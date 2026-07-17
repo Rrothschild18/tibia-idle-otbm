@@ -4,7 +4,7 @@ import posixpath
 import shutil
 import struct
 import xml.etree.ElementTree as ET
-from typing import Dict, List, Optional, Set, Tuple
+from typing import Dict, List, Optional, Tuple
 
 import item_classifier
 
@@ -13,7 +13,7 @@ import item_classifier
 # ======================================================
 
 TILE_SIZE = 32
-MAP_NAME = "grim-reaper"
+MAP_NAME = "rats-rookguard"
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 OTBM_FILE = os.path.join(BASE_DIR, f"{MAP_NAME}.raw.json")
@@ -459,76 +459,6 @@ def _is_roof_tile(analysis: Dict) -> bool:
     return has_unpass and has_unmove and has_unsight and is_multitile
 
 
-# Mirrors the Phaser renderer's DEPTH_OFFSETS table (constants.ts) — used to
-# re-derive each item's INTENDED relative depth when several different
-# layerClasses get merged into "border" by _compute_wall_roof_boost_tiles.
-# ("roof"/"border" are excluded: they use absolute overrides on the render
-# side and are never part of the boosted/re-sorted subset below.)
-_LAYER_DEPTH_PRIORITY: Dict[str, int] = {
-    "ground": 0,
-    "walls_south": 3,
-    "bottom": 5,
-    "walls": 8,
-    "object": 10,
-    "walls_east": 12,
-    "top": 50,
-}
-
-
-def _compute_wall_roof_boost_tiles(
-    raw_item_stacks: Dict[Tuple[int, int], List[Tuple[int, Dict]]],
-) -> Set[Tuple[int, int]]:
-    """Detects tiles whose item stack needs a depth boost because a
-    neighboring oversized roof sprite visually overlaps them.
-
-    Roof sprites anchor bottom-right (setOrigin(1,1) in the Phaser renderer),
-    so an N×M-tile roof anchored at (rx,ry) visually covers tiles
-    (rx-dx, ry-dy) for dx in [0..N-1], dy in [0..M-1] — i.e. it extends WEST
-    and NORTH of its own anchor tile, never south/east.
-
-    A wall sitting in one of those "extra" covered tiles (excluding the
-    roof's own anchor) gets rendered BEHIND the roof under the normal
-    per-layer depth offsets: roof's fixed +100 depth offset swamps the
-    difference between rows/other layer offsets (max 12), so even a wall
-    one row south of the roof's anchor can end up hidden underneath it.
-
-    Returns the set of tiles whose entire item stack should be promoted to
-    the "border" layer — it already uses an absolute depth override (9000)
-    that's unconditionally above any roof, and (unlike reclassifying to
-    "roof") stays on the normal per-sprite render path instead of the
-    Blitter-batched roof path.
-    """
-    roof_anchors: List[Tuple[int, int, int, int]] = []  # (rx, ry, patternWidth, patternHeight)
-    for (x, y), items in raw_item_stacks.items():
-        for _item_index, analysis in items:
-            if classify_layer(analysis) != "roof":
-                continue
-            sprite_info = analysis.get("spriteInfo", {})
-            pattern_width = sprite_info.get("patternWidth", 1)
-            pattern_height = sprite_info.get("patternHeight", 1)
-            if pattern_width > 1 or pattern_height > 1:
-                roof_anchors.append((x, y, pattern_width, pattern_height))
-
-    boost_tiles: Set[Tuple[int, int]] = set()
-    for rx, ry, pattern_width, pattern_height in roof_anchors:
-        for dx in range(pattern_width):
-            for dy in range(pattern_height):
-                if dx == 0 and dy == 0:
-                    continue  # the roof's own anchor tile — never needs boosting
-                neighbor_key = (rx - dx, ry - dy)
-                neighbor_items = raw_item_stacks.get(neighbor_key)
-                if not neighbor_items:
-                    continue
-                has_wall = any(
-                    classify_layer(analysis) in ("walls_south", "walls_east")
-                    for _idx, analysis in neighbor_items
-                )
-                if has_wall:
-                    boost_tiles.add(neighbor_key)
-
-    return boost_tiles
-
-
 def _make_object_entry(analysis: Dict, appearance_id: int,
                        stack_index: int) -> List:
     """Creates a compact [appearanceId, stackIndex] entry.
@@ -686,51 +616,12 @@ def build_phaser_map(dump: Dict) -> Dict:
     walls_south_objects: Dict[Tuple[int, int], List[Dict]] = {}
     walls_east_objects: Dict[Tuple[int, int], List[Dict]] = {}
 
-    # Tiles whose whole stack needs to render above a neighboring oversized
-    # roof (wall-eaten-by-roof bug — see _compute_wall_roof_boost_tiles).
-    wall_roof_boost_tiles = _compute_wall_roof_boost_tiles(raw_item_stacks)
-
     for (x, y), items in raw_item_stacks.items():
-        needs_boost = (x, y) in wall_roof_boost_tiles
-
-        # When boosting, re-sort the promoted items by their ORIGINAL
-        # layerClass depth priority (not raw OTBM stack order) and hand out
-        # fresh sequential stackIndex values in that order. Otherwise, once
-        # merged into the single "border" bucket, relative order would fall
-        # back to raw stack order — e.g. a decoration that always rendered
-        # in front of its wall (object offset 10 > wall offset 3/12,
-        # regardless of stack order) could end up behind it instead.
-        boosted_new_index: Dict[int, int] = {}
-        if needs_boost:
-            boosted_pairs = [
-                pair for pair in items
-                if classify_layer(pair[1]) not in ("roof", "border")
-            ]
-            boosted_pairs.sort(
-                key=lambda pair: (
-                    _LAYER_DEPTH_PRIORITY.get(classify_layer(pair[1]), 0),
-                    pair[0],
-                )
-            )
-            boosted_new_index = {
-                orig_index: new_index
-                for new_index, (orig_index, _analysis) in enumerate(boosted_pairs)
-            }
-
         for item_index, analysis in items:
             layer_class = classify_layer(analysis)
-            if needs_boost and layer_class not in ("roof", "border"):
-                # Promote the whole stack (wall + any stacked decorations)
-                # to the border layer's absolute depth override, so it
-                # renders above the neighboring roof without eating into
-                # any other row's depth band.
-                layer_class = "border"
-                stack_index = boosted_new_index[item_index]
-            else:
-                stack_index = item_index
             entry = _make_object_entry(
                 analysis, analysis["appearanceId"],
-                stack_index,
+                item_index,
             )
             target = _get_layer_dict(
                 layer_class, border_objects, bottom_objects,
