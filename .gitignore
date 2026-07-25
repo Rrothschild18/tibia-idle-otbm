@@ -1,15 +1,15 @@
 node_modules/
 
 # Raw Tibia client asset containers (binary, ~270MB) — used by
-# extractor/appearence-converter.py / extractor/read_aec.py.
+# extractor/scripts/extract_sprites.py / extractor/_legacy/read_aec.py.
 extractor/*.aec
 
 # Extracted sprite library + per-map sprite copies (binary, large).
 extractor/**/sprites/
 
-# Generated pipeline output — regenerate with dump.js + phaserOTBM_converter.py.
-extractor/*.raw.json
-extractor/phaser.map.json
+# Generated pipeline output — regenerate with extractor/scripts/build_map.js.
+extractor/raw-maps/**
+extractor/ready-maps/**
 
 __pycache__/
 *.pyc

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<monsters>
+	<monster centerx="1001" centery="1010" centerz="7" radius="3" />
+	<monster centerx="1036" centery="1010" centerz="7" radius="3">
+		<monster name="Rat" x="-1" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1043" centery="1017" centerz="7" radius="3">
+		<monster name="Rat" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1008" centery="1020" centerz="7" radius="1">
+		<monster name="Rat" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1012" centery="1020" centerz="7" radius="1">
+		<monster name="Rat" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1001" centery="1024" centerz="7" radius="3">
+		<monster name="Rat" x="1" y="-1" z="7" spawntime="90" />
+		<monster name="Rat" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1015" centery="1024" centerz="7" radius="3">
+		<monster name="Rat" x="2" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1033" centery="1027" centerz="7" radius="1">
+		<monster name="Rat" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1041" centery="1028" centerz="7" radius="1">
+		<monster name="Rat" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1008" centery="1031" centerz="7" radius="3">
+		<monster name="Rat" x="2" y="-2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1029" centery="1031" centerz="7" radius="3">
+		<monster name="Rat" x="3" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1040" centery="1035" centerz="7" radius="1">
+		<monster name="Rat" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1015" centery="1038" centerz="7" radius="3">
+		<monster name="Rat" x="-1" y="-3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1036" centery="1024" centerz="8" radius="3" />
+</monsters>
