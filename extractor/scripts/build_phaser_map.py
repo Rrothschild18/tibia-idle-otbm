@@ -5,7 +5,7 @@ import shutil
 import struct
 import sys
 import xml.etree.ElementTree as ET
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List, Optional, Set, Tuple
 
 import item_classifier
 
@@ -214,6 +214,8 @@ def analyze_item(appearance_id: int) -> Dict:
     has_bottom = flags.get("bottom", False)
     has_top = flags.get("top", False)
     has_hang = flags.get("hang", False)
+    has_usable = flags.get("usable", False)
+    has_forceuse = flags.get("forceuse", False)
 
     # Extract hook direction for wall orientation
     hook_raw = flags.get("hook", {})
@@ -246,6 +248,20 @@ def analyze_item(appearance_id: int) -> Dict:
         has_bounding_box_per_direction
     )
 
+    # Floor-transition tiles (stairs/holes) have no dedicated OTBM flag —
+    # this is the heuristic combo observed on every known stairs/hole
+    # appearance ID across the current map set (386, 421, 1948, 12202; see
+    # ADR 0002). `bank` is deliberately NOT required: item 1948 (the actual
+    # staircase in skeletons-rookguard) lacks it, and across every item
+    # placed in the 8 existing maps, no non-transition item shares this
+    # exact 4-flag combo — so dropping `bank` adds no false positives.
+    is_floor_transition = (
+        has_usable and
+        has_forceuse and
+        has_unmove and
+        has_automap
+    )
+
     info = {
         "appearanceId": appearance_id,
         "type": "unknown" if metadata is None else "static",
@@ -265,7 +281,10 @@ def analyze_item(appearance_id: int) -> Dict:
             "bottom": has_bottom,
             "top": has_top,
             "hang": has_hang,
+            "usable": has_usable,
+            "forceuse": has_forceuse,
             "isRoof": is_roof,
+            "isFloorTransition": is_floor_transition,
             "hookDirection": hook_direction,
         },
         "spriteInfo": {
@@ -436,24 +455,6 @@ def classify_layer(analysis: Dict) -> str:
     return "object"
 
 
-def _get_layer_dict(layer_class: str,
-                    border_objects: Dict, bottom_objects: Dict,
-                    normal_objects: Dict, top_objects: Dict,
-                    roof_objects: Dict,
-                    walls_south_objects: Dict,
-                    walls_east_objects: Dict) -> Dict:
-    """Returns the correct dictionary for a given layer classification."""
-    return {
-        "border": border_objects,
-        "bottom": bottom_objects,
-        "object": normal_objects,
-        "top": top_objects,
-        "roof": roof_objects,
-        "walls_south": walls_south_objects,
-        "walls_east": walls_east_objects,
-    }.get(layer_class, normal_objects)
-
-
 def _is_roof_tile(analysis: Dict) -> bool:
     """Determines if a tileid should be treated as roof instead of ground.
 
@@ -546,21 +547,27 @@ def _build_object_defs() -> Dict[str, Dict]:
 # ======================================================
 
 def build_phaser_map(dump: Dict) -> Dict:
-    ground_tiles: Dict[Tuple[int, int], int] = {}
-    raw_item_stacks: Dict[Tuple[int, int], List[Tuple[int, Dict]]] = {}
+    # Ground tiles are bucketed per floor (z) from the start — two floors
+    # occupying the same (x, y) column (e.g. a dungeon directly beneath the
+    # surface) must never merge into one entry. See ADR 0002.
+    ground_tiles: Dict[int, Dict[Tuple[int, int], int]] = {}
+    raw_item_stacks: Dict[Tuple[int, int, int], List[Tuple[int, Dict]]] = {}
     animations: Dict[int, Dict] = {}
     all_tile_ids = set()
+    all_zs: Set[int] = set()
 
     min_x = min_y = 10**9
     max_x = max_y = -10**9
 
     nodes = dump.get("data", {}).get("nodes", [])
 
-    # ── First pass: collect tiles/items, determine map bounds ──
+    # ── First pass: collect tiles/items per floor, determine map bounds ──
     for node in nodes:
         for feature in node.get("features", []):
             base_x = feature.get("x", 0)
             base_y = feature.get("y", 0)
+            z = feature.get("z", 7)
+            all_zs.add(z)
 
             for tile in feature.get("tiles", []):
                 tx = tile.get("x")
@@ -571,12 +578,16 @@ def build_phaser_map(dump: Dict) -> Dict:
                 x = base_x + tx
                 y = base_y + ty
 
+                # Bounds are a union across all floors — every floor shares
+                # the same (tileX, tileY) coordinate space, so a transition
+                # tile lines up with the same column on the floor below/above
+                # without needing explicit destination metadata (ADR 0002).
                 min_x = min(min_x, x)
                 min_y = min(min_y, y)
                 max_x = max(max_x, x)
                 max_y = max(max_y, y)
 
-                key = (x, y)
+                key = (x, y, z)
 
                 # tileid — usually goes to ground tilelayer, but large
                 # blocking tiles (unpass+unmove+unsight with sprite > 1×1)
@@ -597,7 +608,7 @@ def build_phaser_map(dump: Dict) -> Dict:
                             0, (-1, ground_analysis)
                         )
                     else:
-                        ground_tiles[key] = tile_ground
+                        ground_tiles.setdefault(z, {})[(x, y)] = tile_ground
 
                 # Collect items for second pass (bounds not yet final)
                 items = tile.get("items", [])
@@ -619,31 +630,32 @@ def build_phaser_map(dump: Dict) -> Dict:
 
     if min_x == 10**9:
         min_x = min_y = max_x = max_y = 0
+        all_zs.add(7)
 
     width = max_x - min_x + 1
     height = max_y - min_y + 1
 
-    # ── Second pass: classify items into objectgroup layers ──
-    border_objects: Dict[Tuple[int, int], List[Dict]] = {}
-    bottom_objects: Dict[Tuple[int, int], List[Dict]] = {}
-    normal_objects: Dict[Tuple[int, int], List[Dict]] = {}
-    top_objects: Dict[Tuple[int, int], List[Dict]] = {}
-    roof_objects: Dict[Tuple[int, int], List[Dict]] = {}
-    walls_south_objects: Dict[Tuple[int, int], List[Dict]] = {}
-    walls_east_objects: Dict[Tuple[int, int], List[Dict]] = {}
+    # ── Second pass: classify items into per-floor objectgroup layers ──
+    # Each floor gets its own independent set of the 7 layer-class dicts.
+    # Floors never share stack entries even when they occupy the same
+    # (x, y) column — that's precisely the bug this rewrite fixes.
+    floor_objects: Dict[int, Dict[str, Dict[Tuple[int, int], List[Dict]]]] = {
+        z: {
+            "border": {}, "bottom": {}, "object": {}, "top": {},
+            "roof": {}, "walls_south": {}, "walls_east": {},
+        }
+        for z in all_zs
+    }
 
-    for (x, y), items in raw_item_stacks.items():
+    for (x, y, z), items in raw_item_stacks.items():
+        objects_for_floor = floor_objects[z]
         for item_index, analysis in items:
             layer_class = classify_layer(analysis)
             entry = _make_object_entry(
                 analysis, analysis["appearanceId"],
                 item_index,
             )
-            target = _get_layer_dict(
-                layer_class, border_objects, bottom_objects,
-                normal_objects, top_objects, roof_objects,
-                walls_south_objects, walls_east_objects,
-            )
+            target = objects_for_floor.get(layer_class, objects_for_floor["object"])
             target.setdefault((x, y), []).append(entry)
 
     # ── Build tilesets ──
@@ -677,66 +689,79 @@ def build_phaser_map(dump: Dict) -> Dict:
         })
         current_gid += 1
 
-    # ── Build layers ──
-    layers: List[Dict] = []
-    layer_id = 1
-
-    # Layer 1: Ground (tilelayer — ALL tileid entries)
-    ground_data = [0] * (width * height)
-    for (x, y), appearance_id in ground_tiles.items():
-        ix = x - min_x
-        iy = y - min_y
-        index = iy * width + ix
-        ground_data[index] = gid_lookup.get(appearance_id, 0)
-
-    layers.append({
-        "id": layer_id,
-        "name": "Ground",
-        "type": "tilelayer",
-        "visible": True,
-        "opacity": 1,
-        "width": width,
-        "height": height,
-        "data": ground_data,
-        "properties": {"depthOffset": 0, "layerClass": "ground"},
-    })
-    layer_id += 1
-
+    # ── Build layers, once per floor ──
     # Objectgroup layers with increasing depth offsets
     # WallsSouth: horizontal walls + corners → depthOffset 3 (behind player)
     # WallsEast:  vertical walls             → depthOffset 12 (in front of player)
     layer_configs = [
-        ("Borders",    border_objects,       1,   "border"),
-        ("Bottom",     bottom_objects,       5,   "bottom"),
-        ("WallsSouth", walls_south_objects,  3,   "walls_south"),
-        ("WallsEast",  walls_east_objects,   12,  "walls_east"),
-        ("Objects",    normal_objects,       10,  "object"),
-        ("Top",        top_objects,          50,  "top"),
-        ("Roof",       roof_objects,         100, "roof"),
+        ("Borders",    "border",       1),
+        ("Bottom",     "bottom",       5),
+        ("WallsSouth", "walls_south",  3),
+        ("WallsEast",  "walls_east",   12),
+        ("Objects",    "object",       10),
+        ("Top",        "top",          50),
+        ("Roof",       "roof",         100),
     ]
 
-    for name, obj_dict, depth_offset, layer_class in layer_configs:
-        if not obj_dict:
-            continue
-        object_list = []
-        for (x, y), stack in obj_dict.items():
-            tile_x = x - min_x
-            tile_y = y - min_y
-            # Compact: [tileX, tileY, ...stack_entries]
-            # Each stack entry is [appearanceId, stackIndex]
-            object_list.append([tile_x, tile_y] + stack)
+    floors: Dict[str, Dict] = {}
+
+    for z in sorted(all_zs):
+        layers: List[Dict] = []
+        layer_id = 1
+
+        # Layer 1: Ground (tilelayer — ALL tileid entries on this floor).
+        # Sized to the union bounds like every floor, so a column with no
+        # tile on this floor stays zero rather than shifting coordinates.
+        ground_data = [0] * (width * height)
+        for (x, y), appearance_id in ground_tiles.get(z, {}).items():
+            ix = x - min_x
+            iy = y - min_y
+            index = iy * width + ix
+            ground_data[index] = gid_lookup.get(appearance_id, 0)
+
         layers.append({
             "id": layer_id,
-            "name": name,
-            "type": "objectgroup",
+            "name": "Ground",
+            "type": "tilelayer",
             "visible": True,
-            "objects": object_list,
-            "properties": {
-                "depthOffset": depth_offset,
-                "layerClass": layer_class,
-            },
+            "opacity": 1,
+            "width": width,
+            "height": height,
+            "data": ground_data,
+            "properties": {"depthOffset": 0, "layerClass": "ground"},
         })
         layer_id += 1
+
+        objects_for_floor = floor_objects[z]
+        for name, layer_class, depth_offset in layer_configs:
+            obj_dict = objects_for_floor[layer_class]
+            if not obj_dict:
+                continue
+            object_list = []
+            for (x, y), stack in obj_dict.items():
+                tile_x = x - min_x
+                tile_y = y - min_y
+                # Compact: [tileX, tileY, ...stack_entries]
+                # Each stack entry is [appearanceId, stackIndex]
+                object_list.append([tile_x, tile_y] + stack)
+            layers.append({
+                "id": layer_id,
+                "name": name,
+                "type": "objectgroup",
+                "visible": True,
+                "objects": object_list,
+                "properties": {
+                    "depthOffset": depth_offset,
+                    "layerClass": layer_class,
+                },
+            })
+            layer_id += 1
+
+        floors[str(z)] = {"z": z, "layers": layers}
+
+    # Surface floor is conventionally z=7 in Tibia; fall back to the lowest
+    # z present for maps that (unusually) don't include it.
+    default_z = 7 if 7 in all_zs else min(all_zs)
 
     # Build objectDefs: one entry per unique appearanceId
     object_defs = _build_object_defs()
@@ -755,9 +780,10 @@ def build_phaser_map(dump: Dict) -> Dict:
             "maxX": max_x,
             "maxY": max_y,
         },
+        "defaultZ": default_z,
         "assetsRoot": ASSETS_ROOT,
         "objectDefs": object_defs,
-        "layers": layers,
+        "floors": floors,
         "tilesets": tilesets,
         "animations": animations,
     }

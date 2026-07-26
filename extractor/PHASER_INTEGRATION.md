@@ -31,17 +31,35 @@ This document explains the **compact map.json** output from `phaserOTBM_converte
   "renderorder": "right-down",
   "tilewidth": 32,              // TILE_SIZE constant
   "tileheight": 32,
-  "width": 60,                  // map width in tiles
-  "height": 42,                 // map height in tiles
+  "width": 60,                  // map width in tiles — union across ALL floors
+  "height": 42,                 // map height in tiles — union across ALL floors
   "bounds": { "minX": ..., "minY": ..., "maxX": ..., "maxY": ... },
+  "defaultZ": 7,                 // floor to render by default (7 if present, else lowest z)
   "assetsRoot": "assets/dragon-darashia-sprites",
 
-  "objectDefs": { ... },        // appearance definitions (see below)
-  "layers": [ ... ],            // ground tilelayer + objectgroups
-  "tilesets": [ ... ],          // one tileset entry per ground tile ID
-  "animations": { ... }         // animated appearance configs
+  "objectDefs": { ... },        // appearance definitions (see below) — global, shared by every floor
+  "floors": {                    // one entry per floor (z-level) present in the map
+    "7": { "z": 7, "layers": [ ... ] },  // ground tilelayer + objectgroups, same shape as before
+    "8": { "z": 8, "layers": [ ... ] }
+  },
+  "tilesets": [ ... ],          // one tileset entry per ground tile ID — global, shared by every floor
+  "animations": { ... }         // animated appearance configs — global, shared by every floor
 }
 ```
+
+### Floors
+
+Maps can have more than one real floor (z-level) — e.g. a dungeon directly beneath the surface.
+`layers` used to live at the map root; it now lives per floor under `floors["<z>"].layers`, same
+shape as before. `width`/`height`/`bounds` stay a **union across all floors**, so `(tileX,
+tileY)` means the same physical column on every floor — this is what lets a floor-transition
+tile "line up" between floors without needing explicit destination metadata. See
+[ADR 0002](../docs/adr/0002-map-json-floors-e-defaultz.md) for the full rationale, including why
+`"version"` didn't change and how floor-transition tiles (stairs/holes) are flagged via the
+derived `objectDefs[id].flags.isFloorTransition` boolean.
+
+Single-floor maps just produce `floors: {"7": {...}}` — no special-casing needed on the consumer
+side.
 
 ---
 
@@ -213,10 +231,15 @@ interface MapData {
   tilewidth: number;
   tileheight: number;
   assetsRoot: string;
+  defaultZ: number;
   objectDefs: Record<string, ObjectDef>;
-  layers: Layer[];
+  floors: Record<string, { z: number; layers: Layer[] }>;
   tilesets: Tileset[];
   animations: Record<string, AnimationDef>;
+}
+
+function getFloorLayers(mapData: MapData, z: number): Layer[] {
+  return mapData.floors[String(z)]?.layers ?? [];
 }
 
 interface ObjectDef {
@@ -232,7 +255,8 @@ interface ObjectDef {
   issues?: string[];
 }
 
-for (const layer of mapData.layers) {
+const activeZ = mapData.defaultZ; // whichever floor is currently active
+for (const layer of getFloorLayers(mapData, activeZ)) {
   if (layer.type !== 'objectgroup') continue;
   const depthOffset = layer.properties?.depthOffset ?? 0;
 
@@ -332,8 +356,8 @@ Access: `const meta = metadataJson[String(appearanceId)]`
 class TibiaMapRenderer {
   private roofImages: Phaser.GameObjects.Image[] = [];
 
-  loadObjectLayers(mapData: MapData, scene: Phaser.Scene) {
-    for (const layer of mapData.layers) {
+  loadObjectLayers(mapData: MapData, scene: Phaser.Scene, z: number) {
+    for (const layer of getFloorLayers(mapData, z)) {
       if (layer.type !== 'objectgroup') continue;
       const depthOffset = layer.properties?.depthOffset ?? 0;
       const isRoof = layer.properties?.layerClass === 'roof';
