@@ -55,8 +55,11 @@ SPRITES_OUTPUT_DIR = os.path.join(OUTPUT_DIR, "sprites")
 ASSETS_ROOT = posixpath.join("assets", f"{MAP_NAME}-sprites")
 
 # Monsters
+# O editor de mapas exporta os sidecars com o nome do mapa como prefixo
+# (ex: troll-rookguard-monster.xml) — mantemos essa convenção aqui pra não
+# exigir renomear arquivo nenhum ao adicionar um mapa novo.
 OTSERVBR_MONSTER_XML = os.path.join(EXTRACTOR_DIR, "otservbr-monster.xml")
-MONSTER_SPAWN_XML = os.path.join(EXTRACTOR_DIR, "maps", MAP_NAME, "monster.xml")
+MONSTER_SPAWN_XML = os.path.join(EXTRACTOR_DIR, "maps", MAP_NAME, f"{MAP_NAME}-monster.xml")
 OUTFITS_SPRITES_DIR = os.path.join(EXTRACTOR_DIR, "sprites", "outfits")
 MONSTERS_OUTPUT_DIR = os.path.join(OUTPUT_DIR, "monsters")
 MONSTERS_ASSETS_ROOT = posixpath.join("assets", f"{MAP_NAME}-sprites", "monsters")
