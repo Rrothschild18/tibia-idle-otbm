@@ -16,17 +16,20 @@ npm run build-map -- --all                           # atalho para o comando aci
 
 1. Crie uma pasta em `extractor/maps/<nome>/` — `<nome>` é o identificador que
    você vai usar em todos os comandos daqui pra frente.
-2. Coloque dentro dela:
+2. Coloque dentro dela os arquivos exportados pelo editor de mapas, sem
+   renomear nada:
    ```
    extractor/maps/<nome>/
-     <nome>.otbm      ← mesmo nome da pasta, com extensão .otbm
-     house.xml
-     monster.xml
-     npc.xml
-     zones.xml
+     <nome>.otbm
+     <nome>-house.xml
+     <nome>-monster.xml
+     <nome>-npc.xml
+     <nome>-zones.xml
    ```
-   O `.otbm` **precisa** ter o mesmo nome da pasta. Os 4 XMLs são exportados
-   junto do mapa pelo Remere's Map Editor (ou equivalente).
+   O `.otbm` **precisa** ter o mesmo nome da pasta, e os XMLs seguem o padrão
+   `<nome>-house.xml` etc. — é exatamente o nome que o editor de mapas já usa
+   ao exportar, então normalmente basta arrastar os arquivos exportados pra
+   dentro da pasta.
 3. Rode:
    ```
    node extractor/scripts/build_map.js <nome>
@@ -44,10 +47,10 @@ npm run build-map -- --all                           # atalho para o comando aci
 ```
 extractor/maps/orc-fortress/
   orc-fortress.otbm
-  house.xml
-  monster.xml
-  npc.xml
-  zones.xml
+  orc-fortress-house.xml
+  orc-fortress-monster.xml
+  orc-fortress-npc.xml
+  orc-fortress-zones.xml
 ```
 
 ```
