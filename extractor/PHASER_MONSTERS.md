@@ -53,8 +53,9 @@ Carregue **map.json** primeiro (para obter `bounds`), depois `monsters/respawn.j
 ### Campos-chave
 - `assetsRoot`: prefixo para carregar as sprites dos monstros.
 - `monsterDefs`: uma entrada por `outfitId` com mapeamento de animações/direções.
-- `spawns`: posição de cada spawn em coordenadas de tile (`tileX`, `tileY`) e coordenadas Tibia (`worldX`, `worldY`).
-- `mapBoundsRef`: mesmo bounds do `map.json` (usado para converter coordenadas Tibia → tileX/tileY).
+- `spawns`: posição de cada spawn em coordenadas de tile (`tileX`, `tileY`), coordenadas Tibia (`worldX`, `worldY`) e o floor (`worldZ`).
+- `mapBoundsRef`: mesmo bounds do `map.json` (usado para converter coordenadas Tibia → tileX/tileY). Bounds são a união de todos os floors do mapa — ver `map.json`'s `floors`/`defaultZ` (`PHASER_INTEGRATION.md`) — então `tileX`/`tileY` já vêm corretos independente de qual floor o spawn pertence.
+- `worldZ`: floor (z-level) onde aquele spawn deve existir. Um mapa com mais de um floor tem spawns com `worldZ` diferentes; o consumidor **deve filtrar `spawns` pelo floor ativo do jogador** antes de instanciar monstros — spawnar um monstro cujo `worldZ` não é o floor atualmente renderizado o coloca fora da vista, sobre um chão que não existe naquele contexto.
 
 ---
 ## Convenções de animação de outfits
