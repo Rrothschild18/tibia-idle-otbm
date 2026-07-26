@@ -40,3 +40,12 @@ signifique a mesma coluna física em qualquer floor).
       `defaultZ == 7`
 
 ## Comments
+
+Implementado e commitado em `4827601` (junto com o ticket 02). Todos os itens do checklist e
+verificação confirmados: `skeletons-rookguard` reproduz 1848/1812/50 posições distintas por
+floor (z=7/8/9), `rats-sewers` reproduz 2120/372 (menos as tiles sem `tileid`/`items`, um quirk
+preexistente do pipeline não relacionado a floors), os 5 mapas single-floor viram
+`floors: {"7": {...}}` com `defaultZ: 7`. Corrigido o texto de verificação original deste ticket
+(dizia "tiles de Ground não-zero"; o correto é "posições de tile distintas somando Ground +
+objectgroups", já que `_is_roof_tile()` redireciona tiles grandes de bloqueio pra fora do
+tilelayer Ground — comportamento preexistente).

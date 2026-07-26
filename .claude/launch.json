@@ -1,0 +1,23 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "tibia-idle-front",
+      "runtimeExecutable": "C:\\Program Files\\Git\\usr\\bin\\bash.exe",
+      "runtimeArgs": [
+        "-lc",
+        "cd '/c/Users/rault/OneDrive/Área de Trabalho/tibia-idle/tibia-idle' && npx nx serve tibia-idle-front"
+      ],
+      "port": 4200
+    },
+    {
+      "name": "tibia-idle-mock-api",
+      "runtimeExecutable": "C:\\Program Files\\Git\\usr\\bin\\bash.exe",
+      "runtimeArgs": [
+        "-lc",
+        "cd '/c/Users/rault/OneDrive/Área de Trabalho/tibia-idle/tibia-idle' && npx nx serve tibia-idle-mock-api"
+      ],
+      "port": 3001
+    }
+  ]
+}

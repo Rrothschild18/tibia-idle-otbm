@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<monsters>
+	<monster centerx="1014" centery="1027" centerz="7" radius="3">
+		<monster name="Skeleton" x="-2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1021" centery="1027" centerz="7" radius="3">
+		<monster name="Skeleton" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1028" centery="1027" centerz="7" radius="3">
+		<monster name="Skeleton" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1021" centery="1034" centerz="7" radius="3">
+		<monster name="Skeleton" x="1" y="-2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1014" centery="1041" centerz="7" radius="3">
+		<monster name="Skeleton" x="-2" y="-1" z="7" spawntime="90" />
+		<monster name="Rat" x="-2" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1028" centery="1041" centerz="7" radius="3">
+		<monster name="Skeleton" x="0" y="-2" z="7" spawntime="90" />
+		<monster name="Skeleton" x="-2" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1024" centery="1017" centerz="8" radius="1">
+		<monster name="Skeleton" x="1" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1032" centery="1017" centerz="8" radius="1">
+		<monster name="Skeleton" x="1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1014" centery="1020" centerz="8" radius="3">
+		<monster name="Skeleton" x="-1" y="-3" z="8" spawntime="90" />
+		<monster name="Skeleton" x="2" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1022" centery="1024" centerz="8" radius="1">
+		<monster name="Skeleton" x="1" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1032" centery="1028" centerz="8" radius="1">
+		<monster name="Skeleton" x="1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1018" centery="1029" centerz="8" radius="1">
+		<monster name="Skeleton" x="1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1016" centery="1034" centerz="8" radius="1">
+		<monster name="Skeleton" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1025" centery="1035" centerz="8" radius="1">
+		<monster name="Skeleton" x="1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1014" centery="1041" centerz="8" radius="3">
+		<monster name="Skeleton" x="0" y="-3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1021" centery="1048" centerz="8" radius="3">
+		<monster name="Skeleton" x="3" y="-1" z="8" spawntime="90" />
+		<monster name="Skeleton" x="3" y="0" z="8" spawntime="90" />
+	</monster>
+</monsters>
