@@ -35,3 +35,13 @@ em `extractor/SPRITE_METADATA.md` — acabou não entrando: sem ele a escada rea
       regressão na classificação de layer de nenhum item (a nova flag é ortogonal a `layerClass`)
 
 ## Comments
+
+Implementado e commitado em `4827601` (junto com o ticket 01). A heurística originalmente
+especificada (`bank + usable + forceuse + unmove + automap`) foi testada contra os itens
+realmente usados nos 8 mapas existentes e **não detectava a escada real de
+`skeletons-rookguard`** (appearance ID 1948 — o mapa de 3 floors que motivou este ticket).
+Investigação encontrou que `1948` tem `usable + forceuse + unmove + automap` mas não tem `bank`;
+checando todo item dos 8 mapas, esse conjunto de 4 flags (sem `bank`) combina com exatamente 386,
+421, 1948 e 12202 — todas escadas/buracos reais, nenhum falso positivo. A heurística final
+implementada dropa a exigência de `bank`. Detalhes e a evidência completa em
+`docs/adr/0002-map-json-floors-e-defaultz.md`.
