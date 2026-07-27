@@ -73,7 +73,8 @@ Every unique appearance ID used in the map has **one** entry in `objectDefs`. Th
     "4427": {
       "type": "random",                         // "static" | "random" | "animated"
       "layerClass": "roof",                      // "border" | "bottom" | "object" | "top" | "roof"
-      "spriteIds": ["4427_0", "4427_1", ...],    // sprite identifiers
+      "sheet": "roof-64",                        // key into root `sheets`
+      "gids": [0, 1],                            // cell indices within that sheet, one per frame
       "spriteWidth": 64,                         // only present if ≠ 32
       "spriteHeight": 64,                        // only present if ≠ 32
       "random": true,                            // only present if true
@@ -82,12 +83,35 @@ Every unique appearance ID used in the map has **one** entry in `objectDefs`. Th
     "1711": {
       "type": "static",
       "layerClass": "border",
-      "spriteIds": ["1711"],
+      "sheet": "border-32",
+      "gids": [4],
       "flags": { "unmove": true, "clip": true }
     }
   }
 }
 ```
+
+Since map.json v4 (`docs/adr/0003-map-json-v4-grid-sheets.md`), sprite frames are `sheet`+`gids`
+instead of a `spriteIds` path list — see "Root `sheets` Field" below. An entry with neither
+`sheet` nor `gids` was only ever seen as a ground `tileid`, never placed as an object; nothing
+looks it up dynamically. (Static scenery baking, a separate offline-compositing mechanism, was
+removed — see `docs/adr/0004-remover-bake-usar-so-sheets.md` — so there's no `bakedOnly` field or
+`bakedgroup` layer type anymore either.)
+
+### Root `sheets` Field
+
+```jsonc
+{
+  "sheets": {
+    "roof-64": { "image": "assets/dragon-darashia-sprites/sheets/roof-64.png", "cellWidth": 64, "cellHeight": 64, "columns": 12 },
+    "border-32": { "image": "assets/dragon-darashia-sprites/sheets/border-32.png", "cellWidth": 32, "cellHeight": 32, "columns": 16 }
+  }
+}
+```
+
+One entry per `(layerClass, sizeBucket)` combination that had at least one placed appearance.
+`ground`/`tilesets` are unaffected — the tilelayer still resolves through `tilesets`, one PNG per
+unique ground appearance, exactly as before.
 
 ### Omitted / Default Fields
 
@@ -105,18 +129,31 @@ Every unique appearance ID used in the map has **one** entry in `objectDefs`. Th
 
 ## Deriving Values at Runtime
 
-### Sprite Asset Paths
+### Sprite Frame Resolution
 
-Sprite paths are **not stored** in the JSON. Derive them from `assetsRoot` and `spriteIds`:
+A sprite frame is a cell inside a shared grid sheet — resolve its pixel rect with pure arithmetic,
+no per-sprite path or atlas JSON needed:
 
 ```typescript
-function spritePath(assetsRoot: string, appearanceId: string, spriteId: string): string {
-  return `${assetsRoot}/sprites/${appearanceId}/${spriteId}.png`;
+interface SheetDef {
+  image: string;
+  cellWidth: number;
+  cellHeight: number;
+  columns: number;
 }
 
-// Example: assetsRoot = "assets/dragon-darashia-sprites", appearance = "4427", spriteId = "4427_0"
-// → "assets/dragon-darashia-sprites/sprites/4427/4427_0.png"
+function gidToRect(gid: number, sheet: SheetDef) {
+  const col = gid % sheet.columns;
+  const row = Math.floor(gid / sheet.columns);
+  return { x: col * sheet.cellWidth, y: row * sheet.cellHeight, width: sheet.cellWidth, height: sheet.cellHeight };
+}
+
+// Example: def.sheet = "roof-64", def.gids = [0, 1], sheets["roof-64"].columns = 12
+// gid 1 -> col 1, row 0 -> pixel (64, 0)
 ```
+
+Loaded into Phaser via `scene.load.spritesheet(sheetKey, sheets[sheetKey].image, { frameWidth: cellWidth, frameHeight: cellHeight })`,
+`gid` is directly usable as the Phaser frame index — no separate rect math needed at draw time.
 
 ### World Position (pixels)
 
@@ -150,7 +187,8 @@ function resolveStackEntry(
     stackIndex,
     type: def.type,
     layerClass: def.layerClass,
-    spriteIds: def.spriteIds,
+    sheet: def.sheet,
+    gids: def.gids,
     spriteWidth: def.spriteWidth ?? mapData.tilewidth,
     spriteHeight: def.spriteHeight ?? mapData.tileheight,
     worldX: (tileX + 1) * mapData.tilewidth,
@@ -227,12 +265,20 @@ Multiple items on same tile:
 ### Loading Object Layers
 
 ```typescript
+interface SheetDef {
+  image: string;
+  cellWidth: number;
+  cellHeight: number;
+  columns: number;
+}
+
 interface MapData {
   tilewidth: number;
   tileheight: number;
   assetsRoot: string;
   defaultZ: number;
   objectDefs: Record<string, ObjectDef>;
+  sheets: Record<string, SheetDef>;
   floors: Record<string, { z: number; layers: Layer[] }>;
   tilesets: Tileset[];
   animations: Record<string, AnimationDef>;
@@ -245,7 +291,8 @@ function getFloorLayers(mapData: MapData, z: number): Layer[] {
 interface ObjectDef {
   type: 'static' | 'random' | 'animated';
   layerClass: string;
-  spriteIds: string[];
+  sheet?: string;   // absent for ground-only entries (never placed as an object)
+  gids?: number[];
   spriteWidth?: number;
   spriteHeight?: number;
   random?: boolean;
@@ -270,11 +317,11 @@ for (const layer of getFloorLayers(mapData, activeZ)) {
     for (let i = 2; i < obj.length; i++) {
       const [appearanceId, stackIndex] = obj[i];
       const def = mapData.objectDefs[String(appearanceId)];
-      if (!def || def.hasSprite === false) continue;
+      if (!def || def.hasSprite === false || !def.sheet) continue;
 
-      const textureKey = selectTexture(def, seed, appearanceId);
+      const gid = selectGid(def, seed, appearanceId);
 
-      const image = scene.add.image(worldX, worldY, textureKey);
+      const image = scene.add.image(worldX, worldY, def.sheet, gid);
       image.setOrigin(1, 1);
       image.setDepth(
         (tileY + 1) * depthFactor + stackIndex * 0.001 + depthOffset
@@ -284,33 +331,41 @@ for (const layer of getFloorLayers(mapData, activeZ)) {
 }
 ```
 
-### Texture Selection
+### Gid Selection
 
 ```typescript
-function selectTexture(def: ObjectDef, seed: number, appearanceId: number): string {
+function selectGid(def: ObjectDef, seed: number, appearanceId: number): number {
+  const gids = def.gids ?? [];
   if (def.type === 'animated') {
-    return `${appearanceId}_anim`; // pre-registered Phaser animation key
+    return gids[0]; // animation itself plays through scene.anims (see below), this is the idle frame
   }
-  if (def.random && def.spriteIds.length > 1) {
-    const index = Math.abs(seed * appearanceId) % def.spriteIds.length;
-    return def.spriteIds[index];
+  if (def.random && gids.length > 1) {
+    const index = Math.abs(seed * appearanceId) % gids.length;
+    return gids[index];
   }
-  return def.spriteIds[0];
+  return gids[0];
 }
 ```
 
-### Preloading Sprites
+Animated appearances additionally need one `scene.anims.create()` registered per appearance, with
+`frames: def.gids.map(gid => ({ key: def.sheet, frame: gid }))` — same shape as the outfit atlas
+animation setup in `PHASER_MONSTERS.md`, just sourced from `gids` instead of frame-key strings.
+
+### Preloading Sheets
 
 ```typescript
-function preloadSprites(scene: Phaser.Scene, mapData: MapData) {
-  for (const [id, def] of Object.entries(mapData.objectDefs)) {
-    for (const spriteId of def.spriteIds) {
-      const path = `${mapData.assetsRoot}/sprites/${id}/${spriteId}.png`;
-      scene.load.image(spriteId, path);
-    }
+function preloadSheets(scene: Phaser.Scene, mapData: MapData) {
+  for (const [sheetKey, sheet] of Object.entries(mapData.sheets)) {
+    scene.load.spritesheet(sheetKey, sheet.image, {
+      frameWidth: sheet.cellWidth,
+      frameHeight: sheet.cellHeight,
+    });
   }
 }
 ```
+
+One request per sheet (typically a handful per map — one per `(layerClass, sizeBucket)`
+combination actually used) instead of one request per unique appearance.
 
 ---
 
@@ -392,12 +447,32 @@ class TibiaMapRenderer {
 - [ ] Parse `objectDefs` from map root and build a lookup map
 - [ ] Replace verbose stack entry reading with compact `[id, stackIndex]` array parsing
 - [ ] Derive `worldX`/`worldY` from `tileX`/`tileY` (no longer in entry)
-- [ ] Derive sprite paths from `assetsRoot + "/sprites/" + id + "/" + spriteId + ".png"`
 - [ ] Read `spriteWidth`/`spriteHeight` from `objectDefs[id]`, defaulting to `tilewidth`/`tileheight` when absent
 - [ ] Read flags from `objectDefs[id].flags` (only true flags stored, absent = false)
 - [ ] Load `metadata.json` separately only when raw Tibia metadata is needed
 - [ ] Remove any code that reads `spritePaths`, `metadataFound`, or `layerClassification` from entries
 - [ ] Object arrays are `[tileX, tileY, ...entries]` not `{tileX, tileY, stack: [...]}` 
+
+## Migration Checklist (v3 → v4, sheets)
+
+Note: this doc's own v1→v2→v3 numbering is informal and historically hasn't tracked the real
+`map.json` `"version"` field (see `docs/adr/0002-map-json-floors-e-defaultz.md`) — this section
+happens to also be the change that bumps the real `version` field to `4`, see
+`docs/adr/0003-map-json-v4-grid-sheets.md`.
+
+- [ ] Parse the new root `sheets` field; `scene.load.spritesheet()` once per sheet instead of
+      `scene.load.image()` once per appearance/frame
+- [ ] Replace all `objectDefs[id].spriteIds` reads with `objectDefs[id].sheet` + `.gids`
+- [ ] Resolve a frame as `scene.add.image(worldX, worldY, def.sheet, gid)` (texture key + frame
+      index), not a bare texture key
+- [ ] Animated appearances: build `scene.anims.create()` frames as `{ key: def.sheet, frame: gid }`
+      per gid, not `{ key: spriteId }`
+- [ ] `ground`/`tilesets` loading is unaffected — no change needed there
+- [ ] An `objectDefs` entry with no `sheet`/`gids` was ground-only (never placed as an object) —
+      skip it, there's nothing to render dynamically
+- [ ] If your existing loader still reads `bakedgroup` layers or `objectDefs[id].bakedOnly`,
+      remove that code — static scenery baking was removed (`docs/adr/0004-remover-bake-usar-so-sheets.md`);
+      every dynamic appearance now goes through `sheet`+`gids` uniformly
 
 ---
 
@@ -407,6 +482,9 @@ class TibiaMapRenderer {
 |--------|---------------|--------------|
 | v1 (verbose, all fields inline) | ~600,000+ | ~20+ MB |
 | v2 (no paths, true-only flags) | ~330,000 | ~8.7 MB |
-| v3 (objectDefs + compact arrays) | **~81,000** | **~1.1 MB** |
+| v3 (objectDefs + compact arrays) | ~81,000 | ~1.1 MB |
+| v4 (sheets — `objectDefs[id].spriteIds` → `.sheet`+`.gids`) | **~81,000** | **~1.1 MB** |
 
-Reduction: **~87% fewer lines** vs v1.
+Reduction: **~87% fewer lines** vs v1. v4 doesn't change `map.json`'s own size meaningfully — the
+win is in asset *requests*: a map's unique-appearance count no longer equals its sprite request
+count, since many appearances now share one sheet request.

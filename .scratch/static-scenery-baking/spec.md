@@ -1,6 +1,11 @@
 # Spec: Bake de Cenário Estático (Static Scenery Baking)
 
-Status: Fase 1 (pipeline Python) implementada e commitada em 2026-07-26
+Status: superseded — ver `.scratch/map-sprite-sheets-v4/issues/04-remove-bake-system.md` e
+`docs/adr/0004-remover-bake-usar-so-sheets.md`. O sistema de bake descrito neste spec foi removido
+inteiramente em 2026-07-27: medido nos 8 mapas reais, gerava de 41 a 262 PNGs por mapa — mais
+requests de rede do que os poucos sheets (v4) que cobrem o mesmo conteúdo. Mantido por histórico.
+
+~~Status: Fase 1 (pipeline Python) implementada e commitada em 2026-07-26~~
 (`extractor/scripts/build_phaser_map.py`, `item_classifier.py`,
 `extractor/tests/`). Fase 2 (consumo do `bakedgroup` no runtime Phaser, repo
 `tibia-idle`) ainda não implementada.
