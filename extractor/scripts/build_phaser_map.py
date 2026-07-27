@@ -7,6 +7,8 @@ import sys
 import xml.etree.ElementTree as ET
 from typing import Dict, List, Optional, Set, Tuple
 
+from PIL import Image
+
 import item_classifier
 
 # ======================================================
@@ -16,11 +18,13 @@ import item_classifier
 TILE_SIZE = 32
 
 if len(sys.argv) < 2:
-    print("Uso: python build_phaser_map.py <nome-do-mapa>")
+    print("Uso: python build_phaser_map.py <nome-do-mapa> [--dump-baked-preview]")
     print("     <nome-do-mapa> deve ter uma pasta correspondente em extractor/maps/")
+    print("     --dump-baked-preview imprime diagnostico por linha bakeada (baked/)")
     sys.exit(1)
 
 MAP_NAME = sys.argv[1]
+DUMP_BAKED_PREVIEW = "--dump-baked-preview" in sys.argv
 
 SCRIPTS_DIR = os.path.dirname(os.path.abspath(__file__))
 EXTRACTOR_DIR = os.path.dirname(SCRIPTS_DIR)
@@ -52,6 +56,7 @@ if not ITEMS_SOURCES:
 # para não quebrar integrações existentes que já leem esse campo do JSON.
 OUTPUT_DIR = os.path.abspath(os.path.join(EXTRACTOR_DIR, "ready-maps", MAP_NAME))
 SPRITES_OUTPUT_DIR = os.path.join(OUTPUT_DIR, "sprites")
+BAKED_OUTPUT_DIR = os.path.join(OUTPUT_DIR, "baked")
 ASSETS_ROOT = posixpath.join("assets", f"{MAP_NAME}-sprites")
 
 # Monsters
@@ -455,6 +460,101 @@ def classify_layer(analysis: Dict) -> str:
     return "object"
 
 
+def _is_bakeable(analysis: Dict, layer_class: str) -> bool:
+    """Determines if an item placement is eligible for offline baking.
+
+    `random` items are excluded even though they're not animated: their
+    sprite variant is chosen at runtime from a per-hunt seed (see
+    map-loader.ts selectSpriteId), so baking one variant into a shared PNG
+    would freeze that variant for every player instead of varying by seed.
+    `roof`/`border` are excluded because both already have special
+    depth/visibility behavior (absolute depth, visibility toggle) and are
+    small sets, so the cost of keeping them dynamic is low (see ADR 0001).
+    """
+    return (
+        analysis.get("animated", False) is False
+        and analysis.get("random", False) is False
+        and analysis.get("type") != "unknown"
+        and analysis.get("appearanceId") not in item_classifier.INTERACTIVE_IDS
+        and layer_class not in ("roof", "border")
+    )
+
+
+def _baked_entry_sprite(analysis: Dict) -> Tuple[Optional[str], int, int]:
+    """Resolves the (sourcePath, width, height) of a bakeable entry's sprite.
+
+    Falls back to a TILE_SIZE square with no source path when unavailable,
+    same as the rest of the pipeline treats missing sprites.
+    """
+    record = next((r for r in analysis.get("sprites", []) if r.get("available")), None)
+    if record is None:
+        return None, TILE_SIZE, TILE_SIZE
+    return record["sourcePath"], record["width"], record["height"]
+
+
+def _render_baked_row(tile_y: int, layer_class: str, entries: List[Dict]) -> Tuple[Image.Image, Dict]:
+    """Composites one (tileY, layerClass) row of bakeable entries into a
+    single RGBA image.
+
+    Each entry anchors at the same bottom-right-of-tile point the runtime
+    uses for dynamic sprites (`origin(1,1)`): the right edge of the sprite
+    sits at `(tileX + 1) * TILE_SIZE`, the bottom edge of every entry in the
+    row sits at `(tileY + 1) * TILE_SIZE`. The canvas is the dynamic bounding
+    box of all entries, so a sprite wider/taller than one tile still fits.
+    `meta["worldX"/"worldY"]` is the canvas's own top-left corner in the same
+    (already-relative) tile coordinate space as the rest of map.json, so a
+    consumer drawing the image at that pixel with origin (0,0) reproduces
+    the exact per-sprite placement.
+
+    `entries`: dicts of {"tileX": int, "stackIndex": int, "analysis": Dict},
+    all sharing the same tile_y/layer_class. Composited in tileX-ascending,
+    then stackIndex-ascending order — the same stacking order the dynamic
+    renderer uses — so later entries draw on top.
+    """
+    if not entries:
+        raise ValueError("_render_baked_row requires at least one entry")
+
+    ordered = sorted(entries, key=lambda e: (e["tileX"], e["stackIndex"]))
+    bottom = (tile_y + 1) * TILE_SIZE
+
+    resolved = []
+    for entry in ordered:
+        sprite_path, width, height = _baked_entry_sprite(entry["analysis"])
+        right_edge = (entry["tileX"] + 1) * TILE_SIZE
+        resolved.append({
+            "sprite_path": sprite_path,
+            "width": width,
+            "height": height,
+            "right_edge": right_edge,
+            "left_edge": right_edge - width,
+            "top": bottom - height,
+        })
+
+    canvas_min_x = min(r["left_edge"] for r in resolved)
+    canvas_max_x = max(r["right_edge"] for r in resolved)
+    canvas_top = min(r["top"] for r in resolved)
+    canvas_width = canvas_max_x - canvas_min_x
+    canvas_height = bottom - canvas_top
+
+    canvas = Image.new("RGBA", (canvas_width, canvas_height), (0, 0, 0, 0))
+    for r in resolved:
+        if not r["sprite_path"]:
+            continue
+        with Image.open(r["sprite_path"]) as sprite_img:
+            sprite_rgba = sprite_img.convert("RGBA")
+            paste_x = r["left_edge"] - canvas_min_x
+            paste_y = r["top"] - canvas_top
+            canvas.alpha_composite(sprite_rgba, (paste_x, paste_y))
+
+    meta = {
+        "worldX": canvas_min_x,
+        "worldY": canvas_top,
+        "width": canvas_width,
+        "height": canvas_height,
+    }
+    return canvas, meta
+
+
 def _is_roof_tile(analysis: Dict) -> bool:
     """Determines if a tileid should be treated as roof instead of ground.
 
@@ -491,13 +591,20 @@ def _make_object_entry(analysis: Dict, appearance_id: int,
     return [appearance_id, stack_index]
 
 
-def _build_object_defs() -> Dict[str, Dict]:
+def _build_object_defs(baked_ids: Set[int], dynamic_ids: Set[int]) -> Dict[str, Dict]:
     """Builds the ``objectDefs`` lookup from the global ITEM_CACHE.
 
     Each entry is keyed by the string appearanceId and contains every
     property that is the *same* for all placements of that appearance.
     The renderer only needs to join objectDefs[id] with the per-tile
     position to fully reconstruct the old verbose entry.
+
+    An appearanceId whose every placement across the map ended up baked
+    (present in ``baked_ids`` and never in ``dynamic_ids``) is marked
+    ``bakedOnly`` and keeps no ``spriteIds`` — the renderer never needs to
+    instantiate that sprite dynamically. The entry itself is kept (rather
+    than dropped) for debugging/traceability while the bake pipeline is new
+    (see the static-scenery-baking spec).
     """
     defs: Dict[str, Dict] = {}
     for appearance_id, analysis in ITEM_CACHE.items():
@@ -507,11 +614,16 @@ def _build_object_defs() -> Dict[str, Dict]:
         sprite_width = sprite_record["width"] if sprite_record else TILE_SIZE
         sprite_height = sprite_record["height"] if sprite_record else TILE_SIZE
 
+        baked_only = appearance_id in baked_ids and appearance_id not in dynamic_ids
+
         entry: Dict = {
             "type": analysis["type"],
             "layerClass": classify_layer(analysis),
-            "spriteIds": [r["spriteId"] for r in analysis["sprites"]],
         }
+        if baked_only:
+            entry["bakedOnly"] = True
+        else:
+            entry["spriteIds"] = [r["spriteId"] for r in analysis["sprites"]]
 
         # Add wall orientation for wall items
         layer_class = entry["layerClass"]
@@ -618,7 +730,6 @@ def build_phaser_map(dump: Dict) -> Dict:
                         continue
 
                     analysis = analyze_item(appearance_id)
-                    ensure_sprite_assets(analysis)
                     all_tile_ids.add(appearance_id)
 
                     if analysis.get("animated", False) and appearance_id not in animations:
@@ -647,16 +758,40 @@ def build_phaser_map(dump: Dict) -> Dict:
         for z in all_zs
     }
 
+    # Bakeable placements are pulled out of the per-floor objectgroup dicts
+    # into their own (tileY, layerClass) groups instead — see ADR 0001. Each
+    # group becomes one composited image in the floor's bakedgroup layer.
+    floor_baked: Dict[int, Dict[Tuple[int, str], List[Dict]]] = {z: {} for z in all_zs}
+    baked_appearance_ids: Set[int] = set()
+    dynamic_appearance_ids: Set[int] = set()
+
     for (x, y, z), items in raw_item_stacks.items():
         objects_for_floor = floor_objects[z]
+        tile_x = x - min_x
+        tile_y = y - min_y
         for item_index, analysis in items:
             layer_class = classify_layer(analysis)
-            entry = _make_object_entry(
-                analysis, analysis["appearanceId"],
-                item_index,
-            )
+            appearance_id = analysis["appearanceId"]
+
+            if _is_bakeable(analysis, layer_class):
+                floor_baked[z].setdefault((tile_y, layer_class), []).append({
+                    "tileX": tile_x,
+                    "stackIndex": item_index,
+                    "analysis": analysis,
+                })
+                baked_appearance_ids.add(appearance_id)
+                continue
+
+            dynamic_appearance_ids.add(appearance_id)
+            entry = _make_object_entry(analysis, appearance_id, item_index)
             target = objects_for_floor.get(layer_class, objects_for_floor["object"])
             target.setdefault((x, y), []).append(entry)
+
+    # appearanceIds whose every placement got baked never need their sprite
+    # copied to sprites/ — the baked PNG (composited straight from
+    # sourcePath) is all the runtime will ever load for them (see spec.md
+    # "Formato de saída": sprites/ é só para objetos ainda dinâmicos).
+    baked_only_ids = baked_appearance_ids - dynamic_appearance_ids
 
     # ── Build tilesets ──
     gid_lookup: Dict[int, int] = {}
@@ -665,7 +800,8 @@ def build_phaser_map(dump: Dict) -> Dict:
 
     for appearance_id in sorted(all_tile_ids):
         analysis = analyze_item(appearance_id)
-        ensure_sprite_assets(analysis)
+        if appearance_id not in baked_only_ids:
+            ensure_sprite_assets(analysis)
         sprite = next(
             (r for r in analysis["sprites"] if r["available"]), None
         )
@@ -757,6 +893,46 @@ def build_phaser_map(dump: Dict) -> Dict:
             })
             layer_id += 1
 
+        baked_rows = []
+        for (tile_y, layer_class), group_entries in sorted(floor_baked[z].items()):
+            depth_offset = next(do for _name, lc, do in layer_configs if lc == layer_class)
+            image, meta = _render_baked_row(tile_y, layer_class, group_entries)
+
+            filename = f"row_{tile_y}_{layer_class}.png"
+            ensure_directory(BAKED_OUTPUT_DIR)
+            image.save(os.path.join(BAKED_OUTPUT_DIR, filename))
+
+            blocked_tiles = sorted(
+                f"{entry['tileX']},{tile_y}"
+                for entry in group_entries
+                if entry["analysis"].get("flags", {}).get("unpass")
+            )
+
+            row: Dict = {
+                "tileY": tile_y,
+                "layerClass": layer_class,
+                "image": posixpath.join(ASSETS_ROOT, "baked", filename),
+                "worldX": meta["worldX"],
+                "worldY": meta["worldY"],
+                "width": meta["width"],
+                "height": meta["height"],
+                "depthOffset": depth_offset,
+            }
+            if blocked_tiles:
+                row["blockedTiles"] = blocked_tiles
+            baked_rows.append(row)
+
+        if baked_rows:
+            layers.append({
+                "id": layer_id,
+                "name": "BakedObjects",
+                "type": "bakedgroup",
+                "visible": True,
+                "rows": baked_rows,
+                "properties": {},
+            })
+            layer_id += 1
+
         floors[str(z)] = {"z": z, "layers": layers}
 
     # Surface floor is conventionally z=7 in Tibia; fall back to the lowest
@@ -764,7 +940,7 @@ def build_phaser_map(dump: Dict) -> Dict:
     default_z = 7 if 7 in all_zs else min(all_zs)
 
     # Build objectDefs: one entry per unique appearanceId
-    object_defs = _build_object_defs()
+    object_defs = _build_object_defs(baked_appearance_ids, dynamic_appearance_ids)
 
     return {
         "version": 2,
@@ -810,6 +986,26 @@ def _build_metadata_index() -> Dict:
         if entry:
             metadata[str(appearance_id)] = entry
     return metadata
+
+
+def _print_baked_preview(phaser_map: Dict) -> None:
+    """Prints per-row bake diagnostics so a developer can eyeball the
+    dimensions/positions before trusting the new pipeline on a map — open
+    the referenced PNGs under ``baked/`` alongside this output.
+    """
+    for z_str, floor in sorted(phaser_map["floors"].items(), key=lambda kv: int(kv[0])):
+        baked_layer = next((l for l in floor["layers"] if l["type"] == "bakedgroup"), None)
+        if not baked_layer:
+            print(f"[BAKE PREVIEW] floor z={z_str}: no baked rows")
+            continue
+        print(f"[BAKE PREVIEW] floor z={z_str}: {len(baked_layer['rows'])} baked row(s)")
+        for row in baked_layer["rows"]:
+            blocked = len(row.get("blockedTiles", []))
+            print(
+                f"  tileY={row['tileY']:<4} layerClass={row['layerClass']:<12} "
+                f"{row['width']}x{row['height']} @ ({row['worldX']}, {row['worldY']}) "
+                f"depthOffset={row['depthOffset']} blockedTiles={blocked} -> {row['image']}"
+            )
 
 
 # ======================================================
@@ -1062,6 +1258,9 @@ if __name__ == "__main__":
 
     print(f"[OK] Mapa Phaser gerado em {output_path}")
     print(f"[OK] Metadata gerado em {metadata_path} ({len(metadata_index)} entries)")
+
+    if DUMP_BAKED_PREVIEW:
+        _print_baked_preview(phaser_map)
 
     # Write monsters/respawn.json
     build_monster_respawn(phaser_map["bounds"])

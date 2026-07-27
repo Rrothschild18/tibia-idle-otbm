@@ -99,6 +99,13 @@ GROUND_IDS: Set[int] = set()
 # Terrenos caminháveis (normalmente já vão para tilelayer via tileid)
 # Ex: GROUND_IDS = {100, 105, 4526}
 
+INTERACTIVE_IDS: Set[int] = set()
+# Objetos cujo estado o jogo pode alterar (container, item coletável, porta).
+# Nunca bakeável, independente de layerClass — ver ADR 0001. Não participa da
+# classificação de layer (fora de _SET_MAP/_CATEGORY_PRIORITY), só do critério
+# de elegibilidade de bake em build_phaser_map._is_bakeable.
+# Ex: INTERACTIVE_IDS = {2853, 2920}
+
 # ======================================================
 # API PÚBLICA
 # ======================================================
