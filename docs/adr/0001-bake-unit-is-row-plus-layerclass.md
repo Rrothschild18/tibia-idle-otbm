@@ -1,3 +1,9 @@
+**Superseded por [ADR 0004](0004-remover-bake-usar-so-sheets.md)** — o sistema de bake descrito
+aqui foi removido inteiramente em favor do empacotamento em sheets (map.json v4). Mantido por
+histórico: a análise de profundidade abaixo (por que a unidade de bake precisa ser por linha, não
+por mapa inteiro) continua correta, só deixou de se aplicar porque o mecanismo de bake em si não
+existe mais.
+
 # Unidade de bake de cenário estático é (linha, layerClass), não (linha)
 
 Cada `layerClass` (`walls_south`, `bottom`, `object`, `walls_east`, `top`) tem um `depthOffset`

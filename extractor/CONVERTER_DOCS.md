@@ -192,7 +192,7 @@ Main conversion function. Takes raw OTBM2JSON output and produces Phaser map dat
 
 ```json
 {
-  "version": 1,
+  "version": 4,
   "orientation": "orthogonal",
   "renderorder": "right-down",
   "tilewidth": 32,
@@ -200,13 +200,17 @@ Main conversion function. Takes raw OTBM2JSON output and produces Phaser map dat
   "width": 42,
   "height": 38,
   "bounds": { "minX": 795, "minY": 801, "maxX": 836, "maxY": 838 },
+  "defaultZ": 7,
   "assetsRoot": "assets/dragon-darashia-sprites",
-  "layers": [ ... ],
+  "objectDefs": { ... },
+  "sheets": { ... },
+  "floors": { "7": { "z": 7, "layers": [ ... ] } },
   "tilesets": [ ... ],
-  "animations": { ... },
-  "layerClassification": { ... }
+  "animations": { ... }
 }
 ```
+
+(`floors`/`defaultZ` since ADR 0002; `sheets` + `objectDefs[id].sheet`/`.gids` since v4/ADR 0003.)
 
 ### Layers
 
@@ -225,42 +229,77 @@ Main conversion function. Takes raw OTBM2JSON output and produces Phaser map dat
 }
 ```
 
-**Objectgroup layers (Borders, Bottom, Objects, Top, Roof):**
+**Objectgroup layers (Borders, Bottom, WallsSouth, WallsEast, Objects, Top, Roof):**
+
+Compact format — one array per placed tile, `[tileX, tileY, ...stackEntries]`, each stack entry
+`[appearanceId, stackIndex]`. Every property that's the *same* for every placement of an
+appearance (type, layerClass, sprite reference, flags, ...) lives once in the top-level
+`objectDefs`, keyed by appearanceId — join `objectDefs[appearanceId]` with the stack entry to
+reconstruct the full picture:
+
 ```json
 {
-  "id": 2,
-  "name": "Borders",
+  "id": 5,
+  "name": "Objects",
   "type": "objectgroup",
   "visible": true,
   "objects": [
-    {
-      "tileX": 5,
-      "tileY": 3,
-      "stack": [
-        {
-          "appearanceId": 4753,
-          "type": "static",
-          "layerClass": "border",
-          "hasSprite": true,
-          "random": false,
-          "animated": false,
-          "spritePaths": ["assets/.../4753/4753.png"],
-          "spriteIds": ["4753"],
-          "spriteWidth": 32,
-          "spriteHeight": 32,
-          "worldX": 192,
-          "worldY": 128,
-          "stackIndex": 0,
-          "metadataFound": { ... },
-          "flags": { "clip": true, "unmove": true, ... },
-          "issues": []
-        }
-      ]
-    }
+    [42, 3, [5557, 0]]
   ],
-  "properties": { "depthOffset": 1, "layerClass": "border" }
+  "properties": { "depthOffset": 10, "layerClass": "object" }
 }
 ```
+
+```jsonc
+// objectDefs["5557"]
+{
+  "type": "random",
+  "layerClass": "object",
+  "sheet": "object-32",
+  "gids": [9, 10, 11],
+  "random": true,
+  "flags": { "unmove": true }
+}
+```
+
+### `objectDefs` sprite reference — `sheet` + `gids` (map.json v4)
+
+Since v4 (see `docs/adr/0003-map-json-v4-grid-sheets.md`), an `objectDefs` entry's sprite frames
+are **not** individual PNG paths — they're `gids` (grid-cell indices) inside a shared `sheet`
+(a key into the root `sheets` map). Resolve a frame's pixel rect with pure arithmetic:
+
+```
+col = gid % sheets[sheet].columns
+row = gid // sheets[sheet].columns
+x = col * sheets[sheet].cellWidth
+y = row * sheets[sheet].cellHeight
+```
+
+An entry with no `sheet`/`gids` was only ever seen as a ground `tileid`, never placed via an
+objectgroup — nothing looks it up dynamically, so it isn't worth packing into a sheet (see ADR
+0003). (Static scenery baking, which used to leave some entries `"bakedOnly": true` with no sprite
+reference, was removed — see "Bakedgroup layer — removed" below.)
+
+**`ground`/`tilesets` did not change** — the tilelayer still resolves ground tile images through
+the `tilesets` array exactly as in v3, one PNG per unique appearance ID. Only `objectDefs` sprites
+moved to sheets.
+
+### Root `sheets` field (map.json v4)
+
+```jsonc
+"sheets": {
+  "object-32": {
+    "image": "assets/rats-rookguard-sprites/sheets/object-32.png",
+    "cellWidth": 32,
+    "cellHeight": 32,
+    "columns": 16
+  }
+}
+```
+
+One entry per `(layerClass, sizeBucket)` combination that had at least one placed appearance.
+Bucket sizes are 32/64/128px, chosen by an appearance's largest side, rounded up to the nearest
+bucket that fits it (see `extractor/scripts/sheet_packer.py`).
 
 ### Outfit atlases (monstros)
 
@@ -269,45 +308,15 @@ frames de cada outfit em um atlas único, gerado uma vez em `extractor/atlases/o
 compartilhado por todos os mapas — `monsters/respawn.json` referencia esse atlas por outfit em vez
 de ter sua própria cópia dos sprites. Ver `PHASER_MONSTERS.md` e `.scratch/outfit-sprite-atlas/`.
 
-### Bakedgroup layer (static scenery baking)
+### Bakedgroup layer — removed
 
-Non-animated, non-random, non-interactive items outside `border`/`roof`
-(`_is_bakeable`) are pre-composited offline into one PNG per `(tileY,
-layerClass)` instead of being placed as individual dynamic objects — see
-`docs/adr/0001-bake-unit-is-row-plus-layerclass.md` and
-`.scratch/static-scenery-baking/spec.md`. Each floor gets at most one
-`bakedgroup` layer, parallel to the `objectgroup` layers:
-
-```json
-{
-  "type": "bakedgroup",
-  "name": "BakedObjects",
-  "rows": [
-    {
-      "tileY": 12,
-      "layerClass": "object",
-      "image": "assets/{map}-sprites/baked/row_12_object.png",
-      "worldX": 320, "worldY": 384, "width": 640, "height": 32,
-      "depthOffset": 10,
-      "blockedTiles": ["10,12", "11,12"]
-    }
-  ]
-}
-```
-
-- `worldX`/`worldY` are the composited image's own top-left pixel (already
-  relative, like the rest of `map.json`) — drawing it there with origin
-  `(0,0)` reproduces the exact per-sprite `origin(1,1)` placement the
-  dynamic renderer uses.
-- `blockedTiles` (optional) lists `"tileX,tileY"` for baked tiles that had
-  `flags.unpass = true` — baked items are removed from `objectgroup`, so a
-  collision system that derives blocked tiles by scanning those arrays needs
-  this to keep walls solid.
-- An `objectDefs` entry whose every placement got baked (never appears
-  dynamically) is marked `"bakedOnly": true` and has no `spriteIds`; its
-  sprite PNG is not copied to `sprites/`.
-- `python build_phaser_map.py <map> --dump-baked-preview` prints per-row
-  dimensions/position/blocked-tile counts for manual visual sanity-checking.
+Static scenery used to be pre-composited offline into a `bakedgroup` layer (one PNG per `(tileY,
+layerClass)`) instead of being placed as individual dynamic objects. Measured against the 8 real
+maps, this produced 41-262 separate PNG requests per map — more than the 4-6 sheets that now cover
+the same content — so it was removed entirely in favor of routing every dynamic appearance through
+`sheet`+`gids` uniformly. See `docs/adr/0001-bake-unit-is-row-plus-layerclass.md` (superseded) and
+`docs/adr/0004-remover-bake-usar-so-sheets.md`. There is no more `bakedOnly` field or `bakedgroup`
+layer type — every `objectDefs` entry that isn't ground-only has `sheet`+`gids`.
 
 ### Tilesets
 
