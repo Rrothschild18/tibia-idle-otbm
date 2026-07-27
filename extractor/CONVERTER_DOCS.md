@@ -262,6 +262,46 @@ Main conversion function. Takes raw OTBM2JSON output and produces Phaser map dat
 }
 ```
 
+### Bakedgroup layer (static scenery baking)
+
+Non-animated, non-random, non-interactive items outside `border`/`roof`
+(`_is_bakeable`) are pre-composited offline into one PNG per `(tileY,
+layerClass)` instead of being placed as individual dynamic objects — see
+`docs/adr/0001-bake-unit-is-row-plus-layerclass.md` and
+`.scratch/static-scenery-baking/spec.md`. Each floor gets at most one
+`bakedgroup` layer, parallel to the `objectgroup` layers:
+
+```json
+{
+  "type": "bakedgroup",
+  "name": "BakedObjects",
+  "rows": [
+    {
+      "tileY": 12,
+      "layerClass": "object",
+      "image": "assets/{map}-sprites/baked/row_12_object.png",
+      "worldX": 320, "worldY": 384, "width": 640, "height": 32,
+      "depthOffset": 10,
+      "blockedTiles": ["10,12", "11,12"]
+    }
+  ]
+}
+```
+
+- `worldX`/`worldY` are the composited image's own top-left pixel (already
+  relative, like the rest of `map.json`) — drawing it there with origin
+  `(0,0)` reproduces the exact per-sprite `origin(1,1)` placement the
+  dynamic renderer uses.
+- `blockedTiles` (optional) lists `"tileX,tileY"` for baked tiles that had
+  `flags.unpass = true` — baked items are removed from `objectgroup`, so a
+  collision system that derives blocked tiles by scanning those arrays needs
+  this to keep walls solid.
+- An `objectDefs` entry whose every placement got baked (never appears
+  dynamically) is marked `"bakedOnly": true` and has no `spriteIds`; its
+  sprite PNG is not copied to `sprites/`.
+- `python build_phaser_map.py <map> --dump-baked-preview` prints per-row
+  dimensions/position/blocked-tile counts for manual visual sanity-checking.
+
 ### Tilesets
 
 One tileset per unique appearance ID. Used by the Ground tilelayer.

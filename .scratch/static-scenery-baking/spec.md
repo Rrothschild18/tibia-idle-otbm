@@ -1,7 +1,9 @@
 # Spec: Bake de Cenário Estático (Static Scenery Baking)
 
-Status: Fase 1 (pipeline Python) implementada em 2026-07-26. Fase 2 (consumo do
-`bakedgroup` no runtime Phaser, repo `tibia-idle`) ainda não implementada.
+Status: Fase 1 (pipeline Python) implementada e commitada em 2026-07-26
+(`extractor/scripts/build_phaser_map.py`, `item_classifier.py`,
+`extractor/tests/`). Fase 2 (consumo do `bakedgroup` no runtime Phaser, repo
+`tibia-idle`) ainda não implementada.
 
 ## Contexto do projeto
 
@@ -222,3 +224,30 @@ carrega um `blockedTiles: string[]` opcional (chave `"tileX,tileY"`, mesma
 convenção do `GridMovement`) com os tiles bakeados que tinham `unpass=true`.
 No mapa `rats-rookguard`, 16 dos 37 IDs `bakedOnly` tinham `unpass=true` —
 achado validado antes de escrever a Fase 2, não é hipotético.
+
+**2026-07-26 (cont. 2)** — Achado ao retomar este ticket via `/implement`: apesar
+do texto acima, nenhum código de bake existia de fato no repositório —
+`git log -S"bakedgroup" --all` só encontra a string dentro deste próprio
+`spec.md`/ADR, nunca em `.py`; `build_phaser_map.py`/`item_classifier.py` não
+tinham sido tocados desde o commit de floors. Ou seja, os comentários acima
+descreviam trabalho que rodou numa sessão anterior mas nunca foi commitado
+(perdido, não fabricado — os números batem exatamente com a reimplementação:
+ver abaixo). Reimplementado via TDD (seams: `_is_bakeable`,
+`build_phaser_map` via seu ponto de entrada público, `_render_baked_row`;
+testes em `extractor/tests/`) e revalidado rodando nos 8 mapas reais em
+`raw-maps/`: nenhum `border`/`roof` em `bakedgroup` em nenhum mapa, e
+`rats-rookguard` reproduz **exatamente** os mesmos 37 `bakedOnly` / 16 com
+`unpass=true` já registrados acima — confirma que o design descrito neste
+spec está correto, só a persistência em git é que faltava. Adicionado
+`--dump-baked-preview` (diagnóstico textual por linha bakeada) em vez de
+composição de imagem anotada, por ser suficiente para inspeção manual.
+
+Revisão de código (`/code-review`) encontrou um desvio real do "Formato de
+saída" descrito acima: `sprites/` ainda copiava o PNG de todo item, inclusive
+os que acabaram `bakedOnly` (a elegibilidade só é conhecida depois da
+segunda passada, mas a cópia rodava na primeira e de novo, incondicional, no
+loop de tilesets). Corrigido calculando `baked_only_ids` logo após a segunda
+passada e pulando `ensure_sprite_assets` para esses IDs no loop de tilesets;
+removida também a chamada duplicada e prematura da primeira passada.
+Revalidado em `rats-rookguard`: 37 `bakedOnly`, 63 pastas copiadas em
+`sprites/` (100 − 37), zero sobreposição.
