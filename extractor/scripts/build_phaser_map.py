@@ -67,7 +67,12 @@ OTSERVBR_MONSTER_XML = os.path.join(EXTRACTOR_DIR, "otservbr-monster.xml")
 MONSTER_SPAWN_XML = os.path.join(EXTRACTOR_DIR, "maps", MAP_NAME, f"{MAP_NAME}-monster.xml")
 OUTFITS_SPRITES_DIR = os.path.join(EXTRACTOR_DIR, "sprites", "outfits")
 MONSTERS_OUTPUT_DIR = os.path.join(OUTPUT_DIR, "monsters")
-MONSTERS_ASSETS_ROOT = posixpath.join("assets", f"{MAP_NAME}-sprites", "monsters")
+
+# Outfit atlases are baked once, globally, by bake_outfit_atlas.py — shared
+# and cached across every map that uses a given outfit, instead of each map
+# copying its own set of per-frame PNGs (see .scratch/outfit-sprite-atlas/).
+OUTFITS_ATLAS_DIR = os.path.join(EXTRACTOR_DIR, "atlases", "outfits")
+OUTFITS_ATLAS_ASSETS_ROOT = posixpath.join("assets", "outfits")
 
 os.makedirs(SPRITES_OUTPUT_DIR, exist_ok=True)
 
@@ -1134,22 +1139,24 @@ def _build_outfit_anims(outfit_id: int, data: Dict) -> Dict:
     return result
 
 
-def _copy_outfit_sprites(outfit_id: int, dest_dir: str) -> None:
-    """Copy PNG sprites of an outfit to the monster output directory."""
-    src_sub = os.path.join(OUTFITS_SPRITES_DIR, str(outfit_id))
-    ensure_directory(dest_dir)
-    if os.path.isdir(src_sub):
-        for fname in os.listdir(src_sub):
-            if fname.endswith(".png"):
-                dst = os.path.join(dest_dir, fname)
-                if not os.path.exists(dst):
-                    shutil.copy2(os.path.join(src_sub, fname), dst)
-    else:
-        src = os.path.join(OUTFITS_SPRITES_DIR, f"{outfit_id}.png")
-        if os.path.exists(src):
-            dst = os.path.join(dest_dir, f"{outfit_id}.png")
-            if not os.path.exists(dst):
-                shutil.copy2(src, dst)
+def _outfit_atlas_ref(outfit_id: int) -> Optional[Dict]:
+    """Reference to the shared, globally-baked atlas for this outfit.
+
+    Atlases are baked once by bake_outfit_atlas.py, independent of any
+    specific map. Returns None (with a warning) if that step hasn't run yet
+    for this outfit — the map build doesn't need to fail on it.
+    """
+    png_path = os.path.join(OUTFITS_ATLAS_DIR, f"{outfit_id}.png")
+    json_path = os.path.join(OUTFITS_ATLAS_DIR, f"{outfit_id}.json")
+    if not (os.path.exists(png_path) and os.path.exists(json_path)):
+        print(f"[WARN] Atlas do outfit {outfit_id} não encontrado em {OUTFITS_ATLAS_DIR} "
+              f"— rode bake_outfit_atlas.py")
+        return None
+
+    return {
+        "image": posixpath.join(OUTFITS_ATLAS_ASSETS_ROOT, f"{outfit_id}.png"),
+        "json": posixpath.join(OUTFITS_ATLAS_ASSETS_ROOT, f"{outfit_id}.json"),
+    }
 
 
 def build_monster_respawn(map_bounds: Dict) -> Optional[Dict]:
@@ -1193,15 +1200,10 @@ def build_monster_respawn(map_bounds: Dict) -> Optional[Dict]:
 
             anims = _build_outfit_anims(outfit_id, outfit_data) if outfit_data else {}
 
-            _copy_outfit_sprites(
-                outfit_id,
-                os.path.join(MONSTERS_OUTPUT_DIR, str(outfit_id)),
-            )
-
             monster_defs[outfit_id_str] = {
                 "name": name,
                 "outfitId": outfit_id,
-                "assetsPath": posixpath.join(MONSTERS_ASSETS_ROOT, str(outfit_id)),
+                "atlas": _outfit_atlas_ref(outfit_id),
                 **anims,
             }
 
@@ -1218,7 +1220,6 @@ def build_monster_respawn(map_bounds: Dict) -> Optional[Dict]:
         })
 
     respawn = {
-        "assetsRoot": MONSTERS_ASSETS_ROOT,
         "mapBoundsRef": map_bounds,
         "monsterDefs": monster_defs,
         "spawns": spawns_out,

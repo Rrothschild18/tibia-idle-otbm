@@ -262,6 +262,13 @@ Main conversion function. Takes raw OTBM2JSON output and produces Phaser map dat
 }
 ```
 
+### Outfit atlases (monstros)
+
+`monsters/<outfitId>/*.png` **não é mais gerado por mapa**. `bake_outfit_atlas.py` empacota os
+frames de cada outfit em um atlas único, gerado uma vez em `extractor/atlases/outfits/<outfitId>.{png,json}`,
+compartilhado por todos os mapas — `monsters/respawn.json` referencia esse atlas por outfit em vez
+de ter sua própria cópia dos sprites. Ver `PHASER_MONSTERS.md` e `.scratch/outfit-sprite-atlas/`.
+
 ### Bakedgroup layer (static scenery baking)
 
 Non-animated, non-random, non-interactive items outside `border`/`roof`

@@ -8,24 +8,26 @@ Documento complementar ao "Phaser Integration Guide" para carregar monstros, ani
 | File | Conteúdo |
 |------|----------|
 | `map.json` | Map layers, tilesets, objectDefs (sem monstros) |
-| `monsters/respawn.json` | Definições de monstros (animações, assets) + lista de spawns |
-| `monsters/<outfitId>/*.png` | Sprites copiadas do `sprites/outfits/<outfitId>/` |
-| `sprites/outfits/<outfitId>/<outfitId>.json` | Metadados originais do outfit (usado na geração do respawn.json) |
+| `monsters/respawn.json` | Definições de monstros (animações, referência de atlas) + lista de spawns |
+| `atlases/outfits/<outfitId>.png` + `.json` | Atlas global do outfit (gerado uma vez por `bake_outfit_atlas.py`, compartilhado por todos os mapas — ver `.scratch/outfit-sprite-atlas/`) |
+| `sprites/outfits/<outfitId>/<outfitId>.json` | Metadados originais do outfit (usado na geração do respawn.json e do atlas) |
 
-Carregue **map.json** primeiro (para obter `bounds`), depois `monsters/respawn.json`.
+Carregue **map.json** primeiro (para obter `bounds`), depois `monsters/respawn.json`. Cada mapa
+não copia mais sprites de outfit para dentro do seu próprio diretório de saída — o atlas de cada
+outfit é gerado uma única vez, globalmente, e reaproveitado (e cacheado pelo navegador) por
+qualquer mapa que o referencie.
 
 ---
 ## Estrutura de `respawn.json`
 
 ```jsonc
 {
-  "assetsRoot": "assets/<MAP>-sprites/monsters",
   "mapBoundsRef": { "minX": ..., "minY": ..., "maxX": ..., "maxY": ... },
   "monsterDefs": {
     "300": {
       "name": "Grim Reaper",
       "outfitId": 300,
-      "assetsPath": "assets/<MAP>-sprites/monsters/300",
+      "atlas": { "image": "assets/outfits/300.png", "json": "assets/outfits/300.json" },
       "idle": {
         "south": "300_0", "east": "300_1", "north": "300_2", "west": "300_3"
       },
@@ -51,7 +53,9 @@ Carregue **map.json** primeiro (para obter `bounds`), depois `monsters/respawn.j
 ```
 
 ### Campos-chave
-- `assetsRoot`: prefixo para carregar as sprites dos monstros.
+- `atlas`: caminho do par imagem+JSON do atlas global daquele outfit (`assets/outfits/<outfitId>.{png,json}`).
+  Pode ser `null` se `bake_outfit_atlas.py` ainda não rodou para aquele outfit — nesse caso o mapa
+  foi gerado mesmo assim (não é um erro fatal), mas o outfit não vai renderizar até o atlas existir.
 - `monsterDefs`: uma entrada por `outfitId` com mapeamento de animações/direções.
 - `spawns`: posição de cada spawn em coordenadas de tile (`tileX`, `tileY`), coordenadas Tibia (`worldX`, `worldY`) e o floor (`worldZ`).
 - `mapBoundsRef`: mesmo bounds do `map.json` (usado para converter coordenadas Tibia → tileX/tileY). Bounds são a união de todos os floors do mapa — ver `map.json`'s `floors`/`defaultZ` (`PHASER_INTEGRATION.md`) — então `tileX`/`tileY` já vêm corretos independente de qual floor o spawn pertence.
@@ -63,7 +67,8 @@ Carregue **map.json** primeiro (para obter `bounds`), depois `monsters/respawn.j
 Segue o guia de `OUTFIT_SPRITES_DOCUMENTATION.md` (mesmo layout Tibia):
 - 4 sprites **idle** (parado): sul, leste, norte, oeste.
 - 32 sprites **moving**: 8 frames × 4 direções, ordem sul → leste → norte → oeste.
-- Nomes de arquivo: `<outfitId>_<index>.png` dentro de `monsters/<outfitId>/`.
+- Chaves de frame: `<outfitId>_<index>` — mesmas chaves de antes, só que agora resolvidas dentro do
+  atlas do outfit (`def.atlas`) em vez de arquivos soltos em `monsters/<outfitId>/`.
 
 ---
 ## Fluxo de carregamento no Phaser (exemplo TypeScript)
@@ -73,15 +78,14 @@ async function loadMonsters(scene: Phaser.Scene, mapData: MapData) {
   const respawn = await scene.load.json('respawn', `${mapData.assetsRoot}/monsters/respawn.json`).start();
   const data = scene.cache.json.get('respawn');
 
-  // Preload sprites
+  // Preload one shared atlas per outfit instead of one image per frame.
+  // The same outfitId resolves to the same atlas key across every map, so
+  // Phaser's texture cache dedupes it automatically if it was already
+  // loaded for a previous hunt spot.
   for (const [outfitId, def] of Object.entries<any>(data.monsterDefs)) {
-    for (const frame of Object.values(def.idle)) {
-      scene.load.image(frame as string, `${def.assetsPath}/${frame}.png`);
-    }
-    for (const dir of Object.values<any>(def.moving)) {
-      for (const frame of dir.frames) {
-        scene.load.image(frame as string, `${def.assetsPath}/${frame}.png`);
-      }
+    if (!def.atlas) continue; // atlas not baked yet for this outfit
+    if (!scene.textures.exists(outfitId)) {
+      scene.load.atlas(outfitId, def.atlas.image, def.atlas.json);
     }
   }
   await scene.load.startAsync();
@@ -92,7 +96,10 @@ async function loadMonsters(scene: Phaser.Scene, mapData: MapData) {
       const key = `${outfitId}-walk-${dir}`;
       scene.anims.create({
         key,
-        frames: anim.frames.map((f: string) => ({ key: f })),
+        // frame keys reference regions inside the outfit's atlas texture,
+        // not separate textures — same frame-key strings as before, just
+        // resolved against `outfitId`'s atlas instead of their own image.
+        frames: anim.frames.map((f: string) => ({ key: outfitId, frame: f })),
         frameRate: anim.frameRate ?? 6,
         repeat: anim.loopType === 'infinite' ? -1 : 0,
       });
@@ -112,11 +119,11 @@ function spawnMonsters(scene: Phaser.Scene, mapData: MapData, respawn: any) {
     const def = respawn.monsterDefs[String(spawn.outfitId)];
     if (!def) continue;
 
-    // Escolhe frame idle sul como texture inicial
+    // Escolhe frame idle sul como frame inicial dentro do atlas do outfit
     const idleSouth = def.idle?.south || Object.values(def.idle || {})[0];
     const x = (spawn.tileX + 1) * tileSize;
     const y = (spawn.tileY + 1) * tileSize;
-    const sprite = scene.add.sprite(x, y, idleSouth);
+    const sprite = scene.add.sprite(x, y, String(spawn.outfitId), idleSouth);
     sprite.setOrigin(1, 1);
 
     // Usa animação de caminhada sul se existir
@@ -149,8 +156,10 @@ Manual overrides vivem em `item_classifier.py`; flags automáticas só atuam em 
 
 ---
 ## Checklist para usar monstros
-- [ ] Garantir que os outfits necessários estão extraídos em `sprites/outfits/<id>/`
-- [ ] Preload de sprites de `monsters/<outfitId>/`
-- [ ] Criar animações Phaser usando `moving` de cada direção
+- [ ] Garantir que os outfits necessários estão extraídos em `sprites/outfits/<id>/` e que
+      `bake_outfit_atlas.py` já gerou `atlases/outfits/<id>.{png,json}` para eles
+- [ ] Preload de um `scene.load.atlas(outfitId, ...)` por outfit referenciado (dedupado pelo cache
+      de texturas do Phaser entre mapas)
+- [ ] Criar animações Phaser usando `moving` de cada direção (frames dentro do atlas do outfit)
 - [ ] Usar `tileX/tileY` para posicionar: `(tile + 1) * 32`, origem (1,1)
 - [ ] Opcional: usar `radius`/`spawntime` para sua lógica de respawn em runtime
