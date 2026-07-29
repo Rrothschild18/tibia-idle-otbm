@@ -66,6 +66,10 @@ OTSERVBR_MONSTER_XML = os.path.join(EXTRACTOR_DIR, "otservbr-monster.xml")
 MONSTER_SPAWN_XML = os.path.join(EXTRACTOR_DIR, "maps", MAP_NAME, f"{MAP_NAME}-monster.xml")
 OUTFITS_SPRITES_DIR = os.path.join(EXTRACTOR_DIR, "sprites", "outfits")
 MONSTERS_OUTPUT_DIR = os.path.join(OUTPUT_DIR, "monsters")
+# Reference file built once by build_monster_loot_index.py from a local Canary
+# install (see monster_loot.py) — the real pipeline only ever reads this, never
+# the Canary install itself.
+MONSTER_LOOT_INDEX_PATH = os.path.join(EXTRACTOR_DIR, "monster-loot.json")
 
 # Outfit atlases are baked once, globally, by bake_outfit_atlas.py — shared
 # and cached across every map that uses a given outfit, instead of each map
@@ -925,6 +929,15 @@ def _load_monster_lookup() -> Dict[str, int]:
     return lookup
 
 
+def _load_monster_loot_index() -> Dict[str, Dict]:
+    """Parse monster-loot.json -> {monster name: {"loot": [...], "issues": [...]}}."""
+    if not os.path.exists(MONSTER_LOOT_INDEX_PATH):
+        print(f"[WARN] {MONSTER_LOOT_INDEX_PATH} não encontrado — rode build_monster_loot_index.py")
+        return {}
+    with open(MONSTER_LOOT_INDEX_PATH, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
 def _parse_spawn_xml() -> List[Dict]:
     """Parse maps/{MAP_NAME}/monster.xml → list of spawn dicts."""
     if not os.path.exists(MONSTER_SPAWN_XML):
@@ -1077,6 +1090,7 @@ def build_monster_respawn(map_bounds: Dict) -> Optional[Dict]:
     Returns None if no spawn XML is found or no spawns exist.
     """
     monster_lookup = _load_monster_lookup()
+    loot_index = _load_monster_loot_index()
     spawns_raw = _parse_spawn_xml()
 
     if not spawns_raw:
@@ -1089,6 +1103,7 @@ def build_monster_respawn(map_bounds: Dict) -> Optional[Dict]:
     monster_defs: Dict[str, Dict] = {}
     spawns_out: List[Dict] = []
     missing_names: set = set()
+    missing_loot_names: set = set()
 
     for spawn in spawns_raw:
         name = spawn["name"]
@@ -1111,10 +1126,16 @@ def build_monster_respawn(map_bounds: Dict) -> Optional[Dict]:
 
             anims = _build_outfit_anims(outfit_id, outfit_data) if outfit_data else {}
 
+            loot_entry = loot_index.get(name)
+            if loot_entry is None and name not in missing_loot_names:
+                print(f"[WARN] Loot não encontrado para monstro: '{name}' — rode build_monster_loot_index.py")
+                missing_loot_names.add(name)
+
             monster_defs[outfit_id_str] = {
                 "name": name,
                 "outfitId": outfit_id,
                 "atlas": _outfit_atlas_ref(outfit_id),
+                "loot": loot_entry["loot"] if loot_entry else [],
                 **anims,
             }
 
