@@ -65,10 +65,37 @@ qualquer mapa que o referencie.
 ## Convenções de animação de outfits
 
 Segue o guia de `OUTFIT_SPRITES_DOCUMENTATION.md` (mesmo layout Tibia):
-- 4 sprites **idle** (parado): sul, leste, norte, oeste.
+- 4 sprites **idle** (parado): sul, leste, norte, oeste — normalmente 1 sprite estática por direção.
 - 32 sprites **moving**: 8 frames × 4 direções, ordem sul → leste → norte → oeste.
 - Chaves de frame: `<outfitId>_<index>` — mesmas chaves de antes, só que agora resolvidas dentro do
   atlas do outfit (`def.atlas`) em vez de arquivos soltos em `monsters/<outfitId>/`.
+
+### Monstros com animação de IDLE (não só MOVING)
+
+Alguns outfits de monstro (ex: **Wasp** `outfitId 44`, **Ghost** `48`, **Fire Elemental** `49`) têm uma
+animação em loop mesmo parados — asas batendo, tremulação, chama — em vez de uma única sprite estática
+por direção. `extract_sprites.py` já extrai essas sprites normalmente (o filtro de addons/montarias olha
+`patternHeight`/`patternDepth`/`layers`, não a contagem total de sprites — ver `README.md`), e
+`build_phaser_map.py` reflete isso no formato de `idle` do `respawn.json`:
+
+- **Idle estático** (caso comum): `def.idle[dir]` é uma **string** — a chave de um único frame.
+  ```jsonc
+  "idle": { "south": "300_0", "east": "300_1", "north": "300_2", "west": "300_3" }
+  ```
+- **Idle animado** (Wasp/Ghost/Fire Elemental e outros ~150 outfits de criatura): `def.idle[dir]` é um
+  **objeto** com o mesmo formato de `moving[dir]` — `{ frames, frameRate, loopType }`.
+  ```jsonc
+  "idle": {
+    "south": { "frames": ["44_0", "44_1", ..., "44_7"], "frameRate": 10, "loopType": "infinite" },
+    "east":  { "frames": ["44_8", "44_9", ..., "44_15"], "frameRate": 10, "loopType": "infinite" },
+    "north": { "frames": ["44_16", ..., "44_23"], "frameRate": 10, "loopType": "infinite" },
+    "west":  { "frames": ["44_24", ..., "44_31"], "frameRate": 10, "loopType": "infinite" }
+  }
+  ```
+
+O consumidor Phaser deve checar o tipo de `def.idle[dir]` (`string` vs `object`) para decidir entre
+`sprite.setFrame(...)` (estático) e `sprite.play(...)` com uma anim criada a partir de `frames`
+(animado) — ver `loadMonsters`/`spawnMonsters` abaixo.
 
 ---
 ## Fluxo de carregamento no Phaser (exemplo TypeScript)
@@ -104,6 +131,21 @@ async function loadMonsters(scene: Phaser.Scene, mapData: MapData) {
         repeat: anim.loopType === 'infinite' ? -1 : 0,
       });
     }
+
+    // Most outfits have a static idle (def.idle[dir] is a frame-key string)
+    // and don't need an anim here. Creature outfits with a looping idle
+    // (Wasp/Ghost/Fire Elemental — see "Monstros com animação de IDLE"
+    // above) instead have def.idle[dir] as an { frames, frameRate, loopType }
+    // object, same shape as moving — create an anim for those too.
+    for (const [dir, idle] of Object.entries<any>(def.idle || {})) {
+      if (typeof idle !== 'object') continue;
+      scene.anims.create({
+        key: `${outfitId}-idle-${dir}`,
+        frames: idle.frames.map((f: string) => ({ key: outfitId, frame: f })),
+        frameRate: idle.frameRate ?? 6,
+        repeat: idle.loopType === 'infinite' ? -1 : 0,
+      });
+    }
   }
 
   return data;
@@ -119,17 +161,28 @@ function spawnMonsters(scene: Phaser.Scene, mapData: MapData, respawn: any) {
     const def = respawn.monsterDefs[String(spawn.outfitId)];
     if (!def) continue;
 
-    // Escolhe frame idle sul como frame inicial dentro do atlas do outfit
-    const idleSouth = def.idle?.south || Object.values(def.idle || {})[0];
+    // idleSouth may be a static frame key (string) or an animated idle
+    // ({ frames, frameRate, loopType }) — see "Monstros com animação de
+    // IDLE" above. Only pull a frame key out of it for the sprite's
+    // initial texture; the anim (if any) is applied below.
+    const idleSouth = def.idle?.south ?? Object.values(def.idle || {})[0];
+    const initialFrame = typeof idleSouth === 'object' ? idleSouth.frames[0] : idleSouth;
     const x = (spawn.tileX + 1) * tileSize;
     const y = (spawn.tileY + 1) * tileSize;
-    const sprite = scene.add.sprite(x, y, String(spawn.outfitId), idleSouth);
+    const sprite = scene.add.sprite(x, y, String(spawn.outfitId), initialFrame);
     sprite.setOrigin(1, 1);
 
     // Usa animação de caminhada sul se existir
     const walkKey = `${spawn.outfitId}-walk-south`;
     if (scene.anims.exists(walkKey)) {
       sprite.play(walkKey);
+      continue;
+    }
+
+    // Parado, mas com animação de idle (Wasp/Ghost/Fire Elemental etc.)
+    const idleKey = `${spawn.outfitId}-idle-south`;
+    if (scene.anims.exists(idleKey)) {
+      sprite.play(idleKey);
     }
   }
 }

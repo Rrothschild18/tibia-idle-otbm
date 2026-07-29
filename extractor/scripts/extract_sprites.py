@@ -24,10 +24,6 @@ ENABLED_GROUPS = [
 
 OUT_DIR = os.path.join(EXTRACTOR_DIR, "sprites")
 
-# Limite máximo de sprites para outfits.
-# Outfits padrão têm 36 sprites (4 idle + 32 moving).
-# Outfits maiores (64+) possuem addons/layers/montarias.
-MAX_OUTFIT_SPRITES = 36
 
 
 # =========================
@@ -104,6 +100,25 @@ def animation_to_dict(animation):
 # CORE
 # =========================
 
+def outfit_has_addons_or_mounts(appearance) -> bool:
+    """True if this outfit's sprite count is inflated by addons/mounts/extra
+    layers rather than by animation.
+
+    patternWidth is always 4 (the cardinal directions) for outfits; the axes
+    that actually multiply sprite count beyond direction*animation-phases
+    are patternHeight (mount presence), patternDepth (addon variants) and
+    layers (outfit+mount composited layers). A creature with a looping IDLE
+    animation (e.g. Wasp/Ghost/Fire Elemental — wings, flicker, flame) also
+    ends up with well over 36 total sprites, but keeps height/depth/layers
+    at 1, so it's not mistaken for an addon/mount outfit here.
+    """
+    for fg in appearance.frame_group:
+        info = fg.sprite_info
+        if info.pattern_height > 1 or info.pattern_depth > 1 or info.layers > 1:
+            return True
+    return False
+
+
 def get_frame_group_name(frame_group):
     """Retorna o nome do frame group ou None."""
     if frame_group.HasField("fixed_frame_group"):
@@ -133,14 +148,12 @@ def extract_group(appearances, group_name: str):
         app_id = appearance.id
         sprite_data_offset = 0
 
-        # Outfits com muitas sprites são ignorados (ex: animações completas de outfit)
-        if group_name == "outfits":
-            total_sprites = sum(
-                len(fg.sprite_info.sprite_id) for fg in appearance.frame_group
-            )
-            if total_sprites > MAX_OUTFIT_SPRITES:
-                skipped += 1
-                continue
+        # Outfits com addons/montarias/camadas extras são ignorados (ver
+        # outfit_has_addons_or_mounts). Outfits de monstro com animação de
+        # IDLE (não só MOVING) NÃO são ignorados aqui.
+        if group_name == "outfits" and outfit_has_addons_or_mounts(appearance):
+            skipped += 1
+            continue
 
         # Processa múltiplos frame groups (IDLE, MOVING, etc.)
         frame_groups_data = []
@@ -280,7 +293,7 @@ def extract_group(appearances, group_name: str):
 
     print(f"✔ {group_name}: {total_pngs} PNGs extraídos")
     if skipped:
-        print(f"  ⏭ {skipped} outfits ignorados (>{MAX_OUTFIT_SPRITES} sprites)")
+        print(f"  ⏭ {skipped} outfits ignorados (addons/montarias/camadas extras)")
 
 
 # =========================

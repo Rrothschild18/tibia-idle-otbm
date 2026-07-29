@@ -85,7 +85,7 @@ def test_object_def_gets_sheet_and_gids_instead_of_sprite_ids(monkeypatch, tmp_p
     assert "object-32" in result["sheets"]
     assert result["sheets"]["object-32"]["cellWidth"] == 32
     assert result["sheets"]["object-32"]["columns"] == 16
-    assert result["version"] == 4
+    assert result["version"] == 5
 
     sheet_png = tmp_path / "sheets" / "object-32.png"
     assert sheet_png.exists()
