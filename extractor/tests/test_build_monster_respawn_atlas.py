@@ -40,6 +40,47 @@ def test_monster_def_references_shared_atlas_when_it_exists(tmp_path, monkeypatc
     }
 
 
+def test_idle_frame_group_with_multiple_frames_builds_an_animation(tmp_path, monkeypatch):
+    # Wasp (outfit 44), Ghost (48), Fire Elemental (49) loop an animation
+    # while idle too (wings/flicker/flame), not just while moving — their
+    # idle frame group carries 8 frames per direction instead of 1.
+    atlas_dir = tmp_path / "atlases_outfits"
+    atlas_dir.mkdir()
+    (atlas_dir / "44.png").write_bytes(b"")
+    (atlas_dir / "44.json").write_text("{}", encoding="utf-8")
+
+    monkeypatch.setattr(bpm, "OUTFITS_ATLAS_DIR", str(atlas_dir))
+    monkeypatch.setattr(bpm, "OUTFITS_ATLAS_ASSETS_ROOT", "assets/outfits")
+    monkeypatch.setattr(bpm, "MONSTERS_OUTPUT_DIR", str(tmp_path / "monsters"))
+    monkeypatch.setattr(bpm, "_load_outfit_json", lambda outfit_id: {
+        "frameGroups": [
+            {
+                "spriteId": [f"44_{i}" for i in range(8)],
+                "frameGroup": "idle",
+                "spriteInfo": {
+                    "patternWidth": 1,
+                    "animation": {
+                        "loopType": "ANIMATION_LOOP_TYPE_INFINITE",
+                        "spritePhase": [{"durationMin": 100, "durationMax": 100}] * 8,
+                    },
+                },
+            },
+        ]
+    })
+    _stub_single_spawn(monkeypatch, outfit_id=44, name="Wasp")
+
+    result = bpm.build_monster_respawn({"minX": 0, "minY": 0})
+
+    monster_def = result["monsterDefs"]["44"]
+    assert monster_def["idle"] == {
+        "south": {
+            "frames": [f"44_{i}" for i in range(8)],
+            "frameRate": 10.0,
+            "loopType": "infinite",
+        }
+    }
+
+
 def test_monster_def_atlas_is_none_when_not_yet_baked(tmp_path, monkeypatch):
     monkeypatch.setattr(bpm, "OUTFITS_ATLAS_DIR", str(tmp_path / "no-such-atlas-dir"))
     monkeypatch.setattr(bpm, "OUTFITS_ATLAS_ASSETS_ROOT", "assets/outfits")

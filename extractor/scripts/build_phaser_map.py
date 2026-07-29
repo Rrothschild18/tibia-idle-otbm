@@ -609,7 +609,6 @@ def build_phaser_map(dump: Dict) -> Dict:
     ground_tiles: Dict[int, Dict[Tuple[int, int], int]] = {}
     raw_item_stacks: Dict[Tuple[int, int, int], List[Tuple[int, Dict]]] = {}
     animations: Dict[int, Dict] = {}
-    all_tile_ids = set()
     all_zs: Set[int] = set()
 
     min_x = min_y = 10**9
@@ -653,8 +652,6 @@ def build_phaser_map(dump: Dict) -> Dict:
                 tile_ground = tile.get("tileid")
                 if tile_ground is not None:
                     ground_analysis = analyze_item(tile_ground)
-                    ensure_sprite_assets(ground_analysis)
-                    all_tile_ids.add(tile_ground)
 
                     if _is_roof_tile(ground_analysis):
                         # Redirect to item stacks so classify_layer sends
@@ -674,7 +671,6 @@ def build_phaser_map(dump: Dict) -> Dict:
                         continue
 
                     analysis = analyze_item(appearance_id)
-                    all_tile_ids.add(appearance_id)
 
                     if analysis.get("animated", False) and appearance_id not in animations:
                         animations[appearance_id] = analysis["animation"]
@@ -715,36 +711,54 @@ def build_phaser_map(dump: Dict) -> Dict:
             target = objects_for_floor.get(layer_class, objects_for_floor["object"])
             target.setdefault((x, y), []).append(entry)
 
-    # ── Build tilesets ──
+    # ── Pack ground appearances into grid sheets (map.json v5) ──
+    # Reuses the same SheetPacker as objectDefs (layerClass "ground"), so the
+    # Ground tilelayer needs only 1-3 tileset entries (one per size bucket in
+    # use) instead of one legacy single-tile tileset per unique appearance —
+    # see docs/adr/0005-map-json-v5-ground-sheets.md.
+    ground_appearance_ids: Set[int] = {
+        appearance_id
+        for tiles in ground_tiles.values()
+        for appearance_id in tiles.values()
+    }
+
+    ground_local_gid: Dict[int, Tuple[str, int]] = {}
+    for appearance_id in sorted(ground_appearance_ids):
+        analysis = analyze_item(appearance_id)
+        sprite = next((r for r in analysis["sprites"] if r["available"]), None)
+        sprite_width = sprite["width"] if sprite else TILE_SIZE
+        sprite_height = sprite["height"] if sprite else TILE_SIZE
+
+        sheet_key, gids = SHEET_PACKER.add_appearance(appearance_id, "ground", sprite_width, sprite_height)
+        local_gid = gids[0]
+        ground_local_gid[appearance_id] = (sheet_key, local_gid)
+        if sprite:
+            SHEET_FRAME_SOURCES.setdefault(sheet_key, {})[local_gid] = sprite["sourcePath"]
+
+    ground_by_sheet: Dict[str, List[Tuple[int, int]]] = {}
+    for appearance_id, (sheet_key, local_gid) in ground_local_gid.items():
+        ground_by_sheet.setdefault(sheet_key, []).append((appearance_id, local_gid))
+
     gid_lookup: Dict[int, int] = {}
     tilesets: List[Dict] = []
     current_gid = 1
 
-    for appearance_id in sorted(all_tile_ids):
-        analysis = analyze_item(appearance_id)
-        ensure_sprite_assets(analysis)
-        sprite = next(
-            (r for r in analysis["sprites"] if r["available"]), None
-        )
-        image_path = sprite["destPath"] if sprite else build_asset_path(
-            appearance_id, str(appearance_id)
-        )
-        image_width = sprite["width"] if sprite else TILE_SIZE
-        image_height = sprite["height"] if sprite else TILE_SIZE
-
-        gid_lookup[appearance_id] = current_gid
+    for sheet_key in sorted(ground_by_sheet):
+        dims = SHEET_PACKER.sheet_dims(sheet_key)
         tilesets.append({
             "firstgid": current_gid,
-            "name": f"tile-{appearance_id}",
-            "tilewidth": TILE_SIZE,
-            "tileheight": TILE_SIZE,
-            "tilecount": 1,
-            "columns": 1,
-            "image": image_path,
-            "imagewidth": image_width,
-            "imageheight": image_height,
+            "name": sheet_key,
+            "tilewidth": dims["cellSize"],
+            "tileheight": dims["cellSize"],
+            "tilecount": dims["totalCells"],
+            "columns": dims["columns"],
+            "image": posixpath.join(ASSETS_ROOT, "sheets", f"{sheet_key}.png"),
+            "imagewidth": dims["pixelWidth"],
+            "imageheight": dims["pixelHeight"],
         })
-        current_gid += 1
+        for appearance_id, local_gid in ground_by_sheet[sheet_key]:
+            gid_lookup[appearance_id] = current_gid + local_gid
+        current_gid += dims["totalCells"]
 
     # ── Build layers, once per floor ──
     # Objectgroup layers with increasing depth offsets
@@ -841,7 +855,7 @@ def build_phaser_map(dump: Dict) -> Dict:
         }
 
     return {
-        "version": 4,
+        "version": 5,
         "orientation": "orthogonal",
         "renderorder": "right-down",
         "tilewidth": TILE_SIZE,
@@ -953,13 +967,41 @@ def _load_outfit_json(outfit_id: int) -> Optional[Dict]:
     return None
 
 
+def _animation_timing(sprite_info: Dict) -> Tuple[float, str]:
+    """(frameRate, loopType) derived from a frame group's animation block,
+    falling back to a sane default (6 fps, infinite) when absent."""
+    frame_rate = 6.0
+    loop_type = "infinite"
+    anim = sprite_info.get("animation")
+    if anim:
+        phases = anim.get("spritePhase", [])
+        if phases:
+            avg_ms = sum(
+                (p.get("durationMin", 300) + p.get("durationMax", 300)) / 2
+                for p in phases
+            ) / len(phases)
+            frame_rate = round(1000 / max(avg_ms, 1), 2)
+        loop_type = "infinite" if "INFINITE" in anim.get("loopType", "") else "once"
+    return frame_rate, loop_type
+
+
 def _build_outfit_anims(outfit_id: int, data: Dict) -> Dict:
     """Build idle/moving animation data per direction from outfit JSON.
 
     Layout (see OUTFIT_SPRITES_DOCUMENTATION.md):
       - patternWidth directions in order: south, east, north, west
-      - idle:   1 sprite per direction  (indices 0-3)
+      - idle:   usually 1 static sprite per direction, BUT some creature
+        outfits (Wasp, Ghost, Fire Elemental — see outfit_has_addons_or_mounts
+        in extract_sprites.py) loop an animation while idle too (wings,
+        flicker, flame), so their idle frame group carries multiple frames
+        per direction just like moving does.
       - moving: N frames per direction  (indices 4 onward, each dir*N)
+
+    `idle` is a dict per direction whose value is either a plain sprite-key
+    string (static outfits — the common case) or, when the idle frame group
+    itself has more than one frame per direction, an object shaped exactly
+    like `moving`'s: `{frames, frameRate, loopType}`. See PHASER_MONSTERS.md
+    for how the Phaser side should tell the two apart.
     """
     result: Dict = {}
     frame_groups = data.get("frameGroups")
@@ -985,28 +1027,21 @@ def _build_outfit_anims(outfit_id: int, data: Dict) -> Dict:
         }
 
         if fg_type == "idle":
-            result["idle"] = {
-                d: frames[0] if frames else str(outfit_id)
-                for d, frames in dir_sprites.items()
-            }
+            idle_animates = frames_per_dir > 1
+            if idle_animates:
+                frame_rate, loop_type = _animation_timing(sprite_info)
+                result["idle"] = {
+                    d: {"frames": frames, "frameRate": frame_rate, "loopType": loop_type}
+                    for d, frames in dir_sprites.items()
+                }
+            else:
+                result["idle"] = {
+                    d: frames[0] if frames else str(outfit_id)
+                    for d, frames in dir_sprites.items()
+                }
 
         elif fg_type == "moving":
-            frame_rate = 6.0
-            loop_type = "infinite"
-            anim = sprite_info.get("animation")
-            if anim:
-                phases = anim.get("spritePhase", [])
-                if phases:
-                    avg_ms = sum(
-                        (p.get("durationMin", 300) + p.get("durationMax", 300)) / 2
-                        for p in phases
-                    ) / len(phases)
-                    frame_rate = round(1000 / max(avg_ms, 1), 2)
-                if "INFINITE" in anim.get("loopType", ""):
-                    loop_type = "infinite"
-                else:
-                    loop_type = "once"
-
+            frame_rate, loop_type = _animation_timing(sprite_info)
             result["moving"] = {
                 d: {"frames": frames, "frameRate": frame_rate, "loopType": loop_type}
                 for d, frames in dir_sprites.items()

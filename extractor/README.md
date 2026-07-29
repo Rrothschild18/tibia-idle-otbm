@@ -132,9 +132,13 @@ O item existe no mapa mas o PNG do sprite não foi encontrado em
 só fica sem essa imagem.
 
 **Outfit de monstro não aparece / veio incompleto**
-`extract_sprites.py` ignora outfits com mais de `MAX_OUTFIT_SPRITES` (36)
-sprites — outfits com addons/montarias grandes são pulados de propósito.
-Ajuste essa constante no topo do script se precisar incluí-los.
+`extract_sprites.py` ignora outfits cujo `patternHeight`, `patternDepth` ou
+`layers` seja maior que 1 em algum frame group (`outfit_has_addons_or_mounts`)
+— sinal de addon/montaria/camada extra, pulados de propósito. Outfits de
+monstro com animação contínua no IDLE (ex: Wasp, Ghost, Fire Elemental —
+mais de 36 sprites só por causa das fases de animação, não de addons) **são**
+extraídos normalmente. Veja `PHASER_MONSTERS.md` para como o `idle` desses
+outfits é representado no `respawn.json`.
 
 ### Monstros
 
