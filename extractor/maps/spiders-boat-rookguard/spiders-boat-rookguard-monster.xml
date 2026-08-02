@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<monsters>
+	<monster centerx="1007" centery="1011" centerz="7" radius="3">
+		<monster name="Spider" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1013" centery="1011" centerz="7" radius="3">
+		<monster name="Spider" x="2" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="999" centery="1012" centerz="7" radius="3">
+		<monster name="Bug" x="-1" y="-1" z="7" spawntime="60" />
+	</monster>
+	<monster centerx="1007" centery="1017" centerz="7" radius="3">
+		<monster name="Spider" x="-1" y="-2" z="7" spawntime="90" />
+		<monster name="Spider" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1014" centery="1017" centerz="7" radius="3">
+		<monster name="Spider" x="-3" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1021" centery="1017" centerz="7" radius="3">
+		<monster name="Spider" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1027" centery="1018" centerz="7" radius="3" />
+	<monster centerx="1034" centery="1018" centerz="7" radius="3">
+		<monster name="Spider" x="0" y="-2" z="7" spawntime="60" />
+		<monster name="Spider" x="-2" y="0" z="7" spawntime="60" />
+		<monster name="Spider" x="-1" y="2" z="7" spawntime="60" />
+	</monster>
+	<monster centerx="1000" centery="1021" centerz="7" radius="3">
+		<monster name="Bug" x="-3" y="-3" z="7" spawntime="90" />
+		<monster name="Bug" x="-3" y="0" z="7" spawntime="60" />
+		<monster name="Bug" x="0" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1007" centery="1024" centerz="7" radius="3">
+		<monster name="Bug" x="-1" y="-1" z="7" spawntime="90" />
+		<monster name="Bug" x="-1" y="1" z="7" spawntime="90" />
+		<monster name="Bug" x="2" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1014" centery="1024" centerz="7" radius="3">
+		<monster name="Poison Spider" x="-1" y="-2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1021" centery="1024" centerz="7" radius="3">
+		<monster name="Poison Spider" x="2" y="-3" z="7" spawntime="90" />
+		<monster name="Spider" x="-3" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1018" centery="1030" centerz="7" radius="3">
+		<monster name="Spider" x="0" y="-1" z="7" spawntime="60" />
+	</monster>
+	<monster centerx="1027" centery="1030" centerz="7" radius="3">
+		<monster name="Poison Spider" x="-1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1005" centery="1032" centerz="7" radius="3">
+		<monster name="Bug" x="-1" y="-1" z="7" spawntime="60" />
+		<monster name="Bug" x="-1" y="0" z="7" spawntime="90" />
+		<monster name="Bug" x="1" y="1" z="7" spawntime="60" />
+	</monster>
+	<monster centerx="1032" centery="1035" centerz="7" radius="3">
+		<monster name="Spider" x="1" y="-3" z="7" spawntime="60" />
+		<monster name="Bug" x="0" y="-1" z="7" spawntime="60" />
+		<monster name="Spider" x="-1" y="0" z="7" spawntime="60" />
+	</monster>
+	<monster centerx="1000" centery="1038" centerz="7" radius="3">
+		<monster name="Bug" x="-3" y="0" z="7" spawntime="1024" />
+		<monster name="Bug" x="-2" y="0" z="7" spawntime="60" />
+		<monster name="Bug" x="1" y="1" z="7" spawntime="60" />
+	</monster>
+</monsters>

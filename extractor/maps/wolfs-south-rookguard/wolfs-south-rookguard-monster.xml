@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<monsters>
+	<monster centerx="1024" centery="1013" centerz="7" radius="3">
+		<monster name="Wolf" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1016" centery="1014" centerz="7" radius="3">
+		<monster name="Wolf" x="-1" y="-3" z="7" spawntime="60" />
+	</monster>
+	<monster centerx="1009" centery="1016" centerz="7" radius="3">
+		<monster name="Wolf" x="-3" y="-3" z="7" spawntime="60" />
+		<monster name="Wolf" x="-1" y="-1" z="7" spawntime="60" />
+	</monster>
+	<monster centerx="1017" centery="1020" centerz="7" radius="3">
+		<monster name="Wolf" x="1" y="-1" z="7" spawntime="90" />
+		<monster name="Wolf" x="2" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1024" centery="1020" centerz="7" radius="3">
+		<monster name="Wolf" x="0" y="1" z="7" spawntime="60" />
+	</monster>
+	<monster centerx="1029" centery="1024" centerz="7" radius="3">
+		<monster name="Wolf" x="-1" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1036" centery="1024" centerz="7" radius="3">
+		<monster name="Wolf" x="-2" y="-1" z="7" spawntime="90" />
+		<monster name="Wolf" x="0" y="-1" z="7" spawntime="60" />
+	</monster>
+	<monster centerx="1010" centery="1025" centerz="7" radius="3">
+		<monster name="Wolf" x="0" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1016" centery="1027" centerz="7" radius="3">
+		<monster name="Wolf" x="1" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1024" centery="1027" centerz="7" radius="3">
+		<monster name="Wolf" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1016" centery="1035" centerz="7" radius="3">
+		<monster name="Wolf" x="0" y="1" z="7" spawntime="60" />
+	</monster>
+</monsters>

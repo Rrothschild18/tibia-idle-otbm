@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<monsters>
+	<monster centerx="1008" centery="1016" centerz="7" radius="3">
+		<monster name="Minotaur Mage" x="3" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1015" centery="1023" centerz="7" radius="3">
+		<monster name="Minotaur" x="3" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1022" centery="1023" centerz="7" radius="3">
+		<monster name="Wolf" x="3" y="1" z="7" spawntime="90" />
+		<monster name="Wolf" x="2" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1015" centery="1030" centerz="7" radius="3">
+		<monster name="Minotaur" x="2" y="-2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1022" centery="1030" centerz="7" radius="3">
+		<monster name="Minotaur" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1029" centery="1030" centerz="7" radius="3">
+		<monster name="Minotaur" x="-3" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1029" centery="1037" centerz="7" radius="3">
+		<monster name="Minotaur" x="2" y="-2" z="7" spawntime="90" />
+	</monster>
+</monsters>

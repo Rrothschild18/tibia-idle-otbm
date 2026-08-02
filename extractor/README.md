@@ -10,6 +10,7 @@ Para detalhes internos do formato de saída (`map.json`, flags, layers), veja
 node extractor/scripts/build_map.js <nome-do-mapa>   # gera só esse mapa
 node extractor/scripts/build_map.js --all            # gera todos os mapas encontrados
 npm run build-map -- --all                           # atalho para o comando acima
+npm run build-items                                  # bake global de sprites de item (ver abaixo)
 ```
 
 ## Como adicionar um mapa novo
@@ -59,6 +60,21 @@ node extractor/scripts/build_map.js orc-fortress
 
 Saída: `extractor/ready-maps/orc-fortress/`.
 
+5. Se o mapa novo introduz itens (loot, equipamento em NPC, etc.) que ainda não foram baked, rode
+   também:
+   ```
+   npm run build-items
+   ```
+   Isso gera/atualiza, de forma **global** (não por mapa — o mesmo conjunto de assets serve todos
+   os mapas): `extractor/atlases/items/` (atlas por item animado), `extractor/atlases/items-static/`
+   (sheets estáticas compartilhadas) e `extractor/atlases/items-index.json` (índice `itemId →
+   localização do sprite`, consumido pelo repositório `tibia-idle`). Não é chamado automaticamente
+   por `build_map.js` — mesmo padrão já usado pelo atlas de outfit (`bake_outfit_atlas.py`, também
+   um passo manual separado) — porque é global e caro (~2min no dado real), então rodar em toda
+   invocação de `build_map.js` penalizaria até rebuilds repetidos do mesmo mapa durante iteração.
+   Rode sempre que adicionar/mudar itens, não a cada build de mapa. Ver
+   `.scratch/item-sprite-sheets/spec.md` para o contrato completo.
+
 ## Estrutura de pastas
 
 ```
@@ -69,12 +85,18 @@ extractor/
     build_map.js       runner: 1 mapa ou --all, chama as duas etapas
     extract_sprites.py  etapa 0 (avulsa): .aec → extractor/sprites/ (biblioteca compartilhada)
     item_classifier.py  overrides manuais de classificação de layer
+    bake_outfit_atlas.py  bake global (avulso): sprites/outfits/ → atlases/outfits/<id>.{png,json}
+    bake_item_atlas.py     bake global (avulso): item animado → atlases/items/<id>.{png,json}
+    bake_item_sheets.py    bake global (avulso): itens estáticos → atlases/items-static/*.{png,json}
+    build_item_index.py    bake global (avulso): junta os dois bakes acima → atlases/items-index.json
+    build_items.js         runner: chama os três bakes de item acima em sequência (npm run build-items)
   vendor/
     otbm2json.js       lib de leitura/escrita de OTBM (vendorizada, não é do npm)
   maps/<nome>/          SOURCE — .otbm + xmls de cada mapa (versionado)
   raw-maps/<nome>.raw.json   saída da etapa 1 (gitignored, regenerável)
   ready-maps/<nome>/         saída da etapa 2 (gitignored, regenerável)
   sprites/              biblioteca de sprites extraída dos .aec (gitignored, binário grande)
+  atlases/              saída dos bakes globais (outfits/items/items-static + items-index.json), gitignored, regenerável
   otservbr-monster.xml  lookup nome→looktype de monstro, compartilhado entre mapas
   *.aec                 assets binários do cliente Tibia (gitignored)
   _legacy/              scripts antigos/exploratórios, não fazem parte do pipeline
