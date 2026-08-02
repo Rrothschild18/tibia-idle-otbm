@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<monsters>
+	<monster centerx="1018" centery="1017" centerz="7" radius="3">
+		<monster name="Bear" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1026" centery="1023" centerz="7" radius="3">
+		<monster name="Bear" x="3" y="-3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1040" centery="1023" centerz="7" radius="3">
+		<monster name="Bear" x="2" y="-3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1004" centery="1025" centerz="7" radius="3">
+		<monster name="Bear" x="3" y="1" z="7" spawntime="60" />
+	</monster>
+	<monster centerx="1012" centery="1030" centerz="7" radius="3">
+		<monster name="Bear" x="3" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1033" centery="1030" centerz="7" radius="3">
+		<monster name="Bear" x="2" y="-2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1027" centery="1035" centerz="7" radius="3">
+		<monster name="Bear" x="-1" y="0" z="7" spawntime="90" />
+		<monster name="Bear" x="-1" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1012" centery="1037" centerz="7" radius="3">
+		<monster name="Bear" x="2" y="2" z="7" spawntime="90" />
+	</monster>
+</monsters>

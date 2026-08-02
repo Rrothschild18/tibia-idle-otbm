@@ -1,5 +1,6 @@
 {
   "scripts": {
-    "build-map": "node extractor/scripts/build_map.js"
+    "build-map": "node extractor/scripts/build_map.js",
+    "build-items": "node extractor/scripts/build_items.js"
   }
 }

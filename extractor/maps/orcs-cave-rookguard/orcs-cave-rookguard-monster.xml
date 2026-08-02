@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<monsters>
+	<monster centerx="1016" centery="1013" centerz="7" radius="1" />
+	<monster centerx="1013" centery="1016" centerz="7" radius="3">
+		<monster name="Wolf" x="3" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1006" centery="1023" centerz="7" radius="3">
+		<monster name="Orc" x="3" y="-3" z="7" spawntime="90" />
+		<monster name="Orc" x="3" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1013" centery="1023" centerz="7" radius="3">
+		<monster name="Orc" x="1" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1020" centery="1023" centerz="7" radius="3">
+		<monster name="Orc" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1006" centery="1030" centerz="7" radius="3">
+		<monster name="Orc" x="2" y="1" z="7" spawntime="90" />
+		<monster name="Orc" x="3" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1020" centery="1030" centerz="7" radius="3">
+		<monster name="Orc" x="0" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1027" centery="1030" centerz="7" radius="3">
+		<monster name="Minotaur" x="-3" y="-3" z="7" spawntime="90" />
+		<monster name="Minotaur" x="-3" y="-2" z="7" spawntime="90" />
+		<monster name="Orc" x="-2" y="2" z="7" spawntime="90" />
+		<monster name="Wolf" x="0" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1020" centery="1037" centerz="7" radius="3">
+		<monster name="Orc" x="3" y="-3" z="7" spawntime="90" />
+	</monster>
+</monsters>
