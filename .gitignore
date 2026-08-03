@@ -14,5 +14,14 @@ extractor/atlases/
 extractor/raw-maps/**
 extractor/ready-maps/**
 
+# Full-city map output (extractor/full-maps/<name>/): map.json + metadata.json
+# ARE versioned (inspection artifact for the travel-graph pipeline — see
+# .scratch/travel-graph-and-locations), but the baked sheet PNGs and the
+# review-only db-fragment.json (build_travel_fragment.py, no --write-db) are
+# not (binary/regenerable and a local-review scratch file, respectively —
+# same reasoning as ready-maps/** above).
+extractor/full-maps/*/sheets/
+extractor/full-maps/*/db-fragment.json
+
 __pycache__/
 *.pyc

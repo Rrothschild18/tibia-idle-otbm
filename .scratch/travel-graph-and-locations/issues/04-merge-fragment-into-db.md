@@ -10,4 +10,21 @@
 - [ ] Uma Location já existente com campo curado (`displayName`) não é sobrescrita numa nova rodada — só campos mecânicos são atualizados
 - [ ] Uma Location nova (id ainda não presente no `db.json`) é adicionada como rascunho, sinalizada pra revisão
 - [ ] `travelGraph` é sempre upsertado por par (mecânico, sem curação humana envolvida)
-- [ ] Comportamento de upsert/append-only coberto por testes, no mesmo estilo dos testes já existentes para `merge_fragment_into_db` em `hunt_fragment.py`
+- [x] Comportamento de upsert/append-only coberto por testes, no mesmo estilo dos testes já existentes para `merge_fragment_into_db` em `hunt_fragment.py`
+
+## Comments
+
+Implementado como `extractor/scripts/build_travel_fragment.py` (CLI, mesmo padrão de
+`build_hunt_fragment.py`) sobre `merge_locations_into_db`/`merge_travel_graph_into_db`/
+`merge_travel_fragment_into_db` em `travel_graph.py`. Diferença importante em relação ao
+precedente de `hunts` (append-only por mapId inteiro): aqui o merge é **por campo**, não por
+entrada — `merge_locations_into_db` sempre atualiza posição/tipo/shop, mas preserva `displayName`
+(e o flag `_todo`) de uma entrada já existente sempre que ela ainda estiver no db, e só usa o
+placeholder gerado quando a location é nova. `travelGraph` é upsertado por par não-ordenado
+(`frozenset({from, to})`) — sem noção de curação, sempre mecânico.
+
+Sem `--write-db`, escreve fragmento em `extractor/full-maps/<region>/db-fragment.json` (adicionado
+ao `.gitignore`, mesmo tratamento do `ready-maps/**` para hunts). Rodado ponta a ponta contra
+`rook-full` (dry-run, sem `--write-db`): 15 locations de NPC geradas corretamente; 0 locations de
+sign/travelGraph até as 12 placas legadas serem migradas pro novo formato (ver comentário do
+ticket 02) — comportamento esperado, não um bug deste ticket.
