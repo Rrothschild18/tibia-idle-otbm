@@ -11,6 +11,10 @@ node extractor/scripts/build_map.js <nome-do-mapa>   # gera só esse mapa
 node extractor/scripts/build_map.js --all            # gera todos os mapas encontrados
 npm run build-map -- --all                           # atalho para o comando acima
 npm run build-items                                  # bake global de sprites de item (ver abaixo)
+python extractor/scripts/build_hunt_fragment.py <nome-do-mapa> --map-id ROOK-00NN
+                                                      # gera db-fragment.json (hunts/monsters/loot) —
+                                                      # nunca escreve em db.json, ver seção 6 abaixo
+python extractor/scripts/sync_items_to_tibia_idle.py # publica atlases de item no repo tibia-idle
 ```
 
 ## Como adicionar um mapa novo
@@ -74,6 +78,41 @@ Saída: `extractor/ready-maps/orc-fortress/`.
    invocação de `build_map.js` penalizaria até rebuilds repetidos do mesmo mapa durante iteração.
    Rode sempre que adicionar/mudar itens, não a cada build de mapa. Ver
    `.scratch/item-sprite-sheets/spec.md` para o contrato completo.
+6. Gere o fragmento de dados de jogo do mapa (hunts/monsters/loot) para colar manualmente
+   no `db.json` do repositório `tibia-idle`:
+   ```
+   python extractor/scripts/build_hunt_fragment.py <nome> --map-id ROOK-00NN
+   ```
+   Saída: `extractor/ready-maps/<nome>/db-fragment.json`. Por padrão **este script nunca
+   escreve em `db.json`** — `monsters` e `loot` no fragmento já saem prontos (derivados
+   mecanicamente do `respawn.json`), `hunts` sai como rascunho com um campo `_todo` listando
+   o que precisa de revisão humana (nome/label, arte de portrait, `startPosition`). Revise e
+   copie à mão. `--map-id` é opcional; sem ele o fragmento usa um id placeholder e sinaliza em
+   `_todo` que você precisa rodar de novo com o id real antes de copiar.
+
+   Se preferir pular a cópia manual, use `--write-db` (opcional, aditivo — precisa ser pedido
+   explicitamente, `--all` sozinho continua sem tocar em `db.json`):
+   ```
+   python extractor/scripts/build_hunt_fragment.py --all --write-db
+   ```
+   `monsters`/`loot` são sempre mesclados por `mapId` (upsert — igual ao antigo
+   `sync-loot-from-extractor.py`, sempre correto porque é 100% mecânico). `hunts` só é
+   **adicionado** se o `mapId` ainda não existir em `db.json` — um hunt já curado nunca é
+   sobrescrito, e o rascunho novo entra com o campo `_todo` junto, direto no `db.json`, como
+   lembrete. Sem `--map-id` (obrigatório omitir com `--all`), o id de cada mapa novo é
+   atribuído automaticamente (prefixo `ROOK` para mapas `*-rookguard`, senão o primeiro
+   segmento do nome em maiúsculas — vale conferir se fez sentido) continuando a sequência já
+   usada em `db.json`. Por padrão aponta pro checkout irmão `../tibia-idle/tibia-idle`,
+   ajustável via `--tibia-idle-dir`.
+7. Se o mapa novo introduziu sprites de item novos (passo 5 gerou atlases novos), publique-os
+   no repositório `tibia-idle`:
+   ```
+   python extractor/scripts/sync_items_to_tibia_idle.py
+   ```
+   Copia (comparando conteúdo, não sobrescreve à toa) `extractor/atlases/items/`,
+   `extractor/atlases/items-static/` e `extractor/atlases/items-index.json` para
+   `apps/tibia-idle-front/public/assets/` no repositório `tibia-idle`, assumido como
+   `../tibia-idle/tibia-idle` (ajustável via `--tibia-idle-dir`).
 
 ## Estrutura de pastas
 
@@ -90,6 +129,9 @@ extractor/
     bake_item_sheets.py    bake global (avulso): itens estáticos → atlases/items-static/*.{png,json}
     build_item_index.py    bake global (avulso): junta os dois bakes acima → atlases/items-index.json
     build_items.js         runner: chama os três bakes de item acima em sequência (npm run build-items)
+    hunt_fragment.py        lógica pura: respawn.json → fragmento {monsters, loot, hunts}
+    build_hunt_fragment.py  CLI (avulso): gera ready-maps/<nome>/db-fragment.json — nunca escreve em db.json
+    sync_items_to_tibia_idle.py  CLI (avulso): publica atlases de item no repositório tibia-idle
   vendor/
     otbm2json.js       lib de leitura/escrita de OTBM (vendorizada, não é do npm)
   maps/<nome>/          SOURCE — .otbm + xmls de cada mapa (versionado)
@@ -178,6 +220,26 @@ monstro nesse arquivo ou corrija o nome no spawn. O monstro ainda entra no
 **Onde fica o lookup de monstros?**
 `extractor/otservbr-monster.xml` — é compartilhado entre todos os mapas, não
 duplicado por mapa.
+
+### Publicando dados no repositório `tibia-idle`
+
+**Por que `build_hunt_fragment.py` não escreve direto no `db.json` do
+`tibia-idle`?**
+De propósito — `hunts` (nome, portrait, `startPosition`) exige curadoria
+humana que não dá pra derivar do mapa (ver `hunt_fragment.py`), e mesmo os
+campos 100% mecânicos (`monsters`, `loot`) não devem ser mesclados sem
+revisão. O script gera `ready-maps/<nome>/db-fragment.json` e para por aí;
+colar no `db.json` é sempre uma ação manual.
+
+**Onde ficavam antes os scripts `sync-item-sprites-from-extractor.py` e
+`sync-loot-from-extractor.py`?**
+Em `tibia-idle/apps/tibia-idle-mock-api/scripts/`. Foram removidos de lá —
+sincronizar dados do extractor é responsabilidade deste pipeline, não do app
+consumidor. `sync-item-sprites-from-extractor.py` virou
+`extractor/scripts/sync_items_to_tibia_idle.py` (mesmo comportamento, mesma
+direção de cópia, só que rodado a partir daqui). `sync-loot-from-extractor.py`
+foi substituído por `build_hunt_fragment.py`, que não escreve mais em
+`db.json` — ver acima.
 
 ### Classificação de layers (paredes, roof, borders...)
 
