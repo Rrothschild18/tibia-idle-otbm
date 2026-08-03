@@ -30,6 +30,24 @@ EXTRACTOR_DIR = os.path.dirname(SCRIPTS_DIR)
 
 OTBM_FILE = os.path.join(EXTRACTOR_DIR, "raw-maps", f"{MAP_NAME}.raw.json")
 
+# Full-city OTBMs (extractor/full-maps/<name>/) feed the travel-graph
+# pipeline instead of a single hunt spot — same converter, different source
+# tree and, crucially, a versioned output dir (full-maps/<name>/map.json)
+# instead of the gitignored ready-maps/<name>/ used for hunt spots. maps/ is
+# tried first so an ordinary hunt map name never resolves to full-maps/.
+FULL_MAPS_DIR = os.path.join(EXTRACTOR_DIR, "full-maps")
+IS_FULL_MAP = (
+    not os.path.isdir(os.path.join(EXTRACTOR_DIR, "maps", MAP_NAME))
+    and os.path.isdir(os.path.join(FULL_MAPS_DIR, MAP_NAME))
+)
+SOURCE_MAP_DIR = os.path.join(FULL_MAPS_DIR if IS_FULL_MAP else os.path.join(EXTRACTOR_DIR, "maps"), MAP_NAME)
+
+# Marker signs (item 2016) used by the travel-graph tooling to mark POIs use
+# a reserved uid range starting at 10001 — see .scratch/travel-graph-and-locations.
+# They must never leak into a generated map.json (player-facing or the
+# full-city inspection artifact alike).
+MARKER_UID_MIN = 10001
+
 _CANDIDATE_ITEM_SOURCES = [
     os.path.abspath(os.path.join(EXTRACTOR_DIR, "sprites", "items")),
     os.path.abspath(os.path.join(EXTRACTOR_DIR, "sprites", "missiles")),
@@ -49,11 +67,18 @@ for candidate in _CANDIDATE_ITEM_SOURCES:
 if not ITEMS_SOURCES:
     raise FileNotFoundError("Nenhuma pasta de sprites encontrada.")
 
-# Pasta local de saída (dentro de extractor/ready-maps/). O valor de
-# ASSETS_ROOT abaixo é independente disso — é o path que o jogo usa em tempo
-# de execução para localizar os assets copiados, e mantém o sufixo "-sprites"
-# para não quebrar integrações existentes que já leem esse campo do JSON.
-OUTPUT_DIR = os.path.abspath(os.path.join(EXTRACTOR_DIR, "ready-maps", MAP_NAME))
+# Pasta local de saída. Mapas de hunt vão para extractor/ready-maps/ (gerado,
+# gitignored). Mapas de cidade inteira (full-maps/) escrevem de volta no
+# próprio full-maps/<nome>/ — esse map.json É versionado no Git (artefato de
+# inspeção/debug pro travel-graph), diferente do ready-maps/ dos hunts. O
+# valor de ASSETS_ROOT abaixo é independente disso — é o path que o jogo usa
+# em tempo de execução para localizar os assets copiados, e mantém o sufixo
+# "-sprites" para não quebrar integrações existentes que já leem esse campo
+# do JSON.
+OUTPUT_DIR = os.path.abspath(
+    os.path.join(FULL_MAPS_DIR, MAP_NAME) if IS_FULL_MAP
+    else os.path.join(EXTRACTOR_DIR, "ready-maps", MAP_NAME)
+)
 SPRITES_OUTPUT_DIR = os.path.join(OUTPUT_DIR, "sprites")
 SHEETS_OUTPUT_DIR = os.path.join(OUTPUT_DIR, "sheets")
 ASSETS_ROOT = posixpath.join("assets", f"{MAP_NAME}-sprites")
@@ -63,7 +88,7 @@ ASSETS_ROOT = posixpath.join("assets", f"{MAP_NAME}-sprites")
 # (ex: troll-rookguard-monster.xml) — mantemos essa convenção aqui pra não
 # exigir renomear arquivo nenhum ao adicionar um mapa novo.
 OTSERVBR_MONSTER_XML = os.path.join(EXTRACTOR_DIR, "otservbr-monster.xml")
-MONSTER_SPAWN_XML = os.path.join(EXTRACTOR_DIR, "maps", MAP_NAME, f"{MAP_NAME}-monster.xml")
+MONSTER_SPAWN_XML = os.path.join(SOURCE_MAP_DIR, f"{MAP_NAME}-monster.xml")
 OUTFITS_SPRITES_DIR = os.path.join(EXTRACTOR_DIR, "sprites", "outfits")
 MONSTERS_OUTPUT_DIR = os.path.join(OUTPUT_DIR, "monsters")
 # Reference file built once by build_monster_loot_index.py from a local Canary
@@ -672,6 +697,12 @@ def build_phaser_map(dump: Dict) -> Dict:
                 for item_index, raw_item in enumerate(items):
                     appearance_id = raw_item.get("id")
                     if appearance_id is None:
+                        continue
+
+                    # Marker signs (reserved uid range) are travel-graph
+                    # tooling input, never a renderable map object.
+                    uid = raw_item.get("uid")
+                    if uid is not None and uid >= MARKER_UID_MIN:
                         continue
 
                     analysis = analyze_item(appearance_id)
