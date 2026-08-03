@@ -6126,6 +6126,17 @@
     {
       "name": "Wolf",
       "outfitId": 27,
+      "tileX": 209,
+      "tileY": 164,
+      "worldX": 1189,
+      "worldY": 1133,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Wolf",
+      "outfitId": 27,
       "tileX": 198,
       "tileY": 160,
       "worldX": 1178,
@@ -6236,35 +6247,13 @@
     {
       "name": "Wolf",
       "outfitId": 27,
-      "tileX": 210,
-      "tileY": 166,
-      "worldX": 1190,
-      "worldY": 1135,
+      "tileX": 212,
+      "tileY": 169,
+      "worldX": 1192,
+      "worldY": 1138,
       "worldZ": 7,
       "radius": 3,
       "spawntime": 90
-    },
-    {
-      "name": "Wolf",
-      "outfitId": 27,
-      "tileX": 211,
-      "tileY": 167,
-      "worldX": 1191,
-      "worldY": 1136,
-      "worldZ": 7,
-      "radius": 3,
-      "spawntime": 90
-    },
-    {
-      "name": "Wolf",
-      "outfitId": 27,
-      "tileX": 216,
-      "tileY": 168,
-      "worldX": 1196,
-      "worldY": 1137,
-      "worldZ": 7,
-      "radius": 3,
-      "spawntime": 60
     },
     {
       "name": "Wolf",
@@ -6302,9 +6291,9 @@
     {
       "name": "Wolf",
       "outfitId": 27,
-      "tileX": 202,
+      "tileX": 201,
       "tileY": 175,
-      "worldX": 1182,
+      "worldX": 1181,
       "worldY": 1144,
       "worldZ": 7,
       "radius": 3,
@@ -6487,28 +6476,6 @@
       "spawntime": 90
     },
     {
-      "name": "Wolf",
-      "outfitId": 27,
-      "tileX": 209,
-      "tileY": 177,
-      "worldX": 1189,
-      "worldY": 1146,
-      "worldZ": 7,
-      "radius": 3,
-      "spawntime": 90
-    },
-    {
-      "name": "Wolf",
-      "outfitId": 27,
-      "tileX": 217,
-      "tileY": 174,
-      "worldX": 1197,
-      "worldY": 1143,
-      "worldZ": 7,
-      "radius": 3,
-      "spawntime": 90
-    },
-    {
       "name": "Snake",
       "outfitId": 28,
       "tileX": 40,
@@ -6581,6 +6548,17 @@
       "tileY": 185,
       "worldX": 1035,
       "worldY": 1154,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Wolf",
+      "outfitId": 27,
+      "tileX": 210,
+      "tileY": 179,
+      "worldX": 1190,
+      "worldY": 1148,
       "worldZ": 7,
       "radius": 3,
       "spawntime": 90
@@ -7210,17 +7188,6 @@
       "worldY": 1062,
       "worldZ": 8,
       "radius": 2,
-      "spawntime": 90
-    },
-    {
-      "name": "Young Troll",
-      "outfitId": 15,
-      "tileX": 133,
-      "tileY": 95,
-      "worldX": 1113,
-      "worldY": 1064,
-      "worldZ": 8,
-      "radius": 3,
       "spawntime": 90
     },
     {

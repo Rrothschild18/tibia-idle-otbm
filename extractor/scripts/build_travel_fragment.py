@@ -82,8 +82,12 @@ def build_region_fragment(region: str, city_prefix: str, canary_dir: str):
 
     signs, sign_issues = parse_marker_signs(dump)
     for issue in sign_issues:
-        print(f"[WARN] placa fora do formato CIDADE-TIPO-INCREMENTAL: uid={issue['uid']} "
-              f"text={issue['text']!r} em ({issue['x']}, {issue['y']}, {issue['z']})")
+        location = f"uid={issue['uid']} text={issue['text']!r} em ({issue['x']}, {issue['y']}, {issue['z']})"
+        if issue["reason"] == "duplicate-sign-id":
+            print(f"[WARN] placa com id duplicado (outra placa já usa esse uid/texto, "
+                  f"provável copiar-colar sem trocar o uid): {location}")
+        else:
+            print(f"[WARN] placa fora do formato CIDADE-TIPO-INCREMENTAL: {location}")
 
     sign_locations = [build_sign_location(s) for s in signs]
 
