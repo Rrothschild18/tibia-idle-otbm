@@ -23,6 +23,8 @@ import xml.etree.ElementTree as ET
 from collections import deque
 from typing import Deque, Dict, List, Optional, Set, Tuple
 
+import city_ids
+
 # ======================================================
 # Marker signs -> POI locations (HUNT/TEMPLE/DEPOT/QUEST)
 # ======================================================
@@ -32,7 +34,7 @@ MARKER_UID_MIN = 10001
 POI_TYPES = ("HUNT", "TEMPLE", "DEPOT", "QUEST")
 
 _SIGN_ID_RE = re.compile(
-    r"^(?P<city>[A-Z]+)-(?P<type>" + "|".join(POI_TYPES) + r")-(?P<seq>\d+)$"
+    r"^(?P<city>[A-Z]+)-(?P<type>" + "|".join(POI_TYPES) + r")-(?P<seq>\d{4})$"
 )
 
 
@@ -56,8 +58,10 @@ def parse_marker_signs(dump: Dict) -> Tuple[List[Dict], List[Dict]]:
     (locations, issues) pair. A sign whose uid falls outside the reserved
     range isn't a marker at all and is silently skipped (it's an ordinary
     in-game sign, not travel-graph input). A reserved-uid sign whose text
-    doesn't match CIDADE-TIPO-INCREMENTAL is reported as an issue, not
-    silently dropped. Two signs that resolve to the same id (typically a
+    doesn't match CIDADE-TIPO-NNNN (exactly 4 digits — a stray digit count,
+    like the 5-digit `ROOK-HUNT-00015` typo found live, is rejected instead
+    of silently minting an id nothing can ever resolve to) is reported as an
+    issue, not silently dropped. Two signs that resolve to the same id (typically a
     copy-pasted sign that kept the old uid — a map-editing mistake) are also
     reported: only the first occurrence becomes a location, so a duplicate
     id can never reach the fragment/db.json and silently collide there."""
@@ -113,7 +117,10 @@ def build_sign_location(sign: Dict) -> Dict:
     placeholder derived from the id; a HUNT location also gets a `huntId`
     placeholder (None) to be pointed at the matching `hunts` entry's mapId —
     both flagged for human curation via `_todo`. merge_locations_into_db
-    never overwrites either once curated on a later run."""
+    never overwrites either once curated on a later run. `city`/`status` are
+    derived from the id on every run — never curated, never stale."""
+    city = city_ids.derive_city(sign["id"])
+    status = city_ids.derive_status(city)
     entry = {
         "id": sign["id"],
         "type": sign["type"],
@@ -121,7 +128,10 @@ def build_sign_location(sign: Dict) -> Dict:
         "y": sign["y"],
         "z": sign["z"],
         "displayName": _title_from_location_id(sign["id"]),
+        "city": city,
     }
+    if status is not None:
+        entry["status"] = status
     todo = ["confirmar displayName (gerado automaticamente do id)"]
     if sign["type"] == "HUNT":
         entry["huntId"] = None
@@ -371,15 +381,23 @@ def parse_npc_shop_lua(lua_text: str) -> Optional[List[Dict]]:
 def build_npc_location(npc: Dict, city_prefix: str, shop: Optional[List[Dict]]) -> Dict:
     """An NPC (position + name) plus its already-resolved shop (or None) ->
     a `locations` entry. No sign involved, no `displayName` curation — the
-    NPC's real in-game name is already a good display name."""
+    NPC's real in-game name is already a good display name. The id follows
+    the same CIDADE-TIPO-slug shape every other POI type uses
+    (`ROOK-NPC-obi`), city/type uppercase, slug lowercase — `city`/`status`
+    are derived from that same id."""
+    city = city_prefix.upper()
+    status = city_ids.derive_status(city)
     entry: Dict = {
-        "id": f"{city_prefix.lower()}-npc-{slugify(npc['name'])}",
+        "id": f"{city}-NPC-{slugify(npc['name'])}",
         "type": "NPC",
         "x": npc["x"],
         "y": npc["y"],
         "z": npc["z"],
         "displayName": npc["name"],
+        "city": city,
     }
+    if status is not None:
+        entry["status"] = status
     if shop is not None:
         entry["shop"] = shop
     return entry

@@ -2,30 +2,47 @@ const fs = require("fs");
 const path = require("path");
 const { spawnSync } = require("child_process");
 
-const { dumpMap } = require("./dump_otbm.js");
+const { dumpMap, resolveMapDir } = require("./dump_otbm.js");
 
 const SCRIPTS_DIR = __dirname;
 const EXTRACTOR_DIR = path.join(SCRIPTS_DIR, "..");
 const MAPS_DIR = path.join(EXTRACTOR_DIR, "maps");
 const FULL_MAPS_DIR = path.join(EXTRACTOR_DIR, "full-maps");
 
-function discoverMapNames() {
+function discoverCities(root) {
+  if (!fs.existsSync(root)) {
+    return [];
+  }
   return fs
-    .readdirSync(MAPS_DIR, { withFileTypes: true })
+    .readdirSync(root, { withFileTypes: true })
     .filter((entry) => entry.isDirectory())
     .map((entry) => entry.name)
-    .filter((name) => fs.existsSync(path.join(MAPS_DIR, name, `${name}.otbm`)))
     .sort();
 }
 
-// Full-city OTBMs (extractor/full-maps/<name>/) aren't included in --all —
+// Walks every city folder under maps/<CIDADE>/ automatically — adding a new
+// city is purely a new folder, no code change here.
+function discoverMapNames() {
+  const names = [];
+  for (const city of discoverCities(MAPS_DIR)) {
+    const cityDir = path.join(MAPS_DIR, city);
+    for (const entry of fs.readdirSync(cityDir, { withFileTypes: true })) {
+      if (!entry.isDirectory()) continue;
+      const mapDir = path.join(cityDir, entry.name);
+      const hasOtbm = fs.readdirSync(mapDir).some((name) => name.endsWith(".otbm"));
+      if (hasOtbm) {
+        names.push(entry.name);
+      }
+    }
+  }
+  return names.sort();
+}
+
+// Full-city OTBMs (extractor/full-maps/<CIDADE>/) aren't included in --all —
 // they feed the separate travel-graph pipeline, not the hunt-spot rotation —
-// but are still reachable by name, same as any maps/ entry.
+// but are still reachable by name, same as any maps/<cidade>/<pasta> entry.
 function mapExists(mapName) {
-  return (
-    fs.existsSync(path.join(MAPS_DIR, mapName, `${mapName}.otbm`)) ||
-    fs.existsSync(path.join(FULL_MAPS_DIR, mapName, `${mapName}.otbm`))
-  );
+  return resolveMapDir(mapName) !== null;
 }
 
 function buildMap(mapName) {
@@ -48,7 +65,8 @@ function main() {
   const arg = process.argv[2];
 
   if (!arg) {
-    console.error("Uso: node build_map.js <nome-do-mapa>");
+    console.error("Uso: node build_map.js <nome-da-pasta-do-mapa>");
+    console.error("     node build_map.js <CIDADE>          # mapa cidade-inteira (full-maps/<CIDADE>/)");
     console.error("     node build_map.js --all");
     process.exit(1);
   }
@@ -61,7 +79,13 @@ function main() {
   }
 
   if (arg !== "--all" && !mapExists(arg)) {
-    console.error(`Mapa "${arg}" não encontrado em ${MAPS_DIR} nem em ${FULL_MAPS_DIR}`);
+    const cities = Array.from(
+      new Set([...discoverCities(MAPS_DIR), ...discoverCities(FULL_MAPS_DIR)])
+    ).sort();
+    console.error(
+      `Mapa "${arg}" não encontrado em nenhuma cidade sob ${MAPS_DIR} nem em ${FULL_MAPS_DIR}.\n` +
+      `Cidades disponíveis: ${cities.length ? cities.join(", ") : "(nenhuma)"}`
+    );
     process.exit(1);
   }
 

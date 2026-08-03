@@ -10,6 +10,7 @@ from typing import Dict, List, Optional, Set, Tuple
 from PIL import Image
 
 import item_classifier
+import map_dirs
 from sheet_packer import SheetPacker
 
 # ======================================================
@@ -30,17 +31,32 @@ EXTRACTOR_DIR = os.path.dirname(SCRIPTS_DIR)
 
 OTBM_FILE = os.path.join(EXTRACTOR_DIR, "raw-maps", f"{MAP_NAME}.raw.json")
 
-# Full-city OTBMs (extractor/full-maps/<name>/) feed the travel-graph
-# pipeline instead of a single hunt spot — same converter, different source
-# tree and, crucially, a versioned output dir (full-maps/<name>/map.json)
-# instead of the gitignored ready-maps/<name>/ used for hunt spots. maps/ is
-# tried first so an ordinary hunt map name never resolves to full-maps/.
+# A hunt map lives two levels deep — maps/<CIDADE>/<pasta>/ — the city is
+# always the physical parent folder, never guessed from MAP_NAME (see
+# extractor/README.md, "Convenção de pastas"). A full-city OTBM
+# (extractor/full-maps/<CIDADE>/) feeds the travel-graph pipeline instead of
+# a single hunt spot — same converter, different source tree, one level deep
+# (folder = city code itself), and a versioned output dir
+# (full-maps/<CIDADE>/map.json) instead of the gitignored
+# ready-maps/<CIDADE>/<pasta>/ used for hunt spots. maps/ is tried first so
+# an ordinary hunt map name never resolves to full-maps/.
 FULL_MAPS_DIR = os.path.join(EXTRACTOR_DIR, "full-maps")
-IS_FULL_MAP = (
-    not os.path.isdir(os.path.join(EXTRACTOR_DIR, "maps", MAP_NAME))
-    and os.path.isdir(os.path.join(FULL_MAPS_DIR, MAP_NAME))
-)
-SOURCE_MAP_DIR = os.path.join(FULL_MAPS_DIR if IS_FULL_MAP else os.path.join(EXTRACTOR_DIR, "maps"), MAP_NAME)
+_MAPS_DIR = os.path.join(EXTRACTOR_DIR, "maps")
+
+_hunt_dir = map_dirs.find_two_level_dir(_MAPS_DIR, MAP_NAME)
+if _hunt_dir is not None:
+    IS_FULL_MAP = False
+    SOURCE_MAP_DIR = _hunt_dir
+    # Mirrors maps/ 1:1 into ready-maps/ — same relative path, different root.
+    _RELATIVE_OUTPUT_PATH = os.path.relpath(_hunt_dir, _MAPS_DIR)
+elif os.path.isdir(os.path.join(FULL_MAPS_DIR, MAP_NAME)):
+    IS_FULL_MAP = True
+    SOURCE_MAP_DIR = os.path.join(FULL_MAPS_DIR, MAP_NAME)
+    _RELATIVE_OUTPUT_PATH = MAP_NAME
+else:
+    raise FileNotFoundError(
+        f'Mapa "{MAP_NAME}" não encontrado em nenhuma cidade sob {_MAPS_DIR} nem em {FULL_MAPS_DIR}'
+    )
 
 # Marker signs (item 2016) used by the travel-graph tooling to mark POIs use
 # a reserved uid range starting at 10001 — see .scratch/travel-graph-and-locations.
@@ -76,19 +92,27 @@ if not ITEMS_SOURCES:
 # "-sprites" para não quebrar integrações existentes que já leem esse campo
 # do JSON.
 OUTPUT_DIR = os.path.abspath(
-    os.path.join(FULL_MAPS_DIR, MAP_NAME) if IS_FULL_MAP
-    else os.path.join(EXTRACTOR_DIR, "ready-maps", MAP_NAME)
+    os.path.join(FULL_MAPS_DIR, _RELATIVE_OUTPUT_PATH) if IS_FULL_MAP
+    else os.path.join(EXTRACTOR_DIR, "ready-maps", _RELATIVE_OUTPUT_PATH)
 )
 SPRITES_OUTPUT_DIR = os.path.join(OUTPUT_DIR, "sprites")
 SHEETS_OUTPUT_DIR = os.path.join(OUTPUT_DIR, "sheets")
 ASSETS_ROOT = posixpath.join("assets", f"{MAP_NAME}-sprites")
 
+
+def _find_sidecar(directory: str, suffix: str) -> str:
+    """First (sorted) filename ending in `suffix` inside `directory`, or ""
+    if none — found by suffix, not by assuming the exact basename, since a
+    hunt map's folder name (the id) is deliberately allowed to differ from
+    the .otbm/xml basenames the map editor originally exported (see
+    extractor/README.md)."""
+    matches = sorted(name for name in os.listdir(directory) if name.endswith(suffix))
+    return os.path.join(directory, matches[0]) if matches else ""
+
+
 # Monsters
-# O editor de mapas exporta os sidecars com o nome do mapa como prefixo
-# (ex: troll-rookguard-monster.xml) — mantemos essa convenção aqui pra não
-# exigir renomear arquivo nenhum ao adicionar um mapa novo.
 OTSERVBR_MONSTER_XML = os.path.join(EXTRACTOR_DIR, "otservbr-monster.xml")
-MONSTER_SPAWN_XML = os.path.join(SOURCE_MAP_DIR, f"{MAP_NAME}-monster.xml")
+MONSTER_SPAWN_XML = _find_sidecar(SOURCE_MAP_DIR, "-monster.xml")
 OUTFITS_SPRITES_DIR = os.path.join(EXTRACTOR_DIR, "sprites", "outfits")
 MONSTERS_OUTPUT_DIR = os.path.join(OUTPUT_DIR, "monsters")
 # Reference file built once by build_monster_loot_index.py from a local Canary

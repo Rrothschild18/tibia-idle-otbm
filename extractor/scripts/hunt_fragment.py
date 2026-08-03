@@ -15,9 +15,10 @@ existing hand-curated hunt is never overwritten.
 """
 
 import posixpath
-import re
 from collections import Counter
 from typing import Dict, List, Optional
+
+import city_ids
 
 PLACEHOLDER_MAP_ID = "TODO-ASSIGN-ID"
 # db.json's `seed` field has no known consumer today — every existing hunt
@@ -26,8 +27,18 @@ PLACEHOLDER_SEED = "0" * 22
 PLACEHOLDER_PORTRAIT = "/assets/character-default.png"
 
 
+def _descriptive_name(map_name: str) -> str:
+    """`"ROOK-HUNT-0010_bears-rookguard"` -> `"bears-rookguard"` — the
+    human-facing title is derived only from the part after the id (see
+    map_id_from_folder), never the id itself, or a map like
+    `ROOK-HUNT-0018_bugs-rookguard` gets a garbage title like "Rook Hunt
+    0018_bugs Rookguard" instead of "Bugs Rookguard". `map_name` without an
+    underscore (older call sites, tests) passes through unchanged."""
+    return map_name.split("_", 1)[1] if "_" in map_name else map_name
+
+
 def _title_from_map_name(map_name: str) -> str:
-    return " ".join(word.capitalize() for word in map_name.split("-"))
+    return " ".join(word.capitalize() for word in _descriptive_name(map_name).split("-"))
 
 
 def _most_common_spawn(spawns: List[Dict]) -> Optional[Dict]:
@@ -71,7 +82,10 @@ def build_hunts_entry(respawn: Dict, map_name: str, map_id: str) -> Dict:
     if preview_spawn is None:
         todo.insert(0, "sem spawns no mapa — monsterPreview precisa ser preenchido manualmente")
 
-    return {
+    city = city_ids.derive_city(map_id)
+    status = city_ids.derive_status(city)
+
+    entry = {
         "id": map_id,
         "mapId": map_id,
         "name": _title_from_map_name(map_name),
@@ -93,8 +107,12 @@ def build_hunts_entry(respawn: Dict, map_name: str, map_id: str) -> Dict:
             round((bounds["minX"] + bounds["maxX"]) / 2),
             round((bounds["minY"] + bounds["maxY"]) / 2),
         ],
+        "city": city,
         "_todo": todo,
     }
+    if status is not None:
+        entry["status"] = status
+    return entry
 
 
 def build_fragment(respawn: Dict, map_name: str, map_id: Optional[str]) -> Dict:
@@ -110,51 +128,49 @@ def build_fragment(respawn: Dict, map_name: str, map_id: Optional[str]) -> Dict:
     return {"monsters": monsters_entry, "loot": loot_entry, "hunts": hunts_entry}
 
 
-def _id_prefix_for_map(map_name: str) -> str:
-    """Every "-rookguard" map so far uses the "ROOK" prefix; anything else
-    (dragon-darashia -> DRAGON, grim-reaper -> GRIM, ...) is a one-off area,
-    so falling back to its first hyphen segment is the closest guess without
-    a real taxonomy — still worth a glance before trusting it blindly."""
-    if map_name.endswith("-rookguard"):
-        return "ROOK"
-    return re.split(r"[-_]", map_name)[0].upper()
+def map_id_from_folder(map_name: str) -> str:
+    """`"<ID>_nome-descritivo"` -> `"<ID>"` — the id is always the folder name
+    up to its first underscore, chosen by hand (typed into the map-editor
+    sign, mirrored into the folder name) before any script runs. Nothing in
+    the pipeline invents or auto-numbers this id anymore; it only reads and
+    validates the one already chosen (see build_hunt_fragment.py's
+    --map-id comparison)."""
+    return map_name.split("_", 1)[0]
 
 
-def find_existing_map_id(hunts: List[Dict], monsters: List[Dict], map_name: str) -> Optional[str]:
-    """Looks up whether map_name is already registered in db.json, matching on
-    `assetsRoot` (convention-derived, stable) rather than mapId (hand-assigned
-    per map, follows no rule map_name could reproduce — e.g. the "rats-sewers"
-    folder is registered as "ROOK-0002"). Callers MUST try this before
-    next_map_id(), or an already-registered map gets a second, duplicate entry
-    under a freshly minted id instead of being recognized and upserted.
+class MapIdMismatchError(ValueError):
+    """Raised when --map-id disagrees with the id embedded in the map's own
+    folder name — the two are meant to be an explicit double-confirmation of
+    the same value, never a silent pick-one."""
 
-    Checks both `hunts` and `monsters` (not just `hunts`): a map can have its
-    hunts entry removed by hand while monsters/loot are still registered under
-    the old id — matching hunts alone would silently orphan that id and mint
-    a new, colliding one instead of reusing it."""
-    hunts_root = posixpath.join("assets", f"{map_name}-sprites")
-    for entry in hunts:
-        if entry.get("assetsRoot") == hunts_root:
-            return entry.get("mapId")
-
-    monsters_root = posixpath.join("assets", f"{map_name}-sprites", "monsters")
-    for entry in monsters:
-        if entry.get("assetsRoot") == monsters_root:
-            return entry.get("mapId")
-
-    return None
+    def __init__(self, map_id: str, folder_id: str):
+        super().__init__(
+            f"--map-id {map_id} não bate com o id da pasta ({folder_id})"
+        )
+        self.map_id = map_id
+        self.folder_id = folder_id
 
 
-def next_map_id(hunts: List[Dict], map_name: str) -> str:
-    """Next free id for map_name's prefix, based on the highest sequence
-    number already used by that prefix in `hunts` (db.json's hunts collection)."""
-    prefix = _id_prefix_for_map(map_name)
-    max_seq = 0
-    for entry in hunts:
-        match = re.fullmatch(rf"{re.escape(prefix)}-(\d+)", entry.get("mapId", ""))
-        if match:
-            max_seq = max(max_seq, int(match.group(1)))
-    return f"{prefix}-{max_seq + 1:04d}"
+class MapIdAlreadyExistsError(ValueError):
+    """Raised when a mapId already registered in db.json (hunts or monsters)
+    is about to be written again without --edit — updating curated data must
+    always be an explicit, deliberate choice, never a silent upsert."""
+
+    def __init__(self, map_id: str):
+        super().__init__(
+            f"ID do mapa já existe — use --edit se a intenção é atualizar ({map_id})"
+        )
+        self.map_id = map_id
+
+
+def map_id_exists(hunts: List[Dict], monsters: List[Dict], map_id: str) -> bool:
+    """Whether `map_id` is already registered anywhere in db.json — checked
+    against both `hunts` and `monsters` (not just `hunts`) since a hunts entry
+    can be removed by hand while monsters/loot stay registered under the same
+    id, and that should still count as "already exists"."""
+    return any(entry.get("mapId") == map_id for entry in hunts) or any(
+        entry.get("mapId") == map_id for entry in monsters
+    )
 
 
 def _upsert_by_map_id(collection: List[Dict], entry: Dict) -> str:

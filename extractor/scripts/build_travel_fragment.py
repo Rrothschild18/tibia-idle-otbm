@@ -5,18 +5,18 @@ plus every NPC's location and shop — and optionally merge it straight in
 with --write-db. See travel_graph.py for the pure logic and
 .scratch/travel-graph-and-locations/spec.md for the full design.
 
-Requires the region's full-city map already processed once (`node build_map.js
-<region>`, e.g. `node build_map.js rook-full` — see build_phaser_map.py):
-reads extractor/raw-maps/<region>.raw.json (the raw OTBM dump) and
-extractor/full-maps/<region>/map.json (for objectDefs).
+Requires the city's full-city map already processed once (`node build_map.js
+<CIDADE>`, e.g. `node build_map.js ROOK` — see build_phaser_map.py): reads
+extractor/raw-maps/<CIDADE>.raw.json (the raw OTBM dump) and
+extractor/full-maps/<CIDADE>/map.json (for objectDefs).
 
 Without --write-db (the default) nothing outside extractor/ is touched — the
-fragment is written to extractor/full-maps/<region>/db-fragment.json for you
+fragment is written to extractor/full-maps/<CIDADE>/db-fragment.json for you
 to review and copy in by hand. Mechanical fields (position, shop, tileCount)
 always upsert by id/pair with --write-db; a location's curated `displayName`
 is never overwritten once a human edit removed its `_todo` flag.
 
-Run: python build_travel_fragment.py rook-full --city-prefix ROOK [--write-db]
+Run: python build_travel_fragment.py ROOK [--write-db]
 """
 
 import argparse
@@ -75,19 +75,22 @@ def _build_shops_by_name(npc_names, canary_npc_dir):
     return shops_by_name
 
 
-def build_region_fragment(region: str, city_prefix: str, canary_dir: str):
-    dump = _load_json(os.path.join(RAW_MAPS_DIR, f"{region}.raw.json"), "dump OTBM bruto")
-    map_json = _load_json(os.path.join(FULL_MAPS_DIR, region, "map.json"), "map.json da cidade inteira")
+def build_region_fragment(city: str, canary_dir: str):
+    dump = _load_json(os.path.join(RAW_MAPS_DIR, f"{city}.raw.json"), "dump OTBM bruto")
+    map_json = _load_json(os.path.join(FULL_MAPS_DIR, city, "map.json"), "map.json da cidade inteira")
     object_defs = map_json.get("objectDefs", {})
 
     signs, sign_issues = parse_marker_signs(dump)
     for issue in sign_issues:
         location = f"uid={issue['uid']} text={issue['text']!r} em ({issue['x']}, {issue['y']}, {issue['z']})"
         if issue["reason"] == "duplicate-sign-id":
-            print(f"[WARN] placa com id duplicado (outra placa já usa esse uid/texto, "
-                  f"provável copiar-colar sem trocar o uid): {location}")
+            print(f"[WARN] placa com id duplicado (outra placa já usa esse texto/uid, "
+                  f"provável copiar-colar sem trocar o texto ao duplicar a placa): {location}")
+        elif issue["reason"] == "invalid-sign-format":
+            print(f"[WARN] placa fora do formato CIDADE-TIPO-NNNN, com NNNN sendo exatamente "
+                  f"4 dígitos (ex: ROOK-HUNT-0013 — não 5 dígitos, não 3): {location}")
         else:
-            print(f"[WARN] placa fora do formato CIDADE-TIPO-INCREMENTAL: {location}")
+            print(f"[WARN] placa com problema não reconhecido ({issue['reason']}): {location}")
 
     sign_locations = [build_sign_location(s) for s in signs]
 
@@ -95,7 +98,7 @@ def build_region_fragment(region: str, city_prefix: str, canary_dir: str):
     graph = build_walkable_graph(tiles)
     travel_graph_edges = build_travel_graph(graph, sign_locations)
 
-    npc_xml_path = os.path.join(FULL_MAPS_DIR, region, f"{region}-npc.xml")
+    npc_xml_path = os.path.join(FULL_MAPS_DIR, city, f"{city}-npc.xml")
     npcs = []
     if os.path.exists(npc_xml_path):
         with open(npc_xml_path, "r", encoding="utf-8") as f:
@@ -105,7 +108,7 @@ def build_region_fragment(region: str, city_prefix: str, canary_dir: str):
 
     canary_npc_dir = os.path.join(canary_dir, "data-otservbr-global", "npc")
     shops_by_name = _build_shops_by_name({npc["name"] for npc in npcs}, canary_npc_dir)
-    npc_locations, unmatched_npcs = build_npc_locations(npcs, city_prefix, shops_by_name)
+    npc_locations, unmatched_npcs = build_npc_locations(npcs, city, shops_by_name)
     for name in unmatched_npcs:
         print(f"[WARN] NPC '{name}' sem .lua correspondente em {canary_npc_dir} — Location sem shop")
 
@@ -114,8 +117,7 @@ def build_region_fragment(region: str, city_prefix: str, canary_dir: str):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("region", help="Nome da pasta em extractor/full-maps/ (ex: rook-full)")
-    parser.add_argument("--city-prefix", default="ROOK", help="Prefixo de id da cidade (default: ROOK)")
+    parser.add_argument("city", help="Código da cidade — pasta em extractor/full-maps/<CIDADE>/ (ex: ROOK)")
     parser.add_argument("--canary-dir", default=DEFAULT_CANARY_DIR,
                          help=f"Path do checkout local do Canary (default: {DEFAULT_CANARY_DIR})")
     parser.add_argument(
@@ -134,9 +136,9 @@ def main():
     if not os.path.isdir(args.canary_dir):
         parser.error(f"Canary install não encontrado em {args.canary_dir} (use --canary-dir)")
 
-    fragment = build_region_fragment(args.region, args.city_prefix, args.canary_dir)
+    fragment = build_region_fragment(args.city, args.canary_dir)
 
-    out_path = os.path.join(FULL_MAPS_DIR, args.region, "db-fragment.json")
+    out_path = os.path.join(FULL_MAPS_DIR, args.city, "db-fragment.json")
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(fragment, f, indent=2, ensure_ascii=False)
         f.write("\n")

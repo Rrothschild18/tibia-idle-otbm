@@ -7,43 +7,130 @@ Para detalhes internos do formato de saída (`map.json`, flags, layers), veja
 ## TL;DR
 
 ```
-node extractor/scripts/build_map.js <nome-do-mapa>   # gera só esse mapa
-node extractor/scripts/build_map.js --all            # gera todos os mapas encontrados
+node extractor/scripts/build_map.js <nome-da-pasta>  # gera só esse mapa (ex: ROOK-HUNT-0010_bears-rookguard)
+node extractor/scripts/build_map.js --all            # gera todos os mapas de hunt de todas as cidades
 npm run build-map -- --all                           # atalho para o comando acima
 npm run build-items                                  # bake global de sprites de item (ver abaixo)
-python extractor/scripts/build_hunt_fragment.py <nome-do-mapa> --map-id ROOK-00NN
+python extractor/scripts/build_hunt_fragment.py ROOK-HUNT-0010_bears-rookguard --map-id ROOK-HUNT-0010
                                                       # gera db-fragment.json (hunts/monsters/loot) —
                                                       # nunca escreve em db.json, ver seção 6 abaixo
 python extractor/scripts/sync_items_to_tibia_idle.py # publica atlases de item no repo tibia-idle
-node extractor/scripts/build_map.js rook-full        # gera o mapa cidade-inteira (fonte: full-maps/rook-full/)
-python extractor/scripts/build_travel_fragment.py rook-full --city-prefix ROOK
+node extractor/scripts/build_map.js ROOK             # gera o mapa cidade-inteira (fonte: full-maps/ROOK/)
+python extractor/scripts/build_travel_fragment.py ROOK
                                                       # gera db-fragment.json (locations/travelGraph) —
                                                       # nunca escreve em db.json, ver "Travel graph" abaixo
 ```
 
+## Convenção de pastas (cidade + id)
+
+Todo mapa — de hunt ou de cidade inteira — mora sob uma **pasta de cidade**: a cidade nunca é
+adivinhada do nome do mapa (não existe mais um `_id_prefix_for_map` tentando reconhecer
+`"-rookguard"` ou o primeiro pedaço do nome) — ela é sempre, e só, a pasta-pai física onde o mapa
+está. Isso vale nos três lugares:
+
+- `extractor/maps/<CIDADE>/<CIDADE-TIPO-SEQ>_nome-descritivo/` — fonte dos mapas de hunt.
+- `extractor/ready-maps/<CIDADE>/<mesmo-nome>/` — espelha `maps/` 1:1 (mesmo path relativo, raiz
+  diferente, gitignored/regenerável).
+- `extractor/full-maps/<CIDADE>/` — o mapa da cidade inteira, um por cidade. Aqui a pasta **é** só o
+  código da cidade (sem sufixo, ex: `ROOK/`, não `rook-full/`), e o conteúdo é renomeado pra
+  combinar: `ROOK.otbm`, `ROOK-house.xml`, `ROOK-monster.xml`, `ROOK-npc.xml`, `ROOK-zones.xml`,
+  saída `map.json` na mesma pasta.
+
+O nome de uma pasta de hunt **é** o id do mapa, mais um sufixo legível pra humano:
+`<CIDADE-TIPO-SEQ>_nome-descritivo`. Esse id:
+
+- **Nunca é gerado pelo pipeline** — é escolhido à mão, digitado na sign do editor de mapas que
+  marca a entrada daquele hunt no mapa da cidade inteira, e copiado (literalmente copiar-colar,
+  não "traduzido") pro nome da pasta. `build_map.js`/`build_hunt_fragment.py` só leem e validam
+  esse id, nunca inventam um novo.
+- **Repete a cidade de propósito** (`ROOK/ROOK-HUNT-0002_.../`) — é redundante à vista, mas é
+  exatamente essa redundância que permite colar o texto da sign direto no nome da pasta sem montar
+  nada de cabeça (cidade + tipo + número).
+- Vira, sem tradução nenhuma, o `mapId` do hunt e o `Location.id` do travel-graph no `db.json` do
+  `tibia-idle` — os dois eram strings diferentes reconciliadas por `resolveHuntLocationId`; agora são
+  a mesma string, ponto.
+
+**Exemplo — cidade real (Rookgaard):**
+
+```
+extractor/maps/ROOK/ROOK-HUNT-0002_bears-rookguard/
+  bears-rookguard.otbm
+  bears-rookguard-house.xml
+  bears-rookguard-monster.xml
+  bears-rookguard-npc.xml
+  bears-rookguard-zones.xml
+
+extractor/full-maps/ROOK/
+  ROOK.otbm
+  ROOK-house.xml
+  ROOK-monster.xml
+  ROOK-npc.xml
+  ROOK-zones.xml
+```
+
+Note que o **nome da pasta** carrega o id (`ROOK-HUNT-0002_...`), mas os arquivos `.otbm`/`.xml` de
+dentro continuam com o nome descritivo que o editor de mapas já exportou (`bears-rookguard.otbm`,
+não `ROOK-HUNT-0002_bears-rookguard.otbm`) — o pipeline encontra o `.otbm`/`.xml` de dentro por
+sufixo (`*.otbm`, `*-monster.xml`, ...), não por nome exato, então não é preciso renomear nada ao
+mover um mapa pra sua pasta de cidade. Isso é diferente de `full-maps/<CIDADE>/`, onde o conteúdo
+**é** renomeado pra bater com o código da cidade (só existe um mapa cidade-inteira por cidade, então
+não há ambiguidade a resolver).
+
+**Exemplo — cidade fictícia de mapas de teste/descartáveis (`TEST`):**
+
+```
+extractor/maps/TEST/TEST-HUNT-0001_dragon-darashia/
+  dragon-darashia.otbm
+  dragon-darashia-house.xml
+  dragon-darashia-monster.xml
+  dragon-darashia-npc.xml
+  dragon-darashia-zones.xml
+```
+
+`TEST` é uma cidade como qualquer outra pro pipeline — mesmo mecanismo de pasta, nenhum sistema de
+tag separado. `hunts`/`locations` sob `city: "TEST"` (campo derivado do id, nunca digitado à mão —
+ver abaixo) ganham `status: "test"`, e o `tibia-idle` filtra a lista de hunts visível por
+`city !== 'TEST'` por padrão — é assim que os mapas de teste (Dragon Darashia, Grim Reaper, Larva
+Ankrah, Sea Serpent) somem da UI sem precisar de um campo `hidden` à parte.
+
+`city`/`status` nunca são digitados à mão em nenhum hunt/location — o extractor deriva os dois do
+próprio id em toda geração de fragmento (`city_ids.py`): `city` é o primeiro segmento
+(`"ROOK-HUNT-0002"` → `"ROOK"`), `status: "test"` só aparece quando `city === "TEST"` (ausente, não
+`null`/`false`, nos demais casos). Não há como os dois campos ficarem dessincronizados do id — eles
+não existem em lugar nenhum além de serem recalculados a partir dele.
+
+Locations de NPC seguem o mesmo formato `CIDADE-TIPO-slug` de todo outro tipo de POI: `ROOK-NPC-obi`
+(cidade/tipo maiúsculos, slug minúsculo — antes era `rook-npc-obi`, tudo minúsculo, sem separar
+cidade/tipo).
+
 ## Como adicionar um mapa novo
 
-1. Crie uma pasta em `extractor/maps/<nome>/` — `<nome>` é o identificador que
-   você vai usar em todos os comandos daqui pra frente.
-2. Coloque dentro dela os arquivos exportados pelo editor de mapas, sem
-   renomear nada:
+1. Decida o id do hunt à mão — é o texto que você vai colocar na sign do editor de mapas marcando
+   a entrada desse hunt no mapa da cidade inteira, no formato `CIDADE-HUNT-SEQ` (ex:
+   `ROOK-HUNT-0019`, sempre 4 dígitos). Se a cidade ainda não existir em `extractor/maps/`, crie a
+   pasta (`extractor/maps/<CIDADE>/`) — é só isso, nenhum código muda.
+2. Crie a pasta do mapa **dentro** da pasta da cidade, nomeada `<ID>_nome-descritivo`:
    ```
-   extractor/maps/<nome>/
-     <nome>.otbm
-     <nome>-house.xml
-     <nome>-monster.xml
-     <nome>-npc.xml
-     <nome>-zones.xml
+   extractor/maps/<CIDADE>/<ID>_nome-descritivo/
    ```
-   O `.otbm` **precisa** ter o mesmo nome da pasta, e os XMLs seguem o padrão
-   `<nome>-house.xml` etc. — é exatamente o nome que o editor de mapas já usa
-   ao exportar, então normalmente basta arrastar os arquivos exportados pra
-   dentro da pasta.
-3. Rode:
+3. Coloque dentro dela os arquivos exportados pelo editor de mapas, sem renomear nada — o nome
+   descritivo que o editor já usa ao exportar, não o id da pasta:
    ```
-   node extractor/scripts/build_map.js <nome>
+   extractor/maps/<CIDADE>/<ID>_nome-descritivo/
+     nome-descritivo.otbm
+     nome-descritivo-house.xml
+     nome-descritivo-monster.xml
+     nome-descritivo-npc.xml
+     nome-descritivo-zones.xml
    ```
-4. O resultado sai em `extractor/ready-maps/<nome>/`:
+   O pipeline encontra o `.otbm`/XMLs de dentro por sufixo (`*.otbm`, `*-monster.xml`, ...), então
+   não é preciso que o nome do arquivo bata com o nome da pasta — só a pasta carrega o id.
+4. Rode, passando o **nome da pasta** (`<ID>_nome-descritivo`, não só o nome descritivo):
+   ```
+   node extractor/scripts/build_map.js <ID>_nome-descritivo
+   ```
+5. O resultado sai em `extractor/ready-maps/<CIDADE>/<ID>_nome-descritivo/` (mesmo path relativo de
+   `maps/`, raiz diferente):
    ```
    map.json            ← tilemap Phaser
    metadata.json        ← metadados por appearanceId
@@ -51,10 +138,10 @@ python extractor/scripts/build_travel_fragment.py rook-full --city-prefix ROOK
    monsters/respawn.json (se houver spawns em monster.xml)
    ```
 
-### Exemplo: `orc-fortress.otbm`
+### Exemplo: `orc-fortress.otbm`, hunt novo de Rookgaard
 
 ```
-extractor/maps/orc-fortress/
+extractor/maps/ROOK/ROOK-HUNT-0019_orc-fortress/
   orc-fortress.otbm
   orc-fortress-house.xml
   orc-fortress-monster.xml
@@ -63,12 +150,12 @@ extractor/maps/orc-fortress/
 ```
 
 ```
-node extractor/scripts/build_map.js orc-fortress
+node extractor/scripts/build_map.js ROOK-HUNT-0019_orc-fortress
 ```
 
-Saída: `extractor/ready-maps/orc-fortress/`.
+Saída: `extractor/ready-maps/ROOK/ROOK-HUNT-0019_orc-fortress/`.
 
-5. Se o mapa novo introduz itens (loot, equipamento em NPC, etc.) que ainda não foram baked, rode
+6. Se o mapa novo introduz itens (loot, equipamento em NPC, etc.) que ainda não foram baked, rode
    também:
    ```
    npm run build-items
@@ -82,17 +169,22 @@ Saída: `extractor/ready-maps/orc-fortress/`.
    invocação de `build_map.js` penalizaria até rebuilds repetidos do mesmo mapa durante iteração.
    Rode sempre que adicionar/mudar itens, não a cada build de mapa. Ver
    `.scratch/item-sprite-sheets/spec.md` para o contrato completo.
-6. Gere o fragmento de dados de jogo do mapa (hunts/monsters/loot) para colar manualmente
+7. Gere o fragmento de dados de jogo do mapa (hunts/monsters/loot) para colar manualmente
    no `db.json` do repositório `tibia-idle`:
    ```
-   python extractor/scripts/build_hunt_fragment.py <nome> --map-id ROOK-00NN
+   python extractor/scripts/build_hunt_fragment.py ROOK-HUNT-0019_orc-fortress --map-id ROOK-HUNT-0019
    ```
-   Saída: `extractor/ready-maps/<nome>/db-fragment.json`. Por padrão **este script nunca
-   escreve em `db.json`** — `monsters` e `loot` no fragmento já saem prontos (derivados
-   mecanicamente do `respawn.json`), `hunts` sai como rascunho com um campo `_todo` listando
-   o que precisa de revisão humana (nome/label, arte de portrait, `startPosition`). Revise e
-   copie à mão. `--map-id` é opcional; sem ele o fragmento usa um id placeholder e sinaliza em
-   `_todo` que você precisa rodar de novo com o id real antes de copiar.
+   Saída: `extractor/ready-maps/ROOK/ROOK-HUNT-0019_orc-fortress/db-fragment.json`. Por padrão
+   **este script nunca escreve em `db.json`** — `monsters` e `loot` no fragmento já saem prontos
+   (derivados mecanicamente do `respawn.json`), `hunts` sai como rascunho com um campo `_todo`
+   listando o que precisa de revisão humana (nome/label, arte de portrait, `startPosition`). Revise
+   e copie à mão.
+
+   `--map-id` é **obrigatório** — não é mais opcional nem auto-atribuído. O script extrai o id
+   embutido no nome da pasta (tudo antes do primeiro `_`) e **compara** com o valor passado em
+   `--map-id`; uma divergência é erro, citando os dois valores (ex: `--map-id ROOK-HUNT-0013 não
+   bate com o id da pasta (ROOK-HUNT-0014)`) — pense nisso como uma dupla confirmação deliberada,
+   não uma formalidade.
 
    Se preferir pular a cópia manual, use `--write-db` (opcional, aditivo — precisa ser pedido
    explicitamente, `--all` sozinho continua sem tocar em `db.json`):
@@ -103,12 +195,12 @@ Saída: `extractor/ready-maps/orc-fortress/`.
    `sync-loot-from-extractor.py`, sempre correto porque é 100% mecânico). `hunts` só é
    **adicionado** se o `mapId` ainda não existir em `db.json` — um hunt já curado nunca é
    sobrescrito, e o rascunho novo entra com o campo `_todo` junto, direto no `db.json`, como
-   lembrete. Sem `--map-id` (obrigatório omitir com `--all`), o id de cada mapa novo é
-   atribuído automaticamente (prefixo `ROOK` para mapas `*-rookguard`, senão o primeiro
-   segmento do nome em maiúsculas — vale conferir se fez sentido) continuando a sequência já
-   usada em `db.json`. Por padrão aponta pro checkout irmão `../tibia-idle/tibia-idle`,
-   ajustável via `--tibia-idle-dir`.
-7. Se o mapa novo introduziu sprites de item novos (passo 5 gerou atlases novos), publique-os
+   lembrete. Um `mapId` que **já existe** em `db.json` é erro sem `--edit` ("ID do mapa já existe —
+   use --edit se a intenção é atualizar") — nada é escrito; passe `--edit` quando a intenção
+   realmente for atualizar um mapa já registrado. Com `--all`, `--map-id` não é aceito (cada mapa
+   já tem o seu, embutido na própria pasta). Por padrão aponta pro checkout irmão
+   `../tibia-idle/tibia-idle`, ajustável via `--tibia-idle-dir`.
+8. Se o mapa novo introduziu sprites de item novos (passo 6 gerou atlases novos), publique-os
    no repositório `tibia-idle`:
    ```
    python extractor/scripts/sync_items_to_tibia_idle.py
@@ -120,45 +212,54 @@ Saída: `extractor/ready-maps/orc-fortress/`.
 
 ## Travel graph (mapa cidade inteira)
 
-Diferente dos mapas de hunt (pequenos, exportados um a um em `extractor/maps/<nome>/`), o grafo de
-viagem (`locations`/`travelGraph` no `db.json` do `tibia-idle`) é derivado do **mapa da cidade
-inteira**, que vive em `extractor/full-maps/<região>/` (fonte **e** saída ficam na mesma pasta —
-diferente do par `maps/` → `ready-maps/` dos hunts). Hoje só existe `rook-full` (Rookgaard). Ver
+Diferente dos mapas de hunt (pequenos, exportados um a um em `extractor/maps/<CIDADE>/<pasta>/`), o
+grafo de viagem (`locations`/`travelGraph` no `db.json` do `tibia-idle`) é derivado do **mapa da
+cidade inteira**, que vive em `extractor/full-maps/<CIDADE>/` (fonte **e** saída ficam na mesma
+pasta — diferente do par `maps/` → `ready-maps/` dos hunts). Hoje só existe `ROOK` (Rookgaard). Ver
 `.scratch/travel-graph-and-locations/spec.md` para o design completo.
 
-1. Gere o `map.json` da cidade inteira (mesmo runner dos hunts, só que o nome do mapa resolve pra
+1. Gere o `map.json` da cidade inteira (mesmo runner dos hunts, só que o nome passado resolve pra
    `full-maps/` em vez de `maps/`):
    ```
-   node extractor/scripts/build_map.js rook-full
+   node extractor/scripts/build_map.js ROOK
    ```
-   Saída (versionada no Git, ao contrário do `ready-maps/` dos hunts): `extractor/full-maps/rook-full/map.json`.
-2. Gere o fragmento `{locations, travelGraph}`:
+   Saída (versionada no Git, ao contrário do `ready-maps/` dos hunts): `extractor/full-maps/ROOK/map.json`.
+2. Gere o fragmento `{locations, travelGraph}` — um único argumento, o código da cidade (não mais
+   `region` + `--city-prefix` separados: a cidade já é a chave de tudo, do path ao prefixo de id):
    ```
-   python extractor/scripts/build_travel_fragment.py rook-full --city-prefix ROOK
+   python extractor/scripts/build_travel_fragment.py ROOK
    ```
-   Requer o passo 1 já feito (lê `extractor/raw-maps/rook-full.raw.json` +
-   `extractor/full-maps/rook-full/map.json`) e um checkout local do Canary — por padrão
+   Requer o passo 1 já feito (lê `extractor/raw-maps/ROOK.raw.json` +
+   `extractor/full-maps/ROOK/map.json`) e um checkout local do Canary — por padrão
    `C:\canary-3.2.1` (ajustável via `--canary-dir`), usado só pra casar cada NPC com seu `.lua` de
-   shop em `data-otservbr-global/npc/`. Saída: `extractor/full-maps/rook-full/db-fragment.json`, pra
+   shop em `data-otservbr-global/npc/`. Saída: `extractor/full-maps/ROOK/db-fragment.json`, pra
    revisar e colar à mão — por padrão **este script nunca escreve em `db.json`**, mesmo padrão do
    `build_hunt_fragment.py`.
 3. Se preferir pular a cópia manual, use `--write-db` (mescla `locations`/`travelGraph` direto no
    `db.json` do `tibia-idle`):
    ```
-   python extractor/scripts/build_travel_fragment.py rook-full --city-prefix ROOK --write-db
+   python extractor/scripts/build_travel_fragment.py ROOK --write-db
    ```
    Campos mecânicos (posição, `shop`, `tileCount`) sempre são atualizados por id/par; o
    `displayName` de uma location já curada (sem `_todo`) nunca é sobrescrito. Por padrão aponta pro
    checkout irmão `../tibia-idle/tibia-idle`, ajustável via `--tibia-idle-dir`.
 
 **Pontos de interesse (POIs) são marcados no `.otbm` com uma sign** (item 2016, `uid` 10001+, texto
-no formato `CIDADE-TIPO-INCREMENTAL`, ex: `ROOK-HUNT-0001`) — tipos `HUNT`/`TEMPLE`/`DEPOT`/`QUEST`.
-Locations do tipo `NPC` não usam sign — vêm direto de `<região>-npc.xml`. Duas locations só ganham
-uma aresta em `travelGraph` se houver caminho andável entre elas no grafo de tiles (BFS por POI, sem
-penalidade diagonal, sem custo por tipo de piso) — **um par sem aresta não é erro**, é o grafo
-genuinamente desconectado nesse trecho (áreas ainda não conectadas por corredor andável, ou POIs sem
-sign colocada). Migrar sinalizações antigas (ids sem o segmento `TIPO`) pro formato novo é tarefa
-manual de edição de mapa, o extractor não faz isso sozinho.
+no formato `CIDADE-TIPO-NNNN`, com `NNNN` sendo **exatamente 4 dígitos** — ex: `ROOK-HUNT-0001`) —
+tipos `HUNT`/`TEMPLE`/`DEPOT`/`QUEST`. Uma quantidade de dígitos diferente de 4 (`ROOK-HUNT-1`,
+`ROOK-HUNT-00015`) é rejeitada como `invalid-sign-format`, não aceita como um id "válido" só que
+órfão — foi assim que um typo de 5 dígitos (`ROOK-HUNT-00015`) escapou validação antes desta regra.
+Cada motivo de warning tem sua própria mensagem (`invalid-sign-format` vs. `duplicate-sign-id`
+nunca compartilham texto genérico) — uma sign bem-formada colocada duas vezes por engano
+(`ROOK-HUNT-0006`, `uid`/texto idênticos) é reportada como duplicata, não como "formato inválido".
+
+Locations do tipo `NPC` não usam sign — vêm direto de `<CIDADE>-npc.xml`, e seu id segue o mesmo
+formato `CIDADE-TIPO-slug` das demais (`ROOK-NPC-obi`). Duas locations só ganham uma aresta em
+`travelGraph` se houver caminho andável entre elas no grafo de tiles (BFS por POI, sem penalidade
+diagonal, sem custo por tipo de piso) — **um par sem aresta não é erro**, é o grafo genuinamente
+desconectado nesse trecho (áreas ainda não conectadas por corredor andável, ou POIs sem sign
+colocada). Migrar sinalizações antigas (ids sem o segmento `TIPO`) pro formato novo é tarefa manual
+de edição de mapa, o extractor não faz isso sozinho.
 
 ## Estrutura de pastas
 
@@ -176,18 +277,22 @@ extractor/
     build_item_index.py    bake global (avulso): junta os dois bakes acima → atlases/items-index.json
     build_items.js         runner: chama os três bakes de item acima em sequência (npm run build-items)
     hunt_fragment.py        lógica pura: respawn.json → fragmento {monsters, loot, hunts}
-    build_hunt_fragment.py  CLI (avulso): gera ready-maps/<nome>/db-fragment.json — nunca escreve em db.json
+    build_hunt_fragment.py  CLI (avulso): gera ready-maps/<CIDADE>/<pasta>/db-fragment.json — nunca escreve em db.json
     sync_items_to_tibia_idle.py  CLI (avulso): publica atlases de item no repositório tibia-idle
     travel_graph.py         lógica pura: mapa cidade-inteira → grafo de tiles, BFS por POI, fragmento {locations, travelGraph}
-    build_travel_fragment.py CLI (avulso): gera full-maps/<região>/db-fragment.json — nunca escreve em db.json
+    build_travel_fragment.py CLI (avulso): gera full-maps/<CIDADE>/db-fragment.json — nunca escreve em db.json
+    map_dirs.py             lógica pura: descoberta de pastas em dois níveis (maps/<CIDADE>/<pasta>), usada por build_phaser_map.py e build_hunt_fragment.py
+    city_ids.py             lógica pura: deriva `city`/`status` do id de um hunt/location (nunca digitados à mão)
   vendor/
     otbm2json.js       lib de leitura/escrita de OTBM (vendorizada, não é do npm)
-  maps/<nome>/          SOURCE — .otbm + xmls de cada mapa de hunt (versionado)
-  full-maps/<região>/   SOURCE **e** saída do mapa cidade-inteira (.otbm e map.json versionados —
+  maps/<CIDADE>/<ID>_nome/  SOURCE — .otbm + xmls de cada mapa de hunt (versionado); <CIDADE> nunca é
+                             adivinhada, é sempre a pasta-pai (ver "Convenção de pastas" acima)
+  full-maps/<CIDADE>/  SOURCE **e** saída do mapa cidade-inteira (.otbm e map.json versionados —
                          diferente do ready-maps/ dos hunts; db-fragment.json continua gitignored,
-                         igual ao dos hunts — feed do travel-graph, não da rotação de hunts)
-  raw-maps/<nome>.raw.json   saída da etapa 1, hunts e cidade-inteira (gitignored, regenerável)
-  ready-maps/<nome>/         saída da etapa 2 pros mapas de hunt (gitignored, regenerável)
+                         igual ao dos hunts — feed do travel-graph, não da rotação de hunts). Pasta =
+                         só o código da cidade, conteúdo renomeado pra bater (ROOK.otbm, ...)
+  raw-maps/<pasta>.raw.json   saída da etapa 1, hunts e cidade-inteira (gitignored, regenerável)
+  ready-maps/<CIDADE>/<pasta>/  saída da etapa 2 pros mapas de hunt, espelha maps/ 1:1 (gitignored, regenerável)
   sprites/              biblioteca de sprites extraída dos .aec (gitignored, binário grande)
   atlases/              saída dos bakes globais (outfits/items/items-static + items-index.json), gitignored, regenerável
   otservbr-monster.xml  lookup nome→looktype de monstro, compartilhado entre mapas
@@ -206,18 +311,29 @@ Não. `build_map.js` chama as duas etapas em sequência para cada mapa. Só rode
 os scripts individuais se estiver depurando uma etapa específica.
 
 **Como o `--all` descobre quais mapas existem?**
-Ele varre `extractor/maps/*/` procurando uma subpasta que contenha um arquivo
-`<nome-da-pasta>.otbm`. Pastas sem esse arquivo (como `training-spots/`, que
-está vazia) são ignoradas.
+Ele varre `extractor/maps/<CIDADE>/*/` (dois níveis — toda cidade
+automaticamente, sem hardcode) procurando uma subpasta que contenha algum
+arquivo `*.otbm`. Pastas sem esse arquivo (como `training-spots/`, que está
+vazia) são ignoradas.
 
-**Erro `OTBM não encontrado: .../maps/<nome>/<nome>.otbm`**
-O nome da pasta e o nome do arquivo `.otbm` dentro dela precisam ser
-idênticos. Confira também maiúsculas/minúsculas e hífens.
+**Erro `Mapa "<nome>" não encontrado em nenhuma cidade sob .../maps nem em .../full-maps`**
+O nome passado precisa ser o nome exato de uma pasta de mapa
+(`maps/<CIDADE>/<nome>/`) ou de uma cidade inteira (`full-maps/<CIDADE>/`).
+O erro lista as cidades disponíveis pra ajudar a comparar — confira também
+maiúsculas/minúsculas e hífens/underscore.
+
+**O `.otbm`/XMLs de dentro da pasta precisam ter o mesmo nome da pasta?**
+Não — só a pasta carrega o id (`<ID>_nome-descritivo`). O `.otbm`/XMLs de
+dentro são encontrados por sufixo (`*.otbm`, `*-monster.xml`, ...), então o
+nome que o editor de mapas já usa ao exportar (`bears-rookguard.otbm`, por
+exemplo) funciona direto, sem renomear nada. Isso não vale para
+`full-maps/<CIDADE>/`, onde o conteúdo É renomeado pra bater com o código da
+cidade — ver "Convenção de pastas" acima.
 
 **`build_phaser_map.py falhou (exit 1)` ao rodar `--all` para vários mapas**
 O runner continua para o próximo mapa mesmo se um falhar, e no fim lista quais
-falharam. Rode aquele mapa sozinho (`node build_map.js <nome>`) pra ver o erro
-completo.
+falharam. Rode aquele mapa sozinho (`node build_map.js <nome-da-pasta>`) pra
+ver o erro completo.
 
 **"python" não é reconhecido pelo sistema**
 `build_map.js` chama o comando `python` diretamente. Se no seu ambiente o
@@ -279,8 +395,8 @@ duplicado por mapa.
 De propósito — `hunts` (nome, portrait, `startPosition`) exige curadoria
 humana que não dá pra derivar do mapa (ver `hunt_fragment.py`), e mesmo os
 campos 100% mecânicos (`monsters`, `loot`) não devem ser mesclados sem
-revisão. O script gera `ready-maps/<nome>/db-fragment.json` e para por aí;
-colar no `db.json` é sempre uma ação manual.
+revisão. O script gera `ready-maps/<CIDADE>/<pasta>/db-fragment.json` e para
+por aí; colar no `db.json` é sempre uma ação manual.
 
 **Onde ficavam antes os scripts `sync-item-sprites-from-extractor.py` e
 `sync-loot-from-extractor.py`?**
@@ -301,7 +417,7 @@ automática por flags.
 
 **Como ver quais IDs ainda dependem só da detecção automática?**
 ```
-python extractor/scripts/item_classifier.py --dump-unknown extractor/ready-maps/<nome>/map.json
+python extractor/scripts/item_classifier.py --dump-unknown extractor/ready-maps/<CIDADE>/<pasta>/map.json
 ```
 
 ### Git — o que versionar
