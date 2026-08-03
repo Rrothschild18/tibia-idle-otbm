@@ -7,5 +7,7 @@ if SCRIPTS_DIR not in sys.path:
 
 # build_phaser_map.py resolves its output/asset paths from sys.argv[1] at
 # import time. Point it at an existing fixture map so importing the module
-# in tests works the same as running it from the CLI.
-sys.argv = ["build_phaser_map.py", "rats-rookguard"]
+# in tests works the same as running it from the CLI. The argument is the
+# map's pasta name (leaf folder under maps/<CIDADE>/) — the tool resolves
+# which city it lives under itself (see map_dirs.py).
+sys.argv = ["build_phaser_map.py", "ROOK-HUNT-0013_rats-rookguard"]

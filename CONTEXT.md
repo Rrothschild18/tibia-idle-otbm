@@ -9,6 +9,19 @@ runtime que ele alimenta.
 Área delimitada que o jogo carrega como um mapa — não o mundo completo do Tibia. É a unidade de
 escopo do pipeline do extractor e do runtime.
 
+**City** (`city`, ex: `ROOK`, `TEST`):
+A pasta-pai física de um mapa sob `extractor/maps/<CIDADE>/`, `ready-maps/<CIDADE>/` ou
+`full-maps/<CIDADE>/` — nunca adivinhada do nome do mapa. Todo hunt/location no `db.json` do
+`tibia-idle` carrega um campo `city` derivado do próprio id (primeiro segmento), nunca digitado à
+mão. `TEST` é uma cidade fictícia pros mapas de teste/descartáveis (mesmo mecanismo, sem sistema de
+tag separado) — ver `.scratch/city-scoped-ids/spec.md`.
+_Avoid_: region (nome antigo, ambíguo com "região" no sentido geográfico do jogo em si)
+
+**Map id** (`mapId`/`Location.id`, ex: `ROOK-HUNT-0002`):
+Formato `CIDADE-TIPO-SEQ`, escolhido à mão (digitado na sign do editor de mapas, copiado pro nome
+da pasta) — nunca auto-numerado pelo pipeline. Idêntico entre a coleção `hunts` e a location de
+entrada correspondente no travel-graph; não há mais duas strings pra reconciliar.
+
 **Layer class** (`layerClass`):
 O papel de renderização atribuído a um objeto ou tile do mapa (`ground`, `border`, `bottom`,
 `object`, `top`, `roof`, `walls_south`, `walls_east`). Determina ordem de desenho e comportamento

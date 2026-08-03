@@ -4,21 +4,29 @@ collection entries a map needs in tibia-idle's db.json, and optionally merge
 it straight in with --write-db.
 
 `monsters` and `loot` are always fully correct (mechanically derived from
-ready-maps/<map>/monsters/respawn.json), so --write-db always upserts them by
-mapId — same as what the old sync-loot-from-extractor.py did. `hunts` needs
-real human curation (art, wording, spawn tile — see hunt_fragment.py), so
-it's append-only: an existing hunts entry is never overwritten, only new
-mapIds get added, as drafts flagged with "_todo" right in db.json.
+ready-maps/<cidade>/<pasta>/monsters/respawn.json), so --write-db always
+upserts them by mapId — same as what the old sync-loot-from-extractor.py did.
+`hunts` needs real human curation (art, wording, spawn tile — see
+hunt_fragment.py), so it's append-only: an existing hunts entry is never
+overwritten, only new mapIds get added, as drafts flagged with "_todo" right
+in db.json.
+
+The map's id is never invented by this script — it's read from the map's own
+folder name (`<ID>_nome-descritivo` -> `<ID>`, see extractor/README.md) and
+must be repeated explicitly via --map-id as a second, independent
+confirmation; a mismatch between the two is a hard error. Writing a mapId
+that already exists in db.json requires --edit — without it, that's also a
+hard error, and nothing is written.
 
 Without --write-db (the default) nothing outside extractor/ is touched — the
-fragment is written to ready-maps/<map>/db-fragment.json for you to review
-and copy in by hand.
+fragment is written to ready-maps/<cidade>/<pasta>/db-fragment.json for you
+to review and copy in by hand.
 
-Requires `node build_map.js <nome-do-mapa>` to have run already (reads
-ready-maps/<nome>/monsters/respawn.json).
+Requires `node build_map.js <nome-da-pasta-do-mapa>` to have run already
+(reads ready-maps/<cidade>/<pasta>/monsters/respawn.json).
 
-Run: python build_hunt_fragment.py <nome-do-mapa> [--map-id ROOK-0010] [--write-db]
-     python build_hunt_fragment.py --all [--write-db]
+Run: python build_hunt_fragment.py <nome-da-pasta> --map-id ROOK-HUNT-0010 [--write-db [--edit]]
+     python build_hunt_fragment.py --all [--write-db [--edit]]
 """
 
 import argparse
@@ -26,7 +34,15 @@ import json
 import os
 import sys
 
-from hunt_fragment import build_fragment, find_existing_map_id, merge_fragment_into_db, next_map_id
+import map_dirs
+from hunt_fragment import (
+    MapIdAlreadyExistsError,
+    MapIdMismatchError,
+    build_fragment,
+    map_id_exists,
+    map_id_from_folder,
+    merge_fragment_into_db,
+)
 
 SCRIPTS_DIR = os.path.dirname(os.path.abspath(__file__))
 EXTRACTOR_DIR = os.path.dirname(SCRIPTS_DIR)
@@ -38,15 +54,14 @@ DEFAULT_TIBIA_IDLE_DIR = os.path.abspath(
 
 
 def discover_map_names():
-    return sorted(
-        name
-        for name in os.listdir(READY_MAPS_DIR)
-        if os.path.exists(os.path.join(READY_MAPS_DIR, name, "monsters", "respawn.json"))
-    )
+    return map_dirs.discover_two_level_names(READY_MAPS_DIR, os.path.join("monsters", "respawn.json"))
 
 
 def _load_respawn(map_name: str):
-    respawn_path = os.path.join(READY_MAPS_DIR, map_name, "monsters", "respawn.json")
+    map_dir = map_dirs.find_two_level_dir(READY_MAPS_DIR, map_name)
+    if map_dir is None:
+        return None
+    respawn_path = os.path.join(map_dir, "monsters", "respawn.json")
     if not os.path.exists(respawn_path):
         return None
     with open(respawn_path, "r", encoding="utf-8") as f:
@@ -54,7 +69,8 @@ def _load_respawn(map_name: str):
 
 
 def _write_fragment_file(map_name: str, fragment: dict) -> str:
-    out_path = os.path.join(READY_MAPS_DIR, map_name, "db-fragment.json")
+    map_dir = map_dirs.find_two_level_dir(READY_MAPS_DIR, map_name)
+    out_path = os.path.join(map_dir, "db-fragment.json")
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(fragment, f, indent=2, ensure_ascii=False)
         f.write("\n")
@@ -63,15 +79,26 @@ def _write_fragment_file(map_name: str, fragment: dict) -> str:
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("map_name", nargs="?", help="Nome do mapa (pasta em extractor/ready-maps/)")
+    parser.add_argument("map_name", nargs="?", help="Nome da pasta do mapa (em extractor/ready-maps/<cidade>/)")
     parser.add_argument("--all", action="store_true", help="Processa todos os mapas com respawn.json")
-    parser.add_argument("--map-id", help="ID do jogo a atribuir (ex: ROOK-0010) — só válido com um único mapa")
+    parser.add_argument(
+        "--map-id",
+        help="ID do jogo a confirmar (ex: ROOK-HUNT-0010) — obrigatório com um único mapa, "
+        "precisa bater com o id embutido no nome da pasta",
+    )
     parser.add_argument(
         "--write-db",
         action="store_true",
         help="Além do fragmento, mescla direto no db.json do tibia-idle: monsters/loot sempre "
         "atualizados por mapId, hunts só é adicionado se o mapId ainda não existir (nunca sobrescreve "
         "um hunt já curado)",
+    )
+    parser.add_argument(
+        "--edit",
+        action="store_true",
+        help="Confirma a intenção de rodar de novo sobre um mapId que já existe em db.json (sem "
+        "isso, mapId existente é erro). Não sobrescreve hunts já curado — só destrava monsters/loot "
+        "(sempre mecânicos, sempre atualizados)",
     )
     parser.add_argument(
         "--tibia-idle-dir",
@@ -81,9 +108,11 @@ def main():
     args = parser.parse_args()
 
     if not args.all and not args.map_name:
-        parser.error("informe <nome-do-mapa> ou --all")
+        parser.error("informe <nome-da-pasta> ou --all")
     if args.all and args.map_id:
-        parser.error("--map-id não pode ser usado com --all (cada mapa precisa de um id diferente)")
+        parser.error("--map-id não pode ser usado com --all (cada mapa tem seu próprio id, embutido na pasta)")
+    if not args.all and not args.map_id:
+        parser.error("--map-id é obrigatório (confirma o id embutido no nome da pasta)")
 
     map_names = discover_map_names() if args.all else [args.map_name]
     if not map_names:
@@ -100,28 +129,35 @@ def main():
             db = json.load(f)
 
     generated = 0
-    for map_name in map_names:
-        respawn = _load_respawn(map_name)
-        if respawn is None:
-            print(f"[SKIP] {map_name}: sem monsters/respawn.json (mapa sem spawns, ou build_map.js não rodado)")
-            continue
+    try:
+        for map_name in map_names:
+            respawn = _load_respawn(map_name)
+            if respawn is None:
+                print(f"[SKIP] {map_name}: sem monsters/respawn.json (mapa sem spawns, ou build_map.js não rodado)")
+                continue
 
-        map_id = args.map_id
-        if map_id is None and db is not None:
-            # A map already registered under a hand-assigned id (e.g. "rats-sewers" ->
-            # "ROOK-0002") must reuse that id, or it gets duplicated under a fresh one.
-            map_id = find_existing_map_id(db["hunts"], db["monsters"], map_name) or next_map_id(db["hunts"], map_name)
-        fragment = build_fragment(respawn, map_name, map_id)
-        out_path = _write_fragment_file(map_name, fragment)
-        generated += 1
-        print(f"[OK] {map_name}: {len(fragment['loot']['drops'])} loot rows -> {out_path}")
+            folder_id = map_id_from_folder(map_name)
+            if args.map_id and args.map_id != folder_id:
+                raise MapIdMismatchError(args.map_id, folder_id)
+            map_id = args.map_id or folder_id
 
-        if db is not None:
-            report = merge_fragment_into_db(db, fragment)
-            note = " (já existia, hunts NÃO sobrescrito — edite à mão se quiser atualizar)" if report["hunts"] == "skipped" else ""
-            print(f"     db.json: monsters {report['monsters']}, loot {report['loot']}, hunts {report['hunts']}{note}")
-        elif fragment["hunts"]["_todo"]:
-            print(f"     hunts precisa de revisão manual: {'; '.join(fragment['hunts']['_todo'])}")
+            if db is not None and not args.edit and map_id_exists(db["hunts"], db["monsters"], map_id):
+                raise MapIdAlreadyExistsError(map_id)
+
+            fragment = build_fragment(respawn, map_name, map_id)
+            out_path = _write_fragment_file(map_name, fragment)
+            generated += 1
+            print(f"[OK] {map_name}: {len(fragment['loot']['drops'])} loot rows -> {out_path}")
+
+            if db is not None:
+                report = merge_fragment_into_db(db, fragment)
+                note = " (já existia, hunts NÃO sobrescrito — edite à mão se quiser atualizar)" if report["hunts"] == "skipped" else ""
+                print(f"     db.json: monsters {report['monsters']}, loot {report['loot']}, hunts {report['hunts']}{note}")
+            elif fragment["hunts"]["_todo"]:
+                print(f"     hunts precisa de revisão manual: {'; '.join(fragment['hunts']['_todo'])}")
+    except (MapIdMismatchError, MapIdAlreadyExistsError) as err:
+        print(f"[ERRO] {map_name}: {err}")
+        sys.exit(1)
 
     if db is not None:
         with open(db_path, "w", encoding="utf-8") as f:

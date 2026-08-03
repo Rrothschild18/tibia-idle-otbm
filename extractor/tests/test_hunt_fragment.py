@@ -131,6 +131,34 @@ def test_build_hunts_entry_always_flags_fields_needing_human_review():
     assert entry["_todo"]  # name/label/portrait/startPosition always need a look
 
 
+def test_build_hunts_entry_derives_city_from_id_with_no_status_for_a_real_city():
+    entry = hf.build_hunts_entry(_respawn(), "rats-cave", "ROOK-HUNT-0010")
+
+    assert entry["city"] == "ROOK"
+    assert "status" not in entry
+
+
+def test_build_hunts_entry_derives_test_status_for_the_test_city():
+    entry = hf.build_hunts_entry(_respawn(), "dragon-darashia", "TEST-HUNT-0001")
+
+    assert entry["city"] == "TEST"
+    assert entry["status"] == "test"
+
+
+def test_build_hunts_entry_titles_from_the_descriptive_part_not_the_full_folder_name():
+    # map_name is the real ready-maps/<CIDADE>/<pasta> leaf name, id prefix
+    # and all — the human-facing title must ignore the id, or a map like
+    # ROOK-HUNT-0018_bugs-rookguard gets a garbage title ("Rook Hunt
+    # 0018_bugs Rookguard") instead of "Bugs Rookguard".
+    entry = hf.build_hunts_entry(_respawn(), "ROOK-HUNT-0018_bugs-rookguard", "ROOK-HUNT-0018")
+
+    assert entry["name"] == "Bugs Rookguard"
+    assert entry["label"] == "Bugs Rookguard"
+    # assetsRoot/mapUrl DO use the full folder name — that's the real
+    # ready-maps output path the game fetches assets from.
+    assert entry["assetsRoot"] == "assets/ROOK-HUNT-0018_bugs-rookguard-sprites"
+
+
 # ======================================================
 # build_fragment
 # ======================================================
@@ -158,51 +186,41 @@ def test_build_fragment_uses_placeholder_id_and_flags_it_when_map_id_omitted():
 
 
 # ======================================================
-# find_existing_map_id
+# map_id_from_folder
 # ======================================================
 
 
-def test_find_existing_map_id_matches_by_assets_root_not_by_guessing_the_id():
-    # "rats-sewers" has no "-rookguard" suffix but is already registered as
-    # ROOK-0002 — a hand-assigned id next_map_id() could never reproduce.
-    hunts = [{"mapId": "ROOK-0002", "assetsRoot": "assets/rats-sewers-sprites"}]
-
-    assert hf.find_existing_map_id(hunts, [], "rats-sewers") == "ROOK-0002"
+def test_map_id_from_folder_takes_everything_before_the_first_underscore():
+    assert hf.map_id_from_folder("ROOK-HUNT-0002_bears-rookguard") == "ROOK-HUNT-0002"
 
 
-def test_find_existing_map_id_falls_back_to_monsters_when_hunts_entry_was_removed():
-    # A hunts entry can be deleted by hand while monsters/loot stay registered
-    # under the old id — must still resolve to that id, not mint a new one.
-    monsters = [{"mapId": "DRAGON-0001", "assetsRoot": "assets/dragon-darashia-sprites/monsters"}]
-
-    assert hf.find_existing_map_id([], monsters, "dragon-darashia") == "DRAGON-0001"
-
-
-def test_find_existing_map_id_returns_none_for_an_unregistered_map():
-    hunts = [{"mapId": "ROOK-0002", "assetsRoot": "assets/rats-sewers-sprites"}]
-
-    assert hf.find_existing_map_id(hunts, [], "orcs-cave-rookguard") is None
+def test_map_id_from_folder_handles_test_city_ids_too():
+    assert hf.map_id_from_folder("TEST-HUNT-0001_dragon-darashia") == "TEST-HUNT-0001"
 
 
 # ======================================================
-# next_map_id
+# map_id_exists
 # ======================================================
 
 
-def test_next_map_id_uses_rook_prefix_for_rookguard_maps_and_continues_sequence():
-    hunts = [{"mapId": "ROOK-0001"}, {"mapId": "ROOK-0009"}, {"mapId": "DRAGON-0001"}]
+def test_map_id_exists_true_when_present_in_hunts():
+    hunts = [{"mapId": "ROOK-HUNT-0002"}]
 
-    assert hf.next_map_id(hunts, "orcs-cave-rookguard") == "ROOK-0010"
-
-
-def test_next_map_id_falls_back_to_first_segment_for_non_rookguard_maps():
-    hunts = [{"mapId": "DRAGON-0001"}]
-
-    assert hf.next_map_id(hunts, "dragon-darashia") == "DRAGON-0002"
+    assert hf.map_id_exists(hunts, [], "ROOK-HUNT-0002") is True
 
 
-def test_next_map_id_starts_at_one_for_a_brand_new_prefix():
-    assert hf.next_map_id([], "sea-serpent") == "SEA-0001"
+def test_map_id_exists_true_when_present_only_in_monsters():
+    # A hunts entry can be deleted by hand while monsters/loot stay
+    # registered under the same id — still counts as "already exists".
+    monsters = [{"mapId": "TEST-HUNT-0001"}]
+
+    assert hf.map_id_exists([], monsters, "TEST-HUNT-0001") is True
+
+
+def test_map_id_exists_false_for_an_unregistered_id():
+    hunts = [{"mapId": "ROOK-HUNT-0002"}]
+
+    assert hf.map_id_exists(hunts, [], "ROOK-HUNT-0012") is False
 
 
 # ======================================================

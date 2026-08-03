@@ -13,7 +13,7 @@
     "maxY": 1180
   },
   "defaultZ": 7,
-  "assetsRoot": "assets/rook-full-sprites",
+  "assetsRoot": "assets/ROOK-sprites",
   "objectDefs": {
     "1083": {
       "type": "random",
@@ -29730,79 +29730,79 @@
   },
   "sheets": {
     "ground-32": {
-      "image": "assets/rook-full-sprites/sheets/ground-32.png",
+      "image": "assets/ROOK-sprites/sheets/ground-32.png",
       "cellWidth": 32,
       "cellHeight": 32,
       "columns": 16
     },
     "ground-64": {
-      "image": "assets/rook-full-sprites/sheets/ground-64.png",
+      "image": "assets/ROOK-sprites/sheets/ground-64.png",
       "cellWidth": 64,
       "cellHeight": 64,
       "columns": 12
     },
     "walls_south-64": {
-      "image": "assets/rook-full-sprites/sheets/walls_south-64.png",
+      "image": "assets/ROOK-sprites/sheets/walls_south-64.png",
       "cellWidth": 64,
       "cellHeight": 64,
       "columns": 12
     },
     "roof-64": {
-      "image": "assets/rook-full-sprites/sheets/roof-64.png",
+      "image": "assets/ROOK-sprites/sheets/roof-64.png",
       "cellWidth": 64,
       "cellHeight": 64,
       "columns": 12
     },
     "walls_south-32": {
-      "image": "assets/rook-full-sprites/sheets/walls_south-32.png",
+      "image": "assets/ROOK-sprites/sheets/walls_south-32.png",
       "cellWidth": 32,
       "cellHeight": 32,
       "columns": 16
     },
     "object-64": {
-      "image": "assets/rook-full-sprites/sheets/object-64.png",
+      "image": "assets/ROOK-sprites/sheets/object-64.png",
       "cellWidth": 64,
       "cellHeight": 64,
       "columns": 12
     },
     "border-64": {
-      "image": "assets/rook-full-sprites/sheets/border-64.png",
+      "image": "assets/ROOK-sprites/sheets/border-64.png",
       "cellWidth": 64,
       "cellHeight": 64,
       "columns": 12
     },
     "object-32": {
-      "image": "assets/rook-full-sprites/sheets/object-32.png",
+      "image": "assets/ROOK-sprites/sheets/object-32.png",
       "cellWidth": 32,
       "cellHeight": 32,
       "columns": 16
     },
     "bottom-32": {
-      "image": "assets/rook-full-sprites/sheets/bottom-32.png",
+      "image": "assets/ROOK-sprites/sheets/bottom-32.png",
       "cellWidth": 32,
       "cellHeight": 32,
       "columns": 16
     },
     "bottom-64": {
-      "image": "assets/rook-full-sprites/sheets/bottom-64.png",
+      "image": "assets/ROOK-sprites/sheets/bottom-64.png",
       "cellWidth": 64,
       "cellHeight": 64,
       "columns": 12
     },
     "walls_east-64": {
-      "image": "assets/rook-full-sprites/sheets/walls_east-64.png",
+      "image": "assets/ROOK-sprites/sheets/walls_east-64.png",
       "cellWidth": 64,
       "cellHeight": 64,
       "columns": 12
     },
     "top-64": {
-      "image": "assets/rook-full-sprites/sheets/top-64.png",
+      "image": "assets/ROOK-sprites/sheets/top-64.png",
       "cellWidth": 64,
       "cellHeight": 64,
       "columns": 12
     },
     "top-32": {
-      "image": "assets/rook-full-sprites/sheets/top-32.png",
+      "image": "assets/ROOK-sprites/sheets/top-32.png",
       "cellWidth": 32,
       "cellHeight": 32,
       "columns": 16
@@ -1114538,7 +1114538,7 @@
       "tileheight": 32,
       "tilecount": 288,
       "columns": 16,
-      "image": "assets/rook-full-sprites/sheets/ground-32.png",
+      "image": "assets/ROOK-sprites/sheets/ground-32.png",
       "imagewidth": 512,
       "imageheight": 576
     },
@@ -1114549,7 +1114549,7 @@
       "tileheight": 64,
       "tilecount": 12,
       "columns": 12,
-      "image": "assets/rook-full-sprites/sheets/ground-64.png",
+      "image": "assets/ROOK-sprites/sheets/ground-64.png",
       "imagewidth": 768,
       "imageheight": 64
     }

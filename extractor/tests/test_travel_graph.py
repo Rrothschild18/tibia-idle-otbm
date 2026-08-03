@@ -28,16 +28,16 @@ def _sign_item(uid, text):
 
 
 def test_parse_marker_signs_accepts_a_well_formed_id_in_reserved_uid_range():
-    dump = _dump([(1000, 2000, 7, [_sign_item(10001, "ROOK-HUNT-001")])])
+    dump = _dump([(1000, 2000, 7, [_sign_item(10001, "ROOK-HUNT-0001")])])
 
     locations, issues = tg.parse_marker_signs(dump)
 
-    assert locations == [{"id": "ROOK-HUNT-001", "type": "HUNT", "x": 1000, "y": 2000, "z": 7}]
+    assert locations == [{"id": "ROOK-HUNT-0001", "type": "HUNT", "x": 1000, "y": 2000, "z": 7}]
     assert issues == []
 
 
 def test_parse_marker_signs_ignores_uid_outside_reserved_range():
-    dump = _dump([(1000, 2000, 7, [_sign_item(500, "ROOK-HUNT-001")])])
+    dump = _dump([(1000, 2000, 7, [_sign_item(500, "ROOK-HUNT-0001")])])
 
     locations, issues = tg.parse_marker_signs(dump)
 
@@ -54,6 +54,39 @@ def test_parse_marker_signs_reports_legacy_format_without_tipo_segment():
     assert issues == [{"reason": "invalid-sign-format", "uid": 10002, "text": "ROOK-0002", "x": 1000, "y": 2000, "z": 7}]
 
 
+def test_parse_marker_signs_rejects_five_digit_sequence_as_a_typo():
+    # Real-world bug found live in ROOK.otbm: a sign typed with 5 digits
+    # (instead of 4) used to slip through as "valid" and silently produced an
+    # id nothing could ever resolve to.
+    dump = _dump([(1000, 2000, 7, [_sign_item(10015, "ROOK-HUNT-00015")])])
+
+    locations, issues = tg.parse_marker_signs(dump)
+
+    assert locations == []
+    assert issues == [{"reason": "invalid-sign-format", "uid": 10015, "text": "ROOK-HUNT-00015", "x": 1000, "y": 2000, "z": 7}]
+
+
+def test_parse_marker_signs_rejects_sequence_with_fewer_than_four_digits():
+    dump = _dump([(1000, 2000, 7, [_sign_item(10001, "ROOK-HUNT-1")])])
+
+    locations, issues = tg.parse_marker_signs(dump)
+
+    assert locations == []
+    assert issues == [{"reason": "invalid-sign-format", "uid": 10001, "text": "ROOK-HUNT-1", "x": 1000, "y": 2000, "z": 7}]
+
+
+def test_parse_marker_signs_accepts_every_currently_valid_four_digit_sequence():
+    # Regression: the 12 sign ids already placed in ROOK.otbm today, all
+    # 4 digits, must keep validating under the stricter regex.
+    texts = [f"ROOK-HUNT-{n:04d}" for n in range(1, 13)]
+    dump = _dump([(1000 + i, 2000, 7, [_sign_item(10001 + i, text)]) for i, text in enumerate(texts)])
+
+    locations, issues = tg.parse_marker_signs(dump)
+
+    assert issues == []
+    assert [loc["id"] for loc in locations] == texts
+
+
 def test_parse_marker_signs_ignores_non_sign_items_even_with_high_uid():
     dump = _dump([(1000, 2000, 7, [{"id": 2473, "uid": 64129}])])
 
@@ -64,7 +97,7 @@ def test_parse_marker_signs_ignores_non_sign_items_even_with_high_uid():
 
 
 def test_parse_marker_signs_reports_a_second_sign_that_reuses_the_same_id():
-    # Real-world case found in rook-full: two signs share a uid (a copy-paste
+    # Real-world case found in ROOK.otbm: two signs share a uid (a copy-paste
     # mistake in the map editor) and ended up with identical text too — only
     # the first becomes a location, the second is reported, never silently
     # duplicated downstream.
@@ -93,6 +126,20 @@ def test_build_sign_location_hunt_type_also_gets_a_hunt_id_placeholder():
 
     assert entry["huntId"] is None
     assert any("huntId" in note for note in entry["_todo"])
+
+
+def test_build_sign_location_derives_city_with_no_status_for_a_real_city():
+    entry = tg.build_sign_location({"id": "ROOK-DEPOT-001", "type": "DEPOT", "x": 1, "y": 2, "z": 7})
+
+    assert entry["city"] == "ROOK"
+    assert "status" not in entry
+
+
+def test_build_sign_location_derives_test_status_for_the_test_city():
+    entry = tg.build_sign_location({"id": "TEST-HUNT-0001", "type": "HUNT", "x": 1, "y": 2, "z": 7})
+
+    assert entry["city"] == "TEST"
+    assert entry["status"] == "test"
 
 
 # ======================================================
@@ -343,10 +390,11 @@ def test_build_npc_location_includes_shop_when_present():
     entry = tg.build_npc_location(npc, "ROOK", shop)
 
     assert entry == {
-        "id": "rook-npc-obi",
+        "id": "ROOK-NPC-obi",
         "type": "NPC",
         "x": 1151, "y": 1130, "z": 7,
         "displayName": "Obi",
+        "city": "ROOK",
         "shop": shop,
     }
 
@@ -357,13 +405,33 @@ def test_build_npc_location_omits_shop_field_when_none():
     assert "shop" not in entry
 
 
+def test_build_npc_location_uppercases_city_and_type_but_keeps_slug_lowercase():
+    # "An Orc Guard" -> slug "an-orc-guard", city/type upper: ROOK-NPC-an-orc-guard
+    entry = tg.build_npc_location({"name": "An Orc Guard", "x": 0, "y": 0, "z": 7}, "rook", None)
+
+    assert entry["id"] == "ROOK-NPC-an-orc-guard"
+
+
+def test_build_npc_location_derives_test_status_for_the_test_city():
+    entry = tg.build_npc_location({"name": "Nobody", "x": 0, "y": 0, "z": 7}, "TEST", None)
+
+    assert entry["city"] == "TEST"
+    assert entry["status"] == "test"
+
+
+def test_build_npc_location_omits_status_for_a_real_city():
+    entry = tg.build_npc_location({"name": "Obi", "x": 0, "y": 0, "z": 7}, "ROOK", None)
+
+    assert "status" not in entry
+
+
 def test_build_npc_locations_flags_unmatched_npc_names_without_dropping_the_location():
     npcs = [{"name": "Obi", "x": 1, "y": 1, "z": 7}, {"name": "Nobody", "x": 2, "y": 2, "z": 7}]
     shops_by_name = {"Obi": [{"itemName": "axe", "itemId": 3274, "sell": 7}]}
 
     locations, unmatched = tg.build_npc_locations(npcs, "ROOK", shops_by_name)
 
-    assert [loc["id"] for loc in locations] == ["rook-npc-obi", "rook-npc-nobody"]
+    assert [loc["id"] for loc in locations] == ["ROOK-NPC-obi", "ROOK-NPC-nobody"]
     assert "shop" in locations[0]
     assert "shop" not in locations[1]
     assert unmatched == ["Nobody"]
@@ -515,7 +583,7 @@ def test_merge_travel_fragment_into_db_merges_both_collections():
 
     report = tg.merge_travel_fragment_into_db(db, fragment)
 
-    assert report["locations"] == {"rook-npc-obi": "added"}
+    assert report["locations"] == {"ROOK-NPC-obi": "added"}
     assert report["travelGraph"] == {"ROOK-HUNT-001<->ROOK-TEMPLE-001": "added"}
     assert db["locations"] == fragment["locations"]
     assert db["travelGraph"] == fragment["travelGraph"]
