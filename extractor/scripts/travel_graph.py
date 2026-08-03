@@ -57,9 +57,13 @@ def parse_marker_signs(dump: Dict) -> Tuple[List[Dict], List[Dict]]:
     range isn't a marker at all and is silently skipped (it's an ordinary
     in-game sign, not travel-graph input). A reserved-uid sign whose text
     doesn't match CIDADE-TIPO-INCREMENTAL is reported as an issue, not
-    silently dropped."""
+    silently dropped. Two signs that resolve to the same id (typically a
+    copy-pasted sign that kept the old uid — a map-editing mistake) are also
+    reported: only the first occurrence becomes a location, so a duplicate
+    id can never reach the fragment/db.json and silently collide there."""
     locations: List[Dict] = []
     issues: List[Dict] = []
+    seen_ids: Set[str] = set()
 
     for x, y, z, tile in _iter_dump_tiles(dump):
         for raw_item in tile.get("items", []):
@@ -74,6 +78,11 @@ def parse_marker_signs(dump: Dict) -> Tuple[List[Dict], List[Dict]]:
             if not match:
                 issues.append({"reason": "invalid-sign-format", "uid": uid, "text": text, "x": x, "y": y, "z": z})
                 continue
+
+            if text in seen_ids:
+                issues.append({"reason": "duplicate-sign-id", "uid": uid, "text": text, "x": x, "y": y, "z": z})
+                continue
+            seen_ids.add(text)
 
             locations.append({
                 "id": text,
@@ -90,20 +99,35 @@ def _title_from_location_id(location_id: str) -> str:
     return " ".join(word.capitalize() for word in location_id.split("-"))
 
 
+# Fields on a `locations` entry that need a human decision and are never
+# overwritten by a later run once the entry is curated (see merge_locations_into_db).
+# `huntId` only applies to type "HUNT" — it's the mapId a HUNT location's
+# sign-based id can't derive on its own, since the two ids come from
+# unrelated sources: a sign's CIDADE-TIPO-INCREMENTAL text vs. a hunt map's
+# hand-assigned mapId in the `hunts` collection (see hunt_fragment.py).
+CURATED_LOCATION_FIELDS = ("displayName", "huntId")
+
+
 def build_sign_location(sign: Dict) -> Dict:
     """A parsed marker sign -> a draft `locations` entry. `displayName` is a
-    placeholder derived from the id, flagged for human curation — mirrors
-    hunt_fragment.py's build_hunts_entry _todo precedent; merge_locations_into_db
-    never overwrites a curated displayName on a later run."""
-    return {
+    placeholder derived from the id; a HUNT location also gets a `huntId`
+    placeholder (None) to be pointed at the matching `hunts` entry's mapId —
+    both flagged for human curation via `_todo`. merge_locations_into_db
+    never overwrites either once curated on a later run."""
+    entry = {
         "id": sign["id"],
         "type": sign["type"],
         "x": sign["x"],
         "y": sign["y"],
         "z": sign["z"],
         "displayName": _title_from_location_id(sign["id"]),
-        "_todo": ["confirmar displayName (gerado automaticamente do id)"],
     }
+    todo = ["confirmar displayName (gerado automaticamente do id)"]
+    if sign["type"] == "HUNT":
+        entry["huntId"] = None
+        todo.append("associar huntId com o mapId da hunt correspondente (coleção hunts)")
+    entry["_todo"] = todo
+    return entry
 
 
 # ======================================================
@@ -393,9 +417,18 @@ def build_travel_fragment(sign_locations: List[Dict], npc_locations: List[Dict],
 def merge_locations_into_db(db_locations: List[Dict], fragment_locations: List[Dict]) -> Dict[str, str]:
     """Upserts each fragment location into db_locations in place, by id.
     Mechanical fields (position, type, shop) always take the fragment's
-    fresh value. `displayName` (and its `_todo` curation flag) is preserved
-    from the existing db entry once curated — i.e. once a human edit removed
-    `_todo` — never overwritten by a later run's placeholder."""
+    fresh value. Once a human edit removes `_todo` from an existing entry,
+    it's considered fully curated: every field in CURATED_LOCATION_FIELDS
+    (`displayName`, `huntId`) is preserved from then on, never overwritten
+    by a later run's placeholder, and `_todo` stays gone. While `_todo` is
+    still present (still a draft nobody's reviewed yet), the entry is fully
+    regenerated from the fresh fragment instead — including `_todo` itself,
+    so a code change that adds a new curation note (e.g. `huntId`) reaches
+    every not-yet-curated draft on its next run, not just brand-new ones.
+    `by_id` is kept up to date as entries are appended, so two fragment
+    locations sharing an id (should never happen — see parse_marker_signs'
+    duplicate-id check — but this function doesn't trust that) upsert into
+    the same db entry instead of duplicating it."""
     by_id = {entry["id"]: i for i, entry in enumerate(db_locations)}
     report: Dict[str, str] = {}
 
@@ -403,16 +436,16 @@ def merge_locations_into_db(db_locations: List[Dict], fragment_locations: List[D
         existing_index = by_id.get(loc["id"])
         if existing_index is None:
             db_locations.append(dict(loc))
+            by_id[loc["id"]] = len(db_locations) - 1
             report[loc["id"]] = "added"
             continue
 
         existing = db_locations[existing_index]
         merged = dict(loc)
-        if "displayName" in existing:
-            merged["displayName"] = existing["displayName"]
-        if "_todo" in existing:
-            merged["_todo"] = existing["_todo"]
-        else:
+        if "_todo" not in existing:
+            for field in CURATED_LOCATION_FIELDS:
+                if field in existing:
+                    merged[field] = existing[field]
             merged.pop("_todo", None)
         db_locations[existing_index] = merged
         report[loc["id"]] = "updated"

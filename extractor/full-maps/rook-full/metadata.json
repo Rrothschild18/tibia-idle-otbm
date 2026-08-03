@@ -40229,42 +40229,6 @@
       "usable": true
     }
   },
-  "2016": {
-    "metadata": {
-      "id": 2016,
-      "spriteInfo": {
-        "patternWidth": 1,
-        "patternHeight": 1,
-        "patternDepth": 1,
-        "layers": 1,
-        "patternFrames": 0
-      },
-      "frameGroup": "initial",
-      "flags": {
-        "bottom": true,
-        "unpass": true,
-        "unmove": true,
-        "automap": {
-          "color": 186
-        },
-        "lenshelp": {
-          "id": 1111
-        }
-      }
-    },
-    "spriteInfo": {
-      "patternWidth": 1,
-      "patternHeight": 1,
-      "patternDepth": 1,
-      "boundingSquare": 32
-    },
-    "flags": {
-      "unmove": true,
-      "unpass": true,
-      "automap": true,
-      "bottom": true
-    }
-  },
   "2003": {
     "metadata": {
       "id": 2003,
@@ -63274,6 +63238,42 @@
       "unmove": true,
       "automap": true,
       "bank": true
+    }
+  },
+  "2016": {
+    "metadata": {
+      "id": 2016,
+      "spriteInfo": {
+        "patternWidth": 1,
+        "patternHeight": 1,
+        "patternDepth": 1,
+        "layers": 1,
+        "patternFrames": 0
+      },
+      "frameGroup": "initial",
+      "flags": {
+        "bottom": true,
+        "unpass": true,
+        "unmove": true,
+        "automap": {
+          "color": 186
+        },
+        "lenshelp": {
+          "id": 1111
+        }
+      }
+    },
+    "spriteInfo": {
+      "patternWidth": 1,
+      "patternHeight": 1,
+      "patternDepth": 1,
+      "boundingSquare": 32
+    },
+    "flags": {
+      "unmove": true,
+      "unpass": true,
+      "automap": true,
+      "bottom": true
     }
   },
   "5153": {

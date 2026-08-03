@@ -438,6 +438,7 @@
 	</monster>
 	<monster centerx="1188" centery="1130" centerz="7" radius="3">
 		<monster name="Wolf" x="-1" y="-3" z="7" spawntime="60" />
+		<monster name="Wolf" x="1" y="3" z="7" spawntime="90" />
 	</monster>
 	<monster centerx="1181" centery="1132" centerz="7" radius="3">
 		<monster name="Wolf" x="-3" y="-3" z="7" spawntime="60" />
@@ -462,12 +463,9 @@
 		<monster name="Rat" x="-2" y="1" z="7" spawntime="90" />
 	</monster>
 	<monster centerx="1189" centery="1136" centerz="7" radius="3">
-		<monster name="Wolf" x="1" y="-1" z="7" spawntime="90" />
-		<monster name="Wolf" x="2" y="0" z="7" spawntime="90" />
+		<monster name="Wolf" x="3" y="2" z="7" spawntime="90" />
 	</monster>
-	<monster centerx="1196" centery="1136" centerz="7" radius="3">
-		<monster name="Wolf" x="0" y="1" z="7" spawntime="60" />
-	</monster>
+	<monster centerx="1196" centery="1136" centerz="7" radius="3" />
 	<monster centerx="1201" centery="1140" centerz="7" radius="3">
 		<monster name="Wolf" x="-1" y="3" z="7" spawntime="90" />
 	</monster>
@@ -476,7 +474,7 @@
 		<monster name="Wolf" x="0" y="-1" z="7" spawntime="60" />
 	</monster>
 	<monster centerx="1182" centery="1141" centerz="7" radius="3">
-		<monster name="Wolf" x="0" y="3" z="7" spawntime="90" />
+		<monster name="Wolf" x="-1" y="3" z="7" spawntime="90" />
 	</monster>
 	<monster centerx="1063" centery="1143" centerz="7" radius="3">
 		<monster name="Rabbit" x="0" y="-1" z="7" spawntime="90" />
@@ -508,12 +506,8 @@
 		<monster name="Rat" x="0" y="2" z="7" spawntime="90" />
 		<monster name="Spider" x="-3" y="3" z="7" spawntime="90" />
 	</monster>
-	<monster centerx="1188" centery="1143" centerz="7" radius="3">
-		<monster name="Wolf" x="1" y="3" z="7" spawntime="90" />
-	</monster>
-	<monster centerx="1196" centery="1143" centerz="7" radius="3">
-		<monster name="Wolf" x="1" y="0" z="7" spawntime="90" />
-	</monster>
+	<monster centerx="1188" centery="1143" centerz="7" radius="3" />
+	<monster centerx="1196" centery="1143" centerz="7" radius="3" />
 	<monster centerx="1021" centery="1150" centerz="7" radius="3">
 		<monster name="Snake" x="-1" y="2" z="7" spawntime="90" />
 	</monster>
@@ -530,6 +524,7 @@
 		<monster name="Wolf" x="-3" y="3" z="7" spawntime="90" />
 	</monster>
 	<monster centerx="1188" centery="1151" centerz="7" radius="3">
+		<monster name="Wolf" x="2" y="-3" z="7" spawntime="90" />
 		<monster name="Wolf" x="0" y="1" z="7" spawntime="60" />
 	</monster>
 	<monster centerx="1021" centery="1157" centerz="7" radius="3">
@@ -675,9 +670,6 @@
 	</monster>
 	<monster centerx="1135" centery="1061" centerz="8" radius="2">
 		<monster name="Rat" x="-1" y="1" z="8" spawntime="90" />
-	</monster>
-	<monster centerx="1112" centery="1066" centerz="8" radius="3">
-		<monster name="Young Troll" x="1" y="-2" z="8" spawntime="90" />
 	</monster>
 	<monster centerx="1098" centery="1073" centerz="8" radius="3">
 		<monster name="Bug" x="2" y="1" z="8" spawntime="90" />

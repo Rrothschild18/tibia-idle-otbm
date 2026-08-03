@@ -63,11 +63,36 @@ def test_parse_marker_signs_ignores_non_sign_items_even_with_high_uid():
     assert issues == []
 
 
+def test_parse_marker_signs_reports_a_second_sign_that_reuses_the_same_id():
+    # Real-world case found in rook-full: two signs share a uid (a copy-paste
+    # mistake in the map editor) and ended up with identical text too — only
+    # the first becomes a location, the second is reported, never silently
+    # duplicated downstream.
+    dump = _dump([
+        (1000, 2000, 7, [_sign_item(10006, "ROOK-HUNT-0006")]),
+        (1213, 1119, 7, [_sign_item(10006, "ROOK-HUNT-0006")]),
+    ])
+
+    locations, issues = tg.parse_marker_signs(dump)
+
+    assert len(locations) == 1
+    assert locations[0]["x"] == 1000
+    assert issues == [{"reason": "duplicate-sign-id", "uid": 10006, "text": "ROOK-HUNT-0006", "x": 1213, "y": 1119, "z": 7}]
+
+
 def test_build_sign_location_derives_placeholder_display_name_and_flags_todo():
     entry = tg.build_sign_location({"id": "ROOK-DEPOT-001", "type": "DEPOT", "x": 1, "y": 2, "z": 7})
 
     assert entry["displayName"] == "Rook Depot 001"
     assert entry["_todo"]
+    assert "huntId" not in entry
+
+
+def test_build_sign_location_hunt_type_also_gets_a_hunt_id_placeholder():
+    entry = tg.build_sign_location({"id": "ROOK-HUNT-001", "type": "HUNT", "x": 1, "y": 2, "z": 7})
+
+    assert entry["huntId"] is None
+    assert any("huntId" in note for note in entry["_todo"])
 
 
 # ======================================================
@@ -387,6 +412,23 @@ def test_merge_locations_into_db_appends_a_new_location_as_a_draft():
     assert db_locations == fragment
 
 
+def test_merge_locations_into_db_never_duplicates_when_fragment_has_a_repeated_id():
+    # Defensive: even if a fragment somehow carries the same id twice, the
+    # second occurrence must upsert into the same db entry, not append a
+    # second row (parse_marker_signs already prevents this upstream, but
+    # this function shouldn't trust that).
+    db_locations = []
+    fragment = [
+        {"id": "ROOK-HUNT-0006", "type": "HUNT", "x": 1, "y": 1, "z": 7},
+        {"id": "ROOK-HUNT-0006", "type": "HUNT", "x": 2, "y": 2, "z": 7},
+    ]
+
+    tg.merge_locations_into_db(db_locations, fragment)
+
+    assert len(db_locations) == 1
+    assert db_locations[0]["x"] == 2
+
+
 def test_merge_locations_into_db_preserves_curated_display_name_but_updates_position():
     curated = {"id": "ROOK-HUNT-001", "type": "HUNT", "x": 1, "y": 2, "z": 7, "displayName": "Rat Sewers Entrance"}
     db_locations = [curated]
@@ -399,6 +441,20 @@ def test_merge_locations_into_db_preserves_curated_display_name_but_updates_posi
     assert db_locations[0]["displayName"] == "Rat Sewers Entrance"
     assert db_locations[0]["x"] == 999
     assert "_todo" not in db_locations[0]
+
+
+def test_merge_locations_into_db_preserves_curated_hunt_id_but_updates_position():
+    curated = {"id": "ROOK-HUNT-001", "type": "HUNT", "x": 1, "y": 2, "z": 7,
+               "displayName": "Rat Sewers Entrance", "huntId": "ROOK-0002"}
+    db_locations = [curated]
+    fragment = [{"id": "ROOK-HUNT-001", "type": "HUNT", "x": 999, "y": 888, "z": 7,
+                 "displayName": "Rook Hunt 001", "huntId": None, "_todo": ["associar huntId"]}]
+
+    tg.merge_locations_into_db(db_locations, fragment)
+
+    assert db_locations[0]["huntId"] == "ROOK-0002"
+    assert db_locations[0]["displayName"] == "Rat Sewers Entrance"
+    assert db_locations[0]["x"] == 999
 
 
 def test_merge_locations_into_db_keeps_todo_flag_while_still_uncurated():
