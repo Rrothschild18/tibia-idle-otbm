@@ -15,6 +15,10 @@ python extractor/scripts/build_hunt_fragment.py <nome-do-mapa> --map-id ROOK-00N
                                                       # gera db-fragment.json (hunts/monsters/loot) —
                                                       # nunca escreve em db.json, ver seção 6 abaixo
 python extractor/scripts/sync_items_to_tibia_idle.py # publica atlases de item no repo tibia-idle
+node extractor/scripts/build_map.js rook-full        # gera o mapa cidade-inteira (fonte: full-maps/rook-full/)
+python extractor/scripts/build_travel_fragment.py rook-full --city-prefix ROOK
+                                                      # gera db-fragment.json (locations/travelGraph) —
+                                                      # nunca escreve em db.json, ver "Travel graph" abaixo
 ```
 
 ## Como adicionar um mapa novo
@@ -114,6 +118,48 @@ Saída: `extractor/ready-maps/orc-fortress/`.
    `apps/tibia-idle-front/public/assets/` no repositório `tibia-idle`, assumido como
    `../tibia-idle/tibia-idle` (ajustável via `--tibia-idle-dir`).
 
+## Travel graph (mapa cidade inteira)
+
+Diferente dos mapas de hunt (pequenos, exportados um a um em `extractor/maps/<nome>/`), o grafo de
+viagem (`locations`/`travelGraph` no `db.json` do `tibia-idle`) é derivado do **mapa da cidade
+inteira**, que vive em `extractor/full-maps/<região>/` (fonte **e** saída ficam na mesma pasta —
+diferente do par `maps/` → `ready-maps/` dos hunts). Hoje só existe `rook-full` (Rookgaard). Ver
+`.scratch/travel-graph-and-locations/spec.md` para o design completo.
+
+1. Gere o `map.json` da cidade inteira (mesmo runner dos hunts, só que o nome do mapa resolve pra
+   `full-maps/` em vez de `maps/`):
+   ```
+   node extractor/scripts/build_map.js rook-full
+   ```
+   Saída (versionada no Git, ao contrário do `ready-maps/` dos hunts): `extractor/full-maps/rook-full/map.json`.
+2. Gere o fragmento `{locations, travelGraph}`:
+   ```
+   python extractor/scripts/build_travel_fragment.py rook-full --city-prefix ROOK
+   ```
+   Requer o passo 1 já feito (lê `extractor/raw-maps/rook-full.raw.json` +
+   `extractor/full-maps/rook-full/map.json`) e um checkout local do Canary — por padrão
+   `C:\canary-3.2.1` (ajustável via `--canary-dir`), usado só pra casar cada NPC com seu `.lua` de
+   shop em `data-otservbr-global/npc/`. Saída: `extractor/full-maps/rook-full/db-fragment.json`, pra
+   revisar e colar à mão — por padrão **este script nunca escreve em `db.json`**, mesmo padrão do
+   `build_hunt_fragment.py`.
+3. Se preferir pular a cópia manual, use `--write-db` (mescla `locations`/`travelGraph` direto no
+   `db.json` do `tibia-idle`):
+   ```
+   python extractor/scripts/build_travel_fragment.py rook-full --city-prefix ROOK --write-db
+   ```
+   Campos mecânicos (posição, `shop`, `tileCount`) sempre são atualizados por id/par; o
+   `displayName` de uma location já curada (sem `_todo`) nunca é sobrescrito. Por padrão aponta pro
+   checkout irmão `../tibia-idle/tibia-idle`, ajustável via `--tibia-idle-dir`.
+
+**Pontos de interesse (POIs) são marcados no `.otbm` com uma sign** (item 2016, `uid` 10001+, texto
+no formato `CIDADE-TIPO-INCREMENTAL`, ex: `ROOK-HUNT-0001`) — tipos `HUNT`/`TEMPLE`/`DEPOT`/`QUEST`.
+Locations do tipo `NPC` não usam sign — vêm direto de `<região>-npc.xml`. Duas locations só ganham
+uma aresta em `travelGraph` se houver caminho andável entre elas no grafo de tiles (BFS por POI, sem
+penalidade diagonal, sem custo por tipo de piso) — **um par sem aresta não é erro**, é o grafo
+genuinamente desconectado nesse trecho (áreas ainda não conectadas por corredor andável, ou POIs sem
+sign colocada). Migrar sinalizações antigas (ids sem o segmento `TIPO`) pro formato novo é tarefa
+manual de edição de mapa, o extractor não faz isso sozinho.
+
 ## Estrutura de pastas
 
 ```
@@ -132,11 +178,16 @@ extractor/
     hunt_fragment.py        lógica pura: respawn.json → fragmento {monsters, loot, hunts}
     build_hunt_fragment.py  CLI (avulso): gera ready-maps/<nome>/db-fragment.json — nunca escreve em db.json
     sync_items_to_tibia_idle.py  CLI (avulso): publica atlases de item no repositório tibia-idle
+    travel_graph.py         lógica pura: mapa cidade-inteira → grafo de tiles, BFS por POI, fragmento {locations, travelGraph}
+    build_travel_fragment.py CLI (avulso): gera full-maps/<região>/db-fragment.json — nunca escreve em db.json
   vendor/
     otbm2json.js       lib de leitura/escrita de OTBM (vendorizada, não é do npm)
-  maps/<nome>/          SOURCE — .otbm + xmls de cada mapa (versionado)
-  raw-maps/<nome>.raw.json   saída da etapa 1 (gitignored, regenerável)
-  ready-maps/<nome>/         saída da etapa 2 (gitignored, regenerável)
+  maps/<nome>/          SOURCE — .otbm + xmls de cada mapa de hunt (versionado)
+  full-maps/<região>/   SOURCE **e** saída do mapa cidade-inteira (.otbm e map.json versionados —
+                         diferente do ready-maps/ dos hunts; db-fragment.json continua gitignored,
+                         igual ao dos hunts — feed do travel-graph, não da rotação de hunts)
+  raw-maps/<nome>.raw.json   saída da etapa 1, hunts e cidade-inteira (gitignored, regenerável)
+  ready-maps/<nome>/         saída da etapa 2 pros mapas de hunt (gitignored, regenerável)
   sprites/              biblioteca de sprites extraída dos .aec (gitignored, binário grande)
   atlases/              saída dos bakes globais (outfits/items/items-static + items-index.json), gitignored, regenerável
   otservbr-monster.xml  lookup nome→looktype de monstro, compartilhado entre mapas
