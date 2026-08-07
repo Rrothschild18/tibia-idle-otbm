@@ -29,10 +29,15 @@ Três eixos que o `layerClass` colapsava num só passam a ser independentes:
 | passagem | flag `unpass` | dá para andar? |
 | footprint | tamanho do sprite | qual bucket de folha? |
 
-A `paint order` é andar → linha → `stack order`. Dentro da tile: ground primeiro, depois itens de
-fundo por `top order` crescente (`clip`=1, `bottom`=2, `top`=3), depois os demais em ordem de
-inserção. Criaturas sempre por último. **A profundidade de um sprite é consequência dessa ordem** —
-deixa de existir constante de profundidade por categoria.
+A `paint order` é andar → anti-diagonal (`tileX + tileY`) → `stack order`. Dentro da tile: ground
+primeiro, depois itens de fundo por `top order` crescente (`clip`=1, `bottom`=2, `top`=3), depois os
+demais em ordem de inserção. Criaturas sempre por último. **A profundidade de um sprite é
+consequência dessa ordem** — deixa de existir constante de profundidade por categoria.
+
+> Esta ADR dizia "andar → linha → `stack order`". Estava errado, e o erro é do lado da leitura, não
+> deste formato: varrer por linha põe a parede de oeste por cima da tile a leste dela. Ver
+> `MAP_JSON_V6.md` ("Reconstruir a ordem de desenho") e a emenda da ADR 0012 do `tibia-idle`.
+> Nenhum mapa precisou ser reexportado.
 
 A regra vive em `extractor/scripts/tile_stack.py`, puro e sem I/O. Nenhuma lista de id é consultada:
 `item_classifier.py` continua no repo só porque o caminho v5 ainda o chama, e morre junto com ele.

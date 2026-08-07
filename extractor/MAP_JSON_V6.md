@@ -63,11 +63,13 @@ Cada tile é um array plano:
 
 ### Reconstruir a ordem de desenho
 
-É uma varredura, sem tabela de consulta:
+É uma varredura, sem tabela de consulta. **A ordem em que `tiles` vem no arquivo (linha, depois
+coluna) é de armazenamento, não de desenho** — quem desenha precisa reordenar:
 
 ```
 para cada floor em ordem crescente de z:
-  para cada tile em floors[z].tiles:        # já vem em ordem de linha
+  para cada tile, por anti-diagonal (tileX + tileY) crescente,
+                  e dentro da diagonal por tileX crescente:
     desenhe ground (se != 0)
     para cada id em stack:                  # já vem em stack order
       desenhe id
@@ -75,6 +77,21 @@ para cada floor em ordem crescente de z:
 ```
 
 A profundidade de um sprite é a posição dele nessa varredura. Não existe `depthOffset` a somar.
+
+**O eixo da varredura não é escolha de gosto.** Todo sprite ancora no canto inferior-direito da sua
+tile e se estende para **cima e para a esquerda** — um 64×64 em `(x, y)` cobre `(x-1, y-1)`,
+`(x, y-1)`, `(x-1, y)` e `(x, y)`. Só uma varredura cujo "depois" aponta para baixo-**direita**
+garante que tudo o que um sprite cobre já foi pintado. Varrer por linha não garante: pinta
+`(x-1, y+1)` depois de `(x, y)`, e a parede uma coluna a oeste rouba a tile a leste dela.
+
+É a ordem do cliente (`MapView::updateVisibleTiles` do OTClient: `for(diagonal…) for(iy = diagonal -
+advance, ix = advance; …; --iy, ++ix)`). O RME varre por coluna (`MapDrawer::DrawMap`: `map_x`
+externo, `map_y` interno) e concorda com a diagonal em todo par de sprites que pode se sobrepor —
+seguir o cliente também bate com o editor.
+
+Cuidado com o detalhe que já custou caro: o índice de slot ordena aparências **dentro de uma tile**
+e nada mais. Compará-lo entre tiles diferentes faz a presença ou ausência de chão num tile decidir
+o que o vizinho desenha por cima. Ver a emenda da ADR 0012 no `tibia-idle`.
 
 ### Deslocamento e elevação
 

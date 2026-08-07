@@ -35,7 +35,7 @@ Três eixos que o `layerClass` colapsava num só, e que passam a ser independent
 | passagem | flag `unpass` | dá para andar? |
 | footprint | tamanho do sprite | tilelayer, blitter ou sprite? |
 
-A ordem de desenho (`paint order`) é: andar → linha → `stack order`. Dentro da tile: ground
+A ordem de desenho (`paint order`) é: andar → anti-diagonal (`tileX + tileY`) → `stack order`. Dentro da tile: ground
 primeiro, depois itens de fundo por `top order` crescente (`clip`=1, `bottom`=2, `top`=3), depois os
 demais em ordem de inserção. Criaturas sempre por último.
 
@@ -51,7 +51,7 @@ registrado aqui com o motivo.
 
 | Ponto | RME | Decisão | Motivo |
 |---|---|---|---|
-| Ordem de iteração | por coluna | **por linha** | O RME percorre coluna por artefato da estrutura de dados dele. Por linha é o que dá a pista de profundidade correta, e é o que já fazemos |
+| ~~Ordem de iteração~~ | ~~por coluna~~ | ~~**por linha**~~ | **Desvio retirado — era o bug.** Sprites ancoram no canto inferior-direito e se estendem para cima-esquerda, então varrer por linha põe a parede de oeste por cima da tile a leste dela. Passou a ser a anti-diagonal do cliente, que concorda com a coluna do RME em todo par que pode se sobrepor. Ver a emenda da ADR 0012 do `tibia-idle` |
 | Clamp de elevação | nenhum | **clampar, ajustável** | Sem teto, uma pilha alta desloca o sprite para fora da própria tile. O RME nunca encontra o caso porque é editor |
 | Seleção de variante por andar | ignora | **ignorar, atrás de switch** | Critério de aceite é o mapa ficar igual ao que se vê no RME. Afeta ~6.300 posicionamentos; se algum sair errado, o switch liga |
 | Telhado dinâmico | não existe | **não implementar** | Nenhum mapa tem telhado real. O que chamávamos de telhado é chão |
