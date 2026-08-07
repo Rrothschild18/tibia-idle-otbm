@@ -1,4 +1,4 @@
-from sheet_packer import SheetPacker, bucket_for
+from sheet_packer import SAFE_TEXTURE_SIZE, SheetPacker, bucket_for
 
 
 def test_bucket_for_exact_sizes():
@@ -77,3 +77,64 @@ def test_packing_is_deterministic_across_independent_runs():
         return {aid: packer.add_appearance(aid, lc, w, h, fc) for aid, lc, w, h, fc in appearances}
 
     assert run() == run()
+
+
+def test_size_only_key_drops_the_layer_class_from_the_sheet_name():
+    # map.json v6 has no render role to group by — footprint is the whole key.
+    packer = SheetPacker()
+
+    a_key, _ = packer.add_appearance(1, None, 32, 32)
+    b_key, _ = packer.add_appearance(2, None, 64, 64)
+
+    assert a_key == "sheet-32"
+    assert b_key == "sheet-64"
+
+
+def test_size_only_key_merges_appearances_that_v5_would_have_split():
+    packer = SheetPacker()
+
+    ground_key, ground_gids = packer.add_appearance(100, None, 32, 32)
+    object_key, object_gids = packer.add_appearance(200, None, 32, 32)
+
+    assert ground_key == object_key == "sheet-32"
+    assert ground_gids == [0]
+    assert object_gids == [1]
+
+
+def test_a_sheet_within_the_safe_texture_size_is_not_flagged():
+    packer = SheetPacker()
+    packer.add_appearance(1, None, 32, 32)
+
+    assert packer.exceeds_safe_texture_size("sheet-32") is False
+
+
+def test_the_v6_grid_is_wide_enough_to_fill_the_safe_texture_width():
+    packer = SheetPacker()
+
+    for bucket in (32, 64, 128):
+        columns = packer.columns_for_bucket(bucket, size_only=True)
+        assert columns * bucket == SAFE_TEXTURE_SIZE
+        assert columns > packer.columns_for_bucket(bucket)
+
+
+def test_the_v5_grid_is_left_untouched_by_the_v6_one():
+    # v5's `tilesets` firstgid math is computed from these column counts and is
+    # what the game reads today.
+    packer = SheetPacker()
+
+    assert packer.columns_for_bucket(32) == 16
+    assert packer.columns_for_bucket(64) == 12
+    assert packer.columns_for_bucket(128) == 8
+    assert packer.add_appearance(1, "object", 32, 32)[0] == "object-32"
+    assert packer.sheet_dims("object-32")["columns"] == 16
+
+
+def test_a_sheet_taller_than_the_safe_texture_size_is_flagged():
+    packer = SheetPacker()
+    columns = packer.columns_for_bucket(32, size_only=True)
+    # One row past the safe limit: 2048/32 = 64 rows is the last one that fits.
+    for i in range(columns * 65):
+        packer.add_appearance(i, None, 32, 32)
+
+    assert packer.sheet_dims("sheet-32")["pixelHeight"] > SAFE_TEXTURE_SIZE
+    assert packer.exceeds_safe_texture_size("sheet-32") is True

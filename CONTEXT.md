@@ -22,45 +22,60 @@ Formato `CIDADE-TIPO-SEQ`, escolhido à mão (digitado na sign do editor de mapa
 da pasta) — nunca auto-numerado pelo pipeline. Idêntico entre a coleção `hunts` e a location de
 entrada correspondente no travel-graph; não há mais duas strings pra reconciliar.
 
-**Layer class** (`layerClass`):
-O papel de renderização atribuído a um objeto ou tile do mapa (`ground`, `border`, `bottom`,
-`object`, `top`, `roof`, `walls_south`, `walls_east`). Determina ordem de desenho e comportamento
-de profundidade.
-_Avoid_: layer type, categoria (quando o assunto é especificamente o papel de renderização)
+**Draw slot** (slot de desenho):
+Uma das duas únicas categorias de renderização de um objeto do mapa: **ground**, quando a aparência
+carrega a flag `bank` — no máximo um por tile, desenhado primeiro — ou **item**, todo o resto, que
+entra na `stack order` da tile. Não diz nada sobre passagem: um `ground` pode ser intransponível
+(quem responde por isso é `unpass`), nem sobre tamanho de sprite.
+_Avoid_: layer class (modelo anterior, com oito papéis, que misturava desenho, passagem e footprint
+numa enum só)
 
-**Depth offset**:
-A contribuição de uma `layer class` para a profundidade (z-depth) de um sprite renderizado,
-somada a uma base relativa à linha (`tileY`), de forma que diferentes `layer classes` se intercalem
-corretamente com entidades na mesma linha do mapa (ex.: uma parede vertical renderiza na frente do
-jogador, uma parede horizontal na mesma linha renderiza atrás).
+**Stack order** (ordem de pilha):
+A posição de um objeto dentro da sua tile, e a única coisa que determina quem desenha na frente de
+quem dentro dela: o `ground` primeiro, depois os itens de fundo ordenados por `top order` crescente,
+depois os demais em ordem de inserção. Criaturas desenham por último, sempre depois de todo item da
+tile.
+
+**Top order** (`topOrder`):
+A ordem relativa de um item de fundo dentro da `stack order`, derivada diretamente das flags do
+appearances: `clip` = 1, `bottom` = 2, `top` = 3. Qualquer uma das três marca o item como de fundo.
+_Avoid_: depth offset (modelo anterior, em que a ordem vinha de uma tabela de constantes por layer
+class em vez de sair da flag do próprio item)
+
+**Paint order** (ordem de pintor):
+A ordem global de desenho de um mapa: andar, depois linha (`tileY`), depois `stack order`. A
+profundidade de um sprite é consequência dessa ordem — nunca uma constante atribuída por categoria.
 _Avoid_: z-index
 
-**Bakeable** (cenário bakeável):
-Um objeto do mapa elegível para pré-composição offline em uma única imagem estática, por nunca
-mudar de estado, não ser animado, e não pertencer a uma `layer class` com comportamento dinâmico
-especial (`border`, `roof`).
-_Avoid_: static — o campo `type: "static"` do pipeline não implica bakeável (um item estático pode
-ainda ser `roof`, `border` ou marcado como interativo)
+**Elevation** (elevação):
+O deslocamento em pixels que um item aplica aos itens desenhados **depois** dele na mesma tile,
+vindo da flag `height` do appearances. Acumula ao longo da `stack order`, o que faz uma pilha
+parecer pilha. Diferente de `shift`, que desloca só o próprio sprite e não acumula.
 
-**Bakedgroup**:
-Um tipo de layer do `map.json` que contém imagens de cenário pré-renderizadas, uma por combinação
-de `(tileY, layerClass)`, como alternativa a instanciar sprites individuais em runtime.
+**Shift** (deslocamento):
+O deslocamento em pixels (`{x, y}`) do sprite de uma aparência dentro do próprio quadrado, vindo da
+flag `shift` do appearances. É o que põe objeto pequeno no lugar certo da tile. Ao contrário de
+`elevation`, não acumula e não afeta nenhum outro item da pilha.
 
 **Interactive** (item interativo):
 Um objeto do mapa cuja lógica de jogo pode alterar seu estado (container, item coletável, porta),
-mesmo que hoje pareça visualmente estático. Nunca é `bakeable`, independente de `layer class`.
+mesmo que hoje pareça visualmente estático — independente de onde ele caia na `stack order`.
+_Avoid_: static — o campo `type: "static"` do pipeline diz só que a aparência tem um sprite fixo,
+não que a lógica de jogo não mexe nela
 
 **Floor** (z-level):
-Um dos planos verticais de um `hunt spot` (ex. z=7 chão, z=8 masmorra embaixo). Cada floor tem
-seu próprio conjunto independente de `layer classes`; `(tileX, tileY)` significa a mesma coluna
-física em qualquer floor do mesmo mapa (bounds são a união de todos os floors, não uma bounding
-box por floor). Ver ADR 0002.
+Um dos planos verticais de um `hunt spot` (ex. z=7 chão, z=8 masmorra embaixo). Cada floor tem seu
+próprio conjunto independente de tiles; `(tileX, tileY)` significa a mesma coluna física em qualquer
+floor do mesmo mapa (bounds são a união de todos os floors, não uma bounding box por floor). Ver
+ADR 0002.
 
 **`defaultZ`**:
 O floor que deve renderizar por padrão ao carregar um `hunt spot` — `7` se existir, senão o
 menor z presente no mapa.
 
 **Floor transition** (tile de transição):
-Um tile (escada/buraco) identificado pela flag derivada `isFloorTransition` em
-`objectDefs[id].flags`, calculada a partir de uma combinação de flags do OTBM (não existe flag
-nativa pra isso — ver ADR 0002). Pisar num tile assim muda o floor ativo do jogador.
+Um tile (escada/buraco) identificado pela flag derivada `isFloorTransition` nas flags da aparência,
+calculada a partir de uma combinação de flags do OTBM (não existe flag nativa pra isso — ver
+ADR 0002). Pisar num tile assim muda o floor ativo do jogador. É a única flag derivada que sobrevive
+no formato novo: as outras duas (`isRoof`, `hookDirection`) respondiam "onde isso desenha?", que
+agora é a `stack order` quem responde.
