@@ -43,9 +43,14 @@ _Avoid_: depth offset (modelo anterior, em que a ordem vinha de uma tabela de co
 class em vez de sair da flag do próprio item)
 
 **Paint order** (ordem de pintor):
-A ordem global de desenho de um mapa: andar, depois linha (`tileY`), depois `stack order`. A
-profundidade de um sprite é consequência dessa ordem — nunca uma constante atribuída por categoria.
-_Avoid_: z-index
+A ordem global de desenho de um mapa: andar, depois **anti-diagonal** (`tileX + tileY` crescente, e
+dentro dela `tileX` crescente), depois `stack order`. A profundidade de um sprite é consequência
+dessa ordem — nunca uma constante atribuída por categoria. O eixo é obrigatório, não estético:
+sprites ancoram no canto inferior-direito e se estendem para cima e para a esquerda, então só uma
+varredura que avança para baixo-direita garante que o que um sprite cobre já foi pintado. É a ordem
+do cliente; o RME varre por coluna e concorda com ela em todo par que pode se sobrepor.
+_Avoid_: z-index; ordem por linha (`tileY`) — foi o que se tentou até a emenda da ADR 0012 do
+`tibia-idle`, e põe a parede de oeste por cima da tile a leste dela
 
 **Elevation** (elevação):
 O deslocamento em pixels que um item aplica aos itens desenhados **depois** dele na mesma tile,
