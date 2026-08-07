@@ -1,8 +1,9 @@
 # Pipeline de mapas
 
 Guia rápido + FAQ para gerar mapas Phaser a partir de arquivos `.otbm`.
-Para detalhes internos do formato de saída (`map.json`, flags, layers), veja
-[`CONVERTER_DOCS.md`](CONVERTER_DOCS.md) e [`PHASER_INTEGRATION.md`](PHASER_INTEGRATION.md).
+Para detalhes internos do formato de saída, veja [`MAP_JSON_V6.md`](MAP_JSON_V6.md) (formato novo,
+a pilha por tile) e — para o v5, que o jogo ainda consome — [`CONVERTER_DOCS.md`](CONVERTER_DOCS.md)
+e [`PHASER_INTEGRATION.md`](PHASER_INTEGRATION.md).
 
 ## TL;DR
 
@@ -132,11 +133,21 @@ cidade/tipo).
 5. O resultado sai em `extractor/ready-maps/<CIDADE>/<ID>_nome-descritivo/` (mesmo path relativo de
    `maps/`, raiz diferente):
    ```
-   map.json            ← tilemap Phaser
+   map.json            ← tilemap Phaser (v5)
    metadata.json        ← metadados por appearanceId
    sprites/             ← PNGs copiados, organizados por appearanceId
+   sheets/              ← folhas de sprite por (layerClass, tamanho)
    monsters/respawn.json (se houver spawns em monster.xml)
    ```
+   E, na mesma passada, a árvore do formato novo em
+   `extractor/ready-maps-v6/<CIDADE>/<ID>_nome-descritivo/`:
+   ```
+   map.json            ← tilemap v6: tile com pilha ordenada (ver MAP_JSON_V6.md)
+   sheets/              ← folhas de sprite só por tamanho (2 por mapa)
+   monsters/respawn.json (cópia, pra árvore ser autossuficiente)
+   ```
+   Os dois convivem de propósito: `ready-maps/` é o que o jogo consome hoje e fica intocado até o
+   Phaser migrar — ver [ADR 0006](../docs/adr/0006-map-json-v6-pilha-por-tile.md).
 
 ### Exemplo: `orc-fortress.otbm`, hunt novo de Rookgaard
 
@@ -267,10 +278,15 @@ de edição de mapa, o extractor não faz isso sozinho.
 extractor/
   scripts/            ← pipeline ativo (o único lugar que você deveria editar/rodar)
     dump_otbm.js       etapa 1: .otbm → .raw.json (via vendor/otbm2json.js)
-    build_phaser_map.py etapa 2: .raw.json → map.json + sprites/ + respawn.json
+    build_phaser_map.py etapa 2: .raw.json → map.json (v5 e v6) + sprites/ + respawn.json
     build_map.js       runner: 1 mapa ou --all, chama as duas etapas
     extract_sprites.py  etapa 0 (avulsa): .aec → extractor/sprites/ (biblioteca compartilhada)
-    item_classifier.py  overrides manuais de classificação de layer
+    tile_stack.py       lógica pura: flags do appearances → draw slot + stack order de uma tile (v6)
+    map_v6.py           lógica pura: dump OTBM → documento map.json v6 (ver MAP_JSON_V6.md)
+    sheet_packer.py     lógica pura: aparências → grade de folhas de sprite + gids
+    item_classifier.py  overrides manuais de classificação de layer (só v5 — o v6 não consulta lista de id)
+    map_v6_migration_report.py  CLI (avulso): confere v6 contra v5, contagem por tile + antes/depois
+    ground_equivalent_report.py CLI (avulso): mede o `ground_equivalent` do RME contra os mapas
     bake_outfit_atlas.py  bake global (avulso): sprites/outfits/ → atlases/outfits/<id>.{png,json}
     bake_item_atlas.py     bake global (avulso): item animado → atlases/items/<id>.{png,json}
     bake_item_sheets.py    bake global (avulso): itens estáticos → atlases/items-static/*.{png,json}
@@ -285,6 +301,9 @@ extractor/
     city_ids.py             lógica pura: deriva `city`/`status` do id de um hunt/location (nunca digitados à mão)
   vendor/
     otbm2json.js       lib de leitura/escrita de OTBM (vendorizada, não é do npm)
+    rme-materials/     arquivos de autoria do Remere's Map Editor, cópia inalterada (ver o NOTICE.md
+                         de lá). Evidência da medição do `ground_equivalent` — nenhum script de
+                         build lê essa pasta
   maps/<CIDADE>/<ID>_nome/  SOURCE — .otbm + xmls de cada mapa de hunt (versionado); <CIDADE> nunca é
                              adivinhada, é sempre a pasta-pai (ver "Convenção de pastas" acima)
   full-maps/<CIDADE>/  SOURCE **e** saída do mapa cidade-inteira (.otbm e map.json versionados —
@@ -293,6 +312,9 @@ extractor/
                          só o código da cidade, conteúdo renomeado pra bater (ROOK.otbm, ...)
   raw-maps/<pasta>.raw.json   saída da etapa 1, hunts e cidade-inteira (gitignored, regenerável)
   ready-maps/<CIDADE>/<pasta>/  saída da etapa 2 pros mapas de hunt, espelha maps/ 1:1 (gitignored, regenerável)
+  ready-maps-v6/<CIDADE>/<pasta>/  a mesma saída no formato v6, raiz separada pro ready-maps/ ficar
+                         intocado até o jogo migrar (gitignored). Só mapas de hunt — o mapa
+                         cidade-inteira não é renderizado, ver ADR 0006
   sprites/              biblioteca de sprites extraída dos .aec (gitignored, binário grande)
   atlases/              saída dos bakes globais (outfits/items/items-static + items-index.json), gitignored, regenerável
   otservbr-monster.xml  lookup nome→looktype de monstro, compartilhado entre mapas
@@ -426,7 +448,8 @@ python extractor/scripts/item_classifier.py --dump-unknown extractor/ready-maps/
   `extractor/vendor/`, `extractor/otservbr-monster.xml`, os `.md` de
   documentação.
 - **Gitignored (regenerável, não commitar):** `extractor/raw-maps/`,
-  `extractor/ready-maps/`, `extractor/sprites/`, `extractor/*.aec`.
+  `extractor/ready-maps/`, `extractor/ready-maps-v6/`, `extractor/sprites/`,
+  `extractor/*.aec`.
 - Se `git status` mostrar algo dentro dessas pastas ignoradas, normalmente é
   sinal de que o `.gitignore` está desatualizado, não que precisa commitar.
 

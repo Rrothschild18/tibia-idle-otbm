@@ -11,6 +11,7 @@ from PIL import Image
 
 import item_classifier
 import map_dirs
+import map_v6
 from sheet_packer import SheetPacker
 
 # ======================================================
@@ -61,8 +62,9 @@ else:
 # Marker signs (item 2016) used by the travel-graph tooling to mark POIs use
 # a reserved uid range starting at 10001 — see .scratch/travel-graph-and-locations.
 # They must never leak into a generated map.json (player-facing or the
-# full-city inspection artifact alike).
-MARKER_UID_MIN = 10001
+# full-city inspection artifact alike). Defined next to the v6 model so both
+# emitters read one value.
+MARKER_UID_MIN = map_v6.MARKER_UID_MIN
 
 _CANDIDATE_ITEM_SOURCES = [
     os.path.abspath(os.path.join(EXTRACTOR_DIR, "sprites", "items")),
@@ -98,6 +100,23 @@ OUTPUT_DIR = os.path.abspath(
 SPRITES_OUTPUT_DIR = os.path.join(OUTPUT_DIR, "sprites")
 SHEETS_OUTPUT_DIR = os.path.join(OUTPUT_DIR, "sheets")
 ASSETS_ROOT = posixpath.join("assets", f"{MAP_NAME}-sprites")
+
+# map.json v6 is written to a parallel tree — `ready-maps-v6/`, same relative
+# path under a different root — so the directory the game consumes today stays
+# byte-identical while the Phaser side migrates. The two formats also get
+# distinct asset roots, so both can sit in the front's assets/ at once.
+# See docs/adr/0006 and .scratch/modelo-render-rme/spec.md.
+#
+# Hunt spots only. A full-city map.json is never rendered — it exists so
+# build_travel_fragment.py can read its objectDefs — and packing a whole city's
+# ~2000 appearances into footprint sheets would need textures past what any GPU
+# guarantees (512×7936 for ROOK). The v5 tree keeps serving that pipeline.
+V6_OUTPUT_DIR = os.path.abspath(
+    os.path.join(EXTRACTOR_DIR, "ready-maps-v6", _RELATIVE_OUTPUT_PATH)
+)
+V6_SHEETS_OUTPUT_DIR = os.path.join(V6_OUTPUT_DIR, "sheets")
+V6_MONSTERS_OUTPUT_DIR = os.path.join(V6_OUTPUT_DIR, "monsters")
+V6_ASSETS_ROOT = posixpath.join("assets", f"{MAP_NAME}-sprites-v6")
 
 
 def _find_sidecar(directory: str, suffix: str) -> str:
@@ -284,6 +303,20 @@ def analyze_item(appearance_id: int) -> Dict:
     has_usable = flags.get("usable", False)
     has_forceuse = flags.get("forceuse", False)
 
+    # Positioning, not classification: `shift` moves this sprite's own pixels
+    # and does not accumulate; `elevation` (the appearances' `height` flag)
+    # offsets every item drawn AFTER this one on the same tile, and does. Both
+    # are emitted per appearance by map.json v6 — see CONTEXT.md and
+    # .scratch/modelo-render-rme/issues/06-emitir-shift-e-elevacao.md. They stay
+    # out of the `flags` dict below because v5 serializes that wholesale.
+    shift_raw = flags.get("shift")
+    shift = (
+        {"x": shift_raw.get("x", 0), "y": shift_raw.get("y", 0)}
+        if isinstance(shift_raw, dict) else None
+    )
+    height_raw = flags.get("height")
+    elevation = height_raw.get("elevation", 0) if isinstance(height_raw, dict) else 0
+
     # Extract hook direction for wall orientation
     hook_raw = flags.get("hook", {})
     if isinstance(hook_raw, dict):
@@ -360,6 +393,8 @@ def analyze_item(appearance_id: int) -> Dict:
             "patternDepth": pattern_depth,
             "boundingSquare": bounding_square
         },
+        "shift": shift,
+        "elevation": elevation,
         "sprites": [],
         "maxSpriteHeight": TILE_SIZE,
         "issues": []
@@ -1223,6 +1258,53 @@ def build_monster_respawn(map_bounds: Dict) -> Optional[Dict]:
 
 
 # ======================================================
+# MAP.JSON V6
+# ======================================================
+
+def write_map_v6(dump: Dict, respawn: Optional[Dict]) -> Dict:
+    """Build and write the v6 tree for this map, returning the document.
+
+    Its own SheetPacker: v6 groups sheets by footprint alone, while the v5 pass
+    above groups by (layerClass, footprint). Sharing one packer would merge the
+    two key spaces and corrupt both.
+
+    `respawn` is the dict `build_monster_respawn` already produced — copied in
+    so the v6 tree is self-contained for the game to consume, not regenerated.
+    """
+    packer = SheetPacker()
+    document, frame_sources = map_v6.build_map_v6(
+        dump, analyze_item, packer, V6_ASSETS_ROOT
+    )
+
+    if packer.sheets:
+        ensure_directory(V6_SHEETS_OUTPUT_DIR)
+    for sheet_key in sorted(packer.sheets):
+        image = _render_sheet(packer, sheet_key, frame_sources.get(sheet_key, {}))
+        image.save(os.path.join(V6_SHEETS_OUTPUT_DIR, f"{sheet_key}.png"))
+
+    oversized = [key for key in sorted(packer.sheets) if packer.exceeds_safe_texture_size(key)]
+    if oversized:
+        print(f"[WARN] v6: folha acima do limite seguro de textura: {', '.join(oversized)}")
+
+    ensure_directory(V6_OUTPUT_DIR)
+    output_path = os.path.join(V6_OUTPUT_DIR, "map.json")
+    with open(output_path, "w", encoding="utf-8") as output_file:
+        json.dump(document, output_file, indent=2)
+
+    if respawn is not None:
+        ensure_directory(V6_MONSTERS_OUTPUT_DIR)
+        with open(os.path.join(V6_MONSTERS_OUTPUT_DIR, "respawn.json"), "w",
+                  encoding="utf-8") as monsters_file:
+            json.dump(respawn, monsters_file, indent=2, ensure_ascii=False)
+
+    tile_count = sum(len(floor["tiles"]) for floor in document["floors"].values())
+    print(f"[OK] Mapa v6 gerado em {output_path}")
+    print(f"     {tile_count} tiles | {len(document['appearances'])} aparências "
+          f"| {len(document['sheets'])} folhas")
+    return document
+
+
+# ======================================================
 # MAIN
 # ======================================================
 
@@ -1248,4 +1330,12 @@ if __name__ == "__main__":
     print(f"[OK] Metadata gerado em {metadata_path} ({len(metadata_index)} entries)")
 
     # Write monsters/respawn.json
-    build_monster_respawn(phaser_map["bounds"])
+    respawn = build_monster_respawn(phaser_map["bounds"])
+
+    # ── map.json v6, into its own tree ──
+    # Runs after the v5 pass on purpose: ITEM_CACHE is already warm, so this is
+    # a second walk over the dump, not a second round of metadata resolution.
+    if IS_FULL_MAP:
+        print("[INFO] Mapa de cidade inteira: v6 não se aplica (ver V6_OUTPUT_DIR)")
+    else:
+        write_map_v6(dump, respawn)
