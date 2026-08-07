@@ -11,6 +11,7 @@ from PIL import Image
 
 import item_classifier
 import map_dirs
+from otbm_dump import floor_zs, iter_tiles
 from sheet_packer import SheetPacker
 
 # ======================================================
@@ -662,81 +663,63 @@ def build_phaser_map(dump: Dict) -> Dict:
     ground_tiles: Dict[int, Dict[Tuple[int, int], int]] = {}
     raw_item_stacks: Dict[Tuple[int, int, int], List[Tuple[int, Dict]]] = {}
     animations: Dict[int, Dict] = {}
-    all_zs: Set[int] = set()
+
+    # Floors come from what the dump declares, not from what carries tiles —
+    # an empty floor still gets its (empty) layer set. See otbm_dump.floor_zs.
+    all_zs: Set[int] = floor_zs(dump)
 
     min_x = min_y = 10**9
     max_x = max_y = -10**9
 
-    nodes = dump.get("data", {}).get("nodes", [])
-
     # ── First pass: collect tiles/items per floor, determine map bounds ──
-    for node in nodes:
-        for feature in node.get("features", []):
-            base_x = feature.get("x", 0)
-            base_y = feature.get("y", 0)
-            z = feature.get("z", 7)
-            all_zs.add(z)
+    for x, y, z, tile in iter_tiles(dump):
+        # Bounds are a union across all floors — every floor shares the same
+        # (tileX, tileY) coordinate space, so a transition tile lines up with
+        # the same column on the floor below/above without needing explicit
+        # destination metadata (ADR 0002).
+        min_x = min(min_x, x)
+        min_y = min(min_y, y)
+        max_x = max(max_x, x)
+        max_y = max(max_y, y)
 
-            for tile in feature.get("tiles", []):
-                tx = tile.get("x")
-                ty = tile.get("y")
-                if tx is None or ty is None:
-                    continue
+        key = (x, y, z)
 
-                x = base_x + tx
-                y = base_y + ty
+        # tileid — usually goes to ground tilelayer, but large blocking tiles
+        # (unpass+unmove+unsight with sprite > 1×1) are redirected to the roof
+        # objectgroup to avoid rendering 64×64+ sprites in a 32×32 tilelayer
+        # (which causes black lines and incorrect overlap with clip/border
+        # sprites).
+        tile_ground = tile.get("tileid")
+        if tile_ground is not None:
+            ground_analysis = analyze_item(tile_ground)
 
-                # Bounds are a union across all floors — every floor shares
-                # the same (tileX, tileY) coordinate space, so a transition
-                # tile lines up with the same column on the floor below/above
-                # without needing explicit destination metadata (ADR 0002).
-                min_x = min(min_x, x)
-                min_y = min(min_y, y)
-                max_x = max(max_x, x)
-                max_y = max(max_y, y)
+            if _is_roof_tile(ground_analysis):
+                # Redirect to item stacks so classify_layer sends it to the
+                # Roof objectgroup. stackIndex = -1 so it renders below any
+                # real items on this position.
+                raw_item_stacks.setdefault(key, []).insert(0, (-1, ground_analysis))
+            else:
+                ground_tiles.setdefault(z, {})[(x, y)] = tile_ground
 
-                key = (x, y, z)
+        # Collect items for second pass (bounds not yet final)
+        items = tile.get("items", [])
+        for item_index, raw_item in enumerate(items):
+            appearance_id = raw_item.get("id")
+            if appearance_id is None:
+                continue
 
-                # tileid — usually goes to ground tilelayer, but large
-                # blocking tiles (unpass+unmove+unsight with sprite > 1×1)
-                # are redirected to the roof objectgroup to avoid rendering
-                # 64×64+ sprites in a 32×32 tilelayer (which causes black
-                # lines and incorrect overlap with clip/border sprites).
-                tile_ground = tile.get("tileid")
-                if tile_ground is not None:
-                    ground_analysis = analyze_item(tile_ground)
+            # Marker signs (reserved uid range) are travel-graph tooling
+            # input, never a renderable map object.
+            uid = raw_item.get("uid")
+            if uid is not None and uid >= MARKER_UID_MIN:
+                continue
 
-                    if _is_roof_tile(ground_analysis):
-                        # Redirect to item stacks so classify_layer sends
-                        # it to the Roof objectgroup. stackIndex = -1 so
-                        # it renders below any real items on this position.
-                        raw_item_stacks.setdefault(key, []).insert(
-                            0, (-1, ground_analysis)
-                        )
-                    else:
-                        ground_tiles.setdefault(z, {})[(x, y)] = tile_ground
+            analysis = analyze_item(appearance_id)
 
-                # Collect items for second pass (bounds not yet final)
-                items = tile.get("items", [])
-                for item_index, raw_item in enumerate(items):
-                    appearance_id = raw_item.get("id")
-                    if appearance_id is None:
-                        continue
+            if analysis.get("animated", False) and appearance_id not in animations:
+                animations[appearance_id] = analysis["animation"]
 
-                    # Marker signs (reserved uid range) are travel-graph
-                    # tooling input, never a renderable map object.
-                    uid = raw_item.get("uid")
-                    if uid is not None and uid >= MARKER_UID_MIN:
-                        continue
-
-                    analysis = analyze_item(appearance_id)
-
-                    if analysis.get("animated", False) and appearance_id not in animations:
-                        animations[appearance_id] = analysis["animation"]
-
-                    raw_item_stacks.setdefault(key, []).append(
-                        (item_index, analysis)
-                    )
+            raw_item_stacks.setdefault(key, []).append((item_index, analysis))
 
     if min_x == 10**9:
         min_x = min_y = max_x = max_y = 0

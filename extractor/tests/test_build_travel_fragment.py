@@ -6,7 +6,7 @@ from travel_graph import SIGN_ITEM_ID
 
 def _dump_with_signs(signs):
     """signs: list of (uid, text) -> a minimal raw-otbm dump with one sign
-    per tile, matching the shape travel_graph.py's _iter_dump_tiles expects."""
+    per tile, matching the shape otbm_dump.iter_tiles expects."""
     tiles = [
         {"x": i, "y": 0, "items": [{"id": SIGN_ITEM_ID, "uid": uid, "text": text}]}
         for i, (uid, text) in enumerate(signs)

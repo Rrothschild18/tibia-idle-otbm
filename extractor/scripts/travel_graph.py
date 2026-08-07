@@ -24,6 +24,7 @@ from collections import deque
 from typing import Deque, Dict, List, Optional, Set, Tuple
 
 import city_ids
+from otbm_dump import iter_tiles
 
 # ======================================================
 # Marker signs -> POI locations (HUNT/TEMPLE/DEPOT/QUEST)
@@ -36,21 +37,6 @@ POI_TYPES = ("HUNT", "TEMPLE", "DEPOT", "QUEST")
 _SIGN_ID_RE = re.compile(
     r"^(?P<city>[A-Z]+)-(?P<type>" + "|".join(POI_TYPES) + r")-(?P<seq>\d{4})$"
 )
-
-
-def _iter_dump_tiles(dump: Dict):
-    """Yields (x, y, z, tile) for every tile in a raw otbm2json dump — same
-    node/feature/tile walk build_phaser_map.py uses."""
-    for node in dump.get("data", {}).get("nodes", []):
-        for feature in node.get("features", []):
-            base_x = feature.get("x", 0)
-            base_y = feature.get("y", 0)
-            z = feature.get("z", 7)
-            for tile in feature.get("tiles", []):
-                tx, ty = tile.get("x"), tile.get("y")
-                if tx is None or ty is None:
-                    continue
-                yield base_x + tx, base_y + ty, z, tile
 
 
 def parse_marker_signs(dump: Dict) -> Tuple[List[Dict], List[Dict]]:
@@ -69,7 +55,7 @@ def parse_marker_signs(dump: Dict) -> Tuple[List[Dict], List[Dict]]:
     issues: List[Dict] = []
     seen_ids: Set[str] = set()
 
-    for x, y, z, tile in _iter_dump_tiles(dump):
+    for x, y, z, tile in iter_tiles(dump):
         for raw_item in tile.get("items", []):
             if raw_item.get("id") != SIGN_ITEM_ID:
                 continue
@@ -164,7 +150,7 @@ def extract_tile_flags(dump: Dict, object_defs: Dict[str, Dict]) -> List[Dict]:
         return object_defs.get(str(appearance_id), {}).get("flags", {})
 
     tiles: Dict[Node, Dict] = {}
-    for x, y, z, tile in _iter_dump_tiles(dump):
+    for x, y, z, tile in iter_tiles(dump):
         key = (x, y, z)
         unpass = False
         is_floor_transition = False
