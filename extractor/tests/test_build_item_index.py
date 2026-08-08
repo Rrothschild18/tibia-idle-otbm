@@ -5,6 +5,7 @@ from PIL import Image
 
 import bake_item_atlas as bia
 import bake_item_sheets as bis
+import bake_item_sheets_animated as bisa
 import build_item_index as bii
 
 
@@ -20,11 +21,11 @@ def test_build_item_index_animated_single_cell_item():
         "flags": {"market": {"category": "ITEM_CATEGORY_BOOTS"}},
     })]
 
-    index = bii.build_item_index(items, static_shard_of={})
+    index = bii.build_item_index(items, static_shard_of={}, animated_shard_of={3555: 0})
 
     assert index["3555"] == {
-        "kind": "atlas",
-        "file": "items/3555.json",
+        "kind": "animated-sheet",
+        "file": "items-animated/items-animated-0.json",
         "frameKeys": [f"3555_{i}" for i in range(12)],
         "stackable": False,
         "spriteCount": 1,
@@ -41,11 +42,13 @@ def test_build_item_index_animated_multi_cell_item_sprite_count_excludes_frames(
         "flags": {"cumulative": True, "market": {"category": "ITEM_CATEGORY_CREATURE_PRODUCTS"}},
     })]
 
-    index = bii.build_item_index(items, static_shard_of={})
+    index = bii.build_item_index(items, static_shard_of={}, animated_shard_of={9058: 3})
 
     assert index["9058"]["spriteCount"] == 8
     assert index["9058"]["stackable"] is True
     assert len(index["9058"]["frameKeys"]) == 104
+    assert index["9058"]["kind"] == "animated-sheet"
+    assert index["9058"]["file"] == "items-animated/items-animated-3.json"
 
 
 def test_build_item_index_static_single_cell_item_resolves_shard_file():
@@ -55,7 +58,7 @@ def test_build_item_index_static_single_cell_item_resolves_shard_file():
         "flags": {"cumulative": True, "market": {"category": "ITEM_CATEGORY_POTIONS"}},
     })]
 
-    index = bii.build_item_index(items, static_shard_of={49094: 2})
+    index = bii.build_item_index(items, static_shard_of={49094: 2}, animated_shard_of={})
 
     assert index["49094"] == {
         "kind": "static-sheet",
@@ -73,7 +76,7 @@ def test_build_item_index_static_multi_cell_item_sprite_count_is_frame_count():
         "flags": {"market": {"category": "ITEM_CATEGORY_OTHERS"}},
     })]
 
-    index = bii.build_item_index(items, static_shard_of={130: 0})
+    index = bii.build_item_index(items, static_shard_of={130: 0}, animated_shard_of={})
 
     assert index["130"]["spriteCount"] == 8
     assert index["130"]["kind"] == "static-sheet"
@@ -88,20 +91,20 @@ def test_build_item_index_stackable_independent_of_sprite_count():
         "flags": {"cumulative": True, "market": {"category": "ITEM_CATEGORY_VALUABLES"}},
     })]
 
-    index = bii.build_item_index(items, static_shard_of={3031: 0})
+    index = bii.build_item_index(items, static_shard_of={3031: 0}, animated_shard_of={})
 
     assert index["3031"]["stackable"] is True
     assert index["3031"]["spriteCount"] == 1
 
 
 # ---------------------------------------------------------------------------
-# _compute_static_shard_of
+# _compute_shard_of
 # ---------------------------------------------------------------------------
 
-def test_compute_static_shard_of_keeps_multi_cell_item_in_one_shard():
-    static_items = [(1, ["1"]), (2, ["2"]), (100, ["100_0", "100_1", "100_2"]), (3, ["3"])]
+def test_compute_shard_of_keeps_multi_cell_item_in_one_shard():
+    items = [(1, ["1"]), (2, ["2"]), (100, ["100_0", "100_1", "100_2"]), (3, ["3"])]
 
-    shard_of = bii._compute_static_shard_of(static_items, columns=8, num_sheets=2)
+    shard_of = bii._compute_shard_of(items, columns=8, num_sheets=2)
 
     assert set(shard_of.keys()) == {1, 2, 100, 3}
     # every id present, values are valid shard indices
@@ -151,6 +154,9 @@ def test_generate_item_index_covers_animated_and_static_excludes_scenery(tmp_pat
     monkeypatch.setattr(bis, "ITEMS_SPRITES_DIR", str(sprites_dir))
     monkeypatch.setattr(bis, "NUM_SHEETS", 2)
     monkeypatch.setattr(bis, "COLUMNS", 4)
+    monkeypatch.setattr(bisa, "ITEMS_SPRITES_DIR", str(sprites_dir))
+    monkeypatch.setattr(bisa, "NUM_SHEETS", 2)
+    monkeypatch.setattr(bisa, "COLUMNS", 4)
 
     _write_animated_item(str(sprites_dir), 100, n_frames=3)
     _write_static_item(str(sprites_dir), 200, market=True)
@@ -160,7 +166,8 @@ def test_generate_item_index_covers_animated_and_static_excludes_scenery(tmp_pat
     index = bii.generate_item_index()
 
     assert set(index.keys()) == {"100", "200", "201"}
-    assert index["100"]["kind"] == "atlas"
+    assert index["100"]["kind"] == "animated-sheet"
+    assert index["100"]["file"] == "items-animated/items-animated-0.json"
     assert index["200"]["kind"] == "static-sheet"
     assert index["201"]["kind"] == "static-sheet"
 
@@ -188,6 +195,7 @@ def test_main_writes_items_index_json(tmp_path, monkeypatch):
     out_path = tmp_path / "items-index.json"
     monkeypatch.setattr(bia, "ITEMS_SPRITES_DIR", str(sprites_dir))
     monkeypatch.setattr(bis, "ITEMS_SPRITES_DIR", str(sprites_dir))
+    monkeypatch.setattr(bisa, "ITEMS_SPRITES_DIR", str(sprites_dir))
     monkeypatch.setattr(bii, "INDEX_PATH", str(out_path))
 
     _write_static_item(str(sprites_dir), 200, market=True)

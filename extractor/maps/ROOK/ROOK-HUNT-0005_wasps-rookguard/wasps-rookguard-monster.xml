@@ -23,7 +23,8 @@
 	<monster centerx="1059" centery="1056" centerz="4" radius="3">
 		<monster name="Wasp" x="0" y="0" z="4" spawntime="90" />
 	</monster>
-	<monster centerx="1052" centery="1056" centerz="5" radius="3">
-		<monster name="Deer" x="-3" y="-2" z="5" spawntime="90" />
+	<monster centerx="1059" centery="1055" centerz="5" radius="3">
+		<monster name="Wasp" x="-1" y="-1" z="5" spawntime="60" />
+		<monster name="Wasp" x="-1" y="1" z="5" spawntime="60" />
 	</monster>
 </monsters>

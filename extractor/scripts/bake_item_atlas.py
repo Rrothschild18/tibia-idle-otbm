@@ -192,6 +192,14 @@ def _item_frame_list(item_id: int, data: Dict) -> List[Tuple[str, str]]:
 # =========================
 # BAKE
 # =========================
+#
+# bake_item()/main() below are no longer part of the wired pipeline
+# (build_items.js) — items-index.json never points at their output anymore,
+# static and animated items both bake into shared grid sheets now
+# (bake_item_sheets.py / bake_item_sheets_animated.py, which import this
+# module for classification and frame-path resolution). Kept because it's
+# still handy standalone for inspecting a single item's frames without
+# baking/opening a full shared sheet — not run automatically.
 
 def bake_item(item_id: int) -> Optional[Dict]:
     """Bake one item's atlas, writing <id>.png + <id>.json to
