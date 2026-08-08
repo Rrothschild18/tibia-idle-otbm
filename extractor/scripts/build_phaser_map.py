@@ -428,7 +428,16 @@ def analyze_item(appearance_id: int) -> Dict:
     info["hasSprite"] = available_count > 0
     info["maxSpriteHeight"] = max((record["height"] for record in sprite_records), default=TILE_SIZE)
 
-    phase_count = len(sprite_ids)
+    # An appearance's sprite list is `phases x patterns`, phase-major: the
+    # client indexes it as `phase * pattern_count + pattern` (OTClient's
+    # `ThingType::getSpriteIndex`), where the pattern comes from the tile's own
+    # position. So the phase count is the list divided by the pattern count —
+    # NOT its length. Reading the whole list as phases is what made a 3-variant
+    # shore border (id 4633: 3x1x1 patterns, 14 phases, 42 sprites) animate
+    # through all three shapes instead of animating the one belonging to its
+    # column. See ADR 0014 in `tibia-idle`.
+    pattern_count = pattern_width * pattern_height * pattern_depth
+    phase_count = len(sprite_ids) // pattern_count if pattern_count else len(sprite_ids)
     animation_valid = False
     if animation_block:
         phases = animation_block.get("phases")
@@ -436,7 +445,10 @@ def analyze_item(appearance_id: int) -> Dict:
             phase_count = len(phases)
         elif isinstance(phases, int):
             phase_count = phases
-        sprite_ready = available_count == len(sprite_records) and phase_count == len(sprite_records)
+        sprite_ready = (
+            available_count == len(sprite_records)
+            and phase_count * pattern_count == len(sprite_records)
+        )
         if sprite_ready:
             frame_duration = animation_block.get("frame_duration") or animation_block.get("frameDuration") or 500
             animation_valid = True
