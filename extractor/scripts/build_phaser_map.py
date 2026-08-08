@@ -710,13 +710,20 @@ def build_phaser_map(dump: Dict) -> Dict:
             base_x = feature.get("x", 0)
             base_y = feature.get("y", 0)
             z = feature.get("z", 7)
-            all_zs.add(z)
 
             for tile in feature.get("tiles", []):
                 tx = tile.get("x")
                 ty = tile.get("y")
                 if tx is None or ty is None:
                     continue
+
+                # Only count this floor toward `defaultZ` once it actually
+                # contributes a tile — a feature with no `z` and no tiles
+                # (an empty/container node) used to default to z=7 and get
+                # counted anyway, making `defaultZ` pick a phantom floor 7
+                # even on maps whose real content lives entirely elsewhere
+                # (e.g. a tower cut at z=1..5, a dungeon cut at z=8).
+                all_zs.add(z)
 
                 x = base_x + tx
                 y = base_y + ty
@@ -1272,8 +1279,13 @@ def write_map_v6(dump: Dict, respawn: Optional[Dict]) -> Dict:
     so the v6 tree is self-contained for the game to consume, not regenerated.
     """
     packer = SheetPacker()
+    # `MAP_NAME` up to its first underscore is the hunt's own hand-chosen id
+    # (see `hunt_fragment.map_id_from_folder`) — what a start-marker sign's
+    # text must equal for `build_map_v6` to trust it over the defaultZ
+    # heuristic.
+    map_id = MAP_NAME.split("_", 1)[0]
     document, frame_sources = map_v6.build_map_v6(
-        dump, analyze_item, packer, V6_ASSETS_ROOT
+        dump, analyze_item, packer, V6_ASSETS_ROOT, map_id=map_id
     )
 
     if packer.sheets:

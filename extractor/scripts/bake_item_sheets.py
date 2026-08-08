@@ -1,14 +1,17 @@
 """Consolidated grid sheets for STATIC equipment/consumable item icons.
 
-Companion to bake_item_atlas.py, which bakes one small atlas per ANIMATED
-item (808 items in the real data) — that's fine as individual files since
-each atlas is only a handful of frames. Static items (no animation, 5083
-in the real data) are the opposite case: one PNG+JSON per item would mean
-5083 individual downloads for icons that never change, which is exactly
-the "many small requests" problem the outfit/map sheet work already
-solved elsewhere in this pipeline (see OUTFIT_SPRITES_DOCUMENTATION.md and
-.scratch/map-sprite-sheets-v4/spec.md) — so instead they're packed into a
-small, fixed number of big grid sheets.
+Companion to bake_item_sheets_animated.py, which does the same thing for
+ANIMATED items. Static items (no animation, 5083 in the real data) would
+otherwise mean one PNG+JSON download per item for icons that never change
+— exactly the "many small requests" problem the outfit/map sheet work
+already solved elsewhere in this pipeline (see OUTFIT_SPRITES_DOCUMENTATION.md
+and .scratch/map-sprite-sheets-v4/spec.md) — so instead they're packed into a
+small, fixed number of big grid sheets. (Both item kinds used to bake one
+atlas per item individually via bake_item_atlas.py; animated items moved to
+the same shared-sheet model this module already used — see
+.scratch/item-sprite-sheets/issues/03-consolidate-animated-items-into-sheets.md.
+bake_item_atlas.py's classification/frame-path helpers are still the shared
+library both sheet bakers import.)
 
 Design mirrors sheet_packer.py's model (fixed columns, sequential
 placement, no bin-packing) rather than reinventing it, but doesn't reuse

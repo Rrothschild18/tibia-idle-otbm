@@ -4,12 +4,17 @@ One-off maintenance script (not wired into build_map.js/build_items.js — same
 sprite assets this pipeline already baked into the sibling tibia-idle repo's
 front-end assets:
 
-  1. extractor/atlases/items/           -> apps/tibia-idle-front/public/assets/items/
-     (one atlas PNG+JSON pair per animated item)
-  2. extractor/atlases/items-static/    -> apps/tibia-idle-front/public/assets/items-static/
-     (4 shared grid sheets, PNG+JSON pairs)
+  1. extractor/atlases/items-static/    -> apps/tibia-idle-front/public/assets/items-static/
+     (shared grid sheets, PNG+JSON pairs, for items with no animation)
+  2. extractor/atlases/items-animated/  -> apps/tibia-idle-front/public/assets/items-animated/
+     (shared grid sheets, PNG+JSON pairs, for animated items — see
+     .scratch/item-sprite-sheets/issues/03-consolidate-animated-items-into-sheets.md)
   3. extractor/atlases/items-index.json -> apps/tibia-idle-front/public/assets/items-index.json
      (itemId -> sprite location index — see .scratch/item-sprite-sheets/issues/01-item-sprite-index.md)
+
+extractor/atlases/items/ (the old one-atlas-per-animated-item output from
+bake_item_atlas.py) is no longer synced — items-index.json never points at
+it anymore, so nothing in tibia-idle should be reading it either.
 
 Copies are content-compared, not blindly overwritten: a file is only
 rewritten if its bytes differ from the destination, so re-running this with
@@ -86,13 +91,15 @@ def main():
     if not os.path.isdir(args.tibia_idle_dir):
         raise SystemExit(f"[ERRO] tibia-idle não encontrado em {args.tibia_idle_dir} (use --tibia-idle-dir)")
 
-    copied, unchanged = _sync_dir(os.path.join(ATLASES_DIR, "items"), os.path.join(front_assets_dir, "items"))
-    print(f"[OK] items/: {copied} copiados, {unchanged} já atualizados")
-
     copied, unchanged = _sync_dir(
         os.path.join(ATLASES_DIR, "items-static"), os.path.join(front_assets_dir, "items-static")
     )
     print(f"[OK] items-static/: {copied} copiados, {unchanged} já atualizados")
+
+    copied, unchanged = _sync_dir(
+        os.path.join(ATLASES_DIR, "items-animated"), os.path.join(front_assets_dir, "items-animated")
+    )
+    print(f"[OK] items-animated/: {copied} copiados, {unchanged} já atualizados")
 
     index_dst = os.path.join(front_assets_dir, "items-index.json")
     if _sync_file(index_src, index_dst):

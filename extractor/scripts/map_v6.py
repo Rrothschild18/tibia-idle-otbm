@@ -31,6 +31,7 @@ VERSION = 6
 
 # Marker signs (item 2016) placed by the travel-graph tooling use a reserved
 # uid range — tooling input, never a renderable object. Same rule as v5.
+SIGN_ITEM_ID = 2016
 MARKER_UID_MIN = 10001
 
 # A tile row is [tileX, tileY, ground, *stack]. Appearance ids start well above
@@ -120,16 +121,30 @@ def _appearance_entry(analysis: Dict, packer, frame_sources: Dict[str, Dict[int,
 
 
 def build_map_v6(dump: Dict, analyze: Callable[[int], Dict], packer,
-                 assets_root: str) -> Tuple[Dict, Dict[str, Dict[int, str]]]:
+                 assets_root: str,
+                 map_id: Optional[str] = None) -> Tuple[Dict, Dict[str, Dict[int, str]]]:
     """`(document, {sheet key: {gid: source png path}})`.
 
     `analyze` resolves an appearance id to the analysis dict
     `build_phaser_map.analyze_item` produces; `packer` is a `SheetPacker` this
     call is free to fill (it uses the v6 footprint-only key).
+
+    `map_id` (the hunt's own id, e.g. `"ROOK-HUNT-0001"` — see
+    `hunt_fragment.map_id_from_folder`) opts into the start-marker floor
+    pick: a sign (item `SIGN_ITEM_ID`, reserved uid) whose text equals
+    `map_id` exactly, placed by hand in the OTBM at the floor the hunt
+    should load on. When present, its floor wins over the `defaultZ`
+    heuristic below outright — a human said "here", which beats guessing
+    from tile counts every time a hunt spot's real content sits on a floor
+    other than 7 (a tower cut at z=1..5, a dungeon cut at z=8) and the
+    heuristic's fallback (lowest z present) has no way to know which floor
+    among several is the one the player should land on.
     """
     stacks: Dict[int, Dict[Tuple[int, int], Dict]] = {}
     used_ids: Set[int] = set()
     all_zs: Set[int] = set()
+    start_marker_z: Optional[int] = None
+    start_marker_conflict = False
 
     min_x = min_y = 10 ** 9
     max_x = max_y = -(10 ** 9)
@@ -139,7 +154,6 @@ def build_map_v6(dump: Dict, analyze: Callable[[int], Dict], packer,
             base_x = feature.get("x", 0)
             base_y = feature.get("y", 0)
             z = feature.get("z", 7)
-            all_zs.add(z)
 
             for tile in feature.get("tiles", []):
                 tile_x = tile.get("x")
@@ -154,19 +168,46 @@ def build_map_v6(dump: Dict, analyze: Callable[[int], Dict], packer,
                 min_x, min_y = min(min_x, x), min(min_y, y)
                 max_x, max_y = max(max_x, x), max(max_y, y)
 
+                if map_id is not None:
+                    for raw_item in tile.get("items") or []:
+                        if raw_item.get("id") != SIGN_ITEM_ID:
+                            continue
+                        uid = raw_item.get("uid")
+                        if uid is None or uid < MARKER_UID_MIN:
+                            continue
+                        if raw_item.get("text") != map_id:
+                            continue
+                        if start_marker_z is not None and start_marker_z != z:
+                            start_marker_conflict = True
+                        else:
+                            start_marker_z = z
+
                 placements = _tile_placements(tile, analyze)
                 if not placements:
                     # Nothing to draw — an OTBM tile whose only content was a
                     # marker sign, or an empty one. It still counts for bounds
-                    # (above), but emitting a row for it is pure noise.
+                    # (above), but emitting a row for it is pure noise — and
+                    # it must NOT count toward `all_zs` below: an empty
+                    # feature with no `z` of its own defaults to `z=7`
+                    # (line above), and counting that phantom floor is what
+                    # made `defaultZ` pick 7 on maps that don't have a single
+                    # real tile there (see the ROOK-HUNT-0001 floor-8 bug).
                     continue
                 used_ids.update(appearance_id for appearance_id, _ in placements)
                 stacks.setdefault(z, {})[(x, y)] = tile_stack.build_tile_stack(placements)
+                all_zs.add(z)
 
     if min_x == 10 ** 9:
         min_x = min_y = max_x = max_y = 0
     if not all_zs:
         all_zs.add(7)
+
+    if start_marker_conflict:
+        print(f'[WARN] v6: marcador de floor inicial ("{map_id}") aparece em '
+              f'mais de um floor — usando o primeiro encontrado (z={start_marker_z}).')
+    elif map_id is not None and start_marker_z is None:
+        print(f'[WARN] v6: nenhum marcador de floor inicial ("{map_id}") encontrado '
+              f'— defaultZ decidido por heurística (7 se existir, senão o menor z).')
 
     width = max_x - min_x + 1
     height = max_y - min_y + 1
@@ -204,9 +245,12 @@ def build_map_v6(dump: Dict, analyze: Callable[[int], Dict], packer,
         "width": width,
         "height": height,
         "bounds": {"minX": min_x, "minY": min_y, "maxX": max_x, "maxY": max_y},
-        # Surface floor is conventionally z=7 in Tibia; fall back to the lowest
-        # z present for maps that (unusually) don't include it.
-        "defaultZ": 7 if 7 in all_zs else min(all_zs),
+        # The start marker (see the map_id docstring above) wins outright
+        # when present. Otherwise: surface floor is conventionally z=7 in
+        # Tibia, so fall back to that, or to the lowest z present for maps
+        # that (unusually) don't include it.
+        "defaultZ": start_marker_z if start_marker_z is not None
+        else (7 if 7 in all_zs else min(all_zs)),
         "assetsRoot": assets_root,
         "appearances": appearances,
         "sheets": sheets,

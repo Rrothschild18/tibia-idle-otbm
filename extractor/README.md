@@ -172,9 +172,10 @@ Saída: `extractor/ready-maps/ROOK/ROOK-HUNT-0019_orc-fortress/`.
    npm run build-items
    ```
    Isso gera/atualiza, de forma **global** (não por mapa — o mesmo conjunto de assets serve todos
-   os mapas): `extractor/atlases/items/` (atlas por item animado), `extractor/atlases/items-static/`
-   (sheets estáticas compartilhadas) e `extractor/atlases/items-index.json` (índice `itemId →
-   localização do sprite`, consumido pelo repositório `tibia-idle`). Não é chamado automaticamente
+   os mapas): `extractor/atlases/items-static/` (sheets compartilhadas, itens sem animação) e
+   `extractor/atlases/items-animated/` (sheets compartilhadas, itens animados — mesmo modelo,
+   frames de animação em vez de ícones fixos) e `extractor/atlases/items-index.json` (índice
+   `itemId → localização do sprite`, consumido pelo repositório `tibia-idle`). Não é chamado automaticamente
    por `build_map.js` — mesmo padrão já usado pelo atlas de outfit (`bake_outfit_atlas.py`, também
    um passo manual separado) — porque é global e caro (~2min no dado real), então rodar em toda
    invocação de `build_map.js` penalizaria até rebuilds repetidos do mesmo mapa durante iteração.
@@ -216,8 +217,8 @@ Saída: `extractor/ready-maps/ROOK/ROOK-HUNT-0019_orc-fortress/`.
    ```
    python extractor/scripts/sync_items_to_tibia_idle.py
    ```
-   Copia (comparando conteúdo, não sobrescreve à toa) `extractor/atlases/items/`,
-   `extractor/atlases/items-static/` e `extractor/atlases/items-index.json` para
+   Copia (comparando conteúdo, não sobrescreve à toa) `extractor/atlases/items-static/`,
+   `extractor/atlases/items-animated/` e `extractor/atlases/items-index.json` para
    `apps/tibia-idle-front/public/assets/` no repositório `tibia-idle`, assumido como
    `../tibia-idle/tibia-idle` (ajustável via `--tibia-idle-dir`).
 
@@ -288,9 +289,12 @@ extractor/
     map_v6_migration_report.py  CLI (avulso): confere v6 contra v5, contagem por tile + antes/depois
     ground_equivalent_report.py CLI (avulso): mede o `ground_equivalent` do RME contra os mapas
     bake_outfit_atlas.py  bake global (avulso): sprites/outfits/ → atlases/outfits/<id>.{png,json}
-    bake_item_atlas.py     bake global (avulso): item animado → atlases/items/<id>.{png,json}
+    bake_item_atlas.py      lib compartilhada: classificação de equipamento/consumível + resolução de frame,
+                             usada pelos dois bakes de sheet abaixo (bake_item()/main() próprios não são
+                             mais chamados pelo pipeline — ver bake_item_sheets_animated.py)
     bake_item_sheets.py    bake global (avulso): itens estáticos → atlases/items-static/*.{png,json}
-    build_item_index.py    bake global (avulso): junta os dois bakes acima → atlases/items-index.json
+    bake_item_sheets_animated.py bake global (avulso): itens animados → atlases/items-animated/*.{png,json}
+    build_item_index.py    bake global (avulso): junta os dois bakes de sheet acima → atlases/items-index.json
     build_items.js         runner: chama os três bakes de item acima em sequência (npm run build-items)
     hunt_fragment.py        lógica pura: respawn.json → fragmento {monsters, loot, hunts}
     build_hunt_fragment.py  CLI (avulso): gera ready-maps/<CIDADE>/<pasta>/db-fragment.json — nunca escreve em db.json
@@ -316,7 +320,7 @@ extractor/
                          intocado até o jogo migrar (gitignored). Só mapas de hunt — o mapa
                          cidade-inteira não é renderizado, ver ADR 0006
   sprites/              biblioteca de sprites extraída dos .aec (gitignored, binário grande)
-  atlases/              saída dos bakes globais (outfits/items/items-static + items-index.json), gitignored, regenerável
+  atlases/              saída dos bakes globais (outfits/items-static/items-animated + items-index.json), gitignored, regenerável
   otservbr-monster.xml  lookup nome→looktype de monstro, compartilhado entre mapas
   *.aec                 assets binários do cliente Tibia (gitignored)
   _legacy/              scripts antigos/exploratórios, não fazem parte do pipeline

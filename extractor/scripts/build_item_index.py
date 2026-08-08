@@ -1,16 +1,21 @@
-"""Joins bake_item_atlas.py + bake_item_sheets.py output into a single
-itemId -> sprite location index (items-index.json), so a consumer doesn't
-need to open every individual atlas or static sheet to find one item.
+"""Joins bake_item_sheets.py (static) + bake_item_sheets_animated.py
+(animated) output into a single itemId -> sprite location index
+(items-index.json), so a consumer doesn't need to open every sheet to find
+one item.
 
-See .scratch/item-sprite-sheets/issues/01-item-sprite-index.md.
+See .scratch/item-sprite-sheets/issues/01-item-sprite-index.md and
+.scratch/item-sprite-sheets/issues/03-consolidate-animated-items-into-sheets.md
+(animated items moved from one atlas per item, kind "atlas", to shared grid
+sheets, kind "animated-sheet" — mirroring what static items already had).
 """
 
 import json
 import os
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List, Tuple
 
 import bake_item_atlas as bia
 import bake_item_sheets as bis
+import bake_item_sheets_animated as bisa
 
 SCRIPTS_DIR = os.path.dirname(os.path.abspath(__file__))
 EXTRACTOR_DIR = os.path.dirname(SCRIPTS_DIR)
@@ -33,10 +38,12 @@ def _cell_count(sprite_info: Dict) -> int:
 def build_item_index(
     items: List[Tuple[int, Dict]],
     static_shard_of: Dict[int, int],
+    animated_shard_of: Dict[int, int],
 ) -> Dict[str, Dict]:
     """Pure: given (item_id, raw metadata dict) pairs for every equipment
-    candidate, plus a static_shard_of item_id -> shard index (only needed
-    for items with no animation), returns the itemId -> location index.
+    candidate, plus static_shard_of/animated_shard_of item_id -> shard index
+    (each only needed for the matching kind of item), returns the itemId ->
+    location index.
 
     spriteCount is always the item's CELL count (patternWidth * patternHeight
     * patternDepth), never the total sprite/frame count — for an animated
@@ -53,8 +60,9 @@ def build_item_index(
         stackable = bool(flags.get("cumulative"))
 
         if sprite_info.get("animation"):
-            kind = "atlas"
-            file = f"items/{item_id}.json"
+            kind = "animated-sheet"
+            shard = animated_shard_of[item_id]
+            file = f"items-animated/items-animated-{shard}.json"
             sprite_count = _cell_count(sprite_info)
         else:
             kind = "static-sheet"
@@ -72,18 +80,20 @@ def build_item_index(
     return index
 
 
-def _compute_static_shard_of(
-    static_items: List[Tuple[int, List[str]]],
-    columns: int = bis.COLUMNS,
-    num_sheets: int = bis.NUM_SHEETS,
+def _compute_shard_of(
+    items: List[Tuple[int, List[str]]],
+    columns: int,
+    num_sheets: int,
 ) -> Dict[int, int]:
     """item_id -> shard index, derived from bis.plan_static_sheets's shard
     assignment. Checks membership of an item's first frame key in each
     shard's frame map — safe because plan_static_sheets guarantees an
-    item's cells never split across shards."""
-    plans = bis.plan_static_sheets(static_items, columns=columns, num_sheets=num_sheets)
+    item's cells never split across shards. Shared by both static and
+    animated items: the packing algorithm is identical, only the (columns,
+    num_sheets) config and which items feed it differ."""
+    plans = bis.plan_static_sheets(items, columns=columns, num_sheets=num_sheets)
     shard_of: Dict[int, int] = {}
-    for item_id, keys in static_items:
+    for item_id, keys in items:
         if not keys:
             continue
         first_key = keys[0]
@@ -111,8 +121,10 @@ def _load_all_candidates() -> List[Tuple[int, Dict]]:
 def generate_item_index() -> Dict[str, Dict]:
     all_items = _load_all_candidates()
     static_items = [(item_id, list(data.get("spriteId", []))) for item_id, data in all_items if bis._is_static(data)]
-    static_shard_of = _compute_static_shard_of(static_items, columns=bis.COLUMNS, num_sheets=bis.NUM_SHEETS)
-    return build_item_index(all_items, static_shard_of)
+    animated_items = [(item_id, list(data.get("spriteId", []))) for item_id, data in all_items if not bis._is_static(data)]
+    static_shard_of = _compute_shard_of(static_items, columns=bis.COLUMNS, num_sheets=bis.NUM_SHEETS)
+    animated_shard_of = _compute_shard_of(animated_items, columns=bisa.COLUMNS, num_sheets=bisa.NUM_SHEETS)
+    return build_item_index(all_items, static_shard_of, animated_shard_of)
 
 
 # =========================
