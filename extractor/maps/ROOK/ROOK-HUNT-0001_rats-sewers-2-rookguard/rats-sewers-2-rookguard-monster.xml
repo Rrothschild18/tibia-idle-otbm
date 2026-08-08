@@ -57,9 +57,7 @@
 	<monster centerx="1086" centery="1052" centerz="8" radius="1">
 		<monster name="Rat" x="0" y="0" z="8" spawntime="90" />
 	</monster>
-	<monster centerx="1007" centery="1053" centerz="8" radius="3">
-		<monster name="Rabbit" x="-2" y="-3" z="8" spawntime="90" />
-	</monster>
+	<monster centerx="1007" centery="1053" centerz="8" radius="3" />
 	<monster centerx="1035" centery="1053" centerz="8" radius="3">
 		<monster name="Rat" x="-3" y="2" z="8" spawntime="90" />
 		<monster name="Rat" x="0" y="3" z="8" spawntime="90" />

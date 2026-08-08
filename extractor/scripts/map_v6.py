@@ -34,6 +34,16 @@ VERSION = 6
 SIGN_ITEM_ID = 2016
 MARKER_UID_MIN = 10001
 
+# Action id marking where a hunt starts: put it on whatever item is already on
+# the entrance tile (grass, a stone, a ladder — the ids in use range from 103
+# to 7272) and the pipeline reads the tile's position and floor off it.
+#
+# Deliberately an action id on an existing item rather than a dedicated marker
+# object: it adds nothing to render and nothing to strip, so the tile stays
+# exactly what the editor shows. That is also why nothing here removes it —
+# unlike a marker sign, the item it rides on is real map content.
+HUNT_START_ACTION_ID = 3366
+
 # A tile row is [tileX, tileY, ground, *stack]. Appearance ids start well above
 # zero, so 0 is unambiguous as "this tile has no ground".
 NO_GROUND = 0
@@ -99,6 +109,22 @@ def _appearance_entry(analysis: Dict, packer, frame_sources: Dict[str, Dict[int,
         entry["animated"] = True
         entry["animation"] = analysis["animation"]
 
+    # How many position variants this appearance has, and therefore how to read
+    # `gids`: the list is `phases x patterns`, phase-major, so the frames of one
+    # variant are `gids[phase * (w*h*d) + index]`. Without this the list is
+    # unreadable — 42 gids look like 42 frames when they are 3 shore shapes of
+    # 14 frames each, and the renderer has no way to tell. Emitted only when
+    # there is more than one variant, which is the minority of appearances;
+    # absent means 1x1x1, the whole list belongs to one tile.
+    sprite_info = analysis.get("spriteInfo") or {}
+    pattern = {
+        "w": sprite_info.get("patternWidth", 1),
+        "h": sprite_info.get("patternHeight", 1),
+        "d": sprite_info.get("patternDepth", 1),
+    }
+    if pattern["w"] * pattern["h"] * pattern["d"] > 1:
+        entry["pattern"] = pattern
+
     # Both are pure positioning, and both are absent far more often than
     # present — emitting the zero would be noise in every tile of every map.
     shift = analysis.get("shift") or {}
@@ -129,21 +155,19 @@ def build_map_v6(dump: Dict, analyze: Callable[[int], Dict], packer,
     `build_phaser_map.analyze_item` produces; `packer` is a `SheetPacker` this
     call is free to fill (it uses the v6 footprint-only key).
 
-    `map_id` (the hunt's own id, e.g. `"ROOK-HUNT-0001"` — see
-    `hunt_fragment.map_id_from_folder`) opts into the start-marker floor
-    pick: a sign (item `SIGN_ITEM_ID`, reserved uid) whose text equals
-    `map_id` exactly, placed by hand in the OTBM at the floor the hunt
-    should load on. When present, its floor wins over the `defaultZ`
-    heuristic below outright — a human said "here", which beats guessing
-    from tile counts every time a hunt spot's real content sits on a floor
-    other than 7 (a tower cut at z=1..5, a dungeon cut at z=8) and the
-    heuristic's fallback (lowest z present) has no way to know which floor
-    among several is the one the player should land on.
+    The hunt's entrance comes from `HUNT_START_ACTION_ID`, placed by hand on
+    the entrance tile: it fills `start` and decides `defaultZ`. It replaces a
+    marker sign whose text had to equal `map_id` exactly — a rule no map in the
+    set ever satisfied (the signs that exist read `"ROOK-0001"`, not
+    `"ROOK-HUNT-0001"`), so every build fell through to the heuristic. An
+    action id has nothing to spell.
+
+    `map_id` is kept for the warning messages only.
     """
     stacks: Dict[int, Dict[Tuple[int, int], Dict]] = {}
     used_ids: Set[int] = set()
     all_zs: Set[int] = set()
-    start_marker_z: Optional[int] = None
+    start_marker: Optional[Tuple[int, int, int]] = None
     start_marker_conflict = False
 
     min_x = min_y = 10 ** 9
@@ -168,19 +192,13 @@ def build_map_v6(dump: Dict, analyze: Callable[[int], Dict], packer,
                 min_x, min_y = min(min_x, x), min(min_y, y)
                 max_x, max_y = max(max_x, x), max(max_y, y)
 
-                if map_id is not None:
-                    for raw_item in tile.get("items") or []:
-                        if raw_item.get("id") != SIGN_ITEM_ID:
-                            continue
-                        uid = raw_item.get("uid")
-                        if uid is None or uid < MARKER_UID_MIN:
-                            continue
-                        if raw_item.get("text") != map_id:
-                            continue
-                        if start_marker_z is not None and start_marker_z != z:
-                            start_marker_conflict = True
-                        else:
-                            start_marker_z = z
+                for raw_item in tile.get("items") or []:
+                    if raw_item.get("aid") != HUNT_START_ACTION_ID:
+                        continue
+                    if start_marker is not None:
+                        start_marker_conflict = True
+                    else:
+                        start_marker = (x, y, z)
 
                 placements = _tile_placements(tile, analyze)
                 if not placements:
@@ -203,11 +221,12 @@ def build_map_v6(dump: Dict, analyze: Callable[[int], Dict], packer,
         all_zs.add(7)
 
     if start_marker_conflict:
-        print(f'[WARN] v6: marcador de floor inicial ("{map_id}") aparece em '
-              f'mais de um floor — usando o primeiro encontrado (z={start_marker_z}).')
-    elif map_id is not None and start_marker_z is None:
-        print(f'[WARN] v6: nenhum marcador de floor inicial ("{map_id}") encontrado '
-              f'— defaultZ decidido por heurística (7 se existir, senão o menor z).')
+        print(f'[WARN] v6: action id {HUNT_START_ACTION_ID} (início da hunt) aparece em '
+              f'mais de uma tile — usando a primeira encontrada {start_marker}.')
+    elif start_marker is None:
+        print(f'[WARN] v6: nenhuma tile com action id {HUNT_START_ACTION_ID} '
+              f'— sem posição de entrada, e defaultZ decidido por heurística '
+              f'(7 se existir, senão o menor z).')
 
     width = max_x - min_x + 1
     height = max_y - min_y + 1
@@ -245,15 +264,30 @@ def build_map_v6(dump: Dict, analyze: Callable[[int], Dict], packer,
         "width": width,
         "height": height,
         "bounds": {"minX": min_x, "minY": min_y, "maxX": max_x, "maxY": max_y},
-        # The start marker (see the map_id docstring above) wins outright
-        # when present. Otherwise: surface floor is conventionally z=7 in
-        # Tibia, so fall back to that, or to the lowest z present for maps
-        # that (unusually) don't include it.
-        "defaultZ": start_marker_z if start_marker_z is not None
+        # The start marker's own floor wins outright when present — a human
+        # pointed at a tile, which beats guessing from tile counts every time a
+        # hunt's real content sits somewhere other than z=7 (a tower cut at
+        # z=1..5, a dungeon cut at z=8). Otherwise: the surface is
+        # conventionally z=7 in Tibia, so fall back to that, or to the lowest z
+        # present for maps that (unusually) don't include it.
+        "defaultZ": start_marker[2] if start_marker is not None
         else (7 if 7 in all_zs else min(all_zs)),
         "assetsRoot": assets_root,
         "appearances": appearances,
         "sheets": sheets,
         "floors": floors,
     }
+
+    # Where the player enters, in the same tile space as every other coordinate
+    # in the file (relative to `bounds.minX/minY`), so a consumer never has to
+    # know the map's world position to use it. Omitted when the map carries no
+    # marker, which is how a consumer tells "not authored yet" from "enters at
+    # tile 0,0".
+    if start_marker is not None:
+        document["start"] = {
+            "x": start_marker[0] - min_x,
+            "y": start_marker[1] - min_y,
+            "z": start_marker[2],
+        }
+
     return document, frame_sources

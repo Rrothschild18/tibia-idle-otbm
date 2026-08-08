@@ -20,7 +20,8 @@ migrar.
   "width": 62,               // em tiles, união de todos os floors
   "height": 31,
   "bounds": { "minX": 32100, "minY": 31900, "maxX": 32161, "maxY": 31930 },
-  "defaultZ": 7,             // 7 se existir, senão o menor z do mapa
+  "defaultZ": 7,             // o z do marcador de início; sem marcador, 7 se existir, senão o menor z
+  "start": { "x": 78, "y": 24, "z": 8 },   // onde o jogador entra, em tile; ausente se o mapa não foi marcado
   "assetsRoot": "assets/ROOK-HUNT-0013_rats-rookguard-sprites-v6",
   "appearances": { /* ... */ },
   "sheets": { /* ... */ },
@@ -133,6 +134,7 @@ não clampa porque é editor, não cliente).
 | `spriteWidth` / `spriteHeight` | quando ≠ 32 | tamanho do sprite em pixels |
 | `shift` | quando ≠ 0 em algum eixo | `{x, y}`, deslocamento do próprio sprite |
 | `elevation` | quando ≠ 0 | pixels que este item soma aos desenhados depois dele |
+| `pattern` | quando há mais de uma variante | `{w, h, d}`, as variantes de posição — ver abaixo |
 | `random` | quando `true` | os `gids` são variantes; escolha uma, não anime |
 | `animated` + `animation` | quando `true` | os `gids` são frames em sequência |
 | `hasSprite` | quando `false` | nenhum frame foi encontrado na extração |
@@ -197,3 +199,44 @@ inalterado — ver [`PHASER_MONSTERS.md`](PHASER_MONSTERS.md).
 | `objectDefs` | `appearances` |
 | `animations` no topo | `animation` dentro da entrada da aparência |
 | `metadata.json` ao lado | continua saindo no v5 (tem consumidor fora deste repo) |
+
+### `pattern` — variantes por posição
+
+`gids` **não** é uma lista de quadros. É `fases x variantes`, achatada em ordem
+de fase-maior:
+
+```
+gids[fase * (w*h*d) + variante]
+```
+
+As variantes vêm de `pattern` e são escolhidas pela **posição de mundo** da tile
+— não pela coordenada local do arquivo:
+
+```
+variante = ((z % d) * h + (y % h)) * w + (x % w)
+   onde x = bounds.minX + tileX,  y = bounds.minY + tileY
+```
+
+É assim que uma borda de água, uma estrada ou um piso de mosaico encaixam com os
+vizinhos em vez de cada célula decidir sozinha. Usar `tileX` em vez de
+`bounds.minX + tileX` gira a atribuição inteira em qualquer mapa cujo `minX` não
+seja múltiplo de `w` — parece plausível e está errado.
+
+`pattern` ausente significa `1x1x1`: uma variante só, e `gids` é simplesmente a
+lista de fases.
+
+**Animação percorre as fases de uma variante, nunca a lista toda.** O id 4633
+(borda de praia) tem `pattern {w:3,h:1,d:1}` e 42 gids: são 3 formatos de margem
+de 14 fases cada. Tocar os 42 em sequência faz a margem trocar de formato a cada
+quadro. Ver ADR 0014 no `tibia-idle`.
+
+### `start` — onde a hunt começa
+
+Vem do **action id 3366**, colocado à mão sobre qualquer item que já esteja na
+tile de entrada (grama, pedra, escada). O pipeline lê a posição e o andar dele:
+`start` sai em coordenada de tile, como todo o resto do arquivo, e o `z` do
+marcador vira o `defaultZ`.
+
+O item que carrega o action id **não é removido** — é conteúdo real do mapa, ao
+contrário de uma placa marcadora. Ausência de `start` significa "esse mapa ainda
+não foi marcado", que é diferente de "entra na tile 0,0".
