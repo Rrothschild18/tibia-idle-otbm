@@ -27,5 +27,9 @@ extractor/ready-maps-v6/**
 extractor/full-maps/*/sheets/
 extractor/full-maps/*/db-fragment.json
 
+# Backups the map editor writes next to the .otbm it saves. The .otbm itself
+# is versioned, so git already is the backup.
+*.otbm.bak
+
 __pycache__/
 *.pyc

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<monsters>
+	<monster centerx="1059" centery="1049" centerz="1" radius="3">
+		<monster name="Wasp" x="0" y="3" z="1" spawntime="90" />
+	</monster>
+	<monster centerx="1059" centery="1056" centerz="1" radius="3">
+		<monster name="Wasp" x="0" y="-1" z="1" spawntime="90" />
+		<monster name="Wasp" x="0" y="1" z="1" spawntime="90" />
+	</monster>
+	<monster centerx="1066" centery="1056" centerz="1" radius="3">
+		<monster name="Wasp" x="-3" y="0" z="1" spawntime="90" />
+	</monster>
+	<monster centerx="1059" centery="1056" centerz="2" radius="3">
+		<monster name="Wasp" x="1" y="-3" z="2" spawntime="90" />
+		<monster name="Wasp" x="0" y="-1" z="2" spawntime="90" />
+		<monster name="Wasp" x="-1" y="0" z="2" spawntime="90" />
+		<monster name="Wasp" x="1" y="0" z="2" spawntime="90" />
+	</monster>
+	<monster centerx="1059" centery="1056" centerz="3" radius="3">
+		<monster name="Wasp" x="0" y="-1" z="3" spawntime="90" />
+		<monster name="Wasp" x="1" y="-1" z="3" spawntime="90" />
+	</monster>
+	<monster centerx="1059" centery="1056" centerz="4" radius="3">
+		<monster name="Wasp" x="0" y="0" z="4" spawntime="90" />
+	</monster>
+	<monster centerx="1059" centery="1055" centerz="5" radius="3">
+		<monster name="Wasp" x="-1" y="-1" z="5" spawntime="60" />
+		<monster name="Wasp" x="-1" y="1" z="5" spawntime="60" />
+	</monster>
+</monsters>
