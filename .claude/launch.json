@@ -18,6 +18,15 @@
         "cd '/c/Users/rault/OneDrive/Área de Trabalho/tibia-idle/tibia-idle' && npx nx serve tibia-idle-mock-api"
       ],
       "port": 3001
+    },
+    {
+      "name": "render-harness",
+      "runtimeExecutable": "C:\\Program Files\\Git\\usr\\bin\\bash.exe",
+      "runtimeArgs": [
+        "-lc",
+        "cd '/c/Users/rault/OneDrive/Área de Trabalho/tibia-idle/tibia-idle' && npx vite --config tools/render-harness/vite.config.mts"
+      ],
+      "port": 4310
     }
   ]
 }
