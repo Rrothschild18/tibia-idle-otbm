@@ -204,6 +204,31 @@ def test_bake_outfit_returns_none_when_json_missing(tmp_path, monkeypatch):
     assert not atlas_dir.exists()
 
 
+def test_bake_outfit_leaves_player_outfits_to_the_other_baker(tmp_path, monkeypatch):
+    # extract_sprites.py now writes the 22 player outfits into the same
+    # sprites/outfits/ tree, and _list_outfit_ids finds them. They declare an
+    # `axes` block; packing them into this single-row format would produce an
+    # atlas that loads and animates wrong.
+    sprites_dir = tmp_path / "sprites_outfits"
+    atlas_dir = tmp_path / "atlases_outfits"
+    sprites_dir.mkdir()
+    monkeypatch.setattr(boa, "OUTFITS_SPRITES_DIR", str(sprites_dir))
+    monkeypatch.setattr(boa, "OUTFITS_ATLAS_DIR", str(atlas_dir))
+
+    outfit_dir = sprites_dir / "128"
+    outfit_dir.mkdir()
+    data = {
+        "id": 128,
+        "spriteId": ["128_base_a0_north_0"],
+        "axes": {"directions": 4, "phases": 9, "layers": 2, "addons": 3, "mounts": 1},
+    }
+    (outfit_dir / "128.json").write_text(json.dumps(data), encoding="utf-8")
+    Image.new("RGBA", (64, 64), (1, 2, 3, 255)).save(outfit_dir / "128_base_a0_north_0.png")
+
+    assert boa.bake_outfit(128) is None
+    assert not atlas_dir.exists()
+
+
 def test_bake_outfit_is_deterministic_across_runs(tmp_path, monkeypatch):
     sprites_dir = tmp_path / "sprites_outfits"
     atlas_dir = tmp_path / "atlases_outfits"
