@@ -78,6 +78,23 @@ ADR 0002.
 O floor que deve renderizar por padrão ao carregar um `hunt spot` — `7` se existir, senão o
 menor z presente no mapa.
 
+**Pattern axis** (eixo de padrão):
+Um dos quatro eixos ao longo dos quais uma appearance guarda variantes da mesma sprite —
+`pattern_width`, `pattern_height`, `pattern_depth` e `layers` — mais o eixo do tempo (`fase`). O
+que cada um *significa* depende do que a appearance é: num item são posição no mundo (ver ADR 0014
+do `tibia-idle`); num outfit são direção, addon, montaria e camada. A lei de índice é a mesma nos
+dois casos, e é ela que diz que os frames vêm **intercalados por direção, não agrupados** — ver
+`extractor/OUTFIT_SPRITES_DOCUMENTATION.md`.
+_Avoid_: "quantidade de sprites" como critério de classificação — foi o que
+`outfit_has_addons_or_mounts` usou pra decidir o que extrair, e é por isso que os 22 outfits de
+jogador ficaram de fora sem que ninguém soubesse qual eixo os excluiu.
+
+**Outfit layer** (camada de outfit):
+Uma das duas metades de cada sprite de outfit de jogador: a **base**, em tons de cinza, e a
+**máscara**, quatro cores chapadas que dizem a que região do corpo cada pixel pertence. Cor não é
+sprite — é multiplicação da base pela cor da região, feita no cliente. Criaturas têm uma camada só
+e não têm o que tingir.
+
 **Floor transition** (tile de transição):
 Um tile (escada/buraco) identificado pela flag derivada `isFloorTransition` nas flags da aparência,
 calculada a partir de uma combinação de flags do OTBM (não existe flag nativa pra isso — ver
