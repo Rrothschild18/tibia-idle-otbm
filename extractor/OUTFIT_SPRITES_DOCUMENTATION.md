@@ -95,7 +95,19 @@ O campo `name` está vazio nos 1.330 outfits. A extração é por id, e o mapa i
 ## Contrato do sheet
 
 Um sheet por outfit, células de 64×64 com 1px de padding, grade de 24 colunas — 216 frames
-(`4 direções × 3 addons × 2 layers × 9 fases`), 1561×586px, ~92 KB por outfit.
+(`4 direções × 3 addons × 2 layers × 9 fases`), 1561×586px, ~97 KB por outfit (2,08 MB nos 22).
+
+O padding é uma calha **compartilhada** entre células vizinhas, não uma borda por célula: as
+células andam de 65 em 65 px e o sheet tem 1px a mais que a borda da última. É daí que sai
+1561 = 1 + 24×65 e 586 = 1 + 9×65.
+
+Vinte e quatro colunas não é número redondo à toa: uma fase tem exatamente
+`3 addons × 4 direções × 2 layers = 24` frames, então **a linha N do sheet é a fase N**. A grade
+é conferível a olho contra os eixos documentados.
+
+Quem produz: `scripts/bake_player_outfit_sheet.py`, saída em `atlases/player-outfits/`. É outro
+formato que o atlas de criatura de `bake_outfit_atlas.py`, e os dois se distinguem pela presença
+do bloco `axes` — nenhum dos dois carrega lista de id do outro.
 
 Base e máscara moram no **mesmo** arquivo. Separá-los em dois economiza 6% (2,28 → 2,14 MB nos
 22 outfits) ao custo de dobrar as requisições e inventar o estado "outfit meio carregado".

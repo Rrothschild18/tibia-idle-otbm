@@ -87,7 +87,17 @@ dois casos, e é ela que diz que os frames vêm **intercalados por direção, n�
 `extractor/OUTFIT_SPRITES_DOCUMENTATION.md`.
 _Avoid_: "quantidade de sprites" como critério de classificação — foi o que
 `outfit_has_addons_or_mounts` usou pra decidir o que extrair, e é por isso que os 22 outfits de
-jogador ficaram de fora sem que ninguém soubesse qual eixo os excluiu.
+jogador ficaram de fora sem que ninguém soubesse qual eixo os excluiu. Hoje ela se chama
+`has_non_creature_axis` e diz o eixo.
+
+**Player outfit sheet** (sheet de outfit de jogador):
+O PNG+JSON que `bake_player_outfit_sheet.py` produz por outfit de jogador, em
+`atlases/player-outfits/`. 216 frames numa grade de 24 colunas — uma linha por fase —, com chave
+de frame explícita (`128_mask_a0_north_2`) e um bloco `axes` declarando os eixos. É outro formato
+que o atlas de criatura de `bake_outfit_atlas.py`, e os dois bakers se distinguem pela presença
+do `axes`, não por lista de id.
+_Avoid_: assar outfit de jogador com o baker de criatura — ele empacota numa linha só e não
+conhece addon nem camada.
 
 **Outfit layer** (camada de outfit):
 Uma das duas metades de cada sprite de outfit de jogador: a **base**, em tons de cinza, e a

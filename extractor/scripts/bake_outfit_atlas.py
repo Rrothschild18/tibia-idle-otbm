@@ -130,9 +130,15 @@ def bake_outfit(outfit_id: int) -> Optional[Dict]:
     """Bake one outfit's atlas, writing <id>.png + <id>.json to
     OUTFITS_ATLAS_DIR. Returns the atlas JSON dict, or None if the outfit
     has no extracted JSON (mirrors the tolerant missing-outfit handling in
-    build_phaser_map.py)."""
+    build_phaser_map.py) or is a player outfit.
+
+    Player outfits belong to bake_player_outfit_sheet.py: they have an addon
+    and a layer axis, and packing them into this single row of `<id>_<n>`
+    frames would produce an atlas that loads and animates wrong. They are
+    recognised by the `axes` block their extraction declares — not by an id
+    list, so neither baker has to know the other's."""
     data = _load_outfit_json(outfit_id)
-    if data is None:
+    if data is None or "axes" in data:
         return None
 
     frames = _outfit_frame_list(outfit_id, data)
