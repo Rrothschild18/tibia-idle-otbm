@@ -1,193 +1,121 @@
-# Documentação de Sprites de Outfits
+# Sprites de Outfit
 
-Este documento descreve como as sprites de outfits extraídas do arquivo `.aec` estão organizadas e ordenadas para uso em animações no Phaser.js ou outros game engines.
+Como as sprites de outfit saem do `outfits.aec`, e o contrato dos sheets que o
+`tibia-idle` consome.
 
-## Estrutura de Pastas
+> **Correção (2026-08-11).** A versão anterior deste documento afirmava que as direções eram
+> `sul, leste, norte, oeste` e que a animação de caminhada vinha **agrupada** em 8 frames
+> consecutivos por direção (`4 + direção*8 + frame`). **As duas afirmações estavam erradas**, e
+> ninguém percebeu porque uma chave numérica crua (`128_17`) não denuncia um índice mal somado.
+> Os dois consumidores reais sempre leram o formato correto — `animated-outfit-atlas.ts` e
+> `monster-sprite.ts`, ambos no repo `tibia-idle` — então o que estava quebrado era só este
+> arquivo. A fórmula abaixo é a mesma lei do ADR-0014 do `tibia-idle`, com um eixo a mais.
 
-```
-sprites/outfits/
-├── 2/
-│   ├── 2_0.png    # IDLE - Sul (parado olhando para baixo)
-│   ├── 2_1.png    # IDLE - Leste (parado olhando para direita) 
-│   ├── 2_2.png    # IDLE - Norte (parado olhando para cima)
-│   ├── 2_3.png    # IDLE - Oeste (parado olhando para esquerda)
-│   ├── 2_4.png    # MOVING - Sul frame 0
-│   ├── 2_5.png    # MOVING - Sul frame 1
-│   ├── ...
-│   ├── 2_35.png   # MOVING - Oeste frame 7 (último frame)
-│   └── 2.json     # Metadados com frameGroups
-├── 3/
-│   ├── 3_0.png
-│   ├── ...
-```
+## A lei de índice
 
-## Organização das Sprites
-
-### Frame Groups
-
-Cada outfit possui 2 **frame groups**:
-
-1. **IDLE** (`frameGroup: "idle"`) - Sprites estáticas
-2. **MOVING** (`frameGroup: "moving"`) - Sprites de caminhada
-
-### Ordem das Direções
-
-As sprites seguem a ordem padrão do Tibia:
-
-| Índice | Direção | Descrição |
-|--------|---------|-----------|
-| 0 | **Sul** | Personagem olhando para baixo ↓ |
-| 1 | **Leste** | Personagem olhando para direita → |
-| 2 | **Norte** | Personagem olhando para cima ↑ |
-| 3 | **Oeste** | Personagem olhando para esquerda ← |
-
-## Sprites IDLE (4 sprites)
-
-As primeiras 4 sprites são sempre IDLE:
+Uma appearance guarda suas sprites numa lista plana. A posição de cada uma é dada por:
 
 ```
-outfit_ID_0 = Sul (parado)
-outfit_ID_1 = Leste (parado) 
-outfit_ID_2 = Norte (parado)
-outfit_ID_3 = Oeste (parado)
+index = ((((fase * numZ + z) * numY + y) * numX + x) * layers) + layer
 ```
 
-## Sprites MOVING (32 sprites)
+O eixo que varia mais rápido é `layer`; o mais lento é `fase`. Ou seja: **os frames vêm
+intercalados por direção, não agrupados** — todas as direções da fase 0, depois todas as da
+fase 1, e assim por diante. É por isso que `frameIndex % 4` funciona para uma criatura simples,
+e é a mesma regra que o ADR-0014 já estabeleceu para itens (`fase * patternCount + variante`);
+outfits só acrescentam o eixo `layer`, que itens não têm.
 
-As próximas 32 sprites são animação de caminhada, organizadas como:
-- **8 frames por direção**
-- **4 direções** (Sul, Leste, Norte, Oeste)
+| eixo | nome no protobuf | o que significa num outfit |
+|---|---|---|
+| `x` | `pattern_width` | direção — sempre 4 numa criatura |
+| `y` | `pattern_height` | addon — 1 (criatura) ou 3 (outfit de jogador) |
+| `z` | `pattern_depth` | montaria — 1 (criatura) ou 2 (outfit de jogador) |
+| `layer` | `layers` | 1 (criatura) ou 2 (outfit de jogador: base + máscara) |
+| `fase` | — | 1 no frame group `idle`, 8 no `moving` |
 
-### Cálculo do Índice
+## Direções
 
-```javascript
-// Fórmula para calcular índice da sprite MOVING:
-const movingStartIndex = 4; // Após as 4 sprites IDLE
-const frameIndex = movingStartIndex + (direction * 8) + frameNumber;
-
-// Exemplos:
-// Sul frame 0:   4 + (0 * 8) + 0 = 4  → outfit_ID_4
-// Sul frame 7:   4 + (0 * 8) + 7 = 11 → outfit_ID_11
-// Leste frame 0: 4 + (1 * 8) + 0 = 12 → outfit_ID_12
-// Leste frame 7: 4 + (1 * 8) + 7 = 19 → outfit_ID_19
-// Norte frame 0: 4 + (2 * 8) + 0 = 20 → outfit_ID_20
-// Norte frame 7: 4 + (2 * 8) + 7 = 27 → outfit_ID_27
-// Oeste frame 0: 4 + (3 * 8) + 0 = 28 → outfit_ID_28
-// Oeste frame 7: 4 + (3 * 8) + 7 = 35 → outfit_ID_35
+```
+x = 0 → norte      x = 1 → leste      x = 2 → sul      x = 3 → oeste
 ```
 
-### Mapeamento Completo
+Verificado renderizando `x=0` de três criaturas já em uso no jogo — rato (21), lobo (3) e
+dragão (39): as três aparecem **de costas**. Nos outfits de jogador o rosto confirma o resto:
+`x=0` sem rosto, `x=1` e `x=3` de perfil, `x=2` com o rosto inteiro.
 
-| Direção | Frames | Índices das Sprites |
-|---------|---------|-------------------|
-| **Sul** | 0-7 | `outfit_ID_4` até `outfit_ID_11` |
-| **Leste** | 0-7 | `outfit_ID_12` até `outfit_ID_19` |
-| **Norte** | 0-7 | `outfit_ID_20` até `outfit_ID_27` |
-| **Oeste** | 0-7 | `outfit_ID_28` até `outfit_ID_35` |
+Frame group `idle` tem uma fase só; `moving` tem 8. Um outfit de criatura simples portanto tem
+`4 + 32 = 36` sprites — o número que o formato antigo deste documento descrevia, pela razão
+errada.
 
-## Arquivo JSON de Metadados
+## Outfits de jogador
 
-Cada outfit possui um arquivo `{ID}.json` com a seguinte estrutura:
+Os 22 outfits clássicos (128–134, 136–150 — o id 135 não existe) têm todos exatamente a mesma
+forma:
+
+```
+432 sprites = 4 direções × 3 addons × 2 montaria × 2 layers × 9 fases
+              idle: 48 · moving: 384 · sprites de 64×64
+```
+
+### As duas layers
+
+`layer = 0` é o desenho em tons de cinza. `layer = 1` é uma **máscara** de quatro cores puras,
+que diz a que região cada pixel pertence:
+
+| cor da máscara | região |
+|---|---|
+| `#FFFF00` amarelo | cabeça |
+| `#FF0000` vermelho | corpo |
+| `#00FF00` verde | pernas |
+| `#0000FF` azul | pés |
+
+A cor final é **multiplicação em runtime** do pixel base pela cor escolhida daquela região. Não
+existe sprite por cor: seriam 133⁴ ≈ 312 milhões de combinações por outfit. Ver ADR-0019 do
+`tibia-idle` para onde essa multiplicação acontece e por quê.
+
+### Addon é camada aditiva, não variante
+
+`y = 1` e `y = 2` contêm **apenas as peças do addon**, transparentes no resto — o frame `y=1`
+do outfit 128 tem 95 pixels opacos contra 539 do `y=0`. Renderizar "addon 1" é desenhar `y=0`
+e **depois** `y=1` por cima. Os quatro resultados visuais (nenhum, 1, 2, 1+2) saem de três
+frames empilhados.
+
+### Montaria fica fora
+
+O eixo `z=1` é o personagem **sentado, em pose de montaria**; o bicho embaixo é uma appearance
+separada. Sem sistema de montaria esses frames renderizam alguém flutuando sentado, então o
+bake os descarta e declara `mounts: 1` no JSON — ligar montaria depois é re-bake, não mudança
+de contrato.
+
+### O `.aec` não tem nomes
+
+O campo `name` está vazio nos 1.330 outfits. A extração é por id, e o mapa id→nome vive só em
+`BASE_OUTFITS` (`libs/models/character` no `tibia-idle`).
+
+## Contrato do sheet
+
+Um sheet por outfit, células de 64×64 com 1px de padding, grade de 24 colunas — 216 frames
+(`4 direções × 3 addons × 2 layers × 9 fases`), 1561×586px, ~92 KB por outfit.
+
+Base e máscara moram no **mesmo** arquivo. Separá-los em dois economiza 6% (2,28 → 2,14 MB nos
+22 outfits) ao custo de dobrar as requisições e inventar o estado "outfit meio carregado".
+
+### Chave de frame
+
+```
+<outfitId>_<layer>_a<addon>_<direção>_<fase>      ex.: 128_mask_a0_north_2
+```
+
+`layer` é `base` ou `mask`; `direção` é `north|east|south|west`. A chave é explícita, e não o
+`<id>_<n>` numérico usado nos atlases de criatura, exatamente pelo motivo da nota de correção
+no topo: `128_17` fica calado quando alguém soma o índice errado, e `128_mask_a0_north_2` não.
+
+O JSON declara os eixos, para que o consumidor não precise deduzi-los da contagem de frames:
 
 ```json
 {
-  "id": 2,
-  "frameGroups": [
-    {
-      "spriteId": ["2_0", "2_1", "2_2", "2_3"],
-      "frameGroup": "idle",
-      "spriteInfo": {
-        "patternWidth": 4,
-        "patternHeight": 1,
-        "patternDepth": 1,
-        "layers": 1,
-        "patternFrames": 0
-      }
-    },
-    {
-      "spriteId": ["2_4", "2_5", "2_6", ..., "2_35"], 
-      "frameGroup": "moving",
-      "spriteInfo": {
-        "patternWidth": 4,
-        "patternHeight": 1,
-        "patternDepth": 1,
-        "layers": 1,
-        "patternFrames": 0,
-        "animation": {
-          "synchronized": false,
-          "loopType": "ANIMATION_LOOP_TYPE_INFINITE",
-          "spritePhase": [
-            {"durationMin": 300, "durationMax": 300},
-            {"durationMin": 300, "durationMax": 300},
-            ...
-          ]
-        }
-      }
-    }
-  ]
+  "frames": { "128_base_a0_north_0": { "frame": { "x": 1, "y": 1, "w": 64, "h": 64 } } },
+  "axes": { "directions": 4, "phases": 9, "layers": 2, "addons": 3, "mounts": 1 },
+  "meta": { "image": "128.png", "size": { "w": 1561, "h": 586 } }
 }
 ```
-
-## Exemplo de Uso no Phaser.js
-
-```javascript
-// Carregar sprites de um outfit
-const outfitId = 2;
-const outfitPath = `sprites/outfits/${outfitId}/`;
-
-// Sprites IDLE (1 por direção)
-const idleSprites = {
-    south: `${outfitPath}${outfitId}_0.png`,
-    east:  `${outfitPath}${outfitId}_1.png`, 
-    north: `${outfitPath}${outfitId}_2.png`,
-    west:  `${outfitPath}${outfitId}_3.png`
-};
-
-// Sprites MOVING (8 frames por direção)
-const movingSprites = {
-    south: Array.from({length: 8}, (_, i) => `${outfitPath}${outfitId}_${4 + i}.png`),
-    east:  Array.from({length: 8}, (_, i) => `${outfitPath}${outfitId}_${12 + i}.png`),
-    north: Array.from({length: 8}, (_, i) => `${outfitPath}${outfitId}_${20 + i}.png`),
-    west:  Array.from({length: 8}, (_, i) => `${outfitPath}${outfitId}_${28 + i}.png`)
-};
-
-// Criar animações no Phaser
-this.anims.create({
-    key: 'walk-south',
-    frames: movingSprites.south.map(sprite => ({ key: sprite })),
-    frameRate: 10,
-    repeat: -1
-});
-
-this.anims.create({
-    key: 'idle-south', 
-    frames: [{ key: idleSprites.south }],
-    frameRate: 1
-});
-```
-
-## Direções no Sistema de Coordenadas
-
-```
-    Norte (2)
-       ↑
-Oeste (3) ← → Leste (1)  
-       ↓
-     Sul (0)
-```
-
-## Validação
-
-- **Total de sprites por outfit padrão**: 36 (4 IDLE + 32 MOVING)
-- **Duração típica dos frames**: 300ms 
-- **Formato das sprites**: PNG 32x32 pixels
-- **Loop das animações**: Infinito (`ANIMATION_LOOP_TYPE_INFINITE`)
-
-## Notas Importantes
-
-1. **Outfits com mais de 36 sprites** podem conter addons, layers ou montarias
-2. **Pattern dimensions** informam se o outfit ocupa mais de 1 tile (ex: montarias grandes)
-3. **Frames sempre começam do 0** na contagem interna
-4. **Sprites são extraídas sequencialmente** do arquivo `.aec` conforme aparecem nos `frame_group`
-
-Esta organização garante compatibilidade com sistemas de animação 2D e facilita a criação de múltiplas direções de movimento em jogos estilo RPG.
