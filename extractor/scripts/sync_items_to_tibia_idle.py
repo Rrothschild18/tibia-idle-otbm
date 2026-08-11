@@ -11,6 +11,11 @@ front-end assets:
      .scratch/item-sprite-sheets/issues/03-consolidate-animated-items-into-sheets.md)
   3. extractor/atlases/items-index.json -> apps/tibia-idle-front/public/assets/items-index.json
      (itemId -> sprite location index — see .scratch/item-sprite-sheets/issues/01-item-sprite-index.md)
+  4. extractor/atlases/player-outfits/  -> apps/tibia-idle-front/public/assets/player-outfits/
+     (one sheet per player outfit, PNG+JSON pairs — see
+     .scratch/outfit-de-personagem/issues/02-baker-de-sheet.md). Skipped when
+     the directory doesn't exist, so this stays runnable on a checkout that
+     hasn't baked the outfits yet.
 
 extractor/atlases/items/ (the old one-atlas-per-animated-item output from
 bake_item_atlas.py) is no longer synced — items-index.json never points at
@@ -106,6 +111,15 @@ def main():
         print("[OK] items-index.json: copiado")
     else:
         print("[OK] items-index.json: já atualizado")
+
+    outfits_src = os.path.join(ATLASES_DIR, "player-outfits")
+    if os.path.isdir(outfits_src):
+        copied, unchanged = _sync_dir(
+            outfits_src, os.path.join(front_assets_dir, "player-outfits")
+        )
+        print(f"[OK] player-outfits/: {copied} copiados, {unchanged} já atualizados")
+    else:
+        print("[--] player-outfits/: nada a copiar (rode bake_player_outfit_sheet.py)")
 
 
 if __name__ == "__main__":
