@@ -10,4 +10,4 @@ if SCRIPTS_DIR not in sys.path:
 # in tests works the same as running it from the CLI. The argument is the
 # map's pasta name (leaf folder under maps/<CIDADE>/) — the tool resolves
 # which city it lives under itself (see map_dirs.py).
-sys.argv = ["build_phaser_map.py", "ROOK-HUNT-0013_rats-rookguard"]
+sys.argv = ["build_phaser_map.py", "ROOK-HUNT-0001_rats-sewers-2-rookguard"]
