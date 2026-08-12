@@ -11,7 +11,7 @@ escopo do pipeline do extractor e do runtime.
 
 **City** (`city`, ex: `ROOK`, `TEST`):
 A pasta-pai física de um mapa sob `extractor/maps/<CIDADE>/`, `ready-maps/<CIDADE>/` ou
-`full-maps/<CIDADE>/` — nunca adivinhada do nome do mapa. Todo hunt/location no `db.json` do
+`full-maps/<CIDADE>/` — nunca adivinhada do nome do mapa. Todo hunt/location no catálogo do
 `tibia-idle` carrega um campo `city` derivado do próprio id (primeiro segmento), nunca digitado à
 mão. `TEST` é uma cidade fictícia pros mapas de teste/descartáveis (mesmo mecanismo, sem sistema de
 tag separado) — ver `.scratch/city-scoped-ids/spec.md`.
@@ -21,6 +21,33 @@ _Avoid_: region (nome antigo, ambíguo com "região" no sentido geográfico do j
 Formato `CIDADE-TIPO-SEQ`, escolhido à mão (digitado na sign do editor de mapas, copiado pro nome
 da pasta) — nunca auto-numerado pelo pipeline. Idêntico entre a coleção `hunts` e a location de
 entrada correspondente no travel-graph; não há mais duas strings pra reconciliar.
+
+**Fragmento** (`db-fragment.json`) e **export**:
+Duas coisas distintas, e confundi-las é o que faz alguém achar que rodar o extractor mexeu no
+back-end. O **fragmento** é a saída local de um CLI (`ready-maps/<CIDADE>/<pasta>/` pros hunts,
+`full-maps/<CIDADE>/` pro travel-graph), gitignorada, feita pra revisão — gerar fragmento nunca
+toca em nada fora de `extractor/`. O **export** (`--export`) é o passo separado e explícito que
+escreve no `tibia-idle`. Ver `content_export.py` e a tabela em `extractor/README.md`.
+_Avoid_: `--write-db` (flag antigo) e "escrever no db.json" — ver **Catálogo**
+
+**Catálogo** (`catalog-source.json`):
+`apps/tibia-idle-api/content/catalog-source.json` no `tibia-idle`: as três coleções que o extractor
+emite e que viram **linha no Postgres** (`hunts`, `locations`, `travelGraph`). Ninguém o lê em
+runtime — `import-content` valida com Zod e grava, e `nx run db:reset` chama isso. Não confundir com
+`content/hunts/` (`loot.json`, `respawn/<HUNT-ID>.json`, `hunts.json`), que é o conteúdo lido **do
+disco em runtime**: a linha entre os dois é a da ADR-0015 — virou coluna o que a tela filtra e
+ordena, ficou em arquivo o que se carrega inteiro e não responde a `WHERE`.
+_Avoid_: `db.json` (era o destino único, servido por `json-server`; o app foi apagado na fatia 1.8
+e as coleções se separaram por como o back-end lê cada uma)
+
+**Merge mecânico** vs. **curado**:
+O que um re-export pode sobrescrever sem perguntar, e o que não pode. **Mecânico** é tudo derivado
+do mapa (posição, `shop`, `tileCount`, `loot`, respawn): sempre reescrito, porque regenerar dá o
+mesmo valor. **Curado** é decisão humana que o mapa não sabe (`displayName`, `huntId`, `name`,
+`label`, `portrait`, `seed`, `startPosition`): nunca sobrescrito. O corte não é por coleção, é por
+campo — e cada coleção resolve isso do jeito que cabe a ela: `hunts` é append-only (a entrada
+inteira fica intacta), `locations` faz merge campo a campo, e `travelGraph` é substituído por
+cidade, porque não há nada curado numa aresta.
 
 **Draw slot** (slot de desenho):
 Uma das duas únicas categorias de renderização de um objeto do mapa: **ground**, quando a aparência

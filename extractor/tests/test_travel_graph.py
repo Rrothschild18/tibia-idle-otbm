@@ -803,83 +803,83 @@ def test_format_rejection_report_says_so_when_nothing_was_rejected():
 # ======================================================
 
 
-def test_merge_locations_into_db_appends_a_new_location_as_a_draft():
-    db_locations = []
+def test_merge_locations_into_catalog_appends_a_new_location_as_a_draft():
+    catalog_locations = []
     fragment = [tg.build_sign_location({"id": "ROOK-HUNT-001", "type": "HUNT", "x": 1, "y": 2, "z": 7})]
 
-    report = tg.merge_locations_into_db(db_locations, fragment, "ROOK")
+    report = tg.merge_locations_into_catalog(catalog_locations, fragment, "ROOK")
 
     assert report == {"ROOK-HUNT-001": "added"}
-    assert db_locations == fragment
+    assert catalog_locations == fragment
 
 
-def test_merge_locations_into_db_never_duplicates_when_fragment_has_a_repeated_id():
+def test_merge_locations_into_catalog_never_duplicates_when_fragment_has_a_repeated_id():
     # Defensive: even if a fragment somehow carries the same id twice, the
     # second occurrence must upsert into the same db entry, not append a
     # second row (parse_marker_signs already prevents this upstream, but
     # this function shouldn't trust that).
-    db_locations = []
+    catalog_locations = []
     fragment = [
         {"id": "ROOK-HUNT-0006", "type": "HUNT", "x": 1, "y": 1, "z": 7},
         {"id": "ROOK-HUNT-0006", "type": "HUNT", "x": 2, "y": 2, "z": 7},
     ]
 
-    tg.merge_locations_into_db(db_locations, fragment, "ROOK")
+    tg.merge_locations_into_catalog(catalog_locations, fragment, "ROOK")
 
-    assert len(db_locations) == 1
-    assert db_locations[0]["x"] == 2
+    assert len(catalog_locations) == 1
+    assert catalog_locations[0]["x"] == 2
 
 
-def test_merge_locations_into_db_preserves_curated_display_name_but_updates_position():
+def test_merge_locations_into_catalog_preserves_curated_display_name_but_updates_position():
     curated = {"id": "ROOK-HUNT-001", "type": "HUNT", "x": 1, "y": 2, "z": 7, "displayName": "Rat Sewers Entrance"}
-    db_locations = [curated]
+    catalog_locations = [curated]
     fragment = [{"id": "ROOK-HUNT-001", "type": "HUNT", "x": 999, "y": 888, "z": 7,
                  "displayName": "Rook Hunt 001", "_todo": ["confirmar displayName"]}]
 
-    report = tg.merge_locations_into_db(db_locations, fragment, "ROOK")
+    report = tg.merge_locations_into_catalog(catalog_locations, fragment, "ROOK")
 
     assert report == {"ROOK-HUNT-001": "updated"}
-    assert db_locations[0]["displayName"] == "Rat Sewers Entrance"
-    assert db_locations[0]["x"] == 999
-    assert "_todo" not in db_locations[0]
+    assert catalog_locations[0]["displayName"] == "Rat Sewers Entrance"
+    assert catalog_locations[0]["x"] == 999
+    assert "_todo" not in catalog_locations[0]
 
 
-def test_merge_locations_into_db_preserves_curated_hunt_id_but_updates_position():
+def test_merge_locations_into_catalog_preserves_curated_hunt_id_but_updates_position():
     curated = {"id": "ROOK-HUNT-001", "type": "HUNT", "x": 1, "y": 2, "z": 7,
                "displayName": "Rat Sewers Entrance", "huntId": "ROOK-0002"}
-    db_locations = [curated]
+    catalog_locations = [curated]
     fragment = [{"id": "ROOK-HUNT-001", "type": "HUNT", "x": 999, "y": 888, "z": 7,
                  "displayName": "Rook Hunt 001", "huntId": None, "_todo": ["associar huntId"]}]
 
-    tg.merge_locations_into_db(db_locations, fragment, "ROOK")
+    tg.merge_locations_into_catalog(catalog_locations, fragment, "ROOK")
 
-    assert db_locations[0]["huntId"] == "ROOK-0002"
-    assert db_locations[0]["displayName"] == "Rat Sewers Entrance"
-    assert db_locations[0]["x"] == 999
+    assert catalog_locations[0]["huntId"] == "ROOK-0002"
+    assert catalog_locations[0]["displayName"] == "Rat Sewers Entrance"
+    assert catalog_locations[0]["x"] == 999
 
 
-def test_merge_locations_into_db_keeps_todo_flag_while_still_uncurated():
+def test_merge_locations_into_catalog_keeps_todo_flag_while_still_uncurated():
     draft = {"id": "ROOK-HUNT-001", "type": "HUNT", "x": 1, "y": 2, "z": 7,
               "displayName": "Rook Hunt 001", "_todo": ["confirmar displayName"]}
-    db_locations = [dict(draft)]
+    catalog_locations = [dict(draft)]
     fragment = [{"id": "ROOK-HUNT-001", "type": "HUNT", "x": 5, "y": 6, "z": 7,
                  "displayName": "Rook Hunt 001", "_todo": ["confirmar displayName"]}]
 
-    tg.merge_locations_into_db(db_locations, fragment, "ROOK")
+    tg.merge_locations_into_catalog(catalog_locations, fragment, "ROOK")
 
-    assert db_locations[0]["_todo"] == ["confirmar displayName"]
-    assert db_locations[0]["x"] == 5
+    assert catalog_locations[0]["_todo"] == ["confirmar displayName"]
+    assert catalog_locations[0]["x"] == 5
 
 
-def test_merge_locations_into_db_upserts_npc_shop_mechanically_with_no_curation():
-    db_locations = [{"id": "rook-npc-obi", "type": "NPC", "x": 1, "y": 1, "z": 7,
+def test_merge_locations_into_catalog_upserts_npc_shop_mechanically_with_no_curation():
+    catalog_locations = [{"id": "rook-npc-obi", "type": "NPC", "x": 1, "y": 1, "z": 7,
                       "displayName": "Obi", "shop": []}]
     fragment = [{"id": "rook-npc-obi", "type": "NPC", "x": 1, "y": 1, "z": 7,
                  "displayName": "Obi", "shop": [{"itemName": "axe", "itemId": 3274, "sell": 7}]}]
 
-    tg.merge_locations_into_db(db_locations, fragment, "ROOK")
+    tg.merge_locations_into_catalog(catalog_locations, fragment, "ROOK")
 
-    assert db_locations[0]["shop"] == [{"itemName": "axe", "itemId": 3274, "sell": 7}]
+    assert catalog_locations[0]["shop"] == [{"itemName": "axe", "itemId": 3274, "sell": 7}]
 
 
 # ======================================================
@@ -887,27 +887,27 @@ def test_merge_locations_into_db_upserts_npc_shop_mechanically_with_no_curation(
 # ======================================================
 
 
-def test_merge_travel_graph_into_db_appends_new_edge():
+def test_merge_travel_graph_into_catalog_appends_new_edge():
     db_edges = []
     fragment_edges = [{"from": "ROOK-A", "to": "ROOK-B", "tileCount": 10}]
 
-    report = tg.merge_travel_graph_into_db(db_edges, fragment_edges, "ROOK")
+    report = tg.merge_travel_graph_into_catalog(db_edges, fragment_edges, "ROOK")
 
     assert report == {"ROOK-A<->ROOK-B": "added"}
     assert db_edges == fragment_edges
 
 
-def test_merge_travel_graph_into_db_upserts_by_unordered_pair():
+def test_merge_travel_graph_into_catalog_upserts_by_unordered_pair():
     db_edges = [{"from": "ROOK-A", "to": "ROOK-B", "tileCount": 10}]
     fragment_edges = [{"from": "ROOK-B", "to": "ROOK-A", "tileCount": 12}]
 
-    report = tg.merge_travel_graph_into_db(db_edges, fragment_edges, "ROOK")
+    report = tg.merge_travel_graph_into_catalog(db_edges, fragment_edges, "ROOK")
 
     assert report == {"ROOK-B<->ROOK-A": "updated"}
     assert db_edges == [{"from": "ROOK-B", "to": "ROOK-A", "tileCount": 12}]
 
 
-def test_merge_travel_graph_into_db_drops_a_city_edge_the_fragment_no_longer_has():
+def test_merge_travel_graph_into_catalog_drops_a_city_edge_the_fragment_no_longer_has():
     # The regression this whole ticket exists for: upsert-only let 23 edges
     # nobody's BFS ever produced survive in catalog-source.json, one of them
     # citing ROOK-HUNT-00015 — an id with a digit too many that is not a POI.
@@ -917,58 +917,58 @@ def test_merge_travel_graph_into_db_drops_a_city_edge_the_fragment_no_longer_has
     ]
     fragment_edges = [{"from": "ROOK-HUNT-0001", "to": "ROOK-TEMPLE-0001", "tileCount": 12}]
 
-    report = tg.merge_travel_graph_into_db(db_edges, fragment_edges, "ROOK")
+    report = tg.merge_travel_graph_into_catalog(db_edges, fragment_edges, "ROOK")
 
     assert db_edges == fragment_edges
     assert report["ROOK-HUNT-0001<->ROOK-HUNT-00015"] == "removed"
 
 
-def test_merge_travel_graph_into_db_leaves_another_citys_edges_untouched():
+def test_merge_travel_graph_into_catalog_leaves_another_citys_edges_untouched():
     other_city = {"from": "CARL-TEMPLE-0001", "to": "CARL-DEPOT-0001", "tileCount": 30}
     db_edges = [other_city, {"from": "ROOK-A", "to": "ROOK-STALE", "tileCount": 9}]
     fragment_edges = [{"from": "ROOK-A", "to": "ROOK-B", "tileCount": 5}]
 
-    report = tg.merge_travel_graph_into_db(db_edges, fragment_edges, "ROOK")
+    report = tg.merge_travel_graph_into_catalog(db_edges, fragment_edges, "ROOK")
 
     assert other_city in db_edges
     assert {"from": "ROOK-A", "to": "ROOK-STALE", "tileCount": 9} not in db_edges
     assert "CARL-TEMPLE-0001<->CARL-DEPOT-0001" not in report
 
 
-def test_merge_travel_graph_into_db_drops_a_cross_city_edge_touching_the_city():
+def test_merge_travel_graph_into_catalog_drops_a_cross_city_edge_touching_the_city():
     # An edge with one foot in ROOK is ROOK's to regenerate; leaving it
     # because its other end is elsewhere is how an orphan survives.
     db_edges = [{"from": "ROOK-A", "to": "CARL-B", "tileCount": 99}]
 
-    report = tg.merge_travel_graph_into_db(db_edges, [], "ROOK")
+    report = tg.merge_travel_graph_into_catalog(db_edges, [], "ROOK")
 
     assert db_edges == []
     assert report == {"ROOK-A<->CARL-B": "removed"}
 
 
-def test_merge_locations_into_db_reports_a_city_location_the_fragment_dropped():
+def test_merge_locations_into_catalog_reports_a_city_location_the_fragment_dropped():
     # Report only, never deleted: a location rejected this run may be a sign
     # the user is mid-way through fixing, and its curated displayName must
     # survive that. The CLI surfaces these so nothing rots unnoticed.
-    db_locations = [{"id": "ROOK-HUNT-0012", "type": "HUNT", "x": 1, "y": 2, "z": 7},
+    catalog_locations = [{"id": "ROOK-HUNT-0012", "type": "HUNT", "x": 1, "y": 2, "z": 7},
                     {"id": "CARL-HUNT-0001", "type": "HUNT", "x": 3, "y": 4, "z": 7}]
     fragment = [{"id": "ROOK-HUNT-0001", "type": "HUNT", "x": 5, "y": 6, "z": 7}]
 
-    report = tg.merge_locations_into_db(db_locations, fragment, "ROOK")
+    report = tg.merge_locations_into_catalog(catalog_locations, fragment, "ROOK")
 
     assert report["ROOK-HUNT-0012"] == "stale"
     assert "CARL-HUNT-0001" not in report
-    assert len(db_locations) == 3
+    assert len(catalog_locations) == 3
 
 
-def test_merge_travel_fragment_into_db_merges_both_collections():
+def test_merge_travel_fragment_into_catalog_merges_both_collections():
     db = {"locations": [], "travelGraph": []}
     fragment = {
         "locations": [tg.build_npc_location({"name": "Obi", "x": 1, "y": 1, "z": 7}, "ROOK", None)],
         "travelGraph": [{"from": "ROOK-HUNT-001", "to": "ROOK-TEMPLE-001", "tileCount": 5}],
     }
 
-    report = tg.merge_travel_fragment_into_db(db, fragment, "ROOK")
+    report = tg.merge_travel_fragment_into_catalog(db, fragment, "ROOK")
 
     assert report["locations"] == {"ROOK-NPC-obi": "added"}
     assert report["travelGraph"] == {"ROOK-HUNT-001<->ROOK-TEMPLE-001": "added"}

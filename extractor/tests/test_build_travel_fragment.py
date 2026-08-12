@@ -139,6 +139,39 @@ def test_build_city_fragment_reports_a_hunt_map_whose_entrance_has_no_sign(tmp_p
                            "name": "bugs-rookguard"}]
 
 
+def test_export_writes_both_collections_into_the_catalog(tmp_path, monkeypatch):
+    import sys
+
+    _write_city_fixture(
+        tmp_path, monkeypatch,
+        signs=[(10001, "ROOK-TEMPLE-0001"), (10002, "ROOK-DEPOT-0001")],
+    )
+    catalog_path = tmp_path / "tibia-idle" / "apps" / "tibia-idle-api" / "content" / "catalog-source.json"
+    catalog_path.parent.mkdir(parents=True)
+    # A hunt already in the catalog: the travel export owns two of the three
+    # collections and must leave the hunt CLI's alone.
+    catalog_path.write_text(json.dumps({
+        "hunts": [{"mapId": "ROOK-HUNT-0001"}],
+        "locations": [],
+        "travelGraph": [{"from": "ROOK-GHOST-0001", "to": "ROOK-TEMPLE-0001", "tileCount": 99}],
+    }), encoding="utf-8")
+
+    monkeypatch.setattr(sys, "argv", [
+        "build_travel_fragment.py", "ROOK",
+        "--canary-dir", str(tmp_path),
+        "--export", "--tibia-idle-dir", str(tmp_path / "tibia-idle"),
+    ])
+    btf.main()
+
+    catalog = json.loads(catalog_path.read_text(encoding="utf-8"))
+    assert {loc["id"] for loc in catalog["locations"]} == {"ROOK-TEMPLE-0001", "ROOK-DEPOT-0001"}
+    # The stale ROOK edge is replaced, not merged with, the fresh set.
+    assert catalog["travelGraph"] == [
+        {"from": "ROOK-DEPOT-0001", "to": "ROOK-TEMPLE-0001", "tileCount": 1}
+    ]
+    assert catalog["hunts"] == [{"mapId": "ROOK-HUNT-0001"}]
+
+
 def test_discover_hunt_maps_skips_folders_with_no_id_prefix(tmp_path, monkeypatch):
     _write_city_fixture(
         tmp_path, monkeypatch, signs=[],
