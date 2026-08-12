@@ -30,7 +30,15 @@ back-end loads `respawn/<HUNT-ID>.json` directly.
 """
 
 import os
+import posixpath
 from typing import Dict, List
+
+# The renderer format whose bundle the front actually serves. It lives in the
+# folder name (`<pasta>-sprites-v6`), and the back-end's schema *requires* it:
+# `mapUrl` must match `assets/<pasta>-v<N>/map.json` or the import rejects the
+# hunt, because the `-v<N>` is how a content version reaches the client.
+# Bumping the renderer's format means bumping this — and re-baking the maps.
+MAP_BUNDLE_VERSION = 6
 
 # Relative to the tibia-idle checkout root.
 CATALOG_SOURCE_RELPATH = os.path.join("apps", "tibia-idle-api", "content", "catalog-source.json")
@@ -51,6 +59,20 @@ HUNT_MANIFEST_FIELDS = ("id", "mapId", "mapUrl", "startPosition")
 # hunts is append-only on export (see merge_hunt_into_catalog): there is no
 # per-field merge here, the whole entry is left alone once it exists.
 CURATED_HUNT_FIELDS = ("name", "label", "portrait", "seed", "startPosition")
+
+
+def map_bundle_root(map_name: str) -> str:
+    """`"ROOK-HUNT-0013_rats-rookguard"` ->
+    `"assets/ROOK-HUNT-0013_rats-rookguard-sprites-v6"` — the folder the front
+    serves this map's bundle from, and the one build_phaser_map.py bakes into."""
+    return posixpath.join("assets", f"{map_name}-sprites-v{MAP_BUNDLE_VERSION}")
+
+
+def map_bundle_url(map_name: str) -> str:
+    """The `mapUrl` a hunt carries into the catalog. Always versioned — a
+    `mapUrl` without `-v<N>` is rejected by the back-end's schema, which is
+    how a hunt built before this rule silently failed to import."""
+    return posixpath.join(map_bundle_root(map_name), "map.json")
 
 
 def catalog_source_path(tibia_idle_dir: str) -> str:

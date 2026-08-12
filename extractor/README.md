@@ -372,11 +372,26 @@ A coleção `monsters` do fragmento **não tem mais destino**. O payload dela ai
 sai o arquivo de respawn), mas o embrulho que ela adicionava — `id`/`mapId`/`assetsRoot` — não é
 lido por ninguém desde que o back-end passou a ler `respawn/<HUNT-ID>.json` direto.
 
-**Pasta de rascunho não vai pro catálogo.** `--all` varre toda pasta com `respawn.json`, e algumas
-não têm id nenhum no nome (`DEBUG-MAP`, `Nova pasta`, `TEST-WASPS-DEBUG`) — pra elas o "map id"
-acaba sendo o nome da pasta. O fragmento local sai normalmente, mas o **export pula** qualquer id
-fora de `CIDADE-TIPO-NNNN`, avisando qual e por quê. Sem isso, um `nx run db:reset` importaria uma
-hunt chamada "Nova pasta".
+### Três armadilhas do `--all --export`
+
+O `--all` varre `ready-maps/` — **saída gerada e gitignored** —, não a árvore de fontes. Isso faz
+ele achar coisa que não devia virar conteúdo. As três já custaram caro, e as três estão cobertas:
+
+1. **Pasta de rascunho** (`DEBUG-MAP`, `Nova pasta`, `TEST-WASPS-DEBUG`) não tem id no nome, então o
+   "map id" vira o nome da pasta. O export **pula** qualquer id fora de `CIDADE-TIPO-NNNN` — sem
+   isso, um `nx run db:reset` importaria uma hunt chamada "Nova pasta".
+2. **Mapa com a fonte apagada.** `ready-maps/` é gitignored, então apagar um mapa de `maps/` deixa o
+   build dele pra trás e o `--all` continua achando. Foi assim que o `ROOK-HUNT-0013`, removido em
+   f67a94c, voltou como hunt viva no catálogo. O export **pula** o que não tem mais fonte.
+3. **Build desatualizado.** Pela mesma razão, `ready-maps/` pode ser mais velho que `maps/` — e aí o
+   export publica conteúdo **mais velho** por cima do que já está no back-end, sem erro nenhum. O
+   que torna isso traiçoeiro é que uma edição legítima (podar spawns inalcançáveis, por exemplo)
+   também faz o export encolher coisa: olhando só o diff, não dá pra distinguir "podei de
+   propósito" de "exportei de um build velho". Aqui é só **aviso** (mtime não sobrevive a um clone
+   novo, e travar num checkout recém-clonado seria pior).
+
+> **Regra prática:** `node build_map.js --all` **antes** de `build_hunt_fragment.py --all --export`.
+> Exportar de um build velho não falha — degrada em silêncio, e o diff parece uma poda intencional.
 
 ## Estrutura de pastas
 

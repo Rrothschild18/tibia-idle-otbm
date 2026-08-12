@@ -13,10 +13,15 @@ _RESPAWN = {
 }
 
 
-def _make_ready_map(tmp_path, city, folder):
+def _make_ready_map(tmp_path, city, folder, with_source=True):
+    """The built output under ready-maps/, plus (by default) the source map
+    folder it came from — the export refuses a ready-map whose source is
+    gone, so a fixture that wants to reach the catalog needs both."""
     map_dir = tmp_path / "ready-maps" / city / folder / "monsters"
     map_dir.mkdir(parents=True)
     (map_dir / "respawn.json").write_text(json.dumps(_RESPAWN), encoding="utf-8")
+    if with_source:
+        (tmp_path / "maps" / city / folder).mkdir(parents=True)
 
 
 def _catalog(hunts=None):
@@ -61,6 +66,7 @@ class _Target:
 
 def _run(tmp_path, monkeypatch, argv, catalog=None, loot=None):
     monkeypatch.setattr(bhf, "READY_MAPS_DIR", str(tmp_path / "ready-maps"))
+    monkeypatch.setattr(bhf, "MAPS_DIR", str(tmp_path / "maps"))
     target = _Target(tmp_path)
     full_argv = ["build_hunt_fragment.py", *argv]
     if catalog is not None:
@@ -111,7 +117,7 @@ def test_export_writes_the_hunt_to_every_destination_the_back_end_reads(tmp_path
     assert target.manifest == [{
         "id": "ROOK-HUNT-0020",
         "mapId": "ROOK-HUNT-0020",
-        "mapUrl": "assets/ROOK-HUNT-0020_new-area-sprites/map.json",
+        "mapUrl": "assets/ROOK-HUNT-0020_new-area-sprites-v6/map.json",
         "startPosition": [5, 5],
     }]
 
@@ -213,3 +219,47 @@ def test_export_leaves_the_other_catalog_collections_alone(tmp_path, monkeypatch
 
     assert target.catalog["locations"] == [{"id": "ROOK-TEMPLE-0001"}]
     assert target.catalog["travelGraph"] == [{"from": "A", "to": "B", "tileCount": 3}]
+
+
+def test_export_skips_a_ready_map_whose_source_was_deleted(tmp_path, monkeypatch, capsys):
+    # ready-maps/ is gitignored build output, so deleting a map from maps/
+    # leaves its build behind and `--all` still finds it. That is how
+    # ROOK-HUNT-0013 — a map removed months earlier — came back as a live
+    # hunt in the catalog and broke `nx run db:reset`.
+    _make_ready_map(tmp_path, "ROOK", "ROOK-HUNT-0013_rats-rookguard", with_source=False)
+
+    target = _run(tmp_path, monkeypatch, ["--all", "--export"], catalog=_catalog())
+
+    out = capsys.readouterr().out
+    assert "SKIP export" in out
+    assert "não existe mais fonte" in out
+    assert target.catalog["hunts"] == []
+    assert target.respawn("ROOK-HUNT-0013") is None
+
+
+def test_export_warns_when_the_source_changed_after_the_last_build(tmp_path, monkeypatch, capsys):
+    # ready-maps/ is gitignored, so nothing keeps it in step with maps/.
+    # Exporting a stale build publishes OLDER content over newer, and the
+    # diff looks exactly like a deliberate prune — hence the warning.
+    import os
+    import time
+
+    _make_ready_map(tmp_path, "ROOK", "ROOK-HUNT-0020_new-area")
+    source = tmp_path / "maps" / "ROOK" / "ROOK-HUNT-0020_new-area" / "new-area.otbm"
+    source.write_text("otbm", encoding="utf-8")
+    built = tmp_path / "ready-maps" / "ROOK" / "ROOK-HUNT-0020_new-area" / "monsters" / "respawn.json"
+    os.utime(built, (time.time() - 60, time.time() - 60))
+
+    _run(tmp_path, monkeypatch, ["--all", "--export"], catalog=_catalog())
+
+    out = capsys.readouterr().out
+    assert "a fonte mudou depois do último build" in out
+    assert "new-area.otbm" in out
+
+
+def test_export_is_quiet_when_the_build_is_current(tmp_path, monkeypatch, capsys):
+    _make_ready_map(tmp_path, "ROOK", "ROOK-HUNT-0020_new-area")
+
+    _run(tmp_path, monkeypatch, ["--all", "--export"], catalog=_catalog())
+
+    assert "a fonte mudou depois do último build" not in capsys.readouterr().out

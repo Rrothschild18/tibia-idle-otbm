@@ -1,4 +1,10 @@
+import re
+
 import hunt_fragment as hf
+
+# Verbatim from the back-end's BUNDLE_URL_PATTERN
+# (libs/models/content/src/lib/import-source.model.ts).
+BUNDLE_URL_PATTERN = re.compile(r"^(assets/.+-v(\d+))/map\.json$")
 
 
 def _respawn(spawns=None, monster_defs=None):
@@ -87,8 +93,9 @@ def test_build_hunts_entry_derives_title_and_paths_from_map_name():
 
     assert entry["name"] == "Rats Cave Rookguard"
     assert entry["label"] == "Rats Cave Rookguard"
-    assert entry["assetsRoot"] == "assets/rats-cave-rookguard-sprites"
-    assert entry["mapUrl"] == "assets/rats-cave-rookguard-sprites/map.json"
+    # Versioned bundle: the back-end rejects a mapUrl without `-v<N>`.
+    assert entry["assetsRoot"] == "assets/rats-cave-rookguard-sprites-v6"
+    assert entry["mapUrl"] == "assets/rats-cave-rookguard-sprites-v6/map.json"
     assert entry["portrait"] == hf.PLACEHOLDER_PORTRAIT
     assert entry["seed"] == hf.PLACEHOLDER_SEED
 
@@ -156,7 +163,7 @@ def test_build_hunts_entry_titles_from_the_descriptive_part_not_the_full_folder_
     assert entry["label"] == "Bugs Rookguard"
     # assetsRoot/mapUrl DO use the full folder name — that's the real
     # ready-maps output path the game fetches assets from.
-    assert entry["assetsRoot"] == "assets/ROOK-HUNT-0018_bugs-rookguard-sprites"
+    assert entry["assetsRoot"] == "assets/ROOK-HUNT-0018_bugs-rookguard-sprites-v6"
 
 
 # ======================================================
@@ -196,3 +203,12 @@ def test_map_id_from_folder_takes_everything_before_the_first_underscore():
 
 def test_map_id_from_folder_handles_test_city_ids_too():
     assert hf.map_id_from_folder("TEST-HUNT-0001_dragon-darashia") == "TEST-HUNT-0001"
+
+
+def test_build_hunts_entry_map_url_matches_the_back_ends_bundle_pattern():
+    # Regression: the entry used to point at `<pasta>-sprites/map.json`, with
+    # no `-v<N>`. The back-end's schema rejects that, so a hunt exported this
+    # way broke `nx run db:reset` instead of importing.
+    entry = hf.build_hunts_entry(_respawn(), "ROOK-HUNT-0013_rats-rookguard", "ROOK-HUNT-0013")
+
+    assert BUNDLE_URL_PATTERN.match(entry["mapUrl"])

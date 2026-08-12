@@ -52,6 +52,7 @@ from hunt_fragment import (
 SCRIPTS_DIR = os.path.dirname(os.path.abspath(__file__))
 EXTRACTOR_DIR = os.path.dirname(SCRIPTS_DIR)
 READY_MAPS_DIR = os.path.join(EXTRACTOR_DIR, "ready-maps")
+MAPS_DIR = os.path.join(EXTRACTOR_DIR, "maps")
 # Sibling repo checkout: <workspace>/tibia-idle-otbm and <workspace>/tibia-idle/tibia-idle.
 DEFAULT_TIBIA_IDLE_DIR = os.path.abspath(
     os.path.join(EXTRACTOR_DIR, "..", "..", "tibia-idle", "tibia-idle")
@@ -115,6 +116,60 @@ def _load_export_target(parser, tibia_idle_dir: str) -> dict:
         "hunts_dir": hunts_dir,
         "loot": _read_json(os.path.join(hunts_dir, "loot.json"), []),
     }
+
+
+def _export_blocker(map_name: str, map_id: str):
+    """Why this map must not reach the back-end catalog, or None if it may.
+
+    Both cases are things a `--all` sweep picks up that a single-map run
+    never would, because it walks ready-maps/ — generated output — rather
+    than the source tree:
+
+    - a scratch folder with no id in its name (`Nova pasta`, `DEBUG-MAP`),
+      whose "map id" is really just the folder name;
+    - a folder whose **source map was deleted** but whose build output is
+      still sitting in ready-maps/ (gitignored, so nothing ever pruned it).
+      That's how `ROOK-HUNT-0013` — a map removed in f67a94c — came back as a
+      live hunt in the catalog.
+
+    The local fragment is written either way: it's regenerable, and refusing
+    to build it would hide the map instead of the problem."""
+    if not city_ids.is_conventional_id(map_id):
+        return f"id {map_id!r} fora do formato CIDADE-TIPO-NNNN"
+    if map_dirs.find_two_level_dir(MAPS_DIR, map_name) is None:
+        return (f"não existe mais fonte em extractor/maps/<CIDADE>/{map_name} — "
+                f"o que sobrou é saída velha em ready-maps/")
+    return None
+
+
+def stale_build_warning(map_name: str):
+    """A message when the map's source is newer than the build we're about to
+    publish, or None.
+
+    `ready-maps/` is gitignored, so nothing forces it to keep up with
+    `maps/`. Exporting from a stale build doesn't fail — it quietly publishes
+    *older* content over newer, and since a legitimate edit (pruning spawns,
+    say) also makes the export shrink things, the diff alone can't tell you
+    which one you're looking at. Only a warning, not a blocker: mtimes don't
+    survive a fresh clone, and refusing to export on a freshly-cloned
+    checkout would be worse than the risk."""
+    source_dir = map_dirs.find_two_level_dir(MAPS_DIR, map_name)
+    built_dir = map_dirs.find_two_level_dir(READY_MAPS_DIR, map_name)
+    if source_dir is None or built_dir is None:
+        return None
+    respawn_path = os.path.join(built_dir, "monsters", "respawn.json")
+    if not os.path.exists(respawn_path):
+        return None
+    built_at = os.path.getmtime(respawn_path)
+    newer = [
+        name for name in sorted(os.listdir(source_dir))
+        if os.path.getmtime(os.path.join(source_dir, name)) > built_at
+    ]
+    if not newer:
+        return None
+    return (f"a fonte mudou depois do último build ({', '.join(newer)}) — "
+            f"rode `node build_map.js {map_name}` antes de exportar, ou você publica "
+            f"conteúdo mais velho por cima do que já está no back-end")
 
 
 def _write_respawn_file(hunts_dir: str, map_id: str, monsters_entry: dict) -> None:
@@ -204,16 +259,19 @@ def main():
             generated += 1
             print(f"[OK] {map_name}: {len(fragment['loot']['drops'])} loot rows -> {out_path}")
 
-            if target is not None and not city_ids.is_conventional_id(map_id):
-                # The fragment above is fine to keep — it's local. The catalog
-                # is not the place for an id that is really a scratch folder's
-                # name (see city_ids.is_conventional_id).
-                print(f"[SKIP export] {map_name}: id {map_id!r} fora do formato CIDADE-TIPO-NNNN — "
-                      f"fragmento gerado, mas nada escrito no back-end")
+            blocker = _export_blocker(map_name, map_id) if target is not None else None
+            if blocker is not None:
+                # The fragment above is fine to keep — it's local, and
+                # regenerable. The catalog is what must not take this.
+                print(f"[SKIP export] {map_name}: {blocker} — fragmento gerado, "
+                      f"mas nada escrito no back-end")
                 exported_skipped += 1
                 continue
 
             if target is not None:
+                stale = stale_build_warning(map_name)
+                if stale is not None:
+                    print(f"[WARN] {map_name}: {stale}")
                 hunts_state = content_export.merge_hunt_into_catalog(
                     target["catalog"]["hunts"], fragment["hunts"]
                 )
@@ -235,8 +293,8 @@ def main():
         exported = generated - exported_skipped
         print(f"\n{exported}/{len(map_names)} mapa(s) exportado(s) para {args.tibia_idle_dir}.")
         if exported_skipped:
-            print(f"     {exported_skipped} pulado(s) no export por id fora do formato "
-                  f"CIDADE-TIPO-NNNN (fragmento local gerado normalmente).")
+            print(f"     {exported_skipped} pulado(s) no export (ver os [SKIP export] acima) — "
+                  f"o fragmento local de cada um foi gerado normalmente.")
         print("     Rode `nx run db:reset` no tibia-idle pra o catálogo virar linha no Postgres.")
     else:
         print(f"\n{generated}/{len(map_names)} fragmento(s) gerado(s). Nada foi escrito no back-end — "
