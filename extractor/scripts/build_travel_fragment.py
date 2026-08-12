@@ -1,8 +1,9 @@
 """
 CLI: generate the {locations, travelGraph} fragment tibia-idle's db.json
 needs for a city's travel graph — sign-marked POIs (HUNT/TEMPLE/DEPOT/QUEST)
-plus every NPC's location and shop — and optionally merge it straight in
-with --write-db. See travel_graph.py for the pure logic and
+plus every NPC's location and shop, all of them nodes measured against each
+other over the same graph of walkable tiles — and optionally merge it straight
+in with --write-db. See travel_graph.py for the pure logic and
 .scratch/travel-graph-and-locations/spec.md for the full design.
 
 Requires the city's full-city map already processed once (`node build_map.js
@@ -10,11 +11,20 @@ Requires the city's full-city map already processed once (`node build_map.js
 extractor/raw-maps/<CIDADE>.raw.json (the raw OTBM dump) and
 extractor/full-maps/<CIDADE>/map.json (for objectDefs).
 
-Without --write-db (the default) nothing outside extractor/ is touched — the
-fragment is written to extractor/full-maps/<CIDADE>/db-fragment.json for you
-to review and copy in by hand. Mechanical fields (position, shop, tileCount)
-always upsert by id/pair with --write-db; a location's curated `displayName`
-is never overwritten once a human edit removed its `_todo` flag.
+Two files come out, both under extractor/full-maps/<CIDADE>/: db-fragment.json
+(what may be imported) and travel-graph-rejections.txt (every node with no way
+into the graph, with the coordinate to open in the map editor and what to do
+about it). A rejected node is never in the fragment — an unreachable
+destination that reached the game would be a hunt the player simply cannot
+play, with no trace of why.
+
+Without --write-db (the default) nothing outside extractor/ is touched.
+With it, `travelGraph` is *replaced* for this city (the fragment is the
+complete edge set — an edge missing from it stops existing), while
+`locations` upsert by id: mechanical fields (position, shop) always take the
+fresh value, a curated `displayName` is never overwritten once a human edit
+removed its `_todo` flag, and a city location the fragment no longer carries
+is reported but never deleted.
 
 Run: python build_travel_fragment.py ROOK [--write-db]
 """
@@ -24,14 +34,22 @@ import glob
 import json
 import os
 import sys
+from collections import Counter
 
+import city_ids
+import map_dirs
+from hunt_fragment import map_id_from_folder
 from travel_graph import (
+    DEFAULT_NPC_REACH,
+    REJECTION_REASONS,
+    apply_graph_rejections,
     build_npc_locations,
     build_sign_location,
     build_travel_fragment,
     build_travel_graph,
     build_walkable_graph,
     extract_tile_flags,
+    format_rejection_report,
     match_npc_lua_filename,
     merge_travel_fragment_into_db,
     parse_marker_signs,
@@ -43,6 +61,8 @@ SCRIPTS_DIR = os.path.dirname(os.path.abspath(__file__))
 EXTRACTOR_DIR = os.path.dirname(SCRIPTS_DIR)
 RAW_MAPS_DIR = os.path.join(EXTRACTOR_DIR, "raw-maps")
 FULL_MAPS_DIR = os.path.join(EXTRACTOR_DIR, "full-maps")
+MAPS_DIR = os.path.join(EXTRACTOR_DIR, "maps")
+REJECTION_REPORT_NAME = "travel-graph-rejections.txt"
 # Sibling repo checkout: <workspace>/tibia-idle-otbm and <workspace>/tibia-idle/tibia-idle.
 DEFAULT_TIBIA_IDLE_DIR = os.path.abspath(
     os.path.join(EXTRACTOR_DIR, "..", "..", "tibia-idle", "tibia-idle")
@@ -75,7 +95,30 @@ def _build_shops_by_name(npc_names, canary_npc_dir):
     return shops_by_name
 
 
-def build_region_fragment(city: str, canary_dir: str):
+def discover_hunt_maps(city: str):
+    """extractor/maps/<CIDADE>/<ID>_<nome-descritivo>/ -> [{"id", "name"}],
+    sorted by id. This is the list of hunts that exist on disk, which the
+    rejection pass checks the graph against: a hunt map with no POI marking
+    its entrance is a hunt nobody can travel to. A folder with no `_` (or
+    whose id belongs to another city) isn't an id-carrying hunt map — e.g.
+    `training-spots` — and is skipped."""
+    hunts = []
+    for folder in map_dirs.discover_city_map_names(MAPS_DIR, city):
+        if "_" not in folder:
+            continue
+        map_id = map_id_from_folder(folder)
+        if city_ids.derive_city(map_id) != city:
+            continue
+        hunts.append({"id": map_id, "name": folder.split("_", 1)[1]})
+    return sorted(hunts, key=lambda h: h["id"])
+
+
+def build_city_fragment(city: str, canary_dir: str, npc_reach: int = DEFAULT_NPC_REACH):
+    """-> (fragment, rejections). Signs and NPCs are both fed to the same
+    search over walkable tiles, so an NPC is a travel destination measured in
+    real tiles walked — never a euclidean guess, never an occupant hanging off
+    some other POI. What comes out with no way in is rejected rather than
+    emitted (see apply_graph_rejections)."""
     dump = _load_json(os.path.join(RAW_MAPS_DIR, f"{city}.raw.json"), "dump OTBM bruto")
     map_json = _load_json(os.path.join(FULL_MAPS_DIR, city, "map.json"), "map.json da cidade inteira")
     object_defs = map_json.get("objectDefs", {})
@@ -94,10 +137,6 @@ def build_region_fragment(city: str, canary_dir: str):
 
     sign_locations = [build_sign_location(s) for s in signs]
 
-    tiles = extract_tile_flags(dump, object_defs)
-    graph = build_walkable_graph(tiles)
-    travel_graph_edges = build_travel_graph(graph, sign_locations)
-
     npc_xml_path = os.path.join(FULL_MAPS_DIR, city, f"{city}-npc.xml")
     npcs = []
     if os.path.exists(npc_xml_path):
@@ -112,7 +151,14 @@ def build_region_fragment(city: str, canary_dir: str):
     for name in unmatched_npcs:
         print(f"[WARN] NPC '{name}' sem .lua correspondente em {canary_npc_dir} — Location sem shop")
 
-    return build_travel_fragment(sign_locations, npc_locations, travel_graph_edges)
+    tiles = extract_tile_flags(dump, object_defs)
+    graph = build_walkable_graph(tiles)
+    travel_graph_edges = build_travel_graph(graph, [*sign_locations, *npc_locations], npc_reach)
+
+    kept_locations, kept_edges, rejections = apply_graph_rejections(
+        [*sign_locations, *npc_locations], travel_graph_edges, discover_hunt_maps(city)
+    )
+    return build_travel_fragment(kept_locations, kept_edges), rejections
 
 
 def main():
@@ -127,6 +173,15 @@ def main():
         "campos mecânicos sempre atualizados por id/par, displayName já curado nunca é sobrescrito",
     )
     parser.add_argument(
+        "--npc-reach",
+        type=int,
+        default=DEFAULT_NPC_REACH,
+        help=f"Até quantos tiles de distância o jogador conta como tendo chegado num NPC "
+        f"(default: {DEFAULT_NPC_REACH}). Existe porque balconista fica atrás de um balcão "
+        f"intransponível: sem alcance, o tile dele é um bolsão ilhado e ele vira destino "
+        f"inalcançável. Só vale pra NPC — placa ilhada continua indo pro relatório",
+    )
+    parser.add_argument(
         "--tibia-idle-dir",
         default=DEFAULT_TIBIA_IDLE_DIR,
         help=f"Path do checkout do tibia-idle, usado só com --write-db (default: {DEFAULT_TIBIA_IDLE_DIR})",
@@ -136,13 +191,24 @@ def main():
     if not os.path.isdir(args.canary_dir):
         parser.error(f"Canary install não encontrado em {args.canary_dir} (use --canary-dir)")
 
-    fragment = build_region_fragment(args.city, args.canary_dir)
+    fragment, rejections = build_city_fragment(args.city, args.canary_dir, args.npc_reach)
 
     out_path = os.path.join(FULL_MAPS_DIR, args.city, "db-fragment.json")
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(fragment, f, indent=2, ensure_ascii=False)
         f.write("\n")
     print(f"[OK] {len(fragment['locations'])} locations, {len(fragment['travelGraph'])} travelGraph edges -> {out_path}")
+
+    report_path = os.path.join(FULL_MAPS_DIR, args.city, REJECTION_REPORT_NAME)
+    with open(report_path, "w", encoding="utf-8") as f:
+        f.write(format_rejection_report(rejections, args.city))
+    if rejections:
+        by_reason = Counter(r["reason"] for r in rejections)
+        summary = ", ".join(f"{by_reason[reason]} {reason}" for reason in REJECTION_REASONS if by_reason[reason])
+        print(f"[WARN] {len(rejections)} nós sem entrada no grafo, fora do fragmento ({summary})")
+        print(f"       coordenada e o que fazer com cada um -> {report_path}")
+    else:
+        print(f"[OK] nenhum nó sem entrada no grafo -> {report_path}")
 
     if args.write_db:
         db_path = os.path.join(args.tibia_idle_dir, "apps", "tibia-idle-mock-api", "db.json")
@@ -153,18 +219,21 @@ def main():
         db.setdefault("locations", [])
         db.setdefault("travelGraph", [])
 
-        report = merge_travel_fragment_into_db(db, fragment)
+        report = merge_travel_fragment_into_db(db, fragment, args.city)
 
         with open(db_path, "w", encoding="utf-8") as f:
             json.dump(db, f, indent=2, ensure_ascii=False)
             f.write("\n")
 
-        added = sum(1 for v in report["locations"].values() if v == "added")
-        updated = sum(1 for v in report["locations"].values() if v == "updated")
-        edges_added = sum(1 for v in report["travelGraph"].values() if v == "added")
-        edges_updated = sum(1 for v in report["travelGraph"].values() if v == "updated")
-        print(f"     db.json: locations {added} added / {updated} updated, "
-              f"travelGraph {edges_added} added / {edges_updated} updated -> {db_path}")
+        locations = Counter(report["locations"].values())
+        edges = Counter(report["travelGraph"].values())
+        print(f"     db.json: locations {locations['added']} added / {locations['updated']} updated, "
+              f"travelGraph {edges['added']} added / {edges['updated']} updated / "
+              f"{edges['removed']} removed -> {db_path}")
+        stale = sorted(loc_id for loc_id, state in report["locations"].items() if state == "stale")
+        if stale:
+            print(f"[WARN] {len(stale)} locations de {args.city} continuam no db.json sem vir deste run "
+                  f"(não foram apagadas — podem carregar displayName curado): {', '.join(stale)}")
     else:
         print("     Nada foi escrito em db.json — copie o fragmento manualmente (ou rode com --write-db).")
 

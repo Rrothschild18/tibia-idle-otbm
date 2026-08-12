@@ -24,6 +24,9 @@ extractor/ready-maps-v6/**
 # review-only db-fragment.json (build_travel_fragment.py, no --write-db) are
 # not (binary/regenerable and a local-review scratch file, respectively —
 # same reasoning as ready-maps/** above).
+# travel-graph-rejections.txt IS versioned, unlike its sibling db-fragment.json:
+# it's the hand-consumed list of what has no way into the graph, and its
+# deterministic ordering only buys a clean diff if git is holding the baseline.
 extractor/full-maps/*/sheets/
 extractor/full-maps/*/db-fragment.json
 

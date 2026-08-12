@@ -5,23 +5,28 @@ the tibia-idle db.json `locations`/`travelGraph` fragment. See
 build_travel_fragment.py for the CLI that reads/writes files and
 .scratch/travel-graph-and-locations/spec.md for the full design.
 
-Four independent concerns, kept as separate function groups so each is
+Five independent concerns, kept as separate function groups so each is
 testable with tiny in-memory fixtures (no real .otbm/map.json/.lua touched):
 
 1. Marker-sign parsing — POIs (HUNT/TEMPLE/DEPOT/QUEST) marked in the OTBM
    with sign item 2016 at a reserved uid (10001+), text = "CIDADE-TIPO-INCREMENTAL".
-2. Walkability graph + BFS — tileCount distances between POIs.
+2. Walkability graph + tile distances — the tileCount between two locations,
+   walked over real tiles rather than measured across the coordinates.
 3. NPC locations + Canary shop extraction — no sign needed, position/name
-   come from <region>-npc.xml; shop table comes from a same-named .lua.
-4. Fragment assembly + db.json merge — mirrors hunt_fragment.py's
-   mechanical-vs-curated split, but per-field (not per-entry): position/
-   shop/tileCount always upsert, `displayName` is append-only once curated.
+   come from <CIDADE>-npc.xml; shop table comes from a same-named .lua.
+4. Rejecting nodes with no way in — a destination nobody can travel to never
+   reaches the fragment; it leaves in a report with whatever identifies it.
+5. db.json merge — `travelGraph` is *replaced* per city (the fragment is the
+   complete edge set), while `locations` upsert by id in hunt_fragment.py's
+   mechanical-vs-curated split, per-field rather than per-entry: position and
+   shop always take the fresh value, `displayName` is append-only once
+   curated, and an entry the fragment dropped is reported, never deleted.
 """
 
+import heapq
 import re
 import xml.etree.ElementTree as ET
-from collections import deque
-from typing import Deque, Dict, List, Optional, Set, Tuple
+from typing import Dict, List, Optional, Sequence, Set, Tuple
 
 import city_ids
 
@@ -141,10 +146,24 @@ def build_sign_location(sign: Dict) -> Dict:
 
 
 # ======================================================
-# Walkability graph + BFS
+# Walkability graph + tile distances
 # ======================================================
 
 _NEIGHBOR_OFFSETS = [(dx, dy) for dx in (-1, 0, 1) for dy in (-1, 0, 1) if (dx, dy) != (0, 0)]
+
+# How far from an NPC the player may stand and still count as having arrived
+# at it. Not a movement rule — it's how a shop counter is crossed: most of
+# Rookgaard's shopkeepers stand on a tile walled off by an `unpass` counter,
+# and without a reach every one of them is an unreachable destination. See
+# approach_costs for how the distance stays honest.
+#
+# 3 because that is where Rookgaard stops changing: 2 and 3 both bring in
+# every shopkeeper fully connected to the rest of the city, and 4+ only adds
+# one more NPC — by bridging ~5 tiles of solid wall to a single neighbour,
+# giving it one artificial edge and hiding a genuinely misplaced NPC from
+# the rejection report. A reach wide enough to invent a path is worse than
+# a node the report tells you to go fix.
+DEFAULT_NPC_REACH = 3
 
 Node = Tuple[int, int, int]
 
@@ -221,56 +240,116 @@ def build_walkable_graph(tiles: List[Dict]) -> Dict[Node, Set[Node]]:
     return graph
 
 
-def bfs_distances(graph: Dict[Node, Set[Node]], start: Node, targets: Set[Node]) -> Dict[Node, int]:
-    """Shortest tile-count from `start` to every node in `targets` that's
+def tile_distances(graph: Dict[Node, Set[Node]], sources: Dict[Node, int], targets: Set[Node]) -> Dict[Node, int]:
+    """Shortest tile-count from `sources` to every node in `targets` that's
     reachable, stopping as soon as every target has been found (or the graph
-    is exhausted) rather than flooding the whole thing."""
-    remaining = set(targets) - {start}
-    found: Dict[Node, int] = {}
-    if start not in graph or not remaining:
+    is exhausted) rather than flooding the whole thing.
+
+    `sources` maps a starting tile to the cost of *entering* the graph there
+    (0 for a location standing on its own walkable tile; see
+    `approach_costs`). Every graph edge still costs 1 — the seed costs are
+    the only non-uniform part, which is why this pops the cheapest frontier
+    node rather than trusting FIFO order."""
+    remaining = set(targets) - {node for node in sources if node in graph}
+    found: Dict[Node, int] = {node: cost for node, cost in sources.items()
+                              if node in graph and node in targets}
+    if not remaining:
         return found
 
-    visited = {start}
-    queue: Deque[Tuple[Node, int]] = deque([(start, 0)])
-    while queue and remaining:
-        node, dist = queue.popleft()
+    visited = set()
+    frontier = [(cost, node) for node, cost in sources.items() if node in graph]
+    heapq.heapify(frontier)
+    while frontier and remaining:
+        dist, node = heapq.heappop(frontier)
+        if node in visited:
+            continue
+        visited.add(node)
         for neighbor in graph.get(node, ()):
             if neighbor in visited:
                 continue
-            visited.add(neighbor)
             if neighbor in remaining:
                 found[neighbor] = dist + 1
                 remaining.discard(neighbor)
-            queue.append((neighbor, dist + 1))
+            heapq.heappush(frontier, (dist + 1, neighbor))
     return found
 
 
-def build_travel_graph(graph: Dict[Node, Set[Node]], locations: List[Dict]) -> List[Dict]:
-    """One BFS per location, reaching every other location in `locations`
-    (early exit once all are found) -> one {from, to, tileCount} edge per
-    reachable pair. Distance is computed independently per pair (real BFS,
-    never inferred through a shared hub), and a pair on disconnected regions
-    of the graph simply produces no edge."""
+def approach_costs(node: Node, graph: Dict[Node, Set[Node]], reach: int) -> Dict[Node, int]:
+    """The tiles a location can be reached *from*, mapped to how many tiles
+    away from it they are -> what `tile_distances` takes as `sources`.
+
+    With `reach` 0 that's just the location's own tile, when walkable. A
+    larger reach exists for NPCs: most of Rookgaard's shopkeepers stand
+    behind an `unpass` counter, so their own tile is a two-tile pocket the
+    player can never walk into — the player stops on the far side of the
+    counter and trades across it. Charging each approach tile its own
+    distance (rather than seeding them all at 0) keeps that honest in both
+    directions: an NPC standing in the open street still enters at its own
+    tile for 0 and its distances are untouched, while a shopkeeper's start
+    at the 2 tiles that actually separate the player from the counter."""
+    costs: Dict[Node, int] = {}
+    x, y, z = node
+    for dx in range(-reach, reach + 1):
+        for dy in range(-reach, reach + 1):
+            candidate = (x + dx, y + dy, z)
+            if candidate in graph:
+                costs[candidate] = max(abs(dx), abs(dy))
+    return costs
+
+
+def build_travel_graph(
+    graph: Dict[Node, Set[Node]], locations: List[Dict], npc_reach: int = DEFAULT_NPC_REACH
+) -> List[Dict]:
+    """One search per location, reaching every other location (early exit
+    once all are found) -> one {from, to, tileCount} edge per reachable pair.
+    Distance is computed independently per pair (real tiles walked, never
+    inferred through a shared hub, never euclidean), and a pair on
+    disconnected regions of the graph simply produces no edge.
+
+    A location is reached at whichever of its approach tiles is cheapest
+    (see `approach_costs`) — for everything but an NPC that is its own tile
+    and nothing else. Two locations sharing a tile are zero tiles apart, and
+    that edge is emitted like any other: since NPCs became travel
+    destinations, two of them behind the same tavern counter are two
+    destinations the player picks between, not graph noise to collapse.
+
+    Edges are canonical — `from` < `to`, one per unordered pair, never a
+    self-edge — and the list is sorted, so re-running against an unchanged
+    map produces a byte-identical fragment."""
+    approaches: List[Tuple[str, Dict[Node, int]]] = [
+        (loc["id"], approach_costs(
+            (loc["x"], loc["y"], loc["z"]), graph, npc_reach if loc.get("type") == "NPC" else 0
+        ))
+        for loc in locations
+    ]
+    every_approach_tile = {node for _, costs in approaches for node in costs}
+
     edges: List[Dict] = []
     seen_pairs: Set[frozenset] = set()
 
-    for loc in locations:
-        start = (loc["x"], loc["y"], loc["z"])
-        targets_by_node = {
-            (other["x"], other["y"], other["z"]): other["id"]
-            for other in locations
-            if other["id"] != loc["id"]
-        }
-        distances = bfs_distances(graph, start, set(targets_by_node))
+    def _emit(a_id: str, b_id: str, dist: int) -> None:
+        if a_id == b_id:
+            return
+        pair = frozenset((a_id, b_id))
+        if pair in seen_pairs:
+            return
+        seen_pairs.add(pair)
+        low, high = sorted((a_id, b_id))
+        edges.append({"from": low, "to": high, "tileCount": dist})
 
-        for node, dist in distances.items():
-            other_id = targets_by_node[node]
-            pair = frozenset((loc["id"], other_id))
-            if pair in seen_pairs:
+    for loc_id, costs in approaches:
+        if not costs:
+            continue
+        distances = tile_distances(graph, costs, every_approach_tile)
+        for other_id, other_costs in approaches:
+            if other_id == loc_id:
                 continue
-            seen_pairs.add(pair)
-            edges.append({"from": loc["id"], "to": other_id, "tileCount": dist})
+            reachable = [distances[node] + cost for node, cost in other_costs.items()
+                         if node in distances]
+            if reachable:
+                _emit(loc_id, other_id, min(reachable))
 
+    edges.sort(key=lambda e: (e["from"], e["to"]))
     return edges
 
 
@@ -428,11 +507,163 @@ def build_npc_locations(
 # ======================================================
 
 
-def build_travel_fragment(sign_locations: List[Dict], npc_locations: List[Dict], travel_graph: List[Dict]) -> Dict:
-    return {"locations": [*sign_locations, *npc_locations], "travelGraph": travel_graph}
+def build_travel_fragment(locations: List[Dict], travel_graph: List[Dict]) -> Dict:
+    """The one place the fragment's shape is spelled out. `locations` is
+    already both sources combined — sign-marked POIs and NPCs stop being two
+    lists the moment they enter the same graph, and re-splitting them here
+    just to concatenate them again would be ceremony."""
+    return {"locations": locations, "travelGraph": travel_graph}
 
 
-def merge_locations_into_db(db_locations: List[Dict], fragment_locations: List[Dict]) -> Dict[str, str]:
+# ======================================================
+# Rejecting nodes with no way in
+# ======================================================
+
+def _poi_without_edge_line(rejection: Dict) -> str:
+    return (f"  {rejection['id']}  ({rejection['type']})  "
+            f"x={rejection['x']} y={rejection['y']} z={rejection['z']}")
+
+
+def _edge_without_poi_line(rejection: Dict) -> str:
+    cited = ", ".join(f"{edge['from']}<->{edge['to']} ({edge['tileCount']} tiles)"
+                      for edge in rejection["edges"])
+    return f"  {rejection['id']}  sem coordenada  citado por: {cited}"
+
+
+def _hunt_without_poi_line(rejection: Dict) -> str:
+    return f"  {rejection['id']}  {rejection['name']}  sem coordenada de mundo"
+
+
+# The three ways a node can have no way into the travel graph: the reason,
+# what to do about it, and how its line reads — one row per case, because
+# the three travel together (the report groups by reason, in this order, and
+# each case's line shows different fields, since each has different evidence
+# to show). Ordered most actionable (a coordinate to open in the map editor)
+# first, vaguest (a hunt whose entrance nobody has marked yet) last.
+_REJECTION_CASES = (
+    (
+        "poi-without-edge",
+        "POI com coordenada e sem aresta — a placa existe no OTBM, mas o tile dela não\n"
+        "alcança nenhum outro POI da cidade (ilhado por parede/água, ou a placa está num\n"
+        "tile intransponível). Abra a coordenada no editor de mapa e mova a placa pra um\n"
+        "tile caminhável ligado ao resto da cidade.",
+        _poi_without_edge_line,
+    ),
+    (
+        "edge-without-poi",
+        "Id citado numa aresta que não é POI — não existe placa com esse id em lugar nenhum,\n"
+        "então ele não tem coordenada: é id escrito errado na fonte (ex: um dígito a mais).\n"
+        "Corrija o texto da placa no OTBM pro formato CIDADE-TIPO-NNNN, com exatamente 4 dígitos.",
+        _edge_without_poi_line,
+    ),
+    (
+        "hunt-without-poi",
+        "Hunt sem POI de entrada — o mapa da hunt existe em extractor/maps/, mas nenhuma placa\n"
+        "marca por onde se entra nela. A hunt não tem coordenada de mundo (o startPosition dela é\n"
+        "posição dentro do próprio mapa da hunt), então só o OTBM sabe onde fica: coloque a placa\n"
+        "com esse id na entrada, no editor de mapa.",
+        _hunt_without_poi_line,
+    ),
+)
+
+REJECTION_REASONS = tuple(reason for reason, _, _ in _REJECTION_CASES)
+
+
+def apply_graph_rejections(
+    locations: List[Dict], edges: List[Dict], hunts: Sequence[Dict] = ()
+) -> Tuple[List[Dict], List[Dict], List[Dict]]:
+    """Splits a freshly built graph into what may be emitted and what has no
+    way in -> (kept_locations, kept_edges, rejections).
+
+    A node nobody can travel to is rejected here rather than emitted for a
+    downstream gate to drop in silence: while `tileCount` only decorated a
+    label, an unreachable destination cost nothing; once travel is
+    authoritative it is a hunt the player simply cannot play, with no trace
+    of why. Each rejection carries whatever that case actually has to
+    identify it (see `_REJECTION_CASES`) — a coordinate is not invented for a
+    node that never had one.
+
+    Phantom edges go first, so degree is counted over links that will still
+    exist: a POI whose only edge cited a non-existent id is isolated too, and
+    is rejected in the same pass. A hunt whose POI exists but was rejected is
+    reported once, under that POI's own (more actionable) case.
+
+    `hunts` is [{"id", "name"}] — the hunt maps on disk, whose entrance the
+    graph is checked against. Order is by case, then id, so two runs against
+    an unchanged map produce identical output."""
+    location_ids = {loc["id"] for loc in locations}
+
+    kept_edges: List[Dict] = []
+    edges_by_phantom: Dict[str, List[Dict]] = {}
+    for edge in edges:
+        phantoms = [side for side in (edge["from"], edge["to"]) if side not in location_ids]
+        if not phantoms:
+            kept_edges.append(edge)
+            continue
+        for phantom in phantoms:
+            edges_by_phantom.setdefault(phantom, []).append(edge)
+
+    degree: Dict[str, int] = {}
+    for edge in kept_edges:
+        degree[edge["from"]] = degree.get(edge["from"], 0) + 1
+        degree[edge["to"]] = degree.get(edge["to"], 0) + 1
+
+    kept_locations = [loc for loc in locations if degree.get(loc["id"], 0) > 0]
+
+    rejections: List[Dict] = []
+    for loc in locations:
+        if degree.get(loc["id"], 0) == 0:
+            rejections.append({
+                "reason": "poi-without-edge",
+                "id": loc["id"],
+                "type": loc.get("type"),
+                "x": loc["x"],
+                "y": loc["y"],
+                "z": loc["z"],
+            })
+    for phantom_id, citing_edges in edges_by_phantom.items():
+        rejections.append({"reason": "edge-without-poi", "id": phantom_id, "edges": citing_edges})
+    for hunt in hunts:
+        if hunt["id"] not in location_ids:
+            rejections.append({"reason": "hunt-without-poi", "id": hunt["id"], "name": hunt["name"]})
+
+    rejections.sort(key=lambda r: (REJECTION_REASONS.index(r["reason"]), r["id"]))
+    return kept_locations, kept_edges, rejections
+
+
+def format_rejection_report(rejections: List[Dict], city: str) -> str:
+    """The rejection list -> the text file the user opens next to the map
+    editor. Grouped by case, each group stating what to do about it, so a
+    line is actionable without reading the spec. Deterministic: same
+    rejections in, same bytes out, for a clean diff between runs."""
+    lines = [
+        f"# Nós sem entrada no grafo de viagem — {city}",
+        "#",
+        "# Gerado por build_travel_fragment.py. Nada aqui entrou no fragmento: são os nós que",
+        "# ninguém consegue alcançar viajando, e o que fazer com cada um.",
+        "",
+    ]
+
+    if not rejections:
+        lines.append("Nenhum nó rejeitado.")
+        return "\n".join(lines) + "\n"
+
+    for reason, help_text, format_line in _REJECTION_CASES:
+        group = [r for r in rejections if r["reason"] == reason]
+        if not group:
+            continue
+        lines.append(f"## {reason} ({len(group)})")
+        lines.append(help_text)
+        lines.append("")
+        lines.extend(format_line(rejection) for rejection in group)
+        lines.append("")
+
+    return "\n".join(lines).rstrip("\n") + "\n"
+
+
+def merge_locations_into_db(
+    db_locations: List[Dict], fragment_locations: List[Dict], city: str
+) -> Dict[str, str]:
     """Upserts each fragment location into db_locations in place, by id.
     Mechanical fields (position, type, shop) always take the fragment's
     fresh value. Once a human edit removes `_todo` from an existing entry,
@@ -446,9 +677,21 @@ def merge_locations_into_db(db_locations: List[Dict], fragment_locations: List[D
     `by_id` is kept up to date as entries are appended, so two fragment
     locations sharing an id (should never happen — see parse_marker_signs'
     duplicate-id check — but this function doesn't trust that) upsert into
-    the same db entry instead of duplicating it."""
+    the same db entry instead of duplicating it.
+
+    An entry of `city` already in the db that this run's fragment no longer
+    carries (a rejected node, or a sign deleted from the OTBM) is reported as
+    `"stale"` but never removed: unlike an edge, a location holds curated
+    fields, and a node rejected on one run is often a sign the user is
+    halfway through fixing. Edges are the collection that gets replaced
+    outright (see merge_travel_graph_into_db)."""
     by_id = {entry["id"]: i for i, entry in enumerate(db_locations)}
     report: Dict[str, str] = {}
+
+    fragment_ids = {loc["id"] for loc in fragment_locations}
+    for entry in db_locations:
+        if city_ids.derive_city(entry["id"]) == city and entry["id"] not in fragment_ids:
+            report[entry["id"]] = "stale"
 
     for loc in fragment_locations:
         existing_index = by_id.get(loc["id"])
@@ -471,30 +714,55 @@ def merge_locations_into_db(db_locations: List[Dict], fragment_locations: List[D
     return report
 
 
-def merge_travel_graph_into_db(db_travel_graph: List[Dict], fragment_travel_graph: List[Dict]) -> Dict[str, str]:
-    """Upserts each fragment edge into db_travel_graph in place, matched by
-    the unordered {from, to} pair — always mechanical, no human curation
-    involved, so every run just overwrites tileCount with the fresh value."""
-    by_pair = {frozenset((e["from"], e["to"])): i for i, e in enumerate(db_travel_graph)}
+def merge_travel_graph_into_db(
+    db_travel_graph: List[Dict], fragment_travel_graph: List[Dict], city: str
+) -> Dict[str, str]:
+    """Replaces `city`'s slice of db_travel_graph in place with the fragment's
+    edges — the fragment is the complete edge set for that city, so an edge
+    missing from it stops existing in the db too.
+
+    This is a replacement and not an upsert on purpose. Upserting is how 23
+    edges no BFS ever produced (one of them citing `ROOK-HUNT-00015`, an id
+    a digit too long that is not a POI) outlived the map they came from and
+    ended up in a versioned catalog nobody could explain. An edge with even
+    one foot in `city` belongs to this run's regeneration; edges wholly
+    between other cities are left exactly as they are.
+
+    Reports per unordered pair: `"added"`, `"updated"` (in the fragment,
+    was already in the db) or `"removed"` (was in the db for this city, the
+    fragment doesn't carry it). Always mechanical — no human curation lives
+    on an edge, so tileCount is simply overwritten with the fresh value."""
+
+    def _label(edge: Dict) -> str:
+        return f"{edge['from']}<->{edge['to']}"
+
+    def _touches_city(edge: Dict) -> bool:
+        return city in (city_ids.derive_city(edge["from"]), city_ids.derive_city(edge["to"]))
+
+    existing_pairs = {frozenset((e["from"], e["to"])) for e in db_travel_graph}
+    fragment_pairs = {frozenset((e["from"], e["to"])) for e in fragment_travel_graph}
     report: Dict[str, str] = {}
+
+    kept: List[Dict] = []
+    for edge in db_travel_graph:
+        if frozenset((edge["from"], edge["to"])) in fragment_pairs:
+            continue  # re-appended below, with the fresh tileCount
+        if _touches_city(edge):
+            report[_label(edge)] = "removed"
+            continue
+        kept.append(edge)
 
     for edge in fragment_travel_graph:
         pair = frozenset((edge["from"], edge["to"]))
-        label = f"{edge['from']}<->{edge['to']}"
-        existing_index = by_pair.get(pair)
-        if existing_index is None:
-            db_travel_graph.append(dict(edge))
-            by_pair[pair] = len(db_travel_graph) - 1
-            report[label] = "added"
-        else:
-            db_travel_graph[existing_index] = dict(edge)
-            report[label] = "updated"
+        report[_label(edge)] = "updated" if pair in existing_pairs else "added"
+        kept.append(dict(edge))
 
+    db_travel_graph[:] = kept
     return report
 
 
-def merge_travel_fragment_into_db(db: Dict, fragment: Dict) -> Dict[str, Dict[str, str]]:
+def merge_travel_fragment_into_db(db: Dict, fragment: Dict, city: str) -> Dict[str, Dict[str, str]]:
     return {
-        "locations": merge_locations_into_db(db["locations"], fragment["locations"]),
-        "travelGraph": merge_travel_graph_into_db(db["travelGraph"], fragment["travelGraph"]),
+        "locations": merge_locations_into_db(db["locations"], fragment["locations"], city),
+        "travelGraph": merge_travel_graph_into_db(db["travelGraph"], fragment["travelGraph"], city),
     }

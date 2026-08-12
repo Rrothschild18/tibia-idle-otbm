@@ -111,3 +111,22 @@ calculada a partir de uma combinação de flags do OTBM (não existe flag nativa
 ADR 0002). Pisar num tile assim muda o floor ativo do jogador. É a única flag derivada que sobrevive
 no formato novo: as outras duas (`isRoof`, `hookDirection`) respondiam "onde isso desenha?", que
 agora é a `stack order` quem responde.
+
+**Approach tile** (tile de aproximação) e **NPC reach** (alcance):
+O tile de onde se **chega** numa location — não o tile dela. Pra tudo que é marcado por placa, os
+dois são o mesmo tile e não há o que discutir. Pra **NPC** não: balconista fica atrás de um balcão
+`unpass`, num bolsão que ninguém pisa, então o jogador para do lado de fora e negocia atravessando o
+balcão. O `NPC reach` é até quantos tiles dele isso ainda conta como ter chegado (default 3). Cada
+tile de aproximação custa a própria distância até o NPC, nunca 0 — é o que impede o alcance de
+encurtar as distâncias de um NPC que está em rua aberta. Essa distância é a **única** parte medida
+em linha reta (Chebyshev, atravessando parede); todo o resto do trajeto é caminho andado.
+_Avoid_: "raio de trade" (sugere regra de combate/jogo; isto é só como o grafo representa chegada)
+
+**Nó sem entrada** (rejeição):
+Uma location que ninguém consegue alcançar viajando, e que por isso **não entra no fragmento** — sai
+num relatório com o que existe dela. Três casos, e a diferença é o que cada um tem pra ser
+consertado: POI com coordenada e sem aresta (a placa existe, o tile é que está ilhado), id citado
+numa aresta que não é POI (não tem coordenada nenhuma — é id escrito errado), e hunt sem POI (o mapa
+existe em `maps/`, mas ninguém marcou a entrada; o `startPosition` dela é posição *dentro* do mapa
+da hunt, não coordenada de mundo). Emitir um destino inalcançável custa mais caro que rejeitá-lo:
+vira hunt que o jogador não consegue jogar, sem rastro do porquê.

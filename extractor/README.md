@@ -18,8 +18,10 @@ python extractor/scripts/build_hunt_fragment.py ROOK-HUNT-0010_bears-rookguard -
 python extractor/scripts/sync_items_to_tibia_idle.py # publica atlases de item no repo tibia-idle
 node extractor/scripts/build_map.js ROOK             # gera o mapa cidade-inteira (fonte: full-maps/ROOK/)
 python extractor/scripts/build_travel_fragment.py ROOK
-                                                      # gera db-fragment.json (locations/travelGraph) —
-                                                      # nunca escreve em db.json, ver "Travel graph" abaixo
+                                                      # gera db-fragment.json (locations/travelGraph) +
+                                                      # travel-graph-rejections.txt (nó sem entrada no
+                                                      # grafo) — nunca escreve em db.json, ver
+                                                      # "Travel graph" abaixo
 ```
 
 ## Convenção de pastas (cidade + id)
@@ -68,6 +70,12 @@ extractor/full-maps/ROOK/
   ROOK-npc.xml
   ROOK-zones.xml
 ```
+
+> **Renomeou um mapa de cidade? Reabra e re-salve o `.otbm` antes de qualquer coisa.** O cabeçalho
+> do OTBM guarda os nomes dos xmls irmãos, e renomear os arquivos no disco não o atualiza: o editor
+> abre o mapa, procura os nomes velhos, não acha, carrega zero NPC/spawn — e no save grava os xmls
+> novos **vazios**. Foi exatamente assim que `ROOK-npc.xml` e `ROOK-monster.xml` foram zerados
+> depois do renomeio `rook-full-*` → `ROOK-*` (recuperados do Git em seguida).
 
 Note que o **nome da pasta** carrega o id (`ROOK-HUNT-0002_...`), mas os arquivos `.otbm`/`.xml` de
 dentro continuam com o nome descritivo que o editor de mapas já exportou (`bears-rookguard.otbm`,
@@ -246,15 +254,30 @@ pasta — diferente do par `maps/` → `ready-maps/` dos hunts). Hoje só existe
    `C:\canary-3.2.1` (ajustável via `--canary-dir`), usado só pra casar cada NPC com seu `.lua` de
    shop em `data-otservbr-global/npc/`. Saída: `extractor/full-maps/ROOK/db-fragment.json`, pra
    revisar e colar à mão — por padrão **este script nunca escreve em `db.json`**, mesmo padrão do
-   `build_hunt_fragment.py`.
+   `build_hunt_fragment.py`. Sai junto o `travel-graph-rejections.txt` (passo 4).
 3. Se preferir pular a cópia manual, use `--write-db` (mescla `locations`/`travelGraph` direto no
    `db.json` do `tibia-idle`):
    ```
    python extractor/scripts/build_travel_fragment.py ROOK --write-db
    ```
-   Campos mecânicos (posição, `shop`, `tileCount`) sempre são atualizados por id/par; o
-   `displayName` de uma location já curada (sem `_todo`) nunca é sobrescrito. Por padrão aponta pro
+   `locations` é upsert por id: campos mecânicos (posição, `shop`) sempre atualizados, e o
+   `displayName` de uma location já curada (sem `_todo`) nunca sobrescrito — uma location da cidade
+   que sumiu do fragmento é **reportada, nunca apagada** (pode carregar curadoria). Já o
+   `travelGraph` é **substituído**, não mesclado: o fragmento é o conjunto completo de arestas da
+   cidade, então aresta que não está nele deixa de existir no `db.json`. Foi o upsert-só-adiciona
+   que deixou 23 arestas que nenhum BFS produziu sobreviverem no catálogo versionado, uma delas
+   citando `ROOK-HUNT-00015`. Arestas entre outras cidades não são tocadas. Por padrão aponta pro
    checkout irmão `../tibia-idle/tibia-idle`, ajustável via `--tibia-idle-dir`.
+4. Confira `extractor/full-maps/<CIDADE>/travel-graph-rejections.txt` — todo nó **sem entrada no
+   grafo fica fora do fragmento** e vai pra esse arquivo, com o que existe dele e o que fazer:
+
+   | Caso | O que o relatório carrega | O que fazer |
+   |---|---|---|
+   | `poi-without-edge` | id + `x/y/z` | a placa existe mas o tile dela não alcança ninguém — abrir a coordenada no editor e mover pra um tile andável |
+   | `edge-without-poi` | id + as arestas que o citam (sem coordenada) | id escrito errado na fonte — corrigir o texto da placa |
+   | `hunt-without-poi` | id + nome da pasta (sem coordenada) | o mapa da hunt existe em `maps/`, mas ninguém marcou a entrada — colocar a placa no OTBM |
+
+   A ordem é determinística (caso, depois id), pra dar diff limpo entre execuções.
 
 **Pontos de interesse (POIs) são marcados no `.otbm` com uma sign** (item 2016, `uid` 10001+, texto
 no formato `CIDADE-TIPO-NNNN`, com `NNNN` sendo **exatamente 4 dígitos** — ex: `ROOK-HUNT-0001`) —
@@ -266,12 +289,38 @@ nunca compartilham texto genérico) — uma sign bem-formada colocada duas vezes
 (`ROOK-HUNT-0006`, `uid`/texto idênticos) é reportada como duplicata, não como "formato inválido".
 
 Locations do tipo `NPC` não usam sign — vêm direto de `<CIDADE>-npc.xml`, e seu id segue o mesmo
-formato `CIDADE-TIPO-slug` das demais (`ROOK-NPC-obi`). Duas locations só ganham uma aresta em
-`travelGraph` se houver caminho andável entre elas no grafo de tiles (BFS por POI, sem penalidade
-diagonal, sem custo por tipo de piso) — **um par sem aresta não é erro**, é o grafo genuinamente
-desconectado nesse trecho (áreas ainda não conectadas por corredor andável, ou POIs sem sign
-colocada). Migrar sinalizações antigas (ids sem o segmento `TIPO`) pro formato novo é tarefa manual
-de edição de mapa, o extractor não faz isso sozinho.
+formato `CIDADE-TIPO-slug` das demais (`ROOK-NPC-obi`). **NPC é nó do grafo como qualquer outro**, e
+sua distância sai do mesmo BFS por tiles andáveis, nunca de euclidiana: a partir da onda 2.5 só se
+compra estando no NPC, então ele é destino de viagem (o `CONTEXT.md` do `tibia-idle` registra a
+reversão da decisão anterior). Dois NPCs colados viram dois destinos a `tileCount` 0 — é a verdade
+do mapa, não ruído.
+
+NPC tem **alcance** (`--npc-reach`, default 3): o jogador conta como tendo chegado ao NPC parando
+no tile andável mais próximo dentro desse raio. Sem isso, quase todo balconista de Rook é destino
+inalcançável — eles ficam atrás de um balcão `unpass`, num bolsão de dois tiles onde ninguém entra.
+Cada tile de aproximação custa a própria distância até o NPC (não 0), então um NPC em rua aberta
+entra pelo próprio tile de graça e **suas distâncias não encolhem**. O alcance vale **só pra NPC**:
+placa ilhada é bug de mapa e continua indo pro relatório de rejeição, não é acobertada.
+
+**O alcance é a única parte que não é caminho andado**, e vale saber: a distância do NPC até o tile
+de aproximação é medida em linha reta (Chebyshev), **ignorando parede** — é literalmente atravessar
+o balcão. Todo o resto do trajeto é BFS por tiles andáveis. Ou seja, o alcance é um atalho por
+geometria maciça, limitado ao raio: com o default 3, no máximo 3 tiles de um lado e 3 do outro. É o
+preço de conseguir expressar "estou no balconista" num grafo que só conhece tile andável.
+
+Por isso o default é 3, e não mais: é onde Rookgaard para de mudar. 2 e 3 dão o mesmo resultado
+(todo balconista entra, plenamente ligado ao resto da cidade), e 4+ só acrescenta um NPC —
+atravessando ~5 tiles de parede maciça pra deixá-lo com uma única aresta artificial, e escondendo do
+relatório um NPC que está genuinamente mal colocado. Alcance largo o bastante pra inventar caminho é
+pior que um nó que o relatório manda você ir consertar.
+
+Duas locations só ganham uma aresta em `travelGraph` se houver caminho andável entre elas no grafo
+de tiles (BFS por location, sem penalidade diagonal, sem custo por tipo de piso) — **um par sem
+aresta não é erro**, é o grafo genuinamente desconectado nesse trecho. As arestas são canônicas
+(`from` < `to`, um par sem repetir, nunca auto-aresta) e a lista sai ordenada, então rodar de novo
+contra um mapa inalterado dá um fragmento byte a byte idêntico. Migrar sinalizações antigas (ids sem
+o segmento `TIPO`) pro formato novo é tarefa manual de edição de mapa, o extractor não faz isso
+sozinho.
 
 ## Estrutura de pastas
 
@@ -299,9 +348,9 @@ extractor/
     hunt_fragment.py        lógica pura: respawn.json → fragmento {monsters, loot, hunts}
     build_hunt_fragment.py  CLI (avulso): gera ready-maps/<CIDADE>/<pasta>/db-fragment.json — nunca escreve em db.json
     sync_items_to_tibia_idle.py  CLI (avulso): publica atlases de item no repositório tibia-idle
-    travel_graph.py         lógica pura: mapa cidade-inteira → grafo de tiles, BFS por POI, fragmento {locations, travelGraph}
-    build_travel_fragment.py CLI (avulso): gera full-maps/<CIDADE>/db-fragment.json — nunca escreve em db.json
-    map_dirs.py             lógica pura: descoberta de pastas em dois níveis (maps/<CIDADE>/<pasta>), usada por build_phaser_map.py e build_hunt_fragment.py
+    travel_graph.py         lógica pura: mapa cidade-inteira → grafo de tiles, distância por location, rejeição, fragmento {locations, travelGraph}
+    build_travel_fragment.py CLI (avulso): gera full-maps/<CIDADE>/db-fragment.json + travel-graph-rejections.txt — nunca escreve em db.json
+    map_dirs.py             lógica pura: descoberta de pastas em dois níveis (maps/<CIDADE>/<pasta>), usada por build_phaser_map.py, build_hunt_fragment.py e build_travel_fragment.py
     city_ids.py             lógica pura: deriva `city`/`status` do id de um hunt/location (nunca digitados à mão)
   vendor/
     otbm2json.js       lib de leitura/escrita de OTBM (vendorizada, não é do npm)
@@ -310,9 +359,11 @@ extractor/
                          build lê essa pasta
   maps/<CIDADE>/<ID>_nome/  SOURCE — .otbm + xmls de cada mapa de hunt (versionado); <CIDADE> nunca é
                              adivinhada, é sempre a pasta-pai (ver "Convenção de pastas" acima)
-  full-maps/<CIDADE>/  SOURCE **e** saída do mapa cidade-inteira (.otbm e map.json versionados —
-                         diferente do ready-maps/ dos hunts; db-fragment.json continua gitignored,
-                         igual ao dos hunts — feed do travel-graph, não da rotação de hunts). Pasta =
+  full-maps/<CIDADE>/  SOURCE **e** saída do mapa cidade-inteira (.otbm, map.json e
+                         travel-graph-rejections.txt versionados — diferente do ready-maps/ dos
+                         hunts; db-fragment.json continua gitignored, igual ao dos hunts — feed do
+                         travel-graph, não da rotação de hunts). O relatório de rejeição é
+                         versionado justamente pro diff entre execuções ter uma baseline. Pasta =
                          só o código da cidade, conteúdo renomeado pra bater (ROOK.otbm, ...)
   raw-maps/<pasta>.raw.json   saída da etapa 1, hunts e cidade-inteira (gitignored, regenerável)
   ready-maps/<CIDADE>/<pasta>/  saída da etapa 2 pros mapas de hunt, espelha maps/ 1:1 (gitignored, regenerável)

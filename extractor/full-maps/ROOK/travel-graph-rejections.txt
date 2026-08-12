@@ -1,0 +1,26 @@
+# Nós sem entrada no grafo de viagem — ROOK
+#
+# Gerado por build_travel_fragment.py. Nada aqui entrou no fragmento: são os nós que
+# ninguém consegue alcançar viajando, e o que fazer com cada um.
+
+## poi-without-edge (3)
+POI com coordenada e sem aresta — a placa existe no OTBM, mas o tile dela não
+alcança nenhum outro POI da cidade (ilhado por parede/água, ou a placa está num
+tile intransponível). Abra a coordenada no editor de mapa e mova a placa pra um
+tile caminhável ligado ao resto da cidade.
+
+  ROOK-HUNT-0004  (HUNT)  x=1174 y=1126 z=9
+  ROOK-HUNT-0012  (HUNT)  x=1178 y=990 z=12
+  ROOK-NPC-loui  (NPC)  x=1057 y=1123 z=7
+
+## hunt-without-poi (5)
+Hunt sem POI de entrada — o mapa da hunt existe em extractor/maps/, mas nenhuma placa
+marca por onde se entra nela. A hunt não tem coordenada de mundo (o startPosition dela é
+posição dentro do próprio mapa da hunt), então só o OTBM sabe onde fica: coloque a placa
+com esse id na entrada, no editor de mapa.
+
+  ROOK-HUNT-0010  bears-rookguard  sem coordenada de mundo
+  ROOK-HUNT-0015  trolls-tower-rookguard  sem coordenada de mundo
+  ROOK-HUNT-0016  wolfs-east-rookguard  sem coordenada de mundo
+  ROOK-HUNT-0017  wolfs-south-rookguard  sem coordenada de mundo
+  ROOK-HUNT-0018  bugs-rookguard  sem coordenada de mundo
