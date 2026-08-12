@@ -1,17 +1,17 @@
 """
-Pure logic for turning a map's ready-maps/<map>/monsters/respawn.json into a
-tibia-idle db.json fragment, and for merging that fragment into an in-memory
-db.json — see build_hunt_fragment.py for the CLI that reads/writes files.
+Pure logic for turning a map's ready-maps/<CIDADE>/<pasta>/monsters/respawn.json
+into a `{monsters, loot, hunts}` fragment — see build_hunt_fragment.py for the
+CLI that reads/writes files, and content_export.py for where each of the three
+lands in the back-end once exported.
 
 `monsters` and `loot` are always fully correct: every field is mechanically
-derived from respawn.json plus the map's assigned id, so merge_fragment_into_db()
-always upserts them by mapId (matches what the old sync-loot-from-extractor.py
-did). `hunts` cannot be fully correct — name/label/portrait/startPosition are
-real human decisions (existing hunts use hand-picked art and coordinates that
-don't follow any derivable rule) — so build_hunts_entry() returns a
-best-effort scaffold flagged with "_todo", and merge_fragment_into_db() only
-ever *appends* a hunts entry for a mapId that isn't already present; an
-existing hand-curated hunt is never overwritten.
+derived from respawn.json plus the map's assigned id, so exporting always
+overwrites them. `hunts` cannot be fully correct — name/label/portrait/
+startPosition are real human decisions (existing hunts use hand-picked art and
+coordinates that don't follow any derivable rule) — so build_hunts_entry()
+returns a best-effort scaffold flagged with "_todo", and the export only ever
+*appends* a hunts entry whose mapId isn't already there; an existing
+hand-curated hunt is never overwritten.
 """
 
 import posixpath
@@ -21,7 +21,7 @@ from typing import Dict, List, Optional
 import city_ids
 
 PLACEHOLDER_MAP_ID = "TODO-ASSIGN-ID"
-# db.json's `seed` field has no known consumer today — every existing hunt
+# The catalog's `seed` field has no known consumer today — every existing hunt
 # just has a unique-looking placeholder string. Match that shape.
 PLACEHOLDER_SEED = "0" * 22
 PLACEHOLDER_PORTRAIT = "/assets/character-default.png"
@@ -43,7 +43,7 @@ def _title_from_map_name(map_name: str) -> str:
 
 def _most_common_spawn(spawns: List[Dict]) -> Optional[Dict]:
     """Picks the spawn entry whose monster name occurs most often — matches
-    every existing hunt's monsterPreview (verified against db.json)."""
+    every existing hunt's monsterPreview (verified against the catalog)."""
     if not spawns:
         return None
     top_name, _ = Counter(s["name"] for s in spawns).most_common(1)[0]
@@ -117,7 +117,7 @@ def build_hunts_entry(respawn: Dict, map_name: str, map_id: str) -> Dict:
 
 def build_fragment(respawn: Dict, map_name: str, map_id: Optional[str]) -> Dict:
     """Assembles the full {monsters, loot, hunts} fragment. `map_id` is the
-    game id (e.g. "ROOK-0010") the map should get in db.json — if omitted,
+    game id (e.g. "ROOK-0010") the map should get in the catalog — if omitted,
     a placeholder is used and flagged in hunts._todo."""
     resolved_id = map_id or PLACEHOLDER_MAP_ID
     monsters_entry = build_monsters_entry(respawn, map_name, resolved_id)
@@ -152,7 +152,7 @@ class MapIdMismatchError(ValueError):
 
 
 class MapIdAlreadyExistsError(ValueError):
-    """Raised when a mapId already registered in db.json (hunts or monsters)
+    """Raised when a mapId already registered in the back-end content (hunts or loot)
     is about to be written again without --edit — updating curated data must
     always be an explicit, deliberate choice, never a silent upsert."""
 
@@ -163,38 +163,7 @@ class MapIdAlreadyExistsError(ValueError):
         self.map_id = map_id
 
 
-def map_id_exists(hunts: List[Dict], monsters: List[Dict], map_id: str) -> bool:
-    """Whether `map_id` is already registered anywhere in db.json — checked
-    against both `hunts` and `monsters` (not just `hunts`) since a hunts entry
-    can be removed by hand while monsters/loot stay registered under the same
-    id, and that should still count as "already exists"."""
-    return any(entry.get("mapId") == map_id for entry in hunts) or any(
-        entry.get("mapId") == map_id for entry in monsters
-    )
-
-
-def _upsert_by_map_id(collection: List[Dict], entry: Dict) -> str:
-    for i, existing in enumerate(collection):
-        if existing.get("mapId") == entry["mapId"]:
-            collection[i] = entry
-            return "updated"
-    collection.append(entry)
-    return "added"
-
-
-def merge_fragment_into_db(db: Dict, fragment: Dict) -> Dict[str, str]:
-    """Merges a fragment into db's monsters/loot/hunts collections in place.
-    Returns a {"monsters": ..., "loot": ..., "hunts": ...} status report, each
-    one of "added"/"updated" ("hunts" can also be "skipped" — see module docstring)."""
-    report = {
-        "monsters": _upsert_by_map_id(db["monsters"], fragment["monsters"]),
-        "loot": _upsert_by_map_id(db["loot"], fragment["loot"]),
-    }
-
-    map_id = fragment["hunts"]["mapId"]
-    if any(entry.get("mapId") == map_id for entry in db["hunts"]):
-        report["hunts"] = "skipped"
-    else:
-        db["hunts"].append(fragment["hunts"])
-        report["hunts"] = "added"
-    return report
+# Where a fragment goes once it's exported — and how each collection merges
+# with what's already there — lives in content_export.py, next to the paths
+# it writes to. It used to live here, back when every collection landed in
+# one db.json and "merge" was a single function.

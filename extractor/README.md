@@ -14,13 +14,13 @@ npm run build-map -- --all                           # atalho para o comando aci
 npm run build-items                                  # bake global de sprites de item (ver abaixo)
 python extractor/scripts/build_hunt_fragment.py ROOK-HUNT-0010_bears-rookguard --map-id ROOK-HUNT-0010
                                                       # gera db-fragment.json (hunts/monsters/loot) —
-                                                      # nunca escreve em db.json, ver seção 6 abaixo
+                                                      # nunca escreve no back-end, ver seção 7 abaixo
 python extractor/scripts/sync_items_to_tibia_idle.py # publica atlases de item no repo tibia-idle
 node extractor/scripts/build_map.js ROOK             # gera o mapa cidade-inteira (fonte: full-maps/ROOK/)
 python extractor/scripts/build_travel_fragment.py ROOK
                                                       # gera db-fragment.json (locations/travelGraph) +
                                                       # travel-graph-rejections.txt (nó sem entrada no
-                                                      # grafo) — nunca escreve em db.json, ver
+                                                      # grafo) — nunca escreve no back-end, ver
                                                       # "Travel graph" abaixo
 ```
 
@@ -49,7 +49,7 @@ O nome de uma pasta de hunt **é** o id do mapa, mais um sufixo legível pra hum
 - **Repete a cidade de propósito** (`ROOK/ROOK-HUNT-0002_.../`) — é redundante à vista, mas é
   exatamente essa redundância que permite colar o texto da sign direto no nome da pasta sem montar
   nada de cabeça (cidade + tipo + número).
-- Vira, sem tradução nenhuma, o `mapId` do hunt e o `Location.id` do travel-graph no `db.json` do
+- Vira, sem tradução nenhuma, o `mapId` do hunt e o `Location.id` do travel-graph no catálogo do
   `tibia-idle` — os dois eram strings diferentes reconciliadas por `resolveHuntLocationId`; agora são
   a mesma string, ponto.
 
@@ -189,16 +189,16 @@ Saída: `extractor/ready-maps/ROOK/ROOK-HUNT-0019_orc-fortress/`.
    invocação de `build_map.js` penalizaria até rebuilds repetidos do mesmo mapa durante iteração.
    Rode sempre que adicionar/mudar itens, não a cada build de mapa. Ver
    `.scratch/item-sprite-sheets/spec.md` para o contrato completo.
-7. Gere o fragmento de dados de jogo do mapa (hunts/monsters/loot) para colar manualmente
-   no `db.json` do repositório `tibia-idle`:
+7. Gere o fragmento de dados de jogo do mapa (hunts/monsters/loot) para revisar antes de mandar
+   pro back-end (ver "Export pro back-end" abaixo pra onde cada coleção vai parar):
    ```
    python extractor/scripts/build_hunt_fragment.py ROOK-HUNT-0019_orc-fortress --map-id ROOK-HUNT-0019
    ```
    Saída: `extractor/ready-maps/ROOK/ROOK-HUNT-0019_orc-fortress/db-fragment.json`. Por padrão
-   **este script nunca escreve em `db.json`** — `monsters` e `loot` no fragmento já saem prontos
-   (derivados mecanicamente do `respawn.json`), `hunts` sai como rascunho com um campo `_todo`
-   listando o que precisa de revisão humana (nome/label, arte de portrait, `startPosition`). Revise
-   e copie à mão.
+   **este script nunca escreve fora de `extractor/`** — `monsters` e `loot` no fragmento já saem
+   prontos (derivados mecanicamente do `respawn.json`), `hunts` sai como rascunho com um campo
+   `_todo` listando o que precisa de revisão humana (nome/label, arte de portrait,
+   `startPosition`). Revise e copie à mão.
 
    `--map-id` é **obrigatório** — não é mais opcional nem auto-atribuído. O script extrai o id
    embutido no nome da pasta (tudo antes do primeiro `_`) e **compara** com o valor passado em
@@ -206,20 +206,19 @@ Saída: `extractor/ready-maps/ROOK/ROOK-HUNT-0019_orc-fortress/`.
    bate com o id da pasta (ROOK-HUNT-0014)`) — pense nisso como uma dupla confirmação deliberada,
    não uma formalidade.
 
-   Se preferir pular a cópia manual, use `--write-db` (opcional, aditivo — precisa ser pedido
-   explicitamente, `--all` sozinho continua sem tocar em `db.json`):
+   Se preferir pular a cópia manual, use `--export` (opcional, precisa ser pedido explicitamente —
+   `--all` sozinho continua sem tocar no back-end):
    ```
-   python extractor/scripts/build_hunt_fragment.py --all --write-db
+   python extractor/scripts/build_hunt_fragment.py --all --export
    ```
-   `monsters`/`loot` são sempre mesclados por `mapId` (upsert — igual ao antigo
-   `sync-loot-from-extractor.py`, sempre correto porque é 100% mecânico). `hunts` só é
-   **adicionado** se o `mapId` ainda não existir em `db.json` — um hunt já curado nunca é
-   sobrescrito, e o rascunho novo entra com o campo `_todo` junto, direto no `db.json`, como
-   lembrete. Um `mapId` que **já existe** em `db.json` é erro sem `--edit` ("ID do mapa já existe —
-   use --edit se a intenção é atualizar") — nada é escrito; passe `--edit` quando a intenção
-   realmente for atualizar um mapa já registrado. Com `--all`, `--map-id` não é aceito (cada mapa
-   já tem o seu, embutido na própria pasta). Por padrão aponta pro checkout irmão
-   `../tibia-idle/tibia-idle`, ajustável via `--tibia-idle-dir`.
+   `loot` e o respawn são sempre reescritos (100% mecânicos). `hunts` só é **adicionado** ao
+   `catalog-source.json` se o `mapId` ainda não existir — um hunt já curado nunca é sobrescrito, e
+   o rascunho novo entra com o campo `_todo` junto, como lembrete. Um `mapId` que **já está
+   registrado** é erro sem `--edit` ("ID do mapa já existe — use --edit se a intenção é atualizar")
+   — nada é escrito; passe `--edit` quando a intenção realmente for atualizar um mapa já
+   registrado. Com `--all`, `--map-id` não é aceito (cada mapa já tem o seu, embutido na própria
+   pasta). Por padrão aponta pro checkout irmão `../tibia-idle/tibia-idle`, ajustável via
+   `--tibia-idle-dir`.
 8. Se o mapa novo introduziu sprites de item novos (passo 6 gerou atlases novos), publique-os
    no repositório `tibia-idle`:
    ```
@@ -233,7 +232,7 @@ Saída: `extractor/ready-maps/ROOK/ROOK-HUNT-0019_orc-fortress/`.
 ## Travel graph (mapa cidade inteira)
 
 Diferente dos mapas de hunt (pequenos, exportados um a um em `extractor/maps/<CIDADE>/<pasta>/`), o
-grafo de viagem (`locations`/`travelGraph` no `db.json` do `tibia-idle`) é derivado do **mapa da
+grafo de viagem (`locations`/`travelGraph` no catálogo do `tibia-idle`) é derivado do **mapa da
 cidade inteira**, que vive em `extractor/full-maps/<CIDADE>/` (fonte **e** saída ficam na mesma
 pasta — diferente do par `maps/` → `ready-maps/` dos hunts). Hoje só existe `ROOK` (Rookgaard). Ver
 `.scratch/travel-graph-and-locations/spec.md` para o design completo.
@@ -253,18 +252,18 @@ pasta — diferente do par `maps/` → `ready-maps/` dos hunts). Hoje só existe
    `extractor/full-maps/ROOK/map.json`) e um checkout local do Canary — por padrão
    `C:\canary-3.2.1` (ajustável via `--canary-dir`), usado só pra casar cada NPC com seu `.lua` de
    shop em `data-otservbr-global/npc/`. Saída: `extractor/full-maps/ROOK/db-fragment.json`, pra
-   revisar e colar à mão — por padrão **este script nunca escreve em `db.json`**, mesmo padrão do
-   `build_hunt_fragment.py`. Sai junto o `travel-graph-rejections.txt` (passo 4).
-3. Se preferir pular a cópia manual, use `--write-db` (mescla `locations`/`travelGraph` direto no
-   `db.json` do `tibia-idle`):
+   revisar e colar à mão — por padrão **este script nunca escreve fora de `extractor/`**, mesmo
+   padrão do `build_hunt_fragment.py`. Sai junto o `travel-graph-rejections.txt` (passo 4).
+3. Se preferir pular a cópia manual, use `--export` (escreve `locations`/`travelGraph` no
+   `catalog-source.json` do `tibia-idle` — ver "Export pro back-end" abaixo):
    ```
-   python extractor/scripts/build_travel_fragment.py ROOK --write-db
+   python extractor/scripts/build_travel_fragment.py ROOK --export
    ```
    `locations` é upsert por id: campos mecânicos (posição, `shop`) sempre atualizados, e o
    `displayName` de uma location já curada (sem `_todo`) nunca sobrescrito — uma location da cidade
    que sumiu do fragmento é **reportada, nunca apagada** (pode carregar curadoria). Já o
    `travelGraph` é **substituído**, não mesclado: o fragmento é o conjunto completo de arestas da
-   cidade, então aresta que não está nele deixa de existir no `db.json`. Foi o upsert-só-adiciona
+   cidade, então aresta que não está nele deixa de existir no catálogo. Foi o upsert-só-adiciona
    que deixou 23 arestas que nenhum BFS produziu sobreviverem no catálogo versionado, uma delas
    citando `ROOK-HUNT-00015`. Arestas entre outras cidades não são tocadas. Por padrão aponta pro
    checkout irmão `../tibia-idle/tibia-idle`, ajustável via `--tibia-idle-dir`.
@@ -322,6 +321,63 @@ contra um mapa inalterado dá um fragmento byte a byte idêntico. Migrar sinaliz
 o segmento `TIPO`) pro formato novo é tarefa manual de edição de mapa, o extractor não faz isso
 sozinho.
 
+## Export pro back-end
+
+Este pipeline **não tem mais um destino só**. Existia: `apps/tibia-idle-mock-api/db.json`, servido
+por `json-server`, com todas as coleções juntas. Esse app foi apagado (fatia 1.8) e o que ele
+carregava foi separado **por como o back-end lê cada coisa**. Nada mais escreve num `db.json` — o
+flag antigo `--write-db` virou `--export`. O contrato está codificado em
+`extractor/scripts/content_export.py`, que é onde os paths e as regras de merge moram.
+
+| Destino | O que vai | Como o back-end usa |
+|---|---|---|
+| `apps/tibia-idle-api/content/catalog-source.json` | `hunts`, `locations`, `travelGraph` | Vira **linha no Postgres**: `import-content` valida com Zod e grava. Ninguém lê esse arquivo em runtime |
+| `apps/tibia-idle-api/content/hunts/loot.json` | `{mapId, drops}` por hunt | Lido **do disco em runtime**, inteiro por hunt |
+| `apps/tibia-idle-api/content/hunts/respawn/<HUNT-ID>.json` | `{mapBoundsRef, monsterDefs, spawns}` | Idem — repassado direto pro Phaser |
+| `apps/tibia-idle-api/content/hunts/hunts.json` | `{id, mapId, mapUrl, startPosition}` | Manifesto que o simulador lê. **Derivado** do `hunts` do catálogo, nunca mesclado à parte |
+| `apps/tibia-idle-front/public/assets/` | atlases de item e sheets de outfit | `sync_items_to_tibia_idle.py`, ver passo 8 |
+
+A linha entre as duas primeiras é a da ADR-0015: virou coluna o que a tela **filtra e ordena**
+(cidade, status, POI de entrada); ficou em arquivo o que se carrega inteiro e não responde a
+`WHERE` (respawn, loot). O `catalog-source.json` é versionado ao lado da API — é o que faz
+`nx run db:reset` ser **um** comando em vez de "ache o despejo do extractor primeiro".
+
+Os dois comandos que exportam:
+
+```
+python extractor/scripts/build_hunt_fragment.py --all --export
+python extractor/scripts/build_travel_fragment.py ROOK --export
+```
+
+Depois, no `tibia-idle`, pro catálogo virar linha:
+
+```
+nx run db:reset
+```
+
+**Semântica do merge**, e ela não é a mesma pras três coleções do catálogo, de propósito:
+
+- `hunts` — **append-only**. Só entra se o `mapId` for novo; um hunt já existente nunca é tocado.
+  Nome, label, portrait, seed e `startPosition` são curados à mão, e não há merge por campo aqui:
+  a entrada inteira fica como está. Reexportar por cima devolveria o título gerado e o seed
+  placeholder.
+- `locations` — **upsert por id**, merge por campo: posição e `shop` sempre atualizados,
+  `displayName`/`huntId` preservados depois que uma edição humana tirou o `_todo`. Location da
+  cidade que sumiu do fragmento é **reportada, nunca apagada** — pode carregar curadoria.
+- `travelGraph` — **substituído** por cidade. Sem curadoria nenhuma numa aresta, e o fragmento é o
+  conjunto completo, então aresta que não está nele deixa de existir.
+- `loot` e `respawn` — sempre reescritos. 100% mecânicos, derivados do `respawn.json`.
+
+A coleção `monsters` do fragmento **não tem mais destino**. O payload dela ainda importa (é de onde
+sai o arquivo de respawn), mas o embrulho que ela adicionava — `id`/`mapId`/`assetsRoot` — não é
+lido por ninguém desde que o back-end passou a ler `respawn/<HUNT-ID>.json` direto.
+
+**Pasta de rascunho não vai pro catálogo.** `--all` varre toda pasta com `respawn.json`, e algumas
+não têm id nenhum no nome (`DEBUG-MAP`, `Nova pasta`, `TEST-WASPS-DEBUG`) — pra elas o "map id"
+acaba sendo o nome da pasta. O fragmento local sai normalmente, mas o **export pula** qualquer id
+fora de `CIDADE-TIPO-NNNN`, avisando qual e por quê. Sem isso, um `nx run db:reset` importaria uma
+hunt chamada "Nova pasta".
+
 ## Estrutura de pastas
 
 ```
@@ -346,10 +402,11 @@ extractor/
     build_item_index.py    bake global (avulso): junta os dois bakes de sheet acima → atlases/items-index.json
     build_items.js         runner: chama os três bakes de item acima em sequência (npm run build-items)
     hunt_fragment.py        lógica pura: respawn.json → fragmento {monsters, loot, hunts}
-    build_hunt_fragment.py  CLI (avulso): gera ready-maps/<CIDADE>/<pasta>/db-fragment.json — nunca escreve em db.json
+    build_hunt_fragment.py  CLI (avulso): gera ready-maps/<CIDADE>/<pasta>/db-fragment.json; só escreve no back-end com --export
     sync_items_to_tibia_idle.py  CLI (avulso): publica atlases de item no repositório tibia-idle
     travel_graph.py         lógica pura: mapa cidade-inteira → grafo de tiles, distância por location, rejeição, fragmento {locations, travelGraph}
-    build_travel_fragment.py CLI (avulso): gera full-maps/<CIDADE>/db-fragment.json + travel-graph-rejections.txt — nunca escreve em db.json
+    build_travel_fragment.py CLI (avulso): gera full-maps/<CIDADE>/db-fragment.json + travel-graph-rejections.txt; só escreve no back-end com --export
+    content_export.py       lógica pura: pra onde cada coleção vai no back-end e como cada uma mescla (ver "Export pro back-end")
     map_dirs.py             lógica pura: descoberta de pastas em dois níveis (maps/<CIDADE>/<pasta>), usada por build_phaser_map.py, build_hunt_fragment.py e build_travel_fragment.py
     city_ids.py             lógica pura: deriva `city`/`status` do id de um hunt/location (nunca digitados à mão)
   vendor/
@@ -467,13 +524,17 @@ duplicado por mapa.
 
 ### Publicando dados no repositório `tibia-idle`
 
-**Por que `build_hunt_fragment.py` não escreve direto no `db.json` do
-`tibia-idle`?**
+**Por que `build_hunt_fragment.py` não escreve no back-end por padrão?**
 De propósito — `hunts` (nome, portrait, `startPosition`) exige curadoria
-humana que não dá pra derivar do mapa (ver `hunt_fragment.py`), e mesmo os
-campos 100% mecânicos (`monsters`, `loot`) não devem ser mesclados sem
-revisão. O script gera `ready-maps/<CIDADE>/<pasta>/db-fragment.json` e para
-por aí; colar no `db.json` é sempre uma ação manual.
+humana que não dá pra derivar do mapa (ver `hunt_fragment.py`). O script gera
+`ready-maps/<CIDADE>/<pasta>/db-fragment.json` e para por aí; escrever no
+back-end é sempre um pedido explícito, via `--export`.
+
+**Cadê o `db.json`? O `--write-db` sumiu.**
+O `apps/tibia-idle-mock-api` foi apagado (fatia 1.8) e as coleções dele foram
+separadas por como o back-end lê cada uma. `--write-db` virou `--export`, que
+escreve em mais de um destino — ver "Export pro back-end" acima pra tabela
+completa.
 
 **Onde ficavam antes os scripts `sync-item-sprites-from-extractor.py` e
 `sync-loot-from-extractor.py`?**
@@ -482,8 +543,7 @@ sincronizar dados do extractor é responsabilidade deste pipeline, não do app
 consumidor. `sync-item-sprites-from-extractor.py` virou
 `extractor/scripts/sync_items_to_tibia_idle.py` (mesmo comportamento, mesma
 direção de cópia, só que rodado a partir daqui). `sync-loot-from-extractor.py`
-foi substituído por `build_hunt_fragment.py`, que não escreve mais em
-`db.json` — ver acima.
+foi substituído por `build_hunt_fragment.py` — ver acima.
 
 ### Classificação de layers (paredes, roof, borders...)
 

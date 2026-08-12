@@ -1,9 +1,10 @@
 """
-CLI: generate the {locations, travelGraph} fragment tibia-idle's db.json
+CLI: generate the {locations, travelGraph} fragment tibia-idle's back-end
 needs for a city's travel graph — sign-marked POIs (HUNT/TEMPLE/DEPOT/QUEST)
 plus every NPC's location and shop, all of them nodes measured against each
-other over the same graph of walkable tiles — and optionally merge it straight
-in with --write-db. See travel_graph.py for the pure logic and
+other over the same graph of walkable tiles — and optionally write it into
+the catalog with --export. See travel_graph.py for the pure logic,
+content_export.py for where the catalog lives, and
 .scratch/travel-graph-and-locations/spec.md for the full design.
 
 Requires the city's full-city map already processed once (`node build_map.js
@@ -18,15 +19,16 @@ about it). A rejected node is never in the fragment — an unreachable
 destination that reached the game would be a hunt the player simply cannot
 play, with no trace of why.
 
-Without --write-db (the default) nothing outside extractor/ is touched.
-With it, `travelGraph` is *replaced* for this city (the fragment is the
-complete edge set — an edge missing from it stops existing), while
-`locations` upsert by id: mechanical fields (position, shop) always take the
-fresh value, a curated `displayName` is never overwritten once a human edit
-removed its `_todo` flag, and a city location the fragment no longer carries
-is reported but never deleted.
+Without --export (the default) nothing outside extractor/ is touched.
+With it, both collections go into content/catalog-source.json, which
+`nx run db:reset` turns into rows. `travelGraph` is *replaced* for this city
+(the fragment is the complete edge set — an edge missing from it stops
+existing), while `locations` upsert by id: mechanical fields (position, shop)
+always take the fresh value, a curated `displayName` is never overwritten once
+a human edit removed its `_todo` flag, and a city location the fragment no
+longer carries is reported but never deleted.
 
-Run: python build_travel_fragment.py ROOK [--write-db]
+Run: python build_travel_fragment.py ROOK [--export]
 """
 
 import argparse
@@ -37,6 +39,7 @@ import sys
 from collections import Counter
 
 import city_ids
+import content_export
 import map_dirs
 from hunt_fragment import map_id_from_folder
 from travel_graph import (
@@ -51,7 +54,7 @@ from travel_graph import (
     extract_tile_flags,
     format_rejection_report,
     match_npc_lua_filename,
-    merge_travel_fragment_into_db,
+    merge_travel_fragment_into_catalog,
     parse_marker_signs,
     parse_npc_shop_lua,
     parse_npc_xml,
@@ -167,10 +170,11 @@ def main():
     parser.add_argument("--canary-dir", default=DEFAULT_CANARY_DIR,
                          help=f"Path do checkout local do Canary (default: {DEFAULT_CANARY_DIR})")
     parser.add_argument(
-        "--write-db",
+        "--export",
         action="store_true",
-        help="Além do fragmento, mescla direto no db.json do tibia-idle: locations/travelGraph "
-        "campos mecânicos sempre atualizados por id/par, displayName já curado nunca é sobrescrito",
+        help="Além do fragmento, escreve locations/travelGraph no catalog-source.json do "
+        "tibia-idle: travelGraph é substituído pra esta cidade, locations tem os campos mecânicos "
+        "atualizados por id e o displayName já curado nunca é sobrescrito",
     )
     parser.add_argument(
         "--npc-reach",
@@ -184,7 +188,7 @@ def main():
     parser.add_argument(
         "--tibia-idle-dir",
         default=DEFAULT_TIBIA_IDLE_DIR,
-        help=f"Path do checkout do tibia-idle, usado só com --write-db (default: {DEFAULT_TIBIA_IDLE_DIR})",
+        help=f"Path do checkout do tibia-idle, usado só com --export (default: {DEFAULT_TIBIA_IDLE_DIR})",
     )
     args = parser.parse_args()
 
@@ -210,32 +214,33 @@ def main():
     else:
         print(f"[OK] nenhum nó sem entrada no grafo -> {report_path}")
 
-    if args.write_db:
-        db_path = os.path.join(args.tibia_idle_dir, "apps", "tibia-idle-mock-api", "db.json")
-        if not os.path.exists(db_path):
-            parser.error(f"db.json não encontrado em {db_path} (use --tibia-idle-dir)")
-        with open(db_path, "r", encoding="utf-8") as f:
-            db = json.load(f)
-        db.setdefault("locations", [])
-        db.setdefault("travelGraph", [])
+    if args.export:
+        catalog_path = content_export.catalog_source_path(args.tibia_idle_dir)
+        if not os.path.exists(catalog_path):
+            parser.error(f"catalog-source.json não encontrado em {catalog_path} (use --tibia-idle-dir)")
+        with open(catalog_path, "r", encoding="utf-8") as f:
+            catalog = json.load(f)
+        for collection in content_export.CATALOG_COLLECTIONS:
+            catalog.setdefault(collection, [])
 
-        report = merge_travel_fragment_into_db(db, fragment, args.city)
+        report = merge_travel_fragment_into_catalog(catalog, fragment, args.city)
 
-        with open(db_path, "w", encoding="utf-8") as f:
-            json.dump(db, f, indent=2, ensure_ascii=False)
+        with open(catalog_path, "w", encoding="utf-8") as f:
+            json.dump(catalog, f, indent=2, ensure_ascii=False)
             f.write("\n")
 
         locations = Counter(report["locations"].values())
         edges = Counter(report["travelGraph"].values())
-        print(f"     db.json: locations {locations['added']} added / {locations['updated']} updated, "
+        print(f"     catalog: locations {locations['added']} added / {locations['updated']} updated, "
               f"travelGraph {edges['added']} added / {edges['updated']} updated / "
-              f"{edges['removed']} removed -> {db_path}")
+              f"{edges['removed']} removed -> {catalog_path}")
         stale = sorted(loc_id for loc_id, state in report["locations"].items() if state == "stale")
         if stale:
-            print(f"[WARN] {len(stale)} locations de {args.city} continuam no db.json sem vir deste run "
+            print(f"[WARN] {len(stale)} locations de {args.city} continuam no catálogo sem vir deste run "
                   f"(não foram apagadas — podem carregar displayName curado): {', '.join(stale)}")
+        print("     Rode `nx run db:reset` no tibia-idle pra o catálogo virar linha no Postgres.")
     else:
-        print("     Nada foi escrito em db.json — copie o fragmento manualmente (ou rode com --write-db).")
+        print("     Nada foi escrito no back-end — copie o fragmento manualmente (ou rode com --export).")
 
 
 if __name__ == "__main__":

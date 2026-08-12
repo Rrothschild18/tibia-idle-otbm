@@ -1,7 +1,7 @@
 """
 Pure logic for the travel-graph & locations pipeline — turning a full-city
 OTBM dump (+ its map.json objectDefs) and the map editor's NPC export into
-the tibia-idle db.json `locations`/`travelGraph` fragment. See
+the tibia-idle `locations`/`travelGraph` catalog fragment. See
 build_travel_fragment.py for the CLI that reads/writes files and
 .scratch/travel-graph-and-locations/spec.md for the full design.
 
@@ -16,7 +16,7 @@ testable with tiny in-memory fixtures (no real .otbm/map.json/.lua touched):
    come from <CIDADE>-npc.xml; shop table comes from a same-named .lua.
 4. Rejecting nodes with no way in — a destination nobody can travel to never
    reaches the fragment; it leaves in a report with whatever identifies it.
-5. db.json merge — `travelGraph` is *replaced* per city (the fragment is the
+5. Catalog merge — `travelGraph` is *replaced* per city (the fragment is the
    complete edge set), while `locations` upsert by id in hunt_fragment.py's
    mechanical-vs-curated split, per-field rather than per-entry: position and
    shop always take the fresh value, `displayName` is append-only once
@@ -69,7 +69,7 @@ def parse_marker_signs(dump: Dict) -> Tuple[List[Dict], List[Dict]]:
     issue, not silently dropped. Two signs that resolve to the same id (typically a
     copy-pasted sign that kept the old uid — a map-editing mistake) are also
     reported: only the first occurrence becomes a location, so a duplicate
-    id can never reach the fragment/db.json and silently collide there."""
+    id can never reach the fragment/catalog and silently collide there."""
     locations: List[Dict] = []
     issues: List[Dict] = []
     seen_ids: Set[str] = set()
@@ -109,7 +109,7 @@ def _title_from_location_id(location_id: str) -> str:
 
 
 # Fields on a `locations` entry that need a human decision and are never
-# overwritten by a later run once the entry is curated (see merge_locations_into_db).
+# overwritten by a later run once the entry is curated (see merge_locations_into_catalog).
 # `huntId` only applies to type "HUNT" — it's the mapId a HUNT location's
 # sign-based id can't derive on its own, since the two ids come from
 # unrelated sources: a sign's CIDADE-TIPO-INCREMENTAL text vs. a hunt map's
@@ -121,7 +121,7 @@ def build_sign_location(sign: Dict) -> Dict:
     """A parsed marker sign -> a draft `locations` entry. `displayName` is a
     placeholder derived from the id; a HUNT location also gets a `huntId`
     placeholder (None) to be pointed at the matching `hunts` entry's mapId —
-    both flagged for human curation via `_todo`. merge_locations_into_db
+    both flagged for human curation via `_todo`. merge_locations_into_catalog
     never overwrites either once curated on a later run. `city`/`status` are
     derived from the id on every run — never curated, never stale."""
     city = city_ids.derive_city(sign["id"])
@@ -503,7 +503,7 @@ def build_npc_locations(
 
 
 # ======================================================
-# Fragment assembly + db.json merge
+# Fragment assembly + catalog merge
 # ======================================================
 
 
@@ -661,10 +661,10 @@ def format_rejection_report(rejections: List[Dict], city: str) -> str:
     return "\n".join(lines).rstrip("\n") + "\n"
 
 
-def merge_locations_into_db(
-    db_locations: List[Dict], fragment_locations: List[Dict], city: str
+def merge_locations_into_catalog(
+    catalog_locations: List[Dict], fragment_locations: List[Dict], city: str
 ) -> Dict[str, str]:
-    """Upserts each fragment location into db_locations in place, by id.
+    """Upserts each fragment location into catalog_locations in place, by id.
     Mechanical fields (position, type, shop) always take the fragment's
     fresh value. Once a human edit removes `_todo` from an existing entry,
     it's considered fully curated: every field in CURATED_LOCATION_FIELDS
@@ -684,40 +684,40 @@ def merge_locations_into_db(
     `"stale"` but never removed: unlike an edge, a location holds curated
     fields, and a node rejected on one run is often a sign the user is
     halfway through fixing. Edges are the collection that gets replaced
-    outright (see merge_travel_graph_into_db)."""
-    by_id = {entry["id"]: i for i, entry in enumerate(db_locations)}
+    outright (see merge_travel_graph_into_catalog)."""
+    by_id = {entry["id"]: i for i, entry in enumerate(catalog_locations)}
     report: Dict[str, str] = {}
 
     fragment_ids = {loc["id"] for loc in fragment_locations}
-    for entry in db_locations:
+    for entry in catalog_locations:
         if city_ids.derive_city(entry["id"]) == city and entry["id"] not in fragment_ids:
             report[entry["id"]] = "stale"
 
     for loc in fragment_locations:
         existing_index = by_id.get(loc["id"])
         if existing_index is None:
-            db_locations.append(dict(loc))
-            by_id[loc["id"]] = len(db_locations) - 1
+            catalog_locations.append(dict(loc))
+            by_id[loc["id"]] = len(catalog_locations) - 1
             report[loc["id"]] = "added"
             continue
 
-        existing = db_locations[existing_index]
+        existing = catalog_locations[existing_index]
         merged = dict(loc)
         if "_todo" not in existing:
             for field in CURATED_LOCATION_FIELDS:
                 if field in existing:
                     merged[field] = existing[field]
             merged.pop("_todo", None)
-        db_locations[existing_index] = merged
+        catalog_locations[existing_index] = merged
         report[loc["id"]] = "updated"
 
     return report
 
 
-def merge_travel_graph_into_db(
-    db_travel_graph: List[Dict], fragment_travel_graph: List[Dict], city: str
+def merge_travel_graph_into_catalog(
+    catalog_travel_graph: List[Dict], fragment_travel_graph: List[Dict], city: str
 ) -> Dict[str, str]:
-    """Replaces `city`'s slice of db_travel_graph in place with the fragment's
+    """Replaces `city`'s slice of catalog_travel_graph in place with the fragment's
     edges — the fragment is the complete edge set for that city, so an edge
     missing from it stops existing in the db too.
 
@@ -739,12 +739,12 @@ def merge_travel_graph_into_db(
     def _touches_city(edge: Dict) -> bool:
         return city in (city_ids.derive_city(edge["from"]), city_ids.derive_city(edge["to"]))
 
-    existing_pairs = {frozenset((e["from"], e["to"])) for e in db_travel_graph}
+    existing_pairs = {frozenset((e["from"], e["to"])) for e in catalog_travel_graph}
     fragment_pairs = {frozenset((e["from"], e["to"])) for e in fragment_travel_graph}
     report: Dict[str, str] = {}
 
     kept: List[Dict] = []
-    for edge in db_travel_graph:
+    for edge in catalog_travel_graph:
         if frozenset((edge["from"], edge["to"])) in fragment_pairs:
             continue  # re-appended below, with the fresh tileCount
         if _touches_city(edge):
@@ -757,12 +757,12 @@ def merge_travel_graph_into_db(
         report[_label(edge)] = "updated" if pair in existing_pairs else "added"
         kept.append(dict(edge))
 
-    db_travel_graph[:] = kept
+    catalog_travel_graph[:] = kept
     return report
 
 
-def merge_travel_fragment_into_db(db: Dict, fragment: Dict, city: str) -> Dict[str, Dict[str, str]]:
+def merge_travel_fragment_into_catalog(db: Dict, fragment: Dict, city: str) -> Dict[str, Dict[str, str]]:
     return {
-        "locations": merge_locations_into_db(db["locations"], fragment["locations"], city),
-        "travelGraph": merge_travel_graph_into_db(db["travelGraph"], fragment["travelGraph"], city),
+        "locations": merge_locations_into_catalog(db["locations"], fragment["locations"], city),
+        "travelGraph": merge_travel_graph_into_catalog(db["travelGraph"], fragment["travelGraph"], city),
     }
