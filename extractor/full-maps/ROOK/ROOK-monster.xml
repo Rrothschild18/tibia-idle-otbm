@@ -1,2 +1,2074 @@
 <?xml version="1.0"?>
-<monsters />
+<monsters>
+	<monster centerx="1105" centery="1010" centerz="7" radius="3">
+		<monster name="Spider" x="1" y="1" z="7" spawntime="90" />
+		<monster name="Spider" x="3" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1112" centery="1010" centerz="7" radius="3">
+		<monster name="Spider" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1098" centery="1017" centerz="7" radius="3">
+		<monster name="Spider" x="1" y="-2" z="7" spawntime="90" />
+		<monster name="Spider" x="2" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1105" centery="1017" centerz="7" radius="3">
+		<monster name="Spider" x="2" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1112" centery="1017" centerz="7" radius="3">
+		<monster name="Spider" x="0" y="-2" z="7" spawntime="90" />
+		<monster name="Spider" x="-1" y="0" z="7" spawntime="90" />
+		<monster name="Spider" x="-1" y="1" z="7" spawntime="90" />
+		<monster name="Spider" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1119" centery="1017" centerz="7" radius="3">
+		<monster name="Spider" x="0" y="-3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1126" centery="1017" centerz="7" radius="3">
+		<monster name="Spider" x="-3" y="-2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1091" centery="1024" centerz="7" radius="3">
+		<monster name="Spider" x="1" y="-3" z="7" spawntime="90" />
+		<monster name="Spider" x="-3" y="0" z="7" spawntime="90" />
+		<monster name="Spider" x="-2" y="2" z="7" spawntime="90" />
+		<monster name="Spider" x="1" y="2" z="7" spawntime="90" />
+		<monster name="Deer" x="2" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1098" centery="1024" centerz="7" radius="3">
+		<monster name="Deer" x="-2" y="-1" z="7" spawntime="90" />
+		<monster name="Spider" x="2" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1105" centery="1024" centerz="7" radius="3">
+		<monster name="Spider" x="3" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1119" centery="1024" centerz="7" radius="3">
+		<monster name="Spider" x="-2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1126" centery="1024" centerz="7" radius="3">
+		<monster name="Spider" x="2" y="-3" z="7" spawntime="90" />
+		<monster name="Spider" x="3" y="-2" z="7" spawntime="90" />
+		<monster name="Spider" x="-1" y="3" z="7" spawntime="90" />
+		<monster name="Spider" x="3" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1070" centery="1031" centerz="7" radius="3">
+		<monster name="Deer" x="-3" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1084" centery="1031" centerz="7" radius="3">
+		<monster name="Spider" x="2" y="-2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1091" centery="1031" centerz="7" radius="3">
+		<monster name="Deer" x="0" y="-2" z="7" spawntime="90" />
+		<monster name="Deer" x="2" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1098" centery="1031" centerz="7" radius="3">
+		<monster name="Spider" x="0" y="-3" z="7" spawntime="90" />
+		<monster name="Deer" x="1" y="2" z="7" spawntime="90" />
+		<monster name="Spider" x="1" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1105" centery="1031" centerz="7" radius="3">
+		<monster name="Spider" x="3" y="-3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1119" centery="1031" centerz="7" radius="3">
+		<monster name="Spider" x="3" y="-3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1126" centery="1031" centerz="7" radius="3">
+		<monster name="Spider" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1140" centery="1031" centerz="7" radius="3">
+		<monster name="Spider" x="-3" y="0" z="7" spawntime="90" />
+		<monster name="Spider" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1063" centery="1038" centerz="7" radius="3">
+		<monster name="Deer" x="2" y="-3" z="7" spawntime="90" />
+		<monster name="Deer" x="-2" y="-1" z="7" spawntime="90" />
+		<monster name="Deer" x="-2" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1098" centery="1038" centerz="7" radius="3">
+		<monster name="Spider" x="0" y="-3" z="7" spawntime="90" />
+		<monster name="Deer" x="3" y="-1" z="7" spawntime="90" />
+		<monster name="Deer" x="3" y="0" z="7" spawntime="90" />
+		<monster name="Deer" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1119" centery="1038" centerz="7" radius="3">
+		<monster name="Troll" x="0" y="-3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1070" centery="1045" centerz="7" radius="3">
+		<monster name="Wolf" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1077" centery="1045" centerz="7" radius="3">
+		<monster name="Wolf" x="0" y="2" z="7" spawntime="90" />
+		<monster name="Wolf" x="-1" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1098" centery="1045" centerz="7" radius="3">
+		<monster name="Deer" x="-3" y="-3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1161" centery="1045" centerz="7" radius="3">
+		<monster name="Deer" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1056" centery="1052" centerz="7" radius="3">
+		<monster name="Bear" x="3" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1084" centery="1052" centerz="7" radius="3">
+		<monster name="Wolf" x="-2" y="-3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1105" centery="1052" centerz="7" radius="3">
+		<monster name="Deer" x="3" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1119" centery="1052" centerz="7" radius="3">
+		<monster name="Deer" x="1" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1168" centery="1052" centerz="7" radius="3">
+		<monster name="Deer" x="2" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1196" centery="1052" centerz="7" radius="3">
+		<monster name="Wolf" x="-3" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1014" centery="1059" centerz="7" radius="3">
+		<monster name="Orc" x="3" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1056" centery="1059" centerz="7" radius="3">
+		<monster name="Bear" x="0" y="-2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1182" centery="1059" centerz="7" radius="3">
+		<monster name="Deer" x="-3" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1196" centery="1059" centerz="7" radius="3">
+		<monster name="Deer" x="-1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1026" centery="1061" centerz="7" radius="2">
+		<monster name="Orc" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1028" centery="1066" centerz="7" radius="3">
+		<monster name="Orc" x="3" y="-1" z="7" spawntime="90" />
+		<monster name="Deer" x="-2" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1035" centery="1066" centerz="7" radius="3">
+		<monster name="Deer" x="-3" y="-2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1063" centery="1066" centerz="7" radius="3">
+		<monster name="Wolf" x="1" y="-3" z="7" spawntime="90" />
+		<monster name="Wolf" x="-3" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1070" centery="1066" centerz="7" radius="3">
+		<monster name="Deer" x="3" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1098" centery="1066" centerz="7" radius="3">
+		<monster name="Wolf" x="-1" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1133" centery="1066" centerz="7" radius="3">
+		<monster name="Snake" x="0" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1154" centery="1066" centerz="7" radius="3">
+		<monster name="Snake" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1161" centery="1066" centerz="7" radius="3">
+		<monster name="Snake" x="-3" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1182" centery="1066" centerz="7" radius="3">
+		<monster name="Deer" x="3" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1196" centery="1066" centerz="7" radius="3">
+		<monster name="Spider" x="-1" y="3" z="7" spawntime="90" />
+		<monster name="Spider" x="1" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1014" centery="1073" centerz="7" radius="3">
+		<monster name="Orc" x="-1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1070" centery="1073" centerz="7" radius="3">
+		<monster name="Deer" x="1" y="-2" z="7" spawntime="90" />
+		<monster name="Deer" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1154" centery="1073" centerz="7" radius="3">
+		<monster name="Bug" x="2" y="-3" z="7" spawntime="90" />
+		<monster name="Bug" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1182" centery="1073" centerz="7" radius="3">
+		<monster name="Deer" x="0" y="1" z="7" spawntime="90" />
+		<monster name="Deer" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1189" centery="1073" centerz="7" radius="3">
+		<monster name="Spider" x="3" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1203" centery="1073" centerz="7" radius="3">
+		<monster name="Spider" x="0" y="1" z="7" spawntime="90" />
+		<monster name="Deer" x="2" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1014" centery="1080" centerz="7" radius="3">
+		<monster name="Deer" x="-3" y="-3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1091" centery="1080" centerz="7" radius="3">
+		<monster name="Wolf" x="-3" y="1" z="7" spawntime="90" />
+		<monster name="Deer" x="-2" y="1" z="7" spawntime="90" />
+		<monster name="Wolf" x="2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1098" centery="1080" centerz="7" radius="3">
+		<monster name="Snake" x="-1" y="-1" z="7" spawntime="90" />
+		<monster name="Snake" x="-3" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1112" centery="1080" centerz="7" radius="3">
+		<monster name="Snake" x="0" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1119" centery="1080" centerz="7" radius="3">
+		<monster name="Snake" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1126" centery="1080" centerz="7" radius="3">
+		<monster name="Snake" x="2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1189" centery="1080" centerz="7" radius="3">
+		<monster name="Spider" x="2" y="-2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1210" centery="1080" centerz="7" radius="3">
+		<monster name="Wolf" x="-3" y="-2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1035" centery="1087" centerz="7" radius="3">
+		<monster name="Deer" x="3" y="-3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1042" centery="1087" centerz="7" radius="3">
+		<monster name="Deer" x="-2" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1049" centery="1087" centerz="7" radius="3">
+		<monster name="Deer" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1084" centery="1087" centerz="7" radius="3">
+		<monster name="Wolf" x="2" y="-2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1091" centery="1087" centerz="7" radius="3">
+		<monster name="Wolf" x="1" y="-2" z="7" spawntime="90" />
+		<monster name="Snake" x="-3" y="-1" z="7" spawntime="90" />
+		<monster name="Snake" x="-1" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1098" centery="1087" centerz="7" radius="3">
+		<monster name="Snake" x="3" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1112" centery="1087" centerz="7" radius="3">
+		<monster name="Snake" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1119" centery="1087" centerz="7" radius="3">
+		<monster name="Snake" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1161" centery="1087" centerz="7" radius="3">
+		<monster name="Deer" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1168" centery="1087" centerz="7" radius="3">
+		<monster name="Deer" x="-2" y="-2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1182" centery="1087" centerz="7" radius="3">
+		<monster name="Wolf" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1203" centery="1087" centerz="7" radius="3">
+		<monster name="Deer" x="-3" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1210" centery="1087" centerz="7" radius="3">
+		<monster name="Wolf" x="2" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1007" centery="1094" centerz="7" radius="3">
+		<monster name="Snake" x="1" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1035" centery="1094" centerz="7" radius="3">
+		<monster name="Deer" x="2" y="-3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1042" centery="1094" centerz="7" radius="3">
+		<monster name="Deer" x="-3" y="-3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1056" centery="1094" centerz="7" radius="3">
+		<monster name="Snake" x="2" y="-2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1063" centery="1094" centerz="7" radius="3">
+		<monster name="Snake" x="-3" y="-2" z="7" spawntime="90" />
+		<monster name="Snake" x="-3" y="0" z="7" spawntime="90" />
+		<monster name="Snake" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1070" centery="1094" centerz="7" radius="3">
+		<monster name="Snake" x="0" y="-3" z="7" spawntime="90" />
+		<monster name="Snake" x="-2" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1084" centery="1094" centerz="7" radius="3">
+		<monster name="Snake" x="-2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1210" centery="1094" centerz="7" radius="3">
+		<monster name="Deer" x="2" y="-3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1014" centery="1101" centerz="7" radius="3">
+		<monster name="Snake" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1028" centery="1101" centerz="7" radius="3">
+		<monster name="Snake" x="3" y="1" z="7" spawntime="90" />
+		<monster name="Snake" x="2" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1042" centery="1101" centerz="7" radius="3">
+		<monster name="Snake" x="-1" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1049" centery="1101" centerz="7" radius="3">
+		<monster name="Snake" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1070" centery="1101" centerz="7" radius="3">
+		<monster name="Snake" x="-2" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1088" centery="1101" centerz="7" radius="3">
+		<monster name="Troll" x="-1" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1105" centery="1101" centerz="7" radius="3">
+		<monster name="Cat" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1021" centery="1108" centerz="7" radius="3">
+		<monster name="Snake" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1035" centery="1108" centerz="7" radius="3">
+		<monster name="Snake" x="2" y="-3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1049" centery="1108" centerz="7" radius="3">
+		<monster name="Snake" x="0" y="-2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1175" centery="1108" centerz="7" radius="3">
+		<monster name="Deer" x="1" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1203" centery="1108" centerz="7" radius="3">
+		<monster name="Spider" x="-1" y="-2" z="7" spawntime="90" />
+		<monster name="Spider" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1210" centery="1108" centerz="7" radius="3">
+		<monster name="Spider" x="-3" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1217" centery="1108" centerz="7" radius="3">
+		<monster name="Spider" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1223" centery="1109" centerz="7" radius="3" />
+	<monster centerx="1230" centery="1109" centerz="7" radius="3">
+		<monster name="Spider" x="0" y="-2" z="7" spawntime="60" />
+		<monster name="Spider" x="-2" y="0" z="7" spawntime="60" />
+		<monster name="Spider" x="-1" y="2" z="7" spawntime="60" />
+	</monster>
+	<monster centerx="1196" centery="1112" centerz="7" radius="3">
+		<monster name="Bug" x="-3" y="-3" z="7" spawntime="90" />
+		<monster name="Bug" x="0" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1014" centery="1115" centerz="7" radius="3">
+		<monster name="Snake" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1119" centery="1115" centerz="7" radius="3">
+		<monster name="Cat" x="0" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1126" centery="1115" centerz="7" radius="3">
+		<monster name="Cat" x="0" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1133" centery="1115" centerz="7" radius="3">
+		<monster name="Cat" x="-1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1161" centery="1115" centerz="7" radius="3">
+		<monster name="Spider" x="1" y="0" z="7" spawntime="90" />
+		<monster name="Spider" x="2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1168" centery="1115" centerz="7" radius="3">
+		<monster name="Spider" x="1" y="-2" z="7" spawntime="90" />
+		<monster name="Spider" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1182" centery="1115" centerz="7" radius="3">
+		<monster name="Wolf" x="1" y="-2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1189" centery="1115" centerz="7" radius="3">
+		<monster name="Wolf" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1203" centery="1115" centerz="7" radius="3">
+		<monster name="Bug" x="-1" y="-1" z="7" spawntime="90" />
+		<monster name="Bug" x="-1" y="1" z="7" spawntime="90" />
+		<monster name="Bug" x="2" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1210" centery="1115" centerz="7" radius="3">
+		<monster name="Poison Spider" x="-1" y="-2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1217" centery="1115" centerz="7" radius="3">
+		<monster name="Poison Spider" x="2" y="-3" z="7" spawntime="90" />
+		<monster name="Spider" x="-2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1097" centery="1119" centerz="7" radius="5">
+		<monster name="Chicken" x="-3" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1088" centery="1120" centerz="7" radius="5">
+		<monster name="Chicken" x="-5" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1223" centery="1121" centerz="7" radius="3">
+		<monster name="Poison Spider" x="-1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1014" centery="1122" centerz="7" radius="3">
+		<monster name="Rabbit" x="2" y="-3" z="7" spawntime="90" />
+		<monster name="Rabbit" x="3" y="-2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1021" centery="1122" centerz="7" radius="3">
+		<monster name="Wolf" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1028" centery="1122" centerz="7" radius="3">
+		<monster name="Chicken" x="3" y="-3" z="7" spawntime="90" />
+		<monster name="Wolf" x="-3" y="-2" z="7" spawntime="90" />
+		<monster name="Wolf" x="-1" y="-2" z="7" spawntime="90" />
+		<monster name="Wolf" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1056" centery="1122" centerz="7" radius="3">
+		<monster name="Rabbit" x="-1" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1063" centery="1122" centerz="7" radius="3">
+		<monster name="Rabbit" x="-3" y="-3" z="7" spawntime="90" />
+		<monster name="Chicken" x="-3" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1161" centery="1122" centerz="7" radius="3">
+		<monster name="Deer" x="3" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1175" centery="1122" centerz="7" radius="3">
+		<monster name="Deer" x="0" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1075" centery="1124" centerz="7" radius="5">
+		<monster name="Chicken" x="-2" y="-3" z="7" spawntime="90" />
+		<monster name="Chicken" x="-2" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1228" centery="1126" centerz="7" radius="3">
+		<monster name="Spider" x="1" y="-3" z="7" spawntime="60" />
+		<monster name="Spider" x="-1" y="0" z="7" spawntime="60" />
+	</monster>
+	<monster centerx="1042" centery="1129" centerz="7" radius="3">
+		<monster name="Chicken" x="3" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1091" centery="1129" centerz="7" radius="3">
+		<monster name="Chicken" x="-2" y="0" z="7" spawntime="90" />
+		<monster name="Chicken" x="2" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1196" centery="1129" centerz="7" radius="3">
+		<monster name="Wolf" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1076" centery="1130" centerz="7" radius="5">
+		<monster name="Chicken" x="3" y="1" z="7" spawntime="90" />
+		<monster name="Chicken" x="2" y="4" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1188" centery="1130" centerz="7" radius="3">
+		<monster name="Wolf" x="-1" y="-3" z="7" spawntime="60" />
+		<monster name="Wolf" x="1" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1181" centery="1132" centerz="7" radius="3">
+		<monster name="Wolf" x="-3" y="-3" z="7" spawntime="60" />
+		<monster name="Wolf" x="-1" y="-1" z="7" spawntime="60" />
+	</monster>
+	<monster centerx="1035" centery="1136" centerz="7" radius="3">
+		<monster name="Deer" x="1" y="-3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1056" centery="1136" centerz="7" radius="3">
+		<monster name="Deer" x="-2" y="-2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1070" centery="1136" centerz="7" radius="3">
+		<monster name="Chicken" x="-2" y="-3" z="7" spawntime="90" />
+		<monster name="Chicken" x="-3" y="-1" z="7" spawntime="90" />
+		<monster name="Chicken" x="2" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1084" centery="1136" centerz="7" radius="3">
+		<monster name="Chicken" x="3" y="2" z="7" spawntime="90" />
+		<monster name="Chicken" x="0" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1168" centery="1136" centerz="7" radius="3">
+		<monster name="Rat" x="-2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1189" centery="1136" centerz="7" radius="3">
+		<monster name="Wolf" x="3" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1196" centery="1136" centerz="7" radius="3" />
+	<monster centerx="1201" centery="1140" centerz="7" radius="3">
+		<monster name="Wolf" x="-1" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1208" centery="1140" centerz="7" radius="3">
+		<monster name="Wolf" x="-2" y="-1" z="7" spawntime="90" />
+		<monster name="Wolf" x="0" y="-1" z="7" spawntime="60" />
+	</monster>
+	<monster centerx="1182" centery="1141" centerz="7" radius="3">
+		<monster name="Wolf" x="-1" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1063" centery="1143" centerz="7" radius="3">
+		<monster name="Rabbit" x="0" y="-1" z="7" spawntime="90" />
+		<monster name="Chicken" x="2" y="-1" z="7" spawntime="90" />
+		<monster name="Snake" x="0" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1070" centery="1143" centerz="7" radius="3">
+		<monster name="Snake" x="1" y="-2" z="7" spawntime="90" />
+		<monster name="Deer" x="0" y="0" z="7" spawntime="90" />
+		<monster name="Deer" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1077" centery="1143" centerz="7" radius="3">
+		<monster name="Chicken" x="3" y="-3" z="7" spawntime="90" />
+		<monster name="Chicken" x="1" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1105" centery="1143" centerz="7" radius="3">
+		<monster name="Sheep" x="1" y="-3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1112" centery="1143" centerz="7" radius="3">
+		<monster name="Sheep" x="-3" y="-3" z="7" spawntime="90" />
+		<monster name="Sheep" x="1" y="-2" z="7" spawntime="90" />
+		<monster name="Pig" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1161" centery="1143" centerz="7" radius="3">
+		<monster name="Snake" x="-1" y="-2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1168" centery="1143" centerz="7" radius="3">
+		<monster name="Spider" x="-2" y="1" z="7" spawntime="90" />
+		<monster name="Rat" x="0" y="2" z="7" spawntime="90" />
+		<monster name="Spider" x="-3" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1188" centery="1143" centerz="7" radius="3" />
+	<monster centerx="1196" centery="1143" centerz="7" radius="3" />
+	<monster centerx="1021" centery="1150" centerz="7" radius="3">
+		<monster name="Snake" x="-1" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1056" centery="1150" centerz="7" radius="3">
+		<monster name="Rabbit" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1063" centery="1150" centerz="7" radius="3">
+		<monster name="Chicken" x="3" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1038" centery="1151" centerz="7" radius="3">
+		<monster name="Wolf" x="-2" y="-1" z="7" spawntime="90" />
+		<monster name="Wolf" x="2" y="0" z="7" spawntime="90" />
+		<monster name="Wolf" x="0" y="2" z="7" spawntime="90" />
+		<monster name="Wolf" x="-3" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1188" centery="1151" centerz="7" radius="3">
+		<monster name="Wolf" x="2" y="-3" z="7" spawntime="90" />
+		<monster name="Wolf" x="0" y="1" z="7" spawntime="60" />
+	</monster>
+	<monster centerx="1021" centery="1157" centerz="7" radius="3">
+		<monster name="Snake" x="0" y="-3" z="7" spawntime="90" />
+		<monster name="Snake" x="-2" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1028" centery="1157" centerz="7" radius="3">
+		<monster name="Chicken" x="3" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1035" centery="1157" centerz="7" radius="3">
+		<monster name="Rabbit" x="0" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1063" centery="1157" centerz="7" radius="3">
+		<monster name="Deer" x="3" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1091" centery="1157" centerz="7" radius="3">
+		<monster name="Rabbit" x="-3" y="-3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1147" centery="1157" centerz="7" radius="3">
+		<monster name="Rabbit" x="3" y="-2" z="7" spawntime="90" />
+		<monster name="Rabbit" x="-1" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1042" centery="1164" centerz="7" radius="3">
+		<monster name="Snake" x="2" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1049" centery="1164" centerz="7" radius="3">
+		<monster name="Snake" x="2" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1056" centery="1164" centerz="7" radius="3">
+		<monster name="Spider" x="2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1070" centery="1164" centerz="7" radius="3">
+		<monster name="Chicken" x="-2" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1126" centery="1164" centerz="7" radius="3">
+		<monster name="Deer" x="2" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1133" centery="1164" centerz="7" radius="3">
+		<monster name="Deer" x="-3" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1063" centery="1171" centerz="7" radius="3">
+		<monster name="Wolf" x="3" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1070" centery="1171" centerz="7" radius="3">
+		<monster name="Wolf" x="-2" y="-2" z="7" spawntime="90" />
+		<monster name="Wolf" x="-3" y="-1" z="7" spawntime="90" />
+		<monster name="Wolf" x="-2" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1104" centery="1171" centerz="7" radius="1">
+		<monster name="Blue Butterfly" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1140" centery="1171" centerz="7" radius="3">
+		<monster name="Rabbit" x="-2" y="2" z="7" spawntime="90" />
+		<monster name="Rabbit" x="0" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1106" centery="1173" centerz="7" radius="1">
+		<monster name="Red Butterfly" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1097" centery="1175" centerz="7" radius="1">
+		<monster name="Blue Butterfly" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1140" centery="1178" centerz="7" radius="3">
+		<monster name="Rabbit" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1147" centery="1178" centerz="7" radius="3">
+		<monster name="Rabbit" x="-2" y="-2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="1088" centery="1003" centerz="8" radius="2">
+		<monster name="Spider" x="1" y="-1" z="8" spawntime="90" />
+		<monster name="Spider" x="0" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1116" centery="1005" centerz="8" radius="2">
+		<monster name="Troll" x="-1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1161" centery="1010" centerz="8" radius="3">
+		<monster name="Troll" x="-1" y="-1" z="8" spawntime="90" />
+		<monster name="Troll" x="1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1133" centery="1011" centerz="8" radius="2">
+		<monster name="Troll" x="-1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1127" centery="1017" centerz="8" radius="3">
+		<monster name="Troll" x="-1" y="0" z="8" spawntime="90" />
+		<monster name="Troll" x="2" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1098" centery="1024" centerz="8" radius="3">
+		<monster name="Spider" x="1" y="-2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1128" centery="1031" centerz="8" radius="2">
+		<monster name="Spider" x="1" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1210" centery="1031" centerz="8" radius="1">
+		<monster name="Wolf" x="1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1217" centery="1031" centerz="8" radius="3">
+		<monster name="Wolf" x="-2" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1134" centery="1035" centerz="8" radius="3">
+		<monster name="Spider" x="2" y="-3" z="8" spawntime="90" />
+		<monster name="Spider" x="3" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1141" centery="1035" centerz="8" radius="3">
+		<monster name="Spider" x="-2" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1174" centery="1036" centerz="8" radius="4">
+		<monster name="Troll" x="2" y="-3" z="8" spawntime="90" />
+		<monster name="Troll" x="3" y="0" z="8" spawntime="90" />
+		<monster name="Troll" x="-3" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1208" centery="1037" centerz="8" radius="1">
+		<monster name="Wolf" x="0" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1091" centery="1038" centerz="8" radius="3">
+		<monster name="Spider" x="-2" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1203" centery="1041" centerz="8" radius="1">
+		<monster name="Wolf" x="0" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1217" centery="1043" centerz="8" radius="1">
+		<monster name="Wolf" x="-1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1091" centery="1045" centerz="8" radius="3">
+		<monster name="Troll" x="-3" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1198" centery="1045" centerz="8" radius="1">
+		<monster name="Wolf" x="0" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1210" centery="1045" centerz="8" radius="3">
+		<monster name="Wolf" x="-1" y="-2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1119" centery="1052" centerz="8" radius="3">
+		<monster name="Young Troll" x="-2" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1140" centery="1052" centerz="8" radius="3">
+		<monster name="Young Troll" x="-3" y="-3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1157" centery="1052" centerz="8" radius="3">
+		<monster name="Young Troll" x="-1" y="-2" z="8" spawntime="90" />
+		<monster name="Young Troll" x="2" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1021" centery="1059" centerz="8" radius="3">
+		<monster name="Skeleton" x="-1" y="-2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1135" centery="1061" centerz="8" radius="2">
+		<monster name="Rat" x="-1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1098" centery="1073" centerz="8" radius="3">
+		<monster name="Bug" x="2" y="1" z="8" spawntime="90" />
+		<monster name="Bug" x="-2" y="2" z="8" spawntime="90" />
+		<monster name="Bug" x="0" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1133" centery="1073" centerz="8" radius="3">
+		<monster name="Bug" x="-1" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1189" centery="1073" centerz="8" radius="3">
+		<monster name="Spider" x="2" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1196" centery="1073" centerz="8" radius="3">
+		<monster name="Spider" x="-1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1203" centery="1073" centerz="8" radius="3">
+		<monster name="Rotworm" x="3" y="-2" z="8" spawntime="90" />
+		<monster name="Rotworm" x="2" y="-1" z="8" spawntime="90" />
+		<monster name="Rotworm" x="2" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1021" centery="1080" centerz="8" radius="3">
+		<monster name="Orc" x="-2" y="-3" z="8" spawntime="90" />
+		<monster name="Orc" x="-2" y="-2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1028" centery="1080" centerz="8" radius="3">
+		<monster name="Orc" x="0" y="1" z="8" spawntime="90" />
+		<monster name="Orc" x="0" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1063" centery="1080" centerz="8" radius="3">
+		<monster name="Rat" x="0" y="2" z="8" spawntime="90" />
+		<monster name="Rat" x="0" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1070" centery="1080" centerz="8" radius="3">
+		<monster name="Rat" x="-1" y="-2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1098" centery="1080" centerz="8" radius="3">
+		<monster name="Bug" x="3" y="-3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1105" centery="1080" centerz="8" radius="3">
+		<monster name="Bug" x="1" y="-3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1112" centery="1080" centerz="8" radius="3">
+		<monster name="Bug" x="0" y="-2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1119" centery="1080" centerz="8" radius="3">
+		<monster name="Bug" x="-3" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1189" centery="1080" centerz="8" radius="3">
+		<monster name="Spider" x="-1" y="-3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1196" centery="1080" centerz="8" radius="3">
+		<monster name="Poison Spider" x="-2" y="-3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1203" centery="1080" centerz="8" radius="3">
+		<monster name="Rotworm" x="1" y="-3" z="8" spawntime="90" />
+		<monster name="Rotworm" x="2" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1014" centery="1087" centerz="8" radius="3">
+		<monster name="Orc" x="0" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1049" centery="1087" centerz="8" radius="3">
+		<monster name="Rat" x="2" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1070" centery="1087" centerz="8" radius="3">
+		<monster name="Rat" x="-2" y="-3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1119" centery="1087" centerz="8" radius="3">
+		<monster name="Bug" x="0" y="-3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1126" centery="1087" centerz="8" radius="3">
+		<monster name="Bug" x="-3" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1056" centery="1094" centerz="8" radius="3">
+		<monster name="Rat" x="1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1063" centery="1094" centerz="8" radius="3">
+		<monster name="Rat" x="-2" y="-2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1070" centery="1094" centerz="8" radius="3">
+		<monster name="Rat" x="-1" y="-2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1014" centery="1101" centerz="8" radius="3">
+		<monster name="Orc" x="-1" y="-2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1063" centery="1101" centerz="8" radius="3">
+		<monster name="Rat" x="0" y="-3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1084" centery="1101" centerz="8" radius="3">
+		<monster name="Bug" x="-1" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1098" centery="1106" centerz="8" radius="3">
+		<monster name="Spider" x="-2" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1084" centery="1108" centerz="8" radius="3">
+		<monster name="Rat" x="-3" y="-2" z="8" spawntime="90" />
+		<monster name="Spider" x="-1" y="-1" z="8" spawntime="90" />
+		<monster name="Rat" x="-2" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1098" centery="1115" centerz="8" radius="3">
+		<monster name="Spider" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1119" centery="1115" centerz="8" radius="3">
+		<monster name="Rat" x="2" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1021" centery="1118" centerz="8" radius="3">
+		<monster name="Wolf" x="1" y="0" z="8" spawntime="90" />
+		<monster name="Wolf" x="3" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1028" centery="1122" centerz="8" radius="3">
+		<monster name="Wolf" x="-3" y="-1" z="8" spawntime="90" />
+		<monster name="Wolf" x="-3" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1098" centery="1122" centerz="8" radius="3">
+		<monster name="Bug" x="-1" y="-2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1112" centery="1122" centerz="8" radius="3">
+		<monster name="Rat" x="1" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1133" centery="1122" centerz="8" radius="1">
+		<monster name="Rat" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1140" centery="1122" centerz="8" radius="3">
+		<monster name="Rat" x="-1" y="3" z="8" spawntime="90" />
+		<monster name="Rat" x="1" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1195" centery="1123" centerz="8" radius="3">
+		<monster name="Bear" x="1" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1123" centery="1127" centerz="8" radius="1">
+		<monster name="Rat" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1014" centery="1129" centerz="8" radius="3">
+		<monster name="Troll" x="1" y="-3" z="8" spawntime="90" />
+		<monster name="Troll" x="-1" y="0" z="8" spawntime="90" />
+		<monster name="Troll" x="3" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1049" centery="1129" centerz="8" radius="3">
+		<monster name="Rabbit" x="3" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1056" centery="1129" centerz="8" radius="3">
+		<monster name="Rabbit" x="-3" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1063" centery="1129" centerz="8" radius="3">
+		<monster name="Rabbit" x="-3" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1112" centery="1129" centerz="8" radius="3">
+		<monster name="Rat" x="-1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1147" centery="1129" centerz="8" radius="3">
+		<monster name="Rat" x="-1" y="-2" z="8" spawntime="90" />
+		<monster name="Rat" x="-2" y="2" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="1151" centery="1129" centerz="8" radius="1">
+		<monster name="Rat" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1168" centery="1129" centerz="8" radius="3">
+		<monster name="Rat" x="-1" y="0" z="8" spawntime="90" />
+		<monster name="Rat" x="-2" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1203" centery="1129" centerz="8" radius="3">
+		<monster name="Bear" x="3" y="-3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1217" centery="1129" centerz="8" radius="3">
+		<monster name="Bear" x="2" y="-3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1181" centery="1131" centerz="8" radius="3">
+		<monster name="Bear" x="3" y="1" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="1013" centery="1135" centerz="8" radius="3">
+		<monster name="Troll" x="-3" y="-3" z="8" spawntime="90" />
+		<monster name="Troll" x="-1" y="-1" z="8" spawntime="90" />
+		<monster name="Troll" x="1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1042" centery="1136" centerz="8" radius="3">
+		<monster name="Troll" x="2" y="-3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1056" centery="1136" centerz="8" radius="3">
+		<monster name="Rabbit" x="2" y="0" z="8" spawntime="90" />
+		<monster name="Rabbit" x="3" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1063" centery="1136" centerz="8" radius="3">
+		<monster name="Rabbit" x="1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1077" centery="1136" centerz="8" radius="3">
+		<monster name="Rat" x="-2" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1084" centery="1136" centerz="8" radius="3">
+		<monster name="Rat" x="-1" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1105" centery="1136" centerz="8" radius="3">
+		<monster name="Rat" x="3" y="-3" z="8" spawntime="90" />
+		<monster name="Rat" x="0" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1133" centery="1136" centerz="8" radius="3">
+		<monster name="Rat" x="-2" y="0" z="8" spawntime="90" />
+		<monster name="Rat" x="-2" y="2" z="8" spawntime="90" />
+		<monster name="Rat" x="-1" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1140" centery="1136" centerz="8" radius="3">
+		<monster name="Rat" x="-1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1154" centery="1136" centerz="8" radius="3">
+		<monster name="Rat" x="3" y="-3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1189" centery="1136" centerz="8" radius="3">
+		<monster name="Bear" x="3" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1210" centery="1136" centerz="8" radius="3">
+		<monster name="Bear" x="2" y="-2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1124" centery="1139" centerz="8" radius="1">
+		<monster name="Rat" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="993" centery="1140" centerz="8" radius="3">
+		<monster name="Troll" x="2" y="-2" z="8" spawntime="90" />
+		<monster name="Troll" x="-3" y="0" z="8" spawntime="90" />
+		<monster name="Troll" x="-1" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1009" centery="1140" centerz="8" radius="3">
+		<monster name="Troll" x="-1" y="-2" z="8" spawntime="90" />
+		<monster name="Troll" x="-2" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1204" centery="1141" centerz="8" radius="3">
+		<monster name="Bear" x="-1" y="0" z="8" spawntime="90" />
+		<monster name="Bear" x="-1" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1035" centery="1142" centerz="8" radius="5">
+		<monster name="Wolf" x="-2" y="-2" z="8" spawntime="90" />
+		<monster name="Wolf" x="-4" y="-1" z="8" spawntime="90" />
+		<monster name="Wolf" x="4" y="0" z="8" spawntime="90" />
+		<monster name="Wolf" x="2" y="2" z="8" spawntime="90" />
+		<monster name="Wolf" x="-3" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1149" centery="1142" centerz="8" radius="1">
+		<monster name="Rat" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="986" centery="1143" centerz="8" radius="3">
+		<monster name="Troll" x="1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1070" centery="1143" centerz="8" radius="3">
+		<monster name="Rabbit" x="-2" y="-3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1098" centery="1143" centerz="8" radius="3">
+		<monster name="Rat" x="-3" y="2" z="8" spawntime="90" />
+		<monster name="Rat" x="0" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1112" centery="1143" centerz="8" radius="3">
+		<monster name="Rat" x="-2" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1119" centery="1143" centerz="8" radius="3">
+		<monster name="Rat" x="-2" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1133" centery="1143" centerz="8" radius="3">
+		<monster name="Rat" x="1" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1161" centery="1143" centerz="8" radius="3">
+		<monster name="Rat" x="-3" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1189" centery="1143" centerz="8" radius="3">
+		<monster name="Bear" x="2" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1147" centery="1145" centerz="8" radius="1">
+		<monster name="Rat" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1018" centery="1147" centerz="8" radius="3">
+		<monster name="Troll" x="-2" y="-2" z="8" spawntime="90" />
+		<monster name="Troll" x="2" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1026" centery="1150" centerz="8" radius="3">
+		<monster name="Troll" x="-1" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1042" centery="1150" centerz="8" radius="3">
+		<monster name="Spider" x="2" y="0" z="8" spawntime="90" />
+		<monster name="Spider" x="-2" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1077" centery="1150" centerz="8" radius="3">
+		<monster name="Rat" x="-1" y="-2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1112" centery="1150" centerz="8" radius="3">
+		<monster name="Rat" x="1" y="-2" z="8" spawntime="90" />
+		<monster name="Rat" x="-1" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1146" centery="1151" centerz="8" radius="1">
+		<monster name="Rat" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1013" centery="1152" centerz="8" radius="3">
+		<monster name="Troll" x="1" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1021" centery="1157" centerz="8" radius="3">
+		<monster name="Troll" x="1" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1028" centery="1157" centerz="8" radius="3">
+		<monster name="Troll" x="-2" y="-3" z="8" spawntime="90" />
+		<monster name="Spider" x="3" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1119" centery="1157" centerz="8" radius="3">
+		<monster name="Rat" x="-1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1140" centery="1157" centerz="8" radius="3">
+		<monster name="Rat" x="2" y="0" z="8" spawntime="90" />
+		<monster name="Rat" x="3" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1154" centery="1157" centerz="8" radius="3">
+		<monster name="Rat" x="3" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1084" centery="1160" centerz="8" radius="1">
+		<monster name="Rat" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1088" centery="1160" centerz="8" radius="1">
+		<monster name="Rat" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="999" centery="1161" centerz="8" radius="5">
+		<monster name="Spider" x="0" y="-3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="987" centery="1163" centerz="8" radius="5">
+		<monster name="Spider" x="0" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1021" centery="1164" centerz="8" radius="3">
+		<monster name="Spider" x="2" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1035" centery="1164" centerz="8" radius="3">
+		<monster name="Snake" x="3" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1042" centery="1164" centerz="8" radius="3">
+		<monster name="Snake" x="-1" y="1" z="8" spawntime="90" />
+		<monster name="Snake" x="-3" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1077" centery="1164" centerz="8" radius="3">
+		<monster name="Rat" x="1" y="-1" z="8" spawntime="90" />
+		<monster name="Rat" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1091" centery="1164" centerz="8" radius="3">
+		<monster name="Rat" x="2" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1182" centery="1164" centerz="8" radius="3">
+		<monster name="Cave Rat" x="-3" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1109" centery="1167" centerz="8" radius="1">
+		<monster name="Rat" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1117" centery="1168" centerz="8" radius="1">
+		<monster name="Rat" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="988" centery="1171" centerz="8" radius="5">
+		<monster name="Spider" x="-1" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1000" centery="1171" centerz="8" radius="3">
+		<monster name="Spider" x="3" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1007" centery="1171" centerz="8" radius="3">
+		<monster name="Spider" x="-1" y="-3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1084" centery="1171" centerz="8" radius="3">
+		<monster name="Rat" x="2" y="-2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1105" centery="1171" centerz="8" radius="3">
+		<monster name="Rat" x="3" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1036" centery="1173" centerz="8" radius="3">
+		<monster name="Snake" x="-2" y="-3" z="8" spawntime="90" />
+		<monster name="Snake" x="2" y="-3" z="8" spawntime="90" />
+		<monster name="Snake" x="2" y="0" z="8" spawntime="90" />
+		<monster name="Snake" x="-1" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1030" centery="1174" centerz="8" radius="3">
+		<monster name="Snake" x="2" y="-3" z="8" spawntime="90" />
+		<monster name="Snake" x="0" y="-1" z="8" spawntime="90" />
+		<monster name="Snake" x="2" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1116" centery="1175" centerz="8" radius="1">
+		<monster name="Rat" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1057" centery="1177" centerz="8" radius="3">
+		<monster name="Wolf" x="3" y="-2" z="8" spawntime="90" />
+		<monster name="Wolf" x="-2" y="-1" z="8" spawntime="90" />
+		<monster name="Wolf" x="0" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1021" centery="1178" centerz="8" radius="3">
+		<monster name="Spider" x="-1" y="-3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1091" centery="1178" centerz="8" radius="3">
+		<monster name="Rat" x="-1" y="-3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1168" centery="1178" centerz="8" radius="3">
+		<monster name="Rat" x="-2" y="-2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="1104" centery="999" centerz="9" radius="2">
+		<monster name="Spider" x="-1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1111" centery="999" centerz="9" radius="2">
+		<monster name="Poison Spider" x="-1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1081" centery="1000" centerz="9" radius="2">
+		<monster name="Spider" x="0" y="-1" z="9" spawntime="90" />
+		<monster name="Spider" x="1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1098" centery="1010" centerz="9" radius="3">
+		<monster name="Spider" x="0" y="1" z="9" spawntime="90" />
+		<monster name="Poison Spider" x="2" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1105" centery="1010" centerz="9" radius="3">
+		<monster name="Poison Spider" x="-1" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1125" centery="1016" centerz="9" radius="2">
+		<monster name="Troll" x="-1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1098" centery="1017" centerz="9" radius="3">
+		<monster name="Poison Spider" x="0" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1105" centery="1017" centerz="9" radius="3">
+		<monster name="Spider" x="1" y="-1" z="9" spawntime="90" />
+		<monster name="Poison Spider" x="3" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1105" centery="1024" centerz="9" radius="3">
+		<monster name="Rat" x="0" y="2" z="9" spawntime="90" />
+		<monster name="Rat" x="-3" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1063" centery="1031" centerz="9" radius="3">
+		<monster name="Spider" x="-3" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1077" centery="1031" centerz="9" radius="3">
+		<monster name="Spider" x="0" y="-3" z="9" spawntime="90" />
+		<monster name="Spider" x="-1" y="-2" z="9" spawntime="90" />
+		<monster name="Spider" x="-2" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1084" centery="1031" centerz="9" radius="3">
+		<monster name="Spider" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1140" centery="1031" centerz="9" radius="3">
+		<monster name="Orc" x="-3" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1112" centery="1037" centerz="9" radius="3">
+		<monster name="Troll" x="-2" y="-2" z="9" spawntime="90" />
+		<monster name="Troll" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1131" centery="1037" centerz="9" radius="2">
+		<monster name="Orc" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1063" centery="1038" centerz="9" radius="3">
+		<monster name="Spider" x="-1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1161" centery="1038" centerz="9" radius="3">
+		<monster name="Orc" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1091" centery="1045" centerz="9" radius="3">
+		<monster name="Troll" x="-2" y="0" z="9" spawntime="90" />
+		<monster name="Troll" x="0" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1106" centery="1045" centerz="9" radius="2">
+		<monster name="Spider" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1110" centery="1053" centerz="9" radius="3">
+		<monster name="Spider" x="0" y="-2" z="9" spawntime="90" />
+		<monster name="Spider" x="-1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1049" centery="1059" centerz="9" radius="3">
+		<monster name="Rat" x="3" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1091" centery="1059" centerz="9" radius="3">
+		<monster name="Young Troll" x="3" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1021" centery="1066" centerz="9" radius="3">
+		<monster name="Skeleton" x="-2" y="-3" z="9" spawntime="90" />
+		<monster name="Skeleton" x="2" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1049" centery="1066" centerz="9" radius="3">
+		<monster name="Rat" x="3" y="-2" z="9" spawntime="90" />
+		<monster name="Rat" x="-2" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1056" centery="1066" centerz="9" radius="3">
+		<monster name="Rat" x="1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1112" centery="1066" centerz="9" radius="3">
+		<monster name="Young Troll" x="-1" y="2" z="9" spawntime="90" />
+		<monster name="Young Troll" x="-1" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1168" centery="1066" centerz="9" radius="3">
+		<monster name="Wolf" x="-3" y="1" z="9" spawntime="90" />
+		<monster name="Wolf" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1217" centery="1066" centerz="9" radius="3">
+		<monster name="Rotworm" x="-3" y="-1" z="9" spawntime="90" />
+		<monster name="Rotworm" x="-3" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1056" centery="1073" centerz="9" radius="3">
+		<monster name="Rat" x="3" y="-3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1098" centery="1073" centerz="9" radius="3">
+		<monster name="Young Troll" x="-3" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1056" centery="1080" centerz="9" radius="3">
+		<monster name="Rat" x="-3" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1105" centery="1080" centerz="9" radius="3">
+		<monster name="Young Troll" x="1" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1098" centery="1087" centerz="9" radius="3">
+		<monster name="Rat" x="-2" y="3" z="9" spawntime="90" />
+		<monster name="Rat" x="-1" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1119" centery="1087" centerz="9" radius="3">
+		<monster name="Carniphila" x="3" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1126" centery="1087" centerz="9" radius="3">
+		<monster name="Silver Rabbit" x="-3" y="-3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1139" centery="1089" centerz="9" radius="1">
+		<monster name="Blood Crab" x="0" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1042" centery="1094" centerz="9" radius="3">
+		<monster name="Rat" x="3" y="-2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1070" centery="1094" centerz="9" radius="3">
+		<monster name="Rat" x="2" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1098" centery="1094" centerz="9" radius="3">
+		<monster name="Rat" x="2" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1119" centery="1094" centerz="9" radius="3">
+		<monster name="Wailing Widow" x="3" y="-3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1126" centery="1094" centerz="9" radius="3">
+		<monster name="Tiger" x="-3" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1019" centery="1097" centerz="9" radius="3">
+		<monster name="Furious Orc Berserker" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1049" centery="1101" centerz="9" radius="3">
+		<monster name="Rat" x="2" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1056" centery="1101" centerz="9" radius="3">
+		<monster name="Rat" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1070" centery="1101" centerz="9" radius="3">
+		<monster name="Rat" x="2" y="-2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1094" centery="1107" centerz="9" radius="3">
+		<monster name="Poison Spider" x="0" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1103" centery="1107" centerz="9" radius="2">
+		<monster name="Spider" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1119" centery="1108" centerz="9" radius="3">
+		<monster name="Rat" x="-3" y="-1" z="9" spawntime="90" />
+		<monster name="Rat" x="3" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1126" centery="1108" centerz="9" radius="3">
+		<monster name="Rat" x="2" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1175" centery="1108" centerz="9" radius="3">
+		<monster name="Rat" x="-2" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1182" centery="1108" centerz="9" radius="3">
+		<monster name="Rat" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1189" centery="1108" centerz="9" radius="3">
+		<monster name="Skeleton" x="-1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1049" centery="1115" centerz="9" radius="3">
+		<monster name="Rat" x="-2" y="-2" z="9" spawntime="90" />
+		<monster name="Rat" x="-2" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1056" centery="1115" centerz="9" radius="3">
+		<monster name="Rat" x="-3" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1070" centery="1115" centerz="9" radius="3">
+		<monster name="Rat" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1119" centery="1115" centerz="9" radius="3">
+		<monster name="Rat" x="3" y="-1" z="9" spawntime="90" />
+		<monster name="Rat" x="-3" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1147" centery="1115" centerz="9" radius="3">
+		<monster name="Cave Rat" x="-1" y="-3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1161" centery="1115" centerz="9" radius="3">
+		<monster name="Rat" x="0" y="-1" z="9" spawntime="90" />
+		<monster name="Rat" x="-2" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1182" centery="1115" centerz="9" radius="3">
+		<monster name="Rat" x="1" y="-2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1049" centery="1122" centerz="9" radius="3">
+		<monster name="Rat" x="3" y="-2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1098" centery="1122" centerz="9" radius="3">
+		<monster name="Bug" x="0" y="2" z="9" spawntime="90" />
+		<monster name="Bug" x="1" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1105" centery="1122" centerz="9" radius="3">
+		<monster name="Spider" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1119" centery="1122" centerz="9" radius="3">
+		<monster name="Rat" x="0" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1133" centery="1122" centerz="9" radius="3">
+		<monster name="Rat" x="-3" y="2" z="9" spawntime="90" />
+		<monster name="Rat" x="0" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1140" centery="1122" centerz="9" radius="3">
+		<monster name="Rat" x="0" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1175" centery="1122" centerz="9" radius="3">
+		<monster name="Rat" x="-3" y="-1" z="9" spawntime="90" />
+		<monster name="Rat" x="-3" y="1" z="9" spawntime="90" />
+		<monster name="Rat" x="-2" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1189" centery="1122" centerz="9" radius="3">
+		<monster name="Skeleton" x="0" y="-2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1035" centery="1129" centerz="9" radius="3">
+		<monster name="Troll" x="3" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1042" centery="1129" centerz="9" radius="3">
+		<monster name="Troll" x="2" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1049" centery="1129" centerz="9" radius="3">
+		<monster name="Troll" x="-2" y="-2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1133" centery="1129" centerz="9" radius="3">
+		<monster name="Rat" x="2" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1140" centery="1129" centerz="9" radius="3">
+		<monster name="Rat" x="1" y="0" z="9" spawntime="90" />
+		<monster name="Rat" x="-2" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1070" centery="1136" centerz="9" radius="3">
+		<monster name="Rat" x="-2" y="0" z="9" spawntime="90" />
+		<monster name="Rat" x="-3" y="2" z="9" spawntime="90" />
+		<monster name="Rat" x="-2" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1112" centery="1136" centerz="9" radius="3">
+		<monster name="Troll" x="0" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="993" centery="1143" centerz="9" radius="3">
+		<monster name="Troll" x="3" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1000" centery="1143" centerz="9" radius="3">
+		<monster name="Troll" x="-1" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1007" centery="1143" centerz="9" radius="3">
+		<monster name="Troll" x="-2" y="-3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1028" centery="1143" centerz="9" radius="3">
+		<monster name="Troll" x="-3" y="-2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1070" centery="1143" centerz="9" radius="3">
+		<monster name="Rat" x="-1" y="-3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1077" centery="1143" centerz="9" radius="3">
+		<monster name="Rat" x="-3" y="1" z="9" spawntime="90" />
+		<monster name="Cave Rat" x="-1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1140" centery="1143" centerz="9" radius="3">
+		<monster name="Rat" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1147" centery="1143" centerz="9" radius="3">
+		<monster name="Rat" x="3" y="-2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1007" centery="1150" centerz="9" radius="3">
+		<monster name="Troll" x="2" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1084" centery="1150" centerz="9" radius="3">
+		<monster name="Cave Rat" x="-3" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1091" centery="1150" centerz="9" radius="3">
+		<monster name="Cave Rat" x="-2" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1098" centery="1150" centerz="9" radius="3">
+		<monster name="Rat" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1049" centery="1151" centerz="9" radius="1">
+		<monster name="Skeleton" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="986" centery="1157" centerz="9" radius="3">
+		<monster name="Spider" x="0" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1007" centery="1157" centerz="9" radius="3">
+		<monster name="Troll" x="1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1049" centery="1157" centerz="9" radius="3">
+		<monster name="Skeleton" x="1" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1056" centery="1157" centerz="9" radius="3">
+		<monster name="Skeleton" x="-2" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1119" centery="1157" centerz="9" radius="3">
+		<monster name="Cave Rat" x="-2" y="-3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1126" centery="1157" centerz="9" radius="3">
+		<monster name="Cave Rat" x="-3" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1025" centery="1162" centerz="9" radius="3">
+		<monster name="Cave Rat" x="1" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="993" centery="1164" centerz="9" radius="3">
+		<monster name="Spider" x="3" y="-3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1077" centery="1164" centerz="9" radius="3">
+		<monster name="Cave Rat" x="0" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1091" centery="1164" centerz="9" radius="3">
+		<monster name="Rat" x="0" y="0" z="9" spawntime="90" />
+		<monster name="Rat" x="-1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1098" centery="1164" centerz="9" radius="3">
+		<monster name="Rat" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1112" centery="1164" centerz="9" radius="3">
+		<monster name="Cave Rat" x="3" y="-3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1050" centery="1165" centerz="9" radius="1">
+		<monster name="Skeleton" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1026" centery="1167" centerz="9" radius="1">
+		<monster name="Skeleton" x="1" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1048" centery="1170" centerz="9" radius="1">
+		<monster name="Skeleton" x="0" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="993" centery="1171" centerz="9" radius="3">
+		<monster name="Spider" x="0" y="3" z="9" spawntime="90" />
+		<monster name="Spider" x="1" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1000" centery="1171" centerz="9" radius="3">
+		<monster name="Spider" x="3" y="-2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1021" centery="1171" centerz="9" radius="3">
+		<monster name="Cave Rat" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1084" centery="1171" centerz="9" radius="3">
+		<monster name="Cave Rat" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1098" centery="1171" centerz="9" radius="3">
+		<monster name="Cave Rat" x="-1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1147" centery="1173" centerz="9" radius="1">
+		<monster name="Swamp Troll" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1154" centery="1174" centerz="9" radius="1">
+		<monster name="Swamp Troll" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1139" centery="1176" centerz="9" radius="1">
+		<monster name="Swamp Troll" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1158" centery="1179" centerz="9" radius="1">
+		<monster name="Swamp Troll" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="1167" centery="976" centerz="10" radius="1">
+		<monster name="Wolf" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1156" centery="987" centerz="10" radius="3">
+		<monster name="Wolf" x="2" y="-2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1163" centery="987" centerz="10" radius="3">
+		<monster name="Orc" x="-2" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1170" centery="987" centerz="10" radius="3">
+		<monster name="Wolf" x="-3" y="1" z="10" spawntime="90" />
+		<monster name="Wolf" x="2" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1149" centery="994" centerz="10" radius="3" />
+	<monster centerx="1170" centery="994" centerz="10" radius="3">
+		<monster name="Wolf" x="0" y="-2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1108" centery="999" centerz="10" radius="3">
+		<monster name="Poison Spider" x="1" y="-1" z="10" spawntime="90" />
+		<monster name="Poison Spider" x="-2" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1147" centery="1003" centerz="10" radius="3">
+		<monster name="Wolf" x="-3" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1161" centery="1003" centerz="10" radius="3">
+		<monster name="Wolf" x="3" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1154" centery="1010" centerz="10" radius="3">
+		<monster name="Wolf" x="2" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1154" centery="1017" centerz="10" radius="3">
+		<monster name="Wolf" x="3" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1126" centery="1024" centerz="10" radius="3">
+		<monster name="Troll" x="-2" y="-1" z="10" spawntime="90" />
+		<monster name="Troll" x="0" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1170" centery="1033" centerz="10" radius="2">
+		<monster name="Orc" x="2" y="-2" z="10" spawntime="90" />
+		<monster name="Orc" x="0" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1042" centery="1038" centerz="10" radius="3">
+		<monster name="Spider" x="3" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1049" centery="1038" centerz="10" radius="3">
+		<monster name="Spider" x="-2" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1112" centery="1038" centerz="10" radius="3">
+		<monster name="Orc" x="-1" y="-1" z="10" spawntime="90" />
+		<monster name="Orc" x="-3" y="0" z="10" spawntime="90" />
+		<monster name="Orc" x="2" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1119" centery="1038" centerz="10" radius="3">
+		<monster name="Orc" x="0" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1175" centery="1038" centerz="10" radius="3">
+		<monster name="Orc" x="1" y="-3" z="10" spawntime="90" />
+		<monster name="Orc" x="2" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1132" centery="1042" centerz="10" radius="3">
+		<monster name="Orc" x="-1" y="-3" z="10" spawntime="90" />
+		<monster name="Orc" x="0" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1056" centery="1045" centerz="10" radius="3">
+		<monster name="Spider" x="-2" y="-3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1084" centery="1059" centerz="10" radius="3">
+		<monster name="Troll" x="2" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1119" centery="1059" centerz="10" radius="3">
+		<monster name="Troll Guard" x="-1" y="-2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1147" centery="1059" centerz="10" radius="3">
+		<monster name="Wolf" x="2" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1154" centery="1059" centerz="10" radius="3">
+		<monster name="Wolf" x="-2" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1021" centery="1066" centerz="10" radius="3">
+		<monster name="Skeleton" x="1" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1091" centery="1066" centerz="10" radius="3">
+		<monster name="Troll" x="-2" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1105" centery="1066" centerz="10" radius="3">
+		<monster name="Troll Guard" x="2" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1154" centery="1066" centerz="10" radius="3">
+		<monster name="Wolf" x="-3" y="-3" z="10" spawntime="90" />
+		<monster name="Wolf" x="-2" y="-2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1023" centery="1072" centerz="10" radius="3">
+		<monster name="Skeleton" x="2" y="-2" z="10" spawntime="90" />
+		<monster name="Skeleton" x="-2" y="-1" z="10" spawntime="90" />
+		<monster name="Skeleton" x="1" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1217" centery="1073" centerz="10" radius="3">
+		<monster name="Skeleton" x="-2" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1091" centery="1080" centerz="10" radius="3">
+		<monster name="Rat" x="1" y="0" z="10" spawntime="90" />
+		<monster name="Rat" x="-1" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1119" centery="1087" centerz="10" radius="3">
+		<monster name="Spider" x="-2" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1070" centery="1094" centerz="10" radius="3">
+		<monster name="Rat" x="-1" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1105" centery="1094" centerz="10" radius="3">
+		<monster name="Spider" x="3" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1133" centery="1094" centerz="10" radius="3">
+		<monster name="Spider" x="0" y="-1" z="10" spawntime="90" />
+		<monster name="Spider" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1185" centery="1098" centerz="10" radius="1">
+		<monster name="Skeleton" x="1" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1193" centery="1098" centerz="10" radius="1">
+		<monster name="Skeleton" x="1" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1056" centery="1101" centerz="10" radius="3">
+		<monster name="Cave Rat" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1063" centery="1101" centerz="10" radius="3">
+		<monster name="Rat" x="2" y="-1" z="10" spawntime="90" />
+		<monster name="Cave Rat" x="2" y="1" z="10" spawntime="90" />
+		<monster name="Rat" x="1" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1112" centery="1101" centerz="10" radius="3">
+		<monster name="Spider" x="-3" y="-1" z="10" spawntime="90" />
+		<monster name="Spider" x="0" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1126" centery="1101" centerz="10" radius="3">
+		<monster name="Spider" x="2" y="-3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1175" centery="1101" centerz="10" radius="3">
+		<monster name="Skeleton" x="-1" y="-3" z="10" spawntime="90" />
+		<monster name="Skeleton" x="2" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1183" centery="1105" centerz="10" radius="1">
+		<monster name="Skeleton" x="1" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1063" centery="1108" centerz="10" radius="3">
+		<monster name="Rat" x="-2" y="-3" z="10" spawntime="90" />
+		<monster name="Rat" x="-1" y="-2" z="10" spawntime="90" />
+		<monster name="Rat" x="-1" y="-1" z="10" spawntime="90" />
+		<monster name="Rat" x="1" y="-1" z="10" spawntime="90" />
+		<monster name="Rat" x="-1" y="0" z="10" spawntime="90" />
+		<monster name="Cave Rat" x="-3" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1084" centery="1108" centerz="10" radius="3">
+		<monster name="Troll" x="2" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1091" centery="1108" centerz="10" radius="3">
+		<monster name="Troll" x="-2" y="-1" z="10" spawntime="90" />
+		<monster name="Troll" x="0" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1112" centery="1108" centerz="10" radius="3">
+		<monster name="Spider" x="1" y="-1" z="10" spawntime="90" />
+		<monster name="Spider" x="-3" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1126" centery="1108" centerz="10" radius="3">
+		<monster name="Spider" x="-3" y="-3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1133" centery="1108" centerz="10" radius="3">
+		<monster name="Spider" x="-2" y="-3" z="10" spawntime="90" />
+		<monster name="Spider" x="1" y="-2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1193" centery="1109" centerz="10" radius="1">
+		<monster name="Skeleton" x="1" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1179" centery="1110" centerz="10" radius="1">
+		<monster name="Skeleton" x="1" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1056" centery="1115" centerz="10" radius="3">
+		<monster name="Rat" x="-2" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1133" centery="1115" centerz="10" radius="3">
+		<monster name="Spider" x="-1" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1177" centery="1115" centerz="10" radius="1">
+		<monster name="Skeleton" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1186" centery="1116" centerz="10" radius="1">
+		<monster name="Skeleton" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1042" centery="1122" centerz="10" radius="3">
+		<monster name="Troll" x="-2" y="-3" z="10" spawntime="90" />
+		<monster name="Troll" x="3" y="-3" z="10" spawntime="90" />
+		<monster name="Troll" x="0" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1077" centery="1122" centerz="10" radius="3">
+		<monster name="Bug" x="1" y="-1" z="10" spawntime="90" />
+		<monster name="Bug" x="1" y="0" z="10" spawntime="90" />
+		<monster name="Bug" x="2" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1084" centery="1122" centerz="10" radius="3">
+		<monster name="Bug" x="-1" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1098" centery="1122" centerz="10" radius="3">
+		<monster name="Bug" x="-1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1112" centery="1122" centerz="10" radius="3">
+		<monster name="Troll" x="0" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1119" centery="1122" centerz="10" radius="3">
+		<monster name="Troll" x="-1" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1175" centery="1122" centerz="10" radius="3">
+		<monster name="Skeleton" x="0" y="-3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1014" centery="1129" centerz="10" radius="3">
+		<monster name="Troll" x="3" y="-2" z="10" spawntime="90" />
+		<monster name="Troll" x="2" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1021" centery="1129" centerz="10" radius="3">
+		<monster name="Troll" x="1" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1056" centery="1129" centerz="10" radius="3">
+		<monster name="Rat" x="-1" y="-3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1070" centery="1129" centerz="10" radius="3">
+		<monster name="Rat" x="-3" y="0" z="10" spawntime="90" />
+		<monster name="Cave Rat" x="-1" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1091" centery="1129" centerz="10" radius="3">
+		<monster name="Bug" x="-1" y="-2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1098" centery="1129" centerz="10" radius="3">
+		<monster name="Bug" x="-3" y="-2" z="10" spawntime="90" />
+		<monster name="Bug" x="-1" y="-2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1126" centery="1129" centerz="10" radius="3">
+		<monster name="Troll" x="0" y="1" z="10" spawntime="90" />
+		<monster name="Troll" x="2" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1133" centery="1129" centerz="10" radius="3">
+		<monster name="Troll" x="-3" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1182" centery="1129" centerz="10" radius="3">
+		<monster name="Skeleton" x="3" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1021" centery="1136" centerz="10" radius="3">
+		<monster name="Troll" x="-2" y="-3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1028" centery="1136" centerz="10" radius="3">
+		<monster name="Troll" x="-2" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1042" centery="1136" centerz="10" radius="3">
+		<monster name="Troll" x="-1" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1049" centery="1136" centerz="10" radius="3">
+		<monster name="Rat" x="-2" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1063" centery="1136" centerz="10" radius="3">
+		<monster name="Rat" x="-3" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1070" centery="1136" centerz="10" radius="3">
+		<monster name="Rat" x="-3" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="992" centery="1140" centerz="10" radius="3">
+		<monster name="Troll" x="-1" y="-2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="986" centery="1143" centerz="10" radius="3">
+		<monster name="Troll" x="1" y="-3" z="10" spawntime="90" />
+		<monster name="Troll" x="-1" y="-2" z="10" spawntime="90" />
+		<monster name="Troll" x="2" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1056" centery="1143" centerz="10" radius="3">
+		<monster name="Rat" x="2" y="-3" z="10" spawntime="90" />
+		<monster name="Rat" x="3" y="-3" z="10" spawntime="90" />
+		<monster name="Rat" x="-1" y="-2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1070" centery="1143" centerz="10" radius="3">
+		<monster name="Rat" x="-3" y="-3" z="10" spawntime="90" />
+		<monster name="Rat" x="1" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1077" centery="1143" centerz="10" radius="3">
+		<monster name="Rat" x="-3" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1105" centery="1143" centerz="10" radius="3">
+		<monster name="Bug" x="3" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1041" centery="1147" centerz="10" radius="2">
+		<monster name="Skeleton" x="-1" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1063" centery="1150" centerz="10" radius="3">
+		<monster name="Rat" x="0" y="-2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1084" centery="1150" centerz="10" radius="3">
+		<monster name="Bug" x="-3" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1110" centery="1150" centerz="10" radius="3">
+		<monster name="Bug" x="-1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1007" centery="1157" centerz="10" radius="3">
+		<monster name="Troll" x="2" y="-1" z="10" spawntime="90" />
+		<monster name="Troll" x="2" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1014" centery="1157" centerz="10" radius="3">
+		<monster name="Troll" x="-3" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1021" centery="1157" centerz="10" radius="3">
+		<monster name="Troll" x="-3" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1042" centery="1157" centerz="10" radius="3">
+		<monster name="Skeleton" x="3" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1084" centery="1157" centerz="10" radius="3">
+		<monster name="Troll" x="1" y="-2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1098" centery="1157" centerz="10" radius="3">
+		<monster name="Bug" x="2" y="-3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1109" centery="1157" centerz="10" radius="3">
+		<monster name="Bug" x="-1" y="-1" z="10" spawntime="90" />
+		<monster name="Bug" x="0" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1084" centery="1164" centerz="10" radius="3">
+		<monster name="Troll" x="1" y="-3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1025" centery="1172" centerz="10" radius="2">
+		<monster name="Skeleton" x="1" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1014" centery="1178" centerz="10" radius="3">
+		<monster name="Skeleton" x="1" y="-3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="1166" centery="970" centerz="11" radius="1" />
+	<monster centerx="1163" centery="973" centerz="11" radius="3">
+		<monster name="Wolf" x="3" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1156" centery="980" centerz="11" radius="3">
+		<monster name="Orc" x="3" y="-3" z="11" spawntime="90" />
+		<monster name="Orc" x="3" y="-1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1163" centery="980" centerz="11" radius="3">
+		<monster name="Orc" x="1" y="3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1170" centery="980" centerz="11" radius="3">
+		<monster name="Orc" x="0" y="-1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1156" centery="987" centerz="11" radius="3">
+		<monster name="Orc" x="2" y="1" z="11" spawntime="90" />
+		<monster name="Orc" x="3" y="2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1170" centery="987" centerz="11" radius="3">
+		<monster name="Orc" x="0" y="3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1177" centery="987" centerz="11" radius="3">
+		<monster name="Minotaur" x="-3" y="-3" z="11" spawntime="90" />
+		<monster name="Minotaur" x="-3" y="-2" z="11" spawntime="90" />
+		<monster name="Orc" x="-2" y="2" z="11" spawntime="90" />
+		<monster name="Wolf" x="0" y="2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1170" centery="994" centerz="11" radius="3">
+		<monster name="Orc" x="3" y="-3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1105" centery="1010" centerz="11" radius="3">
+		<monster name="Poison Spider" x="-1" y="-3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1112" centery="1017" centerz="11" radius="3">
+		<monster name="Poison Spider" x="-3" y="3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1186" centery="1024" centerz="11" radius="2">
+		<monster name="Bear" x="-1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1175" centery="1030" centerz="11" radius="2">
+		<monster name="Orc" x="-1" y="-1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1179" centery="1031" centerz="11" radius="2">
+		<monster name="Orc" x="0" y="-1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1189" centery="1031" centerz="11" radius="3">
+		<monster name="Minotaur" x="2" y="2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1184" centery="1032" centerz="11" radius="2">
+		<monster name="Orc" x="1" y="-1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1176" centery="1035" centerz="11" radius="2">
+		<monster name="Orc" x="-1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1190" centery="1037" centerz="11" radius="2">
+		<monster name="Minotaur" x="-1" y="-1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1084" centery="1045" centerz="11" radius="3">
+		<monster name="Skeleton" x="-3" y="-1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1021" centery="1059" centerz="11" radius="3">
+		<monster name="Rat" x="-1" y="3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1035" centery="1059" centerz="11" radius="3">
+		<monster name="Rat" x="3" y="-2" z="11" spawntime="90" />
+		<monster name="Rat" x="2" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1042" centery="1059" centerz="11" radius="3">
+		<monster name="Rat" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1021" centery="1066" centerz="11" radius="3">
+		<monster name="Rat" x="0" y="-3" z="11" spawntime="90" />
+		<monster name="Rat" x="1" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1028" centery="1066" centerz="11" radius="3">
+		<monster name="Rat" x="-1" y="-3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1056" centery="1066" centerz="11" radius="3">
+		<monster name="Rat" x="1" y="3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1070" centery="1066" centerz="11" radius="3">
+		<monster name="Rat" x="2" y="2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1035" centery="1073" centerz="11" radius="3">
+		<monster name="Rat" x="1" y="-3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1056" centery="1073" centerz="11" radius="3">
+		<monster name="Rat" x="2" y="-3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1063" centery="1073" centerz="11" radius="3">
+		<monster name="Rat" x="1" y="2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1077" centery="1073" centerz="11" radius="3">
+		<monster name="Rat" x="2" y="2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1091" centery="1073" centerz="11" radius="3">
+		<monster name="Rat" x="-2" y="2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1210" centery="1073" centerz="11" radius="3">
+		<monster name="Ghoul" x="0" y="-2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1217" centery="1073" centerz="11" radius="3">
+		<monster name="Skeleton" x="0" y="-2" z="11" spawntime="90" />
+		<monster name="Rotworm" x="-3" y="1" z="11" spawntime="90" />
+		<monster name="Skeleton" x="1" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1021" centery="1080" centerz="11" radius="3">
+		<monster name="Rat" x="-2" y="-1" z="11" spawntime="90" />
+		<monster name="Rat" x="-1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1042" centery="1080" centerz="11" radius="3">
+		<monster name="Rat" x="-2" y="0" z="11" spawntime="90" />
+		<monster name="Rat" x="-2" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1063" centery="1080" centerz="11" radius="3">
+		<monster name="Rat" x="2" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1077" centery="1080" centerz="11" radius="3">
+		<monster name="Rat" x="-2" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1084" centery="1080" centerz="11" radius="3">
+		<monster name="Rat" x="3" y="-1" z="11" spawntime="90" />
+		<monster name="Rat" x="3" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1098" centery="1080" centerz="11" radius="3">
+		<monster name="Rat" x="0" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1028" centery="1087" centerz="11" radius="3">
+		<monster name="Rat" x="1" y="2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1091" centery="1087" centerz="11" radius="3">
+		<monster name="Rat" x="3" y="-3" z="11" spawntime="90" />
+		<monster name="Rat" x="3" y="-2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="994" centery="1088" centerz="11" radius="1">
+		<monster name="Poison Spider" x="0" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="990" centery="1089" centerz="11" radius="1">
+		<monster name="Poison Spider" x="0" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1056" centery="1094" centerz="11" radius="3">
+		<monster name="Rat" x="-1" y="-3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1035" centery="1101" centerz="11" radius="3">
+		<monster name="Rat" x="0" y="2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1049" centery="1101" centerz="11" radius="3">
+		<monster name="Rat" x="0" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1126" centery="1108" centerz="11" radius="3">
+		<monster name="Poison Spider" x="3" y="2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1056" centery="1115" centerz="11" radius="3">
+		<monster name="Rat" x="-3" y="-3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1091" centery="1115" centerz="11" radius="3">
+		<monster name="Poison Spider" x="-3" y="-1" z="11" spawntime="90" />
+		<monster name="Poison Spider" x="3" y="2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1091" centery="1122" centerz="11" radius="3">
+		<monster name="Poison Spider" x="2" y="-3" z="11" spawntime="90" />
+		<monster name="Spider" x="0" y="-1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1042" centery="1129" centerz="11" radius="3">
+		<monster name="Orc" x="-2" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1105" centery="1129" centerz="11" radius="3">
+		<monster name="Spider" x="1" y="1" z="11" spawntime="90" />
+		<monster name="Poison Spider" x="3" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1040" centery="1139" centerz="11" radius="2">
+		<monster name="Orc" x="-1" y="-2" z="11" spawntime="90" />
+		<monster name="Troll" x="-2" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1035" centery="1143" centerz="11" radius="3">
+		<monster name="Troll" x="1" y="2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1035" centery="1150" centerz="11" radius="3">
+		<monster name="Orc" x="3" y="-3" z="11" spawntime="90" />
+		<monster name="Goblin" x="-3" y="1" z="11" spawntime="90" />
+		<monster name="Goblin" x="3" y="1" z="11" spawntime="90" />
+		<monster name="Goblin" x="-3" y="3" z="11" spawntime="90" />
+		<monster name="Goblin" x="3" y="3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1035" centery="1157" centerz="11" radius="3">
+		<monster name="Goblin" x="-3" y="-2" z="11" spawntime="90" />
+		<monster name="Goblin" x="3" y="-2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1056" centery="1157" centerz="11" radius="3">
+		<monster name="Goblin" x="2" y="-3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1063" centery="1157" centerz="11" radius="3">
+		<monster name="Goblin" x="2" y="-2" z="11" spawntime="90" />
+		<monster name="Goblin" x="2" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1035" centery="1164" centerz="11" radius="3">
+		<monster name="Orc" x="-1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1056" centery="1164" centerz="11" radius="3">
+		<monster name="Cave Rat" x="-1" y="1" z="11" spawntime="90" />
+		<monster name="Cave Rat" x="1" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1063" centery="1164" centerz="11" radius="3">
+		<monster name="Cave Rat" x="0" y="-3" z="11" spawntime="90" />
+		<monster name="Cave Rat" x="0" y="-2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1056" centery="1171" centerz="11" radius="3">
+		<monster name="Cave Rat" x="0" y="2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="1156" centery="973" centerz="12" radius="3">
+		<monster name="Minotaur Mage" x="3" y="2" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="1163" centery="980" centerz="12" radius="3">
+		<monster name="Minotaur" x="3" y="3" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="1170" centery="980" centerz="12" radius="3">
+		<monster name="Wolf" x="3" y="1" z="12" spawntime="90" />
+		<monster name="Wolf" x="2" y="2" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="1163" centery="987" centerz="12" radius="3">
+		<monster name="Minotaur" x="2" y="-2" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="1170" centery="987" centerz="12" radius="3">
+		<monster name="Minotaur" x="-1" y="1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="1177" centery="987" centerz="12" radius="3">
+		<monster name="Minotaur" x="-3" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="1177" centery="994" centerz="12" radius="3">
+		<monster name="Minotaur" x="2" y="-2" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="1052" centery="1011" centerz="12" radius="3">
+		<monster name="Spider Queen" x="0" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="1182" centery="1024" centerz="12" radius="3">
+		<monster name="Spider" x="-1" y="0" z="12" spawntime="90" />
+		<monster name="Spider" x="-2" y="3" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="1176" centery="1028" centerz="12" radius="3">
+		<monster name="Spider" x="2" y="-2" z="12" spawntime="90" />
+		<monster name="Spider" x="2" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="1021" centery="1052" centerz="12" radius="3">
+		<monster name="Bug" x="2" y="-3" z="12" spawntime="90" />
+		<monster name="Bug" x="3" y="-2" z="12" spawntime="90" />
+		<monster name="Bug" x="1" y="-1" z="12" spawntime="90" />
+		<monster name="Bug" x="2" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="1028" centery="1052" centerz="12" radius="3">
+		<monster name="Bug" x="0" y="3" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="1028" centery="1059" centerz="12" radius="3">
+		<monster name="Bug" x="1" y="-1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="1021" centery="1073" centerz="12" radius="3">
+		<monster name="Bug" x="1" y="0" z="12" spawntime="90" />
+		<monster name="Bug" x="0" y="1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="991" centery="1127" centerz="12" radius="1">
+		<monster name="Poison Spider" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="995" centery="1127" centerz="12" radius="5">
+		<monster name="Poison Spider" x="3" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="1028" centery="1129" centerz="12" radius="3">
+		<monster name="Orc" x="2" y="3" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="1035" centery="1129" centerz="12" radius="3">
+		<monster name="Orc" x="-3" y="2" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="1049" centery="1129" centerz="12" radius="3">
+		<monster name="Orc Spearman" x="-3" y="1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="1028" centery="1136" centerz="12" radius="3">
+		<monster name="Orc" x="2" y="2" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="1049" centery="1136" centerz="12" radius="3">
+		<monster name="Orc Spearman" x="-3" y="3" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="1017" centery="1137" centerz="12" radius="3">
+		<monster name="Orc Spearman" x="-2" y="0" z="12" spawntime="90" />
+		<monster name="Goblin" x="1" y="0" z="12" spawntime="90" />
+		<monster name="Wasp" x="0" y="1" z="12" spawntime="90" />
+		<monster name="Goblin" x="2" y="2" z="12" spawntime="90" />
+		<monster name="Goblin" x="-2" y="3" z="12" spawntime="90" />
+		<monster name="Minotaur" x="-1" y="3" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="1028" centery="1143" centerz="12" radius="3">
+		<monster name="Minotaur" x="0" y="2" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="1042" centery="1143" centerz="12" radius="3">
+		<monster name="Orc" x="2" y="3" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="1021" centery="1164" centerz="12" radius="3">
+		<monster name="Goblin" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="1035" centery="1164" centerz="12" radius="3">
+		<monster name="Goblin" x="-3" y="-2" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="1063" centery="1171" centerz="12" radius="3">
+		<monster name="Goblin" x="2" y="-3" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="1079" centery="1046" centerz="13" radius="2">
+		<monster name="Skeleton" x="1" y="0" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="1083" centery="1049" centerz="13" radius="2">
+		<monster name="Skeleton" x="0" y="1" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="994" centery="1126" centerz="13" radius="1">
+		<monster name="Rotworm" x="1" y="0" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="1014" centery="1150" centerz="13" radius="3">
+		<monster name="Goblin" x="-1" y="1" z="13" spawntime="90" />
+		<monster name="Goblin" x="2" y="1" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="1021" centery="1150" centerz="13" radius="3">
+		<monster name="Goblin" x="0" y="1" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="1014" centery="1157" centerz="13" radius="3">
+		<monster name="Goblin" x="3" y="0" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="1021" centery="1157" centerz="13" radius="3">
+		<monster name="Goblin" x="-3" y="-2" z="13" spawntime="90" />
+	</monster>
+</monsters>

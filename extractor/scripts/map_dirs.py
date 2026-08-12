@@ -30,6 +30,23 @@ def find_two_level_dir(root: str, name: str) -> Optional[str]:
     return None
 
 
+def discover_city_map_names(root: str, city: str) -> List[str]:
+    """Every pasta name under `root/<city>/`, sorted. Unlike
+    `discover_two_level_names` this is scoped to one city and asks for no
+    marker file — the caller wants the folders that exist, including one
+    that's missing whatever a marker would prove (see
+    build_travel_fragment.discover_hunt_maps, where a hunt with nothing
+    generated yet still needs to be noticed). Empty list if the city has no
+    folder under `root`."""
+    city_dir = os.path.join(root, city)
+    if not os.path.isdir(city_dir):
+        return []
+    return sorted(
+        entry for entry in os.listdir(city_dir)
+        if os.path.isdir(os.path.join(city_dir, entry))
+    )
+
+
 def discover_two_level_names(root: str, marker_relpath: str) -> List[str]:
     """Every pasta name under `root/<city>/<pasta>/` whose folder contains
     `marker_relpath` (e.g. "monsters/respawn.json"), across every city,
