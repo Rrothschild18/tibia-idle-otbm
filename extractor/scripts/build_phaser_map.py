@@ -9,6 +9,7 @@ from typing import Dict, List, Optional, Set, Tuple
 
 from PIL import Image
 
+import content_export
 import item_classifier
 import map_dirs
 import map_v6
@@ -116,7 +117,10 @@ V6_OUTPUT_DIR = os.path.abspath(
 )
 V6_SHEETS_OUTPUT_DIR = os.path.join(V6_OUTPUT_DIR, "sheets")
 V6_MONSTERS_OUTPUT_DIR = os.path.join(V6_OUTPUT_DIR, "monsters")
-V6_ASSETS_ROOT = posixpath.join("assets", f"{MAP_NAME}-sprites-v6")
+# Same folder name hunt_fragment.py writes into a hunt's `mapUrl` — one
+# definition, since a mismatch means the catalog points at a bundle the front
+# doesn't serve, and the import rejects the hunt.
+V6_ASSETS_ROOT = content_export.map_bundle_root(MAP_NAME)
 
 
 def _find_sidecar(directory: str, suffix: str) -> str:

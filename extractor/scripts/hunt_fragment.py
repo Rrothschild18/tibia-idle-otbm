@@ -19,6 +19,7 @@ from collections import Counter
 from typing import Dict, List, Optional
 
 import city_ids
+import content_export
 
 PLACEHOLDER_MAP_ID = "TODO-ASSIGN-ID"
 # The catalog's `seed` field has no known consumer today — every existing hunt
@@ -70,7 +71,11 @@ def build_loot_entry(monsters_entry: Dict, map_id: str) -> Dict:
 
 
 def build_hunts_entry(respawn: Dict, map_name: str, map_id: str) -> Dict:
-    assets_root = posixpath.join("assets", f"{map_name}-sprites")
+    # `assetsRoot` is a dead field — the back-end's schema drops it as an
+    # unknown key — but it's kept pointing at the same versioned bundle as
+    # `mapUrl` rather than at the old unversioned folder, so nobody reads the
+    # two side by side and concludes the map lives in two places.
+    assets_root = content_export.map_bundle_root(map_name)
     bounds = respawn["mapBoundsRef"]
     preview_spawn = _most_common_spawn(respawn.get("spawns", []))
 
@@ -92,7 +97,7 @@ def build_hunts_entry(respawn: Dict, map_name: str, map_id: str) -> Dict:
         "label": _title_from_map_name(map_name),
         "seed": PLACEHOLDER_SEED,
         "assetsRoot": assets_root,
-        "mapUrl": posixpath.join(assets_root, "map.json"),
+        "mapUrl": content_export.map_bundle_url(map_name),
         "portrait": PLACEHOLDER_PORTRAIT,
         "monsterPreview": (
             {

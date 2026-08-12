@@ -1,4 +1,25 @@
+import re
+
 import content_export as ce
+
+# Copied verbatim from the back-end's BUNDLE_URL_PATTERN
+# (libs/models/content/src/lib/import-source.model.ts). A `mapUrl` that
+# doesn't match is rejected at import — this is the rule that let a hunt
+# built without the `-v<N>` suffix break `nx run db:reset`.
+BUNDLE_URL_PATTERN = re.compile(r"^(assets/.+-v(\d+))/map\.json$")
+
+
+def test_map_bundle_url_matches_the_back_ends_bundle_pattern():
+    assert BUNDLE_URL_PATTERN.match(ce.map_bundle_url("ROOK-HUNT-0013_rats-rookguard"))
+
+
+def test_map_bundle_url_carries_the_version_in_the_folder_name():
+    assert ce.map_bundle_url("ROOK-HUNT-0013_rats-rookguard") == (
+        "assets/ROOK-HUNT-0013_rats-rookguard-sprites-v6/map.json"
+    )
+    assert ce.map_bundle_root("ROOK-HUNT-0013_rats-rookguard") == (
+        "assets/ROOK-HUNT-0013_rats-rookguard-sprites-v6"
+    )
 
 
 def _hunt(map_id, **overrides):
