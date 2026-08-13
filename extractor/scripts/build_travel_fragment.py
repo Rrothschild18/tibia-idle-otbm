@@ -56,6 +56,7 @@ from travel_graph import (
     match_npc_lua_filename,
     merge_travel_fragment_into_catalog,
     parse_marker_signs,
+    parse_npc_outfit_lua,
     parse_npc_shop_lua,
     parse_npc_xml,
 )
@@ -81,21 +82,27 @@ def _load_json(path, what):
         return json.load(f)
 
 
-def _build_shops_by_name(npc_names, canary_npc_dir):
-    """{npc name: parsed shop or None} — a name is a key only if a .lua file
-    matched it (value None then means "matched, but no shop table"); a name
-    genuinely absent (no file at all) is the CLI's cue to warn."""
+def _build_npc_lua_facts(npc_names, canary_npc_dir):
+    """{npc name: (parsed shop or None, parsed outfit or None)} — a name is a
+    key only if a .lua file matched it (a None inside the tuple then means
+    "matched, but no such table"); a name genuinely absent (no file at all) is
+    the CLI's cue to warn.
+
+    Shop **and** outfit in one pass, from one read: the two live side by side
+    in the same Canary file, and reading it twice to fetch them separately
+    would be two passes over the same text for no gain."""
     lua_filenames = [
         os.path.basename(p) for p in glob.glob(os.path.join(canary_npc_dir, "*.lua"))
     ]
-    shops_by_name = {}
+    facts_by_name = {}
     for name in npc_names:
         filename = match_npc_lua_filename(name, lua_filenames)
         if filename is None:
             continue
         with open(os.path.join(canary_npc_dir, filename), "r", encoding="utf-8", errors="replace") as f:
-            shops_by_name[name] = parse_npc_shop_lua(f.read())
-    return shops_by_name
+            text = f.read()
+        facts_by_name[name] = (parse_npc_shop_lua(text), parse_npc_outfit_lua(text))
+    return facts_by_name
 
 
 def discover_hunt_maps(city: str):
@@ -149,8 +156,12 @@ def build_city_fragment(city: str, canary_dir: str, npc_reach: int = DEFAULT_NPC
         print(f"[WARN] {npc_xml_path} não encontrado — nenhuma Location de NPC gerada")
 
     canary_npc_dir = os.path.join(canary_dir, "data-otservbr-global", "npc")
-    shops_by_name = _build_shops_by_name({npc["name"] for npc in npcs}, canary_npc_dir)
-    npc_locations, unmatched_npcs = build_npc_locations(npcs, city, shops_by_name)
+    lua_facts = _build_npc_lua_facts({npc["name"] for npc in npcs}, canary_npc_dir)
+    shops_by_name = {name: shop for name, (shop, _) in lua_facts.items()}
+    outfits_by_name = {name: outfit for name, (_, outfit) in lua_facts.items()}
+    npc_locations, unmatched_npcs = build_npc_locations(
+        npcs, city, shops_by_name, outfits_by_name
+    )
     for name in unmatched_npcs:
         print(f"[WARN] NPC '{name}' sem .lua correspondente em {canary_npc_dir} — Location sem shop")
 

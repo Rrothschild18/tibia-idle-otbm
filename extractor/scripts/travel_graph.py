@@ -427,6 +427,45 @@ def _parse_lua_scalar(raw: str):
     return int(raw) if re.fullmatch(r"-?\d+", raw) else float(raw)
 
 
+_OUTFIT_BLOCK_START_RE = re.compile(r"npcConfig\.outfit\s*=\s*\{")
+
+#: `lookType` is the only required key — an NPC with no colours is a valid
+#: outfit (the base sprite), and `lookAddons` is absent on most of them.
+_OUTFIT_KEYS = ("lookType", "lookHead", "lookBody", "lookLegs", "lookFeet", "lookAddons")
+
+
+def parse_npc_outfit_lua(lua_text: str) -> Optional[Dict]:
+    """A Canary npc .lua file's text -> its `npcConfig.outfit` table, or None
+    when the file has none.
+
+    Same file the shop already comes from, and that is the whole point: the
+    two facts about an NPC that the game needs to *draw* and *trade with* him
+    live side by side in Canary, and reading the file twice to fetch them
+    separately would be two passes over the same text.
+
+    `lookType` is what indexes the outfit atlases the client already ships
+    (`/assets/outfits/<lookType>.png`); the four colour indices and the addon
+    bitmask are what turn the base sprite into *this* NPC. An outfit table
+    without `lookType` is not an outfit, and is reported as None rather than
+    as a half-filled dict — the consumer would have nothing to draw.
+    """
+    block_match = _OUTFIT_BLOCK_START_RE.search(lua_text)
+    if not block_match:
+        return None
+
+    block = _extract_braced_block(lua_text, block_match.end())
+    fields = {
+        m.group(1): _parse_lua_scalar(m.group(2))
+        for m in _SHOP_FIELD_RE.finditer(block)
+        if m.group(1) in _OUTFIT_KEYS
+    }
+
+    if "lookType" not in fields:
+        return None
+
+    return {key: int(fields[key]) for key in _OUTFIT_KEYS if key in fields}
+
+
 def parse_npc_shop_lua(lua_text: str) -> Optional[List[Dict]]:
     """A Canary npc .lua file's text -> its `npcConfig.shop` table, or None
     if the NPC has no shop at all (a trainer/quest NPC). `clientId` is used
@@ -457,7 +496,12 @@ def parse_npc_shop_lua(lua_text: str) -> Optional[List[Dict]]:
     return entries
 
 
-def build_npc_location(npc: Dict, city_prefix: str, shop: Optional[List[Dict]]) -> Dict:
+def build_npc_location(
+    npc: Dict,
+    city_prefix: str,
+    shop: Optional[List[Dict]],
+    outfit: Optional[Dict] = None,
+) -> Dict:
     """An NPC (position + name) plus its already-resolved shop (or None) ->
     a `locations` entry. No sign involved, no `displayName` curation — the
     NPC's real in-game name is already a good display name. The id follows
@@ -477,13 +521,18 @@ def build_npc_location(npc: Dict, city_prefix: str, shop: Optional[List[Dict]]) 
     }
     if status is not None:
         entry["status"] = status
+    if outfit is not None:
+        entry["outfit"] = outfit
     if shop is not None:
         entry["shop"] = shop
     return entry
 
 
 def build_npc_locations(
-    npcs: List[Dict], city_prefix: str, shops_by_name: Dict[str, Optional[List[Dict]]]
+    npcs: List[Dict],
+    city_prefix: str,
+    shops_by_name: Dict[str, Optional[List[Dict]]],
+    outfits_by_name: Optional[Dict[str, Optional[Dict]]] = None,
 ) -> Tuple[List[Dict], List[str]]:
     """Every NPC -> its Location, plus the list of NPC names with no matching
     `.lua` file at all (still get a Location — position/name — just no
@@ -498,7 +547,8 @@ def build_npc_locations(
         if name not in shops_by_name:
             unmatched.append(name)
         shop = shops_by_name.get(name)
-        locations.append(build_npc_location(npc, city_prefix, shop))
+        outfit = (outfits_by_name or {}).get(name)
+        locations.append(build_npc_location(npc, city_prefix, shop, outfit))
     return locations, unmatched
 
 
