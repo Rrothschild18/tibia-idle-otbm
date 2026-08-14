@@ -55,6 +55,7 @@ from travel_graph import (
     format_rejection_report,
     match_npc_lua_filename,
     merge_travel_fragment_into_catalog,
+    parse_floorchange_items,
     parse_marker_signs,
     parse_npc_outfit_lua,
     parse_npc_shop_lua,
@@ -103,6 +104,32 @@ def _build_npc_lua_facts(npc_names, canary_npc_dir):
             text = f.read()
         facts_by_name[name] = (parse_npc_shop_lua(text), parse_npc_outfit_lua(text))
     return facts_by_name
+
+
+def _read_floorchange_items(canary_dir: str):
+    """Canary's `items.xml` -> the floorchange map the walkable graph needs.
+
+    Read from the Canary checkout the CLI already points at (`--canary-dir`,
+    the same one the NPC `.lua` files come from) rather than copied into this
+    repo: a stairs id that a Canary bump adds arrives with the bump, and there
+    is no second list to remember to update.
+
+    A missing file is a **warning, not a failure**: the graph falls back to the
+    render-flag heuristic alone, which is exactly how it behaved before this —
+    fewer connections, no wrong ones. Failing here instead would make an
+    unrelated Canary path break every export."""
+    path = os.path.join(canary_dir, "data", "items", "items.xml")
+
+    try:
+        with open(path, "r", encoding="utf-8", errors="replace") as f:
+            directions = parse_floorchange_items(f.read())
+    except OSError:
+        print(f"[WARN] {path} não encontrado — escada/rampa vão depender só da "
+              f"heurística de flags, e caverna entrada por rampa pode sair como ilhada")
+        return {}
+
+    print(f"[OK] {len(directions)} ids com floorchange lidos de {path}")
+    return directions
 
 
 def discover_hunt_maps(city: str):
@@ -165,7 +192,7 @@ def build_city_fragment(city: str, canary_dir: str, npc_reach: int = DEFAULT_NPC
     for name in unmatched_npcs:
         print(f"[WARN] NPC '{name}' sem .lua correspondente em {canary_npc_dir} — Location sem shop")
 
-    tiles = extract_tile_flags(dump, object_defs)
+    tiles = extract_tile_flags(dump, object_defs, _read_floorchange_items(canary_dir))
     graph = build_walkable_graph(tiles)
     travel_graph_edges = build_travel_graph(graph, [*sign_locations, *npc_locations], npc_reach)
 
