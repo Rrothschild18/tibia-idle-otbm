@@ -18918,6 +18918,46 @@
       "bottom": true
     }
   },
+  "412": {
+    "metadata": {
+      "id": 412,
+      "spriteInfo": {
+        "patternWidth": 1,
+        "patternHeight": 1,
+        "patternDepth": 1,
+        "layers": 1,
+        "patternFrames": 0
+      },
+      "frameGroup": "initial",
+      "flags": {
+        "bank": {
+          "waypoints": 100
+        },
+        "unmove": true,
+        "avoid": true,
+        "translucent": true,
+        "automap": {
+          "color": 210
+        },
+        "fullbank": true,
+        "default_action": {
+          "action": "PLAYER_ACTION_AUTOWALK_HIGHLIGHT"
+        }
+      }
+    },
+    "spriteInfo": {
+      "patternWidth": 1,
+      "patternHeight": 1,
+      "patternDepth": 1,
+      "boundingSquare": 32
+    },
+    "flags": {
+      "fullbank": true,
+      "unmove": true,
+      "automap": true,
+      "bank": true
+    }
+  },
   "2535": {
     "metadata": {
       "id": 2535,
@@ -20828,9 +20868,9 @@
       "usable": true
     }
   },
-  "438": {
+  "414": {
     "metadata": {
-      "id": 438,
+      "id": 414,
       "spriteInfo": {
         "patternWidth": 1,
         "patternHeight": 1,
@@ -20849,6 +20889,7 @@
         "automap": {
           "color": 210
         },
+        "fullbank": true,
         "default_action": {
           "action": "PLAYER_ACTION_AUTOWALK_HIGHLIGHT"
         }
@@ -20861,6 +20902,7 @@
       "boundingSquare": 32
     },
     "flags": {
+      "fullbank": true,
       "unmove": true,
       "automap": true,
       "bank": true
@@ -35045,46 +35087,6 @@
       "bottom": true
     }
   },
-  "414": {
-    "metadata": {
-      "id": 414,
-      "spriteInfo": {
-        "patternWidth": 1,
-        "patternHeight": 1,
-        "patternDepth": 1,
-        "layers": 1,
-        "patternFrames": 0
-      },
-      "frameGroup": "initial",
-      "flags": {
-        "bank": {
-          "waypoints": 100
-        },
-        "unmove": true,
-        "avoid": true,
-        "translucent": true,
-        "automap": {
-          "color": 210
-        },
-        "fullbank": true,
-        "default_action": {
-          "action": "PLAYER_ACTION_AUTOWALK_HIGHLIGHT"
-        }
-      }
-    },
-    "spriteInfo": {
-      "patternWidth": 1,
-      "patternHeight": 1,
-      "patternDepth": 1,
-      "boundingSquare": 32
-    },
-    "flags": {
-      "fullbank": true,
-      "unmove": true,
-      "automap": true,
-      "bank": true
-    }
-  },
   "553": {
     "metadata": {
       "id": 553,
@@ -46754,6 +46756,44 @@
     },
     "flags": {
       "fullbank": true,
+      "unmove": true,
+      "automap": true,
+      "bank": true
+    }
+  },
+  "438": {
+    "metadata": {
+      "id": 438,
+      "spriteInfo": {
+        "patternWidth": 1,
+        "patternHeight": 1,
+        "patternDepth": 1,
+        "layers": 1,
+        "patternFrames": 0
+      },
+      "frameGroup": "initial",
+      "flags": {
+        "bank": {
+          "waypoints": 100
+        },
+        "unmove": true,
+        "avoid": true,
+        "translucent": true,
+        "automap": {
+          "color": 210
+        },
+        "default_action": {
+          "action": "PLAYER_ACTION_AUTOWALK_HIGHLIGHT"
+        }
+      }
+    },
+    "spriteInfo": {
+      "patternWidth": 1,
+      "patternHeight": 1,
+      "patternDepth": 1,
+      "boundingSquare": 32
+    },
+    "flags": {
       "unmove": true,
       "automap": true,
       "bank": true
@@ -63354,46 +63394,6 @@
       "hookDirection": "HOOK_TYPE_SOUTH"
     }
   },
-  "412": {
-    "metadata": {
-      "id": 412,
-      "spriteInfo": {
-        "patternWidth": 1,
-        "patternHeight": 1,
-        "patternDepth": 1,
-        "layers": 1,
-        "patternFrames": 0
-      },
-      "frameGroup": "initial",
-      "flags": {
-        "bank": {
-          "waypoints": 100
-        },
-        "unmove": true,
-        "avoid": true,
-        "translucent": true,
-        "automap": {
-          "color": 210
-        },
-        "fullbank": true,
-        "default_action": {
-          "action": "PLAYER_ACTION_AUTOWALK_HIGHLIGHT"
-        }
-      }
-    },
-    "spriteInfo": {
-      "patternWidth": 1,
-      "patternHeight": 1,
-      "patternDepth": 1,
-      "boundingSquare": 32
-    },
-    "flags": {
-      "fullbank": true,
-      "unmove": true,
-      "automap": true,
-      "bank": true
-    }
-  },
   "368": {
     "metadata": {
       "id": 368,
@@ -72449,9 +72449,9 @@
       "unmove": true
     }
   },
-  "4826": {
+  "566": {
     "metadata": {
-      "id": 4826,
+      "id": 566,
       "spriteInfo": {
         "patternWidth": 1,
         "patternHeight": 1,
@@ -72470,6 +72470,7 @@
         "automap": {
           "color": 210
         },
+        "fullbank": true,
         "default_action": {
           "action": "PLAYER_ACTION_AUTOWALK_HIGHLIGHT"
         }
@@ -72482,6 +72483,7 @@
       "boundingSquare": 32
     },
     "flags": {
+      "fullbank": true,
       "unmove": true,
       "automap": true,
       "bank": true
@@ -72627,68 +72629,6 @@
       "unpass": true,
       "automap": true,
       "bottom": true
-    }
-  },
-  "5122": {
-    "metadata": {
-      "id": 5122,
-      "spriteInfo": {
-        "patternWidth": 1,
-        "patternHeight": 1,
-        "patternDepth": 1,
-        "layers": 1,
-        "patternFrames": 0,
-        "animation": {
-          "synchronized": false,
-          "loopType": "ANIMATION_LOOP_TYPE_INFINITE",
-          "spritePhase": [
-            {
-              "durationMin": 100,
-              "durationMax": 100
-            },
-            {
-              "durationMin": 100,
-              "durationMax": 100
-            },
-            {
-              "durationMin": 200,
-              "durationMax": 200
-            },
-            {
-              "durationMin": 100,
-              "durationMax": 100
-            }
-          ]
-        }
-      },
-      "frameGroup": "initial",
-      "flags": {
-        "usable": true,
-        "unpass": true,
-        "unmove": true,
-        "automap": {
-          "color": 186
-        }
-      }
-    },
-    "spriteInfo": {
-      "patternWidth": 1,
-      "patternHeight": 1,
-      "patternDepth": 1,
-      "boundingSquare": 32
-    },
-    "flags": {
-      "unmove": true,
-      "unpass": true,
-      "automap": true,
-      "usable": true
-    },
-    "animation": {
-      "appearanceId": 5122,
-      "frameDurationMs": 500,
-      "frameRate": 2,
-      "loop": true,
-      "startFrame": 0
     }
   },
   "1983": {
@@ -74257,46 +74197,6 @@
       "unsight": true,
       "automap": true,
       "bottom": true
-    }
-  },
-  "566": {
-    "metadata": {
-      "id": 566,
-      "spriteInfo": {
-        "patternWidth": 1,
-        "patternHeight": 1,
-        "patternDepth": 1,
-        "layers": 1,
-        "patternFrames": 0
-      },
-      "frameGroup": "initial",
-      "flags": {
-        "bank": {
-          "waypoints": 100
-        },
-        "unmove": true,
-        "avoid": true,
-        "translucent": true,
-        "automap": {
-          "color": 210
-        },
-        "fullbank": true,
-        "default_action": {
-          "action": "PLAYER_ACTION_AUTOWALK_HIGHLIGHT"
-        }
-      }
-    },
-    "spriteInfo": {
-      "patternWidth": 1,
-      "patternHeight": 1,
-      "patternDepth": 1,
-      "boundingSquare": 32
-    },
-    "flags": {
-      "fullbank": true,
-      "unmove": true,
-      "automap": true,
-      "bank": true
     }
   },
   "2913": {
