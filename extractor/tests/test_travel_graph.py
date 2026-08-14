@@ -159,7 +159,8 @@ def test_extract_tile_flags_excludes_marker_sign_items_from_flags():
 
     tiles = tg.extract_tile_flags(dump, object_defs)
 
-    assert tiles == [{"x": 0, "y": 0, "z": 7, "unpass": False, "isFloorTransition": False}]
+    assert tiles == [{"x": 0, "y": 0, "z": 7, "unpass": False,
+                      "isFloorTransition": False, "floorchange": None}]
 
 
 def test_extract_tile_flags_combines_ground_and_item_flags():
@@ -173,11 +174,133 @@ def test_extract_tile_flags_combines_ground_and_item_flags():
 
     tiles = tg.extract_tile_flags(dump, object_defs)
 
-    assert tiles == [{"x": 0, "y": 0, "z": 7, "unpass": True, "isFloorTransition": False}]
+    assert tiles == [{"x": 0, "y": 0, "z": 7, "unpass": True,
+                      "isFloorTransition": False, "floorchange": None}]
 
 
-def _tile(x, y, z, unpass=False, transition=False):
-    return {"x": x, "y": y, "z": z, "unpass": unpass, "isFloorTransition": transition}
+def test_extract_tile_flags_takes_floorchange_from_an_item_on_the_tile():
+    dump = {
+        "data": {"nodes": [{"features": [{
+            "x": 0, "y": 0, "z": 8,
+            "tiles": [{"x": 5, "y": 5, "tileid": 100, "items": [{"id": 1951}]}],
+        }]}]}
+    }
+
+    tiles = tg.extract_tile_flags(dump, _object_defs({}), {1951: "west"})
+
+    assert tiles[0]["floorchange"] == "west"
+
+
+def test_extract_tile_flags_reports_no_floorchange_when_items_xml_is_absent():
+    # O fallback declarado de `_read_floorchange_items`: sem items.xml o grafo
+    # perde ligações, mas nunca inventa uma.
+    dump = {
+        "data": {"nodes": [{"features": [{
+            "x": 0, "y": 0, "z": 8,
+            "tiles": [{"x": 5, "y": 5, "tileid": 100, "items": [{"id": 1951}]}],
+        }]}]}
+    }
+
+    tiles = tg.extract_tile_flags(dump, _object_defs({}))
+
+    assert tiles[0]["floorchange"] is None
+
+
+def _tile(x, y, z, unpass=False, transition=False, floorchange=None):
+    return {
+        "x": x,
+        "y": y,
+        "z": z,
+        "unpass": unpass,
+        "isFloorTransition": transition,
+        "floorchange": floorchange,
+    }
+
+
+# ======================================================
+# floorchange — o que se ANDA (rampa/escada/buraco)
+# ======================================================
+
+
+def test_parse_floorchange_items_reads_single_ids_and_ranges():
+    xml = """
+    <items>
+      <item id="1951" article="a" name="ramp">
+        <attribute key="floorchange" value="west"/>
+      </item>
+      <item fromid="369" toid="371" article="a" name="trapdoor">
+        <attribute key="floorchange" value="down"/>
+      </item>
+      <item id="2160" article="a" name="crystal coin"/>
+    </items>
+    """
+
+    directions = tg.parse_floorchange_items(xml)
+
+    assert directions[1951] == "west"
+    assert directions[369] == directions[370] == directions[371] == "down"
+    assert 2160 not in directions
+
+
+def test_parse_floorchange_items_ignores_the_ladder_which_is_used_not_walked():
+    # 1948 é "ladder" no items.xml e **não** tem floorchange: escada de mão se
+    # usa, não se pisa. Quem a liga é `isFloorTransition` — é por isso que as
+    # duas regras coexistem em vez de uma substituir a outra.
+    xml = '<items><item id="1948" article="a" name="ladder"/></items>'
+
+    assert tg.parse_floorchange_items(xml) == {}
+
+
+def test_build_walkable_graph_ramp_connects_one_tile_over_and_one_floor_up():
+    # A rampa encontrada ao lado da placa de ROOK-HUNT-0016: exatamente o caso
+    # que a ponte do mesmo (x, y) não consegue expressar.
+    tiles = [_tile(5, 5, 8, floorchange="west"), _tile(4, 5, 7)]
+
+    graph = tg.build_walkable_graph(tiles)
+
+    assert graph[(5, 5, 8)] == {(4, 5, 7)}
+    assert (5, 5, 8) in graph[(4, 5, 7)]
+
+
+def test_build_walkable_graph_hole_connects_straight_down():
+    tiles = [_tile(5, 5, 7, floorchange="down"), _tile(5, 5, 8)]
+
+    graph = tg.build_walkable_graph(tiles)
+
+    assert graph[(5, 5, 7)] == {(5, 5, 8)}
+
+
+def test_build_walkable_graph_alt_variants_move_like_their_base_direction():
+    tiles = [
+        _tile(0, 0, 8, floorchange="southalt"), _tile(0, 1, 7),
+        _tile(9, 9, 8, floorchange="eastalt"), _tile(10, 9, 7),
+    ]
+
+    graph = tg.build_walkable_graph(tiles)
+
+    assert graph[(0, 0, 8)] == {(0, 1, 7)}
+    assert graph[(9, 9, 8)] == {(10, 9, 7)}
+
+
+def test_build_walkable_graph_floorchange_into_a_blocked_tile_connects_nothing():
+    tiles = [_tile(5, 5, 8, floorchange="west"), _tile(4, 5, 7, unpass=True)]
+
+    graph = tg.build_walkable_graph(tiles)
+
+    assert graph[(5, 5, 8)] == set()
+
+
+def test_build_walkable_graph_tiles_without_the_floorchange_key_still_work():
+    # Um chamador que não passou `items.xml` continua valendo: sem a chave, o
+    # comportamento é o de antes desta regra existir.
+    tiles = [
+        {"x": 0, "y": 0, "z": 7, "unpass": False, "isFloorTransition": False},
+        {"x": 1, "y": 0, "z": 7, "unpass": False, "isFloorTransition": False},
+    ]
+
+    graph = tg.build_walkable_graph(tiles)
+
+    assert graph[(0, 0, 7)] == {(1, 0, 7)}
 
 
 def test_build_walkable_graph_excludes_unpass_tiles():

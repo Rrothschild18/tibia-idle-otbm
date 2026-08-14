@@ -167,15 +167,95 @@ DEFAULT_NPC_REACH = 3
 
 Node = Tuple[int, int, int]
 
+# Where each `floorchange` value takes you, as (dx, dy, dz) from the tile
+# carrying it. `down` drops straight through; the four compass values are
+# ramps/stairs you *walk up* by moving that way, so they land one tile over
+# **and** one floor up — which is exactly the case the same-(x, y) bridge
+# below cannot express, and why every cave entered by a ramp used to come out
+# islanded.
+#
+# `southalt`/`eastalt` are the alternate sprite variants of the same two
+# movements (Canary's FLOORCHANGE_*_ALT), not different movements.
+#
+# The graph is undirected, so one entry per value covers both directions:
+# walking up the ramp and walking back down it are the same edge.
+FLOORCHANGE_DELTAS: Dict[str, Tuple[int, int, int]] = {
+    "down": (0, 0, 1),
+    "north": (0, -1, -1),
+    "south": (0, 1, -1),
+    "east": (1, 0, -1),
+    "west": (-1, 0, -1),
+    "southalt": (0, 1, -1),
+    "eastalt": (1, 0, -1),
+}
 
-def extract_tile_flags(dump: Dict, object_defs: Dict[str, Dict]) -> List[Dict]:
-    """Every tile in the dump -> {"x", "y", "z", "unpass", "isFloorTransition"},
-    combining the ground tileid's flags with every item stacked on it (each
-    resolved through `object_defs`, keyed by appearanceId — the same
+_ITEM_ELEMENT_RE = re.compile(r"<item ([^>]*)>(.*?)</item>", re.S)
+_FLOORCHANGE_ATTR_RE = re.compile(r'key="floorchange"\s+value="([a-z]+)"')
+_ITEM_ID_RE = re.compile(r'\bid="(\d+)"')
+_ITEM_RANGE_RE = re.compile(r'fromid="(\d+)"[^>]*toid="(\d+)"')
+
+
+def parse_floorchange_items(items_xml: str) -> Dict[int, str]:
+    """Canary's `items.xml` -> {item id: floorchange direction}.
+
+    This is the authority on "does walking here change my floor", and it
+    replaces guessing from render flags. The previous rule inferred stairs
+    from a four-flag combo (`usable`+`forceuse`+`unmove`+`automap`) calibrated
+    on four known appearance ids; a ramp carries none of them, so every ramp
+    in the map was invisible to the graph — the whole reason hunts sitting in
+    ramp-entered caves were reported as unreachable.
+
+    Deliberately *not* a curated id list kept in this repo: the same file the
+    map editor reads is the one the server reads, so a new stairs id arrives
+    with a Canary bump instead of with somebody remembering to add it here.
+
+    Ranges (`fromid`/`toid`) expand — Canary declares most stair/ramp families
+    that way, and reading only the single-`id` form would silently pick up a
+    fraction of them.
+
+    **Does not** cover ladders, holes and rope spots: those have no
+    `floorchange` because they are *used*, not walked onto (item 1948, the
+    ladder, carries none). They keep coming from `isFloorTransition` — see
+    `build_walkable_graph`."""
+    directions: Dict[int, str] = {}
+
+    for element in _ITEM_ELEMENT_RE.finditer(items_xml):
+        attributes, body = element.group(1), element.group(2)
+        direction = _FLOORCHANGE_ATTR_RE.search(body)
+        if not direction:
+            continue
+
+        single = _ITEM_ID_RE.search(attributes)
+        span = _ITEM_RANGE_RE.search(attributes)
+        if single:
+            directions[int(single.group(1))] = direction.group(1)
+        elif span:
+            for item_id in range(int(span.group(1)), int(span.group(2)) + 1):
+                directions[item_id] = direction.group(1)
+
+    return directions
+
+
+def extract_tile_flags(
+    dump: Dict,
+    object_defs: Dict[str, Dict],
+    floorchange_by_id: Optional[Dict[int, str]] = None,
+) -> List[Dict]:
+    """Every tile in the dump -> {"x", "y", "z", "unpass", "isFloorTransition",
+    "floorchange"}, combining the ground tileid's flags with every item stacked
+    on it (each resolved through `object_defs`, keyed by appearanceId — the same
     objectDefs map.json already carries). Marker signs (reserved uid range)
     never contribute — they're stripped from map.json (see build_phaser_map.py)
     and the graph must reflect that same city, not the raw OTBM's extra markup.
-    A tile with no metadata for an id (not in object_defs) contributes no flags."""
+    A tile with no metadata for an id (not in object_defs) contributes no flags.
+
+    `floorchange` is the direction from `parse_floorchange_items`, or `None`
+    when nothing on the tile changes floors — and `None` for every tile when
+    `floorchange_by_id` is omitted, which is what keeps a caller that has no
+    `items.xml` behaving exactly as before this existed. The *first* direction
+    found on the tile wins: ground first, then items bottom-up, so a ramp that
+    someone decorated doesn't lose its movement to the decoration."""
+    floorchange_by_id = floorchange_by_id or {}
 
     def _flags(appearance_id: Optional[int]) -> Dict:
         if appearance_id is None:
@@ -187,10 +267,14 @@ def extract_tile_flags(dump: Dict, object_defs: Dict[str, Dict]) -> List[Dict]:
         key = (x, y, z)
         unpass = False
         is_floor_transition = False
+        floorchange: Optional[str] = None
 
-        ground_flags = _flags(tile.get("tileid"))
+        ground_id = tile.get("tileid")
+        ground_flags = _flags(ground_id)
         unpass = unpass or ground_flags.get("unpass", False)
         is_floor_transition = is_floor_transition or ground_flags.get("isFloorTransition", False)
+        if ground_id is not None:
+            floorchange = floorchange_by_id.get(ground_id)
 
         for raw_item in tile.get("items", []):
             uid = raw_item.get("uid")
@@ -199,8 +283,17 @@ def extract_tile_flags(dump: Dict, object_defs: Dict[str, Dict]) -> List[Dict]:
             item_flags = _flags(raw_item.get("id"))
             unpass = unpass or item_flags.get("unpass", False)
             is_floor_transition = is_floor_transition or item_flags.get("isFloorTransition", False)
+            if floorchange is None:
+                floorchange = floorchange_by_id.get(raw_item.get("id"))
 
-        tiles[key] = {"x": x, "y": y, "z": z, "unpass": unpass, "isFloorTransition": is_floor_transition}
+        tiles[key] = {
+            "x": x,
+            "y": y,
+            "z": z,
+            "unpass": unpass,
+            "isFloorTransition": is_floor_transition,
+            "floorchange": floorchange,
+        }
 
     return list(tiles.values())
 
@@ -212,7 +305,18 @@ def build_walkable_graph(tiles: List[Dict]) -> Dict[Node, Set[Node]]:
     `isFloorTransition` also gets an edge to the same (x, y) on both z-1 and
     z+1 whenever that neighbor is itself walkable (ADR 0002: the true up/down
     direction can't be derived from the flag alone, so both directions get
-    an edge rather than guessing)."""
+    an edge rather than guessing).
+
+    A tile carrying a `floorchange` gets the edge that value *names* — one
+    tile over and one floor up for a ramp, straight down for a hole (see
+    `FLOORCHANGE_DELTAS`). This is the accurate half of the two: it comes from
+    Canary's own `items.xml` rather than from a render-flag heuristic, and it
+    knows the direction, so a ramp that moves you sideways connects where the
+    same-(x, y) bridge above silently could not.
+
+    Both rules stay, and neither is redundant: `floorchange` covers what you
+    *walk* onto (stairs, ramps, holes), `isFloorTransition` covers what you
+    *use* (ladders, rope spots), which carry no `floorchange` at all."""
     walkable = {(t["x"], t["y"], t["z"]) for t in tiles if not t["unpass"]}
     graph: Dict[Node, Set[Node]] = {node: set() for node in walkable}
 
@@ -236,6 +340,12 @@ def build_walkable_graph(tiles: List[Dict]) -> Dict[Node, Set[Node]]:
                 neighbor = (x, y, nz)
                 if neighbor in walkable:
                     _connect(node, neighbor)
+
+        delta = FLOORCHANGE_DELTAS.get(t.get("floorchange") or "")
+        if delta:
+            neighbor = (x + delta[0], y + delta[1], z + delta[2])
+            if neighbor in walkable:
+                _connect(node, neighbor)
 
     return graph
 
