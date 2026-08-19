@@ -284,6 +284,30 @@ def _strip_sprite_ids(payload):
         return [_strip_sprite_ids(item) for item in payload]
     return payload
 
+def _frame_durations_ms(phase_list) -> List[int]:
+    """Per-phase duration in ms from a CIP `spritePhase` list.
+
+    Each phase carries `durationMin`/`durationMax` (equal unless the client is
+    meant to pick a random duration in the range); we take the average, which
+    is what the outfit path (`_animation_timing`) already does. Returns an empty
+    list when the data is absent or malformed, so the caller falls back to a
+    scalar rather than emitting garbage.
+    """
+    if not isinstance(phase_list, list) or not phase_list:
+        return []
+    out: List[int] = []
+    for phase in phase_list:
+        if not isinstance(phase, dict):
+            return []
+        dmin = phase.get("durationMin")
+        dmax = phase.get("durationMax", dmin)
+        if dmin is None and dmax is None:
+            return []
+        dmin = dmin if dmin is not None else dmax
+        dmax = dmax if dmax is not None else dmin
+        out.append(int(round((dmin + dmax) / 2)))
+    return out
+
 def analyze_item(appearance_id: int) -> Dict:
     if appearance_id in ITEM_CACHE:
         return ITEM_CACHE[appearance_id]
@@ -444,26 +468,60 @@ def analyze_item(appearance_id: int) -> Dict:
     phase_count = len(sprite_ids) // pattern_count if pattern_count else len(sprite_ids)
     animation_valid = False
     if animation_block:
-        phases = animation_block.get("phases")
-        if isinstance(phases, list):
-            phase_count = len(phases)
-        elif isinstance(phases, int):
-            phase_count = phases
+        # CIP stores the phase list under `spritePhase`, each phase carrying a
+        # `durationMin`/`durationMax` in ms. The old code read `phases` /
+        # `frame_duration` — keys that don't exist in this metadata — so EVERY
+        # animated appearance fell to the 500ms default and rendered at a flat
+        # 2fps regardless of its real cadence (water, fire, teleporters, and
+        # effects all move at different speeds). The outfit path
+        # (`_animation_timing`) already reads `spritePhase`; this brings the map
+        # path in line with it.
+        phase_list = animation_block.get("spritePhase")
+        if not isinstance(phase_list, list):
+            legacy = animation_block.get("phases")
+            phase_list = legacy if isinstance(legacy, list) else None
+        if isinstance(phase_list, list):
+            phase_count = len(phase_list)
+        elif isinstance(animation_block.get("phases"), int):
+            phase_count = animation_block["phases"]
         sprite_ready = (
             available_count == len(sprite_records)
             and phase_count * pattern_count == len(sprite_records)
         )
         if sprite_ready:
-            frame_duration = animation_block.get("frame_duration") or animation_block.get("frameDuration") or 500
+            frame_durations = _frame_durations_ms(phase_list)
+            if frame_durations:
+                avg_ms = sum(frame_durations) / len(frame_durations)
+            else:
+                scalar = (
+                    animation_block.get("frame_duration")
+                    or animation_block.get("frameDuration")
+                    or 500
+                )
+                frame_durations = [int(scalar)] * phase_count
+                avg_ms = scalar
+            loop_type = str(animation_block.get("loopType", ""))
+            loop = ("INFINITE" in loop_type) if loop_type else bool(animation_block.get("loop", True))
             animation_valid = True
             info["animated"] = True
             info["type"] = "animated"
             info["animation"] = {
                 "appearanceId": appearance_id,
-                "frameDurationMs": frame_duration,
-                "frameRate": max(1, int(1000 / max(frame_duration, 1))),
-                "loop": animation_block.get("loop", True),
-                "startFrame": animation_block.get("default_phase", 0)
+                # Real per-frame cadence, one entry per phase and aligned with a
+                # variant's phase-major strided gids (frame i of a variant uses
+                # frameDurations[i]). This is what the renderer honours.
+                "frameDurations": frame_durations,
+                # Scalar average kept as a coarse fallback / back-compat.
+                "frameDurationMs": int(round(avg_ms)),
+                "frameRate": max(1, round(1000 / max(avg_ms, 1), 2)),
+                "loop": loop,
+                # CIP's `synchronized`: True => every tile of this appearance
+                # animates on one shared clock (water, most decor); False =>
+                # each tile free-runs. The renderer aligns phase to a global
+                # clock when True (see `map-loader` playInStep) so a streamed
+                # map doesn't show the same water at different frames.
+                "synchronized": bool(animation_block.get("synchronized", True)),
+                "startFrame": animation_block.get("default_phase", 0),
             }
         else:
             info["issues"].append("invalid_animation")
