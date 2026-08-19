@@ -521,7 +521,13 @@ def analyze_item(appearance_id: int) -> Dict:
                 # clock when True (see `map-loader` playInStep) so a streamed
                 # map doesn't show the same water at different frames.
                 "synchronized": bool(animation_block.get("synchronized", True)),
-                "startFrame": animation_block.get("default_phase", 0),
+                # CIP names this `default_start_phase` (camelCase `defaultStartPhase`
+                # in this protobuf-JSON); the old `default_phase` matched neither
+                # key, so every startFrame silently defaulted to 0.
+                "startFrame": animation_block.get("defaultStartPhase")
+                or animation_block.get("default_start_phase")
+                or animation_block.get("default_phase")
+                or 0,
             }
         else:
             info["issues"].append("invalid_animation")
