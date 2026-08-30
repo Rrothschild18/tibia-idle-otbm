@@ -8,7 +8,9 @@ directory, and a JSON without `axes` is left alone here.
 
 Layout: 216 frames (4 directions x 3 addons x 2 layers x 9 phases — the mount
 axis is dropped upstream), 64x64 cells pitched one pixel apart, 24 columns.
-That comes out at 1561x586, ~92 KB per outfit and 2,28 MB across the 22.
+That comes out at 1561x586, ~92 KB per outfit — times however many ids
+extract_sprites.py wrote to sprites/outfits/ (the full catalogue in
+outfit_names.json, not just the 22 classics).
 
 Twenty-four columns is not arbitrary: one phase is exactly 3 addons x 4
 directions x 2 layers = 24 frames, so **row N of the sheet is phase N**. The
@@ -81,12 +83,13 @@ def pack_player_frames(frames: List[Tuple[str, str]],
 
 
 def build_sheet_json(image_name: str, canvas_size: Tuple[int, int],
-                     frame_map: Dict, axes: Dict) -> Dict:
+                     frame_map: Dict, axes: Dict, name: str = "") -> Dict:
     """The shape Phaser reads directly, plus the `axes` block the client needs
     so it never has to deduce the axes from the frame count."""
     return {
         "frames": frame_map,
         "axes": axes,
+        "name": name,
         "meta": {"image": image_name, "size": {"w": canvas_size[0], "h": canvas_size[1]}},
     }
 
@@ -161,7 +164,7 @@ def bake_player_outfit(outfit_id: int) -> Optional[Dict]:
 
     canvas, frame_map = pack_player_frames(frames)
     image_name = f"{outfit_id}.png"
-    sheet = build_sheet_json(image_name, canvas.size, frame_map, axes)
+    sheet = build_sheet_json(image_name, canvas.size, frame_map, axes, data.get("name", ""))
 
     os.makedirs(SHEETS_DIR, exist_ok=True)
     canvas.save(os.path.join(SHEETS_DIR, image_name))
