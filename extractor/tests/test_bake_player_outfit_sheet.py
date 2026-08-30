@@ -93,15 +93,16 @@ def test_pack_places_each_frames_pixels_at_its_mapped_rect(tmp_path):
 # build_sheet_json
 # ---------------------------------------------------------------------------
 
-def test_sheet_json_carries_frames_axes_and_meta():
+def test_sheet_json_carries_frames_axes_meta_and_name():
     frame_map = {"128_base_a0_north_0": {"frame": {"x": 1, "y": 1, "w": 64, "h": 64}}}
     axes = {"directions": 4, "phases": 9, "layers": 2, "addons": 3, "mounts": 1}
 
-    sheet = bp.build_sheet_json("128.png", (1561, 586), frame_map, axes)
+    sheet = bp.build_sheet_json("128.png", (1561, 586), frame_map, axes, "Citizen")
 
     assert sheet == {
         "frames": frame_map,
         "axes": axes,
+        "name": "Citizen",
         "meta": {"image": "128.png", "size": {"w": 1561, "h": 586}},
     }
 

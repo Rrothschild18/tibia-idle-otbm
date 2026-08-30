@@ -129,15 +129,18 @@ def test_frame_index_on_creature_axes_reduces_to_direction_modulo_4():
 
 
 # ---------------------------------------------------------------------------
-# The 22 ids
+# The fixed catalogue — outfit_names.json, sourced from Canary's
+# data/XML/outfits.xml, not a hardcoded id range
 # ---------------------------------------------------------------------------
 
-def test_player_outfit_ids_are_the_22_classics():
-    assert len(es.PLAYER_OUTFIT_IDS) == 22
-    assert min(es.PLAYER_OUTFIT_IDS) == 128
-    assert max(es.PLAYER_OUTFIT_IDS) == 150
-    # 135 does not exist in outfits.aec.
-    assert 135 not in es.PLAYER_OUTFIT_IDS
+def test_player_outfit_ids_come_from_the_name_catalogue():
+    # Every id extract_sprites treats as a player outfit has a name, and
+    # every named id counts — the 22 classics (128-150, 135 skipped: it
+    # doesn't exist in outfits.aec) are a subset, not the whole list.
+    assert set(es.PLAYER_OUTFIT_IDS) == set(es.OUTFIT_NAMES)
+    classics = set(i for i in range(128, 151) if i != 135)
+    assert classics <= set(es.PLAYER_OUTFIT_IDS)
+    assert len(es.PLAYER_OUTFIT_IDS) > len(classics)
 
 
 def test_is_player_outfit_only_matches_the_catalogued_ids():
@@ -145,7 +148,7 @@ def test_is_player_outfit_only_matches_the_catalogued_ids():
     assert es.is_player_outfit(150)
     assert not es.is_player_outfit(135)
     assert not es.is_player_outfit(21)     # rat
-    assert not es.is_player_outfit(1015)
+    assert not es.is_player_outfit(999999)  # not in the catalogue
 
 
 # ---------------------------------------------------------------------------

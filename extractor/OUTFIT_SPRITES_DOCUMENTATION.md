@@ -49,8 +49,15 @@ errada.
 
 ## Outfits de jogador
 
-Os 22 outfits clássicos (128–134, 136–150 — o id 135 não existe) têm todos exatamente a mesma
-forma:
+O catálogo de outfits de jogador não vem do `.aec` — ele não guarda nome nenhum (ver abaixo).
+Vem de `data/XML/outfits.xml` do Canary, que lista todo outfit selecionável no jogo com seu
+nome e looktype. `scripts/outfit_names.json` é essa lista copiada (242 ids — 121 outfits x
+macho/fêmea), e é o que `extract_sprites.py` usa como `PLAYER_OUTFIT_IDS` — não mais uma faixa
+fixa de 22. Os 22 clássicos (128–134, 136–150 — o id 135 não existe) são um subconjunto, não o
+catálogo inteiro.
+
+Os 242 IDs foram conferidos um a um contra `outfits.aec`: todos existem lá e batem exatamente
+na mesma forma:
 
 ```
 432 sprites = 4 direções × 3 addons × 2 montaria × 2 layers × 9 fases
@@ -89,13 +96,18 @@ de contrato.
 
 ### O `.aec` não tem nomes
 
-O campo `name` está vazio nos 1.330 outfits. A extração é por id, e o mapa id→nome vive só em
-`BASE_OUTFITS` (`libs/models/character` no `tibia-idle`).
+O campo `name` está vazio nos 1.330 outfits, os 242 do catálogo inclusos. A extração de nomes
+não vem do `.aec` — vem de `data/XML/outfits.xml` do Canary, copiado para
+`scripts/outfit_names.json`. `extract_sprites.py` grava o nome no JSON de cada outfit (`"name"`),
+e `bake_player_outfit_sheet.py` carrega esse campo até o sheet final. `BASE_OUTFITS`
+(`libs/models/character` no `tibia-idle`) ainda existe mas cobre só os 22 clássicos — os outfits
+novos saem com o nome no próprio JSON, sem precisar de tabela paralela no client.
 
 ## Contrato do sheet
 
 Um sheet por outfit, células de 64×64 com 1px de padding, grade de 24 colunas — 216 frames
-(`4 direções × 3 addons × 2 layers × 9 fases`), 1561×586px, ~97 KB por outfit (2,08 MB nos 22).
+(`4 direções × 3 addons × 2 layers × 9 fases`), 1561×586px, ~97 KB por outfit (~23 MB nos 242 do
+catálogo inteiro).
 
 O padding é uma calha **compartilhada** entre células vizinhas, não uma borda por célula: as
 células andam de 65 em 65 px e o sheet tem 1px a mais que a borda da última. É daí que sai
@@ -109,8 +121,8 @@ Quem produz: `scripts/bake_player_outfit_sheet.py`, saída em `atlases/player-ou
 formato que o atlas de criatura de `bake_outfit_atlas.py`, e os dois se distinguem pela presença
 do bloco `axes` — nenhum dos dois carrega lista de id do outro.
 
-Base e máscara moram no **mesmo** arquivo. Separá-los em dois economiza 6% (2,28 → 2,14 MB nos
-22 outfits) ao custo de dobrar as requisições e inventar o estado "outfit meio carregado".
+Base e máscara moram no **mesmo** arquivo. Separá-los em dois economiza uns 6% de peso ao custo
+de dobrar as requisições e inventar o estado "outfit meio carregado".
 
 ### Chave de frame
 
@@ -128,6 +140,7 @@ O JSON declara os eixos, para que o consumidor não precise deduzi-los da contag
 {
   "frames": { "128_base_a0_north_0": { "frame": { "x": 1, "y": 1, "w": 64, "h": 64 } } },
   "axes": { "directions": 4, "phases": 9, "layers": 2, "addons": 3, "mounts": 1 },
+  "name": "Citizen",
   "meta": { "image": "128.png", "size": { "w": 1561, "h": 586 } }
 }
 ```

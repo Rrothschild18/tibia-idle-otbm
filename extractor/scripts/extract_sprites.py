@@ -65,8 +65,20 @@ PLAYER_DECLARED_AXES = {
     "mounts": 1,
 }
 
-# Os 22 outfits clássicos de jogador. O id 135 não existe no .aec.
-PLAYER_OUTFIT_IDS = tuple(i for i in range(128, 151) if i != 135)
+# O catálogo fixo de outfits de jogador, tirado de `data/XML/outfits.xml` do
+# Canary (não do .aec, que não guarda nome nenhum — ver OUTFIT_NAMES). São 242
+# ids (121 outfits x macho/fêmea), os 22 clássicos entre eles. Todo id fora
+# desta lista que ainda assim bate na forma de outfit de jogador (addon,
+# montaria, layer) é outra coisa — GM, id removido, etc. — e continua sendo
+# descartado por `has_non_creature_axis`.
+def _load_outfit_names() -> dict:
+    path = os.path.join(SCRIPTS_DIR, "outfit_names.json")
+    with open(path, "r", encoding="utf-8") as handle:
+        return {int(k): v for k, v in json.load(handle).items()}
+
+
+OUTFIT_NAMES = _load_outfit_names()
+PLAYER_OUTFIT_IDS = tuple(sorted(OUTFIT_NAMES))
 
 DIRECTION_NAMES = ("north", "east", "south", "west")
 LAYER_NAMES = ("base", "mask")
@@ -85,11 +97,11 @@ def frame_index(phase: int, z: int, y: int, x: int, layer: int,
 
 
 def is_player_outfit(app_id: int) -> bool:
-    """True para os 22 ids de jogador.
+    """True para os ids do catálogo fixo de outfits.xml (ver PLAYER_OUTFIT_IDS).
 
     A pergunta é "este outfit é de jogador?", e não "este outfit tem eixos
-    demais?" — a lista é conhecida e finita. Ver `creature_axes` para o que
-    acontece com o resto.
+    demais?" — a lista é conhecida e finita, e vem do jogo, não do .aec. Ver
+    `has_non_creature_axis` para o que acontece com o resto.
     """
     return app_id in PLAYER_OUTFIT_IDS
 
@@ -206,7 +218,7 @@ def has_non_creature_axis(appearance) -> bool:
     bem dos 36 sprites e continua entrando aqui, porque mantém os três eixos
     em 1.
 
-    Os 22 outfits de jogador batem nos três de uma vez, e têm caminho próprio
+    Os outfits de jogador batem nos três de uma vez, e têm caminho próprio
     (`is_player_outfit`). O que sobra são appearances de criatura fora do
     formato — descartadas, como sempre foram.
     """
@@ -266,10 +278,19 @@ def extract_player_outfit(appearance, group_dir: str) -> int:
             write_png(appearance.sprite_data[index], png_path)
             written += 1
 
+    declared_axes = {
+        "directions": axes.directions,
+        "phases": axes.phases,
+        "layers": axes.layers,
+        "addons": axes.addons,
+        "mounts": 1,
+    }
+
     json_data = {
         "id": app_id,
+        "name": OUTFIT_NAMES.get(app_id, ""),
         "spriteId": [key for key, _ in plan],
-        "axes": PLAYER_DECLARED_AXES,
+        "axes": declared_axes,
         "flags": proto_to_dict(appearance.flags) if appearance.HasField("flags") else {},
     }
 
@@ -309,8 +330,9 @@ def extract_group(appearances, group_name: str):
         app_id = appearance.id
         sprite_data_offset = 0
 
-        # Os 22 outfits de jogador têm addon, montaria e layer, e saem por um
-        # caminho próprio — com chave de frame explícita e o bloco `axes`.
+        # Os outfits de jogador do catálogo fixo têm addon, montaria e layer,
+        # e saem por um caminho próprio — com chave de frame explícita e o
+        # bloco `axes`.
         if group_name == "outfits" and is_player_outfit(app_id):
             total_pngs += extract_player_outfit(appearance, group_dir)
             players += 1
@@ -460,7 +482,7 @@ def extract_group(appearances, group_name: str):
 
     print(f"[OK] {group_name}: {total_pngs} PNGs extraidos")
     if players:
-        print(f"  [player] {players} outfits de jogador (216 frames cada, sem montaria)")
+        print(f"  [player] {players} outfits de jogador (sem montaria; addons variam por outfit)")
     if skipped:
         print(f"  [skip] {skipped} appearances ignoradas (eixo de addon/montaria/layer)")
 
