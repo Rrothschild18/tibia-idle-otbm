@@ -2,8 +2,8 @@
   "mapBoundsRef": {
     "minX": 980,
     "minY": 970,
-    "maxX": 1239,
-    "maxY": 1179
+    "maxX": 1240,
+    "maxY": 1190
   },
   "monsterDefs": {
     "30": {
@@ -4091,6 +4091,131 @@
             "44_61",
             "44_62",
             "44_63"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "223": {
+      "name": "Seagull",
+      "outfitId": 223,
+      "atlas": {
+        "image": "assets/outfits/223.png",
+        "json": "assets/outfits/223.json"
+      },
+      "loot": [],
+      "idle": {
+        "south": {
+          "frames": [
+            "223_0",
+            "223_1",
+            "223_2",
+            "223_3",
+            "223_4",
+            "223_5",
+            "223_6",
+            "223_7"
+          ],
+          "frameRate": 10.0,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "223_8",
+            "223_9",
+            "223_10",
+            "223_11",
+            "223_12",
+            "223_13",
+            "223_14",
+            "223_15"
+          ],
+          "frameRate": 10.0,
+          "loopType": "infinite"
+        },
+        "north": {
+          "frames": [
+            "223_16",
+            "223_17",
+            "223_18",
+            "223_19",
+            "223_20",
+            "223_21",
+            "223_22",
+            "223_23"
+          ],
+          "frameRate": 10.0,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "223_24",
+            "223_25",
+            "223_26",
+            "223_27",
+            "223_28",
+            "223_29",
+            "223_30",
+            "223_31"
+          ],
+          "frameRate": 10.0,
+          "loopType": "infinite"
+        }
+      },
+      "moving": {
+        "south": {
+          "frames": [
+            "223_32",
+            "223_33",
+            "223_34",
+            "223_35",
+            "223_36",
+            "223_37",
+            "223_38",
+            "223_39"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "223_40",
+            "223_41",
+            "223_42",
+            "223_43",
+            "223_44",
+            "223_45",
+            "223_46",
+            "223_47"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "north": {
+          "frames": [
+            "223_48",
+            "223_49",
+            "223_50",
+            "223_51",
+            "223_52",
+            "223_53",
+            "223_54",
+            "223_55"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "223_56",
+            "223_57",
+            "223_58",
+            "223_59",
+            "223_60",
+            "223_61",
+            "223_62",
+            "223_63"
           ],
           "frameRate": 3.33,
           "loopType": "infinite"
@@ -13435,6 +13560,314 @@
       "worldX": 1018,
       "worldY": 1155,
       "worldZ": 13,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Spider",
+      "outfitId": 30,
+      "tileX": 119,
+      "tileY": 46,
+      "worldX": 1099,
+      "worldY": 1016,
+      "worldZ": 6,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Spider",
+      "outfitId": 30,
+      "tileX": 121,
+      "tileY": 47,
+      "worldX": 1101,
+      "worldY": 1017,
+      "worldZ": 6,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Troll",
+      "outfitId": 15,
+      "tileX": 136,
+      "tileY": 62,
+      "worldX": 1116,
+      "worldY": 1032,
+      "worldZ": 6,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Troll",
+      "outfitId": 15,
+      "tileX": 138,
+      "tileY": 64,
+      "worldX": 1118,
+      "worldY": 1034,
+      "worldZ": 6,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Troll",
+      "outfitId": 15,
+      "tileX": 140,
+      "tileY": 70,
+      "worldX": 1120,
+      "worldY": 1040,
+      "worldZ": 6,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Poison Spider",
+      "outfitId": 36,
+      "tileX": 159,
+      "tileY": 79,
+      "worldX": 1139,
+      "worldY": 1049,
+      "worldZ": 6,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Poison Spider",
+      "outfitId": 36,
+      "tileX": 160,
+      "tileY": 80,
+      "worldX": 1140,
+      "worldY": 1050,
+      "worldZ": 6,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Poison Spider",
+      "outfitId": 36,
+      "tileX": 159,
+      "tileY": 83,
+      "worldX": 1139,
+      "worldY": 1053,
+      "worldZ": 6,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Wasp",
+      "outfitId": 44,
+      "tileX": 62,
+      "tileY": 96,
+      "worldX": 1042,
+      "worldY": 1066,
+      "worldZ": 6,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Spider",
+      "outfitId": 30,
+      "tileX": 143,
+      "tileY": 103,
+      "worldX": 1123,
+      "worldY": 1073,
+      "worldZ": 6,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Orc",
+      "outfitId": 5,
+      "tileX": 36,
+      "tileY": 107,
+      "worldX": 1016,
+      "worldY": 1077,
+      "worldZ": 6,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Orc",
+      "outfitId": 5,
+      "tileX": 46,
+      "tileY": 120,
+      "worldX": 1026,
+      "worldY": 1090,
+      "worldZ": 6,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Troll",
+      "outfitId": 15,
+      "tileX": 106,
+      "tileY": 135,
+      "worldX": 1086,
+      "worldY": 1105,
+      "worldZ": 6,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Troll",
+      "outfitId": 15,
+      "tileX": 107,
+      "tileY": 135,
+      "worldX": 1087,
+      "worldY": 1105,
+      "worldZ": 6,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Cat",
+      "outfitId": 276,
+      "tileX": 143,
+      "tileY": 142,
+      "worldX": 1123,
+      "worldY": 1112,
+      "worldZ": 6,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Wolf",
+      "outfitId": 27,
+      "tileX": 47,
+      "tileY": 152,
+      "worldX": 1027,
+      "worldY": 1122,
+      "worldZ": 6,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Wolf",
+      "outfitId": 27,
+      "tileX": 46,
+      "tileY": 154,
+      "worldX": 1026,
+      "worldY": 1124,
+      "worldZ": 6,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Bear",
+      "outfitId": 16,
+      "tileX": 71,
+      "tileY": 151,
+      "worldX": 1051,
+      "worldY": 1121,
+      "worldZ": 6,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Troll",
+      "outfitId": 15,
+      "tileX": 66,
+      "tileY": 170,
+      "worldX": 1046,
+      "worldY": 1140,
+      "worldZ": 6,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Wolf",
+      "outfitId": 27,
+      "tileX": 58,
+      "tileY": 177,
+      "worldX": 1038,
+      "worldY": 1147,
+      "worldZ": 6,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Wolf",
+      "outfitId": 27,
+      "tileX": 55,
+      "tileY": 183,
+      "worldX": 1035,
+      "worldY": 1153,
+      "worldZ": 6,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Wolf",
+      "outfitId": 27,
+      "tileX": 61,
+      "tileY": 180,
+      "worldX": 1041,
+      "worldY": 1150,
+      "worldZ": 6,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Wolf",
+      "outfitId": 27,
+      "tileX": 60,
+      "tileY": 183,
+      "worldX": 1040,
+      "worldY": 1153,
+      "worldZ": 6,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rabbit",
+      "outfitId": 74,
+      "tileX": 153,
+      "tileY": 190,
+      "worldX": 1133,
+      "worldY": 1160,
+      "worldZ": 6,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Seagull",
+      "outfitId": 223,
+      "tileX": 70,
+      "tileY": 200,
+      "worldX": 1050,
+      "worldY": 1170,
+      "worldZ": 6,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Wolf",
+      "outfitId": 27,
+      "tileX": 89,
+      "tileY": 201,
+      "worldX": 1069,
+      "worldY": 1171,
+      "worldZ": 6,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Wolf",
+      "outfitId": 27,
+      "tileX": 92,
+      "tileY": 202,
+      "worldX": 1072,
+      "worldY": 1172,
+      "worldZ": 6,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Wolf",
+      "outfitId": 27,
+      "tileX": 88,
+      "tileY": 204,
+      "worldX": 1068,
+      "worldY": 1174,
+      "worldZ": 6,
       "radius": 3,
       "spawntime": 90
     }
