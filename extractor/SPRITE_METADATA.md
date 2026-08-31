@@ -568,3 +568,219 @@ ITEM recebido do OTBM
 2. Um item com `bottom + unpass + unmove + unsight` vai para "bottom" (não "roof") porque `bottom` é checado via a precedência adequada — `bottom` items com essas flags extras são paredes/pilões que renderizam na base
 3. Items de ground multi-tile (4×4, pattern 16 sprites) possuem `random: true` pois têm múltiplas sprites → o renderer deve selecionar via hash determinístico
 4. `unmove` sozinho NÃO determina camada — quase todo item de mapa é `unmove`
+
+---
+
+## 11. Effects (categoria `effect`)
+
+Além de `object`/`outfit`, o pipeline passou a extrair a categoria **`effect`**
+do protobuf (`APPEARANCE_EFFECT = 3`, fonte `extractor/effects.aec`). São os
+magic effects do cliente — o que o servidor dispara por `CONST_ME_*`.
+
+**Escopo por ora: só o efeito de teleport.** A extração grava a categoria
+inteira em `sprites/effects/` (169 effects, 2240 PNGs), mas o único que vira
+atlas é o **id 11 — `CONST_ME_TELEPORT`**, o redemoinho usado quando algo é
+teleportado e, no jogo, o efeito de nascimento de monstro. Extração genérica
+de todos os magic effects não está no escopo — quando o jogo precisar de
+outro, basta somar o id em `ATLAS_EFFECT_IDS` (`bake_effect_atlas.py`) e o
+mesmo atlas cresce.
+
+### Como rodar
+
+```
+python extractor/scripts/extract_sprites.py --group effects
+python extractor/scripts/bake_effect_atlas.py
+```
+
+`--group` é opcional e existe justamente pra extrair effects sem reparsear os
+130MB de `outfits.aec`; sem a flag, `ENABLED_GROUPS` (`outfits` + `effects`)
+roda inteiro. A extração continua idempotente — PNG/JSON já existente não é
+regravado.
+
+### Forma de um effect
+
+Todo effect mantém `patternWidth = patternHeight = patternDepth = layers = 1`
+— sem direções, addons ou camadas —, então cai no mesmo ramo de "variações /
+animação" que um item animado já usa. A lista `spriteId` é, portanto,
+exatamente a ordem das fases da animação.
+
+O JSON de `sprites/effects/11/11.json`:
+
+| Campo | Valor |
+|-------|-------|
+| `spriteId` | `11_0` … `11_10` (11 frames) |
+| `spriteInfo.animation.spritePhase[]` | 11 fases, `durationMin`/`durationMax` = 70ms |
+| `spriteInfo.animation.loopType` | `ANIMATION_LOOP_TYPE_COUNTED` (toca uma vez, não repete) |
+| `frameGroup` | `initial` |
+| `flags.light` | `{ brightness: 3, color: 173 }` — o efeito tem luz própria |
+
+Tamanhos de sprite na categoria: 32×32 (902), 64×64 (1147), 32×64 (126) e
+64×32 (65). O efeito 11 é 32×32 em todos os frames.
+
+### Atlas
+
+`bake_effect_atlas.py` é a versão simplificada de `bake_item_atlas.py` —
+mesmo empacotamento em linha única, mesmo formato `{frames, meta}`, sem o
+classificador `is_equipment_candidate` (as flags de mercado/vestível que ele
+lê não existem num effect).
+
+| | |
+|---|---|
+| Saída | `atlases/effects/effects.png` + `atlases/effects/effects.json` |
+| Chaves de frame | `11_0` … `11_10`, na ordem da animação |
+| Tamanho | 374×34px (11 células de 32×32 + 1px de padding por lado) |
+
+O atlas carrega só a geometria dos frames, igual aos de item/outfit — a
+duração e o `loopType` ficam no JSON extraído (`sprites/effects/11/11.json`),
+que é a fonte pra quem for tocar a animação.
+
+Um atlas com a categoria inteira não foi feito de propósito: 2240 frames de
+até 64×64 dariam ~3100×3100px, acima dos 2048×2048 que os sheets de item/mapa
+respeitam como limite seguro de textura.
+
+---
+
+## 12. Corpses (cadáveres de monstro)
+
+Quando um monstro morre o jogo larga o corpo na tile e ele apodrece por uma
+cadeia de estágios (`monster-loot.json` → `<Monstro>.corpse`). O
+`CorpseSprite` não desenhava nada porque **um item de cadáver não tem sheet
+em lugar nenhum do pipeline**:
+
+- **sheets do `map.json`** só carregam as `appearances` que o mapa
+  efetivamente põe numa tile, e um corpse nunca está *na* tile do OTBM — ele
+  nasce em runtime. Medido: a interseção entre os itemIds de corpse e as
+  `appearances` dos 21 `map.json` é **zero**.
+- **`items-static` / `items-animated`** são o catálogo de mercado, e
+  `is_equipment_candidate` (`bake_item_atlas.py`) rejeita a flag `corpse` de
+  propósito.
+
+Daí o atlas próprio, `bake_corpse_atlas.py`.
+
+### Como rodar
+
+```
+node extractor/scripts/build_map.js <pasta-do-mapa>     # gera monsters/respawn.json
+python extractor/scripts/extract_sprites.py             # gera sprites/items/<id>.png
+python extractor/scripts/bake_corpse_atlas.py
+```
+
+### Escopo: só os monstros que os mapas construídos spawnam
+
+`monster-loot.json` tem **1391 monstros com cadeia de corpse, 2688 itemIds
+distintos** (2667 com PNG extraído — 21 nem existem no `items.xml`). Numa
+célula de 66px isso é uma grade de 31 colunas × 87 linhas = **2046×5742px**, e
+mesmo um empacotamento perfeito por tamanho precisaria de ~7,35M px² contra os
+~4,19M que uma textura 2048×2048 comporta: **o conjunto completo não cabe em
+uma textura**.
+
+O critério, então, é o mesmo espírito de `ATLAS_EFFECT_IDS`, mas derivado em
+vez de escrito à mão: entram os monstros que aparecem em `monsterDefs` de
+`ready-maps*/<CIDADE>/<pasta>/monsters/respawn.json` — os mesmos arquivos que
+`build_hunt_fragment.py` lê. Hoje são **16 monstros / 63 itemIds**, e o atlas
+cresce sozinho quando um mapa com monstro novo é construído; não há lista para
+manter.
+
+De cada monstro entra o itemId do corpo **e o de cada estágio da cadeia** — um
+tique de decay que caísse num estágio sem textura apagaria o corpo no meio do
+apodrecimento. Estágio sem PNG extraído é pulado com aviso, não quebra o bake.
+
+### Atlas
+
+Diferente de `bake_effect_atlas.py`/`bake_item_atlas.py`, o empacotamento é em
+**grade**, não em linha única: 63 frames de até 64×64 numa linha dariam 4158px,
+já acima do limite. O modelo é o de `bake_item_sheets.py` (colunas fixas,
+row-major, sem bin-packing), só que a célula é dimensionada pelo maior sprite
+do conjunto em vez de um 32 fixo — corpses vêm em 32×32 (48), 64×32 (8),
+32×64 (3) e 64×64 (4). Ordem de frame, padding e o formato `{frames, meta}`
+são os helpers compartilhados de `bake_item_atlas.py`, importados em vez de
+copiados, igual os dois bakers de sheet de item já fazem.
+
+| | |
+|---|---|
+| Saída | `atlases/corpses/corpses.png` + `atlases/corpses/corpses.json` |
+| Chaves de frame | o **itemId** em string (`"5964"`, `"3994"`, …) |
+| Tamanho | 2046×198px (31 colunas × 3 linhas de células 66×66), ~70KB |
+
+A chave é o itemId, e não o `spriteId` do sprite, porque é o itemId que o
+cliente já tem em mãos (`MonsterCorpse.stages[i].itemId`). Um corpse carrega
+exatamente um `spriteId` (verificado nos 2667 extraídos), então não há frame
+para desambiguar. A cadeia de um monstro fica contígua na grade — a do Rat,
+por exemplo, é `5964` → `3994` → `3995` → `3996`.
+
+---
+
+## 13. Pools (poças de fluido)
+
+Combate deixa poça no chão, e a poça apodrece igual um cadáver. Mesmo buraco
+da seção 12, um passo adiante: um splash nasce em runtime, nunca está numa
+tile do OTBM (nenhuma sheet de `map.json` o carrega) e `is_equipment_candidate`
+também o rejeita — item `liquidpool` não tem `market`, `clothes` nem `take`,
+só `bottom`/`unmove`. Daí o atlas próprio, `bake_pool_atlas.py`.
+
+### O que o servidor spawna (conferido no Canary 3.2.1)
+
+- **hit**: só em dano **físico**, com `ITEM_SMALLSPLASH = 2889`
+  (`Game::combatGetTypeInfo`, `src/game/game.cpp:6957`);
+- **morte**: `ITEM_FULLSPLASH = 2886` (`Creature::dropCorpse`,
+  `src/creatures/creature.cpp:668`);
+- **decay** (`data/items/items.xml`), uma cadeia por origem:
+
+| Origem | Cadeia | Durações |
+|---|---|---|
+| hit | 2889 → 2890 → 2891 → some | 45s, 45s, 60s |
+| morte | 2886 → 2887 → 2888 → some | 45s, 45s, 600s |
+
+Uma poça por tile: uma nova **remove** a antiga
+(`src/items/tile.cpp:1063`) — mesma regra que o `CorpseSprite` já aplica.
+
+### Qual fluido: a `race` do monstro
+
+| `race` | Fluido | Variante |
+|---|---|---|
+| `blood` (885 monstros) | sangue | **2** — RGB(255,13,13) |
+| `venom` (250) | slime | **4** — RGB(45,229,39) |
+| `ink` (10) | ink | **8** — RGB(39,39,39) |
+| `undead` (415), `fire` (73), `energy` (2) | nenhuma poça (só efeito visual) | — |
+
+A aparência de um splash é um grid de pattern **4×3 = 12 células**, uma por
+cor de fluido que o cliente conhece. Os três índices acima foram confirmados
+por inspeção de pixel; as outras 9 células nunca custam um frame porque
+nenhuma raça as pede.
+
+### Como rodar
+
+```
+python extractor/scripts/extract_sprites.py             # gera sprites/items/<id>/
+python extractor/scripts/bake_pool_atlas.py
+```
+
+### Atlas
+
+6 itens × 3 fluidos = **18 frames de 32×32**, então o empacotamento volta a
+ser em **linha única** (`bia.pack_item_frames`, 612px) em vez da grade que a
+seção 12 precisou para 63 frames de até 64×64. Ordem, padding e o formato
+`{frames, meta}` continuam sendo os helpers de `bake_item_atlas.py`,
+importados em vez de copiados.
+
+| | |
+|---|---|
+| Saída | `atlases/pools/pools.png` + `atlases/pools/pools.json` |
+| Chaves de frame | `"<itemId>_<variante>"` (`"2889_2"`, `"2886_8"`, …) |
+| Tamanho | 612×34px (18 células de 34×34 numa linha), ~4KB |
+
+A chave carrega os dois pedaços porque **nenhum sozinho basta**: o itemId vem
+do estágio de decay, a variante vem da raça do monstro que sangrou. Ela
+coincide com o nome do PNG extraído — `extract_sprites.py` nomeia cada célula
+do pattern como `<itemId>_<índice>` —, então o `spriteId` do JSON do item
+serve de validação: variante que a aparência não declara é pulada com aviso,
+igual um PNG faltando, sem quebrar o bake.
+
+Os 18 frames, na ordem em que ficam no atlas (fluido a fluido, e dentro dele
+as duas cadeias na ordem do decay — a sequência que o cliente percorre):
+
+```
+2886_2 2887_2 2888_2 2889_2 2890_2 2891_2   (sangue)
+2886_4 2887_4 2888_4 2889_4 2890_4 2891_4   (venom/slime)
+2886_8 2887_8 2888_8 2889_8 2890_8 2891_8   (ink)
+```

@@ -1107,7 +1107,7 @@ def _load_monster_lookup() -> Dict[str, int]:
 
 
 def _load_monster_loot_index() -> Dict[str, Dict]:
-    """Parse monster-loot.json -> {monster name: {"loot": [...], "issues": [...]}}."""
+    """Parse monster-loot.json -> {monster name: {"loot": [...], "issues": [...], "corpse": {...}, "race": "blood"}}."""
     if not os.path.exists(MONSTER_LOOT_INDEX_PATH):
         print(f"[WARN] {MONSTER_LOOT_INDEX_PATH} não encontrado — rode build_monster_loot_index.py")
         return {}
@@ -1308,11 +1308,19 @@ def build_monster_respawn(map_bounds: Dict) -> Optional[Dict]:
                 print(f"[WARN] Loot não encontrado para monstro: '{name}' — rode build_monster_loot_index.py")
                 missing_loot_names.add(name)
 
+            # corpse só existe pra monstro que deixa corpo, race pra quem
+            # declara uma — sem elas as chaves somem do def, igual ao
+            # monster-loot.json
+            corpse = loot_entry.get("corpse") if loot_entry else None
+            race = loot_entry.get("race") if loot_entry else None
+
             monster_defs[outfit_id_str] = {
                 "name": name,
                 "outfitId": outfit_id,
                 "atlas": _outfit_atlas_ref(outfit_id),
                 "loot": loot_entry["loot"] if loot_entry else [],
+                **({"corpse": corpse} if corpse else {}),
+                **({"race": race} if race else {}),
                 **anims,
             }
 

@@ -110,3 +110,60 @@ def test_no_per_outfit_sprite_folder_is_created_in_map_output(tmp_path, monkeypa
 
     assert not (monsters_output_dir / "21").exists()
     assert not hasattr(bpm, "_copy_outfit_sprites")
+
+
+def _stub_loot_index(monkeypatch, entry):
+    monkeypatch.setattr(bpm, "_load_monster_loot_index", lambda: {"Rat": entry})
+
+
+def test_monster_def_carries_corpse_from_the_loot_index(tmp_path, monkeypatch):
+    """O cliente Phaser só tem monsterDefs em mãos na hora da morte — o corpse
+    precisa viajar junto com o loot, não ficar só no monster-loot.json."""
+    corpse = {"itemId": 5964, "stages": [{"itemId": 5964, "durationSeconds": 10}]}
+    monkeypatch.setattr(bpm, "OUTFITS_ATLAS_DIR", str(tmp_path / "no-such-atlas-dir"))
+    monkeypatch.setattr(bpm, "MONSTERS_OUTPUT_DIR", str(tmp_path / "monsters"))
+    monkeypatch.setattr(bpm, "_load_outfit_json", lambda outfit_id: {"spriteId": ["21_0"]})
+    _stub_loot_index(monkeypatch, {"loot": [{"itemId": 3031}], "issues": [], "corpse": corpse})
+    _stub_single_spawn(monkeypatch)
+
+    result = bpm.build_monster_respawn({"minX": 0, "minY": 0})
+
+    assert result["monsterDefs"]["21"]["corpse"] == corpse
+
+
+def test_monster_def_omits_corpse_for_monster_without_one(tmp_path, monkeypatch):
+    monkeypatch.setattr(bpm, "OUTFITS_ATLAS_DIR", str(tmp_path / "no-such-atlas-dir"))
+    monkeypatch.setattr(bpm, "MONSTERS_OUTPUT_DIR", str(tmp_path / "monsters"))
+    monkeypatch.setattr(bpm, "_load_outfit_json", lambda outfit_id: {"spriteId": ["21_0"]})
+    _stub_loot_index(monkeypatch, {"loot": [], "issues": []})
+    _stub_single_spawn(monkeypatch)
+
+    result = bpm.build_monster_respawn({"minX": 0, "minY": 0})
+
+    assert "corpse" not in result["monsterDefs"]["21"]
+
+
+def test_monster_def_carries_race_from_the_loot_index(tmp_path, monkeypatch):
+    """A poca de fluido nasce no hit e na morte, os dois no cliente — a raca
+    viaja junto com o corpse pra ele saber se pinta sangue, slime ou nada."""
+    monkeypatch.setattr(bpm, "OUTFITS_ATLAS_DIR", str(tmp_path / "no-such-atlas-dir"))
+    monkeypatch.setattr(bpm, "MONSTERS_OUTPUT_DIR", str(tmp_path / "monsters"))
+    monkeypatch.setattr(bpm, "_load_outfit_json", lambda outfit_id: {"spriteId": ["21_0"]})
+    _stub_loot_index(monkeypatch, {"loot": [], "issues": [], "race": "blood"})
+    _stub_single_spawn(monkeypatch)
+
+    result = bpm.build_monster_respawn({"minX": 0, "minY": 0})
+
+    assert result["monsterDefs"]["21"]["race"] == "blood"
+
+
+def test_monster_def_omits_race_for_monster_without_one(tmp_path, monkeypatch):
+    monkeypatch.setattr(bpm, "OUTFITS_ATLAS_DIR", str(tmp_path / "no-such-atlas-dir"))
+    monkeypatch.setattr(bpm, "MONSTERS_OUTPUT_DIR", str(tmp_path / "monsters"))
+    monkeypatch.setattr(bpm, "_load_outfit_json", lambda outfit_id: {"spriteId": ["21_0"]})
+    _stub_loot_index(monkeypatch, {"loot": [], "issues": []})
+    _stub_single_spawn(monkeypatch)
+
+    result = bpm.build_monster_respawn({"minX": 0, "minY": 0})
+
+    assert "race" not in result["monsterDefs"]["21"]

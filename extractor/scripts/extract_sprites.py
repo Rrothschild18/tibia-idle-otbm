@@ -1,3 +1,4 @@
+import argparse
 import os
 import json
 from typing import List, NamedTuple, Tuple
@@ -20,8 +21,13 @@ AEC_FILES = {
     "outfits": (os.path.join(EXTRACTOR_DIR, "outfits.aec"), "outfit"),
 }
 
+# Os grupos que uma execução sem argumento extrai. `effects` entrou pelo efeito
+# de nascimento de monstro (CONST_ME_TELEPORT, id 11) — ver SPRITE_METADATA.md,
+# seção "Effects". Rodar só um grupo (`--group effects`) evita reparsear os
+# 130MB de outfits.aec quando não é ele que mudou.
 ENABLED_GROUPS = [
     "outfits",
+    "effects",
 ]
 
 OUT_DIR = os.path.join(EXTRACTOR_DIR, "sprites")
@@ -491,10 +497,26 @@ def extract_group(appearances, group_name: str):
 # ENTRY POINT
 # =========================
 
+def parse_args():
+    parser = argparse.ArgumentParser(
+        description="Extrai os PNGs/JSONs de um .aec do cliente para extractor/sprites/."
+    )
+    parser.add_argument(
+        "--group",
+        dest="groups",
+        action="append",
+        choices=sorted(AEC_FILES),
+        help="Extrai só este grupo (pode repetir). Sem a flag, roda ENABLED_GROUPS.",
+    )
+    return parser.parse_args()
+
+
 def main():
+    args = parse_args()
+
     ensure_dir(OUT_DIR)
 
-    for group_name in ENABLED_GROUPS:
+    for group_name in args.groups or ENABLED_GROUPS:
         aec_file, field_name = AEC_FILES[group_name]
 
         if not os.path.exists(aec_file):

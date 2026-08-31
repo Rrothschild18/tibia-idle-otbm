@@ -57,6 +57,10 @@ qualquer mapa que o referencie.
   Pode ser `null` se `bake_outfit_atlas.py` ainda não rodou para aquele outfit — nesse caso o mapa
   foi gerado mesmo assim (não é um erro fatal), mas o outfit não vai renderizar até o atlas existir.
 - `monsterDefs`: uma entrada por `outfitId` com mapeamento de animações/direções.
+- `loot` / `corpse`: o payload da morte, copiado de `monster-loot.json` por `build_monster_loot_index.py`.
+  `corpse` é `{ "itemId": N, "stages": [{ "itemId": X, "durationSeconds": Y }, ...] }` — os estágios já vêm
+  em ordem (fresco → ossos → some), e `durationSeconds: null` num estágio significa que aquele corpse não
+  envelhece sozinho. A chave é **omitida** para monstro que não deixa corpo (bosses/summons).
 - `spawns`: posição de cada spawn em coordenadas de tile (`tileX`, `tileY`), coordenadas Tibia (`worldX`, `worldY`) e o floor (`worldZ`).
 - `mapBoundsRef`: mesmo bounds do `map.json` (usado para converter coordenadas Tibia → tileX/tileY). Bounds são a união de todos os floors do mapa — ver `map.json`'s `floors`/`defaultZ` (`PHASER_INTEGRATION.md`) — então `tileX`/`tileY` já vêm corretos independente de qual floor o spawn pertence.
 - `worldZ`: floor (z-level) onde aquele spawn deve existir. Um mapa com mais de um floor tem spawns com `worldZ` diferentes; o consumidor **deve filtrar `spawns` pelo floor ativo do jogador** antes de instanciar monstros — spawnar um monstro cujo `worldZ` não é o floor atualmente renderizado o coloca fora da vista, sobre um chão que não existe naquele contexto.
