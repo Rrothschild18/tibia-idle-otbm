@@ -401,7 +401,8 @@ extractor/
     dump_otbm.js       etapa 1: .otbm → .raw.json (via vendor/otbm2json.js)
     build_phaser_map.py etapa 2: .raw.json → map.json (v5 e v6) + sprites/ + respawn.json
     build_map.js       runner: 1 mapa ou --all, chama as duas etapas
-    extract_sprites.py  etapa 0 (avulsa): .aec → extractor/sprites/ (biblioteca compartilhada)
+    extract_sprites.py  etapa 0 (avulsa): .aec → extractor/sprites/ (biblioteca compartilhada);
+                             `--group <nome>` extrai só um grupo (items/effects/missiles/outfits)
     tile_stack.py       lógica pura: flags do appearances → draw slot + stack order de uma tile (v6)
     map_v6.py           lógica pura: dump OTBM → documento map.json v6 (ver MAP_JSON_V6.md)
     sheet_packer.py     lógica pura: aparências → grade de folhas de sprite + gids
@@ -409,6 +410,8 @@ extractor/
     map_v6_migration_report.py  CLI (avulso): confere v6 contra v5, contagem por tile + antes/depois
     ground_equivalent_report.py CLI (avulso): mede o `ground_equivalent` do RME contra os mapas
     bake_outfit_atlas.py  bake global (avulso): sprites/outfits/ → atlases/outfits/<id>.{png,json}
+    bake_effect_atlas.py  bake global (avulso): sprites/effects/ → atlases/effects/effects.{png,json};
+                             só os ids de ATLAS_EFFECT_IDS (hoje o efeito 11, teleport) — ver SPRITE_METADATA.md
     bake_item_atlas.py      lib compartilhada: classificação de equipamento/consumível + resolução de frame,
                              usada pelos dois bakes de sheet abaixo (bake_item()/main() próprios não são
                              mais chamados pelo pipeline — ver bake_item_sheets_animated.py)
@@ -443,7 +446,7 @@ extractor/
                          intocado até o jogo migrar (gitignored). Só mapas de hunt — o mapa
                          cidade-inteira não é renderizado, ver ADR 0006
   sprites/              biblioteca de sprites extraída dos .aec (gitignored, binário grande)
-  atlases/              saída dos bakes globais (outfits/items-static/items-animated + items-index.json), gitignored, regenerável
+  atlases/              saída dos bakes globais (outfits/items-static/items-animated/effects + items-index.json), gitignored, regenerável
   otservbr-monster.xml  lookup nome→looktype de monstro, compartilhado entre mapas
   *.aec                 assets binários do cliente Tibia (gitignored)
   _legacy/              scripts antigos/exploratórios, não fazem parte do pipeline
@@ -493,7 +496,7 @@ alias/symlink chamado `python` no PATH.
 ### Sprites e appearances
 
 **O que é `extractor/sprites/`?**
-Uma biblioteca compartilhada de imagens (items, missiles, outfits) extraída
+Uma biblioteca compartilhada de imagens (items, missiles, outfits, effects) extraída
 uma única vez dos arquivos `.aec` do cliente Tibia. É a mesma pasta para
 todos os mapas — não é regenerada por mapa. Fica fora do git (binário
 grande, veja `.gitignore`).

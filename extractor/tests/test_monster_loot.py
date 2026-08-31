@@ -41,6 +41,83 @@ def test_load_items_index_missing_file_returns_empty():
 
 
 # ======================================================
+# load_item_decay_index / resolve_corpse_decay_chain
+# ======================================================
+
+DECAY_ITEMS_XML = """<?xml version="1.0" encoding="ISO-8859-1"?>
+<items>
+    <item id="5964" article="a" name="dead rat">
+        <attribute key="fluidsource" value="blood"/>
+        <attribute key="duration" value="10"/>
+        <attribute key="decayTo" value="3994"/>
+    </item>
+    <item id="3994" article="a" name="dead rat">
+        <attribute key="duration" value="300"/>
+        <attribute key="decayTo" value="3996"/>
+    </item>
+    <item id="3996" article="a" name="dead rat">
+        <attribute key="duration" value="60"/>
+        <attribute key="decayTo" value="0"/>
+    </item>
+    <item id="5965" article="a" name="dead human">
+        <attribute key="containersize" value="10"/>
+    </item>
+    <item fromid="4240" toid="4242" name="rotten pile">
+        <attribute key="duration" value="45"/>
+    </item>
+</items>
+"""
+
+
+def _decay_index(tmp_path):
+    items_xml = tmp_path / "items.xml"
+    items_xml.write_text(DECAY_ITEMS_XML, encoding="utf-8")
+    return ml.load_item_decay_index(str(items_xml))
+
+
+def test_load_item_decay_index_reads_child_attributes(tmp_path):
+    decay_index = _decay_index(tmp_path)
+
+    assert decay_index[5964] == {"decayTo": 3994, "durationSeconds": 10}
+    # decayTo="0" is kept as 0 (end of chain), not dropped
+    assert decay_index[3996] == {"decayTo": 0, "durationSeconds": 60}
+    # an item with neither attribute is not indexed at all
+    assert 5965 not in decay_index
+    # ranged entries carry the decay data across every id they span
+    assert decay_index[4241] == {"decayTo": None, "durationSeconds": 45}
+
+
+def test_load_item_decay_index_missing_file_returns_empty():
+    assert ml.load_item_decay_index("does/not/exist.xml") == {}
+
+
+def test_resolve_corpse_decay_chain_walks_until_decay_to_zero(tmp_path):
+    stages = ml.resolve_corpse_decay_chain(5964, _decay_index(tmp_path))
+
+    assert stages == [
+        {"itemId": 5964, "durationSeconds": 10},
+        {"itemId": 3994, "durationSeconds": 300},
+        {"itemId": 3996, "durationSeconds": 60},
+    ]
+
+
+def test_resolve_corpse_decay_chain_single_stage_for_item_without_decay(tmp_path):
+    """A corpse the source data gives no duration/decayTo for is still a stage —
+    it just never ages (dead human, 5965)."""
+    stages = ml.resolve_corpse_decay_chain(5965, _decay_index(tmp_path))
+    assert stages == [{"itemId": 5965, "durationSeconds": None}]
+
+
+def test_resolve_corpse_decay_chain_truncates_a_malformed_cycle():
+    cyclic = {
+        1: {"decayTo": 2, "durationSeconds": 5},
+        2: {"decayTo": 1, "durationSeconds": 5},
+    }
+    stages = ml.resolve_corpse_decay_chain(1, cyclic)
+    assert len(stages) == ml._MAX_DECAY_CHAIN_DEPTH
+
+
+# ======================================================
 # parse_monster_loot_lua
 # ======================================================
 
@@ -52,6 +129,9 @@ def test_parse_monster_loot_lua_reads_name_and_rows(tmp_path):
             """\
             local mType = Game.createMonsterType("Rat")
             local monster = {}
+
+            monster.corpse = 5964
+            monster.race = "blood"
 
             monster.loot = {
                 { name = "gold coin", chance = 100000, maxCount = 4 },
@@ -66,9 +146,11 @@ def test_parse_monster_loot_lua_reads_name_and_rows(tmp_path):
         encoding="utf-8",
     )
 
-    name, rows = ml.parse_monster_loot_lua(str(lua_file))
+    name, corpse_id, race, rows = ml.parse_monster_loot_lua(str(lua_file))
 
     assert name == "Rat"
+    assert corpse_id == 5964
+    assert race == "blood"
     assert rows == [
         {"name": "gold coin", "chance": 100000, "maxCount": 4},
         {"id": 3607, "chance": 39410},
@@ -96,9 +178,11 @@ def test_parse_monster_loot_lua_handles_same_line_empty_table(tmp_path):
         encoding="utf-8",
     )
 
-    name, rows = ml.parse_monster_loot_lua(str(lua_file))
+    name, corpse_id, race, rows = ml.parse_monster_loot_lua(str(lua_file))
 
     assert name == "Practice Target"
+    assert corpse_id is None
+    assert race is None
     assert rows == []
 
 
@@ -106,9 +190,11 @@ def test_parse_monster_loot_lua_no_loot_table(tmp_path):
     lua_file = tmp_path / "no_loot.lua"
     lua_file.write_text('local mType = Game.createMonsterType("Ghost")\n', encoding="utf-8")
 
-    name, rows = ml.parse_monster_loot_lua(str(lua_file))
+    name, corpse_id, race, rows = ml.parse_monster_loot_lua(str(lua_file))
 
     assert name == "Ghost"
+    assert corpse_id is None
+    assert race is None
     assert rows == []
 
 
@@ -196,6 +282,40 @@ def test_build_monster_loot_empty_rows():
     assert result == {"loot": [], "issues": []}
 
 
+def test_build_monster_loot_attaches_corpse_with_resolved_chain():
+    decay_index = {
+        5964: {"decayTo": 3994, "durationSeconds": 10},
+        3994: {"decayTo": 0, "durationSeconds": 300},
+    }
+    result = ml.build_monster_loot([], NAME_TO_ID, ID_TO_NAME, 5964, decay_index)
+
+    assert result["corpse"] == {
+        "itemId": 5964,
+        "stages": [
+            {"itemId": 5964, "durationSeconds": 10},
+            {"itemId": 3994, "durationSeconds": 300},
+        ],
+    }
+
+
+def test_build_monster_loot_omits_corpse_key_for_bodyless_monster():
+    result = ml.build_monster_loot([], NAME_TO_ID, ID_TO_NAME, None, {})
+    assert "corpse" not in result
+
+
+def test_build_monster_loot_keeps_the_race_string_raw():
+    """A raca decide o fluido da poca (blood/venom/ink pintam, undead/fire/
+    energy nao pintam nada) — o indice guarda a string do Canary como veio e
+    deixa a traducao pro jogo."""
+    result = ml.build_monster_loot([], NAME_TO_ID, ID_TO_NAME, None, {}, "venom")
+    assert result["race"] == "venom"
+
+
+def test_build_monster_loot_omits_race_key_when_the_lua_never_declares_one():
+    result = ml.build_monster_loot([], NAME_TO_ID, ID_TO_NAME, None, {}, None)
+    assert "race" not in result
+
+
 # ======================================================
 # build_monster_loot_index (small fake install on disk)
 # ======================================================
@@ -205,7 +325,10 @@ def test_build_monster_loot_index_walks_a_fake_install(tmp_path):
     items_dir = tmp_path / "data" / "items"
     items_dir.mkdir(parents=True)
     (items_dir / "items.xml").write_text(
-        '<?xml version="1.0"?><items><item id="3031" name="gold coin"/></items>',
+        '<?xml version="1.0"?><items>'
+        '<item id="3031" name="gold coin"/>'
+        '<item id="5964" name="dead rat"><attribute key="duration" value="10"/></item>'
+        "</items>",
         encoding="utf-8",
     )
 
@@ -216,6 +339,8 @@ def test_build_monster_loot_index_walks_a_fake_install(tmp_path):
             """\
             local mType = Game.createMonsterType("Rat")
             local monster = {}
+            monster.corpse = 5964
+            monster.race = "blood"
             monster.loot = {
                 { name = "gold coin", chance = 100000, maxCount = 4 },
             }
@@ -232,4 +357,8 @@ def test_build_monster_loot_index_walks_a_fake_install(tmp_path):
 
     assert set(index.keys()) == {"Rat", "Practice Target"}
     assert index["Rat"]["loot"][0]["itemName"] == "gold coin"
+    assert index["Rat"]["corpse"] == {"itemId": 5964, "stages": [{"itemId": 5964, "durationSeconds": 10}]}
+    assert index["Rat"]["race"] == "blood"
     assert index["Practice Target"]["loot"] == []
+    assert "corpse" not in index["Practice Target"]
+    assert "race" not in index["Practice Target"]
