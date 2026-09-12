@@ -1,0 +1,18 @@
+{
+  "_comment": "Cliente Tibia de onde saem TODOS os sprites. A versão é fixada aqui e em nenhum outro lugar: trocar de cliente é editar este arquivo. Um cliente mais novo desloca ids de aparência, e o sintoma aparece seis estágios adiante como sprite trocado — nunca como erro. Por isso o fetch falha, não avisa, quando um checksum diverge.",
+  "clientVersion": "15.25.0a00a0",
+  "release": {
+    "repo": "dudantas/tibia-client",
+    "tag": "15.25.0a00a0",
+    "url": "https://github.com/dudantas/tibia-client/releases/download/15.25.0a00a0/Tibia.15.25.0a00a0-original-linux.zip",
+    "sha256": "da42a4ff5e3c1bc83c3bb6257a51f20e564c66a0ebb24ed21176a03905aa1d56",
+    "sizeBytes": 403457089
+  },
+  "assets": {
+    "_comment": "assets.json.sha256 é o mecanismo de integridade do próprio cliente; conferi-lo pega uma extração truncada que o hash do zip não pegaria.",
+    "pathInZip": "Tibia.15.25.0a00a0-original-linux/packages/Tibia",
+    "assetsJsonSha256": "4cbdf80eee33901f2eb4f3391e23ad02805b65890ca856efcd9c32c54888405a",
+    "catalogEntries": 4933,
+    "appearancesFile": "appearances-aa44a154f30c7ed59acc25f246286396e4043851ef0b54ef3cf3951e46d1ce50.dat"
+  }
+}
