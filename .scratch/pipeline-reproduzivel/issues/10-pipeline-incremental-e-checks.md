@@ -104,3 +104,26 @@ idêntico ao golden**. O `map.json` do hunt também continua idêntico ao golden
 do ROOK carrega suas quatro transições de andar. Zero ali significa grafo sem escadas.
 
 **460 testes passando.**
+
+
+## Comments (2)
+
+**O `bake_player_outfit_sheet.py` tinha ficado de fora do pipeline.** Os 242 outfits de jogador
+eram extraídos como PNG e nunca bakeados; `atlases/player-outfits/` não existia. Nada reclamava — o
+`publish` só dizia `[--] player-outfits/: não bakeado`, que é informativo demais para uma coisa que
+estava simplesmente faltando.
+
+Consertado: estágio `player-outfit-sheets` no pipeline (agora são **dez**), e 242 sheets gerados
+(1561×586 cada, 216 frames, 43 MB no total). Conferido visualmente — a fase 0 do outfit 128 traz as
+24 células esperadas: 3 addons × 4 direções × 2 camadas, com a base cinza e a máscara de cor ao
+lado, que é como outfit de Tibia é montado.
+
+O guarda contra a classe inteira do erro é
+`test_every_bake_script_is_reachable_from_the_pipeline`: todo `bake_*.py` precisa ser estágio ou
+ser chamado por um. Os dois bakers de item passam porque rodam dentro do `build_items.js`;
+`bake_item_atlas.py` é explicitamente excluído, porque deixou de ser bake e virou a biblioteca de
+classificação que os dois importam.
+
+Verifiquei que o teste **falha** ao remover o estágio, em vez de só passar por construção.
+
+466 testes.

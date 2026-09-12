@@ -406,13 +406,14 @@ uv run python extractor/scripts/pipeline.py --stage maps # só um estágio
 uv run python extractor/scripts/pipeline.py --all --force
 ```
 
-Nove estágios, nesta ordem:
+Dez estágios, nesta ordem:
 
 | Estágio | Consome | Produz |
 |---|---|---|
 | `sprites` | `assets/` do cliente | `sprites/{items,outfits,effects,missiles}/` |
 | `items` | `sprites/items/` | `atlases/items-{static,animated}/`, `items-index.json` |
-| `outfit-atlas` | `sprites/outfits/` | `atlases/outfits/` |
+| `outfit-atlas` | `sprites/outfits/` | `atlases/outfits/` (criatura, 1 por outfit) |
+| `player-outfit-sheets` | `sprites/outfits/` | `atlases/player-outfits/` (jogador, grade 24 col.) |
 | `maps` | `maps/`, `sprites/items/` | `ready-maps/` (map.json + sheets + respawn) |
 | `effect-atlas` | `sprites/effects/` | `atlases/effects/` |
 | `corpse-atlas` | `ready-maps/`, `monster-loot.json` | `atlases/corpses/` |
