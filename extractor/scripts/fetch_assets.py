@@ -112,6 +112,50 @@ def verify_extracted(client_dir: str, manifest: dict) -> None:
         )
 
 
+def check_canary_agreement(client_dir: str, manifest: dict, canary_dir=None):
+    """O `appearances.dat` do cliente tem que ser o mesmo do Canary.
+
+    Divergência significa que servidor e cliente discordam sobre metadado de
+    item — id, flag, animação. O pipeline lê o do cliente e o servidor roda com
+    o dele; a discordância não dá erro em lugar nenhum, ela aparece seis
+    estágios adiante como sprite ou comportamento errado.
+
+    -> (ok, mensagem). `None` em `ok` quando não há Canary para comparar, que
+    não é falha: o checkout virou opcional no ticket 04.
+    """
+    expected = manifest["assets"].get("appearancesSha256")
+    client_file = os.path.join(
+        assets_dir(client_dir, manifest), manifest["assets"]["appearancesFile"]
+    )
+    if not os.path.exists(client_file):
+        return False, f"appearances do cliente ausente em {client_file}"
+
+    client_sha = sha256_file(client_file)
+    if expected and client_sha != expected:
+        return False, (
+            f"appearances.dat do cliente não bate com o manifesto\n"
+            f"  esperado: {expected}\n  obtido:   {client_sha}"
+        )
+
+    try:
+        canary = paths.CANARY.require(canary_dir)
+    except paths.MissingRepoError:
+        return None, "sem checkout do Canary para comparar (opcional)"
+
+    canary_file = os.path.join(canary, "data", "items", "appearances.dat")
+    if not os.path.exists(canary_file):
+        return None, f"Canary sem {canary_file} para comparar (opcional)"
+
+    canary_sha = sha256_file(canary_file)
+    if canary_sha != client_sha:
+        return False, (
+            f"cliente e Canary discordam sobre appearances.dat — metadado de item "
+            f"diferente entre quem renderiza e quem simula\n"
+            f"  cliente: {client_sha}\n  canary:  {canary_sha}"
+        )
+    return True, f"cliente e Canary concordam sobre appearances.dat ({client_sha[:16]}…)"
+
+
 def _download(url: str, destination: str) -> None:
     print(f"[..] baixando {url}")
     with urllib.request.urlopen(url) as response, open(destination, "wb") as handler:
@@ -143,6 +187,14 @@ def _extract(zip_path: str, client_dir: str, manifest: dict) -> None:
         archive.extractall(client_dir, members)
 
 
+def _report_canary_agreement(client_dir: str, manifest: dict) -> None:
+    ok, message = check_canary_agreement(client_dir, manifest)
+    if ok is False:
+        print(f"[ERROR] {message}")
+        sys.exit(1)
+    print(f"[{'OK' if ok else 'INFO'}] {message}")
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument(
@@ -164,6 +216,7 @@ def main():
             sys.exit(1)
         print(f"[OK] cliente {manifest['clientVersion']} já presente e íntegro em {client_dir}")
         print(f"     assets: {assets_dir(client_dir, manifest)}")
+        _report_canary_agreement(client_dir, manifest)
         return
 
     os.makedirs(client_dir, exist_ok=True)
@@ -191,6 +244,7 @@ def main():
 
     print(f"[OK] cliente {manifest['clientVersion']} pronto em {client_dir}")
     print(f"     assets: {assets_dir(client_dir, manifest)}")
+    _report_canary_agreement(client_dir, manifest)
 
 
 if __name__ == "__main__":

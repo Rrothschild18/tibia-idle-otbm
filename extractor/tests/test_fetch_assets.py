@@ -108,3 +108,48 @@ def test_the_client_on_this_machine_matches_the_manifest(manifest):
         pytest.skip("cliente não baixado nesta máquina")
 
     fa.verify_extracted(client_dir, manifest)
+
+
+def test_canary_agreement_passes_on_this_machine(manifest):
+    """Cliente e Canary têm que concordar sobre appearances.dat: divergência é
+    servidor e cliente discordando sobre metadado de item, e isso não dá erro
+    em lugar nenhum — vira sprite errado seis estágios adiante."""
+    import paths
+
+    client_dir = paths.TIBIA_CLIENT.resolve(None)
+    if not os.path.isdir(fa.assets_dir(client_dir, manifest)):
+        pytest.skip("cliente não baixado nesta máquina")
+
+    ok, message = fa.check_canary_agreement(client_dir, manifest)
+
+    assert ok is not False, message
+
+
+def test_canary_agreement_reports_a_mismatch(tmp_path, manifest, monkeypatch):
+    client_dir = _fake_client(tmp_path, manifest)
+    appearances = os.path.join(fa.assets_dir(client_dir, manifest),
+                               manifest["assets"]["appearancesFile"])
+    open(appearances, "wb").write(b"outro cliente")
+
+    ok, message = fa.check_canary_agreement(client_dir, manifest)
+
+    assert ok is False
+    assert "não bate com o manifesto" in message
+
+
+def test_canary_agreement_is_optional_when_there_is_no_canary(tmp_path, manifest, monkeypatch):
+    """O checkout do Canary virou opcional no ticket 04 — não tê-lo não pode
+    virar falha, só ausência de comparação."""
+    import paths
+
+    client_dir = _fake_client(tmp_path, manifest)
+    appearances = os.path.join(fa.assets_dir(client_dir, manifest),
+                               manifest["assets"]["appearancesFile"])
+    open(appearances, "wb").write(b"conteudo")
+    monkeypatch.setitem(manifest["assets"], "appearancesSha256", fa.sha256_file(appearances))
+    monkeypatch.setenv(paths.CANARY.env_var, str(tmp_path / "sem-canary"))
+
+    ok, message = fa.check_canary_agreement(client_dir, manifest)
+
+    assert ok is None
+    assert "opcional" in message

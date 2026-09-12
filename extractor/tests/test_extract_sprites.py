@@ -10,6 +10,8 @@ can check by hand.
 import json
 import os
 
+import pytest
+
 import extract_sprites as es
 
 
@@ -18,13 +20,16 @@ import extract_sprites as es
 # ---------------------------------------------------------------------------
 
 class FakeSpriteInfo:
-    def __init__(self, width, height, depth, layers, sprite_count):
+    def __init__(self, width, height, depth, layers, sprite_count, first_id=0):
         self.pattern_width = width
         self.pattern_height = height
         self.pattern_depth = depth
         self.layers = layers
         self.pattern_frames = 0
-        self.sprite_id = list(range(sprite_count))
+        # Ids contíguos e únicos entre frame groups, como no cliente real. É o
+        # que faz o id coincidir com a posição na concatenação, e é isso que
+        # deixa um teste afirmar de qual slot o PNG escrito veio.
+        self.sprite_id = list(range(first_id, first_id + sprite_count))
 
 
 class FakeFrameGroup:
@@ -33,26 +38,38 @@ class FakeFrameGroup:
 
 
 class FakeAppearance:
-    def __init__(self, app_id, frame_groups, sprite_data):
+    def __init__(self, app_id, frame_groups):
         self.id = app_id
         self.frame_group = frame_groups
-        self.sprite_data = sprite_data
 
     def HasField(self, name):  # noqa: N802 — protobuf's spelling
         return False
 
 
-def _player_appearance(app_id=128, sprite_data=None):
+class FakeSprites:
+    """Fonte de sprites de mentira: id -> um 1x1 PNG que codifica o próprio id.
+
+    Substitui o antigo `appearance.sprite_data`, que era um campo não-padrão do
+    protobuf. O teste continua conseguindo dizer *de qual slot* cada PNG veio,
+    que é o ponto — a lei de índice é o que está sob teste."""
+
+    def sprite_png(self, sprite_id):
+        return _solid_png(sprite_id)
+
+
+@pytest.fixture(autouse=True)
+def _fake_sprite_source(monkeypatch):
+    monkeypatch.setattr(es, "SPRITES", FakeSprites())
+
+
+def _player_appearance(app_id=128, moving_count=384):
     """A 432-sprite outfit shaped like the real ones: idle (48) + moving (384)."""
-    if sprite_data is None:
-        sprite_data = [_solid_png(index) for index in range(432)]
     return FakeAppearance(
         app_id,
         [
             FakeFrameGroup(FakeSpriteInfo(4, 3, 2, 2, 48)),
-            FakeFrameGroup(FakeSpriteInfo(4, 3, 2, 2, 384)),
+            FakeFrameGroup(FakeSpriteInfo(4, 3, 2, 2, moving_count, first_id=48)),
         ],
-        sprite_data,
     )
 
 
@@ -234,8 +251,7 @@ def test_source_axes_of_a_creature():
     creature = FakeAppearance(
         21,
         [FakeFrameGroup(FakeSpriteInfo(4, 1, 1, 1, 4)),
-         FakeFrameGroup(FakeSpriteInfo(4, 1, 1, 1, 32))],
-        [],
+         FakeFrameGroup(FakeSpriteInfo(4, 1, 1, 1, 32, first_id=4))],
     )
 
     assert es.source_axes_of(creature) == es.SpriteAxes(
@@ -253,8 +269,7 @@ def test_creature_with_animated_idle_is_not_excluded():
     busy_creature = FakeAppearance(
         50,
         [FakeFrameGroup(FakeSpriteInfo(4, 1, 1, 1, 40)),
-         FakeFrameGroup(FakeSpriteInfo(4, 1, 1, 1, 32))],
-        [],
+         FakeFrameGroup(FakeSpriteInfo(4, 1, 1, 1, 32, first_id=40))],
     )
 
     assert not es.has_non_creature_axis(busy_creature)
@@ -265,7 +280,6 @@ def test_appearance_using_addon_mount_or_layer_axis_is_excluded():
         appearance = FakeAppearance(
             9,
             [FakeFrameGroup(FakeSpriteInfo(width, height, depth, layers, 4))],
-            [],
         )
         assert es.has_non_creature_axis(appearance)
 
@@ -325,11 +339,18 @@ def test_extract_player_outfit_writes_no_mount_frame(tmp_path):
 
 
 def test_extract_player_outfit_skips_an_outfit_of_unexpected_size(tmp_path, capsys):
-    truncated = _player_appearance(sprite_data=[_solid_png(0)] * 200)
+    """Outfit truncado: 383 sprites de moving em vez de 384, então a contagem
+    não fecha com os eixos que a própria appearance declara.
+
+    O número esperado é derivado (`phases = len(sprite_id) // per_phase`), não
+    fixo em 432 — por isso o teste afirma o comportamento (pula, não escreve
+    nada, diz por quê) e não uma constante."""
+    truncated = _player_appearance(moving_count=383)
 
     assert es.extract_player_outfit(truncated, str(tmp_path)) == 0
     assert not os.path.exists(tmp_path / "128")
-    assert "esperado 432" in capsys.readouterr().out
+    out = capsys.readouterr().out
+    assert "431 sprites" in out and "pulado" in out
 
 
 def test_extract_player_outfit_is_idempotent(tmp_path):

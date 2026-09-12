@@ -64,7 +64,13 @@ message Appearance {
     optional string name = 4;
     optional string description = 5;
     optional APPEARANCE_TYPE appearance_type = 6;
-    repeated bytes sprite_data = 7;
+    // O campo 7 (`repeated bytes sprite_data`) era uma extensão não-padrão que
+    // só o export .aec do Assets Editor preenchia, e é a razão de o
+    // appearances.dat oficial nunca ter servido de substituto. O estágio 0
+    // passou a recortar os pixels das folhas do próprio cliente, pelo
+    // sprite_info.sprite_id que o schema oficial já declarava. Número
+    // reservado para que ninguém o reutilize com outro significado.
+    reserved 7;
 }
 
 message AppearanceFlags {

@@ -13,6 +13,8 @@
     "pathInZip": "Tibia.15.25.0a00a0-original-linux/packages/Tibia",
     "assetsJsonSha256": "4cbdf80eee33901f2eb4f3391e23ad02805b65890ca856efcd9c32c54888405a",
     "catalogEntries": 4933,
-    "appearancesFile": "appearances-aa44a154f30c7ed59acc25f246286396e4043851ef0b54ef3cf3951e46d1ce50.dat"
+    "appearancesFile": "appearances-aa44a154f30c7ed59acc25f246286396e4043851ef0b54ef3cf3951e46d1ce50.dat",
+    "appearancesSha256": "aa44a154f30c7ed59acc25f246286396e4043851ef0b54ef3cf3951e46d1ce50",
+    "_appearancesComment": "O appearances.dat do cliente é byte a byte o mesmo de canary/data/items/appearances.dat. Divergência significa que servidor e cliente discordam sobre metadado de item — id, flag, animação — e o sintoma apareceria seis estágios adiante como sprite ou comportamento errado. Conferido por check_canary_agreement()."
   }
 }

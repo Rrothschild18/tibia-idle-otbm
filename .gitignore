@@ -1,7 +1,8 @@
 node_modules/
 
-# Raw Tibia client asset containers (binary, ~270MB) — used by
-# extractor/scripts/extract_sprites.py / extractor/_legacy/read_aec.py.
+# Containers .aec do Assets Editor — insumo APOSENTADO (ver ticket 08). O
+# estágio 0 lê a pasta assets/ do cliente Tibia direto. A regra fica para que
+# um checkout antigo com os arquivos em disco não os reintroduza.
 extractor/*.aec
 
 # Extracted sprite library + per-map sprite copies (binary, large).

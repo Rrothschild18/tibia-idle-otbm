@@ -1,8 +1,12 @@
 import argparse
 import os
 import json
-from typing import List, NamedTuple, Tuple
+import sys
+from typing import List, NamedTuple, Optional, Tuple
 
+import client_sprites
+import fetch_assets
+import paths
 from Appearances_pb2 import Appearances
 from google.protobuf.descriptor import FieldDescriptor
 
@@ -14,12 +18,19 @@ from google.protobuf.descriptor import FieldDescriptor
 SCRIPTS_DIR = os.path.dirname(os.path.abspath(__file__))
 EXTRACTOR_DIR = os.path.dirname(SCRIPTS_DIR)
 
-AEC_FILES = {
-    "items": (os.path.join(EXTRACTOR_DIR, "items.aec"), "object"),
-    "effects": (os.path.join(EXTRACTOR_DIR, "effects.aec"), "effect"),
-    "missiles": (os.path.join(EXTRACTOR_DIR, "missiles.aec"), "missile"),
-    "outfits": (os.path.join(EXTRACTOR_DIR, "outfits.aec"), "outfit"),
+# Grupo de saída -> campo do `appearances.dat`. Os quatro vivem no mesmo
+# arquivo protobuf do cliente; antes eram quatro containers `.aec` separados,
+# de ~270 MB no total, que nenhum clone tinha.
+APPEARANCE_GROUPS = {
+    "items": "object",
+    "effects": "effect",
+    "missiles": "missile",
+    "outfits": "outfit",
 }
+
+# Fonte de pixels, resolvida em main(). Módulo-level porque o caminho de
+# extração é recursivo e passar isso por sete assinaturas não paga.
+SPRITES: Optional[client_sprites.ClientSprites] = None
 
 # Os grupos que uma execução sem argumento extrai. `effects` entrou pelo efeito
 # de nascimento de monstro (CONST_ME_TELEPORT, id 11) — ver SPRITE_METADATA.md,
@@ -152,10 +163,45 @@ def write_png(data: bytes, path: str):
         f.write(data)
 
 
+def write_sprite(sprite_id: int, path: str) -> bool:
+    """Recorta o sprite do cliente e grava. False se o id não existe.
+
+    Antes os bytes vinham de `appearance.sprite_data[i]`, um campo não-padrão
+    (`Appearances.proto:67`) que só o export `.aec` preenchia. Agora vêm da
+    folha do cliente, pelo mesmo id que o protobuf oficial já declarava em
+    `sprite_info.sprite_id` — o campo que este script sempre leu em paralelo.
+    """
+    blob = SPRITES.sprite_png(sprite_id)
+    if blob is None:
+        return False
+    write_png(blob, path)
+    return True
+
+
+def concatenated_sprite_ids(appearance) -> List[int]:
+    """Os sprite ids de todos os frame groups, na ordem em que `sprite_data`
+    vinha concatenado — idle e depois moving. É essa concatenação que a lei de
+    índice do outfit de jogador endereça."""
+    ids: List[int] = []
+    for fg in appearance.frame_group:
+        ids.extend(fg.sprite_info.sprite_id)
+    return ids
+
+
 def enum_or_value(field, value):
     if field.type == FieldDescriptor.TYPE_ENUM:
         return field.enum_type.values_by_number[value].name
     return value
+
+
+def _is_repeated(field) -> bool:
+    """`FieldDescriptor.label` foi removido no protobuf 7; `is_repeated` é o
+    substituto. Aceitar os dois evita prender o repo a uma major do runtime —
+    o piso que importa é o 6.33.5 que `Appearances_pb2.py` exige no import."""
+    is_repeated = getattr(field, "is_repeated", None)
+    if is_repeated is not None:
+        return bool(is_repeated)
+    return field.label == FieldDescriptor.LABEL_REPEATED
 
 
 def proto_to_dict(msg):
@@ -166,7 +212,7 @@ def proto_to_dict(msg):
 
     for field, value in msg.ListFields():
         # repeated
-        if field.label == FieldDescriptor.LABEL_REPEATED:
+        if _is_repeated(field):
             result[field.name] = [
                 proto_to_dict(v) if hasattr(v, "ListFields") else enum_or_value(field, v)
                 for v in value
@@ -259,16 +305,17 @@ def extract_player_outfit(appearance, group_dir: str) -> int:
     """Escreve os 216 PNGs e o JSON de um outfit de jogador. Devolve quantos
     PNGs foram criados.
 
-    `sprite_data` é a concatenação dos frame groups na ordem idle-depois-
+Os sprite ids são a concatenação dos frame groups na ordem idle-depois-
     moving, e a lei de índice sobre as 9 fases somadas cai exatamente em cima
     dessa concatenação — a fase 0 é o frame group idle inteiro, as fases 1..8
-    são o moving. Por isso os índices do plano indexam `sprite_data` direto.
+    são o moving. Por isso os índices do plano endereçam a concatenação direto.
     """
     app_id = appearance.id
     axes = source_axes_of(appearance)
+    sprite_ids = concatenated_sprite_ids(appearance)
 
-    if len(appearance.sprite_data) != axes.total():
-        print(f"  [!] outfit {app_id}: {len(appearance.sprite_data)} sprites, "
+    if len(sprite_ids) != axes.total():
+        print(f"  [!] outfit {app_id}: {len(sprite_ids)} sprites, "
               f"esperado {axes.total()} — pulado")
         return 0
 
@@ -281,8 +328,10 @@ def extract_player_outfit(appearance, group_dir: str) -> int:
     for key, index in plan:
         png_path = os.path.join(outfit_dir, f"{key}.png")
         if not os.path.exists(png_path):
-            write_png(appearance.sprite_data[index], png_path)
-            written += 1
+            if write_sprite(sprite_ids[index], png_path):
+                written += 1
+            else:
+                print(f"  [!] outfit {app_id}: missing_sprite:{sprite_ids[index]}")
 
     declared_axes = {
         "directions": axes.directions,
@@ -334,7 +383,6 @@ def extract_group(appearances, group_name: str):
 
     for appearance in appearances:
         app_id = appearance.id
-        sprite_data_offset = 0
 
         # Os outfits de jogador do catálogo fixo têm addon, montaria e layer,
         # e saem por um caminho próprio — com chave de frame explícita e o
@@ -371,13 +419,10 @@ def extract_group(appearances, group_name: str):
                 png_path = os.path.join(group_dir, f"{png_name}.png")
 
                 if not os.path.exists(png_path):
-                    write_png(
-                        appearance.sprite_data[sprite_data_offset],
-                        png_path,
-                    )
-                    total_pngs += 1
-
-                sprite_data_offset += 1
+                    if write_sprite(sprite_ids[0], png_path):
+                        total_pngs += 1
+                    else:
+                        print(f"  [!] {group_name} {app_id}: missing_sprite:{sprite_ids[0]}")
 
                 fg_data = {
                     "spriteId": [png_name],
@@ -421,13 +466,10 @@ def extract_group(appearances, group_name: str):
                     png_path = os.path.join(anim_dir, f"{name}.png")
 
                     if not os.path.exists(png_path):
-                        write_png(
-                            appearance.sprite_data[sprite_data_offset],
-                            png_path,
-                        )
-                        total_pngs += 1
-
-                    sprite_data_offset += 1
+                        if write_sprite(sprite_ids[i], png_path):
+                            total_pngs += 1
+                        else:
+                            print(f"  [!] {group_name} {app_id}: missing_sprite:{sprite_ids[i]}")
 
                 fg_data = {
                     "spriteId": sprite_names,
@@ -499,36 +541,61 @@ def extract_group(appearances, group_name: str):
 
 def parse_args():
     parser = argparse.ArgumentParser(
-        description="Extrai os PNGs/JSONs de um .aec do cliente para extractor/sprites/."
+        description="Extrai os PNGs/JSONs do cliente Tibia para extractor/sprites/."
     )
     parser.add_argument(
         "--group",
         dest="groups",
         action="append",
-        choices=sorted(AEC_FILES),
+        choices=sorted(APPEARANCE_GROUPS),
         help="Extrai só este grupo (pode repetir). Sem a flag, roda ENABLED_GROUPS.",
+    )
+    parser.add_argument(
+        "--client-dir",
+        default=None,
+        help=f"cliente Tibia extraído (default: ${paths.TIBIA_CLIENT.env_var} "
+             f"ou {paths.TIBIA_CLIENT.sibling_default()})",
     )
     return parser.parse_args()
 
 
 def main():
+    global SPRITES
     args = parse_args()
+
+    manifest = fetch_assets.load_manifest()
+    client_dir = paths.TIBIA_CLIENT.resolve(args.client_dir)
+    assets = fetch_assets.assets_dir(client_dir, manifest)
+
+    if not os.path.isdir(assets):
+        print(f"[ERROR] assets do cliente não encontrados em {assets}")
+        print(f"        rode 'uv run python extractor/scripts/fetch_assets.py'")
+        sys.exit(1)
+
+    try:
+        fetch_assets.verify_extracted(client_dir, manifest)
+    except fetch_assets.ClientVersionMismatch as exc:
+        print(f"[ERROR] {exc}")
+        sys.exit(1)
+
+    try:
+        SPRITES = client_sprites.ClientSprites(assets)
+    except client_sprites.SpriteSheetError as exc:
+        print(f"[ERROR] {exc}")
+        sys.exit(1)
+
+    appearances_path = SPRITES.appearances_file
+    print(f"[OK] cliente {manifest['clientVersion']}: "
+          f"{len(SPRITES._entries)} folhas, maior sprite id {SPRITES.max_sprite_id}")
+
+    with open(appearances_path, "rb") as handler:
+        appearances = Appearances()
+        appearances.ParseFromString(handler.read())
 
     ensure_dir(OUT_DIR)
 
     for group_name in args.groups or ENABLED_GROUPS:
-        aec_file, field_name = AEC_FILES[group_name]
-
-        if not os.path.exists(aec_file):
-            print(f"[!] Arquivo nao encontrado: {aec_file}")
-            continue
-
-        with open(aec_file, "rb") as f:
-            data = f.read()
-
-        appearances = Appearances()
-        appearances.ParseFromString(data)
-
+        field_name = APPEARANCE_GROUPS[group_name]
         extract_group(getattr(appearances, field_name), group_name)
 
     print("\nDONE")
