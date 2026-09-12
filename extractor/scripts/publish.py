@@ -94,8 +94,16 @@ def bundle_dir_name(map_dir: str) -> str:
     recalcular aqui criaria uma segunda fonte de verdade para o mesmo nome, e
     divergir significa o front servir 404 no bundle inteiro.
     """
-    with open(os.path.join(map_dir, "map.json"), "r", encoding="utf-8") as handler:
-        assets_root = json.load(handler)["assetsRoot"]
+    map_json = os.path.join(map_dir, "map.json")
+    with open(map_json, "r", encoding="utf-8") as handler:
+        document = json.load(handler)
+
+    assets_root = document.get("assetsRoot")
+    if not assets_root:
+        raise MissingAtlasError(
+            f"{map_json} não declara `assetsRoot` — bundle de uma versão antiga do "
+            f"pipeline. Reconstrua com 'node extractor/scripts/build_map.js <pasta>'."
+        )
     return os.path.basename(assets_root.rstrip("/"))
 
 
@@ -219,6 +227,13 @@ def main():
 
     if not args.map and not args.all and not args.atlases_only:
         parser.error("passe um mapa, --all ou --atlases-only")
+
+    # `--prune` só faz sentido com `--all`: o conjunto de referência é "o que
+    # este run publicou", e num run de um mapa só (ou só de atlas) esse
+    # conjunto é vazio ou quase — apagaria todo o resto do front.
+    if args.prune and not args.all:
+        parser.error("--prune só com --all: o conjunto de referência é o que o run publicou, "
+                     "e um run parcial apagaria os bundles que ele simplesmente não tocou")
 
     try:
         tibia_idle_dir = paths.TIBIA_IDLE.require(args.tibia_idle_dir)

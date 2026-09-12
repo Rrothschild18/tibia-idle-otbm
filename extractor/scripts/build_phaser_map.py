@@ -1,11 +1,10 @@
 import json
 import os
 import posixpath
-import shutil
 import struct
 import sys
 import xml.etree.ElementTree as ET
-from typing import Dict, List, Optional, Set, Tuple
+from typing import Dict, List, Optional, Tuple
 
 from PIL import Image
 
