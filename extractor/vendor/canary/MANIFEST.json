@@ -1,0 +1,15 @@
+{
+  "source": "opentibiabr/canary",
+  "canary": {
+    "commit": "06c73ccb993b4625a966d452b7e9f867873d1f55",
+    "describe": "v3.6.0-93-g06c73ccb9",
+    "committedAt": "2026-09-10",
+    "origin": "https://github.com/opentibiabr/canary.git"
+  },
+  "generatedAt": "2026-09-12",
+  "command": "uv run python extractor/scripts/update_canary_data.py",
+  "files": {
+    "items.xml": "cópia crua de data/items/items.xml",
+    "npc-lua-facts.json": "tabelas shop e outfit de data-otservbr-global/npc/*.lua"
+  }
+}
