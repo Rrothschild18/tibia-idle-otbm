@@ -1,6 +1,8 @@
 const path = require("path");
 const { spawnSync } = require("child_process");
 
+const { resolvePython, missingPythonError } = require("./resolve_python.js");
+
 // Global item bake — NOT wired into build_map.js on purpose, mirroring the
 // existing outfit atlas (bake_outfit_atlas.py is also a standalone step, not
 // called from build_map.js). Item baking is global, independent of which map
@@ -30,10 +32,16 @@ const STEPS = [
 function runStep(scriptName) {
   console.log(`\n=== ${scriptName} ===`);
 
-  const result = spawnSync("python", [path.join(SCRIPTS_DIR, scriptName)], {
-    cwd: SCRIPTS_DIR,
-    stdio: "inherit",
-  });
+  const python = resolvePython();
+  const result = spawnSync(
+    python.command,
+    [...python.prefixArgs, path.join(SCRIPTS_DIR, scriptName)],
+    { cwd: SCRIPTS_DIR, stdio: "inherit" }
+  );
+
+  if (result.error && result.error.code === "ENOENT") {
+    throw missingPythonError(python);
+  }
 
   if (result.status !== 0) {
     throw new Error(`${scriptName} falhou (exit ${result.status})`);

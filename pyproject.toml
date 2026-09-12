@@ -8,10 +8,11 @@ dependencies = [
     # Recorte e composição de sprites e sheets (bake_*.py, extract_sprites.py,
     # build_phaser_map.py, sheet_packer.py).
     "pillow>=10.0",
-    # Appearances_pb2.py foi gerado por protoc 6.33.5 e chama
-    # ValidateProtobufRuntimeVersion(PUBLIC, 6, 33, 5) no import: um runtime
-    # mais antigo falha em tempo de import, não de uso.
-    "protobuf>=6.33.5",
+    # Appearances_pb2.py foi regerado por protoc 36.1 e chama
+    # ValidateProtobufRuntimeVersion(PUBLIC, 7, 36, 1) no import: um runtime
+    # mais antigo falha em tempo de import, não de uso. Regerar o schema
+    # (extract_sprites/ticket 08) move este piso — mantenha os dois em sincronia.
+    "protobuf>=7.36.1",
 ]
 
 [dependency-groups]

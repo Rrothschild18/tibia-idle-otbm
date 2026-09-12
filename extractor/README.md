@@ -563,8 +563,11 @@ extractor/
     dump_otbm.js       etapa 1: .otbm → .raw.json (via vendor/otbm2json.js)
     build_phaser_map.py etapa 2: .raw.json → map.json (v5 e v6) + sprites/ + respawn.json
     build_map.js       runner: 1 mapa ou --all, chama as duas etapas
-    extract_sprites.py  etapa 0 (avulsa): .aec → extractor/sprites/ (biblioteca compartilhada);
-                             `--group <nome>` extrai só um grupo (items/effects/missiles/outfits)
+    extract_sprites.py  etapa 0 (avulsa): assets/ do cliente → extractor/sprites/ (biblioteca
+                             compartilhada); `--group <nome>` extrai só um grupo
+                             (items/effects/missiles/outfits)
+    client_sprites.py   lógica pura: sprite id → PNG, sobre as folhas LZMA do cliente
+    fetch_assets.py     baixa e verifica o cliente fixado em assets-manifest.json
     tile_stack.py       lógica pura: flags do appearances → draw slot + stack order de uma tile (v6)
     map_v6.py           lógica pura: dump OTBM → documento map.json v6 (ver MAP_JSON_V6.md)
     sheet_packer.py     lógica pura: aparências → grade de folhas de sprite + gids
@@ -607,11 +610,14 @@ extractor/
   ready-maps-v6/<CIDADE>/<pasta>/  a mesma saída no formato v6, raiz separada pro ready-maps/ ficar
                          intocado até o jogo migrar (gitignored). Só mapas de hunt — o mapa
                          cidade-inteira não é renderizado, ver ADR 0006
-  sprites/              biblioteca de sprites extraída dos .aec (gitignored, binário grande)
+  sprites/              biblioteca de sprites extraída do cliente Tibia (gitignored, binário grande)
   atlases/              saída dos bakes globais (outfits/items-static/items-animated/effects + items-index.json), gitignored, regenerável
   otservbr-monster.xml  lookup nome→looktype de monstro, compartilhado entre mapas
-  *.aec                 assets binários do cliente Tibia (gitignored)
-  _legacy/              scripts antigos/exploratórios, não fazem parte do pipeline
+  assets-manifest.json  versão do cliente Tibia + checksums (versionado)
+  vendor/canary/        fatias do Canary que o pipeline lê (versionado)
+  appearance-flags/     tabela de flags por appearance, por cidade (versionado)
+  _legacy/              scripts antigos/exploratórios, não fazem parte do pipeline —
+                         inclui read_aec.py, do insumo .aec aposentado
 ```
 
 ---
@@ -659,17 +665,31 @@ alias/symlink chamado `python` no PATH.
 
 **O que é `extractor/sprites/`?**
 Uma biblioteca compartilhada de imagens (items, missiles, outfits, effects) extraída
-uma única vez dos arquivos `.aec` do cliente Tibia. É a mesma pasta para
+uma única vez da pasta `assets/` do cliente Tibia (ver
+[Cliente Tibia](#cliente-tibia-fonte-dos-sprites)). É a mesma pasta para
 todos os mapas — não é regenerada por mapa. Fica fora do git (binário
 grande, veja `.gitignore`).
+
+Até o ticket 08 a fonte eram quatro containers `.aec`, export do Assets Editor. Foram aposentados:
+os dois editores que existem hoje são Windows-only, e o que ainda tem manutenção
+(`beats-dh/Beats-Assets-Editor`) passou a gravar os bytes de sprite num arquivo **companheiro**
+`.aec.sprites` — um export novo produziria containers vazios, provavelmente sem erro.
 
 **Preciso rodar `extract_sprites.py` toda vez que adiciono um mapa?**
 Não, a menos que o mapa novo introduza um monstro (outfit) que ainda não
 existe em `extractor/sprites/outfits/`. Nesse caso rode:
 ```
-python extractor/scripts/extract_sprites.py
+uv run python extractor/scripts/fetch_assets.py      # se ainda não tem o cliente
+uv run python extractor/scripts/extract_sprites.py   # outfits + effects
+uv run python extractor/scripts/extract_sprites.py --group items --group missiles
 ```
-É idempotente — PNGs/JSONs já existentes não são regravados.
+É idempotente — PNGs/JSONs já existentes não são regravados. Sem `--group`, roda só `outfits` e
+`effects` (`ENABLED_GROUPS`); `items` é o grupo caro, 42107 appearances.
+
+A fonte é a pasta `assets/` do cliente fixado em `assets-manifest.json` — ver
+[Cliente Tibia](#cliente-tibia-fonte-dos-sprites). Os pixels são recortados das folhas do cliente
+pelo `sprite_info.sprite_id` que o `appearances.dat` oficial já declara; não existe mais insumo
+`.aec`.
 
 **`[WARN] appearance X: missing_sprite:<id>`**
 O item existe no mapa mas o PNG do sprite não foi encontrado em
@@ -744,7 +764,7 @@ python extractor/scripts/item_classifier.py --dump-unknown extractor/ready-maps/
   documentação.
 - **Gitignored (regenerável, não commitar):** `extractor/raw-maps/`,
   `extractor/ready-maps/`, `extractor/ready-maps-v6/`, `extractor/sprites/`,
-  `extractor/*.aec`.
+  `extractor/*.aec` (insumo aposentado), `extractor/full-maps/*/map.json`.
 - Se `git status` mostrar algo dentro dessas pastas ignoradas, normalmente é
   sinal de que o `.gitignore` está desatualizado, não que precisa commitar.
 
