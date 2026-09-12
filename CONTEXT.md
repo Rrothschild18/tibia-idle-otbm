@@ -11,7 +11,9 @@ escopo do pipeline do extractor e do runtime.
 
 **City** (`city`, ex: `ROOK`, `TEST`):
 A pasta-pai física de um mapa sob `extractor/maps/<CIDADE>/`, `ready-maps/<CIDADE>/` ou
-`full-maps/<CIDADE>/` — nunca adivinhada do nome do mapa. Todo hunt/location no catálogo do
+`full-maps/<CIDADE>/` — nunca adivinhada do nome do mapa. `full-maps/<CIDADE>/` guarda o `.otbm` da
+cidade e o `respawn.json`; ele **não produz mapa** — o travel-graph consome a tabela de flags
+versionada em `extractor/appearance-flags/<CIDADE>.json`, nunca um `map.json`. Todo hunt/location no catálogo do
 `tibia-idle` carrega um campo `city` derivado do próprio id (primeiro segmento), nunca digitado à
 mão. `TEST` é uma cidade fictícia pros mapas de teste/descartáveis (mesmo mecanismo, sem sistema de
 tag separado) — ver `.scratch/city-scoped-ids/spec.md`.
@@ -47,7 +49,10 @@ mesmo valor. **Curado** é decisão humana que o mapa não sabe (`displayName`, 
 `label`, `portrait`, `seed`, `startPosition`): nunca sobrescrito. O corte não é por coleção, é por
 campo — e cada coleção resolve isso do jeito que cabe a ela: `hunts` é append-only (a entrada
 inteira fica intacta), `locations` faz merge campo a campo, e `travelGraph` é substituído por
-cidade, porque não há nada curado numa aresta.
+cidade, porque não há nada curado numa aresta. A **tabela de flags por appearance**
+(`extractor/appearance-flags/<CIDADE>.json`) aplica o mesmo corte em dois arquivos em vez de dois
+campos: o derivado é sobrescrito inteiro a cada regeneração, e o `<CIDADE>.overrides.json` ao lado
+nunca é tocado e sempre vence no merge.
 
 **Draw slot** (slot de desenho):
 Uma das duas únicas categorias de renderização de um objeto do mapa: **ground**, quando a aparência

@@ -238,16 +238,17 @@ def parse_floorchange_items(items_xml: str) -> Dict[int, str]:
 
 def extract_tile_flags(
     dump: Dict,
-    object_defs: Dict[str, Dict],
+    flags_by_id: Dict[str, Dict],
     floorchange_by_id: Optional[Dict[int, str]] = None,
 ) -> List[Dict]:
     """Every tile in the dump -> {"x", "y", "z", "unpass", "isFloorTransition",
     "floorchange"}, combining the ground tileid's flags with every item stacked
-    on it (each resolved through `object_defs`, keyed by appearanceId — the same
-    objectDefs map.json already carries). Marker signs (reserved uid range)
-    never contribute — they're stripped from map.json (see build_phaser_map.py)
-    and the graph must reflect that same city, not the raw OTBM's extra markup.
-    A tile with no metadata for an id (not in object_defs) contributes no flags.
+    on it (each resolved through `flags_by_id`, keyed by appearanceId — the
+    versioned table in `appearance-flags/<CIDADE>.json`, which replaced the
+    `objectDefs` of a 20,3 MB map.json this never otherwise read). Marker signs
+    (reserved uid range) never contribute — they're stripped from the city's
+    real output, and the graph must reflect that same city, not the raw OTBM's
+    extra markup. A tile with no entry for an id contributes no flags.
 
     `floorchange` is the direction from `parse_floorchange_items`, or `None`
     when nothing on the tile changes floors — and `None` for every tile when
@@ -260,7 +261,7 @@ def extract_tile_flags(
     def _flags(appearance_id: Optional[int]) -> Dict:
         if appearance_id is None:
             return {}
-        return object_defs.get(str(appearance_id), {}).get("flags", {})
+        return flags_by_id.get(str(appearance_id), {})
 
     tiles: Dict[Node, Dict] = {}
     for x, y, z, tile in _iter_dump_tiles(dump):

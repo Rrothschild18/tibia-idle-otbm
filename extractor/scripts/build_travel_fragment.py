@@ -41,6 +41,7 @@ from collections import Counter
 import city_ids
 import content_export
 import map_dirs
+import appearance_flags
 import paths
 import update_canary_data
 from hunt_fragment import map_id_from_folder
@@ -185,8 +186,14 @@ def build_city_fragment(city: str, canary_dir=None, npc_reach: int = DEFAULT_NPC
     some other POI. What comes out with no way in is rejected rather than
     emitted (see apply_graph_rejections)."""
     dump = _load_json(os.path.join(RAW_MAPS_DIR, f"{city}.raw.json"), "dump OTBM bruto")
-    map_json = _load_json(os.path.join(FULL_MAPS_DIR, city, "map.json"), "map.json da cidade inteira")
-    object_defs = map_json.get("objectDefs", {})
+
+    # A tabela de flags substitui o map.json v5 de 20,3 MB: o grafo nunca leu
+    # um mapa, só `objectDefs[<id>].flags`. Ver appearance_flags.py.
+    try:
+        object_defs_flags = appearance_flags.load_flags(city)
+    except appearance_flags.MissingFlagsTableError as exc:
+        print(f"[ERROR] {exc}")
+        sys.exit(1)
 
     signs, sign_issues = parse_marker_signs(dump)
     for issue in sign_issues:
@@ -221,7 +228,7 @@ def build_city_fragment(city: str, canary_dir=None, npc_reach: int = DEFAULT_NPC
     for name in unmatched_npcs:
         print(f"[WARN] NPC '{name}' sem .lua correspondente em {npc_facts_origin} — Location sem shop")
 
-    tiles = extract_tile_flags(dump, object_defs, _read_floorchange_items(canary_dir))
+    tiles = extract_tile_flags(dump, object_defs_flags, _read_floorchange_items(canary_dir))
     graph = build_walkable_graph(tiles)
     travel_graph_edges = build_travel_graph(graph, [*sign_locations, *npc_locations], npc_reach)
 
