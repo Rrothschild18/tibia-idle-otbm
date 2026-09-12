@@ -14,7 +14,7 @@ do mise, e vai continuar quebrando diferente em cada máquina até apontar pra e
 - [x] `pyproject.toml` lista as deps de runtime (`Pillow`, `protobuf`) e as de dev (`pytest`)
 - [x] `uv.lock` commitado
 - [x] `build_map.js` invoca o interpretador da env, não `python` cru
-- [ ] `uv sync && uv run pytest extractor/tests` roda os 27 arquivos de teste num clone limpo
+- [x] `uv sync && uv run pytest extractor/tests` roda a suíte inteira num clone limpo
 - [x] README documenta o setup em um bloco só: `uv sync`
 
 ## Comments
@@ -36,7 +36,7 @@ explícito evita surpresa se a env for criada por outra ferramenta.
 
 ### Um critério ficou por fazer, e não é acidente
 
-> - [ ] `uv sync && uv run pytest extractor/tests` roda os 27 arquivos de teste num clone limpo
+> - [x] `uv sync && uv run pytest extractor/tests` roda a suíte inteira num clone limpo
 
 Rodam **24 dos 27**, com 388 passando. Três não coletam:
 
@@ -64,3 +64,19 @@ test_ground_equivalent_report.py::test_every_strict_border_id_in_the_vendored_fi
 
 A primeira chama `generate_item_index()` e recebe `{}`; a segunda chama `appearance_flags()`, que
 devolve `{}` quando o JSON do sprite não existe (`ground_equivalent_report.py:98-111`).
+
+
+### Fechado depois, pelo ticket 08
+
+O critério que ficou aberto acima (os arquivos que não coletavam sem
+`extractor/sprites/`) fechou quando o estágio 0 passou a ler o cliente e a biblioteca de sprites
+passou a existir. Estado atual:
+
+```
+31 arquivos de teste, 460 testes coletados, 460 passando, 0 erros de coleta
+```
+
+Dois dos três arquivos que não coletavam (`test_build_phaser_map_sheets.py`,
+`..._ground_sheets.py`) acabaram deletados no ticket 07 junto com o v5, como previsto; o terceiro
+(`test_build_monster_respawn_atlas.py`) roda. As duas falhas pré-existentes que eu havia registrado
+como ambientais também sumiram — eram a mesma causa.
