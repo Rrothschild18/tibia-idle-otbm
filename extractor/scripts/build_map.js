@@ -45,16 +45,41 @@ function mapExists(mapName) {
   return resolveMapDir(mapName) !== null;
 }
 
+// Spawnar "python" cru resolvia por acaso via shim do mise e quebrava diferente
+// em cada máquina. As deps (Pillow, protobuf) vivem na env do uv declarada em
+// pyproject.toml, então é o interpretador dela que precisa rodar.
+function resolvePython() {
+  if (process.env.PYTHON) {
+    return { command: process.env.PYTHON, prefixArgs: [] };
+  }
+
+  const venvPython = path.join(EXTRACTOR_DIR, "..", ".venv", "bin", "python");
+  if (fs.existsSync(venvPython)) {
+    return { command: venvPython, prefixArgs: [] };
+  }
+
+  // Sem .venv, deixa o uv resolver (e criar, se preciso) a env do projeto.
+  return { command: "uv", prefixArgs: ["run", "python"] };
+}
+
 function buildMap(mapName) {
   console.log(`\n=== ${mapName} ===`);
 
   dumpMap(mapName);
 
+  const python = resolvePython();
   const result = spawnSync(
-    "python",
-    [path.join(SCRIPTS_DIR, "build_phaser_map.py"), mapName],
+    python.command,
+    [...python.prefixArgs, path.join(SCRIPTS_DIR, "build_phaser_map.py"), mapName],
     { cwd: SCRIPTS_DIR, stdio: "inherit" }
   );
+
+  if (result.error && result.error.code === "ENOENT") {
+    throw new Error(
+      `não encontrei o interpretador Python ("${python.command}"). ` +
+        `Rode "uv sync" na raiz do repo, ou aponte PYTHON para um interpretador com Pillow e protobuf.`
+    );
+  }
 
   if (result.status !== 0) {
     throw new Error(`build_phaser_map.py falhou para "${mapName}" (exit ${result.status})`);

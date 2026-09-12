@@ -10,6 +10,7 @@ Run: python build_monster_loot_index.py [--canary-dir PATH]
 import argparse
 import json
 import os
+import paths
 import sys
 
 from monster_loot import build_monster_loot_index
@@ -17,20 +18,21 @@ from monster_loot import build_monster_loot_index
 SCRIPTS_DIR = os.path.dirname(os.path.abspath(__file__))
 EXTRACTOR_DIR = os.path.dirname(SCRIPTS_DIR)
 OUTPUT_PATH = os.path.join(EXTRACTOR_DIR, "monster-loot.json")
-DEFAULT_CANARY_DIR = r"C:\canary-3.2.1"
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--canary-dir", default=DEFAULT_CANARY_DIR,
-                         help=f"Path to a local Canary server install (default: {DEFAULT_CANARY_DIR})")
+    parser.add_argument("--canary-dir", default=None,
+                         help=f"Path to a local Canary server install (default: ${paths.CANARY.env_var} or {paths.CANARY.sibling_default()})")
     args = parser.parse_args()
 
-    if not os.path.isdir(args.canary_dir):
-        print(f"[ERROR] Canary install not found at {args.canary_dir}")
+    try:
+        canary_dir = paths.CANARY.require(args.canary_dir)
+    except paths.MissingRepoError as exc:
+        print(f"[ERROR] {exc}")
         sys.exit(1)
 
-    index = build_monster_loot_index(args.canary_dir)
+    index = build_monster_loot_index(canary_dir)
 
     with_loot = sum(1 for entry in index.values() if entry["loot"])
     total_issues = sum(len(entry["issues"]) for entry in index.values())

@@ -30,15 +30,12 @@ Run: python sync_items_to_tibia_idle.py [--tibia-idle-dir PATH]
 
 import argparse
 import os
+import paths
 import shutil
 
 SCRIPTS_DIR = os.path.dirname(os.path.abspath(__file__))
 EXTRACTOR_DIR = os.path.dirname(SCRIPTS_DIR)
 ATLASES_DIR = os.path.join(EXTRACTOR_DIR, "atlases")
-# Sibling repo checkout: <workspace>/tibia-idle-otbm and <workspace>/tibia-idle/tibia-idle.
-DEFAULT_TIBIA_IDLE_DIR = os.path.abspath(
-    os.path.join(EXTRACTOR_DIR, "..", "..", "tibia-idle", "tibia-idle")
-)
 
 
 def _files_differ(src_path: str, dst_path: str) -> bool:
@@ -81,8 +78,8 @@ def _sync_dir(src_dir: str, dst_dir: str) -> tuple[int, int]:
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("--tibia-idle-dir", default=DEFAULT_TIBIA_IDLE_DIR,
-                         help=f"Path to the tibia-idle repo checkout (default: {DEFAULT_TIBIA_IDLE_DIR})")
+    parser.add_argument("--tibia-idle-dir", default=None,
+                         help=f"Path to the tibia-idle repo checkout (default: ${paths.TIBIA_IDLE.env_var} or {paths.TIBIA_IDLE.sibling_default()})")
     args = parser.parse_args()
 
     index_src = os.path.join(ATLASES_DIR, "items-index.json")
@@ -92,9 +89,12 @@ def main():
             "Rode 'npm run build-items' neste repo primeiro."
         )
 
-    front_assets_dir = os.path.join(args.tibia_idle_dir, "apps", "tibia-idle-front", "public", "assets")
-    if not os.path.isdir(args.tibia_idle_dir):
-        raise SystemExit(f"[ERRO] tibia-idle não encontrado em {args.tibia_idle_dir} (use --tibia-idle-dir)")
+    try:
+        tibia_idle_dir = paths.TIBIA_IDLE.require(args.tibia_idle_dir)
+    except paths.MissingRepoError as exc:
+        raise SystemExit(f"[ERRO] {exc}")
+
+    front_assets_dir = os.path.join(tibia_idle_dir, "apps", "tibia-idle-front", "public", "assets")
 
     copied, unchanged = _sync_dir(
         os.path.join(ATLASES_DIR, "items-static"), os.path.join(front_assets_dir, "items-static")

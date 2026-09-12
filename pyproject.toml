@@ -1,0 +1,28 @@
+[project]
+name = "tibia-idle-otbm-extractor"
+version = "0.1.0"
+description = "Pipeline OTBM -> sprites/sheets/mapas para o tibia-idle"
+requires-python = ">=3.11"
+
+dependencies = [
+    # Recorte e composição de sprites e sheets (bake_*.py, extract_sprites.py,
+    # build_phaser_map.py, sheet_packer.py).
+    "pillow>=10.0",
+    # Appearances_pb2.py foi gerado por protoc 6.33.5 e chama
+    # ValidateProtobufRuntimeVersion(PUBLIC, 6, 33, 5) no import: um runtime
+    # mais antigo falha em tempo de import, não de uso.
+    "protobuf>=6.33.5",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+]
+
+[tool.uv]
+# Os scripts rodam por caminho (extractor/scripts/*.py), não como pacote
+# instalado. Não há nada para buildar.
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["extractor/tests"]
