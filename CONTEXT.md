@@ -54,6 +54,22 @@ cidade, porque não há nada curado numa aresta. A **tabela de flags por appeara
 campos: o derivado é sobrescrito inteiro a cada regeneração, e o `<CIDADE>.overrides.json` ao lado
 nunca é tocado e sempre vence no merge.
 
+**Tabela de flags** (`extractor/appearance-flags/<CIDADE>.json`) e **override**:
+As flags por appearance que o travel-graph consome, derivadas dos metadados do cliente e
+versionadas. A tabela é mecânica e sobrescrita inteira a cada regeneração; o
+`<CIDADE>.overrides.json` ao lado é curado, sempre vence no merge e nunca é tocado — e um override
+**substitui a entrada inteira** daquele id, não mescla chave a chave.
+_Avoid_: "objectDefs do full-map" — o `map.json` de cidade inteira não existe mais, e o grafo nunca
+leu um mapa, só essa tabela.
+
+**Publish** (`extractor/scripts/publish.py`):
+O único comando que escreve no checkout do `tibia-idle` — bundle do mapa, os sete atlases globais e
+o `items-index.json`. Não confundir com **export** (`--export`), que escreve os JSONs de catálogo e
+conteúdo: os dois escrevem no irmão, o publish leva binário e o export leva catálogo. Nenhum dos
+dois é **fragmento**, que é local e nunca sai de `extractor/`.
+_Avoid_: `sync_items_to_tibia_idle.py` (removido no ticket 09) e "copiar a pasta na mão", que era o
+mecanismo real e é o que deixava o `monsters/respawn.json` para trás.
+
 **Draw slot** (slot de desenho):
 Uma das duas únicas categorias de renderização de um objeto do mapa: **ground**, quando a aparência
 carrega a flag `bank` — no máximo um por tile, desenhado primeiro — ou **item**, todo o resto, que
