@@ -1,3 +1,6 @@
+Status: histórico — implementado. Reescrito no ticket 11 para descrever o mecanismo atual
+(`--export` sobre o catálogo) em vez do `json-server`/`db.json` que nunca chegou a existir.
+
 Status: ready-for-agent
 
 # Travel Graph & Locations
@@ -38,8 +41,8 @@ fragment tooling) reads the full-city OTBM once, produces:
 
 ...and emits two collections — `locations` (the POI catalog: id, type, position, display name, and
 type-specific payload such as an NPC's shop) and `travelGraph` (one `tileCount` edge per reachable
-pair of locations) — as a fragment to merge into the sibling `tibia-idle` repo's `db.json`, the same
-way hunt/monster/loot data is merged today.
+pair of locations) — as a fragment to merge into the sibling `tibia-idle` repo's content catalog,
+the same way hunt/monster/loot data is merged today.
 
 Downstream, `libs/game-logic` (separate, later ticket) turns a `tileCount` plus the traveling
 character's current speed stat into a travel time in minutes/seconds — approximate and plausible,
@@ -67,7 +70,7 @@ not a tile-by-tile simulation.
 18. As a developer, I want NPC location ids generated as a name slug (`rook-npc-obi`), so that ids stay stable across re-runs without needing a hand-maintained counter.
 19. As a developer, I want non-NPC locations (HUNT/TEMPLE/DEPOT/QUEST) to get a placeholder `displayName` (derived from the id) flagged for human curation the first time they're generated, and never overwritten on subsequent runs, so that the workflow matches the existing hunts append-only/`_todo` convention instead of introducing a new one.
 20. As a developer, I want the whole feature exercised through a pure-logic module with no file I/O, tested with small in-memory fixtures (no real `.otbm`/`.lua` files touched in unit tests), so that tests stay fast and the seam matches the rest of the extractor's fragment-generation tooling.
-21. As a developer, I want a thin CLI on top of that module (reads the OTBM dump, `map.json`, `npc.xml`, and the Canary NPC scripts from disk; writes a fragment file or merges into `db.json` with `--write-db`), so that generating/updating the data is a single command, same as `build_hunt_fragment.py`.
+21. As a developer, I want a thin CLI on top of that module (reads the OTBM dump, the appearance-flags table, `npc.xml`, and the Canary NPC data from disk; writes a fragment file, or merges into the catalog with `--export`), so that generating/updating the data is a single command, same as `build_hunt_fragment.py`.
 22. As a developer, I want this first implementation scoped to Rookgaard only, but parameterized by region name / OTBM path (not hardcoded), so that pointing it at another city later doesn't require a redesign.
 23. As a game-logic developer (future ticket), I want a function that turns a `tileCount` and the traveling character's current speed stat into a travel time in ms, so that faster characters get proportionally shorter travel times without the travel-graph data itself needing to change.
 24. As a game-logic developer (future ticket), I want buffs/equipment that modify speed to be a later extension on top of the base speed stat, so that this ticket isn't blocked on designing buff stacking.
@@ -86,8 +89,8 @@ not a tile-by-tile simulation.
 - **Unmatched NPC → shop-less Location, not a hard failure**: if no `.lua` matches, the Location is still created (id, position, name) without a `shop` field, and the run's output calls it out (console warning) so it can be reviewed — mirrors, rather than duplicates, the existing `hunts` `_todo` precedent from `hunt_fragment.py`.
 - **NPC location id**: a slug of the NPC's name from `npc.xml` (e.g. `rook-npc-obi`) — stable across re-runs, no incremental counter to keep in sync with anything else.
 - **Non-NPC `displayName` curation**: HUNT/TEMPLE/DEPOT/QUEST locations get a placeholder `displayName` derived from the id on first generation, following the same append-only / never-overwrite-on-rerun pattern the existing `hunts` fragment uses for human-curated fields.
-- **Seam**: one pure-logic module (parsing signs from the raw OTBM dump, building the walkability graph, running BFS, parsing NPC shop Lua, assembling the `locations`/`travelGraph` fragment) with a thin CLI on top that does the actual file I/O (reading the OTBM dump, `map.json`, `npc.xml`, Canary `.lua` files; writing the fragment or merging into `db.json` with `--write-db`) — same split as `hunt_fragment.py` / `build_hunt_fragment.py`.
-- **Distribution**: no `ServeStaticModule` exists in this project (the earlier draft assumed one). The real "backend" is `json-server` over the sibling repo's `db.json`. `locations` and `travelGraph` become two new top-level collections there, populated the same way `monsters`/`loot`/`hunts` already are — CLI writes a fragment for manual review, `--write-db` merges it in.
+- **Seam**: one pure-logic module (parsing signs from the raw OTBM dump, building the walkability graph, running BFS, parsing NPC shop Lua, assembling the `locations`/`travelGraph` fragment) with a thin CLI on top that does the actual file I/O — same split as `hunt_fragment.py` / `build_hunt_fragment.py`. This is the part of the design that survived intact.
+- **Distribution**: the fragment is written locally for review and never leaves `extractor/` on its own; `--export` is the separate, explicit step that merges `locations`/`travelGraph` into the `tibia-idle` catalog. See `content_export.py` and the "Export pro back-end" table in `extractor/README.md`.
 - **Scope**: Rookgaard only, this round. The CLI takes a region name / OTBM path as a parameter (not hardcoded), so pointing it at another city later is a config change, not a redesign — but no other city is processed as part of this work.
 - **Travel time will account for player speed** (future `libs/game-logic` ticket, decided now to avoid a rework later): `getTravelTimeMs` takes both `tileCount` and the character's current speed stat. Speed-modifying buffs/equipment are an explicit later extension, not designed here — Canary's speed stat is already a single number, so the base case needs no special modeling.
 
@@ -119,6 +122,5 @@ not a tile-by-tile simulation.
   `hunt_fragment.py`); the new sign-based ids should stay consistent with that existing prefix rather
   than introducing a second spelling/casing.
 - The original draft of this design assumed `ServeStaticModule` + content-hash fingerprinting for
-  distribution, modeled after how it believed `hunt.json`/`respawn.json` were served. Neither exists;
-  the actual mechanism (`json-server` + `db.json`, populated via hand-reviewed fragments) was
-  confirmed by reading the sibling repo's tooling before finalizing this spec.
+  distribution, modeled after how it believed `hunt.json`/`respawn.json` were served. It doesn't
+  exist. The mechanism that does is the fragment-then-`--export` split described above.
