@@ -30,6 +30,13 @@ extractor/ready-maps-v6/**
 extractor/full-maps/*/sheets/
 extractor/full-maps/*/db-fragment.json
 
+# O mapa de cidade inteira não produz mais map.json/metadata.json: o
+# travel-graph nunca leu um mapa, só as flags por appearance, que agora vivem
+# versionadas em extractor/appearance-flags/<CIDADE>.json. Ignorados aqui para
+# que um checkout antigo com os arquivos ainda em disco não os reintroduza.
+extractor/full-maps/*/map.json
+extractor/full-maps/*/metadata.json
+
 # Backups the map editor writes next to the .otbm it saves. The .otbm itself
 # is versioned, so git already is the backup.
 *.otbm.bak

@@ -108,10 +108,11 @@ ASSETS_ROOT = posixpath.join("assets", f"{MAP_NAME}-sprites")
 # distinct asset roots, so both can sit in the front's assets/ at once.
 # See docs/adr/0006 and .scratch/modelo-render-rme/spec.md.
 #
-# Hunt spots only. A full-city map.json is never rendered — it exists so
-# build_travel_fragment.py can read its objectDefs — and packing a whole city's
-# ~2000 appearances into footprint sheets would need textures past what any GPU
-# guarantees (512×7936 for ROOK). The v5 tree keeps serving that pipeline.
+# Hunt spots only. A full-city map is never rendered, and since the travel
+# graph moved to `appearance-flags/<CIDADE>.json` it has no map consumer at
+# all — neither v5 nor v6 is emitted for it. Packing a whole city's ~2000
+# appearances into footprint sheets would also need textures past what any GPU
+# guarantees (512×7936 for ROOK).
 V6_OUTPUT_DIR = os.path.abspath(
     os.path.join(EXTRACTOR_DIR, "ready-maps-v6", _RELATIVE_OUTPUT_PATH)
 )
@@ -1414,20 +1415,31 @@ if __name__ == "__main__":
 
     phaser_map = build_phaser_map(dump)
 
-    # Write optimized map.json
-    output_path = os.path.join(OUTPUT_DIR, "map.json")
-    ensure_directory(os.path.dirname(output_path))
-    with open(output_path, "w", encoding="utf-8") as output_file:
-        json.dump(phaser_map, output_file, indent=2)
+    # Mapa de cidade inteira não emite mais map.json/metadata.json. Ele nunca
+    # teve consumidor de *mapa*: o travel-graph lia só `objectDefs[<id>].flags`,
+    # que agora vive versionado em `appearance-flags/<CIDADE>.json` (gerado por
+    # build_appearance_flags.py). Eram 20,3 MB + 1,8 MB para alimentar uma
+    # tabela de ~2100 entradas e o resto ia pro lixo. Sobra o respawn.json,
+    # abaixo, que sempre foi a outra saída deste caminho.
+    if not IS_FULL_MAP:
+        # Write optimized map.json
+        output_path = os.path.join(OUTPUT_DIR, "map.json")
+        ensure_directory(os.path.dirname(output_path))
+        with open(output_path, "w", encoding="utf-8") as output_file:
+            json.dump(phaser_map, output_file, indent=2)
 
-    # Write separate metadata.json (keyed by appearance id)
-    metadata_path = os.path.join(OUTPUT_DIR, "metadata.json")
-    metadata_index = _build_metadata_index()
-    with open(metadata_path, "w", encoding="utf-8") as meta_file:
-        json.dump(metadata_index, meta_file, indent=2)
+        # Write separate metadata.json (keyed by appearance id)
+        metadata_path = os.path.join(OUTPUT_DIR, "metadata.json")
+        metadata_index = _build_metadata_index()
+        with open(metadata_path, "w", encoding="utf-8") as meta_file:
+            json.dump(metadata_index, meta_file, indent=2)
 
-    print(f"[OK] Mapa Phaser gerado em {output_path}")
-    print(f"[OK] Metadata gerado em {metadata_path} ({len(metadata_index)} entries)")
+        print(f"[OK] Mapa Phaser gerado em {output_path}")
+        print(f"[OK] Metadata gerado em {metadata_path} ({len(metadata_index)} entries)")
+    else:
+        print("[INFO] Mapa de cidade inteira: map.json/metadata.json não são mais gerados.")
+        print("       As flags que o travel-graph consome vêm de appearance-flags/"
+              f"{MAP_NAME}.json — regere com build_appearance_flags.py.")
 
     # Write monsters/respawn.json
     respawn = build_monster_respawn(phaser_map["bounds"])

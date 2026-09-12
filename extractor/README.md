@@ -93,6 +93,33 @@ Duas coisas continuam exigindo o checkout, de propósito:
   índice silenciosamente inconsistente.
 - **`update_canary_data.py`** — por definição.
 
+## Tabela de flags por appearance
+
+`extractor/appearance-flags/<CIDADE>.json` — o que o travel-graph realmente consome. Dois arquivos,
+e a separação é a regra mecânico-vs-curado do `CONTEXT.md`:
+
+| Arquivo | Natureza | Regenerar |
+|---|---|---|
+| `<CIDADE>.json` | **100% mecânico**, derivado dos metadados de appearance | sobrescreve sem dó |
+| `<CIDADE>.overrides.json` | **curado**, pequeno, sempre vence no merge | nunca é tocado |
+
+Um override **substitui a entrada inteira** daquele id, não mescla chave a chave: ele é a resposta
+final. Mesclar deixaria a derivação reintroduzir pela porta dos fundos justamente o valor que a
+curadoria existe pra corrigir. Cada linha do arquivo de overrides documenta um caso em que a
+derivação erra.
+
+Regenerar a tabela:
+
+```
+node extractor/scripts/dump_otbm.js ROOK
+uv run python extractor/scripts/build_appearance_flags.py ROOK
+```
+
+**Regenerar exige `extractor/sprites/`** — os `.json` por appearance, de onde as flags saem. Os PNGs
+não: `spriteWidth`/`spriteHeight` vêm da imagem e o grafo não usa nenhum dos dois. **Usar** a tabela
+não exige nada: ela é versionada exatamente pra que um clone sem biblioteca de sprites continue
+gerando o grafo, que é o produto fim-a-fim que essa máquina consegue montar.
+
 ## TL;DR
 
 ```
@@ -325,22 +352,24 @@ cidade inteira**, que vive em `extractor/full-maps/<CIDADE>/` (fonte **e** saíd
 pasta — diferente do par `maps/` → `ready-maps/` dos hunts). Hoje só existe `ROOK` (Rookgaard). Ver
 `.scratch/travel-graph-and-locations/spec.md` para o design completo.
 
-1. Gere o `map.json` da cidade inteira (mesmo runner dos hunts, só que o nome passado resolve pra
-   `full-maps/` em vez de `maps/`):
+O mapa da cidade **não produz um `map.json`**. O grafo nunca leu um mapa: de `objectDefs` ele usava
+só as `flags` por appearance, e nada mais — nem `floors`, nem `sheets`, nem `tilesets`, nem
+`animations`. Essa tabela agora é um artefato próprio e versionado,
+`extractor/appearance-flags/<CIDADE>.json` (~2100 entradas, 161 KB), no lugar dos 20,3 MB de
+`map.json` + 1,8 MB de `metadata.json` que eram gerados e descartados.
+
+1. Faça o dump cru do `.otbm` (é dele que saem os tiles):
    ```
-   node extractor/scripts/build_map.js ROOK
+   node extractor/scripts/dump_otbm.js ROOK
    ```
-   Saída (versionada no Git, ao contrário do `ready-maps/` dos hunts): `extractor/full-maps/ROOK/map.json`.
 2. Gere o fragmento `{locations, travelGraph}` — um único argumento, o código da cidade (não mais
    `region` + `--city-prefix` separados: a cidade já é a chave de tudo, do path ao prefixo de id):
    ```
-   python extractor/scripts/build_travel_fragment.py ROOK
+   uv run python extractor/scripts/build_travel_fragment.py ROOK
    ```
-   Requer o passo 1 já feito (lê `extractor/raw-maps/ROOK.raw.json` +
-   `extractor/full-maps/ROOK/map.json`) e um checkout local do Canary — por padrão
-   o irmão `../canary` (ajustável via `--canary-dir` ou `CANARY_DIR`), usado só pra casar cada NPC
-   com seu `.lua` de shop em `data-otservbr-global/npc/`. Saída: `extractor/full-maps/ROOK/db-fragment.json`, pra
-   revisar e colar à mão — por padrão **este script nunca escreve fora de `extractor/`**, mesmo
+   Lê `extractor/raw-maps/ROOK.raw.json` + `extractor/appearance-flags/ROOK.json` + o
+   [vendor do Canary](#vendor-do-canary) — **nenhum checkout do Canary é necessário**. Saída:
+   `extractor/full-maps/ROOK/db-fragment.json`, pra revisar e colar à mão — por padrão **este script nunca escreve fora de `extractor/`**, mesmo
    padrão do `build_hunt_fragment.py`. Sai junto o `travel-graph-rejections.txt` (passo 4).
 3. Se preferir pular a cópia manual, use `--export` (escreve `locations`/`travelGraph` no
    `catalog-source.json` do `tibia-idle` — ver "Export pro back-end" abaixo):

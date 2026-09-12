@@ -148,7 +148,9 @@ def test_build_sign_location_derives_test_status_for_the_test_city():
 
 
 def _object_defs(flags_by_id):
-    return {str(k): {"flags": v} for k, v in flags_by_id.items()}
+    """A tabela de flags é `{id: {flag: valor}}` — sem o envelope `{"flags":...}`
+    que o objectDefs do map.json carregava."""
+    return {str(k): v for k, v in flags_by_id.items()}
 
 
 def test_extract_tile_flags_excludes_marker_sign_items_from_flags():
