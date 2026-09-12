@@ -494,6 +494,11 @@ irmão por padrão é lamentado exatamente uma vez.
 A separação do `CONTEXT.md` continua intacta e fica mais forte: gerar fragmento nunca escreve fora
 de `extractor/`; publicar é este comando, e só ele.
 
+> **Reinicie o dev server do front depois de publicar.** O Angular monta o mapa de `public/` no
+> boot, então asset que aparece com o servidor já de pé responde **404** até o restart — o arquivo
+> está lá, o servidor é que não sabe. Sintoma típico: `GET /assets/player-outfits/128.json` dando
+> 404 com o arquivo visível em disco.
+
 ## Travel graph (mapa cidade inteira)
 
 Diferente dos mapas de hunt (pequenos, exportados um a um em `extractor/maps/<CIDADE>/<pasta>/`), o
