@@ -216,6 +216,14 @@ def build_stages():
                        "uv run python extractor/scripts/extract_sprites.py --group outfits")],
         ),
         Stage(
+            "player-outfit-sheets",
+            "bakeia uma sheet por outfit de jogador (grade 24 colunas, com eixos)",
+            py + [os.path.join(SCRIPTS_DIR, "bake_player_outfit_sheet.py")],
+            inputs=[os.path.join(sprites, "outfits")],
+            requires=[(os.path.join(sprites, "outfits"),
+                       "uv run python extractor/scripts/extract_sprites.py --group outfits")],
+        ),
+        Stage(
             "maps",
             "OTBM -> map.json + sheets/ + respawn.json de todo hunt",
             ["node", os.path.join(SCRIPTS_DIR, "build_map.js"), "--all"],

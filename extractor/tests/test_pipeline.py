@@ -200,3 +200,31 @@ def test_no_stage_hardcodes_a_city_in_its_command():
         if ":" in stage.name:
             city = stage.name.split(":", 1)[1]
             assert city in " ".join(stage.command)
+
+
+def test_every_bake_script_is_reachable_from_the_pipeline():
+    """O `bake_player_outfit_sheet.py` ficou fora do pipeline na primeira
+    versão: os 242 outfits de jogador eram extraídos e nunca bakeados, e nada
+    reclamava — `publish` só dizia '[--] não bakeado'. Este teste é o guarda.
+
+    Um bake é coberto se for estágio direto ou se um estágio o invocar
+    (os dois de item rodam dentro do `build_items.js`).
+    """
+    import pathlib
+
+    scripts = pathlib.Path(pipeline.SCRIPTS_DIR)
+    bakes = {path.name for path in scripts.glob("bake_*.py")}
+
+    # Não é um bake: virou a biblioteca de classificação que os dois bakers de
+    # item importam (is_equipment_candidate, _list_item_ids, ...). Ver o
+    # comentário no topo de build_items.js.
+    bakes.discard("bake_item_atlas.py")
+
+    comandos = " ".join(" ".join(stage.command) for stage in pipeline.build_stages())
+    runner = (scripts / "build_items.js").read_text()
+
+    for bake in sorted(bakes):
+        assert bake in comandos or bake in runner, (
+            f"{bake} não é estágio do pipeline nem é chamado por um — "
+            f"ele nunca vai rodar num `pipeline --all`"
+        )
