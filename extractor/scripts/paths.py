@@ -79,3 +79,13 @@ CANARY = SiblingRepo(
     flag="--canary-dir",
     sibling_dir="canary",
 )
+
+# Não é um repo — é a pasta onde `fetch_assets.py` extrai o cliente Tibia
+# fixado em `extractor/assets-manifest.json`. Mesma precedência, porque o
+# problema é o mesmo: um caminho que varia por máquina e precisa ser dito.
+TIBIA_CLIENT = SiblingRepo(
+    name="cliente Tibia",
+    env_var="TIBIA_CLIENT_DIR",
+    flag="--client-dir",
+    sibling_dir="tibia-client",
+)

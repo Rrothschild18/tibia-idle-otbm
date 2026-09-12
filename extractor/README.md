@@ -24,13 +24,27 @@ uv run python extractor/scripts/build_travel_fragment.py ROOK
 uv run pytest extractor/tests
 ```
 
-Os caminhos para os repos irmãos vêm de duas variáveis de ambiente (ver
+Os caminhos para os repos irmãos vêm de variáveis de ambiente (ver
 [Caminhos dos repos irmãos](#caminhos-dos-repos-irmãos)):
 
 ```
-TIBIA_IDLE_DIR   checkout do tibia-idle   (default: ../tibia-idle)
-CANARY_DIR       checkout do canary       (default: ../canary)
+TIBIA_IDLE_DIR     checkout do tibia-idle   (default: ../tibia-idle)
+CANARY_DIR         checkout do canary       (default: ../canary)
+TIBIA_CLIENT_DIR   cliente Tibia extraído   (default: ../tibia-client)
 ```
+
+### Máquina nova, do zero
+
+```
+uv sync                                                  # deps Python
+uv run python extractor/scripts/fetch_assets.py          # cliente Tibia (403 MB)
+node extractor/scripts/dump_otbm.js ROOK                 # dump cru do mapa
+uv run python extractor/scripts/build_travel_fragment.py ROOK
+```
+
+O terceiro e o quarto passo **não precisam do segundo**: o grafo de viagem roda com a tabela de
+flags e o vendor do Canary, ambos versionados. O `fetch-assets` é necessário para sprites, sheets e
+atlases.
 
 ## Caminhos dos repos irmãos
 
@@ -119,6 +133,37 @@ uv run python extractor/scripts/build_appearance_flags.py ROOK
 não: `spriteWidth`/`spriteHeight` vêm da imagem e o grafo não usa nenhum dos dois. **Usar** a tabela
 não exige nada: ela é versionada exatamente pra que um clone sem biblioteca de sprites continue
 gerando o grafo, que é o produto fim-a-fim que essa máquina consegue montar.
+
+## Cliente Tibia (fonte dos sprites)
+
+Todo sprite sai da pasta `assets/` de um cliente Tibia — `catalog-content.json`, as folhas
+`sprites-<sha>.bmp.lzma` e o `appearances-<sha>.dat`. Não é preciso Assets Editor, e não é preciso
+bucket privado: a release é pública e imutável.
+
+A versão está fixada em `extractor/assets-manifest.json`, **e em nenhum outro lugar**. Trocar de
+cliente é editar aquele arquivo.
+
+```
+uv run python extractor/scripts/fetch_assets.py           # baixa, confere, extrai
+uv run python extractor/scripts/fetch_assets.py --force   # rebaixa mesmo se já válido
+```
+
+| | |
+|---|---|
+| Release | [`dudantas/tibia-client` @ `15.25.0a00a0`](https://github.com/dudantas/tibia-client/releases/tag/15.25.0a00a0) |
+| Zip | 403,5 MB, sha256 `da42a4ff…` |
+| Extraído | 131 MB em `packages/Tibia/assets/` |
+| Catálogo | 4933 entradas (4927 folhas de sprite + appearances + estáticos) |
+
+**Checksum divergente é erro, não aviso.** O modo de falha é silencioso: um cliente mais novo
+desloca ids de aparência, e o sintoma aparece seis estágios adiante como sprite trocado — nunca
+como erro. Três coisas são conferidas: o sha256 do zip, o `assets.json.sha256` (o mecanismo de
+integridade do próprio cliente, que pega extração truncada depois do zip apagado) e a contagem de
+entradas do catálogo.
+
+O `package.json` irmão de `assets/` também é extraído e conferido. Extrair só `assets/` é o erro
+fácil: o RME recusa a pasta com *"The file package.json is not present"*, numa caixa de diálogo
+cujo título fala do `catalog-content.json`.
 
 ## TL;DR
 
