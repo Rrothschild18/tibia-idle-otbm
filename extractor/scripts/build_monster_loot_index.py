@@ -3,8 +3,14 @@ CLI: extract every monster's loot table from a local Canary install into
 extractor/monster-loot.json — the checked-in reference file build_phaser_map.py
 reads from, so the real pipeline never needs to touch the Canary install again.
 
-Run: python build_monster_loot_index.py [--canary-dir PATH]
-     (default PATH: C:\\canary-3.2.1)
+Diferente do resto do pipeline, este script **exige** um checkout do Canary: os
+1656 `.lua` de monstro não são vendorizados porque o extrato deles já é o
+`monster-loot.json` que ele próprio gera. Ele também lê o `items.xml` do mesmo
+checkout, e não do vendor, de propósito: resolver id de item por uma versão do
+Canary e tabela de loot por outra produziria um índice silenciosamente
+inconsistente.
+
+Run: uv run python extractor/scripts/build_monster_loot_index.py [--canary-dir PATH]
 """
 
 import argparse

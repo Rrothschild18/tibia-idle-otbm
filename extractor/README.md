@@ -34,9 +34,10 @@ CANARY_DIR       checkout do canary       (default: ../canary)
 
 ## Caminhos dos repos irmãos
 
-Dois scripts leem de fora deste repo: o checkout do **tibia-idle** (destino do `--export` e dos
-syncs de atlas) e o do **canary** (fonte do `items.xml` e dos `.lua` de NPC/monstro). Os dois
-caminhos saem de um lugar só — `extractor/scripts/paths.py` — com esta precedência:
+Um script lê de fora deste repo no fluxo normal: o checkout do **tibia-idle** (destino do
+`--export` e dos syncs de atlas). O do **canary** virou opcional — ver
+[Vendor do Canary](#vendor-do-canary). Os dois caminhos saem de um lugar só —
+`extractor/scripts/paths.py` — com esta precedência:
 
 | Precedência | tibia-idle | canary |
 |---|---|---|
@@ -56,6 +57,41 @@ traceback vindo de dentro do pipeline:
 ```
 error: esperava um checkout do canary em /nao/existe; passe --canary-dir ou defina CANARY_DIR
 ```
+
+## Vendor do Canary
+
+Gerar o grafo de viagem exigia um clone inteiro do Canary — `data/items/items.xml` (3,5 MB), 1035
+`.lua` de NPC (9 MB) e 1656 `.lua` de monstro (7,5 MB). O que o pipeline de fato lê está
+versionado em `extractor/vendor/canary/`:
+
+| Arquivo | O que é | Por que nesse formato |
+|---|---|---|
+| `items.xml` | cópia crua de `data/items/items.xml` | é um arquivo só, e é fonte de duas coisas (floorchange pro grafo, nome↔id e decay pro loot) — cru continua auditável |
+| `npc-lua-facts.json` | tabelas `shop` e `outfit` dos 1035 `.lua` de NPC | ninguém revisa 1035 arquivos num diff |
+| `MANIFEST.json` | commit do Canary, data e comando que gerou | sem isso o vendor não tem procedência e ninguém sabe quando envelheceu |
+
+Com isso, **um clone sem Canary nenhum gera o fragmento do ROOK**:
+
+```
+uv run python extractor/scripts/build_travel_fragment.py ROOK
+```
+
+Para atualizar o vendor depois de um bump do Canary:
+
+```
+uv run python extractor/scripts/update_canary_data.py            # usa CANARY_DIR ou ../canary
+```
+
+`--canary-dir` nos scripts que consomem o vendor **relê do checkout** em vez do vendor, que é como
+se confere se o vendor envelheceu — a saída tem que ser idêntica.
+
+Duas coisas continuam exigindo o checkout, de propósito:
+
+- **`build_monster_loot_index.py`** — é o gerador do `monster-loot.json`, que já é o extrato
+  versionado dos `.lua` de monstro. Ele lê o `items.xml` do mesmo checkout dos `.lua`, e não do
+  vendor: resolver id de item por uma versão do Canary e tabela de loot por outra produziria um
+  índice silenciosamente inconsistente.
+- **`update_canary_data.py`** — por definição.
 
 ## TL;DR
 

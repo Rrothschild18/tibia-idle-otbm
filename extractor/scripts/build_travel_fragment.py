@@ -42,6 +42,7 @@ import city_ids
 import content_export
 import map_dirs
 import paths
+import update_canary_data
 from hunt_fragment import map_id_from_folder
 from travel_graph import (
     DEFAULT_NPC_REACH,
@@ -79,42 +80,73 @@ def _load_json(path, what):
         return json.load(f)
 
 
-def _build_npc_lua_facts(npc_names, canary_npc_dir):
+def _load_npc_lua_facts_source(canary_dir=None):
+    """{nome do .lua: {"shop": ..., "outfit": ...}} — do vendor ou de um
+    checkout do Canary.
+
+    O vendor é o padrão: os 1035 `.lua` (9 MB) já foram lidos uma vez e o que
+    este pipeline extrai deles está versionado em
+    `vendor/canary/npc-lua-facts.json`. Passar `--canary-dir` relê do checkout,
+    que é como se confere se o vendor envelheceu."""
+    if canary_dir:
+        npc_dir = os.path.join(canary_dir, "data-otservbr-global", "npc")
+        source = {}
+        for path in sorted(glob.glob(os.path.join(npc_dir, "*.lua"))):
+            with open(path, "r", encoding="utf-8", errors="replace") as f:
+                text = f.read()
+            source[os.path.basename(path)] = {
+                "shop": parse_npc_shop_lua(text),
+                "outfit": parse_npc_outfit_lua(text),
+            }
+        return source, npc_dir
+
+    vendored = update_canary_data.vendored_npc_facts()
+    if not os.path.exists(vendored):
+        print(f"[WARN] {vendored} não encontrado — nenhum NPC terá shop. "
+              f"Rode 'uv run python extractor/scripts/update_canary_data.py'")
+        return {}, vendored
+
+    with open(vendored, "r", encoding="utf-8") as f:
+        return json.load(f), vendored
+
+
+def _build_npc_lua_facts(npc_names, canary_dir=None):
     """{npc name: (parsed shop or None, parsed outfit or None)} — a name is a
     key only if a .lua file matched it (a None inside the tuple then means
     "matched, but no such table"); a name genuinely absent (no file at all) is
     the CLI's cue to warn.
 
-    Shop **and** outfit in one pass, from one read: the two live side by side
-    in the same Canary file, and reading it twice to fetch them separately
-    would be two passes over the same text for no gain."""
-    lua_filenames = [
-        os.path.basename(p) for p in glob.glob(os.path.join(canary_npc_dir, "*.lua"))
-    ]
+    Shop **and** outfit come from the same entry: the two live side by side in
+    the same Canary file, and splitting them would be two lookups for no gain."""
+    source, origin = _load_npc_lua_facts_source(canary_dir)
+    lua_filenames = list(source.keys())
     facts_by_name = {}
     for name in npc_names:
         filename = match_npc_lua_filename(name, lua_filenames)
         if filename is None:
             continue
-        with open(os.path.join(canary_npc_dir, filename), "r", encoding="utf-8", errors="replace") as f:
-            text = f.read()
-        facts_by_name[name] = (parse_npc_shop_lua(text), parse_npc_outfit_lua(text))
-    return facts_by_name
+        entry = source[filename]
+        facts_by_name[name] = (entry["shop"], entry["outfit"])
+    return facts_by_name, origin
 
 
-def _read_floorchange_items(canary_dir: str):
+def _read_floorchange_items(canary_dir=None):
     """Canary's `items.xml` -> the floorchange map the walkable graph needs.
 
-    Read from the Canary checkout the CLI already points at (`--canary-dir`,
-    the same one the NPC `.lua` files come from) rather than copied into this
-    repo: a stairs id that a Canary bump adds arrives with the bump, and there
-    is no second list to remember to update.
+    Read from `vendor/canary/items.xml` by default — the same file the Canary
+    checkout has, copied here so a clone with no Canary can still build the
+    graph. `--canary-dir` reads from the checkout instead, which is how a
+    stale vendor gets caught.
 
     A missing file is a **warning, not a failure**: the graph falls back to the
     render-flag heuristic alone, which is exactly how it behaved before this —
     fewer connections, no wrong ones. Failing here instead would make an
     unrelated Canary path break every export."""
-    path = os.path.join(canary_dir, "data", "items", "items.xml")
+    path = (
+        os.path.join(canary_dir, "data", "items", "items.xml")
+        if canary_dir
+        else update_canary_data.vendored_items_xml()
+    )
 
     try:
         with open(path, "r", encoding="utf-8", errors="replace") as f:
@@ -146,7 +178,7 @@ def discover_hunt_maps(city: str):
     return sorted(hunts, key=lambda h: h["id"])
 
 
-def build_city_fragment(city: str, canary_dir: str, npc_reach: int = DEFAULT_NPC_REACH):
+def build_city_fragment(city: str, canary_dir=None, npc_reach: int = DEFAULT_NPC_REACH):
     """-> (fragment, rejections). Signs and NPCs are both fed to the same
     search over walkable tiles, so an NPC is a travel destination measured in
     real tiles walked — never a euclidean guess, never an occupant hanging off
@@ -178,15 +210,16 @@ def build_city_fragment(city: str, canary_dir: str, npc_reach: int = DEFAULT_NPC
     else:
         print(f"[WARN] {npc_xml_path} não encontrado — nenhuma Location de NPC gerada")
 
-    canary_npc_dir = os.path.join(canary_dir, "data-otservbr-global", "npc")
-    lua_facts = _build_npc_lua_facts({npc["name"] for npc in npcs}, canary_npc_dir)
+    lua_facts, npc_facts_origin = _build_npc_lua_facts(
+        {npc["name"] for npc in npcs}, canary_dir
+    )
     shops_by_name = {name: shop for name, (shop, _) in lua_facts.items()}
     outfits_by_name = {name: outfit for name, (_, outfit) in lua_facts.items()}
     npc_locations, unmatched_npcs = build_npc_locations(
         npcs, city, shops_by_name, outfits_by_name
     )
     for name in unmatched_npcs:
-        print(f"[WARN] NPC '{name}' sem .lua correspondente em {canary_npc_dir} — Location sem shop")
+        print(f"[WARN] NPC '{name}' sem .lua correspondente em {npc_facts_origin} — Location sem shop")
 
     tiles = extract_tile_flags(dump, object_defs, _read_floorchange_items(canary_dir))
     graph = build_walkable_graph(tiles)
@@ -202,7 +235,9 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("city", help="Código da cidade — pasta em extractor/full-maps/<CIDADE>/ (ex: ROOK)")
     parser.add_argument("--canary-dir", default=None,
-                         help=f"Path do checkout local do Canary (default: ${paths.CANARY.env_var} ou {paths.CANARY.sibling_default()})")
+                         help="Relê items.xml e os .lua de NPC deste checkout do Canary em vez do "
+                              "vendor (extractor/vendor/canary/). Sem a flag, o vendor é usado e "
+                              "nenhum clone do Canary é necessário.")
     parser.add_argument(
         "--export",
         action="store_true",
@@ -226,10 +261,15 @@ def main():
     )
     args = parser.parse_args()
 
-    try:
-        canary_dir = paths.CANARY.require(args.canary_dir)
-    except paths.MissingRepoError as exc:
-        parser.error(str(exc))
+    # Sem --canary-dir o vendor responde por tudo; com a flag, o checkout tem
+    # que existir de verdade (passar um caminho errado e cair no vendor em
+    # silêncio seria o pior dos dois mundos).
+    canary_dir = None
+    if args.canary_dir:
+        try:
+            canary_dir = paths.CANARY.require(args.canary_dir)
+        except paths.MissingRepoError as exc:
+            parser.error(str(exc))
 
     fragment, rejections = build_city_fragment(args.city, canary_dir, args.npc_reach)
 
