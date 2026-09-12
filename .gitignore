@@ -45,3 +45,7 @@ __pycache__/
 # (O uv já escreve um .venv/.gitignore, mas deixar explícito evita surpresa
 # se alguém criar a env com outra ferramenta.)
 .venv/
+
+# Stamps do pipeline incremental: hash das entradas de cada estágio.
+# Estado local de quem rodou, não do repo.
+extractor/.stamps/
