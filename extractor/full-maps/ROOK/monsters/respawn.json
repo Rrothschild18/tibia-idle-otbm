@@ -31,6 +31,28 @@
           "rarity": "rare"
         }
       ],
+      "corpse": {
+        "itemId": 5961,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5961
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4250
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4003
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4004
+          }
+        ]
+      },
+      "race": "venom",
       "idle": {
         "south": "30_0",
         "east": "30_1",
@@ -129,6 +151,28 @@
           "rarity": "rare"
         }
       ],
+      "corpse": {
+        "itemId": 5970,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5970
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4016
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4017
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4018
+          }
+        ]
+      },
+      "race": "blood",
       "idle": {
         "south": "31_0",
         "east": "31_1",
@@ -299,6 +343,28 @@
           "rarity": "very-rare"
         }
       ],
+      "corpse": {
+        "itemId": 5960,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5960
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 3987
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 3991
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 3992
+          }
+        ]
+      },
+      "race": "blood",
       "idle": {
         "south": "15_0",
         "east": "15_1",
@@ -389,6 +455,28 @@
           "rarity": "rare"
         }
       ],
+      "corpse": {
+        "itemId": 5968,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5968
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4007
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4008
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4009
+          }
+        ]
+      },
+      "race": "blood",
       "idle": {
         "south": "27_0",
         "east": "27_1",
@@ -495,6 +583,28 @@
           "rarity": "very-rare"
         }
       ],
+      "corpse": {
+        "itemId": 5975,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5975
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4291
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4292
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4293
+          }
+        ]
+      },
+      "race": "blood",
       "idle": {
         "south": "16_0",
         "east": "16_1",
@@ -649,6 +759,28 @@
           "rarity": "very-rare"
         }
       ],
+      "corpse": {
+        "itemId": 5966,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5966
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4001
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4002
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4317
+          }
+        ]
+      },
+      "race": "blood",
       "idle": {
         "south": "5_0",
         "east": "5_1",
@@ -722,6 +854,24 @@
         "json": "assets/outfits/28.json"
       },
       "loot": [],
+      "corpse": {
+        "itemId": 3998,
+        "stages": [
+          {
+            "durationSeconds": 300,
+            "itemId": 3998
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 3999
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4000
+          }
+        ]
+      },
+      "race": "blood",
       "idle": {
         "south": "28_0",
         "east": "28_1",
@@ -812,6 +962,28 @@
           "rarity": "rare"
         }
       ],
+      "corpse": {
+        "itemId": 5990,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5990
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4083
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4084
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4085
+          }
+        ]
+      },
+      "race": "venom",
       "idle": {
         "south": "45_0",
         "east": "45_1",
@@ -885,6 +1057,28 @@
         "json": "assets/outfits/276.json"
       },
       "loot": [],
+      "corpse": {
+        "itemId": 286,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 286
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 287
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 288
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 289
+          }
+        ]
+      },
+      "race": "blood",
       "idle": {
         "south": "276_0",
         "east": "276_1",
@@ -975,6 +1169,28 @@
           "rarity": "rare"
         }
       ],
+      "corpse": {
+        "itemId": 5974,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5974
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4029
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4066
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4125
+          }
+        ]
+      },
+      "race": "venom",
       "idle": {
         "south": "36_0",
         "east": "36_1",
@@ -1081,6 +1297,28 @@
           "rarity": "rare"
         }
       ],
+      "corpse": {
+        "itemId": 6042,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 6042
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4330
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4331
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4332
+          }
+        ]
+      },
+      "race": "blood",
       "idle": {
         "south": "111_0",
         "east": "111_1",
@@ -1171,6 +1409,28 @@
           "rarity": "semi-rare"
         }
       ],
+      "corpse": {
+        "itemId": 6017,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 6017
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4301
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4302
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4303
+          }
+        ]
+      },
+      "race": "blood",
       "idle": {
         "south": "74_0",
         "east": "74_1",
@@ -1261,6 +1521,28 @@
           "rarity": "common"
         }
       ],
+      "corpse": {
+        "itemId": 5964,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5964
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 3994
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 3995
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 3996
+          }
+        ]
+      },
+      "race": "blood",
       "idle": {
         "south": "21_0",
         "east": "21_1",
@@ -1351,6 +1633,28 @@
           "rarity": "rare"
         }
       ],
+      "corpse": {
+        "itemId": 5991,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5991
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4086
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4087
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4088
+          }
+        ]
+      },
+      "race": "blood",
       "idle": {
         "south": "14_0",
         "east": "14_1",
@@ -1441,6 +1745,28 @@
           "rarity": "rare"
         }
       ],
+      "corpse": {
+        "itemId": 6000,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 6000
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4116
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4117
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4118
+          }
+        ]
+      },
+      "race": "blood",
       "idle": {
         "south": "60_0",
         "east": "60_1",
@@ -1514,6 +1840,20 @@
         "json": "assets/outfits/227.json"
       },
       "loot": [],
+      "corpse": {
+        "itemId": 4993,
+        "stages": [
+          {
+            "durationSeconds": 60,
+            "itemId": 4993
+          },
+          {
+            "durationSeconds": null,
+            "itemId": 4378
+          }
+        ]
+      },
+      "race": "venom",
       "idle": {
         "south": {
           "frames": [
@@ -1639,6 +1979,20 @@
         "json": "assets/outfits/228.json"
       },
       "loot": [],
+      "corpse": {
+        "itemId": 4991,
+        "stages": [
+          {
+            "durationSeconds": 60,
+            "itemId": 4991
+          },
+          {
+            "durationSeconds": null,
+            "itemId": 4378
+          }
+        ]
+      },
+      "race": "venom",
       "idle": {
         "south": {
           "frames": [
@@ -1845,6 +2199,28 @@
           "rarity": "rare"
         }
       ],
+      "corpse": {
+        "itemId": 5972,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5972
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4024
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4156
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4157
+          }
+        ]
+      },
+      "race": "undead",
       "idle": {
         "south": "33_0",
         "east": "33_1",
@@ -1983,6 +2359,28 @@
           "rarity": "rare"
         }
       ],
+      "corpse": {
+        "itemId": 5967,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5967
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4266
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4267
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4145
+          }
+        ]
+      },
+      "race": "blood",
       "idle": {
         "south": "26_0"
       },
@@ -2072,6 +2470,28 @@
           "rarity": "rare"
         }
       ],
+      "corpse": {
+        "itemId": 5964,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5964
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 3994
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 3995
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 3996
+          }
+        ]
+      },
+      "race": "blood",
       "idle": {
         "south": "56_0",
         "east": "56_1",
@@ -2210,6 +2630,28 @@
           "rarity": "very-rare"
         }
       ],
+      "corpse": {
+        "itemId": 6047,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 6047
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4345
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4346
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4347
+          }
+        ]
+      },
+      "race": "venom",
       "idle": {
         "south": "120_0",
         "east": "120_1",
@@ -2308,6 +2750,28 @@
           "rarity": "semi-rare"
         }
       ],
+      "corpse": {
+        "itemId": 7338,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 7338
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 7339
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 7340
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 7341
+          }
+        ]
+      },
+      "race": "blood",
       "idle": {
         "south": "262_0",
         "east": "262_1",
@@ -2430,6 +2894,28 @@
           "rarity": "rare"
         }
       ],
+      "corpse": {
+        "itemId": 6075,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 6075
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 5688
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 5689
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 5690
+          }
+        ]
+      },
+      "race": "blood",
       "idle": {
         "south": "200_0",
         "east": "200_1",
@@ -2576,6 +3062,28 @@
           "rarity": "rare"
         }
       ],
+      "corpse": {
+        "itemId": 10393,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 10393
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 10394
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 10395
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 10396
+          }
+        ]
+      },
+      "race": "venom",
       "idle": {
         "south": "347_0",
         "east": "347_1",
@@ -2666,6 +3174,28 @@
           "rarity": "semi-rare"
         }
       ],
+      "corpse": {
+        "itemId": 6051,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 6051
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4357
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4358
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4359
+          }
+        ]
+      },
+      "race": "blood",
       "idle": {
         "south": "125_0",
         "east": "125_1",
@@ -2739,6 +3269,28 @@
         "json": "assets/outfits/8.json"
       },
       "loot": [],
+      "corpse": {
+        "itemId": 5980,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5980
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4045
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4046
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4147
+          }
+        ]
+      },
+      "race": "blood",
       "idle": {
         "south": "8_0",
         "east": "8_1",
@@ -2901,6 +3453,28 @@
           "rarity": "very-rare"
         }
       ],
+      "corpse": {
+        "itemId": 6018,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 6018
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4176
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4177
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4178
+          }
+        ]
+      },
+      "race": "venom",
       "idle": {
         "south": "76_0",
         "east": "76_1",
@@ -3007,6 +3581,28 @@
           "rarity": "rare"
         }
       ],
+      "corpse": {
+        "itemId": 861,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 861
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 862
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 863
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 864
+          }
+        ]
+      },
+      "race": "blood",
       "idle": {
         "south": "281_0",
         "east": "281_1",
@@ -3177,6 +3773,28 @@
           "rarity": "very-rare"
         }
       ],
+      "corpse": {
+        "itemId": 5969,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5969
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4011
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4012
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4013
+          }
+        ]
+      },
+      "race": "blood",
       "idle": {
         "south": "25_0",
         "east": "25_1",
@@ -3347,6 +3965,28 @@
           "rarity": "very-rare"
         }
       ],
+      "corpse": {
+        "itemId": 5976,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5976
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4034
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4035
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4036
+          }
+        ]
+      },
+      "race": "blood",
       "idle": {
         "south": "18_0",
         "east": "18_1",
@@ -3517,6 +4157,28 @@
           "rarity": "rare"
         }
       ],
+      "corpse": {
+        "itemId": 6002,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 6002
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4121
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4122
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4123
+          }
+        ]
+      },
+      "race": "blood",
       "idle": {
         "south": "61_0",
         "east": "61_1",
@@ -3679,6 +4341,28 @@
           "rarity": "very-rare"
         }
       ],
+      "corpse": {
+        "itemId": 5981,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5981
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4047
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4048
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4013
+          }
+        ]
+      },
+      "race": "blood",
       "idle": {
         "south": "23_0",
         "east": "23_1",
@@ -3752,6 +4436,28 @@
         "json": "assets/outfits/219.json"
       },
       "loot": [],
+      "corpse": {
+        "itemId": 6060,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 6060
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4385
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4386
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4387
+          }
+        ]
+      },
+      "race": "venom",
       "idle": {
         "south": "219_0",
         "east": "219_1",
@@ -3898,6 +4604,28 @@
           "rarity": "very-rare"
         }
       ],
+      "corpse": {
+        "itemId": 5996,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5996
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4101
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4102
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4147
+          }
+        ]
+      },
+      "race": "blood",
       "idle": {
         "south": "50_0",
         "east": "50_1",
@@ -3980,6 +4708,28 @@
           "rarity": "rare"
         }
       ],
+      "corpse": {
+        "itemId": 5989,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5989
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4080
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4081
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4082
+          }
+        ]
+      },
+      "race": "venom",
       "idle": {
         "south": {
           "frames": [
@@ -4105,6 +4855,28 @@
         "json": "assets/outfits/223.json"
       },
       "loot": [],
+      "corpse": {
+        "itemId": 6076,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 6076
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 5727
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 5728
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 5729
+          }
+        ]
+      },
+      "race": "blood",
       "idle": {
         "south": {
           "frames": [

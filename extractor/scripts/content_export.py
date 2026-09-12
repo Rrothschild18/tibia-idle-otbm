@@ -33,12 +33,18 @@ import os
 import posixpath
 from typing import Dict, List
 
-# The renderer format whose bundle the front actually serves. It lives in the
-# folder name (`<pasta>-sprites-v6`), and the back-end's schema *requires* it:
-# `mapUrl` must match `assets/<pasta>-v<N>/map.json` or the import rejects the
-# hunt, because the `-v<N>` is how a content version reaches the client.
-# Bumping the renderer's format means bumping this — and re-baking the maps.
-MAP_BUNDLE_VERSION = 6
+# **Versão de conteúdo do bundle**, não do renderer. Vive no nome da pasta
+# (`<pasta>-sprites-v6`) e o schema do back-end a *exige*: `mapUrl` tem que
+# casar `assets/<pasta>-v<N>/map.json` ou o import rejeita o hunt
+# (`import-source.model.ts:15`, `BUNDLE_URL_PATTERN`). O `-v<N>` capturado
+# **vira** `hunt.contentVersion` (`import-source.model.ts:281-282`) — é assim
+# que o cliente sabe que os bytes do bundle mudaram e o cache tem que virar.
+#
+# Ou seja: sobe quando os **bytes do bundle** mudam, não quando o formato do
+# renderer muda. O número 6 começou igual à versão do formato por coincidência
+# histórica (o v6 nasceu junto do bundle atual) e não está preso a ela.
+# Subir isto exige re-bakear os mapas e re-exportar o catálogo.
+MAP_CONTENT_VERSION = 6
 
 # Relative to the tibia-idle checkout root.
 CATALOG_SOURCE_RELPATH = os.path.join("apps", "tibia-idle-api", "content", "catalog-source.json")
@@ -65,7 +71,7 @@ def map_bundle_root(map_name: str) -> str:
     """`"ROOK-HUNT-0013_rats-rookguard"` ->
     `"assets/ROOK-HUNT-0013_rats-rookguard-sprites-v6"` — the folder the front
     serves this map's bundle from, and the one build_phaser_map.py bakes into."""
-    return posixpath.join("assets", f"{map_name}-sprites-v{MAP_BUNDLE_VERSION}")
+    return posixpath.join("assets", f"{map_name}-sprites-v{MAP_CONTENT_VERSION}")
 
 
 def map_bundle_url(map_name: str) -> str:

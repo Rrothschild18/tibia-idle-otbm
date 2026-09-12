@@ -1,18 +1,16 @@
-"""Pure grid-sheet packing model for map.json v4/v6.
+"""Pure grid-sheet packing model for map.json v6.
 
 Assigns each appearance sequential gids inside a fixed-column-width sheet. No
 I/O — rendering the actual sheet PNGs happens in build_phaser_map.py, which
 consumes the plan this module produces.
 
-Two grouping keys, one per map format:
+**Footprint é a chave inteira**: `"sheet-32"`, `"sheet-64"`. O v5 agrupava por
+`(layerClass, bucket)` — `"object-32"`, `"ground-64"` — e emitia de nove a doze
+folhas por mapa; sem papel de render para agrupar, sobram duas, que é o ponto
+(ver `.scratch/modelo-render-rme/issues/05-sheets-por-bucket.md`). O agrupamento
+v5 saiu junto com o formato.
 
-- **v4/v5** groups by `(layerClass, size bucket)` — `"object-32"`, `"ground-64"`.
-- **v6** has no render role left to group by, so footprint is the whole key:
-  pass `layer_class=None` and get `"sheet-32"`. That collapses the nine-to-twelve
-  sheets a map used to emit down to two, which is the point — see
-  `.scratch/modelo-render-rme/issues/05-sheets-por-bucket.md`.
-
-Either way the in-sheet contract is the same: square cell, row-major
+O contrato dentro da folha é o mesmo: square cell, row-major
 left-to-right fill, sprite anchored to the cell's top-left corner, index-to-
 position as pure arithmetic with no atlas file.
 
@@ -22,21 +20,19 @@ cases in a throwaway prototype before being lifted here — see
 """
 
 BUCKET_SIZES = [32, 64, 128]
-COLUMNS_BY_BUCKET = {32: 16, 64: 12, 128: 8}
 
 # The texture size every WebGL 1.0 implementation is required to support, and
 # the floor of what any GPU in the wild offers. A sheet is only safe if both
 # dimensions stay at or under it.
 SAFE_TEXTURE_SIZE = 2048
 
-# v6 packs every appearance of a footprint into one sheet, so a grid that only
-# ever grows downward runs out of texture: at 16 columns of 32px, four of the
-# 20 maps produced sheets 2240-2688px tall. Filling the safe width first
-# (SAFE_TEXTURE_SIZE / cell) keeps each sheet square-ish, and caps its capacity
-# at a full 2048x2048 — 4096 cells at 32px, 1024 at 64px, 256 at 128px, all far
-# above what any single map uses. The v5 numbers above stay put: changing them
-# would renumber the `tilesets` the game reads today.
-V6_COLUMNS_BY_BUCKET = {size: SAFE_TEXTURE_SIZE // size for size in BUCKET_SIZES}
+# Cada footprint vira uma folha só, então uma grade que só cresce para baixo
+# estoura a textura: a 16 colunas de 32px, quatro dos 20 mapas produziam folhas
+# de 2240-2688px de altura. Preencher primeiro a largura segura
+# (SAFE_TEXTURE_SIZE / cell) mantém a folha quase quadrada e limita a
+# capacidade a 2048x2048 — 4096 células a 32px, 1024 a 64px, 256 a 128px, bem
+# acima do que qualquer mapa usa.
+COLUMNS_BY_BUCKET = {size: SAFE_TEXTURE_SIZE // size for size in BUCKET_SIZES}
 
 
 def bucket_for(width: int, height: int) -> int:
@@ -55,24 +51,17 @@ class SheetPacker:
         self.sheets = {}       # sheet_key -> {"cellSize", "columns", "count"}
         self.appearances = {}  # appearance_id -> {"sheet", "gids", "width", "height"}
 
-    def columns_for_bucket(self, bucket: int, size_only: bool = False) -> int:
-        """Columns in a sheet of this bucket. `size_only=True` asks for the v6
-        grid, which is wider — see V6_COLUMNS_BY_BUCKET."""
-        table = V6_COLUMNS_BY_BUCKET if size_only else COLUMNS_BY_BUCKET
-        return table[bucket]
+    def columns_for_bucket(self, bucket: int) -> int:
+        """Colunas numa folha desse bucket."""
+        return COLUMNS_BY_BUCKET[bucket]
 
-    def add_appearance(self, appearance_id, layer_class, width, height, frame_count=1):
-        """Reserve `frame_count` consecutive cells for an appearance.
-
-        `layer_class=None` selects the v6 sheet — footprint is the whole key,
-        and the grid is the wider one.
-        """
+    def add_appearance(self, appearance_id, width, height, frame_count=1):
+        """Reserve `frame_count` consecutive cells for an appearance."""
         cell = bucket_for(width, height)
-        size_only = layer_class is None
-        sheet_key = f"sheet-{cell}" if size_only else f"{layer_class}-{cell}"
+        sheet_key = f"sheet-{cell}"
         sheet = self.sheets.setdefault(
             sheet_key,
-            {"cellSize": cell, "columns": self.columns_for_bucket(cell, size_only), "count": 0},
+            {"cellSize": cell, "columns": self.columns_for_bucket(cell), "count": 0},
         )
         start = sheet["count"]
         gids = list(range(start, start + frame_count))

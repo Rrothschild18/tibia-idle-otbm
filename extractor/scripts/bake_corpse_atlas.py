@@ -60,11 +60,9 @@ EXTRACTOR_DIR = os.path.dirname(SCRIPTS_DIR)
 MONSTER_LOOT_PATH = os.path.join(EXTRACTOR_DIR, "monster-loot.json")
 CORPSES_ATLAS_DIR = os.path.join(EXTRACTOR_DIR, "atlases", "corpses")
 
-# Both map roots: v6 is the current format, v5 is still shipped alongside it,
-# and a monster that only spawns on one of them still dies and leaves a body.
+# Uma árvore só desde que o v5 morreu (ticket 07).
 READY_MAPS_DIRS = (
     os.path.join(EXTRACTOR_DIR, "ready-maps"),
-    os.path.join(EXTRACTOR_DIR, "ready-maps-v6"),
 )
 
 RESPAWN_RELPATH = os.path.join("monsters", "respawn.json")
