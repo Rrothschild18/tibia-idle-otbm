@@ -1,0 +1,531 @@
+{
+  "mapBoundsRef": {
+    "minX": 998,
+    "minY": 1018,
+    "maxX": 1113,
+    "maxY": 1080
+  },
+  "monsterDefs": {
+    "21": {
+      "name": "Rat",
+      "outfitId": 21,
+      "atlas": {
+        "image": "assets/outfits/21.png",
+        "json": "assets/outfits/21.json"
+      },
+      "loot": [
+        {
+          "countMax": 4,
+          "countMin": 1,
+          "dropChance": 1.0,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "always"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.3941,
+          "itemId": 3607,
+          "itemName": "cheese",
+          "rarity": "common"
+        }
+      ],
+      "corpse": {
+        "itemId": 5964,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5964
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 3994
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 3995
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 3996
+          }
+        ]
+      },
+      "race": "blood",
+      "idle": {
+        "south": "21_0",
+        "east": "21_1",
+        "north": "21_2",
+        "west": "21_3"
+      },
+      "moving": {
+        "south": {
+          "frames": [
+            "21_4",
+            "21_5",
+            "21_6",
+            "21_7",
+            "21_8",
+            "21_9",
+            "21_10",
+            "21_11"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "21_12",
+            "21_13",
+            "21_14",
+            "21_15",
+            "21_16",
+            "21_17",
+            "21_18",
+            "21_19"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "north": {
+          "frames": [
+            "21_20",
+            "21_21",
+            "21_22",
+            "21_23",
+            "21_24",
+            "21_25",
+            "21_26",
+            "21_27"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "21_28",
+            "21_29",
+            "21_30",
+            "21_31",
+            "21_32",
+            "21_33",
+            "21_34",
+            "21_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    }
+  },
+  "spawns": [
+    {
+      "name": "Rat",
+      "outfitId": 21,
+      "tileX": 60,
+      "tileY": 10,
+      "worldX": 1058,
+      "worldY": 1028,
+      "worldZ": 8,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rat",
+      "outfitId": 21,
+      "tileX": 52,
+      "tileY": 13,
+      "worldX": 1050,
+      "worldY": 1031,
+      "worldZ": 8,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rat",
+      "outfitId": 21,
+      "tileX": 72,
+      "tileY": 14,
+      "worldX": 1070,
+      "worldY": 1032,
+      "worldZ": 8,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Rat",
+      "outfitId": 21,
+      "tileX": 78,
+      "tileY": 17,
+      "worldX": 1076,
+      "worldY": 1035,
+      "worldZ": 8,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rat",
+      "outfitId": 21,
+      "tileX": 80,
+      "tileY": 17,
+      "worldX": 1078,
+      "worldY": 1035,
+      "worldZ": 8,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rat",
+      "outfitId": 21,
+      "tileX": 62,
+      "tileY": 19,
+      "worldX": 1060,
+      "worldY": 1037,
+      "worldZ": 8,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Rat",
+      "outfitId": 21,
+      "tileX": 50,
+      "tileY": 22,
+      "worldX": 1048,
+      "worldY": 1040,
+      "worldZ": 8,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rat",
+      "outfitId": 21,
+      "tileX": 85,
+      "tileY": 19,
+      "worldX": 1083,
+      "worldY": 1037,
+      "worldZ": 8,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rat",
+      "outfitId": 21,
+      "tileX": 84,
+      "tileY": 23,
+      "worldX": 1082,
+      "worldY": 1041,
+      "worldZ": 8,
+      "radius": 3,
+      "spawntime": 60
+    },
+    {
+      "name": "Rat",
+      "outfitId": 21,
+      "tileX": 90,
+      "tileY": 21,
+      "worldX": 1088,
+      "worldY": 1039,
+      "worldZ": 8,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Rat",
+      "outfitId": 21,
+      "tileX": 106,
+      "tileY": 21,
+      "worldX": 1104,
+      "worldY": 1039,
+      "worldZ": 8,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rat",
+      "outfitId": 21,
+      "tileX": 105,
+      "tileY": 23,
+      "worldX": 1103,
+      "worldY": 1041,
+      "worldZ": 8,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rat",
+      "outfitId": 21,
+      "tileX": 14,
+      "tileY": 30,
+      "worldX": 1012,
+      "worldY": 1048,
+      "worldZ": 8,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rat",
+      "outfitId": 21,
+      "tileX": 22,
+      "tileY": 31,
+      "worldX": 1020,
+      "worldY": 1049,
+      "worldZ": 8,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rat",
+      "outfitId": 21,
+      "tileX": 47,
+      "tileY": 25,
+      "worldX": 1045,
+      "worldY": 1043,
+      "worldZ": 8,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rat",
+      "outfitId": 21,
+      "tileX": 44,
+      "tileY": 31,
+      "worldX": 1042,
+      "worldY": 1049,
+      "worldZ": 8,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rat",
+      "outfitId": 21,
+      "tileX": 70,
+      "tileY": 28,
+      "worldX": 1068,
+      "worldY": 1046,
+      "worldZ": 8,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rat",
+      "outfitId": 21,
+      "tileX": 70,
+      "tileY": 30,
+      "worldX": 1068,
+      "worldY": 1048,
+      "worldZ": 8,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rat",
+      "outfitId": 21,
+      "tileX": 71,
+      "tileY": 30,
+      "worldX": 1069,
+      "worldY": 1048,
+      "worldZ": 8,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rat",
+      "outfitId": 21,
+      "tileX": 78,
+      "tileY": 29,
+      "worldX": 1076,
+      "worldY": 1047,
+      "worldZ": 8,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rat",
+      "outfitId": 21,
+      "tileX": 96,
+      "tileY": 25,
+      "worldX": 1094,
+      "worldY": 1043,
+      "worldZ": 8,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rat",
+      "outfitId": 21,
+      "tileX": 63,
+      "tileY": 31,
+      "worldX": 1061,
+      "worldY": 1049,
+      "worldZ": 8,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Rat",
+      "outfitId": 21,
+      "tileX": 88,
+      "tileY": 34,
+      "worldX": 1086,
+      "worldY": 1052,
+      "worldZ": 8,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Rat",
+      "outfitId": 21,
+      "tileX": 34,
+      "tileY": 37,
+      "worldX": 1032,
+      "worldY": 1055,
+      "worldZ": 8,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rat",
+      "outfitId": 21,
+      "tileX": 37,
+      "tileY": 38,
+      "worldX": 1035,
+      "worldY": 1056,
+      "worldZ": 8,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rat",
+      "outfitId": 21,
+      "tileX": 49,
+      "tileY": 37,
+      "worldX": 1047,
+      "worldY": 1055,
+      "worldZ": 8,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rat",
+      "outfitId": 21,
+      "tileX": 56,
+      "tileY": 38,
+      "worldX": 1054,
+      "worldY": 1056,
+      "worldZ": 8,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rat",
+      "outfitId": 21,
+      "tileX": 73,
+      "tileY": 38,
+      "worldX": 1071,
+      "worldY": 1056,
+      "worldZ": 8,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rat",
+      "outfitId": 21,
+      "tileX": 97,
+      "tileY": 37,
+      "worldX": 1095,
+      "worldY": 1055,
+      "worldZ": 8,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rat",
+      "outfitId": 21,
+      "tileX": 86,
+      "tileY": 37,
+      "worldX": 1084,
+      "worldY": 1055,
+      "worldZ": 8,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Rat",
+      "outfitId": 21,
+      "tileX": 15,
+      "tileY": 40,
+      "worldX": 1013,
+      "worldY": 1058,
+      "worldZ": 8,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rat",
+      "outfitId": 21,
+      "tileX": 52,
+      "tileY": 40,
+      "worldX": 1050,
+      "worldY": 1058,
+      "worldZ": 8,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rat",
+      "outfitId": 21,
+      "tileX": 50,
+      "tileY": 44,
+      "worldX": 1048,
+      "worldY": 1062,
+      "worldZ": 8,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rat",
+      "outfitId": 21,
+      "tileX": 85,
+      "tileY": 43,
+      "worldX": 1083,
+      "worldY": 1061,
+      "worldZ": 8,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Rat",
+      "outfitId": 21,
+      "tileX": 57,
+      "tileY": 49,
+      "worldX": 1055,
+      "worldY": 1067,
+      "worldZ": 8,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rat",
+      "outfitId": 21,
+      "tileX": 81,
+      "tileY": 49,
+      "worldX": 1079,
+      "worldY": 1067,
+      "worldZ": 8,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rat",
+      "outfitId": 21,
+      "tileX": 82,
+      "tileY": 51,
+      "worldX": 1080,
+      "worldY": 1069,
+      "worldZ": 8,
+      "radius": 3,
+      "spawntime": 90
+    }
+  ]
+}

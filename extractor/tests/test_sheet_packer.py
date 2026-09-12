@@ -20,9 +20,9 @@ def test_bucket_for_clamps_anything_larger_than_max_bucket():
 def test_multi_frame_appearance_gets_consecutive_gids_in_same_sheet():
     packer = SheetPacker()
 
-    sheet_key, gids = packer.add_appearance(18609, "object", 32, 32, frame_count=6)
+    sheet_key, gids = packer.add_appearance(18609, 32, 32, frame_count=6)
 
-    assert sheet_key == "object-32"
+    assert sheet_key == "sheet-32"
     assert gids == [0, 1, 2, 3, 4, 5]
 
 
@@ -32,8 +32,8 @@ def test_sheet_wraps_to_next_row_past_column_limit():
 
     # Fill exactly one row, then add one more — it must land at the start of row 1.
     for i in range(columns):
-        packer.add_appearance(1000 + i, "object", 32, 32)
-    sheet_key, gids = packer.add_appearance(2000, "object", 32, 32)
+        packer.add_appearance(1000 + i, 32, 32)
+    sheet_key, gids = packer.add_appearance(2000, 32, 32)
 
     dims = packer.sheet_dims(sheet_key)
     assert dims["rows"] == 2
@@ -46,9 +46,9 @@ def test_gid_to_rect_pixel_math_matches_row_col():
     packer = SheetPacker()
     columns = packer.columns_for_bucket(32)
     for i in range(columns + 3):
-        packer.add_appearance(3000 + i, "object", 32, 32)
+        packer.add_appearance(3000 + i, 32, 32)
 
-    rect = packer.gid_to_rect("object-32", columns + 2)
+    rect = packer.gid_to_rect("sheet-32", columns + 2)
 
     assert rect["row"] == 1
     assert rect["col"] == 2
@@ -58,43 +58,34 @@ def test_gid_to_rect_pixel_math_matches_row_col():
     assert rect["h"] == 32
 
 
-def test_different_layer_classes_same_size_get_separate_sheets():
-    packer = SheetPacker()
-
-    object_key, _ = packer.add_appearance(1, "object", 32, 32)
-    bottom_key, _ = packer.add_appearance(2, "bottom", 32, 32)
-
-    assert object_key == "object-32"
-    assert bottom_key == "bottom-32"
-    assert object_key != bottom_key
 
 
 def test_packing_is_deterministic_across_independent_runs():
-    appearances = [(100, "object", 32, 32, 1), (101, "roof", 64, 64, 1), (102, "object", 96, 96, 1)]
+    appearances = [(100, 32, 32, 1), (101, 64, 64, 1), (102, 96, 96, 1)]
 
     def run():
         packer = SheetPacker()
-        return {aid: packer.add_appearance(aid, lc, w, h, fc) for aid, lc, w, h, fc in appearances}
+        return {aid: packer.add_appearance(aid, w, h, fc) for aid, w, h, fc in appearances}
 
     assert run() == run()
 
 
-def test_size_only_key_drops_the_layer_class_from_the_sheet_name():
+def test_sheet_key_is_the_footprint_alone():
     # map.json v6 has no render role to group by — footprint is the whole key.
     packer = SheetPacker()
 
-    a_key, _ = packer.add_appearance(1, None, 32, 32)
-    b_key, _ = packer.add_appearance(2, None, 64, 64)
+    a_key, _ = packer.add_appearance(1, 32, 32)
+    b_key, _ = packer.add_appearance(2, 64, 64)
 
     assert a_key == "sheet-32"
     assert b_key == "sheet-64"
 
 
-def test_size_only_key_merges_appearances_that_v5_would_have_split():
+def test_appearances_of_the_same_footprint_share_one_sheet():
     packer = SheetPacker()
 
-    ground_key, ground_gids = packer.add_appearance(100, None, 32, 32)
-    object_key, object_gids = packer.add_appearance(200, None, 32, 32)
+    ground_key, ground_gids = packer.add_appearance(100, 32, 32)
+    object_key, object_gids = packer.add_appearance(200, 32, 32)
 
     assert ground_key == object_key == "sheet-32"
     assert ground_gids == [0]
@@ -103,38 +94,29 @@ def test_size_only_key_merges_appearances_that_v5_would_have_split():
 
 def test_a_sheet_within_the_safe_texture_size_is_not_flagged():
     packer = SheetPacker()
-    packer.add_appearance(1, None, 32, 32)
+    packer.add_appearance(1, 32, 32)
 
     assert packer.exceeds_safe_texture_size("sheet-32") is False
 
 
-def test_the_v6_grid_is_wide_enough_to_fill_the_safe_texture_width():
+def test_the_grid_is_wide_enough_to_fill_the_safe_texture_width():
     packer = SheetPacker()
 
     for bucket in (32, 64, 128):
-        columns = packer.columns_for_bucket(bucket, size_only=True)
+        columns = packer.columns_for_bucket(bucket)
+        # Preencher a largura segura inteira é o que mantém a folha
+        # quase quadrada em vez de crescer só para baixo.
         assert columns * bucket == SAFE_TEXTURE_SIZE
-        assert columns > packer.columns_for_bucket(bucket)
 
 
-def test_the_v5_grid_is_left_untouched_by_the_v6_one():
-    # v5's `tilesets` firstgid math is computed from these column counts and is
-    # what the game reads today.
-    packer = SheetPacker()
-
-    assert packer.columns_for_bucket(32) == 16
-    assert packer.columns_for_bucket(64) == 12
-    assert packer.columns_for_bucket(128) == 8
-    assert packer.add_appearance(1, "object", 32, 32)[0] == "object-32"
-    assert packer.sheet_dims("object-32")["columns"] == 16
 
 
 def test_a_sheet_taller_than_the_safe_texture_size_is_flagged():
     packer = SheetPacker()
-    columns = packer.columns_for_bucket(32, size_only=True)
+    columns = packer.columns_for_bucket(32)
     # One row past the safe limit: 2048/32 = 64 rows is the last one that fits.
     for i in range(columns * 65):
-        packer.add_appearance(i, None, 32, 32)
+        packer.add_appearance(i, 32, 32)
 
     assert packer.sheet_dims("sheet-32")["pixelHeight"] > SAFE_TEXTURE_SIZE
     assert packer.exceeds_safe_texture_size("sheet-32") is True

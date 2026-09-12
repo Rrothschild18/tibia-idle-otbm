@@ -31,7 +31,7 @@ from pathlib import Path
 from PIL import Image
 
 REPO = Path(__file__).resolve().parent.parent
-READY_V6 = REPO / 'ready-maps-v6'
+READY_V6 = REPO / 'ready-maps'
 
 TILE_SIZE = 32
 MAX_STACK_ELEVATION = 24          # constants.ts

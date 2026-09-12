@@ -87,7 +87,7 @@ def _appearance_entry(analysis: Dict, packer, frame_sources: Dict[str, Dict[int,
     height = first_available["height"] if first_available else TILE_SIZE
 
     sheet_key, gids = packer.add_appearance(
-        analysis["appearanceId"], None, width, height, frame_count=len(sprites) or 1,
+        analysis["appearanceId"], width, height, frame_count=len(sprites) or 1,
     )
     sources = frame_sources.setdefault(sheet_key, {})
     for gid, sprite in zip(gids, sprites):
@@ -144,6 +144,38 @@ def _appearance_entry(analysis: Dict, packer, frame_sources: Dict[str, Dict[int,
         entry["issues"] = list(analysis["issues"])
 
     return entry
+
+
+def map_bounds(dump: Dict) -> Dict[str, int]:
+    """`{minX, minY, maxX, maxY}` do dump, sem construir documento nenhum.
+
+    Mesma união entre andares que `build_map_v6` calcula (ADR 0002): `(tileX,
+    tileY)` é a mesma coluna física em todo andar. Existe separado porque o
+    mapa de cidade inteira precisa de `bounds` para o `respawn.json` e não
+    gera mapa — construir um documento inteiro só para ler quatro números foi
+    exatamente o desperdício que o ticket 06 removeu.
+    """
+    min_x = min_y = 10 ** 9
+    max_x = max_y = -(10 ** 9)
+
+    for node in dump.get("data", {}).get("nodes", []):
+        for feature in node.get("features", []):
+            base_x = feature.get("x", 0)
+            base_y = feature.get("y", 0)
+            for tile in feature.get("tiles", []):
+                tile_x = tile.get("x")
+                tile_y = tile.get("y")
+                if tile_x is None or tile_y is None:
+                    continue
+                x = base_x + tile_x
+                y = base_y + tile_y
+                min_x, min_y = min(min_x, x), min(min_y, y)
+                max_x, max_y = max(max_x, x), max(max_y, y)
+
+    if min_x == 10 ** 9:
+        min_x = min_y = max_x = max_y = 0
+
+    return {"minX": min_x, "minY": min_y, "maxX": max_x, "maxY": max_y}
 
 
 def build_map_v6(dump: Dict, analyze: Callable[[int], Dict], packer,

@@ -6,7 +6,7 @@ de profundidade, camada de telhado, tilelayer de chão nem `tilesets`. Para o po
 `stack order`, `top order`, `paint order`, `elevation`, `shift`), ver [`CONTEXT.md`](../CONTEXT.md).
 
 Gerado por `node extractor/scripts/build_map.js <pasta>` em
-`extractor/ready-maps-v6/<CIDADE>/<pasta>/`, junto com `sheets/*.png` e `monsters/respawn.json`. O
+`extractor/ready-maps/<CIDADE>/<pasta>/`, junto com `sheets/*.png` e `monsters/respawn.json`. O
 `extractor/ready-maps/` (v5) continua sendo gerado na mesma passada e é o que o jogo consome até
 migrar.
 

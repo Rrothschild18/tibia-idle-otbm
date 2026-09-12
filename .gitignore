@@ -14,10 +14,6 @@ extractor/atlases/
 # Generated pipeline output — regenerate with extractor/scripts/build_map.js.
 extractor/raw-maps/**
 extractor/ready-maps/**
-# Same, for the map.json v6 tree written alongside it (ADR 0006). Separate
-# roots so the directory the game consumes today stays untouched until it
-# migrates — see .scratch/modelo-render-rme/spec.md.
-extractor/ready-maps-v6/**
 
 # Full-city map output (extractor/full-maps/<name>/): map.json + metadata.json
 # ARE versioned (inspection artifact for the travel-graph pipeline — see

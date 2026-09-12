@@ -308,7 +308,7 @@ cidade/tipo).
    monsters/respawn.json (se houver spawns em monster.xml)
    ```
    E, na mesma passada, a árvore do formato novo em
-   `extractor/ready-maps-v6/<CIDADE>/<ID>_nome-descritivo/`:
+   `extractor/ready-maps/<CIDADE>/<ID>_nome-descritivo/`:
    ```
    map.json            ← tilemap v6: tile com pilha ordenada (ver MAP_JSON_V6.md)
    sheets/              ← folhas de sprite só por tamanho (2 por mapa)
@@ -561,7 +561,7 @@ ele achar coisa que não devia virar conteúdo. As três já custaram caro, e as
 extractor/
   scripts/            ← pipeline ativo (o único lugar que você deveria editar/rodar)
     dump_otbm.js       etapa 1: .otbm → .raw.json (via vendor/otbm2json.js)
-    build_phaser_map.py etapa 2: .raw.json → map.json (v5 e v6) + sprites/ + respawn.json
+    build_phaser_map.py etapa 2: .raw.json → map.json (v6) + sheets/ + respawn.json
     build_map.js       runner: 1 mapa ou --all, chama as duas etapas
     extract_sprites.py  etapa 0 (avulsa): assets/ do cliente → extractor/sprites/ (biblioteca
                              compartilhada); `--group <nome>` extrai só um grupo
@@ -606,10 +606,8 @@ extractor/
                          versionado justamente pro diff entre execuções ter uma baseline. Pasta =
                          só o código da cidade, conteúdo renomeado pra bater (ROOK.otbm, ...)
   raw-maps/<pasta>.raw.json   saída da etapa 1, hunts e cidade-inteira (gitignored, regenerável)
-  ready-maps/<CIDADE>/<pasta>/  saída da etapa 2 pros mapas de hunt, espelha maps/ 1:1 (gitignored, regenerável)
-  ready-maps-v6/<CIDADE>/<pasta>/  a mesma saída no formato v6, raiz separada pro ready-maps/ ficar
-                         intocado até o jogo migrar (gitignored). Só mapas de hunt — o mapa
-                         cidade-inteira não é renderizado, ver ADR 0006
+  ready-maps/<CIDADE>/<pasta>/  saída da etapa 2 pros mapas de hunt (map.json v6 + sheets/ +
+                         monsters/respawn.json), espelha maps/ 1:1 (gitignored, regenerável)
   sprites/              biblioteca de sprites extraída do cliente Tibia (gitignored, binário grande)
   atlases/              saída dos bakes globais (outfits/items-static/items-animated/effects + items-index.json), gitignored, regenerável
   otservbr-monster.xml  lookup nome→looktype de monstro, compartilhado entre mapas
@@ -763,7 +761,7 @@ python extractor/scripts/item_classifier.py --dump-unknown extractor/ready-maps/
   `extractor/vendor/`, `extractor/otservbr-monster.xml`, os `.md` de
   documentação.
 - **Gitignored (regenerável, não commitar):** `extractor/raw-maps/`,
-  `extractor/ready-maps/`, `extractor/ready-maps-v6/`, `extractor/sprites/`,
+  `extractor/ready-maps/`, `extractor/sprites/`, `extractor/atlases/`,
   `extractor/*.aec` (insumo aposentado), `extractor/full-maps/*/map.json`.
 - Se `git status` mostrar algo dentro dessas pastas ignoradas, normalmente é
   sinal de que o `.gitignore` está desatualizado, não que precisa commitar.
