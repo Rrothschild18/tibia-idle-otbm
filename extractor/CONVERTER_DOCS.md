@@ -1,3 +1,7 @@
+> **Histórico — o formato v5 foi removido do pipeline no ticket 07.** Nada aqui
+> descreve o que o extractor gera hoje; o formato atual é o v6
+> (`MAP_JSON_V6.md`, ADR 0006). Mantido porque ADRs vivas ainda citam este arquivo.
+
 # phaserOTBM_converter.py — Technical Documentation
 
 Pipeline script that converts OTBM map data (via OTBM2JSON) into Phaser-compatible `map.json` + sprite assets.

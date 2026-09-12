@@ -1,9 +1,13 @@
 # Pipeline de mapas
 
 Guia rápido + FAQ para gerar mapas Phaser a partir de arquivos `.otbm`.
-Para detalhes internos do formato de saída, veja [`MAP_JSON_V6.md`](MAP_JSON_V6.md) (formato novo,
-a pilha por tile) e — para o v5, que o jogo ainda consome — [`CONVERTER_DOCS.md`](CONVERTER_DOCS.md)
-e [`PHASER_INTEGRATION.md`](PHASER_INTEGRATION.md).
+O formato de saída é o **v6**, a pilha por tile — ver [`MAP_JSON_V6.md`](MAP_JSON_V6.md) e a
+[ADR 0006](../docs/adr/0006-map-json-v6-pilha-por-tile.md).
+
+O v5 **não existe mais**: o pipeline emitia duas árvores e o jogo já era v6-only, lançando exceção
+em qualquer outra coisa. [`CONVERTER_DOCS.md`](CONVERTER_DOCS.md) e
+[`PHASER_INTEGRATION.md`](PHASER_INTEGRATION.md) descrevem esse formato morto e ficam como
+**referência histórica** — ADRs vivas ainda apontam para eles.
 
 ## Setup
 

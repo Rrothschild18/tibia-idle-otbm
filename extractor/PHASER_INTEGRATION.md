@@ -1,3 +1,7 @@
+> **Histórico — o formato v5 foi removido do pipeline no ticket 07.** Nada aqui
+> descreve o que o extractor gera hoje; o formato atual é o v6
+> (`MAP_JSON_V6.md`, ADR 0006). Mantido porque ADRs vivas ainda citam este arquivo.
+
 # Phaser Integration Guide — Compact map.json Format (v3)
 
 This document explains the **compact map.json** output from `phaserOTBM_converter.py` and how to load/render it in Phaser.
