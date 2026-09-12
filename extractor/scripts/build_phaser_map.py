@@ -9,6 +9,7 @@ from typing import Dict, List, Optional, Set, Tuple
 
 from PIL import Image
 
+import appearance_derivation
 import content_export
 import map_dirs
 import map_v6
@@ -306,13 +307,6 @@ def analyze_item(appearance_id: int) -> Dict:
     height_raw = flags.get("height")
     elevation = height_raw.get("elevation", 0) if isinstance(height_raw, dict) else 0
 
-    # Extract hook direction for wall orientation
-    hook_raw = flags.get("hook", {})
-    if isinstance(hook_raw, dict):
-        hook_direction = hook_raw.get("direction", None)
-    else:
-        hook_direction = None
-
     # Extract sprite info for bounding calculations
     pattern_width = sprite_info.get("patternWidth", 1)
     pattern_height = sprite_info.get("patternHeight", 1)
@@ -322,34 +316,16 @@ def analyze_item(appearance_id: int) -> Dict:
     bounding_square = pattern_width * pattern_height * TILE_SIZE
     has_bounding_box_per_direction = pattern_depth >= 1
 
-    # Roof items must have:
-    # - Required flags: unpass, unmove, unsight, automap, bank
-    # - Optional flags: fullbank (can be present or not)
-    # - boundingSquare >= 64 (pattern area >= 2 tiles)
-    # - boundingBoxPerDirection (patternDepth >= 1)
-    is_roof = (
-        has_unmove and
-        has_unpass and
-        has_unsight and
-        has_automap and
-        has_bank and
-        bounding_square >= 64 and
-        has_bounding_box_per_direction
-    )
-
-    # Floor-transition tiles (stairs/holes) have no dedicated OTBM flag —
-    # this is the heuristic combo observed on every known stairs/hole
-    # appearance ID across the current map set (386, 421, 1948, 12202; see
-    # ADR 0002). `bank` is deliberately NOT required: item 1948 (the actual
-    # staircase in skeletons-rookguard) lacks it, and across every item
-    # placed in the 8 existing maps, no non-transition item shares this
-    # exact 4-flag combo — so dropping `bank` adds no false positives.
-    is_floor_transition = (
-        has_usable and
-        has_forceuse and
-        has_unmove and
-        has_automap
-    )
+    # As duas flags derivadas (isRoof, isFloorTransition) e o hookDirection
+    # vêm de `appearance_derivation`, a mesma definição que
+    # `build_appearance_flags` usa para montar a tabela do travel-graph.
+    # Duas cópias divergiriam em silêncio — foi exatamente o que aconteceu
+    # quando a tabela nasceu dumpando as flags cruas: `isFloorTransition` saiu
+    # zerada, o BFS perdeu as escadas e uma location sumiu do grafo sem erro.
+    _derived = appearance_derivation.derived_flags(flags, sprite_info)
+    is_roof = _derived["isRoof"]
+    is_floor_transition = _derived["isFloorTransition"]
+    hook_direction = _derived["hookDirection"]
 
     info = {
         "appearanceId": appearance_id,

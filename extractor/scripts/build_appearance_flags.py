@@ -18,6 +18,7 @@ import json
 import os
 import sys
 
+import appearance_derivation
 import appearance_flags
 
 SCRIPTS_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -56,7 +57,14 @@ def appearance_ids_in_dump(dump: dict):
 
 
 def load_appearance_flags(appearance_id: int):
-    """Flags de um appearance, ou None se o `.json` dele não foi extraído."""
+    """Flags de um appearance **como o pipeline as consome**, ou None se o
+    `.json` dele não foi extraído.
+
+    Não são as flags cruas do `appearances.dat`: `isFloorTransition` e `isRoof`
+    não existem lá, são derivadas (ver `appearance_derivation.py`). Dumpar o
+    cru foi o primeiro erro desta tabela — o grafo perdeu as escadas em
+    silêncio, porque `unpass` batia e `isFloorTransition` vinha vazio.
+    """
     for root in ITEM_JSON_ROOTS:
         for candidate in (
             os.path.join(root, f"{appearance_id}.json"),
@@ -64,7 +72,10 @@ def load_appearance_flags(appearance_id: int):
         ):
             if os.path.exists(candidate):
                 with open(candidate, "r", encoding="utf-8") as handler:
-                    return json.load(handler).get("flags", {})
+                    data = json.load(handler)
+                return appearance_derivation.pipeline_flags(
+                    data.get("flags", {}), data.get("spriteInfo", {})
+                )
     return None
 
 

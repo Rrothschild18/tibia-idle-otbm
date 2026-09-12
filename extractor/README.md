@@ -40,15 +40,22 @@ TIBIA_CLIENT_DIR   cliente Tibia extraído   (default: ../tibia-client)
 ### Máquina nova, do zero
 
 ```
-uv sync                                                  # deps Python
-uv run python extractor/scripts/fetch_assets.py          # cliente Tibia (403 MB)
-node extractor/scripts/dump_otbm.js ROOK                 # dump cru do mapa
-uv run python extractor/scripts/build_travel_fragment.py ROOK
+uv sync                                            # deps Python
+uv run python extractor/scripts/fetch_assets.py    # cliente Tibia (403 MB)
+uv run python extractor/scripts/pipeline.py --all  # tudo: sprites, atlases, mapas, grafo
 ```
 
-O terceiro e o quarto passo **não precisam do segundo**: o grafo de viagem roda com a tabela de
-flags e o vendor do Canary, ambos versionados. O `fetch-assets` é necessário para sprites, sheets e
-atlases.
+Três comandos. Ver [Pipeline](#pipeline-um-comando) para os estágios, e
+[Publish](#publish-o-único-comando-que-escreve-no-tibia-idle) para levar o resultado ao
+`tibia-idle`.
+
+O grafo de viagem sozinho **não precisa do cliente**: ele roda com a tabela de flags e o vendor do
+Canary, ambos versionados. Isso importa numa máquina que só precisa regenerar o grafo:
+
+```
+node extractor/scripts/dump_otbm.js ROOK
+uv run python extractor/scripts/build_travel_fragment.py ROOK
+```
 
 ## Caminhos dos repos irmãos
 
@@ -388,6 +395,59 @@ Saída: `extractor/ready-maps/ROOK/ROOK-HUNT-0019_orc-fortress/`.
    uv run python extractor/scripts/publish.py <nome-da-pasta>
    ```
    Ver [Publish](#publish-o-único-comando-que-escreve-no-tibia-idle).
+
+## Pipeline: um comando
+
+```
+uv run python extractor/scripts/pipeline.py --all        # a sequência inteira
+uv run python extractor/scripts/pipeline.py --check      # só diz o que falta
+uv run python extractor/scripts/pipeline.py --list       # os estágios em ordem
+uv run python extractor/scripts/pipeline.py --stage maps # só um estágio
+uv run python extractor/scripts/pipeline.py --all --force
+```
+
+Nove estágios, nesta ordem:
+
+| Estágio | Consome | Produz |
+|---|---|---|
+| `sprites` | `assets/` do cliente | `sprites/{items,outfits,effects,missiles}/` |
+| `items` | `sprites/items/` | `atlases/items-{static,animated}/`, `items-index.json` |
+| `outfit-atlas` | `sprites/outfits/` | `atlases/outfits/` |
+| `maps` | `maps/`, `sprites/items/` | `ready-maps/` (map.json + sheets + respawn) |
+| `effect-atlas` | `sprites/effects/` | `atlases/effects/` |
+| `corpse-atlas` | `ready-maps/`, `monster-loot.json` | `atlases/corpses/` |
+| `pool-atlas` | `sprites/items/` | `atlases/pools/` |
+| `flags` | `raw-maps/ROOK.raw.json`, `sprites/items/` | `appearance-flags/ROOK.json` |
+| `travel-graph` | dump, tabela de flags, vendor | `full-maps/ROOK/db-fragment.json` |
+
+Publicar é o passo separado: [`publish.py`](#publish-o-único-comando-que-escreve-no-tibia-idle).
+
+### Incremental por hash de conteúdo, não mtime
+
+Cada estágio grava em `extractor/.stamps/<nome>.stamp` o hash das entradas que declara, e pula
+quando nada mudou. **Não é mtime**: `git checkout` reescreve mtime e cópia preserva, ou seja, mtime
+mente exatamente quando dói — e o modo de falha é servir saída velha em silêncio, o pior que um
+pipeline tem. `--force` refaz de qualquer jeito.
+
+Duas exceções declaradas:
+
+- A pasta `assets/` do cliente não entra no hash — são centenas de MB por invocação, e o
+  `assets-manifest.json` já decide essa versão por checksum. É o manifesto que entra no hash.
+- Para `sprites/` (204 mil PNGs) e `atlases/`, o hash é do **inventário** (caminho + tamanho), não
+  dos bytes: ler tudo custaria mais que refazer o estágio. Um PNG editado à mão sem mudar de
+  tamanho escaparia — para isso existe `--force`.
+
+### Check antes de gastar tempo
+
+```
+uv run python extractor/scripts/pipeline.py --check
+[OK] sprites
+[!!] maps: falta
+       extractor/sprites/items  ->  uv run python extractor/scripts/extract_sprites.py --group items
+```
+
+Cada estágio declara o que precisa **e o comando que resolve**. Os scripts individuais continuam
+falhando bem sozinhos, para quem entra pelo meio do pipeline.
 
 ## Publish: o único comando que escreve no `tibia-idle`
 
