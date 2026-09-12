@@ -184,3 +184,32 @@ def test_map_json_without_assets_root_says_what_to_do(tmp_path):
 
     assert "assetsRoot" in str(excinfo.value)
     assert "build_map.js" in str(excinfo.value)
+
+
+def test_atlases_only_dry_run_says_what_it_would_do(tmp_path, monkeypatch, capsys):
+    """`--atlases-only --dry-run` não imprimia nada: a publicação de atlas
+    inteira era pulada no dry-run. Dry-run silencioso é pior que não ter —
+    quem roda para conferir conclui que não há nada a fazer."""
+    atlases = tmp_path / "atlases"
+    (atlases / "outfits").mkdir(parents=True)
+    (atlases / "outfits" / "21.png").write_bytes(b"x")
+    monkeypatch.setattr(publish, "ATLASES_DIR", str(atlases))
+    destino = tmp_path / "front"
+
+    publish.publish_atlases(str(destino), dry_run=True)
+
+    saida = capsys.readouterr().out
+    assert "[dry-run]" in saida and "outfits" in saida
+    assert not destino.exists(), "dry-run não pode escrever"
+
+
+def test_atlases_publish_actually_copies_when_not_dry_run(tmp_path, monkeypatch):
+    atlases = tmp_path / "atlases"
+    (atlases / "outfits").mkdir(parents=True)
+    (atlases / "outfits" / "21.png").write_bytes(b"x")
+    monkeypatch.setattr(publish, "ATLASES_DIR", str(atlases))
+    destino = tmp_path / "front"
+
+    publish.publish_atlases(str(destino), dry_run=False)
+
+    assert (destino / "outfits" / "21.png").read_bytes() == b"x"

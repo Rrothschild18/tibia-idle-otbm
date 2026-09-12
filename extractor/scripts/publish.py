@@ -166,11 +166,16 @@ def publish_bundle(map_name: str, front_assets: str, dry_run=False):
     return copied, unchanged
 
 
-def publish_atlases(front_assets: str):
+def publish_atlases(front_assets: str, dry_run=False):
     for name in sorted(ATLAS_TARGETS):
         source = os.path.join(ATLASES_DIR, name)
         if not os.path.isdir(source):
             print(f"[--] atlases/{name}/: não bakeado ({ATLAS_TARGETS[name]})")
+            continue
+        if dry_run:
+            total = sum(len(files) for _root, _dirs, files in os.walk(source))
+            print(f"[dry-run] atlases/{name}/: {total} arquivo(s) -> "
+                  f"{os.path.join(front_assets, name)}")
             continue
         copied, unchanged = sync_tree(source, os.path.join(front_assets, name))
         print(f"[OK] atlases/{name}/: {copied} copiados, {unchanged} já atualizados")
@@ -179,6 +184,9 @@ def publish_atlases(front_assets: str):
         source = os.path.join(ATLASES_DIR, name)
         if not os.path.exists(source):
             print(f"[--] atlases/{name}: não gerado ({command})")
+            continue
+        if dry_run:
+            print(f"[dry-run] atlases/{name} -> {os.path.join(front_assets, name)}")
             continue
         changed = copy_if_different(source, os.path.join(front_assets, name))
         print(f"[OK] atlases/{name}: {'copiado' if changed else 'já atualizado'}")
@@ -263,8 +271,7 @@ def main():
         print(f"[ERRO] {exc}")
         sys.exit(1)
 
-    if not args.dry_run:
-        publish_atlases(front_assets)
+    publish_atlases(front_assets, dry_run=args.dry_run)
 
     if args.prune:
         prune_bundles(front_assets, published, apply=not args.dry_run)
