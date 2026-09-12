@@ -36,3 +36,8 @@ extractor/full-maps/*/db-fragment.json
 
 __pycache__/
 *.pyc
+
+# Env do uv, recriada por `uv sync` a partir de pyproject.toml + uv.lock.
+# (O uv já escreve um .venv/.gitignore, mas deixar explícito evita surpresa
+# se alguém criar a env com outra ferramenta.)
+.venv/

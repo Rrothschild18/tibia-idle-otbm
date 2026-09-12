@@ -5,6 +5,58 @@ Para detalhes internos do formato de saída, veja [`MAP_JSON_V6.md`](MAP_JSON_V6
 a pilha por tile) e — para o v5, que o jogo ainda consome — [`CONVERTER_DOCS.md`](CONVERTER_DOCS.md)
 e [`PHASER_INTEGRATION.md`](PHASER_INTEGRATION.md).
 
+## Setup
+
+Tudo o que o pipeline precisa em Python está declarado em `pyproject.toml` (Pillow e protobuf de
+runtime, pytest de dev) e travado em `uv.lock`. Num clone limpo:
+
+```
+uv sync
+```
+
+É o único passo. `build_map.js` resolve o interpretador sozinho — usa `$PYTHON` se definido, senão
+o `.venv/` do repo, senão cai em `uv run python`; ele nunca mais spawna um `python` cru do PATH.
+
+Para rodar um script Python direto, use a env:
+
+```
+uv run python extractor/scripts/build_travel_fragment.py ROOK
+uv run pytest extractor/tests
+```
+
+Os caminhos para os repos irmãos vêm de duas variáveis de ambiente (ver
+[Caminhos dos repos irmãos](#caminhos-dos-repos-irmãos)):
+
+```
+TIBIA_IDLE_DIR   checkout do tibia-idle   (default: ../tibia-idle)
+CANARY_DIR       checkout do canary       (default: ../canary)
+```
+
+## Caminhos dos repos irmãos
+
+Dois scripts leem de fora deste repo: o checkout do **tibia-idle** (destino do `--export` e dos
+syncs de atlas) e o do **canary** (fonte do `items.xml` e dos `.lua` de NPC/monstro). Os dois
+caminhos saem de um lugar só — `extractor/scripts/paths.py` — com esta precedência:
+
+| Precedência | tibia-idle | canary |
+|---|---|---|
+| 1. flag | `--tibia-idle-dir` | `--canary-dir` |
+| 2. env var | `TIBIA_IDLE_DIR` | `CANARY_DIR` |
+| 3. irmão no workspace | `../tibia-idle` | `../canary` |
+
+Se o layout for o irmão padrão, nenhum dos dois precisa ser passado:
+
+```
+uv run python extractor/scripts/build_travel_fragment.py ROOK
+```
+
+Diretório ausente para com uma mensagem que diz o caminho tentado, a env var e a flag — nunca um
+traceback vindo de dentro do pipeline:
+
+```
+error: esperava um checkout do canary em /nao/existe; passe --canary-dir ou defina CANARY_DIR
+```
+
 ## TL;DR
 
 ```
@@ -217,8 +269,8 @@ Saída: `extractor/ready-maps/ROOK/ROOK-HUNT-0019_orc-fortress/`.
    registrado** é erro sem `--edit` ("ID do mapa já existe — use --edit se a intenção é atualizar")
    — nada é escrito; passe `--edit` quando a intenção realmente for atualizar um mapa já
    registrado. Com `--all`, `--map-id` não é aceito (cada mapa já tem o seu, embutido na própria
-   pasta). Por padrão aponta pro checkout irmão `../tibia-idle/tibia-idle`, ajustável via
-   `--tibia-idle-dir`.
+   pasta). Por padrão aponta pro checkout irmão `../tibia-idle`, ajustável via
+   `--tibia-idle-dir` ou `TIBIA_IDLE_DIR`.
 8. Se o mapa novo introduziu sprites de item novos (passo 6 gerou atlases novos), publique-os
    no repositório `tibia-idle`:
    ```
@@ -227,7 +279,7 @@ Saída: `extractor/ready-maps/ROOK/ROOK-HUNT-0019_orc-fortress/`.
    Copia (comparando conteúdo, não sobrescreve à toa) `extractor/atlases/items-static/`,
    `extractor/atlases/items-animated/` e `extractor/atlases/items-index.json` para
    `apps/tibia-idle-front/public/assets/` no repositório `tibia-idle`, assumido como
-   `../tibia-idle/tibia-idle` (ajustável via `--tibia-idle-dir`).
+   `../tibia-idle` (ajustável via `--tibia-idle-dir` ou `TIBIA_IDLE_DIR`).
 
 ## Travel graph (mapa cidade inteira)
 
@@ -250,8 +302,8 @@ pasta — diferente do par `maps/` → `ready-maps/` dos hunts). Hoje só existe
    ```
    Requer o passo 1 já feito (lê `extractor/raw-maps/ROOK.raw.json` +
    `extractor/full-maps/ROOK/map.json`) e um checkout local do Canary — por padrão
-   `C:\canary-3.2.1` (ajustável via `--canary-dir`), usado só pra casar cada NPC com seu `.lua` de
-   shop em `data-otservbr-global/npc/`. Saída: `extractor/full-maps/ROOK/db-fragment.json`, pra
+   o irmão `../canary` (ajustável via `--canary-dir` ou `CANARY_DIR`), usado só pra casar cada NPC
+   com seu `.lua` de shop em `data-otservbr-global/npc/`. Saída: `extractor/full-maps/ROOK/db-fragment.json`, pra
    revisar e colar à mão — por padrão **este script nunca escreve fora de `extractor/`**, mesmo
    padrão do `build_hunt_fragment.py`. Sai junto o `travel-graph-rejections.txt` (passo 4).
 3. Se preferir pular a cópia manual, use `--export` (escreve `locations`/`travelGraph` no
@@ -266,7 +318,7 @@ pasta — diferente do par `maps/` → `ready-maps/` dos hunts). Hoje só existe
    cidade, então aresta que não está nele deixa de existir no catálogo. Foi o upsert-só-adiciona
    que deixou 23 arestas que nenhum BFS produziu sobreviverem no catálogo versionado, uma delas
    citando `ROOK-HUNT-00015`. Arestas entre outras cidades não são tocadas. Por padrão aponta pro
-   checkout irmão `../tibia-idle/tibia-idle`, ajustável via `--tibia-idle-dir`.
+   checkout irmão `../tibia-idle`, ajustável via `--tibia-idle-dir` ou `TIBIA_IDLE_DIR`.
 4. Confira `extractor/full-maps/<CIDADE>/travel-graph-rejections.txt` — todo nó **sem entrada no
    grafo fica fora do fragmento** e vai pra esse arquivo, com o que existe dele e o que fazer:
 

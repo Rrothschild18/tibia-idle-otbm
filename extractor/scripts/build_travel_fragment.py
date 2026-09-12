@@ -41,6 +41,7 @@ from collections import Counter
 import city_ids
 import content_export
 import map_dirs
+import paths
 from hunt_fragment import map_id_from_folder
 from travel_graph import (
     DEFAULT_NPC_REACH,
@@ -68,11 +69,6 @@ RAW_MAPS_DIR = os.path.join(EXTRACTOR_DIR, "raw-maps")
 FULL_MAPS_DIR = os.path.join(EXTRACTOR_DIR, "full-maps")
 MAPS_DIR = os.path.join(EXTRACTOR_DIR, "maps")
 REJECTION_REPORT_NAME = "travel-graph-rejections.txt"
-# Sibling repo checkout: <workspace>/tibia-idle-otbm and <workspace>/tibia-idle/tibia-idle.
-DEFAULT_TIBIA_IDLE_DIR = os.path.abspath(
-    os.path.join(EXTRACTOR_DIR, "..", "..", "tibia-idle", "tibia-idle")
-)
-DEFAULT_CANARY_DIR = r"C:\canary-3.2.1"
 
 
 def _load_json(path, what):
@@ -205,8 +201,8 @@ def build_city_fragment(city: str, canary_dir: str, npc_reach: int = DEFAULT_NPC
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("city", help="Código da cidade — pasta em extractor/full-maps/<CIDADE>/ (ex: ROOK)")
-    parser.add_argument("--canary-dir", default=DEFAULT_CANARY_DIR,
-                         help=f"Path do checkout local do Canary (default: {DEFAULT_CANARY_DIR})")
+    parser.add_argument("--canary-dir", default=None,
+                         help=f"Path do checkout local do Canary (default: ${paths.CANARY.env_var} ou {paths.CANARY.sibling_default()})")
     parser.add_argument(
         "--export",
         action="store_true",
@@ -225,15 +221,17 @@ def main():
     )
     parser.add_argument(
         "--tibia-idle-dir",
-        default=DEFAULT_TIBIA_IDLE_DIR,
-        help=f"Path do checkout do tibia-idle, usado só com --export (default: {DEFAULT_TIBIA_IDLE_DIR})",
+        default=None,
+        help=f"Path do checkout do tibia-idle, usado só com --export (default: ${paths.TIBIA_IDLE.env_var} ou {paths.TIBIA_IDLE.sibling_default()})",
     )
     args = parser.parse_args()
 
-    if not os.path.isdir(args.canary_dir):
-        parser.error(f"Canary install não encontrado em {args.canary_dir} (use --canary-dir)")
+    try:
+        canary_dir = paths.CANARY.require(args.canary_dir)
+    except paths.MissingRepoError as exc:
+        parser.error(str(exc))
 
-    fragment, rejections = build_city_fragment(args.city, args.canary_dir, args.npc_reach)
+    fragment, rejections = build_city_fragment(args.city, canary_dir, args.npc_reach)
 
     out_path = os.path.join(FULL_MAPS_DIR, args.city, "db-fragment.json")
     with open(out_path, "w", encoding="utf-8") as f:
@@ -253,7 +251,11 @@ def main():
         print(f"[OK] nenhum nó sem entrada no grafo -> {report_path}")
 
     if args.export:
-        catalog_path = content_export.catalog_source_path(args.tibia_idle_dir)
+        try:
+            tibia_idle_dir = paths.TIBIA_IDLE.require(args.tibia_idle_dir)
+        except paths.MissingRepoError as exc:
+            parser.error(str(exc))
+        catalog_path = content_export.catalog_source_path(tibia_idle_dir)
         if not os.path.exists(catalog_path):
             parser.error(f"catalog-source.json não encontrado em {catalog_path} (use --tibia-idle-dir)")
         with open(catalog_path, "r", encoding="utf-8") as f:

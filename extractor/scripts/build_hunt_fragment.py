@@ -37,6 +37,7 @@ Run: python build_hunt_fragment.py <nome-da-pasta> --map-id ROOK-HUNT-0010 [--ex
 import argparse
 import json
 import os
+import paths
 import sys
 
 import city_ids
@@ -53,10 +54,6 @@ SCRIPTS_DIR = os.path.dirname(os.path.abspath(__file__))
 EXTRACTOR_DIR = os.path.dirname(SCRIPTS_DIR)
 READY_MAPS_DIR = os.path.join(EXTRACTOR_DIR, "ready-maps")
 MAPS_DIR = os.path.join(EXTRACTOR_DIR, "maps")
-# Sibling repo checkout: <workspace>/tibia-idle-otbm and <workspace>/tibia-idle/tibia-idle.
-DEFAULT_TIBIA_IDLE_DIR = os.path.abspath(
-    os.path.join(EXTRACTOR_DIR, "..", "..", "tibia-idle", "tibia-idle")
-)
 
 
 def discover_map_names():
@@ -216,8 +213,8 @@ def main():
     )
     parser.add_argument(
         "--tibia-idle-dir",
-        default=DEFAULT_TIBIA_IDLE_DIR,
-        help=f"Path do checkout do tibia-idle, usado só com --export (default: {DEFAULT_TIBIA_IDLE_DIR})",
+        default=None,
+        help=f"Path do checkout do tibia-idle, usado só com --export (default: ${paths.TIBIA_IDLE.env_var} ou {paths.TIBIA_IDLE.sibling_default()})",
     )
     args = parser.parse_args()
 
@@ -233,7 +230,15 @@ def main():
         print(f"Nenhum mapa com respawn.json encontrado em {READY_MAPS_DIR}")
         sys.exit(1)
 
-    target = _load_export_target(parser, args.tibia_idle_dir) if args.export else None
+    if args.export:
+        try:
+            tibia_idle_dir = paths.TIBIA_IDLE.require(args.tibia_idle_dir)
+        except paths.MissingRepoError as exc:
+            parser.error(str(exc))
+    else:
+        tibia_idle_dir = args.tibia_idle_dir
+
+    target = _load_export_target(parser, tibia_idle_dir) if args.export else None
 
     generated = 0
     exported_skipped = 0
@@ -291,7 +296,7 @@ def main():
     if target is not None:
         _flush_export_target(target)
         exported = generated - exported_skipped
-        print(f"\n{exported}/{len(map_names)} mapa(s) exportado(s) para {args.tibia_idle_dir}.")
+        print(f"\n{exported}/{len(map_names)} mapa(s) exportado(s) para {tibia_idle_dir}.")
         if exported_skipped:
             print(f"     {exported_skipped} pulado(s) no export (ver os [SKIP export] acima) — "
                   f"o fragmento local de cada um foi gerado normalmente.")
