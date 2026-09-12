@@ -175,7 +175,7 @@ npm run build-items                                  # bake global de sprites de
 python extractor/scripts/build_hunt_fragment.py ROOK-HUNT-0010_bears-rookguard --map-id ROOK-HUNT-0010
                                                       # gera db-fragment.json (hunts/monsters/loot) —
                                                       # nunca escreve no back-end, ver seção 7 abaixo
-python extractor/scripts/sync_items_to_tibia_idle.py # publica atlases de item no repo tibia-idle
+uv run python extractor/scripts/publish.py --all      # ÚNICO comando que escreve no tibia-idle
 node extractor/scripts/build_map.js ROOK             # gera o mapa cidade-inteira (fonte: full-maps/ROOK/)
 python extractor/scripts/build_travel_fragment.py ROOK
                                                       # gera db-fragment.json (locations/travelGraph) +
@@ -379,15 +379,55 @@ Saída: `extractor/ready-maps/ROOK/ROOK-HUNT-0019_orc-fortress/`.
    registrado. Com `--all`, `--map-id` não é aceito (cada mapa já tem o seu, embutido na própria
    pasta). Por padrão aponta pro checkout irmão `../tibia-idle`, ajustável via
    `--tibia-idle-dir` ou `TIBIA_IDLE_DIR`.
-8. Se o mapa novo introduziu sprites de item novos (passo 6 gerou atlases novos), publique-os
-   no repositório `tibia-idle`:
+8. Publique o bundle e os atlases no `tibia-idle`:
    ```
-   python extractor/scripts/sync_items_to_tibia_idle.py
+   uv run python extractor/scripts/publish.py <nome-da-pasta>
    ```
-   Copia (comparando conteúdo, não sobrescreve à toa) `extractor/atlases/items-static/`,
-   `extractor/atlases/items-animated/` e `extractor/atlases/items-index.json` para
-   `apps/tibia-idle-front/public/assets/` no repositório `tibia-idle`, assumido como
-   `../tibia-idle` (ajustável via `--tibia-idle-dir` ou `TIBIA_IDLE_DIR`).
+   Ver [Publish](#publish-o-único-comando-que-escreve-no-tibia-idle).
+
+## Publish: o único comando que escreve no `tibia-idle`
+
+```
+uv run python extractor/scripts/publish.py <nome-da-pasta>   # um mapa
+uv run python extractor/scripts/publish.py --all             # todo mapa construído
+uv run python extractor/scripts/publish.py --all --dry-run   # diz o que faria
+uv run python extractor/scripts/publish.py --atlases-only    # só os atlases globais
+```
+
+Antes disto **nenhum script** levava um bundle pro repo irmão: a cópia era manual. A prova estava
+no que chegou — os bundles publicados carregam `map.json` + `sheets/` mas **não** o
+`monsters/respawn.json` que o mesmo passo escreve. Cópia seletiva de humano, não sync.
+
+O que ele copia:
+
+| Origem | Destino |
+|---|---|
+| `ready-maps/<CIDADE>/<pasta>/` (recursivo) | `public/assets/<MAP>-sprites-v<N>/` |
+| `atlases/{items-static,items-animated,outfits,player-outfits,effects,corpses,pools}/` | `public/assets/<mesmo nome>/` |
+| `atlases/items-index.json` | `public/assets/items-index.json` |
+
+O nome da pasta de destino sai do `assetsRoot` do próprio `map.json`, não é remontado aqui:
+recalcular criaria uma segunda fonte de verdade para o mesmo nome, e divergir significa o front
+servir 404 no bundle inteiro.
+
+**Atlas referenciado e não bakeado é erro, não silêncio.** O `respawn.json` aponta os monstros para
+`assets/outfits/...`; quando esse atlas não existe, o publish para e diz o comando que o gera:
+
+```
+[ERRO] atlas referenciado pelo bundle que nunca foi bakeado:
+  - atlases/outfits/  ->  uv run python extractor/scripts/bake_outfit_atlas.py
+```
+
+**Cópia comparada por conteúdo**: bytes iguais não são reescritos, então republicar não suja diff
+nem mexe em mtime.
+
+**`--prune` remove, e só ele.** Sem a flag, o publish nunca apaga nada no destino. Com ela, lista os
+bundles que o run não publicou antes de remover, e só toca em pastas com `-sprites-v` no nome —
+`outfits/`, `fonts/` e o resto de `assets/` ficam fora do escopo. Um comando que apaga no repo
+irmão por padrão é lamentado exatamente uma vez.
+
+A separação do `CONTEXT.md` continua intacta e fica mais forte: gerar fragmento nunca escreve fora
+de `extractor/`; publicar é este comando, e só ele.
 
 ## Travel graph (mapa cidade inteira)
 
@@ -497,7 +537,8 @@ flag antigo `--write-db` virou `--export`. O contrato está codificado em
 | `apps/tibia-idle-api/content/hunts/loot.json` | `{mapId, drops}` por hunt | Lido **do disco em runtime**, inteiro por hunt |
 | `apps/tibia-idle-api/content/hunts/respawn/<HUNT-ID>.json` | `{mapBoundsRef, monsterDefs, spawns}` | Idem — repassado direto pro Phaser |
 | `apps/tibia-idle-api/content/hunts/hunts.json` | `{id, mapId, mapUrl, startPosition}` | Manifesto que o simulador lê. **Derivado** do `hunts` do catálogo, nunca mesclado à parte |
-| `apps/tibia-idle-front/public/assets/` | atlases de item e sheets de outfit | `sync_items_to_tibia_idle.py`, ver passo 8 |
+| `apps/tibia-idle-front/public/assets/<MAP>-sprites-v<N>/` | `map.json` + `sheets/` + `monsters/respawn.json` | `publish.py`, ver [Publish](#publish-o-único-comando-que-escreve-no-tibia-idle) |
+| `apps/tibia-idle-front/public/assets/<atlas>/` | os sete atlases globais + `items-index.json` | Idem |
 
 A linha entre as duas primeiras é a da ADR-0015: virou coluna o que a tela **filtra e ordena**
 (cidade, status, POI de entrada); ficou em arquivo o que se carrega inteiro e não responde a
