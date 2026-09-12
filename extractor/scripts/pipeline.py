@@ -158,6 +158,22 @@ def _python():
     return [venv] if os.path.exists(venv) else ["uv", "run", "python"]
 
 
+def _cities():
+    """As cidades com mapa de cidade inteira — a pasta **é** a lista.
+
+    O repo trata adicionar cidade como "pasta nova, sem mudar código"
+    (`build_map.js` faz o mesmo). Fixar "ROOK" aqui faria a segunda cidade ser
+    ignorada em silêncio, que é o pior jeito de descobrir o problema.
+    """
+    full_maps = os.path.join(EXTRACTOR_DIR, "full-maps")
+    if not os.path.isdir(full_maps):
+        return []
+    return sorted(
+        name for name in os.listdir(full_maps)
+        if os.path.isdir(os.path.join(full_maps, name))
+    )
+
+
 def build_stages():
     py = _python()
     client_dir = paths.TIBIA_CLIENT.resolve(None)
@@ -171,7 +187,7 @@ def build_stages():
 
     fetch_cmd = "uv run python extractor/scripts/fetch_assets.py"
 
-    return [
+    stages = [
         Stage(
             "sprites",
             "recorta os PNGs do cliente para extractor/sprites/",
@@ -229,25 +245,30 @@ def build_stages():
             py + [os.path.join(SCRIPTS_DIR, "bake_pool_atlas.py")],
             inputs=[os.path.join(sprites, "items")],
         ),
-        Stage(
-            "flags",
-            "tabela de flags por appearance, para o travel-graph",
-            py + [os.path.join(SCRIPTS_DIR, "build_appearance_flags.py"), "ROOK"],
-            inputs=[os.path.join(EXTRACTOR_DIR, "raw-maps", "ROOK.raw.json"),
-                    os.path.join(sprites, "items")],
-            requires=[(os.path.join(EXTRACTOR_DIR, "raw-maps", "ROOK.raw.json"),
-                       "node extractor/scripts/dump_otbm.js ROOK")],
-        ),
-        Stage(
-            "travel-graph",
-            "locations + travelGraph do ROOK",
-            py + [os.path.join(SCRIPTS_DIR, "build_travel_fragment.py"), "ROOK"],
-            inputs=[os.path.join(EXTRACTOR_DIR, "raw-maps", "ROOK.raw.json"),
-                    os.path.join(EXTRACTOR_DIR, "appearance-flags"),
-                    vendor],
-            requires=[(vendor, "uv run python extractor/scripts/update_canary_data.py")],
-        ),
     ]
+
+    for city in _cities():
+        dump = os.path.join(EXTRACTOR_DIR, "raw-maps", f"{city}.raw.json")
+        stages.extend([
+            Stage(
+                f"flags:{city}",
+                f"tabela de flags por appearance de {city}, para o travel-graph",
+                py + [os.path.join(SCRIPTS_DIR, "build_appearance_flags.py"), city],
+                inputs=[dump, os.path.join(sprites, "items")],
+                requires=[(dump, f"node extractor/scripts/dump_otbm.js {city}")],
+            ),
+            Stage(
+                f"travel-graph:{city}",
+                f"locations + travelGraph de {city}",
+                py + [os.path.join(SCRIPTS_DIR, "build_travel_fragment.py"), city],
+                inputs=[dump,
+                        os.path.join(EXTRACTOR_DIR, "appearance-flags", f"{city}.json"),
+                        vendor],
+                requires=[(vendor, "uv run python extractor/scripts/update_canary_data.py")],
+            ),
+        ])
+
+    return stages
 
 
 def main():

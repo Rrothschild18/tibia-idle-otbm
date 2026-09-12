@@ -586,7 +586,7 @@ def main():
 
     appearances_path = SPRITES.appearances_file
     print(f"[OK] cliente {manifest['clientVersion']}: "
-          f"{len(SPRITES._entries)} folhas, maior sprite id {SPRITES.max_sprite_id}")
+          f"{SPRITES.sheet_count} folhas, maior sprite id {SPRITES.max_sprite_id}")
 
     with open(appearances_path, "rb") as handler:
         appearances = Appearances()

@@ -112,6 +112,11 @@ class ClientSprites:
         return None
 
     @property
+    def sheet_count(self) -> int:
+        """Quantas folhas o catálogo declara."""
+        return len(self._entries)
+
+    @property
     def max_sprite_id(self) -> int:
         return max(entry["lastspriteid"] for entry in self._entries)
 

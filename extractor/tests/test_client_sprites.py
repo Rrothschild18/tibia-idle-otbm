@@ -155,7 +155,7 @@ def test_real_client_catalog_matches_the_manifest():
 
     source = cs.ClientSprites(assets)
 
-    assert len(source._entries) == 4927
+    assert source.sheet_count == 4927
     assert source.max_sprite_id == 289767
     assert source.appearances_file.endswith(".dat")
 

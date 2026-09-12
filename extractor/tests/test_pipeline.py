@@ -169,3 +169,34 @@ def test_the_client_assets_dir_is_never_hashed():
     for stage in pipeline.build_stages():
         for entry in stage.inputs:
             assert "tibia-client" not in entry
+
+
+def test_cities_come_from_the_folder_not_a_hardcoded_list(tmp_path, monkeypatch):
+    """O repo trata adicionar cidade como 'pasta nova, sem mudar código'
+    (build_map.js faz o mesmo). Uma lista fixa faria a segunda cidade ser
+    ignorada em silêncio."""
+    full_maps = tmp_path / "full-maps"
+    (full_maps / "ROOK").mkdir(parents=True)
+    (full_maps / "CARL").mkdir()
+    (full_maps / "um-arquivo.txt").write_text("não é cidade")
+    monkeypatch.setattr(pipeline, "EXTRACTOR_DIR", str(tmp_path))
+
+    assert pipeline._cities() == ["CARL", "ROOK"]
+
+
+def test_a_second_city_gets_its_own_stages(tmp_path, monkeypatch):
+    monkeypatch.setattr(pipeline, "_cities", lambda: ["CARL", "ROOK"])
+
+    names = [stage.name for stage in pipeline.build_stages()]
+
+    assert "flags:CARL" in names and "flags:ROOK" in names
+    assert "travel-graph:CARL" in names and "travel-graph:ROOK" in names
+
+
+def test_no_stage_hardcodes_a_city_in_its_command():
+    """Se um comando trouxesse 'ROOK' fixo, a cidade nova rodaria o estágio
+    contra a cidade errada."""
+    for stage in pipeline.build_stages():
+        if ":" in stage.name:
+            city = stage.name.split(":", 1)[1]
+            assert city in " ".join(stage.command)

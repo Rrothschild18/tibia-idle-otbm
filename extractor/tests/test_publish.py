@@ -154,3 +154,33 @@ def test_every_atlas_target_names_a_bake_command():
 
 def test_the_four_atlases_the_old_sync_forgot_are_covered():
     assert {"outfits", "effects", "corpses", "pools"} <= set(publish.ATLAS_TARGETS)
+
+
+def test_prune_requires_all(monkeypatch, capsys):
+    """Bug real, pego na revisão: `--atlases-only --prune` passava um conjunto
+    de referência **vazio** para o prune, e teria apagado todo bundle publicado.
+    Um run parcial não sabe o que deveria existir."""
+    import subprocess
+    import sys as _sys
+
+    for argv in (["--atlases-only", "--prune"], ["UM-MAPA", "--prune"]):
+        result = subprocess.run(
+            [_sys.executable, os.path.join(SCRIPTS_DIR, "publish.py"), *argv],
+            capture_output=True, text=True,
+        )
+        assert result.returncode != 0, argv
+        assert "--prune só com --all" in result.stderr, argv
+
+
+def test_map_json_without_assets_root_says_what_to_do(tmp_path):
+    """Bundle de uma versão antiga do pipeline: melhor uma mensagem que diz
+    'reconstrua' do que um KeyError cru no meio da publicação."""
+    map_dir = tmp_path / "antigo"
+    map_dir.mkdir()
+    (map_dir / "map.json").write_text(json.dumps({"floors": {}}))
+
+    with pytest.raises(publish.MissingAtlasError) as excinfo:
+        publish.bundle_dir_name(str(map_dir))
+
+    assert "assetsRoot" in str(excinfo.value)
+    assert "build_map.js" in str(excinfo.value)
