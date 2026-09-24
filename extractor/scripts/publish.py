@@ -30,6 +30,14 @@ SCRIPTS_DIR = os.path.dirname(os.path.abspath(__file__))
 EXTRACTOR_DIR = os.path.dirname(SCRIPTS_DIR)
 ATLASES_DIR = os.path.join(EXTRACTOR_DIR, "atlases")
 READY_MAPS_DIR = os.path.join(EXTRACTOR_DIR, "ready-maps")
+FULL_MAPS_DIR = os.path.join(EXTRACTOR_DIR, "full-maps")
+
+# O minimapa da cidade é o único artefato que o front consome e que **não**
+# nasce em ready-maps/: ele é da cidade inteira, não de um mapa de hunt. Sem
+# esta rota ele ficaria pronto em full-maps/ e nunca chegaria ao jogo.
+MINIMAP_DIR_NAME = "minimap"
+FRONT_MINIMAPS_DIR_NAME = "minimaps"
+MINIMAP_COMMAND = "uv run python extractor/scripts/build_city_minimap.py {city}"
 
 FRONT_ASSETS_RELPATH = os.path.join("apps", "tibia-idle-front", "public", "assets")
 
@@ -192,6 +200,29 @@ def publish_atlases(front_assets: str, dry_run=False):
         print(f"[OK] atlases/{name}: {'copiado' if changed else 'já atualizado'}")
 
 
+def publish_minimaps(front_assets: str, dry_run=False):
+    """`full-maps/<CIDADE>/minimap/` -> `assets/minimaps/<CIDADE>/`.
+
+    Uma cidade sem minimapa gerado é avisada com o comando que o gera, no
+    mesmo estilo dos atlases — o modo de falha aqui é o front pedir um PNG que
+    ninguém bakeou e mostrar mapa vazio sem erro nenhum.
+    """
+    for city in map_dirs.discover_cities(FULL_MAPS_DIR):
+        source = os.path.join(FULL_MAPS_DIR, city, MINIMAP_DIR_NAME)
+        destination = os.path.join(front_assets, FRONT_MINIMAPS_DIR_NAME, city)
+        if not os.path.isdir(source):
+            print(f"[--] minimapa de {city}: não gerado "
+                  f"({MINIMAP_COMMAND.format(city=city)})")
+            continue
+        if dry_run:
+            total = sum(len(files) for _root, _dirs, files in os.walk(source))
+            print(f"[dry-run] minimapa de {city}: {total} arquivo(s) -> {destination}")
+            continue
+        copied, unchanged = sync_tree(source, destination)
+        print(f"[OK] minimapa de {city}: {copied} copiados, {unchanged} já atualizados "
+              f"-> {destination}")
+
+
 def prune_bundles(front_assets: str, keep, apply: bool):
     """Remove bundles publicados que o conjunto atual não referencia.
 
@@ -272,6 +303,7 @@ def main():
         sys.exit(1)
 
     publish_atlases(front_assets, dry_run=args.dry_run)
+    publish_minimaps(front_assets, dry_run=args.dry_run)
 
     if args.prune:
         prune_bundles(front_assets, published, apply=not args.dry_run)
