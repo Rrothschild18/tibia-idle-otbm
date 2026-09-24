@@ -359,6 +359,7 @@ def analyze_item(appearance_id: int) -> Dict:
         },
         "shift": shift,
         "elevation": elevation,
+        "automapColor": appearance_derivation.automap_color(flags),
         "sprites": [],
         "maxSpriteHeight": TILE_SIZE,
         "issues": []

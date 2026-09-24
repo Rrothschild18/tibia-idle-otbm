@@ -87,3 +87,33 @@ def test_the_real_rook_table_still_has_its_four_transitions():
 
     transitions = [i for i, f in table.items() if f.get("isFloorTransition")]
     assert len(transitions) == 4, transitions
+
+
+# ── a cor do automap ──────────────────────────────────────────────────────
+
+
+def test_automap_color_is_read_out_of_the_automap_table():
+    assert ad.automap_color({"automap": {"color": 129}}) == 129
+
+
+def test_automap_color_is_zero_when_there_is_no_automap_at_all():
+    assert ad.automap_color({}) == 0
+
+
+def test_automap_color_is_zero_when_the_table_carries_no_color():
+    """No protobuf o campo default some: `automap { }` é cor 0, não ausência
+    de cor — e cor 0 é justamente "este item não pinta o minimapa"."""
+    assert ad.automap_color({"automap": {}}) == 0
+
+
+def test_automap_that_is_not_a_table_does_not_explode():
+    assert ad.automap_color({"automap": True}) == 0
+
+
+def test_pipeline_flags_keep_the_color_next_to_the_boolean():
+    """A cor existe intacta no `<id>.json` e morria virando booleano aqui: o
+    minimapa da cidade não tem outra fonte para ela."""
+    result = ad.pipeline_flags({"automap": {"color": 129}}, {})
+
+    assert result["automap"] is True
+    assert result["automapColor"] == 129

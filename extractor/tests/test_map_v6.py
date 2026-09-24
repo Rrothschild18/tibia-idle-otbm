@@ -6,7 +6,7 @@ from sheet_packer import SheetPacker
 
 def _analysis(appearance_id, *, flags=None, width=32, height=32, frame_count=1,
               source_path=None, animated=False, random=False, shift=None,
-              elevation=0, type_="static"):
+              elevation=0, automap_color=0, type_="static"):
     return {
         "appearanceId": appearance_id,
         "type": "animated" if animated else ("random" if random else type_),
@@ -21,6 +21,7 @@ def _analysis(appearance_id, *, flags=None, width=32, height=32, frame_count=1,
         "flags": dict(flags or {}),
         "shift": shift,
         "elevation": elevation,
+        "automapColor": automap_color,
         "spriteInfo": {"patternWidth": 1, "patternHeight": 1, "patternDepth": 1,
                        "boundingSquare": 32},
         "sprites": [
@@ -255,6 +256,28 @@ def test_a_shift_on_one_axis_only_is_still_emitted_whole():
     doc, _ = _build(analyses, _dump([(0, 0, None, [1])]))
 
     assert doc["appearances"]["1"]["shift"] == {"x": 0, "y": 8}
+
+
+# ── a cor do automap ──────────────────────────────────────────────────────
+
+
+def test_automap_color_is_emitted_beside_shift_and_elevation():
+    """Fora do bloco `flags`, que só serializa chave truthy e perderia a cor
+    junto com o resto do valor."""
+    analyses = {1: _analysis(1, automap_color=129, flags={"automap": True})}
+    doc, _ = _build(analyses, _dump([(0, 0, None, [1])]))
+
+    entry = doc["appearances"]["1"]
+    assert entry["automapColor"] == 129
+    assert "automapColor" not in entry["flags"]
+
+
+def test_automap_color_zero_is_left_out():
+    """Cor 0 é "não pinta o minimapa" — a maioria das aparências."""
+    analyses = {1: _analysis(1, automap_color=0)}
+    doc, _ = _build(analyses, _dump([(0, 0, None, [1])]))
+
+    assert "automapColor" not in doc["appearances"]["1"]
 
 
 def test_an_empty_dump_still_produces_a_readable_document():
