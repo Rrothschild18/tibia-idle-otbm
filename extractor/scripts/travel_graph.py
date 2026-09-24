@@ -24,6 +24,7 @@ testable with tiny in-memory fixtures (no real .otbm/map.json/.lua touched):
 """
 
 import heapq
+import itertools
 import re
 import xml.etree.ElementTree as ET
 from typing import Dict, List, Optional, Sequence, Set, Tuple
@@ -351,38 +352,120 @@ def build_walkable_graph(tiles: List[Dict]) -> Dict[Node, Set[Node]]:
     return graph
 
 
-def tile_distances(graph: Dict[Node, Set[Node]], sources: Dict[Node, int], targets: Set[Node]) -> Dict[Node, int]:
-    """Shortest tile-count from `sources` to every node in `targets` that's
-    reachable, stopping as soon as every target has been found (or the graph
-    is exhausted) rather than flooding the whole thing.
+def _step_direction(a: Node, b: Node) -> Tuple[int, int, int]:
+    return ((b[0] > a[0]) - (b[0] < a[0]),
+            (b[1] > a[1]) - (b[1] < a[1]),
+            (b[2] > a[2]) - (b[2] < a[2]))
 
-    `sources` maps a starting tile to the cost of *entering* the graph there
-    (0 for a location standing on its own walkable tile; see
-    `approach_costs`). Every graph edge still costs 1 — the seed costs are
-    the only non-uniform part, which is why this pops the cheapest frontier
-    node rather than trusting FIFO order."""
+
+def tile_distances_and_prev(
+    graph: Dict[Node, Set[Node]], sources: Dict[Node, int], targets: Set[Node]
+) -> Tuple[Dict[Node, int], Dict[Node, Optional[Node]]]:
+    """`(distâncias, pai de cada nó aceito)` — a busca inteira, com o que
+    `reconstruct_path` precisa para remontar o caminho andado.
+
+    Distância é a contagem de tiles de `sources` até cada nó de `targets` que
+    seja alcançável, parando assim que todos foram aceitos (ou o grafo se
+    esgotou) em vez de inundar o grafo inteiro.
+
+    `sources` mapeia um tile de partida para o custo de *entrar* no grafo ali
+    (0 para uma location em cima do próprio tile caminhável; ver
+    `approach_costs`). Toda aresta do grafo custa 1 — os custos de semente são
+    a única parte não uniforme, e é por isso que isto tira do heap o nó mais
+    barato em vez de confiar em ordem FIFO.
+
+    **O pai é gravado no settle** (quando o nó sai do heap e vira definitivo),
+    nunca no relax. No relax um nó pode ser tocado de novo, mais tarde e por um
+    caminho pior — e como a busca só para quando o último alvo é aceito, esse
+    relax tardio existe de verdade. Gravar ali daria uma polilinha que
+    contradiz o `tileCount` que esta mesma busca reporta.
+
+    Entre dois caminhos de mesmo custo — e num grid 8-conectado há muitos —
+    ganha o de menos curvas. O custo continua sendo a chave primária, então
+    nenhuma distância muda; o que muda é *qual* caminho mínimo sobrevive, e
+    escolher o zigue-zague seria uma polilinha de um vértice por tile. Só este
+    desempate derruba a cidade de 37 mil vértices para 8 mil.
+
+    O último critério é um contador de inserção, que garante desempate total:
+    sem ele duas entradas idênticas até o nó cairiam em comparar os pais, e
+    `None` (a semente) não se compara com uma tupla.
+    """
     remaining = set(targets) - {node for node in sources if node in graph}
     found: Dict[Node, int] = {node: cost for node, cost in sources.items()
                               if node in graph and node in targets}
+    prev: Dict[Node, Optional[Node]] = {}
     if not remaining:
-        return found
+        return found, prev
 
+    order = itertools.count()
     visited = set()
-    frontier = [(cost, node) for node, cost in sources.items() if node in graph]
+    frontier = [(cost, 0, next(order), node, None)
+                for node, cost in sources.items() if node in graph]
     heapq.heapify(frontier)
     while frontier and remaining:
-        dist, node = heapq.heappop(frontier)
+        dist, turns, _, node, parent = heapq.heappop(frontier)
         if node in visited:
             continue
         visited.add(node)
+        prev[node] = parent
+        if node in remaining:
+            found[node] = dist
+            remaining.discard(node)
+        incoming = _step_direction(parent, node) if parent is not None else None
         for neighbor in graph.get(node, ()):
             if neighbor in visited:
                 continue
-            if neighbor in remaining:
-                found[neighbor] = dist + 1
-                remaining.discard(neighbor)
-            heapq.heappush(frontier, (dist + 1, neighbor))
-    return found
+            step = _step_direction(node, neighbor)
+            turned = 0 if incoming is None or step == incoming else 1
+            heapq.heappush(frontier, (dist + 1, turns + turned, next(order), neighbor, node))
+    return found, prev
+
+
+def tile_distances(graph: Dict[Node, Set[Node]], sources: Dict[Node, int], targets: Set[Node]) -> Dict[Node, int]:
+    """Só as distâncias de `tile_distances_and_prev`, para quem não vai
+    desenhar o caminho."""
+    return tile_distances_and_prev(graph, sources, targets)[0]
+
+
+def reconstruct_path(prev: Dict[Node, Optional[Node]], node: Node) -> List[Node]:
+    """O caminho andado até `node`, da semente até ele. Um nó sem pai (a
+    própria semente, ou um alvo que já era semente) é um caminho de um ponto
+    só — não um erro."""
+    path = [node]
+    while prev.get(path[-1]) is not None:
+        path.append(prev[path[-1]])
+    path.reverse()
+    return path
+
+
+def simplify_polyline(path: Sequence[Node]) -> List[Node]:
+    """Guarda vértice só onde a direção muda, com as duas pontas sempre
+    presentes.
+
+    Num grid 8-conectado a maioria dos trechos é reta longa, e cada tile
+    intermediário dela é um ponto que não diz nada: sem isto a cidade inteira
+    sai com ~68.700 vértices. Trocar de andar conta como mudar de direção
+    (o passo tem dz), então o tile onde a rota sobe ou desce nunca some.
+    """
+    if len(path) <= 2:
+        return list(path)
+
+    simplified = [path[0]]
+    for before, here, after in zip(path, path[1:], path[2:]):
+        if _step_direction(before, here) != _step_direction(here, after):
+            simplified.append(here)
+    simplified.append(path[-1])
+    return simplified
+
+
+def _without_repeats(path: Sequence[Node]) -> List[Node]:
+    return [node for index, node in enumerate(path) if index == 0 or node != path[index - 1]]
+
+
+def flatten_polyline(path: Sequence[Node]) -> List[int]:
+    """`[(x, y, z), ...]` -> `[x0, y0, z0, x1, y1, z1, ...]`, o formato plano
+    de triplas que o contrato fixou."""
+    return [value for node in path for value in node]
 
 
 def approach_costs(node: Node, graph: Dict[Node, Set[Node]], reach: int) -> Dict[Node, int]:
@@ -412,7 +495,10 @@ def build_travel_graph(
     graph: Dict[Node, Set[Node]], locations: List[Dict], npc_reach: int = DEFAULT_NPC_REACH
 ) -> List[Dict]:
     """One search per location, reaching every other location (early exit
-    once all are found) -> one {from, to, tileCount} edge per reachable pair.
+    once all are found) -> one {from, to, tileCount, path} edge per reachable
+    pair. `path` is the walked route as a flat array of x,y,z triples, with a
+    vertex only where the direction changes — the same route `tileCount`
+    counts, now drawable.
     Distance is computed independently per pair (real tiles walked, never
     inferred through a shared hub, never euclidean), and a pair on
     disconnected regions of the graph simply produces no edge.
@@ -434,11 +520,18 @@ def build_travel_graph(
         for loc in locations
     ]
     every_approach_tile = {node for _, costs in approaches for node in costs}
+    # Onde o pino de cada location fica. A polilinha é ancorada nele nas duas
+    # pontas: o caminho andado começa e termina num tile de *aproximação*, e
+    # para um NPC atrás do balcão esse tile está a até `npc_reach` dele — uma
+    # rota que começa cinco tiles longe do pino é rota errada na tela. O
+    # trecho de aproximação entra como o segmento reto que ele é, sem nenhum
+    # vértice inventado no meio (o custo dele é Chebyshev, não caminho andado).
+    own_tile: Dict[str, Node] = {loc["id"]: (loc["x"], loc["y"], loc["z"]) for loc in locations}
 
     edges: List[Dict] = []
     seen_pairs: Set[frozenset] = set()
 
-    def _emit(a_id: str, b_id: str, dist: int) -> None:
+    def _emit(a_id: str, b_id: str, dist: int, walked: List[Node]) -> None:
         if a_id == b_id:
             return
         pair = frozenset((a_id, b_id))
@@ -446,19 +539,36 @@ def build_travel_graph(
             return
         seen_pairs.add(pair)
         low, high = sorted((a_id, b_id))
-        edges.append({"from": low, "to": high, "tileCount": dist})
+        # A polilinha sai orientada junto com a aresta canônica: ela serve os
+        # dois sentidos, e quem consome inverte em triplas quando precisa —
+        # mas adivinhar qual ponta é `from` seria trabalho de graça.
+        anchored = _without_repeats([own_tile[a_id], *walked, own_tile[b_id]])
+        oriented = anchored if low == a_id else list(reversed(anchored))
+        edges.append({
+            "from": low,
+            "to": high,
+            "tileCount": dist,
+            "path": flatten_polyline(simplify_polyline(oriented)),
+        })
 
     for loc_id, costs in approaches:
         if not costs:
             continue
-        distances = tile_distances(graph, costs, every_approach_tile)
+        distances, prev = tile_distances_and_prev(graph, costs, every_approach_tile)
         for other_id, other_costs in approaches:
             if other_id == loc_id:
                 continue
-            reachable = [distances[node] + cost for node, cost in other_costs.items()
+            # (custo, tile) e não só o custo: o tile que venceu é por onde a
+            # polilinha termina. O desempate pela coordenada mantém a escolha
+            # estável entre dois runs do mesmo mapa.
+            reachable = [(distances[node] + cost, node) for node, cost in other_costs.items()
                          if node in distances]
             if reachable:
-                _emit(loc_id, other_id, min(reachable))
+                dist, arrival = min(reachable)
+                # O trecho de aproximação a NPC é Chebyshev em linha reta, não
+                # caminho andado: a polilinha para no último tile de fato
+                # caminhado em vez de inventar vértice até o balcão.
+                _emit(loc_id, other_id, dist, reconstruct_path(prev, arrival))
 
     edges.sort(key=lambda e: (e["from"], e["to"]))
     return edges
