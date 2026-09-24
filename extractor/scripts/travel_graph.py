@@ -358,6 +358,29 @@ def _step_direction(a: Node, b: Node) -> Tuple[int, int, int]:
             (b[2] > a[2]) - (b[2] < a[2]))
 
 
+def _step_delta(a: Node, b: Node) -> Tuple[int, int, int]:
+    return (b[0] - a[0], b[1] - a[1], b[2] - a[2])
+
+
+def _extends_the_segment(first: Tuple[int, int, int], second: Tuple[int, int, int]) -> bool:
+    """Se dois passos seguidos desenham a mesma reta — e portanto o vértice
+    entre eles não diz nada.
+
+    É colinearidade de verdade (produto vetorial zero, mesmo sentido), não
+    igualdade de sinal: um passo pode ter mais de um tile de comprimento, e aí
+    o sinal mente. Um salto de aproximação `(5, -4)` depois de uma corrida
+    diagonal `(1, -1)` tem o mesmo sinal e não é a mesma reta.
+
+    Passo que muda de andar nunca estende nada, nem outro igual a ele: quem
+    desenha decide o que mostrar pelo z de cada vértice, sem interpolar, então
+    fundir duas descidas seguidas apagaria o andar do meio da rota.
+    """
+    if first[2] or second[2]:
+        return False
+    cross = first[0] * second[1] - first[1] * second[0]
+    return cross == 0 and first[0] * second[0] + first[1] * second[1] > 0
+
+
 def tile_distances_and_prev(
     graph: Dict[Node, Set[Node]], sources: Dict[Node, int], targets: Set[Node]
 ) -> Tuple[Dict[Node, int], Dict[Node, Optional[Node]]]:
@@ -384,7 +407,7 @@ def tile_distances_and_prev(
     ganha o de menos curvas. O custo continua sendo a chave primária, então
     nenhuma distância muda; o que muda é *qual* caminho mínimo sobrevive, e
     escolher o zigue-zague seria um vértice a cada dois tiles mesmo depois de
-    simplificar. Só este desempate leva o ROOK de 37 mil vértices para 15.384.
+    simplificar. Só este desempate leva o ROOK de 37 mil vértices para 15.467.
 
     O último critério é um contador de inserção, que garante desempate total:
     sem ele duas entradas idênticas até o nó cairiam em comparar os pais, e
@@ -438,16 +461,22 @@ def simplify_polyline(path: Sequence[Node]) -> List[Node]:
 
     Num grid 8-conectado a maioria dos trechos é reta longa, e cada tile
     intermediário dela é um ponto que não diz nada: sem isto as 630 arestas do
-    ROOK sairiam com 69.659 vértices, e saem com 15.384. Trocar de andar conta
-    como mudar de direção (o passo tem dz), então o tile onde a rota sobe ou
-    desce nunca some.
+    ROOK sairiam com 69.659 vértices, e saem com 15.467.
+
+    O que descarta um vértice é os dois passos vizinhos desenharem a mesma
+    reta (`_extends_the_segment`), e não terem o mesmo sinal: nem todo par
+    consecutivo do caminho é um passo de um tile — `build_travel_graph`
+    prepende/anexa o tile da location, e a aproximação a um NPC atrás do
+    balcão é um salto Chebyshev de até `npc_reach`. Pelo sinal, um salto
+    alinhado com a corrida diagonal anterior engolia o tile de aproximação e a
+    reta resultante atravessava tiles que ninguém pisou.
     """
     if len(path) <= 2:
         return list(path)
 
     simplified = [path[0]]
     for before, here, after in zip(path, path[1:], path[2:]):
-        if _step_direction(before, here) != _step_direction(here, after):
+        if not _extends_the_segment(_step_delta(before, here), _step_delta(here, after)):
             simplified.append(here)
     simplified.append(path[-1])
     return simplified
@@ -520,7 +549,14 @@ def build_travel_graph(
     # para um NPC atrás do balcão esse tile está a até `npc_reach` dele — uma
     # rota que começa cinco tiles longe do pino é rota errada na tela. O
     # trecho de aproximação entra como o segmento reto que ele é, sem nenhum
-    # vértice inventado no meio (o custo dele é Chebyshev, não caminho andado).
+    # vértice inventado no meio (o custo dele é Chebyshev, não caminho andado)
+    # — e `simplify_polyline` só o funde com o segmento vizinho quando os dois
+    # desenham a mesma reta, senão o último tile andado sumiria.
+    #
+    # Esse segmento é o único da rota que o jogador não pisa, e ele não vem
+    # marcado: para uma linha na tela dá no mesmo, para navegação passo a
+    # passo não daria. O contrato é silencioso sobre onde a polilinha começa;
+    # está documentado como "de pino a pino" no README.
     own_tile: Dict[str, Node] = {loc["id"]: (loc["x"], loc["y"], loc["z"]) for loc in locations}
 
     edges: List[Dict] = []

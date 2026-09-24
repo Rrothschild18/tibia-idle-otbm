@@ -1179,6 +1179,32 @@ def test_simplify_polyline_keeps_the_tile_where_the_floor_changes():
     assert tg.simplify_polyline(path) == [(0, 0, 7), (1, 0, 7), (1, 0, 8), (2, 0, 8)]
 
 
+def test_simplify_polyline_keeps_the_floor_in_between_two_changes_in_a_row():
+    """Duas descidas seguidas são o mesmo passo, e fundi-las apagaria o z=8 da
+    rota — quem desenha decide pelo z de cada vértice, sem interpolar."""
+    path = [(0, 0, 9), (0, 0, 8), (0, 0, 7), (1, 0, 7)]
+
+    assert tg.simplify_polyline(path) == [(0, 0, 9), (0, 0, 8), (0, 0, 7), (1, 0, 7)]
+
+
+def test_simplify_polyline_keeps_the_vertex_before_a_jump_off_the_line():
+    """O salto de aproximação a um NPC anda mais de um tile de uma vez, e
+    `(5, -4)` só tem o mesmo *sinal* da corrida diagonal `(1, -1)` — não é a
+    mesma reta. Pelo sinal o tile de aproximação sumiria e o segmento
+    atravessaria tiles que ninguém pisou."""
+    path = [(0, 0, 7), (1, -1, 7), (2, -2, 7), (7, -6, 7)]
+
+    assert tg.simplify_polyline(path) == [(0, 0, 7), (2, -2, 7), (7, -6, 7)]
+
+
+def test_simplify_polyline_absorbs_a_jump_that_continues_the_same_line():
+    """Colinear e no mesmo sentido: a reta de ponta a ponta cobre exatamente
+    os mesmos tiles dos dois segmentos, então o vértice do meio não diz nada."""
+    path = [(0, 0, 7), (1, 0, 7), (2, 0, 7), (7, 0, 7)]
+
+    assert tg.simplify_polyline(path) == [(0, 0, 7), (7, 0, 7)]
+
+
 def test_simplify_polyline_of_one_or_two_points_is_itself():
     assert tg.simplify_polyline([(0, 0, 7)]) == [(0, 0, 7)]
     assert tg.simplify_polyline([(0, 0, 7), (1, 0, 7)]) == [(0, 0, 7), (1, 0, 7)]
@@ -1245,3 +1271,17 @@ def test_build_travel_graph_npc_approach_is_one_straight_hop_at_the_end():
 
     assert edge["tileCount"] == 6
     assert edge["path"] == [0, 0, 7, 4, 0, 7, 6, 1, 7]
+
+
+def test_build_travel_graph_keeps_the_last_walked_tile_before_the_npc_hop():
+    """O salto de aproximação alinhado com a corrida diagonal que vem antes:
+    o tile onde o jogador de fato para (4,-4) é vértice, e a rota não vira uma
+    reta de (0,0) até o balcão por cima de tiles que ninguém andou."""
+    run = [(0, 0, 7), (1, -1, 7), (2, -2, 7), (3, -3, 7), (4, -4, 7)]
+    graph = _undirected(list(zip(run, run[1:])))
+    locations = [_location("A", 0, 0), _location("N", 7, -6, loc_type="NPC")]
+
+    edge = tg.build_travel_graph(graph, locations, npc_reach=3)[0]
+
+    assert edge["tileCount"] == 7
+    assert edge["path"] == [0, 0, 7, 4, -4, 7, 7, -6, 7]

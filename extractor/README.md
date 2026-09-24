@@ -596,10 +596,19 @@ Cada aresta carrega também a **polilinha do caminho** (`path`): o mesmo trajeto
 conta, como array plano de triplas `x,y,z`, com vértice **só onde a direção muda**. Uma polilinha
 serve os dois sentidos — quem consome inverte em triplas. Entre dois caminhos de mesmo custo a busca
 escolhe o de menos curvas: num grid 8-conectado isso é a diferença entre ~37 mil vértices de
-zigue-zague e os 15.384 do ROOK (227 KB; sem simplificar nenhuma seriam 69.659). As pontas são ancoradas no tile das duas locations, e para
-NPC o trecho de aproximação entra como o segmento reto que ele é (Chebyshev, não caminho andado). Migrar sinalizações antigas (ids sem
-o segmento `TIPO`) pro formato novo é tarefa manual de edição de mapa, o extractor não faz isso
-sozinho.
+zigue-zague e os 15.467 do ROOK (227 KB; sem simplificar nenhuma seriam 69.659). Um vértice só
+desaparece quando os dois segmentos vizinhos desenham **a mesma reta** — nunca por terem o mesmo
+sinal, e nunca num passo que troca de andar (senão o andar do meio de uma descida de dois degraus
+sumiria da rota).
+
+A polilinha vai de **pino a pino**: ela começa e termina no tile da location, não no último tile
+caminhado. Para um NPC atrás de um balcão o caminho andado para a até `npc_reach` dele, e esse
+trecho de aproximação entra como o segmento reto que ele é (Chebyshev, não caminho andado). É o
+único segmento da rota que o jogador não pisa, e ele **não vem marcado** — quem desenha não
+distingue, o que é aceitável para uma linha na tela e não seria para navegação passo a passo.
+
+Migrar sinalizações antigas (ids sem o segmento `TIPO`) pro formato novo é tarefa manual de edição
+de mapa, o extractor não faz isso sozinho.
 
 ## Minimapa da cidade
 
