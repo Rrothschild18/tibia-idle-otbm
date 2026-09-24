@@ -266,6 +266,15 @@ def build_stages():
                 requires=[(dump, f"node extractor/scripts/dump_otbm.js {city}")],
             ),
             Stage(
+                f"minimap:{city}",
+                f"PNG indexado por andar do minimapa de {city}, um pixel por tile",
+                py + [os.path.join(SCRIPTS_DIR, "build_city_minimap.py"), city],
+                # Só o dump e as cores — nenhum sprite. É por isso que a cidade
+                # inteira tem minimapa e não tem map.json.
+                inputs=[dump, os.path.join(EXTRACTOR_DIR, "appearance-flags", f"{city}.json")],
+                requires=[(dump, f"node extractor/scripts/dump_otbm.js {city}")],
+            ),
+            Stage(
                 f"travel-graph:{city}",
                 f"locations + travelGraph de {city}",
                 py + [os.path.join(SCRIPTS_DIR, "build_travel_fragment.py"), city],
