@@ -42,8 +42,24 @@ def minimap_dir(city: str) -> str:
 def colors_by_appearance(city: str) -> dict:
     """`{appearance id: índice de cor}` a partir da tabela de flags. Só quem
     tem cor entra — a tabela já descarta valor falso, e um id ausente vale 0
-    para `minimap.city_minimap`."""
+    para `minimap.city_minimap`.
+
+    Um override substitui a entrada inteira (ver `appearance_flags.load_flags`),
+    então um override escrito para corrigir outra flag apagaria a cor junto — e
+    o chão inteiro daquela aparência viraria buraco no minimapa, sem erro
+    nenhum. Por isso a tabela mecânica é lida também: a curadoria continua
+    podendo trocar a cor, mas perdê-la sem querer é aviso.
+    """
+    mechanical = appearance_flags.load_mechanical_flags(city)
     table = appearance_flags.load_flags(city)
+
+    lost = appearance_flags.ids_that_lost("automapColor", mechanical, table)
+    if lost:
+        print(f"[WARN] {len(lost)} aparência(s) perderam o automapColor para um override em "
+              f"{os.path.basename(appearance_flags.overrides_path(city))}: {', '.join(lost)}")
+        print("       um override é a entrada inteira — repita o automapColor nele, ou "
+              "essas aparências somem do minimapa")
+
     return {
         int(appearance_id): flags["automapColor"]
         for appearance_id, flags in table.items()

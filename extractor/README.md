@@ -133,6 +133,11 @@ final. Mesclar deixaria a derivação reintroduzir pela porta dos fundos justame
 curadoria existe pra corrigir. Cada linha do arquivo de overrides documenta um caso em que a
 derivação erra.
 
+Corolário que morde: **um override precisa repetir as flags que não quer mexer**. Corrigir só o
+`isFloorTransition` de um chão apagaria o `automapColor` dele junto, e aquele chão sumiria do
+minimapa. `build_city_minimap.py` compara a tabela mecânica com a final e avisa quem perdeu cor
+assim, em vez de desenhar um buraco em silêncio.
+
 Regenerar a tabela:
 
 ```
