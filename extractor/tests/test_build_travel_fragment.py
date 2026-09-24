@@ -165,9 +165,12 @@ def test_export_writes_both_collections_into_the_catalog(tmp_path, monkeypatch):
 
     catalog = json.loads(catalog_path.read_text(encoding="utf-8"))
     assert {loc["id"] for loc in catalog["locations"]} == {"ROOK-TEMPLE-0001", "ROOK-DEPOT-0001"}
-    # The stale ROOK edge is replaced, not merged with, the fresh set.
+    # The stale ROOK edge is replaced, not merged with, the fresh set — and the
+    # polyline travels with the tileCount, or the catalog would carry a route
+    # nothing can draw.
     assert catalog["travelGraph"] == [
-        {"from": "ROOK-DEPOT-0001", "to": "ROOK-TEMPLE-0001", "tileCount": 1}
+        {"from": "ROOK-DEPOT-0001", "to": "ROOK-TEMPLE-0001", "tileCount": 1,
+         "path": [1, 0, 7, 0, 0, 7]}
     ]
     assert catalog["hunts"] == [{"mapId": "ROOK-HUNT-0001"}]
 

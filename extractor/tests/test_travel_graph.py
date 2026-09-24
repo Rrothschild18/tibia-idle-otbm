@@ -370,7 +370,7 @@ def _line_graph(length):
 def test_tile_distances_finds_every_target_and_stops_early():
     graph = _line_graph(10)
 
-    distances = tg.tile_distances(graph, {(0, 0, 7): 0}, {(3, 0, 7), (5, 0, 7)})
+    distances, _ = tg.tile_distances_and_prev(graph, {(0, 0, 7): 0}, {(3, 0, 7), (5, 0, 7)})
 
     assert distances == {(3, 0, 7): 3, (5, 0, 7): 5}
 
@@ -378,7 +378,7 @@ def test_tile_distances_finds_every_target_and_stops_early():
 def test_tile_distances_unreachable_target_is_simply_absent():
     graph = {(0, 0, 7): set(), (5, 5, 7): set()}
 
-    distances = tg.tile_distances(graph, {(0, 0, 7): 0}, {(5, 5, 7)})
+    distances, _ = tg.tile_distances_and_prev(graph, {(0, 0, 7): 0}, {(5, 5, 7)})
 
     assert distances == {}
 
@@ -388,7 +388,7 @@ def test_tile_distances_counts_the_cost_of_entering_at_each_source():
     # tile 4 already costs 2, so tile 6 is 2 + 2 hops, not 2.
     graph = _line_graph(10)
 
-    distances = tg.tile_distances(graph, {(0, 0, 7): 0, (4, 0, 7): 2}, {(6, 0, 7)})
+    distances, _ = tg.tile_distances_and_prev(graph, {(0, 0, 7): 0, (4, 0, 7): 2}, {(6, 0, 7)})
 
     assert distances == {(6, 0, 7): 4}
 
@@ -396,7 +396,7 @@ def test_tile_distances_counts_the_cost_of_entering_at_each_source():
 def test_tile_distances_takes_the_cheapest_source_not_the_first_one():
     graph = _line_graph(10)
 
-    distances = tg.tile_distances(graph, {(0, 0, 7): 0, (5, 0, 7): 3}, {(6, 0, 7)})
+    distances, _ = tg.tile_distances_and_prev(graph, {(0, 0, 7): 0, (5, 0, 7): 3}, {(6, 0, 7)})
 
     assert distances == {(6, 0, 7): 4}
 
@@ -495,7 +495,8 @@ def test_build_travel_graph_two_locations_on_the_same_tile_are_zero_tiles_apart(
 
     edges = tg.build_travel_graph(graph, locations)
 
-    assert edges == [{"from": "AMBER", "to": "NORMA", "tileCount": 0}]
+    assert edges == [{"from": "AMBER", "to": "NORMA", "tileCount": 0,
+                      "path": [1, 0, 7]}]
 
 
 def test_build_travel_graph_co_located_pair_still_reaches_the_rest_of_the_city():
@@ -516,7 +517,8 @@ def test_build_travel_graph_adjacent_locations_are_one_tile_apart():
 
     edges = tg.build_travel_graph(graph, locations)
 
-    assert edges == [{"from": "A", "to": "B", "tileCount": 1}]
+    assert edges == [{"from": "A", "to": "B", "tileCount": 1,
+                      "path": [1, 0, 7, 2, 0, 7]}]
 
 
 def test_build_travel_graph_edges_are_sorted_for_a_stable_diff():
@@ -561,7 +563,10 @@ def test_build_travel_graph_reaches_an_npc_across_a_counter():
 
     # 3 tiles from Norma across the counter to the near side of the street,
     # then 2 more up it — the counter tile itself is never walked through.
-    assert edges == [{"from": "ROOK-NPC-norma", "to": "ROOK-TEMPLE-0001", "tileCount": 5}]
+    # A polilinha sai do tile da Norma e chega no do templo. O balcão é
+    # atravessado como o segmento reto que o custo de aproximação descreve.
+    assert edges == [{"from": "ROOK-NPC-norma", "to": "ROOK-TEMPLE-0001", "tileCount": 5,
+                      "path": [0, 0, 7, 5, 0, 7]}]
 
 
 def test_build_travel_graph_npc_reach_does_not_shorten_an_open_air_npc():
@@ -574,7 +579,8 @@ def test_build_travel_graph_npc_reach_does_not_shorten_an_open_air_npc():
 
     edges = tg.build_travel_graph(graph, locations, npc_reach=5)
 
-    assert edges == [{"from": "ROOK-NPC-cipfried", "to": "ROOK-TEMPLE-0001", "tileCount": 6}]
+    assert edges == [{"from": "ROOK-NPC-cipfried", "to": "ROOK-TEMPLE-0001", "tileCount": 6,
+                      "path": [2, 0, 7, 8, 0, 7]}]
 
 
 def test_build_travel_graph_reach_applies_to_npcs_only_not_to_signs():
@@ -1099,3 +1105,183 @@ def test_merge_travel_fragment_into_catalog_merges_both_collections():
     assert report["travelGraph"] == {"ROOK-HUNT-001<->ROOK-TEMPLE-001": "added"}
     assert db["locations"] == fragment["locations"]
     assert db["travelGraph"] == fragment["travelGraph"]
+
+
+# ======================================================
+# A polilinha de cada aresta
+# ======================================================
+
+
+def _undirected(pairs):
+    """[(a, b), ...] -> mapa de adjacência não-direcionado."""
+    graph: dict = {}
+    for a, b in pairs:
+        graph.setdefault(a, set()).add(b)
+        graph.setdefault(b, set()).add(a)
+    return graph
+
+
+def test_reconstruct_path_walks_prev_back_to_the_seed():
+    prev = {(1, 0, 7): (0, 0, 7), (2, 0, 7): (1, 0, 7), (0, 0, 7): None}
+
+    assert tg.reconstruct_path(prev, (2, 0, 7)) == [(0, 0, 7), (1, 0, 7), (2, 0, 7)]
+
+
+def test_reconstruct_path_of_the_seed_itself_is_a_single_point():
+    assert tg.reconstruct_path({}, (4, 4, 7)) == [(4, 4, 7)]
+
+
+def test_prev_comes_from_the_settle_not_from_the_last_relax():
+    """A armadilha. T é vizinho do atalho (A) **e** do fim do desvio (B3), e a
+    busca continua depois de achar T porque U ainda falta. Quem grava o pai no
+    relax deixa o relax tardio de B3 — que chega por um caminho duas vezes mais
+    longo — sobrescrever o pai certo, e a polilinha sai contradizendo o
+    tileCount que a mesma busca reporta."""
+    seed, shortcut, target = (0, 0, 7), (1, 0, 7), (2, 0, 7)
+    detour = [(1, 1, 7), (2, 2, 7), (3, 3, 7)]
+    graph = _undirected([
+        (seed, shortcut), (shortcut, target),
+        (seed, detour[0]), (detour[0], detour[1]), (detour[1], detour[2]),
+        (detour[2], target),
+        (detour[2], (4, 4, 7)), ((4, 4, 7), (5, 5, 7)),
+    ])
+
+    distances, prev = tg.tile_distances_and_prev(
+        graph, {seed: 0}, {target, (5, 5, 7)}
+    )
+
+    assert distances[target] == 2
+    assert tg.reconstruct_path(prev, target) == [seed, shortcut, target]
+
+
+def test_simplify_polyline_turns_a_straight_run_into_its_two_ends():
+    line = [(0, 0, 7), (1, 0, 7), (2, 0, 7), (3, 0, 7)]
+
+    assert tg.simplify_polyline(line) == [(0, 0, 7), (3, 0, 7)]
+
+
+def test_simplify_polyline_keeps_the_corner_of_an_elbow():
+    elbow = [(0, 0, 7), (1, 0, 7), (2, 0, 7), (2, 1, 7), (2, 2, 7)]
+
+    assert tg.simplify_polyline(elbow) == [(0, 0, 7), (2, 0, 7), (2, 2, 7)]
+
+
+def test_simplify_polyline_treats_a_diagonal_as_its_own_direction():
+    """Grid 8-conectado: a diagonal é um passo, e sair dela é dobrar."""
+    path = [(0, 0, 7), (1, 1, 7), (2, 2, 7), (3, 2, 7)]
+
+    assert tg.simplify_polyline(path) == [(0, 0, 7), (2, 2, 7), (3, 2, 7)]
+
+
+def test_simplify_polyline_keeps_the_tile_where_the_floor_changes():
+    path = [(0, 0, 7), (1, 0, 7), (1, 0, 8), (2, 0, 8)]
+
+    assert tg.simplify_polyline(path) == [(0, 0, 7), (1, 0, 7), (1, 0, 8), (2, 0, 8)]
+
+
+def test_simplify_polyline_keeps_the_floor_in_between_two_changes_in_a_row():
+    """Duas descidas seguidas são o mesmo passo, e fundi-las apagaria o z=8 da
+    rota — quem desenha decide pelo z de cada vértice, sem interpolar."""
+    path = [(0, 0, 9), (0, 0, 8), (0, 0, 7), (1, 0, 7)]
+
+    assert tg.simplify_polyline(path) == [(0, 0, 9), (0, 0, 8), (0, 0, 7), (1, 0, 7)]
+
+
+def test_simplify_polyline_keeps_the_vertex_before_a_jump_off_the_line():
+    """O salto de aproximação a um NPC anda mais de um tile de uma vez, e
+    `(5, -4)` só tem o mesmo *sinal* da corrida diagonal `(1, -1)` — não é a
+    mesma reta. Pelo sinal o tile de aproximação sumiria e o segmento
+    atravessaria tiles que ninguém pisou."""
+    path = [(0, 0, 7), (1, -1, 7), (2, -2, 7), (7, -6, 7)]
+
+    assert tg.simplify_polyline(path) == [(0, 0, 7), (2, -2, 7), (7, -6, 7)]
+
+
+def test_simplify_polyline_absorbs_a_jump_that_continues_the_same_line():
+    """Colinear e no mesmo sentido: a reta de ponta a ponta cobre exatamente
+    os mesmos tiles dos dois segmentos, então o vértice do meio não diz nada."""
+    path = [(0, 0, 7), (1, 0, 7), (2, 0, 7), (7, 0, 7)]
+
+    assert tg.simplify_polyline(path) == [(0, 0, 7), (7, 0, 7)]
+
+
+def test_simplify_polyline_of_one_or_two_points_is_itself():
+    assert tg.simplify_polyline([(0, 0, 7)]) == [(0, 0, 7)]
+    assert tg.simplify_polyline([(0, 0, 7), (1, 0, 7)]) == [(0, 0, 7), (1, 0, 7)]
+
+
+def test_flatten_polyline_is_a_flat_array_of_triples():
+    assert tg.flatten_polyline([(10, 20, 7), (11, 20, 8)]) == [10, 20, 7, 11, 20, 8]
+
+
+def test_build_travel_graph_gives_every_edge_a_path():
+    graph = _line_graph(10)
+    locations = [_location("A", 0, 0), _location("B", 3, 0)]
+
+    edges = tg.build_travel_graph(graph, locations)
+
+    assert edges[0]["path"] == [0, 0, 7, 3, 0, 7]
+
+
+def test_build_travel_graph_orients_the_path_from_the_edges_own_from_to_its_to():
+    """A aresta é canônica (from < to) e a polilinha serve os dois sentidos;
+    orientá-la junto com a aresta poupa o consumidor de adivinhar qual ponta
+    é qual."""
+    graph = _line_graph(10)
+    locations = [_location("Z", 0, 0), _location("A", 3, 0)]
+
+    edge = tg.build_travel_graph(graph, locations)[0]
+
+    assert (edge["from"], edge["to"]) == ("A", "Z")
+    assert edge["path"] == [3, 0, 7, 0, 0, 7]
+
+
+def test_build_travel_graph_path_bends_where_the_walk_bends():
+    graph = _undirected([
+        ((0, 0, 7), (1, 0, 7)), ((1, 0, 7), (2, 0, 7)),
+        ((2, 0, 7), (2, 1, 7)), ((2, 1, 7), (2, 2, 7)),
+    ])
+    locations = [_location("A", 0, 0), _location("B", 2, 2)]
+
+    edge = tg.build_travel_graph(graph, locations)[0]
+
+    assert edge["tileCount"] == 4
+    assert edge["path"] == [0, 0, 7, 2, 0, 7, 2, 2, 7]
+
+
+def test_build_travel_graph_path_of_a_co_located_pair_is_the_single_tile():
+    graph = _line_graph(3)
+    locations = [_location("A", 1, 0), _location("B", 1, 0)]
+
+    edge = tg.build_travel_graph(graph, locations)[0]
+
+    assert edge["tileCount"] == 0
+    assert edge["path"] == [1, 0, 7]
+
+
+def test_build_travel_graph_npc_approach_is_one_straight_hop_at_the_end():
+    """A ponta é ancorada no tile do NPC — senão a rota terminaria a dois
+    tiles do pino — mas o trecho de aproximação é Chebyshev em linha reta,
+    não caminho andado: nenhum vértice é inventado dentro dele."""
+    graph = _line_graph(10)
+    graph[(6, 1, 7)] = set()
+    locations = [_location("A", 0, 0), _location("N", 6, 1, loc_type="NPC")]
+
+    edge = tg.build_travel_graph(graph, locations, npc_reach=2)[0]
+
+    assert edge["tileCount"] == 6
+    assert edge["path"] == [0, 0, 7, 4, 0, 7, 6, 1, 7]
+
+
+def test_build_travel_graph_keeps_the_last_walked_tile_before_the_npc_hop():
+    """O salto de aproximação alinhado com a corrida diagonal que vem antes:
+    o tile onde o jogador de fato para (4,-4) é vértice, e a rota não vira uma
+    reta de (0,0) até o balcão por cima de tiles que ninguém andou."""
+    run = [(0, 0, 7), (1, -1, 7), (2, -2, 7), (3, -3, 7), (4, -4, 7)]
+    graph = _undirected(list(zip(run, run[1:])))
+    locations = [_location("A", 0, 0), _location("N", 7, -6, loc_type="NPC")]
+
+    edge = tg.build_travel_graph(graph, locations, npc_reach=3)[0]
+
+    assert edge["tileCount"] == 7
+    assert edge["path"] == [0, 0, 7, 4, -4, 7, 7, -6, 7]

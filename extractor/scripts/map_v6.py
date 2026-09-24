@@ -134,6 +134,13 @@ def _appearance_entry(analysis: Dict, packer, frame_sources: Dict[str, Dict[int,
     if elevation:
         entry["elevation"] = elevation
 
+    # A cor que este appearance pinta no minimapa. Fica aqui e não em `flags`
+    # porque aquele bloco só serializa chave truthy e é booleano por natureza:
+    # um índice de cor caberia lá exatamente até alguém precisar do valor.
+    automap_color = analysis.get("automapColor") or 0
+    if automap_color:
+        entry["automapColor"] = automap_color
+
     flags_true = {
         key: value for key, value in analysis.get("flags", {}).items()
         if value and key not in DROPPED_V5_FLAGS

@@ -213,3 +213,48 @@ def test_atlases_publish_actually_copies_when_not_dry_run(tmp_path, monkeypatch)
     publish.publish_atlases(str(destino), dry_run=False)
 
     assert (destino / "outfits" / "21.png").read_bytes() == b"x"
+
+
+# ======================================================
+# Minimapa da cidade
+# ======================================================
+
+
+@pytest.fixture
+def full_maps(tmp_path, monkeypatch):
+    """full-maps/<CIDADE>/minimap/, como o build_city_minimap.py deixa."""
+    root = tmp_path / "full-maps"
+    minimap = root / "ROOK" / "minimap"
+    minimap.mkdir(parents=True)
+    (minimap / "z7.png").write_bytes(b"\x89PNG-fake")
+    (minimap / "bounds.json").write_text(json.dumps({"city": "ROOK"}))
+    (root / "CARL").mkdir()
+    monkeypatch.setattr(publish, "FULL_MAPS_DIR", str(root))
+    return root
+
+
+def test_minimap_publishes_under_the_city_folder(tmp_path, full_maps):
+    """O minimapa nasce em full-maps/, não em ready-maps/ — sem esta rota ele
+    simplesmente nunca chegaria ao front."""
+    destino = tmp_path / "front"
+
+    publish.publish_minimaps(str(destino), dry_run=False)
+
+    assert (destino / "minimaps" / "ROOK" / "z7.png").read_bytes() == b"\x89PNG-fake"
+    assert (destino / "minimaps" / "ROOK" / "bounds.json").exists()
+
+
+def test_a_city_without_minimap_says_which_command_generates_it(tmp_path, full_maps, capsys):
+    publish.publish_minimaps(str(tmp_path / "front"), dry_run=False)
+
+    saida = capsys.readouterr().out
+    assert "CARL" in saida and "build_city_minimap.py" in saida
+
+
+def test_minimap_dry_run_writes_nothing(tmp_path, full_maps, capsys):
+    destino = tmp_path / "front"
+
+    publish.publish_minimaps(str(destino), dry_run=True)
+
+    assert "[dry-run]" in capsys.readouterr().out
+    assert not destino.exists(), "dry-run não pode escrever"

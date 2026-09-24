@@ -41,6 +41,19 @@ def _read(path):
         return json.load(handler)
 
 
+def load_mechanical_flags(city: str, flags_dir=None) -> dict:
+    """Só a tabela derivada, sem nenhum override. Quem quer a resposta final
+    quer `load_flags` — isto é para comparar uma com a outra (ver
+    `ids_that_lost`)."""
+    table = _read(table_path(city, flags_dir))
+    if table is None:
+        raise MissingFlagsTableError(
+            f"tabela de flags de {city} não encontrada em {table_path(city, flags_dir)}; "
+            f"gere com 'uv run python extractor/scripts/build_appearance_flags.py {city}'"
+        )
+    return table
+
+
 def load_flags(city: str, flags_dir=None) -> dict:
     """{appearance id (str): {flag: valor}} com os overrides já aplicados.
 
@@ -49,17 +62,25 @@ def load_flags(city: str, flags_dir=None) -> dict:
     pela porta dos fundos justamente o valor que a curadoria existe para
     corrigir.
     """
-    table = _read(table_path(city, flags_dir))
-    if table is None:
-        raise MissingFlagsTableError(
-            f"tabela de flags de {city} não encontrada em {table_path(city, flags_dir)}; "
-            f"gere com 'uv run python extractor/scripts/build_appearance_flags.py {city}'"
-        )
-
-    overrides = _read(overrides_path(city, flags_dir)) or {}
-    merged = dict(table)
-    merged.update(overrides)
+    merged = dict(load_mechanical_flags(city, flags_dir))
+    merged.update(_read(overrides_path(city, flags_dir)) or {})
     return merged
+
+
+def ids_that_lost(flag: str, mechanical: dict, merged: dict) -> list:
+    """Os ids em que a curadoria apagou `flag`, em ordem.
+
+    Consequência direta de o override substituir a entrada inteira: um
+    override escrito para corrigir *uma* flag apaga em silêncio toda flag que
+    ele não repetir. Quem depende de uma flag que a curadoria não tem motivo
+    para mexer (o `automapColor` do minimapa, por exemplo) usa isto para
+    avisar em vez de desenhar errado.
+    """
+    return sorted(
+        (appearance_id for appearance_id, flags in mechanical.items()
+         if flags.get(flag) and not (merged.get(appearance_id) or {}).get(flag)),
+        key=lambda appearance_id: (len(appearance_id), appearance_id),
+    )
 
 
 def write_table(city: str, flags_by_id: dict, flags_dir=None) -> str:

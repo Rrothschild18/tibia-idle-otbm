@@ -191,6 +191,17 @@ def test_a_second_city_gets_its_own_stages(tmp_path, monkeypatch):
 
     assert "flags:CARL" in names and "flags:ROOK" in names
     assert "travel-graph:CARL" in names and "travel-graph:ROOK" in names
+    assert "minimap:CARL" in names and "minimap:ROOK" in names
+
+
+def test_the_minimap_stage_is_stale_when_the_color_table_changes(monkeypatch):
+    """O minimapa é tudo `automapColor`: uma tabela de flags regerada tem que
+    invalidar o estágio, senão a cidade fica com a cor velha em silêncio."""
+    monkeypatch.setattr(pipeline, "_cities", lambda: ["ROOK"])
+    stage = next(s for s in pipeline.build_stages() if s.name == "minimap:ROOK")
+
+    assert any(entry.endswith(os.path.join("appearance-flags", "ROOK.json"))
+               for entry in stage.inputs)
 
 
 def test_no_stage_hardcodes_a_city_in_its_command():

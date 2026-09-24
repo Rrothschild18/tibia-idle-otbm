@@ -14,6 +14,24 @@ de hunt sumiu do grafo sem erro nenhum. Daí este módulo.
 TILE_SIZE = 32
 
 
+def automap_color(raw_flags: dict) -> int:
+    """O índice de cor que este appearance pinta no minimapa, ou 0.
+
+    A flag `automap` chega como tabela (`{"color": 129}`) e os dois
+    consumidores só perguntavam se ela existe — a cor morria aí. É o único
+    dado que o minimapa da cidade tem: ele não desenha sprite nenhum, só esta
+    cor.
+
+    Zero quer dizer "não pinta": no protobuf o campo default some, então
+    `automap { }` e cor 0 são a mesma coisa, e é assim que a pilha do tile
+    trata (um item de cor 0 não vence).
+    """
+    automap = (raw_flags or {}).get("automap")
+    if not isinstance(automap, dict):
+        return 0
+    return automap.get("color", 0)
+
+
 def derived_flags(raw_flags: dict, sprite_info: dict) -> dict:
     """`{isRoof, isFloorTransition, hookDirection}` a partir do que o
     `appearances.dat` traz cru."""
@@ -77,6 +95,10 @@ def pipeline_flags(raw_flags: dict, sprite_info: dict) -> dict:
 
     É esta forma — e não a crua — que a tabela de `appearance-flags/` guarda,
     porque é esta que `travel_graph` lê.
+
+    `automapColor` anda junto do booleano `automap` porque a tabela é plana:
+    no `map.json` v6 a mesma cor sai fora do bloco `flags` (irmã de
+    `shift`/`elevation`), já que aquele bloco só serializa chaves truthy.
     """
     flags = raw_flags or {}
     result = {}
@@ -85,5 +107,6 @@ def pipeline_flags(raw_flags: dict, sprite_info: dict) -> dict:
             result[name] = flags.get(name) is not None
         else:
             result[name] = flags.get(name, False)
+    result["automapColor"] = automap_color(flags)
     result.update(derived_flags(flags, sprite_info))
     return result

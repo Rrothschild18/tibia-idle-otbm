@@ -118,7 +118,8 @@ não clampa porque é editor, não cliente).
   "101":  { "type": "static", "sheet": "sheet-32", "gids": [0],
             "flags": { "bank": true, "unpass": true, "unmove": true, "unsight": true, "fullbank": true } },
   "103":  { "type": "random", "sheet": "sheet-32", "gids": [1, 2, 3, 4],
-            "random": true, "flags": { "bank": true, "unmove": true, "automap": true } },
+            "random": true, "automapColor": 24,
+            "flags": { "bank": true, "unmove": true, "automap": true } },
   "1947": { "type": "static", "sheet": "sheet-64", "gids": [28],
             "spriteWidth": 64, "spriteHeight": 64, "elevation": 8,
             "flags": { "bottom": true, "unmove": true, "automap": true } },
@@ -134,6 +135,7 @@ não clampa porque é editor, não cliente).
 | `spriteWidth` / `spriteHeight` | quando ≠ 32 | tamanho do sprite em pixels |
 | `shift` | quando ≠ 0 em algum eixo | `{x, y}`, deslocamento do próprio sprite |
 | `elevation` | quando ≠ 0 | pixels que este item soma aos desenhados depois dele |
+| `automapColor` | quando ≠ 0 | índice (0–215) da cor que este item pinta no minimapa |
 | `pattern` | quando há mais de uma variante | `{w, h, d}`, as variantes de posição — ver abaixo |
 | `random` | quando `true` | os `gids` são variantes; escolha uma, não anime |
 | `animated` + `animation` | quando `true` | os `gids` são frames em sequência |

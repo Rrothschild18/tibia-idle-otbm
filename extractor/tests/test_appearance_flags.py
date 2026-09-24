@@ -48,6 +48,44 @@ def test_override_replaces_the_entry_rather_than_merging_keys(tmp_path):
     assert "unpass" not in merged["100"]
 
 
+def test_mechanical_flags_ignore_the_overrides_file(tmp_path):
+    _write(str(tmp_path / "ROOK.json"), {"100": {"automapColor": 129}})
+    _write(str(tmp_path / "ROOK.overrides.json"), {"100": {"unpass": True}})
+
+    assert af.load_mechanical_flags("ROOK", flags_dir=str(tmp_path)) == {
+        "100": {"automapColor": 129}
+    }
+
+
+def test_ids_that_lost_names_the_ids_an_override_stripped(tmp_path):
+    """O modo de falha silencioso do override-substitui-a-entrada: um override
+    escrito para corrigir `unpass` apaga o `automapColor` que ninguém queria
+    mexer, e o chão daquela aparência sumiria do minimapa sem um erro."""
+    _write(str(tmp_path / "ROOK.json"), {
+        "100": {"automapColor": 129},
+        "200": {"automapColor": 186, "unpass": True},
+        "300": {"unpass": True},
+    })
+    _write(str(tmp_path / "ROOK.overrides.json"), {
+        "100": {"unpass": True},
+        "200": {"automapColor": 24},
+    })
+
+    mechanical = af.load_mechanical_flags("ROOK", flags_dir=str(tmp_path))
+    merged = af.load_flags("ROOK", flags_dir=str(tmp_path))
+
+    assert af.ids_that_lost("automapColor", mechanical, merged) == ["100"]
+
+
+def test_ids_that_lost_is_empty_without_overrides(tmp_path):
+    _write(str(tmp_path / "ROOK.json"), {"100": {"automapColor": 129}})
+
+    mechanical = af.load_mechanical_flags("ROOK", flags_dir=str(tmp_path))
+    merged = af.load_flags("ROOK", flags_dir=str(tmp_path))
+
+    assert af.ids_that_lost("automapColor", mechanical, merged) == []
+
+
 def test_override_can_add_an_id_the_derivation_never_saw(tmp_path):
     _write(str(tmp_path / "ROOK.json"), {"100": {"unpass": True}})
     _write(str(tmp_path / "ROOK.overrides.json"), {"999": {"isFloorTransition": True}})
