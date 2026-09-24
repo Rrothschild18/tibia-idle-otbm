@@ -383,8 +383,8 @@ def tile_distances_and_prev(
     Entre dois caminhos de mesmo custo — e num grid 8-conectado há muitos —
     ganha o de menos curvas. O custo continua sendo a chave primária, então
     nenhuma distância muda; o que muda é *qual* caminho mínimo sobrevive, e
-    escolher o zigue-zague seria uma polilinha de um vértice por tile. Só este
-    desempate derruba a cidade de 37 mil vértices para 8 mil.
+    escolher o zigue-zague seria um vértice a cada dois tiles mesmo depois de
+    simplificar. Só este desempate leva o ROOK de 37 mil vértices para 15.384.
 
     O último critério é um contador de inserção, que garante desempate total:
     sem ele duas entradas idênticas até o nó cairiam em comparar os pais, e
@@ -437,9 +437,10 @@ def simplify_polyline(path: Sequence[Node]) -> List[Node]:
     presentes.
 
     Num grid 8-conectado a maioria dos trechos é reta longa, e cada tile
-    intermediário dela é um ponto que não diz nada: sem isto a cidade inteira
-    sai com ~68.700 vértices. Trocar de andar conta como mudar de direção
-    (o passo tem dz), então o tile onde a rota sobe ou desce nunca some.
+    intermediário dela é um ponto que não diz nada: sem isto as 630 arestas do
+    ROOK sairiam com 69.659 vértices, e saem com 15.384. Trocar de andar conta
+    como mudar de direção (o passo tem dz), então o tile onde a rota sobe ou
+    desce nunca some.
     """
     if len(path) <= 2:
         return list(path)
@@ -559,9 +560,6 @@ def build_travel_graph(
                          if node in distances]
             if reachable:
                 dist, arrival = min(reachable)
-                # O trecho de aproximação a NPC é Chebyshev em linha reta, não
-                # caminho andado: a polilinha para no último tile de fato
-                # caminhado em vez de inventar vértice até o balcão.
                 _emit(loc_id, other_id, dist, reconstruct_path(prev, arrival))
 
     edges.sort(key=lambda e: (e["from"], e["to"]))

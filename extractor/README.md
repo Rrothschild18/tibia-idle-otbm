@@ -596,7 +596,7 @@ Cada aresta carrega também a **polilinha do caminho** (`path`): o mesmo trajeto
 conta, como array plano de triplas `x,y,z`, com vértice **só onde a direção muda**. Uma polilinha
 serve os dois sentidos — quem consome inverte em triplas. Entre dois caminhos de mesmo custo a busca
 escolhe o de menos curvas: num grid 8-conectado isso é a diferença entre ~37 mil vértices de
-zigue-zague e os 15.384 do ROOK (227 KB). As pontas são ancoradas no tile das duas locations, e para
+zigue-zague e os 15.384 do ROOK (227 KB; sem simplificar nenhuma seriam 69.659). As pontas são ancoradas no tile das duas locations, e para
 NPC o trecho de aproximação entra como o segmento reto que ele é (Chebyshev, não caminho andado). Migrar sinalizações antigas (ids sem
 o segmento `TIPO`) pro formato novo é tarefa manual de edição de mapa, o extractor não faz isso
 sozinho.
