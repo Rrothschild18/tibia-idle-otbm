@@ -406,7 +406,7 @@ uv run python extractor/scripts/pipeline.py --stage maps # só um estágio
 uv run python extractor/scripts/pipeline.py --all --force
 ```
 
-Dez estágios, nesta ordem:
+Onze estágios, nesta ordem:
 
 | Estágio | Consome | Produz |
 |---|---|---|
@@ -419,6 +419,7 @@ Dez estágios, nesta ordem:
 | `corpse-atlas` | `ready-maps/`, `monster-loot.json` | `atlases/corpses/` |
 | `pool-atlas` | `sprites/items/` | `atlases/pools/` |
 | `flags` | `raw-maps/ROOK.raw.json`, `sprites/items/` | `appearance-flags/ROOK.json` |
+| `minimap` | dump, tabela de flags | `full-maps/ROOK/minimap/z*.png` + `bounds.json` |
 | `travel-graph` | dump, tabela de flags, vendor | `full-maps/ROOK/db-fragment.json` |
 
 Publicar é o passo separado: [`publish.py`](#publish-o-único-comando-que-escreve-no-tibia-idle).
@@ -589,9 +590,39 @@ Duas locations só ganham uma aresta em `travelGraph` se houver caminho andável
 de tiles (BFS por location, sem penalidade diagonal, sem custo por tipo de piso) — **um par sem
 aresta não é erro**, é o grafo genuinamente desconectado nesse trecho. As arestas são canônicas
 (`from` < `to`, um par sem repetir, nunca auto-aresta) e a lista sai ordenada, então rodar de novo
-contra um mapa inalterado dá um fragmento byte a byte idêntico. Migrar sinalizações antigas (ids sem
+contra um mapa inalterado dá um fragmento byte a byte idêntico.
+
+Cada aresta carrega também a **polilinha do caminho** (`path`): o mesmo trajeto que o `tileCount`
+conta, como array plano de triplas `x,y,z`, com vértice **só onde a direção muda**. Uma polilinha
+serve os dois sentidos — quem consome inverte em triplas. Entre dois caminhos de mesmo custo a busca
+escolhe o de menos curvas: num grid 8-conectado isso é a diferença entre ~37 mil vértices de
+zigue-zague e os 15.384 do ROOK (227 KB). As pontas são ancoradas no tile das duas locations, e para
+NPC o trecho de aproximação entra como o segmento reto que ele é (Chebyshev, não caminho andado). Migrar sinalizações antigas (ids sem
 o segmento `TIPO`) pro formato novo é tarefa manual de edição de mapa, o extractor não faz isso
 sozinho.
+
+## Minimapa da cidade
+
+O mapa da cidade inteira não gera artefato de render nenhum — a folha de sprites de uma cidade não
+se paga. O **minimapa** não esbarra nisso: ele não usa sprite, só a cor que cada appearance já
+declara em `automap` (ver [tabela de flags](#tabela-de-flags-por-appearance), campo `automapColor`).
+
+```
+uv run python extractor/scripts/build_city_minimap.py ROOK
+```
+
+Sai em `extractor/full-maps/<CIDADE>/minimap/`: um `z<Z>.png` por andar que tenha tile, mais um
+`bounds.json`. O PNG é **indexado**, com a paleta de 216 cores do Tibia (cubo 6×6×6, fórmula e não
+tabela), **um pixel por tile, sem escala** — a conversão é `px = x - minX`, `py = y - minY`, e escala
+é transform de quem desenha. A cor de um tile é a do item mais ao topo da pilha com cor ≠ 0; sem
+nenhum, a do chão; sem chão colorido, o índice 0, que sai transparente.
+
+O ROOK inteiro dá 261×221 tiles, 10 andares (z=6..15), 227.005 tiles e 37,6 KB de PNG somados.
+
+A saída **não é versionada** (binário regenerável, como as sheets): o `.otbm` e a tabela de flags
+são, e só disso o estágio precisa. Quem consome recebe por
+[`publish.py`](#publish-o-único-comando-que-escreve-no-tibia-idle), que o leva para
+`apps/tibia-idle-front/public/assets/minimaps/<CIDADE>/`.
 
 ## Export pro back-end
 
@@ -698,7 +729,9 @@ extractor/
     hunt_fragment.py        lógica pura: respawn.json → fragmento {monsters, loot, hunts}
     build_hunt_fragment.py  CLI (avulso): gera ready-maps/<CIDADE>/<pasta>/db-fragment.json; só escreve no back-end com --export
     sync_items_to_tibia_idle.py  CLI (avulso): publica atlases de item no repositório tibia-idle
-    travel_graph.py         lógica pura: mapa cidade-inteira → grafo de tiles, distância por location, rejeição, fragmento {locations, travelGraph}
+    travel_graph.py         lógica pura: mapa cidade-inteira → grafo de tiles, distância e polilinha por location, rejeição, fragmento {locations, travelGraph}
+    minimap.py              lógica pura: paleta 6x6x6, cor de um tile pela pilha, mundo → pixel
+    build_city_minimap.py   CLI (avulso): gera full-maps/<CIDADE>/minimap/z<Z>.png + bounds.json
     build_travel_fragment.py CLI (avulso): gera full-maps/<CIDADE>/db-fragment.json + travel-graph-rejections.txt; só escreve no back-end com --export
     content_export.py       lógica pura: pra onde cada coleção vai no back-end e como cada uma mescla (ver "Export pro back-end")
     map_dirs.py             lógica pura: descoberta de pastas em dois níveis (maps/<CIDADE>/<pasta>), usada por build_phaser_map.py, build_hunt_fragment.py e build_travel_fragment.py
@@ -712,9 +745,9 @@ extractor/
                              adivinhada, é sempre a pasta-pai (ver "Convenção de pastas" acima)
   full-maps/<CIDADE>/  SOURCE **e** saída do mapa cidade-inteira (.otbm, map.json e
                          travel-graph-rejections.txt versionados — diferente do ready-maps/ dos
-                         hunts; db-fragment.json continua gitignored, igual ao dos hunts — feed do
-                         travel-graph, não da rotação de hunts). O relatório de rejeição é
-                         versionado justamente pro diff entre execuções ter uma baseline. Pasta =
+                         hunts; db-fragment.json e minimap/ continuam gitignored — feed do
+                         travel-graph e do front, não da rotação de hunts). O relatório de rejeição
+                         é versionado justamente pro diff entre execuções ter uma baseline. Pasta =
                          só o código da cidade, conteúdo renomeado pra bater (ROOK.otbm, ...)
   raw-maps/<pasta>.raw.json   saída da etapa 1, hunts e cidade-inteira (gitignored, regenerável)
   ready-maps/<CIDADE>/<pasta>/  saída da etapa 2 pros mapas de hunt (map.json v6 + sheets/ +
@@ -873,7 +906,8 @@ python extractor/scripts/item_classifier.py --dump-unknown extractor/ready-maps/
   documentação.
 - **Gitignored (regenerável, não commitar):** `extractor/raw-maps/`,
   `extractor/ready-maps/`, `extractor/sprites/`, `extractor/atlases/`,
-  `extractor/*.aec` (insumo aposentado), `extractor/full-maps/*/map.json`.
+  `extractor/*.aec` (insumo aposentado), `extractor/full-maps/*/map.json`,
+  `extractor/full-maps/*/minimap/`.
 - Se `git status` mostrar algo dentro dessas pastas ignoradas, normalmente é
   sinal de que o `.gitignore` está desatualizado, não que precisa commitar.
 
