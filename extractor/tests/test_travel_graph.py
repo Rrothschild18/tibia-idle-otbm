@@ -370,7 +370,7 @@ def _line_graph(length):
 def test_tile_distances_finds_every_target_and_stops_early():
     graph = _line_graph(10)
 
-    distances = tg.tile_distances(graph, {(0, 0, 7): 0}, {(3, 0, 7), (5, 0, 7)})
+    distances, _ = tg.tile_distances_and_prev(graph, {(0, 0, 7): 0}, {(3, 0, 7), (5, 0, 7)})
 
     assert distances == {(3, 0, 7): 3, (5, 0, 7): 5}
 
@@ -378,7 +378,7 @@ def test_tile_distances_finds_every_target_and_stops_early():
 def test_tile_distances_unreachable_target_is_simply_absent():
     graph = {(0, 0, 7): set(), (5, 5, 7): set()}
 
-    distances = tg.tile_distances(graph, {(0, 0, 7): 0}, {(5, 5, 7)})
+    distances, _ = tg.tile_distances_and_prev(graph, {(0, 0, 7): 0}, {(5, 5, 7)})
 
     assert distances == {}
 
@@ -388,7 +388,7 @@ def test_tile_distances_counts_the_cost_of_entering_at_each_source():
     # tile 4 already costs 2, so tile 6 is 2 + 2 hops, not 2.
     graph = _line_graph(10)
 
-    distances = tg.tile_distances(graph, {(0, 0, 7): 0, (4, 0, 7): 2}, {(6, 0, 7)})
+    distances, _ = tg.tile_distances_and_prev(graph, {(0, 0, 7): 0, (4, 0, 7): 2}, {(6, 0, 7)})
 
     assert distances == {(6, 0, 7): 4}
 
@@ -396,7 +396,7 @@ def test_tile_distances_counts_the_cost_of_entering_at_each_source():
 def test_tile_distances_takes_the_cheapest_source_not_the_first_one():
     graph = _line_graph(10)
 
-    distances = tg.tile_distances(graph, {(0, 0, 7): 0, (5, 0, 7): 3}, {(6, 0, 7)})
+    distances, _ = tg.tile_distances_and_prev(graph, {(0, 0, 7): 0, (5, 0, 7): 3}, {(6, 0, 7)})
 
     assert distances == {(6, 0, 7): 4}
 
@@ -1152,14 +1152,6 @@ def test_prev_comes_from_the_settle_not_from_the_last_relax():
 
     assert distances[target] == 2
     assert tg.reconstruct_path(prev, target) == [seed, shortcut, target]
-
-
-def test_tile_distances_and_prev_reports_the_same_distances_as_before():
-    graph = _line_graph(10)
-
-    distances, _ = tg.tile_distances_and_prev(graph, {(0, 0, 7): 0, (4, 0, 7): 2}, {(6, 0, 7)})
-
-    assert distances == {(6, 0, 7): 4}
 
 
 def test_simplify_polyline_turns_a_straight_run_into_its_two_ends():

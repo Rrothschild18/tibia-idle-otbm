@@ -421,12 +421,6 @@ def tile_distances_and_prev(
     return found, prev
 
 
-def tile_distances(graph: Dict[Node, Set[Node]], sources: Dict[Node, int], targets: Set[Node]) -> Dict[Node, int]:
-    """Só as distâncias de `tile_distances_and_prev`, para quem não vai
-    desenhar o caminho."""
-    return tile_distances_and_prev(graph, sources, targets)[0]
-
-
 def reconstruct_path(prev: Dict[Node, Optional[Node]], node: Node) -> List[Node]:
     """O caminho andado até `node`, da semente até ele. Um nó sem pai (a
     própria semente, ou um alvo que já era semente) é um caminho de um ponto
@@ -470,7 +464,7 @@ def flatten_polyline(path: Sequence[Node]) -> List[int]:
 
 def approach_costs(node: Node, graph: Dict[Node, Set[Node]], reach: int) -> Dict[Node, int]:
     """The tiles a location can be reached *from*, mapped to how many tiles
-    away from it they are -> what `tile_distances` takes as `sources`.
+    away from it they are -> what `tile_distances_and_prev` takes as `sources`.
 
     With `reach` 0 that's just the location's own tile, when walkable. A
     larger reach exists for NPCs: most of Rookgaard's shopkeepers stand
