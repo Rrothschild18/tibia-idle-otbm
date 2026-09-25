@@ -12,6 +12,7 @@ import appearance_derivation
 import content_export
 import map_dirs
 import map_v6
+import update_canary_data
 from sheet_packer import SheetPacker
 
 # ======================================================
@@ -817,8 +818,10 @@ def write_map_v6(dump: Dict) -> Dict:
     # text must equal for `build_map_v6` to trust it over the defaultZ
     # heuristic.
     map_id = MAP_NAME.split("_", 1)[0]
+    floorchange_by_id, ladder_ids = update_canary_data.read_floor_change_rules()
     document, frame_sources = map_v6.build_map_v6(
-        dump, analyze_item, packer, ASSETS_ROOT, map_id=map_id
+        dump, analyze_item, packer, ASSETS_ROOT, map_id=map_id,
+        floorchange_by_id=floorchange_by_id, ladder_ids=ladder_ids,
     )
 
     if packer.sheets:

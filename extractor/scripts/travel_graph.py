@@ -175,8 +175,10 @@ Node = Tuple[int, int, int]
 # below cannot express, and why every cave entered by a ramp used to come out
 # islanded.
 #
-# `southalt`/`eastalt` are the alternate sprite variants of the same two
-# movements (Canary's FLOORCHANGE_*_ALT), not different movements.
+# `southalt`/`eastalt` are the double-width stairs — `FLOORCHANGE_SOUTH_ALT` /
+# `FLOORCHANGE_EAST_ALT` in Canary, the `*_EX` family in TFS 0.3.7, spelled
+# `southex`/`eastex` in TFS 0.2. You come out **two** tiles over, not one:
+# `Tile::queryDestination`, Canary `src/items/tile.cpp:1018-1026`.
 #
 # The graph is undirected, so one entry per value covers both directions:
 # walking up the ramp and walking back down it are the same edge.
@@ -186,14 +188,48 @@ FLOORCHANGE_DELTAS: Dict[str, Tuple[int, int, int]] = {
     "south": (0, 1, -1),
     "east": (1, 0, -1),
     "west": (-1, 0, -1),
-    "southalt": (0, 1, -1),
-    "eastalt": (1, 0, -1),
+    "southalt": (0, 2, -1),
+    "eastalt": (2, 0, -1),
 }
 
-_ITEM_ELEMENT_RE = re.compile(r"<item ([^>]*)>(.*?)</item>", re.S)
+# Onde um `isFloorTransition` leva — o que o `floorchange` não cobre, porque
+# estes se *usam* em vez de se pisar.
+#
+# A escada de mão sobe, e não na mesma coluna:
+# `data/scripts/actions/items/ladder_up.lua:5-18` chama `moveUpstairs()`, e
+# `data/libs/functions/position.lua:22-50` faz `z -= 1` e soma o offset de
+# `DIRECTION_SOUTH` (`{x=0, y=1}`). O resto — buraco, alçapão, grade — desce
+# na coluna.
+LADDER_DELTA: Tuple[int, int, int] = (0, 1, -1)
+HOLE_DELTA: Tuple[int, int, int] = (0, 0, 1)
+
+_ITEM_ELEMENT_RE = re.compile(r"<item\s([^>]*?)(?:/>|>(.*?)</item>)", re.S)
 _FLOORCHANGE_ATTR_RE = re.compile(r'key="floorchange"\s+value="([a-z]+)"')
+_LADDER_ATTR_RE = re.compile(r'key="type"\s+value="ladder"')
 _ITEM_ID_RE = re.compile(r'\bid="(\d+)"')
 _ITEM_RANGE_RE = re.compile(r'fromid="(\d+)"[^>]*toid="(\d+)"')
+
+
+def _iter_declared_items(items_xml: str):
+    """`(ids declarados, corpo)` por `<item>`, com `fromid`/`toid` expandido.
+
+    Canary declara a maioria das famílias de escada e rampa por faixa, então
+    ler só a forma de `id` único pegaria uma fração delas.
+
+    O `items.xml` mistura `<item .../>` e `<item ...>...</item>`, e as duas
+    formas precisam ser reconhecidas **separadamente**: ler sempre até o
+    próximo `</item>` dava a um item vazio o corpo do item seguinte. Isso
+    deslocava a atribuição de uma casa em toda a sequência — 7541 ("earth",
+    intransponível) ficava com o `floorchange` de 7542 ("ramp"), e 804 dos 997
+    ids lidos eram do item errado."""
+    for element in _ITEM_ELEMENT_RE.finditer(items_xml):
+        attributes, body = element.group(1), element.group(2) or ""
+        single = _ITEM_ID_RE.search(attributes)
+        span = _ITEM_RANGE_RE.search(attributes)
+        if single:
+            yield [int(single.group(1))], body
+        elif span:
+            yield list(range(int(span.group(1)), int(span.group(2)) + 1)), body
 
 
 def parse_floorchange_items(items_xml: str) -> Dict[int, str]:
@@ -210,40 +246,52 @@ def parse_floorchange_items(items_xml: str) -> Dict[int, str]:
     map editor reads is the one the server reads, so a new stairs id arrives
     with a Canary bump instead of with somebody remembering to add it here.
 
-    Ranges (`fromid`/`toid`) expand — Canary declares most stair/ramp families
-    that way, and reading only the single-`id` form would silently pick up a
-    fraction of them.
-
     **Does not** cover ladders, holes and rope spots: those have no
     `floorchange` because they are *used*, not walked onto (item 1948, the
     ladder, carries none). They keep coming from `isFloorTransition` — see
-    `build_walkable_graph`."""
+    `build_walkable_graph` and `parse_ladder_items`."""
     directions: Dict[int, str] = {}
 
-    for element in _ITEM_ELEMENT_RE.finditer(items_xml):
-        attributes, body = element.group(1), element.group(2)
+    for item_ids, body in _iter_declared_items(items_xml):
         direction = _FLOORCHANGE_ATTR_RE.search(body)
         if not direction:
             continue
-
-        single = _ITEM_ID_RE.search(attributes)
-        span = _ITEM_RANGE_RE.search(attributes)
-        if single:
-            directions[int(single.group(1))] = direction.group(1)
-        elif span:
-            for item_id in range(int(span.group(1)), int(span.group(2)) + 1):
-                directions[item_id] = direction.group(1)
+        for item_id in item_ids:
+            directions[item_id] = direction.group(1)
 
     return directions
+
+
+def parse_ladder_items(items_xml: str) -> Set[int]:
+    """Canary's `items.xml` -> os ids marcados
+    `<attribute key="type" value="ladder"/>`.
+
+    É o que separa as duas geometrias de `isFloorTransition`: escada de mão
+    sobe (e para o sul), buraco desce. A flag sozinha nunca diz qual — o
+    `appearances.dat` do cliente carrega um booleano sem direção
+    (`opentibiabr/otclient`, `thingtype.h:138`), e era por isso que a
+    `ADR 0002` ligava os dois sentidos e errava os dois. Do `items.xml` a
+    direção sai.
+
+    Mesma decisão de `parse_floorchange_items`: lido do arquivo que o servidor
+    lê, não de uma lista curada aqui."""
+    ladders: Set[int] = set()
+
+    for item_ids, body in _iter_declared_items(items_xml):
+        if _LADDER_ATTR_RE.search(body):
+            ladders.update(item_ids)
+
+    return ladders
 
 
 def extract_tile_flags(
     dump: Dict,
     flags_by_id: Dict[str, Dict],
     floorchange_by_id: Optional[Dict[int, str]] = None,
+    ladder_ids: Optional[Set[int]] = None,
 ) -> List[Dict]:
     """Every tile in the dump -> {"x", "y", "z", "unpass", "isFloorTransition",
-    "floorchange"}, combining the ground tileid's flags with every item stacked
+    "isLadder", "floorchange"}, combining the ground tileid's flags with every item stacked
     on it (each resolved through `flags_by_id`, keyed by appearanceId — the
     versioned table in `appearance-flags/<CIDADE>.json`, which replaced the
     `objectDefs` of a 20,3 MB map.json this never otherwise read). Marker signs
@@ -256,8 +304,14 @@ def extract_tile_flags(
     `floorchange_by_id` is omitted, which is what keeps a caller that has no
     `items.xml` behaving exactly as before this existed. The *first* direction
     found on the tile wins: ground first, then items bottom-up, so a ramp that
-    someone decorated doesn't lose its movement to the decoration."""
+    someone decorated doesn't lose its movement to the decoration.
+
+    `isLadder` sai de `parse_ladder_items` e responde para onde o
+    `isFloorTransition` daquele tile leva (`build_walkable_graph`). Sem
+    `ladder_ids` é sempre `False`, que é a leitura conservadora: buraco desce
+    na coluna e nada sobe para o tile errado."""
     floorchange_by_id = floorchange_by_id or {}
+    ladder_ids = ladder_ids or set()
 
     def _flags(appearance_id: Optional[int]) -> Dict:
         if appearance_id is None:
@@ -269,6 +323,7 @@ def extract_tile_flags(
         key = (x, y, z)
         unpass = False
         is_floor_transition = False
+        is_ladder = False
         floorchange: Optional[str] = None
 
         ground_id = tile.get("tileid")
@@ -276,6 +331,7 @@ def extract_tile_flags(
         unpass = unpass or ground_flags.get("unpass", False)
         is_floor_transition = is_floor_transition or ground_flags.get("isFloorTransition", False)
         if ground_id is not None:
+            is_ladder = is_ladder or ground_id in ladder_ids
             floorchange = floorchange_by_id.get(ground_id)
 
         for raw_item in tile.get("items", []):
@@ -285,6 +341,7 @@ def extract_tile_flags(
             item_flags = _flags(raw_item.get("id"))
             unpass = unpass or item_flags.get("unpass", False)
             is_floor_transition = is_floor_transition or item_flags.get("isFloorTransition", False)
+            is_ladder = is_ladder or raw_item.get("id") in ladder_ids
             if floorchange is None:
                 floorchange = floorchange_by_id.get(raw_item.get("id"))
 
@@ -294,31 +351,71 @@ def extract_tile_flags(
             "z": z,
             "unpass": unpass,
             "isFloorTransition": is_floor_transition,
+            "isLadder": is_ladder,
             "floorchange": floorchange,
         }
 
     return list(tiles.values())
 
 
+def _floor_change_deltas(tile: Dict) -> List[Tuple[int, int, int]]:
+    """Os `(dx, dy, dz)` que este tile oferece para trocar de andar.
+
+    Duas regras, nenhuma redundante: `floorchange` cobre o que se **pisa**
+    (rampa, escada de pedra, alçapão) e vem do `items.xml`; `isFloorTransition`
+    cobre o que se **usa** (escada de mão, corda), que não tem `floorchange`
+    nenhum. Um tile pode carregar as duas."""
+    deltas: List[Tuple[int, int, int]] = []
+
+    if tile.get("isFloorTransition"):
+        deltas.append(LADDER_DELTA if tile.get("isLadder") else HOLE_DELTA)
+
+    named = FLOORCHANGE_DELTAS.get(tile.get("floorchange") or "")
+    if named:
+        deltas.append(named)
+
+    return deltas
+
+
+def floor_transition_edges(tiles: List[Dict]) -> List[Tuple[Node, Node]]:
+    """As arestas de mudança de andar entre tiles caminháveis, uma por par.
+
+    Não-direcionada e sem duplicata: quem consome liga os dois sentidos. Só
+    sai aresta cujas duas pontas existem no recorte e não são `unpass` — um
+    destino fora do mapa ou bloqueado não vira ligação, e é isso que impede o
+    delta errado de inventar caminho.
+
+    Existe separada de `build_walkable_graph` porque o `map.json` v6 precisa
+    exatamente destas arestas e de mais nada do grafo (`map_v6.build_map_v6`).
+    Duas cópias da regra divergiriam."""
+    walkable = {(t["x"], t["y"], t["z"]) for t in tiles if not t["unpass"]}
+    edges: List[Tuple[Node, Node]] = []
+    seen: Set[Tuple[Node, Node]] = set()
+
+    for t in tiles:
+        if t["unpass"]:
+            continue
+        node = (t["x"], t["y"], t["z"])
+        for dx, dy, dz in _floor_change_deltas(t):
+            neighbor = (node[0] + dx, node[1] + dy, node[2] + dz)
+            if neighbor not in walkable:
+                continue
+            pair = (node, neighbor) if node <= neighbor else (neighbor, node)
+            if pair in seen:
+                continue
+            seen.add(pair)
+            edges.append((node, neighbor))
+
+    return edges
+
+
 def build_walkable_graph(tiles: List[Dict]) -> Dict[Node, Set[Node]]:
     """Walkable tiles -> an undirected adjacency map. Tiles flagged `unpass`
     are excluded entirely (never a node). Same-floor neighbors (orthogonal +
-    diagonal) all cost 1 — no diagonal penalty. A tile flagged
-    `isFloorTransition` also gets an edge to the same (x, y) on both z-1 and
-    z+1 whenever that neighbor is itself walkable (ADR 0002: the true up/down
-    direction can't be derived from the flag alone, so both directions get
-    an edge rather than guessing).
+    diagonal) all cost 1 — no diagonal penalty.
 
-    A tile carrying a `floorchange` gets the edge that value *names* — one
-    tile over and one floor up for a ramp, straight down for a hole (see
-    `FLOORCHANGE_DELTAS`). This is the accurate half of the two: it comes from
-    Canary's own `items.xml` rather than from a render-flag heuristic, and it
-    knows the direction, so a ramp that moves you sideways connects where the
-    same-(x, y) bridge above silently could not.
-
-    Both rules stay, and neither is redundant: `floorchange` covers what you
-    *walk* onto (stairs, ramps, holes), `isFloorTransition` covers what you
-    *use* (ladders, rope spots), which carry no `floorchange` at all."""
+    As ligações entre andares saem de `floor_transition_edges`, que é a mesma
+    regra que o `map.json` v6 publica."""
     walkable = {(t["x"], t["y"], t["z"]) for t in tiles if not t["unpass"]}
     graph: Dict[Node, Set[Node]] = {node: set() for node in walkable}
 
@@ -330,24 +427,13 @@ def build_walkable_graph(tiles: List[Dict]) -> Dict[Node, Set[Node]]:
         if t["unpass"]:
             continue
         x, y, z = t["x"], t["y"], t["z"]
-        node = (x, y, z)
-
         for dx, dy in _NEIGHBOR_OFFSETS:
             neighbor = (x + dx, y + dy, z)
             if neighbor in walkable:
-                _connect(node, neighbor)
+                _connect((x, y, z), neighbor)
 
-        if t["isFloorTransition"]:
-            for nz in (z - 1, z + 1):
-                neighbor = (x, y, nz)
-                if neighbor in walkable:
-                    _connect(node, neighbor)
-
-        delta = FLOORCHANGE_DELTAS.get(t.get("floorchange") or "")
-        if delta:
-            neighbor = (x + delta[0], y + delta[1], z + delta[2])
-            if neighbor in walkable:
-                _connect(node, neighbor)
+    for a, b in floor_transition_edges(tiles):
+        _connect(a, b)
 
     return graph
 

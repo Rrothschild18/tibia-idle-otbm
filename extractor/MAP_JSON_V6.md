@@ -25,7 +25,8 @@ migrar.
   "assetsRoot": "assets/ROOK-HUNT-0013_rats-rookguard-sprites-v6",
   "appearances": { /* ... */ },
   "sheets": { /* ... */ },
-  "floors": { /* ... */ }
+  "floors": { /* ... */ },
+  "transitions": [ /* ... */ ]
 }
 ```
 
@@ -231,6 +232,32 @@ lista de fases.
 (borda de praia) tem `pattern {w:3,h:1,d:1}` e 42 gids: são 3 formatos de margem
 de 14 fases cada. Tocar os 42 em sequência faz a margem trocar de formato a cada
 quadro. Ver ADR 0014 no `tibia-idle`.
+
+### `transitions` — por onde se troca de andar
+
+```jsonc
+"transitions": [
+  15, 16, 11,  15, 17, 10,   // a escada de mão do topo da torre dos trolls
+  15, 16, 10,  15, 16, 11    // o buraco logo acima dela
+]
+```
+
+Array plano, **6 inteiros por aresta**: origem `(tileX, tileY, z)` e destino
+`(tileX, tileY, z)`. Tile local, o mesmo espaço de `floors[].tiles` — quem
+consome não precisa saber onde o mapa fica no mundo.
+
+**Não-direcionada**, uma entrada por par: quem consome liga os dois sentidos.
+Só sai aresta cujas duas pontas o arquivo publica em `floors` e que não são
+`unpass`.
+
+A geometria vem do `items.xml` do Canary, resolvida na extração (ver
+[ADR 0002](../docs/adr/0002-map-json-floors-e-defaultz.md)): rampa e escada de
+pedra pelo atributo `floorchange`, escada de mão pelo `type="ladder"`
+(`(x, y+1, z-1)`), buraco e alçapão descendo na coluna. **Quem lê nunca
+reimplementa isso** — a flag `isFloorTransition` de uma aparência diz que a
+tile é uma transição, nunca para onde ela leva.
+
+Mapa de andar único sai com `transitions: []`.
 
 ### `start` — onde a hunt começa
 

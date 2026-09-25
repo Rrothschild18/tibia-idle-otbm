@@ -42,13 +42,16 @@ GROUND_FLAGS = {"bank": True, "unmove": True}
 BORDER_FLAGS = {"clip": True, "unmove": True}
 
 
-def _build(analyses, dump, assets_root="assets/test-sprites-v6"):
+def _build(analyses, dump, assets_root="assets/test-sprites-v6",
+           floorchange_by_id=None, ladder_ids=None):
     packer = SheetPacker()
     return map_v6.build_map_v6(
         dump,
         analyze=lambda appearance_id: analyses[appearance_id],
         packer=packer,
         assets_root=assets_root,
+        floorchange_by_id=floorchange_by_id,
+        ladder_ids=ladder_ids,
     )
 
 
@@ -345,3 +348,145 @@ def test_a_tile_holding_only_a_marker_sign_is_left_out_but_still_sets_bounds():
 
     assert doc["floors"]["7"]["tiles"] == [[0, 0, 100]]
     assert doc["width"] == 5
+
+
+# ── transições de andar ───────────────────────────────────────────────────
+
+
+TRANSITION_FLAGS = {"isFloorTransition": True, "usable": True}
+WALL_FLAGS = {"unpass": True, "unmove": True}
+
+
+def _floors_dump(tiles_by_z):
+    """{z: [(x, y, tileid, [item ids])]} — lembrando que z menor é andar mais
+    alto."""
+    return {"data": {"nodes": [{"features": [
+        {
+            "x": 0, "y": 0, "z": z,
+            "tiles": [{"x": x, "y": y, "tileid": tileid,
+                       "items": [{"id": item} for item in items]}
+                      for x, y, tileid, items in tiles],
+        }
+        for z, tiles in tiles_by_z.items()
+    ]}]}}
+
+
+def test_a_ladder_lands_one_tile_south_and_one_floor_up():
+    analyses = {100: _analysis(100, flags=GROUND_FLAGS),
+                1948: _analysis(1948, flags=TRANSITION_FLAGS)}
+    dump = _floors_dump({
+        8: [(0, 0, 100, [1948])],
+        7: [(0, 0, 100, []), (0, 1, 100, [])],
+    })
+
+    doc, _ = _build(analyses, dump, ladder_ids={1948})
+
+    assert doc["transitions"] == [0, 0, 8, 0, 1, 7]
+
+
+def test_a_hole_drops_straight_down():
+    analyses = {100: _analysis(100, flags=GROUND_FLAGS),
+                386: _analysis(386, flags=TRANSITION_FLAGS)}
+    dump = _floors_dump({
+        7: [(0, 0, 100, [386])],
+        8: [(0, 0, 100, [])],
+    })
+
+    doc, _ = _build(analyses, dump)
+
+    assert doc["transitions"] == [0, 0, 7, 0, 0, 8]
+
+
+def test_a_ramp_lands_where_its_floorchange_names():
+    analyses = {100: _analysis(100, flags=GROUND_FLAGS), 1951: _analysis(1951)}
+    dump = _floors_dump({
+        8: [(1, 0, 100, [1951])],
+        7: [(0, 0, 100, [])],
+    })
+
+    doc, _ = _build(analyses, dump, floorchange_by_id={1951: "west"})
+
+    assert doc["transitions"] == [1, 0, 8, 0, 0, 7]
+
+
+def test_transition_coordinates_are_relative_to_the_map_bounds():
+    analyses = {100: _analysis(100, flags=GROUND_FLAGS),
+                1948: _analysis(1948, flags=TRANSITION_FLAGS)}
+    dump = _floors_dump({
+        8: [(30, 40, 100, [1948])],
+        7: [(30, 41, 100, [])],
+    })
+
+    doc, _ = _build(analyses, dump, ladder_ids={1948})
+
+    assert doc["bounds"]["minX"] == 30
+    assert doc["transitions"] == [0, 0, 8, 0, 1, 7]
+
+
+def test_a_ladder_with_a_blocked_landing_produces_no_transition():
+    analyses = {
+        100: _analysis(100, flags=GROUND_FLAGS),
+        1948: _analysis(1948, flags=TRANSITION_FLAGS),
+        1000: _analysis(1000, flags=WALL_FLAGS),
+    }
+    dump = _floors_dump({
+        8: [(0, 0, 100, [1948])],
+        7: [(0, 1, 100, [1000])],
+    })
+
+    doc, _ = _build(analyses, dump, ladder_ids={1948})
+
+    assert doc["transitions"] == []
+
+
+def test_a_ladder_landing_outside_the_bundle_produces_no_transition():
+    analyses = {100: _analysis(100, flags=GROUND_FLAGS),
+                1948: _analysis(1948, flags=TRANSITION_FLAGS)}
+    dump = _floors_dump({
+        8: [(0, 0, 100, [1948])],
+        7: [(9, 9, 100, [])],
+    })
+
+    doc, _ = _build(analyses, dump, ladder_ids={1948})
+
+    assert doc["transitions"] == []
+
+
+def test_a_transition_into_a_tile_with_nothing_to_draw_is_left_out():
+    # A ponta tem que existir no `floors` que o consumidor lê; uma tile vazia
+    # não vira linha nenhuma, então uma aresta até ela é aresta para lugar
+    # nenhum.
+    analyses = {100: _analysis(100, flags=GROUND_FLAGS),
+                1948: _analysis(1948, flags=TRANSITION_FLAGS)}
+    dump = _floors_dump({
+        8: [(0, 0, 100, [1948])],
+        7: [(0, 1, None, [])],
+    })
+
+    doc, _ = _build(analyses, dump, ladder_ids={1948})
+
+    assert doc["transitions"] == []
+
+
+def test_a_single_floor_map_declares_no_transitions():
+    analyses = {100: _analysis(100, flags=GROUND_FLAGS)}
+
+    doc, _ = _build(analyses, _dump([(0, 0, 100, [])]))
+
+    assert doc["transitions"] == []
+
+
+def test_without_the_canary_rules_a_ladder_falls_back_to_the_hole_geometry():
+    # Sem `items.xml` a flag sozinha não diz a direção: desce na coluna, que é
+    # a leitura conservadora — perde ligação, nunca inventa uma errada.
+    analyses = {100: _analysis(100, flags=GROUND_FLAGS),
+                1948: _analysis(1948, flags=TRANSITION_FLAGS)}
+    dump = _floors_dump({
+        8: [(0, 0, 100, [1948])],
+        7: [(0, 1, 100, [])],
+        9: [(0, 0, 100, [])],
+    })
+
+    doc, _ = _build(analyses, dump)
+
+    assert doc["transitions"] == [0, 0, 8, 0, 0, 9]

@@ -162,7 +162,8 @@ def test_extract_tile_flags_excludes_marker_sign_items_from_flags():
     tiles = tg.extract_tile_flags(dump, object_defs)
 
     assert tiles == [{"x": 0, "y": 0, "z": 7, "unpass": False,
-                      "isFloorTransition": False, "floorchange": None}]
+                      "isFloorTransition": False, "isLadder": False,
+                      "floorchange": None}]
 
 
 def test_extract_tile_flags_combines_ground_and_item_flags():
@@ -177,7 +178,8 @@ def test_extract_tile_flags_combines_ground_and_item_flags():
     tiles = tg.extract_tile_flags(dump, object_defs)
 
     assert tiles == [{"x": 0, "y": 0, "z": 7, "unpass": True,
-                      "isFloorTransition": False, "floorchange": None}]
+                      "isFloorTransition": False, "isLadder": False,
+                      "floorchange": None}]
 
 
 def test_extract_tile_flags_takes_floorchange_from_an_item_on_the_tile():
@@ -208,13 +210,14 @@ def test_extract_tile_flags_reports_no_floorchange_when_items_xml_is_absent():
     assert tiles[0]["floorchange"] is None
 
 
-def _tile(x, y, z, unpass=False, transition=False, floorchange=None):
+def _tile(x, y, z, unpass=False, transition=False, ladder=False, floorchange=None):
     return {
         "x": x,
         "y": y,
         "z": z,
         "unpass": unpass,
         "isFloorTransition": transition,
+        "isLadder": ladder,
         "floorchange": floorchange,
     }
 
@@ -253,6 +256,81 @@ def test_parse_floorchange_items_ignores_the_ladder_which_is_used_not_walked():
     assert tg.parse_floorchange_items(xml) == {}
 
 
+def test_parse_floorchange_items_does_not_let_a_self_closing_item_steal_the_next_body():
+    # O `items.xml` do Canary mistura `<item .../>` e `<item ...>...</item>`, e
+    # 7541 ("earth", intransponível) precede 7542 ("ramp", east). Ler até o
+    # próximo `</item>` dava o floorchange do 7542 ao 7541 — 804 dos 997 ids
+    # lidos eram do item errado, e os 241 certos ficavam de fora. No mapa dos
+    # orcs isso punha `east` em 15 pedras e em nenhuma rampa.
+    xml = """
+    <items>
+      <item id="7541" name="earth"/>
+      <item id="7542" article="a" name="ramp">
+        <attribute key="floorchange" value="east"/>
+      </item>
+    </items>
+    """
+
+    assert tg.parse_floorchange_items(xml) == {7542: "east"}
+
+
+def test_parse_ladder_items_does_not_let_a_self_closing_item_steal_the_next_body():
+    xml = """
+    <items>
+      <item id="1967" article="a" name="wall"/>
+      <item id="1968" article="a" name="ladder">
+        <attribute key="type" value="ladder"/>
+      </item>
+    </items>
+    """
+
+    assert tg.parse_ladder_items(xml) == {1968}
+
+
+def test_parse_ladder_items_reads_single_ids_and_ranges():
+    xml = """
+    <items>
+      <item id="1948" article="a" name="ladder">
+        <attribute key="type" value="ladder"/>
+      </item>
+      <item fromid="5542" toid="5543" article="a" name="rope ladder">
+        <attribute key="type" value="ladder"/>
+      </item>
+      <item id="1949" article="a" name="depot">
+        <attribute key="type" value="depot"/>
+      </item>
+    </items>
+    """
+
+    assert tg.parse_ladder_items(xml) == {1948, 5542, 5543}
+
+
+def test_extract_tile_flags_marks_a_ladder_on_the_tile():
+    dump = {
+        "data": {"nodes": [{"features": [{
+            "x": 0, "y": 0, "z": 8,
+            "tiles": [{"x": 5, "y": 5, "tileid": 100, "items": [{"id": 1948}]}],
+        }]}]}
+    }
+
+    tiles = tg.extract_tile_flags(dump, _object_defs({}), ladder_ids={1948})
+
+    assert tiles[0]["isLadder"] is True
+
+
+def test_extract_tile_flags_reports_no_ladder_when_items_xml_is_absent():
+    dump = {
+        "data": {"nodes": [{"features": [{
+            "x": 0, "y": 0, "z": 8,
+            "tiles": [{"x": 5, "y": 5, "tileid": 100, "items": [{"id": 1948}]}],
+        }]}]}
+    }
+
+    tiles = tg.extract_tile_flags(dump, _object_defs({}))
+
+    assert tiles[0]["isLadder"] is False
+
+
 def test_build_walkable_graph_ramp_connects_one_tile_over_and_one_floor_up():
     # A rampa encontrada ao lado da placa de ROOK-HUNT-0016: exatamente o caso
     # que a ponte do mesmo (x, y) não consegue expressar.
@@ -272,16 +350,18 @@ def test_build_walkable_graph_hole_connects_straight_down():
     assert graph[(5, 5, 7)] == {(5, 5, 8)}
 
 
-def test_build_walkable_graph_alt_variants_move_like_their_base_direction():
+def test_build_walkable_graph_alt_variants_step_two_tiles_not_one():
+    # São escadas de largura dupla (`*_EX` no TFS), não variantes de sprite das
+    # mesmas duas direções: o degrau de cima fica dois tiles adiante.
     tiles = [
-        _tile(0, 0, 8, floorchange="southalt"), _tile(0, 1, 7),
-        _tile(9, 9, 8, floorchange="eastalt"), _tile(10, 9, 7),
+        _tile(0, 0, 8, floorchange="southalt"), _tile(0, 1, 7), _tile(0, 2, 7),
+        _tile(9, 9, 8, floorchange="eastalt"), _tile(10, 9, 7), _tile(11, 9, 7),
     ]
 
     graph = tg.build_walkable_graph(tiles)
 
-    assert graph[(0, 0, 8)] == {(0, 1, 7)}
-    assert graph[(9, 9, 8)] == {(10, 9, 7)}
+    assert graph[(0, 0, 8)] == {(0, 2, 7)}
+    assert graph[(9, 9, 8)] == {(11, 9, 7)}
 
 
 def test_build_walkable_graph_floorchange_into_a_blocked_tile_connects_nothing():
@@ -323,7 +403,9 @@ def test_build_walkable_graph_connects_diagonal_neighbors_at_same_cost():
     assert (0, 0, 7) in graph[(1, 1, 7)]
 
 
-def test_build_walkable_graph_bridges_floor_transition_tile_to_both_directions():
+def test_build_walkable_graph_floor_transition_without_a_ladder_drops_straight_down():
+    # Buraco/alçapão: quem cai desce na mesma coluna. Nunca para z-1 — subir
+    # sem escada é o que a regra antiga inventava.
     tiles = [
         _tile(0, 0, 7, transition=True),
         _tile(0, 0, 6),
@@ -332,9 +414,34 @@ def test_build_walkable_graph_bridges_floor_transition_tile_to_both_directions()
 
     graph = tg.build_walkable_graph(tiles)
 
-    assert graph[(0, 0, 7)] == {(0, 0, 6), (0, 0, 8)}
-    assert (0, 0, 7) in graph[(0, 0, 6)]
+    assert graph[(0, 0, 7)] == {(0, 0, 8)}
     assert (0, 0, 7) in graph[(0, 0, 8)]
+
+
+def test_build_walkable_graph_ladder_climbs_one_tile_south_and_one_floor_up():
+    # `moveUpstairs()` do Canary: z -= 1 e depois o offset de DIRECTION_SOUTH.
+    # O topo da escada não é a mesma coluna — é o tile ao sul dela.
+    tiles = [
+        _tile(0, 0, 8, transition=True, ladder=True),
+        _tile(0, 0, 7),
+        _tile(0, 1, 7),
+    ]
+
+    graph = tg.build_walkable_graph(tiles)
+
+    assert graph[(0, 0, 8)] == {(0, 1, 7)}
+    assert (0, 0, 8) in graph[(0, 1, 7)]
+
+
+def test_build_walkable_graph_ladder_with_a_blocked_landing_connects_nothing():
+    tiles = [
+        _tile(0, 0, 8, transition=True, ladder=True),
+        _tile(0, 1, 7, unpass=True),
+    ]
+
+    graph = tg.build_walkable_graph(tiles)
+
+    assert graph[(0, 0, 8)] == set()
 
 
 def test_build_walkable_graph_transition_tile_only_bridges_walkable_neighbor_floor():

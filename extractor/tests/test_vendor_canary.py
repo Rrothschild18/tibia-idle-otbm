@@ -76,8 +76,22 @@ def test_missing_vendor_warns_instead_of_crashing(monkeypatch, capsys, tmp_path)
 
 
 def test_vendored_items_xml_carries_the_floorchange_ids():
-    """997 ids é o número que o golden foi gerado com — se o vendor perdesse
-    o items.xml, o grafo cairia calado para a heurística de flags."""
-    directions = btf._read_floorchange_items(None)
+    """434 ids: se o vendor perdesse o items.xml, o grafo cairia calado para a
+    heurística de flags.
 
-    assert len(directions) == 997
+    Eram 997 enquanto `_iter_declared_items` lia sempre até o próximo
+    `</item>` — 804 deles eram do item errado e 241 dos certos ficavam de fora.
+    Não é o vendor que encolheu."""
+    directions, _ = ucd.read_floor_change_rules(None)
+
+    assert len(directions) == 434
+    assert directions[7542] == "east"
+    assert 7541 not in directions
+
+
+def test_vendored_items_xml_carries_the_ladder_ids():
+    """1948 e 5542 são 100% das transições dos mapas de hunt: sem elas a rota
+    de andar múltiplo não tem por onde subir."""
+    _, ladders = ucd.read_floor_change_rules(None)
+
+    assert {1948, 5542} <= ladders

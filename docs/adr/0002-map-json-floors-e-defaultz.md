@@ -53,3 +53,32 @@ não é uma garantia geral do formato OTBM.
 
 **Mapas single-floor não regridem:** viram só `floors: {"7": {...}}`, sem nenhum tile marcado
 `isFloorTransition` — o front-end não precisa de nenhum caso especial pra esse formato.
+
+## Emenda (2026-09-24): a direção é derivável, só não da flag
+
+A "limitação conhecida" acima vale para a **flag**, e só para ela. O
+`appearances.dat` do cliente carrega no máximo um booleano sem direção
+(`opentibiabr/otclient`, `thingtype.h:138`), então nenhuma combinação de flags
+de render jamais vai dizer para onde uma escada leva.
+
+Mas o `items.xml` do Canary diz. `parse_floorchange_items` lê o atributo
+`floorchange` (direção e passo de rampa, escada de pedra e alçapão) e
+`parse_ladder_items` lê `type="ladder"`, que é o que separa as duas geometrias
+de `isFloorTransition`:
+
+```
+isFloorTransition AND type="ladder"   ->  (x, y+1, z-1)   # moveUpstairs(), sul
+isFloorTransition AND NOT ladder      ->  (x, y,   z+1)   # buraco, desce na coluna
+```
+
+Antes disso, `build_walkable_graph` ligava o mesmo `(x, y)` em `z-1` **e**
+`z+1`, e as duas pontas estavam erradas para quem sobe.
+
+Consequência para o `map.json`: o v6 passa a publicar `transitions` — as
+arestas de mudança de andar já resolvidas, em tile local, não-direcionadas, só
+com as duas pontas caminháveis. **A regra "desce se o floor de baixo tiver
+conteúdo na mesma coluna, senão sobe" está aposentada**; quem consome segue
+aresta e nunca reimplementa geometria de escada.
+
+`bounds` como união entre andares continua valendo, e agora por outro motivo:
+é o que faz `transitions` poder usar um par `(x, y)` só, o mesmo em todo andar.

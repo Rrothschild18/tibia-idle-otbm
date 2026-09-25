@@ -30,7 +30,12 @@ import shutil
 import subprocess
 
 import paths
-from travel_graph import parse_npc_outfit_lua, parse_npc_shop_lua
+from travel_graph import (
+    parse_floorchange_items,
+    parse_ladder_items,
+    parse_npc_outfit_lua,
+    parse_npc_shop_lua,
+)
 
 SCRIPTS_DIR = os.path.dirname(os.path.abspath(__file__))
 EXTRACTOR_DIR = os.path.dirname(SCRIPTS_DIR)
@@ -47,6 +52,38 @@ def vendored_items_xml() -> str:
 
 def vendored_npc_facts() -> str:
     return os.path.join(VENDOR_DIR, NPC_FACTS_NAME)
+
+
+def read_floor_change_rules(canary_dir=None):
+    """`items.xml` -> `({id: direção do floorchange}, {ids de escada de mão})`.
+
+    As duas metades da geometria de andar saem do mesmo arquivo e da mesma
+    leitura, então saem juntas: quem calcula aresta precisa das duas ou de
+    nenhuma. Lê o `items.xml` vendorizado por padrão; `--canary-dir` lê do
+    checkout, que é como um vendor velho é pego.
+
+    Arquivo ausente é **aviso, não falha**: sem ele o grafo perde ligação e
+    não inventa nenhuma. Quebrar aqui faria um caminho do Canary derrubar
+    toda exportação."""
+    path = (
+        os.path.join(canary_dir, "data", "items", ITEMS_XML_NAME)
+        if canary_dir
+        else vendored_items_xml()
+    )
+
+    try:
+        with open(path, "r", encoding="utf-8", errors="replace") as items_file:
+            items_xml = items_file.read()
+    except OSError:
+        print(f"[WARN] {path} não encontrado — escada/rampa vão depender só da "
+              f"heurística de flags, e caverna entrada por rampa pode sair como ilhada")
+        return {}, set()
+
+    directions = parse_floorchange_items(items_xml)
+    ladders = parse_ladder_items(items_xml)
+    print(f"[OK] {len(directions)} ids com floorchange e {len(ladders)} escadas "
+          f"de mão lidos de {path}")
+    return directions, ladders
 
 
 def extract_npc_facts(canary_npc_dir: str) -> dict:

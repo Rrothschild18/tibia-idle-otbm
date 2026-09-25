@@ -25,6 +25,7 @@ import posixpath
 from typing import Callable, Dict, List, Optional, Set, Tuple
 
 import tile_stack
+import travel_graph
 
 TILE_SIZE = 32
 VERSION = 6
@@ -185,9 +186,43 @@ def map_bounds(dump: Dict) -> Dict[str, int]:
     return {"minX": min_x, "minY": min_y, "maxX": max_x, "maxY": max_y}
 
 
+def _floor_transitions(dump: Dict, analyze: Callable[[int], Dict],
+                       used_ids: Set[int],
+                       stacks: Dict[int, Dict[Tuple[int, int], Dict]],
+                       min_x: int, min_y: int,
+                       floorchange_by_id: Optional[Dict[int, str]],
+                       ladder_ids: Optional[Set[int]]) -> List[int]:
+    """As arestas de mudança de andar do bundle, achatadas a 6 inteiros cada.
+
+    Origem `(x, y, z)` e destino `(x, y, z)` em tile local — o mesmo espaço de
+    `floors[].tiles` —, não-direcionadas, uma entrada por par. Quem consome é o
+    A* do gerador de rota, que não sabe o que é escada: só segue aresta.
+
+    A regra é a de `travel_graph`, a mesma que alimenta o grafo de viagem.
+    Emitida aqui porque o grafo de viagem vive numa etapa que o mapa de hunt
+    nunca roda, e reimplementá-la seria manter duas geometrias divergindo.
+
+    Só sai aresta cujas duas pontas o documento de fato publica: uma tile sem
+    nada para desenhar não vira linha em `floors`, então uma aresta até ela
+    seria aresta para lugar nenhum."""
+    flags_by_id = {str(appearance_id): analyze(appearance_id)["flags"]
+                   for appearance_id in used_ids}
+    tiles = travel_graph.extract_tile_flags(dump, flags_by_id, floorchange_by_id, ladder_ids)
+
+    transitions: List[int] = []
+    for (ax, ay, az), (bx, by, bz) in travel_graph.floor_transition_edges(tiles):
+        if (ax, ay) not in stacks.get(az, {}) or (bx, by) not in stacks.get(bz, {}):
+            continue
+        transitions.extend([ax - min_x, ay - min_y, az, bx - min_x, by - min_y, bz])
+
+    return transitions
+
+
 def build_map_v6(dump: Dict, analyze: Callable[[int], Dict], packer,
                  assets_root: str,
-                 map_id: Optional[str] = None) -> Tuple[Dict, Dict[str, Dict[int, str]]]:
+                 map_id: Optional[str] = None,
+                 floorchange_by_id: Optional[Dict[int, str]] = None,
+                 ladder_ids: Optional[Set[int]] = None) -> Tuple[Dict, Dict[str, Dict[int, str]]]:
     """`(document, {sheet key: {gid: source png path}})`.
 
     `analyze` resolves an appearance id to the analysis dict
@@ -202,6 +237,10 @@ def build_map_v6(dump: Dict, analyze: Callable[[int], Dict], packer,
     action id has nothing to spell.
 
     `map_id` is kept for the warning messages only.
+
+    `floorchange_by_id` e `ladder_ids` saem do `items.xml` do Canary
+    (`update_canary_data.read_floor_change_rules`) e decidem `transitions`.
+    Omitidos, o documento sai com `transitions: []` — sem ligação inventada.
     """
     stacks: Dict[int, Dict[Tuple[int, int], Dict]] = {}
     used_ids: Set[int] = set()
@@ -315,6 +354,8 @@ def build_map_v6(dump: Dict, analyze: Callable[[int], Dict], packer,
         "appearances": appearances,
         "sheets": sheets,
         "floors": floors,
+        "transitions": _floor_transitions(dump, analyze, used_ids, stacks, min_x, min_y,
+                                          floorchange_by_id, ladder_ids),
     }
 
     # Where the player enters, in the same tile space as every other coordinate

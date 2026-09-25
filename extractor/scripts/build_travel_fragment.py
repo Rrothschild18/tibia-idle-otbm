@@ -58,7 +58,6 @@ from travel_graph import (
     format_rejection_report,
     match_npc_lua_filename,
     merge_travel_fragment_into_catalog,
-    parse_floorchange_items,
     parse_marker_signs,
     parse_npc_outfit_lua,
     parse_npc_shop_lua,
@@ -131,36 +130,6 @@ def _build_npc_lua_facts(npc_names, canary_dir=None):
     return facts_by_name, origin
 
 
-def _read_floorchange_items(canary_dir=None):
-    """Canary's `items.xml` -> the floorchange map the walkable graph needs.
-
-    Read from `vendor/canary/items.xml` by default — the same file the Canary
-    checkout has, copied here so a clone with no Canary can still build the
-    graph. `--canary-dir` reads from the checkout instead, which is how a
-    stale vendor gets caught.
-
-    A missing file is a **warning, not a failure**: the graph falls back to the
-    render-flag heuristic alone, which is exactly how it behaved before this —
-    fewer connections, no wrong ones. Failing here instead would make an
-    unrelated Canary path break every export."""
-    path = (
-        os.path.join(canary_dir, "data", "items", "items.xml")
-        if canary_dir
-        else update_canary_data.vendored_items_xml()
-    )
-
-    try:
-        with open(path, "r", encoding="utf-8", errors="replace") as f:
-            directions = parse_floorchange_items(f.read())
-    except OSError:
-        print(f"[WARN] {path} não encontrado — escada/rampa vão depender só da "
-              f"heurística de flags, e caverna entrada por rampa pode sair como ilhada")
-        return {}
-
-    print(f"[OK] {len(directions)} ids com floorchange lidos de {path}")
-    return directions
-
-
 def discover_hunt_maps(city: str):
     """extractor/maps/<CIDADE>/<ID>_<nome-descritivo>/ -> [{"id", "name"}],
     sorted by id. This is the list of hunts that exist on disk, which the
@@ -228,7 +197,8 @@ def build_city_fragment(city: str, canary_dir=None, npc_reach: int = DEFAULT_NPC
     for name in unmatched_npcs:
         print(f"[WARN] NPC '{name}' sem .lua correspondente em {npc_facts_origin} — Location sem shop")
 
-    tiles = extract_tile_flags(dump, object_defs_flags, _read_floorchange_items(canary_dir))
+    floorchange_by_id, ladder_ids = update_canary_data.read_floor_change_rules(canary_dir)
+    tiles = extract_tile_flags(dump, object_defs_flags, floorchange_by_id, ladder_ids)
     graph = build_walkable_graph(tiles)
     travel_graph_edges = build_travel_graph(graph, [*sign_locations, *npc_locations], npc_reach)
 
