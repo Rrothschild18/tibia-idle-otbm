@@ -39,6 +39,11 @@ MINIMAP_DIR_NAME = "minimap"
 FRONT_MINIMAPS_DIR_NAME = "minimaps"
 MINIMAP_COMMAND = "uv run python extractor/scripts/build_city_minimap.py {city}"
 
+MAP_REGIONS_DIR = os.path.join(EXTRACTOR_DIR, "map-regions")
+MAP_REGIONS_COMMAND = "uv run python extractor/scripts/build_map_regions.py"
+CANDIDATES_FILE_NAME = "candidates.json"
+FRONT_NEW_HUNTS_DIR_NAME = "new-hunts"
+
 FRONT_ASSETS_RELPATH = os.path.join("apps", "tibia-idle-front", "public", "assets")
 
 # Todo atlas que o front serve, com o comando que o gera. O erro de um atlas
@@ -223,6 +228,48 @@ def publish_minimaps(front_assets: str, dry_run=False):
               f"-> {destination}")
 
 
+def publish_hunt_candidates(front_assets: str, dry_run=False):
+    """`full-maps/<CIDADE>/candidates.json` + máscaras -> `assets/new-hunts/<CIDADE>/`.
+
+    Entrada da tela `new-hunts` do front, que é ferramenta de curadoria e não
+    jogo: cidade sem candidata gerada simplesmente não aparece lá.
+    """
+    for city in map_dirs.discover_cities(FULL_MAPS_DIR):
+        source = os.path.join(FULL_MAPS_DIR, city, CANDIDATES_FILE_NAME)
+        if not os.path.isfile(source):
+            continue
+
+        destination = os.path.join(front_assets, FRONT_NEW_HUNTS_DIR_NAME, city)
+        with open(source, encoding="utf-8") as handler:
+            document = json.load(handler)
+        masks = [subarea.get("mask") for subarea in document.get("subareas", [])]
+
+        if dry_run:
+            print(f"[dry-run] candidatas de {city}: 1 + {len(masks)} máscara(s) -> {destination}")
+            continue
+
+        os.makedirs(destination, exist_ok=True)
+        copied = 1 if copy_if_different(
+            source, os.path.join(destination, CANDIDATES_FILE_NAME)
+        ) else 0
+        missing = []
+        for mask in masks:
+            if not mask:
+                continue
+            mask_source = os.path.join(MAP_REGIONS_DIR, mask)
+            if not os.path.isfile(mask_source):
+                missing.append(mask)
+                continue
+            mask_destination = os.path.join(destination, mask)
+            os.makedirs(os.path.dirname(mask_destination), exist_ok=True)
+            if copy_if_different(mask_source, mask_destination):
+                copied += 1
+
+        print(f"[OK] candidatas de {city}: {copied} arquivo(s) -> {destination}")
+        if missing:
+            print(f"[--] {len(missing)} máscara(s) ausente(s) ({MAP_REGIONS_COMMAND})")
+
+
 def prune_bundles(front_assets: str, keep, apply: bool):
     """Remove bundles publicados que o conjunto atual não referencia.
 
@@ -304,6 +351,7 @@ def main():
 
     publish_atlases(front_assets, dry_run=args.dry_run)
     publish_minimaps(front_assets, dry_run=args.dry_run)
+    publish_hunt_candidates(front_assets, dry_run=args.dry_run)
 
     if args.prune:
         prune_bundles(front_assets, published, apply=not args.dry_run)

@@ -1,0 +1,61 @@
+syntax = "proto2";
+
+// Schema do `map-<sha>.dat` do cliente Tibia (entrada `type: "map"` do
+// catalog-content.json) — a divisão oficial do mundo em Areas e Subareas da
+// Cyclopedia, com a máscara de tile de cada subárea de superfície.
+//
+// Reconstruído por inspeção (`protoc --decode_raw`) contra o cliente
+// 15.25.0a00a0: a CipSoft não publica este schema. Nomes de campo são nossos;
+// os números são os do arquivo. Campo desconhecido é campo ausente aqui.
+
+package tibia.protobuf.map;
+
+message MapRegions {
+    repeated Region region = 1;
+    repeated PointOfInterest point_of_interest = 2;
+    repeated MapImage image = 3;
+    optional Position min_position = 4;
+    optional Position max_position = 5;
+}
+
+enum RegionKind {
+    AREA = 1;
+    SUBAREA = 2;
+}
+
+message Region {
+    optional uint32 id = 1;
+    optional string name = 2;
+    optional RegionKind kind = 3;
+    repeated uint32 subarea_id = 4;
+    optional Position center = 5;
+    optional bool hidden = 6;
+}
+
+message PointOfInterest {
+    optional string name = 1;
+    optional Position position = 2;
+    optional uint32 subarea_id = 3;
+}
+
+enum ImageKind {
+    SUBAREA_MASK = 0;
+    SATELLITE = 1;
+    MINIMAP = 2;
+}
+
+message MapImage {
+    optional ImageKind kind = 1;
+    optional Position position = 2;
+    optional string file = 3;
+    optional uint32 width = 4;
+    optional uint32 height = 5;
+    optional uint32 subarea_id = 6;
+    optional double scale = 7;
+}
+
+message Position {
+    optional uint32 x = 1;
+    optional uint32 y = 2;
+    optional uint32 z = 3;
+}

@@ -1,0 +1,70 @@
+{
+  "city": "CARLIN",
+  "area": {
+    "id": 3,
+    "name": "Carlin"
+  },
+  "subareas": [
+    {
+      "id": 280,
+      "name": "Vega"
+    },
+    {
+      "id": 39,
+      "name": "Folda"
+    },
+    {
+      "id": 456,
+      "name": "Carlin"
+    },
+    {
+      "id": 40,
+      "name": "Fields of Glory"
+    },
+    {
+      "id": 271,
+      "name": "Carlin City"
+    },
+    {
+      "id": 38,
+      "name": "Ghostlands"
+    },
+    {
+      "id": 43,
+      "name": "Carlin Surroundings"
+    },
+    {
+      "id": 279,
+      "name": "Ice Islands"
+    },
+    {
+      "id": 281,
+      "name": "Senja"
+    },
+    {
+      "id": 288,
+      "name": "Isle of the Kings"
+    }
+  ],
+  "world": {
+    "file": "otservbr.otbm",
+    "bytes": 184776037
+  },
+  "columns": 80760,
+  "tiles": 382532,
+  "tileAreas": 27287,
+  "towns": [
+    {
+      "id": 6,
+      "name": "Carlin",
+      "x": 32360,
+      "y": 31782,
+      "z": 7
+    }
+  ],
+  "monsterGroups": 804,
+  "monsterEntries": 1334,
+  "npcGroups": 59,
+  "npcEntries": 59,
+  "houses": 96
+}
