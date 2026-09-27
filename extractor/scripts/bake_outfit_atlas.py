@@ -1,3 +1,4 @@
+import contextlib
 import glob
 import json
 import os
@@ -17,7 +18,10 @@ EXTRACTOR_DIR = os.path.dirname(SCRIPTS_DIR)
 
 OUTFITS_SPRITES_DIR = os.path.join(EXTRACTOR_DIR, "sprites", "outfits")
 
-# A camada base, sem addon, de um outfit de jogador. Ver bake_outfit.
+# A camada base, sem addon, de um outfit de jogador. Serve de duas coisas:
+# é o frame que `bake_outfit` empacota, e é a lista de posições
+# (4 direções x 9 fases) sobre a qual `bake_monster_appearance` empilha os
+# addons — as outras camadas têm o mesmo nome com `a0` trocado.
 BASE_LAYER_MARKER = "_base_a0_"
 OUTFITS_ATLAS_DIR = os.path.join(EXTRACTOR_DIR, "atlases", "outfits")
 
@@ -133,14 +137,34 @@ def _outfit_frame_list(outfit_id: int, data: Dict) -> List[Tuple[str, str]]:
 # BAKE
 # =========================
 
+def _appearance_layers(outfit_id: int, position_key: str, addons: int) -> List[Tuple[str, str]]:
+    """Os `(base, mask)` de cada camada ligada daquela posição, de baixo para cima.
+
+    Uma camada que não existe no disco é pulada em vez de derrubar o atlas: o
+    monstro fica sem aquele acessório, e não sem sprite nenhum.
+    """
+    layers = []
+    for addon in outfit_colors.enabled_addons(addons):
+        base_key = position_key.replace(BASE_LAYER_MARKER, f"_base_a{addon}_")
+        base_path = _resolve_frame_path(outfit_id, base_key)
+        mask_path = _resolve_frame_path(outfit_id, base_key.replace("_base_", "_mask_"))
+        if os.path.exists(base_path) and os.path.exists(mask_path):
+            layers.append((base_path, mask_path))
+    return layers
+
+
 def bake_monster_appearance(appearance: Dict) -> Optional[Dict]:
-    """Bakeia o atlas de criatura de **uma aparência** — outfit mais as quatro
-    cores do monstro —, recolorindo base pela máscara.
+    """Bakeia o atlas de criatura de **uma aparência** — outfit, as quatro
+    cores do monstro e os addons —, recolorindo base pela máscara.
 
     Um atlas por outfit não bastaria: 78 looktypes são usados por monstros de
     cores diferentes, e o 137 por quatro (Amazon, e mais três). O nome do
     arquivo é a chave da aparência, e é o mesmo nome que
     `build_phaser_map._outfit_atlas_ref` escreve no `respawn.json`.
+
+    O addon entra empilhado por cima da base, tingido pelas mesmas cores —
+    porque a máscara da camada de addon também pinta região. Sem isso os cinco
+    do culto de Carlin saíam com a chave prometendo addon e o pixel sem ele.
     """
     outfit_id = int(appearance["looktype"])
     data = _load_outfit_json(outfit_id)
@@ -150,17 +174,27 @@ def bake_monster_appearance(appearance: Dict) -> Optional[Dict]:
     frames = _outfit_frame_list(outfit_id, data)
     colors = outfit_colors.region_colors(appearance)
     key = outfit_colors.appearance_key(appearance)
+    addons = int(appearance.get("addons", 0))
 
     with tempfile.TemporaryDirectory(prefix=f"outfit-{key}-") as staging:
         tinted = []
-        for index, (frame_key, base_path) in enumerate(
-            [frame for frame in frames if BASE_LAYER_MARKER in frame[0]]
+        for index, position_key in enumerate(
+            [frame_key for frame_key, _ in frames if BASE_LAYER_MARKER in frame_key]
         ):
-            mask_path = base_path.replace("_base_", "_mask_")
-            if not os.path.exists(base_path) or not os.path.exists(mask_path):
+            layers = _appearance_layers(outfit_id, position_key, addons)
+            if not layers:
                 continue
-            with Image.open(base_path) as base, Image.open(mask_path) as mask:
-                painted = outfit_colors.tint_frame(base, mask, colors)
+            with contextlib.ExitStack() as open_layers:
+                painted = outfit_colors.compose_frame(
+                    [
+                        (
+                            open_layers.enter_context(Image.open(base_path)),
+                            open_layers.enter_context(Image.open(mask_path)),
+                        )
+                        for base_path, mask_path in layers
+                    ],
+                    colors,
+                )
             staged = os.path.join(staging, f"{key}_{index}.png")
             painted.save(staged)
             tinted.append((f"{outfit_id}_{index}", staged))
@@ -242,14 +276,14 @@ def monster_outfit_ids() -> Set[int]:
 
 
 def monster_appearances() -> List[Dict]:
-    """As aparências coloridas que algum monstro construído usa, sem repetir."""
+    """As aparências que precisam de atlas próprio (cor ou addon), sem repetir."""
     seen: Dict[str, Dict] = {}
     pattern = os.path.join(EXTRACTOR_DIR, "ready-maps", "*", "*", "monsters", "respawn.json")
     for path in glob.glob(pattern):
         with open(path, "r", encoding="utf-8") as handler:
             for monster in json.load(handler).get("monsterDefs", {}).values():
                 appearance = monster.get("appearance")
-                if appearance and outfit_colors.has_colors(appearance):
+                if appearance and outfit_colors.needs_appearance_atlas(appearance):
                     seen[outfit_colors.appearance_key(appearance)] = appearance
     return [seen[key] for key in sorted(seen)]
 
@@ -279,7 +313,7 @@ def main():
     if humanoids:
         print(f"  [OK] {len(humanoids)} de outfit de jogador, usados por monstro: {humanoids}")
     if colored:
-        print(f"  [OK] {colored} atlas por aparência (outfit + as cores do monstro)")
+        print(f"  [OK] {colored} atlas por aparência (outfit + cores e addons do monstro)")
     remaining = len(skipped) - len(humanoids)
     if remaining:
         print(f"  [skip] {remaining} outfits ignorados (sem JSON, ou de jogador sem monstro que os use)")

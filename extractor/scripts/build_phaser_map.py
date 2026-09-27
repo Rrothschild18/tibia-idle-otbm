@@ -799,11 +799,11 @@ def build_monster_respawn(map_bounds: Dict) -> Optional[Dict]:
 
             appearance = monster_appearances.get(name_key)
             # Outfit de jogador usado por monstro tem atlas por **aparência**,
-            # não por outfit: o mesmo looktype serve bichos de cores
+            # não por outfit: o mesmo looktype serve bichos de cores e addons
             # diferentes. O nome bate com o que bake_outfit_atlas escreve.
-            colored = (
+            own_atlas = (
                 appearance
-                and outfit_colors.has_colors(appearance)
+                and outfit_colors.needs_appearance_atlas(appearance)
                 and "axes" in (outfit_data or {})
             )
 
@@ -812,7 +812,7 @@ def build_monster_respawn(map_bounds: Dict) -> Optional[Dict]:
                 "outfitId": outfit_id,
                 "atlas": (
                     _outfit_atlas_ref(outfit_colors.appearance_key(appearance))
-                    if colored
+                    if own_atlas
                     else _outfit_atlas_ref(outfit_id)
                 ),
                 **({"appearance": appearance} if appearance else {}),

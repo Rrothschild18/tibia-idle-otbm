@@ -4,6 +4,7 @@ import os
 from PIL import Image
 
 import bake_outfit_atlas as boa
+import outfit_colors
 
 
 def _make_png(path, size, color):
@@ -248,3 +249,106 @@ def test_bake_outfit_is_deterministic_across_runs(tmp_path, monkeypatch):
 
     assert first_png == second_png
     assert first_json == second_json
+
+
+# ---------------------------------------------------------------------------
+# bake_monster_appearance (humanoide: outfit de jogador usado por monstro)
+# ---------------------------------------------------------------------------
+
+def _write_humanoid_outfit(sprites_dir, outfit_id, addon_pixel=(0, 0, 0, 0)):
+    """Um outfit de jogador com uma posição só: base inteira em região de
+    corpo, addon 1 cobrindo metade em região de pernas."""
+    outfit_dir = os.path.join(sprites_dir, str(outfit_id))
+    os.makedirs(outfit_dir, exist_ok=True)
+
+    def write(name, pixels):
+        image = Image.new("RGBA", (2, 1), (0, 0, 0, 0))
+        image.putdata(pixels)
+        image.save(os.path.join(outfit_dir, f"{name}.png"))
+
+    body = (255, 0, 0, 255)
+    legs = (0, 255, 0, 255)
+    write(f"{outfit_id}_base_a0_north_0", [(200, 200, 200, 255)] * 2)
+    write(f"{outfit_id}_mask_a0_north_0", [body, body])
+    write(f"{outfit_id}_base_a1_north_0", [(0, 0, 0, 0), addon_pixel])
+    write(f"{outfit_id}_mask_a1_north_0", [(0, 0, 0, 0), legs])
+
+    data = {
+        "id": outfit_id,
+        "spriteId": [
+            f"{outfit_id}_base_a0_north_0",
+            f"{outfit_id}_mask_a0_north_0",
+            f"{outfit_id}_base_a1_north_0",
+            f"{outfit_id}_mask_a1_north_0",
+        ],
+        "axes": {"directions": 4, "phases": 9, "layers": 2, "addons": 3, "mounts": 1},
+    }
+    with open(os.path.join(outfit_dir, f"{outfit_id}.json"), "w", encoding="utf-8") as f:
+        json.dump(data, f)
+
+
+def _bake_appearance(tmp_path, monkeypatch, appearance, addon_pixel):
+    sprites_dir = tmp_path / "sprites_outfits"
+    atlas_dir = tmp_path / "atlases_outfits"
+    sprites_dir.mkdir()
+    monkeypatch.setattr(boa, "OUTFITS_SPRITES_DIR", str(sprites_dir))
+    monkeypatch.setattr(boa, "OUTFITS_ATLAS_DIR", str(atlas_dir))
+    _write_humanoid_outfit(str(sprites_dir), appearance["looktype"], addon_pixel)
+
+    atlas = boa.bake_monster_appearance(appearance)
+    image = Image.open(atlas_dir / f"{atlas['meta']['image']}").convert("RGBA")
+    frame = list(atlas["frames"].values())[0]["frame"]
+
+    return atlas, [
+        image.getpixel((frame["x"] + x, frame["y"])) for x in range(frame["w"])
+    ]
+
+
+def test_bake_monster_appearance_stacks_the_enabled_addon(tmp_path, monkeypatch):
+    # O Cult Believer e os outros quatro do culto de Carlin têm lookaddons=1:
+    # a chave do arquivo já dizia `-1`, mas o pixel saía sem o acessório.
+    appearance = {
+        "looktype": 132, "head": 0, "body": 94, "legs": 77, "feet": 0, "addons": 1,
+    }
+
+    atlas, pixels = _bake_appearance(tmp_path, monkeypatch, appearance, (100, 100, 100, 255))
+
+    assert atlas["meta"]["image"] == "132-0-94-77-0-1.png"
+    # O segundo pixel é o do addon, tingido com a cor de **pernas** do monstro
+    # (a máscara do addon também pinta região).
+    legs = outfit_colors.outfit_color(77)
+    assert pixels[0] != pixels[1]
+    assert pixels[1] == (
+        round(100 * legs[0] / 255),
+        round(100 * legs[1] / 255),
+        round(100 * legs[2] / 255),
+        255,
+    )
+
+
+def test_bake_monster_appearance_without_addons_keeps_only_the_base(tmp_path, monkeypatch):
+    appearance = {
+        "looktype": 132, "head": 0, "body": 94, "legs": 77, "feet": 0, "addons": 0,
+    }
+
+    atlas, pixels = _bake_appearance(tmp_path, monkeypatch, appearance, (100, 100, 100, 255))
+
+    assert atlas["meta"]["image"] == "132-0-94-77-0-0.png"
+    assert pixels[0] == pixels[1]
+
+
+def test_bake_monster_appearance_survives_a_missing_addon_layer(tmp_path, monkeypatch):
+    sprites_dir = tmp_path / "sprites_outfits"
+    atlas_dir = tmp_path / "atlases_outfits"
+    sprites_dir.mkdir()
+    monkeypatch.setattr(boa, "OUTFITS_SPRITES_DIR", str(sprites_dir))
+    monkeypatch.setattr(boa, "OUTFITS_ATLAS_DIR", str(atlas_dir))
+    _write_humanoid_outfit(str(sprites_dir), 132)
+    os.remove(sprites_dir / "132" / "132_base_a1_north_0.png")
+
+    # Sem a camada o monstro fica sem o acessório — nunca sem sprite.
+    atlas = boa.bake_monster_appearance(
+        {"looktype": 132, "head": 0, "body": 94, "legs": 77, "feet": 0, "addons": 1}
+    )
+
+    assert list(atlas["frames"].keys()) == ["132_0"]

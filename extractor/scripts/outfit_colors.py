@@ -13,7 +13,7 @@ num lugar só.
 """
 
 import math
-from typing import Dict, Tuple
+from typing import Dict, Iterable, List, Tuple
 
 from PIL import Image
 
@@ -119,6 +119,36 @@ def tint_frame(base: Image.Image, mask: Image.Image, colors: Dict[str, Rgb]) -> 
     return out
 
 
+def enabled_addons(addons: int) -> List[int]:
+    """`lookaddons` é bitmask: 1 e 2 são camadas desenhadas **sobre** a base.
+
+    A camada de addon é esparsa — no frame `south_0` do Cult Believer a base
+    tem ~600 pixels opacos e o addon 1 tem 195 —, então ela soma, não
+    substitui. Mesmo `enabledAddons` de `outfit-composition.ts`.
+    """
+    layers = [0]
+    if addons & 1:
+        layers.append(1)
+    if addons & 2:
+        layers.append(2)
+    return layers
+
+
+def compose_frame(
+    layers: Iterable[Tuple[Image.Image, Image.Image]], colors: Dict[str, Rgb]
+) -> Image.Image:
+    """Cada camada `(base, mask)` tingida e empilhada de baixo para cima."""
+    out = None
+    for base, mask in layers:
+        painted = tint_frame(base, mask, colors)
+        out = painted if out is None else Image.alpha_composite(out, painted)
+
+    if out is None:
+        raise ValueError("nada a empilhar: a lista de camadas está vazia")
+
+    return out
+
+
 def appearance_key(appearance: Dict) -> str:
     """`137:113:120:95:115:0` -> `137-113-120-95-115-0`, o nome do atlas.
 
@@ -135,3 +165,13 @@ def appearance_key(appearance: Dict) -> str:
 
 def has_colors(appearance: Dict) -> bool:
     return any(int(appearance.get(field, 0)) for field in ("head", "body", "legs", "feet"))
+
+
+def needs_appearance_atlas(appearance: Dict) -> bool:
+    """Um atlas por looktype só serve para quem não tem cor **nem** addon.
+
+    O atlas por looktype não consegue guardar addon: ele é de um outfit, e o
+    addon é do monstro. Sem esta segunda metade um humanoide sem cor e com
+    `lookaddons` cairia no atlas por looktype e perderia o acessório calado.
+    """
+    return has_colors(appearance) or bool(int(appearance.get("addons", 0)))
