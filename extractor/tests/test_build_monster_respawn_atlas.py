@@ -167,3 +167,76 @@ def test_monster_def_omits_race_for_monster_without_one(tmp_path, monkeypatch):
     result = bpm.build_monster_respawn({"minX": 0, "minY": 0})
 
     assert "race" not in result["monsterDefs"]["21"]
+
+
+# ---------------------------------------------------------------------------
+# _build_outfit_anims — outfit de jogador usado por monstro
+# ---------------------------------------------------------------------------
+
+PLAYER_OUTFIT = {
+    "id": 137,
+    "axes": {"directions": 4, "phases": 9, "layers": 2, "addons": 3, "mounts": 1},
+    "spriteId": [
+        f"137_{layer}_a{addon}_{direction}_{phase}"
+        for phase in range(9)
+        for direction in ("north", "east", "south", "west")
+        for addon in range(3)
+        for layer in ("base", "mask")
+    ],
+}
+
+
+def test_outfit_de_jogador_anima_nas_quatro_direcoes():
+    # Lido como criatura, o bloco único de 216 frames virava uma animação numa
+    # direção só — a Amazon ficava parada, sempre virada para o mesmo lado.
+    anims = bpm._build_outfit_anims(137, PLAYER_OUTFIT)
+
+    assert sorted(anims["idle"]) == ["east", "north", "south", "west"]
+    assert sorted(anims["moving"]) == ["east", "north", "south", "west"]
+
+
+def test_outfit_de_jogador_usa_os_frames_do_atlas_bakeado():
+    # `137_base_a0_north_0` não existe no atlas de aparência: lá os frames são
+    # `137_<índice>`, com índice = fase * 4 + direção.
+    anims = bpm._build_outfit_anims(137, PLAYER_OUTFIT)
+
+    assert anims["idle"] == {
+        "north": "137_0",
+        "east": "137_1",
+        "south": "137_2",
+        "west": "137_3",
+    }
+    assert anims["moving"]["south"]["frames"][:3] == ["137_2", "137_6", "137_10"]
+
+
+def test_outfit_de_jogador_tem_uma_fase_por_quadro_do_passo():
+    anims = bpm._build_outfit_anims(137, PLAYER_OUTFIT)
+
+    for direction in ("north", "east", "south", "west"):
+        assert len(anims["moving"][direction]["frames"]) == 9
+        assert anims["moving"][direction]["loopType"] == "infinite"
+        assert anims["moving"][direction]["frameRate"] == bpm.PLAYER_OUTFIT_WALK_FPS
+
+
+def test_outfit_de_criatura_segue_pelo_caminho_de_sempre():
+    creature = {
+        "id": 223,
+        "frameGroups": [
+            {
+                "frameGroup": "idle",
+                "spriteId": ["223_0", "223_1", "223_2", "223_3"],
+                "spriteInfo": {"patternWidth": 4},
+            },
+            {
+                "frameGroup": "moving",
+                "spriteId": ["223_4", "223_5", "223_6", "223_7"],
+                "spriteInfo": {"patternWidth": 4},
+            },
+        ],
+    }
+
+    anims = bpm._build_outfit_anims(223, creature)
+
+    # Ordem de criatura (south primeiro), e idle de um frame vira string.
+    assert anims["idle"]["south"] == "223_0"
+    assert anims["moving"]["south"]["frames"] == ["223_4"]

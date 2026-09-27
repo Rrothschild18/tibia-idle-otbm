@@ -654,6 +654,54 @@ def _animation_timing(sprite_info: Dict) -> Tuple[float, str]:
     return frame_rate, loop_type
 
 
+# A ordem em que `extract_sprites.py` escreve os frames de um outfit de
+# jogador: fase por fase, e dentro de cada fase estas quatro direções. É a
+# mesma ordem que `bake_outfit_atlas` empacota no atlas de aparência, onde o
+# frame de índice `fase * 4 + direção` vira `<outfit>_<índice>`.
+_PLAYER_OUTFIT_DIRECTIONS = ["north", "east", "south", "west"]
+
+# Nove fases num passo de monstro (600 ms) dão 15 fps. Um outfit de jogador não
+# traz bloco de animação como o de criatura: no cliente quem dita o passo é a
+# velocidade de quem anda, não o sprite.
+PLAYER_OUTFIT_WALK_FPS = 15
+
+
+def _player_outfit_anims(outfit_id: int, data: Dict) -> Dict:
+    """idle/moving de um outfit de **jogador** usado por monstro.
+
+    Um outfit de criatura vem partido em dois frame groups (idle e moving); um
+    de jogador vem num bloco só, com eixos — 4 direções x 9 fases x 2 camadas x
+    3 addons. Lido como criatura, ele virava uma animação de 216 frames numa
+    direção só, com nomes (`137_base_a0_north_0`) que nem existem no atlas
+    bakeado: no jogo a Amazon ficava num quadro parado, sempre virada para o
+    mesmo lado.
+
+    A fase 0 é o quadro parado e as nove são o ciclo do passo — a mesma
+    convenção do `AnimatedOutfit` do front, que desenha `frames[0]` parado e
+    percorre o array inteiro andando.
+    """
+    axes = data.get("axes") or {}
+    phases = max(int(axes.get("phases", 1)), 1)
+    directions = min(int(axes.get("directions", 4)), len(_PLAYER_OUTFIT_DIRECTIONS))
+
+    def frame(direction_index: int, phase: int) -> str:
+        return f"{outfit_id}_{phase * directions + direction_index}"
+
+    return {
+        "idle": {
+            _PLAYER_OUTFIT_DIRECTIONS[d]: frame(d, 0) for d in range(directions)
+        },
+        "moving": {
+            _PLAYER_OUTFIT_DIRECTIONS[d]: {
+                "frames": [frame(d, phase) for phase in range(phases)],
+                "frameRate": PLAYER_OUTFIT_WALK_FPS,
+                "loopType": "infinite",
+            }
+            for d in range(directions)
+        },
+    }
+
+
 def _build_outfit_anims(outfit_id: int, data: Dict) -> Dict:
     """Build idle/moving animation data per direction from outfit JSON.
 
@@ -672,6 +720,9 @@ def _build_outfit_anims(outfit_id: int, data: Dict) -> Dict:
     like `moving`'s: `{frames, frameRate, loopType}`. See PHASER_MONSTERS.md
     for how the Phaser side should tell the two apart.
     """
+    if "axes" in data:
+        return _player_outfit_anims(outfit_id, data)
+
     result: Dict = {}
     frame_groups = data.get("frameGroups")
 
