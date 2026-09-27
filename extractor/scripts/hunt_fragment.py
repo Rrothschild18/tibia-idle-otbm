@@ -70,6 +70,30 @@ def build_loot_entry(monsters_entry: Dict, map_id: str) -> Dict:
     return {"id": map_id, "mapId": map_id, "drops": drops}
 
 
+def _preview_atlas(respawn: Dict, preview_spawn: Dict) -> Dict:
+    """`icon`/`atlas` do monstro do card — o atlas que o próprio `respawn.json`
+    aponta, e não `outfits/<outfitId>`.
+
+    Monstro humanoide tem atlas por aparência (outfit + as quatro cores), e
+    dois bichos podem dividir o mesmo outfit com cores diferentes. Montar o
+    caminho pelo outfitId aqui mostraria a Amazon com a paleta padrão da
+    Hunter, e o Vile Grandmaster com a de outro.
+    """
+    outfit_id = preview_spawn["outfitId"]
+    definition = (respawn.get("monsterDefs") or {}).get(str(outfit_id)) or {}
+    atlas = definition.get("atlas") or {}
+    image = atlas.get("image")
+    document = atlas.get("json")
+
+    if image and document:
+        return {"icon": f"/{image}", "atlas": f"/{document}"}
+
+    return {
+        "icon": f"/assets/outfits/{outfit_id}.png",
+        "atlas": f"/assets/outfits/{outfit_id}.json",
+    }
+
+
 def build_hunts_entry(
     respawn: Dict, map_name: str, map_id: str, curated_name: Optional[str] = None
 ) -> Dict:
@@ -107,8 +131,7 @@ def build_hunts_entry(
         "monsterPreview": (
             {
                 "name": preview_spawn["name"],
-                "icon": f"/assets/outfits/{preview_spawn['outfitId']}.png",
-                "atlas": f"/assets/outfits/{preview_spawn['outfitId']}.json",
+                **_preview_atlas(respawn, preview_spawn),
             }
             if preview_spawn
             else None

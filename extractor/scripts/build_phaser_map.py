@@ -10,6 +10,7 @@ from PIL import Image
 
 import appearance_derivation
 import content_export
+import outfit_colors
 import map_dirs
 import map_v6
 import update_canary_data
@@ -553,6 +554,37 @@ def _load_monster_lookup() -> Dict[str, int]:
     return lookup
 
 
+def _load_monster_appearances() -> Dict[str, Dict[str, int]]:
+    """`{nome minúsculo: {looktype, head, body, legs, feet, addons}}`.
+
+    Monstro humanoide usa outfit de jogador, e outfit de jogador é desenho +
+    máscara de recolorização: sem as quatro cores ele sai na paleta padrão do
+    outfit, não na do bicho (a Amazon vira a Hunter). As cores estão no mesmo
+    `otservbr-monster.xml` de onde o looktype já vinha — só não eram lidas.
+
+    O formato é o do `Appearance` do front (`models/character`), pra compor com
+    o `OutfitTextureFactory` sem tradução no meio.
+    """
+    if not os.path.exists(OTSERVBR_MONSTER_XML):
+        return {}
+    tree = ET.parse(OTSERVBR_MONSTER_XML)
+    appearances: Dict[str, Dict[str, int]] = {}
+    for monster in tree.getroot().iter("monster"):
+        name = monster.get("name")
+        looktype = monster.get("looktype")
+        if not name or not looktype:
+            continue
+        appearances[name.lower()] = {
+            "looktype": int(looktype),
+            "head": int(monster.get("lookhead", 0)),
+            "body": int(monster.get("lookbody", 0)),
+            "legs": int(monster.get("looklegs", 0)),
+            "feet": int(monster.get("lookfeet", 0)),
+            "addons": int(monster.get("lookaddons", 0)),
+        }
+    return appearances
+
+
 def _load_monster_loot_index() -> Dict[str, Dict]:
     """Parse monster-loot.json -> {monster name: {"loot": [...], "issues": [...], "corpse": {...}, "race": "blood"}}."""
     if not os.path.exists(MONSTER_LOOT_INDEX_PATH):
@@ -687,23 +719,26 @@ def _build_outfit_anims(outfit_id: int, data: Dict) -> Dict:
     return result
 
 
-def _outfit_atlas_ref(outfit_id: int) -> Optional[Dict]:
-    """Reference to the shared, globally-baked atlas for this outfit.
+def _outfit_atlas_ref(name) -> Optional[Dict]:
+    """Referência ao atlas global — `<outfit>` ou `<aparência>` (ver
+    outfit_colors.appearance_key), conforme o monstro precise das cores.
 
-    Atlases are baked once by bake_outfit_atlas.py, independent of any
-    specific map. Returns None (with a warning) if that step hasn't run yet
-    for this outfit — the map build doesn't need to fail on it.
+    Atlases são bakeados uma vez por bake_outfit_atlas.py, independentes de
+    mapa. Devolve None (com aviso) se aquele passo ainda não rodou — e o atlas
+    por aparência **só existe depois de um build**, porque é do `respawn.json`
+    que o baker descobre quais aparências existem. A ordem é a mesma do atlas
+    de corpo: build, bake, build.
     """
-    png_path = os.path.join(OUTFITS_ATLAS_DIR, f"{outfit_id}.png")
-    json_path = os.path.join(OUTFITS_ATLAS_DIR, f"{outfit_id}.json")
+    png_path = os.path.join(OUTFITS_ATLAS_DIR, f"{name}.png")
+    json_path = os.path.join(OUTFITS_ATLAS_DIR, f"{name}.json")
     if not (os.path.exists(png_path) and os.path.exists(json_path)):
-        print(f"[WARN] Atlas do outfit {outfit_id} não encontrado em {OUTFITS_ATLAS_DIR} "
+        print(f"[WARN] Atlas {name} não encontrado em {OUTFITS_ATLAS_DIR} "
               f"— rode bake_outfit_atlas.py")
         return None
 
     return {
-        "image": posixpath.join(OUTFITS_ATLAS_ASSETS_ROOT, f"{outfit_id}.png"),
-        "json": posixpath.join(OUTFITS_ATLAS_ASSETS_ROOT, f"{outfit_id}.json"),
+        "image": posixpath.join(OUTFITS_ATLAS_ASSETS_ROOT, f"{name}.png"),
+        "json": posixpath.join(OUTFITS_ATLAS_ASSETS_ROOT, f"{name}.json"),
     }
 
 
@@ -714,6 +749,7 @@ def build_monster_respawn(map_bounds: Dict) -> Optional[Dict]:
     Returns None if no spawn XML is found or no spawns exist.
     """
     monster_lookup = _load_monster_lookup()
+    monster_appearances = _load_monster_appearances()
     loot_index = _load_monster_loot_index()
     spawns_raw = _parse_spawn_xml()
 
@@ -761,10 +797,25 @@ def build_monster_respawn(map_bounds: Dict) -> Optional[Dict]:
             corpse = loot_entry.get("corpse") if loot_entry else None
             race = loot_entry.get("race") if loot_entry else None
 
+            appearance = monster_appearances.get(name_key)
+            # Outfit de jogador usado por monstro tem atlas por **aparência**,
+            # não por outfit: o mesmo looktype serve bichos de cores
+            # diferentes. O nome bate com o que bake_outfit_atlas escreve.
+            colored = (
+                appearance
+                and outfit_colors.has_colors(appearance)
+                and "axes" in (outfit_data or {})
+            )
+
             monster_defs[outfit_id_str] = {
                 "name": name,
                 "outfitId": outfit_id,
-                "atlas": _outfit_atlas_ref(outfit_id),
+                "atlas": (
+                    _outfit_atlas_ref(outfit_colors.appearance_key(appearance))
+                    if colored
+                    else _outfit_atlas_ref(outfit_id)
+                ),
+                **({"appearance": appearance} if appearance else {}),
                 "loot": loot_entry["loot"] if loot_entry else [],
                 **({"corpse": corpse} if corpse else {}),
                 **({"race": race} if race else {}),

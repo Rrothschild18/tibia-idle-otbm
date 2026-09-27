@@ -1,9 +1,12 @@
 import glob
 import json
 import os
+import tempfile
 from typing import Dict, List, Optional, Set, Tuple
 
 from PIL import Image
+
+import outfit_colors
 
 # =========================
 # CONFIG
@@ -130,6 +133,52 @@ def _outfit_frame_list(outfit_id: int, data: Dict) -> List[Tuple[str, str]]:
 # BAKE
 # =========================
 
+def bake_monster_appearance(appearance: Dict) -> Optional[Dict]:
+    """Bakeia o atlas de criatura de **uma aparência** — outfit mais as quatro
+    cores do monstro —, recolorindo base pela máscara.
+
+    Um atlas por outfit não bastaria: 78 looktypes são usados por monstros de
+    cores diferentes, e o 137 por quatro (Amazon, e mais três). O nome do
+    arquivo é a chave da aparência, e é o mesmo nome que
+    `build_phaser_map._outfit_atlas_ref` escreve no `respawn.json`.
+    """
+    outfit_id = int(appearance["looktype"])
+    data = _load_outfit_json(outfit_id)
+    if data is None or "axes" not in data:
+        return None
+
+    frames = _outfit_frame_list(outfit_id, data)
+    colors = outfit_colors.region_colors(appearance)
+    key = outfit_colors.appearance_key(appearance)
+
+    with tempfile.TemporaryDirectory(prefix=f"outfit-{key}-") as staging:
+        tinted = []
+        for index, (frame_key, base_path) in enumerate(
+            [frame for frame in frames if BASE_LAYER_MARKER in frame[0]]
+        ):
+            mask_path = base_path.replace("_base_", "_mask_")
+            if not os.path.exists(base_path) or not os.path.exists(mask_path):
+                continue
+            with Image.open(base_path) as base, Image.open(mask_path) as mask:
+                painted = outfit_colors.tint_frame(base, mask, colors)
+            staged = os.path.join(staging, f"{key}_{index}.png")
+            painted.save(staged)
+            tinted.append((f"{outfit_id}_{index}", staged))
+
+        if not tinted:
+            return None
+
+        canvas, frame_map = pack_outfit_frames(tinted)
+
+    image_name = f"{key}.png"
+    atlas = build_atlas_json(image_name, canvas.size, frame_map)
+    os.makedirs(OUTFITS_ATLAS_DIR, exist_ok=True)
+    canvas.save(os.path.join(OUTFITS_ATLAS_DIR, image_name))
+    with open(os.path.join(OUTFITS_ATLAS_DIR, f"{key}.json"), "w", encoding="utf-8") as handler:
+        json.dump(atlas, handler, indent=2, ensure_ascii=False)
+    return atlas
+
+
 def bake_outfit(outfit_id: int, as_monster: bool = False) -> Optional[Dict]:
     """Bake one outfit's atlas, writing <id>.png + <id>.json to
     OUTFITS_ATLAS_DIR. Returns the atlas JSON dict, or None if the outfit
@@ -192,6 +241,19 @@ def monster_outfit_ids() -> Set[int]:
     return ids
 
 
+def monster_appearances() -> List[Dict]:
+    """As aparências coloridas que algum monstro construído usa, sem repetir."""
+    seen: Dict[str, Dict] = {}
+    pattern = os.path.join(EXTRACTOR_DIR, "ready-maps", "*", "*", "monsters", "respawn.json")
+    for path in glob.glob(pattern):
+        with open(path, "r", encoding="utf-8") as handler:
+            for monster in json.load(handler).get("monsterDefs", {}).values():
+                appearance = monster.get("appearance")
+                if appearance and outfit_colors.has_colors(appearance):
+                    seen[outfit_colors.appearance_key(appearance)] = appearance
+    return [seen[key] for key in sorted(seen)]
+
+
 def main():
     ids = _list_outfit_ids()
     baked = 0
@@ -208,9 +270,16 @@ def main():
         if bake_outfit(outfit_id, as_monster=True) is not None:
             baked += 1
 
+    colored = 0
+    for appearance in monster_appearances():
+        if bake_monster_appearance(appearance) is not None:
+            colored += 1
+
     print(f"[OK] outfits: {baked} atlases gerados em {OUTFITS_ATLAS_DIR}")
     if humanoids:
         print(f"  [OK] {len(humanoids)} de outfit de jogador, usados por monstro: {humanoids}")
+    if colored:
+        print(f"  [OK] {colored} atlas por aparência (outfit + as cores do monstro)")
     remaining = len(skipped) - len(humanoids)
     if remaining:
         print(f"  [skip] {remaining} outfits ignorados (sem JSON, ou de jogador sem monstro que os use)")
