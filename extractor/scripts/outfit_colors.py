@@ -45,8 +45,13 @@ Rgb = Tuple[int, int, int]
 
 def _hue_to_rgb(hue: float, saturation: float, intensity: float):
     low = intensity * (1 - saturation)
-    sector = int(hue * 6)
-    offset = hue * 6 - sector
+    # `% 6` e não um clamp em 5: o último passo de matiz é `18 / 18 = 1`, que é
+    # a volta inteira do círculo — o mesmo ponto que 0, vermelho. Preso no setor
+    # 5 ele saía magenta, e era por isso que as sete cores de matiz 18 (18, 37,
+    # 56, 75, 94, 113 e 132) não tinham vermelho nenhum na paleta: o 94, o
+    # vermelho puro do Tibia, vinha (255, 0, 255).
+    sector = int(hue * 6) % 6
+    offset = hue * 6 - int(hue * 6)
     rising = low + (intensity - low) * offset
     falling = intensity - (intensity - low) * offset
 
@@ -57,7 +62,7 @@ def _hue_to_rgb(hue: float, saturation: float, intensity: float):
         (low, falling, intensity),
         (rising, low, intensity),
         (intensity, low, falling),
-    ][min(sector, 5)]
+    ][sector]
 
 
 def outfit_color(index: int) -> Rgb:

@@ -87,3 +87,24 @@ def test_appearance_key_carries_the_addon():
         )
         == "132-98-96-39-38-1"
     )
+
+
+# ---------------------------------------------------------------------------
+# outfit_color — a volta do círculo de matiz
+# ---------------------------------------------------------------------------
+
+def test_outfit_color_fecha_o_circulo_no_vermelho():
+    # O último passo de matiz é 18/18 = 1, a volta inteira: o mesmo ponto que
+    # 0. Preso no setor 5 ele saía magenta, e a paleta ficava sem vermelho
+    # nenhum — o 94 é o vermelho puro do Tibia, e o 113 (cabelo da Amazon) o
+    # vermelho escuro.
+    assert outfit_colors.outfit_color(94) == (255, 0, 0)
+    assert outfit_colors.outfit_color(113) == (191, 0, 0)
+    assert outfit_colors.outfit_color(132) == (128, 0, 0)
+    assert outfit_colors.outfit_color(18) == (255, 191, 191)
+
+
+def test_outfit_color_da_coluna_cinza_e_das_bordas():
+    assert outfit_colors.outfit_color(0) == (255, 255, 255)
+    assert outfit_colors.outfit_color(132 + 1) == (255, 255, 255)
+    assert outfit_colors.outfit_color(-1) == (255, 255, 255)
