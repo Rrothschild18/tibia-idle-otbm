@@ -50,6 +50,26 @@ def world_paths(canary_dir: str, world_dir=None, prefix=WORLD_PREFIX) -> dict:
     }
 
 
+def square_bounds(columns, margin: int):
+    """A caixa quadrada que cobre as máscaras, com folga. -> `(min_x, min_y, max_x, max_y)`.
+
+    O recorte de tiles é o quadrado; o de spawn e NPC continua sendo a máscara.
+    A máscara sozinha desenha um minimapa com buraco: onde ela acaba o mapa
+    acaba, sem mar e sem costa, e o retrato quadrado do jogo mostra um bloco
+    preto que termina do nada. O quadrado dá contexto sem deixar entrar
+    conteúdo de fora — bicho e NPC seguem filtrados pela máscara.
+    """
+    xs = [x for x, _ in columns]
+    ys = [y for _, y in columns]
+    width = max(xs) - min(xs) + 1
+    height = max(ys) - min(ys) + 1
+    side = max(width, height) + 2 * margin
+    center_x = (min(xs) + max(xs)) // 2
+    center_y = (min(ys) + max(ys)) // 2
+    half = side // 2
+    return (center_x - half, center_y - half, center_x + half, center_y + half)
+
+
 def resolve_subareas(document, area, selected=None) -> list:
     masks = map_regions.masks_by_subarea(document)
     if selected is None:
@@ -139,6 +159,18 @@ def main():
     parser.add_argument("--canary-dir", help="checkout do canary (fonte do mapa-mundo)")
     parser.add_argument("--client-dir", help="checkout do cliente Tibia extraído")
     parser.add_argument("--world-dir", help="pasta do mapa-mundo, se não for a do canary")
+    parser.add_argument(
+        "--shape",
+        choices=("square", "mask"),
+        default="square",
+        help="forma do recorte de tiles: quadrado com folga (padrão) ou a máscara exata",
+    )
+    parser.add_argument(
+        "--margin",
+        type=int,
+        default=16,
+        help="folga em tiles ao redor da máscara, no modo quadrado",
+    )
     parser.add_argument("--force", action="store_true", help="refaz um recorte já existente")
     args = parser.parse_args()
 
@@ -181,15 +213,25 @@ def main():
     print(f"[..] {os.path.basename(world['otbm'])}: {len(data) / 1e6:.0f} MB lidos")
 
     header = otbm_stream.map_header(data)
-    bounds = (
-        min(x for x, _ in columns),
-        min(y for _, y in columns),
-        max(x for x, _ in columns),
-        max(y for _, y in columns),
-    )
+    if args.shape == "square":
+        bounds = square_bounds(columns, args.margin)
+        keep_column = lambda x, y: bounds[0] <= x <= bounds[2] and bounds[1] <= y <= bounds[3]
+        print(
+            f"[OK] recorte quadrado de {bounds[2] - bounds[0] + 1} tiles de lado "
+            f"(máscara + {args.margin} de folga)"
+        )
+    else:
+        bounds = (
+            min(x for x, _ in columns),
+            min(y for _, y in columns),
+            max(x for x, _ in columns),
+            max(y for _, y in columns),
+        )
+        keep_column = lambda x, y: (x, y) in columns
+
     areas = otbm_stream.crop_tiles(
         data,
-        lambda x, y: (x, y) in columns,
+        keep_column,
         bounds=bounds,
         progress=lambda scanned, kept: print(
             f"     {scanned:,} áreas varridas, {kept:,} tiles mantidos", flush=True
@@ -238,6 +280,8 @@ def main():
             "file": os.path.basename(world["otbm"]),
             "bytes": len(data),
         },
+        "shape": args.shape,
+        "bounds": {"minX": bounds[0], "minY": bounds[1], "maxX": bounds[2], "maxY": bounds[3]},
         "columns": len(columns),
         "tiles": written,
         "tileAreas": len(areas),

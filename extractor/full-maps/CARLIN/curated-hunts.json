@@ -33,12 +33,12 @@
       },
       "subareaId": 38,
       "entrance": {
-        "x": 32235,
-        "y": 31841,
-        "z": 10
+        "x": 32234,
+        "y": 31865,
+        "z": 11
       },
-      "walkTilesFromTemple": null,
-      "tiles": 5017,
+      "walkTilesFromTemple": 280,
+      "tiles": 6635,
       "spawns": 14
     },
     {
@@ -82,7 +82,7 @@
         "z": 7
       },
       "walkTilesFromTemple": 141,
-      "tiles": 2210,
+      "tiles": 2895,
       "spawns": 20
     },
     {
@@ -118,7 +118,7 @@
         "z": 7
       },
       "walkTilesFromTemple": 204,
-      "tiles": 1100,
+      "tiles": 1757,
       "spawns": 9
     },
     {
@@ -154,7 +154,7 @@
         "z": 8
       },
       "walkTilesFromTemple": 195,
-      "tiles": 5860,
+      "tiles": 8379,
       "spawns": 33
     },
     {
@@ -185,12 +185,12 @@
       },
       "subareaId": 38,
       "entrance": {
-        "x": 32221,
+        "x": 32228,
         "y": 31835,
         "z": 11
       },
-      "walkTilesFromTemple": null,
-      "tiles": 7072,
+      "walkTilesFromTemple": 315,
+      "tiles": 7182,
       "spawns": 21
     },
     {
@@ -230,7 +230,7 @@
         "z": 7
       },
       "walkTilesFromTemple": 122,
-      "tiles": 23601,
+      "tiles": 24033,
       "spawns": 23
     },
     {
@@ -263,7 +263,7 @@
         "z": 7
       },
       "walkTilesFromTemple": 141,
-      "tiles": 1011,
+      "tiles": 1344,
       "spawns": 5
     },
     {
@@ -299,7 +299,7 @@
         "z": 8
       },
       "walkTilesFromTemple": 132,
-      "tiles": 8098,
+      "tiles": 8141,
       "spawns": 182
     },
     {
@@ -338,7 +338,7 @@
         "z": 8
       },
       "walkTilesFromTemple": 132,
-      "tiles": 12215,
+      "tiles": 12292,
       "spawns": 267
     },
     {
@@ -377,7 +377,7 @@
         "z": 7
       },
       "walkTilesFromTemple": 160,
-      "tiles": 5184,
+      "tiles": 5244,
       "spawns": 11
     }
   ]

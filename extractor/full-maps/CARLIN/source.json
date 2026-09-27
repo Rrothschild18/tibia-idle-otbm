@@ -6,53 +6,40 @@
   },
   "subareas": [
     {
-      "id": 280,
-      "name": "Vega"
-    },
-    {
-      "id": 39,
-      "name": "Folda"
-    },
-    {
-      "id": 456,
-      "name": "Carlin"
+      "id": 38,
+      "name": "Ghostlands"
     },
     {
       "id": 40,
       "name": "Fields of Glory"
     },
     {
-      "id": 271,
-      "name": "Carlin City"
-    },
-    {
-      "id": 38,
-      "name": "Ghostlands"
-    },
-    {
       "id": 43,
       "name": "Carlin Surroundings"
     },
     {
-      "id": 279,
-      "name": "Ice Islands"
+      "id": 271,
+      "name": "Carlin City"
     },
     {
-      "id": 281,
-      "name": "Senja"
-    },
-    {
-      "id": 288,
-      "name": "Isle of the Kings"
+      "id": 456,
+      "name": "Carlin"
     }
   ],
   "world": {
     "file": "otservbr.otbm",
     "bytes": 184776037
   },
-  "columns": 80760,
-  "tiles": 382532,
-  "tileAreas": 27287,
+  "shape": "square",
+  "bounds": {
+    "minX": 32114,
+    "minY": 31502,
+    "maxX": 32556,
+    "maxY": 31944
+  },
+  "columns": 62674,
+  "tiles": 913020,
+  "tileAreas": 59452,
   "towns": [
     {
       "id": 6,
@@ -62,9 +49,9 @@
       "z": 7
     }
   ],
-  "monsterGroups": 804,
-  "monsterEntries": 1334,
-  "npcGroups": 59,
-  "npcEntries": 59,
-  "houses": 96
+  "monsterGroups": 608,
+  "monsterEntries": 1075,
+  "npcGroups": 51,
+  "npcEntries": 51,
+  "houses": 83
 }
