@@ -991,3 +991,20 @@ o sufixo pra não quebrar quem já lê esse campo do lado do jogo.
 Scripts de exploração pontual e um parser OTBM manual antigo, mantidos só
 como referência histórica — não fazem parte do pipeline e os paths internos
 deles estão desatualizados. Veja `_legacy/README.md`.
+
+## Números de combate de uma cidade nova
+
+Depois de `build_map.js`, e antes de publicar:
+
+```bash
+uv run python extractor/scripts/build_monster_stats.py
+```
+
+Ele lê os `.lua` do Canary (`--canary-dir`, ou `CANARY_DIR`) e escreve
+`apps/tibia-idle-api/content/hunts/monster-stats.json` com **os monstros que
+algum mapa construído spawna** — o mesmo critério do `bake_corpse_atlas.py`.
+O passo seguinte é do lado do jogo: `npx nx run item-catalog:generate`.
+
+Sem isso, toda criatura fora das 33 de Rookgaard luta com o placeholder de 20
+de vida. Quem avisa é o teste `monster-identity-contract.spec.ts`, que lista
+hunt por hunt quem ficou sem stats.
