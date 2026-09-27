@@ -596,14 +596,16 @@ def test_build_travel_graph_emits_no_self_edge_and_no_duplicate_pair():
 
 def test_build_travel_graph_two_locations_on_the_same_tile_are_zero_tiles_apart():
     # Two NPCs behind the same tavern counter are two destinations, not one:
-    # a tileCount of 0 is the map's truth, not an error to filter out.
+    # a tileCount of 0 is the map's truth, not an error to filter out. A
+    # polilinha repete o tile porque ela vai de pino a pino, e os dois pinos
+    # entram mesmo sendo o mesmo tile (ver _without_repeats).
     graph = _line_graph(4)
     locations = [_location("NORMA", 1, 0), _location("AMBER", 1, 0)]
 
     edges = tg.build_travel_graph(graph, locations)
 
     assert edges == [{"from": "AMBER", "to": "NORMA", "tileCount": 0,
-                      "path": [1, 0, 7]}]
+                      "path": [1, 0, 7, 1, 0, 7]}]
 
 
 def test_build_travel_graph_co_located_pair_still_reaches_the_rest_of_the_city():
@@ -1356,14 +1358,17 @@ def test_build_travel_graph_path_bends_where_the_walk_bends():
     assert edge["path"] == [0, 0, 7, 2, 0, 7, 2, 2, 7]
 
 
-def test_build_travel_graph_path_of_a_co_located_pair_is_the_single_tile():
+def test_build_travel_graph_path_of_a_co_located_pair_repeats_the_tile():
+    """Pino a pino vale também quando os dois pinos são o mesmo tile: o schema
+    do catálogo recusa polilinha de um ponto, e o extractor emitindo uma era o
+    importador falhando com um par de hunts curadas que dividem a entrada."""
     graph = _line_graph(3)
     locations = [_location("A", 1, 0), _location("B", 1, 0)]
 
     edge = tg.build_travel_graph(graph, locations)[0]
 
     assert edge["tileCount"] == 0
-    assert edge["path"] == [1, 0, 7]
+    assert edge["path"] == [1, 0, 7, 1, 0, 7]
 
 
 def test_build_travel_graph_npc_approach_is_one_straight_hop_at_the_end():

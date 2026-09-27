@@ -237,6 +237,28 @@ def write_map(
     return tiles_written
 
 
+OTBM_ATTR_ACTION_ID = 0x04
+
+
+def item_node(item_id: int, action_id: Optional[int] = None) -> bytes:
+    """Um nó de item solto, pronto para entrar como filho de um tile."""
+    payload = struct.pack("<BH", OTBM_ITEM, item_id)
+    if action_id is not None:
+        payload += struct.pack("<BH", OTBM_ATTR_ACTION_ID, action_id)
+    return bytes([NODE_INIT]) + escape(payload) + bytes([NODE_TERM])
+
+
+def with_extra_item(tile_node: bytes, item: bytes) -> bytes:
+    """O mesmo nó de tile, com um item a mais no topo da pilha.
+
+    O nó chega escapado da fonte e sai escapado: o item entra antes do `0xFF`
+    que fecha o tile, e nada do que já estava lá é reinterpretado.
+    """
+    if not tile_node or tile_node[-1] != NODE_TERM:
+        raise ValueError("nó de tile não termina em NODE_TERM")
+    return tile_node[:-1] + item + bytes([NODE_TERM])
+
+
 AREA_SIZE = 256
 
 

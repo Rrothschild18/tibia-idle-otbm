@@ -1,6 +1,7 @@
+import glob
 import json
 import os
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List, Optional, Set, Tuple
 
 from PIL import Image
 
@@ -12,6 +13,9 @@ SCRIPTS_DIR = os.path.dirname(os.path.abspath(__file__))
 EXTRACTOR_DIR = os.path.dirname(SCRIPTS_DIR)
 
 OUTFITS_SPRITES_DIR = os.path.join(EXTRACTOR_DIR, "sprites", "outfits")
+
+# A camada base, sem addon, de um outfit de jogador. Ver bake_outfit.
+BASE_LAYER_MARKER = "_base_a0_"
 OUTFITS_ATLAS_DIR = os.path.join(EXTRACTOR_DIR, "atlases", "outfits")
 
 # Transparent pixels added around each packed frame so the client scaling
@@ -126,7 +130,7 @@ def _outfit_frame_list(outfit_id: int, data: Dict) -> List[Tuple[str, str]]:
 # BAKE
 # =========================
 
-def bake_outfit(outfit_id: int) -> Optional[Dict]:
+def bake_outfit(outfit_id: int, as_monster: bool = False) -> Optional[Dict]:
     """Bake one outfit's atlas, writing <id>.png + <id>.json to
     OUTFITS_ATLAS_DIR. Returns the atlas JSON dict, or None if the outfit
     has no extracted JSON (mirrors the tolerant missing-outfit handling in
@@ -136,12 +140,29 @@ def bake_outfit(outfit_id: int) -> Optional[Dict]:
     and a layer axis, and packing them into this single row of `<id>_<n>`
     frames would produce an atlas that loads and animates wrong. They are
     recognised by the `axes` block their extraction declares — not by an id
-    list, so neither baker has to know the other's."""
+    list, so neither baker has to know the other's.
+
+    `as_monster` é a exceção, e ela existe porque **monstro humanoide usa
+    outfit de jogador**: Amazon, Valkyrie e os quatro do culto de Carlin caem
+    todos aí, e sem atlas o mapa da hunt sai com aviso e o jogo desenha nada.
+    Nesse modo só a camada base sem addon entra (`_base_a0_`), que é
+    exatamente 4 direções x 9 fases — a mesma contagem e a mesma ordem de um
+    outfit de monstro."""
     data = _load_outfit_json(outfit_id)
-    if data is None or "axes" in data:
+    if data is None:
+        return None
+    if "axes" in data and not as_monster:
         return None
 
     frames = _outfit_frame_list(outfit_id, data)
+    if "axes" in data:
+        # A chave também é renomeada para `<id>_<n>`: quem lê um atlas de
+        # criatura ordena pelo índice no fim da chave, e `137_base_a0_north_0`
+        # e `137_base_a0_east_0` colidiriam no índice 0, embaralhando as
+        # direções. A ordem da lista já é a do outfit, então numerar em
+        # sequência preserva exatamente ela.
+        base = [path for key, path in frames if BASE_LAYER_MARKER in key]
+        frames = [(f"{outfit_id}_{index}", path) for index, path in enumerate(base)]
     canvas, frame_map = pack_outfit_frames(frames)
     image_name = f"{outfit_id}.png"
     atlas = build_atlas_json(image_name, canvas.size, frame_map)
@@ -158,20 +179,41 @@ def bake_outfit(outfit_id: int) -> Optional[Dict]:
 # ENTRY POINT
 # =========================
 
+def monster_outfit_ids() -> Set[int]:
+    """Os outfits que algum spawn usa, lidos dos `respawn.json` construídos."""
+    ids: Set[int] = set()
+    pattern = os.path.join(EXTRACTOR_DIR, "ready-maps", "*", "*", "monsters", "respawn.json")
+    for path in glob.glob(pattern):
+        with open(path, "r", encoding="utf-8") as handler:
+            for spawn in json.load(handler).get("spawns", []):
+                outfit_id = spawn.get("outfitId")
+                if isinstance(outfit_id, int):
+                    ids.add(outfit_id)
+    return ids
+
+
 def main():
     ids = _list_outfit_ids()
     baked = 0
-    skipped = 0
+    skipped = []
 
     for outfit_id in ids:
         if bake_outfit(outfit_id) is not None:
             baked += 1
         else:
-            skipped += 1
+            skipped.append(outfit_id)
+
+    humanoids = sorted(set(skipped) & monster_outfit_ids())
+    for outfit_id in humanoids:
+        if bake_outfit(outfit_id, as_monster=True) is not None:
+            baked += 1
 
     print(f"[OK] outfits: {baked} atlases gerados em {OUTFITS_ATLAS_DIR}")
-    if skipped:
-        print(f"  [skip] {skipped} outfits ignorados (JSON não encontrado)")
+    if humanoids:
+        print(f"  [OK] {len(humanoids)} de outfit de jogador, usados por monstro: {humanoids}")
+    remaining = len(skipped) - len(humanoids)
+    if remaining:
+        print(f"  [skip] {remaining} outfits ignorados (sem JSON, ou de jogador sem monstro que os use)")
 
 
 if __name__ == "__main__":

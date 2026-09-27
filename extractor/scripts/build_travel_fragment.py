@@ -40,6 +40,7 @@ from collections import Counter
 
 import city_ids
 import content_export
+import curated_hunts
 import map_dirs
 import appearance_flags
 import paths
@@ -148,6 +149,33 @@ def discover_hunt_maps(city: str):
     return sorted(hunts, key=lambda h: h["id"])
 
 
+def _load_curated_hunt_locations(city: str):
+    """As hunts curadas de `full-maps/<CIDADE>/curated-hunts.json` como POIs.
+
+    Ausente é o caso normal: Rookgaard marca as entradas com placa no OTBM, e
+    esse caminho continua valendo. Uma hunt sem entrada nenhuma no arquivo é
+    pulada aqui e aparece no relatório de rejeição como hunt sem POI.
+    """
+    path = os.path.join(FULL_MAPS_DIR, city, "curated-hunts.json")
+    if not os.path.exists(path):
+        return [], path
+
+    with open(path, "r", encoding="utf-8") as handler:
+        document = json.load(handler)
+
+    locations = []
+    for hunt in document.get("hunts", []):
+        entrance = hunt.get("entrance")
+        if not entrance:
+            continue
+        locations.append(
+            curated_hunts.build_location(
+                hunt, (entrance["x"], entrance["y"], entrance["z"])
+            )
+        )
+    return locations, path
+
+
 def build_city_fragment(city: str, canary_dir=None, npc_reach: int = DEFAULT_NPC_REACH):
     """-> (fragment, rejections). Signs and NPCs are both fed to the same
     search over walkable tiles, so an NPC is a travel destination measured in
@@ -177,6 +205,16 @@ def build_city_fragment(city: str, canary_dir=None, npc_reach: int = DEFAULT_NPC
             print(f"[WARN] placa com problema não reconhecido ({issue['reason']}): {location}")
 
     sign_locations = [build_sign_location(s) for s in signs]
+
+    # POIs de hunt curados na tela `new-hunts` (ver curated_hunts.py). Onde uma
+    # cidade tem os dois, o arquivo curado vence a placa: ele carrega
+    # `displayName` escolhido e um `huntId` que não precisa de confirmação.
+    curated_locations, curated_path = _load_curated_hunt_locations(city)
+    if curated_locations:
+        by_id = {location["id"]: location for location in sign_locations}
+        by_id.update({location["id"]: location for location in curated_locations})
+        sign_locations = list(by_id.values())
+        print(f"[OK] {len(curated_locations)} POIs de hunt curados lidos de {curated_path}")
 
     npc_xml_path = os.path.join(FULL_MAPS_DIR, city, f"{city}-npc.xml")
     npcs = []

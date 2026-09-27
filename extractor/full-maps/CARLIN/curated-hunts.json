@@ -1,0 +1,334 @@
+{
+  "city": "CARLIN",
+  "area": "Carlin",
+  "hunts": [
+    {
+      "id": "CARLIN-HUNT-0001",
+      "name": "Cemetery — Ghostlands",
+      "slug": "cemetery-ghostlands",
+      "folder": "CARLIN-HUNT-0001_cemetery-ghostlands",
+      "floors": [
+        10,
+        11,
+        12
+      ],
+      "candidateIds": [
+        "CARLIN-C10-008",
+        "CARLIN-C11-002",
+        "CARLIN-C12-003"
+      ],
+      "creatures": 14,
+      "extent": {
+        "minX": 32222,
+        "minY": 31841,
+        "maxX": 32242,
+        "maxY": 31866,
+        "centerX": 32232,
+        "centerY": 31854
+      },
+      "subareaId": 38,
+      "entrance": {
+        "x": 32235,
+        "y": 31841,
+        "z": 10
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 5017,
+      "spawns": 33
+    },
+    {
+      "id": "CARLIN-HUNT-0002",
+      "name": "Amazons Tower",
+      "slug": "amazons-tower",
+      "folder": "CARLIN-HUNT-0002_amazons-tower",
+      "floors": [
+        2,
+        3,
+        4,
+        7
+      ],
+      "candidateIds": [
+        "CARLIN-C02-001",
+        "CARLIN-C03-001",
+        "CARLIN-C04-001",
+        "CARLIN-C07-004"
+      ],
+      "creatures": 20,
+      "extent": {
+        "minX": 32333,
+        "minY": 31638,
+        "maxX": 32363,
+        "maxY": 31658,
+        "centerX": 32348,
+        "centerY": 31648
+      },
+      "subareaId": 40,
+      "entrance": {
+        "x": 32333,
+        "y": 31657,
+        "z": 7
+      },
+      "walkTilesFromTemple": 141,
+      "tiles": 1961,
+      "spawns": 22
+    },
+    {
+      "id": "CARLIN-HUNT-0003",
+      "name": "Amazons North East",
+      "slug": "amazons-north-east",
+      "folder": "CARLIN-HUNT-0003_amazons-north-east",
+      "floors": [
+        6,
+        7
+      ],
+      "candidateIds": [
+        "CARLIN-C06-005",
+        "CARLIN-C07-009"
+      ],
+      "creatures": 9,
+      "extent": {
+        "minX": 32421,
+        "minY": 31577,
+        "maxX": 32433,
+        "maxY": 31597,
+        "centerX": 32427,
+        "centerY": 31587
+      },
+      "subareaId": 40,
+      "entrance": {
+        "x": 32431,
+        "y": 31594,
+        "z": 7
+      },
+      "walkTilesFromTemple": 204,
+      "tiles": 1100,
+      "spawns": 9
+    },
+    {
+      "id": "CARLIN-HUNT-0004",
+      "name": "Ghouls — Ghostlands",
+      "slug": "ghouls-ghostlands",
+      "folder": "CARLIN-HUNT-0004_ghouls-ghostlands",
+      "floors": [
+        8,
+        9
+      ],
+      "candidateIds": [
+        "CARLIN-C08-005",
+        "CARLIN-C09-002"
+      ],
+      "creatures": 33,
+      "extent": {
+        "minX": 32172,
+        "minY": 31770,
+        "maxX": 32212,
+        "maxY": 31812,
+        "centerX": 32192,
+        "centerY": 31791
+      },
+      "subareaId": 38,
+      "entrance": {
+        "x": 32191,
+        "y": 31783,
+        "z": 8
+      },
+      "walkTilesFromTemple": 195,
+      "tiles": 5860,
+      "spawns": 44
+    },
+    {
+      "id": "CARLIN-HUNT-0005",
+      "name": "Ghouls & Skeletons — Ghostlands",
+      "slug": "ghouls-skeletons-ghostlands",
+      "folder": "CARLIN-HUNT-0005_ghouls-skeletons-ghostlands",
+      "floors": [
+        11,
+        12
+      ],
+      "candidateIds": [
+        "CARLIN-C11-003",
+        "CARLIN-C12-001"
+      ],
+      "creatures": 21,
+      "extent": {
+        "minX": 32198,
+        "minY": 31796,
+        "maxX": 32238,
+        "maxY": 31836,
+        "centerX": 32218,
+        "centerY": 31816
+      },
+      "subareaId": 38,
+      "entrance": {
+        "x": 32221,
+        "y": 31835,
+        "z": 11
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 7072,
+      "spawns": 28
+    },
+    {
+      "id": "CARLIN-HUNT-0006",
+      "name": "Ghouls — Carlin Surroundings",
+      "slug": "ghouls-carlin-surroundings",
+      "folder": "CARLIN-HUNT-0006_ghouls-carlin-surroundings",
+      "floors": [
+        7,
+        12
+      ],
+      "candidateIds": [
+        "CARLIN-C07-012",
+        "CARLIN-C12-001"
+      ],
+      "creatures": 23,
+      "extent": {
+        "minX": 32198,
+        "minY": 31793,
+        "maxX": 32243,
+        "maxY": 31835,
+        "centerX": 32221,
+        "centerY": 31814
+      },
+      "subareaId": 43,
+      "entrance": {
+        "x": 32243,
+        "y": 31802,
+        "z": 7
+      },
+      "walkTilesFromTemple": 122,
+      "tiles": 8338,
+      "spawns": 52
+    },
+    {
+      "id": "CARLIN-HUNT-0007",
+      "name": "Amazons Small Camp",
+      "slug": "amazons-small-camp",
+      "folder": "CARLIN-HUNT-0007_amazons-small-camp",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "CARLIN-C07-014"
+      ],
+      "creatures": 5,
+      "extent": {
+        "minX": 32465,
+        "minY": 31776,
+        "maxX": 32482,
+        "maxY": 31783,
+        "centerX": 32474,
+        "centerY": 31780
+      },
+      "subareaId": 43,
+      "entrance": {
+        "x": 32465,
+        "y": 31776,
+        "z": 7
+      },
+      "walkTilesFromTemple": 141,
+      "tiles": 1011,
+      "spawns": 6
+    },
+    {
+      "id": "CARLIN-HUNT-0008",
+      "name": "Cults — Carlin Surroundings z7",
+      "slug": "cults-carlin-surroundings-z7",
+      "folder": "CARLIN-HUNT-0008_cults-carlin-surroundings-z7",
+      "floors": [
+        8,
+        9
+      ],
+      "candidateIds": [
+        "CARLIN-C08-001",
+        "CARLIN-C09-001"
+      ],
+      "creatures": 182,
+      "extent": {
+        "minX": 32326,
+        "minY": 31653,
+        "maxX": 32374,
+        "maxY": 31704,
+        "centerX": 32350,
+        "centerY": 31679
+      },
+      "subareaId": 40,
+      "entrance": {
+        "x": 32368,
+        "y": 31666,
+        "z": 8
+      },
+      "walkTilesFromTemple": 132,
+      "tiles": 8098,
+      "spawns": 182
+    },
+    {
+      "id": "CARLIN-HUNT-0009",
+      "name": "Cults 02 — Fields of Glory",
+      "slug": "cults-02-fields-of-glory",
+      "folder": "CARLIN-HUNT-0009_cults-02-fields-of-glory",
+      "floors": [
+        8,
+        9,
+        10
+      ],
+      "candidateIds": [
+        "CARLIN-C08-001",
+        "CARLIN-C09-001",
+        "CARLIN-C10-001"
+      ],
+      "creatures": 267,
+      "extent": {
+        "minX": 32326,
+        "minY": 31653,
+        "maxX": 32374,
+        "maxY": 31704,
+        "centerX": 32350,
+        "centerY": 31679
+      },
+      "subareaId": 40,
+      "entrance": {
+        "x": 32368,
+        "y": 31666,
+        "z": 8
+      },
+      "walkTilesFromTemple": 132,
+      "tiles": 12215,
+      "spawns": 267
+    },
+    {
+      "id": "CARLIN-HUNT-0010",
+      "name": "Spiders — Fields of Glory",
+      "slug": "spiders-fields-of-glory",
+      "folder": "CARLIN-HUNT-0010_spiders-fields-of-glory",
+      "floors": [
+        7,
+        8,
+        9
+      ],
+      "candidateIds": [
+        "CARLIN-C07-035",
+        "CARLIN-C08-018",
+        "CARLIN-C09-022"
+      ],
+      "creatures": 11,
+      "extent": {
+        "minX": 32429,
+        "minY": 31627,
+        "maxX": 32450,
+        "maxY": 31640,
+        "centerX": 32440,
+        "centerY": 31634
+      },
+      "subareaId": 40,
+      "entrance": {
+        "x": 32440,
+        "y": 31640,
+        "z": 7
+      },
+      "walkTilesFromTemple": 160,
+      "tiles": 5184,
+      "spawns": 20
+    }
+  ]
+}

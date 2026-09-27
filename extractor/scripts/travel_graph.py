@@ -569,7 +569,18 @@ def simplify_polyline(path: Sequence[Node]) -> List[Node]:
 
 
 def _without_repeats(path: Sequence[Node]) -> List[Node]:
-    return [node for index, node in enumerate(path) if index == 0 or node != path[index - 1]]
+    """Tira repetição consecutiva, mas nunca devolve um ponto só.
+
+    Duas locations no **mesmo tile** existem de verdade — duas hunts curadas
+    que compartilham a entrada, dois NPCs colados — e a aresta entre elas é
+    legítima, com `tileCount` 0. Sem o segundo ponto ela sairia com uma
+    polilinha de um vértice, que o schema do catálogo recusa (e com razão: a
+    polilinha vai de pino a pino, então os dois pinos sempre entram, mesmo
+    quando são o mesmo tile)."""
+    trimmed = [
+        node for index, node in enumerate(path) if index == 0 or node != path[index - 1]
+    ]
+    return trimmed * 2 if len(trimmed) == 1 else trimmed
 
 
 def flatten_polyline(path: Sequence[Node]) -> List[int]:
