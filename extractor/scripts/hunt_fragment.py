@@ -70,7 +70,9 @@ def build_loot_entry(monsters_entry: Dict, map_id: str) -> Dict:
     return {"id": map_id, "mapId": map_id, "drops": drops}
 
 
-def build_hunts_entry(respawn: Dict, map_name: str, map_id: str) -> Dict:
+def build_hunts_entry(
+    respawn: Dict, map_name: str, map_id: str, curated_name: Optional[str] = None
+) -> Dict:
     # `assetsRoot` is a dead field — the back-end's schema drops it as an
     # unknown key — but it's kept pointing at the same versioned bundle as
     # `mapUrl` rather than at the old unversioned folder, so nobody reads the
@@ -79,11 +81,14 @@ def build_hunts_entry(respawn: Dict, map_name: str, map_id: str) -> Dict:
     bounds = respawn["mapBoundsRef"]
     preview_spawn = _most_common_spawn(respawn.get("spawns", []))
 
+    # `portrait` não é lido por ninguém — nem o schema do catálogo nem o front o
+    # citam: quem desenha a hunt é o `monsterPreview`, que já é o monstro mais
+    # frequente do mapa. O campo fica pelo histórico do ROOK e sem `_todo`.
     todo = [
-        "confirmar name/label (título gerado automaticamente do nome da pasta)",
-        "criar a arte de portrait e apontar o path",
         "revisar startPosition (centro geométrico do mapBoundsRef, pode cair fora de área andável)",
     ]
+    if curated_name is None:
+        todo.insert(0, "confirmar name/label (título gerado automaticamente do nome da pasta)")
     if preview_spawn is None:
         todo.insert(0, "sem spawns no mapa — monsterPreview precisa ser preenchido manualmente")
 
@@ -93,8 +98,8 @@ def build_hunts_entry(respawn: Dict, map_name: str, map_id: str) -> Dict:
     entry = {
         "id": map_id,
         "mapId": map_id,
-        "name": _title_from_map_name(map_name),
-        "label": _title_from_map_name(map_name),
+        "name": curated_name or _title_from_map_name(map_name),
+        "label": curated_name or _title_from_map_name(map_name),
         "seed": PLACEHOLDER_SEED,
         "assetsRoot": assets_root,
         "mapUrl": content_export.map_bundle_url(map_name),
@@ -120,14 +125,16 @@ def build_hunts_entry(respawn: Dict, map_name: str, map_id: str) -> Dict:
     return entry
 
 
-def build_fragment(respawn: Dict, map_name: str, map_id: Optional[str]) -> Dict:
+def build_fragment(
+    respawn: Dict, map_name: str, map_id: Optional[str], curated_name: Optional[str] = None
+) -> Dict:
     """Assembles the full {monsters, loot, hunts} fragment. `map_id` is the
     game id (e.g. "ROOK-0010") the map should get in the catalog — if omitted,
     a placeholder is used and flagged in hunts._todo."""
     resolved_id = map_id or PLACEHOLDER_MAP_ID
     monsters_entry = build_monsters_entry(respawn, map_name, resolved_id)
     loot_entry = build_loot_entry(monsters_entry, resolved_id)
-    hunts_entry = build_hunts_entry(respawn, map_name, resolved_id)
+    hunts_entry = build_hunts_entry(respawn, map_name, resolved_id, curated_name)
     if map_id is None:
         hunts_entry["_todo"].insert(0, "atribuir um id/mapId real (rode com --map-id)")
     return {"monsters": monsters_entry, "loot": loot_entry, "hunts": hunts_entry}

@@ -1069,6 +1069,69 @@ def build_npc_locations(
 # ======================================================
 
 
+FLOOR_CHANGE_TILE_COST = 10
+
+
+def connect_orphan_hunts(
+    locations: List[Dict], edges: List[Dict]
+) -> Tuple[List[Dict], List[Dict]]:
+    """Liga cada HUNT sem aresta ao POI conectado mais próximo. -> `(arestas, ligações inventadas)`.
+
+    Uma hunt fica sem aresta quando o caminho até ela depende de algo que o
+    grafo não modela: buraco que exige corda, alçapão aberto por script, porta
+    de quest, teleport com action id. Em Carlin são duas, as duas no fundo de
+    Ghostlands, e o vão até o alcançável é rocha maciça — a entrada de verdade
+    está noutro lugar do mapa.
+
+    O jogador **não anda esse trecho e nem o vê**: ele escolhe a hunt numa
+    lista e o jogo conta o tempo de viagem. Então a escolha aqui é entre a hunt
+    não existir e a hunt existir com uma estimativa — e uma hunt que o mapa tem
+    e o jogo esconde é pior. O custo estimado é a distância em linha reta mais
+    `FLOOR_CHANGE_TILE_COST` por andar de diferença, e a polilinha é o segmento
+    reto entre os dois pinos.
+
+    Só HUNT. NPC ilhado continua indo pro relatório de rejeição: aquilo é bug
+    de mapa (ou de posição do NPC) e some assim que alguém o conserta.
+    """
+    connected = {edge["from"] for edge in edges} | {edge["to"] for edge in edges}
+    by_id = {location["id"]: location for location in locations}
+    anchors = [by_id[name] for name in sorted(connected) if name in by_id]
+    if not anchors:
+        return edges, []
+
+    invented: List[Dict] = []
+    for location in locations:
+        if location["type"] != "HUNT" or location["id"] in connected:
+            continue
+
+        def cost(other: Dict) -> int:
+            return max(
+                abs(location["x"] - other["x"]), abs(location["y"] - other["y"])
+            ) + FLOOR_CHANGE_TILE_COST * abs(location["z"] - other["z"])
+
+        nearest = min(anchors, key=lambda other: (cost(other), other["id"]))
+        tile_count = max(1, cost(nearest))
+        low, high = sorted((location["id"], nearest["id"]))
+        ends = {
+            location["id"]: (location["x"], location["y"], location["z"]),
+            nearest["id"]: (nearest["x"], nearest["y"], nearest["z"]),
+        }
+        edges.append(
+            {
+                "from": low,
+                "to": high,
+                "tileCount": tile_count,
+                "path": flatten_polyline([ends[low], ends[high]]),
+            }
+        )
+        invented.append(
+            {"hunt": location["id"], "anchor": nearest["id"], "tileCount": tile_count}
+        )
+
+    edges.sort(key=lambda edge: (edge["from"], edge["to"]))
+    return edges, invented
+
+
 def build_travel_fragment(locations: List[Dict], travel_graph: List[Dict]) -> Dict:
     """The one place the fragment's shape is spelled out. `locations` is
     already both sources combined — sign-marked POIs and NPCs stop being two

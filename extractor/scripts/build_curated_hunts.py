@@ -62,7 +62,14 @@ def _load_json(path: str, what: str):
         return json.load(handler)
 
 
-def crop_spawns(source: str, destination: str, bounds, floors) -> int:
+def crop_spawns(source: str, destination: str, bounds, floors, chosen=None) -> int:
+    """O spawn da hunt: o que está dentro do recorte e nos andares escolhidos.
+
+    `chosen` restringe ainda mais, ao conjunto exato de `(x, y, z, nome)` das
+    candidatas que a curadoria juntou. Sem ele a caixa arrasta vizinho: a
+    "Ghouls — Carlin Surroundings" saía com Poison Spider como monstro mais
+    frequente, porque o bolsão de aranhas ao lado cabia na folga de 12 tiles.
+    """
     min_x, min_y, max_x, max_y = bounds
     tree = ElementTree.parse(source)
     root = tree.getroot()
@@ -77,6 +84,16 @@ def crop_spawns(source: str, destination: str, bounds, floors) -> int:
             if min_x <= center_x + int(entry.get("x")) <= max_x
             and min_y <= center_y + int(entry.get("y")) <= max_y
             and int(entry.get("z", group.get("centerz"))) in floors
+            and (
+                chosen is None
+                or (
+                    center_x + int(entry.get("x")),
+                    center_y + int(entry.get("y")),
+                    int(entry.get("z", group.get("centerz"))),
+                    entry.get("name"),
+                )
+                in chosen
+            )
         ]
         if not inside:
             root.remove(group)
@@ -100,6 +117,7 @@ def write_hunt_map(
     floors,
     entrance=None,
     spawn_floors=None,
+    chosen_spawns=None,
 ) -> dict:
     folder = os.path.join(MAPS_DIR, city, hunt["folder"])
     os.makedirs(folder, exist_ok=True)
@@ -146,6 +164,7 @@ def write_hunt_map(
         os.path.join(folder, f"{slug}-monster.xml"),
         bounds,
         floors if spawn_floors is None else spawn_floors,
+        chosen_spawns,
     )
     for kind, content in EMPTY_XML.items():
         with open(os.path.join(folder, f"{slug}-{kind}.xml"), "w", encoding="utf-8") as handler:
@@ -239,8 +258,20 @@ def main():
                 None,
             )
 
+        chosen_spawns = {
+            (spawn["x"], spawn["y"], spawn["z"], spawn["name"])
+            for spawn in curated_hunts.spawns_of(members)
+        }
         result = write_hunt_map(
-            city, hunt, data, header, bounds, crop_floors, entrance, spawn_floors=floors
+            city,
+            hunt,
+            data,
+            header,
+            bounds,
+            crop_floors,
+            entrance,
+            spawn_floors=floors,
+            chosen_spawns=chosen_spawns,
         )
         if entrance is not None and not result["marked"]:
             print(f"[WARN] {hunt['id']}: tile de entrada {entrance} ficou fora do recorte")

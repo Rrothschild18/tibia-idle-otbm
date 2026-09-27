@@ -1,28 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <monsters>
-	<monster centerx="32222" centery="31763" centerz="8" radius="2">
-		<monster name="Rabbit" x="0" y="-2" z="8" spawntime="90" />
-		<monster name="Rabbit" x="-1" y="1" z="8" spawntime="90" />
-	</monster>
 	<monster centerx="32195" centery="31773" centerz="8" radius="3">
 		<monster name="Skeleton" x="0" y="-1" z="8" spawntime="90" />
 		<monster name="Cave Rat" x="1" y="3" z="8" spawntime="90" />
-	</monster>
-	<monster centerx="32222" centery="31774" centerz="8" radius="2">
-		<monster name="Rabbit" x="2" y="-1" z="8" spawntime="90" />
-		<monster name="Rabbit" x="-1" y="0" z="8" spawntime="90" />
-	</monster>
-	<monster centerx="32224" centery="31782" centerz="8" radius="2">
-		<monster name="Rabbit" x="-1" y="0" z="8" spawntime="90" />
 	</monster>
 	<monster centerx="32201" centery="31783" centerz="8" radius="3">
 		<monster name="Skeleton" x="0" y="-1" z="8" spawntime="90" />
 		<monster name="Cave Rat" x="-2" y="1" z="8" spawntime="90" />
 		<monster name="Cave Rat" x="2" y="1" z="8" spawntime="90" />
-	</monster>
-	<monster centerx="32177" centery="31784" centerz="8" radius="3">
-		<monster name="Cave Rat" x="-3" y="-2" z="8" spawntime="90" />
-		<monster name="Skeleton" x="-1" y="-2" z="8" spawntime="90" />
 	</monster>
 	<monster centerx="32192" centery="31786" centerz="8" radius="3">
 		<monster name="Cave Rat" x="-1" y="-3" z="8" spawntime="90" />
@@ -31,11 +16,6 @@
 	</monster>
 	<monster centerx="32181" centery="31795" centerz="8" radius="3">
 		<monster name="Skeleton" x="1" y="0" z="8" spawntime="90" />
-	</monster>
-	<monster centerx="32222" centery="31814" centerz="8" radius="3">
-		<monster name="Skeleton" x="2" y="-2" z="8" spawntime="90" />
-		<monster name="Skeleton" x="-1" y="1" z="8" spawntime="90" />
-		<monster name="Skeleton" x="1" y="2" z="8" spawntime="90" />
 	</monster>
 	<monster centerx="32189" centery="31772" centerz="9" radius="2">
 		<monster name="Ghoul" x="0" y="0" z="9" spawntime="90" />
@@ -46,9 +26,6 @@
 		<monster name="Scorpion" x="2" y="-2" z="9" spawntime="90" />
 		<monster name="Ghoul" x="-3" y="0" z="9" spawntime="90" />
 		<monster name="Ghoul" x="1" y="1" z="9" spawntime="90" />
-	</monster>
-	<monster centerx="32178" centery="31777" centerz="9" radius="3">
-		<monster name="Ghoul" x="0" y="-1" z="9" spawntime="90" />
 	</monster>
 	<monster centerx="32194" centery="31787" centerz="9" radius="3">
 		<monster name="Ghoul" x="-1" y="-3" z="9" spawntime="90" />

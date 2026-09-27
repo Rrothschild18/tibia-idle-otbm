@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32219" centery="31837" centerz="11" radius="3">
+		<monster name="Ghoul" x="2" y="-2" z="11" spawntime="90" />
+		<monster name="Ghoul" x="-1" y="-1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32228" centery="31837" centerz="11" radius="3">
+		<monster name="Skeleton" x="0" y="-2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32216" centery="31797" centerz="12" radius="3">
+		<monster name="Ghoul" x="-2" y="-1" z="12" spawntime="90" />
+		<monster name="Ghoul" x="1" y="1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32207" centery="31805" centerz="12" radius="3">
+		<monster name="Skeleton" x="-1" y="-2" z="12" spawntime="90" />
+		<monster name="Ghoul" x="0" y="2" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32225" centery="31813" centerz="12" radius="3">
+		<monster name="Ghoul" x="-1" y="-1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32236" centery="31817" centerz="12" radius="3">
+		<monster name="Cave Rat" x="-2" y="-2" z="12" spawntime="90" />
+		<monster name="Ghoul" x="2" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32204" centery="31818" centerz="12" radius="3">
+		<monster name="Ghoul" x="-1" y="-1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32214" centery="31819" centerz="12" radius="3">
+		<monster name="Skeleton" x="1" y="-2" z="12" spawntime="90" />
+		<monster name="Skeleton" x="-1" y="2" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32222" centery="31822" centerz="12" radius="3">
+		<monster name="Cave Rat" x="1" y="-3" z="12" spawntime="90" />
+		<monster name="Cave Rat" x="0" y="1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32228" centery="31832" centerz="12" radius="3">
+		<monster name="Cave Rat" x="0" y="-2" z="12" spawntime="90" />
+		<monster name="Cave Rat" x="2" y="1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32214" centery="31833" centerz="12" radius="3">
+		<monster name="Cave Rat" x="-3" y="-3" z="12" spawntime="90" />
+		<monster name="Cave Rat" x="-2" y="2" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32199" centery="31834" centerz="12" radius="3">
+		<monster name="Skeleton" x="-1" y="-1" z="12" spawntime="90" />
+		<monster name="Skeleton" x="2" y="0" z="12" spawntime="90" />
+	</monster>
+</monsters>

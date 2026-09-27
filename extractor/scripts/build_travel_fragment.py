@@ -49,6 +49,7 @@ from hunt_fragment import map_id_from_folder
 from travel_graph import (
     DEFAULT_NPC_REACH,
     build_mechanical_city_pois,
+    connect_orphan_hunts,
     parse_depot_items,
     REJECTION_REASONS,
     apply_graph_rejections,
@@ -178,7 +179,12 @@ def _load_curated_hunt_locations(city: str):
     return locations, path
 
 
-def build_city_fragment(city: str, canary_dir=None, npc_reach: int = DEFAULT_NPC_REACH):
+def build_city_fragment(
+    city: str,
+    canary_dir=None,
+    npc_reach: int = DEFAULT_NPC_REACH,
+    connect_orphans: bool = True,
+):
     """-> (fragment, rejections). Signs and NPCs are both fed to the same
     search over walkable tiles, so an NPC is a travel destination measured in
     real tiles walked — never a euclidean guess, never an occupant hanging off
@@ -257,15 +263,32 @@ def build_city_fragment(city: str, canary_dir=None, npc_reach: int = DEFAULT_NPC
         print(f"[OK] {len(added)} POIs mecânicos (templo/depot) de {city}")
     travel_graph_edges = build_travel_graph(graph, [*sign_locations, *npc_locations], npc_reach)
 
+    # Hunt que o grafo não alcança é ligada por estimativa, não descartada: o
+    # caminho real depende de corda, alçapão de script ou teleport, e o jogador
+    # escolhe a hunt numa lista sem nunca ver o trecho. Ver connect_orphan_hunts.
+    invented = []
+    if connect_orphans:
+        travel_graph_edges, invented = connect_orphan_hunts(
+            [*sign_locations, *npc_locations], travel_graph_edges
+        )
+        for link in invented:
+            print(f"[~~] {link['hunt']} sem caminho no mapa — ligada a {link['anchor']} "
+                  f"por estimativa ({link['tileCount']} tiles)")
+
     kept_locations, kept_edges, rejections = apply_graph_rejections(
         [*sign_locations, *npc_locations], travel_graph_edges, discover_hunt_maps(city)
     )
-    return build_travel_fragment(kept_locations, kept_edges), rejections
+    return build_travel_fragment(kept_locations, kept_edges), rejections, invented
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("city", help="Código da cidade — pasta em extractor/full-maps/<CIDADE>/ (ex: ROOK)")
+    parser.add_argument(
+        "--no-connect-orphans",
+        action="store_true",
+        help="não liga por estimativa a hunt que o grafo não alcança (ela some do catálogo)",
+    )
     parser.add_argument("--canary-dir", default=None,
                          help="Relê items.xml e os .lua de NPC deste checkout do Canary em vez do "
                               "vendor (extractor/vendor/canary/). Sem a flag, o vendor é usado e "
@@ -303,13 +326,18 @@ def main():
         except paths.MissingRepoError as exc:
             parser.error(str(exc))
 
-    fragment, rejections = build_city_fragment(args.city, canary_dir, args.npc_reach)
+    fragment, rejections, invented = build_city_fragment(
+        args.city, canary_dir, args.npc_reach, connect_orphans=not args.no_connect_orphans
+    )
 
     out_path = os.path.join(FULL_MAPS_DIR, args.city, "db-fragment.json")
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(fragment, f, indent=2, ensure_ascii=False)
         f.write("\n")
     print(f"[OK] {len(fragment['locations'])} locations, {len(fragment['travelGraph'])} travelGraph edges -> {out_path}")
+    if invented:
+        print(f"[~~] {len(invented)} hunt(s) ligada(s) por estimativa — o mapa não tem "
+              f"caminho andável até elas (corda, alçapão de script ou teleport)")
 
     report_path = os.path.join(FULL_MAPS_DIR, args.city, REJECTION_REPORT_NAME)
     with open(report_path, "w", encoding="utf-8") as f:

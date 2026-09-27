@@ -81,7 +81,7 @@ def test_build_city_fragment_takes_a_single_city_argument_no_separate_prefix(tmp
     # lookup key and the NPC id prefix.
     _write_city_fixture(tmp_path, monkeypatch, [])
 
-    fragment, rejections = btf.build_city_fragment("ROOK", str(tmp_path / "no-canary-here"))
+    fragment, rejections, _invented = btf.build_city_fragment("ROOK", str(tmp_path / "no-canary-here"))
 
     assert fragment == {"locations": [], "travelGraph": []}
     assert rejections == []
@@ -97,7 +97,7 @@ def test_build_city_fragment_makes_every_npc_a_node_of_the_travel_graph(tmp_path
         npcs=[("Norma", 1, 0), ("Obi", 2, 0)],
     )
 
-    fragment, rejections = btf.build_city_fragment("ROOK", str(tmp_path / "no-canary-here"))
+    fragment, rejections, _invented = btf.build_city_fragment("ROOK", str(tmp_path / "no-canary-here"))
 
     ids = {loc["id"] for loc in fragment["locations"]}
     assert ids == {"ROOK-TEMPLE-0001", "ROOK-NPC-norma", "ROOK-NPC-obi"}
@@ -119,7 +119,7 @@ def test_build_city_fragment_rejects_a_poi_that_reaches_nothing(tmp_path, monkey
         npcs=[("Norma", 40, 40)],
     )
 
-    fragment, rejections = btf.build_city_fragment("ROOK", str(tmp_path / "no-canary-here"))
+    fragment, rejections, _invented = btf.build_city_fragment("ROOK", str(tmp_path / "no-canary-here"))
 
     assert {loc["id"] for loc in fragment["locations"]} == {"ROOK-TEMPLE-0001", "ROOK-DEPOT-0001"}
     assert rejections == [{"reason": "poi-without-edge", "id": "ROOK-NPC-norma", "type": "NPC",
@@ -133,7 +133,7 @@ def test_build_city_fragment_reports_a_hunt_map_whose_entrance_has_no_sign(tmp_p
         hunt_folders=["ROOK-HUNT-0001_rats-sewers", "ROOK-HUNT-0018_bugs-rookguard", "training-spots"],
     )
 
-    _, rejections = btf.build_city_fragment("ROOK", str(tmp_path / "no-canary-here"))
+    _, rejections, _invented = btf.build_city_fragment("ROOK", str(tmp_path / "no-canary-here"))
 
     assert rejections == [{"reason": "hunt-without-poi", "id": "ROOK-HUNT-0018",
                            "name": "bugs-rookguard"}]

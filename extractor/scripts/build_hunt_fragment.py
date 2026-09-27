@@ -53,6 +53,7 @@ from hunt_fragment import (
 SCRIPTS_DIR = os.path.dirname(os.path.abspath(__file__))
 EXTRACTOR_DIR = os.path.dirname(SCRIPTS_DIR)
 READY_MAPS_DIR = os.path.join(EXTRACTOR_DIR, "ready-maps")
+FULL_MAPS_DIR = os.path.join(EXTRACTOR_DIR, "full-maps")
 MAPS_DIR = os.path.join(EXTRACTOR_DIR, "maps")
 
 
@@ -188,6 +189,32 @@ def _flush_export_target(target: dict) -> None:
     )
 
 
+CURATED_HUNTS_FILE_NAME = "curated-hunts.json"
+_curated_names_cache = {}
+
+
+def _curated_name(map_id):
+    """O nome que você deu à hunt na tela `new-hunts`, se houver.
+
+    Sem ele o nome sai do slug da pasta, que perde acento e travessão
+    ("Ghouls — Ghostlands" vira "Ghouls Ghostlands"). Com ele não há o que
+    confirmar, e a entrada nasce sem `_todo` de nome.
+    """
+    if not map_id:
+        return None
+    city = city_ids.derive_city(map_id)
+    if city not in _curated_names_cache:
+        path = os.path.join(FULL_MAPS_DIR, city, CURATED_HUNTS_FILE_NAME)
+        names = {}
+        if os.path.exists(path):
+            with open(path, "r", encoding="utf-8") as handler:
+                for hunt in json.load(handler).get("hunts", []):
+                    if hunt.get("id") and hunt.get("name"):
+                        names[hunt["id"]] = hunt["name"]
+        _curated_names_cache[city] = names
+    return _curated_names_cache[city].get(map_id)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("map_name", nargs="?", help="Nome da pasta do mapa (em extractor/ready-maps/<cidade>/)")
@@ -259,7 +286,9 @@ def main():
             ):
                 raise MapIdAlreadyExistsError(map_id)
 
-            fragment = build_fragment(respawn, map_name, map_id)
+            fragment = build_fragment(
+                respawn, map_name, map_id, _curated_name(map_id)
+            )
             out_path = _write_fragment_file(map_name, fragment)
             generated += 1
             print(f"[OK] {map_name}: {len(fragment['loot']['drops'])} loot rows -> {out_path}")
