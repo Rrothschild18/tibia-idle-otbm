@@ -92,7 +92,14 @@ def crop_spawns(source: str, destination: str, bounds, floors) -> int:
 
 
 def write_hunt_map(
-    city: str, hunt: dict, data: bytes, header: dict, bounds, floors, entrance=None
+    city: str,
+    hunt: dict,
+    data: bytes,
+    header: dict,
+    bounds,
+    floors,
+    entrance=None,
+    spawn_floors=None,
 ) -> dict:
     folder = os.path.join(MAPS_DIR, city, hunt["folder"])
     os.makedirs(folder, exist_ok=True)
@@ -138,7 +145,7 @@ def write_hunt_map(
         os.path.join(FULL_MAPS_DIR, city, f"{city}-monster.xml"),
         os.path.join(folder, f"{slug}-monster.xml"),
         bounds,
-        floors,
+        floors if spawn_floors is None else spawn_floors,
     )
     for kind, content in EMPTY_XML.items():
         with open(os.path.join(folder, f"{slug}-{kind}.xml"), "w", encoding="utf-8") as handler:
@@ -207,6 +214,11 @@ def main():
             continue
 
         floors = set(hunt["floors"])
+        # O recorte leva os andares do meio; o spawn, não. A torre das amazonas
+        # tem bicho em z7, z4, z3 e z2, e as escadas em z5 e z6 — sem os dois
+        # andares vazios o mapa sai em pedaços que não se alcançam. Trazer só o
+        # chão deles dá a escada sem trazer bicho fraco pra hunt.
+        crop_floors = set(range(min(floors), max(floors) + 1))
         bounds = curated_hunts.crop_bounds(hunt["extent"], args.margin)
 
         anchor_of = lambda spawn: hunt_candidates.anchor_tile(spawn, walkable)
@@ -227,7 +239,9 @@ def main():
                 None,
             )
 
-        result = write_hunt_map(city, hunt, data, header, bounds, floors, entrance)
+        result = write_hunt_map(
+            city, hunt, data, header, bounds, crop_floors, entrance, spawn_floors=floors
+        )
         if entrance is not None and not result["marked"]:
             print(f"[WARN] {hunt['id']}: tile de entrada {entrance} ficou fora do recorte")
         written.append(
@@ -237,6 +251,7 @@ def main():
                 "slug": hunt["slug"],
                 "folder": hunt["folder"],
                 "floors": sorted(floors),
+                "cropFloors": sorted(crop_floors),
                 "candidateIds": hunt["candidateIds"],
                 "creatures": sum(member["creatures"] for member in members),
                 "extent": hunt["extent"],

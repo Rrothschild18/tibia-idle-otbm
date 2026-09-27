@@ -205,6 +205,7 @@ HOLE_DELTA: Tuple[int, int, int] = (0, 0, 1)
 
 _ITEM_ELEMENT_RE = re.compile(r"<item\s([^>]*?)(?:/>|>(.*?)</item>)", re.S)
 _FLOORCHANGE_ATTR_RE = re.compile(r'key="floorchange"\s+value="([a-z]+)"')
+_DEPOT_ATTR_RE = re.compile(r'key="type"\s+value="depot"')
 _LADDER_ATTR_RE = re.compile(r'key="type"\s+value="ladder"')
 _ITEM_ID_RE = re.compile(r'\bid="(\d+)"')
 _ITEM_RANGE_RE = re.compile(r'fromid="(\d+)"[^>]*toid="(\d+)"')
@@ -260,6 +261,171 @@ def parse_floorchange_items(items_xml: str) -> Dict[int, str]:
             directions[item_id] = direction.group(1)
 
     return directions
+
+
+def parse_depot_items(items_xml: str) -> Set[int]:
+    """`items.xml` -> os ids que são depot (o `locker`, hoje 3497-3500).
+
+    É a mesma leitura que dá floorchange e escada, e é o que permite marcar o
+    depot de uma cidade sem placa nenhuma. Rookgaard é a exceção que confirma a
+    regra: o `ROOK-DEPOT-0001` está numa tile sem objeto de depot, porque
+    Rookgaard não tem depot no Tibia — aquilo é decisão de design, não fato do
+    mapa, e por isso continua vindo de placa.
+    """
+    ids: Set[int] = set()
+    for item_ids, body in _iter_declared_items(items_xml):
+        if _DEPOT_ATTR_RE.search(body):
+            ids.update(item_ids)
+    return ids
+
+
+def find_depot_tiles(dump: Dict, depot_ids: Set[int]) -> List[Node]:
+    """Toda tile da cidade que carrega um item de depot **fora de casa**.
+
+    Todo locker de casa é um item de depot, e são eles a maioria: em Carlin, 8
+    dos 46. O que separa os dois é a própria tile — o OTBM marca a de casa com
+    `houseId`, e o depot da cidade nunca está numa.
+    """
+    found: Set[Node] = set()
+
+    def scan(items, node: Node) -> None:
+        for raw_item in items or []:
+            if raw_item.get("id") in depot_ids:
+                found.add(node)
+            scan(raw_item.get("content"), node)
+
+    for x, y, z, tile in _iter_dump_tiles(dump):
+        if tile.get("houseId"):
+            continue
+        scan(tile.get("items"), (x, y, z))
+
+    return sorted(found)
+
+
+def town_positions(dump: Dict) -> List[Dict]:
+    """Os `towns` do OTBM — id, nome e a posição do templo."""
+    towns = []
+    for node in dump.get("data", {}).get("nodes", []):
+        for feature in node.get("features", []):
+            for town in feature.get("towns", []) or []:
+                towns.append(
+                    {
+                        "id": town.get("townid"),
+                        "name": town.get("name", ""),
+                        "x": town.get("x"),
+                        "y": town.get("y"),
+                        "z": town.get("z"),
+                    }
+                )
+    return towns
+
+
+def nearest_walkable(node: Node, walkable: Set[Node], reach: int = 3) -> Optional[Node]:
+    """O próprio tile, ou o andável mais próximo dele no mesmo andar.
+
+    Um depot é um móvel intransponível: o POI tem que cair ao lado dele, senão
+    o grafo rejeita a location por não alcançar ninguém — que é o que acontece
+    hoje com a placa ilhada.
+    """
+    if node in walkable:
+        return node
+    x, y, z = node
+    for distance in range(1, reach + 1):
+        for dx in range(-distance, distance + 1):
+            for dy in range(-distance, distance + 1):
+                if max(abs(dx), abs(dy)) != distance:
+                    continue
+                candidate = (x + dx, y + dy, z)
+                if candidate in walkable:
+                    return candidate
+    return None
+
+
+def cluster_tiles(tiles: Sequence[Node], radius: int = 10) -> List[List[Node]]:
+    """Agrupa tiles por proximidade em x/y, **ignorando o andar**: um prédio de
+    depot ocupa a mesma planta em vários andares e é um destino só."""
+    groups: List[List[Node]] = []
+    for tile in sorted(tiles):
+        for group in groups:
+            if any(
+                max(abs(tile[0] - other[0]), abs(tile[1] - other[1])) <= radius
+                for other in group
+            ):
+                group.append(tile)
+                break
+        else:
+            groups.append([tile])
+    return groups
+
+
+def build_mechanical_city_pois(
+    dump: Dict, city: str, walkable: Set[Node], depot_ids: Set[int]
+) -> Tuple[List[Dict], List[str]]:
+    """`(locations, avisos)` — o templo e o depot de uma cidade, sem placa.
+
+    O templo vem do nó `towns` do OTBM; o depot, do item. São os dois POIs que
+    toda cidade tem e que ninguém deveria precisar marcar à mão — sem eles uma
+    cidade importada não tem de onde partir nem onde guardar.
+    """
+    locations: List[Dict] = []
+    warnings: List[str] = []
+
+    for index, town in enumerate(town_positions(dump), start=1):
+        node = nearest_walkable((town["x"], town["y"], town["z"]), walkable)
+        if node is None:
+            warnings.append(
+                f"templo {town['name']!r} em {town['x']},{town['y']},{town['z']} "
+                "não encosta em tile andável"
+            )
+            continue
+        locations.append(
+            build_city_poi(
+                f"{city}-TEMPLE-{index:04d}", "TEMPLE", node, town["name"] or f"{city} Temple"
+            )
+        )
+
+    town_name = next((t["name"] for t in town_positions(dump) if t.get("name")), None)
+    depot_label = f"{town_name or city.capitalize()} Depot"
+
+    depots = find_depot_tiles(dump, depot_ids)
+    for index, group in enumerate(cluster_tiles(depots), start=1):
+        node = next(
+            (found for found in (nearest_walkable(tile, walkable) for tile in group) if found),
+            None,
+        )
+        if node is None:
+            warnings.append(f"depot em {group[0]} não encosta em tile andável")
+            continue
+        locations.append(
+            build_city_poi(f"{city}-DEPOT-{index:04d}", "DEPOT", node, depot_label)
+        )
+
+    return locations, warnings
+
+
+def build_city_poi(location_id: str, poi_type: str, node: Node, display_name: str) -> Dict:
+    """Um POI mecânico da cidade (templo, depot) como entrada de `locations`.
+
+    Nem placa nem curadoria: o templo sai do nó `towns` do próprio OTBM e o
+    depot do item. Os dois são fato do mapa, e ficar esperando alguém marcá-los
+    à mão é o que deixou uma cidade recém-importada sem lugar nenhum de onde
+    partir.
+    """
+    x, y, z = node
+    city = city_ids.derive_city(location_id)
+    status = city_ids.derive_status(city)
+    entry = {
+        "id": location_id,
+        "type": poi_type,
+        "x": x,
+        "y": y,
+        "z": z,
+        "displayName": display_name,
+        "city": city,
+    }
+    if status is not None:
+        entry["status"] = status
+    return entry
 
 
 def parse_ladder_items(items_xml: str) -> Set[int]:

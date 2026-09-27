@@ -48,6 +48,8 @@ import update_canary_data
 from hunt_fragment import map_id_from_folder
 from travel_graph import (
     DEFAULT_NPC_REACH,
+    build_mechanical_city_pois,
+    parse_depot_items,
     REJECTION_REASONS,
     apply_graph_rejections,
     build_npc_locations,
@@ -238,6 +240,21 @@ def build_city_fragment(city: str, canary_dir=None, npc_reach: int = DEFAULT_NPC
     floorchange_by_id, ladder_ids = update_canary_data.read_floor_change_rules(canary_dir)
     tiles = extract_tile_flags(dump, object_defs_flags, floorchange_by_id, ladder_ids)
     graph = build_walkable_graph(tiles)
+
+    # Templo e depot não vêm de placa: o primeiro está no nó `towns` do OTBM, o
+    # segundo é o item `type="depot"`. Placa e curadoria continuam vencendo,
+    # porque Rookgaard marca os dois à mão (e o depot dele é ficção — a cidade
+    # não tem um no Tibia).
+    mechanical, mechanical_warnings = build_mechanical_city_pois(
+        dump, city, set(graph), parse_depot_items(update_canary_data.read_items_xml(canary_dir))
+    )
+    for warning in mechanical_warnings:
+        print(f"[WARN] {warning}")
+    if mechanical:
+        taken = {location["id"] for location in sign_locations}
+        added = [loc for loc in mechanical if loc["id"] not in taken]
+        sign_locations = [*sign_locations, *added]
+        print(f"[OK] {len(added)} POIs mecânicos (templo/depot) de {city}")
     travel_graph_edges = build_travel_graph(graph, [*sign_locations, *npc_locations], npc_reach)
 
     kept_locations, kept_edges, rejections = apply_graph_rejections(

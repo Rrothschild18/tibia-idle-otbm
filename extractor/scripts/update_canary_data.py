@@ -54,6 +54,23 @@ def vendored_npc_facts() -> str:
     return os.path.join(VENDOR_DIR, NPC_FACTS_NAME)
 
 
+def read_items_xml(canary_dir=None) -> str:
+    """O `items.xml` inteiro, do vendor ou do checkout. Arquivo ausente vira
+    string vazia: quem chama perde a regra que ia tirar dali e não inventa
+    nenhuma, no mesmo espírito de `read_floor_change_rules`."""
+    path = (
+        os.path.join(canary_dir, "data", "items", ITEMS_XML_NAME)
+        if canary_dir
+        else vendored_items_xml()
+    )
+    try:
+        with open(path, "r", encoding="utf-8", errors="replace") as items_file:
+            return items_file.read()
+    except OSError:
+        print(f"[WARN] {path} não encontrado")
+        return ""
+
+
 def read_floor_change_rules(canary_dir=None):
     """`items.xml` -> `({id: direção do floorchange}, {ids de escada de mão})`.
 

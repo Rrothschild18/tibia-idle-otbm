@@ -12,6 +12,11 @@
         11,
         12
       ],
+      "cropFloors": [
+        10,
+        11,
+        12
+      ],
       "candidateIds": [
         "CARLIN-C10-008",
         "CARLIN-C11-002",
@@ -47,6 +52,14 @@
         4,
         7
       ],
+      "cropFloors": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
       "candidateIds": [
         "CARLIN-C02-001",
         "CARLIN-C03-001",
@@ -69,7 +82,7 @@
         "z": 7
       },
       "walkTilesFromTemple": 141,
-      "tiles": 1961,
+      "tiles": 2210,
       "spawns": 22
     },
     {
@@ -78,6 +91,10 @@
       "slug": "amazons-north-east",
       "folder": "CARLIN-HUNT-0003_amazons-north-east",
       "floors": [
+        6,
+        7
+      ],
+      "cropFloors": [
         6,
         7
       ],
@@ -113,6 +130,10 @@
         8,
         9
       ],
+      "cropFloors": [
+        8,
+        9
+      ],
       "candidateIds": [
         "CARLIN-C08-005",
         "CARLIN-C09-002"
@@ -142,6 +163,10 @@
       "slug": "ghouls-skeletons-ghostlands",
       "folder": "CARLIN-HUNT-0005_ghouls-skeletons-ghostlands",
       "floors": [
+        11,
+        12
+      ],
+      "cropFloors": [
         11,
         12
       ],
@@ -177,6 +202,14 @@
         7,
         12
       ],
+      "cropFloors": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
       "candidateIds": [
         "CARLIN-C07-012",
         "CARLIN-C12-001"
@@ -197,7 +230,7 @@
         "z": 7
       },
       "walkTilesFromTemple": 122,
-      "tiles": 8338,
+      "tiles": 23601,
       "spawns": 52
     },
     {
@@ -206,6 +239,9 @@
       "slug": "amazons-small-camp",
       "folder": "CARLIN-HUNT-0007_amazons-small-camp",
       "floors": [
+        7
+      ],
+      "cropFloors": [
         7
       ],
       "candidateIds": [
@@ -236,6 +272,10 @@
       "slug": "cults-carlin-surroundings-z7",
       "folder": "CARLIN-HUNT-0008_cults-carlin-surroundings-z7",
       "floors": [
+        8,
+        9
+      ],
+      "cropFloors": [
         8,
         9
       ],
@@ -272,6 +312,11 @@
         9,
         10
       ],
+      "cropFloors": [
+        8,
+        9,
+        10
+      ],
       "candidateIds": [
         "CARLIN-C08-001",
         "CARLIN-C09-001",
@@ -302,6 +347,11 @@
       "slug": "spiders-fields-of-glory",
       "folder": "CARLIN-HUNT-0010_spiders-fields-of-glory",
       "floors": [
+        7,
+        8,
+        9
+      ],
+      "cropFloors": [
         7,
         8,
         9
