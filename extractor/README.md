@@ -797,6 +797,7 @@ extractor/
     minimap.py              lógica pura: paleta 6x6x6, cor de um tile pela pilha, mundo → pixel
     build_city_minimap.py   CLI (avulso): gera full-maps/<CIDADE>/minimap/z<Z>.png + bounds.json
     build_travel_fragment.py CLI (avulso): gera full-maps/<CIDADE>/db-fragment.json + travel-graph-rejections.txt; só escreve no back-end com --export
+    dump_marker_signs.py    CLI (avulso): salva as placas de POI de uma cidade em sign-snapshots/ antes de o .otbm ser refeito; para se mapa e catálogo discordarem
     content_export.py       lógica pura: pra onde cada coleção vai no back-end e como cada uma mescla (ver "Export pro back-end")
     map_dirs.py             lógica pura: descoberta de pastas em dois níveis (maps/<CIDADE>/<pasta>), usada por build_phaser_map.py, build_hunt_fragment.py e build_travel_fragment.py
     city_ids.py             lógica pura: deriva `city`/`status` do id de um hunt/location (nunca digitados à mão)
@@ -813,6 +814,9 @@ extractor/
                          travel-graph e do front, não da rotação de hunts). O relatório de rejeição
                          é versionado justamente pro diff entre execuções ter uma baseline. Pasta =
                          só o código da cidade, conteúdo renomeado pra bater (ROOK.otbm, ...)
+  sign-snapshots/      as placas de POI de uma cidade em texto, uma cópia por commit de origem
+                         (versionado): o .otbm é a única fonte delas, e um recorte novo o
+                         sobrescreve
   raw-maps/<pasta>.raw.json   saída da etapa 1, hunts e cidade-inteira (gitignored, regenerável)
   ready-maps/<CIDADE>/<pasta>/  saída da etapa 2 pros mapas de hunt (map.json v6 + sheets/ +
                          monsters/respawn.json), espelha maps/ 1:1 (gitignored, regenerável)

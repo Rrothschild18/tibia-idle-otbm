@@ -84,6 +84,26 @@ def _iter_dump_tiles(dump: Dict):
                 yield base_x + tx, base_y + ty, z, tile
 
 
+def iter_marker_sign_items(dump: Dict):
+    """Yields (x, y, z, uid, text) for every sign item in the reserved uid
+    range — the raw marker items, before any judgement about whether their
+    text is a valid id.
+
+    Public because more than one consumer needs the *items* and not the
+    locations parse_marker_signs distils them into: the sign snapshot taken
+    before a city is re-cut needs each marker's `uid`, which a location has no
+    room for. Without this, a second consumer either reaches for a private
+    helper or copies the filter, and the copy is the part that rots."""
+    for x, y, z, tile in _iter_dump_tiles(dump):
+        for raw_item in tile.get("items", []):
+            if raw_item.get("id") != SIGN_ITEM_ID:
+                continue
+            uid = raw_item.get("uid")
+            if uid is None or uid < MARKER_UID_MIN:
+                continue
+            yield x, y, z, uid, raw_item.get("text", "")
+
+
 def parse_marker_signs(dump: Dict) -> Tuple[List[Dict], List[Dict]]:
     """Every sign item (id 2016) with a uid in the reserved range -> a
     (locations, issues) pair. A sign whose uid falls outside the reserved
@@ -100,32 +120,24 @@ def parse_marker_signs(dump: Dict) -> Tuple[List[Dict], List[Dict]]:
     issues: List[Dict] = []
     seen_ids: Set[str] = set()
 
-    for x, y, z, tile in _iter_dump_tiles(dump):
-        for raw_item in tile.get("items", []):
-            if raw_item.get("id") != SIGN_ITEM_ID:
-                continue
-            uid = raw_item.get("uid")
-            if uid is None or uid < MARKER_UID_MIN:
-                continue
+    for x, y, z, uid, text in iter_marker_sign_items(dump):
+        match = _SIGN_ID_RE.match(text)
+        if not match:
+            issues.append({"reason": "invalid-sign-format", "uid": uid, "text": text, "x": x, "y": y, "z": z})
+            continue
 
-            text = raw_item.get("text", "")
-            match = _SIGN_ID_RE.match(text)
-            if not match:
-                issues.append({"reason": "invalid-sign-format", "uid": uid, "text": text, "x": x, "y": y, "z": z})
-                continue
+        if text in seen_ids:
+            issues.append({"reason": "duplicate-sign-id", "uid": uid, "text": text, "x": x, "y": y, "z": z})
+            continue
+        seen_ids.add(text)
 
-            if text in seen_ids:
-                issues.append({"reason": "duplicate-sign-id", "uid": uid, "text": text, "x": x, "y": y, "z": z})
-                continue
-            seen_ids.add(text)
-
-            locations.append({
-                "id": text,
-                "type": match.group("type"),
-                "x": x,
-                "y": y,
-                "z": z,
-            })
+        locations.append({
+            "id": text,
+            "type": match.group("type"),
+            "x": x,
+            "y": y,
+            "z": z,
+        })
 
     return locations, issues
 
