@@ -510,7 +510,10 @@ de `extractor/`; publicar é este comando, e só ele.
 Rookgaard foi recortado à mão no editor: recorte, placas e "o que é uma hunt"
 saíram de horas de trabalho humano, em coordenada local, sem nada que ligue um
 mapa de hunt ao lugar da cidade de onde ele veio. Uma cidade nova não precisa
-disso — o próprio cliente Tibia diz onde cada região começa e termina.
+disso — o próprio cliente Tibia diz onde cada região começa e termina. E
+Rookgaard também não precisa mais: ele foi refeito por este caminho (Subarea
+317 de Thais, `--shape square --margin 32`), e das horas humanas só as placas
+voltaram, transplantadas por offset.
 
 **A fonte é o `map-<sha>.dat`** da pasta `assets/` do cliente (entrada
 `type: "map"` do `catalog-content.json`): 28 **Areas** e 424 **Subareas** da
@@ -546,14 +549,16 @@ por espécie, e baixar o JSON.
 | `build_hunt_candidates.py` | bolsão de spawn por andar, sem atravessar parede (componente caminhável); espécies, tiles, distância a pé do templo; desmembramento por espécie | — |
 | tela `new-hunts` | — | o que é uma hunt, nome, fundir/dividir |
 
-**O recorte não é rebaseado.** Rookgaard está em coordenada local porque foi
-recortado no editor; cidade nova nasce em coordenada de mundo, e é isso que
-permite conferir depois que o roster de uma hunt bate com o da cidade naquela
-região — a classe de bug que fez uma hunt de Orc ser rotulada como Troll Tower
-não tem como ser pega por olho.
+**O recorte não é rebaseado.** Toda cidade em `full-maps/` nasce em coordenada
+de mundo, Rookgaard incluído, e é isso que permite conferir depois que o roster
+de uma hunt bate com o da cidade naquela região — a classe de bug que fez uma
+hunt de Orc ser rotulada como Troll Tower não tem como ser pega por olho. Os
+mapas de hunt em `maps/<CIDADE>/` seguem em coordenada própria: são bundles
+exportados um a um, independentes do mapa da cidade.
 
 **`cut_city.py` nunca sobrescreve mapa feito à mão**: pasta de cidade sem
-`source.json` para o comando com erro, porque o `ROOK/` é exatamente isso.
+`source.json` para o comando com erro. Não tem flag que fure — refazer um
+recorte à mão é apagar a pasta de propósito, com o git como cópia.
 
 ## Travel graph (mapa cidade inteira)
 

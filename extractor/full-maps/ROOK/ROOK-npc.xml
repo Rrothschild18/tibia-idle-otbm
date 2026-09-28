@@ -1,60 +1,78 @@
-<?xml version="1.0"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <npcs>
-	<npc centerx="1028" centery="1083" centerz="7" radius="1">
-		<npc name="An Orc Guard" x="0" y="0" z="7" spawntime="60" />
+	<npc centerx="32138" centery="32172" centerz="3" radius="1">
+		<npc name="Hyacinth" x="0" y="0" z="3" spawntime="60" />
 	</npc>
-	<npc centerx="1139" centery="1103" centerz="7" radius="1">
-		<npc name="Norma" x="0" y="0" z="7" spawntime="60" />
+	<npc centerx="32102" centery="32129" centerz="4" radius="1">
+		<npc name="Blind Orc" x="0" y="0" z="4" spawntime="60" />
 	</npc>
-	<npc centerx="1105" centery="1105" centerz="7" radius="1">
-		<npc name="Al Dee" x="0" y="0" z="7" spawntime="60" />
+	<npc centerx="32096" centery="32219" centerz="5" radius="1">
+		<npc name="Asralius" x="0" y="0" z="5" spawntime="60" />
 	</npc>
-	<npc centerx="1146" centery="1115" centerz="7" radius="1">
-		<npc name="Seymour" x="0" y="0" z="7" spawntime="60" />
-	</npc>
-	<npc centerx="1066" centery="1121" centerz="7" radius="1">
-		<npc name="Lee'Delle" x="0" y="0" z="7" spawntime="60" />
-	</npc>
-	<npc centerx="1146" centery="1122" centerz="7" radius="1">
-		<npc name="Vascalir" x="0" y="0" z="7" spawntime="60" />
-	</npc>
-	<npc centerx="1057" centery="1123" centerz="7" radius="1">
-		<npc name="Loui" x="0" y="0" z="7" spawntime="60" />
-	</npc>
-	<npc centerx="1127" centery="1125" centerz="7" radius="1">
-		<npc name="Tom" x="0" y="0" z="7" spawntime="60" />
-	</npc>
-	<npc centerx="1110" centery="1130" centerz="7" radius="1">
-		<npc name="Willie" x="0" y="0" z="7" spawntime="60" />
-	</npc>
-	<npc centerx="1151" centery="1130" centerz="7" radius="1">
-		<npc name="Obi" x="0" y="0" z="7" spawntime="60" />
-	</npc>
-	<npc centerx="1092" centery="1132" centerz="7" radius="1">
-		<npc name="Billy" x="0" y="0" z="7" spawntime="60" />
-	</npc>
-	<npc centerx="1139" centery="1144" centerz="7" radius="1">
-		<npc name="Cipfried" x="0" y="0" z="7" spawntime="60" />
-	</npc>
-	<npc centerx="1108" centery="1151" centerz="7" radius="1">
-		<npc name="Lily" x="0" y="0" z="7" spawntime="60" />
-	</npc>
-	<npc centerx="1146" centery="1106" centerz="8" radius="1">
-		<npc name="Amber" x="0" y="0" z="8" spawntime="60" />
-	</npc>
-	<npc centerx="1157" centery="1114" centerz="8" radius="1">
-		<npc name="Paulie" x="0" y="0" z="8" spawntime="60" />
-	</npc>
-	<npc centerx="1135" centery="1106" centerz="6" radius="1">
+	<npc centerx="32093" centery="32180" centerz="6" radius="1">
 		<npc name="Dallheim" x="0" y="0" z="6" spawntime="60" />
 	</npc>
-	<npc centerx="1146" centery="1116" centerz="6" radius="1">
+	<npc centerx="32104" centery="32190" centerz="6" radius="1">
 		<npc name="The Oracle" x="0" y="0" z="6" spawntime="60" />
 	</npc>
-	<npc centerx="1064" centery="1128" centerz="6" radius="1">
+	<npc centerx="32022" centery="32202" centerz="6" radius="1">
 		<npc name="Zerbrus" x="0" y="0" z="6" spawntime="60" />
 	</npc>
-	<npc centerx="1147" centery="1133" centerz="6" radius="1">
+	<npc centerx="32105" centery="32207" centerz="6" radius="1">
 		<npc name="Dixi" x="0" y="0" z="6" spawntime="60" />
+	</npc>
+	<npc centerx="32034" centery="32273" centerz="6" radius="1">
+		<npc name="Santiago" x="0" y="0" z="6" spawntime="60" />
+	</npc>
+	<npc centerx="31986" centery="32157" centerz="7" radius="1">
+		<npc name="An Orc Guard" x="0" y="0" z="7" spawntime="60" />
+	</npc>
+	<npc centerx="32097" centery="32177" centerz="7" radius="1">
+		<npc name="Norma" x="0" y="0" z="7" spawntime="60" />
+	</npc>
+	<npc centerx="32063" centery="32179" centerz="7" radius="1">
+		<npc name="Al Dee" x="0" y="0" z="7" spawntime="60" />
+	</npc>
+	<npc centerx="32104" centery="32189" centerz="7" radius="1">
+		<npc name="Seymour" x="0" y="0" z="7" spawntime="60" />
+	</npc>
+	<npc centerx="32024" centery="32195" centerz="7" radius="1">
+		<npc name="Lee'Delle" x="0" y="0" z="7" spawntime="60" />
+	</npc>
+	<npc centerx="32104" centery="32196" centerz="7" radius="1">
+		<npc name="Vascalir" x="0" y="0" z="7" spawntime="60" />
+	</npc>
+	<npc centerx="32015" centery="32197" centerz="7" radius="1">
+		<npc name="Loui" x="0" y="0" z="7" spawntime="60" />
+	</npc>
+	<npc centerx="32085" centery="32199" centerz="7" radius="1">
+		<npc name="Tom" x="0" y="0" z="7" spawntime="60" />
+	</npc>
+	<npc centerx="32068" centery="32204" centerz="7" radius="1">
+		<npc name="Willie" x="0" y="0" z="7" spawntime="60" />
+	</npc>
+	<npc centerx="32109" centery="32204" centerz="7" radius="1">
+		<npc name="Obi" x="0" y="0" z="7" spawntime="60" />
+	</npc>
+	<npc centerx="32050" centery="32206" centerz="7" radius="1">
+		<npc name="Billy" x="0" y="0" z="7" spawntime="60" />
+	</npc>
+	<npc centerx="32097" centery="32218" centerz="7" radius="1">
+		<npc name="Cipfried" x="0" y="0" z="7" spawntime="60" />
+	</npc>
+	<npc centerx="32066" centery="32225" centerz="7" radius="1">
+		<npc name="Lily" x="0" y="0" z="7" spawntime="60" />
+	</npc>
+	<npc centerx="32082" centery="32263" centerz="7" radius="1">
+		<npc name="Carlos" x="0" y="0" z="7" spawntime="60" />
+	</npc>
+	<npc centerx="32058" centery="32268" centerz="7" radius="1">
+		<npc name="Zirella" x="0" y="0" z="7" spawntime="60" />
+	</npc>
+	<npc centerx="32104" centery="32180" centerz="8" radius="1">
+		<npc name="Amber" x="0" y="0" z="8" spawntime="60" />
+	</npc>
+	<npc centerx="32115" centery="32188" centerz="8" radius="1">
+		<npc name="Paulie" x="0" y="0" z="8" spawntime="60" />
 	</npc>
 </npcs>

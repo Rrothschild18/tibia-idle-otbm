@@ -3,6 +3,14 @@
     "clip": true,
     "unmove": true
   },
+  "10000": {
+    "automap": true,
+    "automapColor": 12,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "usable": true
+  },
   "1001": {
     "clip": true,
     "unmove": true
@@ -17,6 +25,13 @@
   "1003": {
     "clip": true,
     "unmove": true
+  },
+  "10032": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
   },
   "10034": {
     "bottom": true,
@@ -63,6 +78,13 @@
     "unmove": true,
     "usable": true
   },
+  "10065": {
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true,
+    "usable": true
+  },
   "1007": {
     "bank": true,
     "fullbank": true,
@@ -83,6 +105,13 @@
     "unmove": true,
     "unpass": true,
     "unsight": true
+  },
+  "10098": {
+    "automap": true,
+    "automapColor": 12,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
   },
   "101": {
     "bank": true,
@@ -125,6 +154,13 @@
   },
   "10163": {
     "clip": true,
+    "unmove": true
+  },
+  "1019": {
+    "automap": true,
+    "automapColor": 24,
+    "bank": true,
+    "fullbank": true,
     "unmove": true
   },
   "1020": {
@@ -302,6 +338,13 @@
     "unpass": true,
     "unsight": true
   },
+  "104": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
   "1041": {
     "automap": true,
     "automapColor": 114,
@@ -376,6 +419,18 @@
     "clip": true,
     "unmove": true
   },
+  "10526": {
+    "clip": true,
+    "unmove": true
+  },
+  "10527": {
+    "clip": true,
+    "unmove": true
+  },
+  "10528": {
+    "clip": true,
+    "unmove": true
+  },
   "10529": {
     "clip": true,
     "unmove": true
@@ -383,6 +438,184 @@
   "10530": {
     "clip": true,
     "unmove": true
+  },
+  "10531": {
+    "clip": true,
+    "unmove": true
+  },
+  "10532": {
+    "clip": true,
+    "unmove": true
+  },
+  "10533": {
+    "clip": true,
+    "unmove": true
+  },
+  "10534": {
+    "automap": true,
+    "automapColor": 114,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "10535": {
+    "automap": true,
+    "automapColor": 114,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "10539": {
+    "clip": true,
+    "unmove": true
+  },
+  "1054": {
+    "clip": true,
+    "unmove": true
+  },
+  "10540": {
+    "clip": true,
+    "unmove": true
+  },
+  "10541": {
+    "clip": true,
+    "unmove": true
+  },
+  "10543": {
+    "clip": true,
+    "unmove": true
+  },
+  "10545": {
+    "clip": true,
+    "unmove": true
+  },
+  "1055": {
+    "clip": true,
+    "unmove": true
+  },
+  "1056": {
+    "clip": true,
+    "unmove": true
+  },
+  "1057": {
+    "clip": true,
+    "unmove": true
+  },
+  "1058": {
+    "clip": true,
+    "unmove": true
+  },
+  "10588": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "10589": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "1059": {
+    "clip": true,
+    "unmove": true
+  },
+  "10590": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "10591": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "10592": {
+    "automap": true,
+    "automapColor": 210,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "1060": {
+    "clip": true,
+    "unmove": true
+  },
+  "1061": {
+    "clip": true,
+    "unmove": true
+  },
+  "1062": {
+    "clip": true,
+    "unmove": true
+  },
+  "1063": {
+    "clip": true,
+    "unmove": true
+  },
+  "1064": {
+    "clip": true,
+    "unmove": true
+  },
+  "10649": {
+    "unmove": true,
+    "unpass": true
+  },
+  "1065": {
+    "clip": true,
+    "unmove": true
+  },
+  "10650": {
+    "unmove": true,
+    "unpass": true
+  },
+  "10651": {
+    "unmove": true,
+    "unpass": true
+  },
+  "10652": {
+    "unmove": true,
+    "unpass": true
+  },
+  "10653": {
+    "unmove": true,
+    "unpass": true
+  },
+  "10654": {
+    "unmove": true,
+    "unpass": true
+  },
+  "10655": {
+    "unmove": true,
+    "unpass": true
+  },
+  "10656": {
+    "unmove": true,
+    "unpass": true
+  },
+  "10661": {
+    "unmove": true,
+    "unpass": true
+  },
+  "10663": {
+    "unmove": true,
+    "unpass": true
+  },
+  "10664": {
+    "unmove": true,
+    "unpass": true
   },
   "10675": {
     "unmove": true
@@ -399,17 +632,137 @@
   "10679": {
     "unmove": true
   },
+  "1068": {
+    "unmove": true
+  },
   "10680": {
     "unmove": true
   },
   "10681": {
     "unmove": true
   },
+  "10682": {
+    "unmove": true
+  },
+  "10685": {
+    "unmove": true
+  },
+  "10686": {
+    "unmove": true
+  },
+  "10689": {
+    "unmove": true
+  },
+  "1069": {
+    "unmove": true
+  },
+  "10690": {
+    "unmove": true
+  },
+  "10691": {
+    "clip": true,
+    "unmove": true
+  },
+  "10692": {
+    "clip": true,
+    "unmove": true
+  },
   "10693": {
     "clip": true,
     "unmove": true
   },
+  "1070": {
+    "unmove": true
+  },
+  "10706": {
+    "clip": true,
+    "unmove": true
+  },
+  "10707": {
+    "unmove": true
+  },
+  "10708": {
+    "unmove": true
+  },
+  "10709": {
+    "unmove": true
+  },
+  "1071": {
+    "unmove": true
+  },
+  "10710": {
+    "unmove": true
+  },
+  "10711": {
+    "automap": true,
+    "automapColor": 12,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "10714": {
+    "automap": true,
+    "automapColor": 12,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "10716": {
+    "automap": true,
+    "automapColor": 12,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "usable": true
+  },
+  "10718": {
+    "automap": true,
+    "automapColor": 12,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "usable": true
+  },
+  "1072": {
+    "unmove": true
+  },
+  "10720": {
+    "automap": true,
+    "automapColor": 12,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "usable": true
+  },
+  "10728": {
+    "automap": true,
+    "automapColor": 12,
+    "unmove": true,
+    "unpass": true
+  },
+  "10729": {
+    "automap": true,
+    "automapColor": 12,
+    "unmove": true,
+    "unpass": true
+  },
+  "1073": {
+    "unmove": true
+  },
+  "10730": {
+    "automap": true,
+    "automapColor": 12,
+    "unmove": true,
+    "unpass": true
+  },
   "10735": {
+    "automap": true,
+    "automapColor": 12,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "10737": {
     "automap": true,
     "automapColor": 12,
     "bottom": true,
@@ -422,6 +775,23 @@
     "bottom": true,
     "unmove": true,
     "unpass": true
+  },
+  "10744": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "hookDirection": "HOOK_TYPE_EAST",
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "10746": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
   },
   "10747": {
     "automap": true,
@@ -441,6 +811,9 @@
   "10751": {
     "unmove": true
   },
+  "10752": {
+    "unmove": true
+  },
   "10753": {
     "unmove": true
   },
@@ -454,6 +827,18 @@
     "unmove": true
   },
   "10764": {
+    "unmove": true
+  },
+  "10770": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "hookDirection": "HOOK_TYPE_SOUTH",
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "1078": {
     "unmove": true
   },
   "1080": {
@@ -555,6 +940,28 @@
     "unpass": true,
     "unsight": true
   },
+  "10845": {
+    "unmove": true
+  },
+  "10846": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "10847": {
+    "unmove": true
+  },
+  "10848": {
+    "clip": true,
+    "unmove": true
+  },
+  "10849": {
+    "clip": true,
+    "unmove": true
+  },
   "1085": {
     "automap": true,
     "automapColor": 86,
@@ -563,6 +970,18 @@
     "unpass": true,
     "unsight": true
   },
+  "10850": {
+    "clip": true,
+    "unmove": true
+  },
+  "10851": {
+    "clip": true,
+    "unmove": true
+  },
+  "10852": {
+    "clip": true,
+    "unmove": true
+  },
   "1086": {
     "automap": true,
     "automapColor": 86,
@@ -570,6 +989,10 @@
     "unmove": true,
     "unpass": true,
     "unsight": true
+  },
+  "10865": {
+    "unmove": true,
+    "unpass": true
   },
   "10871": {
     "top": true,
@@ -597,6 +1020,10 @@
     "unmove": true
   },
   "1091": {
+    "clip": true,
+    "unmove": true
+  },
+  "1092": {
     "clip": true,
     "unmove": true
   },
@@ -648,6 +1075,10 @@
     "unmove": true,
     "unpass": true
   },
+  "1093": {
+    "clip": true,
+    "unmove": true
+  },
   "10930": {
     "automap": true,
     "automapColor": 186,
@@ -664,6 +1095,10 @@
     "clip": true,
     "unmove": true
   },
+  "1095": {
+    "clip": true,
+    "unmove": true
+  },
   "1096": {
     "clip": true,
     "unmove": true
@@ -674,12 +1109,30 @@
   "10966": {
     "unmove": true
   },
+  "10968": {
+    "unmove": true
+  },
+  "1097": {
+    "clip": true,
+    "unmove": true
+  },
   "10978": {
+    "unmove": true
+  },
+  "10979": {
     "unmove": true
   },
   "1098": {
     "clip": true,
     "unmove": true
+  },
+  "10984": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
   },
   "1100": {
     "clip": true,
@@ -1002,11 +1455,27 @@
     "unpass": true,
     "unsight": true
   },
+  "11335": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
   "1134": {
     "automap": true,
     "automapColor": 86,
     "unmove": true,
     "unpass": true
+  },
+  "11346": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
   },
   "1136": {
     "automap": true,
@@ -1014,12 +1483,26 @@
     "unmove": true,
     "unpass": true
   },
+  "11363": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
   "11366": {
     "automap": true,
     "automapColor": 121,
     "bank": true,
     "fullbank": true,
     "unmove": true
+  },
+  "1137": {
+    "automap": true,
+    "automapColor": 86,
+    "unmove": true,
+    "unpass": true
   },
   "11436": {
     "unmove": true
@@ -1041,6 +1524,12 @@
     "unmove": true,
     "usable": true
   },
+  "1150": {
+    "automap": true,
+    "automapColor": 86,
+    "unmove": true,
+    "unpass": true
+  },
   "1152": {
     "automap": true,
     "automapColor": 129,
@@ -1060,11 +1549,27 @@
     "unmove": true,
     "unpass": true
   },
+  "11706": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
   "11707": {
     "automap": true,
     "automapColor": 210,
     "bottom": true,
     "unmove": true
+  },
+  "11710": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
   },
   "11711": {
     "automap": true,
@@ -1321,7 +1826,366 @@
     "top": true,
     "unmove": true
   },
+  "1187": {
+    "unmove": true,
+    "unpass": true
+  },
+  "1188": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "1189": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "1190": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "1191": {
+    "unmove": true,
+    "unpass": true
+  },
+  "1192": {
+    "unmove": true,
+    "unpass": true
+  },
+  "11925": {
+    "automap": true,
+    "automapColor": 121,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "1193": {
+    "unmove": true,
+    "unpass": true
+  },
+  "1194": {
+    "unmove": true,
+    "unpass": true
+  },
+  "1195": {
+    "unmove": true,
+    "unpass": true
+  },
+  "1196": {
+    "unmove": true,
+    "unpass": true
+  },
   "11968": {
+    "unmove": true
+  },
+  "12083": {
+    "automap": true,
+    "automapColor": 210,
+    "clip": true,
+    "unmove": true
+  },
+  "12084": {
+    "automap": true,
+    "automapColor": 210,
+    "clip": true,
+    "unmove": true
+  },
+  "12214": {
+    "clip": true,
+    "unmove": true
+  },
+  "12216": {
+    "clip": true,
+    "unmove": true
+  },
+  "12217": {
+    "clip": true,
+    "unmove": true
+  },
+  "12218": {
+    "clip": true,
+    "unmove": true
+  },
+  "12219": {
+    "clip": true,
+    "unmove": true
+  },
+  "12220": {
+    "clip": true,
+    "unmove": true
+  },
+  "12225": {
+    "clip": true,
+    "unmove": true
+  },
+  "12345": {
+    "automap": true,
+    "automapColor": 210,
+    "clip": true,
+    "unmove": true
+  },
+  "12346": {
+    "automap": true,
+    "automapColor": 210,
+    "clip": true,
+    "unmove": true
+  },
+  "12347": {
+    "automap": true,
+    "automapColor": 210,
+    "clip": true,
+    "unmove": true
+  },
+  "12348": {
+    "automap": true,
+    "automapColor": 210,
+    "clip": true,
+    "unmove": true
+  },
+  "12349": {
+    "automap": true,
+    "automapColor": 210,
+    "clip": true,
+    "unmove": true
+  },
+  "12350": {
+    "automap": true,
+    "automapColor": 210,
+    "clip": true,
+    "unmove": true
+  },
+  "12351": {
+    "automap": true,
+    "automapColor": 210,
+    "clip": true,
+    "unmove": true
+  },
+  "12352": {
+    "automap": true,
+    "automapColor": 210,
+    "clip": true,
+    "unmove": true
+  },
+  "12353": {
+    "automap": true,
+    "automapColor": 210,
+    "clip": true,
+    "unmove": true
+  },
+  "12354": {
+    "automap": true,
+    "automapColor": 210,
+    "clip": true,
+    "unmove": true
+  },
+  "12355": {
+    "automap": true,
+    "automapColor": 210,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "12356": {
+    "clip": true,
+    "unmove": true
+  },
+  "12357": {
+    "clip": true,
+    "unmove": true
+  },
+  "12358": {
+    "clip": true,
+    "unmove": true
+  },
+  "12359": {
+    "clip": true,
+    "unmove": true
+  },
+  "12360": {
+    "clip": true,
+    "unmove": true
+  },
+  "12361": {
+    "clip": true,
+    "unmove": true
+  },
+  "12362": {
+    "clip": true,
+    "unmove": true
+  },
+  "12363": {
+    "clip": true,
+    "unmove": true
+  },
+  "12364": {
+    "clip": true,
+    "unmove": true
+  },
+  "12365": {
+    "clip": true,
+    "unmove": true
+  },
+  "12366": {
+    "clip": true,
+    "unmove": true
+  },
+  "12367": {
+    "clip": true,
+    "unmove": true
+  },
+  "12379": {
+    "automap": true,
+    "automapColor": 192,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "12380": {
+    "automap": true,
+    "automapColor": 207,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "12381": {
+    "automap": true,
+    "automapColor": 192,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "12382": {
+    "automap": true,
+    "automapColor": 207,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "12383": {
+    "automap": true,
+    "automapColor": 192,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "12384": {
+    "automap": true,
+    "automapColor": 207,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "12385": {
+    "automap": true,
+    "automapColor": 192,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "12386": {
+    "automap": true,
+    "automapColor": 207,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "12387": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "12388": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "12389": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "12390": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "12391": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "12392": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "12393": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "12394": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "12395": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "12401": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "12402": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "12417": {
+    "clip": true,
     "unmove": true
   },
   "12418": {
@@ -1331,6 +2195,10 @@
     "unmove": true,
     "unpass": true
   },
+  "12422": {
+    "clip": true,
+    "unmove": true
+  },
   "12424": {
     "automap": true,
     "automapColor": 86,
@@ -1338,8 +2206,16 @@
     "unmove": true,
     "unpass": true
   },
+  "12427": {
+    "clip": true,
+    "unmove": true
+  },
   "12431": {
     "hang": true,
+    "unmove": true,
+    "usable": true
+  },
+  "12442": {
     "unmove": true,
     "usable": true
   },
@@ -1368,6 +2244,10 @@
     "bottom": true,
     "unmove": true,
     "unpass": true
+  },
+  "12484": {
+    "clip": true,
+    "unmove": true
   },
   "12605": {
     "unmove": true
@@ -1872,6 +2752,13 @@
     "unpass": true,
     "unsight": true
   },
+  "12860": {
+    "automap": true,
+    "automapColor": 121,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
   "1287": {
     "automap": true,
     "automapColor": 186,
@@ -2028,6 +2915,59 @@
     "unpass": true,
     "unsight": true
   },
+  "13991": {
+    "usable": true
+  },
+  "1450": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "hookDirection": "HOOK_TYPE_EAST",
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "1451": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "hookDirection": "HOOK_TYPE_SOUTH",
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "1453": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "1454": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "14842": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "14843": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
   "14850": {
     "automap": true,
     "automapColor": 186,
@@ -2052,6 +2992,14 @@
     "unpass": true,
     "unsight": true
   },
+  "14860": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
   "14879": {
     "automap": true,
     "automapColor": 186,
@@ -2061,6 +3009,14 @@
     "unsight": true
   },
   "14880": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "14881": {
     "automap": true,
     "automapColor": 186,
     "bottom": true,
@@ -2108,12 +3064,120 @@
     "clip": true,
     "unmove": true
   },
+  "14901": {
+    "clip": true,
+    "unmove": true
+  },
   "14902": {
+    "clip": true,
+    "unmove": true
+  },
+  "14903": {
     "clip": true,
     "unmove": true
   },
   "14904": {
     "clip": true,
+    "unmove": true
+  },
+  "1493": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "14940": {
+    "automap": true,
+    "automapColor": 86,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "14941": {
+    "automap": true,
+    "automapColor": 86,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "14942": {
+    "automap": true,
+    "automapColor": 86,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "14943": {
+    "automap": true,
+    "automapColor": 86,
+    "bottom": true,
+    "unmove": true
+  },
+  "14944": {
+    "automap": true,
+    "automapColor": 86,
+    "bottom": true,
+    "unmove": true
+  },
+  "14945": {
+    "automap": true,
+    "automapColor": 86,
+    "bottom": true,
+    "unmove": true
+  },
+  "14949": {
+    "automap": true,
+    "automapColor": 86,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "14950": {
+    "automap": true,
+    "automapColor": 86,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "14952": {
+    "automap": true,
+    "automapColor": 86,
+    "bottom": true,
+    "unmove": true
+  },
+  "14953": {
+    "automap": true,
+    "automapColor": 86,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "14957": {
+    "automap": true,
+    "automapColor": 86,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "14958": {
+    "automap": true,
+    "automapColor": 86,
+    "bottom": true,
+    "unmove": true
+  },
+  "14960": {
+    "automap": true,
+    "automapColor": 86,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "14964": {
+    "automap": true,
+    "automapColor": 86,
+    "bottom": true,
     "unmove": true
   },
   "150": {
@@ -2123,6 +3187,83 @@
     "unmove": true,
     "unpass": true,
     "usable": true
+  },
+  "15000": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "15001": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "15002": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "15004": {
+    "clip": true,
+    "unmove": true
+  },
+  "15005": {
+    "clip": true,
+    "unmove": true
+  },
+  "15006": {
+    "clip": true,
+    "unmove": true
+  },
+  "15007": {
+    "clip": true,
+    "unmove": true
+  },
+  "15008": {
+    "clip": true,
+    "unmove": true
+  },
+  "15009": {
+    "clip": true,
+    "unmove": true
+  },
+  "15010": {
+    "clip": true,
+    "unmove": true
+  },
+  "15011": {
+    "clip": true,
+    "unmove": true
+  },
+  "15012": {
+    "clip": true,
+    "unmove": true
+  },
+  "15013": {
+    "clip": true,
+    "unmove": true
+  },
+  "15014": {
+    "clip": true,
+    "unmove": true
+  },
+  "15015": {
+    "clip": true,
+    "unmove": true
+  },
+  "1505": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
   },
   "151": {
     "automap": true,
@@ -2210,6 +3351,66 @@
     "unpass": true,
     "unsight": true
   },
+  "15312": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "15313": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "15321": {
+    "clip": true,
+    "unmove": true
+  },
+  "15323": {
+    "clip": true,
+    "unmove": true
+  },
+  "15324": {
+    "clip": true,
+    "unmove": true
+  },
+  "15325": {
+    "clip": true,
+    "unmove": true
+  },
+  "15326": {
+    "clip": true,
+    "unmove": true
+  },
+  "15327": {
+    "clip": true,
+    "unmove": true
+  },
+  "15328": {
+    "clip": true,
+    "unmove": true
+  },
+  "15329": {
+    "clip": true,
+    "unmove": true
+  },
+  "15330": {
+    "clip": true,
+    "unmove": true
+  },
+  "15331": {
+    "clip": true,
+    "unmove": true
+  },
+  "15332": {
+    "clip": true,
+    "unmove": true
+  },
   "15345": {
     "automap": true,
     "automapColor": 186,
@@ -2290,6 +3491,27 @@
     "unpass": true,
     "unsight": true
   },
+  "15532": {
+    "automap": true,
+    "automapColor": 207,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "15533": {
+    "automap": true,
+    "automapColor": 207,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "15534": {
+    "automap": true,
+    "automapColor": 207,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
   "1554": {
     "automap": true,
     "automapColor": 186,
@@ -2322,6 +3544,30 @@
     "unpass": true,
     "unsight": true
   },
+  "15584": {
+    "clip": true,
+    "unmove": true
+  },
+  "15585": {
+    "clip": true,
+    "unmove": true
+  },
+  "15586": {
+    "clip": true,
+    "unmove": true
+  },
+  "15587": {
+    "clip": true,
+    "unmove": true
+  },
+  "15588": {
+    "clip": true,
+    "unmove": true
+  },
+  "15589": {
+    "clip": true,
+    "unmove": true
+  },
   "1559": {
     "automap": true,
     "automapColor": 186,
@@ -2329,6 +3575,30 @@
     "unmove": true,
     "unpass": true,
     "unsight": true
+  },
+  "15590": {
+    "clip": true,
+    "unmove": true
+  },
+  "15591": {
+    "clip": true,
+    "unmove": true
+  },
+  "15592": {
+    "clip": true,
+    "unmove": true
+  },
+  "15593": {
+    "clip": true,
+    "unmove": true
+  },
+  "15594": {
+    "clip": true,
+    "unmove": true
+  },
+  "15595": {
+    "clip": true,
+    "unmove": true
   },
   "1560": {
     "automap": true,
@@ -2358,6 +3628,14 @@
     "unpass": true,
     "unsight": true
   },
+  "1564": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
   "1565": {
     "top": true,
     "unmove": true
@@ -2373,6 +3651,13 @@
   "1568": {
     "top": true,
     "unmove": true
+  },
+  "1569": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
   },
   "1570": {
     "automap": true,
@@ -2419,6 +3704,14 @@
     "unpass": true,
     "unsight": true
   },
+  "1578": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
   "1579": {
     "automap": true,
     "automapColor": 186,
@@ -2454,6 +3747,22 @@
     "clip": true,
     "unmove": true
   },
+  "15847": {
+    "clip": true,
+    "unmove": true
+  },
+  "15848": {
+    "clip": true,
+    "unmove": true
+  },
+  "15849": {
+    "clip": true,
+    "unmove": true
+  },
+  "15850": {
+    "clip": true,
+    "unmove": true
+  },
   "15851": {
     "clip": true,
     "unmove": true
@@ -2466,11 +3775,39 @@
     "clip": true,
     "unmove": true
   },
+  "15854": {
+    "clip": true,
+    "unmove": true
+  },
   "15855": {
     "clip": true,
     "unmove": true
   },
+  "15856": {
+    "clip": true,
+    "unmove": true
+  },
+  "15857": {
+    "clip": true,
+    "unmove": true
+  },
   "15858": {
+    "clip": true,
+    "unmove": true
+  },
+  "15859": {
+    "clip": true,
+    "unmove": true
+  },
+  "15860": {
+    "clip": true,
+    "unmove": true
+  },
+  "15861": {
+    "clip": true,
+    "unmove": true
+  },
+  "15862": {
     "clip": true,
     "unmove": true
   },
@@ -2490,6 +3827,14 @@
     "unpass": true,
     "unsight": true
   },
+  "1599": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
   "1600": {
     "automap": true,
     "automapColor": 186,
@@ -2499,6 +3844,14 @@
     "unsight": true
   },
   "1601": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "1602": {
     "automap": true,
     "automapColor": 186,
     "bottom": true,
@@ -2545,6 +3898,9 @@
     "unpass": true,
     "unsight": true
   },
+  "16162": {
+    "usable": true
+  },
   "1619": {
     "automap": true,
     "automapColor": 186,
@@ -2553,11 +3909,61 @@
     "unpass": true,
     "unsight": true
   },
+  "16198": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "forceuse": true,
+    "isFloorTransition": true,
+    "unmove": true,
+    "unpass": true,
+    "usable": true
+  },
+  "16199": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "forceuse": true,
+    "isFloorTransition": true,
+    "unmove": true,
+    "unpass": true,
+    "usable": true
+  },
   "162": {
     "automap": true,
     "automapColor": 186,
     "bottom": true,
     "unmove": true
+  },
+  "16200": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "forceuse": true,
+    "isFloorTransition": true,
+    "unmove": true,
+    "unpass": true,
+    "usable": true
+  },
+  "16201": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "forceuse": true,
+    "isFloorTransition": true,
+    "unmove": true,
+    "unpass": true,
+    "usable": true
+  },
+  "16202": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "forceuse": true,
+    "isFloorTransition": true,
+    "unmove": true,
+    "unpass": true,
+    "usable": true
   },
   "1624": {
     "top": true,
@@ -2659,6 +4065,40 @@
     "clip": true,
     "unmove": true
   },
+  "1730": {
+    "clip": true,
+    "unmove": true
+  },
+  "1731": {
+    "clip": true,
+    "unmove": true
+  },
+  "17318": {
+    "automap": true,
+    "automapColor": 186,
+    "unmove": true,
+    "unpass": true,
+    "usable": true
+  },
+  "17320": {
+    "automap": true,
+    "automapColor": 186,
+    "unmove": true,
+    "unpass": true
+  },
+  "17368": {
+    "unmove": true
+  },
+  "17369": {
+    "unmove": true
+  },
+  "17377": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
   "1738": {
     "automap": true,
     "automapColor": 186,
@@ -2673,6 +4113,14 @@
     "unmove": true,
     "unpass": true
   },
+  "1748": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
   "1755": {
     "bottom": true,
     "unmove": true
@@ -2681,11 +4129,19 @@
     "bottom": true,
     "unmove": true
   },
+  "1758": {
+    "bottom": true,
+    "unmove": true
+  },
   "1759": {
     "bottom": true,
     "forceuse": true,
     "unmove": true,
     "usable": true
+  },
+  "1770": {
+    "unmove": true,
+    "unpass": true
   },
   "1771": {
     "automap": true,
@@ -3109,6 +4565,37 @@
     "unmove": true,
     "unpass": true
   },
+  "1884": {
+    "automap": true,
+    "automapColor": 86,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "1885": {
+    "automap": true,
+    "automapColor": 86,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "1886": {
+    "automap": true,
+    "automapColor": 86,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "18864": {
+    "unmove": true
+  },
+  "1887": {
+    "automap": true,
+    "automapColor": 86,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
   "1888": {
     "automap": true,
     "automapColor": 86,
@@ -3210,6 +4697,20 @@
     "unmove": true,
     "unpass": true
   },
+  "1907": {
+    "automap": true,
+    "automapColor": 86,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "1908": {
+    "automap": true,
+    "automapColor": 86,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
   "1909": {
     "automap": true,
     "automapColor": 86,
@@ -3260,6 +4761,16 @@
   "192": {
     "unmove": true
   },
+  "19236": {
+    "unmove": true,
+    "unpass": true,
+    "usable": true
+  },
+  "19250": {
+    "unmove": true,
+    "unpass": true,
+    "usable": true
+  },
   "193": {
     "unmove": true
   },
@@ -3270,6 +4781,9 @@
     "unmove": true,
     "unpass": true,
     "usable": true
+  },
+  "19308": {
+    "unmove": true
   },
   "1931": {
     "automap": true,
@@ -3334,6 +4848,14 @@
     "automapColor": 210,
     "bottom": true,
     "unmove": true
+  },
+  "19491": {
+    "automap": true,
+    "automapColor": 179,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true,
+    "unpass": true
   },
   "195": {
     "unmove": true
@@ -3483,6 +5005,54 @@
     "unmove": true,
     "unpass": true
   },
+  "19946": {
+    "clip": true,
+    "unmove": true
+  },
+  "19947": {
+    "clip": true,
+    "unmove": true
+  },
+  "19948": {
+    "clip": true,
+    "unmove": true
+  },
+  "19949": {
+    "clip": true,
+    "unmove": true
+  },
+  "19950": {
+    "clip": true,
+    "unmove": true
+  },
+  "19951": {
+    "clip": true,
+    "unmove": true
+  },
+  "19952": {
+    "clip": true,
+    "unmove": true
+  },
+  "19953": {
+    "clip": true,
+    "unmove": true
+  },
+  "19954": {
+    "clip": true,
+    "unmove": true
+  },
+  "19955": {
+    "clip": true,
+    "unmove": true
+  },
+  "19956": {
+    "clip": true,
+    "unmove": true
+  },
+  "19957": {
+    "clip": true,
+    "unmove": true
+  },
   "1996": {
     "unmove": true
   },
@@ -3592,6 +5162,13 @@
     "unmove": true,
     "unpass": true
   },
+  "2027": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
   "2030": {
     "unpass": true
   },
@@ -3601,6 +5178,27 @@
   "2058": {
     "hang": true,
     "unmove": true
+  },
+  "2066": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "2093": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "2104": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
   },
   "2109": {
     "automap": true,
@@ -3719,6 +5317,12 @@
     "unmove": true,
     "unpass": true
   },
+  "2166": {
+    "automap": true,
+    "automapColor": 186,
+    "unmove": true,
+    "unpass": true
+  },
   "2168": {
     "automap": true,
     "automapColor": 186,
@@ -3770,6 +5374,12 @@
     "unpass": true
   },
   "2182": {
+    "automap": true,
+    "automapColor": 186,
+    "unmove": true,
+    "unpass": true
+  },
+  "2183": {
     "automap": true,
     "automapColor": 186,
     "unmove": true,
@@ -3830,7 +5440,17 @@
     "unmove": true,
     "unpass": true
   },
+  "22422": {
+    "clip": true,
+    "unmove": true
+  },
   "2255": {
+    "automap": true,
+    "automapColor": 186,
+    "unmove": true,
+    "unpass": true
+  },
+  "2256": {
     "automap": true,
     "automapColor": 186,
     "unmove": true,
@@ -3874,7 +5494,19 @@
     "unmove": true,
     "unpass": true
   },
+  "2271": {
+    "automap": true,
+    "automapColor": 186,
+    "unmove": true,
+    "unpass": true
+  },
   "2272": {
+    "automap": true,
+    "automapColor": 186,
+    "unmove": true,
+    "unpass": true
+  },
+  "2273": {
     "automap": true,
     "automapColor": 186,
     "unmove": true,
@@ -3886,7 +5518,19 @@
     "unmove": true,
     "unpass": true
   },
+  "2275": {
+    "automap": true,
+    "automapColor": 186,
+    "unmove": true,
+    "unpass": true
+  },
   "2276": {
+    "automap": true,
+    "automapColor": 186,
+    "unmove": true,
+    "unpass": true
+  },
+  "2285": {
     "automap": true,
     "automapColor": 186,
     "unmove": true,
@@ -3901,6 +5545,13 @@
   "2297": {
     "automap": true,
     "automapColor": 186,
+    "unmove": true,
+    "unpass": true
+  },
+  "2299": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
     "unmove": true,
     "unpass": true
   },
@@ -4002,10 +5653,30 @@
     "unmove": true,
     "unpass": true
   },
+  "23164": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "23168": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
   "2317": {
     "automap": true,
     "automapColor": 186,
     "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "23171": {
+    "automap": true,
+    "automapColor": 186,
     "unmove": true,
     "unpass": true
   },
@@ -4120,6 +5791,9 @@
     "unmove": true,
     "unpass": true
   },
+  "2354": {
+    "unmove": true
+  },
   "2370": {
     "unmove": true
   },
@@ -4146,6 +5820,16 @@
     "usable": true
   },
   "2428": {
+    "unmove": true,
+    "unpass": true,
+    "usable": true
+  },
+  "2429": {
+    "unmove": true,
+    "unpass": true,
+    "usable": true
+  },
+  "2430": {
     "unmove": true,
     "unpass": true,
     "usable": true
@@ -4203,6 +5887,10 @@
     "unpass": true,
     "usable": true
   },
+  "2461": {
+    "unmove": true,
+    "unpass": true
+  },
   "2462": {
     "unmove": true,
     "unpass": true
@@ -4252,6 +5940,12 @@
     "unmove": true,
     "unpass": true
   },
+  "2478": {
+    "usable": true
+  },
+  "2482": {
+    "usable": true
+  },
   "2483": {
     "usable": true
   },
@@ -4294,6 +5988,15 @@
     "unmove": true,
     "unpass": true
   },
+  "25049": {
+    "unmove": true
+  },
+  "25055": {
+    "unmove": true
+  },
+  "25057": {
+    "unmove": true
+  },
   "2511": {
     "unmove": true
   },
@@ -4316,6 +6019,10 @@
     "usable": true
   },
   "2520": {
+    "unmove": true,
+    "unpass": true
+  },
+  "2521": {
     "unmove": true,
     "unpass": true
   },
@@ -4486,6 +6193,38 @@
     "clip": true,
     "unmove": true
   },
+  "25803": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "usable": true
+  },
+  "2581": {
+    "clip": true,
+    "unmove": true
+  },
+  "2582": {
+    "clip": true,
+    "unmove": true
+  },
+  "2583": {
+    "clip": true,
+    "unmove": true
+  },
+  "2584": {
+    "clip": true,
+    "unmove": true
+  },
+  "2585": {
+    "clip": true,
+    "unmove": true
+  },
+  "2586": {
+    "clip": true,
+    "unmove": true
+  },
   "2587": {
     "clip": true,
     "unmove": true
@@ -4502,6 +6241,22 @@
     "clip": true,
     "unmove": true
   },
+  "2591": {
+    "clip": true,
+    "unmove": true
+  },
+  "2592": {
+    "clip": true,
+    "unmove": true
+  },
+  "2593": {
+    "clip": true,
+    "unmove": true
+  },
+  "2594": {
+    "clip": true,
+    "unmove": true
+  },
   "2595": {
     "clip": true,
     "unmove": true
@@ -4512,10 +6267,16 @@
   "2599": {
     "unmove": true
   },
+  "2600": {
+    "unmove": true
+  },
   "2602": {
     "unmove": true
   },
   "2603": {
+    "unmove": true
+  },
+  "2609": {
     "unmove": true
   },
   "2622": {
@@ -4527,16 +6288,38 @@
   "2625": {
     "unmove": true
   },
+  "2631": {
+    "unmove": true
+  },
   "2654": {
     "unmove": true
   },
   "2655": {
     "unmove": true
   },
+  "2662": {
+    "unmove": true,
+    "usable": true
+  },
   "2665": {
     "unmove": true
   },
   "2666": {
+    "unmove": true
+  },
+  "2669": {
+    "unmove": true
+  },
+  "2671": {
+    "unmove": true
+  },
+  "2675": {
+    "unmove": true
+  },
+  "2682": {
+    "unmove": true
+  },
+  "2684": {
     "unmove": true
   },
   "2693": {
@@ -4557,25 +6340,482 @@
   "2698": {
     "unmove": true
   },
+  "26980": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "hookDirection": "HOOK_TYPE_SOUTH",
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "26982": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "26983": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "hookDirection": "HOOK_TYPE_EAST",
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "26986": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "hookDirection": "HOOK_TYPE_EAST",
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "26988": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
   "2699": {
     "unmove": true
+  },
+  "26995": {
+    "automap": true,
+    "automapColor": 86,
+    "bank": true,
+    "isRoof": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "26996": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "26997": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "26998": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "26999": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
   },
   "2700": {
     "unmove": true
   },
+  "27000": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "27001": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "27002": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "27003": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "27004": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "27005": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
   "2701": {
     "unmove": true
+  },
+  "27010": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "27016": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "2702": {
+    "hang": true,
+    "unmove": true
+  },
+  "27024": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "27025": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "27026": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "27027": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "27028": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "27029": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "2703": {
+    "hang": true,
+    "unmove": true
+  },
+  "27030": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "27031": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "27032": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "27033": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "27038": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "2704": {
+    "hang": true,
+    "unmove": true
+  },
+  "27044": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "2705": {
+    "hang": true,
+    "unmove": true
+  },
+  "27052": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "27053": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "27054": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "27055": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "27056": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "27057": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "27058": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "27059": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "2706": {
+    "hang": true,
+    "unmove": true
+  },
+  "27060": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "27061": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "2708": {
+    "hang": true,
+    "unmove": true
+  },
+  "2709": {
+    "hang": true,
+    "unmove": true
+  },
+  "2710": {
+    "hang": true,
+    "unmove": true
+  },
+  "2711": {
+    "hang": true,
+    "unmove": true
+  },
+  "27135": {
+    "automap": true,
+    "automapColor": 86,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "27137": {
+    "automap": true,
+    "automapColor": 86,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "2714": {
+    "unmove": true
+  },
+  "27145": {
+    "automap": true,
+    "automapColor": 86,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "27155": {
+    "automap": true,
+    "automapColor": 86,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "27159": {
+    "automap": true,
+    "automapColor": 86,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
   },
   "2716": {
     "unmove": true
   },
+  "27169": {
+    "automap": true,
+    "automapColor": 86,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "27171": {
+    "automap": true,
+    "automapColor": 86,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "27179": {
+    "automap": true,
+    "automapColor": 86,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
   "2718": {
     "unmove": true
+  },
+  "27182": {
+    "automap": true,
+    "automapColor": 86,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "27189": {
+    "automap": true,
+    "automapColor": 86,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "2719": {
+    "unmove": true
+  },
+  "27192": {
+    "automap": true,
+    "automapColor": 86,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
   },
   "2720": {
     "unmove": true
   },
   "2721": {
+    "unmove": true
+  },
+  "2722": {
     "unmove": true
   },
   "2724": {
@@ -4629,6 +6869,24 @@
     "unmove": true,
     "unpass": true
   },
+  "2747": {
+    "hang": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "2748": {
+    "hang": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "27487": {
+    "automap": true,
+    "automapColor": 86,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
   "2749": {
     "hang": true,
     "unmove": true,
@@ -4639,10 +6897,50 @@
     "unmove": true,
     "unpass": true
   },
+  "2751": {
+    "hang": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "2752": {
+    "hang": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "2770": {
+    "unmove": true
+  },
+  "2771": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "usable": true
+  },
   "2772": {
     "unmove": true,
     "unpass": true,
     "usable": true
+  },
+  "27869": {
+    "usable": true
+  },
+  "27877": {
+    "unmove": true,
+    "unpass": true,
+    "usable": true
+  },
+  "27901": {
+    "unmove": true,
+    "unpass": true,
+    "usable": true
+  },
+  "27914": {
+    "unmove": true
+  },
+  "27921": {
+    "unmove": true
   },
   "2815": {
     "usable": true
@@ -4650,7 +6948,14 @@
   "2816": {
     "usable": true
   },
+  "28204": {
+    "unmove": true,
+    "unpass": true
+  },
   "2831": {
+    "usable": true
+  },
+  "285": {
     "usable": true
   },
   "2853": {
@@ -4660,6 +6965,14 @@
     "usable": true
   },
   "2856": {
+    "usable": true
+  },
+  "28565": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
     "usable": true
   },
   "2873": {
@@ -4683,6 +6996,22 @@
   "2883": {
     "usable": true
   },
+  "2887": {
+    "bottom": true,
+    "unmove": true
+  },
+  "2888": {
+    "bottom": true,
+    "unmove": true
+  },
+  "2890": {
+    "bottom": true,
+    "unmove": true
+  },
+  "2891": {
+    "bottom": true,
+    "unmove": true
+  },
   "2893": {
     "usable": true
   },
@@ -4690,12 +7019,60 @@
     "bottom": true,
     "unmove": true
   },
+  "28952": {
+    "clip": true,
+    "unmove": true
+  },
   "2896": {
     "bottom": true,
     "unmove": true
   },
+  "28964": {
+    "clip": true,
+    "unmove": true
+  },
+  "28965": {
+    "clip": true,
+    "unmove": true
+  },
+  "28966": {
+    "clip": true,
+    "unmove": true
+  },
+  "28967": {
+    "clip": true,
+    "unmove": true
+  },
+  "28968": {
+    "clip": true,
+    "unmove": true
+  },
+  "28969": {
+    "clip": true,
+    "unmove": true
+  },
   "2897": {
     "bottom": true,
+    "unmove": true
+  },
+  "28970": {
+    "clip": true,
+    "unmove": true
+  },
+  "28971": {
+    "clip": true,
+    "unmove": true
+  },
+  "28973": {
+    "clip": true,
+    "unmove": true
+  },
+  "28974": {
+    "clip": true,
+    "unmove": true
+  },
+  "28975": {
+    "clip": true,
     "unmove": true
   },
   "2898": {
@@ -4714,20 +7091,242 @@
     "bottom": true,
     "unmove": true
   },
+  "29000": {
+    "automap": true,
+    "automapColor": 179,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "29010": {
+    "clip": true,
+    "unmove": true
+  },
+  "29011": {
+    "clip": true,
+    "unmove": true
+  },
+  "29012": {
+    "clip": true,
+    "unmove": true
+  },
+  "29013": {
+    "clip": true,
+    "unmove": true
+  },
+  "29014": {
+    "clip": true,
+    "unmove": true
+  },
+  "29015": {
+    "clip": true,
+    "unmove": true
+  },
+  "29016": {
+    "clip": true,
+    "unmove": true
+  },
+  "29017": {
+    "clip": true,
+    "unmove": true
+  },
+  "29020": {
+    "clip": true,
+    "unmove": true
+  },
+  "29021": {
+    "clip": true,
+    "unmove": true
+  },
+  "29022": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "29044": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "29045": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "29047": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "29048": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "29049": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "29050": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "29051": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "29052": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "29053": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "29066": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "29067": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "29068": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "29069": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
   "2907": {
     "hang": true,
     "unmove": true,
     "usable": true
+  },
+  "29071": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "29072": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "29073": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "29074": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "29075": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
   },
   "2908": {
     "hang": true,
     "unmove": true,
     "usable": true
   },
+  "29088": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "hookDirection": "HOOK_TYPE_SOUTH",
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
   "2909": {
     "hang": true,
     "unmove": true,
     "usable": true
+  },
+  "29091": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "hookDirection": "HOOK_TYPE_EAST",
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "29092": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "29094": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "29097": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
   },
   "291": {
     "clip": true,
@@ -4740,6 +7339,51 @@
   },
   "2911": {
     "usable": true
+  },
+  "29116": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "hookDirection": "HOOK_TYPE_SOUTH",
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "29118": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "29119": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "hookDirection": "HOOK_TYPE_EAST",
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "2912": {
+    "usable": true
+  },
+  "29122": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "29125": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
   },
   "292": {
     "clip": true,
@@ -4781,7 +7425,34 @@
     "unmove": true,
     "usable": true
   },
+  "29315": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "29342": {
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "29343": {
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "2939": {
+    "hang": true,
+    "unmove": true,
+    "usable": true
+  },
   "2941": {
+    "hang": true,
+    "unmove": true,
+    "usable": true
+  },
+  "2943": {
     "hang": true,
     "unmove": true,
     "usable": true
@@ -4812,11 +7483,28 @@
     "clip": true,
     "unmove": true
   },
+  "29973": {
+    "unmove": true
+  },
   "300": {
     "clip": true,
     "unmove": true
   },
   "3003": {
+    "usable": true
+  },
+  "30033": {
+    "automap": true,
+    "automapColor": 186,
+    "unmove": true,
+    "unpass": true,
+    "usable": true
+  },
+  "30034": {
+    "automap": true,
+    "automapColor": 186,
+    "unmove": true,
+    "unpass": true,
     "usable": true
   },
   "301": {
@@ -4831,13 +7519,25 @@
     "clip": true,
     "unmove": true
   },
+  "3031": {
+    "usable": true
+  },
+  "3035": {
+    "usable": true
+  },
   "304": {
     "clip": true,
     "unmove": true
   },
+  "3043": {
+    "usable": true
+  },
   "305": {
     "clip": true,
     "unmove": true
+  },
+  "3059": {
+    "usable": true
   },
   "307": {
     "clip": true,
@@ -4903,6 +7603,10 @@
     "clip": true,
     "unmove": true
   },
+  "32176": {
+    "top": true,
+    "unmove": true
+  },
   "322": {
     "clip": true,
     "unmove": true
@@ -4932,7 +7636,17 @@
   "3276": {
     "usable": true
   },
+  "32768": {
+    "unmove": true,
+    "unpass": true
+  },
   "3286": {
+    "usable": true
+  },
+  "3334": {
+    "usable": true
+  },
+  "3451": {
     "usable": true
   },
   "3453": {
@@ -4959,6 +7673,41 @@
   },
   "3483": {
     "usable": true
+  },
+  "3493": {
+    "unmove": true,
+    "unpass": true
+  },
+  "3501": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "35048": {
+    "clip": true,
+    "unmove": true
+  },
+  "35049": {
+    "clip": true,
+    "unmove": true
+  },
+  "35050": {
+    "clip": true,
+    "unmove": true
+  },
+  "35051": {
+    "clip": true,
+    "unmove": true
+  },
+  "35054": {
+    "clip": true,
+    "unmove": true
+  },
+  "35055": {
+    "clip": true,
+    "unmove": true
   },
   "3509": {
     "usable": true
@@ -5037,6 +7786,9 @@
     "unmove": true,
     "unpass": true,
     "unsight": true
+  },
+  "3577": {
+    "usable": true
   },
   "3579": {
     "usable": true
@@ -5316,6 +8068,12 @@
     "unpass": true,
     "unsight": true
   },
+  "3666": {
+    "unmove": true
+  },
+  "3667": {
+    "unmove": true
+  },
   "3669": {
     "automap": true,
     "automapColor": 12,
@@ -5343,7 +8101,24 @@
     "unmove": true,
     "unpass": true
   },
+  "3672": {
+    "automap": true,
+    "automapColor": 12,
+    "unmove": true,
+    "unpass": true
+  },
+  "3675": {
+    "unmove": true
+  },
   "3676": {
+    "unmove": true,
+    "unpass": true
+  },
+  "3677": {
+    "unmove": true,
+    "unpass": true
+  },
+  "3678": {
     "unmove": true,
     "unpass": true
   },
@@ -5492,6 +8267,350 @@
     "unmove": true,
     "unpass": true,
     "usable": true
+  },
+  "3704": {
+    "automap": true,
+    "automapColor": 12,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "3707": {
+    "automap": true,
+    "automapColor": 12,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "3708": {
+    "automap": true,
+    "automapColor": 12,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "37115": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "37116": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "37117": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "37118": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "37119": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "37120": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "37121": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "37122": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "usable": true
+  },
+  "37123": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "37124": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "37125": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "37126": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "37127": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "37128": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "usable": true
+  },
+  "37129": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "usable": true
+  },
+  "37130": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "usable": true
+  },
+  "37131": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "usable": true
+  },
+  "37132": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "usable": true
+  },
+  "37133": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "usable": true
+  },
+  "37134": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "usable": true
+  },
+  "37135": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "37136": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "37137": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "37138": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "37139": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "37140": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "37141": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "37142": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "37143": {
+    "automap": true,
+    "automapColor": 186,
+    "top": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "37144": {
+    "automap": true,
+    "automapColor": 186,
+    "top": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "37145": {
+    "automap": true,
+    "automapColor": 186,
+    "top": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "37146": {
+    "automap": true,
+    "automapColor": 186,
+    "top": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "37147": {
+    "automap": true,
+    "automapColor": 186,
+    "top": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "37148": {
+    "automap": true,
+    "automapColor": 186,
+    "top": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "37149": {
+    "automap": true,
+    "automapColor": 186,
+    "top": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "37150": {
+    "automap": true,
+    "automapColor": 186,
+    "top": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "37151": {
+    "automap": true,
+    "automapColor": 186,
+    "top": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "37152": {
+    "automap": true,
+    "automapColor": 186,
+    "top": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "37153": {
+    "automap": true,
+    "automapColor": 186,
+    "top": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "37154": {
+    "automap": true,
+    "automapColor": 186,
+    "top": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "37155": {
+    "automap": true,
+    "automapColor": 186,
+    "top": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "37156": {
+    "automap": true,
+    "automapColor": 186,
+    "top": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "37157": {
+    "automap": true,
+    "automapColor": 186,
+    "top": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "37158": {
+    "automap": true,
+    "automapColor": 186,
+    "top": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "37159": {
+    "automap": true,
+    "automapColor": 186,
+    "top": true,
+    "unmove": true,
+    "unpass": true
   },
   "3723": {
     "usable": true
@@ -5661,6 +8780,14 @@
     "unmove": true,
     "unpass": true
   },
+  "3886": {
+    "bottom": true,
+    "unmove": true
+  },
+  "3887": {
+    "bottom": true,
+    "unmove": true
+  },
   "3888": {
     "bottom": true,
     "unmove": true
@@ -5689,6 +8816,10 @@
     "unmove": true
   },
   "3893": {
+    "bottom": true,
+    "unmove": true
+  },
+  "3894": {
     "bottom": true,
     "unmove": true
   },
@@ -5747,6 +8878,13 @@
     "unmove": true,
     "unpass": true
   },
+  "3912": {
+    "automap": true,
+    "automapColor": 12,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
   "3913": {
     "automap": true,
     "automapColor": 12,
@@ -5779,12 +8917,21 @@
     "unmove": true,
     "unpass": true
   },
+  "3922": {
+    "automap": true,
+    "automapColor": 12,
+    "clip": true,
+    "unmove": true
+  },
   "393": {
     "automap": true,
     "automapColor": 114,
     "bottom": true,
     "unmove": true,
     "unpass": true
+  },
+  "3938": {
+    "unmove": true
   },
   "4025": {
     "usable": true
@@ -5824,6 +8971,9 @@
     "fullbank": true,
     "unmove": true
   },
+  "4100": {
+    "usable": true
+  },
   "411": {
     "automap": true,
     "automapColor": 210,
@@ -5849,6 +8999,24 @@
     "bank": true,
     "fullbank": true,
     "unmove": true
+  },
+  "4140": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "hookDirection": "HOOK_TYPE_EAST",
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "4144": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "hookDirection": "HOOK_TYPE_SOUTH",
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
   },
   "416": {
     "automap": true,
@@ -6058,6 +9226,10 @@
     "automapColor": 24,
     "bank": true,
     "fullbank": true,
+    "unmove": true
+  },
+  "4413": {
+    "clip": true,
     "unmove": true
   },
   "4415": {
@@ -6494,6 +9666,14 @@
     "unmove": true,
     "unpass": true
   },
+  "4490": {
+    "automap": true,
+    "automapColor": 86,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
   "4493": {
     "automap": true,
     "automapColor": 86,
@@ -6547,7 +9727,23 @@
     "unpass": true,
     "unsight": true
   },
+  "4501": {
+    "automap": true,
+    "automapColor": 86,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "4503": {
+    "clip": true,
+    "unmove": true
+  },
   "4504": {
+    "clip": true,
+    "unmove": true
+  },
+  "4505": {
     "clip": true,
     "unmove": true
   },
@@ -6563,7 +9759,19 @@
     "clip": true,
     "unmove": true
   },
+  "4511": {
+    "clip": true,
+    "unmove": true
+  },
+  "4512": {
+    "clip": true,
+    "unmove": true
+  },
   "4513": {
+    "clip": true,
+    "unmove": true
+  },
+  "4514": {
     "clip": true,
     "unmove": true
   },
@@ -6741,11 +9949,43 @@
     "clip": true,
     "unmove": true
   },
+  "4544": {
+    "clip": true,
+    "unmove": true
+  },
+  "4545": {
+    "clip": true,
+    "unmove": true
+  },
+  "4547": {
+    "clip": true,
+    "unmove": true
+  },
+  "4548": {
+    "clip": true,
+    "unmove": true
+  },
+  "4549": {
+    "clip": true,
+    "unmove": true
+  },
   "455": {
     "automap": true,
     "automapColor": 129,
     "bank": true,
     "fullbank": true,
+    "unmove": true
+  },
+  "4550": {
+    "clip": true,
+    "unmove": true
+  },
+  "4551": {
+    "clip": true,
+    "unmove": true
+  },
+  "4554": {
+    "clip": true,
     "unmove": true
   },
   "4555": {
@@ -6844,11 +10084,19 @@
     "fullbank": true,
     "unmove": true
   },
+  "4569": {
+    "clip": true,
+    "unmove": true
+  },
   "457": {
     "automap": true,
     "automapColor": 129,
     "bank": true,
     "fullbank": true,
+    "unmove": true
+  },
+  "4570": {
+    "clip": true,
     "unmove": true
   },
   "4571": {
@@ -6898,7 +10146,15 @@
     "clip": true,
     "unmove": true
   },
+  "4581": {
+    "clip": true,
+    "unmove": true
+  },
   "4582": {
+    "clip": true,
+    "unmove": true
+  },
+  "4583": {
     "clip": true,
     "unmove": true
   },
@@ -7127,6 +10383,13 @@
     "unmove": true
   },
   "4629": {
+    "automap": true,
+    "automapColor": 51,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "4630": {
     "automap": true,
     "automapColor": 51,
     "bank": true,
@@ -7463,6 +10726,14 @@
     "unmove": true,
     "unpass": true
   },
+  "4698": {
+    "automap": true,
+    "automapColor": 140,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true,
+    "unpass": true
+  },
   "4702": {
     "clip": true,
     "unmove": true
@@ -7508,6 +10779,10 @@
     "unmove": true
   },
   "4713": {
+    "clip": true,
+    "unmove": true
+  },
+  "4718": {
     "clip": true,
     "unmove": true
   },
@@ -7697,11 +10972,38 @@
     "bank": true,
     "unmove": true
   },
+  "4854": {
+    "unmove": true
+  },
+  "4855": {
+    "unmove": true
+  },
+  "4856": {
+    "unmove": true
+  },
+  "4857": {
+    "unmove": true
+  },
+  "4858": {
+    "unmove": true
+  },
+  "4859": {
+    "unmove": true
+  },
   "486": {
     "automap": true,
     "automapColor": 129,
     "bank": true,
     "fullbank": true,
+    "unmove": true
+  },
+  "4860": {
+    "unmove": true
+  },
+  "4861": {
+    "unmove": true
+  },
+  "4862": {
     "unmove": true
   },
   "487": {
@@ -7734,13 +11036,215 @@
     "unmove": true,
     "unpass": true
   },
+  "4881": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "hookDirection": "HOOK_TYPE_EAST",
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "4882": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "4885": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "4886": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "4887": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "4888": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "4889": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
   "489": {
     "bank": true,
     "unmove": true,
     "unpass": true
   },
+  "4891": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "4892": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "4893": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "4894": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
   "490": {
     "bank": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "4904": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "4905": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "4906": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "4907": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "4908": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "4909": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "491": {
+    "bank": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "4910": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "4917": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "492": {
+    "bank": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "4920": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "4921": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "4925": {
+    "automap": true,
+    "automapColor": 186,
+    "unmove": true,
+    "unpass": true
+  },
+  "4926": {
+    "automap": true,
+    "automapColor": 186,
+    "unmove": true,
+    "unpass": true
+  },
+  "4927": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "4929": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
     "unmove": true,
     "unpass": true
   },
@@ -7749,8 +11253,123 @@
     "unmove": true,
     "unpass": true
   },
+  "4930": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "4938": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
   "494": {
     "bank": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "4940": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "4941": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "4942": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "4945": {
+    "unmove": true,
+    "unpass": true
+  },
+  "4946": {
+    "unmove": true,
+    "unpass": true
+  },
+  "4947": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "4948": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "4949": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "4953": {
+    "bank": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "4954": {
+    "bank": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "4955": {
+    "bank": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "4956": {
+    "bank": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "4961": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "4962": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "4971": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "4987": {
     "unmove": true,
     "unpass": true
   },
@@ -7767,6 +11386,22 @@
     "bank": true,
     "fullbank": true,
     "unmove": true
+  },
+  "5001": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "5004": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "hookDirection": "HOOK_TYPE_SOUTH",
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
   },
   "501": {
     "automap": true,
@@ -7805,6 +11440,52 @@
   "5024": {
     "unmove": true
   },
+  "503": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "5037": {
+    "automap": true,
+    "automapColor": 210,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "5038": {
+    "automap": true,
+    "automapColor": 210,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "5039": {
+    "automap": true,
+    "automapColor": 210,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "504": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "5040": {
+    "automap": true,
+    "automapColor": 210,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
   "5048": {
     "unmove": true
   },
@@ -7817,7 +11498,13 @@
   "5052": {
     "unmove": true
   },
+  "5053": {
+    "unmove": true
+  },
   "5054": {
+    "unmove": true
+  },
+  "5058": {
     "unmove": true
   },
   "5061": {
@@ -7845,6 +11532,9 @@
     "unmove": true
   },
   "5069": {
+    "unmove": true
+  },
+  "5070": {
     "unmove": true
   },
   "5071": {
@@ -7880,14 +11570,24 @@
     "unpass": true,
     "usable": true
   },
-  "5106": {
+  "5107": {
     "automap": true,
     "automapColor": 186,
     "unmove": true,
     "unpass": true,
     "usable": true
   },
-  "5107": {
+  "5108": {
+    "top": true,
+    "unmove": true,
+    "usable": true
+  },
+  "5117": {
+    "top": true,
+    "unmove": true,
+    "usable": true
+  },
+  "5122": {
     "automap": true,
     "automapColor": 186,
     "unmove": true,
@@ -7957,10 +11657,59 @@
     "unpass": true,
     "unsight": true
   },
+  "516": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "520": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "521": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "522": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "523": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "525": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
   "5258": {
     "automap": true,
     "automapColor": 210,
     "bottom": true,
+    "unmove": true
+  },
+  "526": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
     "unmove": true
   },
   "5260": {
@@ -8013,6 +11762,13 @@
     "unpass": true,
     "unsight": true
   },
+  "527": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
   "5271": {
     "automap": true,
     "automapColor": 186,
@@ -8048,6 +11804,13 @@
     "unmove": true,
     "unpass": true,
     "unsight": true
+  },
+  "528": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
   },
   "5295": {
     "unmove": true
@@ -8124,13 +11887,41 @@
     "unmove": true,
     "unpass": true
   },
+  "5359": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
   "5362": {
+    "unmove": true
+  },
+  "537": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
     "unmove": true
   },
   "5372": {
     "unmove": true
   },
+  "538": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
   "5382": {
+    "unmove": true
+  },
+  "539": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
     "unmove": true
   },
   "5393": {
@@ -8167,6 +11958,13 @@
     "bottom": true,
     "unmove": true,
     "unpass": true
+  },
+  "540": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
   },
   "5404": {
     "automap": true,
@@ -8210,6 +12008,13 @@
     "fullbank": true,
     "unmove": true
   },
+  "541": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
   "5411": {
     "automap": true,
     "automapColor": 86,
@@ -8245,6 +12050,13 @@
     "top": true,
     "unmove": true
   },
+  "542": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
   "5420": {
     "unmove": true,
     "unpass": true
@@ -8262,6 +12074,20 @@
     "bottom": true,
     "unmove": true,
     "unpass": true
+  },
+  "544": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "545": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
   },
   "5484": {
     "clip": true,
@@ -8321,6 +12147,14 @@
   "5505": {
     "unmove": true,
     "unpass": true
+  },
+  "5518": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
   },
   "5520": {
     "automap": true,
@@ -8436,11 +12270,35 @@
     "clip": true,
     "unmove": true
   },
+  "5577": {
+    "clip": true,
+    "unmove": true
+  },
+  "5578": {
+    "clip": true,
+    "unmove": true
+  },
+  "5579": {
+    "clip": true,
+    "unmove": true
+  },
   "558": {
     "automap": true,
     "automapColor": 129,
     "bank": true,
     "fullbank": true,
+    "unmove": true
+  },
+  "5580": {
+    "clip": true,
+    "unmove": true
+  },
+  "5581": {
+    "clip": true,
+    "unmove": true
+  },
+  "5582": {
+    "clip": true,
     "unmove": true
   },
   "5586": {
@@ -8492,6 +12350,24 @@
   "5596": {
     "unmove": true
   },
+  "5597": {
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "5598": {
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "5599": {
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
   "560": {
     "automap": true,
     "automapColor": 129,
@@ -8499,12 +12375,42 @@
     "fullbank": true,
     "unmove": true
   },
+  "5600": {
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "5609": {
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
   "561": {
     "automap": true,
     "automapColor": 129,
     "bank": true,
     "fullbank": true,
     "unmove": true
+  },
+  "5610": {
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "5611": {
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "5612": {
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
   },
   "5618": {
     "automap": true,
@@ -8740,6 +12646,10 @@
     "unpass": true,
     "unsight": true
   },
+  "5659": {
+    "unmove": true,
+    "unpass": true
+  },
   "566": {
     "automap": true,
     "automapColor": 210,
@@ -8748,6 +12658,10 @@
     "unmove": true
   },
   "5660": {
+    "unmove": true,
+    "unpass": true
+  },
+  "5661": {
     "unmove": true,
     "unpass": true
   },
@@ -8766,7 +12680,17 @@
     "fullbank": true,
     "unmove": true
   },
+  "5670": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
   "5674": {
+    "unmove": true
+  },
+  "5675": {
     "unmove": true
   },
   "5676": {
@@ -8803,6 +12727,45 @@
     "unmove": true,
     "unpass": true,
     "unsight": true
+  },
+  "5692": {
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "5693": {
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "5694": {
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "5701": {
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "5702": {
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "5703": {
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "5706": {
+    "usable": true
   },
   "5707": {
     "automap": true,
@@ -8942,6 +12905,17 @@
     "automapColor": 129,
     "unmove": true
   },
+  "5735": {
+    "automap": true,
+    "automapColor": 186,
+    "unmove": true,
+    "unpass": true,
+    "usable": true
+  },
+  "5738": {
+    "unmove": true,
+    "unpass": true
+  },
   "574": {
     "automap": true,
     "automapColor": 129,
@@ -9008,6 +12982,29 @@
     "fullbank": true,
     "unmove": true
   },
+  "5770": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "5771": {
+    "clip": true,
+    "unmove": true
+  },
+  "5772": {
+    "clip": true,
+    "unmove": true
+  },
+  "5773": {
+    "clip": true,
+    "unmove": true
+  },
+  "5774": {
+    "clip": true,
+    "unmove": true
+  },
   "5777": {
     "unmove": true,
     "unpass": true,
@@ -9027,6 +13024,9 @@
   "5784": {
     "unmove": true
   },
+  "5785": {
+    "usable": true
+  },
   "5787": {
     "unmove": true,
     "unpass": true,
@@ -9043,8 +13043,25 @@
   "5790": {
     "unmove": true
   },
+  "580": {
+    "automap": true,
+    "automapColor": 129,
+    "unmove": true
+  },
   "5800": {
     "unmove": true
+  },
+  "5813": {
+    "usable": true
+  },
+  "5814": {
+    "automap": true,
+    "automapColor": 121,
+    "bank": true,
+    "isRoof": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
   },
   "584": {
     "automap": true,
@@ -9078,16 +13095,28 @@
   "5858": {
     "unmove": true
   },
+  "5859": {
+    "unmove": true
+  },
   "586": {
     "automap": true,
     "automapColor": 129,
     "unmove": true
+  },
+  "5860": {
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
   },
   "5861": {
     "bottom": true,
     "unmove": true,
     "unpass": true,
     "unsight": true
+  },
+  "5862": {
+    "unmove": true
   },
   "5863": {
     "unmove": true
@@ -9132,6 +13161,13 @@
     "unmove": true,
     "usable": true
   },
+  "594": {
+    "automap": true,
+    "automapColor": 24,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
   "600": {
     "automap": true,
     "automapColor": 210,
@@ -9170,6 +13206,9 @@
     "fullbank": true,
     "unmove": true
   },
+  "6104": {
+    "usable": true
+  },
   "612": {
     "automap": true,
     "automapColor": 129,
@@ -9177,6 +13216,9 @@
     "unmove": true
   },
   "6121": {
+    "unmove": true
+  },
+  "6122": {
     "unmove": true
   },
   "6127": {
@@ -9228,6 +13270,9 @@
   "6215": {
     "unmove": true
   },
+  "6216": {
+    "unmove": true
+  },
   "6217": {
     "unmove": true
   },
@@ -9261,6 +13306,12 @@
     "unmove": true
   },
   "6227": {
+    "unmove": true
+  },
+  "6228": {
+    "unmove": true
+  },
+  "6229": {
     "unmove": true
   },
   "623": {
@@ -9468,6 +13519,60 @@
     "clip": true,
     "unmove": true
   },
+  "6394": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "6395": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "6396": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "6398": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "6415": {
+    "automap": true,
+    "automapColor": 186,
+    "unmove": true,
+    "unpass": true
+  },
+  "6419": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "6420": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
   "6430": {
     "automap": true,
     "automapColor": 12,
@@ -9645,6 +13750,34 @@
     "unpass": true
   },
   "6642": {
+    "automap": true,
+    "automapColor": 51,
+    "clip": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "6643": {
+    "automap": true,
+    "automapColor": 51,
+    "clip": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "6644": {
+    "automap": true,
+    "automapColor": 51,
+    "clip": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "6645": {
+    "automap": true,
+    "automapColor": 51,
+    "clip": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "6646": {
     "automap": true,
     "automapColor": 51,
     "clip": true,
@@ -10070,6 +14203,13 @@
     "unpass": true,
     "usable": true
   },
+  "6898": {
+    "automap": true,
+    "automapColor": 186,
+    "unmove": true,
+    "unpass": true,
+    "usable": true
+  },
   "6900": {
     "automap": true,
     "automapColor": 186,
@@ -10085,10 +14225,27 @@
   "6926": {
     "unmove": true
   },
+  "6966": {
+    "automap": true,
+    "automapColor": 86,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
   "6971": {
     "unmove": true
   },
+  "6972": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
   "6974": {
+    "unmove": true
+  },
+  "6980": {
     "unmove": true
   },
   "6981": {
@@ -10112,6 +14269,14 @@
   "6986": {
     "top": true,
     "unmove": true
+  },
+  "6987": {
+    "unmove": true,
+    "usable": true
+  },
+  "6990": {
+    "unmove": true,
+    "usable": true
   },
   "7000": {
     "automap": true,
@@ -10150,6 +14315,14 @@
     "unpass": true,
     "usable": true
   },
+  "7058": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "usable": true
+  },
   "7059": {
     "automap": true,
     "automapColor": 186,
@@ -10157,6 +14330,112 @@
     "unmove": true,
     "unpass": true,
     "usable": true
+  },
+  "7062": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "7063": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "7064": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "7065": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "7066": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "7067": {
+    "clip": true,
+    "unmove": true
+  },
+  "7068": {
+    "clip": true,
+    "unmove": true
+  },
+  "7069": {
+    "clip": true,
+    "unmove": true
+  },
+  "7070": {
+    "clip": true,
+    "unmove": true
+  },
+  "7071": {
+    "clip": true,
+    "unmove": true
+  },
+  "7072": {
+    "clip": true,
+    "unmove": true
+  },
+  "7073": {
+    "clip": true,
+    "unmove": true
+  },
+  "7074": {
+    "clip": true,
+    "unmove": true
+  },
+  "7075": {
+    "clip": true,
+    "unmove": true
+  },
+  "7076": {
+    "clip": true,
+    "unmove": true
+  },
+  "7077": {
+    "clip": true,
+    "unmove": true
+  },
+  "7078": {
+    "clip": true,
+    "unmove": true
+  },
+  "7081": {
+    "clip": true,
+    "unmove": true
+  },
+  "7084": {
+    "clip": true,
+    "unmove": true
+  },
+  "7085": {
+    "clip": true,
+    "unmove": true
+  },
+  "7086": {
+    "clip": true,
+    "unmove": true
+  },
+  "7095": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
   },
   "7096": {
     "automap": true,
@@ -10193,6 +14472,9 @@
   "7109": {
     "unmove": true,
     "unpass": true
+  },
+  "7137": {
+    "unmove": true
   },
   "7138": {
     "unmove": true
@@ -10309,6 +14591,20 @@
     "unmove": true,
     "unpass": true
   },
+  "7229": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "7234": {
+    "unmove": true
+  },
+  "7240": {
+    "unmove": true
+  },
   "7272": {
     "automap": true,
     "automapColor": 121,
@@ -10316,21 +14612,81 @@
     "fullbank": true,
     "unmove": true
   },
+  "7273": {
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "7274": {
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "7275": {
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "7276": {
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "7288": {
+    "unmove": true
+  },
+  "736": {
+    "unmove": true,
+    "unpass": true,
+    "usable": true
+  },
+  "737": {
+    "unmove": true,
+    "unpass": true
+  },
+  "738": {
+    "unmove": true,
+    "unpass": true,
+    "usable": true
+  },
+  "7388": {
+    "usable": true
+  },
+  "739": {
+    "unmove": true,
+    "unpass": true
+  },
   "740": {
     "unmove": true,
     "unpass": true,
+    "usable": true
+  },
+  "7408": {
     "usable": true
   },
   "741": {
     "unmove": true,
     "unpass": true
   },
+  "7416": {
+    "usable": true
+  },
   "742": {
     "unmove": true,
     "unpass": true,
     "usable": true
   },
+  "7429": {
+    "usable": true
+  },
   "743": {
+    "unmove": true,
+    "unpass": true
+  },
+  "746": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
     "unmove": true,
     "unpass": true
   },
@@ -10349,6 +14705,12 @@
     "unpass": true,
     "usable": true
   },
+  "7515": {
+    "unmove": true
+  },
+  "7516": {
+    "unmove": true
+  },
   "7517": {
     "unmove": true
   },
@@ -10359,6 +14721,14 @@
     "unmove": true
   },
   "752": {
+    "unmove": true
+  },
+  "7522": {
+    "automap": true,
+    "automapColor": 210,
+    "unmove": true
+  },
+  "7523": {
     "unmove": true
   },
   "753": {
@@ -10455,9 +14825,44 @@
     "unmove": true,
     "unpass": true
   },
+  "7588": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "7589": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
   "759": {
     "clip": true,
     "unmove": true
+  },
+  "7590": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "7591": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "7592": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
   },
   "7593": {
     "automap": true,
@@ -10534,13 +14939,22 @@
   "7634": {
     "unmove": true
   },
+  "7635": {
+    "unmove": true
+  },
   "7636": {
     "unmove": true
   },
   "7637": {
     "unmove": true
   },
+  "7638": {
+    "unmove": true
+  },
   "7639": {
+    "unmove": true
+  },
+  "7640": {
     "unmove": true
   },
   "7641": {
@@ -10703,6 +15117,20 @@
     "top": true,
     "unmove": true
   },
+  "7708": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "7709": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
   "7715": {
     "automap": true,
     "automapColor": 186,
@@ -10734,6 +15162,57 @@
     "bank": true,
     "unmove": true
   },
+  "7749": {
+    "automap": true,
+    "automapColor": 24,
+    "bank": true,
+    "forceuse": true,
+    "fullbank": true,
+    "isFloorTransition": true,
+    "unmove": true,
+    "usable": true
+  },
+  "7751": {
+    "unmove": true,
+    "unpass": true
+  },
+  "7753": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "usable": true
+  },
+  "7756": {
+    "automap": true,
+    "automapColor": 121,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "7757": {
+    "unmove": true,
+    "unpass": true,
+    "usable": true
+  },
+  "7761": {
+    "automap": true,
+    "automapColor": 24,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "7762": {
+    "automap": true,
+    "automapColor": 210,
+    "bank": true,
+    "forceuse": true,
+    "fullbank": true,
+    "isFloorTransition": true,
+    "unmove": true,
+    "usable": true
+  },
   "7764": {
     "automap": true,
     "automapColor": 129,
@@ -10747,6 +15226,36 @@
     "bank": true,
     "fullbank": true,
     "unmove": true
+  },
+  "7768": {
+    "automap": true,
+    "automapColor": 210,
+    "bank": true,
+    "unmove": true
+  },
+  "7769": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "7770": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "7772": {
+    "unmove": true
+  },
+  "7788": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
   },
   "7789": {
     "automap": true,
@@ -10833,6 +15342,13 @@
     "unmove": true,
     "unpass": true
   },
+  "7812": {
+    "automap": true,
+    "automapColor": 86,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
   "7813": {
     "automap": true,
     "automapColor": 186,
@@ -10882,11 +15398,30 @@
   "7879": {
     "usable": true
   },
+  "7880": {
+    "automap": true,
+    "automapColor": 24,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "7881": {
+    "automap": true,
+    "automapColor": 210,
+    "bottom": true,
+    "unmove": true
+  },
   "7886": {
     "automap": true,
     "automapColor": 129,
     "bank": true,
     "fullbank": true,
+    "unmove": true
+  },
+  "7887": {
+    "automap": true,
+    "automapColor": 210,
+    "bottom": true,
     "unmove": true
   },
   "7888": {
@@ -10927,8 +15462,82 @@
     "clip": true,
     "unmove": true
   },
+  "8097": {
+    "usable": true
+  },
+  "8103": {
+    "usable": true
+  },
+  "8142": {
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "usable": true
+  },
   "8145": {
     "top": true,
+    "unmove": true
+  },
+  "8158": {
+    "clip": true,
+    "unmove": true
+  },
+  "8159": {
+    "clip": true,
+    "unmove": true
+  },
+  "8160": {
+    "clip": true,
+    "unmove": true
+  },
+  "8161": {
+    "clip": true,
+    "unmove": true
+  },
+  "8162": {
+    "clip": true,
+    "unmove": true
+  },
+  "8163": {
+    "clip": true,
+    "unmove": true
+  },
+  "8164": {
+    "clip": true,
+    "unmove": true
+  },
+  "8165": {
+    "clip": true,
+    "unmove": true
+  },
+  "8166": {
+    "clip": true,
+    "unmove": true
+  },
+  "8167": {
+    "clip": true,
+    "unmove": true
+  },
+  "8168": {
+    "clip": true,
+    "unmove": true
+  },
+  "8169": {
+    "clip": true,
+    "unmove": true
+  },
+  "8170": {
+    "clip": true,
+    "unmove": true
+  },
+  "8171": {
+    "clip": true,
+    "unmove": true
+  },
+  "8172": {
+    "unmove": true
+  },
+  "8173": {
     "unmove": true
   },
   "8230": {
@@ -10982,6 +15591,13 @@
     "unmove": true,
     "unpass": true,
     "unsight": true
+  },
+  "8276": {
+    "automap": true,
+    "automapColor": 129,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
   },
   "8291": {
     "automap": true,
@@ -11058,6 +15674,20 @@
     "fullbank": true,
     "unmove": true
   },
+  "8309": {
+    "automap": true,
+    "automapColor": 121,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "8310": {
+    "automap": true,
+    "automapColor": 121,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
   "8311": {
     "automap": true,
     "automapColor": 121,
@@ -11072,6 +15702,53 @@
     "fullbank": true,
     "unmove": true
   },
+  "8313": {
+    "automap": true,
+    "automapColor": 121,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "8314": {
+    "automap": true,
+    "automapColor": 121,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "8315": {
+    "automap": true,
+    "automapColor": 121,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "8316": {
+    "automap": true,
+    "automapColor": 121,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "8318": {
+    "clip": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "8323": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "8327": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
   "8367": {
     "automap": true,
     "automapColor": 186,
@@ -11082,6 +15759,20 @@
   "8369": {
     "top": true,
     "unmove": true
+  },
+  "8388": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "8390": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
   },
   "842": {
     "bottom": true,
@@ -11135,7 +15826,19 @@
     "unmove": true,
     "unpass": true
   },
+  "8508": {
+    "unmove": true
+  },
   "851": {
+    "unmove": true
+  },
+  "8510": {
+    "unmove": true
+  },
+  "8512": {
+    "unmove": true
+  },
+  "8513": {
     "unmove": true
   },
   "852": {
@@ -11158,7 +15861,47 @@
   "853": {
     "unmove": true
   },
+  "8536": {
+    "unmove": true
+  },
+  "8537": {
+    "unmove": true
+  },
+  "8538": {
+    "unmove": true
+  },
   "854": {
+    "unmove": true
+  },
+  "8554": {
+    "automap": true,
+    "automapColor": 186,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "8555": {
+    "unmove": true,
+    "unpass": true
+  },
+  "8556": {
+    "unmove": true,
+    "unpass": true
+  },
+  "8557": {
+    "unmove": true,
+    "unpass": true
+  },
+  "8560": {
+    "unmove": true,
+    "unpass": true
+  },
+  "8561": {
+    "unmove": true,
+    "unpass": true
+  },
+  "8587": {
     "unmove": true
   },
   "8595": {
@@ -11167,7 +15910,21 @@
   "8597": {
     "unmove": true
   },
+  "8599": {
+    "unmove": true
+  },
+  "8603": {
+    "unmove": true
+  },
   "8605": {
+    "unmove": true
+  },
+  "8653": {
+    "clip": true,
+    "unmove": true
+  },
+  "8654": {
+    "clip": true,
     "unmove": true
   },
   "869": {
@@ -11380,6 +16137,11 @@
     "fullbank": true,
     "unmove": true
   },
+  "8911": {
+    "unmove": true,
+    "unpass": true,
+    "usable": true
+  },
   "8919": {
     "clip": true,
     "unmove": true
@@ -11467,6 +16229,9 @@
     "unpass": true,
     "usable": true
   },
+  "9215": {
+    "usable": true
+  },
   "9226": {
     "unmove": true
   },
@@ -11543,6 +16308,23 @@
     "unpass": true,
     "unsight": true
   },
+  "9412": {
+    "automap": true,
+    "automapColor": 210,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "unsight": true
+  },
+  "9440": {
+    "unmove": true
+  },
+  "9441": {
+    "unmove": true
+  },
+  "9442": {
+    "unmove": true
+  },
   "9469": {
     "unmove": true
   },
@@ -11594,6 +16376,46 @@
     "unmove": true,
     "unpass": true
   },
+  "963": {
+    "automap": true,
+    "automapColor": 207,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "964": {
+    "automap": true,
+    "automapColor": 207,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "965": {
+    "automap": true,
+    "automapColor": 207,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "966": {
+    "automap": true,
+    "automapColor": 207,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "9669": {
+    "unmove": true
+  },
+  "9672": {
+    "unmove": true
+  },
+  "9675": {
+    "unmove": true
+  },
+  "9677": {
+    "unmove": true
+  },
   "970": {
     "automap": true,
     "automapColor": 121,
@@ -11636,12 +16458,109 @@
     "fullbank": true,
     "unmove": true
   },
+  "976": {
+    "automap": true,
+    "automapColor": 121,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
+  "977": {
+    "automap": true,
+    "automapColor": 24,
+    "bank": true,
+    "fullbank": true,
+    "unmove": true
+  },
   "978": {
     "automap": true,
     "automapColor": 24,
     "bank": true,
     "fullbank": true,
     "unmove": true
+  },
+  "9818": {
+    "automap": true,
+    "automapColor": 12,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "9819": {
+    "automap": true,
+    "automapColor": 12,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "9820": {
+    "unmove": true
+  },
+  "9821": {
+    "unmove": true
+  },
+  "9822": {
+    "unmove": true
+  },
+  "9823": {
+    "unmove": true
+  },
+  "9846": {
+    "automap": true,
+    "automapColor": 12,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "9871": {
+    "automap": true,
+    "automapColor": 12,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "9886": {
+    "automap": true,
+    "automapColor": 12,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true,
+    "usable": true
+  },
+  "9888": {
+    "automap": true,
+    "automapColor": 12,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "9889": {
+    "automap": true,
+    "automapColor": 12,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "9890": {
+    "automap": true,
+    "automapColor": 12,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "9891": {
+    "automap": true,
+    "automapColor": 12,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "9892": {
+    "automap": true,
+    "automapColor": 12,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
   },
   "992": {
     "automap": true,
@@ -11665,9 +16584,44 @@
     "clip": true,
     "unmove": true
   },
+  "9953": {
+    "automap": true,
+    "automapColor": 12,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "9954": {
+    "automap": true,
+    "automapColor": 12,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "9956": {
+    "automap": true,
+    "automapColor": 12,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "9957": {
+    "automap": true,
+    "automapColor": 12,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
   "996": {
     "clip": true,
     "unmove": true
+  },
+  "9960": {
+    "automap": true,
+    "automapColor": 12,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
   },
   "9963": {
     "unmove": true,
@@ -11690,5 +16644,26 @@
   "999": {
     "clip": true,
     "unmove": true
+  },
+  "9997": {
+    "automap": true,
+    "automapColor": 12,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "9998": {
+    "automap": true,
+    "automapColor": 12,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
+  },
+  "9999": {
+    "automap": true,
+    "automapColor": 12,
+    "bottom": true,
+    "unmove": true,
+    "unpass": true
   }
 }

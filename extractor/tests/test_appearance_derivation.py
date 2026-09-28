@@ -73,9 +73,15 @@ def test_automap_and_bank_become_booleans():
     assert result["bank"] is True
 
 
-def test_the_real_rook_table_still_has_its_four_transitions():
-    """Regressão direta do bug: a tabela versionada tem que carregar as quatro
-    transições de andar do ROOK. Zero aqui significa grafo sem escadas."""
+def test_the_real_rook_table_still_has_floor_transitions():
+    """Regressão direta do bug: a tabela versionada tem que carregar as
+    transições de andar do ROOK. Zero aqui significa grafo sem escadas.
+
+    Sem número fixo: a quantidade é do recorte, não da derivação — o Rookgaard
+    recortado do mapa-mundo tem mais escada que o recorte à mão tinha (4 -> 11),
+    e prender o número faz este teste falhar a cada recorte novo. O bug produzia
+    lista vazia, e é a lista vazia que ele guarda.
+    """
     import json
     path = os.path.join(SCRIPTS_DIR, "..", "appearance-flags", "ROOK.json")
     if not os.path.exists(path):
@@ -86,7 +92,7 @@ def test_the_real_rook_table_still_has_its_four_transitions():
         table = json.load(handler)
 
     transitions = [i for i, f in table.items() if f.get("isFloorTransition")]
-    assert len(transitions) == 4, transitions
+    assert transitions
 
 
 # ── a cor do automap ──────────────────────────────────────────────────────

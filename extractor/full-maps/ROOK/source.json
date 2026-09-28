@@ -1,0 +1,41 @@
+{
+  "city": "ROOK",
+  "area": {
+    "id": 24,
+    "name": "Thais"
+  },
+  "subareas": [
+    {
+      "id": 317,
+      "name": "Rookgaard"
+    }
+  ],
+  "world": {
+    "file": "otservbr.otbm",
+    "bytes": 184777193
+  },
+  "shape": "square",
+  "bounds": {
+    "minX": 31924,
+    "minY": 32039,
+    "maxX": 32222,
+    "maxY": 32337
+  },
+  "columns": 29134,
+  "tiles": 352416,
+  "tileAreas": 23565,
+  "towns": [
+    {
+      "id": 3,
+      "name": "Rookgaard",
+      "x": 32097,
+      "y": 32219,
+      "z": 7
+    }
+  ],
+  "monsterGroups": 553,
+  "monsterEntries": 787,
+  "npcGroups": 25,
+  "npcEntries": 25,
+  "houses": 0
+}

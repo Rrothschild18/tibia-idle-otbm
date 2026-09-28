@@ -12,7 +12,9 @@ caixa de 401x401 em Carlin já entra com NPC de Kazordoon e com Ghostland.
 A coordenada de mundo é preservada: o recorte **não** é rebaseado. Sem isso não
 existe procedência — nada liga o recorte ao lugar de onde ele saiu, e uma hunt
 pode ser rotulada com a placa de outra sem que nenhum check consiga reprovar.
-Rookgaard é a exceção histórica (coordenada local, recorte feito à mão).
+Rookgaard era a exceção histórica (coordenada local, recortado à mão no
+editor); desde que foi refeito por aqui, toda cidade em `full-maps/` está em
+coordenada de mundo.
 
 Run: uv run python extractor/scripts/cut_city.py CARLIN --area Carlin
      uv run python extractor/scripts/cut_city.py CARLIN --area Carlin --subareas 271,43,38
@@ -141,8 +143,8 @@ def guard_destination(destination: str, force: bool) -> None:
     if not os.path.isfile(manifest):
         sys.exit(
             f"error: {destination} existe e não tem {SOURCE_MANIFEST} — é mapa feito "
-            "à mão (Rookgaard é um), e este script sobrescreveria o .otbm. Escolha "
-            "outro código de cidade."
+            "à mão, e este script sobrescreveria o .otbm. Escolha outro código de "
+            "cidade."
         )
     if not force:
         sys.exit(f"error: {destination} já foi recortado; use --force para refazer")
