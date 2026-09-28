@@ -560,6 +560,33 @@ exportados um a um, independentes do mapa da cidade.
 `source.json` para o comando com erro. Não tem flag que fure — refazer um
 recorte à mão é apagar a pasta de propósito, com o git como cópia.
 
+### Cidade refeita: as placas voltam por offset
+
+Cidade **nova** não tem nada a transplantar. Cidade que já existia à mão tem: as
+placas de POI (item 2016) foram colocadas no `.otbm` dela e **não existem no
+mapa-mundo**, então o recorte novo nasce sem nenhuma — e hunt cuja entrada não
+tem POI é derrubada pelo grafo. Bola de rota e marcador de quest são o caso
+contrário: foram pintados no mapa-mundo e vêm de graça no recorte.
+
+```
+uv run python extractor/scripts/dump_marker_signs.py ROOK       # ANTES de cortar
+uv run python extractor/scripts/cut_city.py ROOK --area Thais --subareas 317 --shape square --margin 32
+uv run python extractor/scripts/transplant_markers.py \
+    --from extractor/sign-snapshots/ROOK-<sha>.json \
+    --into extractor/full-maps/ROOK/ROOK.otbm --offset 30958,31074,0
+node extractor/scripts/dump_otbm.js ROOK                        # senão o dump sai sem placa
+```
+
+`transplant_markers.py` aceita os dois tipos de fonte em `--from`, decidindo
+pela forma do arquivo: dump cru (bola de rota e marcador de quest) ou snapshot
+de placas. **O offset é do chamador e o sentido importa**: o recorte novo está
+em coordenada de mundo e o snapshot em coordenada local, então aqui é
+`+30958,+31074,0` — o negativo do que se usa para levar marcador do mundo para
+um mapa local. Errar o sinal não injeta no vazio: o comando recusa cada placa,
+nomeia qual, e sai com erro. Recusa também placa que cai em tile `unpass` (POI
+inalcançável) ou em uid já usado por outra placa. Rodar duas vezes não duplica
+nada — o que já está no destino é reconhecido e pulado.
+
 ## Travel graph (mapa cidade inteira)
 
 Diferente dos mapas de hunt (pequenos, exportados um a um em `extractor/maps/<CIDADE>/<pasta>/`), o
@@ -803,6 +830,8 @@ extractor/
     build_city_minimap.py   CLI (avulso): gera full-maps/<CIDADE>/minimap/z<Z>.png + bounds.json
     build_travel_fragment.py CLI (avulso): gera full-maps/<CIDADE>/db-fragment.json + travel-graph-rejections.txt; só escreve no back-end com --export
     dump_marker_signs.py    CLI (avulso): salva as placas de POI de uma cidade em sign-snapshots/ antes de o .otbm ser refeito; para se mapa e catálogo discordarem
+    transplant_markers.py   CLI (avulso): leva bola de rota, marcador de quest e placa de POI de um mapa para outro por offset; recusa e sai com erro quando o destino não aceita
+    transplant_spawns.py    CLI (avulso): leva para outro mapa os grupos de spawn que um humano acrescentou ao <MAPA>-monster.xml, pelo mesmo offset
     content_export.py       lógica pura: pra onde cada coleção vai no back-end e como cada uma mescla (ver "Export pro back-end")
     map_dirs.py             lógica pura: descoberta de pastas em dois níveis (maps/<CIDADE>/<pasta>), usada por build_phaser_map.py, build_hunt_fragment.py e build_travel_fragment.py
     city_ids.py             lógica pura: deriva `city`/`status` do id de um hunt/location (nunca digitados à mão)

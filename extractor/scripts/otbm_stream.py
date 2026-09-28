@@ -31,6 +31,8 @@ OTBM_HOUSETILE = 0x0E
 OTBM_WAYPOINTS = 0x0F
 
 OTBM_ATTR_DESCRIPTION = 0x01
+OTBM_ATTR_TILE_FLAGS = 0x03
+OTBM_ATTR_ITEM = 0x09
 OTBM_ATTR_EXT_SPAWN_FILE = 0x0B
 OTBM_ATTR_EXT_HOUSE_FILE = 0x0D
 
@@ -137,6 +139,41 @@ def tile_area_origin(data: bytes, start: int) -> Tuple[int, int, int]:
 def tile_offsets(data: bytes, start: int) -> Tuple[int, int]:
     raw = unescape(data[start + 1 : start + 1 + 3 * 2])
     return raw[1], raw[2]
+
+
+def tile_ground_id(data: bytes, start: int) -> Optional[int]:
+    """O id do chão declarado como **atributo** do tile, ou `None`.
+
+    Não é "o chão do tile": um tile pode trazer o chão como primeiro nó de item
+    filho em vez de atributo, e em Rookgaard 18.720 dos 352.416 tiles fazem
+    isso. O dump do `otbm2json` traduz só o atributo para `tileid`, e é essa
+    tradução que este reproduz — quem quer o chão dos outros olha os itens.
+
+    Para de ler no primeiro atributo de largura desconhecida em vez de
+    adivinhar: um byte de largura errada faria todo o resto do tile virar lixo,
+    e um `None` a mais é leitura conservadora (nenhuma flag), não corrupção."""
+    raw = unescape(data[start + 1 : start + 1 + 16 * 2])
+    if not raw:
+        return None
+    # `housetile` carrega o id da casa (4 bytes) entre as coordenadas e os
+    # atributos; `tile` vai direto.
+    index = 7 if raw[0] == OTBM_HOUSETILE else 3
+
+    while index < len(raw):
+        attr = raw[index]
+        if attr in (NODE_INIT, NODE_TERM):
+            return None
+        index += 1
+        if attr == OTBM_ATTR_ITEM:
+            if index + 2 > len(raw):
+                return None
+            return int.from_bytes(raw[index : index + 2], "little")
+        if attr == OTBM_ATTR_TILE_FLAGS:
+            index += 4
+        else:
+            return None
+
+    return None
 
 
 def towns(data: bytes) -> List[dict]:

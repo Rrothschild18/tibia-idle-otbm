@@ -86,3 +86,39 @@ def test_bounds_skip_areas_without_opening_their_tiles(tmp_path):
     )
 
     assert [origin for origin, _ in kept] == [(1024, 768, 7)]
+
+
+def _tile_node_with_child_ground(offset_x: int, offset_y: int, ground_id: int) -> bytes:
+    """O outro jeito de o RME gravar chão: como primeiro nó de item, sem atributo.
+
+    18.720 dos 352.416 tiles de Rookgaard chegam assim."""
+    payload = struct.pack("<BBB", ot.OTBM_TILE, offset_x, offset_y)
+    child = ot.item_node(ground_id)
+    return bytes([ot.NODE_INIT]) + ot.escape(payload) + child + bytes([ot.NODE_TERM])
+
+
+def test_ground_id_reads_the_attribute_when_the_tile_declares_one():
+    assert ot.tile_ground_id(_tile_node(1, 2, 4526), 0) == 4526
+
+
+def test_ground_id_is_none_when_the_ground_came_as_an_item_node():
+    # `otbm2json` também deixa `tileid` de fora nesse caso, e é essa tradução
+    # que este leitor reproduz — o chão sai pelos itens.
+    assert ot.tile_ground_id(_tile_node_with_child_ground(1, 2, 4526), 0) is None
+
+
+def test_ground_id_steps_over_the_tile_flags_that_come_before_it():
+    payload = struct.pack("<BBB", ot.OTBM_TILE, 1, 2)
+    payload += struct.pack("<BI", ot.OTBM_ATTR_TILE_FLAGS, 0x40)
+    payload += struct.pack("<BH", ot.OTBM_ATTR_ITEM, 4526)
+    node = bytes([ot.NODE_INIT]) + ot.escape(payload) + bytes([ot.NODE_TERM])
+
+    assert ot.tile_ground_id(node, 0) == 4526
+
+
+def test_ground_id_skips_the_house_id_of_a_housetile():
+    payload = struct.pack("<BBB", ot.OTBM_HOUSETILE, 1, 2) + struct.pack("<I", 4242)
+    payload += struct.pack("<BH", ot.OTBM_ATTR_ITEM, 4526)
+    node = bytes([ot.NODE_INIT]) + ot.escape(payload) + bytes([ot.NODE_TERM])
+
+    assert ot.tile_ground_id(node, 0) == 4526
