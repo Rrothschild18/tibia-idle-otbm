@@ -258,3 +258,35 @@ def test_minimap_dry_run_writes_nothing(tmp_path, full_maps, capsys):
 
     assert "[dry-run]" in capsys.readouterr().out
     assert not destino.exists(), "dry-run não pode escrever"
+
+
+# ======================================================
+# A rota pintada à mão
+# ======================================================
+
+
+def test_publish_bundle_carries_the_painted_route(bundle, tmp_path, monkeypatch):
+    """`routes/route-anchors.json` é o único artefato do bundle que o jogo lê e
+    que ninguém tinha conferido chegar. O `map.json` + `sheets/` do bundle de
+    uma quest publicada antes do painted-route existir chegaram sozinhos, e a
+    rota ficou em ready-maps/ — publicar de novo é o que a leva. Este teste
+    prende isso: um artefato novo dentro do bundle nasce publicado."""
+    (bundle / "routes").mkdir()
+    (bundle / "routes" / "route-anchors.json").write_text(json.dumps({
+        "mapId": "ROOK-HUNT-0001",
+        "start": {"x": 1188, "y": 1134, "z": 7},
+        "waypoints": [{"x": 1188, "y": 1134, "z": 7, "kind": "path"}],
+    }))
+
+    atlases = tmp_path / "atlases"
+    (atlases / "outfits").mkdir(parents=True)
+    (atlases / "outfits" / "21.png").write_bytes(b"x")
+    monkeypatch.setattr(publish, "ATLASES_DIR", str(atlases))
+    monkeypatch.setattr(publish, "READY_MAPS_DIR", str(bundle.parent.parent))
+
+    front = tmp_path / "front"
+    publish.publish_bundle("ROOK-HUNT-0001_rats", str(front))
+
+    published = front / "ROOK-HUNT-0001_rats-sprites-v6" / "routes" / "route-anchors.json"
+    assert published.exists(), "bundle publicado sem a rota pintada"
+    assert json.loads(published.read_text())["mapId"] == "ROOK-HUNT-0001"

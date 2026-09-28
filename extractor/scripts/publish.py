@@ -14,6 +14,14 @@ copiados à mão e faltavam os que o sync cobria.
 A separação do `CONTEXT.md` continua intacta, e fica **mais forte**: gerar
 fragmento nunca escreve fora de `extractor/`; publicar é este comando, e só ele.
 
+O bundle é copiado como **árvore inteira**, nunca por lista de nomes: é o que
+faz um artefato novo dentro dele (`monsters/`, `sheets/`, `routes/`) nascer
+publicado, sem ninguém se lembrar de acrescentá-lo aqui. Quem procura o nome de
+um artefato neste arquivo não acha, e a conclusão certa é essa — não que ele
+tenha ficado de fora. O que fica de fora é bundle que ninguém republicou depois
+de ganhar o artefato: foi assim que `routes/route-anchors.json` da
+ROOK-HUNT-0013 passou semanas em ready-maps/ sem chegar ao jogo.
+
 Run: uv run python extractor/scripts/publish.py <mapa|--all> [--prune]
 """
 
