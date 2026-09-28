@@ -1,55 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <monsters>
-	<monster centerx="1175" centery="1108" centerz="7" radius="3">
-		<monster name="Deer" x="1" y="2" z="7" spawntime="90" />
-	</monster>
-	<monster centerx="1203" centery="1108" centerz="7" radius="3">
-		<monster name="Spider" x="-1" y="-2" z="7" spawntime="90" />
-		<monster name="Spider" x="-1" y="1" z="7" spawntime="90" />
-	</monster>
-	<monster centerx="1210" centery="1108" centerz="7" radius="3">
-		<monster name="Spider" x="-3" y="1" z="7" spawntime="90" />
-	</monster>
-	<monster centerx="1217" centery="1108" centerz="7" radius="3">
-		<monster name="Spider" x="1" y="0" z="7" spawntime="90" />
-	</monster>
-	<monster centerx="1230" centery="1109" centerz="7" radius="3">
-		<monster name="Spider" x="0" y="-2" z="7" spawntime="60" />
-		<monster name="Spider" x="-2" y="0" z="7" spawntime="60" />
-		<monster name="Spider" x="-1" y="2" z="7" spawntime="60" />
-	</monster>
-	<monster centerx="1196" centery="1112" centerz="7" radius="3">
-		<monster name="Bug" x="-3" y="-3" z="7" spawntime="90" />
-		<monster name="Bug" x="0" y="3" z="7" spawntime="90" />
-	</monster>
-	<monster centerx="1168" centery="1115" centerz="7" radius="3">
-		<monster name="Spider" x="1" y="-2" z="7" spawntime="90" />
-		<monster name="Spider" x="1" y="0" z="7" spawntime="90" />
-	</monster>
-	<monster centerx="1182" centery="1115" centerz="7" radius="3">
-		<monster name="Wolf" x="1" y="-2" z="7" spawntime="90" />
-	</monster>
-	<monster centerx="1189" centery="1115" centerz="7" radius="3">
-		<monster name="Wolf" x="-1" y="1" z="7" spawntime="90" />
-	</monster>
-	<monster centerx="1203" centery="1115" centerz="7" radius="3">
-		<monster name="Bug" x="-1" y="-1" z="7" spawntime="90" />
-		<monster name="Bug" x="-1" y="1" z="7" spawntime="90" />
-		<monster name="Bug" x="2" y="3" z="7" spawntime="90" />
-	</monster>
-	<monster centerx="1210" centery="1115" centerz="7" radius="3">
-		<monster name="Poison Spider" x="-1" y="-2" z="7" spawntime="90" />
-	</monster>
-	<monster centerx="1217" centery="1115" centerz="7" radius="3">
-		<monster name="Poison Spider" x="2" y="-3" z="7" spawntime="90" />
-		<monster name="Spider" x="-2" y="1" z="7" spawntime="90" />
-	</monster>
-	<monster centerx="1223" centery="1121" centerz="7" radius="3">
-		<monster name="Poison Spider" x="-1" y="-1" z="7" spawntime="90" />
-	</monster>
-	<monster centerx="1175" centery="1122" centerz="7" radius="3">
-		<monster name="Deer" x="0" y="2" z="7" spawntime="90" />
-	</monster>
 	<monster centerx="1228" centery="1126" centerz="7" radius="3">
 		<monster name="Spider" x="1" y="-3" z="7" spawntime="60" />
 		<monster name="Spider" x="-1" y="0" z="7" spawntime="60" />
@@ -106,26 +56,6 @@
 	</monster>
 	<monster centerx="1189" centery="1143" centerz="8" radius="3">
 		<monster name="Bear" x="2" y="2" z="8" spawntime="90" />
-	</monster>
-	<monster centerx="1175" centery="1108" centerz="9" radius="3">
-		<monster name="Rat" x="-2" y="2" z="9" spawntime="90" />
-	</monster>
-	<monster centerx="1182" centery="1108" centerz="9" radius="3">
-		<monster name="Rat" x="1" y="0" z="9" spawntime="90" />
-	</monster>
-	<monster centerx="1189" centery="1108" centerz="9" radius="3">
-		<monster name="Skeleton" x="-1" y="0" z="9" spawntime="90" />
-	</monster>
-	<monster centerx="1182" centery="1115" centerz="9" radius="3">
-		<monster name="Rat" x="1" y="-2" z="9" spawntime="90" />
-	</monster>
-	<monster centerx="1175" centery="1122" centerz="9" radius="3">
-		<monster name="Rat" x="-3" y="-1" z="9" spawntime="90" />
-		<monster name="Rat" x="-3" y="1" z="9" spawntime="90" />
-		<monster name="Rat" x="-2" y="2" z="9" spawntime="90" />
-	</monster>
-	<monster centerx="1189" centery="1122" centerz="9" radius="3">
-		<monster name="Skeleton" x="0" y="-2" z="9" spawntime="90" />
 	</monster>
 	<monster centerx="1232" centery="1134" centerz="9" radius="1">
 		<monster name="Dragon Hatchling" x="0" y="0" z="9" spawntime="60" />
