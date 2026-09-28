@@ -155,3 +155,13 @@ def test_floor_pixels_lays_the_floor_out_row_major_with_holes_empty():
     pixels = minimap.floor_pixels({(10, 20): 24, (11, 21): 129}, bounds)
 
     assert pixels == [24, 0, 0, 129]
+
+
+def test_city_minimap_ignores_a_route_marker_item_without_uid():
+    """A bola de energia da rota é entrada de ferramenta como a placa, e não
+    tem uid — o corte é pelo id do item."""
+    floors = minimap.city_minimap(
+        _dump([(10, 20, 7, 100, [27869])]), {**COLORS, 27869: 200}
+    )
+
+    assert floors[7] == {(10, 20): 24}

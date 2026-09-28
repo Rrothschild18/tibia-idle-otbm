@@ -16,6 +16,8 @@ O CLI que lê o dump e escreve os PNGs é `build_city_minimap.py`.
 
 from typing import Dict, Iterable, List, Sequence, Tuple
 
+import travel_graph
+
 # O cubo 6x6x6 do Tibia. 216 índices, e a cor é fórmula — não existe tabela
 # para envelhecer fora de sincronia com quem desenha.
 PALETTE_SIZE = 216
@@ -33,8 +35,10 @@ EMPTY_COLOR = 0
 SURFACE_Z = 7
 
 # Placa de marcação do travel-graph: uid reservado, entrada de ferramenta.
-# Mesmo corte que `map_v6` e `travel_graph` fazem.
-MARKER_UID_MIN = 10001
+# Mesmo corte que `map_v6` e `travel_graph` fazem — e é literalmente o mesmo
+# predicado agora, `travel_graph.is_marker_item`, que também conhece os itens
+# que são marcador pelo id (o caminho de rota pintado não tem uid).
+MARKER_UID_MIN = travel_graph.MARKER_UID_MIN
 
 
 def palette_rgb(index: int) -> Tuple[int, int, int]:
@@ -100,7 +104,7 @@ def city_minimap(dump: Dict, colors: Dict[int, int]) -> Dict[int, Dict[Tuple[int
                 item_colors = [
                     colors.get(raw_item.get("id"), 0)
                     for raw_item in tile.get("items") or []
-                    if (raw_item.get("uid") or 0) < MARKER_UID_MIN
+                    if not travel_graph.is_marker_item(raw_item)
                 ]
                 color = tile_minimap_color(colors.get(tile.get("tileid"), 0), item_colors)
                 floors.setdefault(z, {})[(base_x + tile_x, base_y + tile_y)] = color

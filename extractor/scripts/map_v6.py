@@ -31,7 +31,9 @@ TILE_SIZE = 32
 VERSION = 6
 
 # Marker signs (item 2016) placed by the travel-graph tooling use a reserved
-# uid range — tooling input, never a renderable object. Same rule as v5.
+# uid range — tooling input, never a renderable object. Same rule as v5. The
+# rule itself lives in `travel_graph.is_marker_item`, which also knows the
+# items that are markers by id alone (a painted route path carries no uid).
 SIGN_ITEM_ID = 2016
 MARKER_UID_MIN = 10001
 
@@ -71,8 +73,7 @@ def _tile_placements(tile: Dict, analyze: Callable[[int], Dict]) -> List[Tuple[i
         appearance_id = raw_item.get("id")
         if appearance_id is None:
             continue
-        uid = raw_item.get("uid")
-        if uid is not None and uid >= MARKER_UID_MIN:
+        if travel_graph.is_marker_item(raw_item):
             continue
         placements.append((appearance_id, analyze(appearance_id)["flags"]))
 

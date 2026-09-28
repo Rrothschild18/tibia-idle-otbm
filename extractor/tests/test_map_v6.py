@@ -490,3 +490,15 @@ def test_without_the_canary_rules_a_ladder_falls_back_to_the_hole_geometry():
     doc, _ = _build(analyses, dump)
 
     assert doc["transitions"] == [0, 0, 8, 0, 0, 9]
+
+
+def test_a_route_marker_item_never_reaches_the_stack_even_without_a_uid():
+    # A bola de energia (27869) é o caminho da rota pintado no editor: entrada
+    # de ferramenta, igual a uma placa. Ela não carrega uid — quem a pintou
+    # pintou 219 tiles, e exigir uid em cada um seria exigir 219 cliques —, por
+    # isso o corte tem de ser pelo id do item, não pela faixa de uid.
+    analyses = {100: _analysis(100, flags=GROUND_FLAGS), 27869: _analysis(27869)}
+    doc, _ = _build(analyses, _dump([(0, 0, 100, [27869])]))
+
+    assert doc["floors"]["7"]["tiles"] == [[0, 0, 100]]
+    assert "27869" not in doc["appearances"]

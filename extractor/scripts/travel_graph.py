@@ -39,6 +39,31 @@ SIGN_ITEM_ID = 2016
 MARKER_UID_MIN = 10001
 POI_TYPES = ("HUNT", "TEMPLE", "DEPOT", "QUEST")
 
+# Itens que são entrada de ferramenta pelo próprio id, sem depender de uid.
+#
+# A placa de POI se identifica pelo uid reservado, porque são poucas e cada uma
+# precisa de um uid único mesmo (é o que o editor garante). O caminho de uma
+# rota é outra escala: são centenas de tiles pintados de uma vez, e exigir uid
+# em cada um seria exigir centenas de cliques para marcar o que o id do item já
+# diz. Então este conjunto responde "este item é marcador?" sem olhar uid.
+#
+# 27869 ("red energy ball", quest item no items.xml do Canary) é o caminho que
+# o gerador de rota segue.
+MARKER_ITEM_IDS = frozenset({27869})
+
+
+def is_marker_item(raw_item: Dict) -> bool:
+    """O item é entrada de ferramenta, e não conteúdo que a cidade mostra?
+
+    Existe para que a regra viva num lugar só: ela é consumida pelo grafo
+    (`extract_tile_flags`), pelo bundle (`map_v6`) e pelo minimapa (`minimap`),
+    e antes disto estava escrita à mão nos três — três cópias que só por sorte
+    concordavam."""
+    if raw_item.get("id") in MARKER_ITEM_IDS:
+        return True
+    uid = raw_item.get("uid")
+    return uid is not None and uid >= MARKER_UID_MIN
+
 _SIGN_ID_RE = re.compile(
     r"^(?P<city>[A-Z]+)-(?P<type>" + "|".join(POI_TYPES) + r")-(?P<seq>\d{4})$"
 )
@@ -501,8 +526,7 @@ def extract_tile_flags(
             floorchange = floorchange_by_id.get(ground_id)
 
         for raw_item in tile.get("items", []):
-            uid = raw_item.get("uid")
-            if uid is not None and uid >= MARKER_UID_MIN:
+            if is_marker_item(raw_item):
                 continue
             item_flags = _flags(raw_item.get("id"))
             unpass = unpass or item_flags.get("unpass", False)

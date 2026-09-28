@@ -238,13 +238,29 @@ def write_map(
 
 
 OTBM_ATTR_ACTION_ID = 0x04
+OTBM_ATTR_UNIQUE_ID = 0x05
+OTBM_ATTR_TEXT = 0x06
 
 
-def item_node(item_id: int, action_id: Optional[int] = None) -> bytes:
-    """Um nó de item solto, pronto para entrar como filho de um tile."""
+def item_node(
+    item_id: int,
+    action_id: Optional[int] = None,
+    unique_id: Optional[int] = None,
+    text: Optional[str] = None,
+) -> bytes:
+    """Um nó de item solto, pronto para entrar como filho de um tile.
+
+    `action_id` e `unique_id` são dois bytes cada; `text` é string de 16 bits
+    de comprimento. As três larguras são as que o leitor do vendor espera — um
+    marcador escrito com a largura errada corrompe todo o tile depois dele, e
+    não só o atributo."""
     payload = struct.pack("<BH", OTBM_ITEM, item_id)
     if action_id is not None:
         payload += struct.pack("<BH", OTBM_ATTR_ACTION_ID, action_id)
+    if unique_id is not None:
+        payload += struct.pack("<BH", OTBM_ATTR_UNIQUE_ID, unique_id)
+    if text is not None:
+        payload += bytes([OTBM_ATTR_TEXT]) + _string16(text)
     return bytes([NODE_INIT]) + escape(payload) + bytes([NODE_TERM])
 
 

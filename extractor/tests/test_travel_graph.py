@@ -1397,3 +1397,17 @@ def test_build_travel_graph_keeps_the_last_walked_tile_before_the_npc_hop():
 
     assert edge["tileCount"] == 7
     assert edge["path"] == [0, 0, 7, 4, -4, 7, 7, -6, 7]
+
+
+def test_a_route_marker_item_contributes_no_flags_to_the_graph():
+    """A bola de energia da rota é marcador, não conteúdo: se ela contribuísse
+    `unpass`, o próprio caminho que ela desenha ficaria inandável e a rota que
+    depende dele nunca fecharia."""
+    dump = {"data": {"nodes": [{"features": [{"x": 0, "y": 0, "z": 7, "tiles": [
+        {"x": 1, "y": 1, "tileid": 100, "items": [{"id": 27869}]},
+    ]}]}]}}
+    flags = {"100": {}, "27869": {"unpass": True}}
+
+    tiles = tg.extract_tile_flags(dump, flags)
+
+    assert [t["unpass"] for t in tiles] == [False]
