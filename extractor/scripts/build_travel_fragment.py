@@ -54,15 +54,18 @@ from travel_graph import (
     REJECTION_REASONS,
     apply_graph_rejections,
     build_npc_locations,
+    build_quest_slug_location,
     build_sign_location,
     build_travel_fragment,
     build_travel_graph,
     build_walkable_graph,
     extract_tile_flags,
     format_rejection_report,
+    hunt_id_for_slug,
     match_npc_lua_filename,
     merge_travel_fragment_into_catalog,
     parse_marker_signs,
+    parse_quest_slug_markers,
     parse_npc_outfit_lua,
     parse_npc_shop_lua,
     parse_npc_xml,
@@ -213,6 +216,29 @@ def build_city_fragment(
             print(f"[WARN] placa com problema não reconhecido ({issue['reason']}): {location}")
 
     sign_locations = [build_sign_location(s) for s in signs]
+
+    # POIs marcados por slug: item com uid na faixa de quest e o slug no texto,
+    # que é como uma área desenhada à mão se marca sem seguir o formato
+    # `CIDADE-TIPO-NNNN` da placa. O id vem da pasta do mapa cujo slug casa —
+    # a pasta se chama `<ID>_<slug>`, então nada precisa de tabela curada.
+    slug_markers = parse_quest_slug_markers(dump)
+    if slug_markers:
+        folders = discover_hunt_maps(city)
+        matched = []
+        for marker in slug_markers:
+            hunt_id = hunt_id_for_slug(marker["slug"], folders)
+            if hunt_id is None:
+                print(f"[WARN] marcador '{marker['slug']}' (uid {marker['uid']}) em "
+                      f"({marker['x']},{marker['y']},{marker['z']}): nenhuma pasta de mapa com "
+                      f"esse slug em maps/{city}/ — POI não gerado")
+                continue
+            matched.append(build_quest_slug_location(marker, hunt_id))
+        if matched:
+            by_id = {location["id"]: location for location in sign_locations}
+            by_id.update({location["id"]: location for location in matched})
+            sign_locations = list(by_id.values())
+            print(f"[OK] {len(matched)} POIs de slug: "
+                  f"{', '.join(location['id'] for location in matched)}")
 
     # POIs de hunt curados na tela `new-hunts` (ver curated_hunts.py). Onde uma
     # cidade tem os dois, o arquivo curado vence a placa: ele carrega

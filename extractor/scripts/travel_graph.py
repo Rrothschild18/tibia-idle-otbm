@@ -130,6 +130,82 @@ def parse_marker_signs(dump: Dict) -> Tuple[List[Dict], List[Dict]]:
     return locations, issues
 
 
+# =========================================================
+# Marcador de quest por slug
+# =========================================================
+#
+# A placa de POI se chama `CIDADE-TIPO-NNNN` e é lida por `parse_marker_signs`.
+# Uma área marcada no editor por quem está desenhando conteúdo tende a não
+# seguir esse formato: o autor põe um item qualquer, um uid numa faixa que ele
+# reservou, e no texto o **slug** do que aquilo é (`copper_shield_quest`).
+#
+# Isto lê essa convenção. Ela conviva com a placa em vez de substituí-la: são
+# dois jeitos de marcar a mesma coisa, e o mapa de Rookgaard tem os dois.
+#
+# A faixa é limitada nas duas pontas de propósito — o mapa-mundo do otservbr usa
+# uid alto para as coisas dele (50080 e 64128 aparecem dentro de Rookgaard), e
+# uma faixa aberta em ">= 20001" leria esses objetos como marcador do autor.
+QUEST_MARKER_UID_MIN = 20001
+QUEST_MARKER_UID_MAX = 20999
+
+
+def parse_quest_slug_markers(dump: Dict) -> List[Dict]:
+    """Todo item com uid na faixa de quest e texto -> `{slug, uid, x, y, z}`.
+
+    Sem texto não há slug, e sem slug não há o que casar com pasta de mapa: é
+    marcador inacabado, e não entra."""
+    markers: List[Dict] = []
+
+    for x, y, z, tile in _iter_dump_tiles(dump):
+        for raw_item in tile.get("items") or []:
+            uid = raw_item.get("uid")
+            if uid is None or not (QUEST_MARKER_UID_MIN <= uid <= QUEST_MARKER_UID_MAX):
+                continue
+            slug = (raw_item.get("text") or "").strip()
+            if not slug:
+                continue
+            markers.append({"slug": slug, "uid": uid, "x": x, "y": y, "z": z})
+
+    return markers
+
+
+def _normalize_slug(slug: str) -> str:
+    return slug.strip().lower().replace("_", "-")
+
+
+def hunt_id_for_slug(slug: str, hunt_folders: Sequence[Dict]) -> Optional[str]:
+    """O id da hunt cuja pasta tem esse slug, ou `None`.
+
+    `hunt_folders` é `[{"id", "name"}]`, o que `build_travel_fragment` já lê das
+    pastas de `maps/<CIDADE>/` — a pasta se chama `<ID>_<slug>`, então o id já
+    está lá e não precisa de tabela curada nenhuma para ligar um ao outro.
+    Underscore e hífen são a mesma coisa nessa comparação: o editor aceita os
+    dois e ninguém deveria perder uma quest por isso."""
+    wanted = _normalize_slug(slug)
+    for folder in hunt_folders:
+        if _normalize_slug(folder.get("name", "")) == wanted:
+            return folder.get("id")
+    return None
+
+
+def build_quest_slug_location(marker: Dict, hunt_id: str) -> Dict:
+    """O POI de entrada de uma hunt marcada por slug.
+
+    Tipo `HUNT`, não um tipo novo: no grafo de viagem a entrada de uma quest faz
+    exatamente o que a entrada de uma hunt faz, e o `displayName` sai curado do
+    catálogo como em qualquer hunt."""
+    return {
+        "id": hunt_id,
+        "type": "HUNT",
+        "x": marker["x"],
+        "y": marker["y"],
+        "z": marker["z"],
+        "huntId": hunt_id,
+        "_todo": ["revisar displayName"],
+        "displayName": _title_from_location_id(hunt_id),
+    }
+
+
 def _title_from_location_id(location_id: str) -> str:
     return " ".join(word.capitalize() for word in location_id.split("-"))
 

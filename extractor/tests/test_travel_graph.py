@@ -1411,3 +1411,54 @@ def test_a_route_marker_item_contributes_no_flags_to_the_graph():
     tiles = tg.extract_tile_flags(dump, flags)
 
     assert [t["unpass"] for t in tiles] == [False]
+
+
+# ======================================================
+# Marcador de quest por slug (uid em faixa + texto)
+# ======================================================
+
+def _slug_marker_dump(items):
+    return {"data": {"nodes": [{"features": [{"x": 0, "y": 0, "z": 7, "tiles": [
+        {"x": i, "y": 0, "tileid": 1, "items": [it]} for i, it in enumerate(items)
+    ]}]}]}}
+
+
+def test_a_slug_marker_is_read_from_the_uid_band_and_its_text():
+    """O autor marcou a entrada com um item qualquer carregando uid na faixa de
+    quest e o slug no texto — não com a placa `CIDADE-TIPO-NNNN`."""
+    dump = _slug_marker_dump([{"id": 2014, "uid": 20001, "text": "copper_shield_quest"}])
+
+    markers = tg.parse_quest_slug_markers(dump)
+
+    assert markers == [{"slug": "copper_shield_quest", "uid": 20001, "x": 0, "y": 0, "z": 7}]
+
+
+def test_the_slug_band_leaves_the_poi_signs_and_the_world_maps_own_uids_alone():
+    dump = _slug_marker_dump([
+        {"id": 2016, "uid": 10005, "text": "ROOK-HUNT-0005"},   # placa de POI
+        {"id": 2473, "uid": 64129},                             # uid do proprio mapa-mundo
+        {"id": 2012, "uid": 20002, "text": "katana_quest"},
+    ])
+
+    assert [m["slug"] for m in tg.parse_quest_slug_markers(dump)] == ["katana_quest"]
+
+
+def test_a_slug_marker_mints_a_hunt_poi_matching_the_map_folder():
+    # O slug do marcador casa com o slug da pasta do mapa, e a pasta carrega o
+    # id. Nada de tabela curada nova: se a pasta existe, o id existe.
+    marker = {"slug": "copper_shield_quest", "uid": 20001, "x": 1188, "y": 1134, "z": 7}
+
+    location = tg.build_quest_slug_location(marker, "ROOK-HUNT-0013")
+
+    assert location["id"] == "ROOK-HUNT-0013"
+    assert location["type"] == "HUNT"
+    assert (location["x"], location["y"], location["z"]) == (1188, 1134, 7)
+
+
+def test_matching_a_slug_to_a_folder_ignores_underscore_versus_hyphen():
+    folders = [{"id": "ROOK-HUNT-0013", "name": "copper-shield-quest"},
+               {"id": "ROOK-HUNT-0014", "name": "katana-quest"}]
+
+    assert tg.hunt_id_for_slug("copper_shield_quest", folders) == "ROOK-HUNT-0013"
+    assert tg.hunt_id_for_slug("katana_quest", folders) == "ROOK-HUNT-0014"
+    assert tg.hunt_id_for_slug("sem_pasta", folders) is None

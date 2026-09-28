@@ -40,10 +40,12 @@ import travel_graph
 
 Node = Tuple[int, int, int]
 
-# Faixa de uid reservada para marcador de quest. Limitada nas duas pontas —
-# ver o docstring do módulo para o porquê (uids do próprio mapa-mundo).
-QUEST_MARKER_UID_MIN = 20001
-QUEST_MARKER_UID_MAX = 20999
+# Faixa de uid reservada para marcador de quest — a mesma que
+# `travel_graph.parse_quest_slug_markers` lê, e por isso importada de lá em vez
+# de recopiada: duas faixas que discordam é um marcador que o transplante leva
+# e o grafo não vê.
+QUEST_MARKER_UID_MIN = travel_graph.QUEST_MARKER_UID_MIN
+QUEST_MARKER_UID_MAX = travel_graph.QUEST_MARKER_UID_MAX
 
 
 def _is_quest_marker(raw_item: Dict) -> bool:
