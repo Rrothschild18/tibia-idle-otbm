@@ -262,10 +262,22 @@ def build_candidates(
         if not is_admitted_on_its_own(point["name"], experience_by_name, min_experience, christens_name)
     ]
 
+    def _cluster_key(point: Dict):
+        """Componente caminhável **e** subárea oficial. Um deserto sem parede
+        nenhuma (Darashia) é um componente só; sem a subárea na chave o
+        cluster o engole inteiro — com ela, a fronteira que a Cipsoft já
+        desenhou volta a valer mesmo onde não há parede (spec, decisão 5)."""
+        component = component_of.get(point["anchor"], -1)
+        subarea = subarea_of_column(point["x"], point["y"]) if subarea_of_column else None
+        return (component, subarea)
+
     component_size = Counter(component_of.values())
-    raw_groups = _cluster(strong, radius, key_of=lambda p: component_of.get(p["anchor"], -1))
+    raw_groups = _cluster(strong, radius, key_of=_cluster_key)
 
     group_component = [component_of.get(g[0]["anchor"], -1) for g in raw_groups]
+    group_subarea = [
+        subarea_of_column(g[0]["x"], g[0]["y"]) if subarea_of_column else None for g in raw_groups
+    ]
     group_floor = [g[0]["z"] for g in raw_groups]
     group_admitted_families = [
         {
@@ -280,12 +292,14 @@ def build_candidates(
     extra_by_group: Dict[int, List[Dict]] = defaultdict(list)
     for w_component, w_point in weak:
         family = family_by_name.get(w_point["name"].lower()) if family_by_name else None
+        w_subarea = subarea_of_column(w_point["x"], w_point["y"]) if subarea_of_column else None
         matches = [
             index
             for index, _ in enumerate(raw_groups)
             if family is not None
             and family in group_admitted_families[index]
             and group_component[index] == w_component
+            and group_subarea[index] == w_subarea
             and group_floor[index] == w_point["z"]
             and _within_radius(w_point, raw_groups[index], radius)
         ]

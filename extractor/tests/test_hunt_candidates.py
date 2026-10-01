@@ -308,3 +308,72 @@ def test_notable_species_still_lead_the_list_even_with_fewer_spawns():
     )
 
     assert [s["name"] for s in candidates[0]["species"]] == ["Rotworm", "Poison Spider"]
+
+
+# ---------------------------------------------------------------------------
+# A subárea entra na chave do cluster — mesmo componente caminhável, mesmo
+# raio, mas a fronteira oficial da Cipsoft ainda separa.
+# ---------------------------------------------------------------------------
+
+
+def test_cluster_never_crosses_a_subarea_boundary_even_inside_one_component():
+    """O deserto de Darashia: um componente caminhável só, sem parede
+    nenhuma, mas duas subáreas oficiais — o cluster não pode engolir as duas
+    só porque o raio alcança."""
+    walkable = _floor(range(0, 20), range(0, 3), 7)
+    components = hc.same_floor_components(walkable)
+    points = [
+        {"name": "Minotaur", "x": x, "y": 1, "z": 7} for x in range(1, 4)
+    ] + [{"name": "Minotaur", "x": x, "y": 1, "z": 7} for x in range(8, 11)]
+
+    def subarea_of_column(x, y):
+        return "A" if x < 6 else "B"
+
+    candidates, _, _ = hc.build_candidates(
+        "TEST", points, walkable, components, radius=10, min_creatures=3,
+        experience_by_name={"minotaur": 50},
+        subarea_of_column=subarea_of_column,
+    )
+
+    assert len(candidates) == 2
+    assert {c["subareaId"] for c in candidates} == {"A", "B"}
+
+
+def test_a_weak_companion_only_sweeps_into_a_group_of_its_own_subarea():
+    walkable = _floor(range(0, 20), range(0, 3), 7)
+    components = hc.same_floor_components(walkable)
+    points = [
+        {"name": "Ghoul", "x": x, "y": 1, "z": 7} for x in range(1, 4)
+    ] + [{"name": "Skeleton", "x": 7, "y": 1, "z": 7}]
+
+    def subarea_of_column(x, y):
+        return "A" if x < 6 else "B"
+
+    candidates, _, discarded = hc.build_candidates(
+        "TEST", points, walkable, components, radius=10, min_creatures=1,
+        experience_by_name={"ghoul": 85, "skeleton": 35},
+        family_by_name={"ghoul": "Undead", "skeleton": "Undead"},
+        subarea_of_column=subarea_of_column,
+    )
+
+    assert len(candidates) == 1
+    assert candidates[0]["subareaId"] == "A"
+    assert {s["name"] for s in candidates[0]["species"]} == {"Ghoul"}
+    assert discarded == [{"name": "Skeleton", "count": 1}]
+
+
+def test_a_candidate_with_no_path_from_the_temple_still_comes_out():
+    """Decisão 14: sem filtro de alcançabilidade — gera tudo, inclusive o que
+    não tem caminho a pé. Conectividade é problema de outra camada."""
+    walkable = _floor(range(0, 12), range(0, 12), 7)
+    components = hc.same_floor_components(walkable)
+    points = [{"name": "Troll", "x": x, "y": 4, "z": 7} for x in range(1, 4)]
+
+    candidates, _, _ = hc.build_candidates(
+        "TEST", points, walkable, components, radius=10, min_creatures=3,
+        experience_by_name={"troll": 70},
+    )
+
+    assert len(candidates) == 1
+    hc.attach_walk_distance(candidates, {}, anchor_of=lambda s: (s["x"], s["y"], s["z"]))
+    assert candidates[0]["walkTilesFromTemple"] is None
