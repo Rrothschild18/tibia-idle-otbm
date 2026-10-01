@@ -94,6 +94,24 @@ def spawns_of(members: Iterable[Dict]) -> List[Dict]:
     return [spawn for member in members for spawn in member["spawns"]]
 
 
+def chosen_spawns_of(hunt: Dict, members: Iterable[Dict]) -> Set[Tuple[int, int, int, str]]:
+    """O spawn que a hunt de fato leva para o recorte.
+
+    `hunt["species"]` é gravado pela tela (`candidates.ts:buildHunt`) quando a
+    curadoria restringe a espécie — "só os Amazons daqui". `None` quer dizer
+    "não restringiu", e aí o bolsão inteiro das candidatas entra, como sempre
+    entrou. Sem este filtro, `build_curated_hunts.py` descartava a escolha de
+    espécie em silêncio: a curadoria gravava `species`, e o recorte saía com o
+    bolsão inteiro do OTBM mesmo assim.
+    """
+    species = hunt.get("species")
+    return {
+        (spawn["x"], spawn["y"], spawn["z"], spawn["name"])
+        for spawn in spawns_of(members)
+        if species is None or spawn["name"] in species
+    }
+
+
 def entrance_of(
     members: Sequence[Dict],
     distances: Dict[Node, int],

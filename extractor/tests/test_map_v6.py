@@ -58,6 +58,8 @@ def _build(analyses, dump, assets_root="assets/test-sprites-v6",
 def _dump(tiles, z=7, base=(0, 0)):
     """tiles: list of (x, y, tileid or None, [item ids or (id, uid) pairs])."""
     def _item(entry):
+        if isinstance(entry, dict):
+            return entry
         if isinstance(entry, tuple):
             return {"id": entry[0], "uid": entry[1]}
         return {"id": entry}
@@ -174,6 +176,36 @@ def test_marker_signs_never_reach_the_stack():
 
     assert doc["floors"]["7"]["tiles"] == [[0, 0, 100]]
     assert "2016" not in doc["appearances"]
+
+
+def test_the_entrance_marker_item_never_reaches_the_stack():
+    """`build_curated_hunts.py` injeta item 352 com aid 3366 na tile de
+    entrada só para `start`/`defaultZ` o lerem; sem este corte ele entrava no
+    `tile_stack` e era desenhado como um piso de terra em toda hunt."""
+    analyses = {100: _analysis(100, flags=GROUND_FLAGS), 352: _analysis(352)}
+    doc, _ = _build(
+        analyses,
+        _dump([(0, 0, 100, [{"id": 352, "aid": map_v6.HUNT_START_ACTION_ID}])]),
+    )
+
+    assert doc["floors"]["7"]["tiles"] == [[0, 0, 100]]
+    assert "352" not in doc["appearances"]
+    assert doc["start"] == {"x": 0, "y": 0, "z": 7}
+
+
+def test_an_entrance_marker_riding_a_real_item_still_only_draws_that_item():
+    analyses = {
+        100: _analysis(100, flags=GROUND_FLAGS),
+        103: _analysis(103),
+    }
+    doc, _ = _build(
+        analyses,
+        _dump([(0, 0, 100, [{"id": 103, "aid": map_v6.HUNT_START_ACTION_ID}])]),
+    )
+
+    assert doc["floors"]["7"]["tiles"] == [[0, 0, 100]]
+    assert "103" not in doc["appearances"]
+    assert doc["start"] == {"x": 0, "y": 0, "z": 7}
 
 
 def test_ground_and_items_share_one_sheet_per_footprint():

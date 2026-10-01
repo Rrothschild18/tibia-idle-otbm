@@ -279,10 +279,7 @@ def main():
                 None,
             )
 
-        chosen_spawns = {
-            (spawn["x"], spawn["y"], spawn["z"], spawn["name"])
-            for spawn in curated_hunts.spawns_of(members)
-        }
+        chosen_spawns = curated_hunts.chosen_spawns_of(hunt, members)
         result = write_hunt_map(
             city,
             hunt,

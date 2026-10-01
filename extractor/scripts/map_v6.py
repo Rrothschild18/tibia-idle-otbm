@@ -37,14 +37,14 @@ VERSION = 6
 SIGN_ITEM_ID = 2016
 MARKER_UID_MIN = 10001
 
-# Action id marking where a hunt starts: put it on whatever item is already on
-# the entrance tile (grass, a stone, a ladder — the ids in use range from 103
-# to 7272) and the pipeline reads the tile's position and floor off it.
-#
-# Deliberately an action id on an existing item rather than a dedicated marker
-# object: it adds nothing to render and nothing to strip, so the tile stays
-# exactly what the editor shows. That is also why nothing here removes it —
-# unlike a marker sign, the item it rides on is real map content.
+# Action id marking where a hunt starts, read off whatever item carries it so
+# the pipeline knows the tile's position and floor. In Rookgaard it rides a
+# real item placed by hand in the editor; `build_curated_hunts.py` instead
+# injects a fresh item 352 for this alone — a synthetic carrier, not map
+# content. Either way it is tooling input, same category as a marker sign
+# (`SIGN_ITEM_ID` above): stripped from the stack below, never drawn. Without
+# this, the injected 352 entered `tile_stack` and showed up as a patch of dirt
+# on the entrance tile of every curated hunt.
 HUNT_START_ACTION_ID = 3366
 
 # A tile row is [tileX, tileY, ground, *stack]. Appearance ids start well above
@@ -74,6 +74,8 @@ def _tile_placements(tile: Dict, analyze: Callable[[int], Dict]) -> List[Tuple[i
         if appearance_id is None:
             continue
         if travel_graph.is_marker_item(raw_item):
+            continue
+        if raw_item.get("aid") == HUNT_START_ACTION_ID:
             continue
         placements.append((appearance_id, analyze(appearance_id)["flags"]))
 
