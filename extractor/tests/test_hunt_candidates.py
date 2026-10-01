@@ -70,11 +70,12 @@ def test_candidates_split_by_walkable_component_not_by_distance():
         {"name": "Rat", "x": 7, "y": 2, "z": 7},
     ]
 
-    candidates, orphans = hc.build_candidates(
+    candidates, orphans, discarded = hc.build_candidates(
         "TEST", points, walkable, components, radius=10, min_creatures=2
     )
 
     assert orphans == []
+    assert discarded == []
     assert len(candidates) == 2
     assert {c["creatures"] for c in candidates} == {2}
 
@@ -88,7 +89,7 @@ def test_candidate_carries_the_species_split_and_a_stable_id():
         {"name": "Wolf", "x": 3, "y": 3, "z": 9},
     ]
 
-    candidates, _ = hc.build_candidates(
+    candidates, _, _ = hc.build_candidates(
         "TEST", points, walkable, components, radius=10, min_creatures=3
     )
 
@@ -114,7 +115,7 @@ def test_orphan_spawn_is_reported_instead_of_silently_dropped():
         {"name": "Rat", "x": 60, "y": 60, "z": 7},
     ]
 
-    candidates, orphans = hc.build_candidates(
+    candidates, orphans, _ = hc.build_candidates(
         "TEST", points, walkable, components, radius=10, min_creatures=2
     )
 
@@ -131,7 +132,7 @@ def test_walk_distance_is_the_closest_spawn_of_the_candidate():
         {"name": "Rat", "x": 8, "y": 8, "z": 7},
         {"name": "Rat", "x": 5, "y": 5, "z": 7},
     ]
-    candidates, _ = hc.build_candidates(
+    candidates, _, _ = hc.build_candidates(
         "TEST", points, walkable, components, radius=10, min_creatures=3
     )
     distances = {(4, 4, 7): 12, (8, 8, 7): 30, (5, 5, 7): 15}
@@ -150,7 +151,7 @@ def test_walk_distance_is_none_when_nothing_is_reachable():
         {"name": "Rat", "x": 1, "y": 1, "z": 7},
         {"name": "Rat", "x": 2, "y": 2, "z": 7},
     ]
-    candidates, _ = hc.build_candidates(
+    candidates, _, _ = hc.build_candidates(
         "TEST", points, walkable, components, radius=10, min_creatures=2
     )
 
@@ -161,25 +162,40 @@ def test_walk_distance_is_none_when_nothing_is_reachable():
     assert candidates[0]["walkTilesFromTemple"] is None
 
 
-def test_weak_monsters_are_dropped_before_clustering():
+# ---------------------------------------------------------------------------
+# Monstro fraco: teto de XP + nome (batiza hunt da wiki) + família (Bestiary)
+# ---------------------------------------------------------------------------
+
+
+def test_weak_monster_without_name_or_family_signal_is_dropped():
+    """Sem nome e sem família admitida por perto, Snake não forma hunt —
+    nem sozinho (vira bolsão vazio) nem puxando o Dragon para dentro."""
     walkable = _floor(range(0, 12), range(0, 12), 7)
     components = hc.same_floor_components(walkable)
-    points = [
-        {"name": "Snake", "x": x, "y": 4, "z": 7} for x in range(1, 6)
-    ] + [{"name": "Dragon", "x": x, "y": 8, "z": 7} for x in range(1, 4)]
+    points = [{"name": "Snake", "x": x, "y": 4, "z": 7} for x in range(1, 6)]
 
-    candidates, _ = hc.build_candidates(
-        "TEST",
-        points,
-        walkable,
-        components,
-        radius=10,
-        min_creatures=3,
-        experience_by_name={"snake": 20, "dragon": 700},
+    candidates, _, discarded = hc.build_candidates(
+        "TEST", points, walkable, components, radius=10, min_creatures=3,
+        experience_by_name={"snake": 20},
     )
 
-    assert [c["species"][0]["name"] for c in candidates] == ["Dragon"]
-    assert all(s["name"] != "Snake" for c in candidates for s in c["species"])
+    assert candidates == []
+    assert discarded == [{"name": "Snake", "count": 5}]
+
+
+def test_species_at_exactly_the_threshold_is_admitted():
+    """Minotaur vale exatamente 50 — o corte é >= 50, não > 50."""
+    walkable = _floor(range(0, 12), range(0, 12), 7)
+    components = hc.same_floor_components(walkable)
+    points = [{"name": "Minotaur", "x": x, "y": 4, "z": 7} for x in range(1, 4)]
+
+    candidates, _, discarded = hc.build_candidates(
+        "TEST", points, walkable, components, radius=10, min_creatures=3,
+        experience_by_name={"minotaur": 50},
+    )
+
+    assert len(candidates) == 1
+    assert discarded == []
 
 
 def test_unknown_experience_keeps_the_monster():
@@ -187,67 +203,108 @@ def test_unknown_experience_keeps_the_monster():
     components = hc.same_floor_components(walkable)
     points = [{"name": "Bicho Novo", "x": x, "y": 4, "z": 7} for x in range(1, 4)]
 
-    candidates, _ = hc.build_candidates(
+    candidates, _, discarded = hc.build_candidates(
         "TEST", points, walkable, components, radius=10, min_creatures=3,
         experience_by_name={"snake": 20},
     )
 
     assert len(candidates) == 1
+    assert discarded == []
 
 
-def test_notable_monsters_lead_the_species_list_even_with_fewer_spawns():
-    walkable = _floor(range(0, 12), range(0, 12), 7)
-    components = hc.same_floor_components(walkable)
-    points = [
-        {"name": "Poison Spider", "x": x, "y": 4, "z": 7} for x in range(1, 7)
-    ] + [{"name": "Rotworm", "x": x, "y": 5, "z": 7} for x in range(1, 3)]
-
-    candidates, _ = hc.build_candidates(
-        "TEST", points, walkable, components, radius=10, min_creatures=3
-    )
-
-    assert [s["name"] for s in candidates[0]["species"]] == ["Rotworm", "Poison Spider"]
-
-
-def test_notable_monster_survives_the_experience_cut():
-    """Rotworm vale 40 e dá nome a caverna: o corte de 50 não pode levá-lo."""
+def test_classic_name_survives_the_cut_via_wiki_christening():
+    """Rotworm vale 40 e batiza hunt da wiki: o corte de 50 não pode levá-lo,
+    mesmo sem nenhuma família por perto."""
     walkable = _floor(range(0, 12), range(0, 12), 7)
     components = hc.same_floor_components(walkable)
     points = [{"name": "Rotworm", "x": x, "y": 4, "z": 7} for x in range(1, 5)]
 
-    candidates, _ = hc.build_candidates(
+    candidates, _, discarded = hc.build_candidates(
         "TEST", points, walkable, components, radius=10, min_creatures=3,
         experience_by_name={"rotworm": 40},
+        christens_name={"rotworm"},
     )
 
     assert len(candidates) == 1
     assert candidates[0]["species"][0]["name"] == "Rotworm"
+    assert discarded == []
 
 
-def test_scenery_fauna_still_goes_even_though_it_is_weak():
+def test_family_lets_a_weak_companion_join_the_bolsao_of_an_admitted_relative():
+    """Skeleton (35, não batiza nada) acompanha Ghoul (85) no mesmo bolsão —
+    mesma classe Undead."""
     walkable = _floor(range(0, 12), range(0, 12), 7)
     components = hc.same_floor_components(walkable)
-    points = [{"name": "Snake", "x": x, "y": 4, "z": 7} for x in range(1, 5)]
+    points = (
+        [{"name": "Ghoul", "x": x, "y": 4, "z": 7} for x in range(1, 4)]
+        + [{"name": "Skeleton", "x": x, "y": 5, "z": 7} for x in range(1, 3)]
+    )
 
-    candidates, _ = hc.build_candidates(
+    candidates, _, discarded = hc.build_candidates(
         "TEST", points, walkable, components, radius=10, min_creatures=3,
-        experience_by_name={"snake": 20},
+        experience_by_name={"ghoul": 85, "skeleton": 35},
+        family_by_name={"ghoul": "Undead", "skeleton": "Undead"},
+    )
+
+    assert len(candidates) == 1
+    assert candidates[0]["creatures"] == 5
+    names = {s["name"] for s in candidates[0]["species"]}
+    assert names == {"Ghoul", "Skeleton"}
+    assert discarded == []
+
+
+def test_family_does_not_join_a_bolsao_with_no_admitted_relative():
+    """O mesmo Skeleton, ao lado só de Rat, fica fora — não existe Undead
+    admitido no bolsão para ele acompanhar."""
+    walkable = _floor(range(0, 12), range(0, 12), 7)
+    components = hc.same_floor_components(walkable)
+    points = (
+        [{"name": "Rat", "x": x, "y": 4, "z": 7} for x in range(1, 4)]
+        + [{"name": "Skeleton", "x": x, "y": 5, "z": 7} for x in range(1, 3)]
+    )
+
+    candidates, _, discarded = hc.build_candidates(
+        "TEST", points, walkable, components, radius=10, min_creatures=3,
+        experience_by_name={"rat": 5, "skeleton": 35},
+        family_by_name={"skeleton": "Undead"},
     )
 
     assert candidates == []
+    assert {d["name"]: d["count"] for d in discarded} == {"Rat": 3, "Skeleton": 2}
 
 
-def test_kept_weak_monster_does_not_outrank_a_notable_one():
-    """Poison Spider sobrevive ao corte, mas não lidera na frente do Rotworm."""
+def test_family_never_crosses_floors():
+    """Ghoul no andar 7 não resgata Skeleton no andar 8 — família junta só
+    dentro do mesmo andar (decisão 11)."""
+    walkable = _floor(range(0, 12), range(0, 12), 7) | _floor(range(0, 12), range(0, 12), 8)
+    components = hc.same_floor_components(walkable)
+    points = (
+        [{"name": "Ghoul", "x": x, "y": 4, "z": 7} for x in range(1, 4)]
+        + [{"name": "Skeleton", "x": x, "y": 4, "z": 8} for x in range(1, 4)]
+    )
+
+    candidates, _, discarded = hc.build_candidates(
+        "TEST", points, walkable, components, radius=10, min_creatures=3,
+        experience_by_name={"ghoul": 85, "skeleton": 35},
+        family_by_name={"ghoul": "Undead", "skeleton": "Undead"},
+    )
+
+    assert len(candidates) == 1
+    assert candidates[0]["floor"] == 7
+    assert discarded == [{"name": "Skeleton", "count": 3}]
+
+
+def test_notable_species_still_lead_the_list_even_with_fewer_spawns():
     walkable = _floor(range(0, 12), range(0, 12), 7)
     components = hc.same_floor_components(walkable)
     points = [
         {"name": "Poison Spider", "x": x, "y": 4, "z": 7} for x in range(1, 7)
     ] + [{"name": "Rotworm", "x": x, "y": 5, "z": 7} for x in range(1, 3)]
 
-    candidates, _ = hc.build_candidates(
+    candidates, _, _ = hc.build_candidates(
         "TEST", points, walkable, components, radius=10, min_creatures=3,
-        experience_by_name={"poison spider": 44, "rotworm": 40},
+        experience_by_name={"poison spider": 80, "rotworm": 40},
+        christens_name={"rotworm"},
     )
 
     assert [s["name"] for s in candidates[0]["species"]] == ["Rotworm", "Poison Spider"]

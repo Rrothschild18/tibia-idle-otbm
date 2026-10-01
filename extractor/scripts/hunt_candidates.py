@@ -24,54 +24,10 @@ DEFAULT_MIN_CREATURES = 3
 
 # Bicho de cenário não faz hunt. Snake, Skunk, Rat, Bug e Cat aparecem aos
 # montes em volta de qualquer cidade e formavam candidatas inteiras, que a
-# curadoria tinha de recusar uma a uma. O corte é pelo XP do Canary, não por
-# lista de nomes: monstro novo entra no critério sozinho.
+# curadoria tinha de recusar uma a uma. O corte é pelo XP do Canary, calibrado
+# na casa decimal: Minotaur vale exatamente 50, e o corte é `>= 50` para não
+# derrubá-lo (`.scratch/hunts-por-subarea/spec.md`, decisões 6-7).
 MIN_MONSTER_EXPERIENCE = 50
-
-# Os clássicos de hunt do Tibia. A lista faz duas coisas: **ordena** (contagem
-# de spawn não mede o que a curadoria quer — um bolsão de 40 Poison Spider ganha
-# de um de 12 Dragon por número, e é o segundo que vira hunt) e **isenta do
-# corte de XP**. A isenção existe porque o clássico de início de jogo vale
-# pouco: Troll 20, Orc 25, Rotworm 40 — um corte por XP puro apagaria Rotworm
-# Cave, Troll Cave e Orc Cave, que são hunts de nome próprio. O corte existe
-# para tirar Snake e Skunk, não o bicho que dá nome à caverna.
-#
-# Não estar aqui nunca descarta por si só: cidade nova nasceria sem candidata
-# nenhuma. O que descarta é XP abaixo do mínimo **e** ausência desta lista.
-NOTABLE_MONSTERS = frozenset(
-    {
-        "rotworm", "amazon", "valkyrie", "swamp troll", "troll", "cyclops",
-        "dwarf", "dwarf soldier", "dwarf guard", "minotaur", "minotaur archer",
-        "minotaur guard", "minotaur mage", "orc", "orc warrior", "orc berserker",
-        "orc spearman", "ghoul", "mummy", "scarab", "ancient scarab", "dragon",
-        "dragon lord", "wyvern", "giant spider", "tarantula", "carniphila",
-        "elf", "elf scout", "elf arcanist", "stone golem", "earth elemental",
-        "demon skeleton", "banshee", "hydra", "serpent spawn", "behemoth",
-        "nomad", "larva", "crocodile", "terror bird", "dworc voodoomaster",
-        "dworc fleshhunter", "wasp", "bear", "wolf", "war wolf", "panda",
-        "lion", "polar bear", "frost troll", "husky", "crystal spider",
-        "ice golem", "gargoyle", "quara", "water elemental", "fire elemental",
-        "blood crab", "apprentice sharpear", "necromancer", "priestess",
-        "crypt shambler", "bonebeast", "vampire", "grim reaper", "lich",
-        "braindeath", "undead dragon", "goblin", "skeleton",
-    }
-)
-
-# Quem sobrevive ao corte de XP mesmo valendo pouco. É conjunto à parte do de
-# cima porque as duas perguntas são diferentes: "este bicho merece liderar a
-# hunt?" e "este bicho merece existir nela?". Poison Spider responde não à
-# primeira e sim à segunda — ela é recheio legítimo de caverna, e não pode
-# ganhar de um Rotworm na ordenação só por ser mais numerosa.
-#
-# Todo famoso é isento; estes entram além deles. O que o corte tira de verdade
-# é fauna de cenário: Snake, Skunk, Rabbit, Butterfly, Seagull, Sheep.
-LOW_EXPERIENCE_KEEP = NOTABLE_MONSTERS | frozenset(
-    {
-        "goblin scavenger", "goblin assassin", "skeleton warrior", "scorpion",
-        "poison spider", "swampling", "rat", "cave rat", "troll champion",
-        "bug", "badger", "wasp",
-    }
-)
 
 _NEIGHBOR_OFFSETS = [(-1, -1), (0, -1), (1, -1), (-1, 0), (1, 0), (-1, 1), (0, 1), (1, 1)]
 
@@ -193,13 +149,10 @@ def _extent(points: Sequence[Dict]) -> Dict:
     }
 
 
-def is_notable(name: str) -> bool:
-    return name.lower() in NOTABLE_MONSTERS
-
-
-def survives_low_experience(name: str) -> bool:
-    """O bicho fica mesmo valendo menos que `MIN_MONSTER_EXPERIENCE`?"""
-    return name.lower() in LOW_EXPERIENCE_KEEP
+def is_notable(name: str, christens_name: Optional[Set[str]] = None) -> bool:
+    """A espécie dá nome a alguma hunt da wiki — sinal gerado
+    (`wiki_hunt_names.christened_species`), nunca lista à mão."""
+    return bool(christens_name) and name.lower() in christens_name
 
 
 def _experience_of(experience_by_name: Optional[Dict[str, int]], name: str) -> Optional[int]:
@@ -210,14 +163,42 @@ def _experience_of(experience_by_name: Optional[Dict[str, int]], name: str) -> O
     return experience_by_name.get(name.lower())
 
 
-def _species(points: Sequence[Dict], experience_by_name=None) -> List[Dict]:
+def is_admitted_on_its_own(
+    name: str,
+    experience_by_name: Optional[Dict[str, int]],
+    min_experience: int,
+    christens_name: Optional[Set[str]],
+) -> bool:
+    """A espécie se sustenta sem precisar de família por perto: bate o teto
+    de XP, batiza hunt da wiki, ou o XP é desconhecido (bicho novo nunca é
+    descartado por falta de dado — decisões 6-9 da spec)."""
+    if is_notable(name, christens_name):
+        return True
+    experience = _experience_of(experience_by_name, name)
+    if experience is None:
+        return True
+    return experience >= min_experience
+
+
+def _within_radius(point: Dict, group: Sequence[Dict], radius: int) -> bool:
+    return any(
+        max(abs(point["x"] - other["x"]), abs(point["y"] - other["y"])) <= radius
+        for other in group
+    )
+
+
+def _species(
+    points: Sequence[Dict],
+    experience_by_name=None,
+    christens_name: Optional[Set[str]] = None,
+) -> List[Dict]:
     counts = Counter(p["name"] for p in points)
     return [
         {"name": name, "count": count}
         for name, count in sorted(
             counts.items(),
             key=lambda item: (
-                not is_notable(item[0]),
+                not is_notable(item[0], christens_name),
                 -item[1],
                 -(_experience_of(experience_by_name, item[0]) or 0),
                 item[0],
@@ -236,54 +217,107 @@ def build_candidates(
     min_creatures: int = DEFAULT_MIN_CREATURES,
     experience_by_name: Optional[Dict[str, int]] = None,
     min_experience: int = MIN_MONSTER_EXPERIENCE,
-) -> Tuple[List[Dict], List[Dict]]:
-    """-> `(candidatas, spawns sem tile caminhável por perto)`.
+    christens_name: Optional[Set[str]] = None,
+    family_by_name: Optional[Dict[str, str]] = None,
+) -> Tuple[List[Dict], List[Dict], List[Dict]]:
+    """-> `(candidatas, spawns sem tile caminhável por perto, descartados)`.
 
     O segundo valor não é ruído a esconder: spawn que não encosta em tile
     andável costuma ser bicho atrás de parede (ou erro de mapa), e some da
-    contagem da candidata sem esse relatório.
+    contagem da candidata sem esse relatório. O terceiro é o monstro fraco
+    descartado — nunca em silêncio (ordem de execução, item 5): `[{"name",
+    "count"}]`, por cidade, não por candidata.
 
-    `experience_by_name` é o XP do Canary por nome (sem caixa). Com ele, bicho
-    abaixo de `min_experience` sai **antes** do agrupamento: senão um bolsão de
-    Snake continuaria puxando o recorte e a extensão da candidata. Nome sem XP
-    conhecido fica — o filtro não pode engolir criatura nova.
+    `experience_by_name` é o XP do Canary por nome (sem caixa). A candidata
+    nasce só de quem **se sustenta por si** (`is_admitted_on_its_own`): bate o
+    teto `min_experience`, batiza hunt da wiki (`christens_name`), ou tem XP
+    desconhecido (bicho novo nunca é descartado por falta de dado). Isso
+    acontece **antes** do agrupamento — senão um bolsão de Snake continuaria
+    puxando o recorte e a extensão da candidata.
 
-    Monstro de `NOTABLE_MONSTERS` também fica, custe o XP que custar: Rotworm
-    vale 40, Troll 20, Orc 25, e um filtro por XP puro apagaria justamente as
-    hunts clássicas de início de jogo — Rotworm Cave, Troll Cave, Orc Cave.
-    O que o corte existe para tirar é Snake e Skunk, não o bicho que dá nome
-    à caverna.
+    Quem não se sustenta por si ainda pode entrar: se partilha
+    `family_by_name` (a classe do Bestiary) com alguém já admitido **no mesmo
+    bolsão e andar**, ele entra como companheiro (decisões 10-11) — Skeleton
+    (35, não batiza nada) acompanha Ghoul (85, Undead) onde os dois convivem,
+    e fica de fora onde só há Rat. Família nunca atravessa andar: o bolsão é
+    por `component_of`, que já é por andar.
     """
     anchored: List[Tuple[int, Dict]] = []
     orphans: List[Dict] = []
     for point in points:
-        experience = _experience_of(experience_by_name, point["name"])
-        if (
-            experience is not None
-            and experience < min_experience
-            and not survives_low_experience(point["name"])
-        ):
-            continue
         anchor = anchor_tile(point, walkable)
         if anchor is None:
             orphans.append(point)
             continue
         anchored.append((component_of.get(anchor, -1), {**point, "anchor": anchor}))
 
+    strong = [
+        (component, point)
+        for component, point in anchored
+        if is_admitted_on_its_own(point["name"], experience_by_name, min_experience, christens_name)
+    ]
+    weak = [
+        (component, point)
+        for component, point in anchored
+        if not is_admitted_on_its_own(point["name"], experience_by_name, min_experience, christens_name)
+    ]
+
+    component_size = Counter(component_of.values())
+    raw_groups = _cluster(strong, radius, key_of=lambda p: component_of.get(p["anchor"], -1))
+
+    group_component = [component_of.get(g[0]["anchor"], -1) for g in raw_groups]
+    group_floor = [g[0]["z"] for g in raw_groups]
+    group_admitted_families = [
+        {
+            family_by_name.get(p["name"].lower())
+            for p in g
+            if family_by_name and family_by_name.get(p["name"].lower())
+        }
+        for g in raw_groups
+    ]
+
+    discarded_counter: "Counter[str]" = Counter()
+    extra_by_group: Dict[int, List[Dict]] = defaultdict(list)
+    for w_component, w_point in weak:
+        family = family_by_name.get(w_point["name"].lower()) if family_by_name else None
+        matches = [
+            index
+            for index, _ in enumerate(raw_groups)
+            if family is not None
+            and family in group_admitted_families[index]
+            and group_component[index] == w_component
+            and group_floor[index] == w_point["z"]
+            and _within_radius(w_point, raw_groups[index], radius)
+        ]
+        if not matches:
+            discarded_counter[w_point["name"]] += 1
+            continue
+        best = min(
+            matches,
+            key=lambda index: min(
+                max(abs(w_point["x"] - g["x"]), abs(w_point["y"] - g["y"]))
+                for g in raw_groups[index]
+            ),
+        )
+        extra_by_group[best].append(w_point)
+
     candidates: List[Dict] = []
     by_floor: Dict[int, int] = defaultdict(int)
-    component_size = Counter(component_of.values())
-
-    groups = _cluster(anchored, radius, key_of=lambda p: component_of.get(p["anchor"], -1))
 
     def _rank(group: Sequence[Dict]):
-        notable = sum(1 for p in group if is_notable(p["name"]))
+        notable = sum(1 for p in group if is_notable(p["name"], christens_name))
         experience = sum(_experience_of(experience_by_name, p["name"]) or 0 for p in group)
         extent = _extent(group)
         return (group[0]["z"], -notable, -len(group), -experience, extent["minX"], extent["minY"])
 
-    for group in sorted(groups, key=_rank):
+    members_by_group = [
+        raw_groups[index] + extra_by_group.get(index, []) for index in range(len(raw_groups))
+    ]
+
+    for group in sorted(members_by_group, key=_rank):
         if len(group) < min_creatures:
+            for p in group:
+                discarded_counter[p["name"]] += 1
             continue
         floor = group[0]["z"]
         by_floor[floor] += 1
@@ -291,7 +325,7 @@ def build_candidates(
         extent = _extent(group)
 
         by_species: List[Dict] = []
-        for name in (entry["name"] for entry in _species(group, experience_by_name)):
+        for name in (entry["name"] for entry in _species(group, experience_by_name, christens_name)):
             same_name = [p for p in group if p["name"] == name]
             for piece in _cluster(
                 [(0, p) for p in same_name], radius, key_of=lambda p: component
@@ -313,7 +347,7 @@ def build_candidates(
                 "component": component,
                 "componentTiles": component_size.get(component, 0),
                 "creatures": len(group),
-                "species": _species(group, experience_by_name),
+                "species": _species(group, experience_by_name, christens_name),
                 "extent": extent,
                 "subareaId": subarea_id,
                 "splitBySpecies": sorted(
@@ -329,7 +363,12 @@ def build_candidates(
             }
         )
 
-    return candidates, orphans
+    discarded = [
+        {"name": name, "count": count}
+        for name, count in sorted(discarded_counter.items(), key=lambda item: (-item[1], item[0]))
+    ]
+
+    return candidates, orphans, discarded
 
 
 def attach_walk_distance(

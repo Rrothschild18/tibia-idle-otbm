@@ -25,12 +25,18 @@ import map_regions
 import monster_stats
 import paths
 import update_canary_data
+import wiki_hunt_names
 from travel_graph import build_walkable_graph, extract_tile_flags, tile_distances_and_prev
 
 SCRIPTS_DIR = os.path.dirname(os.path.abspath(__file__))
 EXTRACTOR_DIR = os.path.dirname(SCRIPTS_DIR)
 RAW_MAPS_DIR = os.path.join(EXTRACTOR_DIR, "raw-maps")
 FULL_MAPS_DIR = os.path.join(EXTRACTOR_DIR, "full-maps")
+HUNT_CATALOG_FILE = os.path.join(EXTRACTOR_DIR, "hunt-catalog", "catalog.json")
+
+# Rookgaard foi curada à mão, antes de qualquer gerador existir — a regra de
+# monstro fraco não se aplica a ela (spec, decisão 13).
+HAND_CURATED_CITIES = frozenset({"ROOK"})
 
 
 def _load_json(path: str, what: str):
@@ -117,9 +123,14 @@ def main():
         points = hunt_candidates.parse_spawn_xml(handler.read())
     print(f"[OK] {len(points):,} criaturas no spawn do recorte")
 
-    # O XP vem do mesmo lua que alimenta a tabela de combate; o nome do lua é
-    # minúsculo e o do spawn não, então a chave aqui já nasce sem caixa.
+    # Rookgaard foi curada à mão, antes de qualquer gerador existir — a regra
+    # de monstro fraco não se aplica a ela (spec, decisão 13).
+    min_experience = 0 if city in HAND_CURATED_CITIES else args.min_experience
+
+    # O XP e a família vêm do mesmo lua, lido uma vez só; o nome do lua é
+    # minúsculo e o do spawn não, então as duas chaves já nascem sem caixa.
     experience_by_name = {}
+    family_by_name = {}
     try:
         stats = monster_stats.build_monster_stats(
             paths.CANARY.require(args.canary_dir), {p["name"] for p in points}
@@ -127,30 +138,33 @@ def main():
         experience_by_name = {
             name.lower(): entry["experienceReward"] for name, entry in stats.items()
         }
+        family_by_name = {
+            name.lower(): entry["bestiaryClass"]
+            for name, entry in stats.items()
+            if entry.get("bestiaryClass")
+        }
     except paths.MissingRepoError as exc:
         print(f"[WARN] sem Canary ({exc}); nenhum monstro será filtrado por XP")
 
+    # Quem batiza hunt na wiki sobrevive ao corte mesmo sem XP — Rotworm (40),
+    # Dwarf (45) e Swamp Troll (25) são os três que o teto sozinho derrubaria
+    # (spec, decisão 8). Sem o catálogo, nenhuma espécie fica isenta por nome.
+    christens_name = set()
+    if os.path.isfile(HUNT_CATALOG_FILE):
+        with open(HUNT_CATALOG_FILE, encoding="utf-8") as handler:
+            catalog = json.load(handler)
+        hunt_names = [h["name"] for h in catalog["hunts"]]
+        christens_name = wiki_hunt_names.christened_species(
+            hunt_names, {p["name"] for p in points}
+        )
+    else:
+        print(f"[WARN] sem catálogo da wiki ({HUNT_CATALOG_FILE}); regra do nome desligada")
+
     if experience_by_name:
-        # O relatório separa os dois destinos de quem vale pouco: o descartado
-        # e o que a lista de clássicos salvou. Juntá-los já enganou uma vez —
-        # a linha dizia "descartados: ... Rotworm ..." e o Rotworm estava lá,
-        # no mapa, isento.
-        weak = {
-            p["name"]
-            for p in points
-            if experience_by_name.get(p["name"].lower(), args.min_experience)
-            < args.min_experience
-        }
-        dropped = sorted(n for n in weak if not hunt_candidates.survives_low_experience(n))
-        spared = sorted(n for n in weak if hunt_candidates.survives_low_experience(n))
+        print(f"[OK] XP de {len(experience_by_name)} monstros lido do Canary")
         unknown = sorted(
             {p["name"] for p in points if p["name"].lower() not in experience_by_name}
         )
-        print(f"[OK] XP de {len(experience_by_name)} monstros lido do Canary")
-        if dropped:
-            print(f"     descartados (<{args.min_experience} xp): {', '.join(dropped)}")
-        if spared:
-            print(f"     fracos mantidos por serem clássicos: {', '.join(spared)}")
         if unknown:
             print(f"[WARN] {len(unknown)} sem XP no Canary (mantidos): {', '.join(unknown)}")
 
@@ -159,7 +173,7 @@ def main():
     owner, names = subarea_lookup(assets_dir, [s["id"] for s in source["subareas"]])
     placement = mask_placement(assets_dir, [s["id"] for s in source["subareas"]])
 
-    candidates, orphans = hunt_candidates.build_candidates(
+    candidates, orphans, discarded = hunt_candidates.build_candidates(
         city,
         points,
         walkable,
@@ -168,8 +182,16 @@ def main():
         radius=args.radius,
         min_creatures=args.min_creatures,
         experience_by_name=experience_by_name,
-        min_experience=args.min_experience,
+        min_experience=min_experience,
+        christens_name=christens_name,
+        family_by_name=family_by_name,
     )
+
+    if discarded:
+        # Relatório visível do descarte de monstro fraco — nunca em silêncio
+        # (ordem de execução, item 5).
+        summary = ", ".join(f"{d['count']}x {d['name']}" for d in discarded)
+        print(f"[OK] monstro fraco descartado (sem teto, nome ou família que o salve): {summary}")
 
     temples = [town for town in source.get("towns", [])]
     distances = {}
@@ -213,11 +235,12 @@ def main():
         "temple": temples[0] if temples else None,
         "clusterRadius": args.radius,
         "minCreatures": args.min_creatures,
-        "minExperience": args.min_experience,
+        "minExperience": min_experience,
         "candidates": candidates,
         "orphanSpawns": [
             {"name": p["name"], "x": p["x"], "y": p["y"], "z": p["z"]} for p in orphans
         ],
+        "discardedSpecies": discarded,
     }
 
     destination = os.path.join(city_dir, "candidates.json")
