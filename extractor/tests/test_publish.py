@@ -290,3 +290,56 @@ def test_publish_bundle_carries_the_painted_route(bundle, tmp_path, monkeypatch)
     published = front / "ROOK-HUNT-0001_rats-sprites-v6" / "routes" / "route-anchors.json"
     assert published.exists(), "bundle publicado sem a rota pintada"
     assert json.loads(published.read_text())["mapId"] == "ROOK-HUNT-0001"
+
+
+# ======================================================
+# O catálogo de regiões completo, para a tela de curadoria
+# ======================================================
+
+
+@pytest.fixture
+def map_regions_dir(tmp_path, monkeypatch):
+    root = tmp_path / "map-regions"
+    masks = root / "masks"
+    masks.mkdir(parents=True)
+    (root / "regions.json").write_text(json.dumps({"areas": [], "subareas": []}))
+    (masks / "0038.png").write_bytes(b"\x89PNG-fake")
+    monkeypatch.setattr(publish, "MAP_REGIONS_DIR", str(root))
+    return root
+
+
+def test_full_region_catalog_publishes_the_json_and_every_mask(tmp_path, map_regions_dir):
+    destino = tmp_path / "front"
+
+    publish.publish_full_region_catalog(str(destino), dry_run=False)
+
+    published = destino / "new-hunts" / "regions.json"
+    assert json.loads(published.read_text()) == {"areas": [], "subareas": []}
+    assert (destino / "new-hunts" / "masks" / "0038.png").read_bytes() == b"\x89PNG-fake"
+
+
+def test_full_region_catalog_is_one_file_not_per_city(tmp_path, map_regions_dir):
+    """Decisão 25: o catálogo é do mundo, não de um recorte — publica uma vez
+    só, em `new-hunts/`, nunca dentro da pasta de uma cidade."""
+    destino = tmp_path / "front"
+
+    publish.publish_full_region_catalog(str(destino), dry_run=False)
+
+    assert not (destino / "new-hunts" / "CARLIN").exists()
+
+
+def test_region_catalog_dry_run_writes_nothing(tmp_path, map_regions_dir, capsys):
+    destino = tmp_path / "front"
+
+    publish.publish_full_region_catalog(str(destino), dry_run=True)
+
+    assert "[dry-run]" in capsys.readouterr().out
+    assert not destino.exists(), "dry-run não pode escrever"
+
+
+def test_missing_region_catalog_says_which_command_generates_it(tmp_path, monkeypatch, capsys):
+    monkeypatch.setattr(publish, "MAP_REGIONS_DIR", str(tmp_path / "nao-existe"))
+
+    publish.publish_full_region_catalog(str(tmp_path / "front"), dry_run=False)
+
+    assert "build_map_regions.py" in capsys.readouterr().out

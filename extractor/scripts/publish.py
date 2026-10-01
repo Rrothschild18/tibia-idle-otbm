@@ -236,6 +236,44 @@ def publish_minimaps(front_assets: str, dry_run=False):
               f"-> {destination}")
 
 
+FULL_REGIONS_FILE_NAME = "regions.json"
+
+
+def publish_full_region_catalog(front_assets: str, dry_run=False):
+    """`map-regions/regions.json` (28 áreas, 424 subáreas) + as 204 máscaras
+    -> `assets/new-hunts/regions.json` + `assets/new-hunts/masks/`.
+
+    Cidade única, cidade nenhuma: o catálogo é do mundo, não de um recorte.
+    A tela de curadoria (`.scratch/hunts-por-subarea/spec.md`, decisão 25)
+    precisa das 266 subáreas das áreas que o jogo cobre — inclusive as sem
+    hunt, pra marcar "Edron Dragon Lair" antes de existir candidata lá. O
+    `regions.json` **enxuto** que a janela de mapa do jogo consome
+    (`/assets/map-regions/`, só as 72 com hunt) é outro arquivo, com outro
+    propósito, e este publish nunca o toca.
+    """
+    source = os.path.join(MAP_REGIONS_DIR, FULL_REGIONS_FILE_NAME)
+    if not os.path.isfile(source):
+        print(f"[--] catálogo de regiões: não gerado ({MAP_REGIONS_COMMAND})")
+        return
+
+    destination_dir = os.path.join(front_assets, FRONT_NEW_HUNTS_DIR_NAME)
+    masks_source = os.path.join(MAP_REGIONS_DIR, "masks")
+    mask_count = len(os.listdir(masks_source)) if os.path.isdir(masks_source) else 0
+
+    if dry_run:
+        print(f"[dry-run] catálogo de regiões: 1 + {mask_count} máscara(s) -> {destination_dir}")
+        return
+
+    copied = 1 if copy_if_different(
+        source, os.path.join(destination_dir, FULL_REGIONS_FILE_NAME)
+    ) else 0
+    if os.path.isdir(masks_source):
+        tree_copied, _unchanged = sync_tree(masks_source, os.path.join(destination_dir, "masks"))
+        copied += tree_copied
+
+    print(f"[OK] catálogo de regiões: {copied} arquivo(s) -> {destination_dir}")
+
+
 def publish_hunt_candidates(front_assets: str, dry_run=False):
     """`full-maps/<CIDADE>/candidates.json` + máscaras -> `assets/new-hunts/<CIDADE>/`.
 
@@ -360,6 +398,7 @@ def main():
     publish_atlases(front_assets, dry_run=args.dry_run)
     publish_minimaps(front_assets, dry_run=args.dry_run)
     publish_hunt_candidates(front_assets, dry_run=args.dry_run)
+    publish_full_region_catalog(front_assets, dry_run=args.dry_run)
 
     if args.prune:
         prune_bundles(front_assets, published, apply=not args.dry_run)
