@@ -117,15 +117,30 @@ def entrance_of(
     distances: Dict[Node, int],
     anchor_of,
 ) -> Tuple[Optional[Node], Optional[int]]:
-    """O tile da hunt mais barato de alcançar a pé, e o custo dele.
+    """O tile mais barato de alcançar a pé, **dentro do andar mais fundo com
+    spawn** — nunca o mais barato entre todos os andares da hunt.
+
+    "Mais perto do templo" sem essa restrição é a causa raiz dos waypoints
+    sobre Deer e Sandcrawler (`.scratch/hunts-por-subarea/spec.md`, decisão
+    17): o templo está na superfície, então o spawn mais barato é quase
+    sempre o do andar de cima, mesmo quando a hunt de verdade mora mais
+    fundo. Aqui o andar já decide primeiro; dentro dele, o mais barato ainda
+    é o critério — alguma distância precisa desempatar.
 
     Sem caminho nenhum a entrada é `None`: a hunt existe no mapa e não existe
     como destino, e é o relatório de rejeição do travel-graph que conta isso —
     inventar uma entrada aqui esconderia uma hunt que o jogador não alcança.
     """
+    spawns = spawns_of(members)
+    if not spawns:
+        return None, None
+    deepest_floor = max(spawn["z"] for spawn in spawns)
+
     best: Optional[Node] = None
     best_cost: Optional[int] = None
-    for spawn in spawns_of(members):
+    for spawn in spawns:
+        if spawn["z"] != deepest_floor:
+            continue
         anchor = anchor_of(spawn)
         if anchor is None or anchor not in distances:
             continue
