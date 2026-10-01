@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32133" centery="32182" centerz="7" radius="3">
+		<monster name="Deer" x="1" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32119" centery="32189" centerz="7" radius="3">
+		<monster name="Spider" x="1" y="0" z="7" spawntime="90" />
+		<monster name="Spider" x="2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32126" centery="32189" centerz="7" radius="3">
+		<monster name="Spider" x="1" y="-2" z="7" spawntime="90" />
+		<monster name="Spider" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32140" centery="32189" centerz="7" radius="3">
+		<monster name="Wolf" x="1" y="-2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32147" centery="32189" centerz="7" radius="3">
+		<monster name="Wolf" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32119" centery="32196" centerz="7" radius="3">
+		<monster name="Deer" x="3" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32133" centery="32196" centerz="7" radius="3">
+		<monster name="Deer" x="0" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32133" centery="32203" centerz="7" radius="3">
+		<monster name="Snake" x="1" y="1" z="7" spawntime="90" />
+		<monster name="Snake" x="3" y="1" z="7" spawntime="90" />
+		<monster name="Snake" x="3" y="2" z="7" spawntime="90" />
+		<monster name="Snake" x="3" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32154" centery="32203" centerz="7" radius="3">
+		<monster name="Wolf" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32126" centery="32210" centerz="7" radius="3">
+		<monster name="Spider" x="3" y="-2" z="7" spawntime="90" />
+		<monster name="Spider" x="3" y="0" z="7" spawntime="90" />
+		<monster name="Rat" x="-2" y="1" z="7" spawntime="90" />
+		<monster name="Snake" x="2" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32147" centery="32210" centerz="7" radius="3">
+		<monster name="Wolf" x="0" y="-3" z="7" spawntime="90" />
+		<monster name="Wolf" x="1" y="-2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32154" centery="32210" centerz="7" radius="3">
+		<monster name="Wolf" x="3" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32119" centery="32217" centerz="7" radius="3">
+		<monster name="Snake" x="-1" y="-2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32126" centery="32217" centerz="7" radius="3">
+		<monster name="Spider" x="-2" y="1" z="7" spawntime="90" />
+		<monster name="Rat" x="0" y="2" z="7" spawntime="90" />
+		<monster name="Spider" x="-3" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32133" centery="32217" centerz="7" radius="3">
+		<monster name="Rat" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32154" centery="32217" centerz="7" radius="3">
+		<monster name="Wolf" x="2" y="-2" z="7" spawntime="90" />
+		<monster name="Wolf" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32161" centery="32217" centerz="7" radius="3">
+		<monster name="Wolf" x="-3" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32133" centery="32224" centerz="7" radius="3">
+		<monster name="Snake" x="-3" y="-3" z="7" spawntime="90" />
+		<monster name="Snake" x="-2" y="-2" z="7" spawntime="90" />
+	</monster>
+</monsters>

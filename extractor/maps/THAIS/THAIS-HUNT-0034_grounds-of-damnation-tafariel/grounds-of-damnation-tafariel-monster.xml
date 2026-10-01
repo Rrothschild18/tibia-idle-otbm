@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="33484" centery="32707" centerz="13" radius="3">
+		<monster name="Vexclaw" x="-2" y="0" z="13" spawntime="60" />
+	</monster>
+	<monster centerx="33491" centery="32707" centerz="13" radius="3">
+		<monster name="Vexclaw" x="-2" y="-3" z="13" spawntime="60" />
+		<monster name="Dark Torturer" x="-1" y="0" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33477" centery="32714" centerz="13" radius="3">
+		<monster name="Dark Torturer" x="-2" y="-2" z="13" spawntime="60" />
+		<monster name="Dark Torturer" x="0" y="-2" z="13" spawntime="60" />
+	</monster>
+	<monster centerx="33490" centery="32719" centerz="13" radius="1">
+		<monster name="Vexclaw" x="0" y="0" z="13" spawntime="60" />
+	</monster>
+	<monster centerx="33491" centery="32728" centerz="13" radius="3">
+		<monster name="Vexclaw" x="-2" y="-1" z="13" spawntime="60" />
+	</monster>
+	<monster centerx="33495" centery="32734" centerz="13" radius="3">
+		<monster name="Vexclaw" x="-3" y="2" z="13" spawntime="60" />
+	</monster>
+	<monster centerx="33495" centery="32741" centerz="13" radius="3">
+		<monster name="Vexclaw" x="0" y="1" z="13" spawntime="60" />
+	</monster>
+</monsters>

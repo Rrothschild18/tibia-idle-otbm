@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="33230" centery="31758" centerz="5" radius="1">
+		<monster name="Wyvern" x="1" y="1" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="33233" centery="31764" centerz="5" radius="1">
+		<monster name="Wyvern" x="0" y="1" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="33233" centery="31773" centerz="5" radius="1">
+		<monster name="Wyvern" x="1" y="-1" z="5" spawntime="90" />
+	</monster>
+</monsters>

@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="33113" centery="31684" centerz="12" radius="3">
+		<monster name="Juggernaut" x="-1" y="1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33125" centery="31687" centerz="12" radius="3">
+		<monster name="Demon" x="2" y="1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33105" centery="31688" centerz="12" radius="3">
+		<monster name="Demon" x="2" y="-3" z="12" spawntime="90" />
+		<monster name="Demon" x="-1" y="-1" z="12" spawntime="90" />
+		<monster name="Hellhound" x="-2" y="2" z="12" spawntime="90" />
+		<monster name="Demon" x="1" y="3" z="12" spawntime="90" />
+		<monster name="Demon Summoner" x="2" y="3" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33117" centery="31692" centerz="12" radius="3">
+		<monster name="Juggernaut" x="-2" y="-3" z="12" spawntime="90" />
+		<monster name="Fury" x="0" y="-3" z="12" spawntime="90" />
+		<monster name="Fury" x="-3" y="-1" z="12" spawntime="90" />
+		<monster name="Juggernaut" x="-2" y="3" z="12" spawntime="90" />
+		<monster name="Juggernaut" x="3" y="3" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33128" centery="31695" centerz="12" radius="3">
+		<monster name="Demon Summoner" x="-3" y="-1" z="12" spawntime="90" />
+		<monster name="Juggernaut" x="2" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33101" centery="31696" centerz="12" radius="3">
+		<monster name="Demon" x="2" y="1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33109" centery="31698" centerz="12" radius="3">
+		<monster name="Demon" x="2" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33119" centery="31699" centerz="12" radius="1">
+		<monster name="Juggernaut" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33126" centery="31704" centerz="12" radius="4">
+		<monster name="Hellhound" x="-4" y="-4" z="12" spawntime="90" />
+		<monster name="Demon" x="2" y="-2" z="12" spawntime="90" />
+		<monster name="Juggernaut" x="-2" y="1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33115" centery="31707" centerz="12" radius="4">
+		<monster name="Hellhound" x="-2" y="-1" z="12" spawntime="90" />
+		<monster name="Demon Summoner" x="-4" y="3" z="12" spawntime="90" />
+		<monster name="Undead Dragon" x="1" y="3" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33122" centery="31709" centerz="12" radius="1">
+		<monster name="Demon Summoner" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33105" centery="31710" centerz="12" radius="3">
+		<monster name="Hellhound" x="-1" y="-2" z="12" spawntime="90" />
+		<monster name="Hellhound" x="2" y="3" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33127" centery="31713" centerz="12" radius="3">
+		<monster name="Demon" x="-1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33111" centery="31718" centerz="12" radius="3">
+		<monster name="Undead Dragon" x="0" y="-1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33118" centery="31720" centerz="12" radius="3">
+		<monster name="Demon" x="1" y="-1" z="12" spawntime="90" />
+		<monster name="Demon Summoner" x="-3" y="2" z="12" spawntime="90" />
+	</monster>
+</monsters>

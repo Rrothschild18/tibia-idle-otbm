@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="33043" centery="32434" centerz="9" radius="3">
+		<monster name="Ghoul" x="1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33050" centery="32441" centerz="9" radius="3">
+		<monster name="Ghoul" x="1" y="0" z="9" spawntime="90" />
+		<monster name="Ghoul" x="3" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33064" centery="32448" centerz="9" radius="3">
+		<monster name="Bonelord" x="-2" y="-2" z="9" spawntime="90" />
+		<monster name="Ghoul" x="0" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33064" centery="32455" centerz="9" radius="3">
+		<monster name="Ghoul" x="-3" y="-3" z="9" spawntime="90" />
+		<monster name="Ghoul" x="-2" y="-2" z="9" spawntime="90" />
+		<monster name="Ghoul" x="-1" y="-1" z="9" spawntime="90" />
+		<monster name="Ghoul" x="0" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33071" centery="32455" centerz="9" radius="3">
+		<monster name="Ghoul" x="-3" y="-2" z="9" spawntime="90" />
+		<monster name="Skeleton" x="-3" y="1" z="9" spawntime="90" />
+		<monster name="Ghoul" x="-2" y="2" z="9" spawntime="90" />
+	</monster>
+</monsters>

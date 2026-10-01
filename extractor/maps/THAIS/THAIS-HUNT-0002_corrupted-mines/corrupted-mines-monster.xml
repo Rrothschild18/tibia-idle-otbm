@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32584" centery="32465" centerz="9" radius="5">
+		<monster name="Assassin" x="1" y="-4" z="9" spawntime="90" />
+		<monster name="Dark Monk" x="-1" y="-2" z="9" spawntime="90" />
+		<monster name="Assassin" x="3" y="0" z="9" spawntime="90" />
+		<monster name="Assassin" x="-4" y="1" z="9" spawntime="90" />
+		<monster name="Dark Monk" x="-2" y="1" z="9" spawntime="90" />
+		<monster name="Assassin" x="-1" y="4" z="9" spawntime="90" />
+		<monster name="Dark Monk" x="4" y="4" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32614" centery="32469" centerz="9" radius="5">
+		<monster name="Assassin" x="1" y="-5" z="9" spawntime="90" />
+		<monster name="Wild Warrior" x="3" y="-3" z="9" spawntime="90" />
+		<monster name="Assassin" x="-2" y="-2" z="9" spawntime="90" />
+		<monster name="Dark Monk" x="3" y="-1" z="9" spawntime="90" />
+		<monster name="Wild Warrior" x="-2" y="1" z="9" spawntime="90" />
+		<monster name="Hunter" x="-2" y="3" z="9" spawntime="90" />
+		<monster name="Dark Monk" x="3" y="3" z="9" spawntime="90" />
+		<monster name="Mummy" x="0" y="4" z="9" spawntime="90" />
+		<monster name="Witch" x="-4" y="5" z="9" spawntime="90" />
+		<monster name="Assassin" x="1" y="5" z="9" spawntime="90" />
+		<monster name="Dark Monk" x="5" y="5" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32584" centery="32482" centerz="9" radius="5">
+		<monster name="Ghost" x="1" y="-4" z="9" spawntime="90" />
+		<monster name="Ghost" x="-3" y="-1" z="9" spawntime="90" />
+		<monster name="Ghost" x="2" y="-1" z="9" spawntime="90" />
+		<monster name="Ghost" x="4" y="2" z="9" spawntime="90" />
+		<monster name="Ghost" x="-2" y="4" z="9" spawntime="90" />
+	</monster>
+</monsters>

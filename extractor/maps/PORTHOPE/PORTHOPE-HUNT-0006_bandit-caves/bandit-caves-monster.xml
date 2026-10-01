@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32598" centery="32684" centerz="7" radius="2">
+		<monster name="Crocodile" x="-1" y="-1" z="7" spawntime="90" />
+		<monster name="Snake" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32571" centery="32692" centerz="7" radius="2">
+		<monster name="Slime" x="0" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32579" centery="32697" centerz="7" radius="2">
+		<monster name="Slime" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32593" centery="32697" centerz="7" radius="5">
+		<monster name="Snake" x="1" y="-3" z="7" spawntime="90" />
+		<monster name="Snake" x="1" y="-2" z="7" spawntime="90" />
+		<monster name="Snake" x="1" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32569" centery="32703" centerz="7" radius="2">
+		<monster name="Slime" x="-1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32601" centery="32707" centerz="7" radius="3">
+		<monster name="Wasp" x="0" y="-3" z="7" spawntime="90" />
+		<monster name="Centipede" x="2" y="-3" z="7" spawntime="90" />
+		<monster name="Centipede" x="-2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32590" centery="32721" centerz="7" radius="5">
+		<monster name="Spider" x="0" y="-2" z="7" spawntime="90" />
+		<monster name="Bug" x="-4" y="-1" z="7" spawntime="90" />
+		<monster name="Centipede" x="3" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32607" centery="32721" centerz="7" radius="5">
+		<monster name="Bug" x="1" y="-4" z="7" spawntime="90" />
+		<monster name="Spider" x="-4" y="-2" z="7" spawntime="90" />
+		<monster name="Centipede" x="1" y="0" z="7" spawntime="90" />
+		<monster name="Centipede" x="2" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32574" centery="32722" centerz="7" radius="5">
+		<monster name="Slime" x="1" y="-4" z="7" spawntime="90" />
+		<monster name="Centipede" x="3" y="-2" z="7" spawntime="90" />
+		<monster name="Bug" x="-3" y="4" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32552" centery="32735" centerz="7" radius="5">
+		<monster name="Purple Butterfly" x="-4" y="-4" z="7" spawntime="90" />
+		<monster name="Blue Butterfly" x="3" y="-3" z="7" spawntime="90" />
+		<monster name="Red Butterfly" x="-5" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32564" centery="32735" centerz="7" radius="5">
+		<monster name="Purple Butterfly" x="-4" y="3" z="7" spawntime="90" />
+		<monster name="Blue Butterfly" x="3" y="4" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32576" centery="32735" centerz="7" radius="5">
+		<monster name="Blue Butterfly" x="-4" y="-5" z="7" spawntime="90" />
+		<monster name="Purple Butterfly" x="4" y="-4" z="7" spawntime="90" />
+		<monster name="Red Butterfly" x="-2" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32564" centery="32748" centerz="7" radius="5">
+		<monster name="Purple Butterfly" x="4" y="-4" z="7" spawntime="90" />
+		<monster name="Blue Butterfly" x="-5" y="5" z="7" spawntime="90" />
+		<monster name="Red Butterfly" x="5" y="5" z="7" spawntime="90" />
+	</monster>
+</monsters>

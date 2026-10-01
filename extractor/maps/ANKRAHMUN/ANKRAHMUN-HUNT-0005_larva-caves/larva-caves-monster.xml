@@ -1,0 +1,1760 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="33112" centery="32651" centerz="7" radius="2">
+		<monster name="Hyaena" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33123" centery="32661" centerz="7" radius="4">
+		<monster name="Nomad" x="-3" y="-1" z="7" spawntime="90" />
+		<monster name="Nomad" x="-2" y="-1" z="7" spawntime="90" />
+		<monster name="Nomad" x="1" y="4" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33145" centery="32661" centerz="7" radius="4">
+		<monster name="Nomad" x="-4" y="-4" z="7" spawntime="90" />
+		<monster name="Nomad" x="-2" y="-2" z="7" spawntime="90" />
+		<monster name="Nomad" x="-3" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33134" centery="32662" centerz="7" radius="30">
+		<monster name="Dromedary" x="-16" y="-20" z="7" spawntime="90" />
+		<monster name="Dromedary" x="16" y="-14" z="7" spawntime="90" />
+		<monster name="Dromedary" x="11" y="-10" z="7" spawntime="90" />
+		<monster name="Nomad" x="-1" y="3" z="7" spawntime="90" />
+		<monster name="Dromedary" x="-7" y="7" z="7" spawntime="90" />
+		<monster name="Dromedary" x="3" y="8" z="7" spawntime="90" />
+		<monster name="Dromedary" x="-9" y="14" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33067" centery="32734" centerz="7" radius="1">
+		<monster name="Nomad" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33065" centery="32741" centerz="7" radius="1">
+		<monster name="Nomad" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33067" centery="32741" centerz="7" radius="1">
+		<monster name="Nomad" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33063" centery="32747" centerz="7" radius="1">
+		<monster name="Nomad" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33053" centery="32753" centerz="7" radius="2">
+		<monster name="Nomad" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33212" centery="32545" centerz="9" radius="3">
+		<monster name="Scarab" x="0" y="-2" z="9" spawntime="90" />
+		<monster name="Scarab" x="-1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33191" centery="32550" centerz="9" radius="3">
+		<monster name="Scarab" x="2" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="0" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="-2" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33207" centery="32552" centerz="9" radius="2">
+		<monster name="Larva" x="-1" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33220" centery="32555" centerz="9" radius="2">
+		<monster name="Larva" x="-2" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="1" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="2" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33178" centery="32557" centerz="9" radius="3">
+		<monster name="Scarab" x="1" y="-3" z="9" spawntime="90" />
+		<monster name="Scarab" x="-1" y="-1" z="9" spawntime="90" />
+		<monster name="Scarab" x="2" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33226" centery="32559" centerz="9" radius="2">
+		<monster name="Scarab" x="-2" y="-2" z="9" spawntime="90" />
+		<monster name="Scarab" x="-1" y="2" z="9" spawntime="90" />
+		<monster name="Scarab" x="1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33153" centery="32567" centerz="9" radius="3">
+		<monster name="Scarab" x="2" y="-2" z="9" spawntime="90" />
+		<monster name="Scarab" x="-3" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33185" centery="32567" centerz="9" radius="3">
+		<monster name="Scarab" x="1" y="-2" z="9" spawntime="90" />
+		<monster name="Scarab" x="-3" y="-1" z="9" spawntime="90" />
+		<monster name="Scarab" x="1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33174" centery="32570" centerz="9" radius="2">
+		<monster name="Larva" x="0" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="-1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33225" centery="32572" centerz="9" radius="3">
+		<monster name="Larva" x="-2" y="-2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33200" centery="32573" centerz="9" radius="3">
+		<monster name="Scarab" x="-1" y="-2" z="9" spawntime="90" />
+		<monster name="Scarab" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33185" centery="32577" centerz="9" radius="3">
+		<monster name="Scarab" x="-3" y="-2" z="9" spawntime="90" />
+		<monster name="Scarab" x="2" y="0" z="9" spawntime="90" />
+		<monster name="Scarab" x="2" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33123" centery="32579" centerz="9" radius="2">
+		<monster name="Scarab" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33145" centery="32579" centerz="9" radius="4">
+		<monster name="Larva" x="0" y="-2" z="9" spawntime="90" />
+		<monster name="Scarab" x="-2" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="2" y="0" z="9" spawntime="90" />
+		<monster name="Larva" x="3" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33218" centery="32581" centerz="9" radius="3">
+		<monster name="Scarab" x="-2" y="-3" z="9" spawntime="90" />
+		<monster name="Scarab" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33193" centery="32583" centerz="9" radius="2">
+		<monster name="Larva" x="-1" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33133" centery="32584" centerz="9" radius="3">
+		<monster name="Larva" x="1" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="-3" y="1" z="9" spawntime="90" />
+		<monster name="Larva" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33175" centery="32585" centerz="9" radius="2">
+		<monster name="Scarab" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33232" centery="32588" centerz="9" radius="3">
+		<monster name="Scarab" x="-2" y="-2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33239" centery="32588" centerz="9" radius="3">
+		<monster name="Scarab" x="-1" y="-2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33260" centery="32588" centerz="9" radius="3">
+		<monster name="Larva" x="0" y="-3" z="9" spawntime="90" />
+		<monster name="Larva" x="-1" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="0" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="-3" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33212" centery="32589" centerz="9" radius="3">
+		<monster name="Larva" x="-1" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="-2" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="0" y="2" z="9" spawntime="90" />
+		<monster name="Larva" x="2" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33143" centery="32591" centerz="9" radius="3">
+		<monster name="Larva" x="-1" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="-2" y="2" z="9" spawntime="90" />
+		<monster name="Larva" x="1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33119" centery="32593" centerz="9" radius="3">
+		<monster name="Scarab" x="-2" y="0" z="9" spawntime="90" />
+		<monster name="Larva" x="-1" y="2" z="9" spawntime="90" />
+		<monster name="Scarab" x="2" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33152" centery="32593" centerz="9" radius="2">
+		<monster name="Scarab" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33166" centery="32593" centerz="9" radius="3">
+		<monster name="Larva" x="2" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33225" centery="32595" centerz="9" radius="3">
+		<monster name="Scarab" x="2" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33232" centery="32595" centerz="9" radius="3">
+		<monster name="Scarab" x="-1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33253" centery="32595" centerz="9" radius="3">
+		<monster name="Scarab" x="0" y="-1" z="9" spawntime="90" />
+		<monster name="Scarab" x="0" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33267" centery="32595" centerz="9" radius="3">
+		<monster name="Larva" x="1" y="-2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33185" centery="32598" centerz="9" radius="3">
+		<monster name="Scarab" x="2" y="-1" z="9" spawntime="90" />
+		<monster name="Scarab" x="-1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33217" centery="32598" centerz="9" radius="2">
+		<monster name="Scarab" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33155" centery="32599" centerz="9" radius="2">
+		<monster name="Larva" x="-1" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33207" centery="32599" centerz="9" radius="3">
+		<monster name="Scarab" x="1" y="-2" z="9" spawntime="90" />
+		<monster name="Scarab" x="1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33123" centery="32601" centerz="9" radius="3">
+		<monster name="Larva" x="-2" y="-3" z="9" spawntime="90" />
+		<monster name="Larva" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33145" centery="32601" centerz="9" radius="2">
+		<monster name="Scarab" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33238" centery="32602" centerz="9" radius="2">
+		<monster name="Scarab" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33246" centery="32602" centerz="9" radius="3">
+		<monster name="Scarab" x="-2" y="-2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33274" centery="32602" centerz="9" radius="3">
+		<monster name="Larva" x="2" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="3" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33132" centery="32603" centerz="9" radius="3">
+		<monster name="Larva" x="-2" y="-3" z="9" spawntime="90" />
+		<monster name="Larva" x="2" y="2" z="9" spawntime="90" />
+		<monster name="Larva" x="0" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33173" centery="32604" centerz="9" radius="3">
+		<monster name="Larva" x="2" y="-3" z="9" spawntime="90" />
+		<monster name="Larva" x="-2" y="0" z="9" spawntime="90" />
+		<monster name="Larva" x="2" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33194" centery="32607" centerz="9" radius="2">
+		<monster name="Scarab" x="-1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33202" centery="32608" centerz="9" radius="3">
+		<monster name="Larva" x="2" y="-3" z="9" spawntime="90" />
+		<monster name="Larva" x="2" y="0" z="9" spawntime="90" />
+		<monster name="Larva" x="-2" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33218" centery="32608" centerz="9" radius="2">
+		<monster name="Larva" x="2" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="0" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33225" centery="32608" centerz="9" radius="2">
+		<monster name="Larva" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33267" centery="32608" centerz="9" radius="2">
+		<monster name="Larva" x="-1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33116" centery="32609" centerz="9" radius="3">
+		<monster name="Scarab" x="-2" y="-1" z="9" spawntime="90" />
+		<monster name="Scarab" x="2" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33153" centery="32609" centerz="9" radius="3">
+		<monster name="Larva" x="1" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="-2" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33180" centery="32609" centerz="9" radius="2">
+		<monster name="Scarab" x="-1" y="-1" z="9" spawntime="90" />
+		<monster name="Scarab" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33128" centery="32611" centerz="9" radius="2">
+		<monster name="Scarab" x="1" y="-2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33278" centery="32611" centerz="9" radius="2">
+		<monster name="Scarab" x="-1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33237" centery="32612" centerz="9" radius="2">
+		<monster name="Scarab" x="2" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33166" centery="32613" centerz="9" radius="2">
+		<monster name="Larva" x="1" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="-2" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33246" centery="32613" centerz="9" radius="2">
+		<monster name="Scarab" x="0" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33144" centery="32614" centerz="9" radius="3">
+		<monster name="Scarab" x="-3" y="-2" z="9" spawntime="90" />
+		<monster name="Scarab" x="3" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33178" centery="32615" centerz="9" radius="2">
+		<monster name="Scarab" x="1" y="0" z="9" spawntime="90" />
+		<monster name="Scarab" x="-1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33263" centery="32615" centerz="9" radius="2">
+		<monster name="Scarab" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33271" centery="32615" centerz="9" radius="2">
+		<monster name="Larva" x="0" y="-1" z="9" spawntime="90" />
+		<monster name="Scarab" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33206" centery="32616" centerz="9" radius="3">
+		<monster name="Larva" x="-1" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33121" centery="32617" centerz="9" radius="2">
+		<monster name="Scarab" x="2" y="-2" z="9" spawntime="90" />
+		<monster name="Scarab" x="-1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33255" centery="32617" centerz="9" radius="2">
+		<monster name="Larva" x="-1" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33131" centery="32618" centerz="9" radius="2">
+		<monster name="Larva" x="1" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="-2" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="-1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33188" centery="32618" centerz="9" radius="2">
+		<monster name="Scarab" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33164" centery="32619" centerz="9" radius="2">
+		<monster name="Larva" x="0" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="-2" y="1" z="9" spawntime="90" />
+		<monster name="Larva" x="2" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33224" centery="32619" centerz="9" radius="2">
+		<monster name="Scarab" x="1" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33213" centery="32620" centerz="9" radius="2">
+		<monster name="Scarab" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33108" centery="32621" centerz="9" radius="2">
+		<monster name="Larva" x="2" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="-1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33243" centery="32622" centerz="9" radius="2">
+		<monster name="Larva" x="-1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33176" centery="32623" centerz="9" radius="2">
+		<monster name="Scarab" x="2" y="-2" z="9" spawntime="90" />
+		<monster name="Scarab" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33198" centery="32623" centerz="9" radius="2">
+		<monster name="Larva" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33258" centery="32623" centerz="9" radius="2">
+		<monster name="Larva" x="-2" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="0" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33190" centery="32624" centerz="9" radius="2">
+		<monster name="Larva" x="-1" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33273" centery="32624" centerz="9" radius="2">
+		<monster name="Larva" x="1" y="0" z="9" spawntime="90" />
+		<monster name="Larva" x="-2" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33281" centery="32624" centerz="9" radius="2">
+		<monster name="Larva" x="2" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="-1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33126" centery="32625" centerz="9" radius="2">
+		<monster name="Larva" x="1" y="0" z="9" spawntime="90" />
+		<monster name="Larva" x="-1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33204" centery="32626" centerz="9" radius="2">
+		<monster name="Scarab" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33236" centery="32626" centerz="9" radius="2">
+		<monster name="Larva" x="2" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="-1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33251" centery="32627" centerz="9" radius="3">
+		<monster name="Larva" x="2" y="0" z="9" spawntime="90" />
+		<monster name="Larva" x="-3" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33264" centery="32627" centerz="9" radius="2">
+		<monster name="Scarab" x="-2" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33144" centery="32628" centerz="9" radius="2">
+		<monster name="Larva" x="2" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="-1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33162" centery="32629" centerz="9" radius="2">
+		<monster name="Scarab" x="-1" y="-1" z="9" spawntime="90" />
+		<monster name="Scarab" x="2" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33221" centery="32629" centerz="9" radius="3">
+		<monster name="Larva" x="0" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="3" y="0" z="9" spawntime="90" />
+		<monster name="Larva" x="-2" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33103" centery="32630" centerz="9" radius="2">
+		<monster name="Scarab" x="0" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33171" centery="32630" centerz="9" radius="3">
+		<monster name="Scarab" x="1" y="-2" z="9" spawntime="90" />
+		<monster name="Scarab" x="-2" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33194" centery="32631" centerz="9" radius="3">
+		<monster name="Larva" x="-3" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="1" y="0" z="9" spawntime="90" />
+		<monster name="Larva" x="3" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33284" centery="32631" centerz="9" radius="2">
+		<monster name="Scarab" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33154" centery="32633" centerz="9" radius="3">
+		<monster name="Larva" x="1" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="-2" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33185" centery="32634" centerz="9" radius="2">
+		<monster name="Larva" x="2" y="-1" z="9" spawntime="90" />
+		<monster name="Scarab" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33203" centery="32634" centerz="9" radius="2">
+		<monster name="Larva" x="-1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33212" centery="32634" centerz="9" radius="3">
+		<monster name="Larva" x="2" y="-3" z="9" spawntime="90" />
+		<monster name="Larva" x="0" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33257" centery="32634" centerz="9" radius="2">
+		<monster name="Larva" x="-2" y="-2" z="9" spawntime="90" />
+		<monster name="Scarab" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33144" centery="32635" centerz="9" radius="3">
+		<monster name="Scarab" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33267" centery="32635" centerz="9" radius="2">
+		<monster name="Scarab" x="-1" y="-1" z="9" spawntime="90" />
+		<monster name="Scarab" x="1" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33276" centery="32635" centerz="9" radius="3">
+		<monster name="Larva" x="2" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="-2" y="1" z="9" spawntime="90" />
+		<monster name="Larva" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33104" centery="32638" centerz="9" radius="2">
+		<monster name="Scarab" x="0" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="1" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="-1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33163" centery="32638" centerz="9" radius="2">
+		<monster name="Scarab" x="1" y="0" z="9" spawntime="90" />
+		<monster name="Scarab" x="0" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33237" centery="32638" centerz="9" radius="2">
+		<monster name="Scarab" x="0" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33244" centery="32640" centerz="9" radius="2">
+		<monster name="Larva" x="0" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="2" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33113" centery="32642" centerz="9" radius="3">
+		<monster name="Scarab" x="2" y="-3" z="9" spawntime="90" />
+		<monster name="Scarab" x="-2" y="-1" z="9" spawntime="90" />
+		<monster name="Scarab" x="-3" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33148" centery="32642" centerz="9" radius="2">
+		<monster name="Scarab" x="-1" y="0" z="9" spawntime="90" />
+		<monster name="Scarab" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33260" centery="32642" centerz="9" radius="2">
+		<monster name="Larva" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33269" centery="32642" centerz="9" radius="2">
+		<monster name="Larva" x="-2" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33278" centery="32642" centerz="9" radius="2">
+		<monster name="Larva" x="-1" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33285" centery="32642" centerz="9" radius="2">
+		<monster name="Scarab" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33185" centery="32644" centerz="9" radius="2">
+		<monster name="Larva" x="-1" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33192" centery="32644" centerz="9" radius="2">
+		<monster name="Larva" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33227" centery="32645" centerz="9" radius="3">
+		<monster name="Larva" x="-3" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="0" y="0" z="9" spawntime="90" />
+		<monster name="Larva" x="-1" y="2" z="9" spawntime="90" />
+		<monster name="Larva" x="2" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33171" centery="32648" centerz="9" radius="2">
+		<monster name="Scarab" x="2" y="-2" z="9" spawntime="90" />
+		<monster name="Scarab" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33156" centery="32649" centerz="9" radius="2">
+		<monster name="Scarab" x="1" y="-1" z="9" spawntime="90" />
+		<monster name="Scarab" x="-2" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33234" centery="32649" centerz="9" radius="2">
+		<monster name="Scarab" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33274" centery="32649" centerz="9" radius="3">
+		<monster name="Scarab" x="0" y="-2" z="9" spawntime="90" />
+		<monster name="Scarab" x="2" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33213" centery="32650" centerz="9" radius="4">
+		<monster name="Larva" x="-3" y="-3" z="9" spawntime="90" />
+		<monster name="Larva" x="-2" y="1" z="9" spawntime="90" />
+		<monster name="Larva" x="3" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33263" centery="32652" centerz="9" radius="3">
+		<monster name="Larva" x="3" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="1" y="0" z="9" spawntime="90" />
+		<monster name="Larva" x="-2" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33186" centery="32653" centerz="9" radius="2">
+		<monster name="Scarab" x="1" y="-1" z="9" spawntime="90" />
+		<monster name="Scarab" x="-2" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33140" centery="32656" centerz="9" radius="3">
+		<monster name="Scarab" x="2" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33276" centery="32657" centerz="9" radius="3">
+		<monster name="Scarab" x="-2" y="1" z="9" spawntime="90" />
+		<monster name="Scarab" x="2" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33162" centery="32658" centerz="9" radius="4">
+		<monster name="Larva" x="-4" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="2" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="-2" y="2" z="9" spawntime="90" />
+		<monster name="Larva" x="2" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33197" centery="32659" centerz="9" radius="3">
+		<monster name="Larva" x="3" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="0" y="1" z="9" spawntime="90" />
+		<monster name="Larva" x="-3" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33253" centery="32659" centerz="9" radius="3">
+		<monster name="Larva" x="-2" y="0" z="9" spawntime="90" />
+		<monster name="Scarab" x="2" y="0" z="9" spawntime="90" />
+		<monster name="Larva" x="2" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33174" centery="32660" centerz="9" radius="3">
+		<monster name="Scarab" x="2" y="-1" z="9" spawntime="90" />
+		<monster name="Scarab" x="-1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33268" centery="32660" centerz="9" radius="3">
+		<monster name="Larva" x="-2" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="2" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="-3" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33119" centery="32662" centerz="9" radius="2">
+		<monster name="Scarab" x="0" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33130" centery="32662" centerz="9" radius="3">
+		<monster name="Larva" x="2" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="3" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33223" centery="32662" centerz="9" radius="3">
+		<monster name="Scarab" x="-2" y="-1" z="9" spawntime="90" />
+		<monster name="Scarab" x="2" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33206" centery="32663" centerz="9" radius="3">
+		<monster name="Larva" x="2" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="2" y="1" z="9" spawntime="90" />
+		<monster name="Larva" x="-2" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33139" centery="32665" centerz="9" radius="3">
+		<monster name="Larva" x="2" y="-3" z="9" spawntime="90" />
+		<monster name="Larva" x="1" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="-2" y="0" z="9" spawntime="90" />
+		<monster name="Larva" x="1" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33148" centery="32665" centerz="9" radius="2">
+		<monster name="Scarab" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33154" centery="32665" centerz="9" radius="2">
+		<monster name="Scarab" x="2" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33108" centery="32667" centerz="9" radius="3">
+		<monster name="Larva" x="-1" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="2" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33183" centery="32667" centerz="9" radius="3">
+		<monster name="Larva" x="0" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="-1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33193" centery="32667" centerz="9" radius="2">
+		<monster name="Scarab" x="1" y="-1" z="9" spawntime="90" />
+		<monster name="Scarab" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33259" centery="32667" centerz="9" radius="2">
+		<monster name="Scarab" x="2" y="-2" z="9" spawntime="90" />
+		<monster name="Scarab" x="-2" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33273" centery="32670" centerz="9" radius="3">
+		<monster name="Larva" x="-3" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33281" centery="32670" centerz="9" radius="3">
+		<monster name="Scarab" x="1" y="-2" z="9" spawntime="90" />
+		<monster name="Scarab" x="0" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33153" centery="32671" centerz="9" radius="2">
+		<monster name="Scarab" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33235" centery="32672" centerz="9" radius="2">
+		<monster name="Larva" x="-2" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33167" centery="32673" centerz="9" radius="3">
+		<monster name="Larva" x="1" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="-1" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33204" centery="32673" centerz="9" radius="3">
+		<monster name="Scarab" x="1" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33129" centery="32675" centerz="9" radius="3">
+		<monster name="Larva" x="-2" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="3" y="0" z="9" spawntime="90" />
+		<monster name="Larva" x="1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33262" centery="32675" centerz="9" radius="3">
+		<monster name="Larva" x="-3" y="-3" z="9" spawntime="90" />
+		<monster name="Larva" x="-3" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="-1" y="1" z="9" spawntime="90" />
+		<monster name="Larva" x="3" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33117" centery="32676" centerz="9" radius="3">
+		<monster name="Larva" x="0" y="-3" z="9" spawntime="90" />
+		<monster name="Larva" x="-2" y="1" z="9" spawntime="90" />
+		<monster name="Larva" x="3" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33178" centery="32677" centerz="9" radius="3">
+		<monster name="Scarab" x="-2" y="0" z="9" spawntime="90" />
+		<monster name="Scarab" x="2" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33251" centery="32678" centerz="9" radius="3">
+		<monster name="Larva" x="-2" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="0" y="1" z="9" spawntime="90" />
+		<monster name="Larva" x="2" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33240" centery="32679" centerz="9" radius="2">
+		<monster name="Larva" x="-1" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="-1" y="0" z="9" spawntime="90" />
+		<monster name="Larva" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33222" centery="32680" centerz="9" radius="2">
+		<monster name="Larva" x="-1" y="0" z="9" spawntime="90" />
+		<monster name="Larva" x="1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33271" centery="32680" centerz="9" radius="3">
+		<monster name="Scarab" x="0" y="-1" z="9" spawntime="90" />
+		<monster name="Scarab" x="1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33146" centery="32681" centerz="9" radius="3">
+		<monster name="Larva" x="-3" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="1" y="0" z="9" spawntime="90" />
+		<monster name="Larva" x="-2" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33198" centery="32682" centerz="9" radius="3">
+		<monster name="Larva" x="0" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="1" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="-2" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33189" centery="32683" centerz="9" radius="3">
+		<monster name="Larva" x="-3" y="0" z="9" spawntime="90" />
+		<monster name="Larva" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33215" centery="32683" centerz="9" radius="2">
+		<monster name="Larva" x="0" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33228" centery="32685" centerz="9" radius="2">
+		<monster name="Scarab" x="-2" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33247" centery="32685" centerz="9" radius="2">
+		<monster name="Scarab" x="0" y="-1" z="9" spawntime="90" />
+		<monster name="Scarab" x="-1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33262" centery="32688" centerz="9" radius="3">
+		<monster name="Larva" x="-1" y="-3" z="9" spawntime="90" />
+		<monster name="Larva" x="1" y="0" z="9" spawntime="90" />
+		<monster name="Larva" x="2" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33137" centery="32689" centerz="9" radius="2">
+		<monster name="Scarab" x="0" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33220" centery="32690" centerz="9" radius="2">
+		<monster name="Scarab" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33127" centery="32691" centerz="9" radius="3">
+		<monster name="Larva" x="-3" y="-3" z="9" spawntime="90" />
+		<monster name="Larva" x="1" y="1" z="9" spawntime="90" />
+		<monster name="Larva" x="-1" y="2" z="9" spawntime="90" />
+		<monster name="Larva" x="2" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33118" centery="32692" centerz="9" radius="3">
+		<monster name="Scarab" x="1" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="3" y="-2" z="9" spawntime="90" />
+		<monster name="Scarab" x="0" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33186" centery="32695" centerz="9" radius="3">
+		<monster name="Larva" x="-1" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="2" y="1" z="9" spawntime="90" />
+		<monster name="Larva" x="-3" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33209" centery="32697" centerz="9" radius="2">
+		<monster name="Larva" x="0" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33201" centery="32702" centerz="9" radius="3">
+		<monster name="Scarab" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33215" centery="32702" centerz="9" radius="2">
+		<monster name="Larva" x="0" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="-1" y="0" z="9" spawntime="90" />
+		<monster name="Larva" x="1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33162" centery="32704" centerz="9" radius="4">
+		<monster name="Larva" x="0" y="-3" z="9" spawntime="90" />
+		<monster name="Larva" x="-3" y="1" z="9" spawntime="90" />
+		<monster name="Larva" x="2" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33268" centery="32705" centerz="9" radius="2">
+		<monster name="Larva" x="-1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33274" centery="32705" centerz="9" radius="2">
+		<monster name="Scarab" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33180" centery="32706" centerz="9" radius="3">
+		<monster name="Larva" x="-2" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="0" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="2" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33252" centery="32706" centerz="9" radius="2">
+		<monster name="Scarab" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33022" centery="32707" centerz="9" radius="3">
+		<monster name="Terramite" x="3" y="-3" z="9" spawntime="90" />
+		<monster name="Terramite" x="3" y="-2" z="9" spawntime="90" />
+		<monster name="Terramite" x="2" y="-1" z="9" spawntime="90" />
+		<monster name="Terramite" x="-3" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33143" centery="32707" centerz="9" radius="4">
+		<monster name="Larva" x="1" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="0" y="2" z="9" spawntime="90" />
+		<monster name="Larva" x="-3" y="3" z="9" spawntime="90" />
+		<monster name="Larva" x="4" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33211" centery="32709" centerz="9" radius="3">
+		<monster name="Larva" x="-2" y="0" z="9" spawntime="90" />
+		<monster name="Larva" x="2" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33280" centery="32709" centerz="9" radius="2">
+		<monster name="Larva" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33262" centery="32710" centerz="9" radius="2">
+		<monster name="Scarab" x="1" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33126" centery="32712" centerz="9" radius="4">
+		<monster name="Larva" x="1" y="-4" z="9" spawntime="90" />
+		<monster name="Larva" x="-3" y="0" z="9" spawntime="90" />
+		<monster name="Larva" x="3" y="0" z="9" spawntime="90" />
+		<monster name="Larva" x="0" y="1" z="9" spawntime="90" />
+		<monster name="Larva" x="1" y="4" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33190" centery="32712" centerz="9" radius="2">
+		<monster name="Scarab" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33200" centery="32712" centerz="9" radius="2">
+		<monster name="Scarab" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33286" centery="32712" centerz="9" radius="2">
+		<monster name="Larva" x="-1" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="2" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33271" centery="32713" centerz="9" radius="2">
+		<monster name="Larva" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33248" centery="32714" centerz="9" radius="2">
+		<monster name="Scarab" x="2" y="-2" z="9" spawntime="90" />
+		<monster name="Scarab" x="-2" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33081" centery="32715" centerz="9" radius="2">
+		<monster name="Larva" x="1" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="-1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33141" centery="32717" centerz="9" radius="4">
+		<monster name="Scarab" x="0" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33217" centery="32717" centerz="9" radius="3">
+		<monster name="Scarab" x="-2" y="-1" z="9" spawntime="90" />
+		<monster name="Scarab" x="0" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33257" centery="32717" centerz="9" radius="2">
+		<monster name="Scarab" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33295" centery="32718" centerz="9" radius="2">
+		<monster name="Larva" x="2" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="-1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33181" centery="32719" centerz="9" radius="2">
+		<monster name="Larva" x="-1" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33275" centery="32719" centerz="9" radius="2">
+		<monster name="Larva" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33288" centery="32719" centerz="9" radius="2">
+		<monster name="Larva" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33232" centery="32721" centerz="9" radius="2">
+		<monster name="Larva" x="-2" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33090" centery="32722" centerz="9" radius="2">
+		<monster name="Scarab" x="-1" y="-2" z="9" spawntime="90" />
+		<monster name="Scarab" x="1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33106" centery="32722" centerz="9" radius="2">
+		<monster name="Larva" x="0" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33188" centery="32722" centerz="9" radius="2">
+		<monster name="Scarab" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33239" centery="32722" centerz="9" radius="2">
+		<monster name="Larva" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33066" centery="32723" centerz="9" radius="2">
+		<monster name="Larva" x="2" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="0" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33128" centery="32723" centerz="9" radius="3">
+		<monster name="Scarab" x="2" y="-2" z="9" spawntime="90" />
+		<monster name="Scarab" x="-1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33164" centery="32723" centerz="9" radius="3">
+		<monster name="Larva" x="3" y="-3" z="9" spawntime="90" />
+		<monster name="Larva" x="1" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="1" y="2" z="9" spawntime="90" />
+		<monster name="Larva" x="-2" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33197" centery="32723" centerz="9" radius="3">
+		<monster name="Larva" x="0" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="1" y="1" z="9" spawntime="90" />
+		<monster name="Larva" x="2" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33100" centery="32725" centerz="9" radius="2">
+		<monster name="Larva" x="2" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="-1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33252" centery="32725" centerz="9" radius="2">
+		<monster name="Larva" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33290" centery="32725" centerz="9" radius="2">
+		<monster name="Scarab" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33081" centery="32726" centerz="9" radius="2">
+		<monster name="Scarab" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33176" centery="32726" centerz="9" radius="3">
+		<monster name="Larva" x="0" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="-1" y="1" z="9" spawntime="90" />
+		<monster name="Larva" x="0" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33140" centery="32727" centerz="9" radius="3">
+		<monster name="Larva" x="2" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="-3" y="1" z="9" spawntime="90" />
+		<monster name="Larva" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33147" centery="32727" centerz="9" radius="2">
+		<monster name="Larva" x="-1" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33225" centery="32727" centerz="9" radius="2">
+		<monster name="Scarab" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33031" centery="32730" centerz="9" radius="1">
+		<monster name="Scarab" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33114" centery="32730" centerz="9" radius="2">
+		<monster name="Scarab" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33042" centery="32731" centerz="9" radius="2">
+		<monster name="Scarab" x="-1" y="-1" z="9" spawntime="90" />
+		<monster name="Scarab" x="1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33166" centery="32731" centerz="9" radius="2">
+		<monster name="Scarab" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33204" centery="32731" centerz="9" radius="2">
+		<monster name="Scarab" x="-1" y="-2" z="9" spawntime="90" />
+		<monster name="Scarab" x="1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33257" centery="32731" centerz="9" radius="2">
+		<monster name="Larva" x="2" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="-2" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33301" centery="32731" centerz="9" radius="2">
+		<monster name="Larva" x="0" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="-2" y="1" z="9" spawntime="90" />
+		<monster name="Larva" x="2" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33021" centery="32732" centerz="9" radius="1">
+		<monster name="Scarab" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33024" centery="32732" centerz="9" radius="1">
+		<monster name="Scarab" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33077" centery="32732" centerz="9" radius="2">
+		<monster name="Scarab" x="-1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33154" centery="32732" centerz="9" radius="3">
+		<monster name="Larva" x="-1" y="-3" z="9" spawntime="90" />
+		<monster name="Larva" x="-1" y="0" z="9" spawntime="90" />
+		<monster name="Larva" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33147" centery="32733" centerz="9" radius="2">
+		<monster name="Scarab" x="0" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="-2" y="0" z="9" spawntime="90" />
+		<monster name="Scarab" x="0" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33182" centery="32734" centerz="9" radius="3">
+		<monster name="Scarab" x="-1" y="-2" z="9" spawntime="90" />
+		<monster name="Scarab" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33267" centery="32734" centerz="9" radius="2">
+		<monster name="Larva" x="0" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33092" centery="32735" centerz="9" radius="2">
+		<monster name="Scarab" x="-1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33103" centery="32735" centerz="9" radius="2">
+		<monster name="Larva" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33134" centery="32735" centerz="9" radius="2">
+		<monster name="Scarab" x="0" y="-1" z="9" spawntime="90" />
+		<monster name="Scarab" x="0" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33294" centery="32735" centerz="9" radius="3">
+		<monster name="Larva" x="1" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="-2" y="-1" z="9" spawntime="90" />
+		<monster name="Scarab" x="0" y="2" z="9" spawntime="90" />
+		<monster name="Larva" x="2" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33028" centery="32736" centerz="9" radius="1">
+		<monster name="Scarab" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33161" centery="32738" centerz="9" radius="2">
+		<monster name="Scarab" x="-1" y="-1" z="9" spawntime="90" />
+		<monster name="Scarab" x="2" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33228" centery="32738" centerz="9" radius="2">
+		<monster name="Scarab" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33084" centery="32739" centerz="9" radius="2">
+		<monster name="Larva" x="1" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="-2" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33212" centery="32739" centerz="9" radius="2">
+		<monster name="Larva" x="-2" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33219" centery="32739" centerz="9" radius="2">
+		<monster name="Larva" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33252" centery="32739" centerz="9" radius="2">
+		<monster name="Scarab" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33071" centery="32740" centerz="9" radius="3">
+		<monster name="Larva" x="-2" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="2" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33109" centery="32740" centerz="9" radius="2">
+		<monster name="Larva" x="-1" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33263" centery="32740" centerz="9" radius="2">
+		<monster name="Larva" x="0" y="-2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33269" centery="32741" centerz="9" radius="2">
+		<monster name="Larva" x="-1" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33116" centery="32742" centerz="9" radius="2">
+		<monster name="Larva" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33301" centery="32742" centerz="9" radius="2">
+		<monster name="Scarab" x="-2" y="0" z="9" spawntime="90" />
+		<monster name="Larva" x="2" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33226" centery="32744" centerz="9" radius="2">
+		<monster name="Scarab" x="0" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33057" centery="32745" centerz="9" radius="3">
+		<monster name="Larva" x="1" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="-1" y="1" z="9" spawntime="90" />
+		<monster name="Larva" x="2" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33265" centery="32747" centerz="9" radius="2">
+		<monster name="Larva" x="-2" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="2" y="-2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33082" centery="32748" centerz="9" radius="2">
+		<monster name="Larva" x="0" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33114" centery="32748" centerz="9" radius="2">
+		<monster name="Larva" x="0" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33095" centery="32749" centerz="9" radius="3">
+		<monster name="Larva" x="0" y="0" z="9" spawntime="90" />
+		<monster name="Larva" x="-3" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33216" centery="32749" centerz="9" radius="2">
+		<monster name="Larva" x="1" y="0" z="9" spawntime="90" />
+		<monster name="Larva" x="-1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33207" centery="32750" centerz="9" radius="2">
+		<monster name="Scarab" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33074" centery="32752" centerz="9" radius="3">
+		<monster name="Larva" x="1" y="-2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33121" centery="32752" centerz="9" radius="2">
+		<monster name="Scarab" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33246" centery="32752" centerz="9" radius="2">
+		<monster name="Larva" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33060" centery="32753" centerz="9" radius="2">
+		<monster name="Larva" x="-1" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="2" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33231" centery="32754" centerz="9" radius="3">
+		<monster name="Scarab" x="-1" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="1" y="1" z="9" spawntime="90" />
+		<monster name="Larva" x="3" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33260" centery="32755" centerz="9" radius="2">
+		<monster name="Scarab" x="-1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33102" centery="32756" centerz="9" radius="2">
+		<monster name="Scarab" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33294" centery="32756" centerz="9" radius="2">
+		<monster name="Larva" x="2" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="-1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33208" centery="32757" centerz="9" radius="2">
+		<monster name="Scarab" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33221" centery="32757" centerz="9" radius="2">
+		<monster name="Scarab" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33272" centery="32757" centerz="9" radius="2">
+		<monster name="Larva" x="-1" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="2" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33278" centery="32757" centerz="9" radius="2">
+		<monster name="Larva" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33117" centery="32759" centerz="9" radius="3">
+		<monster name="Scarab" x="-2" y="-2" z="9" spawntime="90" />
+		<monster name="Scarab" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33133" centery="32761" centerz="9" radius="3">
+		<monster name="Larva" x="2" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="0" y="1" z="9" spawntime="90" />
+		<monster name="Larva" x="-2" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33258" centery="32762" centerz="9" radius="2">
+		<monster name="Larva" x="-2" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33296" centery="32762" centerz="9" radius="2">
+		<monster name="Larva" x="-2" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="2" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33047" centery="32763" centerz="9" radius="2">
+		<monster name="Scarab" x="0" y="-2" z="9" spawntime="90" />
+		<monster name="Scarab" x="1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33066" centery="32763" centerz="9" radius="2">
+		<monster name="Scarab" x="-1" y="-1" z="9" spawntime="90" />
+		<monster name="Scarab" x="1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33097" centery="32764" centerz="9" radius="3">
+		<monster name="Scarab" x="-1" y="-3" z="9" spawntime="90" />
+		<monster name="Scarab" x="3" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33275" centery="32764" centerz="9" radius="2">
+		<monster name="Larva" x="0" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33142" centery="32765" centerz="9" radius="2">
+		<monster name="Scarab" x="-1" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33194" centery="32765" centerz="9" radius="2">
+		<monster name="Scarab" x="-2" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="0" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="2" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33212" centery="32766" centerz="9" radius="2">
+		<monster name="Larva" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33302" centery="32766" centerz="9" radius="2">
+		<monster name="Larva" x="-1" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33112" centery="32767" centerz="9" radius="2">
+		<monster name="Larva" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33120" centery="32767" centerz="9" radius="3">
+		<monster name="Larva" x="2" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="-1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33074" centery="32768" centerz="9" radius="2">
+		<monster name="Larva" x="0" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33253" centery="32768" centerz="9" radius="2">
+		<monster name="Larva" x="-1" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="2" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33288" centery="32768" centerz="9" radius="2">
+		<monster name="Larva" x="1" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="-2" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33054" centery="32769" centerz="9" radius="2">
+		<monster name="Larva" x="-2" y="0" z="9" spawntime="90" />
+		<monster name="Larva" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33088" centery="32769" centerz="9" radius="3">
+		<monster name="Larva" x="-2" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="2" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33259" centery="32771" centerz="9" radius="2">
+		<monster name="Larva" x="2" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="-1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33067" centery="32772" centerz="9" radius="2">
+		<monster name="Larva" x="1" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33199" centery="32772" centerz="9" radius="3">
+		<monster name="Larva" x="2" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="1" y="1" z="9" spawntime="90" />
+		<monster name="Larva" x="-2" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33275" centery="32772" centerz="9" radius="2">
+		<monster name="Larva" x="-2" y="0" z="9" spawntime="90" />
+		<monster name="Larva" x="2" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33098" centery="32773" centerz="9" radius="3">
+		<monster name="Scarab" x="3" y="-1" z="9" spawntime="90" />
+		<monster name="Scarab" x="-1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33220" centery="32773" centerz="9" radius="2">
+		<monster name="Scarab" x="1" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33048" centery="32774" centerz="9" radius="2">
+		<monster name="Larva" x="-1" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="2" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="2" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33116" centery="32774" centerz="9" radius="2">
+		<monster name="Larva" x="-1" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33227" centery="32775" centerz="9" radius="2">
+		<monster name="Scarab" x="0" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33238" centery="32775" centerz="9" radius="2">
+		<monster name="Larva" x="-1" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="2" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33287" centery="32776" centerz="9" radius="2">
+		<monster name="Larva" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33061" centery="32779" centerz="9" radius="2">
+		<monster name="Scarab" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33047" centery="32780" centerz="9" radius="2">
+		<monster name="Larva" x="-1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33080" centery="32780" centerz="9" radius="2">
+		<monster name="Larva" x="-1" y="1" z="9" spawntime="90" />
+		<monster name="Larva" x="2" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33118" centery="32780" centerz="9" radius="2">
+		<monster name="Scarab" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33279" centery="32780" centerz="9" radius="2">
+		<monster name="Larva" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33237" centery="32782" centerz="9" radius="2">
+		<monster name="Scarab" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33099" centery="32783" centerz="9" radius="2">
+		<monster name="Larva" x="2" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="-1" y="0" z="9" spawntime="90" />
+		<monster name="Larva" x="-1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33127" centery="32784" centerz="9" radius="3">
+		<monster name="Larva" x="-2" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="0" y="1" z="9" spawntime="90" />
+		<monster name="Larva" x="2" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33199" centery="32785" centerz="9" radius="2">
+		<monster name="Larva" x="-2" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="2" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33229" centery="32785" centerz="9" radius="2">
+		<monster name="Larva" x="-1" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="2" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33286" centery="32785" centerz="9" radius="2">
+		<monster name="Larva" x="0" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33047" centery="32786" centerz="9" radius="2">
+		<monster name="Scarab" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33067" centery="32787" centerz="9" radius="2">
+		<monster name="Scarab" x="0" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33115" centery="32787" centerz="9" radius="2">
+		<monster name="Larva" x="1" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="-1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33086" centery="32789" centerz="9" radius="2">
+		<monster name="Larva" x="-1" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="2" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33107" centery="32790" centerz="9" radius="2">
+		<monster name="Scarab" x="-1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33097" centery="32791" centerz="9" radius="2">
+		<monster name="Scarab" x="0" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33250" centery="32791" centerz="9" radius="2">
+		<monster name="Larva" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33055" centery="32794" centerz="9" radius="3">
+		<monster name="Larva" x="-3" y="-3" z="9" spawntime="90" />
+		<monster name="Larva" x="3" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="-1" y="2" z="9" spawntime="90" />
+		<monster name="Larva" x="1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33234" centery="32794" centerz="9" radius="2">
+		<monster name="Larva" x="0" y="-2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33071" centery="32795" centerz="9" radius="2">
+		<monster name="Scarab" x="1" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33225" centery="32795" centerz="9" radius="2">
+		<monster name="Scarab" x="1" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33265" centery="32795" centerz="9" radius="3">
+		<monster name="Larva" x="-1" y="-3" z="9" spawntime="90" />
+		<monster name="Larva" x="2" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="0" y="1" z="9" spawntime="90" />
+		<monster name="Larva" x="3" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33048" centery="32797" centerz="9" radius="2">
+		<monster name="Larva" x="-1" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33244" centery="32797" centerz="9" radius="2">
+		<monster name="Larva" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33079" centery="32799" centerz="9" radius="2">
+		<monster name="Scarab" x="-1" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33065" centery="32807" centerz="9" radius="2">
+		<monster name="Larva" x="-2" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33083" centery="32807" centerz="9" radius="2">
+		<monster name="Scarab" x="2" y="-1" z="9" spawntime="90" />
+		<monster name="Scarab" x="-1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33243" centery="32808" centerz="9" radius="2">
+		<monster name="Larva" x="-2" y="-2" z="9" spawntime="90" />
+		<monster name="Larva" x="2" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33049" centery="32812" centerz="9" radius="2">
+		<monster name="Larva" x="1" y="-1" z="9" spawntime="90" />
+		<monster name="Larva" x="-1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33063" centery="32817" centerz="9" radius="2">
+		<monster name="Scarab" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33073" centery="32818" centerz="9" radius="2">
+		<monster name="Scarab" x="-1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33052" centery="32819" centerz="9" radius="2">
+		<monster name="Scarab" x="1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33121" centery="32605" centerz="10" radius="3">
+		<monster name="Scarab" x="2" y="-1" z="10" spawntime="90" />
+		<monster name="Scarab" x="-2" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33118" centery="32613" centerz="10" radius="3">
+		<monster name="Larva" x="1" y="-3" z="10" spawntime="90" />
+		<monster name="Larva" x="-2" y="-1" z="10" spawntime="90" />
+		<monster name="Larva" x="2" y="1" z="10" spawntime="90" />
+		<monster name="Larva" x="-1" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33114" centery="32631" centerz="10" radius="4">
+		<monster name="Scarab" x="1" y="-2" z="10" spawntime="90" />
+		<monster name="Scarab" x="-2" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33070" centery="32639" centerz="10" radius="3">
+		<monster name="Scarab" x="1" y="-1" z="10" spawntime="90" />
+		<monster name="Scarab" x="-1" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33106" centery="32642" centerz="10" radius="3">
+		<monster name="Larva" x="1" y="-1" z="10" spawntime="90" />
+		<monster name="Larva" x="-1" y="3" z="10" spawntime="90" />
+		<monster name="Larva" x="3" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33076" centery="32649" centerz="10" radius="3">
+		<monster name="Larva" x="-1" y="-2" z="10" spawntime="90" />
+		<monster name="Larva" x="2" y="-2" z="10" spawntime="90" />
+		<monster name="Scarab" x="-3" y="0" z="10" spawntime="90" />
+		<monster name="Larva" x="-1" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33114" centery="32649" centerz="10" radius="3">
+		<monster name="Scarab" x="-1" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33114" centery="32658" centerz="10" radius="2">
+		<monster name="Scarab" x="0" y="-1" z="10" spawntime="90" />
+		<monster name="Scarab" x="1" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33108" centery="32664" centerz="10" radius="2">
+		<monster name="Larva" x="-2" y="-2" z="10" spawntime="90" />
+		<monster name="Larva" x="1" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33117" centery="32670" centerz="10" radius="3">
+		<monster name="Larva" x="-2" y="-3" z="10" spawntime="90" />
+		<monster name="Larva" x="2" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33096" centery="32674" centerz="10" radius="3">
+		<monster name="Larva" x="-2" y="-1" z="10" spawntime="90" />
+		<monster name="Larva" x="2" y="-1" z="10" spawntime="90" />
+		<monster name="Larva" x="0" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33092" centery="32682" centerz="10" radius="3">
+		<monster name="Scarab" x="2" y="-2" z="10" spawntime="90" />
+		<monster name="Scarab" x="0" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33055" centery="32686" centerz="10" radius="5">
+		<monster name="Scarab" x="-1" y="-3" z="10" spawntime="90" />
+		<monster name="Larva" x="1" y="-3" z="10" spawntime="90" />
+		<monster name="Larva" x="5" y="-3" z="10" spawntime="90" />
+		<monster name="Larva" x="-3" y="-1" z="10" spawntime="90" />
+		<monster name="Larva" x="3" y="-1" z="10" spawntime="90" />
+		<monster name="Scarab" x="-4" y="1" z="10" spawntime="90" />
+		<monster name="Scarab" x="-1" y="4" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33071" centery="32687" centerz="10" radius="3">
+		<monster name="Larva" x="2" y="-2" z="10" spawntime="90" />
+		<monster name="Larva" x="0" y="2" z="10" spawntime="90" />
+		<monster name="Larva" x="2" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33126" centery="32711" centerz="10" radius="3">
+		<monster name="Scarab" x="1" y="-2" z="10" spawntime="90" />
+		<monster name="Scarab" x="-2" y="0" z="10" spawntime="90" />
+		<monster name="Scarab" x="3" y="1" z="10" spawntime="90" />
+		<monster name="Scarab" x="0" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33124" centery="32719" centerz="10" radius="3">
+		<monster name="Larva" x="1" y="-2" z="10" spawntime="90" />
+		<monster name="Larva" x="-1" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33139" centery="32721" centerz="10" radius="3">
+		<monster name="Scarab" x="0" y="-2" z="10" spawntime="90" />
+		<monster name="Scarab" x="2" y="1" z="10" spawntime="90" />
+		<monster name="Larva" x="-2" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33131" centery="32727" centerz="10" radius="3">
+		<monster name="Larva" x="3" y="-3" z="10" spawntime="90" />
+		<monster name="Larva" x="-2" y="0" z="10" spawntime="90" />
+		<monster name="Larva" x="1" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33207" centery="32727" centerz="10" radius="5">
+		<monster name="Scarab" x="-2" y="-3" z="10" spawntime="90" />
+		<monster name="Larva" x="3" y="-1" z="10" spawntime="90" />
+		<monster name="Larva" x="-4" y="0" z="10" spawntime="90" />
+		<monster name="Larva" x="1" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33224" centery="32728" centerz="10" radius="5">
+		<monster name="Scarab" x="1" y="-5" z="10" spawntime="90" />
+		<monster name="Scarab" x="-3" y="-3" z="10" spawntime="90" />
+		<monster name="Larva" x="3" y="-1" z="10" spawntime="90" />
+		<monster name="Larva" x="-2" y="0" z="10" spawntime="90" />
+		<monster name="Larva" x="3" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33245" centery="32731" centerz="10" radius="5">
+		<monster name="Scarab" x="2" y="-3" z="10" spawntime="90" />
+		<monster name="Larva" x="-4" y="-1" z="10" spawntime="90" />
+		<monster name="Larva" x="-1" y="-1" z="10" spawntime="90" />
+		<monster name="Scarab" x="3" y="1" z="10" spawntime="90" />
+		<monster name="Larva" x="-2" y="2" z="10" spawntime="90" />
+		<monster name="Scarab" x="1" y="3" z="10" spawntime="90" />
+		<monster name="Larva" x="-5" y="4" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33131" centery="32740" centerz="10" radius="3">
+		<monster name="Larva" x="0" y="-2" z="10" spawntime="90" />
+		<monster name="Larva" x="-2" y="0" z="10" spawntime="90" />
+		<monster name="Larva" x="2" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33143" centery="32742" centerz="10" radius="3">
+		<monster name="Scarab" x="2" y="-2" z="10" spawntime="90" />
+		<monster name="Scarab" x="-2" y="-1" z="10" spawntime="90" />
+		<monster name="Scarab" x="0" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33221" centery="32744" centerz="10" radius="4">
+		<monster name="Larva" x="4" y="-3" z="10" spawntime="90" />
+		<monster name="Larva" x="-4" y="-2" z="10" spawntime="90" />
+		<monster name="Larva" x="1" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33185" centery="32745" centerz="10" radius="5">
+		<monster name="Scarab" x="-3" y="-3" z="10" spawntime="90" />
+		<monster name="Larva" x="1" y="-3" z="10" spawntime="90" />
+		<monster name="Scarab" x="4" y="-3" z="10" spawntime="90" />
+		<monster name="Larva" x="-4" y="0" z="10" spawntime="90" />
+		<monster name="Scarab" x="2" y="1" z="10" spawntime="90" />
+		<monster name="Scarab" x="-1" y="2" z="10" spawntime="90" />
+		<monster name="Larva" x="4" y="2" z="10" spawntime="90" />
+		<monster name="Scarab" x="3" y="4" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33238" centery="32745" centerz="10" radius="5">
+		<monster name="Scarab" x="0" y="-3" z="10" spawntime="90" />
+		<monster name="Larva" x="1" y="-1" z="10" spawntime="90" />
+		<monster name="Larva" x="-4" y="0" z="10" spawntime="90" />
+		<monster name="Scarab" x="4" y="0" z="10" spawntime="90" />
+		<monster name="Larva" x="2" y="2" z="10" spawntime="90" />
+		<monster name="Larva" x="-1" y="3" z="10" spawntime="90" />
+		<monster name="Scarab" x="-3" y="5" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33207" centery="32747" centerz="10" radius="4">
+		<monster name="Larva" x="-1" y="-4" z="10" spawntime="90" />
+		<monster name="Scarab" x="2" y="-3" z="10" spawntime="90" />
+		<monster name="Larva" x="-3" y="0" z="10" spawntime="90" />
+		<monster name="Larva" x="3" y="0" z="10" spawntime="90" />
+		<monster name="Scarab" x="1" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33111" centery="32748" centerz="10" radius="2">
+		<monster name="Larva" x="2" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33259" centery="32748" centerz="10" radius="5">
+		<monster name="Larva" x="0" y="-2" z="10" spawntime="90" />
+		<monster name="Larva" x="-3" y="0" z="10" spawntime="90" />
+		<monster name="Scarab" x="5" y="0" z="10" spawntime="90" />
+		<monster name="Larva" x="-5" y="2" z="10" spawntime="90" />
+		<monster name="Larva" x="2" y="2" z="10" spawntime="90" />
+		<monster name="Scarab" x="3" y="4" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33194" centery="32751" centerz="10" radius="2">
+		<monster name="Larva" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33138" centery="32752" centerz="10" radius="3">
+		<monster name="Scarab" x="-1" y="-1" z="10" spawntime="90" />
+		<monster name="Scarab" x="2" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33118" centery="32754" centerz="10" radius="3">
+		<monster name="Larva" x="-2" y="-2" z="10" spawntime="90" />
+		<monster name="Larva" x="-1" y="1" z="10" spawntime="90" />
+		<monster name="Larva" x="3" y="1" z="10" spawntime="90" />
+		<monster name="Larva" x="3" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33085" centery="32757" centerz="10" radius="3">
+		<monster name="Scarab" x="2" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33175" centery="32757" centerz="10" radius="3">
+		<monster name="Larva" x="2" y="-1" z="10" spawntime="90" />
+		<monster name="Larva" x="3" y="2" z="10" spawntime="90" />
+		<monster name="Larva" x="-1" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33225" centery="32757" centerz="10" radius="2">
+		<monster name="Scarab" x="-1" y="-1" z="10" spawntime="90" />
+		<monster name="Larva" x="1" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33232" centery="32759" centerz="10" radius="2">
+		<monster name="Scarab" x="1" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33110" centery="32760" centerz="10" radius="3">
+		<monster name="Scarab" x="3" y="-2" z="10" spawntime="90" />
+		<monster name="Scarab" x="-1" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33206" centery="32760" centerz="10" radius="2">
+		<monster name="Larva" x="-2" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33076" centery="32761" centerz="10" radius="3">
+		<monster name="Larva" x="-2" y="-1" z="10" spawntime="90" />
+		<monster name="Larva" x="2" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33183" centery="32761" centerz="10" radius="3">
+		<monster name="Scarab" x="-1" y="-2" z="10" spawntime="90" />
+		<monster name="Scarab" x="2" y="1" z="10" spawntime="90" />
+		<monster name="Scarab" x="-3" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33263" centery="32762" centerz="10" radius="5">
+		<monster name="Scarab" x="4" y="-3" z="10" spawntime="90" />
+		<monster name="Larva" x="-2" y="-1" z="10" spawntime="90" />
+		<monster name="Scarab" x="0" y="0" z="10" spawntime="90" />
+		<monster name="Larva" x="1" y="0" z="10" spawntime="90" />
+		<monster name="Scarab" x="4" y="0" z="10" spawntime="90" />
+		<monster name="Larva" x="-5" y="1" z="10" spawntime="90" />
+		<monster name="Scarab" x="5" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33196" centery="32763" centerz="10" radius="3">
+		<monster name="Larva" x="0" y="-2" z="10" spawntime="90" />
+		<monster name="Larva" x="3" y="0" z="10" spawntime="90" />
+		<monster name="Larva" x="-2" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33220" centery="32766" centerz="10" radius="2">
+		<monster name="Larva" x="1" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33087" centery="32769" centerz="10" radius="3">
+		<monster name="Larva" x="-1" y="-2" z="10" spawntime="90" />
+		<monster name="Larva" x="2" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33133" centery="32769" centerz="10" radius="3">
+		<monster name="Scarab" x="-2" y="0" z="10" spawntime="90" />
+		<monster name="Scarab" x="2" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33187" centery="32769" centerz="10" radius="2">
+		<monster name="Larva" x="-1" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33124" centery="32772" centerz="10" radius="3">
+		<monster name="Larva" x="3" y="-3" z="10" spawntime="90" />
+		<monster name="Larva" x="-3" y="0" z="10" spawntime="90" />
+		<monster name="Larva" x="2" y="0" z="10" spawntime="90" />
+		<monster name="Larva" x="-1" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33198" centery="32773" centerz="10" radius="2">
+		<monster name="Larva" x="-1" y="-1" z="10" spawntime="90" />
+		<monster name="Larva" x="1" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33217" centery="32773" centerz="10" radius="3">
+		<monster name="Larva" x="-2" y="-2" z="10" spawntime="90" />
+		<monster name="Larva" x="2" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33104" centery="32775" centerz="10" radius="3">
+		<monster name="Scarab" x="1" y="-2" z="10" spawntime="90" />
+		<monster name="Scarab" x="1" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33270" centery="32775" centerz="10" radius="5">
+		<monster name="Larva" x="0" y="-3" z="10" spawntime="90" />
+		<monster name="Larva" x="-4" y="-1" z="10" spawntime="90" />
+		<monster name="Scarab" x="2" y="0" z="10" spawntime="90" />
+		<monster name="Larva" x="0" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33054" centery="32776" centerz="10" radius="5">
+		<monster name="Larva" x="4" y="-4" z="10" spawntime="90" />
+		<monster name="Larva" x="-2" y="-3" z="10" spawntime="90" />
+		<monster name="Larva" x="4" y="0" z="10" spawntime="90" />
+		<monster name="Larva" x="1" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33235" centery="32776" centerz="10" radius="3">
+		<monster name="Larva" x="3" y="-1" z="10" spawntime="90" />
+		<monster name="Larva" x="-1" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33094" centery="32777" centerz="10" radius="3">
+		<monster name="Larva" x="-2" y="-2" z="10" spawntime="90" />
+		<monster name="Larva" x="1" y="0" z="10" spawntime="90" />
+		<monster name="Larva" x="1" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33180" centery="32777" centerz="10" radius="4">
+		<monster name="Larva" x="0" y="-3" z="10" spawntime="90" />
+		<monster name="Scarab" x="-2" y="-2" z="10" spawntime="90" />
+		<monster name="Larva" x="3" y="0" z="10" spawntime="90" />
+		<monster name="Larva" x="-3" y="1" z="10" spawntime="90" />
+		<monster name="Scarab" x="1" y="3" z="10" spawntime="90" />
+		<monster name="Larva" x="3" y="4" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33074" centery="32778" centerz="10" radius="3">
+		<monster name="Larva" x="0" y="-2" z="10" spawntime="90" />
+		<monster name="Larva" x="3" y="-1" z="10" spawntime="90" />
+		<monster name="Larva" x="-2" y="1" z="10" spawntime="90" />
+		<monster name="Larva" x="2" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33199" centery="32780" centerz="10" radius="2">
+		<monster name="Larva" x="2" y="-1" z="10" spawntime="90" />
+		<monster name="Scarab" x="-1" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33217" centery="32780" centerz="10" radius="2">
+		<monster name="Larva" x="0" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33114" centery="32781" centerz="10" radius="3">
+		<monster name="Larva" x="-2" y="-2" z="10" spawntime="90" />
+		<monster name="Larva" x="2" y="0" z="10" spawntime="90" />
+		<monster name="Larva" x="2" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33193" centery="32784" centerz="10" radius="2">
+		<monster name="Scarab" x="2" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33080" centery="32786" centerz="10" radius="3">
+		<monster name="Larva" x="-3" y="-3" z="10" spawntime="90" />
+		<monster name="Larva" x="1" y="-3" z="10" spawntime="90" />
+		<monster name="Larva" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33100" centery="32786" centerz="10" radius="3">
+		<monster name="Larva" x="1" y="-2" z="10" spawntime="90" />
+		<monster name="Larva" x="0" y="2" z="10" spawntime="90" />
+		<monster name="Larva" x="3" y="2" z="10" spawntime="90" />
+		<monster name="Larva" x="-3" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33122" centery="32786" centerz="10" radius="3">
+		<monster name="Larva" x="-3" y="-2" z="10" spawntime="90" />
+		<monster name="Scarab" x="-2" y="-1" z="10" spawntime="90" />
+		<monster name="Scarab" x="2" y="0" z="10" spawntime="90" />
+		<monster name="Scarab" x="1" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33239" centery="32786" centerz="10" radius="4">
+		<monster name="Larva" x="-4" y="-3" z="10" spawntime="90" />
+		<monster name="Larva" x="1" y="-1" z="10" spawntime="90" />
+		<monster name="Larva" x="-3" y="1" z="10" spawntime="90" />
+		<monster name="Scarab" x="3" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33069" centery="32787" centerz="10" radius="3">
+		<monster name="Scarab" x="-1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33088" centery="32787" centerz="10" radius="3">
+		<monster name="Scarab" x="0" y="-2" z="10" spawntime="90" />
+		<monster name="Scarab" x="-2" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33225" centery="32789" centerz="10" radius="2">
+		<monster name="Larva" x="-1" y="-1" z="10" spawntime="90" />
+		<monster name="Larva" x="2" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33266" centery="32789" centerz="10" radius="5">
+		<monster name="Larva" x="-3" y="-4" z="10" spawntime="90" />
+		<monster name="Larva" x="0" y="-2" z="10" spawntime="90" />
+		<monster name="Scarab" x="3" y="-1" z="10" spawntime="90" />
+		<monster name="Larva" x="-4" y="1" z="10" spawntime="90" />
+		<monster name="Scarab" x="0" y="3" z="10" spawntime="90" />
+		<monster name="Larva" x="2" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33187" centery="32790" centerz="10" radius="2">
+		<monster name="Larva" x="-2" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33108" centery="32791" centerz="10" radius="3">
+		<monster name="Scarab" x="-1" y="-2" z="10" spawntime="90" />
+		<monster name="Scarab" x="3" y="-1" z="10" spawntime="90" />
+		<monster name="Scarab" x="1" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33095" centery="32795" centerz="10" radius="3">
+		<monster name="Larva" x="1" y="-3" z="10" spawntime="90" />
+		<monster name="Scarab" x="-1" y="0" z="10" spawntime="90" />
+		<monster name="Scarab" x="2" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33168" centery="32796" centerz="10" radius="3">
+		<monster name="Scarab" x="2" y="-3" z="10" spawntime="90" />
+		<monster name="Larva" x="-1" y="-2" z="10" spawntime="90" />
+		<monster name="Scarab" x="2" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33224" centery="32796" centerz="10" radius="2">
+		<monster name="Scarab" x="0" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33179" centery="32797" centerz="10" radius="4">
+		<monster name="Larva" x="1" y="-3" z="10" spawntime="90" />
+		<monster name="Larva" x="-3" y="-1" z="10" spawntime="90" />
+		<monster name="Scarab" x="2" y="-1" z="10" spawntime="90" />
+		<monster name="Larva" x="4" y="0" z="10" spawntime="90" />
+		<monster name="Scarab" x="-2" y="2" z="10" spawntime="90" />
+		<monster name="Larva" x="0" y="4" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33199" centery="32799" centerz="10" radius="3">
+		<monster name="Larva" x="1" y="-2" z="10" spawntime="90" />
+		<monster name="Larva" x="-3" y="-1" z="10" spawntime="90" />
+		<monster name="Larva" x="-2" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33234" centery="32799" centerz="10" radius="4">
+		<monster name="Larva" x="-3" y="-3" z="10" spawntime="90" />
+		<monster name="Larva" x="1" y="-2" z="10" spawntime="90" />
+		<monster name="Larva" x="0" y="1" z="10" spawntime="90" />
+		<monster name="Larva" x="3" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33210" centery="32803" centerz="10" radius="3">
+		<monster name="Larva" x="0" y="-3" z="10" spawntime="90" />
+		<monster name="Larva" x="-3" y="0" z="10" spawntime="90" />
+		<monster name="Larva" x="1" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33191" centery="32804" centerz="10" radius="3">
+		<monster name="Scarab" x="-3" y="-2" z="10" spawntime="90" />
+		<monster name="Scarab" x="3" y="-1" z="10" spawntime="90" />
+		<monster name="Scarab" x="0" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33262" centery="32804" centerz="10" radius="4">
+		<monster name="Larva" x="-2" y="-3" z="10" spawntime="90" />
+		<monster name="Larva" x="2" y="-1" z="10" spawntime="90" />
+		<monster name="Larva" x="-3" y="2" z="10" spawntime="90" />
+		<monster name="Scarab" x="2" y="2" z="10" spawntime="90" />
+		<monster name="Scarab" x="-2" y="4" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33177" centery="32807" centerz="10" radius="3">
+		<monster name="Larva" x="2" y="-3" z="10" spawntime="90" />
+		<monster name="Scarab" x="0" y="-2" z="10" spawntime="90" />
+		<monster name="Larva" x="-2" y="0" z="10" spawntime="90" />
+		<monster name="Scarab" x="2" y="1" z="10" spawntime="90" />
+		<monster name="Scarab" x="-3" y="3" z="10" spawntime="90" />
+		<monster name="Larva" x="3" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33225" centery="32810" centerz="10" radius="5">
+		<monster name="Larva" x="-2" y="-5" z="10" spawntime="90" />
+		<monster name="Larva" x="2" y="-3" z="10" spawntime="90" />
+		<monster name="Larva" x="0" y="-1" z="10" spawntime="90" />
+		<monster name="Scarab" x="-3" y="2" z="10" spawntime="90" />
+		<monster name="Scarab" x="3" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33247" centery="32811" centerz="10" radius="5">
+		<monster name="Larva" x="-2" y="-4" z="10" spawntime="90" />
+		<monster name="Larva" x="3" y="-1" z="10" spawntime="90" />
+		<monster name="Larva" x="1" y="2" z="10" spawntime="90" />
+		<monster name="Larva" x="-2" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33210" centery="32813" centerz="10" radius="4">
+		<monster name="Scarab" x="0" y="-3" z="10" spawntime="90" />
+		<monster name="Scarab" x="-3" y="0" z="10" spawntime="90" />
+		<monster name="Scarab" x="3" y="0" z="10" spawntime="90" />
+		<monster name="Scarab" x="-1" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33057" centery="32761" centerz="11" radius="5">
+		<monster name="Scarab" x="-1" y="-3" z="11" spawntime="90" />
+		<monster name="Ancient Scarab" x="4" y="-2" z="11" spawntime="90" />
+		<monster name="Ancient Scarab" x="-4" y="1" z="11" spawntime="90" />
+		<monster name="Scarab" x="3" y="1" z="11" spawntime="90" />
+		<monster name="Scarab" x="-2" y="2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33039" centery="32762" centerz="11" radius="6">
+		<monster name="Ancient Scarab" x="-1" y="-4" z="11" spawntime="90" />
+		<monster name="Larva" x="-6" y="-2" z="11" spawntime="90" />
+		<monster name="Larva" x="-2" y="-1" z="11" spawntime="90" />
+		<monster name="Ancient Scarab" x="6" y="-1" z="11" spawntime="90" />
+		<monster name="Ancient Scarab" x="-2" y="2" z="11" spawntime="90" />
+		<monster name="Larva" x="3" y="2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33075" centery="32762" centerz="11" radius="5">
+		<monster name="Larva" x="5" y="-5" z="11" spawntime="90" />
+		<monster name="Ancient Scarab" x="0" y="-3" z="11" spawntime="90" />
+		<monster name="Larva" x="-5" y="-2" z="11" spawntime="90" />
+		<monster name="Larva" x="2" y="-2" z="11" spawntime="90" />
+		<monster name="Scarab" x="4" y="-1" z="11" spawntime="90" />
+		<monster name="Scarab" x="-2" y="2" z="11" spawntime="90" />
+		<monster name="Larva" x="-5" y="3" z="11" spawntime="90" />
+		<monster name="Larva" x="1" y="4" z="11" spawntime="90" />
+		<monster name="Ancient Scarab" x="4" y="5" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33053" centery="32776" centerz="11" radius="4">
+		<monster name="Scarab" x="1" y="-4" z="11" spawntime="90" />
+		<monster name="Scarab" x="-4" y="-3" z="11" spawntime="90" />
+		<monster name="Scarab" x="3" y="2" z="11" spawntime="90" />
+		<monster name="Scarab" x="1" y="3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33066" centery="32777" centerz="11" radius="5">
+		<monster name="Ancient Scarab" x="1" y="-4" z="11" spawntime="90" />
+		<monster name="Scarab" x="-3" y="0" z="11" spawntime="90" />
+		<monster name="Scarab" x="2" y="2" z="11" spawntime="90" />
+		<monster name="Ancient Scarab" x="0" y="4" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33078" centery="32779" centerz="11" radius="5">
+		<monster name="Ancient Scarab" x="0" y="-4" z="11" spawntime="90" />
+		<monster name="Larva" x="-2" y="-2" z="11" spawntime="90" />
+		<monster name="Larva" x="4" y="-1" z="11" spawntime="90" />
+		<monster name="Larva" x="1" y="0" z="11" spawntime="90" />
+		<monster name="Larva" x="-2" y="2" z="11" spawntime="90" />
+		<monster name="Ancient Scarab" x="3" y="3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33078" centery="32791" centerz="11" radius="5">
+		<monster name="Scarab" x="1" y="-4" z="11" spawntime="90" />
+		<monster name="Larva" x="-3" y="-3" z="11" spawntime="90" />
+		<monster name="Scarab" x="4" y="-1" z="11" spawntime="90" />
+		<monster name="Scarab" x="-4" y="2" z="11" spawntime="90" />
+		<monster name="Scarab" x="-1" y="2" z="11" spawntime="90" />
+		<monster name="Ancient Scarab" x="2" y="2" z="11" spawntime="90" />
+		<monster name="Larva" x="4" y="2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33065" centery="32792" centerz="11" radius="5">
+		<monster name="Larva" x="0" y="-3" z="11" spawntime="90" />
+		<monster name="Ancient Scarab" x="3" y="-1" z="11" spawntime="90" />
+		<monster name="Larva" x="-4" y="0" z="11" spawntime="90" />
+		<monster name="Scarab" x="-1" y="1" z="11" spawntime="90" />
+		<monster name="Ancient Scarab" x="-3" y="4" z="11" spawntime="90" />
+		<monster name="Scarab" x="2" y="4" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33050" centery="32793" centerz="11" radius="5">
+		<monster name="Ancient Scarab" x="0" y="-4" z="11" spawntime="90" />
+		<monster name="Scarab" x="-3" y="-1" z="11" spawntime="90" />
+		<monster name="Ancient Scarab" x="4" y="1" z="11" spawntime="90" />
+		<monster name="Ancient Scarab" x="-4" y="3" z="11" spawntime="90" />
+		<monster name="Scarab" x="1" y="3" z="11" spawntime="90" />
+	</monster>
+</monsters>

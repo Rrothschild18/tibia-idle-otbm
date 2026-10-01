@@ -68,10 +68,59 @@ function dumpMap(mapName) {
   fs.mkdirSync(outputDir, { recursive: true });
 
   const data = otbm2json.read(input);
-  fs.writeFileSync(output, JSON.stringify(data, null, 2), "utf-8");
+  _writeJsonStream(output, data);
 
   console.log(`✔ ${mapName}.raw.json gerado`);
   return output;
+}
+
+// JSON.stringify de cidade grande (THAIS: 11,9M tiles) estoura o tamanho
+// máximo de string do V8. Serializa por streaming, em pedaços de 8MB,
+// compacto — quem lê é json.load do Python, que não liga pra indentação.
+function _writeJsonStream(output, value) {
+  const fd = fs.openSync(output, "w");
+  const parts = [];
+  let size = 0;
+  const flush = () => {
+    if (parts.length) {
+      fs.writeSync(fd, parts.join(""));
+      parts.length = 0;
+      size = 0;
+    }
+  };
+  const push = (s) => {
+    parts.push(s);
+    size += s.length;
+    if (size > 8 * 1024 * 1024) flush();
+  };
+  const walk = (v) => {
+    if (v === undefined || v === null || typeof v === "function") {
+      push("null");
+    } else if (Array.isArray(v)) {
+      push("[");
+      for (let i = 0; i < v.length; i++) {
+        if (i) push(",");
+        walk(v[i]);
+      }
+      push("]");
+    } else if (typeof v === "object") {
+      push("{");
+      let first = true;
+      for (const key of Object.keys(v)) {
+        if (v[key] === undefined) continue;
+        if (!first) push(",");
+        first = false;
+        push(`${JSON.stringify(key)}:`);
+        walk(v[key]);
+      }
+      push("}");
+    } else {
+      push(JSON.stringify(v));
+    }
+  };
+  walk(value);
+  flush();
+  fs.closeSync(fd);
 }
 
 module.exports = { dumpMap, resolveMapDir };

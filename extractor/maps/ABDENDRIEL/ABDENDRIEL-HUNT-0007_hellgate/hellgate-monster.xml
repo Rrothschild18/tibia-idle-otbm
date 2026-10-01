@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32679" centery="31601" centerz="11" radius="3">
+		<monster name="Troll" x="-3" y="3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32679" centery="31608" centerz="11" radius="3">
+		<monster name="Troll" x="3" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32686" centery="31612" centerz="11" radius="2">
+		<monster name="Troll Champion" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32694" centery="31619" centerz="11" radius="2">
+		<monster name="Troll" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32700" centery="31623" centerz="11" radius="2">
+		<monster name="Troll" x="1" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32703" centery="31630" centerz="11" radius="2">
+		<monster name="Troll Champion" x="-1" y="0" z="11" spawntime="90" />
+		<monster name="Troll Champion" x="2" y="2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32668" centery="31634" centerz="11" radius="4">
+		<monster name="Troll Champion" x="-1" y="-2" z="11" spawntime="90" />
+		<monster name="Troll" x="1" y="2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32677" centery="31636" centerz="11" radius="2">
+		<monster name="Troll" x="0" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32686" centery="31643" centerz="11" radius="3">
+		<monster name="Troll Champion" x="-3" y="-3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32672" centery="31650" centerz="11" radius="3">
+		<monster name="Troll Champion" x="3" y="-1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32672" centery="31657" centerz="11" radius="3">
+		<monster name="Troll" x="-1" y="2" z="11" spawntime="90" />
+		<monster name="Troll Champion" x="-2" y="3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32686" centery="31657" centerz="11" radius="3">
+		<monster name="Troll" x="-1" y="3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32686" centery="31664" centerz="11" radius="3">
+		<monster name="Troll" x="1" y="3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32693" centery="31664" centerz="11" radius="3">
+		<monster name="Troll" x="-2" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32665" centery="31671" centerz="11" radius="3">
+		<monster name="Troll" x="2" y="-2" z="11" spawntime="90" />
+		<monster name="Troll" x="3" y="-2" z="11" spawntime="90" />
+		<monster name="Troll" x="1" y="-1" z="11" spawntime="90" />
+	</monster>
+</monsters>

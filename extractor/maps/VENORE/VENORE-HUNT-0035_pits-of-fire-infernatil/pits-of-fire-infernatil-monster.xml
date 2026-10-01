@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32910" centery="32216" centerz="15" radius="5">
+		<monster name="Hellfire Fighter" x="-3" y="-5" z="15" spawntime="90" />
+		<monster name="Hellfire Fighter" x="-1" y="-4" z="15" spawntime="90" />
+		<monster name="Hellhound" x="1" y="-3" z="15" spawntime="90" />
+		<monster name="Hellfire Fighter" x="5" y="-3" z="15" spawntime="90" />
+		<monster name="Hellhound" x="-4" y="-2" z="15" spawntime="90" />
+		<monster name="Demon" x="0" y="-1" z="15" spawntime="90" />
+		<monster name="Hellfire Fighter" x="3" y="-1" z="15" spawntime="90" />
+		<monster name="Hellhound" x="-4" y="3" z="15" spawntime="90" />
+	</monster>
+	<monster centerx="32900" centery="32218" centerz="15" radius="3">
+		<monster name="Hellfire Fighter" x="-1" y="0" z="15" spawntime="90" />
+	</monster>
+	<monster centerx="32867" centery="32219" centerz="15" radius="2">
+		<monster name="Hellhound" x="1" y="-1" z="15" spawntime="90" />
+	</monster>
+	<monster centerx="32892" centery="32219" centerz="15" radius="3">
+		<monster name="Hellfire Fighter" x="-2" y="-2" z="15" spawntime="90" />
+		<monster name="Hellfire Fighter" x="3" y="-2" z="15" spawntime="90" />
+		<monster name="Hellfire Fighter" x="1" y="2" z="15" spawntime="90" />
+	</monster>
+	<monster centerx="32876" centery="32222" centerz="15" radius="2">
+		<monster name="Hellfire Fighter" x="0" y="0" z="15" spawntime="90" />
+	</monster>
+	<monster centerx="32862" centery="32223" centerz="15" radius="2">
+		<monster name="Hellhound" x="1" y="1" z="15" spawntime="90" />
+	</monster>
+	<monster centerx="32892" centery="32227" centerz="15" radius="2">
+		<monster name="Hellfire Fighter" x="1" y="1" z="15" spawntime="90" />
+	</monster>
+	<monster centerx="32883" centery="32228" centerz="15" radius="2">
+		<monster name="Hellfire Fighter" x="1" y="-1" z="15" spawntime="90" />
+	</monster>
+	<monster centerx="32857" centery="32230" centerz="15" radius="3">
+		<monster name="Hellfire Fighter" x="0" y="-3" z="15" spawntime="90" />
+		<monster name="Hellfire Fighter" x="1" y="0" z="15" spawntime="90" />
+	</monster>
+	<monster centerx="32892" centery="32233" centerz="15" radius="2">
+		<monster name="Hellhound" x="1" y="0" z="15" spawntime="90" />
+	</monster>
+	<monster centerx="32883" centery="32236" centerz="15" radius="3">
+		<monster name="Hellfire Fighter" x="1" y="-2" z="15" spawntime="90" />
+		<monster name="Hellfire Fighter" x="0" y="3" z="15" spawntime="90" />
+	</monster>
+	<monster centerx="32892" centery="32239" centerz="15" radius="2">
+		<monster name="Hellfire Fighter" x="-1" y="-1" z="15" spawntime="90" />
+		<monster name="Hellhound" x="2" y="-1" z="15" spawntime="90" />
+		<monster name="Hellhound" x="2" y="2" z="15" spawntime="90" />
+	</monster>
+	<monster centerx="32892" centery="32245" centerz="15" radius="2">
+		<monster name="Demon" x="1" y="0" z="15" spawntime="90" />
+	</monster>
+</monsters>

@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32568" centery="31431" centerz="12" radius="1">
+		<monster name="Skeleton" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32556" centery="31433" centerz="12" radius="1">
+		<monster name="Bonelord" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32551" centery="31434" centerz="12" radius="1">
+		<monster name="Bonelord" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32570" centery="31434" centerz="12" radius="1">
+		<monster name="Bonelord" x="0" y="-1" z="12" spawntime="90" />
+		<monster name="Skeleton" x="1" y="-1" z="12" spawntime="90" />
+		<monster name="Skeleton" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32569" centery="31437" centerz="12" radius="1">
+		<monster name="Ghoul" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32544" centery="31439" centerz="12" radius="1">
+		<monster name="Ghoul" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32569" centery="31445" centerz="12" radius="1">
+		<monster name="Bonelord" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32540" centery="31447" centerz="12" radius="1">
+		<monster name="Bonelord" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32539" centery="31457" centerz="12" radius="1">
+		<monster name="Ghoul" x="-1" y="-1" z="12" spawntime="90" />
+		<monster name="Ghoul" x="1" y="1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32545" centery="31468" centerz="12" radius="1">
+		<monster name="Bonelord" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32568" centery="31476" centerz="12" radius="1">
+		<monster name="Ghoul" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32549" centery="31477" centerz="12" radius="1">
+		<monster name="Skeleton" x="0" y="-1" z="12" spawntime="90" />
+		<monster name="Bonelord" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32566" centery="31479" centerz="12" radius="1">
+		<monster name="Ghoul" x="0" y="-1" z="12" spawntime="90" />
+		<monster name="Ghoul" x="1" y="-1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32562" centery="31480" centerz="12" radius="1">
+		<monster name="Ghoul" x="-1" y="0" z="12" spawntime="90" />
+		<monster name="Bonelord" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32551" centery="31484" centerz="12" radius="1">
+		<monster name="Bonelord" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32554" centery="31486" centerz="12" radius="1">
+		<monster name="Bonelord" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+</monsters>

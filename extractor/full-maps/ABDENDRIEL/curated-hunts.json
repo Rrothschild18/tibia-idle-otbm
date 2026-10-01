@@ -1,0 +1,288 @@
+{
+  "city": "ABDENDRIEL",
+  "area": {
+    "id": 1,
+    "name": "Ab'Dendriel"
+  },
+  "hunts": [
+    {
+      "id": "ABDENDRIEL-HUNT-0001",
+      "name": "Ab'Dendriel Underground",
+      "slug": "ab-dendriel-underground",
+      "folder": "ABDENDRIEL-HUNT-0001_ab-dendriel-underground",
+      "floors": [
+        8
+      ],
+      "cropFloors": [
+        8
+      ],
+      "candidateIds": [
+        "ABDENDRIEL-C08-003",
+        "ABDENDRIEL-C08-004",
+        "ABDENDRIEL-C08-010"
+      ],
+      "creatures": 25,
+      "extent": {
+        "minX": 32691,
+        "minY": 31595,
+        "maxX": 32724,
+        "maxY": 31648,
+        "centerX": 32707,
+        "centerY": 31621
+      },
+      "subareaId": 273,
+      "entrance": {
+        "x": 32699,
+        "y": 31595,
+        "z": 8
+      },
+      "walkTilesFromTemple": 144,
+      "tiles": 4487,
+      "spawns": 25
+    },
+    {
+      "id": "ABDENDRIEL-HUNT-0002",
+      "name": "Ab'Dendriel Slimes Cave",
+      "slug": "ab-dendriel-slimes-cave",
+      "folder": "ABDENDRIEL-HUNT-0002_ab-dendriel-slimes-cave",
+      "floors": [
+        8
+      ],
+      "cropFloors": [
+        8
+      ],
+      "candidateIds": [
+        "ABDENDRIEL-C08-003",
+        "ABDENDRIEL-C08-004",
+        "ABDENDRIEL-C08-010",
+        "ABDENDRIEL-C08-011"
+      ],
+      "creatures": 28,
+      "extent": {
+        "minX": 32688,
+        "minY": 31580,
+        "maxX": 32724,
+        "maxY": 31648,
+        "centerX": 32706,
+        "centerY": 31614
+      },
+      "subareaId": 273,
+      "entrance": {
+        "x": 32699,
+        "y": 31595,
+        "z": 8
+      },
+      "walkTilesFromTemple": 144,
+      "tiles": 5576,
+      "spawns": 28
+    },
+    {
+      "id": "ABDENDRIEL-HUNT-0003",
+      "name": "Elvenbane",
+      "slug": "elvenbane",
+      "folder": "ABDENDRIEL-HUNT-0003_elvenbane",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "ABDENDRIEL-C07-001",
+        "ABDENDRIEL-C07-002"
+      ],
+      "creatures": 28,
+      "extent": {
+        "minX": 32576,
+        "minY": 31638,
+        "maxX": 32599,
+        "maxY": 31691,
+        "centerX": 32587,
+        "centerY": 31664
+      },
+      "subareaId": 55,
+      "entrance": {
+        "x": 32585,
+        "y": 31687,
+        "z": 7
+      },
+      "walkTilesFromTemple": 167,
+      "tiles": 3744,
+      "spawns": 28
+    },
+    {
+      "id": "ABDENDRIEL-HUNT-0004",
+      "name": "Ab'Dendriel Elf Cave",
+      "slug": "ab-dendriel-elf-cave",
+      "folder": "ABDENDRIEL-HUNT-0004_ab-dendriel-elf-cave",
+      "floors": [
+        8
+      ],
+      "cropFloors": [
+        8
+      ],
+      "candidateIds": [
+        "ABDENDRIEL-C08-007",
+        "ABDENDRIEL-C08-009"
+      ],
+      "creatures": 13,
+      "extent": {
+        "minX": 32642,
+        "minY": 31605,
+        "maxX": 32659,
+        "maxY": 31637,
+        "centerX": 32650,
+        "centerY": 31621
+      },
+      "subareaId": 273,
+      "entrance": {
+        "x": 32656,
+        "y": 31637,
+        "z": 8
+      },
+      "walkTilesFromTemple": 85,
+      "tiles": 2380,
+      "spawns": 13
+    },
+    {
+      "id": "ABDENDRIEL-HUNT-0005",
+      "name": "Forsaken Mine/Cyclopes",
+      "slug": "forsaken-mine-cyclopes",
+      "folder": "ABDENDRIEL-HUNT-0005_forsaken-mine-cyclopes",
+      "floors": [
+        9
+      ],
+      "cropFloors": [
+        9
+      ],
+      "candidateIds": [
+        "ABDENDRIEL-C09-010"
+      ],
+      "creatures": 3,
+      "extent": {
+        "minX": 32649,
+        "minY": 31734,
+        "maxX": 32666,
+        "maxY": 31738,
+        "centerX": 32657,
+        "centerY": 31736
+      },
+      "subareaId": 55,
+      "entrance": {
+        "x": 32649,
+        "y": 31734,
+        "z": 9
+      },
+      "walkTilesFromTemple": 140,
+      "tiles": 1151,
+      "spawns": 3
+    },
+    {
+      "id": "ABDENDRIEL-HUNT-0006",
+      "name": "Forsaken Mine",
+      "slug": "forsaken-mine",
+      "folder": "ABDENDRIEL-HUNT-0006_forsaken-mine",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "ABDENDRIEL-C07-005",
+        "ABDENDRIEL-C07-009"
+      ],
+      "creatures": 9,
+      "extent": {
+        "minX": 32665,
+        "minY": 31716,
+        "maxX": 32672,
+        "maxY": 31764,
+        "centerX": 32668,
+        "centerY": 31740
+      },
+      "subareaId": 55,
+      "entrance": {
+        "x": 32665,
+        "y": 31718,
+        "z": 7
+      },
+      "walkTilesFromTemple": 128,
+      "tiles": 2336,
+      "spawns": 9
+    },
+    {
+      "id": "ABDENDRIEL-HUNT-0007",
+      "name": "Hellgate",
+      "slug": "hellgate",
+      "folder": "ABDENDRIEL-HUNT-0007_hellgate",
+      "floors": [
+        11
+      ],
+      "cropFloors": [
+        11
+      ],
+      "candidateIds": [
+        "ABDENDRIEL-C11-003",
+        "ABDENDRIEL-C11-005",
+        "ABDENDRIEL-C11-009"
+      ],
+      "creatures": 20,
+      "extent": {
+        "minX": 32666,
+        "minY": 31604,
+        "maxX": 32705,
+        "maxY": 31670,
+        "centerX": 32685,
+        "centerY": 31637
+      },
+      "subareaId": 273,
+      "entrance": {
+        "x": 32667,
+        "y": 31632,
+        "z": 11
+      },
+      "walkTilesFromTemple": 110,
+      "tiles": 5713,
+      "spawns": 20
+    },
+    {
+      "id": "ABDENDRIEL-HUNT-0008",
+      "name": "Draconia",
+      "slug": "draconia",
+      "folder": "ABDENDRIEL-HUNT-0008_draconia",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "ABDENDRIEL-C07-003",
+        "ABDENDRIEL-C07-004",
+        "ABDENDRIEL-C07-007",
+        "ABDENDRIEL-C07-010",
+        "ABDENDRIEL-C07-011",
+        "ABDENDRIEL-C07-012"
+      ],
+      "creatures": 29,
+      "extent": {
+        "minX": 32777,
+        "minY": 31572,
+        "maxX": 32817,
+        "maxY": 31599,
+        "centerX": 32797,
+        "centerY": 31585
+      },
+      "subareaId": 53,
+      "entrance": {
+        "x": 32777,
+        "y": 31595,
+        "z": 7
+      },
+      "walkTilesFromTemple": 571,
+      "tiles": 3380,
+      "spawns": 29
+    }
+  ]
+}

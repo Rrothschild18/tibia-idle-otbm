@@ -1,0 +1,360 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32925" centery="32481" centerz="7" radius="1">
+		<monster name="Crab" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32922" centery="32486" centerz="7" radius="1">
+		<monster name="Crab" x="-1" y="0" z="7" spawntime="90" />
+		<monster name="Slime" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32927" centery="32487" centerz="7" radius="1">
+		<monster name="Slime" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32924" centery="32491" centerz="7" radius="1">
+		<monster name="Crab" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32927" centery="32495" centerz="7" radius="1">
+		<monster name="Centipede" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32941" centery="32497" centerz="7" radius="2">
+		<monster name="Carniphila" x="-1" y="-2" z="7" spawntime="90" />
+		<monster name="Carniphila" x="2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32930" centery="32498" centerz="7" radius="1">
+		<monster name="Centipede" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32926" centery="32500" centerz="7" radius="1">
+		<monster name="Centipede" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32952" centery="32501" centerz="7" radius="1">
+		<monster name="Massive Earth Elemental" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32941" centery="32503" centerz="7" radius="1">
+		<monster name="Carniphila" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32937" centery="32504" centerz="7" radius="1">
+		<monster name="Cobra" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32934" centery="32508" centerz="7" radius="1">
+		<monster name="Cobra" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32951" centery="32508" centerz="7" radius="1">
+		<monster name="Massive Earth Elemental" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32926" centery="32510" centerz="7" radius="1">
+		<monster name="Spit Nettle" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32944" centery="32510" centerz="7" radius="1">
+		<monster name="Massive Earth Elemental" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32930" centery="32513" centerz="7" radius="1">
+		<monster name="Cobra" x="-1" y="1" z="7" spawntime="90" />
+		<monster name="Carniphila" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32967" centery="32513" centerz="7" radius="1">
+		<monster name="Centipede" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32936" centery="32514" centerz="7" radius="1">
+		<monster name="Carniphila" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32944" centery="32515" centerz="7" radius="1">
+		<monster name="Carniphila" x="0" y="-1" z="7" spawntime="90" />
+		<monster name="Cobra" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32948" centery="32518" centerz="7" radius="1">
+		<monster name="Spit Nettle" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32954" centery="32519" centerz="7" radius="1">
+		<monster name="Massive Earth Elemental" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32972" centery="32520" centerz="7" radius="1">
+		<monster name="Centipede" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32982" centery="32520" centerz="7" radius="1">
+		<monster name="Cobra" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32941" centery="32522" centerz="7" radius="1">
+		<monster name="Carniphila" x="1" y="-1" z="7" spawntime="90" />
+		<monster name="Terror Bird" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32953" centery="32522" centerz="7" radius="1">
+		<monster name="Carniphila" x="0" y="-1" z="7" spawntime="90" />
+		<monster name="Terror Bird" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32962" centery="32522" centerz="7" radius="1">
+		<monster name="Carniphila" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32968" centery="32522" centerz="7" radius="1">
+		<monster name="Carniphila" x="1" y="0" z="7" spawntime="90" />
+		<monster name="Massive Earth Elemental" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32988" centery="32522" centerz="7" radius="2">
+		<monster name="Hydra" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32978" centery="32523" centerz="7" radius="1">
+		<monster name="Terror Bird" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32984" centery="32523" centerz="7" radius="1">
+		<monster name="Cobra" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32945" centery="32524" centerz="7" radius="1">
+		<monster name="Massive Earth Elemental" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32981" centery="32526" centerz="7" radius="1">
+		<monster name="Centipede" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32936" centery="32527" centerz="7" radius="1">
+		<monster name="Spit Nettle" x="0" y="0" z="7" spawntime="90" />
+		<monster name="Cobra" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32967" centery="32527" centerz="7" radius="1">
+		<monster name="Terror Bird" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32941" centery="32528" centerz="7" radius="1">
+		<monster name="Massive Earth Elemental" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32987" centery="32528" centerz="7" radius="2">
+		<monster name="Centipede" x="1" y="0" z="7" spawntime="90" />
+		<monster name="Terror Bird" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32994" centery="32529" centerz="7" radius="1">
+		<monster name="Terror Bird" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32952" centery="32530" centerz="7" radius="1">
+		<monster name="Cobra" x="0" y="-1" z="7" spawntime="90" />
+		<monster name="Terror Bird" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32935" centery="32532" centerz="7" radius="1">
+		<monster name="Terror Bird" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32940" centery="32532" centerz="7" radius="1">
+		<monster name="Terror Bird" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32990" centery="32532" centerz="7" radius="1">
+		<monster name="Terror Bird" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32994" centery="32532" centerz="7" radius="1">
+		<monster name="Hydra" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32937" centery="32535" centerz="7" radius="1">
+		<monster name="Centipede" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32979" centery="32535" centerz="7" radius="1">
+		<monster name="Spit Nettle" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32996" centery="32536" centerz="7" radius="1">
+		<monster name="Centipede" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32940" centery="32537" centerz="7" radius="1">
+		<monster name="Carniphila" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32944" centery="32538" centerz="7" radius="1">
+		<monster name="Carniphila" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32966" centery="32540" centerz="7" radius="1">
+		<monster name="Cobra" x="-1" y="-1" z="7" spawntime="90" />
+		<monster name="Massive Earth Elemental" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33005" centery="32542" centerz="7" radius="1">
+		<monster name="Centipede" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32953" centery="32544" centerz="7" radius="1">
+		<monster name="Giant Spider" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32976" centery="32545" centerz="7" radius="1">
+		<monster name="Massive Earth Elemental" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32985" centery="32545" centerz="7" radius="1">
+		<monster name="Massive Earth Elemental" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33006" centery="32546" centerz="7" radius="1">
+		<monster name="Centipede" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32945" centery="32547" centerz="7" radius="1">
+		<monster name="Cobra" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32955" centery="32548" centerz="7" radius="1">
+		<monster name="Massive Earth Elemental" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32959" centery="32548" centerz="7" radius="1">
+		<monster name="Giant Spider" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32940" centery="32549" centerz="7" radius="2">
+		<monster name="Centipede" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32969" centery="32549" centerz="7" radius="1">
+		<monster name="Carniphila" x="1" y="-1" z="7" spawntime="90" />
+		<monster name="Terror Bird" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32974" centery="32554" centerz="7" radius="1">
+		<monster name="Spit Nettle" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32999" centery="32554" centerz="7" radius="1">
+		<monster name="Slime" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32944" centery="32555" centerz="7" radius="1">
+		<monster name="Behemoth" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32965" centery="32556" centerz="7" radius="1">
+		<monster name="Cobra" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33006" centery="32556" centerz="7" radius="2">
+		<monster name="Slime" x="-1" y="0" z="7" spawntime="90" />
+		<monster name="Slime" x="2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32979" centery="32557" centerz="7" radius="1">
+		<monster name="Spit Nettle" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32988" centery="32558" centerz="7" radius="1">
+		<monster name="Massive Earth Elemental" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32999" centery="32559" centerz="7" radius="1">
+		<monster name="Tiger" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33019" centery="32560" centerz="7" radius="2">
+		<monster name="Carniphila" x="1" y="-1" z="7" spawntime="90" />
+		<monster name="Carniphila" x="-2" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33005" centery="32561" centerz="7" radius="1">
+		<monster name="Tiger" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33013" centery="32561" centerz="7" radius="1">
+		<monster name="Behemoth" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32940" centery="32564" centerz="7" radius="1">
+		<monster name="Spit Nettle" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32946" centery="32564" centerz="7" radius="1">
+		<monster name="Centipede" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32974" centery="32564" centerz="7" radius="1">
+		<monster name="Cobra" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32952" centery="32565" centerz="7" radius="1">
+		<monster name="Spit Nettle" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32960" centery="32565" centerz="7" radius="1">
+		<monster name="Spit Nettle" x="0" y="-1" z="7" spawntime="90" />
+		<monster name="Cobra" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33004" centery="32565" centerz="7" radius="1">
+		<monster name="Spit Nettle" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32977" centery="32566" centerz="7" radius="1">
+		<monster name="Carniphila" x="1" y="-1" z="7" spawntime="90" />
+		<monster name="Spit Nettle" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33022" centery="32568" centerz="7" radius="1">
+		<monster name="Stone Golem" x="-1" y="-1" z="7" spawntime="90" />
+		<monster name="Stone Golem" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32941" centery="32569" centerz="7" radius="1">
+		<monster name="Spit Nettle" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33011" centery="32569" centerz="7" radius="1">
+		<monster name="Stone Golem" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32949" centery="32571" centerz="7" radius="1">
+		<monster name="Centipede" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32955" centery="32571" centerz="7" radius="1">
+		<monster name="Cobra" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32968" centery="32571" centerz="7" radius="1">
+		<monster name="Elephant" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33006" centery="32571" centerz="7" radius="1">
+		<monster name="Behemoth" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32986" centery="32572" centerz="7" radius="1">
+		<monster name="Carniphila" x="1" y="-1" z="7" spawntime="90" />
+		<monster name="Terror Bird" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33012" centery="32572" centerz="7" radius="1">
+		<monster name="Spit Nettle" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32952" centery="32574" centerz="7" radius="1">
+		<monster name="Massive Earth Elemental" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32964" centery="32575" centerz="7" radius="1">
+		<monster name="Cobra" x="1" y="0" z="7" spawntime="90" />
+		<monster name="Cobra" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33009" centery="32575" centerz="7" radius="1">
+		<monster name="Spit Nettle" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33020" centery="32576" centerz="7" radius="1">
+		<monster name="Spit Nettle" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32971" centery="32578" centerz="7" radius="1">
+		<monster name="Elephant" x="1" y="-1" z="7" spawntime="90" />
+		<monster name="Carniphila" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32993" centery="32578" centerz="7" radius="1">
+		<monster name="Spit Nettle" x="1" y="-1" z="7" spawntime="90" />
+		<monster name="Terror Bird" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32954" centery="32581" centerz="7" radius="1">
+		<monster name="Massive Earth Elemental" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32950" centery="32582" centerz="7" radius="1">
+		<monster name="Spit Nettle" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33015" centery="32582" centerz="7" radius="1">
+		<monster name="Spit Nettle" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33012" centery="32583" centerz="7" radius="1">
+		<monster name="Spit Nettle" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33001" centery="32584" centerz="7" radius="1">
+		<monster name="Cobra" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32959" centery="32586" centerz="7" radius="1">
+		<monster name="Carniphila" x="-1" y="-1" z="7" spawntime="90" />
+		<monster name="Spit Nettle" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32964" centery="32587" centerz="7" radius="1">
+		<monster name="Carniphila" x="0" y="-1" z="7" spawntime="90" />
+		<monster name="Cobra" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32977" centery="32587" centerz="7" radius="1">
+		<monster name="Tarantula" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32991" centery="32587" centerz="7" radius="1">
+		<monster name="Carniphila" x="-1" y="-1" z="7" spawntime="90" />
+		<monster name="Massive Earth Elemental" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33004" centery="32587" centerz="7" radius="1">
+		<monster name="Cobra" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32953" centery="32588" centerz="7" radius="1">
+		<monster name="Cobra" x="-1" y="-1" z="7" spawntime="90" />
+		<monster name="Carniphila" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32983" centery="32588" centerz="7" radius="1">
+		<monster name="Carniphila" x="-1" y="0" z="7" spawntime="90" />
+		<monster name="Carniphila" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32970" centery="32589" centerz="7" radius="1">
+		<monster name="Carniphila" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32988" centery="32589" centerz="7" radius="1">
+		<monster name="Spit Nettle" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32999" centery="32589" centerz="7" radius="1">
+		<monster name="Cobra" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32949" centery="32591" centerz="7" radius="1">
+		<monster name="Spit Nettle" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32979" centery="32591" centerz="7" radius="1">
+		<monster name="Tarantula" x="1" y="0" z="7" spawntime="90" />
+		<monster name="Tarantula" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32975" centery="32592" centerz="7" radius="2">
+		<monster name="Tarantula" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32991" centery="32593" centerz="7" radius="1">
+		<monster name="Massive Earth Elemental" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+</monsters>

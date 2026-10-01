@@ -1,0 +1,57 @@
+{
+  "city": "GRAYBEACH",
+  "area": {
+    "id": 11,
+    "name": "Quirefang"
+  },
+  "subareas": [
+    {
+      "id": 302,
+      "name": "Gray Beach"
+    },
+    {
+      "id": 167,
+      "name": "Hive Pools"
+    },
+    {
+      "id": 168,
+      "name": "Hive Pyramids"
+    },
+    {
+      "id": 169,
+      "name": "Hive Secondary Structure"
+    },
+    {
+      "id": 507,
+      "name": "Blue Valley"
+    }
+  ],
+  "world": {
+    "file": "otservbr.otbm",
+    "bytes": 184777193
+  },
+  "shape": "square",
+  "bounds": {
+    "minX": 33358,
+    "minY": 31148,
+    "maxX": 33762,
+    "maxY": 31552
+  },
+  "columns": 37113,
+  "tiles": 534624,
+  "tileAreas": 35274,
+  "towns": [
+    {
+      "id": 18,
+      "name": "Gray Beach",
+      "x": 33447,
+      "y": 31323,
+      "z": 9
+    }
+  ],
+  "monsterGroups": 1598,
+  "monsterEntries": 1916,
+  "npcGroups": 8,
+  "npcEntries": 8,
+  "houses": 1
+}

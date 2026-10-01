@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="33230" centery="31701" centerz="13" radius="2">
+		<monster name="Hellfire Fighter" x="1" y="0" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33229" centery="31708" centerz="13" radius="3">
+		<monster name="Hellfire Fighter" x="-2" y="-2" z="13" spawntime="90" />
+		<monster name="Hellfire Fighter" x="3" y="-1" z="13" spawntime="90" />
+		<monster name="Hellfire Fighter" x="0" y="1" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33169" centery="31714" centerz="13" radius="2">
+		<monster name="Hellfire Fighter" x="-1" y="-2" z="13" spawntime="90" />
+		<monster name="Hellfire Fighter" x="2" y="1" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33208" centery="31714" centerz="13" radius="3">
+		<monster name="Hellfire Fighter" x="0" y="-3" z="13" spawntime="90" />
+		<monster name="Hellfire Fighter" x="3" y="1" z="13" spawntime="90" />
+		<monster name="Massive Fire Elemental" x="-1" y="2" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33176" centery="31715" centerz="13" radius="3">
+		<monster name="Massive Fire Elemental" x="-1" y="-2" z="13" spawntime="90" />
+		<monster name="Massive Fire Elemental" x="0" y="2" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33216" centery="31715" centerz="13" radius="3">
+		<monster name="Massive Fire Elemental" x="-2" y="0" z="13" spawntime="90" />
+		<monster name="Massive Fire Elemental" x="3" y="1" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33224" centery="31716" centerz="13" radius="3">
+		<monster name="Massive Fire Elemental" x="1" y="-3" z="13" spawntime="90" />
+		<monster name="Massive Fire Elemental" x="-1" y="0" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33185" centery="31717" centerz="13" radius="3">
+		<monster name="Hellfire Fighter" x="-2" y="-1" z="13" spawntime="90" />
+		<monster name="Massive Fire Elemental" x="0" y="2" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33192" centery="31718" centerz="13" radius="2">
+		<monster name="Hellfire Fighter" x="0" y="1" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33199" centery="31718" centerz="13" radius="3">
+		<monster name="Massive Fire Elemental" x="-1" y="-2" z="13" spawntime="90" />
+		<monster name="Hellfire Fighter" x="2" y="-2" z="13" spawntime="90" />
+		<monster name="Massive Fire Elemental" x="-1" y="2" z="13" spawntime="90" />
+	</monster>
+</monsters>

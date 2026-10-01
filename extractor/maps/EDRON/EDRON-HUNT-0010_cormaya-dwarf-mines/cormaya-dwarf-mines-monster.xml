@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="33308" centery="32016" centerz="8" radius="2">
+		<monster name="Dwarf Guard" x="0" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33327" centery="32021" centerz="8" radius="1">
+		<monster name="Dwarf Soldier" x="1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33342" centery="32021" centerz="8" radius="1">
+		<monster name="Dwarf Guard" x="-1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33308" centery="32024" centerz="8" radius="2">
+		<monster name="Dwarf Soldier" x="-1" y="0" z="8" spawntime="90" />
+		<monster name="Dwarf Guard" x="2" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33357" centery="32025" centerz="8" radius="1">
+		<monster name="Dwarf" x="0" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33322" centery="32026" centerz="8" radius="1">
+		<monster name="Dwarf Soldier" x="1" y="-1" z="8" spawntime="90" />
+		<monster name="Dwarf Soldier" x="0" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33308" centery="32030" centerz="8" radius="2">
+		<monster name="Dwarf Soldier" x="0" y="1" z="8" spawntime="90" />
+		<monster name="Dwarf Guard" x="-2" y="2" z="8" spawntime="90" />
+		<monster name="Dwarf Guard" x="2" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33350" centery="32030" centerz="8" radius="1">
+		<monster name="Dwarf" x="0" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33355" centery="32030" centerz="8" radius="2">
+		<monster name="Dwarf Soldier" x="2" y="-2" z="8" spawntime="90" />
+		<monster name="Dwarf Soldier" x="-2" y="-1" z="8" spawntime="90" />
+		<monster name="Dwarf Soldier" x="-2" y="1" z="8" spawntime="90" />
+		<monster name="Dwarf" x="1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33330" centery="32034" centerz="8" radius="2">
+		<monster name="Dwarf Soldier" x="0" y="0" z="8" spawntime="90" />
+		<monster name="Dwarf" x="-2" y="1" z="8" spawntime="90" />
+		<monster name="Dwarf" x="1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33308" centery="32035" centerz="8" radius="1">
+		<monster name="Dwarf" x="0" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33323" centery="32035" centerz="8" radius="2">
+		<monster name="Dwarf" x="2" y="-2" z="8" spawntime="90" />
+		<monster name="Dwarf Soldier" x="1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33308" centery="32040" centerz="8" radius="2">
+		<monster name="Dwarf Soldier" x="-1" y="0" z="8" spawntime="90" />
+		<monster name="Dwarf Soldier" x="1" y="0" z="8" spawntime="90" />
+		<monster name="Dwarf" x="1" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33314" centery="32046" centerz="8" radius="1">
+		<monster name="Dwarf Soldier" x="0" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33303" centery="32047" centerz="8" radius="2">
+		<monster name="Dwarf" x="-1" y="-1" z="8" spawntime="90" />
+		<monster name="Dwarf Soldier" x="2" y="-1" z="8" spawntime="90" />
+		<monster name="Dwarf" x="0" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33330" centery="32047" centerz="8" radius="1">
+		<monster name="Dwarf" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33334" centery="32047" centerz="8" radius="1">
+		<monster name="Dwarf" x="1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33319" centery="32048" centerz="8" radius="1">
+		<monster name="Dwarf Soldier" x="1" y="-1" z="8" spawntime="90" />
+		<monster name="Dwarf" x="0" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33324" centery="32048" centerz="8" radius="1">
+		<monster name="Dwarf Soldier" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33311" centery="32049" centerz="8" radius="1">
+		<monster name="Dwarf Soldier" x="-1" y="0" z="8" spawntime="90" />
+		<monster name="Dwarf Soldier" x="1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33333" centery="32052" centerz="8" radius="1">
+		<monster name="Dwarf" x="1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33308" centery="32054" centerz="8" radius="2">
+		<monster name="Dwarf Soldier" x="1" y="-2" z="8" spawntime="90" />
+		<monster name="Dwarf" x="1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33309" centery="32065" centerz="8" radius="2">
+		<monster name="Dwarf Guard" x="2" y="0" z="8" spawntime="90" />
+		<monster name="Dwarf Soldier" x="-2" y="2" z="8" spawntime="90" />
+		<monster name="Dwarf Soldier" x="1" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33329" centery="32067" centerz="8" radius="3">
+		<monster name="Dwarf Soldier" x="3" y="-3" z="8" spawntime="90" />
+		<monster name="Dwarf Soldier" x="-3" y="0" z="8" spawntime="90" />
+		<monster name="Dwarf Soldier" x="2" y="0" z="8" spawntime="90" />
+	</monster>
+</monsters>

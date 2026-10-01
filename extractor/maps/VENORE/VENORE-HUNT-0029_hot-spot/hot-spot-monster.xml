@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32868" centery="31901" centerz="13" radius="3">
+		<monster name="Dragon Lord" x="0" y="1" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="32840" centery="31907" centerz="13" radius="3">
+		<monster name="Vulcongra" x="0" y="1" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="32859" centery="31909" centerz="13" radius="3">
+		<monster name="Dragon Lord" x="-1" y="1" z="13" spawntime="90" />
+		<monster name="Dragon Lord" x="0" y="1" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="32846" centery="31912" centerz="13" radius="3">
+		<monster name="Massive Fire Elemental" x="0" y="1" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="32874" centery="31912" centerz="13" radius="3">
+		<monster name="Vulcongra" x="0" y="1" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="32843" centery="31915" centerz="13" radius="3">
+		<monster name="Vulcongra" x="0" y="1" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="32847" centery="31919" centerz="13" radius="3">
+		<monster name="Dragon Lord" x="0" y="1" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="32859" centery="31920" centerz="13" radius="3">
+		<monster name="Vulcongra" x="-3" y="0" z="13" spawntime="90" />
+		<monster name="Vulcongra" x="0" y="1" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="32871" centery="31920" centerz="13" radius="3">
+		<monster name="Massive Fire Elemental" x="0" y="1" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="32872" centery="31926" centerz="13" radius="3">
+		<monster name="Vulcongra" x="0" y="1" z="13" spawntime="90" />
+		<monster name="Dragon Lord" x="-3" y="3" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="32870" centery="31929" centerz="13" radius="3">
+		<monster name="Vulcongra" x="0" y="1" z="13" spawntime="90" />
+	</monster>
+</monsters>

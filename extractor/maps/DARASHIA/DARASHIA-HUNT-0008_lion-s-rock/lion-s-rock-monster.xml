@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="33127" centery="32357" centerz="8" radius="3">
+		<monster name="Skeleton" x="-3" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33141" centery="32357" centerz="8" radius="3">
+		<monster name="Cobra" x="-2" y="0" z="8" spawntime="90" />
+		<monster name="Scorpion" x="2" y="2" z="8" spawntime="90" />
+		<monster name="Scarab" x="3" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33127" centery="32364" centerz="8" radius="3">
+		<monster name="Terramite" x="-2" y="-3" z="8" spawntime="90" />
+		<monster name="Ghoul" x="-3" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33127" centery="32371" centerz="8" radius="3">
+		<monster name="Demon Skeleton" x="3" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33134" centery="32378" centerz="8" radius="3">
+		<monster name="Scarab" x="-3" y="-3" z="8" spawntime="90" />
+	</monster>
+</monsters>

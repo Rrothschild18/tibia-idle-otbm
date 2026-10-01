@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32737" centery="31937" centerz="7" radius="1">
+		<monster name="Wasp" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32721" centery="31938" centerz="7" radius="5">
+		<monster name="Tainted Soul" x="0" y="0" z="7" spawntime="60" />
+	</monster>
+	<monster centerx="32743" centery="31939" centerz="7" radius="1">
+		<monster name="Wasp" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32739" centery="31941" centerz="7" radius="1">
+		<monster name="Wasp" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32744" centery="31944" centerz="7" radius="1">
+		<monster name="Wasp" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32733" centery="31945" centerz="7" radius="1">
+		<monster name="Wasp" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32724" centery="31946" centerz="7" radius="2">
+		<monster name="Scorpion" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32723" centery="31955" centerz="7" radius="1">
+		<monster name="Scorpion" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32728" centery="31961" centerz="7" radius="1">
+		<monster name="Scorpion" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+</monsters>

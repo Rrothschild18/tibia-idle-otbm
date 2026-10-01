@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32651" centery="32128" centerz="7" radius="2">
+		<monster name="Lion" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32659" centery="32128" centerz="7" radius="2">
+		<monster name="Lion" x="-2" y="-2" z="7" spawntime="90" />
+		<monster name="Lion" x="1" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32642" centery="32131" centerz="7" radius="4">
+		<monster name="Scorpion" x="-3" y="-3" z="7" spawntime="90" />
+		<monster name="Scorpion" x="3" y="-1" z="7" spawntime="90" />
+		<monster name="Scorpion" x="-2" y="2" z="7" spawntime="90" />
+		<monster name="Scorpion" x="4" y="2" z="7" spawntime="90" />
+		<monster name="Scorpion" x="-4" y="4" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32615" centery="32134" centerz="7" radius="9">
+		<monster name="Lion" x="8" y="-8" z="7" spawntime="90" />
+		<monster name="Lion" x="0" y="-5" z="7" spawntime="90" />
+		<monster name="Lion" x="2" y="1" z="7" spawntime="90" />
+		<monster name="Lion" x="-5" y="3" z="7" spawntime="90" />
+		<monster name="Lion" x="5" y="6" z="7" spawntime="90" />
+		<monster name="Lion" x="-2" y="8" z="7" spawntime="90" />
+	</monster>
+</monsters>

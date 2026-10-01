@@ -1,0 +1,657 @@
+{
+  "city": "YALAHAR",
+  "area": {
+    "id": 27,
+    "name": "Yalahar"
+  },
+  "hunts": [
+    {
+      "id": "YALAHAR-HUNT-0001",
+      "name": "Beregar",
+      "slug": "beregar",
+      "folder": "YALAHAR-HUNT-0001_beregar",
+      "floors": [
+        11
+      ],
+      "cropFloors": [
+        11
+      ],
+      "candidateIds": [
+        "YALAHAR-C11-007",
+        "YALAHAR-C11-012",
+        "YALAHAR-C11-013",
+        "YALAHAR-C11-014"
+      ],
+      "creatures": 13,
+      "extent": {
+        "minX": 32570,
+        "minY": 31425,
+        "maxX": 32611,
+        "maxY": 31466,
+        "centerX": 32590,
+        "centerY": 31445
+      },
+      "subareaId": 461,
+      "entrance": {
+        "x": 32574,
+        "y": 31425,
+        "z": 11
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 2639,
+      "spawns": 13
+    },
+    {
+      "id": "YALAHAR-HUNT-0002",
+      "name": "Magician Quarter/Academy of Magic",
+      "slug": "magician-quarter-academy-of-magic",
+      "folder": "YALAHAR-HUNT-0002_magician-quarter-academy-of-magic",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "YALAHAR-C07-017",
+        "YALAHAR-C07-046"
+      ],
+      "creatures": 13,
+      "extent": {
+        "minX": 32854,
+        "minY": 31114,
+        "maxX": 32907,
+        "maxY": 31144,
+        "centerX": 32880,
+        "centerY": 31129
+      },
+      "subareaId": 130,
+      "entrance": {
+        "x": 32856,
+        "y": 31144,
+        "z": 7
+      },
+      "walkTilesFromTemple": 225,
+      "tiles": 4290,
+      "spawns": 13
+    },
+    {
+      "id": "YALAHAR-HUNT-0003",
+      "name": "Magician Quarter/Residential Area",
+      "slug": "magician-quarter-residential-area",
+      "folder": "YALAHAR-HUNT-0003_magician-quarter-residential-area",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "YALAHAR-C07-047"
+      ],
+      "creatures": 3,
+      "extent": {
+        "minX": 32889,
+        "minY": 31059,
+        "maxX": 32895,
+        "maxY": 31069,
+        "centerX": 32892,
+        "centerY": 31064
+      },
+      "subareaId": 130,
+      "entrance": {
+        "x": 32895,
+        "y": 31059,
+        "z": 7
+      },
+      "walkTilesFromTemple": 252,
+      "tiles": 1085,
+      "spawns": 3
+    },
+    {
+      "id": "YALAHAR-HUNT-0004",
+      "name": "Arena and Zoo Quarter",
+      "slug": "arena-and-zoo-quarter",
+      "folder": "YALAHAR-HUNT-0004_arena-and-zoo-quarter",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "YALAHAR-C07-003",
+        "YALAHAR-C07-005",
+        "YALAHAR-C07-007",
+        "YALAHAR-C07-008",
+        "YALAHAR-C07-009",
+        "YALAHAR-C07-010",
+        "YALAHAR-C07-012",
+        "YALAHAR-C07-013",
+        "YALAHAR-C07-019",
+        "YALAHAR-C07-024",
+        "YALAHAR-C07-028",
+        "YALAHAR-C07-029",
+        "YALAHAR-C07-030",
+        "YALAHAR-C07-039",
+        "YALAHAR-C07-045"
+      ],
+      "creatures": 293,
+      "extent": {
+        "minX": 32627,
+        "minY": 31099,
+        "maxX": 32770,
+        "maxY": 31379,
+        "centerX": 32698,
+        "centerY": 31239
+      },
+      "subareaId": 134,
+      "entrance": {
+        "x": 32726,
+        "y": 31291,
+        "z": 7
+      },
+      "walkTilesFromTemple": 117,
+      "tiles": 51238,
+      "spawns": 293
+    },
+    {
+      "id": "YALAHAR-HUNT-0005",
+      "name": "Fenrock",
+      "slug": "fenrock",
+      "folder": "YALAHAR-HUNT-0005_fenrock",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "YALAHAR-C07-015"
+      ],
+      "creatures": 12,
+      "extent": {
+        "minX": 32518,
+        "minY": 31265,
+        "maxX": 32546,
+        "maxY": 31302,
+        "centerX": 32532,
+        "centerY": 31283
+      },
+      "subareaId": 136,
+      "entrance": {
+        "x": 32536,
+        "y": 31265,
+        "z": 7
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 3286,
+      "spawns": 12
+    },
+    {
+      "id": "YALAHAR-HUNT-0006",
+      "name": "Trade Quarter",
+      "slug": "trade-quarter",
+      "folder": "YALAHAR-HUNT-0006_trade-quarter",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "YALAHAR-C07-001",
+        "YALAHAR-C07-002",
+        "YALAHAR-C07-026"
+      ],
+      "creatures": 265,
+      "extent": {
+        "minX": 32779,
+        "minY": 31225,
+        "maxX": 32971,
+        "maxY": 31370,
+        "centerX": 32875,
+        "centerY": 31297
+      },
+      "subareaId": 129,
+      "entrance": {
+        "x": 32878,
+        "y": 31225,
+        "z": 7
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 36890,
+      "spawns": 265
+    },
+    {
+      "id": "YALAHAR-HUNT-0007",
+      "name": "Magician Quarter/Research Centre",
+      "slug": "magician-quarter-research-centre",
+      "folder": "YALAHAR-HUNT-0007_magician-quarter-research-centre",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "YALAHAR-C07-006",
+        "YALAHAR-C07-022",
+        "YALAHAR-C07-032"
+      ],
+      "creatures": 47,
+      "extent": {
+        "minX": 32814,
+        "minY": 31026,
+        "maxX": 32880,
+        "maxY": 31103,
+        "centerX": 32847,
+        "centerY": 31064
+      },
+      "subareaId": 130,
+      "entrance": {
+        "x": 32848,
+        "y": 31103,
+        "z": 7
+      },
+      "walkTilesFromTemple": 200,
+      "tiles": 9282,
+      "spawns": 47
+    },
+    {
+      "id": "YALAHAR-HUNT-0008",
+      "name": "Mistrock",
+      "slug": "mistrock",
+      "folder": "YALAHAR-HUNT-0008_mistrock",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "YALAHAR-C07-033",
+        "YALAHAR-C07-034",
+        "YALAHAR-C07-035",
+        "YALAHAR-C07-036",
+        "YALAHAR-C07-037"
+      ],
+      "creatures": 15,
+      "extent": {
+        "minX": 32545,
+        "minY": 31412,
+        "maxX": 32609,
+        "maxY": 31475,
+        "centerX": 32577,
+        "centerY": 31443
+      },
+      "subareaId": 135,
+      "entrance": {
+        "x": 32545,
+        "y": 31447,
+        "z": 7
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 7832,
+      "spawns": 15
+    },
+    {
+      "id": "YALAHAR-HUNT-0009",
+      "name": "Yalahar Cemetery Quarter",
+      "slug": "yalahar-cemetery-quarter",
+      "folder": "YALAHAR-HUNT-0009_yalahar-cemetery-quarter",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "YALAHAR-C07-004",
+        "YALAHAR-C07-005",
+        "YALAHAR-C07-014",
+        "YALAHAR-C07-016",
+        "YALAHAR-C07-018",
+        "YALAHAR-C07-019",
+        "YALAHAR-C07-020",
+        "YALAHAR-C07-021",
+        "YALAHAR-C07-023",
+        "YALAHAR-C07-025",
+        "YALAHAR-C07-031",
+        "YALAHAR-C07-040",
+        "YALAHAR-C07-041",
+        "YALAHAR-C07-042",
+        "YALAHAR-C07-043"
+      ],
+      "creatures": 177,
+      "extent": {
+        "minX": 32627,
+        "minY": 31012,
+        "maxX": 32803,
+        "maxY": 31212,
+        "centerX": 32715,
+        "centerY": 31112
+      },
+      "subareaId": 131,
+      "entrance": {
+        "x": 32740,
+        "y": 31012,
+        "z": 7
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 44936,
+      "spawns": 177
+    },
+    {
+      "id": "YALAHAR-HUNT-0010",
+      "name": "Alchemist Quarter",
+      "slug": "alchemist-quarter",
+      "folder": "YALAHAR-HUNT-0010_alchemist-quarter",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "YALAHAR-C07-004",
+        "YALAHAR-C07-005",
+        "YALAHAR-C07-014",
+        "YALAHAR-C07-018",
+        "YALAHAR-C07-019",
+        "YALAHAR-C07-020",
+        "YALAHAR-C07-021",
+        "YALAHAR-C07-023",
+        "YALAHAR-C07-040",
+        "YALAHAR-C07-041",
+        "YALAHAR-C07-042",
+        "YALAHAR-C07-043"
+      ],
+      "creatures": 156,
+      "extent": {
+        "minX": 32627,
+        "minY": 31012,
+        "maxX": 32775,
+        "maxY": 31212,
+        "centerX": 32701,
+        "centerY": 31112
+      },
+      "subareaId": 132,
+      "entrance": {
+        "x": 32740,
+        "y": 31012,
+        "z": 7
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 38636,
+      "spawns": 156
+    },
+    {
+      "id": "YALAHAR-HUNT-0011",
+      "name": "Magician Quarter",
+      "slug": "magician-quarter",
+      "folder": "YALAHAR-HUNT-0011_magician-quarter",
+      "floors": [
+        6
+      ],
+      "cropFloors": [
+        6
+      ],
+      "candidateIds": [
+        "YALAHAR-C06-029"
+      ],
+      "creatures": 4,
+      "extent": {
+        "minX": 32891,
+        "minY": 31093,
+        "maxX": 32896,
+        "maxY": 31096,
+        "centerX": 32893,
+        "centerY": 31094
+      },
+      "subareaId": 130,
+      "entrance": {
+        "x": 32895,
+        "y": 31095,
+        "z": 6
+      },
+      "walkTilesFromTemple": 292,
+      "tiles": 368,
+      "spawns": 4
+    },
+    {
+      "id": "YALAHAR-HUNT-0012",
+      "name": "Yalahar Magician Quarter",
+      "slug": "yalahar-magician-quarter",
+      "folder": "YALAHAR-HUNT-0012_yalahar-magician-quarter",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "YALAHAR-C07-006"
+      ],
+      "creatures": 36,
+      "extent": {
+        "minX": 32814,
+        "minY": 31026,
+        "maxX": 32880,
+        "maxY": 31071,
+        "centerX": 32847,
+        "centerY": 31048
+      },
+      "subareaId": 130,
+      "entrance": {
+        "x": 32873,
+        "y": 31055,
+        "z": 7
+      },
+      "walkTilesFromTemple": 251,
+      "tiles": 6370,
+      "spawns": 36
+    },
+    {
+      "id": "YALAHAR-HUNT-0013",
+      "name": "Magician Quarter/Efreet Territory",
+      "slug": "magician-quarter-efreet-territory",
+      "folder": "YALAHAR-HUNT-0013_magician-quarter-efreet-territory",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "YALAHAR-C07-017"
+      ],
+      "creatures": 10,
+      "extent": {
+        "minX": 32863,
+        "minY": 31114,
+        "maxX": 32907,
+        "maxY": 31135,
+        "centerX": 32885,
+        "centerY": 31124
+      },
+      "subareaId": 130,
+      "entrance": {
+        "x": 32880,
+        "y": 31114,
+        "z": 7
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 3174,
+      "spawns": 10
+    },
+    {
+      "id": "YALAHAR-HUNT-0014",
+      "name": "Magician Quarter/Marid Territory",
+      "slug": "magician-quarter-marid-territory",
+      "folder": "YALAHAR-HUNT-0014_magician-quarter-marid-territory",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "YALAHAR-C07-027"
+      ],
+      "creatures": 6,
+      "extent": {
+        "minX": 32804,
+        "minY": 31114,
+        "maxX": 32829,
+        "maxY": 31130,
+        "centerX": 32816,
+        "centerY": 31122
+      },
+      "subareaId": 130,
+      "entrance": {
+        "x": 32820,
+        "y": 31114,
+        "z": 7
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 2050,
+      "spawns": 6
+    },
+    {
+      "id": "YALAHAR-HUNT-0015",
+      "name": "Beregar Bonelord Dungeons",
+      "slug": "beregar-bonelord-dungeons",
+      "folder": "YALAHAR-HUNT-0015_beregar-bonelord-dungeons",
+      "floors": [
+        12
+      ],
+      "cropFloors": [
+        12
+      ],
+      "candidateIds": [
+        "YALAHAR-C12-001",
+        "YALAHAR-C12-003"
+      ],
+      "creatures": 22,
+      "extent": {
+        "minX": 32538,
+        "minY": 31431,
+        "maxX": 32571,
+        "maxY": 31486,
+        "centerX": 32554,
+        "centerY": 31458
+      },
+      "subareaId": 461,
+      "entrance": {
+        "x": 32557,
+        "y": 31433,
+        "z": 12
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 4140,
+      "spawns": 22
+    },
+    {
+      "id": "YALAHAR-HUNT-0016",
+      "name": "Fenrock Dragon Lair",
+      "slug": "fenrock-dragon-lair",
+      "folder": "YALAHAR-HUNT-0016_fenrock-dragon-lair",
+      "floors": [
+        15
+      ],
+      "cropFloors": [
+        15
+      ],
+      "candidateIds": [
+        "YALAHAR-C15-005"
+      ],
+      "creatures": 3,
+      "extent": {
+        "minX": 32618,
+        "minY": 31387,
+        "maxX": 32622,
+        "maxY": 31393,
+        "centerX": 32620,
+        "centerY": 31390
+      },
+      "subareaId": 461,
+      "entrance": {
+        "x": 32621,
+        "y": 31387,
+        "z": 15
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 899,
+      "spawns": 3
+    },
+    {
+      "id": "YALAHAR-HUNT-0017",
+      "name": "Isle of Evil",
+      "slug": "isle-of-evil",
+      "folder": "YALAHAR-HUNT-0017_isle-of-evil",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "YALAHAR-C07-011"
+      ],
+      "creatures": 22,
+      "extent": {
+        "minX": 32688,
+        "minY": 31430,
+        "maxX": 32726,
+        "maxY": 31480,
+        "centerX": 32707,
+        "centerY": 31455
+      },
+      "subareaId": 138,
+      "entrance": {
+        "x": 32703,
+        "y": 31430,
+        "z": 7
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 4725,
+      "spawns": 22
+    },
+    {
+      "id": "YALAHAR-HUNT-0018",
+      "name": "Cults of Tibia (The Barkless)",
+      "slug": "cults-of-tibia-the-barkless",
+      "folder": "YALAHAR-HUNT-0018_cults-of-tibia-the-barkless",
+      "floors": [
+        8
+      ],
+      "cropFloors": [
+        8
+      ],
+      "candidateIds": [
+        "YALAHAR-C08-007",
+        "YALAHAR-C08-013",
+        "YALAHAR-C08-035"
+      ],
+      "creatures": 20,
+      "extent": {
+        "minX": 32708,
+        "minY": 31427,
+        "maxX": 32757,
+        "maxY": 31481,
+        "centerX": 32732,
+        "centerY": 31454
+      },
+      "subareaId": 461,
+      "entrance": {
+        "x": 32729,
+        "y": 31440,
+        "z": 8
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 5813,
+      "spawns": 20
+    }
+  ]
+}

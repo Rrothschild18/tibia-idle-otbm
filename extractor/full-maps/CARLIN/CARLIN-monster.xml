@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0"?>
 <monsters>
 	<monster centerx="32355" centery="31645" centerz="1" radius="2">
 		<monster name="Valkyrie" x="-1" y="0" z="1" spawntime="90" />
@@ -124,6 +124,7 @@
 	</monster>
 	<monster centerx="32229" centery="31782" centerz="6" radius="2">
 		<monster name="Wyvern" x="-1" y="0" z="6" spawntime="90" />
+		<monster name="Wyvern" x="1" y="0" z="6" spawntime="60" />
 	</monster>
 	<monster centerx="32245" centery="31834" centerz="6" radius="3">
 		<monster name="Poison Spider" x="-1" y="1" z="6" spawntime="90" />
@@ -135,6 +136,7 @@
 	</monster>
 	<monster centerx="32423" centery="31589" centerz="7" radius="2">
 		<monster name="Amazon" x="-2" y="-2" z="7" spawntime="90" />
+		<monster name="Amazon" x="2" y="-2" z="7" spawntime="90" />
 		<monster name="Amazon" x="1" y="1" z="7" spawntime="90" />
 	</monster>
 	<monster centerx="32398" centery="31593" centerz="7" radius="2">
@@ -150,6 +152,9 @@
 	<monster centerx="32492" centery="31595" centerz="7" radius="2">
 		<monster name="Chicken" x="1" y="-2" z="7" spawntime="90" />
 		<monster name="Chicken" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32418" centery="31598" centerz="7" radius="1">
+		<monster name="Amazon" x="0" y="0" z="7" spawntime="60" />
 	</monster>
 	<monster centerx="32405" centery="31599" centerz="7" radius="2">
 		<monster name="Rabbit" x="0" y="-2" z="7" spawntime="90" />
@@ -479,7 +484,9 @@
 		<monster name="Amazon" x="1" y="3" z="7" spawntime="90" />
 	</monster>
 	<monster centerx="32482" centery="31778" centerz="7" radius="3">
+		<monster name="Amazon" x="3" y="-3" z="7" spawntime="90" />
 		<monster name="Amazon" x="0" y="0" z="7" spawntime="90" />
+		<monster name="Amazon" x="2" y="2" z="7" spawntime="90" />
 	</monster>
 	<monster centerx="32453" centery="31779" centerz="7" radius="3">
 		<monster name="Rabbit" x="1" y="2" z="7" spawntime="90" />
@@ -491,6 +498,7 @@
 	<monster centerx="32474" centery="31782" centerz="7" radius="3">
 		<monster name="Amazon" x="-2" y="-1" z="7" spawntime="90" />
 		<monster name="Valkyrie" x="2" y="1" z="7" spawntime="90" />
+		<monster name="Amazon" x="-1" y="3" z="7" spawntime="90" />
 	</monster>
 	<monster centerx="32188" centery="31785" centerz="7" radius="3">
 		<monster name="Poison Spider" x="1" y="0" z="7" spawntime="90" />
@@ -608,6 +616,9 @@
 		<monster name="Cave Rat" x="-1" y="-2" z="7" spawntime="90" />
 		<monster name="Cave Rat" x="3" y="-1" z="7" spawntime="90" />
 		<monster name="Cave Rat" x="1" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32415" centery="31578" centerz="8" radius="1">
+		<monster name="Amazon" x="0" y="0" z="8" spawntime="60" />
 	</monster>
 	<monster centerx="32430" centery="31578" centerz="8" radius="3">
 		<monster name="Amazon" x="-1" y="1" z="8" spawntime="90" />
@@ -958,6 +969,7 @@
 	</monster>
 	<monster centerx="32195" centery="31773" centerz="8" radius="3">
 		<monster name="Skeleton" x="0" y="-1" z="8" spawntime="90" />
+		<monster name="Skeleton" x="2" y="2" z="8" spawntime="90" />
 		<monster name="Cave Rat" x="1" y="3" z="8" spawntime="90" />
 	</monster>
 	<monster centerx="32222" centery="31774" centerz="8" radius="2">
@@ -975,10 +987,13 @@
 		<monster name="Skeleton" x="0" y="-1" z="8" spawntime="90" />
 		<monster name="Cave Rat" x="-2" y="1" z="8" spawntime="90" />
 		<monster name="Cave Rat" x="2" y="1" z="8" spawntime="90" />
+		<monster name="Skeleton" x="1" y="2" z="8" spawntime="90" />
 	</monster>
 	<monster centerx="32177" centery="31784" centerz="8" radius="3">
+		<monster name="Skeleton" x="2" y="-3" z="8" spawntime="90" />
 		<monster name="Cave Rat" x="-3" y="-2" z="8" spawntime="90" />
 		<monster name="Skeleton" x="-1" y="-2" z="8" spawntime="90" />
+		<monster name="Skeleton" x="0" y="1" z="8" spawntime="90" />
 	</monster>
 	<monster centerx="32375" centery="31785" centerz="8" radius="2">
 		<monster name="Bug" x="0" y="-2" z="8" spawntime="90" />
@@ -1021,10 +1036,15 @@
 	</monster>
 	<monster centerx="32181" centery="31795" centerz="8" radius="3">
 		<monster name="Skeleton" x="1" y="0" z="8" spawntime="90" />
+		<monster name="Skeleton" x="-3" y="2" z="8" spawntime="90" />
 	</monster>
 	<monster centerx="32451" centery="31795" centerz="8" radius="3">
 		<monster name="Troll" x="-1" y="-2" z="8" spawntime="90" />
 		<monster name="Troll" x="2" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32172" centery="31798" centerz="8" radius="3">
+		<monster name="Skeleton" x="0" y="-1" z="8" spawntime="90" />
+		<monster name="Skeleton" x="-2" y="3" z="8" spawntime="90" />
 	</monster>
 	<monster centerx="32368" centery="31802" centerz="8" radius="3">
 		<monster name="Bug" x="0" y="-3" z="8" spawntime="90" />
@@ -1487,6 +1507,7 @@
 	</monster>
 	<monster centerx="32178" centery="31777" centerz="9" radius="3">
 		<monster name="Ghoul" x="0" y="-1" z="9" spawntime="90" />
+		<monster name="Ghoul" x="-1" y="1" z="9" spawntime="60" />
 	</monster>
 	<monster centerx="32302" centery="31780" centerz="9" radius="3">
 		<monster name="Rotworm" x="0" y="-1" z="9" spawntime="90" />
@@ -1537,6 +1558,7 @@
 	</monster>
 	<monster centerx="32174" centery="31804" centerz="9" radius="3">
 		<monster name="Scorpion" x="-2" y="0" z="9" spawntime="90" />
+		<monster name="Ghoul" x="-1" y="2" z="9" spawntime="60" />
 		<monster name="Scorpion" x="1" y="2" z="9" spawntime="90" />
 	</monster>
 	<monster centerx="32392" centery="31804" centerz="9" radius="3">
@@ -1548,6 +1570,7 @@
 	</monster>
 	<monster centerx="32187" centery="31812" centerz="9" radius="3">
 		<monster name="Scorpion" x="0" y="-2" z="9" spawntime="90" />
+		<monster name="Ghoul" x="-3" y="0" z="9" spawntime="60" />
 		<monster name="Ghoul" x="2" y="0" z="9" spawntime="90" />
 	</monster>
 	<monster centerx="32247" centery="31822" centerz="9" radius="3">
@@ -1567,6 +1590,11 @@
 	<monster centerx="32267" centery="31840" centerz="9" radius="3">
 		<monster name="Stalker" x="1" y="-1" z="9" spawntime="90" />
 	</monster>
+	<monster centerx="32173" centery="31846" centerz="9" radius="3">
+		<monster name="Ghoul" x="-3" y="-1" z="9" spawntime="90" />
+		<monster name="Ghoul" x="0" y="-1" z="9" spawntime="90" />
+		<monster name="Ghoul" x="0" y="1" z="9" spawntime="90" />
+	</monster>
 	<monster centerx="32198" centery="31846" centerz="9" radius="3">
 		<monster name="Ghoul" x="-2" y="-1" z="9" spawntime="90" />
 		<monster name="Ghoul" x="2" y="2" z="9" spawntime="90" />
@@ -1575,8 +1603,16 @@
 		<monster name="Ghoul" x="-3" y="-2" z="9" spawntime="90" />
 		<monster name="Ghoul" x="1" y="1" z="9" spawntime="90" />
 	</monster>
+	<monster centerx="32173" centery="31862" centerz="9" radius="3">
+		<monster name="Ghoul" x="-1" y="-1" z="9" spawntime="90" />
+		<monster name="Ghoul" x="-2" y="0" z="9" spawntime="90" />
+		<monster name="Ghoul" x="1" y="0" z="9" spawntime="90" />
+	</monster>
 	<monster centerx="32255" centery="31862" centerz="9" radius="1">
 		<monster name="Ghoul" x="0" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="32187" centery="31863" centerz="9" radius="1">
+		<monster name="Fire Devil" x="0" y="0" z="9" spawntime="60" />
 	</monster>
 	<monster centerx="32252" centery="31863" centerz="9" radius="1">
 		<monster name="Stalker" x="0" y="1" z="9" spawntime="60" />
@@ -1799,13 +1835,34 @@
 	<monster centerx="32506" centery="31731" centerz="10" radius="3">
 		<monster name="Bear" x="1" y="0" z="10" spawntime="90" />
 	</monster>
+	<monster centerx="32181" centery="31763" centerz="10" radius="1">
+		<monster name="Ghoul" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32179" centery="31766" centerz="10" radius="1">
+		<monster name="Ghoul" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32183" centery="31766" centerz="10" radius="1">
+		<monster name="Ghoul" x="0" y="0" z="10" spawntime="60" />
+	</monster>
 	<monster centerx="32196" centery="31771" centerz="10" radius="3">
 		<monster name="Ghoul" x="1" y="-2" z="10" spawntime="90" />
 		<monster name="Demon Skeleton" x="0" y="2" z="10" spawntime="90" />
 	</monster>
+	<monster centerx="32173" centery="31776" centerz="10" radius="1">
+		<monster name="Ghoul" x="0" y="0" z="10" spawntime="60" />
+	</monster>
 	<monster centerx="32181" centery="31777" centerz="10" radius="3">
 		<monster name="Ghoul" x="-1" y="-2" z="10" spawntime="90" />
 		<monster name="Demon Skeleton" x="2" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32168" centery="31784" centerz="10" radius="1">
+		<monster name="Ghoul" x="1" y="-1" z="10" spawntime="60" />
+		<monster name="Ghoul" x="-1" y="0" z="10" spawntime="60" />
+		<monster name="Ghoul" x="0" y="0" z="10" spawntime="60" />
+		<monster name="Ghoul" x="1" y="1" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32183" centery="31785" centerz="10" radius="1">
+		<monster name="Ghoul" x="0" y="0" z="10" spawntime="60" />
 	</monster>
 	<monster centerx="32193" centery="31785" centerz="10" radius="3">
 		<monster name="Ghoul" x="-2" y="-3" z="10" spawntime="90" />
@@ -1817,14 +1874,26 @@
 	</monster>
 	<monster centerx="32193" centery="31795" centerz="10" radius="3">
 		<monster name="Ghoul" x="0" y="-1" z="10" spawntime="90" />
+		<monster name="Ghoul" x="2" y="0" z="10" spawntime="60" />
+		<monster name="Ghoul" x="2" y="2" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32373" centery="31796" centerz="10" radius="1">
+		<monster name="Rotworm" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32398" centery="31802" centerz="10" radius="1">
+		<monster name="Rotworm" x="0" y="0" z="10" spawntime="60" />
 	</monster>
 	<monster centerx="32371" centery="31804" centerz="10" radius="3">
 		<monster name="Rotworm" x="2" y="-3" z="10" spawntime="90" />
 		<monster name="Rotworm" x="-1" y="-2" z="10" spawntime="90" />
 		<monster name="Rotworm" x="3" y="-1" z="10" spawntime="90" />
+		<monster name="Rotworm" x="1" y="2" z="10" spawntime="60" />
 	</monster>
 	<monster centerx="32413" centery="31804" centerz="10" radius="3">
 		<monster name="Corym Vanguard" x="-2" y="-2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32396" centery="31810" centerz="10" radius="1">
+		<monster name="Rotworm" x="0" y="0" z="10" spawntime="60" />
 	</monster>
 	<monster centerx="32378" centery="31811" centerz="10" radius="3">
 		<monster name="Rotworm" x="-3" y="-2" z="10" spawntime="90" />
@@ -1838,6 +1907,11 @@
 	</monster>
 	<monster centerx="32385" centery="31818" centerz="10" radius="3">
 		<monster name="Rotworm" x="-3" y="-1" z="10" spawntime="90" />
+		<monster name="Rotworm" x="2" y="-1" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32375" centery="31830" centerz="10" radius="1">
+		<monster name="Rotworm" x="0" y="0" z="10" spawntime="60" />
+		<monster name="Rotworm" x="-1" y="1" z="10" spawntime="60" />
 	</monster>
 	<monster centerx="32350" centery="31832" centerz="10" radius="3">
 		<monster name="Rotworm" x="2" y="-3" z="10" spawntime="90" />
@@ -1855,12 +1929,25 @@
 	<monster centerx="32343" centery="31839" centerz="10" radius="3">
 		<monster name="Rotworm" x="3" y="-1" z="10" spawntime="90" />
 	</monster>
+	<monster centerx="32362" centery="31839" centerz="10" radius="1">
+		<monster name="Rotworm" x="0" y="0" z="10" spawntime="60" />
+		<monster name="Rotworm" x="-1" y="1" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32377" centery="31840" centerz="10" radius="1">
+		<monster name="Rotworm" x="0" y="0" z="10" spawntime="60" />
+		<monster name="Rotworm" x="-1" y="1" z="10" spawntime="60" />
+		<monster name="Rotworm" x="1" y="1" z="10" spawntime="60" />
+	</monster>
 	<monster centerx="32235" centery="31842" centerz="10" radius="3">
 		<monster name="Cave Rat" x="0" y="-1" z="10" spawntime="90" />
 		<monster name="Ghoul" x="0" y="2" z="10" spawntime="90" />
 	</monster>
 	<monster centerx="32343" centery="31846" centerz="10" radius="3">
 		<monster name="Rotworm" x="-1" y="-3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32360" centery="31850" centerz="10" radius="1">
+		<monster name="Rotworm" x="0" y="0" z="10" spawntime="60" />
+		<monster name="Rotworm" x="1" y="0" z="10" spawntime="60" />
 	</monster>
 	<monster centerx="32235" centery="31851" centerz="10" radius="3">
 		<monster name="Scorpion" x="-2" y="-2" z="10" spawntime="90" />
@@ -1872,8 +1959,25 @@
 		<monster name="Slime" x="-4" y="1" z="10" spawntime="90" />
 		<monster name="Slime" x="2" y="4" z="10" spawntime="90" />
 	</monster>
+	<monster centerx="32364" centery="31857" centerz="10" radius="1">
+		<monster name="Rotworm" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32194" centery="31865" centerz="10" radius="1">
+		<monster name="Demon Skeleton" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32361" centery="31868" centerz="10" radius="1">
+		<monster name="Rotworm" x="0" y="0" z="10" spawntime="60" />
+		<monster name="Rotworm" x="-1" y="1" z="10" spawntime="60" />
+	</monster>
 	<monster centerx="32234" centery="31870" centerz="10" radius="3">
 		<monster name="Skeleton" x="0" y="-2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32358" centery="31875" centerz="10" radius="1">
+		<monster name="Rotworm" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32363" centery="31881" centerz="10" radius="1">
+		<monster name="Rotworm" x="0" y="0" z="10" spawntime="60" />
+		<monster name="Rotworm" x="0" y="1" z="10" spawntime="60" />
 	</monster>
 	<monster centerx="32424" centery="31595" centerz="11" radius="2">
 		<monster name="Hunter" x="1" y="0" z="11" spawntime="90" />
@@ -1933,7 +2037,14 @@
 		<monster name="Rotworm" x="-1" y="2" z="11" spawntime="90" />
 	</monster>
 	<monster centerx="32378" centery="31825" centerz="11" radius="3">
+		<monster name="Carrion Worm" x="3" y="-1" z="11" spawntime="60" />
 		<monster name="Carrion Worm" x="-2" y="3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32399" centery="31825" centerz="11" radius="1">
+		<monster name="Carrion Worm" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32363" centery="31830" centerz="11" radius="1">
+		<monster name="Carrion Worm" x="0" y="0" z="11" spawntime="60" />
 	</monster>
 	<monster centerx="32219" centery="31837" centerz="11" radius="3">
 		<monster name="Ghoul" x="2" y="-2" z="11" spawntime="90" />
@@ -1946,12 +2057,99 @@
 		<monster name="Demon Skeleton" x="-3" y="-2" z="11" spawntime="90" />
 		<monster name="Skeleton" x="1" y="2" z="11" spawntime="90" />
 	</monster>
+	<monster centerx="32364" centery="31844" centerz="11" radius="1">
+		<monster name="Carrion Worm" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32361" centery="31854" centerz="11" radius="1">
+		<monster name="Carrion Worm" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32190" centery="31860" centerz="11" radius="1">
+		<monster name="Demon Skeleton" x="0" y="0" z="11" spawntime="60" />
+	</monster>
 	<monster centerx="32235" centery="31863" centerz="11" radius="4">
 		<monster name="Ghoul" x="-1" y="-4" z="11" spawntime="90" />
 		<monster name="Skeleton Warrior" x="-3" y="-1" z="11" spawntime="90" />
 		<monster name="Skeleton Warrior" x="2" y="-1" z="11" spawntime="90" />
 		<monster name="Skeleton" x="-1" y="2" z="11" spawntime="90" />
 		<monster name="Ghoul" x="2" y="3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32365" centery="31863" centerz="11" radius="1">
+		<monster name="Carrion Worm" x="-1" y="0" z="11" spawntime="3072" />
+		<monster name="Carrion Worm" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32194" centery="31870" centerz="11" radius="1">
+		<monster name="Demon Skeleton" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32375" centery="31878" centerz="11" radius="1">
+		<monster name="Carrion Worm" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32364" centery="31879" centerz="11" radius="1">
+		<monster name="Carrion Worm" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32362" centery="31880" centerz="11" radius="1">
+		<monster name="Carrion Worm" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32380" centery="31880" centerz="11" radius="1">
+		<monster name="Carrion Worm" x="0" y="0" z="11" spawntime="60" />
+		<monster name="Carrion Worm" x="0" y="1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32291" centery="31907" centerz="11" radius="1">
+		<monster name="Giant Spider" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32232" centery="31909" centerz="11" radius="1">
+		<monster name="Scorpion" x="-1" y="-1" z="11" spawntime="60" />
+		<monster name="Scorpion" x="0" y="-1" z="11" spawntime="60" />
+		<monster name="Scorpion" x="0" y="0" z="11" spawntime="60" />
+		<monster name="Scorpion" x="0" y="1" z="11" spawntime="60" />
+		<monster name="Scorpion" x="1" y="1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32217" centery="31910" centerz="11" radius="1">
+		<monster name="Scorpion" x="-1" y="-1" z="11" spawntime="60" />
+		<monster name="Scorpion" x="0" y="0" z="11" spawntime="60" />
+		<monster name="Scorpion" x="1" y="0" z="11" spawntime="60" />
+		<monster name="Scorpion" x="0" y="1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32226" centery="31911" centerz="11" radius="1">
+		<monster name="Scorpion" x="0" y="-1" z="11" spawntime="60" />
+		<monster name="Scorpion" x="-1" y="0" z="11" spawntime="60" />
+		<monster name="Scorpion" x="0" y="0" z="11" spawntime="60" />
+		<monster name="Scorpion" x="1" y="1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32231" centery="31915" centerz="11" radius="1">
+		<monster name="Scorpion" x="0" y="-1" z="11" spawntime="60" />
+		<monster name="Scorpion" x="-1" y="0" z="11" spawntime="60" />
+		<monster name="Scorpion" x="0" y="0" z="11" spawntime="60" />
+		<monster name="Scorpion" x="1" y="1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32245" centery="31920" centerz="11" radius="1">
+		<monster name="Scorpion" x="0" y="-1" z="11" spawntime="60" />
+		<monster name="Scorpion" x="0" y="0" z="11" spawntime="60" />
+		<monster name="Scorpion" x="-1" y="1" z="11" spawntime="60" />
+		<monster name="Scorpion" x="0" y="1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32244" centery="31922" centerz="11" radius="1">
+		<monster name="Scorpion" x="0" y="0" z="11" spawntime="60" />
+		<monster name="Scorpion" x="-1" y="1" z="11" spawntime="60" />
+		<monster name="Scorpion" x="0" y="1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32218" centery="31927" centerz="11" radius="1">
+		<monster name="Scorpion" x="0" y="-1" z="11" spawntime="60" />
+		<monster name="Scorpion" x="0" y="0" z="11" spawntime="60" />
+		<monster name="Scorpion" x="-1" y="1" z="11" spawntime="60" />
+		<monster name="Scorpion" x="0" y="1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32246" centery="31932" centerz="11" radius="1">
+		<monster name="Scorpion" x="-1" y="-1" z="11" spawntime="60" />
+		<monster name="Scorpion" x="1" y="-1" z="11" spawntime="60" />
+		<monster name="Scorpion" x="0" y="0" z="11" spawntime="60" />
+		<monster name="Scorpion" x="-1" y="1" z="11" spawntime="60" />
+		<monster name="Scorpion" x="0" y="1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32233" centery="31936" centerz="11" radius="1">
+		<monster name="Scorpion" x="1" y="-1" z="11" spawntime="60" />
+		<monster name="Scorpion" x="-1" y="0" z="11" spawntime="60" />
+		<monster name="Scorpion" x="0" y="0" z="11" spawntime="60" />
+		<monster name="Scorpion" x="0" y="1" z="11" spawntime="60" />
 	</monster>
 	<monster centerx="32467" centery="31624" centerz="12" radius="3">
 		<monster name="Orc Berserker" x="0" y="-2" z="12" spawntime="90" />
@@ -1984,6 +2182,9 @@
 	<monster centerx="32397" centery="31706" centerz="12" radius="2">
 		<monster name="Snake" x="1" y="0" z="12" spawntime="90" />
 	</monster>
+	<monster centerx="32385" centery="31796" centerz="12" radius="1">
+		<monster name="Corym Charlatan" x="0" y="0" z="12" spawntime="60" />
+	</monster>
 	<monster centerx="32216" centery="31797" centerz="12" radius="3">
 		<monster name="Ghoul" x="-2" y="-1" z="12" spawntime="90" />
 		<monster name="Ghoul" x="1" y="1" z="12" spawntime="90" />
@@ -1998,14 +2199,26 @@
 		<monster name="Skeleton" x="-1" y="-2" z="12" spawntime="90" />
 		<monster name="Ghoul" x="0" y="2" z="12" spawntime="90" />
 	</monster>
+	<monster centerx="32371" centery="31805" centerz="12" radius="1">
+		<monster name="Corym Charlatan" x="0" y="0" z="12" spawntime="60" />
+	</monster>
 	<monster centerx="32378" centery="31811" centerz="12" radius="3">
 		<monster name="Corym Charlatan" x="1" y="-1" z="12" spawntime="90" />
 	</monster>
 	<monster centerx="32385" centery="31811" centerz="12" radius="3">
 		<monster name="Corym Charlatan" x="-3" y="1" z="12" spawntime="90" />
 	</monster>
+	<monster centerx="32396" centery="31812" centerz="12" radius="1">
+		<monster name="Corym Charlatan" x="0" y="0" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32398" centery="31812" centerz="12" radius="1">
+		<monster name="Corym Charlatan" x="0" y="0" z="12" spawntime="60" />
+	</monster>
 	<monster centerx="32225" centery="31813" centerz="12" radius="3">
 		<monster name="Ghoul" x="-1" y="-1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32397" centery="31814" centerz="12" radius="1">
+		<monster name="Corym Charlatan" x="0" y="0" z="12" spawntime="60" />
 	</monster>
 	<monster centerx="32236" centery="31817" centerz="12" radius="3">
 		<monster name="Cave Rat" x="-2" y="-2" z="12" spawntime="90" />
@@ -2015,6 +2228,7 @@
 		<monster name="Ghoul" x="-1" y="-1" z="12" spawntime="90" />
 	</monster>
 	<monster centerx="32371" centery="31818" centerz="12" radius="3">
+		<monster name="Corym Charlatan" x="2" y="-2" z="12" spawntime="60" />
 		<monster name="Corym Charlatan" x="0" y="2" z="12" spawntime="90" />
 	</monster>
 	<monster centerx="32378" centery="31818" centerz="12" radius="3">
@@ -2023,6 +2237,9 @@
 	<monster centerx="32214" centery="31819" centerz="12" radius="3">
 		<monster name="Skeleton" x="1" y="-2" z="12" spawntime="90" />
 		<monster name="Skeleton" x="-1" y="2" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32387" centery="31819" centerz="12" radius="1">
+		<monster name="Corym Charlatan" x="0" y="0" z="12" spawntime="60" />
 	</monster>
 	<monster centerx="32222" centery="31822" centerz="12" radius="3">
 		<monster name="Cave Rat" x="1" y="-3" z="12" spawntime="90" />
@@ -2034,6 +2251,16 @@
 	<monster centerx="32490" centery="31825" centerz="12" radius="3">
 		<monster name="Dragon" x="3" y="-3" z="12" spawntime="90" />
 		<monster name="Dragon" x="-3" y="-2" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32362" centery="31826" centerz="12" radius="1">
+		<monster name="Corym Charlatan" x="0" y="0" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32381" centery="31827" centerz="12" radius="1">
+		<monster name="Corym Charlatan" x="0" y="0" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32391" centery="31829" centerz="12" radius="1">
+		<monster name="Corym Charlatan" x="0" y="0" z="12" spawntime="60" />
+		<monster name="Corym Charlatan" x="1" y="0" z="12" spawntime="60" />
 	</monster>
 	<monster centerx="32177" centery="31831" centerz="12" radius="3">
 		<monster name="Vampire" x="1" y="-1" z="12" spawntime="90" />
@@ -2099,6 +2326,39 @@
 	</monster>
 	<monster centerx="32455" centery="31729" centerz="13" radius="3">
 		<monster name="Dragon" x="1" y="1" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="32397" centery="31809" centerz="13" radius="1">
+		<monster name="Corym Charlatan" x="0" y="0" z="13" spawntime="60" />
+		<monster name="Corym Skirmisher" x="1" y="1" z="13" spawntime="60" />
+	</monster>
+	<monster centerx="32388" centery="31811" centerz="13" radius="1">
+		<monster name="Corym Charlatan" x="0" y="0" z="13" spawntime="60" />
+		<monster name="Corym Skirmisher" x="0" y="1" z="13" spawntime="60" />
+	</monster>
+	<monster centerx="32396" centery="31816" centerz="13" radius="1">
+		<monster name="Corym Skirmisher" x="0" y="0" z="13" spawntime="60" />
+	</monster>
+	<monster centerx="32408" centery="31816" centerz="13" radius="1">
+		<monster name="Corym Charlatan" x="0" y="0" z="13" spawntime="60" />
+		<monster name="Corym Charlatan" x="1" y="0" z="13" spawntime="60" />
+	</monster>
+	<monster centerx="32427" centery="31823" centerz="13" radius="1">
+		<monster name="Corym Charlatan" x="1" y="-1" z="13" spawntime="60" />
+		<monster name="Corym Charlatan" x="0" y="0" z="13" spawntime="60" />
+		<monster name="Corym Skirmisher" x="1" y="1" z="13" spawntime="60" />
+	</monster>
+	<monster centerx="32385" centery="31828" centerz="13" radius="1">
+		<monster name="Corym Charlatan" x="0" y="0" z="13" spawntime="60" />
+	</monster>
+	<monster centerx="32390" centery="31836" centerz="13" radius="1">
+		<monster name="Corym Charlatan" x="0" y="0" z="13" spawntime="60" />
+		<monster name="Corym Charlatan" x="0" y="1" z="13" spawntime="60" />
+	</monster>
+	<monster centerx="32398" centery="31839" centerz="13" radius="1">
+		<monster name="Corym Skirmisher" x="0" y="0" z="13" spawntime="60" />
+	</monster>
+	<monster centerx="32396" centery="31841" centerz="13" radius="1">
+		<monster name="Corym Skirmisher" x="0" y="0" z="13" spawntime="60" />
 	</monster>
 	<monster centerx="32227" centery="31854" centerz="13" radius="1">
 		<monster name="Scorpion" x="0" y="0" z="13" spawntime="90" />

@@ -1,0 +1,119 @@
+{
+  "city": "THAIS",
+  "area": {
+    "id": 24,
+    "name": "Thais"
+  },
+  "subareas": [
+    {
+      "id": 317,
+      "name": "Rookgaard"
+    },
+    {
+      "id": 514,
+      "name": "Newhaven"
+    },
+    {
+      "id": 120,
+      "name": "Isle of Destiny"
+    },
+    {
+      "id": 454,
+      "name": "Thais"
+    },
+    {
+      "id": 307,
+      "name": "Adventurers' Guild"
+    },
+    {
+      "id": 28,
+      "name": "Thais City"
+    },
+    {
+      "id": 33,
+      "name": "Thais Trolls' Cave"
+    },
+    {
+      "id": 34,
+      "name": "Mount Sternum"
+    },
+    {
+      "id": 292,
+      "name": "Travora"
+    },
+    {
+      "id": 35,
+      "name": "Fibula"
+    },
+    {
+      "id": 291,
+      "name": "Meluna"
+    },
+    {
+      "id": 29,
+      "name": "Thais Surroundings"
+    },
+    {
+      "id": 293,
+      "name": "Temple of Light"
+    },
+    {
+      "id": 295,
+      "name": "Greenshore"
+    },
+    {
+      "id": 478,
+      "name": "Thais Peninsula"
+    },
+    {
+      "id": 528,
+      "name": "Aragonia"
+    },
+    {
+      "id": 526,
+      "name": "Targuna"
+    }
+  ],
+  "world": {
+    "file": "otservbr.otbm",
+    "bytes": 184777193
+  },
+  "shape": "square",
+  "bounds": {
+    "minX": 31893,
+    "minY": 31485,
+    "maxX": 33575,
+    "maxY": 33167
+  },
+  "columns": 164406,
+  "tiles": 11942709,
+  "tileAreas": 787054,
+  "towns": [
+    {
+      "id": 3,
+      "name": "Rookgaard",
+      "x": 32097,
+      "y": 32219,
+      "z": 7
+    },
+    {
+      "id": 4,
+      "name": "Island of Destiny",
+      "x": 32091,
+      "y": 32027,
+      "z": 7
+    },
+    {
+      "id": 8,
+      "name": "Thais",
+      "x": 32369,
+      "y": 32241,
+      "z": 7
+    }
+  ],
+  "monsterGroups": 1723,
+  "monsterEntries": 3122,
+  "npcGroups": 124,
+  "npcEntries": 124,
+  "houses": 130
+}

@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="33187" centery="32303" centerz="7" radius="1">
+		<monster name="Nomad" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33189" centery="32307" centerz="7" radius="1">
+		<monster name="Nomad" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33194" centery="32316" centerz="7" radius="1">
+		<monster name="Nomad" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33198" centery="32320" centerz="7" radius="1">
+		<monster name="Wasp" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33210" centery="32322" centerz="7" radius="1">
+		<monster name="Wasp" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33191" centery="32323" centerz="7" radius="1">
+		<monster name="Nomad" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33196" centery="32325" centerz="7" radius="1">
+		<monster name="Nomad" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33202" centery="32327" centerz="7" radius="1">
+		<monster name="Nomad" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33216" centery="32329" centerz="7" radius="1">
+		<monster name="Nomad" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33295" centery="32334" centerz="7" radius="1">
+		<monster name="Wasp" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33301" centery="32337" centerz="7" radius="1">
+		<monster name="Wasp" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33311" centery="32337" centerz="7" radius="1">
+		<monster name="Wasp" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33297" centery="32342" centerz="7" radius="1">
+		<monster name="Wasp" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33300" centery="32346" centerz="7" radius="1">
+		<monster name="Wasp" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33293" centery="32348" centerz="7" radius="1">
+		<monster name="Wasp" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33298" centery="32350" centerz="7" radius="1">
+		<monster name="Nomad" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33302" centery="32351" centerz="7" radius="1">
+		<monster name="Nomad" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33308" centery="32353" centerz="7" radius="2">
+		<monster name="Nomad" x="0" y="-2" z="7" spawntime="90" />
+		<monster name="Nomad" x="1" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33315" centery="32366" centerz="7" radius="1">
+		<monster name="Nomad" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+</monsters>

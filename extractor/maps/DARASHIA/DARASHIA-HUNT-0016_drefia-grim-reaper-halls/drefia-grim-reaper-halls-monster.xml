@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="33037" centery="32455" centerz="12" radius="3">
+		<monster name="Grim Reaper" x="-3" y="1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33035" centery="32463" centerz="12" radius="3">
+		<monster name="Grim Reaper" x="-3" y="1" z="12" spawntime="90" />
+		<monster name="Shadow Pupil" x="2" y="2" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33037" centery="32464" centerz="12" radius="3">
+		<monster name="Gravedigger" x="2" y="-2" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33029" centery="32476" centerz="12" radius="3">
+		<monster name="Gravedigger" x="2" y="-2" z="12" spawntime="90" />
+		<monster name="Ghost" x="0" y="0" z="12" spawntime="90" />
+		<monster name="Shadow Pupil" x="0" y="1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33017" centery="32480" centerz="12" radius="3">
+		<monster name="Gravedigger" x="2" y="-2" z="12" spawntime="90" />
+		<monster name="Shadow Pupil" x="0" y="1" z="12" spawntime="90" />
+	</monster>
+</monsters>

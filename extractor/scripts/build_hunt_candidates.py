@@ -22,6 +22,7 @@ import appearance_flags
 import fetch_assets
 import hunt_candidates
 import map_regions
+import monster_stats
 import paths
 import update_canary_data
 from travel_graph import build_walkable_graph, extract_tile_flags, tile_distances_and_prev
@@ -82,6 +83,12 @@ def main():
     parser.add_argument(
         "--min-creatures", type=int, default=hunt_candidates.DEFAULT_MIN_CREATURES
     )
+    parser.add_argument(
+        "--min-experience",
+        type=int,
+        default=hunt_candidates.MIN_MONSTER_EXPERIENCE,
+        help="descarta spawn de monstro com XP abaixo disto (0 desliga o filtro)",
+    )
     parser.add_argument("--canary-dir")
     parser.add_argument("--client-dir")
     args = parser.parse_args()
@@ -110,6 +117,43 @@ def main():
         points = hunt_candidates.parse_spawn_xml(handler.read())
     print(f"[OK] {len(points):,} criaturas no spawn do recorte")
 
+    # O XP vem do mesmo lua que alimenta a tabela de combate; o nome do lua é
+    # minúsculo e o do spawn não, então a chave aqui já nasce sem caixa.
+    experience_by_name = {}
+    try:
+        stats = monster_stats.build_monster_stats(
+            paths.CANARY.require(args.canary_dir), {p["name"] for p in points}
+        )
+        experience_by_name = {
+            name.lower(): entry["experienceReward"] for name, entry in stats.items()
+        }
+    except paths.MissingRepoError as exc:
+        print(f"[WARN] sem Canary ({exc}); nenhum monstro será filtrado por XP")
+
+    if experience_by_name:
+        # O relatório separa os dois destinos de quem vale pouco: o descartado
+        # e o que a lista de clássicos salvou. Juntá-los já enganou uma vez —
+        # a linha dizia "descartados: ... Rotworm ..." e o Rotworm estava lá,
+        # no mapa, isento.
+        weak = {
+            p["name"]
+            for p in points
+            if experience_by_name.get(p["name"].lower(), args.min_experience)
+            < args.min_experience
+        }
+        dropped = sorted(n for n in weak if not hunt_candidates.survives_low_experience(n))
+        spared = sorted(n for n in weak if hunt_candidates.survives_low_experience(n))
+        unknown = sorted(
+            {p["name"] for p in points if p["name"].lower() not in experience_by_name}
+        )
+        print(f"[OK] XP de {len(experience_by_name)} monstros lido do Canary")
+        if dropped:
+            print(f"     descartados (<{args.min_experience} xp): {', '.join(dropped)}")
+        if spared:
+            print(f"     fracos mantidos por serem clássicos: {', '.join(spared)}")
+        if unknown:
+            print(f"[WARN] {len(unknown)} sem XP no Canary (mantidos): {', '.join(unknown)}")
+
     client_dir = paths.TIBIA_CLIENT.require(args.client_dir)
     assets_dir = fetch_assets.assets_dir(client_dir, fetch_assets.load_manifest())
     owner, names = subarea_lookup(assets_dir, [s["id"] for s in source["subareas"]])
@@ -123,6 +167,8 @@ def main():
         subarea_of_column=lambda x, y: owner.get((x, y)),
         radius=args.radius,
         min_creatures=args.min_creatures,
+        experience_by_name=experience_by_name,
+        min_experience=args.min_experience,
     )
 
     temples = [town for town in source.get("towns", [])]
@@ -167,6 +213,7 @@ def main():
         "temple": temples[0] if temples else None,
         "clusterRadius": args.radius,
         "minCreatures": args.min_creatures,
+        "minExperience": args.min_experience,
         "candidates": candidates,
         "orphanSpawns": [
             {"name": p["name"], "x": p["x"], "y": p["y"], "z": p["z"]} for p in orphans

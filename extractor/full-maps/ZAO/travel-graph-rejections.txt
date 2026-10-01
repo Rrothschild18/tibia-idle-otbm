@@ -1,0 +1,19 @@
+# Nós sem entrada no grafo de viagem — ZAO
+#
+# Gerado por build_travel_fragment.py. Nada aqui entrou no fragmento: são os nós que
+# ninguém consegue alcançar viajando, e o que fazer com cada um.
+
+## poi-without-edge (8)
+POI com coordenada e sem aresta — a placa existe no OTBM, mas o tile dela não
+alcança nenhum outro POI da cidade (ilhado por parede/água, ou a placa está num
+tile intransponível). Abra a coordenada no editor de mapa e mova a placa pra um
+tile caminhável ligado ao resto da cidade.
+
+  ZAO-NPC-a-sleeping-dragon  (NPC)  x=33239 y=31224 z=10
+  ZAO-NPC-awarness-of-the-emperor  (NPC)  x=33062 y=31153 z=15
+  ZAO-NPC-cael  (NPC)  x=33028 y=31513 z=10
+  ZAO-NPC-crowned-tree  (NPC)  x=33362 y=31342 z=8
+  ZAO-NPC-izsh  (NPC)  x=33080 y=31215 z=5
+  ZAO-NPC-murim  (NPC)  x=33012 y=31494 z=10
+  ZAO-NPC-rabaz  (NPC)  x=33009 y=31532 z=10
+  ZAO-NPC-zizzle  (NPC)  x=33105 y=31120 z=12

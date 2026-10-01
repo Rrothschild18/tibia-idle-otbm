@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="33355" centery="31594" centerz="11" radius="3">
+		<monster name="Hellfire Fighter" x="0" y="-2" z="11" spawntime="90" />
+		<monster name="Fury" x="2" y="-1" z="11" spawntime="90" />
+		<monster name="Destroyer" x="-1" y="0" z="11" spawntime="90" />
+		<monster name="Fury" x="3" y="1" z="11" spawntime="90" />
+		<monster name="Plaguesmith" x="-3" y="2" z="11" spawntime="90" />
+		<monster name="Plaguesmith" x="1" y="3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33355" centery="31602" centerz="11" radius="3">
+		<monster name="Destroyer" x="-1" y="-2" z="11" spawntime="90" />
+		<monster name="Hellfire Fighter" x="-2" y="2" z="11" spawntime="90" />
+		<monster name="Hellfire Fighter" x="2" y="3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33355" centery="31610" centerz="11" radius="3">
+		<monster name="Juggernaut" x="2" y="-3" z="11" spawntime="90" />
+		<monster name="Plaguesmith" x="1" y="-1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33363" centery="31610" centerz="11" radius="3">
+		<monster name="Plaguesmith" x="2" y="-3" z="11" spawntime="90" />
+		<monster name="Plaguesmith" x="-2" y="-2" z="11" spawntime="90" />
+	</monster>
+</monsters>

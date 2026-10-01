@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32573" centery="31428" centerz="11" radius="4">
+		<monster name="Scarab" x="1" y="-3" z="11" spawntime="90" />
+		<monster name="Ancient Scarab" x="1" y="-1" z="11" spawntime="90" />
+		<monster name="Scarab" x="-3" y="0" z="11" spawntime="90" />
+		<monster name="Scarab" x="2" y="3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32574" centery="31446" centerz="11" radius="4">
+		<monster name="Scarab" x="-2" y="-2" z="11" spawntime="90" />
+		<monster name="Scarab" x="3" y="2" z="11" spawntime="90" />
+		<monster name="Scarab" x="-1" y="3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32609" centery="31461" centerz="11" radius="2">
+		<monster name="Goblin Leader" x="2" y="-1" z="11" spawntime="60" />
+		<monster name="Goblin" x="-1" y="0" z="11" spawntime="90" />
+		<monster name="Goblin Scavenger" x="2" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32573" centery="31463" centerz="11" radius="4">
+		<monster name="Scarab" x="-2" y="-3" z="11" spawntime="90" />
+		<monster name="Ancient Scarab" x="2" y="0" z="11" spawntime="90" />
+		<monster name="Scarab" x="0" y="3" z="11" spawntime="90" />
+	</monster>
+</monsters>

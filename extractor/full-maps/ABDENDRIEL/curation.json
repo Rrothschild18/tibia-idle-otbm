@@ -1,0 +1,249 @@
+{
+  "city": "ABDENDRIEL",
+  "area": {
+    "id": 1,
+    "name": "Ab'Dendriel"
+  },
+  "subareas": [
+    {
+      "id": 451,
+      "name": "Ab'Dendriel",
+      "mask": "masks/0451.png",
+      "maskPlacement": {
+        "x": 32650,
+        "y": 31572,
+        "width": 90,
+        "height": 198
+      }
+    },
+    {
+      "id": 273,
+      "name": "Ab'Dendriel City",
+      "mask": "masks/0273.png",
+      "maskPlacement": {
+        "x": 32541,
+        "y": 31571,
+        "width": 198,
+        "height": 202
+      }
+    },
+    {
+      "id": 53,
+      "name": "Draconia",
+      "mask": "masks/0053.png",
+      "maskPlacement": {
+        "x": 32770,
+        "y": 31552,
+        "width": 60,
+        "height": 69
+      }
+    },
+    {
+      "id": 54,
+      "name": "Elvenbane",
+      "mask": "masks/0054.png",
+      "maskPlacement": {
+        "x": 32562,
+        "y": 31630,
+        "width": 51,
+        "height": 42
+      }
+    },
+    {
+      "id": 55,
+      "name": "Ab'Dendriel Surroundings",
+      "mask": "masks/0055.png",
+      "maskPlacement": {
+        "x": 32471,
+        "y": 31644,
+        "width": 241,
+        "height": 175
+      }
+    }
+  ],
+  "hunts": [
+    {
+      "name": "Ab'Dendriel Underground",
+      "floors": [
+        8
+      ],
+      "candidateIds": [
+        "ABDENDRIEL-C08-003",
+        "ABDENDRIEL-C08-004",
+        "ABDENDRIEL-C08-010"
+      ],
+      "species": null,
+      "creatures": 25,
+      "extent": {
+        "minX": 32691,
+        "minY": 31595,
+        "maxX": 32724,
+        "maxY": 31648,
+        "centerX": 32707,
+        "centerY": 31621
+      },
+      "subareaId": 273,
+      "walkTilesFromTemple": 144
+    },
+    {
+      "name": "Ab'Dendriel Slimes Cave",
+      "floors": [
+        8
+      ],
+      "candidateIds": [
+        "ABDENDRIEL-C08-003",
+        "ABDENDRIEL-C08-004",
+        "ABDENDRIEL-C08-010",
+        "ABDENDRIEL-C08-011"
+      ],
+      "species": null,
+      "creatures": 28,
+      "extent": {
+        "minX": 32688,
+        "minY": 31580,
+        "maxX": 32724,
+        "maxY": 31648,
+        "centerX": 32706,
+        "centerY": 31614
+      },
+      "subareaId": 273,
+      "walkTilesFromTemple": 144
+    },
+    {
+      "name": "Elvenbane",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "ABDENDRIEL-C07-001",
+        "ABDENDRIEL-C07-002"
+      ],
+      "species": null,
+      "creatures": 28,
+      "extent": {
+        "minX": 32576,
+        "minY": 31638,
+        "maxX": 32599,
+        "maxY": 31691,
+        "centerX": 32587,
+        "centerY": 31664
+      },
+      "subareaId": 55,
+      "walkTilesFromTemple": 167
+    },
+    {
+      "name": "Ab'Dendriel Elf Cave",
+      "floors": [
+        8
+      ],
+      "candidateIds": [
+        "ABDENDRIEL-C08-007",
+        "ABDENDRIEL-C08-009"
+      ],
+      "species": null,
+      "creatures": 13,
+      "extent": {
+        "minX": 32642,
+        "minY": 31605,
+        "maxX": 32659,
+        "maxY": 31637,
+        "centerX": 32650,
+        "centerY": 31621
+      },
+      "subareaId": 273,
+      "walkTilesFromTemple": 85
+    },
+    {
+      "name": "Forsaken Mine/Cyclopes",
+      "floors": [
+        9
+      ],
+      "candidateIds": [
+        "ABDENDRIEL-C09-010"
+      ],
+      "species": null,
+      "creatures": 3,
+      "extent": {
+        "minX": 32649,
+        "minY": 31734,
+        "maxX": 32666,
+        "maxY": 31738,
+        "centerX": 32657,
+        "centerY": 31736
+      },
+      "subareaId": 55,
+      "walkTilesFromTemple": 140
+    },
+    {
+      "name": "Forsaken Mine",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "ABDENDRIEL-C07-005",
+        "ABDENDRIEL-C07-009"
+      ],
+      "species": null,
+      "creatures": 9,
+      "extent": {
+        "minX": 32665,
+        "minY": 31716,
+        "maxX": 32672,
+        "maxY": 31764,
+        "centerX": 32668,
+        "centerY": 31740
+      },
+      "subareaId": 55,
+      "walkTilesFromTemple": 128
+    },
+    {
+      "name": "Hellgate",
+      "floors": [
+        11
+      ],
+      "candidateIds": [
+        "ABDENDRIEL-C11-003",
+        "ABDENDRIEL-C11-005",
+        "ABDENDRIEL-C11-009"
+      ],
+      "species": null,
+      "creatures": 20,
+      "extent": {
+        "minX": 32666,
+        "minY": 31604,
+        "maxX": 32705,
+        "maxY": 31670,
+        "centerX": 32685,
+        "centerY": 31637
+      },
+      "subareaId": 273,
+      "walkTilesFromTemple": 110
+    },
+    {
+      "name": "Draconia",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "ABDENDRIEL-C07-003",
+        "ABDENDRIEL-C07-004",
+        "ABDENDRIEL-C07-007",
+        "ABDENDRIEL-C07-010",
+        "ABDENDRIEL-C07-011",
+        "ABDENDRIEL-C07-012"
+      ],
+      "species": null,
+      "creatures": 29,
+      "extent": {
+        "minX": 32777,
+        "minY": 31572,
+        "maxX": 32817,
+        "maxY": 31599,
+        "centerX": 32797,
+        "centerY": 31585
+      },
+      "subareaId": 53,
+      "walkTilesFromTemple": 571
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="33295" centery="31797" centerz="14" radius="3">
+		<monster name="Dragonling" x="-3" y="3" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="33294" centery="31803" centerz="14" radius="1">
+		<monster name="Massive Fire Elemental" x="0" y="0" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="33267" centery="31811" centerz="14" radius="3">
+		<monster name="Infernalist" x="-2" y="-1" z="14" spawntime="90" />
+		<monster name="Massive Fire Elemental" x="0" y="-1" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="33274" centery="31811" centerz="14" radius="3">
+		<monster name="Fury" x="-3" y="-3" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="33281" centery="31811" centerz="14" radius="3">
+		<monster name="Massive Fire Elemental" x="3" y="-2" z="14" spawntime="90" />
+		<monster name="Hellfire Fighter" x="-1" y="2" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="33288" centery="31811" centerz="14" radius="3">
+		<monster name="Massive Fire Elemental" x="3" y="-1" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="33295" centery="31811" centerz="14" radius="3">
+		<monster name="Dragonling" x="-2" y="0" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="33281" centery="31818" centerz="14" radius="3">
+		<monster name="Infernalist" x="2" y="-3" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="33288" centery="31818" centerz="14" radius="3">
+		<monster name="Fire Elemental" x="-3" y="-3" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="33295" centery="31818" centerz="14" radius="3">
+		<monster name="Dragonling" x="1" y="2" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="33287" centery="31824" centerz="14" radius="1">
+		<monster name="Massive Fire Elemental" x="0" y="0" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="33296" centery="31829" centerz="14" radius="1">
+		<monster name="Massive Fire Elemental" x="0" y="0" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="33288" centery="31832" centerz="14" radius="3">
+		<monster name="Dragon Lord" x="-3" y="1" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="33297" centery="31835" centerz="14" radius="1">
+		<monster name="Massive Fire Elemental" x="0" y="0" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="33316" centery="31846" centerz="14" radius="3">
+		<monster name="Fury" x="1" y="-2" z="14" spawntime="60" />
+		<monster name="Infernalist" x="2" y="0" z="14" spawntime="60" />
+		<monster name="Massive Fire Elemental" x="0" y="2" z="14" spawntime="60" />
+	</monster>
+</monsters>

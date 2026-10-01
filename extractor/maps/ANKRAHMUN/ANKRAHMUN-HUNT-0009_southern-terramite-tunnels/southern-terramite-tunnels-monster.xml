@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="33092" centery="32679" centerz="8" radius="3">
+		<monster name="Terramite" x="1" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33099" centery="32679" centerz="8" radius="3">
+		<monster name="Terramite" x="0" y="3" z="8" spawntime="90" />
+		<monster name="Terramite" x="3" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33071" centery="32693" centerz="8" radius="3">
+		<monster name="Terramite" x="-2" y="-1" z="8" spawntime="90" />
+		<monster name="Terramite" x="3" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33078" centery="32693" centerz="8" radius="3">
+		<monster name="Terramite" x="3" y="-2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33106" centery="32693" centerz="8" radius="3">
+		<monster name="Terramite" x="3" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33050" centery="32700" centerz="8" radius="3">
+		<monster name="Terramite" x="-3" y="1" z="8" spawntime="90" />
+		<monster name="Terramite" x="0" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33057" centery="32700" centerz="8" radius="3">
+		<monster name="Terramite" x="-2" y="2" z="8" spawntime="90" />
+		<monster name="Terramite" x="3" y="2" z="8" spawntime="90" />
+	</monster>
+</monsters>

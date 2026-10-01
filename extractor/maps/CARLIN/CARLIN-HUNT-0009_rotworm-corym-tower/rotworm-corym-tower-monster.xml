@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32357" centery="31818" centerz="10" radius="3">
+		<monster name="Rotworm" x="-2" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32375" centery="31830" centerz="10" radius="1">
+		<monster name="Rotworm" x="0" y="0" z="10" spawntime="60" />
+		<monster name="Rotworm" x="-1" y="1" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32350" centery="31832" centerz="10" radius="3">
+		<monster name="Rotworm" x="2" y="-3" z="10" spawntime="90" />
+		<monster name="Rotworm" x="-1" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32357" centery="31832" centerz="10" radius="3">
+		<monster name="Rotworm" x="3" y="-3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32364" centery="31832" centerz="10" radius="3">
+		<monster name="Rotworm" x="2" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32336" centery="31839" centerz="10" radius="3">
+		<monster name="Rotworm" x="2" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32343" centery="31839" centerz="10" radius="3">
+		<monster name="Rotworm" x="3" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32362" centery="31839" centerz="10" radius="1">
+		<monster name="Rotworm" x="0" y="0" z="10" spawntime="60" />
+		<monster name="Rotworm" x="-1" y="1" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32377" centery="31840" centerz="10" radius="1">
+		<monster name="Rotworm" x="0" y="0" z="10" spawntime="60" />
+		<monster name="Rotworm" x="-1" y="1" z="10" spawntime="60" />
+		<monster name="Rotworm" x="1" y="1" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32343" centery="31846" centerz="10" radius="3">
+		<monster name="Rotworm" x="-1" y="-3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32360" centery="31850" centerz="10" radius="1">
+		<monster name="Rotworm" x="0" y="0" z="10" spawntime="60" />
+		<monster name="Rotworm" x="1" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32364" centery="31857" centerz="10" radius="1">
+		<monster name="Rotworm" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32375" centery="31878" centerz="11" radius="1">
+		<monster name="Carrion Worm" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32380" centery="31880" centerz="11" radius="1">
+		<monster name="Carrion Worm" x="0" y="0" z="11" spawntime="60" />
+		<monster name="Carrion Worm" x="0" y="1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32371" centery="31805" centerz="12" radius="1">
+		<monster name="Corym Charlatan" x="0" y="0" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32378" centery="31811" centerz="12" radius="3">
+		<monster name="Corym Charlatan" x="1" y="-1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32385" centery="31811" centerz="12" radius="3">
+		<monster name="Corym Charlatan" x="-3" y="1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32396" centery="31812" centerz="12" radius="1">
+		<monster name="Corym Charlatan" x="0" y="0" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32398" centery="31812" centerz="12" radius="1">
+		<monster name="Corym Charlatan" x="0" y="0" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32397" centery="31814" centerz="12" radius="1">
+		<monster name="Corym Charlatan" x="0" y="0" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32371" centery="31818" centerz="12" radius="3">
+		<monster name="Corym Charlatan" x="2" y="-2" z="12" spawntime="60" />
+		<monster name="Corym Charlatan" x="0" y="2" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32378" centery="31818" centerz="12" radius="3">
+		<monster name="Corym Charlatan" x="-2" y="-1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32387" centery="31819" centerz="12" radius="1">
+		<monster name="Corym Charlatan" x="0" y="0" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32362" centery="31826" centerz="12" radius="1">
+		<monster name="Corym Charlatan" x="0" y="0" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32381" centery="31827" centerz="12" radius="1">
+		<monster name="Corym Charlatan" x="0" y="0" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32391" centery="31829" centerz="12" radius="1">
+		<monster name="Corym Charlatan" x="0" y="0" z="12" spawntime="60" />
+		<monster name="Corym Charlatan" x="1" y="0" z="12" spawntime="60" />
+	</monster>
+</monsters>

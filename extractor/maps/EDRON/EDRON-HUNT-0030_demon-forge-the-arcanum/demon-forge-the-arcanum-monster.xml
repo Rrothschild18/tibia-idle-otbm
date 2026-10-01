@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="33120" centery="31782" centerz="15" radius="10">
+		<monster name="Warlock" x="3" y="-8" z="15" spawntime="90" />
+		<monster name="Hand of Cursed Fate" x="-3" y="-7" z="15" spawntime="90" />
+		<monster name="Diabolic Imp" x="0" y="-6" z="15" spawntime="90" />
+		<monster name="Hand of Cursed Fate" x="-7" y="-2" z="15" spawntime="90" />
+		<monster name="Undead Dragon" x="4" y="-1" z="15" spawntime="90" />
+		<monster name="Hand of Cursed Fate" x="-7" y="3" z="15" spawntime="90" />
+		<monster name="Undead Dragon" x="3" y="5" z="15" spawntime="90" />
+	</monster>
+	<monster centerx="33097" centery="31783" centerz="15" radius="10">
+		<monster name="Lich" x="-5" y="-5" z="15" spawntime="90" />
+		<monster name="Warlock" x="5" y="-5" z="15" spawntime="90" />
+		<monster name="Lich" x="2" y="-4" z="15" spawntime="90" />
+		<monster name="Diabolic Imp" x="-4" y="-3" z="15" spawntime="90" />
+		<monster name="Lich" x="-2" y="0" z="15" spawntime="90" />
+		<monster name="Lich" x="7" y="0" z="15" spawntime="90" />
+		<monster name="Diabolic Imp" x="0" y="2" z="15" spawntime="90" />
+		<monster name="Lich" x="-4" y="3" z="15" spawntime="90" />
+		<monster name="Diabolic Imp" x="3" y="4" z="15" spawntime="90" />
+	</monster>
+</monsters>

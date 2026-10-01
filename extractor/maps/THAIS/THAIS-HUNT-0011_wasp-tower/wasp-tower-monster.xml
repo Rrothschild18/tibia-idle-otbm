@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="31972" centery="32133" centerz="7" radius="3">
+		<monster name="Orc" x="3" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="31984" centery="32135" centerz="7" radius="2">
+		<monster name="Orc" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="31986" centery="32140" centerz="7" radius="3">
+		<monster name="Orc" x="3" y="-1" z="7" spawntime="90" />
+		<monster name="Deer" x="-2" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="31993" centery="32140" centerz="7" radius="3">
+		<monster name="Deer" x="-3" y="-2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32021" centery="32140" centerz="7" radius="3">
+		<monster name="Wolf" x="1" y="-3" z="7" spawntime="90" />
+		<monster name="Wolf" x="-3" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32028" centery="32140" centerz="7" radius="3">
+		<monster name="Deer" x="3" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="31972" centery="32147" centerz="7" radius="3">
+		<monster name="Orc" x="-1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32028" centery="32147" centerz="7" radius="3">
+		<monster name="Deer" x="1" y="-2" z="7" spawntime="90" />
+		<monster name="Deer" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="31972" centery="32154" centerz="7" radius="3">
+		<monster name="Deer" x="-3" y="-3" z="7" spawntime="90" />
+	</monster>
+</monsters>

@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32532" centery="32413" centerz="9" radius="3">
+		<monster name="Misguided Bully" x="-1" y="0" z="9" spawntime="60" />
+		<monster name="Misguided Thief" x="0" y="2" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="32532" centery="32420" centerz="9" radius="3">
+		<monster name="Misguided Bully" x="1" y="3" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="32504" centery="32427" centerz="9" radius="3">
+		<monster name="Misguided Bully" x="-2" y="-1" z="9" spawntime="60" />
+		<monster name="Misguided Thief" x="-1" y="3" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="32511" centery="32427" centerz="9" radius="3">
+		<monster name="Misguided Bully" x="-3" y="-1" z="9" spawntime="60" />
+		<monster name="Misguided Thief" x="3" y="-1" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="32518" centery="32427" centerz="9" radius="3">
+		<monster name="Misguided Bully" x="1" y="-1" z="9" spawntime="60" />
+		<monster name="Misguided Thief" x="3" y="-1" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="32525" centery="32427" centerz="9" radius="3">
+		<monster name="Misguided Bully" x="0" y="-1" z="9" spawntime="60" />
+		<monster name="Misguided Thief" x="2" y="-1" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="32532" centery="32427" centerz="9" radius="3">
+		<monster name="Misguided Bully" x="-1" y="-1" z="9" spawntime="60" />
+		<monster name="Misguided Bully" x="0" y="3" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="32532" centery="32434" centerz="9" radius="3">
+		<monster name="Misguided Bully" x="-1" y="-2" z="9" spawntime="60" />
+	</monster>
+</monsters>

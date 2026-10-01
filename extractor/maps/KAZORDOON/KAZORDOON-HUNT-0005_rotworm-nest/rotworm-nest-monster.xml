@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32511" centery="31895" centerz="9" radius="3">
+		<monster name="Rotworm" x="3" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32504" centery="31902" centerz="9" radius="3">
+		<monster name="Rotworm" x="-3" y="-3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32511" centery="31902" centerz="9" radius="3">
+		<monster name="Dwarf" x="-2" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32518" centery="31902" centerz="9" radius="3">
+		<monster name="Rotworm" x="-1" y="-3" z="9" spawntime="90" />
+		<monster name="Rotworm" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32497" centery="31909" centerz="9" radius="3">
+		<monster name="Rotworm" x="-3" y="-1" z="9" spawntime="90" />
+		<monster name="Rotworm" x="-3" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32504" centery="31909" centerz="9" radius="3">
+		<monster name="Dwarf" x="1" y="-3" z="9" spawntime="90" />
+		<monster name="Dwarf" x="-3" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32518" centery="31909" centerz="9" radius="3">
+		<monster name="Rotworm" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32490" centery="31916" centerz="9" radius="3">
+		<monster name="Dwarf" x="3" y="-3" z="9" spawntime="90" />
+		<monster name="Dwarf" x="2" y="-2" z="9" spawntime="90" />
+		<monster name="Rotworm" x="3" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32497" centery="31916" centerz="9" radius="3">
+		<monster name="Dwarf" x="3" y="-3" z="9" spawntime="90" />
+		<monster name="Dwarf" x="-3" y="-2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32483" centery="31923" centerz="9" radius="3">
+		<monster name="Rotworm" x="0" y="2" z="9" spawntime="90" />
+		<monster name="Rotworm" x="3" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32490" centery="31923" centerz="9" radius="3">
+		<monster name="Rotworm" x="-2" y="-3" z="9" spawntime="90" />
+		<monster name="Dwarf" x="-2" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32504" centery="31923" centerz="9" radius="3">
+		<monster name="Dwarf" x="0" y="-3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32504" centery="31930" centerz="9" radius="3">
+		<monster name="Dwarf" x="1" y="-2" z="9" spawntime="90" />
+		<monster name="Dwarf" x="2" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32525" centery="31930" centerz="9" radius="3">
+		<monster name="Rotworm" x="-1" y="-2" z="9" spawntime="90" />
+		<monster name="Rotworm" x="-1" y="2" z="9" spawntime="90" />
+		<monster name="Rotworm" x="2" y="2" z="9" spawntime="90" />
+		<monster name="Rotworm" x="3" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32539" centery="31930" centerz="9" radius="3">
+		<monster name="Rotworm" x="1" y="-3" z="9" spawntime="90" />
+		<monster name="Dwarf" x="0" y="2" z="9" spawntime="90" />
+		<monster name="Rotworm" x="3" y="2" z="9" spawntime="90" />
+		<monster name="Dwarf" x="1" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32546" centery="31930" centerz="9" radius="3">
+		<monster name="Rotworm" x="2" y="-2" z="9" spawntime="90" />
+		<monster name="Dwarf" x="-2" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32511" centery="31937" centerz="9" radius="3">
+		<monster name="Dwarf" x="-3" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32525" centery="31937" centerz="9" radius="3">
+		<monster name="Rotworm" x="0" y="-2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32539" centery="31937" centerz="9" radius="3">
+		<monster name="Rotworm" x="-2" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32511" centery="31944" centerz="9" radius="3">
+		<monster name="Dwarf" x="-2" y="-1" z="9" spawntime="90" />
+		<monster name="Rotworm" x="-2" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32518" centery="31944" centerz="9" radius="3">
+		<monster name="Rotworm" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32539" centery="31944" centerz="9" radius="3">
+		<monster name="Rotworm" x="-1" y="-2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32511" centery="31951" centerz="9" radius="3">
+		<monster name="Dwarf" x="-2" y="1" z="9" spawntime="90" />
+	</monster>
+</monsters>

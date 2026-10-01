@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32892" centery="31752" centerz="8" radius="4">
+		<monster name="Orc Spearman" x="-1" y="-3" z="8" spawntime="90" />
+		<monster name="Orc Spearman" x="3" y="-2" z="8" spawntime="90" />
+		<monster name="Orc Spearman" x="-3" y="0" z="8" spawntime="90" />
+		<monster name="Orc Spearman" x="-1" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32963" centery="31753" centerz="8" radius="3">
+		<monster name="Orc Shaman" x="1" y="-2" z="8" spawntime="90" />
+		<monster name="Orc Shaman" x="-3" y="-1" z="8" spawntime="90" />
+		<monster name="Orc Shaman" x="1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32947" centery="31754" centerz="8" radius="3">
+		<monster name="War Wolf" x="2" y="-2" z="8" spawntime="90" />
+		<monster name="Orc Shaman" x="-3" y="-1" z="8" spawntime="90" />
+		<monster name="Orc Rider" x="-1" y="0" z="8" spawntime="90" />
+		<monster name="War Wolf" x="2" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32956" centery="31758" centerz="8" radius="2">
+		<monster name="War Wolf" x="-1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32898" centery="31765" centerz="8" radius="3">
+		<monster name="Orc Berserker" x="1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32906" centery="31765" centerz="8" radius="3">
+		<monster name="Orc Warrior" x="2" y="0" z="8" spawntime="90" />
+		<monster name="Orc Warrior" x="0" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32914" centery="31765" centerz="8" radius="3">
+		<monster name="Orc Berserker" x="1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32956" centery="31767" centerz="8" radius="5">
+		<monster name="Orc Leader" x="-3" y="-3" z="8" spawntime="90" />
+		<monster name="Orc Leader" x="3" y="-3" z="8" spawntime="90" />
+		<monster name="Orc Warlord" x="1" y="-1" z="8" spawntime="90" />
+		<monster name="Orc Berserker" x="-2" y="0" z="8" spawntime="90" />
+		<monster name="Orc Berserker" x="4" y="2" z="8" spawntime="90" />
+		<monster name="Orc Berserker" x="-1" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32889" centery="31771" centerz="8" radius="3">
+		<monster name="Orc Warrior" x="-3" y="-3" z="8" spawntime="90" />
+		<monster name="Orc Warrior" x="3" y="0" z="8" spawntime="90" />
+		<monster name="Orc Warrior" x="1" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32910" centery="31771" centerz="8" radius="1">
+		<monster name="Orc Berserker" x="-1" y="1" z="8" spawntime="90" />
+		<monster name="Orc Warrior" x="1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32928" centery="31772" centerz="8" radius="5">
+		<monster name="Orc Shaman" x="-3" y="-4" z="8" spawntime="90" />
+		<monster name="Orc Berserker" x="0" y="-4" z="8" spawntime="90" />
+		<monster name="Orc Berserker" x="5" y="-4" z="8" spawntime="90" />
+		<monster name="Orc Shaman" x="-1" y="-3" z="8" spawntime="90" />
+		<monster name="Orc Shaman" x="1" y="-2" z="8" spawntime="90" />
+		<monster name="Bonelord" x="1" y="-1" z="8" spawntime="90" />
+		<monster name="Orc Berserker" x="-4" y="0" z="8" spawntime="90" />
+		<monster name="Orc Shaman" x="1" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32943" centery="31772" centerz="8" radius="2">
+		<monster name="Orc Warlord" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32898" centery="31777" centerz="8" radius="3">
+		<monster name="Orc Berserker" x="1" y="-1" z="8" spawntime="90" />
+		<monster name="Orc Berserker" x="2" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32914" centery="31777" centerz="8" radius="3">
+		<monster name="Orc Shaman" x="0" y="0" z="8" spawntime="90" />
+		<monster name="Orc Berserker" x="2" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32906" centery="31778" centerz="8" radius="3">
+		<monster name="Orc Leader" x="2" y="-2" z="8" spawntime="90" />
+		<monster name="Orc Shaman" x="0" y="-1" z="8" spawntime="90" />
+		<monster name="Orc Leader" x="1" y="1" z="8" spawntime="90" />
+	</monster>
+</monsters>

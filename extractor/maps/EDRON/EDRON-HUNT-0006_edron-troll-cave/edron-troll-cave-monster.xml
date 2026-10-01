@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="33126" centery="31774" centerz="7" radius="3">
+		<monster name="Troll" x="-1" y="-2" z="7" spawntime="90" />
+		<monster name="Troll" x="3" y="-1" z="7" spawntime="90" />
+		<monster name="Troll" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33117" centery="31780" centerz="7" radius="3">
+		<monster name="Troll" x="-2" y="-2" z="7" spawntime="90" />
+		<monster name="Troll" x="2" y="-2" z="7" spawntime="90" />
+		<monster name="Troll" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+</monsters>

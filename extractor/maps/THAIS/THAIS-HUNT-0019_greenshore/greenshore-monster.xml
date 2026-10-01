@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32215" centery="32051" centerz="7" radius="2">
+		<monster name="Wolf" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32210" centery="32056" centerz="7" radius="3">
+		<monster name="Insectoid Scout" x="-2" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32218" centery="32059" centerz="7" radius="2">
+		<monster name="Deer" x="2" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32231" centery="32061" centerz="7" radius="2">
+		<monster name="Deer" x="-1" y="-2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32254" centery="32061" centerz="7" radius="3">
+		<monster name="Chicken" x="-1" y="-1" z="7" spawntime="90" />
+		<monster name="Sheep" x="2" y="0" z="7" spawntime="90" />
+		<monster name="Chicken" x="1" y="1" z="7" spawntime="90" />
+		<monster name="Sheep" x="-2" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32210" centery="32063" centerz="7" radius="3">
+		<monster name="Insectoid Scout" x="-1" y="-3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32239" centery="32067" centerz="7" radius="4">
+		<monster name="Chicken" x="-2" y="-3" z="7" spawntime="90" />
+		<monster name="Chicken" x="-4" y="2" z="7" spawntime="90" />
+		<monster name="Snake" x="1" y="3" z="7" spawntime="90" />
+		<monster name="Deer" x="4" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32222" centery="32069" centerz="7" radius="2">
+		<monster name="Bug" x="2" y="-1" z="7" spawntime="90" />
+		<monster name="Bug" x="-1" y="2" z="7" spawntime="90" />
+	</monster>
+</monsters>

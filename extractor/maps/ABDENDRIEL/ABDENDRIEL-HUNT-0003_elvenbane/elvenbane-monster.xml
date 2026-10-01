@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32593" centery="31638" centerz="7" radius="1">
+		<monster name="Orc Spearman" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32582" centery="31639" centerz="7" radius="2">
+		<monster name="Orc Warrior" x="1" y="0" z="7" spawntime="90" />
+		<monster name="Orc Warrior" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32589" centery="31639" centerz="7" radius="1">
+		<monster name="Orc Spearman" x="-1" y="-1" z="7" spawntime="90" />
+		<monster name="Minotaur" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32598" centery="31639" centerz="7" radius="1">
+		<monster name="Orc Warrior" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32584" centery="31644" centerz="7" radius="1">
+		<monster name="Orc Warrior" x="1" y="-1" z="7" spawntime="90" />
+		<monster name="Orc Spearman" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32590" centery="31644" centerz="7" radius="1">
+		<monster name="Orc Berserker" x="-1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32599" centery="31645" centerz="7" radius="1">
+		<monster name="Minotaur" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32585" centery="31648" centerz="7" radius="1">
+		<monster name="Minotaur" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32595" centery="31649" centerz="7" radius="1">
+		<monster name="Minotaur" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32590" centery="31650" centerz="7" radius="1">
+		<monster name="Minotaur Guard" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32582" centery="31652" centerz="7" radius="2">
+		<monster name="Minotaur" x="-1" y="-1" z="7" spawntime="90" />
+		<monster name="Minotaur" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32579" centery="31675" centerz="7" radius="5">
+		<monster name="Squirrel" x="-3" y="-4" z="7" spawntime="90" />
+		<monster name="Orc" x="2" y="0" z="7" spawntime="90" />
+		<monster name="Orc Warrior" x="1" y="1" z="7" spawntime="90" />
+		<monster name="Orc Spearman" x="-2" y="2" z="7" spawntime="90" />
+		<monster name="Orc" x="4" y="4" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32581" centery="31687" centerz="7" radius="5">
+		<monster name="Orc Spearman" x="-3" y="-4" z="7" spawntime="90" />
+		<monster name="Orc Warrior" x="3" y="-4" z="7" spawntime="90" />
+		<monster name="Orc" x="0" y="-3" z="7" spawntime="90" />
+		<monster name="Orc Spearman" x="4" y="-3" z="7" spawntime="90" />
+		<monster name="Orc" x="-5" y="0" z="7" spawntime="90" />
+		<monster name="Elf" x="1" y="0" z="7" spawntime="90" />
+		<monster name="Orc" x="4" y="0" z="7" spawntime="90" />
+		<monster name="Orc" x="-1" y="4" z="7" spawntime="90" />
+	</monster>
+</monsters>

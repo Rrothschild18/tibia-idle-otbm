@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="33505" centery="31209" centerz="8" radius="3">
+		<monster name="Spidris Elite" x="2" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33505" centery="31216" centerz="8" radius="3">
+		<monster name="Kollos" x="1" y="2" z="8" spawntime="90" />
+		<monster name="Spidris Elite" x="0" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33456" centery="31223" centerz="8" radius="3">
+		<monster name="Waspoid" x="-2" y="0" z="8" spawntime="90" />
+		<monster name="Waspoid" x="0" y="0" z="8" spawntime="90" />
+		<monster name="Waspoid" x="-2" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33456" centery="31230" centerz="8" radius="3">
+		<monster name="Waspoid" x="3" y="1" z="8" spawntime="90" />
+		<monster name="Spitter" x="-2" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33477" centery="31230" centerz="8" radius="3">
+		<monster name="Hive Overseer" x="-3" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33491" centery="31230" centerz="8" radius="3">
+		<monster name="Insectoid Worker" x="1" y="-1" z="8" spawntime="90" />
+		<monster name="Insectoid Worker" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33498" centery="31230" centerz="8" radius="3">
+		<monster name="Insectoid Worker" x="-3" y="3" z="8" spawntime="90" />
+		<monster name="Insectoid Worker" x="-2" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33505" centery="31230" centerz="8" radius="3">
+		<monster name="Hive Overseer" x="-3" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33512" centery="31230" centerz="8" radius="3">
+		<monster name="Kollos" x="0" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33470" centery="31237" centerz="8" radius="3">
+		<monster name="Spidris" x="1" y="-2" z="8" spawntime="90" />
+		<monster name="Spidris Elite" x="3" y="-2" z="8" spawntime="90" />
+		<monster name="Spitter" x="-2" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33519" centery="31237" centerz="8" radius="3">
+		<monster name="Spidris Elite" x="3" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33477" centery="31244" centerz="8" radius="3">
+		<monster name="Spitter" x="1" y="2" z="8" spawntime="90" />
+		<monster name="Spidris Elite" x="0" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33491" centery="31244" centerz="8" radius="3">
+		<monster name="Waspoid" x="1" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33498" centery="31244" centerz="8" radius="3">
+		<monster name="Spitter" x="-2" y="-2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33512" centery="31244" centerz="8" radius="3">
+		<monster name="Spidris Elite" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33477" centery="31251" centerz="8" radius="3">
+		<monster name="Hive Overseer" x="2" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33484" centery="31251" centerz="8" radius="3">
+		<monster name="Waspoid" x="1" y="1" z="8" spawntime="90" />
+		<monster name="Spidris Elite" x="-3" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33491" centery="31251" centerz="8" radius="3">
+		<monster name="Kollos" x="1" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33505" centery="31251" centerz="8" radius="3">
+		<monster name="Spidris Elite" x="-2" y="-2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33512" centery="31251" centerz="8" radius="3">
+		<monster name="Spitter" x="-3" y="0" z="8" spawntime="90" />
+		<monster name="Spitter" x="-1" y="0" z="8" spawntime="90" />
+		<monster name="Spitter" x="1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33442" centery="31258" centerz="8" radius="3">
+		<monster name="Kollos" x="-1" y="3" z="8" spawntime="90" />
+		<monster name="Kollos" x="1" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33470" centery="31258" centerz="8" radius="3">
+		<monster name="Waspoid" x="1" y="-1" z="8" spawntime="90" />
+		<monster name="Spitter" x="1" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33477" centery="31258" centerz="8" radius="3">
+		<monster name="Waspoid" x="-2" y="-1" z="8" spawntime="90" />
+		<monster name="Spidris Elite" x="-3" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33491" centery="31258" centerz="8" radius="3">
+		<monster name="Waspoid" x="-1" y="-3" z="8" spawntime="90" />
+		<monster name="Waspoid" x="3" y="-3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33505" centery="31258" centerz="8" radius="3">
+		<monster name="Spidris Elite" x="-2" y="1" z="8" spawntime="90" />
+		<monster name="Spidris Elite" x="-1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33519" centery="31258" centerz="8" radius="3">
+		<monster name="Insectoid Worker" x="-3" y="-3" z="8" spawntime="90" />
+		<monster name="Kollos" x="-2" y="-2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33449" centery="31265" centerz="8" radius="3">
+		<monster name="Spitter" x="0" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33456" centery="31265" centerz="8" radius="3">
+		<monster name="Insectoid Worker" x="-2" y="-2" z="8" spawntime="90" />
+		<monster name="Spitter" x="0" y="2" z="8" spawntime="90" />
+		<monster name="Swarmer" x="2" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33463" centery="31265" centerz="8" radius="3">
+		<monster name="Swarmer" x="-1" y="3" z="8" spawntime="90" />
+		<monster name="Swarmer" x="1" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33470" centery="31265" centerz="8" radius="3">
+		<monster name="Insectoid Worker" x="-3" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33505" centery="31265" centerz="8" radius="3">
+		<monster name="Crawler" x="0" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33512" centery="31265" centerz="8" radius="3">
+		<monster name="Spitter" x="2" y="1" z="8" spawntime="90" />
+		<monster name="Spitter" x="0" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33449" centery="31272" centerz="8" radius="3">
+		<monster name="Spidris Elite" x="-2" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33456" centery="31272" centerz="8" radius="3">
+		<monster name="Swarmer" x="2" y="-3" z="8" spawntime="90" />
+		<monster name="Insectoid Worker" x="3" y="-3" z="8" spawntime="90" />
+		<monster name="Spitter" x="0" y="-2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33519" centery="31272" centerz="8" radius="3">
+		<monster name="Spitter" x="2" y="-2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33449" centery="31279" centerz="8" radius="3">
+		<monster name="Spitter" x="3" y="-2" z="8" spawntime="90" />
+	</monster>
+</monsters>

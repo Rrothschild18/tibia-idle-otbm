@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="33317" centery="32084" centerz="9" radius="1">
+		<monster name="Floating Savant" x="-1" y="-1" z="9" spawntime="60" />
+		<monster name="Floating Savant" x="1" y="1" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33321" centery="32088" centerz="9" radius="1">
+		<monster name="Floating Savant" x="0" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33322" centery="32098" centerz="9" radius="1">
+		<monster name="Fury" x="0" y="-1" z="9" spawntime="60" />
+		<monster name="Floating Savant" x="0" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33321" centery="32101" centerz="9" radius="1">
+		<monster name="Floating Savant" x="-1" y="0" z="9" spawntime="60" />
+		<monster name="Floating Savant" x="-1" y="1" z="9" spawntime="60" />
+	</monster>
+</monsters>

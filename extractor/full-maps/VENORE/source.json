@@ -1,0 +1,93 @@
+{
+  "city": "VENORE",
+  "area": {
+    "id": 25,
+    "name": "Venore"
+  },
+  "subareas": [
+    {
+      "id": 276,
+      "name": "Venore City"
+    },
+    {
+      "id": 75,
+      "name": "Plains of Havoc"
+    },
+    {
+      "id": 460,
+      "name": "Venore"
+    },
+    {
+      "id": 69,
+      "name": "Amazon Camp"
+    },
+    {
+      "id": 70,
+      "name": "Black Knight Villa"
+    },
+    {
+      "id": 71,
+      "name": "Venore Dragon Lair"
+    },
+    {
+      "id": 72,
+      "name": "Green Claw Swamp"
+    },
+    {
+      "id": 73,
+      "name": "Outlaw Camp"
+    },
+    {
+      "id": 74,
+      "name": "Dark Cathedral"
+    },
+    {
+      "id": 76,
+      "name": "Shadowthorn"
+    },
+    {
+      "id": 77,
+      "name": "Venore Southern Swamp"
+    },
+    {
+      "id": 78,
+      "name": "Venore Surroundings"
+    },
+    {
+      "id": 104,
+      "name": "Jakundaf Desert"
+    },
+    {
+      "id": 239,
+      "name": "Gloom Caverns"
+    }
+  ],
+  "world": {
+    "file": "otservbr.otbm",
+    "bytes": 184777193
+  },
+  "shape": "square",
+  "bounds": {
+    "minX": 32543,
+    "minY": 31841,
+    "maxX": 33167,
+    "maxY": 32465
+  },
+  "columns": 157763,
+  "tiles": 2007397,
+  "tileAreas": 134464,
+  "towns": [
+    {
+      "id": 9,
+      "name": "Venore",
+      "x": 32957,
+      "y": 32076,
+      "z": 7
+    }
+  ],
+  "monsterGroups": 1873,
+  "monsterEntries": 3069,
+  "npcGroups": 96,
+  "npcEntries": 96,
+  "houses": 82
+}

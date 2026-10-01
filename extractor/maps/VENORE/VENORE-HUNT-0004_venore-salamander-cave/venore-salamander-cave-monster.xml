@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32924" centery="32140" centerz="10" radius="3">
+		<monster name="Slug" x="3" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32910" centery="32147" centerz="10" radius="3">
+		<monster name="Swamp Troll" x="2" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32917" centery="32147" centerz="10" radius="3">
+		<monster name="Slug" x="2" y="-1" z="10" spawntime="90" />
+		<monster name="Slug" x="-3" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32931" centery="32147" centerz="10" radius="3">
+		<monster name="Slug" x="-1" y="-3" z="10" spawntime="90" />
+		<monster name="Swamp Troll" x="2" y="-2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32910" centery="32154" centerz="10" radius="3">
+		<monster name="Slug" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32924" centery="32154" centerz="10" radius="3">
+		<monster name="Swamp Troll" x="-2" y="0" z="10" spawntime="90" />
+		<monster name="Swamp Troll" x="2" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32931" centery="32154" centerz="10" radius="3">
+		<monster name="Swamp Troll" x="1" y="-2" z="10" spawntime="90" />
+		<monster name="Swamp Troll" x="-3" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32917" centery="32161" centerz="10" radius="3">
+		<monster name="Swamp Troll" x="2" y="-3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32924" centery="32161" centerz="10" radius="3">
+		<monster name="Slug" x="0" y="-2" z="10" spawntime="90" />
+	</monster>
+</monsters>

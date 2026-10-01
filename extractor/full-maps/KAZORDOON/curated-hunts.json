@@ -1,0 +1,403 @@
+{
+  "city": "KAZORDOON",
+  "area": "Kazordoon",
+  "hunts": [
+    {
+      "id": "KAZORDOON-HUNT-0001",
+      "name": "Orc Lands — Berserkers",
+      "slug": "orc-lands-berserkers",
+      "folder": "KAZORDOON-HUNT-0001_orc-lands-berserkers",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "KAZORDOON-C07-002"
+      ],
+      "creatures": 137,
+      "extent": {
+        "minX": 32892,
+        "minY": 31709,
+        "maxX": 32986,
+        "maxY": 31806,
+        "centerX": 32939,
+        "centerY": 31758
+      },
+      "subareaId": 106,
+      "entrance": {
+        "x": 32893,
+        "y": 31773,
+        "z": 7
+      },
+      "walkTilesFromTemple": 560,
+      "tiles": 14518,
+      "spawns": 137
+    },
+    {
+      "id": "KAZORDOON-HUNT-0002",
+      "name": "Orc Lands — Camp",
+      "slug": "orc-lands-camp",
+      "folder": "KAZORDOON-HUNT-0002_orc-lands-camp",
+      "floors": [
+        8
+      ],
+      "cropFloors": [
+        8
+      ],
+      "candidateIds": [
+        "KAZORDOON-C08-001"
+      ],
+      "creatures": 43,
+      "extent": {
+        "minX": 32886,
+        "minY": 31749,
+        "maxX": 32964,
+        "maxY": 31780,
+        "centerX": 32925,
+        "centerY": 31764
+      },
+      "subareaId": 106,
+      "entrance": {
+        "x": 32886,
+        "y": 31768,
+        "z": 8
+      },
+      "walkTilesFromTemple": 568,
+      "tiles": 5403,
+      "spawns": 43
+    },
+    {
+      "id": "KAZORDOON-HUNT-0003",
+      "name": "Orc Lands — Warlords",
+      "slug": "orc-lands-warlords",
+      "folder": "KAZORDOON-HUNT-0003_orc-lands-warlords",
+      "floors": [
+        9
+      ],
+      "cropFloors": [
+        9
+      ],
+      "candidateIds": [
+        "KAZORDOON-C09-011"
+      ],
+      "creatures": 10,
+      "extent": {
+        "minX": 32955,
+        "minY": 31763,
+        "maxX": 32974,
+        "maxY": 31771,
+        "centerX": 32964,
+        "centerY": 31767
+      },
+      "subareaId": 106,
+      "entrance": {
+        "x": 32955,
+        "y": 31765,
+        "z": 9
+      },
+      "walkTilesFromTemple": 636,
+      "tiles": 1452,
+      "spawns": 10
+    },
+    {
+      "id": "KAZORDOON-HUNT-0004",
+      "name": "Dwarf Tower",
+      "slug": "dwarf-tower",
+      "folder": "KAZORDOON-HUNT-0004_dwarf-tower",
+      "floors": [
+        10,
+        11,
+        12
+      ],
+      "cropFloors": [
+        10,
+        11,
+        12
+      ],
+      "candidateIds": [
+        "KAZORDOON-C10-008",
+        "KAZORDOON-C11-001",
+        "KAZORDOON-C12-005"
+      ],
+      "creatures": 43,
+      "extent": {
+        "minX": 32429,
+        "minY": 31878,
+        "maxX": 32499,
+        "maxY": 31930,
+        "centerX": 32464,
+        "centerY": 31904
+      },
+      "subareaId": 50,
+      "entrance": {
+        "x": 32475,
+        "y": 31904,
+        "z": 11
+      },
+      "walkTilesFromTemple": 381,
+      "tiles": 21886,
+      "spawns": 43
+    },
+    {
+      "id": "KAZORDOON-HUNT-0005",
+      "name": "Rotworm Nest",
+      "slug": "rotworm-nest",
+      "folder": "KAZORDOON-HUNT-0005_rotworm-nest",
+      "floors": [
+        9
+      ],
+      "cropFloors": [
+        9
+      ],
+      "candidateIds": [
+        "KAZORDOON-C09-001"
+      ],
+      "creatures": 40,
+      "extent": {
+        "minX": 32483,
+        "minY": 31898,
+        "maxX": 32548,
+        "maxY": 31952,
+        "centerX": 32516,
+        "centerY": 31925
+      },
+      "subareaId": 50,
+      "entrance": {
+        "x": 32524,
+        "y": 31932,
+        "z": 9
+      },
+      "walkTilesFromTemple": 317,
+      "tiles": 7110,
+      "spawns": 40
+    },
+    {
+      "id": "KAZORDOON-HUNT-0006",
+      "name": "Minotaur Tower",
+      "slug": "minotaur-tower",
+      "folder": "KAZORDOON-HUNT-0006_minotaur-tower",
+      "floors": [
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "cropFloors": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "candidateIds": [
+        "KAZORDOON-C03-002",
+        "KAZORDOON-C03-003",
+        "KAZORDOON-C04-003",
+        "KAZORDOON-C04-006",
+        "KAZORDOON-C06-012",
+        "KAZORDOON-C07-033",
+        "KAZORDOON-C07-044",
+        "KAZORDOON-C08-028",
+        "KAZORDOON-C09-024"
+      ],
+      "creatures": 37,
+      "extent": {
+        "minX": 32453,
+        "minY": 31937,
+        "maxX": 32469,
+        "maxY": 31967,
+        "centerX": 32461,
+        "centerY": 31952
+      },
+      "subareaId": 49,
+      "entrance": {
+        "x": 32469,
+        "y": 31967,
+        "z": 8
+      },
+      "walkTilesFromTemple": 359,
+      "tiles": 8668,
+      "spawns": 37
+    },
+    {
+      "id": "KAZORDOON-HUNT-0007",
+      "name": "Dwarf Warren",
+      "slug": "dwarf-warren",
+      "folder": "KAZORDOON-HUNT-0007_dwarf-warren",
+      "floors": [
+        8,
+        9
+      ],
+      "cropFloors": [
+        8,
+        9
+      ],
+      "candidateIds": [
+        "KAZORDOON-C08-023",
+        "KAZORDOON-C09-004"
+      ],
+      "creatures": 25,
+      "extent": {
+        "minX": 32484,
+        "minY": 31880,
+        "maxX": 32542,
+        "maxY": 31915,
+        "centerX": 32513,
+        "centerY": 31898
+      },
+      "subareaId": 50,
+      "entrance": {
+        "x": 32531,
+        "y": 31915,
+        "z": 8
+      },
+      "walkTilesFromTemple": 287,
+      "tiles": 9960,
+      "spawns": 25
+    },
+    {
+      "id": "KAZORDOON-HUNT-0008",
+      "name": "Rotworm Cave",
+      "slug": "rotworm-cave",
+      "folder": "KAZORDOON-HUNT-0008_rotworm-cave",
+      "floors": [
+        9
+      ],
+      "cropFloors": [
+        9
+      ],
+      "candidateIds": [
+        "KAZORDOON-C09-003"
+      ],
+      "creatures": 22,
+      "extent": {
+        "minX": 32557,
+        "minY": 31992,
+        "maxX": 32596,
+        "maxY": 32035,
+        "centerX": 32576,
+        "centerY": 32014
+      },
+      "subareaId": 50,
+      "entrance": {
+        "x": 32566,
+        "y": 31998,
+        "z": 9
+      },
+      "walkTilesFromTemple": 321,
+      "tiles": 4250,
+      "spawns": 22
+    },
+    {
+      "id": "KAZORDOON-HUNT-0009",
+      "name": "Troll Camp",
+      "slug": "troll-camp",
+      "folder": "KAZORDOON-HUNT-0009_troll-camp",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "KAZORDOON-C07-007"
+      ],
+      "creatures": 16,
+      "extent": {
+        "minX": 32652,
+        "minY": 31949,
+        "maxX": 32670,
+        "maxY": 31974,
+        "centerX": 32661,
+        "centerY": 31962
+      },
+      "subareaId": 45,
+      "entrance": {
+        "x": 32665,
+        "y": 31949,
+        "z": 7
+      },
+      "walkTilesFromTemple": 340,
+      "tiles": 2150,
+      "spawns": 16
+    },
+    {
+      "id": "KAZORDOON-HUNT-0010",
+      "name": "Dragon Tower",
+      "slug": "dragon-tower",
+      "folder": "KAZORDOON-HUNT-0010_dragon-tower",
+      "floors": [
+        5,
+        6,
+        7
+      ],
+      "cropFloors": [
+        5,
+        6,
+        7
+      ],
+      "candidateIds": [
+        "KAZORDOON-CUSTOM-DRAGON-Z5",
+        "KAZORDOON-CUSTOM-DRAGON-Z6",
+        "KAZORDOON-CUSTOM-DRAGON-Z7"
+      ],
+      "creatures": 8,
+      "extent": {
+        "minX": 32645,
+        "minY": 31880,
+        "maxX": 32663,
+        "maxY": 31927,
+        "centerX": 32654,
+        "centerY": 31904
+      },
+      "subareaId": null,
+      "entrance": {
+        "x": 32645,
+        "y": 31903,
+        "z": 7
+      },
+      "walkTilesFromTemple": 331,
+      "tiles": 7160,
+      "spawns": 8
+    },
+    {
+      "id": "KAZORDOON-HUNT-0011",
+      "name": "Wyverns",
+      "slug": "wyverns",
+      "folder": "KAZORDOON-HUNT-0011_wyverns",
+      "floors": [
+        6
+      ],
+      "cropFloors": [
+        6
+      ],
+      "candidateIds": [
+        "KAZORDOON-CUSTOM-WYVERN-Z6"
+      ],
+      "creatures": 3,
+      "extent": {
+        "minX": 32654,
+        "minY": 31878,
+        "maxX": 32669,
+        "maxY": 31882,
+        "centerX": 32662,
+        "centerY": 31880
+      },
+      "subareaId": null,
+      "entrance": {
+        "x": 32669,
+        "y": 31878,
+        "z": 6
+      },
+      "walkTilesFromTemple": 371,
+      "tiles": 548,
+      "spawns": 3
+    }
+  ]
+}

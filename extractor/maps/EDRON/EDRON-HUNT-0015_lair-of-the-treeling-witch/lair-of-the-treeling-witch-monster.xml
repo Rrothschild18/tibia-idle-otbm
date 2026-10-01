@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="33351" centery="31965" centerz="7" radius="3">
+		<monster name="Wasp" x="1" y="3" z="7" spawntime="60" />
+	</monster>
+	<monster centerx="33344" centery="31972" centerz="7" radius="3">
+		<monster name="Wasp" x="2" y="-1" z="7" spawntime="60" />
+	</monster>
+	<monster centerx="33351" centery="31972" centerz="7" radius="3">
+		<monster name="Leaf Golem" x="-1" y="1" z="7" spawntime="60" />
+	</monster>
+	<monster centerx="33351" centery="31979" centerz="7" radius="3">
+		<monster name="Wasp" x="2" y="-2" z="7" spawntime="60" />
+		<monster name="Wasp" x="-3" y="-1" z="7" spawntime="60" />
+		<monster name="Wasp" x="-1" y="-1" z="7" spawntime="60" />
+	</monster>
+</monsters>

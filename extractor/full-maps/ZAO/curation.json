@@ -1,0 +1,721 @@
+{
+  "city": "ZAO",
+  "area": {
+    "id": 8,
+    "name": "Zao"
+  },
+  "subareas": [
+    {
+      "id": 449,
+      "name": "Zao",
+      "mask": "masks/0449.png",
+      "maskPlacement": {
+        "x": 33356,
+        "y": 31142,
+        "width": 6,
+        "height": 7
+      }
+    },
+    {
+      "id": 141,
+      "name": "Zao Orc Fortress",
+      "mask": "masks/0141.png",
+      "maskPlacement": {
+        "x": 33017,
+        "y": 31266,
+        "width": 89,
+        "height": 103
+      }
+    },
+    {
+      "id": 125,
+      "name": "Vengoth",
+      "mask": "masks/0125.png",
+      "maskPlacement": {
+        "x": 32856,
+        "y": 31408,
+        "width": 226,
+        "height": 179
+      }
+    },
+    {
+      "id": 142,
+      "name": "Zao Steppe",
+      "mask": "masks/0142.png",
+      "maskPlacement": {
+        "x": 33007,
+        "y": 31298,
+        "width": 396,
+        "height": 274
+      }
+    },
+    {
+      "id": 143,
+      "name": "Zzaion",
+      "mask": "masks/0143.png",
+      "maskPlacement": {
+        "x": 33253,
+        "y": 31491,
+        "width": 110,
+        "height": 134
+      }
+    },
+    {
+      "id": 144,
+      "name": "Dragonblaze Peaks",
+      "mask": "masks/0144.png",
+      "maskPlacement": {
+        "x": 33114,
+        "y": 31245,
+        "width": 226,
+        "height": 128
+      }
+    },
+    {
+      "id": 145,
+      "name": "Muggy Plains",
+      "mask": "masks/0145.png",
+      "maskPlacement": {
+        "x": 33139,
+        "y": 31091,
+        "width": 233,
+        "height": 176
+      }
+    },
+    {
+      "id": 148,
+      "name": "Razachai",
+      "mask": "masks/0148.png",
+      "maskPlacement": {
+        "x": 32986,
+        "y": 31062,
+        "width": 140,
+        "height": 226
+      }
+    },
+    {
+      "id": 149,
+      "name": "Corrupted Gardens",
+      "mask": "masks/0149.png",
+      "maskPlacement": {
+        "x": 33113,
+        "y": 31068,
+        "width": 125,
+        "height": 167
+      }
+    },
+    {
+      "id": 150,
+      "name": "Emperor's Castle",
+      "mask": "masks/0150.png",
+      "maskPlacement": {
+        "x": 33053,
+        "y": 31088,
+        "width": 48,
+        "height": 40
+      }
+    },
+    {
+      "id": 151,
+      "name": "Chazorai",
+      "mask": "masks/0151.png",
+      "maskPlacement": {
+        "x": 33046,
+        "y": 31009,
+        "width": 69,
+        "height": 52
+      }
+    },
+    {
+      "id": 152,
+      "name": "Spirittrails",
+      "mask": "masks/0152.png",
+      "maskPlacement": {
+        "x": 33125,
+        "y": 31008,
+        "width": 212,
+        "height": 109
+      }
+    },
+    {
+      "id": 511,
+      "name": "Norcferatu Fortress",
+      "mask": "masks/0511.png",
+      "maskPlacement": {
+        "x": 32898,
+        "y": 31406,
+        "width": 69,
+        "height": 58
+      }
+    },
+    {
+      "id": 319,
+      "name": "Falcon Bastion",
+      "mask": "masks/0319.png",
+      "maskPlacement": {
+        "x": 33341,
+        "y": 31278,
+        "width": 52,
+        "height": 101
+      }
+    }
+  ],
+  "hunts": [
+    {
+      "name": "Farmine Mines",
+      "floors": [
+        12
+      ],
+      "candidateIds": [
+        "ZAO-C12-002"
+      ],
+      "species": null,
+      "creatures": 38,
+      "extent": {
+        "minX": 33035,
+        "minY": 31438,
+        "maxX": 33114,
+        "maxY": 31504,
+        "centerX": 33074,
+        "centerY": 31471
+      },
+      "subareaId": 142,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Dragonblaze Peaks",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "ZAO-C07-002",
+        "ZAO-C07-018",
+        "ZAO-C07-019"
+      ],
+      "species": null,
+      "creatures": 266,
+      "extent": {
+        "minX": 33028,
+        "minY": 31269,
+        "maxX": 33357,
+        "maxY": 31520,
+        "centerX": 33192,
+        "centerY": 31394
+      },
+      "subareaId": 144,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Vengoth",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "ZAO-C07-005",
+        "ZAO-C07-023",
+        "ZAO-C07-035",
+        "ZAO-C07-037",
+        "ZAO-C07-038",
+        "ZAO-C07-039",
+        "ZAO-C07-040",
+        "ZAO-C07-041"
+      ],
+      "species": null,
+      "creatures": 135,
+      "extent": {
+        "minX": 32869,
+        "minY": 31448,
+        "maxX": 32968,
+        "maxY": 31564,
+        "centerX": 32918,
+        "centerY": 31506
+      },
+      "subareaId": 125,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Zao Orc Land",
+      "floors": [
+        6
+      ],
+      "candidateIds": [
+        "ZAO-C06-005",
+        "ZAO-C06-006",
+        "ZAO-C06-013",
+        "ZAO-C06-018",
+        "ZAO-C06-019",
+        "ZAO-C06-020"
+      ],
+      "species": null,
+      "creatures": 51,
+      "extent": {
+        "minX": 33028,
+        "minY": 31267,
+        "maxX": 33111,
+        "maxY": 31365,
+        "centerX": 33069,
+        "centerY": 31316
+      },
+      "subareaId": 141,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Zao Steppe",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "ZAO-C07-002",
+        "ZAO-C07-006",
+        "ZAO-C07-010",
+        "ZAO-C07-011",
+        "ZAO-C07-012",
+        "ZAO-C07-013",
+        "ZAO-C07-014",
+        "ZAO-C07-016",
+        "ZAO-C07-018",
+        "ZAO-C07-020",
+        "ZAO-C07-022",
+        "ZAO-C07-025",
+        "ZAO-C07-026",
+        "ZAO-C07-027",
+        "ZAO-C07-028",
+        "ZAO-C07-029",
+        "ZAO-C07-030",
+        "ZAO-C07-032",
+        "ZAO-C07-036",
+        "ZAO-C07-042",
+        "ZAO-C07-043",
+        "ZAO-C07-044",
+        "ZAO-C07-046",
+        "ZAO-C07-047",
+        "ZAO-C07-053"
+      ],
+      "species": null,
+      "creatures": 492,
+      "extent": {
+        "minX": 33016,
+        "minY": 31284,
+        "maxX": 33375,
+        "maxY": 31617,
+        "centerX": 33195,
+        "centerY": 31450
+      },
+      "subareaId": 142,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Muggy Plains",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "ZAO-C07-001",
+        "ZAO-C07-003",
+        "ZAO-C07-004",
+        "ZAO-C07-007",
+        "ZAO-C07-008",
+        "ZAO-C07-009",
+        "ZAO-C07-015",
+        "ZAO-C07-017",
+        "ZAO-C07-019",
+        "ZAO-C07-021",
+        "ZAO-C07-024",
+        "ZAO-C07-031",
+        "ZAO-C07-033",
+        "ZAO-C07-045",
+        "ZAO-C07-048",
+        "ZAO-C07-049",
+        "ZAO-C07-050",
+        "ZAO-C07-052"
+      ],
+      "species": null,
+      "creatures": 784,
+      "extent": {
+        "minX": 33028,
+        "minY": 31020,
+        "maxX": 33354,
+        "maxY": 31295,
+        "centerX": 33191,
+        "centerY": 31157
+      },
+      "subareaId": 145,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Brimstone Bug Cave",
+      "floors": [
+        8
+      ],
+      "candidateIds": [
+        "ZAO-C08-002"
+      ],
+      "species": null,
+      "creatures": 20,
+      "extent": {
+        "minX": 33256,
+        "minY": 31144,
+        "maxX": 33305,
+        "maxY": 31189,
+        "centerX": 33280,
+        "centerY": 31166
+      },
+      "subareaId": 145,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Chazorai",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "ZAO-C07-001",
+        "ZAO-C07-003",
+        "ZAO-C07-004",
+        "ZAO-C07-007",
+        "ZAO-C07-008",
+        "ZAO-C07-009",
+        "ZAO-C07-015",
+        "ZAO-C07-017",
+        "ZAO-C07-019",
+        "ZAO-C07-021",
+        "ZAO-C07-024",
+        "ZAO-C07-031",
+        "ZAO-C07-045",
+        "ZAO-C07-048",
+        "ZAO-C07-049"
+      ],
+      "species": null,
+      "creatures": 773,
+      "extent": {
+        "minX": 33028,
+        "minY": 31020,
+        "maxX": 33334,
+        "maxY": 31295,
+        "centerX": 33181,
+        "centerY": 31157
+      },
+      "subareaId": 148,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Fire Dragon Dojo",
+      "floors": [
+        7,
+        9
+      ],
+      "candidateIds": [
+        "ZAO-C07-001",
+        "ZAO-C07-003",
+        "ZAO-C07-004",
+        "ZAO-C07-007",
+        "ZAO-C07-008",
+        "ZAO-C07-009",
+        "ZAO-C07-015",
+        "ZAO-C07-017",
+        "ZAO-C07-019",
+        "ZAO-C07-021",
+        "ZAO-C07-024",
+        "ZAO-C07-031",
+        "ZAO-C07-033",
+        "ZAO-C07-045",
+        "ZAO-C07-048",
+        "ZAO-C07-049",
+        "ZAO-C07-050",
+        "ZAO-C07-052",
+        "ZAO-C09-011",
+        "ZAO-C09-019"
+      ],
+      "species": null,
+      "creatures": 797,
+      "extent": {
+        "minX": 33028,
+        "minY": 31020,
+        "maxX": 33354,
+        "maxY": 31295,
+        "centerX": 33191,
+        "centerY": 31157
+      },
+      "subareaId": 149,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Northern Zao Plantations",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "ZAO-C07-004",
+        "ZAO-C07-008",
+        "ZAO-C07-049"
+      ],
+      "species": null,
+      "creatures": 151,
+      "extent": {
+        "minX": 33119,
+        "minY": 31020,
+        "maxX": 33334,
+        "maxY": 31230,
+        "centerX": 33226,
+        "centerY": 31125
+      },
+      "subareaId": 149,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Zao Palace Antechambers",
+      "floors": [
+        7,
+        9,
+        10
+      ],
+      "candidateIds": [
+        "ZAO-C07-001",
+        "ZAO-C07-002",
+        "ZAO-C07-003",
+        "ZAO-C07-004",
+        "ZAO-C07-007",
+        "ZAO-C07-008",
+        "ZAO-C07-009",
+        "ZAO-C07-015",
+        "ZAO-C07-017",
+        "ZAO-C07-018",
+        "ZAO-C07-019",
+        "ZAO-C07-021",
+        "ZAO-C07-024",
+        "ZAO-C07-030",
+        "ZAO-C07-031",
+        "ZAO-C07-036",
+        "ZAO-C07-045",
+        "ZAO-C07-048",
+        "ZAO-C07-049",
+        "ZAO-C09-007",
+        "ZAO-C10-003",
+        "ZAO-C10-008"
+      ],
+      "species": null,
+      "creatures": 1087,
+      "extent": {
+        "minX": 33028,
+        "minY": 31020,
+        "maxX": 33357,
+        "maxY": 31520,
+        "centerX": 33192,
+        "centerY": 31270
+      },
+      "subareaId": 144,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Temple Complex",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "ZAO-C07-003",
+        "ZAO-C07-004",
+        "ZAO-C07-031",
+        "ZAO-C07-033",
+        "ZAO-C07-048",
+        "ZAO-C07-050",
+        "ZAO-C07-052"
+      ],
+      "species": null,
+      "creatures": 342,
+      "extent": {
+        "minX": 33119,
+        "minY": 31020,
+        "maxX": 33354,
+        "maxY": 31265,
+        "centerX": 33236,
+        "centerY": 31142
+      },
+      "subareaId": 145,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Black Serpent Dungeon",
+      "floors": [
+        9
+      ],
+      "candidateIds": [
+        "ZAO-C09-003",
+        "ZAO-C09-013"
+      ],
+      "species": null,
+      "creatures": 40,
+      "extent": {
+        "minX": 33255,
+        "minY": 31114,
+        "maxX": 33331,
+        "maxY": 31183,
+        "centerX": 33293,
+        "centerY": 31148
+      },
+      "subareaId": 145,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Zao Palace",
+      "floors": [
+        10
+      ],
+      "candidateIds": [
+        "ZAO-C10-003",
+        "ZAO-C10-008"
+      ],
+      "species": null,
+      "creatures": 33,
+      "extent": {
+        "minX": 33143,
+        "minY": 31252,
+        "maxX": 33188,
+        "maxY": 31299,
+        "centerX": 33165,
+        "centerY": 31275
+      },
+      "subareaId": 144,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Demon Forge (The Blood Halls)",
+      "floors": [
+        12
+      ],
+      "candidateIds": [
+        "ZAO-C12-004"
+      ],
+      "species": null,
+      "creatures": 19,
+      "extent": {
+        "minX": 33348,
+        "minY": 31590,
+        "maxX": 33361,
+        "maxY": 31613,
+        "centerX": 33354,
+        "centerY": 31601
+      },
+      "subareaId": 143,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Demon Forge (The Foundry)",
+      "floors": [
+        11
+      ],
+      "candidateIds": [
+        "ZAO-C11-003"
+      ],
+      "species": null,
+      "creatures": 13,
+      "extent": {
+        "minX": 33352,
+        "minY": 31592,
+        "maxX": 33365,
+        "maxY": 31609,
+        "centerX": 33358,
+        "centerY": 31600
+      },
+      "subareaId": 143,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Falcon Bastion",
+      "floors": [
+        3,
+        5,
+        7
+      ],
+      "candidateIds": [
+        "ZAO-C03-004",
+        "ZAO-C03-010",
+        "ZAO-C03-025",
+        "ZAO-C03-026",
+        "ZAO-C03-027",
+        "ZAO-C05-007",
+        "ZAO-C05-046",
+        "ZAO-C07-002",
+        "ZAO-C07-006",
+        "ZAO-C07-010",
+        "ZAO-C07-011",
+        "ZAO-C07-012",
+        "ZAO-C07-013",
+        "ZAO-C07-014",
+        "ZAO-C07-016",
+        "ZAO-C07-018",
+        "ZAO-C07-020",
+        "ZAO-C07-022",
+        "ZAO-C07-025",
+        "ZAO-C07-026",
+        "ZAO-C07-027",
+        "ZAO-C07-028",
+        "ZAO-C07-029",
+        "ZAO-C07-030",
+        "ZAO-C07-032",
+        "ZAO-C07-034",
+        "ZAO-C07-036",
+        "ZAO-C07-042",
+        "ZAO-C07-043",
+        "ZAO-C07-044",
+        "ZAO-C07-046",
+        "ZAO-C07-047",
+        "ZAO-C07-053"
+      ],
+      "species": null,
+      "creatures": 544,
+      "extent": {
+        "minX": 33016,
+        "minY": 31284,
+        "maxX": 33378,
+        "maxY": 31617,
+        "centerX": 33197,
+        "centerY": 31450
+      },
+      "subareaId": 142,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Grounds of Plague (Verminor)",
+      "floors": [
+        11
+      ],
+      "candidateIds": [
+        "ZAO-C11-002"
+      ],
+      "species": null,
+      "creatures": 53,
+      "extent": {
+        "minX": 33192,
+        "minY": 31431,
+        "maxX": 33235,
+        "maxY": 31480,
+        "centerX": 33213,
+        "centerY": 31455
+      },
+      "subareaId": 142,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Halls of Ascension",
+      "floors": [
+        12
+      ],
+      "candidateIds": [
+        "ZAO-C12-003",
+        "ZAO-C12-010"
+      ],
+      "species": null,
+      "creatures": 39,
+      "extent": {
+        "minX": 33302,
+        "minY": 31372,
+        "maxX": 33362,
+        "maxY": 31465,
+        "centerX": 33332,
+        "centerY": 31418
+      },
+      "subareaId": 142,
+      "walkTilesFromTemple": null
+    }
+  ]
+}

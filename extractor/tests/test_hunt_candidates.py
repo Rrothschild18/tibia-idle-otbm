@@ -159,3 +159,95 @@ def test_walk_distance_is_none_when_nothing_is_reachable():
     )
 
     assert candidates[0]["walkTilesFromTemple"] is None
+
+
+def test_weak_monsters_are_dropped_before_clustering():
+    walkable = _floor(range(0, 12), range(0, 12), 7)
+    components = hc.same_floor_components(walkable)
+    points = [
+        {"name": "Snake", "x": x, "y": 4, "z": 7} for x in range(1, 6)
+    ] + [{"name": "Dragon", "x": x, "y": 8, "z": 7} for x in range(1, 4)]
+
+    candidates, _ = hc.build_candidates(
+        "TEST",
+        points,
+        walkable,
+        components,
+        radius=10,
+        min_creatures=3,
+        experience_by_name={"snake": 20, "dragon": 700},
+    )
+
+    assert [c["species"][0]["name"] for c in candidates] == ["Dragon"]
+    assert all(s["name"] != "Snake" for c in candidates for s in c["species"])
+
+
+def test_unknown_experience_keeps_the_monster():
+    walkable = _floor(range(0, 12), range(0, 12), 7)
+    components = hc.same_floor_components(walkable)
+    points = [{"name": "Bicho Novo", "x": x, "y": 4, "z": 7} for x in range(1, 4)]
+
+    candidates, _ = hc.build_candidates(
+        "TEST", points, walkable, components, radius=10, min_creatures=3,
+        experience_by_name={"snake": 20},
+    )
+
+    assert len(candidates) == 1
+
+
+def test_notable_monsters_lead_the_species_list_even_with_fewer_spawns():
+    walkable = _floor(range(0, 12), range(0, 12), 7)
+    components = hc.same_floor_components(walkable)
+    points = [
+        {"name": "Poison Spider", "x": x, "y": 4, "z": 7} for x in range(1, 7)
+    ] + [{"name": "Rotworm", "x": x, "y": 5, "z": 7} for x in range(1, 3)]
+
+    candidates, _ = hc.build_candidates(
+        "TEST", points, walkable, components, radius=10, min_creatures=3
+    )
+
+    assert [s["name"] for s in candidates[0]["species"]] == ["Rotworm", "Poison Spider"]
+
+
+def test_notable_monster_survives_the_experience_cut():
+    """Rotworm vale 40 e dá nome a caverna: o corte de 50 não pode levá-lo."""
+    walkable = _floor(range(0, 12), range(0, 12), 7)
+    components = hc.same_floor_components(walkable)
+    points = [{"name": "Rotworm", "x": x, "y": 4, "z": 7} for x in range(1, 5)]
+
+    candidates, _ = hc.build_candidates(
+        "TEST", points, walkable, components, radius=10, min_creatures=3,
+        experience_by_name={"rotworm": 40},
+    )
+
+    assert len(candidates) == 1
+    assert candidates[0]["species"][0]["name"] == "Rotworm"
+
+
+def test_scenery_fauna_still_goes_even_though_it_is_weak():
+    walkable = _floor(range(0, 12), range(0, 12), 7)
+    components = hc.same_floor_components(walkable)
+    points = [{"name": "Snake", "x": x, "y": 4, "z": 7} for x in range(1, 5)]
+
+    candidates, _ = hc.build_candidates(
+        "TEST", points, walkable, components, radius=10, min_creatures=3,
+        experience_by_name={"snake": 20},
+    )
+
+    assert candidates == []
+
+
+def test_kept_weak_monster_does_not_outrank_a_notable_one():
+    """Poison Spider sobrevive ao corte, mas não lidera na frente do Rotworm."""
+    walkable = _floor(range(0, 12), range(0, 12), 7)
+    components = hc.same_floor_components(walkable)
+    points = [
+        {"name": "Poison Spider", "x": x, "y": 4, "z": 7} for x in range(1, 7)
+    ] + [{"name": "Rotworm", "x": x, "y": 5, "z": 7} for x in range(1, 3)]
+
+    candidates, _ = hc.build_candidates(
+        "TEST", points, walkable, components, radius=10, min_creatures=3,
+        experience_by_name={"poison spider": 44, "rotworm": 40},
+    )
+
+    assert [s["name"] for s in candidates[0]["species"]] == ["Rotworm", "Poison Spider"]

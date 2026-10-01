@@ -1,0 +1,17 @@
+# Nós sem entrada no grafo de viagem — PORTHOPE
+#
+# Gerado por build_travel_fragment.py. Nada aqui entrou no fragmento: são os nós que
+# ninguém consegue alcançar viajando, e o que fazer com cada um.
+
+## poi-without-edge (6)
+POI com coordenada e sem aresta — a placa existe no OTBM, mas o tile dela não
+alcança nenhum outro POI da cidade (ilhado por parede/água, ou a placa está num
+tile intransponível). Abra a coordenada no editor de mapa e mova a placa pra um
+tile caminhável ligado ao resto da cidade.
+
+  PORTHOPE-NPC-fa-hradin  (NPC)  x=33102 y=32540 z=5
+  PORTHOPE-NPC-ghost-of-a-priest  (NPC)  x=32732 y=32564 z=12
+  PORTHOPE-NPC-ghost-of-a-priest  (NPC)  x=32784 y=32528 z=13
+  PORTHOPE-NPC-ghost-of-a-priest  (NPC)  x=32809 y=32641 z=14
+  PORTHOPE-NPC-samir  (NPC)  x=33027 y=32417 z=4
+  PORTHOPE-NPC-tonar-oskayaat  (NPC)  x=33068 y=32917 z=7

@@ -1,0 +1,864 @@
+{
+  "city": "ANKRAHMUN",
+  "area": {
+    "id": 2,
+    "name": "Southern Darama"
+  },
+  "hunts": [
+    {
+      "id": "ANKRAHMUN-HUNT-0001",
+      "name": "Ankrahmun Library Tomb",
+      "slug": "ankrahmun-library-tomb",
+      "folder": "ANKRAHMUN-HUNT-0001_ankrahmun-library-tomb",
+      "floors": [
+        8
+      ],
+      "cropFloors": [
+        8
+      ],
+      "candidateIds": [
+        "ANKRAHMUN-C08-006"
+      ],
+      "creatures": 26,
+      "extent": {
+        "minX": 33139,
+        "minY": 32831,
+        "maxX": 33161,
+        "maxY": 32853,
+        "centerX": 33150,
+        "centerY": 32842
+      },
+      "subareaId": 297,
+      "entrance": {
+        "x": 33144,
+        "y": 32840,
+        "z": 8
+      },
+      "walkTilesFromTemple": 74,
+      "tiles": 1660,
+      "spawns": 26
+    },
+    {
+      "id": "ANKRAHMUN-HUNT-0002",
+      "name": "Mountain Tomb",
+      "slug": "mountain-tomb",
+      "folder": "ANKRAHMUN-HUNT-0002_mountain-tomb",
+      "floors": [
+        8
+      ],
+      "cropFloors": [
+        8
+      ],
+      "candidateIds": [
+        "ANKRAHMUN-C08-003",
+        "ANKRAHMUN-C08-004",
+        "ANKRAHMUN-C08-008"
+      ],
+      "creatures": 123,
+      "extent": {
+        "minX": 33133,
+        "minY": 32563,
+        "maxX": 33253,
+        "maxY": 32668,
+        "centerX": 33193,
+        "centerY": 32615
+      },
+      "subareaId": 85,
+      "entrance": {
+        "x": 33219,
+        "y": 32643,
+        "z": 8
+      },
+      "walkTilesFromTemple": 234,
+      "tiles": 18744,
+      "spawns": 123
+    },
+    {
+      "id": "ANKRAHMUN-HUNT-0003",
+      "name": "Oasis Tomb",
+      "slug": "oasis-tomb",
+      "folder": "ANKRAHMUN-HUNT-0003_oasis-tomb",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "ANKRAHMUN-C07-002"
+      ],
+      "creatures": 14,
+      "extent": {
+        "minX": 33112,
+        "minY": 32642,
+        "maxX": 33150,
+        "maxY": 32676,
+        "centerX": 33131,
+        "centerY": 32659
+      },
+      "subareaId": 85,
+      "entrance": {
+        "x": 33125,
+        "y": 32676,
+        "z": 7
+      },
+      "walkTilesFromTemple": 194,
+      "tiles": 3717,
+      "spawns": 14
+    },
+    {
+      "id": "ANKRAHMUN-HUNT-0004",
+      "name": "Nomad Cave",
+      "slug": "nomad-cave",
+      "folder": "ANKRAHMUN-HUNT-0004_nomad-cave",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "ANKRAHMUN-C07-005"
+      ],
+      "creatures": 9,
+      "extent": {
+        "minX": 33207,
+        "minY": 32564,
+        "maxX": 33240,
+        "maxY": 32595,
+        "centerX": 33223,
+        "centerY": 32579
+      },
+      "subareaId": 85,
+      "entrance": {
+        "x": 33207,
+        "y": 32595,
+        "z": 7
+      },
+      "walkTilesFromTemple": 275,
+      "tiles": 3248,
+      "spawns": 9
+    },
+    {
+      "id": "ANKRAHMUN-HUNT-0005",
+      "name": "Larva Caves",
+      "slug": "larva-caves",
+      "folder": "ANKRAHMUN-HUNT-0005_larva-caves",
+      "floors": [
+        7,
+        9,
+        10,
+        11
+      ],
+      "cropFloors": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "candidateIds": [
+        "ANKRAHMUN-C07-002",
+        "ANKRAHMUN-C07-010",
+        "ANKRAHMUN-C09-001",
+        "ANKRAHMUN-C09-002",
+        "ANKRAHMUN-C09-003",
+        "ANKRAHMUN-C09-004",
+        "ANKRAHMUN-C09-005",
+        "ANKRAHMUN-C09-007",
+        "ANKRAHMUN-C09-009",
+        "ANKRAHMUN-C09-010",
+        "ANKRAHMUN-C09-011",
+        "ANKRAHMUN-C09-013",
+        "ANKRAHMUN-C09-014",
+        "ANKRAHMUN-C09-016",
+        "ANKRAHMUN-C10-001",
+        "ANKRAHMUN-C10-005",
+        "ANKRAHMUN-C10-009",
+        "ANKRAHMUN-C10-011",
+        "ANKRAHMUN-C10-015",
+        "ANKRAHMUN-C10-016",
+        "ANKRAHMUN-C10-019",
+        "ANKRAHMUN-C10-020",
+        "ANKRAHMUN-C10-023",
+        "ANKRAHMUN-C10-025",
+        "ANKRAHMUN-C10-027",
+        "ANKRAHMUN-C10-030",
+        "ANKRAHMUN-C10-032",
+        "ANKRAHMUN-C11-001"
+      ],
+      "creatures": 923,
+      "extent": {
+        "minX": 33019,
+        "minY": 32543,
+        "maxX": 33303,
+        "maxY": 32821,
+        "centerX": 33161,
+        "centerY": 32682
+      },
+      "subareaId": 85,
+      "entrance": {
+        "x": 33247,
+        "y": 32753,
+        "z": 9
+      },
+      "walkTilesFromTemple": 144,
+      "tiles": 420153,
+      "spawns": 923
+    },
+    {
+      "id": "ANKRAHMUN-HUNT-0006",
+      "name": "Peninsula Tomb",
+      "slug": "peninsula-tomb",
+      "folder": "ANKRAHMUN-HUNT-0006_peninsula-tomb",
+      "floors": [
+        11
+      ],
+      "cropFloors": [
+        11
+      ],
+      "candidateIds": [
+        "ANKRAHMUN-C11-017"
+      ],
+      "creatures": 7,
+      "extent": {
+        "minX": 33028,
+        "minY": 32835,
+        "maxX": 33044,
+        "maxY": 32849,
+        "centerX": 33036,
+        "centerY": 32842
+      },
+      "subareaId": 85,
+      "entrance": {
+        "x": 33040,
+        "y": 32835,
+        "z": 11
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 1486,
+      "spawns": 7
+    },
+    {
+      "id": "ANKRAHMUN-HUNT-0007",
+      "name": "Stone Tomb",
+      "slug": "stone-tomb",
+      "folder": "ANKRAHMUN-HUNT-0007_stone-tomb",
+      "floors": [
+        8
+      ],
+      "cropFloors": [
+        8
+      ],
+      "candidateIds": [
+        "ANKRAHMUN-C08-001",
+        "ANKRAHMUN-C08-015"
+      ],
+      "creatures": 65,
+      "extent": {
+        "minX": 33234,
+        "minY": 32709,
+        "maxX": 33307,
+        "maxY": 32777,
+        "centerX": 33270,
+        "centerY": 32743
+      },
+      "subareaId": 85,
+      "entrance": {
+        "x": 33257,
+        "y": 32742,
+        "z": 8
+      },
+      "walkTilesFromTemple": 131,
+      "tiles": 7619,
+      "spawns": 65
+    },
+    {
+      "id": "ANKRAHMUN-HUNT-0008",
+      "name": "Shadow Tomb",
+      "slug": "shadow-tomb",
+      "folder": "ANKRAHMUN-HUNT-0008_shadow-tomb",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "ANKRAHMUN-C07-022"
+      ],
+      "creatures": 3,
+      "extent": {
+        "minX": 33252,
+        "minY": 32812,
+        "maxX": 33260,
+        "maxY": 32824,
+        "centerX": 33256,
+        "centerY": 32818
+      },
+      "subareaId": 85,
+      "entrance": {
+        "x": 33260,
+        "y": 32812,
+        "z": 7
+      },
+      "walkTilesFromTemple": 96,
+      "tiles": 1221,
+      "spawns": 3
+    },
+    {
+      "id": "ANKRAHMUN-HUNT-0009",
+      "name": "Southern Terramite Tunnels",
+      "slug": "southern-terramite-tunnels",
+      "folder": "ANKRAHMUN-HUNT-0009_southern-terramite-tunnels",
+      "floors": [
+        8
+      ],
+      "cropFloors": [
+        8
+      ],
+      "candidateIds": [
+        "ANKRAHMUN-C08-012",
+        "ANKRAHMUN-C08-013",
+        "ANKRAHMUN-C08-014"
+      ],
+      "creatures": 11,
+      "extent": {
+        "minX": 33047,
+        "minY": 32681,
+        "maxX": 33109,
+        "maxY": 32703,
+        "centerX": 33078,
+        "centerY": 32692
+      },
+      "subareaId": 81,
+      "entrance": {
+        "x": 33109,
+        "y": 32692,
+        "z": 8
+      },
+      "walkTilesFromTemple": 182,
+      "tiles": 3945,
+      "spawns": 11
+    },
+    {
+      "id": "ANKRAHMUN-HUNT-0010",
+      "name": "Darama Terramite Cave",
+      "slug": "darama-terramite-cave",
+      "folder": "ANKRAHMUN-HUNT-0010_darama-terramite-cave",
+      "floors": [
+        7,
+        8
+      ],
+      "cropFloors": [
+        7,
+        8
+      ],
+      "candidateIds": [
+        "ANKRAHMUN-C07-003",
+        "ANKRAHMUN-C07-011",
+        "ANKRAHMUN-C07-014",
+        "ANKRAHMUN-C08-012",
+        "ANKRAHMUN-C08-013",
+        "ANKRAHMUN-C08-014"
+      ],
+      "creatures": 32,
+      "extent": {
+        "minX": 32998,
+        "minY": 32639,
+        "maxX": 33129,
+        "maxY": 32707,
+        "centerX": 33063,
+        "centerY": 32673
+      },
+      "subareaId": 85,
+      "entrance": {
+        "x": 33117,
+        "y": 32707,
+        "z": 7
+      },
+      "walkTilesFromTemple": 163,
+      "tiles": 27521,
+      "spawns": 32
+    },
+    {
+      "id": "ANKRAHMUN-HUNT-0011",
+      "name": "Dragon Lair (Ankrahmun)",
+      "slug": "dragon-lair-ankrahmun",
+      "folder": "ANKRAHMUN-HUNT-0011_dragon-lair-ankrahmun",
+      "floors": [
+        6
+      ],
+      "cropFloors": [
+        6
+      ],
+      "candidateIds": [
+        "ANKRAHMUN-C06-004"
+      ],
+      "creatures": 3,
+      "extent": {
+        "minX": 33065,
+        "minY": 32678,
+        "maxX": 33072,
+        "maxY": 32687,
+        "centerX": 33068,
+        "centerY": 32682
+      },
+      "subareaId": 84,
+      "entrance": {
+        "x": 33072,
+        "y": 32678,
+        "z": 6
+      },
+      "walkTilesFromTemple": 203,
+      "tiles": 1088,
+      "spawns": 3
+    },
+    {
+      "id": "ANKRAHMUN-HUNT-0012",
+      "name": "Kha'zeel Mountains",
+      "slug": "kha-zeel-mountains",
+      "folder": "ANKRAHMUN-HUNT-0012_kha-zeel-mountains",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "ANKRAHMUN-C07-013"
+      ],
+      "creatures": 4,
+      "extent": {
+        "minX": 33070,
+        "minY": 32570,
+        "maxX": 33076,
+        "maxY": 32582,
+        "centerX": 33073,
+        "centerY": 32576
+      },
+      "subareaId": 84,
+      "entrance": {
+        "x": 33076,
+        "y": 32582,
+        "z": 7
+      },
+      "walkTilesFromTemple": 321,
+      "tiles": 1147,
+      "spawns": 4
+    },
+    {
+      "id": "ANKRAHMUN-HUNT-0013",
+      "name": "Tiquanda Dwarf Mines",
+      "slug": "tiquanda-dwarf-mines",
+      "folder": "ANKRAHMUN-HUNT-0013_tiquanda-dwarf-mines",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "ANKRAHMUN-C07-003",
+        "ANKRAHMUN-C07-011"
+      ],
+      "creatures": 17,
+      "extent": {
+        "minX": 32998,
+        "minY": 32639,
+        "maxX": 33039,
+        "maxY": 32687,
+        "centerX": 33018,
+        "centerY": 32663
+      },
+      "subareaId": 84,
+      "entrance": {
+        "x": 33004,
+        "y": 32650,
+        "z": 7
+      },
+      "walkTilesFromTemple": 381,
+      "tiles": 4818,
+      "spawns": 17
+    },
+    {
+      "id": "ANKRAHMUN-HUNT-0014",
+      "name": "Dragon Lair (Kha'zeel)",
+      "slug": "dragon-lair-kha-zeel",
+      "folder": "ANKRAHMUN-HUNT-0014_dragon-lair-kha-zeel",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "ANKRAHMUN-C07-003",
+        "ANKRAHMUN-C07-004",
+        "ANKRAHMUN-C07-009",
+        "ANKRAHMUN-C07-011"
+      ],
+      "creatures": 33,
+      "extent": {
+        "minX": 32991,
+        "minY": 32624,
+        "maxX": 33076,
+        "maxY": 32687,
+        "centerX": 33033,
+        "centerY": 32655
+      },
+      "subareaId": 84,
+      "entrance": {
+        "x": 33004,
+        "y": 32650,
+        "z": 7
+      },
+      "walkTilesFromTemple": 381,
+      "tiles": 9680,
+      "spawns": 33
+    },
+    {
+      "id": "ANKRAHMUN-HUNT-0015",
+      "name": "Forbidden Temple",
+      "slug": "forbidden-temple",
+      "folder": "ANKRAHMUN-HUNT-0015_forbidden-temple",
+      "floors": [
+        10
+      ],
+      "cropFloors": [
+        10
+      ],
+      "candidateIds": [
+        "ANKRAHMUN-C10-013"
+      ],
+      "creatures": 8,
+      "extent": {
+        "minX": 33320,
+        "minY": 32665,
+        "maxX": 33332,
+        "maxY": 32675,
+        "centerX": 33326,
+        "centerY": 32670
+      },
+      "subareaId": null,
+      "entrance": {
+        "x": 33321,
+        "y": 32675,
+        "z": 10
+      },
+      "walkTilesFromTemple": 260,
+      "tiles": 534,
+      "spawns": 8
+    },
+    {
+      "id": "ANKRAHMUN-HUNT-0016",
+      "name": "Kha'zeel Dragon Lairs/Tiquanda",
+      "slug": "kha-zeel-dragon-lairs-tiquanda",
+      "folder": "ANKRAHMUN-HUNT-0016_kha-zeel-dragon-lairs-tiquanda",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "ANKRAHMUN-C07-003",
+        "ANKRAHMUN-C07-009",
+        "ANKRAHMUN-C07-011"
+      ],
+      "creatures": 22,
+      "extent": {
+        "minX": 32991,
+        "minY": 32624,
+        "maxX": 33039,
+        "maxY": 32687,
+        "centerX": 33015,
+        "centerY": 32655
+      },
+      "subareaId": 84,
+      "entrance": {
+        "x": 33004,
+        "y": 32650,
+        "z": 7
+      },
+      "walkTilesFromTemple": 381,
+      "tiles": 6424,
+      "spawns": 22
+    },
+    {
+      "id": "ANKRAHMUN-HUNT-0017",
+      "name": "Ankrahmun Pharaoh Tombs (Curse)",
+      "slug": "ankrahmun-pharaoh-tombs-curse",
+      "folder": "ANKRAHMUN-HUNT-0017_ankrahmun-pharaoh-tombs-curse",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "ANKRAHMUN-C07-008",
+        "ANKRAHMUN-C07-018"
+      ],
+      "creatures": 9,
+      "extent": {
+        "minX": 33024,
+        "minY": 32708,
+        "maxX": 33043,
+        "maxY": 32727,
+        "centerX": 33033,
+        "centerY": 32717
+      },
+      "subareaId": 81,
+      "entrance": {
+        "x": 33027,
+        "y": 32712,
+        "z": 7
+      },
+      "walkTilesFromTemple": 230,
+      "tiles": 1936,
+      "spawns": 9
+    },
+    {
+      "id": "ANKRAHMUN-HUNT-0018",
+      "name": "Mal'ouquah",
+      "slug": "mal-ouquah",
+      "folder": "ANKRAHMUN-HUNT-0018_mal-ouquah",
+      "floors": [
+        6,
+        7
+      ],
+      "cropFloors": [
+        6,
+        7
+      ],
+      "candidateIds": [
+        "ANKRAHMUN-C06-002",
+        "ANKRAHMUN-C07-002",
+        "ANKRAHMUN-C07-003",
+        "ANKRAHMUN-C07-004",
+        "ANKRAHMUN-C07-011"
+      ],
+      "creatures": 47,
+      "extent": {
+        "minX": 32998,
+        "minY": 32623,
+        "maxX": 33150,
+        "maxY": 32687,
+        "centerX": 33074,
+        "centerY": 32655
+      },
+      "subareaId": 83,
+      "entrance": {
+        "x": 33125,
+        "y": 32676,
+        "z": 7
+      },
+      "walkTilesFromTemple": 194,
+      "tiles": 25520,
+      "spawns": 47
+    },
+    {
+      "id": "ANKRAHMUN-HUNT-0019",
+      "name": "Mother of Scarabs Lair",
+      "slug": "mother-of-scarabs-lair",
+      "folder": "ANKRAHMUN-HUNT-0019_mother-of-scarabs-lair",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "ANKRAHMUN-C07-005",
+        "ANKRAHMUN-C07-007"
+      ],
+      "creatures": 17,
+      "extent": {
+        "minX": 33207,
+        "minY": 32564,
+        "maxX": 33290,
+        "maxY": 32618,
+        "centerX": 33248,
+        "centerY": 32591
+      },
+      "subareaId": 85,
+      "entrance": {
+        "x": 33280,
+        "y": 32618,
+        "z": 7
+      },
+      "walkTilesFromTemple": 252,
+      "tiles": 8532,
+      "spawns": 17
+    },
+    {
+      "id": "ANKRAHMUN-HUNT-0020",
+      "name": "Forbidden Lands",
+      "slug": "forbidden-lands",
+      "folder": "ANKRAHMUN-HUNT-0020_forbidden-lands",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "ANKRAHMUN-C07-009"
+      ],
+      "creatures": 5,
+      "extent": {
+        "minX": 32991,
+        "minY": 32624,
+        "maxX": 32997,
+        "maxY": 32628,
+        "centerX": 32994,
+        "centerY": 32626
+      },
+      "subareaId": 84,
+      "entrance": {
+        "x": 32991,
+        "y": 32624,
+        "z": 7
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 899,
+      "spawns": 5
+    },
+    {
+      "id": "ANKRAHMUN-HUNT-0021",
+      "name": "Daramian Scarab Lairs",
+      "slug": "daramian-scarab-lairs",
+      "folder": "ANKRAHMUN-HUNT-0021_daramian-scarab-lairs",
+      "floors": [
+        8
+      ],
+      "cropFloors": [
+        8
+      ],
+      "candidateIds": [
+        "ANKRAHMUN-C08-004",
+        "ANKRAHMUN-C08-007"
+      ],
+      "creatures": 77,
+      "extent": {
+        "minX": 33188,
+        "minY": 32582,
+        "maxX": 33296,
+        "maxY": 32668,
+        "centerX": 33242,
+        "centerY": 32625
+      },
+      "subareaId": 85,
+      "entrance": {
+        "x": 33219,
+        "y": 32643,
+        "z": 8
+      },
+      "walkTilesFromTemple": 234,
+      "tiles": 14161,
+      "spawns": 77
+    },
+    {
+      "id": "ANKRAHMUN-HUNT-0022",
+      "name": "Kha'zeel Hydra Lair",
+      "slug": "kha-zeel-hydra-lair",
+      "folder": "ANKRAHMUN-HUNT-0022_kha-zeel-hydra-lair",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "ANKRAHMUN-C07-003",
+        "ANKRAHMUN-C07-004",
+        "ANKRAHMUN-C07-011"
+      ],
+      "creatures": 28,
+      "extent": {
+        "minX": 32998,
+        "minY": 32639,
+        "maxX": 33076,
+        "maxY": 32687,
+        "centerX": 33037,
+        "centerY": 32663
+      },
+      "subareaId": 84,
+      "entrance": {
+        "x": 33004,
+        "y": 32650,
+        "z": 7
+      },
+      "walkTilesFromTemple": 381,
+      "tiles": 7519,
+      "spawns": 28
+    },
+    {
+      "id": "ANKRAHMUN-HUNT-0023",
+      "name": "The First Dragon's Lair",
+      "slug": "the-first-dragon-s-lair",
+      "folder": "ANKRAHMUN-HUNT-0023_the-first-dragon-s-lair",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "ANKRAHMUN-C07-010"
+      ],
+      "creatures": 5,
+      "extent": {
+        "minX": 33054,
+        "minY": 32734,
+        "maxX": 33068,
+        "maxY": 32753,
+        "centerX": 33061,
+        "centerY": 32743
+      },
+      "subareaId": 85,
+      "entrance": {
+        "x": 33054,
+        "y": 32753,
+        "z": 7
+      },
+      "walkTilesFromTemple": 157,
+      "tiles": 1716,
+      "spawns": 5
+    },
+    {
+      "id": "ANKRAHMUN-HUNT-0024",
+      "name": "Cobra Bastion",
+      "slug": "cobra-bastion",
+      "folder": "ANKRAHMUN-HUNT-0024_cobra-bastion",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "ANKRAHMUN-C07-001"
+      ],
+      "creatures": 29,
+      "extent": {
+        "minX": 33383,
+        "minY": 32638,
+        "maxX": 33410,
+        "maxY": 32696,
+        "centerX": 33396,
+        "centerY": 32667
+      },
+      "subareaId": 354,
+      "entrance": {
+        "x": 33408,
+        "y": 32638,
+        "z": 7
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 4316,
+      "spawns": 29
+    }
+  ]
+}

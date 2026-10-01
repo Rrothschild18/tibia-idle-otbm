@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32764" centery="32333" centerz="10" radius="7">
+		<monster name="Demon Skeleton" x="0" y="-5" z="10" spawntime="90" />
+		<monster name="Demon Skeleton" x="-5" y="-4" z="10" spawntime="90" />
+		<monster name="Ghost" x="-2" y="-3" z="10" spawntime="90" />
+		<monster name="Demon Skeleton" x="4" y="-2" z="10" spawntime="90" />
+		<monster name="Demon Skeleton" x="-6" y="-1" z="10" spawntime="90" />
+		<monster name="Ghost" x="3" y="1" z="10" spawntime="90" />
+		<monster name="Demon Skeleton" x="1" y="2" z="10" spawntime="90" />
+		<monster name="Demon Skeleton" x="-2" y="3" z="10" spawntime="90" />
+		<monster name="Demon Skeleton" x="6" y="4" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32792" centery="32367" centerz="10" radius="5">
+		<monster name="Demon Skeleton" x="-1" y="-5" z="10" spawntime="90" />
+		<monster name="Demon Skeleton" x="1" y="-3" z="10" spawntime="90" />
+		<monster name="Demon Skeleton" x="-3" y="1" z="10" spawntime="90" />
+		<monster name="Demon Skeleton" x="1" y="1" z="10" spawntime="90" />
+		<monster name="Ghost" x="5" y="2" z="10" spawntime="90" />
+		<monster name="Demon Skeleton" x="-5" y="5" z="10" spawntime="90" />
+		<monster name="Demon Skeleton" x="-1" y="5" z="10" spawntime="90" />
+		<monster name="Demon Skeleton" x="4" y="5" z="10" spawntime="90" />
+	</monster>
+</monsters>

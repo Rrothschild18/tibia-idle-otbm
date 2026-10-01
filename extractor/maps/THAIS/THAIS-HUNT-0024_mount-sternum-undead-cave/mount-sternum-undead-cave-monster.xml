@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32392" centery="32014" centerz="7" radius="3">
+		<monster name="Snake" x="-2" y="-1" z="7" spawntime="90" />
+		<monster name="Snake" x="3" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32385" centery="32026" centerz="7" radius="2">
+		<monster name="Snake" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+</monsters>

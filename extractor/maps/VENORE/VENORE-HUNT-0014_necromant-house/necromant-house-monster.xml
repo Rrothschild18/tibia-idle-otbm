@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32762" centery="32318" centerz="7" radius="2">
+		<monster name="Scorpion" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32755" centery="32325" centerz="7" radius="2">
+		<monster name="Giant Spider" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32759" centery="32325" centerz="7" radius="2">
+		<monster name="Scorpion" x="2" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32743" centery="32331" centerz="7" radius="2">
+		<monster name="Giant Spider" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32783" centery="32332" centerz="7" radius="3">
+		<monster name="Ghoul" x="0" y="-3" z="7" spawntime="90" />
+		<monster name="Ghoul" x="0" y="-1" z="7" spawntime="90" />
+		<monster name="Ghoul" x="-1" y="1" z="7" spawntime="90" />
+		<monster name="Skeleton" x="-1" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32749" centery="32337" centerz="7" radius="2">
+		<monster name="Tarantula" x="0" y="1" z="7" spawntime="90" />
+		<monster name="Giant Spider" x="2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32767" centery="32339" centerz="7" radius="2">
+		<monster name="Ghoul" x="2" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32774" centery="32340" centerz="7" radius="2">
+		<monster name="Skeleton" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32781" centery="32341" centerz="7" radius="2">
+		<monster name="Ghoul" x="0" y="-1" z="7" spawntime="90" />
+		<monster name="Skeleton" x="-1" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32788" centery="32341" centerz="7" radius="2">
+		<monster name="Ghoul" x="2" y="-1" z="7" spawntime="90" />
+		<monster name="Ghoul" x="-1" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32767" centery="32345" centerz="7" radius="2">
+		<monster name="Ghoul" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32773" centery="32346" centerz="7" radius="2">
+		<monster name="Skeleton" x="2" y="-1" z="7" spawntime="90" />
+		<monster name="Skeleton" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32790" centery="32348" centerz="7" radius="2">
+		<monster name="Skeleton" x="2" y="-2" z="7" spawntime="90" />
+		<monster name="Ghoul" x="0" y="-1" z="7" spawntime="90" />
+		<monster name="Skeleton" x="-1" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32798" centery="32348" centerz="7" radius="2">
+		<monster name="Skeleton" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32758" centery="32351" centerz="7" radius="2">
+		<monster name="Wolf" x="-1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32750" centery="32355" centerz="7" radius="2">
+		<monster name="Wolf" x="-1" y="-1" z="7" spawntime="90" />
+		<monster name="Wolf" x="0" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32788" centery="32355" centerz="7" radius="2">
+		<monster name="Skeleton" x="2" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32759" centery="32358" centerz="7" radius="2">
+		<monster name="Wolf" x="1" y="-2" z="7" spawntime="90" />
+		<monster name="Wolf" x="1" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32779" centery="32361" centerz="7" radius="3">
+		<monster name="Demon Skeleton" x="-2" y="-3" z="7" spawntime="90" />
+		<monster name="Demon Skeleton" x="3" y="0" z="7" spawntime="90" />
+	</monster>
+</monsters>

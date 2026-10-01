@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32938" centery="32210" centerz="7" radius="3">
+		<monster name="Swamp Troll" x="-3" y="2" z="7" spawntime="90" />
+		<monster name="Rabbit" x="1" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32966" centery="32210" centerz="7" radius="3">
+		<monster name="Marsh Stalker" x="-2" y="1" z="7" spawntime="90" />
+		<monster name="Water Buffalo" x="-1" y="3" z="7" spawntime="60" />
+		<monster name="Water Buffalo" x="0" y="3" z="7" spawntime="60" />
+	</monster>
+	<monster centerx="32957" centery="32213" centerz="7" radius="1">
+		<monster name="Water Buffalo" x="-1" y="0" z="7" spawntime="60" />
+		<monster name="Water Buffalo" x="0" y="0" z="7" spawntime="60" />
+	</monster>
+	<monster centerx="32945" centery="32217" centerz="7" radius="3">
+		<monster name="Swamp Troll" x="1" y="-3" z="7" spawntime="90" />
+		<monster name="Swamp Troll" x="-2" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32964" centery="32217" centerz="7" radius="1">
+		<monster name="Water Buffalo" x="0" y="0" z="7" spawntime="60" />
+		<monster name="Water Buffalo" x="1" y="1" z="7" spawntime="60" />
+	</monster>
+	<monster centerx="32959" centery="32224" centerz="7" radius="3">
+		<monster name="Water Buffalo" x="3" y="-2" z="7" spawntime="60" />
+		<monster name="Water Buffalo" x="3" y="0" z="7" spawntime="60" />
+		<monster name="Swampling" x="2" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32959" centery="32231" centerz="7" radius="3">
+		<monster name="Swampling" x="1" y="-3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32966" centery="32231" centerz="7" radius="3">
+		<monster name="Swampling" x="-2" y="-3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32959" centery="32238" centerz="7" radius="3">
+		<monster name="Swampling" x="-3" y="-1" z="7" spawntime="90" />
+	</monster>
+</monsters>

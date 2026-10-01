@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="33191" centery="31667" centerz="12" radius="4">
+		<monster name="Son of Verminor" x="3" y="-3" z="12" spawntime="90" />
+		<monster name="Son of Verminor" x="-1" y="2" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33202" centery="31667" centerz="12" radius="4">
+		<monster name="Juggernaut" x="3" y="-1" z="12" spawntime="90" />
+		<monster name="Son of Verminor" x="0" y="0" z="12" spawntime="90" />
+		<monster name="Son of Verminor" x="-4" y="3" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33189" centery="31679" centerz="12" radius="6">
+		<monster name="Son of Verminor" x="3" y="-5" z="12" spawntime="90" />
+		<monster name="Nightmare" x="4" y="-2" z="12" spawntime="90" />
+		<monster name="Nightmare" x="5" y="2" z="12" spawntime="90" />
+		<monster name="Bonebeast" x="4" y="5" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33203" centery="31680" centerz="12" radius="6">
+		<monster name="Juggernaut" x="-1" y="-6" z="12" spawntime="90" />
+		<monster name="Son of Verminor" x="-6" y="-5" z="12" spawntime="90" />
+		<monster name="Son of Verminor" x="0" y="-3" z="12" spawntime="90" />
+		<monster name="Juggernaut" x="-4" y="-2" z="12" spawntime="90" />
+		<monster name="Son of Verminor" x="-2" y="0" z="12" spawntime="90" />
+		<monster name="Nightmare" x="0" y="3" z="12" spawntime="90" />
+		<monster name="Son of Verminor" x="-6" y="4" z="12" spawntime="90" />
+		<monster name="Bonebeast" x="1" y="4" z="12" spawntime="90" />
+		<monster name="Nightmare" x="-4" y="5" z="12" spawntime="90" />
+	</monster>
+</monsters>

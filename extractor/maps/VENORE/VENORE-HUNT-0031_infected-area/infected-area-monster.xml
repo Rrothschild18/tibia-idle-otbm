@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32722" centery="32337" centerz="8" radius="2">
+		<monster name="Scorpion" x="0" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32698" centery="32341" centerz="8" radius="2">
+		<monster name="Cave Rat" x="1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32636" centery="32344" centerz="8" radius="5">
+		<monster name="Wild Warrior" x="1" y="-2" z="8" spawntime="90" />
+		<monster name="Bandit" x="-3" y="-1" z="8" spawntime="90" />
+		<monster name="Smuggler" x="3" y="-1" z="8" spawntime="90" />
+		<monster name="Smuggler" x="-2" y="2" z="8" spawntime="90" />
+		<monster name="Wild Warrior" x="0" y="3" z="8" spawntime="90" />
+		<monster name="Bandit" x="-2" y="4" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32649" centery="32344" centerz="8" radius="2">
+		<monster name="Smuggler" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32678" centery="32344" centerz="8" radius="5">
+		<monster name="Wild Warrior" x="2" y="-3" z="8" spawntime="90" />
+		<monster name="Bat" x="-3" y="-2" z="8" spawntime="90" />
+		<monster name="Bat" x="2" y="2" z="8" spawntime="90" />
+		<monster name="Wild Warrior" x="-1" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32619" centery="32345" centerz="8" radius="3">
+		<monster name="Poison Spider" x="0" y="-2" z="8" spawntime="90" />
+		<monster name="Poison Spider" x="3" y="0" z="8" spawntime="90" />
+		<monster name="Poison Spider" x="-2" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32659" centery="32345" centerz="8" radius="2">
+		<monster name="Smuggler" x="-1" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32688" centery="32345" centerz="8" radius="2">
+		<monster name="Bat" x="2" y="-2" z="8" spawntime="90" />
+		<monster name="Bat" x="-1" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32708" centery="32346" centerz="8" radius="3">
+		<monster name="Bat" x="2" y="-2" z="8" spawntime="90" />
+		<monster name="Poison Spider" x="-2" y="0" z="8" spawntime="90" />
+		<monster name="Bat" x="-1" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32719" centery="32347" centerz="8" radius="3">
+		<monster name="Poison Spider" x="1" y="-2" z="8" spawntime="90" />
+		<monster name="Poison Spider" x="0" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32728" centery="32347" centerz="8" radius="3">
+		<monster name="Poison Spider" x="1" y="-2" z="8" spawntime="90" />
+		<monster name="Poison Spider" x="-2" y="0" z="8" spawntime="90" />
+		<monster name="Poison Spider" x="-1" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32699" centery="32348" centerz="8" radius="3">
+		<monster name="Centipede" x="0" y="-2" z="8" spawntime="90" />
+		<monster name="Centipede" x="3" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32707" centery="32354" centerz="8" radius="3">
+		<monster name="Poison Spider" x="-2" y="-3" z="8" spawntime="90" />
+		<monster name="Poison Spider" x="2" y="-3" z="8" spawntime="90" />
+		<monster name="Poison Spider" x="-1" y="0" z="8" spawntime="90" />
+		<monster name="Poison Spider" x="2" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32632" centery="32355" centerz="8" radius="2">
+		<monster name="Bat" x="0" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32641" centery="32355" centerz="8" radius="2">
+		<monster name="Bat" x="0" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32648" centery="32355" centerz="8" radius="2">
+		<monster name="Bat" x="0" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32673" centery="32355" centerz="8" radius="3">
+		<monster name="Centipede" x="3" y="-1" z="8" spawntime="90" />
+		<monster name="Centipede" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32659" centery="32356" centerz="8" radius="4">
+		<monster name="Wild Warrior" x="1" y="-3" z="8" spawntime="90" />
+		<monster name="Wild Warrior" x="-4" y="1" z="8" spawntime="90" />
+		<monster name="Wild Warrior" x="3" y="1" z="8" spawntime="90" />
+		<monster name="Bandit" x="-1" y="2" z="8" spawntime="90" />
+		<monster name="Bandit" x="3" y="4" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32696" centery="32358" centerz="8" radius="4">
+		<monster name="Slime" x="0" y="-3" z="8" spawntime="90" />
+		<monster name="Poison Spider" x="-1" y="0" z="8" spawntime="90" />
+		<monster name="Poison Spider" x="-4" y="3" z="8" spawntime="90" />
+		<monster name="Poison Spider" x="1" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32649" centery="32361" centerz="8" radius="2">
+		<monster name="Bat" x="-2" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32710" centery="32367" centerz="8" radius="4">
+		<monster name="Skeleton" x="0" y="-3" z="8" spawntime="90" />
+		<monster name="Skeleton" x="-4" y="1" z="8" spawntime="90" />
+		<monster name="Skeleton" x="2" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32659" centery="32368" centerz="8" radius="5">
+		<monster name="Bandit" x="-3" y="-4" z="8" spawntime="90" />
+		<monster name="Bandit" x="1" y="-3" z="8" spawntime="90" />
+		<monster name="Bandit" x="4" y="-1" z="8" spawntime="90" />
+		<monster name="Bandit" x="-2" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32671" centery="32377" centerz="8" radius="4">
+		<monster name="Bandit" x="1" y="-3" z="8" spawntime="90" />
+		<monster name="Bandit" x="-2" y="0" z="8" spawntime="90" />
+		<monster name="Bandit" x="3" y="0" z="8" spawntime="90" />
+		<monster name="Bandit" x="1" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32684" centery="32378" centerz="8" radius="4">
+		<monster name="Wild Warrior" x="0" y="-4" z="8" spawntime="90" />
+		<monster name="Wild Warrior" x="4" y="0" z="8" spawntime="90" />
+		<monster name="Wild Warrior" x="-2" y="1" z="8" spawntime="90" />
+		<monster name="Wild Warrior" x="1" y="2" z="8" spawntime="90" />
+	</monster>
+</monsters>

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="33169" centery="31644" centerz="7" radius="1">
+		<monster name="Hunter" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33162" centery="31648" centerz="7" radius="1">
+		<monster name="Wild Warrior" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33157" centery="31651" centerz="7" radius="1">
+		<monster name="Hunter" x="0" y="-1" z="7" spawntime="90" />
+		<monster name="Wild Warrior" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33164" centery="31652" centerz="7" radius="1">
+		<monster name="Wild Warrior" x="0" y="-1" z="7" spawntime="90" />
+		<monster name="Hunter" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+</monsters>

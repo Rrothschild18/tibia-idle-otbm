@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="33190" centery="31979" centerz="11" radius="3">
+		<monster name="Rabbit" x="-2" y="2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33197" centery="31979" centerz="11" radius="3">
+		<monster name="Wilting Leaf Golem" x="-3" y="-2" z="11" spawntime="60" />
+		<monster name="Leaf Golem" x="1" y="-2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33183" centery="31986" centerz="11" radius="3">
+		<monster name="Leaf Golem" x="1" y="2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33197" centery="31986" centerz="11" radius="3">
+		<monster name="Wilting Leaf Golem" x="1" y="-1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33183" centery="31993" centerz="11" radius="3">
+		<monster name="Leaf Golem" x="3" y="-3" z="11" spawntime="60" />
+	</monster>
+</monsters>

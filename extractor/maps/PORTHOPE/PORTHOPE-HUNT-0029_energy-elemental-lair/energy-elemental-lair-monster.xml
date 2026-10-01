@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="33181" centery="32533" centerz="8" radius="1">
+		<monster name="Scorpion" x="1" y="-1" z="8" spawntime="90" />
+		<monster name="Nomad" x="1" y="0" z="8" spawntime="90" />
+		<monster name="Scorpion" x="1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33184" centery="32539" centerz="8" radius="1">
+		<monster name="Nomad" x="1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33195" centery="32541" centerz="8" radius="1">
+		<monster name="Nomad" x="-1" y="0" z="8" spawntime="90" />
+		<monster name="Scorpion" x="1" y="0" z="8" spawntime="90" />
+		<monster name="Nomad" x="1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33214" centery="32542" centerz="8" radius="1">
+		<monster name="Nomad" x="1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33201" centery="32543" centerz="8" radius="1">
+		<monster name="Scorpion" x="1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33211" centery="32543" centerz="8" radius="1">
+		<monster name="Nomad" x="-1" y="0" z="8" spawntime="90" />
+		<monster name="Nomad" x="1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33197" centery="32544" centerz="8" radius="1">
+		<monster name="Nomad" x="-1" y="0" z="8" spawntime="90" />
+		<monster name="Nomad" x="1" y="0" z="8" spawntime="90" />
+	</monster>
+</monsters>

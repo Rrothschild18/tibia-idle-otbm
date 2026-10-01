@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="33323" centery="31944" centerz="8" radius="3">
+		<monster name="Bug" x="0" y="2" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33323" centery="31951" centerz="8" radius="3">
+		<monster name="Swampling" x="0" y="2" z="8" spawntime="60" />
+		<monster name="Leaf Golem" x="1" y="2" z="8" spawntime="60" />
+		<monster name="Bug" x="1" y="3" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33316" centery="31965" centerz="8" radius="3">
+		<monster name="Swampling" x="-2" y="-2" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33309" centery="31972" centerz="8" radius="3">
+		<monster name="Leaf Golem" x="-1" y="-2" z="8" spawntime="60" />
+		<monster name="Leaf Golem" x="-1" y="3" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33316" centery="31972" centerz="8" radius="3">
+		<monster name="Bug" x="-3" y="0" z="8" spawntime="60" />
+	</monster>
+</monsters>

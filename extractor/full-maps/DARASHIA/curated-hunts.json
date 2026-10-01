@@ -1,0 +1,772 @@
+{
+  "city": "DARASHIA",
+  "area": {
+    "id": 4,
+    "name": "Northern Darama"
+  },
+  "hunts": [
+    {
+      "id": "DARASHIA-HUNT-0001",
+      "name": "Darashia Rotworm Caves",
+      "slug": "darashia-rotworm-caves",
+      "folder": "DARASHIA-HUNT-0001_darashia-rotworm-caves",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "DARASHIA-C07-005",
+        "DARASHIA-C07-008"
+      ],
+      "creatures": 20,
+      "extent": {
+        "minX": 33187,
+        "minY": 32304,
+        "maxX": 33316,
+        "maxY": 32365,
+        "centerX": 33251,
+        "centerY": 32334
+      },
+      "subareaId": 68,
+      "entrance": {
+        "x": 33294,
+        "y": 32348,
+        "z": 7
+      },
+      "walkTilesFromTemple": 145,
+      "tiles": 13244,
+      "spawns": 20
+    },
+    {
+      "id": "DARASHIA-HUNT-0002",
+      "name": "Dark Pyramid",
+      "slug": "dark-pyramid",
+      "folder": "DARASHIA-HUNT-0002_dark-pyramid",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "DARASHIA-C07-004"
+      ],
+      "creatures": 14,
+      "extent": {
+        "minX": 33296,
+        "minY": 32278,
+        "maxX": 33320,
+        "maxY": 32297,
+        "centerX": 33308,
+        "centerY": 32287
+      },
+      "subareaId": 64,
+      "entrance": {
+        "x": 33296,
+        "y": 32297,
+        "z": 7
+      },
+      "walkTilesFromTemple": 181,
+      "tiles": 2156,
+      "spawns": 14
+    },
+    {
+      "id": "DARASHIA-HUNT-0003",
+      "name": "Daramian Rotworm Caves",
+      "slug": "daramian-rotworm-caves",
+      "folder": "DARASHIA-HUNT-0003_daramian-rotworm-caves",
+      "floors": [
+        8
+      ],
+      "cropFloors": [
+        8
+      ],
+      "candidateIds": [
+        "DARASHIA-C08-004",
+        "DARASHIA-C08-017",
+        "DARASHIA-C08-021"
+      ],
+      "creatures": 27,
+      "extent": {
+        "minX": 33203,
+        "minY": 32266,
+        "maxX": 33251,
+        "maxY": 32336,
+        "centerX": 33227,
+        "centerY": 32301
+      },
+      "subareaId": 68,
+      "entrance": {
+        "x": 33212,
+        "y": 32329,
+        "z": 8
+      },
+      "walkTilesFromTemple": 150,
+      "tiles": 6459,
+      "spawns": 27
+    },
+    {
+      "id": "DARASHIA-HUNT-0004",
+      "name": "Nomad Cave",
+      "slug": "nomad-cave",
+      "folder": "DARASHIA-HUNT-0004_nomad-cave",
+      "floors": [
+        8
+      ],
+      "cropFloors": [
+        8
+      ],
+      "candidateIds": [
+        "DARASHIA-C08-012"
+      ],
+      "creatures": 11,
+      "extent": {
+        "minX": 33217,
+        "minY": 32495,
+        "maxX": 33230,
+        "maxY": 32515,
+        "centerX": 33223,
+        "centerY": 32505
+      },
+      "subareaId": 296,
+      "entrance": {
+        "x": 33222,
+        "y": 32495,
+        "z": 8
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 1710,
+      "spawns": 11
+    },
+    {
+      "id": "DARASHIA-HUNT-0005",
+      "name": "Drefia",
+      "slug": "drefia",
+      "folder": "DARASHIA-HUNT-0005_drefia",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "DARASHIA-C07-001",
+        "DARASHIA-C07-002"
+      ],
+      "creatures": 86,
+      "extent": {
+        "minX": 32962,
+        "minY": 32399,
+        "maxX": 33074,
+        "maxY": 32503,
+        "centerX": 33018,
+        "centerY": 32451
+      },
+      "subareaId": 66,
+      "entrance": {
+        "x": 33057,
+        "y": 32465,
+        "z": 7
+      },
+      "walkTilesFromTemple": 187,
+      "tiles": 17673,
+      "spawns": 86
+    },
+    {
+      "id": "DARASHIA-HUNT-0006",
+      "name": "Darashia Catacombs",
+      "slug": "darashia-catacombs",
+      "folder": "DARASHIA-HUNT-0006_darashia-catacombs",
+      "floors": [
+        8
+      ],
+      "cropFloors": [
+        8
+      ],
+      "candidateIds": [
+        "DARASHIA-C08-025"
+      ],
+      "creatures": 4,
+      "extent": {
+        "minX": 33277,
+        "minY": 32445,
+        "maxX": 33285,
+        "maxY": 32448,
+        "centerX": 33281,
+        "centerY": 32446
+      },
+      "subareaId": 296,
+      "entrance": {
+        "x": 33279,
+        "y": 32448,
+        "z": 8
+      },
+      "walkTilesFromTemple": 107,
+      "tiles": 924,
+      "spawns": 4
+    },
+    {
+      "id": "DARASHIA-HUNT-0007",
+      "name": "Northern Terramite Tunnels",
+      "slug": "northern-terramite-tunnels",
+      "folder": "DARASHIA-HUNT-0007_northern-terramite-tunnels",
+      "floors": [
+        8
+      ],
+      "cropFloors": [
+        8
+      ],
+      "candidateIds": [
+        "DARASHIA-C08-001",
+        "DARASHIA-C08-002",
+        "DARASHIA-C08-007"
+      ],
+      "creatures": 67,
+      "extent": {
+        "minX": 33107,
+        "minY": 32419,
+        "maxX": 33199,
+        "maxY": 32493,
+        "centerX": 33153,
+        "centerY": 32456
+      },
+      "subareaId": 68,
+      "entrance": {
+        "x": 33133,
+        "y": 32433,
+        "z": 8
+      },
+      "walkTilesFromTemple": 109,
+      "tiles": 11525,
+      "spawns": 67
+    },
+    {
+      "id": "DARASHIA-HUNT-0008",
+      "name": "Lion's Rock",
+      "slug": "lion-s-rock",
+      "folder": "DARASHIA-HUNT-0008_lion-s-rock",
+      "floors": [
+        8
+      ],
+      "cropFloors": [
+        8
+      ],
+      "candidateIds": [
+        "DARASHIA-C08-020",
+        "DARASHIA-C08-029"
+      ],
+      "creatures": 8,
+      "extent": {
+        "minX": 33124,
+        "minY": 32357,
+        "maxX": 33144,
+        "maxY": 32375,
+        "centerX": 33134,
+        "centerY": 32366
+      },
+      "subareaId": 68,
+      "entrance": {
+        "x": 33139,
+        "y": 32357,
+        "z": 8
+      },
+      "walkTilesFromTemple": 143,
+      "tiles": 1855,
+      "spawns": 8
+    },
+    {
+      "id": "DARASHIA-HUNT-0009",
+      "name": "Ashta'daramai",
+      "slug": "ashta-daramai",
+      "folder": "DARASHIA-HUNT-0009_ashta-daramai",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "DARASHIA-C07-009"
+      ],
+      "creatures": 7,
+      "extent": {
+        "minX": 33095,
+        "minY": 32522,
+        "maxX": 33102,
+        "maxY": 32530,
+        "centerX": 33098,
+        "centerY": 32526
+      },
+      "subareaId": 82,
+      "entrance": {
+        "x": 33098,
+        "y": 32522,
+        "z": 7
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 1056,
+      "spawns": 7
+    },
+    {
+      "id": "DARASHIA-HUNT-0010",
+      "name": "Vampire Crypts",
+      "slug": "vampire-crypts",
+      "folder": "DARASHIA-HUNT-0010_vampire-crypts",
+      "floors": [
+        7,
+        12
+      ],
+      "cropFloors": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "candidateIds": [
+        "DARASHIA-C07-001",
+        "DARASHIA-C07-002",
+        "DARASHIA-C12-001",
+        "DARASHIA-C12-006"
+      ],
+      "creatures": 125,
+      "extent": {
+        "minX": 32961,
+        "minY": 32399,
+        "maxX": 33074,
+        "maxY": 32503,
+        "centerX": 33017,
+        "centerY": 32451
+      },
+      "subareaId": 66,
+      "entrance": {
+        "x": 33057,
+        "y": 32465,
+        "z": 7
+      },
+      "walkTilesFromTemple": 187,
+      "tiles": 97879,
+      "spawns": 125
+    },
+    {
+      "id": "DARASHIA-HUNT-0011",
+      "name": "Deeper Drefia",
+      "slug": "deeper-drefia",
+      "folder": "DARASHIA-HUNT-0011_deeper-drefia",
+      "floors": [
+        10
+      ],
+      "cropFloors": [
+        10
+      ],
+      "candidateIds": [
+        "DARASHIA-C10-002",
+        "DARASHIA-C10-004",
+        "DARASHIA-C10-005",
+        "DARASHIA-C10-007",
+        "DARASHIA-C10-010",
+        "DARASHIA-C10-015",
+        "DARASHIA-C10-016",
+        "DARASHIA-C10-017",
+        "DARASHIA-C10-018",
+        "DARASHIA-C10-019",
+        "DARASHIA-C10-020",
+        "DARASHIA-C10-021",
+        "DARASHIA-C10-022"
+      ],
+      "creatures": 171,
+      "extent": {
+        "minX": 32971,
+        "minY": 32349,
+        "maxX": 33112,
+        "maxY": 32486,
+        "centerX": 33041,
+        "centerY": 32417
+      },
+      "subareaId": 66,
+      "entrance": {
+        "x": 33087,
+        "y": 32424,
+        "z": 10
+      },
+      "walkTilesFromTemple": 190,
+      "tiles": 25006,
+      "spawns": 171
+    },
+    {
+      "id": "DARASHIA-HUNT-0012",
+      "name": "Forbidden Lands",
+      "slug": "forbidden-lands",
+      "folder": "DARASHIA-HUNT-0012_forbidden-lands",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "DARASHIA-C07-001"
+      ],
+      "creatures": 58,
+      "extent": {
+        "minX": 32962,
+        "minY": 32399,
+        "maxX": 33033,
+        "maxY": 32479,
+        "centerX": 32997,
+        "centerY": 32439
+      },
+      "subareaId": 66,
+      "entrance": {
+        "x": 33008,
+        "y": 32415,
+        "z": 7
+      },
+      "walkTilesFromTemple": 237,
+      "tiles": 10080,
+      "spawns": 58
+    },
+    {
+      "id": "DARASHIA-HUNT-0013",
+      "name": "Kha'zeel Scarab Lair",
+      "slug": "kha-zeel-scarab-lair",
+      "folder": "DARASHIA-HUNT-0013_kha-zeel-scarab-lair",
+      "floors": [
+        9
+      ],
+      "cropFloors": [
+        9
+      ],
+      "candidateIds": [
+        "DARASHIA-C09-005"
+      ],
+      "creatures": 15,
+      "extent": {
+        "minX": 33025,
+        "minY": 32459,
+        "maxX": 33063,
+        "maxY": 32484,
+        "centerX": 33044,
+        "centerY": 32471
+      },
+      "subareaId": 66,
+      "entrance": {
+        "x": 33052,
+        "y": 32465,
+        "z": 9
+      },
+      "walkTilesFromTemple": 202,
+      "tiles": 3018,
+      "spawns": 15
+    },
+    {
+      "id": "DARASHIA-HUNT-0014",
+      "name": "Drefia Vampire Crypts",
+      "slug": "drefia-vampire-crypts",
+      "folder": "DARASHIA-HUNT-0014_drefia-vampire-crypts",
+      "floors": [
+        12
+      ],
+      "cropFloors": [
+        12
+      ],
+      "candidateIds": [
+        "DARASHIA-C12-001",
+        "DARASHIA-C12-002",
+        "DARASHIA-C12-006"
+      ],
+      "creatures": 48,
+      "extent": {
+        "minX": 32961,
+        "minY": 32405,
+        "maxX": 33039,
+        "maxY": 32481,
+        "centerX": 33000,
+        "centerY": 32443
+      },
+      "subareaId": 66,
+      "entrance": {
+        "x": 33032,
+        "y": 32464,
+        "z": 12
+      },
+      "walkTilesFromTemple": 240,
+      "tiles": 9061,
+      "spawns": 48
+    },
+    {
+      "id": "DARASHIA-HUNT-0015",
+      "name": "Drefia Wyrm Caves",
+      "slug": "drefia-wyrm-caves",
+      "folder": "DARASHIA-HUNT-0015_drefia-wyrm-caves",
+      "floors": [
+        13
+      ],
+      "cropFloors": [
+        13
+      ],
+      "candidateIds": [
+        "DARASHIA-C13-005",
+        "DARASHIA-C13-009"
+      ],
+      "creatures": 19,
+      "extent": {
+        "minX": 33058,
+        "minY": 32367,
+        "maxX": 33109,
+        "maxY": 32415,
+        "centerX": 33083,
+        "centerY": 32391
+      },
+      "subareaId": 68,
+      "entrance": {
+        "x": 33101,
+        "y": 32372,
+        "z": 13
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 5509,
+      "spawns": 19
+    },
+    {
+      "id": "DARASHIA-HUNT-0016",
+      "name": "Drefia Grim Reaper Halls",
+      "slug": "drefia-grim-reaper-halls",
+      "folder": "DARASHIA-HUNT-0016_drefia-grim-reaper-halls",
+      "floors": [
+        12
+      ],
+      "cropFloors": [
+        12
+      ],
+      "candidateIds": [
+        "DARASHIA-C12-002"
+      ],
+      "creatures": 9,
+      "extent": {
+        "minX": 33017,
+        "minY": 32456,
+        "maxX": 33039,
+        "maxY": 32481,
+        "centerX": 33028,
+        "centerY": 32468
+      },
+      "subareaId": 66,
+      "entrance": {
+        "x": 33032,
+        "y": 32464,
+        "z": 12
+      },
+      "walkTilesFromTemple": 240,
+      "tiles": 1826,
+      "spawns": 9
+    },
+    {
+      "id": "DARASHIA-HUNT-0017",
+      "name": "Hyaena Lairs",
+      "slug": "hyaena-lairs",
+      "folder": "DARASHIA-HUNT-0017_hyaena-lairs",
+      "floors": [
+        10
+      ],
+      "cropFloors": [
+        10
+      ],
+      "candidateIds": [
+        "DARASHIA-C10-001",
+        "DARASHIA-C10-003",
+        "DARASHIA-C10-006",
+        "DARASHIA-C10-009",
+        "DARASHIA-C10-013"
+      ],
+      "creatures": 182,
+      "extent": {
+        "minX": 33145,
+        "minY": 32347,
+        "maxX": 33228,
+        "maxY": 32479,
+        "centerX": 33186,
+        "centerY": 32413
+      },
+      "subareaId": 296,
+      "entrance": {
+        "x": 33207,
+        "y": 32355,
+        "z": 10
+      },
+      "walkTilesFromTemple": 161,
+      "tiles": 16882,
+      "spawns": 182
+    },
+    {
+      "id": "DARASHIA-HUNT-0018",
+      "name": "Deep Desert",
+      "slug": "deep-desert",
+      "folder": "DARASHIA-HUNT-0018_deep-desert",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "DARASHIA-C07-016"
+      ],
+      "creatures": 3,
+      "extent": {
+        "minX": 33115,
+        "minY": 32389,
+        "maxX": 33130,
+        "maxY": 32399,
+        "centerX": 33122,
+        "centerY": 32394
+      },
+      "subareaId": 68,
+      "entrance": {
+        "x": 33130,
+        "y": 32389,
+        "z": 7
+      },
+      "walkTilesFromTemple": 110,
+      "tiles": 1400,
+      "spawns": 3
+    },
+    {
+      "id": "DARASHIA-HUNT-0019",
+      "name": "Grounds of Damnation",
+      "slug": "grounds-of-damnation",
+      "folder": "DARASHIA-HUNT-0019_grounds-of-damnation",
+      "floors": [
+        14
+      ],
+      "cropFloors": [
+        14
+      ],
+      "candidateIds": [
+        "DARASHIA-C14-004"
+      ],
+      "creatures": 19,
+      "extent": {
+        "minX": 33295,
+        "minY": 32330,
+        "maxX": 33325,
+        "maxY": 32369,
+        "centerX": 33310,
+        "centerY": 32349
+      },
+      "subareaId": 68,
+      "entrance": {
+        "x": 33297,
+        "y": 32330,
+        "z": 14
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 3518,
+      "spawns": 19
+    },
+    {
+      "id": "DARASHIA-HUNT-0020",
+      "name": "Grounds of Despair",
+      "slug": "grounds-of-despair",
+      "folder": "DARASHIA-HUNT-0020_grounds-of-despair",
+      "floors": [
+        14
+      ],
+      "cropFloors": [
+        14
+      ],
+      "candidateIds": [
+        "DARASHIA-C14-005"
+      ],
+      "creatures": 8,
+      "extent": {
+        "minX": 33296,
+        "minY": 32391,
+        "maxX": 33300,
+        "maxY": 32399,
+        "centerX": 33298,
+        "centerY": 32395
+      },
+      "subareaId": 68,
+      "entrance": {
+        "x": 33299,
+        "y": 32391,
+        "z": 14
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 956,
+      "spawns": 8
+    },
+    {
+      "id": "DARASHIA-HUNT-0021",
+      "name": "Haunted Nexus (Tomb)",
+      "slug": "haunted-nexus-tomb",
+      "folder": "DARASHIA-HUNT-0021_haunted-nexus-tomb",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "DARASHIA-C07-006"
+      ],
+      "creatures": 10,
+      "extent": {
+        "minX": 33040,
+        "minY": 32352,
+        "maxX": 33079,
+        "maxY": 32374,
+        "centerX": 33059,
+        "centerY": 32363
+      },
+      "subareaId": 68,
+      "entrance": {
+        "x": 33079,
+        "y": 32360,
+        "z": 7
+      },
+      "walkTilesFromTemple": 161,
+      "tiles": 3008,
+      "spawns": 10
+    },
+    {
+      "id": "DARASHIA-HUNT-0022",
+      "name": "Hell Hub",
+      "slug": "hell-hub",
+      "folder": "DARASHIA-HUNT-0022_hell-hub",
+      "floors": [
+        13
+      ],
+      "cropFloors": [
+        13
+      ],
+      "candidateIds": [
+        "DARASHIA-C13-002",
+        "DARASHIA-C13-006",
+        "DARASHIA-C13-011"
+      ],
+      "creatures": 35,
+      "extent": {
+        "minX": 33288,
+        "minY": 32332,
+        "maxX": 33321,
+        "maxY": 32416,
+        "centerX": 33304,
+        "centerY": 32374
+      },
+      "subareaId": 68,
+      "entrance": {
+        "x": 33321,
+        "y": 32332,
+        "z": 13
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 6220,
+      "spawns": 35
+    }
+  ]
+}

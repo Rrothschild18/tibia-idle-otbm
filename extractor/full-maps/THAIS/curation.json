@@ -1,0 +1,985 @@
+{
+  "city": "THAIS",
+  "area": {
+    "id": 24,
+    "name": "Thais"
+  },
+  "subareas": [
+    {
+      "id": 317,
+      "name": "Rookgaard",
+      "mask": "masks/0317.png",
+      "maskPlacement": {
+        "x": 31956,
+        "y": 32078,
+        "width": 235,
+        "height": 222
+      }
+    },
+    {
+      "id": 514,
+      "name": "Newhaven",
+      "mask": "masks/0514.png",
+      "maskPlacement": {
+        "x": 32504,
+        "y": 32406,
+        "width": 131,
+        "height": 117
+      }
+    },
+    {
+      "id": 120,
+      "name": "Isle of Destiny",
+      "mask": "masks/0120.png",
+      "maskPlacement": {
+        "x": 31940,
+        "y": 31962,
+        "width": 187,
+        "height": 1007
+      }
+    },
+    {
+      "id": 454,
+      "name": "Thais",
+      "mask": "masks/0454.png",
+      "maskPlacement": {
+        "x": 32130,
+        "y": 32051,
+        "width": 266,
+        "height": 381
+      }
+    },
+    {
+      "id": 307,
+      "name": "Adventurers' Guild",
+      "mask": "masks/0307.png",
+      "maskPlacement": {
+        "x": 32145,
+        "y": 32265,
+        "width": 73,
+        "height": 55
+      }
+    },
+    {
+      "id": 28,
+      "name": "Thais City",
+      "mask": "masks/0028.png",
+      "maskPlacement": {
+        "x": 32130,
+        "y": 32009,
+        "width": 471,
+        "height": 438
+      }
+    },
+    {
+      "id": 33,
+      "name": "Thais Trolls' Cave",
+      "mask": "masks/0033.png",
+      "maskPlacement": {
+        "x": 32476,
+        "y": 32240,
+        "width": 48,
+        "height": 72
+      }
+    },
+    {
+      "id": 34,
+      "name": "Mount Sternum",
+      "mask": "masks/0034.png",
+      "maskPlacement": {
+        "x": 32430,
+        "y": 32036,
+        "width": 116,
+        "height": 73
+      }
+    },
+    {
+      "id": 292,
+      "name": "Travora",
+      "mask": "masks/0292.png",
+      "maskPlacement": {
+        "x": 32047,
+        "y": 32352,
+        "width": 26,
+        "height": 21
+      }
+    },
+    {
+      "id": 35,
+      "name": "Fibula",
+      "mask": "masks/0035.png",
+      "maskPlacement": {
+        "x": 32115,
+        "y": 31685,
+        "width": 125,
+        "height": 791
+      }
+    },
+    {
+      "id": 291,
+      "name": "Meluna",
+      "mask": "masks/0291.png",
+      "maskPlacement": {
+        "x": 32012,
+        "y": 32401,
+        "width": 97,
+        "height": 73
+      }
+    },
+    {
+      "id": 29,
+      "name": "Thais Surroundings",
+      "mask": "masks/0029.png",
+      "maskPlacement": {
+        "x": 32212,
+        "y": 32008,
+        "width": 348,
+        "height": 424
+      }
+    },
+    {
+      "id": 293,
+      "name": "Temple of Light",
+      "mask": "masks/0293.png",
+      "maskPlacement": {
+        "x": 31910,
+        "y": 31975,
+        "width": 120,
+        "height": 126
+      }
+    },
+    {
+      "id": 295,
+      "name": "Greenshore",
+      "mask": "masks/0295.png",
+      "maskPlacement": {
+        "x": 32197,
+        "y": 32008,
+        "width": 121,
+        "height": 108
+      }
+    },
+    {
+      "id": 478,
+      "name": "Thais Peninsula",
+      "mask": "masks/0478.png",
+      "maskPlacement": {
+        "x": 32452,
+        "y": 32277,
+        "width": 70,
+        "height": 34
+      }
+    },
+    {
+      "id": 528,
+      "name": "Aragonia",
+      "mask": "masks/0528.png",
+      "maskPlacement": {
+        "x": 33475,
+        "y": 32684,
+        "width": 85,
+        "height": 69
+      }
+    },
+    {
+      "id": 526,
+      "name": "Targuna",
+      "mask": "masks/0526.png",
+      "maskPlacement": {
+        "x": 31920,
+        "y": 31850,
+        "width": 61,
+        "height": 80
+      }
+    }
+  ],
+  "hunts": [
+    {
+      "name": "Al Dee Rat Cave",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "THAIS-C07-004",
+        "THAIS-C07-012",
+        "THAIS-C07-014",
+        "THAIS-C07-044",
+        "THAIS-C07-045",
+        "THAIS-C07-046",
+        "THAIS-C07-061",
+        "THAIS-C07-062"
+      ],
+      "species": null,
+      "creatures": 71,
+      "extent": {
+        "minX": 31977,
+        "minY": 32153,
+        "maxX": 32090,
+        "maxY": 32245,
+        "centerX": 32033,
+        "centerY": 32199
+      },
+      "subareaId": 317,
+      "walkTilesFromTemple": 28
+    },
+    {
+      "name": "Corrupted Mines",
+      "floors": [
+        9
+      ],
+      "candidateIds": [
+        "THAIS-C09-013",
+        "THAIS-C09-014"
+      ],
+      "species": null,
+      "creatures": 23,
+      "extent": {
+        "minX": 32580,
+        "minY": 32461,
+        "maxX": 32619,
+        "maxY": 32486,
+        "centerX": 32599,
+        "centerY": 32473
+      },
+      "subareaId": 514,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Muglex Clan Camp",
+      "floors": [
+        9
+      ],
+      "candidateIds": [
+        "THAIS-C09-012"
+      ],
+      "species": null,
+      "creatures": 14,
+      "extent": {
+        "minX": 32502,
+        "minY": 32413,
+        "maxX": 32533,
+        "maxY": 32432,
+        "centerX": 32517,
+        "centerY": 32422
+      },
+      "subareaId": 514,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Troll Cave (Rookgaard)",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "THAIS-C07-014",
+        "THAIS-C07-061"
+      ],
+      "species": null,
+      "creatures": 17,
+      "extent": {
+        "minX": 32040,
+        "minY": 32153,
+        "maxX": 32086,
+        "maxY": 32177,
+        "centerX": 32063,
+        "centerY": 32165
+      },
+      "subareaId": 317,
+      "walkTilesFromTemple": 65
+    },
+    {
+      "name": "Bear Cave",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "THAIS-C07-005",
+        "THAIS-C07-020",
+        "THAIS-C07-030"
+      ],
+      "species": null,
+      "creatures": 41,
+      "extent": {
+        "minX": 32118,
+        "minY": 32180,
+        "maxX": 32177,
+        "maxY": 32222,
+        "centerX": 32147,
+        "centerY": 32201
+      },
+      "subareaId": 317,
+      "walkTilesFromTemple": 81
+    },
+    {
+      "name": "Rookgaard Bear Cave",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "THAIS-C07-005",
+        "THAIS-C07-030"
+      ],
+      "species": null,
+      "creatures": 31,
+      "extent": {
+        "minX": 32118,
+        "minY": 32184,
+        "maxX": 32158,
+        "maxY": 32222,
+        "centerX": 32138,
+        "centerY": 32203
+      },
+      "subareaId": 317,
+      "walkTilesFromTemple": 81
+    },
+    {
+      "name": "Spider Cave (Rookgaard Premium)",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "THAIS-C07-004",
+        "THAIS-C07-012",
+        "THAIS-C07-044",
+        "THAIS-C07-045",
+        "THAIS-C07-046"
+      ],
+      "species": null,
+      "creatures": 51,
+      "extent": {
+        "minX": 31977,
+        "minY": 32193,
+        "maxX": 32051,
+        "maxY": 32245,
+        "centerX": 32014,
+        "centerY": 32219
+      },
+      "subareaId": 317,
+      "walkTilesFromTemple": 60
+    },
+    {
+      "name": "Minotaur Hell",
+      "floors": [
+        8
+      ],
+      "candidateIds": [
+        "THAIS-C08-011"
+      ],
+      "species": null,
+      "creatures": 9,
+      "extent": {
+        "minX": 32054,
+        "minY": 32148,
+        "maxX": 32081,
+        "maxY": 32163,
+        "centerX": 32067,
+        "centerY": 32155
+      },
+      "subareaId": 317,
+      "walkTilesFromTemple": 74
+    },
+    {
+      "name": "Orc Fortress (Rookgaard)",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "THAIS-C07-004",
+        "THAIS-C07-006",
+        "THAIS-C07-012",
+        "THAIS-C07-029",
+        "THAIS-C07-044"
+      ],
+      "species": null,
+      "creatures": 72,
+      "extent": {
+        "minX": 31966,
+        "minY": 32134,
+        "maxX": 32051,
+        "maxY": 32241,
+        "centerX": 32008,
+        "centerY": 32187
+      },
+      "subareaId": 317,
+      "walkTilesFromTemple": 60
+    },
+    {
+      "name": "Thais Underground",
+      "floors": [
+        8
+      ],
+      "candidateIds": [
+        "THAIS-C08-001",
+        "THAIS-C08-017",
+        "THAIS-C08-018",
+        "THAIS-C08-034",
+        "THAIS-C08-051",
+        "THAIS-C08-054"
+      ],
+      "species": null,
+      "creatures": 104,
+      "extent": {
+        "minX": 32323,
+        "minY": 32182,
+        "maxX": 32425,
+        "maxY": 32272,
+        "centerX": 32374,
+        "centerY": 32227
+      },
+      "subareaId": 28,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Wasp Tower",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "THAIS-C07-029",
+        "THAIS-C07-037"
+      ],
+      "species": null,
+      "creatures": 12,
+      "extent": {
+        "minX": 31969,
+        "minY": 32134,
+        "maxX": 32031,
+        "maxY": 32151,
+        "centerX": 32000,
+        "centerY": 32142
+      },
+      "subareaId": 317,
+      "walkTilesFromTemple": 116
+    },
+    {
+      "name": "Kendram Benson's Grave",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "THAIS-C07-010",
+        "THAIS-C07-048"
+      ],
+      "species": null,
+      "creatures": 20,
+      "extent": {
+        "minX": 32111,
+        "minY": 32120,
+        "maxX": 32165,
+        "maxY": 32161,
+        "centerX": 32138,
+        "centerY": 32140
+      },
+      "subareaId": 317,
+      "walkTilesFromTemple": 78
+    },
+    {
+      "name": "Ancient Temple",
+      "floors": [
+        8
+      ],
+      "candidateIds": [
+        "THAIS-C08-001",
+        "THAIS-C08-002",
+        "THAIS-C08-017",
+        "THAIS-C08-018",
+        "THAIS-C08-023",
+        "THAIS-C08-034",
+        "THAIS-C08-051",
+        "THAIS-C08-054"
+      ],
+      "species": null,
+      "creatures": 145,
+      "extent": {
+        "minX": 32313,
+        "minY": 32121,
+        "maxX": 32425,
+        "maxY": 32272,
+        "centerX": 32369,
+        "centerY": 32196
+      },
+      "subareaId": 29,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Minotaur Camp",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "THAIS-C07-001",
+        "THAIS-C07-007",
+        "THAIS-C07-022",
+        "THAIS-C07-024"
+      ],
+      "species": null,
+      "creatures": 106,
+      "extent": {
+        "minX": 32261,
+        "minY": 32280,
+        "maxX": 32392,
+        "maxY": 32415,
+        "centerX": 32326,
+        "centerY": 32347
+      },
+      "subareaId": 29,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Thais Northern Dungeon",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "THAIS-C07-016",
+        "THAIS-C07-064"
+      ],
+      "species": null,
+      "creatures": 17,
+      "extent": {
+        "minX": 32336,
+        "minY": 32061,
+        "maxX": 32393,
+        "maxY": 32091,
+        "centerX": 32364,
+        "centerY": 32076
+      },
+      "subareaId": 29,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Thais Wolf Den",
+      "floors": [
+        8
+      ],
+      "candidateIds": [
+        "THAIS-C08-059"
+      ],
+      "species": null,
+      "creatures": 3,
+      "extent": {
+        "minX": 32498,
+        "minY": 32267,
+        "maxX": 32502,
+        "maxY": 32271,
+        "centerX": 32500,
+        "centerY": 32269
+      },
+      "subareaId": 33,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Fibula Dungeon",
+      "floors": [
+        7,
+        9
+      ],
+      "candidateIds": [
+        "THAIS-C07-033",
+        "THAIS-C09-015"
+      ],
+      "species": null,
+      "creatures": 16,
+      "extent": {
+        "minX": 32138,
+        "minY": 32403,
+        "maxX": 32221,
+        "maxY": 32453,
+        "centerX": 32179,
+        "centerY": 32428
+      },
+      "subareaId": 35,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Fibula",
+      "floors": [
+        9
+      ],
+      "candidateIds": [
+        "THAIS-C09-003",
+        "THAIS-C09-040"
+      ],
+      "species": null,
+      "creatures": 35,
+      "extent": {
+        "minX": 32123,
+        "minY": 32359,
+        "maxX": 32183,
+        "maxY": 32436,
+        "centerX": 32153,
+        "centerY": 32397
+      },
+      "subareaId": 35,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Greenshore",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "THAIS-C07-018",
+        "THAIS-C07-050"
+      ],
+      "species": null,
+      "creatures": 15,
+      "extent": {
+        "minX": 32208,
+        "minY": 32050,
+        "maxX": 32256,
+        "maxY": 32071,
+        "centerX": 32232,
+        "centerY": 32060
+      },
+      "subareaId": 295,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Thais Peninsula",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "THAIS-C07-058"
+      ],
+      "species": null,
+      "creatures": 4,
+      "extent": {
+        "minX": 32477,
+        "minY": 32289,
+        "maxX": 32489,
+        "maxY": 32293,
+        "centerX": 32483,
+        "centerY": 32291
+      },
+      "subareaId": 478,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Thais Trolls' Cave",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "THAIS-C07-059"
+      ],
+      "species": null,
+      "creatures": 4,
+      "extent": {
+        "minX": 32506,
+        "minY": 32245,
+        "maxX": 32513,
+        "maxY": 32254,
+        "centerX": 32509,
+        "centerY": 32249
+      },
+      "subareaId": 33,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Thais Wasp Dungeon",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "THAIS-C07-027",
+        "THAIS-C07-035"
+      ],
+      "species": null,
+      "creatures": 14,
+      "extent": {
+        "minX": 32408,
+        "minY": 32312,
+        "maxX": 32463,
+        "maxY": 32344,
+        "centerX": 32435,
+        "centerY": 32328
+      },
+      "subareaId": 29,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Thais Wolf Dungeon",
+      "floors": [
+        7,
+        8
+      ],
+      "candidateIds": [
+        "THAIS-C07-001",
+        "THAIS-C07-007",
+        "THAIS-C07-022",
+        "THAIS-C07-024",
+        "THAIS-C08-008"
+      ],
+      "species": null,
+      "creatures": 117,
+      "extent": {
+        "minX": 32261,
+        "minY": 32280,
+        "maxX": 32392,
+        "maxY": 32415,
+        "centerX": 32326,
+        "centerY": 32347
+      },
+      "subareaId": 29,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Mount Sternum/Undead Cave",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "THAIS-C07-066"
+      ],
+      "species": null,
+      "creatures": 3,
+      "extent": {
+        "minX": 32385,
+        "minY": 32013,
+        "maxX": 32395,
+        "maxY": 32025,
+        "centerX": 32390,
+        "centerY": 32019
+      },
+      "subareaId": 29,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Alatar Lake",
+      "floors": [
+        8
+      ],
+      "candidateIds": [
+        "THAIS-C08-035"
+      ],
+      "species": null,
+      "creatures": 4,
+      "extent": {
+        "minX": 32369,
+        "minY": 32126,
+        "maxX": 32374,
+        "maxY": 32132,
+        "centerX": 32371,
+        "centerY": 32129
+      },
+      "subareaId": 29,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Cyclops Camp",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "THAIS-C07-001",
+        "THAIS-C07-007",
+        "THAIS-C07-022",
+        "THAIS-C07-024",
+        "THAIS-C07-055"
+      ],
+      "species": null,
+      "creatures": 110,
+      "extent": {
+        "minX": 32261,
+        "minY": 32280,
+        "maxX": 32427,
+        "maxY": 32415,
+        "centerX": 32344,
+        "centerY": 32347
+      },
+      "subareaId": 29,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Mount Sternum",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "THAIS-C07-043"
+      ],
+      "species": null,
+      "creatures": 5,
+      "extent": {
+        "minX": 32479,
+        "minY": 32067,
+        "maxX": 32484,
+        "maxY": 32073,
+        "centerX": 32481,
+        "centerY": 32070
+      },
+      "subareaId": 34,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Orc Peninsula",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "THAIS-C07-011"
+      ],
+      "species": null,
+      "creatures": 16,
+      "extent": {
+        "minX": 32319,
+        "minY": 32033,
+        "maxX": 32335,
+        "maxY": 32049,
+        "centerX": 32327,
+        "centerY": 32041
+      },
+      "subareaId": 29,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Mintwallin",
+      "floors": [
+        15
+      ],
+      "candidateIds": [
+        "THAIS-C15-001",
+        "THAIS-C15-002",
+        "THAIS-C15-005",
+        "THAIS-C15-006"
+      ],
+      "species": null,
+      "creatures": 50,
+      "extent": {
+        "minX": 32397,
+        "minY": 32089,
+        "maxX": 32454,
+        "maxY": 32190,
+        "centerX": 32425,
+        "centerY": 32139
+      },
+      "subareaId": 29,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Dragon Lair (Mount Sternum)",
+      "floors": [
+        12
+      ],
+      "candidateIds": [
+        "THAIS-C12-004"
+      ],
+      "species": null,
+      "creatures": 5,
+      "extent": {
+        "minX": 32361,
+        "minY": 32022,
+        "maxX": 32380,
+        "maxY": 32032,
+        "centerX": 32370,
+        "centerY": 32027
+      },
+      "subareaId": 29,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Thais Dragon Lair",
+      "floors": [
+        10
+      ],
+      "candidateIds": [
+        "THAIS-C10-001",
+        "THAIS-C10-010",
+        "THAIS-C10-011",
+        "THAIS-C10-014",
+        "THAIS-C10-020",
+        "THAIS-C10-021",
+        "THAIS-C10-023",
+        "THAIS-C10-025",
+        "THAIS-C10-026",
+        "THAIS-C10-031",
+        "THAIS-C10-032",
+        "THAIS-C10-037",
+        "THAIS-C10-039",
+        "THAIS-C10-044",
+        "THAIS-C10-046"
+      ],
+      "species": null,
+      "creatures": 129,
+      "extent": {
+        "minX": 32277,
+        "minY": 32076,
+        "maxX": 32413,
+        "maxY": 32194,
+        "centerX": 32345,
+        "centerY": 32135
+      },
+      "subareaId": 29,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Minotaurs Cult Cave",
+      "floors": [
+        15
+      ],
+      "candidateIds": [
+        "THAIS-C15-001",
+        "THAIS-C15-005",
+        "THAIS-C15-006"
+      ],
+      "species": null,
+      "creatures": 35,
+      "extent": {
+        "minX": 32400,
+        "minY": 32089,
+        "maxX": 32454,
+        "maxY": 32135,
+        "centerX": 32427,
+        "centerY": 32112
+      },
+      "subareaId": 29,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Underground Isle",
+      "floors": [
+        14
+      ],
+      "candidateIds": [
+        "THAIS-C14-016",
+        "THAIS-C14-017"
+      ],
+      "species": null,
+      "creatures": 6,
+      "extent": {
+        "minX": 32478,
+        "minY": 32040,
+        "maxX": 32506,
+        "maxY": 32060,
+        "centerX": 32492,
+        "centerY": 32050
+      },
+      "subareaId": null,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Grounds of Damnation (Tafariel)",
+      "floors": [
+        13
+      ],
+      "candidateIds": [
+        "THAIS-C13-017",
+        "THAIS-C13-018"
+      ],
+      "species": null,
+      "creatures": 9,
+      "extent": {
+        "minX": 33475,
+        "minY": 32704,
+        "maxX": 33495,
+        "maxY": 32742,
+        "centerX": 33485,
+        "centerY": 32723
+      },
+      "subareaId": 528,
+      "walkTilesFromTemple": null
+    }
+  ]
+}

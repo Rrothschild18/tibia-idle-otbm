@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32805" centery="32473" centerz="12" radius="1">
+		<monster name="Souleater" x="0" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32802" centery="32475" centerz="12" radius="1">
+		<monster name="Souleater" x="0" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32836" centery="32476" centerz="12" radius="1">
+		<monster name="Nightstalker" x="0" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32804" centery="32477" centerz="12" radius="1">
+		<monster name="Souleater" x="0" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32823" centery="32480" centerz="12" radius="1">
+		<monster name="Souleater" x="0" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32829" centery="32481" centerz="12" radius="1">
+		<monster name="Souleater" x="-1" y="-1" z="12" spawntime="90" />
+		<monster name="Souleater" x="0" y="-1" z="12" spawntime="14219" />
+		<monster name="Souleater" x="0" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32819" centery="32483" centerz="12" radius="3">
+		<monster name="Souleater" x="2" y="-2" z="12" spawntime="90" />
+		<monster name="Banshee" x="3" y="1" z="12" spawntime="90" />
+	</monster>
+</monsters>

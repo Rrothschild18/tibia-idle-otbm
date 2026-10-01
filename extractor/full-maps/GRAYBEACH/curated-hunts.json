@@ -1,0 +1,317 @@
+{
+  "city": "GRAYBEACH",
+  "area": {
+    "id": 11,
+    "name": "Quirefang"
+  },
+  "hunts": [
+    {
+      "id": "GRAYBEACH-HUNT-0001",
+      "name": "Deepling Outpost",
+      "slug": "deepling-outpost",
+      "folder": "GRAYBEACH-HUNT-0001_deepling-outpost",
+      "floors": [
+        15
+      ],
+      "cropFloors": [
+        15
+      ],
+      "candidateIds": [
+        "GRAYBEACH-C15-008"
+      ],
+      "creatures": 3,
+      "extent": {
+        "minX": 33519,
+        "minY": 31356,
+        "maxX": 33525,
+        "maxY": 31367,
+        "centerX": 33522,
+        "centerY": 31361
+      },
+      "subareaId": 168,
+      "entrance": {
+        "x": 33524,
+        "y": 31356,
+        "z": 15
+      },
+      "walkTilesFromTemple": 123,
+      "tiles": 945,
+      "spawns": 3
+    },
+    {
+      "id": "GRAYBEACH-HUNT-0002",
+      "name": "Hatchery",
+      "slug": "hatchery",
+      "folder": "GRAYBEACH-HUNT-0002_hatchery",
+      "floors": [
+        14
+      ],
+      "cropFloors": [
+        14
+      ],
+      "candidateIds": [
+        "GRAYBEACH-C14-003",
+        "GRAYBEACH-C14-010",
+        "GRAYBEACH-C14-012"
+      ],
+      "creatures": 20,
+      "extent": {
+        "minX": 33535,
+        "minY": 31234,
+        "maxX": 33582,
+        "maxY": 31283,
+        "centerX": 33558,
+        "centerY": 31258
+      },
+      "subareaId": 168,
+      "entrance": {
+        "x": 33556,
+        "y": 31234,
+        "z": 14
+      },
+      "walkTilesFromTemple": 488,
+      "tiles": 4667,
+      "spawns": 20
+    },
+    {
+      "id": "GRAYBEACH-HUNT-0003",
+      "name": "Lava Grotto",
+      "slug": "lava-grotto",
+      "folder": "GRAYBEACH-HUNT-0003_lava-grotto",
+      "floors": [
+        13
+      ],
+      "cropFloors": [
+        13
+      ],
+      "candidateIds": [
+        "GRAYBEACH-C13-001"
+      ],
+      "creatures": 48,
+      "extent": {
+        "minX": 33529,
+        "minY": 31258,
+        "maxX": 33568,
+        "maxY": 31311,
+        "centerX": 33548,
+        "centerY": 31284
+      },
+      "subareaId": 168,
+      "entrance": {
+        "x": 33529,
+        "y": 31259,
+        "z": 13
+      },
+      "walkTilesFromTemple": 601,
+      "tiles": 4025,
+      "spawns": 48
+    },
+    {
+      "id": "GRAYBEACH-HUNT-0004",
+      "name": "Hive Main Structure",
+      "slug": "hive-main-structure",
+      "folder": "GRAYBEACH-HUNT-0004_hive-main-structure",
+      "floors": [
+        8
+      ],
+      "cropFloors": [
+        8
+      ],
+      "candidateIds": [
+        "GRAYBEACH-C08-001",
+        "GRAYBEACH-C08-007"
+      ],
+      "creatures": 60,
+      "extent": {
+        "minX": 33441,
+        "minY": 31212,
+        "maxX": 33522,
+        "maxY": 31277,
+        "centerX": 33481,
+        "centerY": 31244
+      },
+      "subareaId": 167,
+      "entrance": {
+        "x": 33454,
+        "y": 31223,
+        "z": 8
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 9056,
+      "spawns": 60
+    },
+    {
+      "id": "GRAYBEACH-HUNT-0005",
+      "name": "Hive Pools",
+      "slug": "hive-pools",
+      "folder": "GRAYBEACH-HUNT-0005_hive-pools",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "GRAYBEACH-C07-001",
+        "GRAYBEACH-C07-002",
+        "GRAYBEACH-C07-003",
+        "GRAYBEACH-C07-004"
+      ],
+      "creatures": 398,
+      "extent": {
+        "minX": 33446,
+        "minY": 31170,
+        "maxX": 33610,
+        "maxY": 31361,
+        "centerX": 33528,
+        "centerY": 31265
+      },
+      "subareaId": 168,
+      "entrance": {
+        "x": 33452,
+        "y": 31286,
+        "z": 7
+      },
+      "walkTilesFromTemple": 48,
+      "tiles": 40824,
+      "spawns": 398
+    },
+    {
+      "id": "GRAYBEACH-HUNT-0006",
+      "name": "Ancient Ancestorial Grounds",
+      "slug": "ancient-ancestorial-grounds",
+      "folder": "GRAYBEACH-HUNT-0006_ancient-ancestorial-grounds",
+      "floors": [
+        14
+      ],
+      "cropFloors": [
+        14
+      ],
+      "candidateIds": [
+        "GRAYBEACH-C14-001",
+        "GRAYBEACH-C14-004"
+      ],
+      "creatures": 29,
+      "extent": {
+        "minX": 33568,
+        "minY": 31417,
+        "maxX": 33617,
+        "maxY": 31478,
+        "centerX": 33592,
+        "centerY": 31447
+      },
+      "subareaId": 507,
+      "entrance": {
+        "x": 33603,
+        "y": 31443,
+        "z": 14
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 6088,
+      "spawns": 29
+    },
+    {
+      "id": "GRAYBEACH-HUNT-0007",
+      "name": "Ancestorial Grounds",
+      "slug": "ancestorial-grounds",
+      "folder": "GRAYBEACH-HUNT-0007_ancestorial-grounds",
+      "floors": [
+        15
+      ],
+      "cropFloors": [
+        15
+      ],
+      "candidateIds": [
+        "GRAYBEACH-C15-002"
+      ],
+      "creatures": 10,
+      "extent": {
+        "minX": 33499,
+        "minY": 31166,
+        "maxX": 33520,
+        "maxY": 31181,
+        "centerX": 33509,
+        "centerY": 31173
+      },
+      "subareaId": 169,
+      "entrance": {
+        "x": 33499,
+        "y": 31179,
+        "z": 15
+      },
+      "walkTilesFromTemple": 501,
+      "tiles": 1840,
+      "spawns": 10
+    },
+    {
+      "id": "GRAYBEACH-HUNT-0008",
+      "name": "Netherworld",
+      "slug": "netherworld",
+      "folder": "GRAYBEACH-HUNT-0008_netherworld",
+      "floors": [
+        8
+      ],
+      "cropFloors": [
+        8
+      ],
+      "candidateIds": [
+        "GRAYBEACH-C08-002",
+        "GRAYBEACH-C08-003"
+      ],
+      "creatures": 64,
+      "extent": {
+        "minX": 33516,
+        "minY": 31406,
+        "maxX": 33609,
+        "maxY": 31481,
+        "centerX": 33562,
+        "centerY": 31443
+      },
+      "subareaId": 507,
+      "entrance": {
+        "x": 33569,
+        "y": 31406,
+        "z": 8
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 11725,
+      "spawns": 64
+    },
+    {
+      "id": "GRAYBEACH-HUNT-0009",
+      "name": "Zarganash",
+      "slug": "zarganash",
+      "folder": "GRAYBEACH-HUNT-0009_zarganash",
+      "floors": [
+        10
+      ],
+      "cropFloors": [
+        10
+      ],
+      "candidateIds": [
+        "GRAYBEACH-C10-001",
+        "GRAYBEACH-C10-002",
+        "GRAYBEACH-C10-003",
+        "GRAYBEACH-C10-006"
+      ],
+      "creatures": 86,
+      "extent": {
+        "minX": 33550,
+        "minY": 31440,
+        "maxX": 33646,
+        "maxY": 31533,
+        "centerX": 33598,
+        "centerY": 31486
+      },
+      "subareaId": 507,
+      "entrance": {
+        "x": 33568,
+        "y": 31481,
+        "z": 10
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 14186,
+      "spawns": 86
+    }
+  ]
+}

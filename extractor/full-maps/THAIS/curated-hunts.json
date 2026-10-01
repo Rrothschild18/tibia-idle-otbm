@@ -1,0 +1,1207 @@
+{
+  "city": "THAIS",
+  "area": {
+    "id": 24,
+    "name": "Thais"
+  },
+  "hunts": [
+    {
+      "id": "THAIS-HUNT-0001",
+      "name": "Al Dee Rat Cave",
+      "slug": "al-dee-rat-cave",
+      "folder": "THAIS-HUNT-0001_al-dee-rat-cave",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "THAIS-C07-004",
+        "THAIS-C07-012",
+        "THAIS-C07-014",
+        "THAIS-C07-044",
+        "THAIS-C07-045",
+        "THAIS-C07-046",
+        "THAIS-C07-061",
+        "THAIS-C07-062"
+      ],
+      "creatures": 71,
+      "extent": {
+        "minX": 31977,
+        "minY": 32153,
+        "maxX": 32090,
+        "maxY": 32245,
+        "centerX": 32033,
+        "centerY": 32199
+      },
+      "subareaId": 317,
+      "entrance": {
+        "x": 32084,
+        "y": 32192,
+        "z": 7
+      },
+      "walkTilesFromTemple": 28,
+      "tiles": 16146,
+      "spawns": 71
+    },
+    {
+      "id": "THAIS-HUNT-0002",
+      "name": "Corrupted Mines",
+      "slug": "corrupted-mines",
+      "folder": "THAIS-HUNT-0002_corrupted-mines",
+      "floors": [
+        9
+      ],
+      "cropFloors": [
+        9
+      ],
+      "candidateIds": [
+        "THAIS-C09-013",
+        "THAIS-C09-014"
+      ],
+      "creatures": 23,
+      "extent": {
+        "minX": 32580,
+        "minY": 32461,
+        "maxX": 32619,
+        "maxY": 32486,
+        "centerX": 32599,
+        "centerY": 32473
+      },
+      "subareaId": 514,
+      "entrance": {
+        "x": 32585,
+        "y": 32461,
+        "z": 9
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 2963,
+      "spawns": 23
+    },
+    {
+      "id": "THAIS-HUNT-0003",
+      "name": "Muglex Clan Camp",
+      "slug": "muglex-clan-camp",
+      "folder": "THAIS-HUNT-0003_muglex-clan-camp",
+      "floors": [
+        9
+      ],
+      "cropFloors": [
+        9
+      ],
+      "candidateIds": [
+        "THAIS-C09-012"
+      ],
+      "creatures": 14,
+      "extent": {
+        "minX": 32502,
+        "minY": 32413,
+        "maxX": 32533,
+        "maxY": 32432,
+        "centerX": 32517,
+        "centerY": 32422
+      },
+      "subareaId": 514,
+      "entrance": {
+        "x": 32531,
+        "y": 32413,
+        "z": 9
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 2403,
+      "spawns": 14
+    },
+    {
+      "id": "THAIS-HUNT-0004",
+      "name": "Troll Cave (Rookgaard)",
+      "slug": "troll-cave-rookgaard",
+      "folder": "THAIS-HUNT-0004_troll-cave-rookgaard",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "THAIS-C07-014",
+        "THAIS-C07-061"
+      ],
+      "creatures": 17,
+      "extent": {
+        "minX": 32040,
+        "minY": 32153,
+        "maxX": 32086,
+        "maxY": 32177,
+        "centerX": 32063,
+        "centerY": 32165
+      },
+      "subareaId": 317,
+      "entrance": {
+        "x": 32086,
+        "y": 32155,
+        "z": 7
+      },
+      "walkTilesFromTemple": 65,
+      "tiles": 3479,
+      "spawns": 17
+    },
+    {
+      "id": "THAIS-HUNT-0005",
+      "name": "Bear Cave",
+      "slug": "bear-cave",
+      "folder": "THAIS-HUNT-0005_bear-cave",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "THAIS-C07-005",
+        "THAIS-C07-020",
+        "THAIS-C07-030"
+      ],
+      "creatures": 41,
+      "extent": {
+        "minX": 32118,
+        "minY": 32180,
+        "maxX": 32177,
+        "maxY": 32222,
+        "centerX": 32147,
+        "centerY": 32201
+      },
+      "subareaId": 317,
+      "entrance": {
+        "x": 32120,
+        "y": 32189,
+        "z": 7
+      },
+      "walkTilesFromTemple": 81,
+      "tiles": 5628,
+      "spawns": 41
+    },
+    {
+      "id": "THAIS-HUNT-0006",
+      "name": "Rookgaard Bear Cave",
+      "slug": "rookgaard-bear-cave",
+      "folder": "THAIS-HUNT-0006_rookgaard-bear-cave",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "THAIS-C07-005",
+        "THAIS-C07-030"
+      ],
+      "creatures": 31,
+      "extent": {
+        "minX": 32118,
+        "minY": 32184,
+        "maxX": 32158,
+        "maxY": 32222,
+        "centerX": 32138,
+        "centerY": 32203
+      },
+      "subareaId": 317,
+      "entrance": {
+        "x": 32120,
+        "y": 32189,
+        "z": 7
+      },
+      "walkTilesFromTemple": 81,
+      "tiles": 4095,
+      "spawns": 31
+    },
+    {
+      "id": "THAIS-HUNT-0007",
+      "name": "Spider Cave (Rookgaard Premium)",
+      "slug": "spider-cave-rookgaard-premium",
+      "folder": "THAIS-HUNT-0007_spider-cave-rookgaard-premium",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "THAIS-C07-004",
+        "THAIS-C07-012",
+        "THAIS-C07-044",
+        "THAIS-C07-045",
+        "THAIS-C07-046"
+      ],
+      "creatures": 51,
+      "extent": {
+        "minX": 31977,
+        "minY": 32193,
+        "maxX": 32051,
+        "maxY": 32245,
+        "centerX": 32014,
+        "centerY": 32219
+      },
+      "subareaId": 317,
+      "entrance": {
+        "x": 32046,
+        "y": 32228,
+        "z": 7
+      },
+      "walkTilesFromTemple": 60,
+      "tiles": 7623,
+      "spawns": 51
+    },
+    {
+      "id": "THAIS-HUNT-0008",
+      "name": "Minotaur Hell",
+      "slug": "minotaur-hell",
+      "folder": "THAIS-HUNT-0008_minotaur-hell",
+      "floors": [
+        8
+      ],
+      "cropFloors": [
+        8
+      ],
+      "candidateIds": [
+        "THAIS-C08-011"
+      ],
+      "creatures": 9,
+      "extent": {
+        "minX": 32054,
+        "minY": 32148,
+        "maxX": 32081,
+        "maxY": 32163,
+        "centerX": 32067,
+        "centerY": 32155
+      },
+      "subareaId": 317,
+      "entrance": {
+        "x": 32074,
+        "y": 32155,
+        "z": 8
+      },
+      "walkTilesFromTemple": 74,
+      "tiles": 2080,
+      "spawns": 9
+    },
+    {
+      "id": "THAIS-HUNT-0009",
+      "name": "Orc Fortress (Rookgaard)",
+      "slug": "orc-fortress-rookgaard",
+      "folder": "THAIS-HUNT-0009_orc-fortress-rookgaard",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "THAIS-C07-004",
+        "THAIS-C07-006",
+        "THAIS-C07-012",
+        "THAIS-C07-029",
+        "THAIS-C07-044"
+      ],
+      "creatures": 72,
+      "extent": {
+        "minX": 31966,
+        "minY": 32134,
+        "maxX": 32051,
+        "maxY": 32241,
+        "centerX": 32008,
+        "centerY": 32187
+      },
+      "subareaId": 317,
+      "entrance": {
+        "x": 32046,
+        "y": 32228,
+        "z": 7
+      },
+      "walkTilesFromTemple": 60,
+      "tiles": 14520,
+      "spawns": 72
+    },
+    {
+      "id": "THAIS-HUNT-0010",
+      "name": "Thais Underground",
+      "slug": "thais-underground",
+      "folder": "THAIS-HUNT-0010_thais-underground",
+      "floors": [
+        8
+      ],
+      "cropFloors": [
+        8
+      ],
+      "candidateIds": [
+        "THAIS-C08-001",
+        "THAIS-C08-017",
+        "THAIS-C08-018",
+        "THAIS-C08-034",
+        "THAIS-C08-051",
+        "THAIS-C08-054"
+      ],
+      "creatures": 104,
+      "extent": {
+        "minX": 32323,
+        "minY": 32182,
+        "maxX": 32425,
+        "maxY": 32272,
+        "centerX": 32374,
+        "centerY": 32227
+      },
+      "subareaId": 28,
+      "entrance": {
+        "x": 32372,
+        "y": 32182,
+        "z": 8
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 13449,
+      "spawns": 104
+    },
+    {
+      "id": "THAIS-HUNT-0011",
+      "name": "Wasp Tower",
+      "slug": "wasp-tower",
+      "folder": "THAIS-HUNT-0011_wasp-tower",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "THAIS-C07-029",
+        "THAIS-C07-037"
+      ],
+      "creatures": 12,
+      "extent": {
+        "minX": 31969,
+        "minY": 32134,
+        "maxX": 32031,
+        "maxY": 32151,
+        "centerX": 32000,
+        "centerY": 32142
+      },
+      "subareaId": 317,
+      "entrance": {
+        "x": 32031,
+        "y": 32143,
+        "z": 7
+      },
+      "walkTilesFromTemple": 116,
+      "tiles": 3654,
+      "spawns": 12
+    },
+    {
+      "id": "THAIS-HUNT-0012",
+      "name": "Kendram Benson's Grave",
+      "slug": "kendram-benson-s-grave",
+      "folder": "THAIS-HUNT-0012_kendram-benson-s-grave",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "THAIS-C07-010",
+        "THAIS-C07-048"
+      ],
+      "creatures": 20,
+      "extent": {
+        "minX": 32111,
+        "minY": 32120,
+        "maxX": 32165,
+        "maxY": 32161,
+        "centerX": 32138,
+        "centerY": 32140
+      },
+      "subareaId": 317,
+      "entrance": {
+        "x": 32112,
+        "y": 32147,
+        "z": 7
+      },
+      "walkTilesFromTemple": 78,
+      "tiles": 5214,
+      "spawns": 20
+    },
+    {
+      "id": "THAIS-HUNT-0013",
+      "name": "Ancient Temple",
+      "slug": "ancient-temple",
+      "folder": "THAIS-HUNT-0013_ancient-temple",
+      "floors": [
+        8
+      ],
+      "cropFloors": [
+        8
+      ],
+      "candidateIds": [
+        "THAIS-C08-001",
+        "THAIS-C08-002",
+        "THAIS-C08-017",
+        "THAIS-C08-018",
+        "THAIS-C08-023",
+        "THAIS-C08-034",
+        "THAIS-C08-051",
+        "THAIS-C08-054"
+      ],
+      "creatures": 145,
+      "extent": {
+        "minX": 32313,
+        "minY": 32121,
+        "maxX": 32425,
+        "maxY": 32272,
+        "centerX": 32369,
+        "centerY": 32196
+      },
+      "subareaId": 29,
+      "entrance": {
+        "x": 32372,
+        "y": 32182,
+        "z": 8
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 21516,
+      "spawns": 145
+    },
+    {
+      "id": "THAIS-HUNT-0014",
+      "name": "Minotaur Camp",
+      "slug": "minotaur-camp",
+      "folder": "THAIS-HUNT-0014_minotaur-camp",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "THAIS-C07-001",
+        "THAIS-C07-007",
+        "THAIS-C07-022",
+        "THAIS-C07-024"
+      ],
+      "creatures": 106,
+      "extent": {
+        "minX": 32261,
+        "minY": 32280,
+        "maxX": 32392,
+        "maxY": 32415,
+        "centerX": 32326,
+        "centerY": 32347
+      },
+      "subareaId": 29,
+      "entrance": {
+        "x": 32362,
+        "y": 32281,
+        "z": 7
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 24960,
+      "spawns": 106
+    },
+    {
+      "id": "THAIS-HUNT-0015",
+      "name": "Thais Northern Dungeon",
+      "slug": "thais-northern-dungeon",
+      "folder": "THAIS-HUNT-0015_thais-northern-dungeon",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "THAIS-C07-016",
+        "THAIS-C07-064"
+      ],
+      "creatures": 17,
+      "extent": {
+        "minX": 32336,
+        "minY": 32061,
+        "maxX": 32393,
+        "maxY": 32091,
+        "centerX": 32364,
+        "centerY": 32076
+      },
+      "subareaId": 29,
+      "entrance": {
+        "x": 32381,
+        "y": 32063,
+        "z": 7
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 4510,
+      "spawns": 17
+    },
+    {
+      "id": "THAIS-HUNT-0016",
+      "name": "Thais Wolf Den",
+      "slug": "thais-wolf-den",
+      "folder": "THAIS-HUNT-0016_thais-wolf-den",
+      "floors": [
+        8
+      ],
+      "cropFloors": [
+        8
+      ],
+      "candidateIds": [
+        "THAIS-C08-059"
+      ],
+      "creatures": 3,
+      "extent": {
+        "minX": 32498,
+        "minY": 32267,
+        "maxX": 32502,
+        "maxY": 32271,
+        "centerX": 32500,
+        "centerY": 32269
+      },
+      "subareaId": 33,
+      "entrance": {
+        "x": 32498,
+        "y": 32267,
+        "z": 8
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 841,
+      "spawns": 3
+    },
+    {
+      "id": "THAIS-HUNT-0017",
+      "name": "Fibula Dungeon",
+      "slug": "fibula-dungeon",
+      "folder": "THAIS-HUNT-0017_fibula-dungeon",
+      "floors": [
+        7,
+        9
+      ],
+      "cropFloors": [
+        7,
+        8,
+        9
+      ],
+      "candidateIds": [
+        "THAIS-C07-033",
+        "THAIS-C09-015"
+      ],
+      "creatures": 16,
+      "extent": {
+        "minX": 32138,
+        "minY": 32403,
+        "maxX": 32221,
+        "maxY": 32453,
+        "centerX": 32179,
+        "centerY": 32428
+      },
+      "subareaId": 35,
+      "entrance": {
+        "x": 32145,
+        "y": 32435,
+        "z": 7
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 20349,
+      "spawns": 16
+    },
+    {
+      "id": "THAIS-HUNT-0018",
+      "name": "Fibula",
+      "slug": "fibula",
+      "folder": "THAIS-HUNT-0018_fibula",
+      "floors": [
+        9
+      ],
+      "cropFloors": [
+        9
+      ],
+      "candidateIds": [
+        "THAIS-C09-003",
+        "THAIS-C09-040"
+      ],
+      "creatures": 35,
+      "extent": {
+        "minX": 32123,
+        "minY": 32359,
+        "maxX": 32183,
+        "maxY": 32436,
+        "centerX": 32153,
+        "centerY": 32397
+      },
+      "subareaId": 35,
+      "entrance": {
+        "x": 32163,
+        "y": 32359,
+        "z": 9
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 7049,
+      "spawns": 35
+    },
+    {
+      "id": "THAIS-HUNT-0019",
+      "name": "Greenshore",
+      "slug": "greenshore",
+      "folder": "THAIS-HUNT-0019_greenshore",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "THAIS-C07-018",
+        "THAIS-C07-050"
+      ],
+      "creatures": 15,
+      "extent": {
+        "minX": 32208,
+        "minY": 32050,
+        "maxX": 32256,
+        "maxY": 32071,
+        "centerX": 32232,
+        "centerY": 32060
+      },
+      "subareaId": 295,
+      "entrance": {
+        "x": 32216,
+        "y": 32050,
+        "z": 7
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 3358,
+      "spawns": 15
+    },
+    {
+      "id": "THAIS-HUNT-0020",
+      "name": "Thais Peninsula",
+      "slug": "thais-peninsula",
+      "folder": "THAIS-HUNT-0020_thais-peninsula",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "THAIS-C07-058"
+      ],
+      "creatures": 4,
+      "extent": {
+        "minX": 32477,
+        "minY": 32289,
+        "maxX": 32489,
+        "maxY": 32293,
+        "centerX": 32483,
+        "centerY": 32291
+      },
+      "subareaId": 478,
+      "entrance": {
+        "x": 32479,
+        "y": 32289,
+        "z": 7
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 1073,
+      "spawns": 4
+    },
+    {
+      "id": "THAIS-HUNT-0021",
+      "name": "Thais Trolls' Cave",
+      "slug": "thais-trolls-cave",
+      "folder": "THAIS-HUNT-0021_thais-trolls-cave",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "THAIS-C07-059"
+      ],
+      "creatures": 4,
+      "extent": {
+        "minX": 32506,
+        "minY": 32245,
+        "maxX": 32513,
+        "maxY": 32254,
+        "centerX": 32509,
+        "centerY": 32249
+      },
+      "subareaId": 33,
+      "entrance": {
+        "x": 32507,
+        "y": 32245,
+        "z": 7
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 1088,
+      "spawns": 4
+    },
+    {
+      "id": "THAIS-HUNT-0022",
+      "name": "Thais Wasp Dungeon",
+      "slug": "thais-wasp-dungeon",
+      "folder": "THAIS-HUNT-0022_thais-wasp-dungeon",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "THAIS-C07-027",
+        "THAIS-C07-035"
+      ],
+      "creatures": 14,
+      "extent": {
+        "minX": 32408,
+        "minY": 32312,
+        "maxX": 32463,
+        "maxY": 32344,
+        "centerX": 32435,
+        "centerY": 32328
+      },
+      "subareaId": 29,
+      "entrance": {
+        "x": 32442,
+        "y": 32312,
+        "z": 7
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 4560,
+      "spawns": 14
+    },
+    {
+      "id": "THAIS-HUNT-0023",
+      "name": "Thais Wolf Dungeon",
+      "slug": "thais-wolf-dungeon",
+      "folder": "THAIS-HUNT-0023_thais-wolf-dungeon",
+      "floors": [
+        7,
+        8
+      ],
+      "cropFloors": [
+        7,
+        8
+      ],
+      "candidateIds": [
+        "THAIS-C07-001",
+        "THAIS-C07-007",
+        "THAIS-C07-022",
+        "THAIS-C07-024",
+        "THAIS-C08-008"
+      ],
+      "creatures": 117,
+      "extent": {
+        "minX": 32261,
+        "minY": 32280,
+        "maxX": 32392,
+        "maxY": 32415,
+        "centerX": 32326,
+        "centerY": 32347
+      },
+      "subareaId": 29,
+      "entrance": {
+        "x": 32362,
+        "y": 32281,
+        "z": 7
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 36740,
+      "spawns": 117
+    },
+    {
+      "id": "THAIS-HUNT-0024",
+      "name": "Mount Sternum/Undead Cave",
+      "slug": "mount-sternum-undead-cave",
+      "folder": "THAIS-HUNT-0024_mount-sternum-undead-cave",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "THAIS-C07-066"
+      ],
+      "creatures": 3,
+      "extent": {
+        "minX": 32385,
+        "minY": 32013,
+        "maxX": 32395,
+        "maxY": 32025,
+        "centerX": 32390,
+        "centerY": 32019
+      },
+      "subareaId": 29,
+      "entrance": {
+        "x": 32390,
+        "y": 32013,
+        "z": 7
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 1295,
+      "spawns": 3
+    },
+    {
+      "id": "THAIS-HUNT-0025",
+      "name": "Alatar Lake",
+      "slug": "alatar-lake",
+      "folder": "THAIS-HUNT-0025_alatar-lake",
+      "floors": [
+        8
+      ],
+      "cropFloors": [
+        8
+      ],
+      "candidateIds": [
+        "THAIS-C08-035"
+      ],
+      "creatures": 4,
+      "extent": {
+        "minX": 32369,
+        "minY": 32126,
+        "maxX": 32374,
+        "maxY": 32132,
+        "centerX": 32371,
+        "centerY": 32129
+      },
+      "subareaId": 29,
+      "entrance": {
+        "x": 32373,
+        "y": 32126,
+        "z": 8
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 930,
+      "spawns": 4
+    },
+    {
+      "id": "THAIS-HUNT-0026",
+      "name": "Cyclops Camp",
+      "slug": "cyclops-camp",
+      "folder": "THAIS-HUNT-0026_cyclops-camp",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "THAIS-C07-001",
+        "THAIS-C07-007",
+        "THAIS-C07-022",
+        "THAIS-C07-024",
+        "THAIS-C07-055"
+      ],
+      "creatures": 110,
+      "extent": {
+        "minX": 32261,
+        "minY": 32280,
+        "maxX": 32427,
+        "maxY": 32415,
+        "centerX": 32344,
+        "centerY": 32347
+      },
+      "subareaId": 29,
+      "entrance": {
+        "x": 32362,
+        "y": 32281,
+        "z": 7
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 30560,
+      "spawns": 110
+    },
+    {
+      "id": "THAIS-HUNT-0027",
+      "name": "Mount Sternum",
+      "slug": "mount-sternum",
+      "folder": "THAIS-HUNT-0027_mount-sternum",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "THAIS-C07-043"
+      ],
+      "creatures": 5,
+      "extent": {
+        "minX": 32479,
+        "minY": 32067,
+        "maxX": 32484,
+        "maxY": 32073,
+        "centerX": 32481,
+        "centerY": 32070
+      },
+      "subareaId": 34,
+      "entrance": {
+        "x": 32483,
+        "y": 32067,
+        "z": 7
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 930,
+      "spawns": 5
+    },
+    {
+      "id": "THAIS-HUNT-0028",
+      "name": "Orc Peninsula",
+      "slug": "orc-peninsula",
+      "folder": "THAIS-HUNT-0028_orc-peninsula",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "THAIS-C07-011"
+      ],
+      "creatures": 16,
+      "extent": {
+        "minX": 32319,
+        "minY": 32033,
+        "maxX": 32335,
+        "maxY": 32049,
+        "centerX": 32327,
+        "centerY": 32041
+      },
+      "subareaId": 29,
+      "entrance": {
+        "x": 32333,
+        "y": 32033,
+        "z": 7
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 1681,
+      "spawns": 16
+    },
+    {
+      "id": "THAIS-HUNT-0029",
+      "name": "Mintwallin",
+      "slug": "mintwallin",
+      "folder": "THAIS-HUNT-0029_mintwallin",
+      "floors": [
+        15
+      ],
+      "cropFloors": [
+        15
+      ],
+      "candidateIds": [
+        "THAIS-C15-001",
+        "THAIS-C15-002",
+        "THAIS-C15-005",
+        "THAIS-C15-006"
+      ],
+      "creatures": 50,
+      "extent": {
+        "minX": 32397,
+        "minY": 32089,
+        "maxX": 32454,
+        "maxY": 32190,
+        "centerX": 32425,
+        "centerY": 32139
+      },
+      "subareaId": 29,
+      "entrance": {
+        "x": 32445,
+        "y": 32089,
+        "z": 15
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 9598,
+      "spawns": 50
+    },
+    {
+      "id": "THAIS-HUNT-0030",
+      "name": "Dragon Lair (Mount Sternum)",
+      "slug": "dragon-lair-mount-sternum",
+      "folder": "THAIS-HUNT-0030_dragon-lair-mount-sternum",
+      "floors": [
+        12
+      ],
+      "cropFloors": [
+        12
+      ],
+      "candidateIds": [
+        "THAIS-C12-004"
+      ],
+      "creatures": 5,
+      "extent": {
+        "minX": 32361,
+        "minY": 32022,
+        "maxX": 32380,
+        "maxY": 32032,
+        "centerX": 32370,
+        "centerY": 32027
+      },
+      "subareaId": 29,
+      "entrance": {
+        "x": 32371,
+        "y": 32022,
+        "z": 12
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 1394,
+      "spawns": 5
+    },
+    {
+      "id": "THAIS-HUNT-0031",
+      "name": "Thais Dragon Lair",
+      "slug": "thais-dragon-lair",
+      "folder": "THAIS-HUNT-0031_thais-dragon-lair",
+      "floors": [
+        10
+      ],
+      "cropFloors": [
+        10
+      ],
+      "candidateIds": [
+        "THAIS-C10-001",
+        "THAIS-C10-010",
+        "THAIS-C10-011",
+        "THAIS-C10-014",
+        "THAIS-C10-020",
+        "THAIS-C10-021",
+        "THAIS-C10-023",
+        "THAIS-C10-025",
+        "THAIS-C10-026",
+        "THAIS-C10-031",
+        "THAIS-C10-032",
+        "THAIS-C10-037",
+        "THAIS-C10-039",
+        "THAIS-C10-044",
+        "THAIS-C10-046"
+      ],
+      "creatures": 129,
+      "extent": {
+        "minX": 32277,
+        "minY": 32076,
+        "maxX": 32413,
+        "maxY": 32194,
+        "centerX": 32345,
+        "centerY": 32135
+      },
+      "subareaId": 29,
+      "entrance": {
+        "x": 32314,
+        "y": 32120,
+        "z": 10
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 18989,
+      "spawns": 129
+    },
+    {
+      "id": "THAIS-HUNT-0032",
+      "name": "Minotaurs Cult Cave",
+      "slug": "minotaurs-cult-cave",
+      "folder": "THAIS-HUNT-0032_minotaurs-cult-cave",
+      "floors": [
+        15
+      ],
+      "cropFloors": [
+        15
+      ],
+      "candidateIds": [
+        "THAIS-C15-001",
+        "THAIS-C15-005",
+        "THAIS-C15-006"
+      ],
+      "creatures": 35,
+      "extent": {
+        "minX": 32400,
+        "minY": 32089,
+        "maxX": 32454,
+        "maxY": 32135,
+        "centerX": 32427,
+        "centerY": 32112
+      },
+      "subareaId": 29,
+      "entrance": {
+        "x": 32445,
+        "y": 32089,
+        "z": 15
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 5531,
+      "spawns": 35
+    },
+    {
+      "id": "THAIS-HUNT-0033",
+      "name": "Underground Isle",
+      "slug": "underground-isle",
+      "folder": "THAIS-HUNT-0033_underground-isle",
+      "floors": [
+        14
+      ],
+      "cropFloors": [
+        14
+      ],
+      "candidateIds": [
+        "THAIS-C14-016",
+        "THAIS-C14-017"
+      ],
+      "creatures": 6,
+      "extent": {
+        "minX": 32478,
+        "minY": 32040,
+        "maxX": 32506,
+        "maxY": 32060,
+        "centerX": 32492,
+        "centerY": 32050
+      },
+      "subareaId": null,
+      "entrance": {
+        "x": 32478,
+        "y": 32055,
+        "z": 14
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 2227,
+      "spawns": 6
+    },
+    {
+      "id": "THAIS-HUNT-0034",
+      "name": "Grounds of Damnation (Tafariel)",
+      "slug": "grounds-of-damnation-tafariel",
+      "folder": "THAIS-HUNT-0034_grounds-of-damnation-tafariel",
+      "floors": [
+        13
+      ],
+      "cropFloors": [
+        13
+      ],
+      "candidateIds": [
+        "THAIS-C13-017",
+        "THAIS-C13-018"
+      ],
+      "creatures": 9,
+      "extent": {
+        "minX": 33475,
+        "minY": 32704,
+        "maxX": 33495,
+        "maxY": 32742,
+        "centerX": 33485,
+        "centerY": 32723
+      },
+      "subareaId": 528,
+      "entrance": {
+        "x": 33489,
+        "y": 32704,
+        "z": 13
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 2835,
+      "spawns": 9
+    }
+  ]
+}

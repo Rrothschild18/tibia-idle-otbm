@@ -1,0 +1,14 @@
+# Nós sem entrada no grafo de viagem — ANKRAHMUN
+#
+# Gerado por build_travel_fragment.py. Nada aqui entrou no fragmento: são os nós que
+# ninguém consegue alcançar viajando, e o que fazer com cada um.
+
+## poi-without-edge (3)
+POI com coordenada e sem aresta — a placa existe no OTBM, mas o tile dela não
+alcança nenhum outro POI da cidade (ilhado por parede/água, ou a placa está num
+tile intransponível). Abra a coordenada no editor de mapa e mova a placa pra um
+tile caminhável ligado ao resto da cidade.
+
+  ANKRAHMUN-NPC-ishebad  (NPC)  x=33158 y=32849 z=7
+  ANKRAHMUN-NPC-rata-mari  (NPC)  x=33037 y=32626 z=7
+  ANKRAHMUN-NPC-ubaid  (NPC)  x=33047 y=32622 z=6

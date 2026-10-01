@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="33008" centery="32637" centerz="7" radius="3">
+		<monster name="Dragon Hatchling" x="1" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33012" centery="32640" centerz="7" radius="1">
+		<monster name="Dragon" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33004" centery="32650" centerz="7" radius="1">
+		<monster name="Dragon" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33008" centery="32651" centerz="7" radius="3">
+		<monster name="Dragon" x="1" y="-2" z="7" spawntime="90" />
+		<monster name="Dragon" x="3" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33002" centery="32658" centerz="7" radius="1">
+		<monster name="Dragon" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33008" centery="32658" centerz="7" radius="1">
+		<monster name="Dragon" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33015" centery="32665" centerz="7" radius="3">
+		<monster name="Dragon Hatchling" x="3" y="-3" z="7" spawntime="90" />
+		<monster name="Dragon Hatchling" x="3" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33022" centery="32665" centerz="7" radius="3">
+		<monster name="Dragon" x="3" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33031" centery="32668" centerz="7" radius="1">
+		<monster name="Dragon" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32998" centery="32672" centerz="7" radius="1">
+		<monster name="Dragon" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33036" centery="32672" centerz="7" radius="3">
+		<monster name="Dragon" x="2" y="-3" z="7" spawntime="90" />
+		<monster name="Dragon" x="3" y="-3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33007" centery="32679" centerz="7" radius="1">
+		<monster name="Dragon" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33015" centery="32686" centerz="7" radius="3">
+		<monster name="Dragon" x="-2" y="-2" z="7" spawntime="90" />
+		<monster name="Dragon" x="-3" y="1" z="7" spawntime="90" />
+	</monster>
+</monsters>

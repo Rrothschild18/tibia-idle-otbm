@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="33008" centery="32637" centerz="7" radius="3">
+		<monster name="Dragon Hatchling" x="1" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33012" centery="32640" centerz="7" radius="1">
+		<monster name="Dragon" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33004" centery="32650" centerz="7" radius="1">
+		<monster name="Dragon" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33008" centery="32651" centerz="7" radius="3">
+		<monster name="Dragon" x="1" y="-2" z="7" spawntime="90" />
+		<monster name="Dragon" x="3" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33002" centery="32658" centerz="7" radius="1">
+		<monster name="Dragon" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33008" centery="32658" centerz="7" radius="1">
+		<monster name="Dragon" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33015" centery="32665" centerz="7" radius="3">
+		<monster name="Dragon Hatchling" x="3" y="-3" z="7" spawntime="90" />
+		<monster name="Dragon Hatchling" x="3" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33022" centery="32665" centerz="7" radius="3">
+		<monster name="Dragon" x="3" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33031" centery="32668" centerz="7" radius="1">
+		<monster name="Dragon" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32998" centery="32672" centerz="7" radius="1">
+		<monster name="Dragon" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33036" centery="32672" centerz="7" radius="3">
+		<monster name="Dragon" x="2" y="-3" z="7" spawntime="90" />
+		<monster name="Dragon" x="3" y="-3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33007" centery="32679" centerz="7" radius="1">
+		<monster name="Dragon" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33015" centery="32686" centerz="7" radius="3">
+		<monster name="Dragon" x="-2" y="-2" z="7" spawntime="90" />
+		<monster name="Dragon" x="-3" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33125" centery="32702" centerz="7" radius="4">
+		<monster name="Deer" x="4" y="-3" z="7" spawntime="90" />
+		<monster name="Deer" x="-1" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33140" centery="32718" centerz="7" radius="30">
+		<monster name="Dromedary" x="-23" y="-17" z="7" spawntime="90" />
+		<monster name="Dromedary" x="-23" y="-11" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33092" centery="32679" centerz="8" radius="3">
+		<monster name="Terramite" x="1" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33099" centery="32679" centerz="8" radius="3">
+		<monster name="Terramite" x="0" y="3" z="8" spawntime="90" />
+		<monster name="Terramite" x="3" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33071" centery="32693" centerz="8" radius="3">
+		<monster name="Terramite" x="-2" y="-1" z="8" spawntime="90" />
+		<monster name="Terramite" x="3" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33078" centery="32693" centerz="8" radius="3">
+		<monster name="Terramite" x="3" y="-2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33106" centery="32693" centerz="8" radius="3">
+		<monster name="Terramite" x="3" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33050" centery="32700" centerz="8" radius="3">
+		<monster name="Terramite" x="-3" y="1" z="8" spawntime="90" />
+		<monster name="Terramite" x="0" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33057" centery="32700" centerz="8" radius="3">
+		<monster name="Terramite" x="-2" y="2" z="8" spawntime="90" />
+		<monster name="Terramite" x="3" y="2" z="8" spawntime="90" />
+	</monster>
+</monsters>

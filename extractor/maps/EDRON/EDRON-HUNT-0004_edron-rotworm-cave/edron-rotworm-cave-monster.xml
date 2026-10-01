@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="33240" centery="31892" centerz="8" radius="2">
+		<monster name="Rotworm" x="1" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33234" centery="31902" centerz="8" radius="2">
+		<monster name="Rotworm" x="-2" y="-2" z="8" spawntime="90" />
+		<monster name="Rotworm" x="2" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33225" centery="31904" centerz="8" radius="1">
+		<monster name="Rotworm" x="-1" y="1" z="8" spawntime="90" />
+	</monster>
+</monsters>

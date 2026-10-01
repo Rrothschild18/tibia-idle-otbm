@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32171" centery="31827" centerz="7" radius="3">
+		<monster name="Cave Rat" x="0" y="-2" z="7" spawntime="90" />
+		<monster name="Poison Spider" x="3" y="0" z="7" spawntime="90" />
+		<monster name="Poison Spider" x="-2" y="1" z="7" spawntime="90" />
+		<monster name="Cave Rat" x="1" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32182" centery="31827" centerz="7" radius="3">
+		<monster name="Cave Rat" x="1" y="-3" z="7" spawntime="90" />
+		<monster name="Cave Rat" x="2" y="-1" z="7" spawntime="90" />
+		<monster name="Cave Rat" x="-2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32190" centery="31826" centerz="8" radius="3">
+		<monster name="Ghoul" x="-1" y="0" z="8" spawntime="90" />
+		<monster name="Poison Spider" x="2" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32200" centery="31839" centerz="8" radius="3">
+		<monster name="Skeleton" x="2" y="-2" z="8" spawntime="90" />
+	</monster>
+</monsters>

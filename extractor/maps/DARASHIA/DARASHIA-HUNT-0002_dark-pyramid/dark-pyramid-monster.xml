@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="33304" centery="32278" centerz="7" radius="1">
+		<monster name="Minotaur" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33312" centery="32279" centerz="7" radius="1">
+		<monster name="Minotaur" x="1" y="-1" z="7" spawntime="90" />
+		<monster name="Minotaur" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33299" centery="32282" centerz="7" radius="1">
+		<monster name="Minotaur" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33319" centery="32283" centerz="7" radius="1">
+		<monster name="Minotaur" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33313" centery="32284" centerz="7" radius="1">
+		<monster name="Minotaur" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33305" centery="32285" centerz="7" radius="1">
+		<monster name="Minotaur" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33306" centery="32289" centerz="7" radius="1">
+		<monster name="Minotaur" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33298" centery="32291" centerz="7" radius="1">
+		<monster name="Minotaur" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33302" centery="32291" centerz="7" radius="1">
+		<monster name="Minotaur" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33312" centery="32291" centerz="7" radius="1">
+		<monster name="Minotaur" x="0" y="-1" z="7" spawntime="90" />
+		<monster name="Minotaur" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33296" centery="32296" centerz="7" radius="1">
+		<monster name="Minotaur" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33300" centery="32298" centerz="7" radius="1">
+		<monster name="Minotaur" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+</monsters>

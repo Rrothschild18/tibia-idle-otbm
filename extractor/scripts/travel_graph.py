@@ -27,7 +27,7 @@ import heapq
 import itertools
 import re
 import xml.etree.ElementTree as ET
-from typing import Dict, List, Optional, Sequence, Set, Tuple
+from typing import Dict, Iterable, List, Optional, Sequence, Set, Tuple
 
 import city_ids
 
@@ -500,18 +500,43 @@ def build_mechanical_city_pois(
     town_name = next((t["name"] for t in town_positions(dump) if t.get("name")), None)
     depot_label = f"{town_name or city.capitalize()} Depot"
 
-    depots = find_depot_tiles(dump, depot_ids)
-    for index, group in enumerate(cluster_tiles(depots), start=1):
+    # **Um** depot por cidade, como o templo. Era um por aglomerado de lockers,
+    # e isso dava 16 em Thais e 6 em Kazordoon: o recorte por máscara de
+    # subárea arrasta locker de cidade vizinha (o maior aglomerado de
+    # Kazordoon está em coordenada de Ab'Dendriel, a 642 tiles do templo
+    # dela), e o raio do `cluster_tiles` ainda parte um mesmo prédio em dois
+    # (Venore, 32910 e 32911). Os dois somados é a inconsistência de depot.
+    #
+    # O critério é a distância ao templo, não o tamanho: o depot da cidade é o
+    # que fica *na* cidade. Tamanho engana — guildhall tem locker à vontade, e
+    # o maior aglomerado costuma ser de outra cidade que entrou no recorte.
+    # Locker de casa já estava fora por `houseId` (ver `find_depot_tiles`).
+    temples = [(loc["x"], loc["y"], loc["z"]) for loc in locations if loc["type"] == "TEMPLE"]
+    candidates: List[Tuple[int, Node]] = []
+    for group in cluster_tiles(find_depot_tiles(dump, depot_ids)):
         node = next(
             (found for found in (nearest_walkable(tile, walkable) for tile in group) if found),
             None,
         )
         if node is None:
-            warnings.append(f"depot em {group[0]} não encosta em tile andável")
             continue
-        locations.append(
-            build_city_poi(f"{city}-DEPOT-{index:04d}", "DEPOT", node, depot_label)
-        )
+        if not temples:
+            candidates.append((0, node))
+            continue
+        candidates.append((
+            min(
+                max(abs(node[0] - t[0]), abs(node[1] - t[1]))
+                + FLOOR_CHANGE_TILE_COST * abs(node[2] - t[2])
+                for t in temples
+            ),
+            node,
+        ))
+
+    if candidates:
+        _, node = min(candidates)
+        locations.append(build_city_poi(f"{city}-DEPOT-0001", "DEPOT", node, depot_label))
+    elif find_depot_tiles(dump, depot_ids):
+        warnings.append("nenhum depot encosta em tile andável")
 
     return locations, warnings
 
@@ -687,13 +712,49 @@ def floor_transition_edges(tiles: List[Dict]) -> List[Tuple[Node, Node]]:
     return edges
 
 
-def build_walkable_graph(tiles: List[Dict]) -> Dict[Node, Set[Node]]:
+def extract_teleport_edges(dump: Dict) -> List[Tuple[Node, Node]]:
+    """Os pares `(tile do teleport, tile de destino)` do dump OTBM.
+
+    Cada item de teleport carrega `destination {x,y,z}` já em coordenada de
+    mundo — a mesma do recorte, que não é rebaseado. Destino `(0,0,0)` é
+    teleport decorativo/sem ligar e não entra. Não-direcionado por decisão
+    (ADR/di memória): no idle de fast-travel todo TP vale nos dois sentidos,
+    então quem consome liga os dois lados. O `floorchange`/`isFloorTransition`
+    (escada, rampa, corda, buraco) continua em `floor_transition_edges`; isto
+    cobre só o que teleporta, que aqueles não pegam e que ilhava cidade com
+    área separada por água/portal (Zao, Thais, Yalahar)."""
+    edges: List[Tuple[Node, Node]] = []
+    for x, y, z, tile in _iter_dump_tiles(dump):
+        for item in tile.get("items", []):
+            if is_marker_item(item):
+                continue
+            dest = item.get("destination")
+            if not isinstance(dest, dict):
+                continue
+            dx, dy, dz = dest.get("x", 0), dest.get("y", 0), dest.get("z", 0)
+            if dx == 0 and dy == 0 and dz == 0:
+                continue
+            edges.append(((x, y, z), (dx, dy, dz)))
+    return edges
+
+
+def build_walkable_graph(
+    tiles: List[Dict],
+    extra_edges: Iterable[Tuple[Node, Node]] = (),
+) -> Dict[Node, Set[Node]]:
     """Walkable tiles -> an undirected adjacency map. Tiles flagged `unpass`
     are excluded entirely (never a node). Same-floor neighbors (orthogonal +
     diagonal) all cost 1 — no diagonal penalty.
 
     As ligações entre andares saem de `floor_transition_edges`, que é a mesma
-    regra que o `map.json` v6 publica."""
+    regra que o `map.json` v6 publica.
+
+    `extra_edges` são pares extras a ligar — hoje os teleports de
+    `extract_teleport_edges`. Só o grafo de viagem os passa; candidato de
+    hunt e mapa v6 não, porque lá teleport fundiria bolsão de spawn que o
+    jogador não atravessa a pé. Uma ponta fora do recorte ou `unpass` é
+    ignorada: destino que não existe no mapa não vira ligação, igual à regra
+    de `floor_transition_edges`."""
     walkable = {(t["x"], t["y"], t["z"]) for t in tiles if not t["unpass"]}
     graph: Dict[Node, Set[Node]] = {node: set() for node in walkable}
 
@@ -712,6 +773,10 @@ def build_walkable_graph(tiles: List[Dict]) -> Dict[Node, Set[Node]]:
 
     for a, b in floor_transition_edges(tiles):
         _connect(a, b)
+
+    for a, b in extra_edges:
+        if a in walkable and b in walkable:
+            _connect(a, b)
 
     return graph
 
@@ -1187,13 +1252,18 @@ FLOOR_CHANGE_TILE_COST = 10
 def connect_orphan_hunts(
     locations: List[Dict], edges: List[Dict]
 ) -> Tuple[List[Dict], List[Dict]]:
-    """Liga cada HUNT sem aresta ao POI conectado mais próximo. -> `(arestas, ligações inventadas)`.
+    """Liga ao continente toda HUNT que não se alcança dele. -> `(arestas, ligações inventadas)`.
 
-    Uma hunt fica sem aresta quando o caminho até ela depende de algo que o
-    grafo não modela: buraco que exige corda, alçapão aberto por script, porta
-    de quest, teleport com action id. Em Carlin são duas, as duas no fundo de
-    Ghostlands, e o vão até o alcançável é rocha maciça — a entrada de verdade
-    está noutro lugar do mapa.
+    Uma hunt fica fora de alcance quando o caminho até ela depende de algo que
+    o grafo não modela: buraco que exige corda, alçapão aberto por script,
+    porta de quest, **barco** (Fibula, Mount Sternum) ou **airship** (a mina de
+    Farmine, em Zao, que fica a andares do resto da cidade).
+
+    Não basta olhar "tem aresta?": uma ilha com várias hunts liga as suas entre
+    si e passa por conectada, mas o templo não chega em nenhuma. Então o corte
+    é por **componente**: acha o maior (o continente, onde o templo está) e
+    liga a ele cada componente que tenha hunt, pelo par de POIs mais baratos.
+    Foi medindo isso que Zao apareceu com 1 de 19 hunts alcançáveis.
 
     O jogador **não anda esse trecho e nem o vê**: ele escolhe a hunt numa
     lista e o jogo conta o tempo de viagem. Então a escolha aqui é entre a hunt
@@ -1202,31 +1272,76 @@ def connect_orphan_hunts(
     `FLOOR_CHANGE_TILE_COST` por andar de diferença, e a polilinha é o segmento
     reto entre os dois pinos.
 
-    Só HUNT. NPC ilhado continua indo pro relatório de rejeição: aquilo é bug
+    Componente só de NPC continua indo pro relatório de rejeição: aquilo é bug
     de mapa (ou de posição do NPC) e some assim que alguém o conserta.
     """
-    connected = {edge["from"] for edge in edges} | {edge["to"] for edge in edges}
     by_id = {location["id"]: location for location in locations}
-    anchors = [by_id[name] for name in sorted(connected) if name in by_id]
-    if not anchors:
+    if not by_id:
         return edges, []
 
+    adjacency: Dict[str, Set[str]] = {name: set() for name in by_id}
+    for edge in edges:
+        if edge["from"] in adjacency and edge["to"] in adjacency:
+            adjacency[edge["from"]].add(edge["to"])
+            adjacency[edge["to"]].add(edge["from"])
+
+    components: List[Set[str]] = []
+    seen: Set[str] = set()
+    for name in sorted(by_id):
+        if name in seen:
+            continue
+        component = {name}
+        seen.add(name)
+        queue = [name]
+        while queue:
+            current = queue.pop()
+            for neighbor in adjacency[current]:
+                if neighbor not in seen:
+                    seen.add(neighbor)
+                    component.add(neighbor)
+                    queue.append(neighbor)
+        components.append(component)
+
+    if len(components) < 2:
+        return edges, []
+
+    # O continente é o maior componente — é onde o templo está em toda cidade
+    # medida. Empate resolve por id, pra o fragmento sair idêntico a cada run.
+    mainland = max(components, key=lambda c: (len(c), -ord(min(c)[0])))
+    islands = [c for c in components if c is not mainland]
+
+    def cost(a: Dict, b: Dict) -> int:
+        return max(abs(a["x"] - b["x"]), abs(a["y"] - b["y"])) + (
+            FLOOR_CHANGE_TILE_COST * abs(a["z"] - b["z"])
+        )
+
+    anchors = [by_id[name] for name in sorted(mainland)]
     invented: List[Dict] = []
-    for location in locations:
-        if location["type"] != "HUNT" or location["id"] in connected:
+
+    for island in islands:
+        # Hunt é o motivo original da ponte; templo e depot entraram porque
+        # toda cidade precisa dos dois, e Yalahar perdia o seu — o depot dela
+        # cai num componente sem hunt nenhuma e era rejeitado. Componente só
+        # de NPC continua indo pro relatório: aquilo é bug de mapa.
+        hunts = sorted(
+            name
+            for name in island
+            if by_id[name]["type"] in ("HUNT", "TEMPLE", "DEPOT")
+        )
+        if not hunts:
             continue
 
-        def cost(other: Dict) -> int:
-            return max(
-                abs(location["x"] - other["x"]), abs(location["y"] - other["y"])
-            ) + FLOOR_CHANGE_TILE_COST * abs(location["z"] - other["z"])
-
-        nearest = min(anchors, key=lambda other: (cost(other), other["id"]))
-        tile_count = max(1, cost(nearest))
-        low, high = sorted((location["id"], nearest["id"]))
+        pairs = (
+            (cost(by_id[near], anchor), near, anchor["id"])
+            for near in sorted(island)
+            for anchor in anchors
+        )
+        _, island_id, anchor_id = min(pairs)
+        tile_count = max(1, cost(by_id[island_id], by_id[anchor_id]))
+        low, high = sorted((island_id, anchor_id))
         ends = {
-            location["id"]: (location["x"], location["y"], location["z"]),
-            nearest["id"]: (nearest["x"], nearest["y"], nearest["z"]),
+            name: (by_id[name]["x"], by_id[name]["y"], by_id[name]["z"])
+            for name in (island_id, anchor_id)
         }
         edges.append(
             {
@@ -1237,11 +1352,103 @@ def connect_orphan_hunts(
             }
         )
         invented.append(
-            {"hunt": location["id"], "anchor": nearest["id"], "tileCount": tile_count}
+            {
+                "hunt": island_id,
+                "anchor": anchor_id,
+                "tileCount": tile_count,
+                "hunts": len(hunts),
+            }
         )
 
     edges.sort(key=lambda edge: (edge["from"], edge["to"]))
     return edges, invented
+
+
+def close_bridged_pairs(edges: List[Dict]) -> Tuple[List[Dict], int]:
+    """Dá aresta direta a todo par que só se ligava passando por uma ponte. -> `(arestas, quantas)`.
+
+    `build_travel_graph` emite **uma aresta por par mutuamente alcançável**, não
+    por vizinhança: dentro de um componente o grafo já é completo, e é por isso
+    que a tela de viagem lista a cidade inteira de uma vez. As pontes de
+    `connect_orphan_hunts` quebram essa propriedade — elas ligam dois
+    componentes por um fio só, e aí chegar numa hunt do outro lado passa a
+    exigir 3, 4, 5 saltos (Zao: 1 hunt a um salto, 3 a cinco).
+
+    Então o transitivo é fechado aqui: Dijkstra de cada POI sobre o grafo de
+    POIs, e todo par que ficou sem aresta ganha uma, com `tileCount` somado e a
+    polilinha concatenada no caminho. Só toca par que a ponte tornou possível —
+    par do mesmo componente já tinha a sua, medida em tile andado de verdade.
+    O custo somado é estimativa por cima de estimativa, e assumido: a ponte já
+    era inventada."""
+    adjacency: Dict[str, Dict[str, Dict]] = {}
+    for edge in edges:
+        adjacency.setdefault(edge["from"], {})[edge["to"]] = edge
+        adjacency.setdefault(edge["to"], {})[edge["from"]] = edge
+
+    existing = {frozenset((edge["from"], edge["to"])) for edge in edges}
+    added: List[Dict] = []
+
+    for source in sorted(adjacency):
+        # Dijkstra guardando o antecessor, pra reconstruir a polilinha.
+        best: Dict[str, int] = {source: 0}
+        previous: Dict[str, str] = {}
+        heap: List[Tuple[int, str]] = [(0, source)]
+        while heap:
+            distance, node = heapq.heappop(heap)
+            if distance > best.get(node, distance):
+                continue
+            for neighbor, edge in adjacency[node].items():
+                candidate = distance + edge["tileCount"]
+                if candidate < best.get(neighbor, candidate + 1):
+                    best[neighbor] = candidate
+                    previous[neighbor] = node
+                    heapq.heappush(heap, (candidate, neighbor))
+
+        for target, distance in sorted(best.items()):
+            if target <= source:
+                continue
+            pair = frozenset((source, target))
+            if pair in existing:
+                continue
+            existing.add(pair)
+
+            hops = [target]
+            while hops[-1] != source:
+                hops.append(previous[hops[-1]])
+            hops.reverse()
+
+            # A polilinha de cada perna é gravada de `from` para `to`; andada no
+            # sentido contrário ela entra invertida, senão o traço volta no
+            # próprio rastro. O vértice de junção não se repete.
+            walked: List[Node] = []
+            for first, second in zip(hops, hops[1:]):
+                leg = adjacency[first][second]
+                flat = leg["path"] or []
+                nodes = [tuple(flat[i:i + 3]) for i in range(0, len(flat), 3)]
+                if leg["from"] != first:
+                    nodes.reverse()
+                if walked and nodes and nodes[0] == walked[-1]:
+                    nodes = nodes[1:]
+                walked.extend(nodes)
+
+            low, high = sorted((source, target))
+            added.append(
+                {
+                    "from": low,
+                    "to": high,
+                    "tileCount": max(1, distance),
+                    "path": flatten_polyline(
+                        walked if low == source else list(reversed(walked))
+                    ),
+                }
+            )
+
+    if not added:
+        return edges, 0
+
+    edges = [*edges, *added]
+    edges.sort(key=lambda edge: (edge["from"], edge["to"]))
+    return edges, len(added)
 
 
 def build_travel_fragment(locations: List[Dict], travel_graph: List[Dict]) -> Dict:

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32959" centery="31768" centerz="9" radius="5">
+		<monster name="Orc Shaman" x="0" y="-5" z="9" spawntime="90" />
+		<monster name="Orc Leader" x="-4" y="-3" z="9" spawntime="90" />
+		<monster name="Orc Leader" x="1" y="-2" z="9" spawntime="90" />
+		<monster name="Orc Warlord" x="-4" y="0" z="9" spawntime="90" />
+		<monster name="Dragon" x="2" y="0" z="9" spawntime="90" />
+		<monster name="Orc Leader" x="0" y="2" z="9" spawntime="90" />
+		<monster name="Orc Warlord" x="4" y="2" z="9" spawntime="90" />
+		<monster name="Orc Warlord" x="-3" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32971" centery="31769" centerz="9" radius="3">
+		<monster name="Orc Berserker" x="-2" y="-1" z="9" spawntime="90" />
+		<monster name="Orc Berserker" x="3" y="0" z="9" spawntime="90" />
+	</monster>
+</monsters>

@@ -1,0 +1,1040 @@
+{
+  "city": "VENORE",
+  "area": {
+    "id": 25,
+    "name": "Venore"
+  },
+  "subareas": [
+    {
+      "id": 276,
+      "name": "Venore City",
+      "mask": "masks/0276.png",
+      "maskPlacement": {
+        "x": 32857,
+        "y": 31992,
+        "width": 172,
+        "height": 174
+      }
+    },
+    {
+      "id": 75,
+      "name": "Plains of Havoc",
+      "mask": "masks/0075.png",
+      "maskPlacement": {
+        "x": 32624,
+        "y": 32136,
+        "width": 249,
+        "height": 272
+      }
+    },
+    {
+      "id": 460,
+      "name": "Venore",
+      "mask": "masks/0460.png",
+      "maskPlacement": {
+        "x": 32757,
+        "y": 32053,
+        "width": 334,
+        "height": 113
+      }
+    },
+    {
+      "id": 69,
+      "name": "Amazon Camp",
+      "mask": "masks/0069.png",
+      "maskPlacement": {
+        "x": 32811,
+        "y": 31900,
+        "width": 72,
+        "height": 60
+      }
+    },
+    {
+      "id": 70,
+      "name": "Black Knight Villa",
+      "mask": "masks/0070.png",
+      "maskPlacement": {
+        "x": 32809,
+        "y": 31954,
+        "width": 25,
+        "height": 20
+      }
+    },
+    {
+      "id": 71,
+      "name": "Venore Dragon Lair",
+      "mask": "masks/0071.png",
+      "maskPlacement": {
+        "x": 32775,
+        "y": 32138,
+        "width": 56,
+        "height": 33
+      }
+    },
+    {
+      "id": 72,
+      "name": "Green Claw Swamp",
+      "mask": "masks/0072.png",
+      "maskPlacement": {
+        "x": 32625,
+        "y": 31930,
+        "width": 254,
+        "height": 226
+      }
+    },
+    {
+      "id": 73,
+      "name": "Outlaw Camp",
+      "mask": "masks/0073.png",
+      "maskPlacement": {
+        "x": 32577,
+        "y": 32156,
+        "width": 123,
+        "height": 174
+      }
+    },
+    {
+      "id": 74,
+      "name": "Dark Cathedral",
+      "mask": "masks/0074.png",
+      "maskPlacement": {
+        "x": 32617,
+        "y": 32318,
+        "width": 76,
+        "height": 65
+      }
+    },
+    {
+      "id": 76,
+      "name": "Shadowthorn",
+      "mask": "masks/0076.png",
+      "maskPlacement": {
+        "x": 33045,
+        "y": 32132,
+        "width": 107,
+        "height": 80
+      }
+    },
+    {
+      "id": 77,
+      "name": "Venore Southern Swamp",
+      "mask": "masks/0077.png",
+      "maskPlacement": {
+        "x": 32770,
+        "y": 32077,
+        "width": 289,
+        "height": 197
+      }
+    },
+    {
+      "id": 78,
+      "name": "Venore Surroundings",
+      "mask": "masks/0078.png",
+      "maskPlacement": {
+        "x": 32998,
+        "y": 32000,
+        "width": 124,
+        "height": 170
+      }
+    },
+    {
+      "id": 104,
+      "name": "Jakundaf Desert",
+      "mask": "masks/0104.png",
+      "maskPlacement": {
+        "x": 32560,
+        "y": 32063,
+        "width": 144,
+        "height": 99
+      }
+    },
+    {
+      "id": 239,
+      "name": "Gloom Caverns",
+      "mask": "masks/0239.png",
+      "maskPlacement": {
+        "x": 32666,
+        "y": 31931,
+        "width": 56,
+        "height": 41
+      }
+    }
+  ],
+  "hunts": [
+    {
+      "name": "Tainted Caves",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "VENORE-C07-019",
+        "VENORE-C07-062"
+      ],
+      "species": null,
+      "creatures": 12,
+      "extent": {
+        "minX": 32702,
+        "minY": 31936,
+        "maxX": 32744,
+        "maxY": 31960,
+        "centerX": 32723,
+        "centerY": 31948
+      },
+      "subareaId": 239,
+      "walkTilesFromTemple": 390
+    },
+    {
+      "name": "Jakundaf Desert",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "VENORE-C07-025",
+        "VENORE-C07-030"
+      ],
+      "species": null,
+      "creatures": 14,
+      "extent": {
+        "minX": 32610,
+        "minY": 32126,
+        "maxX": 32660,
+        "maxY": 32142,
+        "centerX": 32635,
+        "centerY": 32134
+      },
+      "subareaId": 104,
+      "walkTilesFromTemple": 343
+    },
+    {
+      "name": "Swamp Troll Cave",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "VENORE-C07-009"
+      ],
+      "species": null,
+      "creatures": 17,
+      "extent": {
+        "minX": 32935,
+        "minY": 32211,
+        "maxX": 32966,
+        "maxY": 32237,
+        "centerX": 32950,
+        "centerY": 32224
+      },
+      "subareaId": 77,
+      "walkTilesFromTemple": 157
+    },
+    {
+      "name": "Venore Salamander Cave",
+      "floors": [
+        10
+      ],
+      "candidateIds": [
+        "VENORE-C10-010"
+      ],
+      "species": null,
+      "creatures": 13,
+      "extent": {
+        "minX": 32910,
+        "minY": 32141,
+        "maxX": 32933,
+        "maxY": 32159,
+        "centerX": 32921,
+        "centerY": 32150
+      },
+      "subareaId": 276,
+      "walkTilesFromTemple": 130
+    },
+    {
+      "name": "Dusalk's Troll Clan Cave",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "VENORE-C07-058",
+        "VENORE-C07-059"
+      ],
+      "species": null,
+      "creatures": 6,
+      "extent": {
+        "minX": 32664,
+        "minY": 31940,
+        "maxX": 32683,
+        "maxY": 31986,
+        "centerX": 32673,
+        "centerY": 31963
+      },
+      "subareaId": 72,
+      "walkTilesFromTemple": 351
+    },
+    {
+      "name": "Dwarf Bridge",
+      "floors": [
+        8
+      ],
+      "candidateIds": [
+        "VENORE-C08-016",
+        "VENORE-C08-018"
+      ],
+      "species": null,
+      "creatures": 13,
+      "extent": {
+        "minX": 32641,
+        "minY": 31970,
+        "maxX": 32658,
+        "maxY": 31997,
+        "centerX": 32649,
+        "centerY": 31983
+      },
+      "subareaId": 72,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Little Corym's Cave",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "VENORE-C07-081"
+      ],
+      "species": null,
+      "creatures": 3,
+      "extent": {
+        "minX": 33007,
+        "minY": 32152,
+        "maxX": 33014,
+        "maxY": 32155,
+        "centerX": 33010,
+        "centerY": 32153
+      },
+      "subareaId": 77,
+      "walkTilesFromTemple": 106
+    },
+    {
+      "name": "Marshland",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "VENORE-C07-015",
+        "VENORE-C07-021"
+      ],
+      "species": null,
+      "creatures": 21,
+      "extent": {
+        "minX": 33036,
+        "minY": 32042,
+        "maxX": 33083,
+        "maxY": 32091,
+        "centerX": 33059,
+        "centerY": 32066
+      },
+      "subareaId": 78,
+      "walkTilesFromTemple": 139
+    },
+    {
+      "name": "Venore Amazon Camp",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "VENORE-C07-003"
+      ],
+      "species": null,
+      "creatures": 27,
+      "extent": {
+        "minX": 32817,
+        "minY": 31910,
+        "maxX": 32872,
+        "maxY": 31947,
+        "centerX": 32844,
+        "centerY": 31928
+      },
+      "subareaId": 69,
+      "walkTilesFromTemple": 265
+    },
+    {
+      "name": "Venore Orc Cave",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "VENORE-C07-015",
+        "VENORE-C07-021",
+        "VENORE-C07-054",
+        "VENORE-C07-082"
+      ],
+      "species": null,
+      "creatures": 28,
+      "extent": {
+        "minX": 33036,
+        "minY": 32028,
+        "maxX": 33083,
+        "maxY": 32091,
+        "centerX": 33059,
+        "centerY": 32059
+      },
+      "subareaId": 78,
+      "walkTilesFromTemple": 139
+    },
+    {
+      "name": "Slug Cave",
+      "floors": [
+        8
+      ],
+      "candidateIds": [
+        "VENORE-C08-026"
+      ],
+      "species": null,
+      "creatures": 5,
+      "extent": {
+        "minX": 32947,
+        "minY": 32122,
+        "maxX": 32952,
+        "maxY": 32145,
+        "centerX": 32949,
+        "centerY": 32133
+      },
+      "subareaId": 276,
+      "walkTilesFromTemple": 100
+    },
+    {
+      "name": "Plains of Havoc",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "VENORE-C07-001",
+        "VENORE-C07-002",
+        "VENORE-C07-028",
+        "VENORE-C07-035",
+        "VENORE-C07-042",
+        "VENORE-C07-065",
+        "VENORE-C07-072"
+      ],
+      "species": null,
+      "creatures": 164,
+      "extent": {
+        "minX": 32714,
+        "minY": 32162,
+        "maxX": 32906,
+        "maxY": 32321,
+        "centerX": 32810,
+        "centerY": 32241
+      },
+      "subareaId": 75,
+      "walkTilesFromTemple": 135
+    },
+    {
+      "name": "Dark Cathedral",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "VENORE-C07-006",
+        "VENORE-C07-007"
+      ],
+      "species": null,
+      "creatures": 38,
+      "extent": {
+        "minX": 32617,
+        "minY": 32328,
+        "maxX": 32675,
+        "maxY": 32379,
+        "centerX": 32646,
+        "centerY": 32353
+      },
+      "subareaId": 74,
+      "walkTilesFromTemple": 456
+    },
+    {
+      "name": "Necromant House",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "VENORE-C07-005",
+        "VENORE-C07-043",
+        "VENORE-C07-067",
+        "VENORE-C07-070"
+      ],
+      "species": null,
+      "creatures": 31,
+      "extent": {
+        "minX": 32744,
+        "minY": 32319,
+        "maxX": 32799,
+        "maxY": 32361,
+        "centerX": 32771,
+        "centerY": 32340
+      },
+      "subareaId": 75,
+      "walkTilesFromTemple": 442
+    },
+    {
+      "name": "Outlaw Camp",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "VENORE-C07-010",
+        "VENORE-C07-017",
+        "VENORE-C07-024",
+        "VENORE-C07-027",
+        "VENORE-C07-057"
+      ],
+      "species": null,
+      "creatures": 43,
+      "extent": {
+        "minX": 32612,
+        "minY": 32171,
+        "maxX": 32676,
+        "maxY": 32257,
+        "centerX": 32644,
+        "centerY": 32214
+      },
+      "subareaId": 73,
+      "walkTilesFromTemple": 329
+    },
+    {
+      "name": "Poacher Caves/Poachers",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "VENORE-C07-019"
+      ],
+      "species": null,
+      "creatures": 9,
+      "extent": {
+        "minX": 32721,
+        "minY": 31938,
+        "maxX": 32744,
+        "maxY": 31960,
+        "centerX": 32732,
+        "centerY": 31949
+      },
+      "subareaId": 72,
+      "walkTilesFromTemple": 401
+    },
+    {
+      "name": "Shadowthorn",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "VENORE-C07-022",
+        "VENORE-C07-031",
+        "VENORE-C07-053",
+        "VENORE-C07-055"
+      ],
+      "species": null,
+      "creatures": 23,
+      "extent": {
+        "minX": 33054,
+        "minY": 32127,
+        "maxX": 33104,
+        "maxY": 32203,
+        "centerX": 33079,
+        "centerY": 32165
+      },
+      "subareaId": 76,
+      "walkTilesFromTemple": 245
+    },
+    {
+      "name": "Desert Dungeon",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "VENORE-C07-056"
+      ],
+      "species": null,
+      "creatures": 3,
+      "extent": {
+        "minX": 32638,
+        "minY": 32085,
+        "maxX": 32649,
+        "maxY": 32089,
+        "centerX": 32643,
+        "centerY": 32087
+      },
+      "subareaId": 104,
+      "walkTilesFromTemple": 353
+    },
+    {
+      "name": "Green Claw Swamp",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "VENORE-C07-068"
+      ],
+      "species": null,
+      "creatures": 3,
+      "extent": {
+        "minX": 32746,
+        "minY": 31968,
+        "maxX": 32753,
+        "maxY": 31979,
+        "centerX": 32749,
+        "centerY": 31973
+      },
+      "subareaId": 72,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Isle of the Mists",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "VENORE-C07-001",
+        "VENORE-C07-002",
+        "VENORE-C07-028",
+        "VENORE-C07-042",
+        "VENORE-C07-072"
+      ],
+      "species": null,
+      "creatures": 156,
+      "extent": {
+        "minX": 32755,
+        "minY": 32162,
+        "maxX": 32906,
+        "maxY": 32321,
+        "centerX": 32830,
+        "centerY": 32241
+      },
+      "subareaId": 75,
+      "walkTilesFromTemple": 135
+    },
+    {
+      "name": "Venore Corym Cave",
+      "floors": [
+        7,
+        11
+      ],
+      "candidateIds": [
+        "VENORE-C07-015",
+        "VENORE-C07-021",
+        "VENORE-C11-001",
+        "VENORE-C11-010"
+      ],
+      "species": null,
+      "creatures": 51,
+      "extent": {
+        "minX": 32954,
+        "minY": 32042,
+        "maxX": 33083,
+        "maxY": 32150,
+        "centerX": 33018,
+        "centerY": 32096
+      },
+      "subareaId": 78,
+      "walkTilesFromTemple": 139
+    },
+    {
+      "name": "Triangle Tower",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "VENORE-C07-023"
+      ],
+      "species": null,
+      "creatures": 8,
+      "extent": {
+        "minX": 32571,
+        "minY": 32126,
+        "maxX": 32580,
+        "maxY": 32143,
+        "centerX": 32575,
+        "centerY": 32134
+      },
+      "subareaId": 104,
+      "walkTilesFromTemple": 422
+    },
+    {
+      "name": "Venore Dragon Lair",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "VENORE-C07-001",
+        "VENORE-C07-002",
+        "VENORE-C07-029",
+        "VENORE-C07-037",
+        "VENORE-C07-046",
+        "VENORE-C07-047",
+        "VENORE-C07-048",
+        "VENORE-C07-074",
+        "VENORE-C07-078"
+      ],
+      "species": null,
+      "creatures": 172,
+      "extent": {
+        "minX": 32755,
+        "minY": 32066,
+        "maxX": 32906,
+        "maxY": 32307,
+        "centerX": 32830,
+        "centerY": 32186
+      },
+      "subareaId": 77,
+      "walkTilesFromTemple": 135
+    },
+    {
+      "name": "Black Knight Villa",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "VENORE-C07-045"
+      ],
+      "species": null,
+      "creatures": 4,
+      "extent": {
+        "minX": 32807,
+        "minY": 31963,
+        "maxX": 32812,
+        "maxY": 31974,
+        "centerX": 32809,
+        "centerY": 31968
+      },
+      "subareaId": 72,
+      "walkTilesFromTemple": 218
+    },
+    {
+      "name": "Underground Nightmare Knights Base",
+      "floors": [
+        10
+      ],
+      "candidateIds": [
+        "VENORE-C10-012",
+        "VENORE-C10-014"
+      ],
+      "species": null,
+      "creatures": 17,
+      "extent": {
+        "minX": 32758,
+        "minY": 32328,
+        "maxX": 32797,
+        "maxY": 32372,
+        "centerX": 32777,
+        "centerY": 32350
+      },
+      "subareaId": null,
+      "walkTilesFromTemple": 527
+    },
+    {
+      "name": "Outlaw Camp/Water Elemental Dungeon",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "VENORE-C07-004"
+      ],
+      "species": null,
+      "creatures": 25,
+      "extent": {
+        "minX": 32605,
+        "minY": 32283,
+        "maxX": 32644,
+        "maxY": 32332,
+        "centerX": 32624,
+        "centerY": 32307
+      },
+      "subareaId": 73,
+      "walkTilesFromTemple": 415
+    },
+    {
+      "name": "Corym Mines",
+      "floors": [
+        7,
+        11
+      ],
+      "candidateIds": [
+        "VENORE-C07-015",
+        "VENORE-C07-021",
+        "VENORE-C11-025"
+      ],
+      "species": null,
+      "creatures": 24,
+      "extent": {
+        "minX": 33036,
+        "minY": 32021,
+        "maxX": 33083,
+        "maxY": 32091,
+        "centerX": 33059,
+        "centerY": 32056
+      },
+      "subareaId": 78,
+      "walkTilesFromTemple": 139
+    },
+    {
+      "name": "Dragon Lair (Pits of Inferno)",
+      "floors": [
+        12
+      ],
+      "candidateIds": [
+        "VENORE-C12-001",
+        "VENORE-C12-014",
+        "VENORE-C12-015"
+      ],
+      "species": null,
+      "creatures": 34,
+      "extent": {
+        "minX": 32740,
+        "minY": 32305,
+        "maxX": 32821,
+        "maxY": 32364,
+        "centerX": 32780,
+        "centerY": 32334
+      },
+      "subareaId": 75,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Hot Spot",
+      "floors": [
+        13
+      ],
+      "candidateIds": [
+        "VENORE-C13-003"
+      ],
+      "species": null,
+      "creatures": 14,
+      "extent": {
+        "minX": 32840,
+        "minY": 31902,
+        "maxX": 32874,
+        "maxY": 31930,
+        "centerX": 32857,
+        "centerY": 31916
+      },
+      "subareaId": 69,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Desecrated Glade",
+      "floors": [
+        7,
+        10
+      ],
+      "candidateIds": [
+        "VENORE-C07-013",
+        "VENORE-C10-002"
+      ],
+      "species": null,
+      "creatures": 50,
+      "extent": {
+        "minX": 32596,
+        "minY": 32107,
+        "maxX": 32755,
+        "maxY": 32271,
+        "centerX": 32675,
+        "centerY": 32189
+      },
+      "subareaId": 75,
+      "walkTilesFromTemple": 401
+    },
+    {
+      "name": "Infected Area",
+      "floors": [
+        8
+      ],
+      "candidateIds": [
+        "VENORE-C08-001",
+        "VENORE-C08-002"
+      ],
+      "species": null,
+      "creatures": 63,
+      "extent": {
+        "minX": 32617,
+        "minY": 32336,
+        "maxX": 32729,
+        "maxY": 32380,
+        "centerX": 32673,
+        "centerY": 32358
+      },
+      "subareaId": 74,
+      "walkTilesFromTemple": 472
+    },
+    {
+      "name": "Pits of Damnation (Tafariel)",
+      "floors": [
+        15
+      ],
+      "candidateIds": [
+        "VENORE-C15-001"
+      ],
+      "species": null,
+      "creatures": 47,
+      "extent": {
+        "minX": 32759,
+        "minY": 32226,
+        "maxX": 32789,
+        "maxY": 32251,
+        "centerX": 32774,
+        "centerY": 32238
+      },
+      "subareaId": 75,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Pits of Deceit (Bazir)",
+      "floors": [
+        15
+      ],
+      "candidateIds": [
+        "VENORE-C15-002",
+        "VENORE-C15-003",
+        "VENORE-C15-007",
+        "VENORE-C15-009",
+        "VENORE-C15-010"
+      ],
+      "species": null,
+      "creatures": 80,
+      "extent": {
+        "minX": 32780,
+        "minY": 32277,
+        "maxX": 32856,
+        "maxY": 32353,
+        "centerX": 32818,
+        "centerY": 32315
+      },
+      "subareaId": null,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Pits of Destruction (Apocalypse)",
+      "floors": [
+        15
+      ],
+      "candidateIds": [
+        "VENORE-C15-012"
+      ],
+      "species": null,
+      "creatures": 3,
+      "extent": {
+        "minX": 32870,
+        "minY": 32287,
+        "maxX": 32875,
+        "maxY": 32289,
+        "centerX": 32872,
+        "centerY": 32288
+      },
+      "subareaId": null,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Pits of Fire (Infernatil)",
+      "floors": [
+        15
+      ],
+      "candidateIds": [
+        "VENORE-C15-004"
+      ],
+      "species": null,
+      "creatures": 26,
+      "extent": {
+        "minX": 32857,
+        "minY": 32211,
+        "maxX": 32915,
+        "maxY": 32245,
+        "centerX": 32886,
+        "centerY": 32228
+      },
+      "subareaId": 77,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Pits of Inferno (DT City)",
+      "floors": [
+        12
+      ],
+      "candidateIds": [
+        "VENORE-C12-002"
+      ],
+      "species": null,
+      "creatures": 18,
+      "extent": {
+        "minX": 32847,
+        "minY": 32274,
+        "maxX": 32876,
+        "maxY": 32295,
+        "centerX": 32861,
+        "centerY": 32284
+      },
+      "subareaId": 75,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Pits of Inferno Hub",
+      "floors": [
+        12
+      ],
+      "candidateIds": [
+        "VENORE-C12-003"
+      ],
+      "species": null,
+      "creatures": 17,
+      "extent": {
+        "minX": 32819,
+        "minY": 32233,
+        "maxX": 32829,
+        "maxY": 32247,
+        "centerX": 32824,
+        "centerY": 32240
+      },
+      "subareaId": 75,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Pits of Undeath (Ashfalor)",
+      "floors": [
+        15
+      ],
+      "candidateIds": [
+        "VENORE-C15-006"
+      ],
+      "species": null,
+      "creatures": 10,
+      "extent": {
+        "minX": 32828,
+        "minY": 32266,
+        "maxX": 32837,
+        "maxY": 32288,
+        "centerX": 32832,
+        "centerY": 32277
+      },
+      "subareaId": 75,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Haunted Nexus (Cellar)",
+      "floors": [
+        7
+      ],
+      "candidateIds": [
+        "VENORE-C07-010",
+        "VENORE-C07-011",
+        "VENORE-C07-024"
+      ],
+      "species": null,
+      "creatures": 36,
+      "extent": {
+        "minX": 32622,
+        "minY": 32171,
+        "maxX": 32716,
+        "maxY": 32241,
+        "centerX": 32669,
+        "centerY": 32206
+      },
+      "subareaId": 75,
+      "walkTilesFromTemple": 329
+    }
+  ]
+}

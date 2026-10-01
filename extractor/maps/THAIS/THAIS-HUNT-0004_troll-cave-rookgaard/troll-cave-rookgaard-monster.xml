@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32049" centery="32154" centerz="7" radius="3">
+		<monster name="Wolf" x="-3" y="1" z="7" spawntime="90" />
+		<monster name="Deer" x="-2" y="1" z="7" spawntime="90" />
+		<monster name="Wolf" x="2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32056" centery="32154" centerz="7" radius="3">
+		<monster name="Snake" x="-1" y="-1" z="7" spawntime="90" />
+		<monster name="Snake" x="-3" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32070" centery="32154" centerz="7" radius="3">
+		<monster name="Snake" x="0" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32077" centery="32154" centerz="7" radius="3">
+		<monster name="Snake" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32084" centery="32154" centerz="7" radius="3">
+		<monster name="Snake" x="2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32042" centery="32161" centerz="7" radius="3">
+		<monster name="Wolf" x="2" y="-2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32049" centery="32161" centerz="7" radius="3">
+		<monster name="Wolf" x="1" y="-2" z="7" spawntime="90" />
+		<monster name="Snake" x="-3" y="-1" z="7" spawntime="90" />
+		<monster name="Snake" x="-1" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32056" centery="32161" centerz="7" radius="3">
+		<monster name="Snake" x="3" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32070" centery="32161" centerz="7" radius="3">
+		<monster name="Snake" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32077" centery="32161" centerz="7" radius="3">
+		<monster name="Snake" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32042" centery="32168" centerz="7" radius="3">
+		<monster name="Snake" x="-2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32046" centery="32175" centerz="7" radius="3">
+		<monster name="Troll" x="-1" y="2" z="7" spawntime="90" />
+	</monster>
+</monsters>

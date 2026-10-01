@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32785" centery="32281" centerz="15" radius="5">
+		<monster name="Demon" x="3" y="-4" z="15" spawntime="90" />
+		<monster name="Demon" x="-2" y="-3" z="15" spawntime="90" />
+		<monster name="Hand of Cursed Fate" x="2" y="-2" z="15" spawntime="90" />
+		<monster name="Betrayed Wraith" x="5" y="-2" z="15" spawntime="90" />
+		<monster name="Betrayed Wraith" x="-2" y="0" z="15" spawntime="90" />
+		<monster name="Demon" x="1" y="1" z="15" spawntime="90" />
+		<monster name="Hand of Cursed Fate" x="5" y="1" z="15" spawntime="90" />
+		<monster name="Hand of Cursed Fate" x="-4" y="2" z="15" spawntime="90" />
+		<monster name="Betrayed Wraith" x="3" y="2" z="15" spawntime="90" />
+		<monster name="Betrayed Wraith" x="-1" y="3" z="15" spawntime="90" />
+		<monster name="Betrayed Wraith" x="-5" y="5" z="15" spawntime="90" />
+		<monster name="Hand of Cursed Fate" x="0" y="5" z="15" spawntime="90" />
+		<monster name="Betrayed Wraith" x="5" y="5" z="15" spawntime="90" />
+	</monster>
+	<monster centerx="32785" centery="32294" centerz="15" radius="6">
+		<monster name="Spectre" x="-2" y="-6" z="15" spawntime="90" />
+		<monster name="Betrayed Wraith" x="6" y="-5" z="15" spawntime="90" />
+		<monster name="Spectre" x="3" y="-4" z="15" spawntime="90" />
+		<monster name="Betrayed Wraith" x="0" y="-2" z="15" spawntime="90" />
+		<monster name="Spectre" x="-3" y="-1" z="15" spawntime="90" />
+		<monster name="Spectre" x="6" y="-1" z="15" spawntime="90" />
+		<monster name="Hand of Cursed Fate" x="3" y="0" z="15" spawntime="90" />
+		<monster name="Hand of Cursed Fate" x="-4" y="2" z="15" spawntime="90" />
+		<monster name="Hand of Cursed Fate" x="-2" y="5" z="15" spawntime="90" />
+		<monster name="Spectre" x="3" y="6" z="15" spawntime="90" />
+	</monster>
+	<monster centerx="32832" centery="32299" centerz="15" radius="2">
+		<monster name="Demon" x="1" y="0" z="15" spawntime="90" />
+	</monster>
+	<monster centerx="32785" centery="32307" centerz="15" radius="5">
+		<monster name="Spectre" x="1" y="-3" z="15" spawntime="90" />
+		<monster name="Betrayed Wraith" x="2" y="0" z="15" spawntime="90" />
+		<monster name="Spectre" x="-1" y="2" z="15" spawntime="90" />
+		<monster name="Spectre" x="2" y="2" z="15" spawntime="90" />
+	</monster>
+	<monster centerx="32838" centery="32309" centerz="15" radius="6">
+		<monster name="Lich" x="-5" y="-5" z="15" spawntime="90" />
+		<monster name="Lich" x="0" y="-2" z="15" spawntime="90" />
+		<monster name="Undead Dragon" x="-3" y="-1" z="15" spawntime="90" />
+		<monster name="Undead Dragon" x="2" y="0" z="15" spawntime="90" />
+		<monster name="Lich" x="1" y="1" z="15" spawntime="90" />
+		<monster name="Lich" x="-4" y="2" z="15" spawntime="90" />
+		<monster name="Undead Dragon" x="5" y="2" z="15" spawntime="90" />
+	</monster>
+	<monster centerx="32854" centery="32327" centerz="15" radius="2">
+		<monster name="Plaguesmith" x="-2" y="-2" z="15" spawntime="90" />
+		<monster name="Plaguesmith" x="2" y="-1" z="15" spawntime="90" />
+		<monster name="Plaguesmith" x="-1" y="1" z="15" spawntime="90" />
+		<monster name="Blightwalker" x="1" y="2" z="15" spawntime="90" />
+	</monster>
+	<monster centerx="32806" centery="32328" centerz="15" radius="3">
+		<monster name="Nightmare" x="-2" y="-2" z="15" spawntime="90" />
+		<monster name="Phantasm" x="-1" y="1" z="15" spawntime="90" />
+		<monster name="Phantasm" x="3" y="1" z="15" spawntime="90" />
+		<monster name="Phantasm" x="-3" y="2" z="15" spawntime="90" />
+		<monster name="Nightmare" x="2" y="2" z="15" spawntime="90" />
+	</monster>
+	<monster centerx="32834" centery="32331" centerz="15" radius="4">
+		<monster name="Blightwalker" x="1" y="-4" z="15" spawntime="90" />
+		<monster name="Blightwalker" x="3" y="-3" z="15" spawntime="90" />
+		<monster name="Plaguesmith" x="2" y="0" z="15" spawntime="90" />
+		<monster name="Blightwalker" x="0" y="3" z="15" spawntime="90" />
+		<monster name="Plaguesmith" x="4" y="3" z="15" spawntime="90" />
+	</monster>
+	<monster centerx="32845" centery="32333" centerz="15" radius="3">
+		<monster name="Plaguesmith" x="1" y="-1" z="15" spawntime="90" />
+		<monster name="Plaguesmith" x="3" y="0" z="15" spawntime="90" />
+		<monster name="Blightwalker" x="-2" y="1" z="15" spawntime="90" />
+	</monster>
+	<monster centerx="32854" centery="32334" centerz="15" radius="3">
+		<monster name="Blightwalker" x="-2" y="-3" z="15" spawntime="90" />
+		<monster name="Blightwalker" x="2" y="-3" z="15" spawntime="90" />
+		<monster name="Plaguesmith" x="0" y="-1" z="15" spawntime="90" />
+		<monster name="Son of Verminor" x="2" y="0" z="15" spawntime="90" />
+		<monster name="Son of Verminor" x="1" y="1" z="15" spawntime="90" />
+		<monster name="Plaguesmith" x="-1" y="2" z="15" spawntime="90" />
+	</monster>
+	<monster centerx="32802" centery="32343" centerz="15" radius="2">
+		<monster name="Nightmare" x="1" y="2" z="15" spawntime="90" />
+	</monster>
+	<monster centerx="32846" centery="32343" centerz="15" radius="3">
+		<monster name="Blightwalker" x="-3" y="-3" z="15" spawntime="90" />
+		<monster name="Blightwalker" x="1" y="-2" z="15" spawntime="90" />
+		<monster name="Blightwalker" x="-2" y="0" z="15" spawntime="90" />
+		<monster name="Plaguesmith" x="1" y="1" z="15" spawntime="90" />
+		<monster name="Blightwalker" x="-1" y="2" z="15" spawntime="90" />
+	</monster>
+	<monster centerx="32854" centery="32343" centerz="15" radius="3">
+		<monster name="Plaguesmith" x="-1" y="-1" z="15" spawntime="90" />
+		<monster name="Blightwalker" x="2" y="0" z="15" spawntime="90" />
+		<monster name="Plaguesmith" x="1" y="3" z="15" spawntime="90" />
+	</monster>
+	<monster centerx="32800" centery="32350" centerz="15" radius="3">
+		<monster name="Nightmare" x="2" y="0" z="15" spawntime="90" />
+		<monster name="Phantasm" x="-2" y="1" z="15" spawntime="90" />
+	</monster>
+	<monster centerx="32836" centery="32350" centerz="15" radius="4">
+		<monster name="Plaguesmith" x="1" y="-4" z="15" spawntime="90" />
+		<monster name="Blightwalker" x="4" y="-4" z="15" spawntime="90" />
+		<monster name="Blightwalker" x="-1" y="-3" z="15" spawntime="90" />
+		<monster name="Son of Verminor" x="-1" y="-2" z="15" spawntime="90" />
+		<monster name="Blightwalker" x="1" y="-2" z="15" spawntime="90" />
+		<monster name="Son of Verminor" x="2" y="-1" z="15" spawntime="90" />
+		<monster name="Son of Verminor" x="1" y="2" z="15" spawntime="90" />
+		<monster name="Plaguesmith" x="-1" y="3" z="15" spawntime="90" />
+		<monster name="Plaguesmith" x="4" y="3" z="15" spawntime="90" />
+	</monster>
+	<monster centerx="32786" centery="32351" centerz="15" radius="2">
+		<monster name="Phantasm" x="0" y="-1" z="15" spawntime="90" />
+	</monster>
+	<monster centerx="32793" centery="32352" centerz="15" radius="2">
+		<monster name="Phantasm" x="-1" y="-1" z="15" spawntime="90" />
+	</monster>
+</monsters>

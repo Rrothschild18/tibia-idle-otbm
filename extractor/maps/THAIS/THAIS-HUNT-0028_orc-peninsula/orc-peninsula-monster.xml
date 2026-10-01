@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32334" centery="32037" centerz="7" radius="4">
+		<monster name="Orc Warrior" x="-1" y="-4" z="7" spawntime="90" />
+		<monster name="Orc Berserker" x="-1" y="0" z="7" spawntime="90" />
+		<monster name="War Wolf" x="1" y="0" z="7" spawntime="90" />
+		<monster name="Orc Spearman" x="-1" y="4" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32323" centery="32038" centerz="7" radius="5">
+		<monster name="War Wolf" x="-3" y="-4" z="7" spawntime="90" />
+		<monster name="War Wolf" x="2" y="-2" z="7" spawntime="90" />
+		<monster name="War Wolf" x="-3" y="-1" z="7" spawntime="90" />
+		<monster name="Orc Warrior" x="4" y="-1" z="7" spawntime="90" />
+		<monster name="Orc Rider" x="-4" y="0" z="7" spawntime="90" />
+		<monster name="War Wolf" x="2" y="0" z="7" spawntime="90" />
+		<monster name="Orc Spearman" x="-2" y="1" z="7" spawntime="90" />
+		<monster name="Orc Warrior" x="2" y="2" z="7" spawntime="90" />
+		<monster name="Orc Rider" x="1" y="4" z="7" spawntime="90" />
+		<monster name="War Wolf" x="-2" y="5" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32321" centery="32048" centerz="7" radius="3">
+		<monster name="Orc Rider" x="0" y="-2" z="7" spawntime="90" />
+		<monster name="Orc Spearman" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+</monsters>

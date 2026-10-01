@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32840" centery="31026" centerz="7" radius="3">
+		<monster name="Gozzler" x="-2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32845" centery="31026" centerz="7" radius="1">
+		<monster name="Gozzler" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32872" centery="31026" centerz="7" radius="2">
+		<monster name="Necromancer" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32854" centery="31027" centerz="7" radius="3">
+		<monster name="Gozzler" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32881" centery="31027" centerz="7" radius="2">
+		<monster name="Necromancer" x="-1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32818" centery="31031" centerz="7" radius="3">
+		<monster name="Gozzler" x="-1" y="-1" z="7" spawntime="90" />
+		<monster name="Gozzler" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32830" centery="31032" centerz="7" radius="3">
+		<monster name="Hellspawn" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32864" centery="31033" centerz="7" radius="3">
+		<monster name="Gozzler" x="2" y="-1" z="7" spawntime="90" />
+		<monster name="Gozzler" x="-2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32840" centery="31035" centerz="7" radius="3">
+		<monster name="Hellspawn" x="1" y="-3" z="7" spawntime="90" />
+		<monster name="Gozzler" x="-2" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32817" centery="31037" centerz="7" radius="1">
+		<monster name="Gozzler" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32853" centery="31038" centerz="7" radius="3">
+		<monster name="Gozzler" x="1" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32825" centery="31041" centerz="7" radius="1">
+		<monster name="Gozzler" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32830" centery="31041" centerz="7" radius="3">
+		<monster name="Hellspawn" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32819" centery="31043" centerz="7" radius="3">
+		<monster name="Hellspawn" x="0" y="-3" z="7" spawntime="90" />
+		<monster name="Gozzler" x="-1" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32863" centery="31044" centerz="7" radius="2">
+		<monster name="Necromancer" x="-1" y="0" z="7" spawntime="90" />
+		<monster name="Gozzler" x="-2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32875" centery="31044" centerz="7" radius="3">
+		<monster name="Necromancer" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32839" centery="31045" centerz="7" radius="3">
+		<monster name="Gozzler" x="-1" y="-2" z="7" spawntime="90" />
+		<monster name="Gozzler" x="2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32825" centery="31046" centerz="7" radius="1">
+		<monster name="Gozzler" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32816" centery="31051" centerz="7" radius="3">
+		<monster name="Gozzler" x="1" y="0" z="7" spawntime="90" />
+		<monster name="Gozzler" x="-2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32853" centery="31052" centerz="7" radius="2">
+		<monster name="Gozzler" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32867" centery="31052" centerz="7" radius="2">
+		<monster name="Gozzler" x="2" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32874" centery="31055" centerz="7" radius="2">
+		<monster name="Necromancer" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32861" centery="31056" centerz="7" radius="2">
+		<monster name="Necromancer" x="-1" y="-1" z="7" spawntime="90" />
+		<monster name="Gozzler" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32868" centery="31062" centerz="7" radius="2">
+		<monster name="Gozzler" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32848" centery="31066" centerz="7" radius="3">
+		<monster name="Gozzler" x="2" y="-2" z="7" spawntime="90" />
+		<monster name="Gozzler" x="-2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32857" centery="31071" centerz="7" radius="2">
+		<monster name="Gozzler" x="-2" y="0" z="7" spawntime="90" />
+		<monster name="Necromancer" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+</monsters>

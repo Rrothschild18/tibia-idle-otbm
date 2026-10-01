@@ -1,0 +1,17 @@
+# Nós sem entrada no grafo de viagem — YALAHAR
+#
+# Gerado por build_travel_fragment.py. Nada aqui entrou no fragmento: são os nós que
+# ninguém consegue alcançar viajando, e o que fazer com cada um.
+
+## poi-without-edge (6)
+POI com coordenada e sem aresta — a placa existe no OTBM, mas o tile dela não
+alcança nenhum outro POI da cidade (ilhado por parede/água, ou a placa está num
+tile intransponível). Abra a coordenada no editor de mapa e mova a placa pra um
+tile caminhável ligado ao resto da cidade.
+
+  YALAHAR-NPC-captain-cookie  (NPC)  x=32804 y=31277 z=6
+  YALAHAR-NPC-karith  (NPC)  x=32818 y=31278 z=5
+  YALAHAR-NPC-mr-west  (NPC)  x=32771 y=31357 z=6
+  YALAHAR-NPC-palimuth  (NPC)  x=32801 y=31223 z=7
+  YALAHAR-NPC-tamerin  (NPC)  x=32659 y=31211 z=8
+  YALAHAR-NPC-tarak-sunken  (NPC)  x=32941 y=31181 z=7

@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="33029" centery="32420" centerz="10" radius="3">
+		<monster name="Ghost" x="1" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33026" centery="32427" centerz="10" radius="3">
+		<monster name="Demon Skeleton" x="0" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33044" centery="32430" centerz="10" radius="1">
+		<monster name="Shadow Pupil" x="-1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33036" centery="32434" centerz="10" radius="3">
+		<monster name="Shadow Pupil" x="3" y="-3" z="10" spawntime="90" />
+		<monster name="Necromancer" x="1" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33038" centery="32449" centerz="10" radius="3">
+		<monster name="Zombie" x="1" y="-1" z="10" spawntime="90" />
+		<monster name="Ghoul" x="0" y="1" z="10" spawntime="90" />
+		<monster name="Demon Skeleton" x="-2" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33043" centery="32455" centerz="10" radius="3">
+		<monster name="Zombie" x="0" y="-3" z="10" spawntime="90" />
+		<monster name="Demon Skeleton" x="3" y="-3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33085" centery="32455" centerz="10" radius="3">
+		<monster name="Demon Skeleton" x="3" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33085" centery="32469" centerz="10" radius="3">
+		<monster name="Cave Rat" x="1" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33092" centery="32469" centerz="10" radius="3">
+		<monster name="Cave Rat" x="-3" y="-3" z="10" spawntime="90" />
+	</monster>
+</monsters>

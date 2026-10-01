@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32654" centery="32590" centerz="7" radius="2">
+		<monster name="Centipede" x="-2" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32640" centery="32592" centerz="7" radius="2">
+		<monster name="Centipede" x="-2" y="-1" z="7" spawntime="90" />
+		<monster name="Centipede" x="-2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32648" centery="32596" centerz="7" radius="2">
+		<monster name="Crocodile" x="-2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32628" centery="32598" centerz="7" radius="2">
+		<monster name="Centipede" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32655" centery="32602" centerz="7" radius="2">
+		<monster name="Cobra" x="-1" y="-2" z="7" spawntime="90" />
+		<monster name="Crocodile" x="-1" y="0" z="7" spawntime="90" />
+		<monster name="Slime" x="-2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32643" centery="32604" centerz="7" radius="2">
+		<monster name="Slime" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32650" centery="32609" centerz="7" radius="2">
+		<monster name="Slime" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32630" centery="32612" centerz="7" radius="2">
+		<monster name="Crocodile" x="0" y="-2" z="7" spawntime="90" />
+		<monster name="Crocodile" x="2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32624" centery="32614" centerz="7" radius="2">
+		<monster name="Crocodile" x="1" y="-1" z="7" spawntime="90" />
+		<monster name="Crocodile" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32659" centery="32615" centerz="7" radius="2">
+		<monster name="Crocodile" x="1" y="-1" z="7" spawntime="90" />
+		<monster name="Crocodile" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32636" centery="32617" centerz="7" radius="2">
+		<monster name="Crocodile" x="-1" y="-1" z="7" spawntime="90" />
+		<monster name="Crocodile" x="2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32628" centery="32621" centerz="7" radius="2">
+		<monster name="Crocodile" x="2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32653" centery="32622" centerz="7" radius="2">
+		<monster name="Snake" x="-2" y="0" z="7" spawntime="90" />
+		<monster name="Crocodile" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32663" centery="32624" centerz="7" radius="2">
+		<monster name="Crocodile" x="2" y="0" z="7" spawntime="90" />
+		<monster name="Snake" x="-1" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32617" centery="32625" centerz="7" radius="2">
+		<monster name="Crocodile" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32634" centery="32625" centerz="7" radius="2">
+		<monster name="Crocodile" x="1" y="-1" z="7" spawntime="90" />
+		<monster name="Crocodile" x="-2" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32626" centery="32630" centerz="7" radius="2">
+		<monster name="Crocodile" x="-2" y="-1" z="7" spawntime="90" />
+		<monster name="Terror Bird" x="1" y="2" z="7" spawntime="90" />
+	</monster>
+</monsters>

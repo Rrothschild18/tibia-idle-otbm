@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32849" centery="32278" centerz="12" radius="4">
+		<monster name="Destroyer" x="1" y="-4" z="12" spawntime="90" />
+		<monster name="Destroyer" x="3" y="-1" z="12" spawntime="90" />
+		<monster name="Destroyer" x="1" y="2" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32872" centery="32287" centerz="12" radius="5">
+		<monster name="Hellfire Fighter" x="-3" y="-5" z="12" spawntime="90" />
+		<monster name="Diabolic Imp" x="1" y="-4" z="12" spawntime="90" />
+		<monster name="Plaguesmith" x="-4" y="-2" z="12" spawntime="90" />
+		<monster name="Diabolic Imp" x="4" y="0" z="12" spawntime="90" />
+		<monster name="Hellfire Fighter" x="-3" y="2" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32860" centery="32288" centerz="12" radius="5">
+		<monster name="Dark Torturer" x="-4" y="-5" z="12" spawntime="90" />
+		<monster name="Dark Torturer" x="2" y="-4" z="12" spawntime="90" />
+		<monster name="Dark Torturer" x="-4" y="1" z="12" spawntime="90" />
+		<monster name="Dark Torturer" x="1" y="3" z="12" spawntime="90" />
+		<monster name="Plaguesmith" x="5" y="3" z="12" spawntime="90" />
+		<monster name="Hellfire Fighter" x="-2" y="4" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32849" centery="32289" centerz="12" radius="4">
+		<monster name="Plaguesmith" x="-2" y="-4" z="12" spawntime="90" />
+		<monster name="Plaguesmith" x="4" y="-3" z="12" spawntime="90" />
+		<monster name="Plaguesmith" x="-1" y="2" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32860" centery="32297" centerz="12" radius="2">
+		<monster name="Hellfire Fighter" x="1" y="-2" z="12" spawntime="90" />
+	</monster>
+</monsters>

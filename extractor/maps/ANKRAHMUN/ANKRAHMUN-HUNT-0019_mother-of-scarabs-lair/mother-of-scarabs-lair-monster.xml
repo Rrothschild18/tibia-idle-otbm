@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="33218" centery="32567" centerz="7" radius="3">
+		<monster name="Dromedary" x="3" y="-2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33239" centery="32567" centerz="7" radius="3">
+		<monster name="Deer" x="1" y="-3" z="7" spawntime="90" />
+		<monster name="Deer" x="-3" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33225" centery="32574" centerz="7" radius="3">
+		<monster name="Dromedary" x="-2" y="-3" z="7" spawntime="90" />
+		<monster name="Hyaena" x="3" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33215" centery="32580" centerz="7" radius="2">
+		<monster name="Sandcrawler" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33208" centery="32592" centerz="7" radius="4">
+		<monster name="Nomad" x="0" y="-2" z="7" spawntime="90" />
+		<monster name="Nomad" x="-1" y="2" z="7" spawntime="90" />
+		<monster name="Nomad" x="-1" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33267" centery="32602" centerz="7" radius="3">
+		<monster name="Dromedary" x="2" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33274" centery="32602" centerz="7" radius="3">
+		<monster name="Nomad" x="2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33274" centery="32609" centerz="7" radius="3">
+		<monster name="Nomad" x="1" y="-3" z="7" spawntime="90" />
+		<monster name="Nomad" x="2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33281" centery="32609" centerz="7" radius="3">
+		<monster name="Dromedary" x="-3" y="2" z="7" spawntime="90" />
+		<monster name="Nomad" x="-1" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33288" centery="32609" centerz="7" radius="3">
+		<monster name="Nomad" x="2" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33278" centery="32616" centerz="7" radius="4">
+		<monster name="Nomad" x="2" y="2" z="7" spawntime="90" />
+	</monster>
+</monsters>

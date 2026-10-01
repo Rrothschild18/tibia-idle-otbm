@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32658" centery="31881" centerz="5" radius="3">
+		<monster name="Dragon" x="-1" y="-1" z="5" spawntime="90" />
+		<monster name="Dragon" x="-2" y="0" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32651" centery="31909" centerz="5" radius="3">
+		<monster name="Dragon" x="3" y="1" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32665" centery="31916" centerz="5" radius="3">
+		<monster name="Dragon" x="-3" y="1" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32658" centery="31909" centerz="6" radius="3">
+		<monster name="Dragon" x="0" y="-1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32663" centery="31927" centerz="6" radius="1">
+		<monster name="Dragon" x="0" y="0" z="6" spawntime="60" />
+	</monster>
+	<monster centerx="32658" centery="31888" centerz="7" radius="3">
+		<monster name="Dragon" x="-1" y="-3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32645" centery="31903" centerz="7" radius="1">
+		<monster name="Dragon" x="0" y="0" z="7" spawntime="60" />
+	</monster>
+</monsters>

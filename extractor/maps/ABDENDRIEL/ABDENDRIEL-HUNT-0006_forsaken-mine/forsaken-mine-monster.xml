@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32665" centery="31713" centerz="7" radius="3">
+		<monster name="Wolf" x="3" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32665" centery="31720" centerz="7" radius="3">
+		<monster name="Wolf" x="0" y="-2" z="7" spawntime="90" />
+		<monster name="Wolf" x="2" y="-2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32670" centery="31727" centerz="7" radius="2">
+		<monster name="White Deer" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32667" centery="31734" centerz="7" radius="2">
+		<monster name="White Deer" x="-2" y="-2" z="7" spawntime="90" />
+		<monster name="White Deer" x="2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32665" centery="31748" centerz="7" radius="3">
+		<monster name="Starving Wolf" x="1" y="-2" z="7" spawntime="60" />
+	</monster>
+	<monster centerx="32664" centery="31756" centerz="7" radius="2">
+		<monster name="White Deer" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32670" centery="31763" centerz="7" radius="2">
+		<monster name="White Deer" x="2" y="1" z="7" spawntime="90" />
+	</monster>
+</monsters>

@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32463" centery="31948" centerz="3" radius="3">
+		<monster name="Minotaur Archer" x="0" y="-2" z="3" spawntime="90" />
+		<monster name="Minotaur Archer" x="-2" y="1" z="3" spawntime="90" />
+		<monster name="Minotaur Archer" x="2" y="1" z="3" spawntime="90" />
+		<monster name="Minotaur Archer" x="0" y="2" z="3" spawntime="90" />
+	</monster>
+	<monster centerx="32462" centery="31960" centerz="3" radius="1">
+		<monster name="Minotaur Archer" x="-1" y="1" z="3" spawntime="90" />
+	</monster>
+	<monster centerx="32468" centery="31960" centerz="3" radius="1">
+		<monster name="Minotaur Archer" x="-1" y="0" z="3" spawntime="90" />
+	</monster>
+	<monster centerx="32464" centery="31964" centerz="3" radius="1">
+		<monster name="Minotaur Archer" x="1" y="-1" z="3" spawntime="90" />
+	</monster>
+	<monster centerx="32468" centery="31964" centerz="3" radius="1">
+		<monster name="Minotaur Mage" x="-1" y="-1" z="3" spawntime="90" />
+	</monster>
+	<monster centerx="32463" centery="31948" centerz="4" radius="1">
+		<monster name="Minotaur Archer" x="-1" y="1" z="4" spawntime="90" />
+	</monster>
+	<monster centerx="32459" centery="31952" centerz="4" radius="1">
+		<monster name="Minotaur Archer" x="1" y="1" z="4" spawntime="90" />
+	</monster>
+	<monster centerx="32465" centery="31952" centerz="4" radius="1">
+		<monster name="Minotaur Guard" x="1" y="1" z="4" spawntime="90" />
+	</monster>
+	<monster centerx="32463" centery="31956" centerz="4" radius="1">
+		<monster name="Minotaur Archer" x="0" y="-1" z="4" spawntime="90" />
+	</monster>
+	<monster centerx="32468" centery="31956" centerz="4" radius="1">
+		<monster name="Minotaur Guard" x="-1" y="-1" z="4" spawntime="90" />
+	</monster>
+	<monster centerx="32457" centery="31957" centerz="4" radius="1">
+		<monster name="Minotaur Archer" x="1" y="-1" z="4" spawntime="90" />
+	</monster>
+	<monster centerx="32463" centery="31961" centerz="4" radius="1">
+		<monster name="Minotaur Archer" x="0" y="1" z="4" spawntime="90" />
+	</monster>
+	<monster centerx="32467" centery="31961" centerz="4" radius="1">
+		<monster name="Minotaur Mage" x="-1" y="1" z="4" spawntime="90" />
+	</monster>
+	<monster centerx="32463" centery="31967" centerz="4" radius="1">
+		<monster name="Minotaur Mage" x="1" y="-1" z="4" spawntime="90" />
+	</monster>
+	<monster centerx="32469" centery="31967" centerz="4" radius="1">
+		<monster name="Minotaur Archer" x="-1" y="0" z="4" spawntime="90" />
+	</monster>
+	<monster centerx="32463" centery="31949" centerz="6" radius="1">
+		<monster name="Minotaur Guard" x="-1" y="1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32459" centery="31952" centerz="6" radius="1">
+		<monster name="Minotaur Guard" x="0" y="1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32461" centery="31956" centerz="6" radius="1">
+		<monster name="Minotaur Archer" x="-1" y="1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32467" centery="31956" centerz="6" radius="1">
+		<monster name="Minotaur Archer" x="-1" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32464" centery="31960" centerz="6" radius="1">
+		<monster name="Minotaur Archer" x="1" y="-1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32466" centery="31943" centerz="7" radius="1">
+		<monster name="Minotaur" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32457" centery="31949" centerz="7" radius="1">
+		<monster name="Minotaur" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32463" centery="31950" centerz="7" radius="1">
+		<monster name="Minotaur Archer" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32460" centery="31954" centerz="7" radius="1">
+		<monster name="Minotaur Guard" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32464" centery="31954" centerz="7" radius="1">
+		<monster name="Minotaur Guard" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32452" centery="31955" centerz="7" radius="1">
+		<monster name="Minotaur" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32464" centery="31958" centerz="7" radius="1">
+		<monster name="Minotaur Archer" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32462" centery="31965" centerz="8" radius="3">
+		<monster name="Minotaur" x="3" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32469" centery="31965" centerz="8" radius="3">
+		<monster name="Minotaur" x="-3" y="-2" z="8" spawntime="90" />
+		<monster name="Minotaur" x="-1" y="2" z="8" spawntime="90" />
+		<monster name="Bat" x="0" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32469" centery="31937" centerz="9" radius="3">
+		<monster name="Minotaur" x="-3" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32455" centery="31944" centerz="9" radius="3">
+		<monster name="Minotaur" x="2" y="0" z="9" spawntime="90" />
+		<monster name="Minotaur Archer" x="-2" y="1" z="9" spawntime="90" />
+	</monster>
+</monsters>

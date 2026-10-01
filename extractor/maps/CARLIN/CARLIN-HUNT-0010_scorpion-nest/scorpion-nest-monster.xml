@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32232" centery="31909" centerz="11" radius="1">
+		<monster name="Scorpion" x="-1" y="-1" z="11" spawntime="60" />
+		<monster name="Scorpion" x="0" y="-1" z="11" spawntime="60" />
+		<monster name="Scorpion" x="0" y="0" z="11" spawntime="60" />
+		<monster name="Scorpion" x="0" y="1" z="11" spawntime="60" />
+		<monster name="Scorpion" x="1" y="1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32217" centery="31910" centerz="11" radius="1">
+		<monster name="Scorpion" x="-1" y="-1" z="11" spawntime="60" />
+		<monster name="Scorpion" x="0" y="0" z="11" spawntime="60" />
+		<monster name="Scorpion" x="1" y="0" z="11" spawntime="60" />
+		<monster name="Scorpion" x="0" y="1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32226" centery="31911" centerz="11" radius="1">
+		<monster name="Scorpion" x="0" y="-1" z="11" spawntime="60" />
+		<monster name="Scorpion" x="-1" y="0" z="11" spawntime="60" />
+		<monster name="Scorpion" x="0" y="0" z="11" spawntime="60" />
+		<monster name="Scorpion" x="1" y="1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32231" centery="31915" centerz="11" radius="1">
+		<monster name="Scorpion" x="0" y="-1" z="11" spawntime="60" />
+		<monster name="Scorpion" x="-1" y="0" z="11" spawntime="60" />
+		<monster name="Scorpion" x="0" y="0" z="11" spawntime="60" />
+		<monster name="Scorpion" x="1" y="1" z="11" spawntime="60" />
+	</monster>
+</monsters>

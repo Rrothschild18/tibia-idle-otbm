@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32497" centery="32042" centerz="14" radius="3">
+		<monster name="Mutated Rat" x="-1" y="-2" z="14" spawntime="90" />
+		<monster name="Earth Elemental" x="-3" y="1" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="32504" centery="32049" centerz="14" radius="3">
+		<monster name="Bog Raider" x="2" y="1" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="32476" centery="32056" centerz="14" radius="3">
+		<monster name="Bog Raider" x="2" y="-1" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="32490" centery="32056" centerz="14" radius="3">
+		<monster name="Bonebeast" x="-2" y="2" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="32490" centery="32063" centerz="14" radius="3">
+		<monster name="Bonebeast" x="-3" y="-3" z="14" spawntime="90" />
+	</monster>
+</monsters>

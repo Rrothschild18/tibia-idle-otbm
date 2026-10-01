@@ -1,0 +1,76 @@
+{
+  "city": "ANKRAHMUN",
+  "area": {
+    "id": 2,
+    "name": "Southern Darama"
+  },
+  "subareas": [
+    {
+      "id": 297,
+      "name": "Ankrahmun City"
+    },
+    {
+      "id": 457,
+      "name": "Southern Darama"
+    },
+    {
+      "id": 81,
+      "name": "Ankrahmun Pharaoh Tombs"
+    },
+    {
+      "id": 83,
+      "name": "Mal'ouquah"
+    },
+    {
+      "id": 84,
+      "name": "Kha'zeel Dragon Lairs"
+    },
+    {
+      "id": 85,
+      "name": "Southern Darama Desert"
+    },
+    {
+      "id": 184,
+      "name": "Southern Terramite Tunnels"
+    },
+    {
+      "id": 354,
+      "name": "Cobra Bastion"
+    }
+  ],
+  "world": {
+    "file": "otservbr.otbm",
+    "bytes": 184777193
+  },
+  "shape": "square",
+  "bounds": {
+    "minX": 32970,
+    "minY": 32483,
+    "maxX": 33430,
+    "maxY": 32943
+  },
+  "columns": 76462,
+  "tiles": 1373250,
+  "tileAreas": 91644,
+  "towns": [
+    {
+      "id": 10,
+      "name": "Ankrahmun",
+      "x": 33194,
+      "y": 32853,
+      "z": 8
+    },
+    {
+      "id": 24,
+      "name": "Cobra Bastion",
+      "x": 33397,
+      "y": 32651,
+      "z": 7
+    }
+  ],
+  "monsterGroups": 1519,
+  "monsterEntries": 4356,
+  "npcGroups": 26,
+  "npcEntries": 26,
+  "houses": 120
+}

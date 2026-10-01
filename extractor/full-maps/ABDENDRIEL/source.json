@@ -1,0 +1,57 @@
+{
+  "city": "ABDENDRIEL",
+  "area": {
+    "id": 1,
+    "name": "Ab'Dendriel"
+  },
+  "subareas": [
+    {
+      "id": 451,
+      "name": "Ab'Dendriel"
+    },
+    {
+      "id": 273,
+      "name": "Ab'Dendriel City"
+    },
+    {
+      "id": 53,
+      "name": "Draconia"
+    },
+    {
+      "id": 54,
+      "name": "Elvenbane"
+    },
+    {
+      "id": 55,
+      "name": "Ab'Dendriel Surroundings"
+    }
+  ],
+  "world": {
+    "file": "otservbr.otbm",
+    "bytes": 184777193
+  },
+  "shape": "square",
+  "bounds": {
+    "minX": 32455,
+    "minY": 31490,
+    "maxX": 32845,
+    "maxY": 31880
+  },
+  "columns": 33928,
+  "tiles": 843662,
+  "tileAreas": 57064,
+  "towns": [
+    {
+      "id": 5,
+      "name": "Ab'Dendriel",
+      "x": 32732,
+      "y": 31634,
+      "z": 7
+    }
+  ],
+  "monsterGroups": 476,
+  "monsterEntries": 781,
+  "npcGroups": 31,
+  "npcEntries": 31,
+  "houses": 55
+}

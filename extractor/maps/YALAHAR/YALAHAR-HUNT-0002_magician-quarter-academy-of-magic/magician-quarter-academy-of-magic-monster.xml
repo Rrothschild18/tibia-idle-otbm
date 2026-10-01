@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32879" centery="31114" centerz="7" radius="1">
+		<monster name="Green Djinn" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32872" centery="31116" centerz="7" radius="1">
+		<monster name="Green Djinn" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32862" centery="31118" centerz="7" radius="2">
+		<monster name="Green Djinn" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32878" centery="31121" centerz="7" radius="1">
+		<monster name="Green Djinn" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32871" centery="31127" centerz="7" radius="1">
+		<monster name="Green Djinn" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32907" centery="31127" centerz="7" radius="1">
+		<monster name="Green Djinn" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32886" centery="31128" centerz="7" radius="1">
+		<monster name="Green Djinn" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32894" centery="31129" centerz="7" radius="1">
+		<monster name="Green Djinn" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32889" centery="31135" centerz="7" radius="1">
+		<monster name="Green Djinn" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32899" centery="31135" centerz="7" radius="1">
+		<monster name="Green Djinn" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32856" centery="31143" centerz="7" radius="3">
+		<monster name="Dark Magician" x="-2" y="-2" z="7" spawntime="90" />
+		<monster name="Dark Magician" x="2" y="-2" z="7" spawntime="90" />
+		<monster name="Dark Magician" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+</monsters>

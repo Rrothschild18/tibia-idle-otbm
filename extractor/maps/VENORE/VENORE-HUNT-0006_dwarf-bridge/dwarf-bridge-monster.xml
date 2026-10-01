@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32644" centery="31972" centerz="8" radius="5">
+		<monster name="Troll" x="2" y="-2" z="8" spawntime="90" />
+		<monster name="Troll Champion" x="-1" y="-1" z="8" spawntime="90" />
+		<monster name="Troll Champion" x="4" y="1" z="8" spawntime="90" />
+		<monster name="Troll" x="-3" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32656" centery="31977" centerz="8" radius="4">
+		<monster name="Troll Champion" x="2" y="-2" z="8" spawntime="90" />
+		<monster name="Troll Champion" x="2" y="2" z="8" spawntime="90" />
+		<monster name="Troll" x="-1" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32643" centery="31993" centerz="8" radius="5">
+		<monster name="Troll" x="-1" y="-5" z="8" spawntime="90" />
+		<monster name="Troll Champion" x="-1" y="-3" z="8" spawntime="90" />
+		<monster name="Troll" x="-2" y="-1" z="8" spawntime="90" />
+		<monster name="Troll Champion" x="2" y="0" z="8" spawntime="90" />
+		<monster name="Troll" x="2" y="1" z="8" spawntime="90" />
+		<monster name="Troll" x="1" y="4" z="8" spawntime="90" />
+	</monster>
+</monsters>

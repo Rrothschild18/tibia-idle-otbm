@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="33193" centery="31631" centerz="13" radius="1">
+		<monster name="Priestess" x="-1" y="-1" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33193" centery="31634" centerz="13" radius="1">
+		<monster name="Minotaur Guard" x="1" y="0" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33192" centery="31639" centerz="13" radius="1">
+		<monster name="Minotaur Guard" x="0" y="-1" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33183" centery="31642" centerz="13" radius="1">
+		<monster name="Minotaur Guard" x="0" y="1" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33187" centery="31642" centerz="13" radius="1">
+		<monster name="Minotaur Guard" x="1" y="-1" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33192" centery="31642" centerz="13" radius="1">
+		<monster name="Monk" x="0" y="-1" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33192" centery="31650" centerz="13" radius="1">
+		<monster name="Monk" x="-1" y="-1" z="13" spawntime="90" />
+	</monster>
+</monsters>

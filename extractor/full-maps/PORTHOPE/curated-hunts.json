@@ -1,0 +1,1547 @@
+{
+  "city": "PORTHOPE",
+  "area": {
+    "id": 19,
+    "name": "Tiquanda"
+  },
+  "hunts": [
+    {
+      "id": "PORTHOPE-HUNT-0001",
+      "name": "Port Hope Swamp Troll Den",
+      "slug": "port-hope-swamp-troll-den",
+      "folder": "PORTHOPE-HUNT-0001_port-hope-swamp-troll-den",
+      "floors": [
+        8
+      ],
+      "cropFloors": [
+        8
+      ],
+      "candidateIds": [
+        "PORTHOPE-C08-004"
+      ],
+      "creatures": 30,
+      "extent": {
+        "minX": 32649,
+        "minY": 32701,
+        "maxX": 32677,
+        "maxY": 32746,
+        "centerX": 32663,
+        "centerY": 32723
+      },
+      "subareaId": 92,
+      "entrance": {
+        "x": 32662,
+        "y": 32740,
+        "z": 8
+      },
+      "walkTilesFromTemple": 72,
+      "tiles": 3301,
+      "spawns": 30
+    },
+    {
+      "id": "PORTHOPE-HUNT-0002",
+      "name": "Port Hope Swamp Trolls",
+      "slug": "port-hope-swamp-trolls",
+      "folder": "PORTHOPE-HUNT-0002_port-hope-swamp-trolls",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "PORTHOPE-C07-002",
+        "PORTHOPE-C07-004",
+        "PORTHOPE-C07-005",
+        "PORTHOPE-C07-009",
+        "PORTHOPE-C07-014",
+        "PORTHOPE-C07-015",
+        "PORTHOPE-C07-021",
+        "PORTHOPE-C07-037",
+        "PORTHOPE-C07-039",
+        "PORTHOPE-C07-041",
+        "PORTHOPE-C07-043",
+        "PORTHOPE-C07-046",
+        "PORTHOPE-C07-051",
+        "PORTHOPE-C07-053"
+      ],
+      "creatures": 410,
+      "extent": {
+        "minX": 32547,
+        "minY": 32486,
+        "maxX": 32932,
+        "maxY": 32753,
+        "centerX": 32739,
+        "centerY": 32619
+      },
+      "subareaId": 92,
+      "entrance": {
+        "x": 32574,
+        "y": 32737,
+        "z": 7
+      },
+      "walkTilesFromTemple": 26,
+      "tiles": 119720,
+      "spawns": 410
+    },
+    {
+      "id": "PORTHOPE-HUNT-0003",
+      "name": "Nomad Cave",
+      "slug": "nomad-cave",
+      "folder": "PORTHOPE-HUNT-0003_nomad-cave",
+      "floors": [
+        8
+      ],
+      "cropFloors": [
+        8
+      ],
+      "candidateIds": [
+        "PORTHOPE-C08-017",
+        "PORTHOPE-C08-050"
+      ],
+      "creatures": 17,
+      "extent": {
+        "minX": 33182,
+        "minY": 32519,
+        "maxX": 33216,
+        "maxY": 32544,
+        "centerX": 33199,
+        "centerY": 32531
+      },
+      "subareaId": 107,
+      "entrance": {
+        "x": 33182,
+        "y": 32532,
+        "z": 8
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 2950,
+      "spawns": 17
+    },
+    {
+      "id": "PORTHOPE-HUNT-0004",
+      "name": "Drefia",
+      "slug": "drefia",
+      "folder": "PORTHOPE-HUNT-0004_drefia",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "PORTHOPE-C07-003"
+      ],
+      "creatures": 137,
+      "extent": {
+        "minX": 32921,
+        "minY": 32482,
+        "maxX": 33023,
+        "maxY": 32593,
+        "centerX": 32972,
+        "centerY": 32537
+      },
+      "subareaId": 90,
+      "entrance": {
+        "x": 33013,
+        "y": 32560,
+        "z": 7
+      },
+      "walkTilesFromTemple": 830,
+      "tiles": 17272,
+      "spawns": 137
+    },
+    {
+      "id": "PORTHOPE-HUNT-0005",
+      "name": "Larva Caves",
+      "slug": "larva-caves",
+      "folder": "PORTHOPE-HUNT-0005_larva-caves",
+      "floors": [
+        9,
+        10,
+        11
+      ],
+      "cropFloors": [
+        9,
+        10,
+        11
+      ],
+      "candidateIds": [
+        "PORTHOPE-C09-016",
+        "PORTHOPE-C09-020",
+        "PORTHOPE-C09-028",
+        "PORTHOPE-C09-037",
+        "PORTHOPE-C09-038",
+        "PORTHOPE-C09-039",
+        "PORTHOPE-C09-054",
+        "PORTHOPE-C09-062",
+        "PORTHOPE-C09-063",
+        "PORTHOPE-C09-064",
+        "PORTHOPE-C09-065",
+        "PORTHOPE-C09-066",
+        "PORTHOPE-C09-076",
+        "PORTHOPE-C10-005",
+        "PORTHOPE-C10-019",
+        "PORTHOPE-C10-039",
+        "PORTHOPE-C10-049",
+        "PORTHOPE-C11-007"
+      ],
+      "creatures": 171,
+      "extent": {
+        "minX": 33019,
+        "minY": 32509,
+        "maxX": 33195,
+        "maxY": 32802,
+        "centerX": 33107,
+        "centerY": 32655
+      },
+      "subareaId": 107,
+      "entrance": {
+        "x": 33066,
+        "y": 32725,
+        "z": 9
+      },
+      "walkTilesFromTemple": 653,
+      "tiles": 168468,
+      "spawns": 171
+    },
+    {
+      "id": "PORTHOPE-HUNT-0006",
+      "name": "Bandit Caves",
+      "slug": "bandit-caves",
+      "folder": "PORTHOPE-HUNT-0006_bandit-caves",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "PORTHOPE-C07-009",
+        "PORTHOPE-C07-046"
+      ],
+      "creatures": 32,
+      "extent": {
+        "minX": 32547,
+        "minY": 32683,
+        "maxX": 32609,
+        "maxY": 32753,
+        "centerX": 32578,
+        "centerY": 32718
+      },
+      "subareaId": 92,
+      "entrance": {
+        "x": 32574,
+        "y": 32737,
+        "z": 7
+      },
+      "walkTilesFromTemple": 26,
+      "tiles": 8265,
+      "spawns": 32
+    },
+    {
+      "id": "PORTHOPE-HUNT-0007",
+      "name": "Chakoya Iceberg",
+      "slug": "chakoya-iceberg",
+      "folder": "PORTHOPE-HUNT-0007_chakoya-iceberg",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "PORTHOPE-C07-015",
+        "PORTHOPE-C07-021"
+      ],
+      "creatures": 28,
+      "extent": {
+        "minX": 32618,
+        "minY": 32590,
+        "maxX": 32665,
+        "maxY": 32632,
+        "centerX": 32641,
+        "centerY": 32611
+      },
+      "subareaId": 92,
+      "entrance": {
+        "x": 32627,
+        "y": 32632,
+        "z": 7
+      },
+      "walkTilesFromTemple": 129,
+      "tiles": 4824,
+      "spawns": 28
+    },
+    {
+      "id": "PORTHOPE-HUNT-0008",
+      "name": "Lake Equivocolao",
+      "slug": "lake-equivocolao",
+      "folder": "PORTHOPE-HUNT-0008_lake-equivocolao",
+      "floors": [
+        8
+      ],
+      "cropFloors": [
+        8
+      ],
+      "candidateIds": [
+        "PORTHOPE-C08-033"
+      ],
+      "creatures": 5,
+      "extent": {
+        "minX": 32607,
+        "minY": 32663,
+        "maxX": 32616,
+        "maxY": 32680,
+        "centerX": 32611,
+        "centerY": 32671
+      },
+      "subareaId": 92,
+      "entrance": {
+        "x": 32607,
+        "y": 32680,
+        "z": 8
+      },
+      "walkTilesFromTemple": 79,
+      "tiles": 1424,
+      "spawns": 5
+    },
+    {
+      "id": "PORTHOPE-HUNT-0009",
+      "name": "Tiquanda/Reptile and Crustacean Caves",
+      "slug": "tiquanda-reptile-and-crustacean-caves",
+      "folder": "PORTHOPE-HUNT-0009_tiquanda-reptile-and-crustacean-caves",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "PORTHOPE-C07-009",
+        "PORTHOPE-C07-017",
+        "PORTHOPE-C07-046"
+      ],
+      "creatures": 46,
+      "extent": {
+        "minX": 32547,
+        "minY": 32683,
+        "maxX": 32644,
+        "maxY": 32753,
+        "centerX": 32595,
+        "centerY": 32718
+      },
+      "subareaId": 92,
+      "entrance": {
+        "x": 32574,
+        "y": 32737,
+        "z": 7
+      },
+      "walkTilesFromTemple": 26,
+      "tiles": 11590,
+      "spawns": 46
+    },
+    {
+      "id": "PORTHOPE-HUNT-0010",
+      "name": "Tiquanda/Tarantula Caves",
+      "slug": "tiquanda-tarantula-caves",
+      "folder": "PORTHOPE-HUNT-0010_tiquanda-tarantula-caves",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "PORTHOPE-C07-001",
+        "PORTHOPE-C07-002",
+        "PORTHOPE-C07-004",
+        "PORTHOPE-C07-008",
+        "PORTHOPE-C07-012",
+        "PORTHOPE-C07-014"
+      ],
+      "creatures": 700,
+      "extent": {
+        "minX": 32674,
+        "minY": 32486,
+        "maxX": 33008,
+        "maxY": 32894,
+        "centerX": 32841,
+        "centerY": 32690
+      },
+      "subareaId": 92,
+      "entrance": {
+        "x": 32700,
+        "y": 32639,
+        "z": 7
+      },
+      "walkTilesFromTemple": 127,
+      "tiles": 155446,
+      "spawns": 700
+    },
+    {
+      "id": "PORTHOPE-HUNT-0011",
+      "name": "Tiquanda/Trapwood",
+      "slug": "tiquanda-trapwood",
+      "folder": "PORTHOPE-HUNT-0011_tiquanda-trapwood",
+      "floors": [
+        8
+      ],
+      "cropFloors": [
+        8
+      ],
+      "candidateIds": [
+        "PORTHOPE-C08-001",
+        "PORTHOPE-C08-011",
+        "PORTHOPE-C08-018",
+        "PORTHOPE-C08-034",
+        "PORTHOPE-C08-056",
+        "PORTHOPE-C08-058"
+      ],
+      "creatures": 251,
+      "extent": {
+        "minX": 32595,
+        "minY": 32831,
+        "maxX": 32779,
+        "maxY": 32942,
+        "centerX": 32687,
+        "centerY": 32886
+      },
+      "subareaId": 92,
+      "entrance": {
+        "x": 32630,
+        "y": 32840,
+        "z": 8
+      },
+      "walkTilesFromTemple": 105,
+      "tiles": 24657,
+      "spawns": 251
+    },
+    {
+      "id": "PORTHOPE-HUNT-0012",
+      "name": "Northern Terramite Tunnels",
+      "slug": "northern-terramite-tunnels",
+      "folder": "PORTHOPE-HUNT-0012_northern-terramite-tunnels",
+      "floors": [
+        8
+      ],
+      "cropFloors": [
+        8
+      ],
+      "candidateIds": [
+        "PORTHOPE-C08-028"
+      ],
+      "creatures": 8,
+      "extent": {
+        "minX": 33095,
+        "minY": 32488,
+        "maxX": 33111,
+        "maxY": 32502,
+        "centerX": 33103,
+        "centerY": 32495
+      },
+      "subareaId": 107,
+      "entrance": {
+        "x": 33111,
+        "y": 32491,
+        "z": 8
+      },
+      "walkTilesFromTemple": 800,
+      "tiles": 1599,
+      "spawns": 8
+    },
+    {
+      "id": "PORTHOPE-HUNT-0013",
+      "name": "Southern Terramite Tunnels",
+      "slug": "southern-terramite-tunnels",
+      "folder": "PORTHOPE-HUNT-0013_southern-terramite-tunnels",
+      "floors": [
+        8
+      ],
+      "cropFloors": [
+        8
+      ],
+      "candidateIds": [
+        "PORTHOPE-C08-012",
+        "PORTHOPE-C08-039",
+        "PORTHOPE-C08-049",
+        "PORTHOPE-C08-068"
+      ],
+      "creatures": 30,
+      "extent": {
+        "minX": 32978,
+        "minY": 32681,
+        "maxX": 33088,
+        "maxY": 32706,
+        "centerX": 33033,
+        "centerY": 32693
+      },
+      "subareaId": null,
+      "entrance": {
+        "x": 32978,
+        "y": 32686,
+        "z": 8
+      },
+      "walkTilesFromTemple": 419,
+      "tiles": 6140,
+      "spawns": 30
+    },
+    {
+      "id": "PORTHOPE-HUNT-0014",
+      "name": "Banuta",
+      "slug": "banuta",
+      "folder": "PORTHOPE-HUNT-0014_banuta",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "PORTHOPE-C07-002",
+        "PORTHOPE-C07-004",
+        "PORTHOPE-C07-005",
+        "PORTHOPE-C07-014",
+        "PORTHOPE-C07-037",
+        "PORTHOPE-C07-039",
+        "PORTHOPE-C07-041",
+        "PORTHOPE-C07-043",
+        "PORTHOPE-C07-051",
+        "PORTHOPE-C07-053"
+      ],
+      "creatures": 350,
+      "extent": {
+        "minX": 32670,
+        "minY": 32486,
+        "maxX": 32932,
+        "maxY": 32720,
+        "centerX": 32801,
+        "centerY": 32603
+      },
+      "subareaId": 86,
+      "entrance": {
+        "x": 32700,
+        "y": 32639,
+        "z": 7
+      },
+      "walkTilesFromTemple": 127,
+      "tiles": 74333,
+      "spawns": 350
+    },
+    {
+      "id": "PORTHOPE-HUNT-0015",
+      "name": "Darama Terramite Cave",
+      "slug": "darama-terramite-cave",
+      "folder": "PORTHOPE-HUNT-0015_darama-terramite-cave",
+      "floors": [
+        7,
+        8
+      ],
+      "cropFloors": [
+        7,
+        8
+      ],
+      "candidateIds": [
+        "PORTHOPE-C07-001",
+        "PORTHOPE-C07-002",
+        "PORTHOPE-C07-004",
+        "PORTHOPE-C07-006",
+        "PORTHOPE-C07-010",
+        "PORTHOPE-C07-011",
+        "PORTHOPE-C07-023",
+        "PORTHOPE-C07-024",
+        "PORTHOPE-C07-044",
+        "PORTHOPE-C08-012",
+        "PORTHOPE-C08-039",
+        "PORTHOPE-C08-049",
+        "PORTHOPE-C08-068"
+      ],
+      "creatures": 785,
+      "extent": {
+        "minX": 32674,
+        "minY": 32486,
+        "maxX": 33088,
+        "maxY": 32894,
+        "centerX": 32881,
+        "centerY": 32690
+      },
+      "subareaId": 107,
+      "entrance": {
+        "x": 32700,
+        "y": 32639,
+        "z": 7
+      },
+      "walkTilesFromTemple": 127,
+      "tiles": 335803,
+      "spawns": 785
+    },
+    {
+      "id": "PORTHOPE-HUNT-0016",
+      "name": "Dworc Camp",
+      "slug": "dworc-camp",
+      "folder": "PORTHOPE-HUNT-0016_dworc-camp",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "PORTHOPE-C07-001",
+        "PORTHOPE-C07-002",
+        "PORTHOPE-C07-004",
+        "PORTHOPE-C07-006",
+        "PORTHOPE-C07-010",
+        "PORTHOPE-C07-011",
+        "PORTHOPE-C07-023",
+        "PORTHOPE-C07-024",
+        "PORTHOPE-C07-044"
+      ],
+      "creatures": 755,
+      "extent": {
+        "minX": 32674,
+        "minY": 32486,
+        "maxX": 33008,
+        "maxY": 32894,
+        "centerX": 32841,
+        "centerY": 32690
+      },
+      "subareaId": 92,
+      "entrance": {
+        "x": 32700,
+        "y": 32639,
+        "z": 7
+      },
+      "walkTilesFromTemple": 127,
+      "tiles": 155446,
+      "spawns": 755
+    },
+    {
+      "id": "PORTHOPE-HUNT-0017",
+      "name": "Tarantula Caves",
+      "slug": "tarantula-caves",
+      "folder": "PORTHOPE-HUNT-0017_tarantula-caves",
+      "floors": [
+        9
+      ],
+      "cropFloors": [
+        9
+      ],
+      "candidateIds": [
+        "PORTHOPE-C09-004",
+        "PORTHOPE-C09-071"
+      ],
+      "creatures": 42,
+      "extent": {
+        "minX": 32701,
+        "minY": 32792,
+        "maxX": 32777,
+        "maxY": 32844,
+        "centerX": 32739,
+        "centerY": 32818
+      },
+      "subareaId": 92,
+      "entrance": {
+        "x": 32701,
+        "y": 32792,
+        "z": 9
+      },
+      "walkTilesFromTemple": 210,
+      "tiles": 7161,
+      "spawns": 42
+    },
+    {
+      "id": "PORTHOPE-HUNT-0018",
+      "name": "Tiquanda Laboratory",
+      "slug": "tiquanda-laboratory",
+      "folder": "PORTHOPE-HUNT-0018_tiquanda-laboratory",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "PORTHOPE-C07-002",
+        "PORTHOPE-C07-003",
+        "PORTHOPE-C07-005",
+        "PORTHOPE-C07-007",
+        "PORTHOPE-C07-020",
+        "PORTHOPE-C07-026",
+        "PORTHOPE-C07-030",
+        "PORTHOPE-C07-032",
+        "PORTHOPE-C07-035"
+      ],
+      "creatures": 445,
+      "extent": {
+        "minX": 32674,
+        "minY": 32482,
+        "maxX": 33023,
+        "maxY": 32640,
+        "centerX": 32848,
+        "centerY": 32561
+      },
+      "subareaId": 86,
+      "entrance": {
+        "x": 32700,
+        "y": 32639,
+        "z": 7
+      },
+      "walkTilesFromTemple": 127,
+      "tiles": 68442,
+      "spawns": 445
+    },
+    {
+      "id": "PORTHOPE-HUNT-0019",
+      "name": "Tiquanda",
+      "slug": "tiquanda",
+      "folder": "PORTHOPE-HUNT-0019_tiquanda",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "PORTHOPE-C07-001",
+        "PORTHOPE-C07-002",
+        "PORTHOPE-C07-004",
+        "PORTHOPE-C07-008",
+        "PORTHOPE-C07-014"
+      ],
+      "creatures": 681,
+      "extent": {
+        "minX": 32674,
+        "minY": 32486,
+        "maxX": 33008,
+        "maxY": 32894,
+        "centerX": 32841,
+        "centerY": 32690
+      },
+      "subareaId": 92,
+      "entrance": {
+        "x": 32700,
+        "y": 32639,
+        "z": 7
+      },
+      "walkTilesFromTemple": 127,
+      "tiles": 155446,
+      "spawns": 681
+    },
+    {
+      "id": "PORTHOPE-HUNT-0020",
+      "name": "Dragon Lair (Kha'zeel)",
+      "slug": "dragon-lair-kha-zeel",
+      "folder": "PORTHOPE-HUNT-0020_dragon-lair-kha-zeel",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "PORTHOPE-C07-001",
+        "PORTHOPE-C07-002",
+        "PORTHOPE-C07-003",
+        "PORTHOPE-C07-004",
+        "PORTHOPE-C07-005",
+        "PORTHOPE-C07-006",
+        "PORTHOPE-C07-007",
+        "PORTHOPE-C07-010",
+        "PORTHOPE-C07-011",
+        "PORTHOPE-C07-020",
+        "PORTHOPE-C07-023",
+        "PORTHOPE-C07-024",
+        "PORTHOPE-C07-026",
+        "PORTHOPE-C07-030",
+        "PORTHOPE-C07-032",
+        "PORTHOPE-C07-035",
+        "PORTHOPE-C07-044"
+      ],
+      "creatures": 1020,
+      "extent": {
+        "minX": 32674,
+        "minY": 32482,
+        "maxX": 33023,
+        "maxY": 32894,
+        "centerX": 32848,
+        "centerY": 32688
+      },
+      "subareaId": 92,
+      "entrance": {
+        "x": 32700,
+        "y": 32639,
+        "z": 7
+      },
+      "walkTilesFromTemple": 127,
+      "tiles": 163437,
+      "spawns": 1020
+    },
+    {
+      "id": "PORTHOPE-HUNT-0021",
+      "name": "Port Hope Corym Dungeons",
+      "slug": "port-hope-corym-dungeons",
+      "folder": "PORTHOPE-HUNT-0021_port-hope-corym-dungeons",
+      "floors": [
+        8
+      ],
+      "cropFloors": [
+        8
+      ],
+      "candidateIds": [
+        "PORTHOPE-C08-001",
+        "PORTHOPE-C08-018",
+        "PORTHOPE-C08-055"
+      ],
+      "creatures": 225,
+      "extent": {
+        "minX": 32595,
+        "minY": 32812,
+        "maxX": 32779,
+        "maxY": 32937,
+        "centerX": 32687,
+        "centerY": 32874
+      },
+      "subareaId": 92,
+      "entrance": {
+        "x": 32630,
+        "y": 32840,
+        "z": 8
+      },
+      "walkTilesFromTemple": 105,
+      "tiles": 28002,
+      "spawns": 225
+    },
+    {
+      "id": "PORTHOPE-HUNT-0022",
+      "name": "Mal'ouquah",
+      "slug": "mal-ouquah",
+      "folder": "PORTHOPE-HUNT-0022_mal-ouquah",
+      "floors": [
+        6,
+        7
+      ],
+      "cropFloors": [
+        6,
+        7
+      ],
+      "candidateIds": [
+        "PORTHOPE-C06-005",
+        "PORTHOPE-C07-001",
+        "PORTHOPE-C07-006"
+      ],
+      "creatures": 434,
+      "extent": {
+        "minX": 32862,
+        "minY": 32617,
+        "maxX": 33077,
+        "maxY": 32894,
+        "centerX": 32969,
+        "centerY": 32755
+      },
+      "subareaId": 107,
+      "entrance": {
+        "x": 32890,
+        "y": 32667,
+        "z": 7
+      },
+      "walkTilesFromTemple": 321,
+      "tiles": 95107,
+      "spawns": 434
+    },
+    {
+      "id": "PORTHOPE-HUNT-0023",
+      "name": "Tiquanda Corym Cave",
+      "slug": "tiquanda-corym-cave",
+      "folder": "PORTHOPE-HUNT-0023_tiquanda-corym-cave",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "PORTHOPE-C07-013",
+        "PORTHOPE-C07-025",
+        "PORTHOPE-C07-048"
+      ],
+      "creatures": 30,
+      "extent": {
+        "minX": 32582,
+        "minY": 32801,
+        "maxX": 32657,
+        "maxY": 32853,
+        "centerX": 32619,
+        "centerY": 32827
+      },
+      "subareaId": 92,
+      "entrance": {
+        "x": 32594,
+        "y": 32801,
+        "z": 7
+      },
+      "walkTilesFromTemple": 64,
+      "tiles": 7700,
+      "spawns": 30
+    },
+    {
+      "id": "PORTHOPE-HUNT-0024",
+      "name": "Tiquanda/Water Elemental Cave",
+      "slug": "tiquanda-water-elemental-cave",
+      "folder": "PORTHOPE-HUNT-0024_tiquanda-water-elemental-cave",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "PORTHOPE-C07-045"
+      ],
+      "creatures": 3,
+      "extent": {
+        "minX": 32544,
+        "minY": 32854,
+        "maxX": 32549,
+        "maxY": 32858,
+        "centerX": 32546,
+        "centerY": 32856
+      },
+      "subareaId": 92,
+      "entrance": {
+        "x": 32546,
+        "y": 32854,
+        "z": 7
+      },
+      "walkTilesFromTemple": 115,
+      "tiles": 870,
+      "spawns": 3
+    },
+    {
+      "id": "PORTHOPE-HUNT-0025",
+      "name": "Water Elemental Dungeon",
+      "slug": "water-elemental-dungeon",
+      "folder": "PORTHOPE-HUNT-0025_water-elemental-dungeon",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "PORTHOPE-C07-038"
+      ],
+      "creatures": 4,
+      "extent": {
+        "minX": 32682,
+        "minY": 32953,
+        "maxX": 32685,
+        "maxY": 32966,
+        "centerX": 32683,
+        "centerY": 32959
+      },
+      "subareaId": 92,
+      "entrance": {
+        "x": 32682,
+        "y": 32953,
+        "z": 7
+      },
+      "walkTilesFromTemple": 214,
+      "tiles": 994,
+      "spawns": 4
+    },
+    {
+      "id": "PORTHOPE-HUNT-0026",
+      "name": "Deeper Drefia",
+      "slug": "deeper-drefia",
+      "folder": "PORTHOPE-HUNT-0026_deeper-drefia",
+      "floors": [
+        10
+      ],
+      "cropFloors": [
+        10
+      ],
+      "candidateIds": [
+        "PORTHOPE-C10-042",
+        "PORTHOPE-C10-043",
+        "PORTHOPE-C10-051"
+      ],
+      "creatures": 13,
+      "extent": {
+        "minX": 33026,
+        "minY": 32422,
+        "maxX": 33089,
+        "maxY": 32468,
+        "centerX": 33057,
+        "centerY": 32445
+      },
+      "subareaId": 107,
+      "entrance": {
+        "x": 33089,
+        "y": 32466,
+        "z": 10
+      },
+      "walkTilesFromTemple": 872,
+      "tiles": 6234,
+      "spawns": 13
+    },
+    {
+      "id": "PORTHOPE-HUNT-0027",
+      "name": "Kha'zeel Scarab Lair",
+      "slug": "kha-zeel-scarab-lair",
+      "folder": "PORTHOPE-HUNT-0027_kha-zeel-scarab-lair",
+      "floors": [
+        9
+      ],
+      "cropFloors": [
+        9
+      ],
+      "candidateIds": [
+        "PORTHOPE-C09-023"
+      ],
+      "creatures": 12,
+      "extent": {
+        "minX": 33044,
+        "minY": 32436,
+        "maxX": 33069,
+        "maxY": 32457,
+        "centerX": 33056,
+        "centerY": 32446
+      },
+      "subareaId": 107,
+      "entrance": {
+        "x": 33053,
+        "y": 32444,
+        "z": 9
+      },
+      "walkTilesFromTemple": 870,
+      "tiles": 2291,
+      "spawns": 12
+    },
+    {
+      "id": "PORTHOPE-HUNT-0028",
+      "name": "Spider Caves",
+      "slug": "spider-caves",
+      "folder": "PORTHOPE-HUNT-0028_spider-caves",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "PORTHOPE-C07-001",
+        "PORTHOPE-C07-010",
+        "PORTHOPE-C07-023",
+        "PORTHOPE-C07-024",
+        "PORTHOPE-C07-031",
+        "PORTHOPE-C07-044"
+      ],
+      "creatures": 430,
+      "extent": {
+        "minX": 32840,
+        "minY": 32660,
+        "maxX": 33008,
+        "maxY": 32894,
+        "centerX": 32924,
+        "centerY": 32777
+      },
+      "subareaId": 92,
+      "entrance": {
+        "x": 32840,
+        "y": 32872,
+        "z": 7
+      },
+      "walkTilesFromTemple": 261,
+      "tiles": 49986,
+      "spawns": 430
+    },
+    {
+      "id": "PORTHOPE-HUNT-0029",
+      "name": "Energy Elemental Lair",
+      "slug": "energy-elemental-lair",
+      "folder": "PORTHOPE-HUNT-0029_energy-elemental-lair",
+      "floors": [
+        8
+      ],
+      "cropFloors": [
+        8
+      ],
+      "candidateIds": [
+        "PORTHOPE-C08-017"
+      ],
+      "creatures": 13,
+      "extent": {
+        "minX": 33182,
+        "minY": 32532,
+        "maxX": 33215,
+        "maxY": 32544,
+        "centerX": 33198,
+        "centerY": 32538
+      },
+      "subareaId": 107,
+      "entrance": {
+        "x": 33182,
+        "y": 32532,
+        "z": 8
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 2146,
+      "spawns": 13
+    },
+    {
+      "id": "PORTHOPE-HUNT-0030",
+      "name": "Deeper Banuta",
+      "slug": "deeper-banuta",
+      "folder": "PORTHOPE-HUNT-0030_deeper-banuta",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "PORTHOPE-C07-001",
+        "PORTHOPE-C07-002",
+        "PORTHOPE-C07-004",
+        "PORTHOPE-C07-006",
+        "PORTHOPE-C07-008",
+        "PORTHOPE-C07-010",
+        "PORTHOPE-C07-011",
+        "PORTHOPE-C07-014",
+        "PORTHOPE-C07-023",
+        "PORTHOPE-C07-024",
+        "PORTHOPE-C07-044"
+      ],
+      "creatures": 803,
+      "extent": {
+        "minX": 32674,
+        "minY": 32486,
+        "maxX": 33008,
+        "maxY": 32894,
+        "centerX": 32841,
+        "centerY": 32690
+      },
+      "subareaId": 92,
+      "entrance": {
+        "x": 32700,
+        "y": 32639,
+        "z": 7
+      },
+      "walkTilesFromTemple": 127,
+      "tiles": 155446,
+      "spawns": 803
+    },
+    {
+      "id": "PORTHOPE-HUNT-0031",
+      "name": "Cosmic Chamber",
+      "slug": "cosmic-chamber",
+      "folder": "PORTHOPE-HUNT-0031_cosmic-chamber",
+      "floors": [
+        13
+      ],
+      "cropFloors": [
+        13
+      ],
+      "candidateIds": [
+        "PORTHOPE-C13-001",
+        "PORTHOPE-C13-005",
+        "PORTHOPE-C13-026"
+      ],
+      "creatures": 123,
+      "extent": {
+        "minX": 32758,
+        "minY": 32818,
+        "maxX": 32867,
+        "maxY": 32930,
+        "centerX": 32812,
+        "centerY": 32874
+      },
+      "subareaId": 92,
+      "entrance": {
+        "x": 32842,
+        "y": 32825,
+        "z": 13
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 14496,
+      "spawns": 123
+    },
+    {
+      "id": "PORTHOPE-HUNT-0032",
+      "name": "Astral Shaper Ruins",
+      "slug": "astral-shaper-ruins",
+      "folder": "PORTHOPE-HUNT-0032_astral-shaper-ruins",
+      "floors": [
+        14
+      ],
+      "cropFloors": [
+        14
+      ],
+      "candidateIds": [
+        "PORTHOPE-C14-001",
+        "PORTHOPE-C14-003",
+        "PORTHOPE-C14-011",
+        "PORTHOPE-C14-032",
+        "PORTHOPE-C14-033",
+        "PORTHOPE-C14-034",
+        "PORTHOPE-C14-040"
+      ],
+      "creatures": 130,
+      "extent": {
+        "minX": 32763,
+        "minY": 32690,
+        "maxX": 32886,
+        "maxY": 32796,
+        "centerX": 32824,
+        "centerY": 32743
+      },
+      "subareaId": 92,
+      "entrance": {
+        "x": 32839,
+        "y": 32736,
+        "z": 14
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 17174,
+      "spawns": 130
+    },
+    {
+      "id": "PORTHOPE-HUNT-0033",
+      "name": "Kha'zeel Hydra Falls",
+      "slug": "kha-zeel-hydra-falls",
+      "folder": "PORTHOPE-HUNT-0033_kha-zeel-hydra-falls",
+      "floors": [
+        6
+      ],
+      "cropFloors": [
+        6
+      ],
+      "candidateIds": [
+        "PORTHOPE-C06-018"
+      ],
+      "creatures": 3,
+      "extent": {
+        "minX": 32999,
+        "minY": 32630,
+        "maxX": 33001,
+        "maxY": 32632,
+        "centerX": 33000,
+        "centerY": 32631
+      },
+      "subareaId": 107,
+      "entrance": {
+        "x": 32999,
+        "y": 32630,
+        "z": 6
+      },
+      "walkTilesFromTemple": 453,
+      "tiles": 729,
+      "spawns": 3
+    },
+    {
+      "id": "PORTHOPE-HUNT-0034",
+      "name": "The First Dragon's Lair",
+      "slug": "the-first-dragon-s-lair",
+      "folder": "PORTHOPE-HUNT-0034_the-first-dragon-s-lair",
+      "floors": [
+        4
+      ],
+      "cropFloors": [
+        4
+      ],
+      "candidateIds": [
+        "PORTHOPE-C04-005"
+      ],
+      "creatures": 4,
+      "extent": {
+        "minX": 33033,
+        "minY": 32772,
+        "maxX": 33038,
+        "maxY": 32785,
+        "centerX": 33035,
+        "centerY": 32778
+      },
+      "subareaId": 107,
+      "entrance": {
+        "x": 33033,
+        "y": 32783,
+        "z": 4
+      },
+      "walkTilesFromTemple": 526,
+      "tiles": 742,
+      "spawns": 4
+    },
+    {
+      "id": "PORTHOPE-HUNT-0035",
+      "name": "Drefia Spirit Grounds",
+      "slug": "drefia-spirit-grounds",
+      "folder": "PORTHOPE-HUNT-0035_drefia-spirit-grounds",
+      "floors": [
+        12
+      ],
+      "cropFloors": [
+        12
+      ],
+      "candidateIds": [
+        "PORTHOPE-C12-018",
+        "PORTHOPE-C12-041"
+      ],
+      "creatures": 10,
+      "extent": {
+        "minX": 32802,
+        "minY": 32473,
+        "maxX": 32836,
+        "maxY": 32484,
+        "centerX": 32819,
+        "centerY": 32478
+      },
+      "subareaId": 92,
+      "entrance": {
+        "x": 32836,
+        "y": 32476,
+        "z": 12
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 1885,
+      "spawns": 10
+    },
+    {
+      "id": "PORTHOPE-HUNT-0036",
+      "name": "Medusa Tower",
+      "slug": "medusa-tower",
+      "folder": "PORTHOPE-HUNT-0036_medusa-tower",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "PORTHOPE-C07-001",
+        "PORTHOPE-C07-002",
+        "PORTHOPE-C07-004",
+        "PORTHOPE-C07-006",
+        "PORTHOPE-C07-010",
+        "PORTHOPE-C07-011",
+        "PORTHOPE-C07-023",
+        "PORTHOPE-C07-024",
+        "PORTHOPE-C07-031",
+        "PORTHOPE-C07-044"
+      ],
+      "creatures": 761,
+      "extent": {
+        "minX": 32674,
+        "minY": 32486,
+        "maxX": 33008,
+        "maxY": 32894,
+        "centerX": 32841,
+        "centerY": 32690
+      },
+      "subareaId": 92,
+      "entrance": {
+        "x": 32700,
+        "y": 32639,
+        "z": 7
+      },
+      "walkTilesFromTemple": 127,
+      "tiles": 155446,
+      "spawns": 761
+    },
+    {
+      "id": "PORTHOPE-HUNT-0037",
+      "name": "Murky Caverns",
+      "slug": "murky-caverns",
+      "folder": "PORTHOPE-HUNT-0037_murky-caverns",
+      "floors": [
+        10
+      ],
+      "cropFloors": [
+        10
+      ],
+      "candidateIds": [
+        "PORTHOPE-C10-008"
+      ],
+      "creatures": 25,
+      "extent": {
+        "minX": 32871,
+        "minY": 32873,
+        "maxX": 32941,
+        "maxY": 32897,
+        "centerX": 32906,
+        "centerY": 32885
+      },
+      "subareaId": 87,
+      "entrance": {
+        "x": 32888,
+        "y": 32873,
+        "z": 10
+      },
+      "walkTilesFromTemple": 417,
+      "tiles": 4461,
+      "spawns": 25
+    },
+    {
+      "id": "PORTHOPE-HUNT-0038",
+      "name": "Carnivora's Rocks",
+      "slug": "carnivora-s-rocks",
+      "folder": "PORTHOPE-HUNT-0038_carnivora-s-rocks",
+      "floors": [
+        8
+      ],
+      "cropFloors": [
+        8
+      ],
+      "candidateIds": [
+        "PORTHOPE-C08-009",
+        "PORTHOPE-C08-035"
+      ],
+      "creatures": 24,
+      "extent": {
+        "minX": 32739,
+        "minY": 32612,
+        "maxX": 32798,
+        "maxY": 32650,
+        "centerX": 32768,
+        "centerY": 32631
+      },
+      "subareaId": 92,
+      "entrance": {
+        "x": 32787,
+        "y": 32612,
+        "z": 8
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 5271,
+      "spawns": 24
+    },
+    {
+      "id": "PORTHOPE-HUNT-0039",
+      "name": "Sunken Temple",
+      "slug": "sunken-temple",
+      "folder": "PORTHOPE-HUNT-0039_sunken-temple",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "PORTHOPE-C07-002",
+        "PORTHOPE-C07-003",
+        "PORTHOPE-C07-004",
+        "PORTHOPE-C07-005",
+        "PORTHOPE-C07-007",
+        "PORTHOPE-C07-014",
+        "PORTHOPE-C07-020",
+        "PORTHOPE-C07-026",
+        "PORTHOPE-C07-030",
+        "PORTHOPE-C07-032",
+        "PORTHOPE-C07-035",
+        "PORTHOPE-C07-037",
+        "PORTHOPE-C07-039",
+        "PORTHOPE-C07-041",
+        "PORTHOPE-C07-043",
+        "PORTHOPE-C07-051",
+        "PORTHOPE-C07-053"
+      ],
+      "creatures": 563,
+      "extent": {
+        "minX": 32670,
+        "minY": 32482,
+        "maxX": 33023,
+        "maxY": 32720,
+        "centerX": 32846,
+        "centerY": 32601
+      },
+      "subareaId": 86,
+      "entrance": {
+        "x": 32700,
+        "y": 32639,
+        "z": 7
+      },
+      "walkTilesFromTemple": 127,
+      "tiles": 99414,
+      "spawns": 563
+    },
+    {
+      "id": "PORTHOPE-HUNT-0040",
+      "name": "Asura Vaults",
+      "slug": "asura-vaults",
+      "folder": "PORTHOPE-HUNT-0040_asura-vaults",
+      "floors": [
+        9
+      ],
+      "cropFloors": [
+        9
+      ],
+      "candidateIds": [
+        "PORTHOPE-C09-001",
+        "PORTHOPE-C09-026",
+        "PORTHOPE-C09-029",
+        "PORTHOPE-C09-072"
+      ],
+      "creatures": 129,
+      "extent": {
+        "minX": 32809,
+        "minY": 32740,
+        "maxX": 32882,
+        "maxY": 32822,
+        "centerX": 32845,
+        "centerY": 32781
+      },
+      "subareaId": 92,
+      "entrance": {
+        "x": 32847,
+        "y": 32742,
+        "z": 9
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 9169,
+      "spawns": 129
+    },
+    {
+      "id": "PORTHOPE-HUNT-0041",
+      "name": "Haunted Nexus (Temple)",
+      "slug": "haunted-nexus-temple",
+      "folder": "PORTHOPE-HUNT-0041_haunted-nexus-temple",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [
+        "PORTHOPE-C07-002",
+        "PORTHOPE-C07-004",
+        "PORTHOPE-C07-005",
+        "PORTHOPE-C07-014",
+        "PORTHOPE-C07-027",
+        "PORTHOPE-C07-037",
+        "PORTHOPE-C07-039",
+        "PORTHOPE-C07-041",
+        "PORTHOPE-C07-043",
+        "PORTHOPE-C07-051",
+        "PORTHOPE-C07-053"
+      ],
+      "creatures": 358,
+      "extent": {
+        "minX": 32656,
+        "minY": 32486,
+        "maxX": 32932,
+        "maxY": 32720,
+        "centerX": 32794,
+        "centerY": 32603
+      },
+      "subareaId": 92,
+      "entrance": {
+        "x": 32665,
+        "y": 32665,
+        "z": 7
+      },
+      "walkTilesFromTemple": 98,
+      "tiles": 77959,
+      "spawns": 358
+    }
+  ]
+}

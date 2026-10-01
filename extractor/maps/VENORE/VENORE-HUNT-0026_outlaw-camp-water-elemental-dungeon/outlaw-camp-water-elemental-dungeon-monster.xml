@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32630" centery="32280" centerz="7" radius="3">
+		<monster name="Bandit" x="3" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32623" centery="32287" centerz="7" radius="3">
+		<monster name="Wild Warrior" x="1" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32637" centery="32287" centerz="7" radius="3">
+		<monster name="Wild Warrior" x="2" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32635" centery="32290" centerz="7" radius="2">
+		<monster name="Bandit" x="-1" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32646" centery="32291" centerz="7" radius="2">
+		<monster name="Wild Warrior" x="-2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32616" centery="32294" centerz="7" radius="3">
+		<monster name="Smuggler" x="-2" y="0" z="7" spawntime="90" />
+		<monster name="Wild Warrior" x="3" y="1" z="7" spawntime="90" />
+		<monster name="Boar" x="0" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32602" centery="32301" centerz="7" radius="3">
+		<monster name="Smuggler" x="3" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32623" centery="32301" centerz="7" radius="3">
+		<monster name="Bandit" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32623" centery="32309" centerz="7" radius="3">
+		<monster name="Bandit" x="0" y="-3" z="7" spawntime="90" />
+		<monster name="Bandit" x="2" y="0" z="7" spawntime="90" />
+		<monster name="Bandit" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32635" centery="32309" centerz="7" radius="3">
+		<monster name="Wild Warrior" x="0" y="-2" z="7" spawntime="90" />
+		<monster name="Wild Warrior" x="-3" y="0" z="7" spawntime="90" />
+		<monster name="Wild Warrior" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32643" centery="32321" centerz="7" radius="2">
+		<monster name="Wolf" x="-1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32619" centery="32323" centerz="7" radius="3">
+		<monster name="Bandit" x="2" y="-1" z="7" spawntime="90" />
+		<monster name="Bandit" x="-2" y="0" z="7" spawntime="90" />
+		<monster name="Bandit" x="0" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32630" centery="32325" centerz="7" radius="2">
+		<monster name="Wolf" x="1" y="-1" z="7" spawntime="90" />
+		<monster name="Wolf" x="-1" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32640" centery="32328" centerz="7" radius="2">
+		<monster name="Wolf" x="-2" y="-2" z="7" spawntime="90" />
+		<monster name="Wolf" x="-1" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32634" centery="32332" centerz="7" radius="2">
+		<monster name="Wolf" x="2" y="0" z="7" spawntime="90" />
+	</monster>
+</monsters>

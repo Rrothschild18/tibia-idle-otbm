@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="33297" centery="32394" centerz="14" radius="3">
+		<monster name="Grimeleech" x="2" y="-3" z="14" spawntime="60" />
+		<monster name="Grimeleech" x="3" y="-2" z="14" spawntime="60" />
+		<monster name="Demon" x="3" y="-1" z="14" spawntime="60" />
+		<monster name="Demon" x="1" y="1" z="14" spawntime="60" />
+		<monster name="Hellflayer" x="-1" y="2" z="14" spawntime="60" />
+		<monster name="Demon" x="3" y="2" z="14" spawntime="60" />
+		<monster name="Fire Elemental" x="0" y="3" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33297" centery="32401" centerz="14" radius="3">
+		<monster name="Grimeleech" x="0" y="-2" z="14" spawntime="60" />
+	</monster>
+</monsters>

@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="33297" centery="32331" centerz="14" radius="3">
+		<monster name="Vexclaw" x="0" y="-1" z="14" spawntime="60" />
+		<monster name="Hellflayer" x="3" y="-1" z="14" spawntime="60" />
+		<monster name="Vexclaw" x="1" y="1" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33325" centery="32331" centerz="14" radius="1">
+		<monster name="Vexclaw" x="0" y="0" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="33304" centery="32338" centerz="14" radius="3">
+		<monster name="Grimeleech" x="2" y="3" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33311" centery="32338" centerz="14" radius="3">
+		<monster name="Demon" x="-1" y="0" z="14" spawntime="60" />
+		<monster name="Grimeleech" x="-2" y="2" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33318" centery="32338" centerz="14" radius="3">
+		<monster name="Hellflayer" x="2" y="-2" z="14" spawntime="90" />
+		<monster name="Demon" x="2" y="1" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="33311" centery="32345" centerz="14" radius="3">
+		<monster name="Vexclaw" x="-2" y="-3" z="14" spawntime="60" />
+		<monster name="Grimeleech" x="-1" y="-2" z="14" spawntime="60" />
+		<monster name="Grimeleech" x="1" y="-2" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="33306" centery="32349" centerz="14" radius="1">
+		<monster name="Hellflayer" x="0" y="0" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="33297" centery="32352" centerz="14" radius="3">
+		<monster name="Grimeleech" x="-2" y="2" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="33297" centery="32359" centerz="14" radius="3">
+		<monster name="Demon" x="-1" y="-1" z="14" spawntime="90" />
+		<monster name="Hellflayer" x="2" y="-1" z="14" spawntime="90" />
+		<monster name="Demon" x="1" y="3" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="33304" centery="32366" centerz="14" radius="3">
+		<monster name="Hellflayer" x="-2" y="-2" z="14" spawntime="90" />
+		<monster name="Vexclaw" x="0" y="3" z="14" spawntime="90" />
+	</monster>
+</monsters>

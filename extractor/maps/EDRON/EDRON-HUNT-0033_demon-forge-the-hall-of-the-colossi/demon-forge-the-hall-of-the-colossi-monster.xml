@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="33230" centery="31650" centerz="12" radius="5">
+		<monster name="Behemoth" x="0" y="-3" z="12" spawntime="90" />
+		<monster name="Gargoyle" x="-1" y="-1" z="12" spawntime="90" />
+		<monster name="Gargoyle" x="1" y="-1" z="12" spawntime="90" />
+		<monster name="Behemoth" x="-4" y="0" z="12" spawntime="90" />
+		<monster name="Behemoth" x="5" y="0" z="12" spawntime="90" />
+		<monster name="Juggernaut" x="0" y="2" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33230" centery="31667" centerz="12" radius="5">
+		<monster name="Stone Golem" x="-3" y="-5" z="12" spawntime="90" />
+		<monster name="Stone Golem" x="4" y="-5" z="12" spawntime="90" />
+		<monster name="Juggernaut" x="-3" y="-1" z="12" spawntime="90" />
+		<monster name="Juggernaut" x="4" y="-1" z="12" spawntime="90" />
+		<monster name="Gargoyle" x="-2" y="1" z="12" spawntime="90" />
+		<monster name="Gargoyle" x="3" y="1" z="12" spawntime="90" />
+		<monster name="Gargoyle" x="-4" y="5" z="12" spawntime="90" />
+		<monster name="Gargoyle" x="5" y="5" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33230" centery="31684" centerz="12" radius="5">
+		<monster name="Stone Golem" x="3" y="-5" z="12" spawntime="90" />
+		<monster name="Stone Golem" x="-3" y="-4" z="12" spawntime="90" />
+		<monster name="Gargoyle" x="-4" y="-1" z="12" spawntime="90" />
+		<monster name="Gargoyle" x="1" y="-1" z="12" spawntime="90" />
+		<monster name="Juggernaut" x="0" y="2" z="12" spawntime="90" />
+		<monster name="Gargoyle" x="-4" y="3" z="12" spawntime="90" />
+		<monster name="Stone Golem" x="5" y="4" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33230" centery="31696" centerz="12" radius="5">
+		<monster name="Gargoyle" x="0" y="-3" z="12" spawntime="90" />
+		<monster name="Behemoth" x="-4" y="-2" z="12" spawntime="90" />
+		<monster name="Stone Golem" x="5" y="-2" z="12" spawntime="90" />
+		<monster name="Behemoth" x="4" y="-1" z="12" spawntime="90" />
+		<monster name="Gargoyle" x="-4" y="0" z="12" spawntime="90" />
+		<monster name="Gargoyle" x="5" y="1" z="12" spawntime="90" />
+		<monster name="Gargoyle" x="-1" y="4" z="12" spawntime="90" />
+	</monster>
+</monsters>
