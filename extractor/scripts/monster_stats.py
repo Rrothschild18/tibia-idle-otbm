@@ -19,6 +19,12 @@ Minotaur (45 -> 30).
 resolvia assim ("Melee only — lifedrain spell ignored" no Skeleton). Uma
 criatura com ataque à distância ganha `attackRange` 3, que é o que Orc Spearman
 e Minotaur Mage usam apesar de o Canary dizer 7.
+
+**`bestiaryClass` não tem fórmula.** É `monster.Bestiary.class` cru, uma das 20
+classes do Bestiary (Humanoid, Undead, Demon, ...) — a curadoria de hunt usa
+para decidir se um monstro fraco acompanha um já admitido da mesma família
+(`.scratch/hunts-por-subarea/spec.md`, decisões 10-12). `None` quando o `.lua`
+não tem bloco `Bestiary` (acontece com boss) — ausência de família, não erro.
 """
 
 import glob
@@ -50,6 +56,8 @@ _ARMOR_RE = re.compile(r"armor\s*=\s*(\d+)")
 _ATTACKS_RE = re.compile(r"monster\.attacks\s*=\s*\{(.*?)\n\}", re.S)
 _MELEE_RE = re.compile(r'name\s*=\s*"melee".*?maxDamage\s*=\s*-?(\d+)', re.S)
 _RANGE_RE = re.compile(r"\brange\s*=\s*(\d+)")
+_BESTIARY_RE = re.compile(r"monster\.Bestiary\s*=\s*\{(.*?)\n\}", re.S)
+_BESTIARY_CLASS_RE = re.compile(r'class\s*=\s*"([^"]+)"')
 
 
 def attack_value_for(max_damage: int, attack_skill: int = DEFAULT_ATTACK_SKILL) -> int:
@@ -85,6 +93,9 @@ def parse_monster_stats_lua(path: str) -> Optional[Dict]:
 
     experience = _EXPERIENCE_RE.search(text)
 
+    bestiary = _BESTIARY_RE.search(text)
+    bestiary_class = _BESTIARY_CLASS_RE.search(bestiary.group(1)) if bestiary else None
+
     return {
         "name": name.group(1),
         "maxHealth": int(health.group(1)),
@@ -95,6 +106,7 @@ def parse_monster_stats_lua(path: str) -> Optional[Dict]:
         "attackValue": attack_value_for(melee_damage) if melee_damage else 0,
         "attackRange": RANGED_ATTACK_RANGE if ranged else MELEE_ATTACK_RANGE,
         "meleeMaxDamage": melee_damage,
+        "bestiaryClass": bestiary_class.group(1) if bestiary_class else None,
     }
 
 

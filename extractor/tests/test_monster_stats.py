@@ -12,6 +12,11 @@ monster.experience = 60
 monster.health = 110
 monster.maxHealth = 110
 monster.corpse = 18042
+monster.Bestiary = {
+\tclass = "Humanoid",
+\trace = BESTY_RACE_HUMANOID,
+\ttoKill = 500,
+}
 monster.attacks = {
 \t{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -45 },
 \t{ name = "combat", interval = 2000, chance = 15, maxDamage = -40, range = 5, target = false },
@@ -90,6 +95,20 @@ def test_parse_deriva_o_ataque_do_melee_e_ignora_a_magia(tmp_path):
     assert stats["meleeMaxDamage"] == 45
     assert stats["attackValue"] == 30
     assert stats["attackSkill"] == monster_stats.DEFAULT_ATTACK_SKILL
+
+
+def test_parse_le_a_classe_do_bestiary(tmp_path):
+    path = _write(tmp_path, "humans/amazon.lua", AMAZON_LUA)
+
+    assert monster_stats.parse_monster_stats_lua(path)["bestiaryClass"] == "Humanoid"
+
+
+def test_parse_sem_bestiary_nao_quebra(tmp_path):
+    """Nem todo .lua tem o bloco Bestiary (bosses, por exemplo) — ausência não
+    é motivo de erro, só "não sei a família"."""
+    path = _write(tmp_path, "undeads/skeleton.lua", SKELETON_LUA)
+
+    assert monster_stats.parse_monster_stats_lua(path)["bestiaryClass"] is None
 
 
 def test_parse_trata_range_1_como_corpo_a_corpo(tmp_path):
