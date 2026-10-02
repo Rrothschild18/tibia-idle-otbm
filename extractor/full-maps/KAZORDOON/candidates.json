@@ -148,7 +148,7 @@
       "id": "KAZORDOON-C01-001",
       "city": "KAZORDOON",
       "floor": 1,
-      "component": 612,
+      "component": 611,
       "componentTiles": 291,
       "creatures": 11,
       "species": [
@@ -298,7 +298,7 @@
       "id": "KAZORDOON-C01-002",
       "city": "KAZORDOON",
       "floor": 1,
-      "component": 2347,
+      "component": 2345,
       "componentTiles": 39,
       "creatures": 5,
       "species": [
@@ -384,7 +384,7 @@
       "id": "KAZORDOON-C02-001",
       "city": "KAZORDOON",
       "floor": 2,
-      "component": 1044,
+      "component": 1041,
       "componentTiles": 84,
       "creatures": 11,
       "species": [
@@ -554,7 +554,7 @@
       "id": "KAZORDOON-C02-002",
       "city": "KAZORDOON",
       "floor": 2,
-      "component": 1776,
+      "component": 1774,
       "componentTiles": 40,
       "creatures": 4,
       "species": [
@@ -634,7 +634,7 @@
       "id": "KAZORDOON-C03-001",
       "city": "KAZORDOON",
       "floor": 3,
-      "component": 1387,
+      "component": 1385,
       "componentTiles": 29,
       "creatures": 3,
       "species": [
@@ -724,7 +724,7 @@
       "id": "KAZORDOON-C03-002",
       "city": "KAZORDOON",
       "floor": 3,
-      "component": 1354,
+      "component": 1352,
       "componentTiles": 132,
       "creatures": 7,
       "species": [
@@ -934,7 +934,7 @@
       "id": "KAZORDOON-C03-004",
       "city": "KAZORDOON",
       "floor": 3,
-      "component": 2075,
+      "component": 2073,
       "componentTiles": 47,
       "creatures": 4,
       "species": [
@@ -998,7 +998,7 @@
       "id": "KAZORDOON-C03-005",
       "city": "KAZORDOON",
       "floor": 3,
-      "component": 3156,
+      "component": 3154,
       "componentTiles": 12,
       "creatures": 4,
       "species": [
@@ -1078,7 +1078,7 @@
       "id": "KAZORDOON-C03-006",
       "city": "KAZORDOON",
       "floor": 3,
-      "component": 1644,
+      "component": 1642,
       "componentTiles": 70,
       "creatures": 3,
       "species": [
@@ -1136,7 +1136,7 @@
       "id": "KAZORDOON-C04-001",
       "city": "KAZORDOON",
       "floor": 4,
-      "component": 938,
+      "component": 936,
       "componentTiles": 85,
       "creatures": 5,
       "species": [
@@ -1206,7 +1206,7 @@
       "id": "KAZORDOON-C04-002",
       "city": "KAZORDOON",
       "floor": 4,
-      "component": 2694,
+      "component": 2692,
       "componentTiles": 31,
       "creatures": 6,
       "species": [
@@ -1314,7 +1314,7 @@
       "id": "KAZORDOON-C04-003",
       "city": "KAZORDOON",
       "floor": 4,
-      "component": 2870,
+      "component": 2868,
       "componentTiles": 14,
       "creatures": 4,
       "species": [
@@ -1486,7 +1486,7 @@
       "id": "KAZORDOON-C04-005",
       "city": "KAZORDOON",
       "floor": 4,
-      "component": 951,
+      "component": 949,
       "componentTiles": 191,
       "creatures": 12,
       "species": [
@@ -1766,7 +1766,7 @@
       "id": "KAZORDOON-C04-007",
       "city": "KAZORDOON",
       "floor": 4,
-      "component": 1753,
+      "component": 1751,
       "componentTiles": 60,
       "creatures": 4,
       "species": [
@@ -1846,7 +1846,7 @@
       "id": "KAZORDOON-C04-008",
       "city": "KAZORDOON",
       "floor": 4,
-      "component": 1646,
+      "component": 1644,
       "componentTiles": 12,
       "creatures": 4,
       "species": [
@@ -1928,11 +1928,265 @@
       "floor": 5,
       "component": 14,
       "componentTiles": 1489,
-      "creatures": 10,
+      "creatures": 14,
+      "species": [
+        {
+          "name": "Wolf",
+          "count": 6
+        },
+        {
+          "name": "Goblin",
+          "count": 3
+        },
+        {
+          "name": "Bear",
+          "count": 1
+        },
+        {
+          "name": "Goblin Scavenger",
+          "count": 4
+        }
+      ],
+      "extent": {
+        "minX": 32544,
+        "minY": 31785,
+        "maxX": 32557,
+        "maxY": 31812,
+        "centerX": 32550,
+        "centerY": 31798
+      },
+      "subareaId": 47,
+      "splitBySpecies": [
+        {
+          "name": "Wolf",
+          "count": 6,
+          "extent": {
+            "minX": 32545,
+            "minY": 31796,
+            "maxX": 32555,
+            "maxY": 31812,
+            "centerX": 32550,
+            "centerY": 31804
+          }
+        },
+        {
+          "name": "Goblin",
+          "count": 3,
+          "extent": {
+            "minX": 32544,
+            "minY": 31802,
+            "maxX": 32552,
+            "maxY": 31808,
+            "centerX": 32548,
+            "centerY": 31805
+          }
+        },
+        {
+          "name": "Goblin Scavenger",
+          "count": 2,
+          "extent": {
+            "minX": 32547,
+            "minY": 31785,
+            "maxX": 32551,
+            "maxY": 31789,
+            "centerX": 32549,
+            "centerY": 31787
+          }
+        },
+        {
+          "name": "Goblin Scavenger",
+          "count": 2,
+          "extent": {
+            "minX": 32555,
+            "minY": 31809,
+            "maxX": 32557,
+            "maxY": 31809,
+            "centerX": 32556,
+            "centerY": 31809
+          }
+        },
+        {
+          "name": "Bear",
+          "count": 1,
+          "extent": {
+            "minX": 32557,
+            "minY": 31791,
+            "maxX": 32557,
+            "maxY": 31791,
+            "centerX": 32557,
+            "centerY": 31791
+          }
+        }
+      ],
+      "spawns": [
+        {
+          "name": "Goblin Scavenger",
+          "x": 32547,
+          "y": 31785,
+          "z": 5
+        },
+        {
+          "name": "Goblin Scavenger",
+          "x": 32551,
+          "y": 31789,
+          "z": 5
+        },
+        {
+          "name": "Bear",
+          "x": 32557,
+          "y": 31791,
+          "z": 5
+        },
+        {
+          "name": "Wolf",
+          "x": 32554,
+          "y": 31796,
+          "z": 5
+        },
+        {
+          "name": "Wolf",
+          "x": 32545,
+          "y": 31800,
+          "z": 5
+        },
+        {
+          "name": "Goblin",
+          "x": 32552,
+          "y": 31802,
+          "z": 5
+        },
+        {
+          "name": "Wolf",
+          "x": 32549,
+          "y": 31807,
+          "z": 5
+        },
+        {
+          "name": "Wolf",
+          "x": 32555,
+          "y": 31807,
+          "z": 5
+        },
+        {
+          "name": "Goblin",
+          "x": 32544,
+          "y": 31808,
+          "z": 5
+        },
+        {
+          "name": "Goblin",
+          "x": 32550,
+          "y": 31808,
+          "z": 5
+        },
+        {
+          "name": "Goblin Scavenger",
+          "x": 32555,
+          "y": 31809,
+          "z": 5
+        },
+        {
+          "name": "Goblin Scavenger",
+          "x": 32557,
+          "y": 31809,
+          "z": 5
+        },
+        {
+          "name": "Wolf",
+          "x": 32546,
+          "y": 31810,
+          "z": 5
+        },
+        {
+          "name": "Wolf",
+          "x": 32552,
+          "y": 31812,
+          "z": 5
+        }
+      ],
+      "walkTilesFromTemple": 430
+    },
+    {
+      "id": "KAZORDOON-C05-002",
+      "city": "KAZORDOON",
+      "floor": 5,
+      "component": 549,
+      "componentTiles": 86,
+      "creatures": 5,
+      "species": [
+        {
+          "name": "Dwarf",
+          "count": 5
+        }
+      ],
+      "extent": {
+        "minX": 32564,
+        "minY": 31900,
+        "maxX": 32571,
+        "maxY": 31905,
+        "centerX": 32567,
+        "centerY": 31902
+      },
+      "subareaId": 50,
+      "splitBySpecies": [
+        {
+          "name": "Dwarf",
+          "count": 5,
+          "extent": {
+            "minX": 32564,
+            "minY": 31900,
+            "maxX": 32571,
+            "maxY": 31905,
+            "centerX": 32567,
+            "centerY": 31902
+          }
+        }
+      ],
+      "spawns": [
+        {
+          "name": "Dwarf",
+          "x": 32564,
+          "y": 31900,
+          "z": 5
+        },
+        {
+          "name": "Dwarf",
+          "x": 32568,
+          "y": 31901,
+          "z": 5
+        },
+        {
+          "name": "Dwarf",
+          "x": 32571,
+          "y": 31901,
+          "z": 5
+        },
+        {
+          "name": "Dwarf",
+          "x": 32570,
+          "y": 31904,
+          "z": 5
+        },
+        {
+          "name": "Dwarf",
+          "x": 32565,
+          "y": 31905,
+          "z": 5
+        }
+      ],
+      "walkTilesFromTemple": 155
+    },
+    {
+      "id": "KAZORDOON-C05-003",
+      "city": "KAZORDOON",
+      "floor": 5,
+      "component": 14,
+      "componentTiles": 1489,
+      "creatures": 8,
       "species": [
         {
           "name": "Cyclops",
-          "count": 6
+          "count": 4
         },
         {
           "name": "Goblin Assassin",
@@ -1943,22 +2197,22 @@
         "minX": 32595,
         "minY": 31771,
         "maxX": 32610,
-        "maxY": 31797,
+        "maxY": 31789,
         "centerX": 32602,
-        "centerY": 31784
+        "centerY": 31780
       },
       "subareaId": 47,
       "splitBySpecies": [
         {
           "name": "Cyclops",
-          "count": 6,
+          "count": 4,
           "extent": {
             "minX": 32595,
             "minY": 31781,
             "maxX": 32603,
-            "maxY": 31797,
+            "maxY": 31786,
             "centerX": 32599,
-            "centerY": 31789
+            "centerY": 31783
           }
         },
         {
@@ -2034,94 +2288,12 @@
           "x": 32610,
           "y": 31789,
           "z": 5
-        },
-        {
-          "name": "Cyclops",
-          "x": 32599,
-          "y": 31794,
-          "z": 5
-        },
-        {
-          "name": "Cyclops",
-          "x": 32596,
-          "y": 31797,
-          "z": 5
         }
       ],
       "walkTilesFromTemple": 402
     },
     {
-      "id": "KAZORDOON-C05-002",
-      "city": "KAZORDOON",
-      "floor": 5,
-      "component": 550,
-      "componentTiles": 86,
-      "creatures": 5,
-      "species": [
-        {
-          "name": "Dwarf",
-          "count": 5
-        }
-      ],
-      "extent": {
-        "minX": 32564,
-        "minY": 31900,
-        "maxX": 32571,
-        "maxY": 31905,
-        "centerX": 32567,
-        "centerY": 31902
-      },
-      "subareaId": 50,
-      "splitBySpecies": [
-        {
-          "name": "Dwarf",
-          "count": 5,
-          "extent": {
-            "minX": 32564,
-            "minY": 31900,
-            "maxX": 32571,
-            "maxY": 31905,
-            "centerX": 32567,
-            "centerY": 31902
-          }
-        }
-      ],
-      "spawns": [
-        {
-          "name": "Dwarf",
-          "x": 32564,
-          "y": 31900,
-          "z": 5
-        },
-        {
-          "name": "Dwarf",
-          "x": 32568,
-          "y": 31901,
-          "z": 5
-        },
-        {
-          "name": "Dwarf",
-          "x": 32571,
-          "y": 31901,
-          "z": 5
-        },
-        {
-          "name": "Dwarf",
-          "x": 32570,
-          "y": 31904,
-          "z": 5
-        },
-        {
-          "name": "Dwarf",
-          "x": 32565,
-          "y": 31905,
-          "z": 5
-        }
-      ],
-      "walkTilesFromTemple": 155
-    },
-    {
-      "id": "KAZORDOON-C05-003",
+      "id": "KAZORDOON-C05-004",
       "city": "KAZORDOON",
       "floor": 5,
       "component": 30,
@@ -2229,10 +2401,10 @@
       "walkTilesFromTemple": 373
     },
     {
-      "id": "KAZORDOON-C05-004",
+      "id": "KAZORDOON-C05-005",
       "city": "KAZORDOON",
       "floor": 5,
-      "component": 2179,
+      "component": 2177,
       "componentTiles": 17,
       "creatures": 3,
       "species": [
@@ -2285,120 +2457,6 @@
         }
       ],
       "walkTilesFromTemple": 502
-    },
-    {
-      "id": "KAZORDOON-C05-005",
-      "city": "KAZORDOON",
-      "floor": 5,
-      "component": 14,
-      "componentTiles": 1489,
-      "creatures": 7,
-      "species": [
-        {
-          "name": "Cyclops",
-          "count": 2
-        },
-        {
-          "name": "Goblin Scavenger",
-          "count": 4
-        },
-        {
-          "name": "Goblin Assassin",
-          "count": 1
-        }
-      ],
-      "extent": {
-        "minX": 32575,
-        "minY": 31769,
-        "maxX": 32590,
-        "maxY": 31791,
-        "centerX": 32582,
-        "centerY": 31780
-      },
-      "subareaId": 47,
-      "splitBySpecies": [
-        {
-          "name": "Goblin Scavenger",
-          "count": 4,
-          "extent": {
-            "minX": 32575,
-            "minY": 31769,
-            "maxX": 32590,
-            "maxY": 31771,
-            "centerX": 32582,
-            "centerY": 31770
-          }
-        },
-        {
-          "name": "Cyclops",
-          "count": 2,
-          "extent": {
-            "minX": 32576,
-            "minY": 31781,
-            "maxX": 32580,
-            "maxY": 31791,
-            "centerX": 32578,
-            "centerY": 31786
-          }
-        },
-        {
-          "name": "Goblin Assassin",
-          "count": 1,
-          "extent": {
-            "minX": 32586,
-            "minY": 31771,
-            "maxX": 32586,
-            "maxY": 31771,
-            "centerX": 32586,
-            "centerY": 31771
-          }
-        }
-      ],
-      "spawns": [
-        {
-          "name": "Goblin Scavenger",
-          "x": 32590,
-          "y": 31769,
-          "z": 5
-        },
-        {
-          "name": "Goblin Scavenger",
-          "x": 32582,
-          "y": 31770,
-          "z": 5
-        },
-        {
-          "name": "Goblin Scavenger",
-          "x": 32575,
-          "y": 31771,
-          "z": 5
-        },
-        {
-          "name": "Goblin Scavenger",
-          "x": 32580,
-          "y": 31771,
-          "z": 5
-        },
-        {
-          "name": "Goblin Assassin",
-          "x": 32586,
-          "y": 31771,
-          "z": 5
-        },
-        {
-          "name": "Cyclops",
-          "x": 32576,
-          "y": 31781,
-          "z": 5
-        },
-        {
-          "name": "Cyclops",
-          "x": 32580,
-          "y": 31791,
-          "z": 5
-        }
-      ],
-      "walkTilesFromTemple": 428
     },
     {
       "id": "KAZORDOON-C05-006",
@@ -2730,7 +2788,7 @@
       "id": "KAZORDOON-C05-008",
       "city": "KAZORDOON",
       "floor": 5,
-      "component": 1267,
+      "component": 1265,
       "componentTiles": 24,
       "creatures": 5,
       "species": [
@@ -2816,6 +2874,86 @@
       "id": "KAZORDOON-C05-009",
       "city": "KAZORDOON",
       "floor": 5,
+      "component": 14,
+      "componentTiles": 1489,
+      "creatures": 4,
+      "species": [
+        {
+          "name": "Goblin Scavenger",
+          "count": 3
+        },
+        {
+          "name": "Goblin Assassin",
+          "count": 1
+        }
+      ],
+      "extent": {
+        "minX": 32580,
+        "minY": 31769,
+        "maxX": 32590,
+        "maxY": 31771,
+        "centerX": 32585,
+        "centerY": 31770
+      },
+      "subareaId": 47,
+      "splitBySpecies": [
+        {
+          "name": "Goblin Scavenger",
+          "count": 3,
+          "extent": {
+            "minX": 32580,
+            "minY": 31769,
+            "maxX": 32590,
+            "maxY": 31771,
+            "centerX": 32585,
+            "centerY": 31770
+          }
+        },
+        {
+          "name": "Goblin Assassin",
+          "count": 1,
+          "extent": {
+            "minX": 32586,
+            "minY": 31771,
+            "maxX": 32586,
+            "maxY": 31771,
+            "centerX": 32586,
+            "centerY": 31771
+          }
+        }
+      ],
+      "spawns": [
+        {
+          "name": "Goblin Scavenger",
+          "x": 32590,
+          "y": 31769,
+          "z": 5
+        },
+        {
+          "name": "Goblin Scavenger",
+          "x": 32582,
+          "y": 31770,
+          "z": 5
+        },
+        {
+          "name": "Goblin Scavenger",
+          "x": 32580,
+          "y": 31771,
+          "z": 5
+        },
+        {
+          "name": "Goblin Assassin",
+          "x": 32586,
+          "y": 31771,
+          "z": 5
+        }
+      ],
+      "walkTilesFromTemple": 428
+    },
+    {
+      "id": "KAZORDOON-C05-010",
+      "city": "KAZORDOON",
+      "floor": 5,
       "component": 16,
       "componentTiles": 33,
       "creatures": 3,
@@ -2871,7 +3009,7 @@
       "walkTilesFromTemple": null
     },
     {
-      "id": "KAZORDOON-C05-010",
+      "id": "KAZORDOON-C05-011",
       "city": "KAZORDOON",
       "floor": 5,
       "component": 14,
@@ -3112,7 +3250,7 @@
       "id": "KAZORDOON-C06-003",
       "city": "KAZORDOON",
       "floor": 6,
-      "component": 533,
+      "component": 532,
       "componentTiles": 231,
       "creatures": 5,
       "species": [
@@ -3182,7 +3320,7 @@
       "id": "KAZORDOON-C06-004",
       "city": "KAZORDOON",
       "floor": 6,
-      "component": 1794,
+      "component": 1792,
       "componentTiles": 34,
       "creatures": 4,
       "species": [
@@ -3524,7 +3662,7 @@
       "id": "KAZORDOON-C06-009",
       "city": "KAZORDOON",
       "floor": 6,
-      "component": 1841,
+      "component": 1839,
       "componentTiles": 59,
       "creatures": 4,
       "species": [
@@ -3778,7 +3916,7 @@
       "id": "KAZORDOON-C06-013",
       "city": "KAZORDOON",
       "floor": 6,
-      "component": 414,
+      "component": 413,
       "componentTiles": 125,
       "creatures": 8,
       "species": [
@@ -4006,7 +4144,7 @@
       "id": "KAZORDOON-C06-015",
       "city": "KAZORDOON",
       "floor": 6,
-      "component": 849,
+      "component": 847,
       "componentTiles": 24,
       "creatures": 6,
       "species": [
@@ -4114,7 +4252,7 @@
       "id": "KAZORDOON-C06-016",
       "city": "KAZORDOON",
       "floor": 6,
-      "component": 506,
+      "component": 505,
       "componentTiles": 254,
       "creatures": 15,
       "species": [
@@ -4494,7 +4632,7 @@
       "id": "KAZORDOON-C06-018",
       "city": "KAZORDOON",
       "floor": 6,
-      "component": 1537,
+      "component": 1535,
       "componentTiles": 122,
       "creatures": 8,
       "species": [
@@ -4744,7 +4882,7 @@
       "id": "KAZORDOON-C06-020",
       "city": "KAZORDOON",
       "floor": 6,
-      "component": 851,
+      "component": 849,
       "componentTiles": 95,
       "creatures": 5,
       "species": [
@@ -5020,7 +5158,7 @@
       "id": "KAZORDOON-C06-023",
       "city": "KAZORDOON",
       "floor": 6,
-      "component": 1891,
+      "component": 1889,
       "componentTiles": 30,
       "creatures": 4,
       "species": [
@@ -6535,7 +6673,7 @@
       "city": "KAZORDOON",
       "floor": 7,
       "component": 1,
-      "componentTiles": 72868,
+      "componentTiles": 72867,
       "creatures": 14,
       "species": [
         {
@@ -7811,7 +7949,7 @@
       "city": "KAZORDOON",
       "floor": 7,
       "component": 1,
-      "componentTiles": 72868,
+      "componentTiles": 72867,
       "creatures": 9,
       "species": [
         {
@@ -8975,7 +9113,7 @@
       "city": "KAZORDOON",
       "floor": 7,
       "component": 1,
-      "componentTiles": 72868,
+      "componentTiles": 72867,
       "creatures": 6,
       "species": [
         {
@@ -9051,7 +9189,7 @@
       "city": "KAZORDOON",
       "floor": 7,
       "component": 1,
-      "componentTiles": 72868,
+      "componentTiles": 72867,
       "creatures": 6,
       "species": [
         {
@@ -9535,7 +9673,7 @@
       "city": "KAZORDOON",
       "floor": 7,
       "component": 1,
-      "componentTiles": 72868,
+      "componentTiles": 72867,
       "creatures": 5,
       "species": [
         {
@@ -9605,7 +9743,7 @@
       "city": "KAZORDOON",
       "floor": 7,
       "component": 1,
-      "componentTiles": 72868,
+      "componentTiles": 72867,
       "creatures": 4,
       "species": [
         {
@@ -9909,7 +10047,7 @@
       "city": "KAZORDOON",
       "floor": 7,
       "component": 1,
-      "componentTiles": 72868,
+      "componentTiles": 72867,
       "creatures": 4,
       "species": [
         {
@@ -10942,7 +11080,7 @@
       "id": "KAZORDOON-C07-033",
       "city": "KAZORDOON",
       "floor": 7,
-      "component": 1094,
+      "component": 1091,
       "componentTiles": 163,
       "creatures": 3,
       "species": [
@@ -11000,7 +11138,7 @@
       "id": "KAZORDOON-C07-034",
       "city": "KAZORDOON",
       "floor": 7,
-      "component": 1095,
+      "component": 1092,
       "componentTiles": 148,
       "creatures": 3,
       "species": [
@@ -11365,7 +11503,7 @@
       "city": "KAZORDOON",
       "floor": 7,
       "component": 1,
-      "componentTiles": 72868,
+      "componentTiles": 72867,
       "creatures": 3,
       "species": [
         {
@@ -12272,7 +12410,7 @@
       "id": "KAZORDOON-C07-045",
       "city": "KAZORDOON",
       "floor": 7,
-      "component": 942,
+      "component": 940,
       "componentTiles": 136,
       "creatures": 6,
       "species": [
@@ -12412,7 +12550,7 @@
       "id": "KAZORDOON-C07-046",
       "city": "KAZORDOON",
       "floor": 7,
-      "component": 1649,
+      "component": 1647,
       "componentTiles": 53,
       "creatures": 4,
       "species": [
@@ -12756,240 +12894,6 @@
       "id": "KAZORDOON-C08-001",
       "city": "KAZORDOON",
       "floor": 8,
-      "component": 755,
-      "componentTiles": 490,
-      "creatures": 19,
-      "species": [
-        {
-          "name": "Dwarf",
-          "count": 11
-        },
-        {
-          "name": "Rotworm",
-          "count": 6
-        },
-        {
-          "name": "Bat",
-          "count": 2
-        }
-      ],
-      "extent": {
-        "minX": 32484,
-        "minY": 31974,
-        "maxX": 32536,
-        "maxY": 31998,
-        "centerX": 32510,
-        "centerY": 31986
-      },
-      "subareaId": 50,
-      "splitBySpecies": [
-        {
-          "name": "Dwarf",
-          "count": 8,
-          "extent": {
-            "minX": 32509,
-            "minY": 31974,
-            "maxX": 32533,
-            "maxY": 31996,
-            "centerX": 32521,
-            "centerY": 31985
-          }
-        },
-        {
-          "name": "Rotworm",
-          "count": 4,
-          "extent": {
-            "minX": 32484,
-            "minY": 31991,
-            "maxX": 32502,
-            "maxY": 31995,
-            "centerX": 32493,
-            "centerY": 31993
-          }
-        },
-        {
-          "name": "Bat",
-          "count": 2,
-          "extent": {
-            "minX": 32526,
-            "minY": 31991,
-            "maxX": 32532,
-            "maxY": 31993,
-            "centerX": 32529,
-            "centerY": 31992
-          }
-        },
-        {
-          "name": "Rotworm",
-          "count": 2,
-          "extent": {
-            "minX": 32513,
-            "minY": 31995,
-            "maxX": 32513,
-            "maxY": 31998,
-            "centerX": 32513,
-            "centerY": 31996
-          }
-        },
-        {
-          "name": "Dwarf",
-          "count": 1,
-          "extent": {
-            "minX": 32496,
-            "minY": 31993,
-            "maxX": 32496,
-            "maxY": 31993,
-            "centerX": 32496,
-            "centerY": 31993
-          }
-        },
-        {
-          "name": "Dwarf",
-          "count": 1,
-          "extent": {
-            "minX": 32536,
-            "minY": 31993,
-            "maxX": 32536,
-            "maxY": 31993,
-            "centerX": 32536,
-            "centerY": 31993
-          }
-        },
-        {
-          "name": "Dwarf",
-          "count": 1,
-          "extent": {
-            "minX": 32484,
-            "minY": 31994,
-            "maxX": 32484,
-            "maxY": 31994,
-            "centerX": 32484,
-            "centerY": 31994
-          }
-        }
-      ],
-      "spawns": [
-        {
-          "name": "Dwarf",
-          "x": 32532,
-          "y": 31974,
-          "z": 8
-        },
-        {
-          "name": "Dwarf",
-          "x": 32533,
-          "y": 31976,
-          "z": 8
-        },
-        {
-          "name": "Dwarf",
-          "x": 32528,
-          "y": 31982,
-          "z": 8
-        },
-        {
-          "name": "Dwarf",
-          "x": 32510,
-          "y": 31985,
-          "z": 8
-        },
-        {
-          "name": "Dwarf",
-          "x": 32525,
-          "y": 31989,
-          "z": 8
-        },
-        {
-          "name": "Rotworm",
-          "x": 32488,
-          "y": 31991,
-          "z": 8
-        },
-        {
-          "name": "Bat",
-          "x": 32526,
-          "y": 31991,
-          "z": 8
-        },
-        {
-          "name": "Rotworm",
-          "x": 32494,
-          "y": 31993,
-          "z": 8
-        },
-        {
-          "name": "Dwarf",
-          "x": 32496,
-          "y": 31993,
-          "z": 8
-        },
-        {
-          "name": "Bat",
-          "x": 32532,
-          "y": 31993,
-          "z": 8
-        },
-        {
-          "name": "Dwarf",
-          "x": 32536,
-          "y": 31993,
-          "z": 8
-        },
-        {
-          "name": "Dwarf",
-          "x": 32484,
-          "y": 31994,
-          "z": 8
-        },
-        {
-          "name": "Rotworm",
-          "x": 32484,
-          "y": 31994,
-          "z": 8
-        },
-        {
-          "name": "Dwarf",
-          "x": 32509,
-          "y": 31994,
-          "z": 8
-        },
-        {
-          "name": "Rotworm",
-          "x": 32502,
-          "y": 31995,
-          "z": 8
-        },
-        {
-          "name": "Rotworm",
-          "x": 32513,
-          "y": 31995,
-          "z": 8
-        },
-        {
-          "name": "Dwarf",
-          "x": 32518,
-          "y": 31995,
-          "z": 8
-        },
-        {
-          "name": "Dwarf",
-          "x": 32514,
-          "y": 31996,
-          "z": 8
-        },
-        {
-          "name": "Rotworm",
-          "x": 32513,
-          "y": 31998,
-          "z": 8
-        }
-      ],
-      "walkTilesFromTemple": 314
-    },
-    {
-      "id": "KAZORDOON-C08-002",
-      "city": "KAZORDOON",
-      "floor": 8,
       "component": 32,
       "componentTiles": 541,
       "creatures": 19,
@@ -13185,10 +13089,172 @@
       "walkTilesFromTemple": null
     },
     {
+      "id": "KAZORDOON-C08-002",
+      "city": "KAZORDOON",
+      "floor": 8,
+      "component": 754,
+      "componentTiles": 490,
+      "creatures": 13,
+      "species": [
+        {
+          "name": "Dwarf",
+          "count": 8
+        },
+        {
+          "name": "Rotworm",
+          "count": 3
+        },
+        {
+          "name": "Bat",
+          "count": 2
+        }
+      ],
+      "extent": {
+        "minX": 32502,
+        "minY": 31974,
+        "maxX": 32533,
+        "maxY": 31998,
+        "centerX": 32517,
+        "centerY": 31986
+      },
+      "subareaId": 50,
+      "splitBySpecies": [
+        {
+          "name": "Dwarf",
+          "count": 8,
+          "extent": {
+            "minX": 32509,
+            "minY": 31974,
+            "maxX": 32533,
+            "maxY": 31996,
+            "centerX": 32521,
+            "centerY": 31985
+          }
+        },
+        {
+          "name": "Bat",
+          "count": 2,
+          "extent": {
+            "minX": 32526,
+            "minY": 31991,
+            "maxX": 32532,
+            "maxY": 31993,
+            "centerX": 32529,
+            "centerY": 31992
+          }
+        },
+        {
+          "name": "Rotworm",
+          "count": 2,
+          "extent": {
+            "minX": 32513,
+            "minY": 31995,
+            "maxX": 32513,
+            "maxY": 31998,
+            "centerX": 32513,
+            "centerY": 31996
+          }
+        },
+        {
+          "name": "Rotworm",
+          "count": 1,
+          "extent": {
+            "minX": 32502,
+            "minY": 31995,
+            "maxX": 32502,
+            "maxY": 31995,
+            "centerX": 32502,
+            "centerY": 31995
+          }
+        }
+      ],
+      "spawns": [
+        {
+          "name": "Dwarf",
+          "x": 32532,
+          "y": 31974,
+          "z": 8
+        },
+        {
+          "name": "Dwarf",
+          "x": 32533,
+          "y": 31976,
+          "z": 8
+        },
+        {
+          "name": "Dwarf",
+          "x": 32528,
+          "y": 31982,
+          "z": 8
+        },
+        {
+          "name": "Dwarf",
+          "x": 32510,
+          "y": 31985,
+          "z": 8
+        },
+        {
+          "name": "Dwarf",
+          "x": 32525,
+          "y": 31989,
+          "z": 8
+        },
+        {
+          "name": "Bat",
+          "x": 32526,
+          "y": 31991,
+          "z": 8
+        },
+        {
+          "name": "Bat",
+          "x": 32532,
+          "y": 31993,
+          "z": 8
+        },
+        {
+          "name": "Dwarf",
+          "x": 32509,
+          "y": 31994,
+          "z": 8
+        },
+        {
+          "name": "Rotworm",
+          "x": 32502,
+          "y": 31995,
+          "z": 8
+        },
+        {
+          "name": "Rotworm",
+          "x": 32513,
+          "y": 31995,
+          "z": 8
+        },
+        {
+          "name": "Dwarf",
+          "x": 32518,
+          "y": 31995,
+          "z": 8
+        },
+        {
+          "name": "Dwarf",
+          "x": 32514,
+          "y": 31996,
+          "z": 8
+        },
+        {
+          "name": "Rotworm",
+          "x": 32513,
+          "y": 31998,
+          "z": 8
+        }
+      ],
+      "walkTilesFromTemple": 318
+    },
+    {
       "id": "KAZORDOON-C08-003",
       "city": "KAZORDOON",
       "floor": 8,
-      "component": 747,
+      "component": 746,
       "componentTiles": 420,
       "creatures": 12,
       "species": [
@@ -13328,150 +13394,6 @@
       "id": "KAZORDOON-C08-004",
       "city": "KAZORDOON",
       "floor": 8,
-      "component": 184,
-      "componentTiles": 434,
-      "creatures": 12,
-      "species": [
-        {
-          "name": "Dwarf",
-          "count": 8
-        },
-        {
-          "name": "Rotworm",
-          "count": 3
-        },
-        {
-          "name": "Poison Spider",
-          "count": 1
-        }
-      ],
-      "extent": {
-        "minX": 32496,
-        "minY": 31877,
-        "maxX": 32513,
-        "maxY": 31898,
-        "centerX": 32504,
-        "centerY": 31887
-      },
-      "subareaId": 50,
-      "splitBySpecies": [
-        {
-          "name": "Dwarf",
-          "count": 8,
-          "extent": {
-            "minX": 32496,
-            "minY": 31878,
-            "maxX": 32513,
-            "maxY": 31897,
-            "centerX": 32504,
-            "centerY": 31887
-          }
-        },
-        {
-          "name": "Rotworm",
-          "count": 3,
-          "extent": {
-            "minX": 32504,
-            "minY": 31877,
-            "maxX": 32505,
-            "maxY": 31880,
-            "centerX": 32504,
-            "centerY": 31878
-          }
-        },
-        {
-          "name": "Poison Spider",
-          "count": 1,
-          "extent": {
-            "minX": 32511,
-            "minY": 31898,
-            "maxX": 32511,
-            "maxY": 31898,
-            "centerX": 32511,
-            "centerY": 31898
-          }
-        }
-      ],
-      "spawns": [
-        {
-          "name": "Rotworm",
-          "x": 32504,
-          "y": 31877,
-          "z": 8
-        },
-        {
-          "name": "Rotworm",
-          "x": 32505,
-          "y": 31877,
-          "z": 8
-        },
-        {
-          "name": "Dwarf",
-          "x": 32497,
-          "y": 31878,
-          "z": 8
-        },
-        {
-          "name": "Dwarf",
-          "x": 32501,
-          "y": 31878,
-          "z": 8
-        },
-        {
-          "name": "Dwarf",
-          "x": 32506,
-          "y": 31878,
-          "z": 8
-        },
-        {
-          "name": "Dwarf",
-          "x": 32502,
-          "y": 31880,
-          "z": 8
-        },
-        {
-          "name": "Rotworm",
-          "x": 32505,
-          "y": 31880,
-          "z": 8
-        },
-        {
-          "name": "Dwarf",
-          "x": 32496,
-          "y": 31882,
-          "z": 8
-        },
-        {
-          "name": "Dwarf",
-          "x": 32512,
-          "y": 31889,
-          "z": 8
-        },
-        {
-          "name": "Dwarf",
-          "x": 32513,
-          "y": 31890,
-          "z": 8
-        },
-        {
-          "name": "Dwarf",
-          "x": 32513,
-          "y": 31897,
-          "z": 8
-        },
-        {
-          "name": "Poison Spider",
-          "x": 32511,
-          "y": 31898,
-          "z": 8
-        }
-      ],
-      "walkTilesFromTemple": 312
-    },
-    {
-      "id": "KAZORDOON-C08-005",
-      "city": "KAZORDOON",
-      "floor": 8,
       "component": 168,
       "componentTiles": 167,
       "creatures": 11,
@@ -13607,10 +13529,10 @@
       "walkTilesFromTemple": 392
     },
     {
-      "id": "KAZORDOON-C08-006",
+      "id": "KAZORDOON-C08-005",
       "city": "KAZORDOON",
       "floor": 8,
-      "component": 441,
+      "component": 440,
       "componentTiles": 392,
       "creatures": 9,
       "species": [
@@ -13717,7 +13639,7 @@
       "walkTilesFromTemple": 472
     },
     {
-      "id": "KAZORDOON-C08-007",
+      "id": "KAZORDOON-C08-006",
       "city": "KAZORDOON",
       "floor": 8,
       "component": 76,
@@ -13833,7 +13755,7 @@
       "walkTilesFromTemple": null
     },
     {
-      "id": "KAZORDOON-C08-008",
+      "id": "KAZORDOON-C08-007",
       "city": "KAZORDOON",
       "floor": 8,
       "component": 53,
@@ -13949,7 +13871,7 @@
       "walkTilesFromTemple": 291
     },
     {
-      "id": "KAZORDOON-C08-009",
+      "id": "KAZORDOON-C08-008",
       "city": "KAZORDOON",
       "floor": 8,
       "component": 53,
@@ -14053,10 +13975,10 @@
       "walkTilesFromTemple": 351
     },
     {
-      "id": "KAZORDOON-C08-010",
+      "id": "KAZORDOON-C08-009",
       "city": "KAZORDOON",
       "floor": 8,
-      "component": 755,
+      "component": 754,
       "componentTiles": 490,
       "creatures": 6,
       "species": [
@@ -14145,6 +14067,98 @@
       "walkTilesFromTemple": 305
     },
     {
+      "id": "KAZORDOON-C08-010",
+      "city": "KAZORDOON",
+      "floor": 8,
+      "component": 184,
+      "componentTiles": 433,
+      "creatures": 6,
+      "species": [
+        {
+          "name": "Dwarf",
+          "count": 3
+        },
+        {
+          "name": "Rotworm",
+          "count": 3
+        }
+      ],
+      "extent": {
+        "minX": 32496,
+        "minY": 31877,
+        "maxX": 32506,
+        "maxY": 31882,
+        "centerX": 32501,
+        "centerY": 31879
+      },
+      "subareaId": 50,
+      "splitBySpecies": [
+        {
+          "name": "Dwarf",
+          "count": 3,
+          "extent": {
+            "minX": 32496,
+            "minY": 31878,
+            "maxX": 32506,
+            "maxY": 31882,
+            "centerX": 32501,
+            "centerY": 31880
+          }
+        },
+        {
+          "name": "Rotworm",
+          "count": 3,
+          "extent": {
+            "minX": 32504,
+            "minY": 31877,
+            "maxX": 32505,
+            "maxY": 31880,
+            "centerX": 32504,
+            "centerY": 31878
+          }
+        }
+      ],
+      "spawns": [
+        {
+          "name": "Rotworm",
+          "x": 32504,
+          "y": 31877,
+          "z": 8
+        },
+        {
+          "name": "Rotworm",
+          "x": 32505,
+          "y": 31877,
+          "z": 8
+        },
+        {
+          "name": "Dwarf",
+          "x": 32506,
+          "y": 31878,
+          "z": 8
+        },
+        {
+          "name": "Dwarf",
+          "x": 32502,
+          "y": 31880,
+          "z": 8
+        },
+        {
+          "name": "Rotworm",
+          "x": 32505,
+          "y": 31880,
+          "z": 8
+        },
+        {
+          "name": "Dwarf",
+          "x": 32496,
+          "y": 31882,
+          "z": 8
+        }
+      ],
+      "walkTilesFromTemple": 330
+    },
+    {
       "id": "KAZORDOON-C08-011",
       "city": "KAZORDOON",
       "floor": 8,
@@ -14224,77 +14238,7 @@
       "id": "KAZORDOON-C08-012",
       "city": "KAZORDOON",
       "floor": 8,
-      "component": 184,
-      "componentTiles": 434,
-      "creatures": 5,
-      "species": [
-        {
-          "name": "Dwarf",
-          "count": 5
-        }
-      ],
-      "extent": {
-        "minX": 32524,
-        "minY": 31907,
-        "maxX": 32531,
-        "maxY": 31915,
-        "centerX": 32527,
-        "centerY": 31911
-      },
-      "subareaId": 50,
-      "splitBySpecies": [
-        {
-          "name": "Dwarf",
-          "count": 5,
-          "extent": {
-            "minX": 32524,
-            "minY": 31907,
-            "maxX": 32531,
-            "maxY": 31915,
-            "centerX": 32527,
-            "centerY": 31911
-          }
-        }
-      ],
-      "spawns": [
-        {
-          "name": "Dwarf",
-          "x": 32524,
-          "y": 31907,
-          "z": 8
-        },
-        {
-          "name": "Dwarf",
-          "x": 32524,
-          "y": 31910,
-          "z": 8
-        },
-        {
-          "name": "Dwarf",
-          "x": 32526,
-          "y": 31913,
-          "z": 8
-        },
-        {
-          "name": "Dwarf",
-          "x": 32524,
-          "y": 31914,
-          "z": 8
-        },
-        {
-          "name": "Dwarf",
-          "x": 32531,
-          "y": 31915,
-          "z": 8
-        }
-      ],
-      "walkTilesFromTemple": 287
-    },
-    {
-      "id": "KAZORDOON-C08-013",
-      "city": "KAZORDOON",
-      "floor": 8,
-      "component": 747,
+      "component": 746,
       "componentTiles": 420,
       "creatures": 5,
       "species": [
@@ -14377,7 +14321,7 @@
       "walkTilesFromTemple": 322
     },
     {
-      "id": "KAZORDOON-C08-014",
+      "id": "KAZORDOON-C08-013",
       "city": "KAZORDOON",
       "floor": 8,
       "component": 53,
@@ -14463,7 +14407,7 @@
       "walkTilesFromTemple": 370
     },
     {
-      "id": "KAZORDOON-C08-015",
+      "id": "KAZORDOON-C08-014",
       "city": "KAZORDOON",
       "floor": 8,
       "component": 53,
@@ -14549,11 +14493,11 @@
       "walkTilesFromTemple": 385
     },
     {
-      "id": "KAZORDOON-C08-016",
+      "id": "KAZORDOON-C08-015",
       "city": "KAZORDOON",
       "floor": 8,
       "component": 184,
-      "componentTiles": 434,
+      "componentTiles": 433,
       "creatures": 4,
       "species": [
         {
@@ -14629,7 +14573,7 @@
       "walkTilesFromTemple": 303
     },
     {
-      "id": "KAZORDOON-C08-017",
+      "id": "KAZORDOON-C08-016",
       "city": "KAZORDOON",
       "floor": 8,
       "component": 309,
@@ -14709,7 +14653,7 @@
       "walkTilesFromTemple": 359
     },
     {
-      "id": "KAZORDOON-C08-018",
+      "id": "KAZORDOON-C08-017",
       "city": "KAZORDOON",
       "floor": 8,
       "component": 309,
@@ -14789,10 +14733,10 @@
       "walkTilesFromTemple": 404
     },
     {
-      "id": "KAZORDOON-C08-019",
+      "id": "KAZORDOON-C08-018",
       "city": "KAZORDOON",
       "floor": 8,
-      "component": 1187,
+      "component": 1184,
       "componentTiles": 62,
       "creatures": 4,
       "species": [
@@ -14853,10 +14797,10 @@
       "walkTilesFromTemple": 346
     },
     {
-      "id": "KAZORDOON-C08-020",
+      "id": "KAZORDOON-C08-019",
       "city": "KAZORDOON",
       "floor": 8,
-      "component": 517,
+      "component": 516,
       "componentTiles": 652,
       "creatures": 4,
       "species": [
@@ -14917,7 +14861,7 @@
       "walkTilesFromTemple": 439
     },
     {
-      "id": "KAZORDOON-C08-021",
+      "id": "KAZORDOON-C08-020",
       "city": "KAZORDOON",
       "floor": 8,
       "component": 53,
@@ -15021,10 +14965,10 @@
       "walkTilesFromTemple": 342
     },
     {
-      "id": "KAZORDOON-C08-022",
+      "id": "KAZORDOON-C08-021",
       "city": "KAZORDOON",
       "floor": 8,
-      "component": 522,
+      "component": 521,
       "componentTiles": 276,
       "creatures": 3,
       "species": [
@@ -15079,7 +15023,7 @@
       "walkTilesFromTemple": 310
     },
     {
-      "id": "KAZORDOON-C08-023",
+      "id": "KAZORDOON-C08-022",
       "city": "KAZORDOON",
       "floor": 8,
       "component": 32,
@@ -15137,11 +15081,11 @@
       "walkTilesFromTemple": null
     },
     {
-      "id": "KAZORDOON-C08-024",
+      "id": "KAZORDOON-C08-023",
       "city": "KAZORDOON",
       "floor": 8,
       "component": 108,
-      "componentTiles": 1988,
+      "componentTiles": 1987,
       "creatures": 4,
       "species": [
         {
@@ -15214,10 +15158,10 @@
           "z": 8
         }
       ],
-      "walkTilesFromTemple": 418
+      "walkTilesFromTemple": null
     },
     {
-      "id": "KAZORDOON-C08-025",
+      "id": "KAZORDOON-C08-024",
       "city": "KAZORDOON",
       "floor": 8,
       "component": 53,
@@ -15297,11 +15241,11 @@
       "walkTilesFromTemple": 376
     },
     {
-      "id": "KAZORDOON-C08-026",
+      "id": "KAZORDOON-C08-025",
       "city": "KAZORDOON",
       "floor": 8,
       "component": 230,
-      "componentTiles": 2269,
+      "componentTiles": 2268,
       "creatures": 3,
       "species": [
         {
@@ -15371,7 +15315,7 @@
       "walkTilesFromTemple": 482
     },
     {
-      "id": "KAZORDOON-C08-027",
+      "id": "KAZORDOON-C08-026",
       "city": "KAZORDOON",
       "floor": 8,
       "component": 26,
@@ -15445,7 +15389,7 @@
       "walkTilesFromTemple": 583
     },
     {
-      "id": "KAZORDOON-C08-028",
+      "id": "KAZORDOON-C08-027",
       "city": "KAZORDOON",
       "floor": 8,
       "component": 53,
@@ -15519,7 +15463,7 @@
       "walkTilesFromTemple": 377
     },
     {
-      "id": "KAZORDOON-C08-029",
+      "id": "KAZORDOON-C08-028",
       "city": "KAZORDOON",
       "floor": 8,
       "component": 26,
@@ -15633,11 +15577,11 @@
       "walkTilesFromTemple": 600
     },
     {
-      "id": "KAZORDOON-C08-030",
+      "id": "KAZORDOON-C08-029",
       "city": "KAZORDOON",
       "floor": 8,
       "component": 108,
-      "componentTiles": 1988,
+      "componentTiles": 1987,
       "creatures": 5,
       "species": [
         {
@@ -15744,10 +15688,10 @@
           "z": 8
         }
       ],
-      "walkTilesFromTemple": 398
+      "walkTilesFromTemple": null
     },
     {
-      "id": "KAZORDOON-C08-031",
+      "id": "KAZORDOON-C08-030",
       "city": "KAZORDOON",
       "floor": 8,
       "component": 26,
@@ -15965,7 +15909,7 @@
       "walkTilesFromTemple": 568
     },
     {
-      "id": "KAZORDOON-C08-032",
+      "id": "KAZORDOON-C08-031",
       "city": "KAZORDOON",
       "floor": 8,
       "component": 26,
@@ -16177,7 +16121,7 @@
       "walkTilesFromTemple": 609
     },
     {
-      "id": "KAZORDOON-C08-033",
+      "id": "KAZORDOON-C08-032",
       "city": "KAZORDOON",
       "floor": 8,
       "component": 239,
@@ -16317,7 +16261,7 @@
       "walkTilesFromTemple": 387
     },
     {
-      "id": "KAZORDOON-C08-034",
+      "id": "KAZORDOON-C08-033",
       "city": "KAZORDOON",
       "floor": 8,
       "component": 26,
@@ -16415,10 +16359,10 @@
       "walkTilesFromTemple": 644
     },
     {
-      "id": "KAZORDOON-C08-035",
+      "id": "KAZORDOON-C08-034",
       "city": "KAZORDOON",
       "floor": 8,
-      "component": 857,
+      "component": 855,
       "componentTiles": 67,
       "creatures": 4,
       "species": [
@@ -16495,11 +16439,11 @@
       "walkTilesFromTemple": 427
     },
     {
-      "id": "KAZORDOON-C08-036",
+      "id": "KAZORDOON-C08-035",
       "city": "KAZORDOON",
       "floor": 8,
       "component": 108,
-      "componentTiles": 1988,
+      "componentTiles": 1987,
       "creatures": 4,
       "species": [
         {
@@ -16584,13 +16528,13 @@
           "z": 8
         }
       ],
-      "walkTilesFromTemple": 412
+      "walkTilesFromTemple": null
     },
     {
-      "id": "KAZORDOON-C08-037",
+      "id": "KAZORDOON-C08-036",
       "city": "KAZORDOON",
       "floor": 8,
-      "component": 2326,
+      "component": 2324,
       "componentTiles": 41,
       "creatures": 3,
       "species": [
@@ -16645,7 +16589,7 @@
       "walkTilesFromTemple": 656
     },
     {
-      "id": "KAZORDOON-C08-038",
+      "id": "KAZORDOON-C08-037",
       "city": "KAZORDOON",
       "floor": 8,
       "component": 26,
@@ -16719,10 +16663,10 @@
       "walkTilesFromTemple": 650
     },
     {
-      "id": "KAZORDOON-C08-039",
+      "id": "KAZORDOON-C08-038",
       "city": "KAZORDOON",
       "floor": 8,
-      "component": 647,
+      "component": 646,
       "componentTiles": 155,
       "creatures": 3,
       "species": [
@@ -16805,11 +16749,11 @@
       "walkTilesFromTemple": null
     },
     {
-      "id": "KAZORDOON-C08-040",
+      "id": "KAZORDOON-C08-039",
       "city": "KAZORDOON",
       "floor": 8,
       "component": 108,
-      "componentTiles": 1988,
+      "componentTiles": 1987,
       "creatures": 3,
       "species": [
         {
@@ -16876,14 +16820,14 @@
           "z": 8
         }
       ],
-      "walkTilesFromTemple": 384
+      "walkTilesFromTemple": null
     },
     {
-      "id": "KAZORDOON-C08-041",
+      "id": "KAZORDOON-C08-040",
       "city": "KAZORDOON",
       "floor": 8,
       "component": 108,
-      "componentTiles": 1988,
+      "componentTiles": 1987,
       "creatures": 3,
       "species": [
         {
@@ -16950,10 +16894,10 @@
           "z": 8
         }
       ],
-      "walkTilesFromTemple": 430
+      "walkTilesFromTemple": null
     },
     {
-      "id": "KAZORDOON-C08-042",
+      "id": "KAZORDOON-C08-041",
       "city": "KAZORDOON",
       "floor": 8,
       "component": 26,
@@ -17250,178 +17194,6 @@
       "id": "KAZORDOON-C09-002",
       "city": "KAZORDOON",
       "floor": 9,
-      "component": 8,
-      "componentTiles": 747,
-      "creatures": 22,
-      "species": [
-        {
-          "name": "Rotworm",
-          "count": 22
-        }
-      ],
-      "extent": {
-        "minX": 32557,
-        "minY": 31992,
-        "maxX": 32596,
-        "maxY": 32035,
-        "centerX": 32576,
-        "centerY": 32013
-      },
-      "subareaId": 50,
-      "splitBySpecies": [
-        {
-          "name": "Rotworm",
-          "count": 22,
-          "extent": {
-            "minX": 32557,
-            "minY": 31992,
-            "maxX": 32596,
-            "maxY": 32035,
-            "centerX": 32576,
-            "centerY": 32013
-          }
-        }
-      ],
-      "spawns": [
-        {
-          "name": "Rotworm",
-          "x": 32557,
-          "y": 31992,
-          "z": 9
-        },
-        {
-          "name": "Rotworm",
-          "x": 32557,
-          "y": 31993,
-          "z": 9
-        },
-        {
-          "name": "Rotworm",
-          "x": 32567,
-          "y": 31993,
-          "z": 9
-        },
-        {
-          "name": "Rotworm",
-          "x": 32590,
-          "y": 31994,
-          "z": 9
-        },
-        {
-          "name": "Rotworm",
-          "x": 32582,
-          "y": 31995,
-          "z": 9
-        },
-        {
-          "name": "Rotworm",
-          "x": 32576,
-          "y": 31997,
-          "z": 9
-        },
-        {
-          "name": "Rotworm",
-          "x": 32581,
-          "y": 31997,
-          "z": 9
-        },
-        {
-          "name": "Rotworm",
-          "x": 32596,
-          "y": 31997,
-          "z": 9
-        },
-        {
-          "name": "Rotworm",
-          "x": 32566,
-          "y": 31998,
-          "z": 9
-        },
-        {
-          "name": "Rotworm",
-          "x": 32559,
-          "y": 32003,
-          "z": 9
-        },
-        {
-          "name": "Rotworm",
-          "x": 32562,
-          "y": 32004,
-          "z": 9
-        },
-        {
-          "name": "Rotworm",
-          "x": 32567,
-          "y": 32005,
-          "z": 9
-        },
-        {
-          "name": "Rotworm",
-          "x": 32561,
-          "y": 32009,
-          "z": 9
-        },
-        {
-          "name": "Rotworm",
-          "x": 32561,
-          "y": 32012,
-          "z": 9
-        },
-        {
-          "name": "Rotworm",
-          "x": 32569,
-          "y": 32014,
-          "z": 9
-        },
-        {
-          "name": "Rotworm",
-          "x": 32573,
-          "y": 32015,
-          "z": 9
-        },
-        {
-          "name": "Rotworm",
-          "x": 32569,
-          "y": 32021,
-          "z": 9
-        },
-        {
-          "name": "Rotworm",
-          "x": 32574,
-          "y": 32023,
-          "z": 9
-        },
-        {
-          "name": "Rotworm",
-          "x": 32575,
-          "y": 32026,
-          "z": 9
-        },
-        {
-          "name": "Rotworm",
-          "x": 32569,
-          "y": 32027,
-          "z": 9
-        },
-        {
-          "name": "Rotworm",
-          "x": 32572,
-          "y": 32030,
-          "z": 9
-        },
-        {
-          "name": "Rotworm",
-          "x": 32575,
-          "y": 32035,
-          "z": 9
-        }
-      ],
-      "walkTilesFromTemple": 321
-    },
-    {
-      "id": "KAZORDOON-C09-003",
-      "city": "KAZORDOON",
-      "floor": 9,
       "component": 4,
       "componentTiles": 693,
       "creatures": 17,
@@ -17601,147 +17373,7 @@
       "walkTilesFromTemple": 317
     },
     {
-      "id": "KAZORDOON-C09-004",
-      "city": "KAZORDOON",
-      "floor": 9,
-      "component": 811,
-      "componentTiles": 541,
-      "creatures": 14,
-      "species": [
-        {
-          "name": "Dwarf",
-          "count": 12
-        },
-        {
-          "name": "Rotworm",
-          "count": 2
-        }
-      ],
-      "extent": {
-        "minX": 32511,
-        "minY": 31880,
-        "maxX": 32542,
-        "maxY": 31914,
-        "centerX": 32526,
-        "centerY": 31897
-      },
-      "subareaId": 50,
-      "splitBySpecies": [
-        {
-          "name": "Dwarf",
-          "count": 12,
-          "extent": {
-            "minX": 32514,
-            "minY": 31880,
-            "maxX": 32542,
-            "maxY": 31914,
-            "centerX": 32528,
-            "centerY": 31897
-          }
-        },
-        {
-          "name": "Rotworm",
-          "count": 2,
-          "extent": {
-            "minX": 32511,
-            "minY": 31883,
-            "maxX": 32514,
-            "maxY": 31885,
-            "centerX": 32512,
-            "centerY": 31884
-          }
-        }
-      ],
-      "spawns": [
-        {
-          "name": "Dwarf",
-          "x": 32514,
-          "y": 31880,
-          "z": 9
-        },
-        {
-          "name": "Rotworm",
-          "x": 32514,
-          "y": 31883,
-          "z": 9
-        },
-        {
-          "name": "Rotworm",
-          "x": 32511,
-          "y": 31885,
-          "z": 9
-        },
-        {
-          "name": "Dwarf",
-          "x": 32517,
-          "y": 31885,
-          "z": 9
-        },
-        {
-          "name": "Dwarf",
-          "x": 32520,
-          "y": 31888,
-          "z": 9
-        },
-        {
-          "name": "Dwarf",
-          "x": 32527,
-          "y": 31896,
-          "z": 9
-        },
-        {
-          "name": "Dwarf",
-          "x": 32532,
-          "y": 31896,
-          "z": 9
-        },
-        {
-          "name": "Dwarf",
-          "x": 32542,
-          "y": 31897,
-          "z": 9
-        },
-        {
-          "name": "Dwarf",
-          "x": 32540,
-          "y": 31901,
-          "z": 9
-        },
-        {
-          "name": "Dwarf",
-          "x": 32528,
-          "y": 31903,
-          "z": 9
-        },
-        {
-          "name": "Dwarf",
-          "x": 32527,
-          "y": 31904,
-          "z": 9
-        },
-        {
-          "name": "Dwarf",
-          "x": 32527,
-          "y": 31913,
-          "z": 9
-        },
-        {
-          "name": "Dwarf",
-          "x": 32525,
-          "y": 31914,
-          "z": 9
-        },
-        {
-          "name": "Dwarf",
-          "x": 32528,
-          "y": 31914,
-          "z": 9
-        }
-      ],
-      "walkTilesFromTemple": 324
-    },
-    {
-      "id": "KAZORDOON-C09-005",
+      "id": "KAZORDOON-C09-003",
       "city": "KAZORDOON",
       "floor": 9,
       "component": 9,
@@ -17971,10 +17603,10 @@
       "walkTilesFromTemple": null
     },
     {
-      "id": "KAZORDOON-C09-006",
+      "id": "KAZORDOON-C09-004",
       "city": "KAZORDOON",
       "floor": 9,
-      "component": 445,
+      "component": 444,
       "componentTiles": 402,
       "creatures": 13,
       "species": [
@@ -18145,7 +17777,7 @@
       "walkTilesFromTemple": 323
     },
     {
-      "id": "KAZORDOON-C09-007",
+      "id": "KAZORDOON-C09-005",
       "city": "KAZORDOON",
       "floor": 9,
       "component": 228,
@@ -18267,7 +17899,7 @@
       "walkTilesFromTemple": 317
     },
     {
-      "id": "KAZORDOON-C09-008",
+      "id": "KAZORDOON-C09-006",
       "city": "KAZORDOON",
       "floor": 9,
       "component": 311,
@@ -18361,10 +17993,92 @@
       "walkTilesFromTemple": 480
     },
     {
-      "id": "KAZORDOON-C09-009",
+      "id": "KAZORDOON-C09-007",
       "city": "KAZORDOON",
       "floor": 9,
-      "component": 445,
+      "component": 8,
+      "componentTiles": 747,
+      "creatures": 7,
+      "species": [
+        {
+          "name": "Rotworm",
+          "count": 7
+        }
+      ],
+      "extent": {
+        "minX": 32557,
+        "minY": 31992,
+        "maxX": 32590,
+        "maxY": 31997,
+        "centerX": 32573,
+        "centerY": 31994
+      },
+      "subareaId": 50,
+      "splitBySpecies": [
+        {
+          "name": "Rotworm",
+          "count": 7,
+          "extent": {
+            "minX": 32557,
+            "minY": 31992,
+            "maxX": 32590,
+            "maxY": 31997,
+            "centerX": 32573,
+            "centerY": 31994
+          }
+        }
+      ],
+      "spawns": [
+        {
+          "name": "Rotworm",
+          "x": 32557,
+          "y": 31992,
+          "z": 9
+        },
+        {
+          "name": "Rotworm",
+          "x": 32557,
+          "y": 31993,
+          "z": 9
+        },
+        {
+          "name": "Rotworm",
+          "x": 32567,
+          "y": 31993,
+          "z": 9
+        },
+        {
+          "name": "Rotworm",
+          "x": 32590,
+          "y": 31994,
+          "z": 9
+        },
+        {
+          "name": "Rotworm",
+          "x": 32582,
+          "y": 31995,
+          "z": 9
+        },
+        {
+          "name": "Rotworm",
+          "x": 32576,
+          "y": 31997,
+          "z": 9
+        },
+        {
+          "name": "Rotworm",
+          "x": 32581,
+          "y": 31997,
+          "z": 9
+        }
+      ],
+      "walkTilesFromTemple": 322
+    },
+    {
+      "id": "KAZORDOON-C09-008",
+      "city": "KAZORDOON",
+      "floor": 9,
+      "component": 444,
       "componentTiles": 402,
       "creatures": 7,
       "species": [
@@ -18475,105 +18189,99 @@
       "walkTilesFromTemple": 336
     },
     {
-      "id": "KAZORDOON-C09-010",
+      "id": "KAZORDOON-C09-009",
       "city": "KAZORDOON",
       "floor": 9,
-      "component": 8,
-      "componentTiles": 747,
-      "creatures": 7,
+      "component": 810,
+      "componentTiles": 540,
+      "creatures": 6,
       "species": [
         {
-          "name": "Rotworm",
-          "count": 5
+          "name": "Dwarf",
+          "count": 4
         },
         {
-          "name": "Poison Spider",
+          "name": "Rotworm",
           "count": 2
         }
       ],
       "extent": {
-        "minX": 32549,
-        "minY": 31968,
-        "maxX": 32560,
-        "maxY": 31976,
-        "centerX": 32554,
-        "centerY": 31972
+        "minX": 32511,
+        "minY": 31883,
+        "maxX": 32532,
+        "maxY": 31896,
+        "centerX": 32521,
+        "centerY": 31889
       },
       "subareaId": 50,
       "splitBySpecies": [
         {
-          "name": "Rotworm",
-          "count": 5,
+          "name": "Dwarf",
+          "count": 4,
           "extent": {
-            "minX": 32550,
-            "minY": 31968,
-            "maxX": 32560,
-            "maxY": 31976,
-            "centerX": 32555,
-            "centerY": 31972
+            "minX": 32517,
+            "minY": 31885,
+            "maxX": 32532,
+            "maxY": 31896,
+            "centerX": 32524,
+            "centerY": 31890
           }
         },
         {
-          "name": "Poison Spider",
+          "name": "Rotworm",
           "count": 2,
           "extent": {
-            "minX": 32549,
-            "minY": 31972,
-            "maxX": 32553,
-            "maxY": 31976,
-            "centerX": 32551,
-            "centerY": 31974
+            "minX": 32511,
+            "minY": 31883,
+            "maxX": 32514,
+            "maxY": 31885,
+            "centerX": 32512,
+            "centerY": 31884
           }
         }
       ],
       "spawns": [
         {
           "name": "Rotworm",
-          "x": 32550,
-          "y": 31968,
+          "x": 32514,
+          "y": 31883,
           "z": 9
         },
         {
           "name": "Rotworm",
-          "x": 32550,
-          "y": 31971,
+          "x": 32511,
+          "y": 31885,
           "z": 9
         },
         {
-          "name": "Poison Spider",
-          "x": 32549,
-          "y": 31972,
+          "name": "Dwarf",
+          "x": 32517,
+          "y": 31885,
           "z": 9
         },
         {
-          "name": "Rotworm",
-          "x": 32550,
-          "y": 31973,
+          "name": "Dwarf",
+          "x": 32520,
+          "y": 31888,
           "z": 9
         },
         {
-          "name": "Rotworm",
-          "x": 32552,
-          "y": 31976,
+          "name": "Dwarf",
+          "x": 32527,
+          "y": 31896,
           "z": 9
         },
         {
-          "name": "Poison Spider",
-          "x": 32553,
-          "y": 31976,
-          "z": 9
-        },
-        {
-          "name": "Rotworm",
-          "x": 32560,
-          "y": 31976,
+          "name": "Dwarf",
+          "x": 32532,
+          "y": 31896,
           "z": 9
         }
       ],
-      "walkTilesFromTemple": 340
+      "walkTilesFromTemple": 324
     },
     {
-      "id": "KAZORDOON-C09-011",
+      "id": "KAZORDOON-C09-010",
       "city": "KAZORDOON",
       "floor": 9,
       "component": 228,
@@ -18659,93 +18367,7 @@
       "walkTilesFromTemple": 343
     },
     {
-      "id": "KAZORDOON-C09-012",
-      "city": "KAZORDOON",
-      "floor": 9,
-      "component": 811,
-      "componentTiles": 541,
-      "creatures": 5,
-      "species": [
-        {
-          "name": "Rotworm",
-          "count": 3
-        },
-        {
-          "name": "Dwarf",
-          "count": 2
-        }
-      ],
-      "extent": {
-        "minX": 32454,
-        "minY": 31889,
-        "maxX": 32469,
-        "maxY": 31898,
-        "centerX": 32461,
-        "centerY": 31893
-      },
-      "subareaId": 50,
-      "splitBySpecies": [
-        {
-          "name": "Rotworm",
-          "count": 3,
-          "extent": {
-            "minX": 32454,
-            "minY": 31893,
-            "maxX": 32465,
-            "maxY": 31898,
-            "centerX": 32459,
-            "centerY": 31895
-          }
-        },
-        {
-          "name": "Dwarf",
-          "count": 2,
-          "extent": {
-            "minX": 32466,
-            "minY": 31889,
-            "maxX": 32469,
-            "maxY": 31893,
-            "centerX": 32467,
-            "centerY": 31891
-          }
-        }
-      ],
-      "spawns": [
-        {
-          "name": "Dwarf",
-          "x": 32469,
-          "y": 31889,
-          "z": 9
-        },
-        {
-          "name": "Rotworm",
-          "x": 32465,
-          "y": 31893,
-          "z": 9
-        },
-        {
-          "name": "Dwarf",
-          "x": 32466,
-          "y": 31893,
-          "z": 9
-        },
-        {
-          "name": "Rotworm",
-          "x": 32458,
-          "y": 31895,
-          "z": 9
-        },
-        {
-          "name": "Rotworm",
-          "x": 32454,
-          "y": 31898,
-          "z": 9
-        }
-      ],
-      "walkTilesFromTemple": 374
-    },
-    {
-      "id": "KAZORDOON-C09-013",
+      "id": "KAZORDOON-C09-011",
       "city": "KAZORDOON",
       "floor": 9,
       "component": 8,
@@ -18815,11 +18437,11 @@
       "walkTilesFromTemple": 340
     },
     {
-      "id": "KAZORDOON-C09-014",
+      "id": "KAZORDOON-C09-012",
       "city": "KAZORDOON",
       "floor": 9,
       "component": 101,
-      "componentTiles": 692,
+      "componentTiles": 334,
       "creatures": 15,
       "species": [
         {
@@ -19046,7 +18668,173 @@
           "z": 9
         }
       ],
-      "walkTilesFromTemple": 666
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "KAZORDOON-C09-013",
+      "city": "KAZORDOON",
+      "floor": 9,
+      "component": 810,
+      "componentTiles": 540,
+      "creatures": 4,
+      "species": [
+        {
+          "name": "Dwarf",
+          "count": 2
+        },
+        {
+          "name": "Rotworm",
+          "count": 2
+        }
+      ],
+      "extent": {
+        "minX": 32458,
+        "minY": 31889,
+        "maxX": 32469,
+        "maxY": 31895,
+        "centerX": 32463,
+        "centerY": 31892
+      },
+      "subareaId": 50,
+      "splitBySpecies": [
+        {
+          "name": "Dwarf",
+          "count": 2,
+          "extent": {
+            "minX": 32466,
+            "minY": 31889,
+            "maxX": 32469,
+            "maxY": 31893,
+            "centerX": 32467,
+            "centerY": 31891
+          }
+        },
+        {
+          "name": "Rotworm",
+          "count": 2,
+          "extent": {
+            "minX": 32458,
+            "minY": 31893,
+            "maxX": 32465,
+            "maxY": 31895,
+            "centerX": 32461,
+            "centerY": 31894
+          }
+        }
+      ],
+      "spawns": [
+        {
+          "name": "Dwarf",
+          "x": 32469,
+          "y": 31889,
+          "z": 9
+        },
+        {
+          "name": "Rotworm",
+          "x": 32465,
+          "y": 31893,
+          "z": 9
+        },
+        {
+          "name": "Dwarf",
+          "x": 32466,
+          "y": 31893,
+          "z": 9
+        },
+        {
+          "name": "Rotworm",
+          "x": 32458,
+          "y": 31895,
+          "z": 9
+        }
+      ],
+      "walkTilesFromTemple": 374
+    },
+    {
+      "id": "KAZORDOON-C09-014",
+      "city": "KAZORDOON",
+      "floor": 9,
+      "component": 8,
+      "componentTiles": 747,
+      "creatures": 5,
+      "species": [
+        {
+          "name": "Rotworm",
+          "count": 3
+        },
+        {
+          "name": "Poison Spider",
+          "count": 2
+        }
+      ],
+      "extent": {
+        "minX": 32549,
+        "minY": 31971,
+        "maxX": 32553,
+        "maxY": 31976,
+        "centerX": 32551,
+        "centerY": 31973
+      },
+      "subareaId": 50,
+      "splitBySpecies": [
+        {
+          "name": "Rotworm",
+          "count": 3,
+          "extent": {
+            "minX": 32550,
+            "minY": 31971,
+            "maxX": 32552,
+            "maxY": 31976,
+            "centerX": 32551,
+            "centerY": 31973
+          }
+        },
+        {
+          "name": "Poison Spider",
+          "count": 2,
+          "extent": {
+            "minX": 32549,
+            "minY": 31972,
+            "maxX": 32553,
+            "maxY": 31976,
+            "centerX": 32551,
+            "centerY": 31974
+          }
+        }
+      ],
+      "spawns": [
+        {
+          "name": "Rotworm",
+          "x": 32550,
+          "y": 31971,
+          "z": 9
+        },
+        {
+          "name": "Poison Spider",
+          "x": 32549,
+          "y": 31972,
+          "z": 9
+        },
+        {
+          "name": "Rotworm",
+          "x": 32550,
+          "y": 31973,
+          "z": 9
+        },
+        {
+          "name": "Rotworm",
+          "x": 32552,
+          "y": 31976,
+          "z": 9
+        },
+        {
+          "name": "Poison Spider",
+          "x": 32553,
+          "y": 31976,
+          "z": 9
+        }
+      ],
+      "walkTilesFromTemple": 340
     },
     {
       "id": "KAZORDOON-C09-015",
@@ -19132,64 +18920,6 @@
       "id": "KAZORDOON-C09-016",
       "city": "KAZORDOON",
       "floor": 9,
-      "component": 811,
-      "componentTiles": 541,
-      "creatures": 3,
-      "species": [
-        {
-          "name": "Dwarf",
-          "count": 3
-        }
-      ],
-      "extent": {
-        "minX": 32441,
-        "minY": 31903,
-        "maxX": 32444,
-        "maxY": 31906,
-        "centerX": 32442,
-        "centerY": 31904
-      },
-      "subareaId": null,
-      "splitBySpecies": [
-        {
-          "name": "Dwarf",
-          "count": 3,
-          "extent": {
-            "minX": 32441,
-            "minY": 31903,
-            "maxX": 32444,
-            "maxY": 31906,
-            "centerX": 32442,
-            "centerY": 31904
-          }
-        }
-      ],
-      "spawns": [
-        {
-          "name": "Dwarf",
-          "x": 32444,
-          "y": 31903,
-          "z": 9
-        },
-        {
-          "name": "Dwarf",
-          "x": 32442,
-          "y": 31904,
-          "z": 9
-        },
-        {
-          "name": "Dwarf",
-          "x": 32441,
-          "y": 31906,
-          "z": 9
-        }
-      ],
-      "walkTilesFromTemple": 399
-    },
-    {
-      "id": "KAZORDOON-C09-017",
-      "city": "KAZORDOON",
-      "floor": 9,
       "component": 4,
       "componentTiles": 693,
       "creatures": 3,
@@ -19261,10 +18991,10 @@
       "walkTilesFromTemple": 371
     },
     {
-      "id": "KAZORDOON-C09-018",
+      "id": "KAZORDOON-C09-017",
       "city": "KAZORDOON",
       "floor": 9,
-      "component": 445,
+      "component": 444,
       "componentTiles": 402,
       "creatures": 3,
       "species": [
@@ -19319,7 +19049,7 @@
       "walkTilesFromTemple": 353
     },
     {
-      "id": "KAZORDOON-C09-019",
+      "id": "KAZORDOON-C09-018",
       "city": "KAZORDOON",
       "floor": 9,
       "component": 289,
@@ -19377,7 +19107,7 @@
       "walkTilesFromTemple": 403
     },
     {
-      "id": "KAZORDOON-C09-020",
+      "id": "KAZORDOON-C09-019",
       "city": "KAZORDOON",
       "floor": 9,
       "component": 119,
@@ -19482,10 +19212,10 @@
           "z": 9
         }
       ],
-      "walkTilesFromTemple": 471
+      "walkTilesFromTemple": null
     },
     {
-      "id": "KAZORDOON-C09-021",
+      "id": "KAZORDOON-C09-020",
       "city": "KAZORDOON",
       "floor": 9,
       "component": 119,
@@ -19574,10 +19304,10 @@
           "z": 9
         }
       ],
-      "walkTilesFromTemple": 499
+      "walkTilesFromTemple": null
     },
     {
-      "id": "KAZORDOON-C09-022",
+      "id": "KAZORDOON-C09-021",
       "city": "KAZORDOON",
       "floor": 9,
       "component": 8,
@@ -19657,7 +19387,7 @@
       "walkTilesFromTemple": 357
     },
     {
-      "id": "KAZORDOON-C09-023",
+      "id": "KAZORDOON-C09-022",
       "city": "KAZORDOON",
       "floor": 9,
       "component": 119,
@@ -19728,14 +19458,14 @@
           "z": 9
         }
       ],
-      "walkTilesFromTemple": 496
+      "walkTilesFromTemple": null
     },
     {
-      "id": "KAZORDOON-C09-024",
+      "id": "KAZORDOON-C09-023",
       "city": "KAZORDOON",
       "floor": 9,
-      "component": 811,
-      "componentTiles": 541,
+      "component": 810,
+      "componentTiles": 540,
       "creatures": 3,
       "species": [
         {
@@ -19821,11 +19551,11 @@
       "walkTilesFromTemple": 347
     },
     {
-      "id": "KAZORDOON-C09-025",
+      "id": "KAZORDOON-C09-024",
       "city": "KAZORDOON",
       "floor": 9,
-      "component": 101,
-      "componentTiles": 692,
+      "component": 303,
+      "componentTiles": 357,
       "creatures": 10,
       "species": [
         {
@@ -19985,11 +19715,11 @@
       "walkTilesFromTemple": 636
     },
     {
-      "id": "KAZORDOON-C09-026",
+      "id": "KAZORDOON-C09-025",
       "city": "KAZORDOON",
       "floor": 9,
-      "component": 101,
-      "componentTiles": 692,
+      "component": 303,
+      "componentTiles": 357,
       "creatures": 6,
       "species": [
         {
@@ -20093,7 +19823,7 @@
       "walkTilesFromTemple": 648
     },
     {
-      "id": "KAZORDOON-C09-027",
+      "id": "KAZORDOON-C09-026",
       "city": "KAZORDOON",
       "floor": 9,
       "component": 118,
@@ -20167,10 +19897,10 @@
       "walkTilesFromTemple": 463
     },
     {
-      "id": "KAZORDOON-C09-028",
+      "id": "KAZORDOON-C09-027",
       "city": "KAZORDOON",
       "floor": 9,
-      "component": 584,
+      "component": 583,
       "componentTiles": 369,
       "creatures": 8,
       "species": [
@@ -20271,7 +20001,7 @@
       "walkTilesFromTemple": 468
     },
     {
-      "id": "KAZORDOON-C09-029",
+      "id": "KAZORDOON-C09-028",
       "city": "KAZORDOON",
       "floor": 9,
       "component": 119,
@@ -20342,7 +20072,7 @@
           "z": 9
         }
       ],
-      "walkTilesFromTemple": 489
+      "walkTilesFromTemple": null
     },
     {
       "id": "KAZORDOON-C10-001",
@@ -20508,7 +20238,7 @@
       "id": "KAZORDOON-C10-002",
       "city": "KAZORDOON",
       "floor": 10,
-      "component": 524,
+      "component": 523,
       "componentTiles": 832,
       "creatures": 6,
       "species": [
@@ -20601,7 +20331,7 @@
       "city": "KAZORDOON",
       "floor": 10,
       "component": 169,
-      "componentTiles": 695,
+      "componentTiles": 2526,
       "creatures": 7,
       "species": [
         {
@@ -20726,7 +20456,7 @@
       "id": "KAZORDOON-C10-004",
       "city": "KAZORDOON",
       "floor": 10,
-      "component": 819,
+      "component": 818,
       "componentTiles": 39,
       "creatures": 5,
       "species": [
@@ -20994,7 +20724,7 @@
           "z": 10
         }
       ],
-      "walkTilesFromTemple": 483
+      "walkTilesFromTemple": null
     },
     {
       "id": "KAZORDOON-C10-006",
@@ -21156,7 +20886,7 @@
           "z": 10
         }
       ],
-      "walkTilesFromTemple": 447
+      "walkTilesFromTemple": null
     },
     {
       "id": "KAZORDOON-C10-007",
@@ -21272,150 +21002,6 @@
       "id": "KAZORDOON-C10-008",
       "city": "KAZORDOON",
       "floor": 10,
-      "component": 966,
-      "componentTiles": 456,
-      "creatures": 8,
-      "species": [
-        {
-          "name": "Dwarf",
-          "count": 2
-        },
-        {
-          "name": "Rotworm",
-          "count": 2
-        },
-        {
-          "name": "Dwarf Soldier",
-          "count": 4
-        }
-      ],
-      "extent": {
-        "minX": 32457,
-        "minY": 31883,
-        "maxX": 32480,
-        "maxY": 31913,
-        "centerX": 32468,
-        "centerY": 31898
-      },
-      "subareaId": 50,
-      "splitBySpecies": [
-        {
-          "name": "Dwarf",
-          "count": 2,
-          "extent": {
-            "minX": 32472,
-            "minY": 31912,
-            "maxX": 32479,
-            "maxY": 31913,
-            "centerX": 32475,
-            "centerY": 31912
-          }
-        },
-        {
-          "name": "Dwarf Soldier",
-          "count": 2,
-          "extent": {
-            "minX": 32458,
-            "minY": 31897,
-            "maxX": 32464,
-            "maxY": 31905,
-            "centerX": 32461,
-            "centerY": 31901
-          }
-        },
-        {
-          "name": "Rotworm",
-          "count": 2,
-          "extent": {
-            "minX": 32457,
-            "minY": 31892,
-            "maxX": 32459,
-            "maxY": 31900,
-            "centerX": 32458,
-            "centerY": 31896
-          }
-        },
-        {
-          "name": "Dwarf Soldier",
-          "count": 1,
-          "extent": {
-            "minX": 32459,
-            "minY": 31883,
-            "maxX": 32459,
-            "maxY": 31883,
-            "centerX": 32459,
-            "centerY": 31883
-          }
-        },
-        {
-          "name": "Dwarf Soldier",
-          "count": 1,
-          "extent": {
-            "minX": 32480,
-            "minY": 31910,
-            "maxX": 32480,
-            "maxY": 31910,
-            "centerX": 32480,
-            "centerY": 31910
-          }
-        }
-      ],
-      "spawns": [
-        {
-          "name": "Dwarf Soldier",
-          "x": 32459,
-          "y": 31883,
-          "z": 10
-        },
-        {
-          "name": "Rotworm",
-          "x": 32457,
-          "y": 31892,
-          "z": 10
-        },
-        {
-          "name": "Dwarf Soldier",
-          "x": 32458,
-          "y": 31897,
-          "z": 10
-        },
-        {
-          "name": "Rotworm",
-          "x": 32459,
-          "y": 31900,
-          "z": 10
-        },
-        {
-          "name": "Dwarf Soldier",
-          "x": 32464,
-          "y": 31905,
-          "z": 10
-        },
-        {
-          "name": "Dwarf Soldier",
-          "x": 32480,
-          "y": 31910,
-          "z": 10
-        },
-        {
-          "name": "Dwarf",
-          "x": 32479,
-          "y": 31912,
-          "z": 10
-        },
-        {
-          "name": "Dwarf",
-          "x": 32472,
-          "y": 31913,
-          "z": 10
-        }
-      ],
-      "walkTilesFromTemple": 384
-    },
-    {
-      "id": "KAZORDOON-C10-009",
-      "city": "KAZORDOON",
-      "floor": 10,
       "component": 333,
       "componentTiles": 976,
       "creatures": 4,
@@ -21477,7 +21063,7 @@
       "walkTilesFromTemple": 117
     },
     {
-      "id": "KAZORDOON-C10-010",
+      "id": "KAZORDOON-C10-009",
       "city": "KAZORDOON",
       "floor": 10,
       "component": 73,
@@ -21557,7 +21143,7 @@
       "walkTilesFromTemple": 70
     },
     {
-      "id": "KAZORDOON-C10-011",
+      "id": "KAZORDOON-C10-010",
       "city": "KAZORDOON",
       "floor": 10,
       "component": 333,
@@ -21615,10 +21201,10 @@
       "walkTilesFromTemple": 113
     },
     {
-      "id": "KAZORDOON-C10-012",
+      "id": "KAZORDOON-C10-011",
       "city": "KAZORDOON",
       "floor": 10,
-      "component": 524,
+      "component": 523,
       "componentTiles": 832,
       "creatures": 7,
       "species": [
@@ -21741,11 +21327,11 @@
       "walkTilesFromTemple": 371
     },
     {
-      "id": "KAZORDOON-C10-013",
+      "id": "KAZORDOON-C10-012",
       "city": "KAZORDOON",
       "floor": 10,
-      "component": 389,
-      "componentTiles": 734,
+      "component": 169,
+      "componentTiles": 2526,
       "creatures": 5,
       "species": [
         {
@@ -21824,10 +21410,10 @@
           "z": 10
         }
       ],
-      "walkTilesFromTemple": 443
+      "walkTilesFromTemple": 400
     },
     {
-      "id": "KAZORDOON-C10-014",
+      "id": "KAZORDOON-C10-013",
       "city": "KAZORDOON",
       "floor": 10,
       "component": 37,
@@ -21916,13 +21502,87 @@
           "z": 10
         }
       ],
-      "walkTilesFromTemple": 464
+      "walkTilesFromTemple": 444
+    },
+    {
+      "id": "KAZORDOON-C10-014",
+      "city": "KAZORDOON",
+      "floor": 10,
+      "component": 169,
+      "componentTiles": 2526,
+      "creatures": 3,
+      "species": [
+        {
+          "name": "Dwarf",
+          "count": 2
+        },
+        {
+          "name": "Dwarf Soldier",
+          "count": 1
+        }
+      ],
+      "extent": {
+        "minX": 32472,
+        "minY": 31910,
+        "maxX": 32480,
+        "maxY": 31913,
+        "centerX": 32476,
+        "centerY": 31911
+      },
+      "subareaId": 50,
+      "splitBySpecies": [
+        {
+          "name": "Dwarf",
+          "count": 2,
+          "extent": {
+            "minX": 32472,
+            "minY": 31912,
+            "maxX": 32479,
+            "maxY": 31913,
+            "centerX": 32475,
+            "centerY": 31912
+          }
+        },
+        {
+          "name": "Dwarf Soldier",
+          "count": 1,
+          "extent": {
+            "minX": 32480,
+            "minY": 31910,
+            "maxX": 32480,
+            "maxY": 31910,
+            "centerX": 32480,
+            "centerY": 31910
+          }
+        }
+      ],
+      "spawns": [
+        {
+          "name": "Dwarf Soldier",
+          "x": 32480,
+          "y": 31910,
+          "z": 10
+        },
+        {
+          "name": "Dwarf",
+          "x": 32479,
+          "y": 31912,
+          "z": 10
+        },
+        {
+          "name": "Dwarf",
+          "x": 32472,
+          "y": 31913,
+          "z": 10
+        }
+      ],
+      "walkTilesFromTemple": 384
     },
     {
       "id": "KAZORDOON-C10-015",
       "city": "KAZORDOON",
       "floor": 10,
-      "component": 524,
+      "component": 523,
       "componentTiles": 832,
       "creatures": 3,
       "species": [
@@ -21996,6 +21656,80 @@
       "id": "KAZORDOON-C10-016",
       "city": "KAZORDOON",
       "floor": 10,
+      "component": 169,
+      "componentTiles": 2526,
+      "creatures": 3,
+      "species": [
+        {
+          "name": "Rotworm",
+          "count": 2
+        },
+        {
+          "name": "Dwarf Soldier",
+          "count": 1
+        }
+      ],
+      "extent": {
+        "minX": 32457,
+        "minY": 31892,
+        "maxX": 32459,
+        "maxY": 31900,
+        "centerX": 32458,
+        "centerY": 31896
+      },
+      "subareaId": 50,
+      "splitBySpecies": [
+        {
+          "name": "Rotworm",
+          "count": 2,
+          "extent": {
+            "minX": 32457,
+            "minY": 31892,
+            "maxX": 32459,
+            "maxY": 31900,
+            "centerX": 32458,
+            "centerY": 31896
+          }
+        },
+        {
+          "name": "Dwarf Soldier",
+          "count": 1,
+          "extent": {
+            "minX": 32458,
+            "minY": 31897,
+            "maxX": 32458,
+            "maxY": 31897,
+            "centerX": 32458,
+            "centerY": 31897
+          }
+        }
+      ],
+      "spawns": [
+        {
+          "name": "Rotworm",
+          "x": 32457,
+          "y": 31892,
+          "z": 10
+        },
+        {
+          "name": "Dwarf Soldier",
+          "x": 32458,
+          "y": 31897,
+          "z": 10
+        },
+        {
+          "name": "Rotworm",
+          "x": 32459,
+          "y": 31900,
+          "z": 10
+        }
+      ],
+      "walkTilesFromTemple": 394
+    },
+    {
+      "id": "KAZORDOON-C10-017",
+      "city": "KAZORDOON",
+      "floor": 10,
       "component": 218,
       "componentTiles": 1408,
       "creatures": 3,
@@ -22064,81 +21798,7 @@
           "z": 10
         }
       ],
-      "walkTilesFromTemple": 513
-    },
-    {
-      "id": "KAZORDOON-C10-017",
-      "city": "KAZORDOON",
-      "floor": 10,
-      "component": 966,
-      "componentTiles": 456,
-      "creatures": 3,
-      "species": [
-        {
-          "name": "Rotworm",
-          "count": 1
-        },
-        {
-          "name": "Dwarf Soldier",
-          "count": 2
-        }
-      ],
-      "extent": {
-        "minX": 32471,
-        "minY": 31879,
-        "maxX": 32473,
-        "maxY": 31881,
-        "centerX": 32472,
-        "centerY": 31880
-      },
-      "subareaId": 50,
-      "splitBySpecies": [
-        {
-          "name": "Dwarf Soldier",
-          "count": 2,
-          "extent": {
-            "minX": 32471,
-            "minY": 31879,
-            "maxX": 32472,
-            "maxY": 31880,
-            "centerX": 32471,
-            "centerY": 31879
-          }
-        },
-        {
-          "name": "Rotworm",
-          "count": 1,
-          "extent": {
-            "minX": 32473,
-            "minY": 31881,
-            "maxX": 32473,
-            "maxY": 31881,
-            "centerX": 32473,
-            "centerY": 31881
-          }
-        }
-      ],
-      "spawns": [
-        {
-          "name": "Dwarf Soldier",
-          "x": 32472,
-          "y": 31879,
-          "z": 10
-        },
-        {
-          "name": "Dwarf Soldier",
-          "x": 32471,
-          "y": 31880,
-          "z": 10
-        },
-        {
-          "name": "Rotworm",
-          "x": 32473,
-          "y": 31881,
-          "z": 10
-        }
-      ],
-      "walkTilesFromTemple": 420
+      "walkTilesFromTemple": null
     },
     {
       "id": "KAZORDOON-C10-018",
@@ -22444,7 +22104,7 @@
       "id": "KAZORDOON-C10-020",
       "city": "KAZORDOON",
       "floor": 10,
-      "component": 301,
+      "component": 300,
       "componentTiles": 1665,
       "creatures": 8,
       "species": [
@@ -22532,7 +22192,7 @@
       "id": "KAZORDOON-C10-021",
       "city": "KAZORDOON",
       "floor": 10,
-      "component": 301,
+      "component": 300,
       "componentTiles": 1665,
       "creatures": 7,
       "species": [
@@ -22615,7 +22275,7 @@
       "city": "KAZORDOON",
       "floor": 10,
       "component": 373,
-      "componentTiles": 1649,
+      "componentTiles": 1648,
       "creatures": 6,
       "species": [
         {
@@ -22758,8 +22418,8 @@
       "id": "KAZORDOON-C10-023",
       "city": "KAZORDOON",
       "floor": 10,
-      "component": 966,
-      "componentTiles": 456,
+      "component": 169,
+      "componentTiles": 2526,
       "creatures": 6,
       "species": [
         {
@@ -22834,78 +22494,8 @@
       "id": "KAZORDOON-C10-024",
       "city": "KAZORDOON",
       "floor": 10,
-      "component": 966,
-      "componentTiles": 456,
-      "creatures": 5,
-      "species": [
-        {
-          "name": "Dwarf Soldier",
-          "count": 5
-        }
-      ],
-      "extent": {
-        "minX": 32462,
-        "minY": 31942,
-        "maxX": 32469,
-        "maxY": 31966,
-        "centerX": 32465,
-        "centerY": 31954
-      },
-      "subareaId": 49,
-      "splitBySpecies": [
-        {
-          "name": "Dwarf Soldier",
-          "count": 5,
-          "extent": {
-            "minX": 32462,
-            "minY": 31942,
-            "maxX": 32469,
-            "maxY": 31966,
-            "centerX": 32465,
-            "centerY": 31954
-          }
-        }
-      ],
-      "spawns": [
-        {
-          "name": "Dwarf Soldier",
-          "x": 32469,
-          "y": 31942,
-          "z": 10
-        },
-        {
-          "name": "Dwarf Soldier",
-          "x": 32468,
-          "y": 31947,
-          "z": 10
-        },
-        {
-          "name": "Dwarf Soldier",
-          "x": 32466,
-          "y": 31955,
-          "z": 10
-        },
-        {
-          "name": "Dwarf Soldier",
-          "x": 32462,
-          "y": 31964,
-          "z": 10
-        },
-        {
-          "name": "Dwarf Soldier",
-          "x": 32462,
-          "y": 31966,
-          "z": 10
-        }
-      ],
-      "walkTilesFromTemple": 417
-    },
-    {
-      "id": "KAZORDOON-C10-025",
-      "city": "KAZORDOON",
-      "floor": 10,
-      "component": 389,
-      "componentTiles": 734,
+      "component": 169,
+      "componentTiles": 2526,
       "creatures": 5,
       "species": [
         {
@@ -22971,7 +22561,7 @@
       "walkTilesFromTemple": 352
     },
     {
-      "id": "KAZORDOON-C10-026",
+      "id": "KAZORDOON-C10-025",
       "city": "KAZORDOON",
       "floor": 10,
       "component": 71,
@@ -23067,10 +22657,10 @@
       "walkTilesFromTemple": null
     },
     {
-      "id": "KAZORDOON-C10-027",
+      "id": "KAZORDOON-C10-026",
       "city": "KAZORDOON",
       "floor": 10,
-      "component": 301,
+      "component": 300,
       "componentTiles": 1665,
       "creatures": 4,
       "species": [
@@ -23131,11 +22721,11 @@
       "walkTilesFromTemple": 397
     },
     {
-      "id": "KAZORDOON-C10-028",
+      "id": "KAZORDOON-C10-027",
       "city": "KAZORDOON",
       "floor": 10,
       "component": 373,
-      "componentTiles": 1649,
+      "componentTiles": 1648,
       "creatures": 3,
       "species": [
         {
@@ -23205,10 +22795,10 @@
       "walkTilesFromTemple": 597
     },
     {
-      "id": "KAZORDOON-C10-029",
+      "id": "KAZORDOON-C10-028",
       "city": "KAZORDOON",
       "floor": 10,
-      "component": 301,
+      "component": 300,
       "componentTiles": 1665,
       "creatures": 3,
       "species": [
@@ -23263,10 +22853,10 @@
       "walkTilesFromTemple": 377
     },
     {
-      "id": "KAZORDOON-C10-030",
+      "id": "KAZORDOON-C10-029",
       "city": "KAZORDOON",
       "floor": 10,
-      "component": 301,
+      "component": 300,
       "componentTiles": 1665,
       "creatures": 3,
       "species": [
@@ -23321,10 +22911,10 @@
       "walkTilesFromTemple": 380
     },
     {
-      "id": "KAZORDOON-C10-031",
+      "id": "KAZORDOON-C10-030",
       "city": "KAZORDOON",
       "floor": 10,
-      "component": 524,
+      "component": 523,
       "componentTiles": 832,
       "creatures": 3,
       "species": [
@@ -23379,11 +22969,11 @@
       "walkTilesFromTemple": 394
     },
     {
-      "id": "KAZORDOON-C10-032",
+      "id": "KAZORDOON-C10-031",
       "city": "KAZORDOON",
       "floor": 10,
-      "component": 389,
-      "componentTiles": 734,
+      "component": 169,
+      "componentTiles": 2526,
       "creatures": 3,
       "species": [
         {
@@ -23437,11 +23027,11 @@
       "walkTilesFromTemple": 364
     },
     {
-      "id": "KAZORDOON-C10-033",
+      "id": "KAZORDOON-C10-032",
       "city": "KAZORDOON",
       "floor": 10,
-      "component": 389,
-      "componentTiles": 734,
+      "component": 169,
+      "componentTiles": 2526,
       "creatures": 3,
       "species": [
         {
@@ -23498,7 +23088,7 @@
       "id": "KAZORDOON-C11-001",
       "city": "KAZORDOON",
       "floor": 11,
-      "component": 526,
+      "component": 525,
       "componentTiles": 548,
       "creatures": 7,
       "species": [
@@ -23574,7 +23164,7 @@
           "z": 11
         }
       ],
-      "walkTilesFromTemple": 480
+      "walkTilesFromTemple": 494
     },
     {
       "id": "KAZORDOON-C11-002",
@@ -23638,7 +23228,7 @@
           "z": 11
         }
       ],
-      "walkTilesFromTemple": 617
+      "walkTilesFromTemple": 652
     },
     {
       "id": "KAZORDOON-C11-003",
@@ -23703,7 +23293,7 @@
       "city": "KAZORDOON",
       "floor": 11,
       "component": 92,
-      "componentTiles": 1298,
+      "componentTiles": 1297,
       "creatures": 3,
       "species": [
         {
@@ -23761,7 +23351,7 @@
       "city": "KAZORDOON",
       "floor": 11,
       "component": 92,
-      "componentTiles": 1298,
+      "componentTiles": 1297,
       "creatures": 3,
       "species": [
         {
@@ -23914,14 +23504,14 @@
           "z": 11
         }
       ],
-      "walkTilesFromTemple": 541
+      "walkTilesFromTemple": null
     },
     {
       "id": "KAZORDOON-C11-007",
       "city": "KAZORDOON",
       "floor": 11,
       "component": 92,
-      "componentTiles": 1298,
+      "componentTiles": 1297,
       "creatures": 3,
       "species": [
         {
@@ -24080,7 +23670,7 @@
           "z": 11
         }
       ],
-      "walkTilesFromTemple": 521
+      "walkTilesFromTemple": null
     },
     {
       "id": "KAZORDOON-C11-009",
@@ -24154,14 +23744,14 @@
           "z": 11
         }
       ],
-      "walkTilesFromTemple": 507
+      "walkTilesFromTemple": null
     },
     {
       "id": "KAZORDOON-C11-010",
       "city": "KAZORDOON",
       "floor": 11,
       "component": 221,
-      "componentTiles": 514,
+      "componentTiles": 513,
       "creatures": 24,
       "species": [
         {
@@ -24373,66 +23963,38 @@
       "city": "KAZORDOON",
       "floor": 11,
       "component": 223,
-      "componentTiles": 502,
-      "creatures": 17,
+      "componentTiles": 501,
+      "creatures": 13,
       "species": [
         {
           "name": "Dwarf Soldier",
-          "count": 16
-        },
-        {
-          "name": "Dwarf Guard",
-          "count": 1
+          "count": 13
         }
       ],
       "extent": {
-        "minX": 32451,
-        "minY": 31885,
-        "maxX": 32499,
-        "maxY": 31924,
-        "centerX": 32475,
-        "centerY": 31904
+        "minX": 32458,
+        "minY": 31894,
+        "maxX": 32495,
+        "maxY": 31922,
+        "centerX": 32476,
+        "centerY": 31908
       },
       "subareaId": 50,
       "splitBySpecies": [
         {
           "name": "Dwarf Soldier",
-          "count": 16,
+          "count": 13,
           "extent": {
-            "minX": 32451,
-            "minY": 31885,
-            "maxX": 32499,
-            "maxY": 31924,
-            "centerX": 32475,
-            "centerY": 31904
-          }
-        },
-        {
-          "name": "Dwarf Guard",
-          "count": 1,
-          "extent": {
-            "minX": 32498,
-            "minY": 31922,
-            "maxX": 32498,
+            "minX": 32458,
+            "minY": 31894,
+            "maxX": 32495,
             "maxY": 31922,
-            "centerX": 32498,
-            "centerY": 31922
+            "centerX": 32476,
+            "centerY": 31908
           }
         }
       ],
       "spawns": [
-        {
-          "name": "Dwarf Soldier",
-          "x": 32452,
-          "y": 31885,
-          "z": 11
-        },
-        {
-          "name": "Dwarf Soldier",
-          "x": 32451,
-          "y": 31887,
-          "z": 11
-        },
         {
           "name": "Dwarf Soldier",
           "x": 32458,
@@ -24510,18 +24072,6 @@
           "x": 32495,
           "y": 31922,
           "z": 11
-        },
-        {
-          "name": "Dwarf Guard",
-          "x": 32498,
-          "y": 31922,
-          "z": 11
-        },
-        {
-          "name": "Dwarf Soldier",
-          "x": 32499,
-          "y": 31924,
-          "z": 11
         }
       ],
       "walkTilesFromTemple": 381
@@ -24530,7 +24080,7 @@
       "id": "KAZORDOON-C11-012",
       "city": "KAZORDOON",
       "floor": 11,
-      "component": 568,
+      "component": 567,
       "componentTiles": 475,
       "creatures": 8,
       "species": [
@@ -24628,13 +24178,13 @@
           "z": 11
         }
       ],
-      "walkTilesFromTemple": 468
+      "walkTilesFromTemple": 440
     },
     {
       "id": "KAZORDOON-C11-013",
       "city": "KAZORDOON",
       "floor": 11,
-      "component": 620,
+      "component": 619,
       "componentTiles": 394,
       "creatures": 5,
       "species": [
@@ -24812,7 +24362,7 @@
       "id": "KAZORDOON-C11-015",
       "city": "KAZORDOON",
       "floor": 11,
-      "component": 620,
+      "component": 619,
       "componentTiles": 394,
       "creatures": 4,
       "species": [
@@ -24892,129 +24442,7 @@
       "id": "KAZORDOON-C11-016",
       "city": "KAZORDOON",
       "floor": 11,
-      "component": 223,
-      "componentTiles": 502,
-      "creatures": 4,
-      "species": [
-        {
-          "name": "Dwarf Soldier",
-          "count": 4
-        }
-      ],
-      "extent": {
-        "minX": 32455,
-        "minY": 31920,
-        "maxX": 32467,
-        "maxY": 31930,
-        "centerX": 32461,
-        "centerY": 31925
-      },
-      "subareaId": 50,
-      "splitBySpecies": [
-        {
-          "name": "Dwarf Soldier",
-          "count": 4,
-          "extent": {
-            "minX": 32455,
-            "minY": 31920,
-            "maxX": 32467,
-            "maxY": 31930,
-            "centerX": 32461,
-            "centerY": 31925
-          }
-        }
-      ],
-      "spawns": [
-        {
-          "name": "Dwarf Soldier",
-          "x": 32467,
-          "y": 31920,
-          "z": 11
-        },
-        {
-          "name": "Dwarf Soldier",
-          "x": 32465,
-          "y": 31924,
-          "z": 11
-        },
-        {
-          "name": "Dwarf Soldier",
-          "x": 32460,
-          "y": 31929,
-          "z": 11
-        },
-        {
-          "name": "Dwarf Soldier",
-          "x": 32455,
-          "y": 31930,
-          "z": 11
-        }
-      ],
-      "walkTilesFromTemple": 414
-    },
-    {
-      "id": "KAZORDOON-C11-017",
-      "city": "KAZORDOON",
-      "floor": 11,
-      "component": 223,
-      "componentTiles": 502,
-      "creatures": 3,
-      "species": [
-        {
-          "name": "Dwarf Guard",
-          "count": 3
-        }
-      ],
-      "extent": {
-        "minX": 32439,
-        "minY": 31878,
-        "maxX": 32442,
-        "maxY": 31879,
-        "centerX": 32440,
-        "centerY": 31878
-      },
-      "subareaId": null,
-      "splitBySpecies": [
-        {
-          "name": "Dwarf Guard",
-          "count": 3,
-          "extent": {
-            "minX": 32439,
-            "minY": 31878,
-            "maxX": 32442,
-            "maxY": 31879,
-            "centerX": 32440,
-            "centerY": 31878
-          }
-        }
-      ],
-      "spawns": [
-        {
-          "name": "Dwarf Guard",
-          "x": 32439,
-          "y": 31878,
-          "z": 11
-        },
-        {
-          "name": "Dwarf Guard",
-          "x": 32440,
-          "y": 31878,
-          "z": 11
-        },
-        {
-          "name": "Dwarf Guard",
-          "x": 32442,
-          "y": 31879,
-          "z": 11
-        }
-      ],
-      "walkTilesFromTemple": 412
-    },
-    {
-      "id": "KAZORDOON-C11-018",
-      "city": "KAZORDOON",
-      "floor": 11,
-      "component": 835,
+      "component": 833,
       "componentTiles": 105,
       "creatures": 3,
       "species": [
@@ -25069,10 +24497,10 @@
       "walkTilesFromTemple": 407
     },
     {
-      "id": "KAZORDOON-C11-019",
+      "id": "KAZORDOON-C11-017",
       "city": "KAZORDOON",
       "floor": 11,
-      "component": 432,
+      "component": 431,
       "componentTiles": 278,
       "creatures": 3,
       "species": [
@@ -25127,11 +24555,11 @@
       "walkTilesFromTemple": null
     },
     {
-      "id": "KAZORDOON-C11-020",
+      "id": "KAZORDOON-C11-018",
       "city": "KAZORDOON",
       "floor": 11,
       "component": 221,
-      "componentTiles": 514,
+      "componentTiles": 513,
       "creatures": 3,
       "species": [
         {
@@ -25297,7 +24725,7 @@
       "city": "KAZORDOON",
       "floor": 12,
       "component": 21,
-      "componentTiles": 1516,
+      "componentTiles": 1515,
       "creatures": 3,
       "species": [
         {
@@ -25413,7 +24841,7 @@
       "city": "KAZORDOON",
       "floor": 12,
       "component": 41,
-      "componentTiles": 1261,
+      "componentTiles": 1260,
       "creatures": 6,
       "species": [
         {
@@ -25622,7 +25050,7 @@
       "id": "KAZORDOON-C12-006",
       "city": "KAZORDOON",
       "floor": 12,
-      "component": 769,
+      "component": 768,
       "componentTiles": 404,
       "creatures": 12,
       "species": [
@@ -25892,70 +25320,6 @@
       "id": "KAZORDOON-C12-009",
       "city": "KAZORDOON",
       "floor": 12,
-      "component": 233,
-      "componentTiles": 408,
-      "creatures": 4,
-      "species": [
-        {
-          "name": "Dwarf Guard",
-          "count": 4
-        }
-      ],
-      "extent": {
-        "minX": 32429,
-        "minY": 31900,
-        "maxX": 32447,
-        "maxY": 31905,
-        "centerX": 32438,
-        "centerY": 31902
-      },
-      "subareaId": null,
-      "splitBySpecies": [
-        {
-          "name": "Dwarf Guard",
-          "count": 4,
-          "extent": {
-            "minX": 32429,
-            "minY": 31900,
-            "maxX": 32447,
-            "maxY": 31905,
-            "centerX": 32438,
-            "centerY": 31902
-          }
-        }
-      ],
-      "spawns": [
-        {
-          "name": "Dwarf Guard",
-          "x": 32429,
-          "y": 31900,
-          "z": 12
-        },
-        {
-          "name": "Dwarf Guard",
-          "x": 32432,
-          "y": 31901,
-          "z": 12
-        },
-        {
-          "name": "Dwarf Guard",
-          "x": 32440,
-          "y": 31905,
-          "z": 12
-        },
-        {
-          "name": "Dwarf Guard",
-          "x": 32447,
-          "y": 31905,
-          "z": 12
-        }
-      ],
-      "walkTilesFromTemple": 419
-    },
-    {
-      "id": "KAZORDOON-C12-010",
-      "city": "KAZORDOON",
-      "floor": 12,
       "component": 190,
       "componentTiles": 611,
       "creatures": 4,
@@ -26017,7 +25381,7 @@
       "walkTilesFromTemple": 359
     },
     {
-      "id": "KAZORDOON-C12-011",
+      "id": "KAZORDOON-C12-010",
       "city": "KAZORDOON",
       "floor": 12,
       "component": 120,
@@ -26081,11 +25445,11 @@
       "walkTilesFromTemple": null
     },
     {
-      "id": "KAZORDOON-C12-012",
+      "id": "KAZORDOON-C12-011",
       "city": "KAZORDOON",
       "floor": 12,
       "component": 41,
-      "componentTiles": 1261,
+      "componentTiles": 1260,
       "creatures": 3,
       "species": [
         {
@@ -26155,68 +25519,10 @@
       "walkTilesFromTemple": 511
     },
     {
-      "id": "KAZORDOON-C12-013",
+      "id": "KAZORDOON-C12-012",
       "city": "KAZORDOON",
       "floor": 12,
-      "component": 233,
-      "componentTiles": 408,
-      "creatures": 3,
-      "species": [
-        {
-          "name": "Dwarf Guard",
-          "count": 3
-        }
-      ],
-      "extent": {
-        "minX": 32428,
-        "minY": 31881,
-        "maxX": 32439,
-        "maxY": 31885,
-        "centerX": 32433,
-        "centerY": 31883
-      },
-      "subareaId": null,
-      "splitBySpecies": [
-        {
-          "name": "Dwarf Guard",
-          "count": 3,
-          "extent": {
-            "minX": 32428,
-            "minY": 31881,
-            "maxX": 32439,
-            "maxY": 31885,
-            "centerX": 32433,
-            "centerY": 31883
-          }
-        }
-      ],
-      "spawns": [
-        {
-          "name": "Dwarf Guard",
-          "x": 32428,
-          "y": 31881,
-          "z": 12
-        },
-        {
-          "name": "Dwarf Guard",
-          "x": 32430,
-          "y": 31882,
-          "z": 12
-        },
-        {
-          "name": "Dwarf Guard",
-          "x": 32439,
-          "y": 31885,
-          "z": 12
-        }
-      ],
-      "walkTilesFromTemple": 433
-    },
-    {
-      "id": "KAZORDOON-C12-014",
-      "city": "KAZORDOON",
-      "floor": 12,
-      "component": 752,
+      "component": 751,
       "componentTiles": 381,
       "creatures": 3,
       "species": [
@@ -26268,126 +25574,10 @@
           "z": 12
         }
       ],
-      "walkTilesFromTemple": 487
+      "walkTilesFromTemple": 459
     },
     {
-      "id": "KAZORDOON-C12-015",
-      "city": "KAZORDOON",
-      "floor": 12,
-      "component": 233,
-      "componentTiles": 408,
-      "creatures": 3,
-      "species": [
-        {
-          "name": "Dwarf Guard",
-          "count": 3
-        }
-      ],
-      "extent": {
-        "minX": 32448,
-        "minY": 31880,
-        "maxX": 32456,
-        "maxY": 31885,
-        "centerX": 32452,
-        "centerY": 31882
-      },
-      "subareaId": 50,
-      "splitBySpecies": [
-        {
-          "name": "Dwarf Guard",
-          "count": 3,
-          "extent": {
-            "minX": 32448,
-            "minY": 31880,
-            "maxX": 32456,
-            "maxY": 31885,
-            "centerX": 32452,
-            "centerY": 31882
-          }
-        }
-      ],
-      "spawns": [
-        {
-          "name": "Dwarf Guard",
-          "x": 32454,
-          "y": 31880,
-          "z": 12
-        },
-        {
-          "name": "Dwarf Guard",
-          "x": 32456,
-          "y": 31881,
-          "z": 12
-        },
-        {
-          "name": "Dwarf Guard",
-          "x": 32448,
-          "y": 31885,
-          "z": 12
-        }
-      ],
-      "walkTilesFromTemple": 433
-    },
-    {
-      "id": "KAZORDOON-C12-016",
-      "city": "KAZORDOON",
-      "floor": 12,
-      "component": 233,
-      "componentTiles": 408,
-      "creatures": 3,
-      "species": [
-        {
-          "name": "Dwarf Guard",
-          "count": 3
-        }
-      ],
-      "extent": {
-        "minX": 32455,
-        "minY": 31909,
-        "maxX": 32461,
-        "maxY": 31912,
-        "centerX": 32458,
-        "centerY": 31910
-      },
-      "subareaId": 50,
-      "splitBySpecies": [
-        {
-          "name": "Dwarf Guard",
-          "count": 3,
-          "extent": {
-            "minX": 32455,
-            "minY": 31909,
-            "maxX": 32461,
-            "maxY": 31912,
-            "centerX": 32458,
-            "centerY": 31910
-          }
-        }
-      ],
-      "spawns": [
-        {
-          "name": "Dwarf Guard",
-          "x": 32455,
-          "y": 31909,
-          "z": 12
-        },
-        {
-          "name": "Dwarf Guard",
-          "x": 32460,
-          "y": 31911,
-          "z": 12
-        },
-        {
-          "name": "Dwarf Guard",
-          "x": 32461,
-          "y": 31912,
-          "z": 12
-        }
-      ],
-      "walkTilesFromTemple": 432
-    },
-    {
-      "id": "KAZORDOON-C12-017",
+      "id": "KAZORDOON-C12-013",
       "city": "KAZORDOON",
       "floor": 12,
       "component": 190,
@@ -26449,7 +25639,7 @@
       "city": "KAZORDOON",
       "floor": 13,
       "component": 189,
-      "componentTiles": 1832,
+      "componentTiles": 1831,
       "creatures": 31,
       "species": [
         {
@@ -26814,112 +26004,6 @@
       "id": "KAZORDOON-C13-002",
       "city": "KAZORDOON",
       "floor": 13,
-      "component": 1252,
-      "componentTiles": 270,
-      "creatures": 11,
-      "species": [
-        {
-          "name": "Slime",
-          "count": 11
-        }
-      ],
-      "extent": {
-        "minX": 32431,
-        "minY": 31875,
-        "maxX": 32447,
-        "maxY": 31912,
-        "centerX": 32439,
-        "centerY": 31893
-      },
-      "subareaId": null,
-      "splitBySpecies": [
-        {
-          "name": "Slime",
-          "count": 11,
-          "extent": {
-            "minX": 32431,
-            "minY": 31875,
-            "maxX": 32447,
-            "maxY": 31912,
-            "centerX": 32439,
-            "centerY": 31893
-          }
-        }
-      ],
-      "spawns": [
-        {
-          "name": "Slime",
-          "x": 32443,
-          "y": 31875,
-          "z": 13
-        },
-        {
-          "name": "Slime",
-          "x": 32440,
-          "y": 31878,
-          "z": 13
-        },
-        {
-          "name": "Slime",
-          "x": 32432,
-          "y": 31881,
-          "z": 13
-        },
-        {
-          "name": "Slime",
-          "x": 32441,
-          "y": 31888,
-          "z": 13
-        },
-        {
-          "name": "Slime",
-          "x": 32435,
-          "y": 31892,
-          "z": 13
-        },
-        {
-          "name": "Slime",
-          "x": 32447,
-          "y": 31897,
-          "z": 13
-        },
-        {
-          "name": "Slime",
-          "x": 32433,
-          "y": 31900,
-          "z": 13
-        },
-        {
-          "name": "Slime",
-          "x": 32431,
-          "y": 31903,
-          "z": 13
-        },
-        {
-          "name": "Slime",
-          "x": 32436,
-          "y": 31909,
-          "z": 13
-        },
-        {
-          "name": "Slime",
-          "x": 32437,
-          "y": 31911,
-          "z": 13
-        },
-        {
-          "name": "Slime",
-          "x": 32437,
-          "y": 31912,
-          "z": 13
-        }
-      ],
-      "walkTilesFromTemple": 441
-    },
-    {
-      "id": "KAZORDOON-C13-003",
-      "city": "KAZORDOON",
-      "floor": 13,
       "component": 5,
       "componentTiles": 898,
       "creatures": 19,
@@ -27187,11 +26271,11 @@
       "walkTilesFromTemple": null
     },
     {
-      "id": "KAZORDOON-C13-004",
+      "id": "KAZORDOON-C13-003",
       "city": "KAZORDOON",
       "floor": 13,
       "component": 189,
-      "componentTiles": 1832,
+      "componentTiles": 1831,
       "creatures": 4,
       "species": [
         {
@@ -27283,69 +26367,11 @@
       "walkTilesFromTemple": 235
     },
     {
-      "id": "KAZORDOON-C13-005",
-      "city": "KAZORDOON",
-      "floor": 13,
-      "component": 1252,
-      "componentTiles": 270,
-      "creatures": 3,
-      "species": [
-        {
-          "name": "Slime",
-          "count": 3
-        }
-      ],
-      "extent": {
-        "minX": 32458,
-        "minY": 31899,
-        "maxX": 32459,
-        "maxY": 31904,
-        "centerX": 32458,
-        "centerY": 31901
-      },
-      "subareaId": 50,
-      "splitBySpecies": [
-        {
-          "name": "Slime",
-          "count": 3,
-          "extent": {
-            "minX": 32458,
-            "minY": 31899,
-            "maxX": 32459,
-            "maxY": 31904,
-            "centerX": 32458,
-            "centerY": 31901
-          }
-        }
-      ],
-      "spawns": [
-        {
-          "name": "Slime",
-          "x": 32459,
-          "y": 31899,
-          "z": 13
-        },
-        {
-          "name": "Slime",
-          "x": 32458,
-          "y": 31900,
-          "z": 13
-        },
-        {
-          "name": "Slime",
-          "x": 32459,
-          "y": 31904,
-          "z": 13
-        }
-      ],
-      "walkTilesFromTemple": 470
-    },
-    {
-      "id": "KAZORDOON-C13-006",
+      "id": "KAZORDOON-C13-004",
       "city": "KAZORDOON",
       "floor": 13,
       "component": 189,
-      "componentTiles": 1832,
+      "componentTiles": 1831,
       "creatures": 3,
       "species": [
         {
@@ -27399,11 +26425,11 @@
       "walkTilesFromTemple": 246
     },
     {
-      "id": "KAZORDOON-C13-007",
+      "id": "KAZORDOON-C13-005",
       "city": "KAZORDOON",
       "floor": 13,
-      "component": 486,
-      "componentTiles": 454,
+      "component": 485,
+      "componentTiles": 455,
       "creatures": 5,
       "species": [
         {
@@ -27517,11 +26543,11 @@
       "walkTilesFromTemple": null
     },
     {
-      "id": "KAZORDOON-C13-008",
+      "id": "KAZORDOON-C13-006",
       "city": "KAZORDOON",
       "floor": 13,
       "component": 189,
-      "componentTiles": 1832,
+      "componentTiles": 1831,
       "creatures": 5,
       "species": [
         {
@@ -27615,11 +26641,11 @@
       "walkTilesFromTemple": 159
     },
     {
-      "id": "KAZORDOON-C13-009",
+      "id": "KAZORDOON-C13-007",
       "city": "KAZORDOON",
       "floor": 13,
       "component": 189,
-      "componentTiles": 1832,
+      "componentTiles": 1831,
       "creatures": 4,
       "species": [
         {
@@ -27695,10 +26721,10 @@
       "walkTilesFromTemple": 142
     },
     {
-      "id": "KAZORDOON-C13-010",
+      "id": "KAZORDOON-C13-008",
       "city": "KAZORDOON",
       "floor": 13,
-      "component": 841,
+      "component": 839,
       "componentTiles": 69,
       "creatures": 8,
       "species": [
@@ -27799,11 +26825,11 @@
       "walkTilesFromTemple": 329
     },
     {
-      "id": "KAZORDOON-C13-011",
+      "id": "KAZORDOON-C13-009",
       "city": "KAZORDOON",
       "floor": 13,
       "component": 189,
-      "componentTiles": 1832,
+      "componentTiles": 1831,
       "creatures": 4,
       "species": [
         {
@@ -27879,11 +26905,11 @@
       "walkTilesFromTemple": 227
     },
     {
-      "id": "KAZORDOON-C13-012",
+      "id": "KAZORDOON-C13-010",
       "city": "KAZORDOON",
       "floor": 13,
       "component": 189,
-      "componentTiles": 1832,
+      "componentTiles": 1831,
       "creatures": 4,
       "species": [
         {
@@ -27959,10 +26985,10 @@
       "walkTilesFromTemple": 197
     },
     {
-      "id": "KAZORDOON-C13-013",
+      "id": "KAZORDOON-C13-011",
       "city": "KAZORDOON",
       "floor": 13,
-      "component": 736,
+      "component": 735,
       "componentTiles": 325,
       "creatures": 22,
       "species": [
@@ -28131,11 +27157,11 @@
       "walkTilesFromTemple": 366
     },
     {
-      "id": "KAZORDOON-C13-014",
+      "id": "KAZORDOON-C13-012",
       "city": "KAZORDOON",
       "floor": 13,
       "component": 217,
-      "componentTiles": 446,
+      "componentTiles": 445,
       "creatures": 16,
       "species": [
         {
@@ -28267,7 +27293,7 @@
       "walkTilesFromTemple": 495
     },
     {
-      "id": "KAZORDOON-C13-015",
+      "id": "KAZORDOON-C13-013",
       "city": "KAZORDOON",
       "floor": 13,
       "component": 39,
@@ -28379,7 +27405,7 @@
       "walkTilesFromTemple": 427
     },
     {
-      "id": "KAZORDOON-C13-016",
+      "id": "KAZORDOON-C13-014",
       "city": "KAZORDOON",
       "floor": 13,
       "component": 39,
@@ -28491,7 +27517,7 @@
       "walkTilesFromTemple": 451
     },
     {
-      "id": "KAZORDOON-C13-017",
+      "id": "KAZORDOON-C13-015",
       "city": "KAZORDOON",
       "floor": 13,
       "component": 5,
@@ -28595,10 +27621,10 @@
       "walkTilesFromTemple": null
     },
     {
-      "id": "KAZORDOON-C13-018",
+      "id": "KAZORDOON-C13-016",
       "city": "KAZORDOON",
       "floor": 13,
-      "component": 884,
+      "component": 882,
       "componentTiles": 283,
       "creatures": 5,
       "species": [
@@ -28662,10 +27688,10 @@
           "z": 13
         }
       ],
-      "walkTilesFromTemple": 510
+      "walkTilesFromTemple": 482
     },
     {
-      "id": "KAZORDOON-C13-019",
+      "id": "KAZORDOON-C13-017",
       "city": "KAZORDOON",
       "floor": 13,
       "component": 237,
@@ -28739,10 +27765,10 @@
       "walkTilesFromTemple": 512
     },
     {
-      "id": "KAZORDOON-C13-020",
+      "id": "KAZORDOON-C13-018",
       "city": "KAZORDOON",
       "floor": 13,
-      "component": 884,
+      "component": 882,
       "componentTiles": 283,
       "creatures": 3,
       "species": [
@@ -28794,7 +27820,7 @@
           "z": 13
         }
       ],
-      "walkTilesFromTemple": 520
+      "walkTilesFromTemple": 492
     },
     {
       "id": "KAZORDOON-C14-001",
@@ -29128,7 +28154,7 @@
       "id": "KAZORDOON-C14-002",
       "city": "KAZORDOON",
       "floor": 14,
-      "component": 482,
+      "component": 481,
       "componentTiles": 818,
       "creatures": 27,
       "species": [
@@ -29410,88 +28436,6 @@
       "id": "KAZORDOON-C14-003",
       "city": "KAZORDOON",
       "floor": 14,
-      "component": 322,
-      "componentTiles": 223,
-      "creatures": 7,
-      "species": [
-        {
-          "name": "Slime",
-          "count": 7
-        }
-      ],
-      "extent": {
-        "minX": 32456,
-        "minY": 31881,
-        "maxX": 32471,
-        "maxY": 31893,
-        "centerX": 32463,
-        "centerY": 31887
-      },
-      "subareaId": 50,
-      "splitBySpecies": [
-        {
-          "name": "Slime",
-          "count": 7,
-          "extent": {
-            "minX": 32456,
-            "minY": 31881,
-            "maxX": 32471,
-            "maxY": 31893,
-            "centerX": 32463,
-            "centerY": 31887
-          }
-        }
-      ],
-      "spawns": [
-        {
-          "name": "Slime",
-          "x": 32471,
-          "y": 31881,
-          "z": 14
-        },
-        {
-          "name": "Slime",
-          "x": 32470,
-          "y": 31883,
-          "z": 14
-        },
-        {
-          "name": "Slime",
-          "x": 32456,
-          "y": 31886,
-          "z": 14
-        },
-        {
-          "name": "Slime",
-          "x": 32462,
-          "y": 31887,
-          "z": 14
-        },
-        {
-          "name": "Slime",
-          "x": 32460,
-          "y": 31890,
-          "z": 14
-        },
-        {
-          "name": "Slime",
-          "x": 32456,
-          "y": 31892,
-          "z": 14
-        },
-        {
-          "name": "Slime",
-          "x": 32463,
-          "y": 31893,
-          "z": 14
-        }
-      ],
-      "walkTilesFromTemple": 477
-    },
-    {
-      "id": "KAZORDOON-C14-004",
-      "city": "KAZORDOON",
-      "floor": 14,
       "component": 383,
       "componentTiles": 1384,
       "creatures": 6,
@@ -29609,7 +28553,7 @@
       "walkTilesFromTemple": 270
     },
     {
-      "id": "KAZORDOON-C14-005",
+      "id": "KAZORDOON-C14-004",
       "city": "KAZORDOON",
       "floor": 14,
       "component": 290,
@@ -29793,10 +28737,10 @@
       "walkTilesFromTemple": null
     },
     {
-      "id": "KAZORDOON-C14-006",
+      "id": "KAZORDOON-C14-005",
       "city": "KAZORDOON",
       "floor": 14,
-      "component": 482,
+      "component": 481,
       "componentTiles": 818,
       "creatures": 13,
       "species": [
@@ -29955,10 +28899,10 @@
       "walkTilesFromTemple": null
     },
     {
-      "id": "KAZORDOON-C14-007",
+      "id": "KAZORDOON-C14-006",
       "city": "KAZORDOON",
       "floor": 14,
-      "component": 482,
+      "component": 481,
       "componentTiles": 818,
       "creatures": 7,
       "species": [
@@ -30053,11 +28997,11 @@
       "walkTilesFromTemple": null
     },
     {
-      "id": "KAZORDOON-C14-008",
+      "id": "KAZORDOON-C14-007",
       "city": "KAZORDOON",
       "floor": 14,
       "component": 322,
-      "componentTiles": 223,
+      "componentTiles": 222,
       "creatures": 3,
       "species": [
         {
@@ -30066,52 +29010,52 @@
         }
       ],
       "extent": {
-        "minX": 32442,
-        "minY": 31883,
-        "maxX": 32447,
-        "maxY": 31891,
-        "centerX": 32444,
-        "centerY": 31887
+        "minX": 32456,
+        "minY": 31887,
+        "maxX": 32462,
+        "maxY": 31892,
+        "centerX": 32459,
+        "centerY": 31889
       },
-      "subareaId": null,
+      "subareaId": 50,
       "splitBySpecies": [
         {
           "name": "Slime",
           "count": 3,
           "extent": {
-            "minX": 32442,
-            "minY": 31883,
-            "maxX": 32447,
-            "maxY": 31891,
-            "centerX": 32444,
-            "centerY": 31887
+            "minX": 32456,
+            "minY": 31887,
+            "maxX": 32462,
+            "maxY": 31892,
+            "centerX": 32459,
+            "centerY": 31889
           }
         }
       ],
       "spawns": [
         {
           "name": "Slime",
-          "x": 32442,
-          "y": 31883,
+          "x": 32462,
+          "y": 31887,
           "z": 14
         },
         {
           "name": "Slime",
-          "x": 32443,
-          "y": 31885,
+          "x": 32460,
+          "y": 31890,
           "z": 14
         },
         {
           "name": "Slime",
-          "x": 32447,
-          "y": 31891,
+          "x": 32456,
+          "y": 31892,
           "z": 14
         }
       ],
-      "walkTilesFromTemple": 483
+      "walkTilesFromTemple": 478
     },
     {
-      "id": "KAZORDOON-C14-009",
+      "id": "KAZORDOON-C14-008",
       "city": "KAZORDOON",
       "floor": 14,
       "component": 154,
@@ -30245,7 +29189,7 @@
       "walkTilesFromTemple": null
     },
     {
-      "id": "KAZORDOON-C14-010",
+      "id": "KAZORDOON-C14-009",
       "city": "KAZORDOON",
       "floor": 14,
       "component": 337,
@@ -30887,10 +29831,10 @@
       "walkTilesFromTemple": null
     },
     {
-      "id": "KAZORDOON-C14-011",
+      "id": "KAZORDOON-C14-010",
       "city": "KAZORDOON",
       "floor": 14,
-      "component": 564,
+      "component": 563,
       "componentTiles": 204,
       "creatures": 4,
       "species": [
@@ -30951,10 +29895,10 @@
       "walkTilesFromTemple": 277
     },
     {
-      "id": "KAZORDOON-C14-012",
+      "id": "KAZORDOON-C14-011",
       "city": "KAZORDOON",
       "floor": 14,
-      "component": 792,
+      "component": 791,
       "componentTiles": 52,
       "creatures": 3,
       "species": [
@@ -31009,7 +29953,7 @@
       "walkTilesFromTemple": 324
     },
     {
-      "id": "KAZORDOON-C14-013",
+      "id": "KAZORDOON-C14-012",
       "city": "KAZORDOON",
       "floor": 14,
       "component": 154,
@@ -31102,7 +30046,7 @@
       "id": "KAZORDOON-C15-001",
       "city": "KAZORDOON",
       "floor": 15,
-      "component": 427,
+      "component": 426,
       "componentTiles": 304,
       "creatures": 11,
       "species": [
@@ -31744,7 +30688,7 @@
       "id": "KAZORDOON-C15-006",
       "city": "KAZORDOON",
       "floor": 15,
-      "component": 784,
+      "component": 783,
       "componentTiles": 411,
       "creatures": 4,
       "species": [
@@ -32042,7 +30986,7 @@
       "id": "KAZORDOON-C15-010",
       "city": "KAZORDOON",
       "floor": 15,
-      "component": 1057,
+      "component": 1054,
       "componentTiles": 46,
       "creatures": 3,
       "species": [
@@ -32100,7 +31044,7 @@
       "id": "KAZORDOON-C15-011",
       "city": "KAZORDOON",
       "floor": 15,
-      "component": 725,
+      "component": 724,
       "componentTiles": 441,
       "creatures": 3,
       "species": [
@@ -32158,7 +31102,7 @@
       "id": "KAZORDOON-C15-012",
       "city": "KAZORDOON",
       "floor": 15,
-      "component": 725,
+      "component": 724,
       "componentTiles": 441,
       "creatures": 18,
       "species": [
@@ -32378,7 +31322,7 @@
       "id": "KAZORDOON-C15-013",
       "city": "KAZORDOON",
       "floor": 15,
-      "component": 484,
+      "component": 483,
       "componentTiles": 263,
       "creatures": 9,
       "species": [
@@ -32802,7 +31746,7 @@
       "id": "KAZORDOON-C15-017",
       "city": "KAZORDOON",
       "floor": 15,
-      "component": 390,
+      "component": 389,
       "componentTiles": 546,
       "creatures": 9,
       "species": [
@@ -33256,7 +32200,7 @@
       "id": "KAZORDOON-C15-019",
       "city": "KAZORDOON",
       "floor": 15,
-      "component": 390,
+      "component": 389,
       "componentTiles": 546,
       "creatures": 13,
       "species": [
@@ -33770,7 +32714,7 @@
       "id": "KAZORDOON-C15-022",
       "city": "KAZORDOON",
       "floor": 15,
-      "component": 484,
+      "component": 483,
       "componentTiles": 263,
       "creatures": 6,
       "species": [
@@ -33878,7 +32822,7 @@
       "id": "KAZORDOON-C15-023",
       "city": "KAZORDOON",
       "floor": 15,
-      "component": 2476,
+      "component": 2474,
       "componentTiles": 42,
       "creatures": 6,
       "species": [
@@ -34084,7 +33028,7 @@
       "id": "KAZORDOON-C15-025",
       "city": "KAZORDOON",
       "floor": 15,
-      "component": 1529,
+      "component": 1527,
       "componentTiles": 37,
       "creatures": 5,
       "species": [
@@ -34170,7 +33114,7 @@
       "id": "KAZORDOON-C15-026",
       "city": "KAZORDOON",
       "floor": 15,
-      "component": 930,
+      "component": 928,
       "componentTiles": 211,
       "creatures": 4,
       "species": [
@@ -34282,7 +33226,7 @@
       "id": "KAZORDOON-C15-027",
       "city": "KAZORDOON",
       "floor": 15,
-      "component": 605,
+      "component": 604,
       "componentTiles": 302,
       "creatures": 4,
       "species": [
@@ -34378,7 +33322,7 @@
       "id": "KAZORDOON-C15-028",
       "city": "KAZORDOON",
       "floor": 15,
-      "component": 390,
+      "component": 389,
       "componentTiles": 546,
       "creatures": 4,
       "species": [
@@ -34725,19 +33669,19 @@
     },
     {
       "name": "Deer",
-      "count": 40
+      "count": 41
+    },
+    {
+      "name": "Poison Spider",
+      "count": 37
     },
     {
       "name": "Snake",
       "count": 37
     },
     {
-      "name": "Poison Spider",
-      "count": 36
-    },
-    {
       "name": "Dwarf Soldier",
-      "count": 35
+      "count": 34
     },
     {
       "name": "Orc Spearman",
@@ -34752,20 +33696,16 @@
       "count": 24
     },
     {
-      "name": "Dragon",
-      "count": 23
-    },
-    {
       "name": "Rotworm",
       "count": 22
     },
     {
-      "name": "Pig",
+      "name": "Dragon",
       "count": 21
     },
     {
-      "name": "Wyvern",
-      "count": 16
+      "name": "Pig",
+      "count": 21
     },
     {
       "name": "Fire Devil",
@@ -34776,8 +33716,16 @@
       "count": 15
     },
     {
+      "name": "Wyvern",
+      "count": 15
+    },
+    {
       "name": "Toad",
       "count": 14
+    },
+    {
+      "name": "Slime",
+      "count": 13
     },
     {
       "name": "Corym Charlatan",
@@ -34789,10 +33737,6 @@
     },
     {
       "name": "Seagull",
-      "count": 11
-    },
-    {
-      "name": "Slime",
       "count": 11
     },
     {
@@ -34872,10 +33816,6 @@
       "count": 5
     },
     {
-      "name": "Cyclops",
-      "count": 5
-    },
-    {
       "name": "Ghost Wolf",
       "count": 5
     },
@@ -34885,6 +33825,10 @@
     },
     {
       "name": "Corym Vanguard",
+      "count": 4
+    },
+    {
+      "name": "Cyclops",
       "count": 4
     },
     {
@@ -34909,10 +33853,6 @@
     },
     {
       "name": "Squirrel",
-      "count": 4
-    },
-    {
-      "name": "Wolf",
       "count": 4
     },
     {
@@ -34949,6 +33889,10 @@
     },
     {
       "name": "Witch",
+      "count": 3
+    },
+    {
+      "name": "Wolf",
       "count": 3
     },
     {

@@ -122,3 +122,60 @@ def test_ground_id_skips_the_house_id_of_a_housetile():
     node = bytes([ot.NODE_INIT]) + ot.escape(payload) + bytes([ot.NODE_TERM])
 
     assert ot.tile_ground_id(node, 0) == 4526
+
+
+def _tile_with_items(offset_x, offset_y, ground_id, *item_nodes):
+    payload = struct.pack("<BBB", ot.OTBM_TILE, offset_x, offset_y)
+    payload += struct.pack("<BH", ot.OTBM_ATTR_ITEM, ground_id)
+    node = bytes([ot.NODE_INIT]) + ot.escape(payload)
+    for item in item_nodes:
+        node += item
+    return node + bytes([ot.NODE_TERM])
+
+
+def test_item_id_and_text_reads_a_sign():
+    item = ot.item_node(2017, text="6005")
+    item_id, text = ot.item_id_and_text(item, 0, len(item))
+    assert (item_id, text) == (2017, "6005")
+
+
+def test_item_id_and_text_is_none_for_an_item_without_text():
+    item = ot.item_node(5910)
+    assert ot.item_id_and_text(item, 0, len(item)) == (5910, None)
+
+
+def test_without_items_drops_only_the_matching_item():
+    sign = ot.item_node(2017, text="6005")
+    cloth = ot.item_node(5910)
+    lore_sign = ot.item_node(2017, text="Welcome to Carlin!")
+    node = _tile_with_items(1, 2, 4526, sign, cloth, lore_sign)
+
+    def drop(item_id, text):
+        return item_id == 5910 or (item_id == 2017 and text is not None and text.isdigit())
+
+    cleaned = ot.without_items(node, drop)
+
+    assert ot.tile_offsets(cleaned, 0) == (1, 2)
+    assert ot.tile_ground_id(cleaned, 0) == 4526
+    kids = list(ot.children(cleaned, 0))
+    assert len(kids) == 1
+    assert ot.item_id_and_text(cleaned, *kids[0]) == (2017, "Welcome to Carlin!")
+
+
+def test_without_items_is_a_no_op_when_nothing_matches():
+    node = _tile_with_items(0, 0, 100, ot.item_node(200))
+
+    assert ot.without_items(node, lambda item_id, text: False) == node
+
+
+def test_without_items_round_trips_through_write_map(tmp_path):
+    sign = ot.item_node(2017, text="6005")
+    tile = _tile_with_items(3, 4, 4526, sign)
+    cleaned = ot.without_items(tile, lambda item_id, text: item_id == 2017)
+
+    _, data = _write(tmp_path, [((1024, 768, 7), [cleaned])])
+
+    back = ot.crop_tiles(data, lambda x, y: True)
+    (_, nodes) = back[0]
+    assert ot.tile_ground_id(nodes[0], 0) == 4526
+    assert list(ot.children(nodes[0], 0)) == []

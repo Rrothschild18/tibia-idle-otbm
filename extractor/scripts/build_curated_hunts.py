@@ -24,6 +24,7 @@ import json
 import os
 import sys
 import xml.etree.ElementTree as ElementTree
+from typing import Optional
 
 import appearance_flags
 import curated_hunts
@@ -48,6 +49,22 @@ HUNT_START_ITEM_ID = 352
 
 # O andar mais fundo que existe no OTBM.
 MAX_FLOOR = 15
+
+# Marcação de edição — placa numerada ("6005") e pano de cor usados pra
+# desenhar o limite de uma hunt no mapa-mundo — nunca deve chegar no mapa que
+# o jogador vê. Fica de fora daqui, não do recorte da cidade: é do
+# `full-maps/<CIDADE>/<CIDADE>.otbm` que `candidates.json`/`sign-groups.json`
+# tiram o casamento placa->candidata, e aquele arquivo continua intacto.
+SIGN_ITEM_IDS = frozenset({2016, 2017})
+SCAFFOLDING_CLOTH_ITEM_IDS = frozenset({5910})  # green piece of cloth
+
+
+def is_editor_scaffolding(item_id: int, text: Optional[str]) -> bool:
+    if item_id in SCAFFOLDING_CLOTH_ITEM_IDS:
+        return True
+    if item_id in SIGN_ITEM_IDS:
+        return bool(text) and text.strip().isdigit()
+    return False
 
 CURATION_FILE_NAME = "curation.json"
 CURATED_HUNTS_FILE_NAME = "curated-hunts.json"
@@ -150,7 +167,10 @@ def write_hunt_map(
 
     min_x, min_y, max_x, max_y = bounds
     areas = [
-        (origin, nodes)
+        (
+            origin,
+            [otbm_stream.without_items(node, is_editor_scaffolding) for node in nodes],
+        )
         for origin, nodes in otbm_stream.crop_tiles(
             data,
             lambda x, y: min_x <= x <= max_x and min_y <= y <= max_y,

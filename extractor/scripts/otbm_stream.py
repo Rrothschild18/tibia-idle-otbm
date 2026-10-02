@@ -312,6 +312,65 @@ def with_extra_item(tile_node: bytes, item: bytes) -> bytes:
     return tile_node[:-1] + item + bytes([NODE_TERM])
 
 
+def item_id_and_text(data: bytes, start: int, end: int) -> Tuple[Optional[int], Optional[str]]:
+    """O id e o texto (se houver) de um nó de item — `(start, end)` como
+    `children()` devolve. `None` no id é "não é item/não decodificou", nunca
+    "item sem atributo nenhum" (esse caso é id presente, texto `None`).
+
+    Para no primeiro atributo de largura desconhecida — um item com conteúdo
+    de container (0xFE aninhado) não é o caso de placa/pano que isto existe
+    para achar, e ler como atributo um byte que é na verdade o começo de um
+    filho devolveria lixo em vez de parar."""
+    raw = unescape(data[start + 1 : end - 1])
+    if len(raw) < 3 or raw[0] != OTBM_ITEM:
+        return None, None
+    item_id = struct.unpack_from("<H", raw, 1)[0]
+    text = None
+    index = 3
+    while index < len(raw):
+        attr = raw[index]
+        index += 1
+        if attr == OTBM_ATTR_TEXT:
+            if index + 2 > len(raw):
+                break
+            length = struct.unpack_from("<H", raw, index)[0]
+            index += 2
+            text = raw[index : index + length].decode("latin-1", errors="replace")
+            index += length
+        elif attr in (OTBM_ATTR_ACTION_ID, OTBM_ATTR_UNIQUE_ID):
+            index += 2
+        else:
+            break
+    return item_id, text
+
+
+def without_items(tile_node: bytes, drop: Callable[[int, Optional[str]], bool]) -> bytes:
+    """O mesmo nó de tile, sem os itens-filho que `drop(item_id, text)` aceita.
+
+    Existe pro recorte final de uma hunt (`build_curated_hunts.write_hunt_map`)
+    poder tirar o que foi marcação de edição — placa numerada, pano de cor —
+    sem tocar o `.otbm` fonte: a placa continua no mapa-mundo (é dela que o
+    casamento com `candidates.json` depende), só não atravessa pro mapa que o
+    jogador vê. Item que não é mexido (chão, parede, o resto do conteúdo do
+    tile) sai byte a byte, igual ao `crop_tiles`."""
+    if not tile_node or tile_node[0] != NODE_INIT:
+        raise ValueError("nó de tile não começa em NODE_INIT")
+
+    kids = list(children(tile_node, 0))
+    if not kids:
+        return tile_node
+
+    kept = bytearray(tile_node[: kids[0][0]])
+    for start, end in kids:
+        if node_type(tile_node, start) == OTBM_ITEM:
+            item_id, text = item_id_and_text(tile_node, start, end)
+            if item_id is not None and drop(item_id, text):
+                continue
+        kept += tile_node[start:end]
+    kept += bytes([NODE_TERM])
+    return bytes(kept)
+
+
 AREA_SIZE = 256
 
 

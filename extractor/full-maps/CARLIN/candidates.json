@@ -6,14 +6,36 @@
   },
   "subareas": [
     {
-      "id": 38,
-      "name": "Ghostlands",
-      "mask": "masks/0038.png",
+      "id": 280,
+      "name": "Vega",
+      "mask": "masks/0280.png",
       "maskPlacement": {
-        "x": 32166,
-        "y": 31767,
-        "width": 92,
-        "height": 109
+        "x": 31936,
+        "y": 31673,
+        "width": 91,
+        "height": 69
+      }
+    },
+    {
+      "id": 39,
+      "name": "Folda",
+      "mask": "masks/0039.png",
+      "maskPlacement": {
+        "x": 31958,
+        "y": 31508,
+        "width": 135,
+        "height": 129
+      }
+    },
+    {
+      "id": 456,
+      "name": "Carlin",
+      "mask": "masks/0456.png",
+      "maskPlacement": {
+        "x": 32275,
+        "y": 31585,
+        "width": 258,
+        "height": 271
       }
     },
     {
@@ -28,17 +50,6 @@
       }
     },
     {
-      "id": 43,
-      "name": "Carlin Surroundings",
-      "mask": "masks/0043.png",
-      "maskPlacement": {
-        "x": 32203,
-        "y": 31629,
-        "width": 297,
-        "height": 224
-      }
-    },
-    {
       "id": 271,
       "name": "Carlin City",
       "mask": "masks/0271.png",
@@ -50,14 +61,58 @@
       }
     },
     {
-      "id": 456,
-      "name": "Carlin",
-      "mask": "masks/0456.png",
+      "id": 38,
+      "name": "Ghostlands",
+      "mask": "masks/0038.png",
       "maskPlacement": {
-        "x": 32275,
-        "y": 31585,
-        "width": 258,
-        "height": 271
+        "x": 32166,
+        "y": 31767,
+        "width": 92,
+        "height": 109
+      }
+    },
+    {
+      "id": 43,
+      "name": "Carlin Surroundings",
+      "mask": "masks/0043.png",
+      "maskPlacement": {
+        "x": 32203,
+        "y": 31629,
+        "width": 297,
+        "height": 224
+      }
+    },
+    {
+      "id": 279,
+      "name": "Ice Islands",
+      "mask": "masks/0279.png",
+      "maskPlacement": {
+        "x": 32098,
+        "y": 31571,
+        "width": 165,
+        "height": 183
+      }
+    },
+    {
+      "id": 281,
+      "name": "Senja",
+      "mask": "masks/0281.png",
+      "maskPlacement": {
+        "x": 32117,
+        "y": 31615,
+        "width": 85,
+        "height": 75
+      }
+    },
+    {
+      "id": 288,
+      "name": "Isle of the Kings",
+      "mask": "masks/0288.png",
+      "maskPlacement": {
+        "x": 32152,
+        "y": 31915,
+        "width": 49,
+        "height": 49
       }
     }
   ],
@@ -101,11 +156,91 @@
   "minExperience": 50,
   "candidates": [
     {
+      "id": "CARLIN-C01-001",
+      "city": "CARLIN",
+      "floor": 1,
+      "component": 1274,
+      "componentTiles": 25,
+      "creatures": 4,
+      "species": [
+        {
+          "name": "Amazon",
+          "count": 2
+        },
+        {
+          "name": "Valkyrie",
+          "count": 2
+        }
+      ],
+      "extent": {
+        "minX": 32354,
+        "minY": 31643,
+        "maxX": 32357,
+        "maxY": 31646,
+        "centerX": 32355,
+        "centerY": 31644
+      },
+      "subareaId": 40,
+      "splitBySpecies": [
+        {
+          "name": "Amazon",
+          "count": 2,
+          "extent": {
+            "minX": 32356,
+            "minY": 31643,
+            "maxX": 32357,
+            "maxY": 31645,
+            "centerX": 32356,
+            "centerY": 31644
+          }
+        },
+        {
+          "name": "Valkyrie",
+          "count": 2,
+          "extent": {
+            "minX": 32354,
+            "minY": 31645,
+            "maxX": 32355,
+            "maxY": 31646,
+            "centerX": 32354,
+            "centerY": 31645
+          }
+        }
+      ],
+      "spawns": [
+        {
+          "name": "Amazon",
+          "x": 32356,
+          "y": 31643,
+          "z": 1
+        },
+        {
+          "name": "Valkyrie",
+          "x": 32354,
+          "y": 31645,
+          "z": 1
+        },
+        {
+          "name": "Amazon",
+          "x": 32357,
+          "y": 31645,
+          "z": 1
+        },
+        {
+          "name": "Valkyrie",
+          "x": 32355,
+          "y": 31646,
+          "z": 1
+        }
+      ],
+      "walkTilesFromTemple": 174
+    },
+    {
       "id": "CARLIN-C02-001",
       "city": "CARLIN",
       "floor": 2,
-      "component": 1064,
-      "componentTiles": 16,
+      "component": 1441,
+      "componentTiles": 15,
       "creatures": 4,
       "species": [
         {
@@ -200,8 +335,8 @@
       "id": "CARLIN-C03-001",
       "city": "CARLIN",
       "floor": 3,
-      "component": 1129,
-      "componentTiles": 20,
+      "component": 1502,
+      "componentTiles": 19,
       "creatures": 3,
       "species": [
         {
@@ -274,7 +409,7 @@
       "id": "CARLIN-C03-002",
       "city": "CARLIN",
       "floor": 3,
-      "component": 484,
+      "component": 947,
       "componentTiles": 88,
       "creatures": 3,
       "species": [
@@ -348,8 +483,8 @@
       "id": "CARLIN-C04-001",
       "city": "CARLIN",
       "floor": 4,
-      "component": 1273,
-      "componentTiles": 20,
+      "component": 1665,
+      "componentTiles": 19,
       "creatures": 4,
       "species": [
         {
@@ -428,7 +563,7 @@
       "id": "CARLIN-C04-002",
       "city": "CARLIN",
       "floor": 4,
-      "component": 779,
+      "component": 1104,
       "componentTiles": 88,
       "creatures": 3,
       "species": [
@@ -502,7 +637,7 @@
       "id": "CARLIN-C05-001",
       "city": "CARLIN",
       "floor": 5,
-      "component": 1004,
+      "component": 1348,
       "componentTiles": 20,
       "creatures": 3,
       "species": [
@@ -560,7 +695,7 @@
       "id": "CARLIN-C05-002",
       "city": "CARLIN",
       "floor": 5,
-      "component": 385,
+      "component": 470,
       "componentTiles": 234,
       "creatures": 3,
       "species": [
@@ -634,7 +769,7 @@
       "id": "CARLIN-C06-001",
       "city": "CARLIN",
       "floor": 6,
-      "component": 394,
+      "component": 478,
       "componentTiles": 40,
       "creatures": 4,
       "species": [
@@ -698,8 +833,124 @@
       "id": "CARLIN-C06-002",
       "city": "CARLIN",
       "floor": 6,
-      "component": 258,
-      "componentTiles": 31,
+      "component": 1102,
+      "componentTiles": 82,
+      "creatures": 3,
+      "species": [
+        {
+          "name": "Wyvern",
+          "count": 3
+        }
+      ],
+      "extent": {
+        "minX": 31982,
+        "minY": 31684,
+        "maxX": 31991,
+        "maxY": 31689,
+        "centerX": 31986,
+        "centerY": 31686
+      },
+      "subareaId": 280,
+      "splitBySpecies": [
+        {
+          "name": "Wyvern",
+          "count": 3,
+          "extent": {
+            "minX": 31982,
+            "minY": 31684,
+            "maxX": 31991,
+            "maxY": 31689,
+            "centerX": 31986,
+            "centerY": 31686
+          }
+        }
+      ],
+      "spawns": [
+        {
+          "name": "Wyvern",
+          "x": 31984,
+          "y": 31684,
+          "z": 6
+        },
+        {
+          "name": "Wyvern",
+          "x": 31982,
+          "y": 31686,
+          "z": 6
+        },
+        {
+          "name": "Wyvern",
+          "x": 31991,
+          "y": 31689,
+          "z": 6
+        }
+      ],
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "CARLIN-C06-003",
+      "city": "CARLIN",
+      "floor": 6,
+      "component": 214,
+      "componentTiles": 84,
+      "creatures": 3,
+      "species": [
+        {
+          "name": "Wyvern",
+          "count": 3
+        }
+      ],
+      "extent": {
+        "minX": 32017,
+        "minY": 31563,
+        "maxX": 32024,
+        "maxY": 31566,
+        "centerX": 32020,
+        "centerY": 31564
+      },
+      "subareaId": 39,
+      "splitBySpecies": [
+        {
+          "name": "Wyvern",
+          "count": 3,
+          "extent": {
+            "minX": 32017,
+            "minY": 31563,
+            "maxX": 32024,
+            "maxY": 31566,
+            "centerX": 32020,
+            "centerY": 31564
+          }
+        }
+      ],
+      "spawns": [
+        {
+          "name": "Wyvern",
+          "x": 32018,
+          "y": 31563,
+          "z": 6
+        },
+        {
+          "name": "Wyvern",
+          "x": 32017,
+          "y": 31566,
+          "z": 6
+        },
+        {
+          "name": "Wyvern",
+          "x": 32024,
+          "y": 31566,
+          "z": 6
+        }
+      ],
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "CARLIN-C06-004",
+      "city": "CARLIN",
+      "floor": 6,
+      "component": 945,
+      "componentTiles": 30,
       "creatures": 3,
       "species": [
         {
@@ -772,8 +1023,8 @@
       "id": "CARLIN-C07-001",
       "city": "CARLIN",
       "floor": 7,
-      "component": 0,
-      "componentTiles": 49260,
+      "component": 10,
+      "componentTiles": 53286,
       "creatures": 8,
       "species": [
         {
@@ -860,35 +1111,35 @@
       "id": "CARLIN-C07-002",
       "city": "CARLIN",
       "floor": 7,
-      "component": 0,
-      "componentTiles": 49260,
-      "creatures": 8,
+      "component": 10,
+      "componentTiles": 53286,
+      "creatures": 6,
       "species": [
         {
           "name": "Amazon",
-          "count": 8
+          "count": 6
         }
       ],
       "extent": {
-        "minX": 32418,
+        "minX": 32421,
         "minY": 31577,
         "maxX": 32433,
-        "maxY": 31598,
-        "centerX": 32425,
-        "centerY": 31587
+        "maxY": 31596,
+        "centerX": 32427,
+        "centerY": 31586
       },
       "subareaId": 40,
       "splitBySpecies": [
         {
           "name": "Amazon",
-          "count": 8,
+          "count": 6,
           "extent": {
-            "minX": 32418,
+            "minX": 32421,
             "minY": 31577,
             "maxX": 32433,
-            "maxY": 31598,
-            "centerX": 32425,
-            "centerY": 31587
+            "maxY": 31596,
+            "centerX": 32427,
+            "centerY": 31586
           }
         }
       ],
@@ -913,12 +1164,6 @@
         },
         {
           "name": "Amazon",
-          "x": 32425,
-          "y": 31587,
-          "z": 7
-        },
-        {
-          "name": "Amazon",
           "x": 32424,
           "y": 31590,
           "z": 7
@@ -934,27 +1179,21 @@
           "x": 32433,
           "y": 31596,
           "z": 7
-        },
-        {
-          "name": "Amazon",
-          "x": 32418,
-          "y": 31598,
-          "z": 7
         }
       ],
-      "walkTilesFromTemple": 199
+      "walkTilesFromTemple": 204
     },
     {
       "id": "CARLIN-C07-003",
       "city": "CARLIN",
       "floor": 7,
-      "component": 0,
-      "componentTiles": 49260,
-      "creatures": 8,
+      "component": 10,
+      "componentTiles": 53286,
+      "creatures": 5,
       "species": [
         {
           "name": "Amazon",
-          "count": 7
+          "count": 4
         },
         {
           "name": "Valkyrie",
@@ -963,24 +1202,24 @@
       ],
       "extent": {
         "minX": 32465,
-        "minY": 31775,
-        "maxX": 32485,
-        "maxY": 31785,
-        "centerX": 32475,
-        "centerY": 31780
+        "minY": 31776,
+        "maxX": 32482,
+        "maxY": 31783,
+        "centerX": 32473,
+        "centerY": 31779
       },
       "subareaId": 43,
       "splitBySpecies": [
         {
           "name": "Amazon",
-          "count": 7,
+          "count": 4,
           "extent": {
             "minX": 32465,
-            "minY": 31775,
-            "maxX": 32485,
-            "maxY": 31785,
-            "centerX": 32475,
-            "centerY": 31780
+            "minY": 31776,
+            "maxX": 32482,
+            "maxY": 31781,
+            "centerX": 32473,
+            "centerY": 31778
           }
         },
         {
@@ -997,12 +1236,6 @@
         }
       ],
       "spawns": [
-        {
-          "name": "Amazon",
-          "x": 32485,
-          "y": 31775,
-          "z": 7
-        },
         {
           "name": "Amazon",
           "x": 32465,
@@ -1023,12 +1256,6 @@
         },
         {
           "name": "Amazon",
-          "x": 32484,
-          "y": 31780,
-          "z": 7
-        },
-        {
-          "name": "Amazon",
           "x": 32472,
           "y": 31781,
           "z": 7
@@ -1038,12 +1265,6 @@
           "x": 32476,
           "y": 31783,
           "z": 7
-        },
-        {
-          "name": "Amazon",
-          "x": 32473,
-          "y": 31785,
-          "z": 7
         }
       ],
       "walkTilesFromTemple": 141
@@ -1052,8 +1273,8 @@
       "id": "CARLIN-C07-004",
       "city": "CARLIN",
       "floor": 7,
-      "component": 0,
-      "componentTiles": 49260,
+      "component": 10,
+      "componentTiles": 53286,
       "creatures": 4,
       "species": [
         {
@@ -1116,8 +1337,8 @@
       "id": "CARLIN-C07-005",
       "city": "CARLIN",
       "floor": 7,
-      "component": 0,
-      "componentTiles": 49260,
+      "component": 10,
+      "componentTiles": 53286,
       "creatures": 4,
       "species": [
         {
@@ -1180,8 +1401,8 @@
       "id": "CARLIN-C07-006",
       "city": "CARLIN",
       "floor": 7,
-      "component": 0,
-      "componentTiles": 49260,
+      "component": 10,
+      "componentTiles": 53286,
       "creatures": 4,
       "species": [
         {
@@ -1244,8 +1465,8 @@
       "id": "CARLIN-C07-007",
       "city": "CARLIN",
       "floor": 7,
-      "component": 0,
-      "componentTiles": 49260,
+      "component": 10,
+      "componentTiles": 53286,
       "creatures": 3,
       "species": [
         {
@@ -1302,8 +1523,8 @@
       "id": "CARLIN-C07-008",
       "city": "CARLIN",
       "floor": 7,
-      "component": 0,
-      "componentTiles": 49260,
+      "component": 10,
+      "componentTiles": 53286,
       "creatures": 3,
       "species": [
         {
@@ -1360,8 +1581,8 @@
       "id": "CARLIN-C07-009",
       "city": "CARLIN",
       "floor": 7,
-      "component": 0,
-      "componentTiles": 49260,
+      "component": 10,
+      "componentTiles": 53286,
       "creatures": 3,
       "species": [
         {
@@ -1434,8 +1655,8 @@
       "id": "CARLIN-C07-010",
       "city": "CARLIN",
       "floor": 7,
-      "component": 0,
-      "componentTiles": 49260,
+      "component": 10,
+      "componentTiles": 53286,
       "creatures": 3,
       "species": [
         {
@@ -1492,8 +1713,8 @@
       "id": "CARLIN-C07-011",
       "city": "CARLIN",
       "floor": 7,
-      "component": 0,
-      "componentTiles": 49260,
+      "component": 10,
+      "componentTiles": 53286,
       "creatures": 3,
       "species": [
         {
@@ -1566,7 +1787,7 @@
       "id": "CARLIN-C07-012",
       "city": "CARLIN",
       "floor": 7,
-      "component": 78,
+      "component": 172,
       "componentTiles": 4618,
       "creatures": 3,
       "species": [
@@ -1656,7 +1877,7 @@
       "id": "CARLIN-C07-013",
       "city": "CARLIN",
       "floor": 7,
-      "component": 480,
+      "component": 597,
       "componentTiles": 87,
       "creatures": 3,
       "species": [
@@ -1730,7 +1951,7 @@
       "id": "CARLIN-C08-001",
       "city": "CARLIN",
       "floor": 8,
-      "component": 56,
+      "component": 73,
       "componentTiles": 1665,
       "creatures": 26,
       "species": [
@@ -1958,7 +2179,7 @@
       "id": "CARLIN-C08-002",
       "city": "CARLIN",
       "floor": 8,
-      "component": 56,
+      "component": 73,
       "componentTiles": 1665,
       "creatures": 8,
       "species": [
@@ -2046,7 +2267,105 @@
       "id": "CARLIN-C08-003",
       "city": "CARLIN",
       "floor": 8,
-      "component": 56,
+      "component": 85,
+      "componentTiles": 6936,
+      "creatures": 7,
+      "species": [
+        {
+          "name": "Minotaur",
+          "count": 4
+        },
+        {
+          "name": "Rotworm",
+          "count": 3
+        }
+      ],
+      "extent": {
+        "minX": 31994,
+        "minY": 31675,
+        "maxX": 32006,
+        "maxY": 31685,
+        "centerX": 32000,
+        "centerY": 31680
+      },
+      "subareaId": 280,
+      "splitBySpecies": [
+        {
+          "name": "Minotaur",
+          "count": 4,
+          "extent": {
+            "minX": 31994,
+            "minY": 31675,
+            "maxX": 32006,
+            "maxY": 31685,
+            "centerX": 32000,
+            "centerY": 31680
+          }
+        },
+        {
+          "name": "Rotworm",
+          "count": 3,
+          "extent": {
+            "minX": 32000,
+            "minY": 31681,
+            "maxX": 32006,
+            "maxY": 31684,
+            "centerX": 32003,
+            "centerY": 31682
+          }
+        }
+      ],
+      "spawns": [
+        {
+          "name": "Minotaur",
+          "x": 31994,
+          "y": 31675,
+          "z": 8
+        },
+        {
+          "name": "Minotaur",
+          "x": 32003,
+          "y": 31680,
+          "z": 8
+        },
+        {
+          "name": "Rotworm",
+          "x": 32006,
+          "y": 31681,
+          "z": 8
+        },
+        {
+          "name": "Minotaur",
+          "x": 32006,
+          "y": 31682,
+          "z": 8
+        },
+        {
+          "name": "Rotworm",
+          "x": 32004,
+          "y": 31683,
+          "z": 8
+        },
+        {
+          "name": "Rotworm",
+          "x": 32000,
+          "y": 31684,
+          "z": 8
+        },
+        {
+          "name": "Minotaur",
+          "x": 32002,
+          "y": 31685,
+          "z": 8
+        }
+      ],
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "CARLIN-C08-004",
+      "city": "CARLIN",
+      "floor": 8,
+      "component": 73,
       "componentTiles": 1665,
       "creatures": 7,
       "species": [
@@ -2125,10 +2444,86 @@
       "walkTilesFromTemple": 40
     },
     {
-      "id": "CARLIN-C08-004",
+      "id": "CARLIN-C08-005",
       "city": "CARLIN",
       "floor": 8,
-      "component": 71,
+      "component": 85,
+      "componentTiles": 6936,
+      "creatures": 6,
+      "species": [
+        {
+          "name": "Rotworm",
+          "count": 6
+        }
+      ],
+      "extent": {
+        "minX": 31983,
+        "minY": 31590,
+        "maxX": 32004,
+        "maxY": 31605,
+        "centerX": 31993,
+        "centerY": 31597
+      },
+      "subareaId": 39,
+      "splitBySpecies": [
+        {
+          "name": "Rotworm",
+          "count": 6,
+          "extent": {
+            "minX": 31983,
+            "minY": 31590,
+            "maxX": 32004,
+            "maxY": 31605,
+            "centerX": 31993,
+            "centerY": 31597
+          }
+        }
+      ],
+      "spawns": [
+        {
+          "name": "Rotworm",
+          "x": 31985,
+          "y": 31590,
+          "z": 8
+        },
+        {
+          "name": "Rotworm",
+          "x": 31993,
+          "y": 31590,
+          "z": 8
+        },
+        {
+          "name": "Rotworm",
+          "x": 31983,
+          "y": 31594,
+          "z": 8
+        },
+        {
+          "name": "Rotworm",
+          "x": 31993,
+          "y": 31597,
+          "z": 8
+        },
+        {
+          "name": "Rotworm",
+          "x": 31999,
+          "y": 31601,
+          "z": 8
+        },
+        {
+          "name": "Rotworm",
+          "x": 32004,
+          "y": 31605,
+          "z": 8
+        }
+      ],
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "CARLIN-C08-006",
+      "city": "CARLIN",
+      "floor": 8,
+      "component": 265,
       "componentTiles": 260,
       "creatures": 6,
       "species": [
@@ -2201,10 +2596,10 @@
       "walkTilesFromTemple": 165
     },
     {
-      "id": "CARLIN-C08-005",
+      "id": "CARLIN-C08-007",
       "city": "CARLIN",
       "floor": 8,
-      "component": 56,
+      "component": 73,
       "componentTiles": 1665,
       "creatures": 6,
       "species": [
@@ -2277,10 +2672,80 @@
       "walkTilesFromTemple": 78
     },
     {
-      "id": "CARLIN-C08-006",
+      "id": "CARLIN-C08-008",
       "city": "CARLIN",
       "floor": 8,
-      "component": 56,
+      "component": 85,
+      "componentTiles": 6936,
+      "creatures": 5,
+      "species": [
+        {
+          "name": "Rotworm",
+          "count": 5
+        }
+      ],
+      "extent": {
+        "minX": 32026,
+        "minY": 31542,
+        "maxX": 32029,
+        "maxY": 31551,
+        "centerX": 32027,
+        "centerY": 31546
+      },
+      "subareaId": 39,
+      "splitBySpecies": [
+        {
+          "name": "Rotworm",
+          "count": 5,
+          "extent": {
+            "minX": 32026,
+            "minY": 31542,
+            "maxX": 32029,
+            "maxY": 31551,
+            "centerX": 32027,
+            "centerY": 31546
+          }
+        }
+      ],
+      "spawns": [
+        {
+          "name": "Rotworm",
+          "x": 32026,
+          "y": 31542,
+          "z": 8
+        },
+        {
+          "name": "Rotworm",
+          "x": 32029,
+          "y": 31543,
+          "z": 8
+        },
+        {
+          "name": "Rotworm",
+          "x": 32028,
+          "y": 31544,
+          "z": 8
+        },
+        {
+          "name": "Rotworm",
+          "x": 32027,
+          "y": 31551,
+          "z": 8
+        },
+        {
+          "name": "Rotworm",
+          "x": 32028,
+          "y": 31551,
+          "z": 8
+        }
+      ],
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "CARLIN-C08-009",
+      "city": "CARLIN",
+      "floor": 8,
+      "component": 73,
       "componentTiles": 1665,
       "creatures": 5,
       "species": [
@@ -2347,10 +2812,10 @@
       "walkTilesFromTemple": 58
     },
     {
-      "id": "CARLIN-C08-007",
+      "id": "CARLIN-C08-010",
       "city": "CARLIN",
       "floor": 8,
-      "component": 56,
+      "component": 73,
       "componentTiles": 1665,
       "creatures": 5,
       "species": [
@@ -2417,11 +2882,11 @@
       "walkTilesFromTemple": 50
     },
     {
-      "id": "CARLIN-C08-008",
+      "id": "CARLIN-C08-011",
       "city": "CARLIN",
       "floor": 8,
-      "component": 93,
-      "componentTiles": 1918,
+      "component": 150,
+      "componentTiles": 2090,
       "creatures": 5,
       "species": [
         {
@@ -2487,10 +2952,10 @@
       "walkTilesFromTemple": 166
     },
     {
-      "id": "CARLIN-C08-009",
+      "id": "CARLIN-C08-012",
       "city": "CARLIN",
       "floor": 8,
-      "component": 39,
+      "component": 173,
       "componentTiles": 120,
       "creatures": 4,
       "species": [
@@ -2567,10 +3032,10 @@
       "walkTilesFromTemple": 227
     },
     {
-      "id": "CARLIN-C08-010",
+      "id": "CARLIN-C08-013",
       "city": "CARLIN",
       "floor": 8,
-      "component": 56,
+      "component": 73,
       "componentTiles": 1665,
       "creatures": 4,
       "species": [
@@ -2631,10 +3096,10 @@
       "walkTilesFromTemple": 62
     },
     {
-      "id": "CARLIN-C08-011",
+      "id": "CARLIN-C08-014",
       "city": "CARLIN",
       "floor": 8,
-      "component": 56,
+      "component": 73,
       "componentTiles": 1665,
       "creatures": 4,
       "species": [
@@ -2695,11 +3160,11 @@
       "walkTilesFromTemple": 75
     },
     {
-      "id": "CARLIN-C08-012",
+      "id": "CARLIN-C08-015",
       "city": "CARLIN",
       "floor": 8,
-      "component": 93,
-      "componentTiles": 1918,
+      "component": 150,
+      "componentTiles": 2090,
       "creatures": 4,
       "species": [
         {
@@ -2759,11 +3224,11 @@
       "walkTilesFromTemple": 239
     },
     {
-      "id": "CARLIN-C08-013",
+      "id": "CARLIN-C08-016",
       "city": "CARLIN",
       "floor": 8,
-      "component": 93,
-      "componentTiles": 1918,
+      "component": 150,
+      "componentTiles": 2090,
       "creatures": 4,
       "species": [
         {
@@ -2823,11 +3288,97 @@
       "walkTilesFromTemple": 189
     },
     {
-      "id": "CARLIN-C08-014",
+      "id": "CARLIN-C08-017",
       "city": "CARLIN",
       "floor": 8,
-      "component": 453,
-      "componentTiles": 171,
+      "component": 85,
+      "componentTiles": 6936,
+      "creatures": 5,
+      "species": [
+        {
+          "name": "Spider",
+          "count": 3
+        },
+        {
+          "name": "Poison Spider",
+          "count": 2
+        }
+      ],
+      "extent": {
+        "minX": 32041,
+        "minY": 31575,
+        "maxX": 32045,
+        "maxY": 31582,
+        "centerX": 32043,
+        "centerY": 31578
+      },
+      "subareaId": 39,
+      "splitBySpecies": [
+        {
+          "name": "Spider",
+          "count": 3,
+          "extent": {
+            "minX": 32041,
+            "minY": 31575,
+            "maxX": 32043,
+            "maxY": 31577,
+            "centerX": 32042,
+            "centerY": 31576
+          }
+        },
+        {
+          "name": "Poison Spider",
+          "count": 2,
+          "extent": {
+            "minX": 32044,
+            "minY": 31575,
+            "maxX": 32045,
+            "maxY": 31582,
+            "centerX": 32044,
+            "centerY": 31578
+          }
+        }
+      ],
+      "spawns": [
+        {
+          "name": "Spider",
+          "x": 32043,
+          "y": 31575,
+          "z": 8
+        },
+        {
+          "name": "Poison Spider",
+          "x": 32045,
+          "y": 31575,
+          "z": 8
+        },
+        {
+          "name": "Spider",
+          "x": 32041,
+          "y": 31576,
+          "z": 8
+        },
+        {
+          "name": "Spider",
+          "x": 32043,
+          "y": 31577,
+          "z": 8
+        },
+        {
+          "name": "Poison Spider",
+          "x": 32044,
+          "y": 31582,
+          "z": 8
+        }
+      ],
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "CARLIN-C08-018",
+      "city": "CARLIN",
+      "floor": 8,
+      "component": 150,
+      "componentTiles": 2090,
       "creatures": 3,
       "species": [
         {
@@ -2881,11 +3432,11 @@
       "walkTilesFromTemple": 209
     },
     {
-      "id": "CARLIN-C08-015",
+      "id": "CARLIN-C08-019",
       "city": "CARLIN",
       "floor": 8,
-      "component": 93,
-      "componentTiles": 1918,
+      "component": 150,
+      "componentTiles": 2090,
       "creatures": 3,
       "species": [
         {
@@ -2939,10 +3490,10 @@
       "walkTilesFromTemple": 206
     },
     {
-      "id": "CARLIN-C08-016",
+      "id": "CARLIN-C08-020",
       "city": "CARLIN",
       "floor": 8,
-      "component": 1207,
+      "component": 1610,
       "componentTiles": 54,
       "creatures": 3,
       "species": [
@@ -2997,11 +3548,11 @@
       "walkTilesFromTemple": 165
     },
     {
-      "id": "CARLIN-C08-017",
+      "id": "CARLIN-C08-021",
       "city": "CARLIN",
       "floor": 8,
-      "component": 93,
-      "componentTiles": 1918,
+      "component": 150,
+      "componentTiles": 2090,
       "creatures": 3,
       "species": [
         {
@@ -3055,11 +3606,11 @@
       "walkTilesFromTemple": 188
     },
     {
-      "id": "CARLIN-C08-018",
+      "id": "CARLIN-C08-022",
       "city": "CARLIN",
       "floor": 8,
-      "component": 93,
-      "componentTiles": 1918,
+      "component": 150,
+      "componentTiles": 2090,
       "creatures": 3,
       "species": [
         {
@@ -3113,11 +3664,11 @@
       "walkTilesFromTemple": 197
     },
     {
-      "id": "CARLIN-C08-019",
+      "id": "CARLIN-C08-023",
       "city": "CARLIN",
       "floor": 8,
-      "component": 94,
-      "componentTiles": 290,
+      "component": 104,
+      "componentTiles": 289,
       "creatures": 3,
       "species": [
         {
@@ -3171,11 +3722,11 @@
       "walkTilesFromTemple": 251
     },
     {
-      "id": "CARLIN-C08-020",
+      "id": "CARLIN-C08-024",
       "city": "CARLIN",
       "floor": 8,
-      "component": 93,
-      "componentTiles": 1918,
+      "component": 150,
+      "componentTiles": 2090,
       "creatures": 3,
       "species": [
         {
@@ -3229,11 +3780,11 @@
       "walkTilesFromTemple": 235
     },
     {
-      "id": "CARLIN-C08-021",
+      "id": "CARLIN-C08-025",
       "city": "CARLIN",
       "floor": 8,
-      "component": 20,
-      "componentTiles": 763,
+      "component": 22,
+      "componentTiles": 762,
       "creatures": 51,
       "species": [
         {
@@ -3679,11 +4230,11 @@
       "walkTilesFromTemple": 132
     },
     {
-      "id": "CARLIN-C08-022",
+      "id": "CARLIN-C08-026",
       "city": "CARLIN",
       "floor": 8,
-      "component": 20,
-      "componentTiles": 763,
+      "component": 22,
+      "componentTiles": 762,
       "creatures": 31,
       "species": [
         {
@@ -4048,7 +4599,7 @@
       "id": "CARLIN-C09-001",
       "city": "CARLIN",
       "floor": 9,
-      "component": 6,
+      "component": 56,
       "componentTiles": 3298,
       "creatures": 10,
       "species": [
@@ -4188,8 +4739,8 @@
       "id": "CARLIN-C09-002",
       "city": "CARLIN",
       "floor": 9,
-      "component": 12,
-      "componentTiles": 1062,
+      "component": 14,
+      "componentTiles": 1061,
       "creatures": 9,
       "species": [
         {
@@ -4282,7 +4833,7 @@
       "id": "CARLIN-C09-003",
       "city": "CARLIN",
       "floor": 9,
-      "component": 6,
+      "component": 56,
       "componentTiles": 3298,
       "creatures": 8,
       "species": [
@@ -4386,8 +4937,8 @@
       "id": "CARLIN-C09-004",
       "city": "CARLIN",
       "floor": 9,
-      "component": 12,
-      "componentTiles": 1062,
+      "component": 132,
+      "componentTiles": 387,
       "creatures": 7,
       "species": [
         {
@@ -4396,12 +4947,12 @@
         }
       ],
       "extent": {
-        "minX": 32184,
-        "minY": 31791,
-        "maxX": 32212,
-        "maxY": 31812,
-        "centerX": 32198,
-        "centerY": 31801
+        "minX": 32183,
+        "minY": 31838,
+        "maxX": 32200,
+        "maxY": 31857,
+        "centerX": 32191,
+        "centerY": 31847
       },
       "subareaId": 38,
       "splitBySpecies": [
@@ -4409,11 +4960,257 @@
           "name": "Ghoul",
           "count": 7,
           "extent": {
-            "minX": 32184,
+            "minX": 32183,
+            "minY": 31838,
+            "maxX": 32200,
+            "maxY": 31857,
+            "centerX": 32191,
+            "centerY": 31847
+          }
+        }
+      ],
+      "spawns": [
+        {
+          "name": "Ghoul",
+          "x": 32183,
+          "y": 31838,
+          "z": 9
+        },
+        {
+          "name": "Ghoul",
+          "x": 32187,
+          "y": 31840,
+          "z": 9
+        },
+        {
+          "name": "Ghoul",
+          "x": 32196,
+          "y": 31845,
+          "z": 9
+        },
+        {
+          "name": "Ghoul",
+          "x": 32200,
+          "y": 31845,
+          "z": 9
+        },
+        {
+          "name": "Ghoul",
+          "x": 32200,
+          "y": 31848,
+          "z": 9
+        },
+        {
+          "name": "Ghoul",
+          "x": 32195,
+          "y": 31854,
+          "z": 9
+        },
+        {
+          "name": "Ghoul",
+          "x": 32199,
+          "y": 31857,
+          "z": 9
+        }
+      ],
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "CARLIN-C09-005",
+      "city": "CARLIN",
+      "floor": 9,
+      "component": 799,
+      "componentTiles": 120,
+      "creatures": 7,
+      "species": [
+        {
+          "name": "Rotworm",
+          "count": 7
+        }
+      ],
+      "extent": {
+        "minX": 31977,
+        "minY": 31562,
+        "maxX": 31983,
+        "maxY": 31569,
+        "centerX": 31980,
+        "centerY": 31565
+      },
+      "subareaId": 39,
+      "splitBySpecies": [
+        {
+          "name": "Rotworm",
+          "count": 7,
+          "extent": {
+            "minX": 31977,
+            "minY": 31562,
+            "maxX": 31983,
+            "maxY": 31569,
+            "centerX": 31980,
+            "centerY": 31565
+          }
+        }
+      ],
+      "spawns": [
+        {
+          "name": "Rotworm",
+          "x": 31977,
+          "y": 31562,
+          "z": 9
+        },
+        {
+          "name": "Rotworm",
+          "x": 31983,
+          "y": 31563,
+          "z": 9
+        },
+        {
+          "name": "Rotworm",
+          "x": 31978,
+          "y": 31566,
+          "z": 9
+        },
+        {
+          "name": "Rotworm",
+          "x": 31980,
+          "y": 31566,
+          "z": 9
+        },
+        {
+          "name": "Rotworm",
+          "x": 31980,
+          "y": 31567,
+          "z": 9
+        },
+        {
+          "name": "Rotworm",
+          "x": 31978,
+          "y": 31569,
+          "z": 9
+        },
+        {
+          "name": "Rotworm",
+          "x": 31980,
+          "y": 31569,
+          "z": 9
+        }
+      ],
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "CARLIN-C09-006",
+      "city": "CARLIN",
+      "floor": 9,
+      "component": 27,
+      "componentTiles": 6177,
+      "creatures": 7,
+      "species": [
+        {
+          "name": "Rotworm",
+          "count": 7
+        }
+      ],
+      "extent": {
+        "minX": 32117,
+        "minY": 31735,
+        "maxX": 32128,
+        "maxY": 31740,
+        "centerX": 32122,
+        "centerY": 31737
+      },
+      "subareaId": 279,
+      "splitBySpecies": [
+        {
+          "name": "Rotworm",
+          "count": 7,
+          "extent": {
+            "minX": 32117,
+            "minY": 31735,
+            "maxX": 32128,
+            "maxY": 31740,
+            "centerX": 32122,
+            "centerY": 31737
+          }
+        }
+      ],
+      "spawns": [
+        {
+          "name": "Rotworm",
+          "x": 32122,
+          "y": 31735,
+          "z": 9
+        },
+        {
+          "name": "Rotworm",
+          "x": 32125,
+          "y": 31736,
+          "z": 9
+        },
+        {
+          "name": "Rotworm",
+          "x": 32128,
+          "y": 31737,
+          "z": 9
+        },
+        {
+          "name": "Rotworm",
+          "x": 32117,
+          "y": 31738,
+          "z": 9
+        },
+        {
+          "name": "Rotworm",
+          "x": 32123,
+          "y": 31738,
+          "z": 9
+        },
+        {
+          "name": "Rotworm",
+          "x": 32118,
+          "y": 31739,
+          "z": 9
+        },
+        {
+          "name": "Rotworm",
+          "x": 32124,
+          "y": 31740,
+          "z": 9
+        }
+      ],
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "CARLIN-C09-007",
+      "city": "CARLIN",
+      "floor": 9,
+      "component": 14,
+      "componentTiles": 1061,
+      "creatures": 6,
+      "species": [
+        {
+          "name": "Ghoul",
+          "count": 6
+        }
+      ],
+      "extent": {
+        "minX": 32189,
+        "minY": 31791,
+        "maxX": 32212,
+        "maxY": 31812,
+        "centerX": 32200,
+        "centerY": 31801
+      },
+      "subareaId": 38,
+      "splitBySpecies": [
+        {
+          "name": "Ghoul",
+          "count": 6,
+          "extent": {
+            "minX": 32189,
             "minY": 31791,
             "maxX": 32212,
             "maxY": 31812,
-            "centerX": 32198,
+            "centerX": 32200,
             "centerY": 31801
           }
         }
@@ -4451,12 +5248,6 @@
         },
         {
           "name": "Ghoul",
-          "x": 32184,
-          "y": 31812,
-          "z": 9
-        },
-        {
-          "name": "Ghoul",
           "x": 32189,
           "y": 31812,
           "z": 9
@@ -4465,86 +5256,10 @@
       "walkTilesFromTemple": 214
     },
     {
-      "id": "CARLIN-C09-005",
+      "id": "CARLIN-C09-008",
       "city": "CARLIN",
       "floor": 9,
-      "component": 119,
-      "componentTiles": 387,
-      "creatures": 6,
-      "species": [
-        {
-          "name": "Ghoul",
-          "count": 6
-        }
-      ],
-      "extent": {
-        "minX": 32183,
-        "minY": 31838,
-        "maxX": 32200,
-        "maxY": 31857,
-        "centerX": 32191,
-        "centerY": 31847
-      },
-      "subareaId": 38,
-      "splitBySpecies": [
-        {
-          "name": "Ghoul",
-          "count": 6,
-          "extent": {
-            "minX": 32183,
-            "minY": 31838,
-            "maxX": 32200,
-            "maxY": 31857,
-            "centerX": 32191,
-            "centerY": 31847
-          }
-        }
-      ],
-      "spawns": [
-        {
-          "name": "Ghoul",
-          "x": 32183,
-          "y": 31838,
-          "z": 9
-        },
-        {
-          "name": "Ghoul",
-          "x": 32187,
-          "y": 31840,
-          "z": 9
-        },
-        {
-          "name": "Ghoul",
-          "x": 32196,
-          "y": 31845,
-          "z": 9
-        },
-        {
-          "name": "Ghoul",
-          "x": 32200,
-          "y": 31848,
-          "z": 9
-        },
-        {
-          "name": "Ghoul",
-          "x": 32195,
-          "y": 31854,
-          "z": 9
-        },
-        {
-          "name": "Ghoul",
-          "x": 32199,
-          "y": 31857,
-          "z": 9
-        }
-      ],
-      "walkTilesFromTemple": 241
-    },
-    {
-      "id": "CARLIN-C09-006",
-      "city": "CARLIN",
-      "floor": 9,
-      "component": 322,
+      "component": 388,
       "componentTiles": 229,
       "creatures": 6,
       "species": [
@@ -4617,10 +5332,80 @@
       "walkTilesFromTemple": 95
     },
     {
-      "id": "CARLIN-C09-007",
+      "id": "CARLIN-C09-009",
       "city": "CARLIN",
       "floor": 9,
-      "component": 6,
+      "component": 27,
+      "componentTiles": 6177,
+      "creatures": 5,
+      "species": [
+        {
+          "name": "Rotworm",
+          "count": 5
+        }
+      ],
+      "extent": {
+        "minX": 32172,
+        "minY": 31637,
+        "maxX": 32177,
+        "maxY": 31641,
+        "centerX": 32174,
+        "centerY": 31639
+      },
+      "subareaId": 281,
+      "splitBySpecies": [
+        {
+          "name": "Rotworm",
+          "count": 5,
+          "extent": {
+            "minX": 32172,
+            "minY": 31637,
+            "maxX": 32177,
+            "maxY": 31641,
+            "centerX": 32174,
+            "centerY": 31639
+          }
+        }
+      ],
+      "spawns": [
+        {
+          "name": "Rotworm",
+          "x": 32172,
+          "y": 31637,
+          "z": 9
+        },
+        {
+          "name": "Rotworm",
+          "x": 32176,
+          "y": 31637,
+          "z": 9
+        },
+        {
+          "name": "Rotworm",
+          "x": 32176,
+          "y": 31639,
+          "z": 9
+        },
+        {
+          "name": "Rotworm",
+          "x": 32177,
+          "y": 31639,
+          "z": 9
+        },
+        {
+          "name": "Rotworm",
+          "x": 32174,
+          "y": 31641,
+          "z": 9
+        }
+      ],
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "CARLIN-C09-010",
+      "city": "CARLIN",
+      "floor": 9,
+      "component": 56,
       "componentTiles": 3298,
       "creatures": 5,
       "species": [
@@ -4687,10 +5472,166 @@
       "walkTilesFromTemple": 341
     },
     {
-      "id": "CARLIN-C09-008",
+      "id": "CARLIN-C09-011",
       "city": "CARLIN",
       "floor": 9,
-      "component": 77,
+      "component": 250,
+      "componentTiles": 81,
+      "creatures": 6,
+      "species": [
+        {
+          "name": "Ghoul",
+          "count": 4
+        },
+        {
+          "name": "Skeleton",
+          "count": 2
+        }
+      ],
+      "extent": {
+        "minX": 32169,
+        "minY": 31929,
+        "maxX": 32177,
+        "maxY": 31940,
+        "centerX": 32173,
+        "centerY": 31934
+      },
+      "subareaId": 288,
+      "splitBySpecies": [
+        {
+          "name": "Ghoul",
+          "count": 4,
+          "extent": {
+            "minX": 32171,
+            "minY": 31929,
+            "maxX": 32177,
+            "maxY": 31933,
+            "centerX": 32174,
+            "centerY": 31931
+          }
+        },
+        {
+          "name": "Skeleton",
+          "count": 2,
+          "extent": {
+            "minX": 32169,
+            "minY": 31936,
+            "maxX": 32171,
+            "maxY": 31940,
+            "centerX": 32170,
+            "centerY": 31938
+          }
+        }
+      ],
+      "spawns": [
+        {
+          "name": "Ghoul",
+          "x": 32175,
+          "y": 31929,
+          "z": 9
+        },
+        {
+          "name": "Ghoul",
+          "x": 32171,
+          "y": 31930,
+          "z": 9
+        },
+        {
+          "name": "Ghoul",
+          "x": 32177,
+          "y": 31930,
+          "z": 9
+        },
+        {
+          "name": "Ghoul",
+          "x": 32172,
+          "y": 31933,
+          "z": 9
+        },
+        {
+          "name": "Skeleton",
+          "x": 32171,
+          "y": 31936,
+          "z": 9
+        },
+        {
+          "name": "Skeleton",
+          "x": 32169,
+          "y": 31940,
+          "z": 9
+        }
+      ],
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "CARLIN-C09-012",
+      "city": "CARLIN",
+      "floor": 9,
+      "component": 27,
+      "componentTiles": 6177,
+      "creatures": 4,
+      "species": [
+        {
+          "name": "Rotworm",
+          "count": 4
+        }
+      ],
+      "extent": {
+        "minX": 32022,
+        "minY": 31576,
+        "maxX": 32030,
+        "maxY": 31581,
+        "centerX": 32026,
+        "centerY": 31578
+      },
+      "subareaId": 39,
+      "splitBySpecies": [
+        {
+          "name": "Rotworm",
+          "count": 4,
+          "extent": {
+            "minX": 32022,
+            "minY": 31576,
+            "maxX": 32030,
+            "maxY": 31581,
+            "centerX": 32026,
+            "centerY": 31578
+          }
+        }
+      ],
+      "spawns": [
+        {
+          "name": "Rotworm",
+          "x": 32023,
+          "y": 31576,
+          "z": 9
+        },
+        {
+          "name": "Rotworm",
+          "x": 32022,
+          "y": 31577,
+          "z": 9
+        },
+        {
+          "name": "Rotworm",
+          "x": 32024,
+          "y": 31577,
+          "z": 9
+        },
+        {
+          "name": "Rotworm",
+          "x": 32030,
+          "y": 31581,
+          "z": 9
+        }
+      ],
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "CARLIN-C09-013",
+      "city": "CARLIN",
+      "floor": 9,
+      "component": 488,
       "componentTiles": 521,
       "creatures": 5,
       "species": [
@@ -4789,126 +5730,10 @@
       "walkTilesFromTemple": 261
     },
     {
-      "id": "CARLIN-C09-009",
+      "id": "CARLIN-C09-014",
       "city": "CARLIN",
       "floor": 9,
-      "component": 119,
-      "componentTiles": 387,
-      "creatures": 3,
-      "species": [
-        {
-          "name": "Ghoul",
-          "count": 3
-        }
-      ],
-      "extent": {
-        "minX": 32170,
-        "minY": 31845,
-        "maxX": 32173,
-        "maxY": 31847,
-        "centerX": 32171,
-        "centerY": 31846
-      },
-      "subareaId": null,
-      "splitBySpecies": [
-        {
-          "name": "Ghoul",
-          "count": 3,
-          "extent": {
-            "minX": 32170,
-            "minY": 31845,
-            "maxX": 32173,
-            "maxY": 31847,
-            "centerX": 32171,
-            "centerY": 31846
-          }
-        }
-      ],
-      "spawns": [
-        {
-          "name": "Ghoul",
-          "x": 32170,
-          "y": 31845,
-          "z": 9
-        },
-        {
-          "name": "Ghoul",
-          "x": 32173,
-          "y": 31845,
-          "z": 9
-        },
-        {
-          "name": "Ghoul",
-          "x": 32173,
-          "y": 31847,
-          "z": 9
-        }
-      ],
-      "walkTilesFromTemple": 249
-    },
-    {
-      "id": "CARLIN-C09-010",
-      "city": "CARLIN",
-      "floor": 9,
-      "component": 119,
-      "componentTiles": 387,
-      "creatures": 3,
-      "species": [
-        {
-          "name": "Ghoul",
-          "count": 3
-        }
-      ],
-      "extent": {
-        "minX": 32171,
-        "minY": 31861,
-        "maxX": 32174,
-        "maxY": 31862,
-        "centerX": 32172,
-        "centerY": 31861
-      },
-      "subareaId": null,
-      "splitBySpecies": [
-        {
-          "name": "Ghoul",
-          "count": 3,
-          "extent": {
-            "minX": 32171,
-            "minY": 31861,
-            "maxX": 32174,
-            "maxY": 31862,
-            "centerX": 32172,
-            "centerY": 31861
-          }
-        }
-      ],
-      "spawns": [
-        {
-          "name": "Ghoul",
-          "x": 32172,
-          "y": 31861,
-          "z": 9
-        },
-        {
-          "name": "Ghoul",
-          "x": 32171,
-          "y": 31862,
-          "z": 9
-        },
-        {
-          "name": "Ghoul",
-          "x": 32174,
-          "y": 31862,
-          "z": 9
-        }
-      ],
-      "walkTilesFromTemple": 248
-    },
-    {
-      "id": "CARLIN-C09-011",
-      "city": "CARLIN",
-      "floor": 9,
-      "component": 4,
+      "component": 32,
       "componentTiles": 503,
       "creatures": 3,
       "species": [
@@ -4963,10 +5788,10 @@
       "walkTilesFromTemple": 165
     },
     {
-      "id": "CARLIN-C09-012",
+      "id": "CARLIN-C09-015",
       "city": "CARLIN",
       "floor": 9,
-      "component": 609,
+      "component": 782,
       "componentTiles": 47,
       "creatures": 3,
       "species": [
@@ -5021,10 +5846,10 @@
       "walkTilesFromTemple": 192
     },
     {
-      "id": "CARLIN-C09-013",
+      "id": "CARLIN-C09-016",
       "city": "CARLIN",
       "floor": 9,
-      "component": 6,
+      "component": 56,
       "componentTiles": 3298,
       "creatures": 3,
       "species": [
@@ -5079,10 +5904,10 @@
       "walkTilesFromTemple": 385
     },
     {
-      "id": "CARLIN-C09-014",
+      "id": "CARLIN-C09-017",
       "city": "CARLIN",
       "floor": 9,
-      "component": 6,
+      "component": 56,
       "componentTiles": 3298,
       "creatures": 3,
       "species": [
@@ -5137,10 +5962,10 @@
       "walkTilesFromTemple": 335
     },
     {
-      "id": "CARLIN-C09-015",
+      "id": "CARLIN-C09-018",
       "city": "CARLIN",
       "floor": 9,
-      "component": 6,
+      "component": 56,
       "componentTiles": 3298,
       "creatures": 3,
       "species": [
@@ -5195,10 +6020,10 @@
       "walkTilesFromTemple": 221
     },
     {
-      "id": "CARLIN-C09-016",
+      "id": "CARLIN-C09-019",
       "city": "CARLIN",
       "floor": 9,
-      "component": 322,
+      "component": 388,
       "componentTiles": 229,
       "creatures": 3,
       "species": [
@@ -5253,10 +6078,10 @@
       "walkTilesFromTemple": 86
     },
     {
-      "id": "CARLIN-C09-017",
+      "id": "CARLIN-C09-020",
       "city": "CARLIN",
       "floor": 9,
-      "component": 6,
+      "component": 56,
       "componentTiles": 3298,
       "creatures": 3,
       "species": [
@@ -5311,10 +6136,10 @@
       "walkTilesFromTemple": 392
     },
     {
-      "id": "CARLIN-C09-018",
+      "id": "CARLIN-C09-021",
       "city": "CARLIN",
       "floor": 9,
-      "component": 6,
+      "component": 56,
       "componentTiles": 3298,
       "creatures": 3,
       "species": [
@@ -5369,11 +6194,11 @@
       "walkTilesFromTemple": 285
     },
     {
-      "id": "CARLIN-C09-019",
+      "id": "CARLIN-C09-022",
       "city": "CARLIN",
       "floor": 9,
-      "component": 180,
-      "componentTiles": 730,
+      "component": 340,
+      "componentTiles": 729,
       "creatures": 64,
       "species": [
         {
@@ -5913,11 +6738,11 @@
       "walkTilesFromTemple": 158
     },
     {
-      "id": "CARLIN-C09-020",
+      "id": "CARLIN-C09-023",
       "city": "CARLIN",
       "floor": 9,
-      "component": 180,
-      "componentTiles": 730,
+      "component": 340,
+      "componentTiles": 729,
       "creatures": 36,
       "species": [
         {
@@ -6337,10 +7162,10 @@
       "walkTilesFromTemple": 181
     },
     {
-      "id": "CARLIN-C09-021",
+      "id": "CARLIN-C09-024",
       "city": "CARLIN",
       "floor": 9,
-      "component": 8,
+      "component": 134,
       "componentTiles": 759,
       "creatures": 5,
       "species": [
@@ -6426,128 +7251,116 @@
       "id": "CARLIN-C10-001",
       "city": "CARLIN",
       "floor": 10,
-      "component": 34,
-      "componentTiles": 521,
-      "creatures": 9,
+      "component": 45,
+      "componentTiles": 5849,
+      "creatures": 7,
       "species": [
         {
-          "name": "Ghoul",
-          "count": 9
+          "name": "Minotaur",
+          "count": 7
         }
       ],
       "extent": {
-        "minX": 32167,
-        "minY": 31763,
-        "maxX": 32183,
-        "maxY": 31785,
-        "centerX": 32175,
-        "centerY": 31774
+        "minX": 32126,
+        "minY": 31590,
+        "maxX": 32139,
+        "maxY": 31604,
+        "centerX": 32132,
+        "centerY": 31597
       },
-      "subareaId": null,
+      "subareaId": 279,
       "splitBySpecies": [
         {
-          "name": "Ghoul",
-          "count": 9,
+          "name": "Minotaur",
+          "count": 7,
           "extent": {
-            "minX": 32167,
-            "minY": 31763,
-            "maxX": 32183,
-            "maxY": 31785,
-            "centerX": 32175,
-            "centerY": 31774
+            "minX": 32126,
+            "minY": 31590,
+            "maxX": 32139,
+            "maxY": 31604,
+            "centerX": 32132,
+            "centerY": 31597
           }
         }
       ],
       "spawns": [
         {
-          "name": "Ghoul",
-          "x": 32181,
-          "y": 31763,
+          "name": "Minotaur",
+          "x": 32128,
+          "y": 31590,
           "z": 10
         },
         {
-          "name": "Ghoul",
-          "x": 32179,
-          "y": 31766,
+          "name": "Minotaur",
+          "x": 32128,
+          "y": 31592,
           "z": 10
         },
         {
-          "name": "Ghoul",
-          "x": 32183,
-          "y": 31766,
+          "name": "Minotaur",
+          "x": 32137,
+          "y": 31592,
           "z": 10
         },
         {
-          "name": "Ghoul",
-          "x": 32180,
-          "y": 31775,
+          "name": "Minotaur",
+          "x": 32132,
+          "y": 31595,
           "z": 10
         },
         {
-          "name": "Ghoul",
-          "x": 32173,
-          "y": 31776,
+          "name": "Minotaur",
+          "x": 32126,
+          "y": 31599,
           "z": 10
         },
         {
-          "name": "Ghoul",
-          "x": 32169,
-          "y": 31783,
+          "name": "Minotaur",
+          "x": 32132,
+          "y": 31603,
           "z": 10
         },
         {
-          "name": "Ghoul",
-          "x": 32167,
-          "y": 31784,
-          "z": 10
-        },
-        {
-          "name": "Ghoul",
-          "x": 32168,
-          "y": 31784,
-          "z": 10
-        },
-        {
-          "name": "Ghoul",
-          "x": 32169,
-          "y": 31785,
+          "name": "Minotaur",
+          "x": 32139,
+          "y": 31604,
           "z": 10
         }
       ],
-      "walkTilesFromTemple": 215
+      "walkTilesFromTemple": null
     },
     {
       "id": "CARLIN-C10-002",
       "city": "CARLIN",
       "floor": 10,
-      "component": 101,
+      "component": 192,
       "componentTiles": 1189,
-      "creatures": 9,
+      "creatures": 7,
       "species": [
         {
           "name": "Rotworm",
-          "count": 9
+          "count": 7
         }
       ],
       "extent": {
         "minX": 32338,
         "minY": 31820,
-        "maxX": 32375,
+        "maxX": 32366,
         "maxY": 31840,
-        "centerX": 32356,
+        "centerX": 32352,
         "centerY": 31830
       },
       "subareaId": 271,
       "splitBySpecies": [
         {
           "name": "Rotworm",
-          "count": 9,
+          "count": 7,
           "extent": {
             "minX": 32338,
             "minY": 31820,
-            "maxX": 32375,
+            "maxX": 32366,
             "maxY": 31840,
-            "centerX": 32356,
+            "centerX": 32352,
             "centerY": 31830
           }
         }
@@ -6569,18 +7382,6 @@
           "name": "Rotworm",
           "x": 32360,
           "y": 31829,
-          "z": 10
-        },
-        {
-          "name": "Rotworm",
-          "x": 32375,
-          "y": 31830,
-          "z": 10
-        },
-        {
-          "name": "Rotworm",
-          "x": 32374,
-          "y": 31831,
           "z": 10
         },
         {
@@ -6614,13 +7415,13 @@
       "id": "CARLIN-C10-003",
       "city": "CARLIN",
       "floor": 10,
-      "component": 34,
-      "componentTiles": 521,
-      "creatures": 11,
+      "component": 62,
+      "componentTiles": 520,
+      "creatures": 8,
       "species": [
         {
           "name": "Ghoul",
-          "count": 8
+          "count": 5
         },
         {
           "name": "Demon Skeleton",
@@ -6631,22 +7432,22 @@
         "minX": 32181,
         "minY": 31769,
         "maxX": 32197,
-        "maxY": 31797,
+        "maxY": 31795,
         "centerX": 32189,
-        "centerY": 31783
+        "centerY": 31782
       },
       "subareaId": 38,
       "splitBySpecies": [
         {
           "name": "Ghoul",
-          "count": 7,
+          "count": 3,
           "extent": {
-            "minX": 32181,
+            "minX": 32191,
             "minY": 31782,
             "maxX": 32195,
-            "maxY": 31797,
-            "centerX": 32188,
-            "centerY": 31789
+            "maxY": 31794,
+            "centerX": 32193,
+            "centerY": 31788
           }
         },
         {
@@ -6696,6 +7497,18 @@
             "centerX": 32197,
             "centerY": 31769
           }
+        },
+        {
+          "name": "Ghoul",
+          "count": 1,
+          "extent": {
+            "minX": 32181,
+            "minY": 31795,
+            "maxX": 32181,
+            "maxY": 31795,
+            "centerX": 32181,
+            "centerY": 31795
+          }
         }
       ],
       "spawns": [
@@ -6725,12 +7538,6 @@
         },
         {
           "name": "Ghoul",
-          "x": 32183,
-          "y": 31785,
-          "z": 10
-        },
-        {
-          "name": "Ghoul",
           "x": 32195,
           "y": 31785,
           "z": 10
@@ -6752,18 +7559,6 @@
           "x": 32181,
           "y": 31795,
           "z": 10
-        },
-        {
-          "name": "Ghoul",
-          "x": 32195,
-          "y": 31795,
-          "z": 10
-        },
-        {
-          "name": "Ghoul",
-          "x": 32195,
-          "y": 31797,
-          "z": 10
         }
       ],
       "walkTilesFromTemple": 205
@@ -6772,45 +7567,39 @@
       "id": "CARLIN-C10-004",
       "city": "CARLIN",
       "floor": 10,
-      "component": 101,
+      "component": 192,
       "componentTiles": 1189,
-      "creatures": 7,
+      "creatures": 5,
       "species": [
         {
           "name": "Rotworm",
-          "count": 7
+          "count": 5
         }
       ],
       "extent": {
         "minX": 32370,
-        "minY": 31796,
+        "minY": 31801,
         "maxX": 32382,
         "maxY": 31817,
         "centerX": 32376,
-        "centerY": 31806
+        "centerY": 31809
       },
       "subareaId": 271,
       "splitBySpecies": [
         {
           "name": "Rotworm",
-          "count": 7,
+          "count": 5,
           "extent": {
             "minX": 32370,
-            "minY": 31796,
+            "minY": 31801,
             "maxX": 32382,
             "maxY": 31817,
             "centerX": 32376,
-            "centerY": 31806
+            "centerY": 31809
           }
         }
       ],
       "spawns": [
-        {
-          "name": "Rotworm",
-          "x": 32373,
-          "y": 31796,
-          "z": 10
-        },
         {
           "name": "Rotworm",
           "x": 32373,
@@ -6827,12 +7616,6 @@
           "name": "Rotworm",
           "x": 32374,
           "y": 31803,
-          "z": 10
-        },
-        {
-          "name": "Rotworm",
-          "x": 32372,
-          "y": 31806,
           "z": 10
         },
         {
@@ -6854,148 +7637,8 @@
       "id": "CARLIN-C10-005",
       "city": "CARLIN",
       "floor": 10,
-      "component": 101,
-      "componentTiles": 1189,
-      "creatures": 5,
-      "species": [
-        {
-          "name": "Rotworm",
-          "count": 5
-        }
-      ],
-      "extent": {
-        "minX": 32358,
-        "minY": 31868,
-        "maxX": 32363,
-        "maxY": 31882,
-        "centerX": 32360,
-        "centerY": 31875
-      },
-      "subareaId": null,
-      "splitBySpecies": [
-        {
-          "name": "Rotworm",
-          "count": 5,
-          "extent": {
-            "minX": 32358,
-            "minY": 31868,
-            "maxX": 32363,
-            "maxY": 31882,
-            "centerX": 32360,
-            "centerY": 31875
-          }
-        }
-      ],
-      "spawns": [
-        {
-          "name": "Rotworm",
-          "x": 32361,
-          "y": 31868,
-          "z": 10
-        },
-        {
-          "name": "Rotworm",
-          "x": 32360,
-          "y": 31869,
-          "z": 10
-        },
-        {
-          "name": "Rotworm",
-          "x": 32358,
-          "y": 31875,
-          "z": 10
-        },
-        {
-          "name": "Rotworm",
-          "x": 32363,
-          "y": 31881,
-          "z": 10
-        },
-        {
-          "name": "Rotworm",
-          "x": 32363,
-          "y": 31882,
-          "z": 10
-        }
-      ],
-      "walkTilesFromTemple": 151
-    },
-    {
-      "id": "CARLIN-C10-006",
-      "city": "CARLIN",
-      "floor": 10,
-      "component": 101,
-      "componentTiles": 1189,
-      "creatures": 5,
-      "species": [
-        {
-          "name": "Rotworm",
-          "count": 5
-        }
-      ],
-      "extent": {
-        "minX": 32360,
-        "minY": 31839,
-        "maxX": 32364,
-        "maxY": 31857,
-        "centerX": 32362,
-        "centerY": 31848
-      },
-      "subareaId": null,
-      "splitBySpecies": [
-        {
-          "name": "Rotworm",
-          "count": 5,
-          "extent": {
-            "minX": 32360,
-            "minY": 31839,
-            "maxX": 32364,
-            "maxY": 31857,
-            "centerX": 32362,
-            "centerY": 31848
-          }
-        }
-      ],
-      "spawns": [
-        {
-          "name": "Rotworm",
-          "x": 32362,
-          "y": 31839,
-          "z": 10
-        },
-        {
-          "name": "Rotworm",
-          "x": 32361,
-          "y": 31840,
-          "z": 10
-        },
-        {
-          "name": "Rotworm",
-          "x": 32360,
-          "y": 31850,
-          "z": 10
-        },
-        {
-          "name": "Rotworm",
-          "x": 32361,
-          "y": 31850,
-          "z": 10
-        },
-        {
-          "name": "Rotworm",
-          "x": 32364,
-          "y": 31857,
-          "z": 10
-        }
-      ],
-      "walkTilesFromTemple": 122
-    },
-    {
-      "id": "CARLIN-C10-007",
-      "city": "CARLIN",
-      "floor": 10,
-      "component": 23,
-      "componentTiles": 128,
+      "component": 950,
+      "componentTiles": 131,
       "creatures": 4,
       "species": [
         {
@@ -7052,71 +7695,193 @@
           "z": 10
         }
       ],
-      "walkTilesFromTemple": 250
+      "walkTilesFromTemple": null
     },
     {
-      "id": "CARLIN-C10-008",
+      "id": "CARLIN-C10-006",
       "city": "CARLIN",
       "floor": 10,
-      "component": 101,
-      "componentTiles": 1189,
-      "creatures": 3,
+      "component": 695,
+      "componentTiles": 70,
+      "creatures": 4,
       "species": [
         {
-          "name": "Rotworm",
-          "count": 3
+          "name": "Ghoul",
+          "count": 4
         }
       ],
       "extent": {
-        "minX": 32376,
-        "minY": 31840,
-        "maxX": 32378,
-        "maxY": 31841,
-        "centerX": 32377,
-        "centerY": 31840
+        "minX": 32168,
+        "minY": 31929,
+        "maxX": 32173,
+        "maxY": 31935,
+        "centerX": 32170,
+        "centerY": 31932
       },
-      "subareaId": null,
+      "subareaId": 288,
       "splitBySpecies": [
         {
-          "name": "Rotworm",
-          "count": 3,
+          "name": "Ghoul",
+          "count": 4,
           "extent": {
-            "minX": 32376,
-            "minY": 31840,
-            "maxX": 32378,
-            "maxY": 31841,
-            "centerX": 32377,
-            "centerY": 31840
+            "minX": 32168,
+            "minY": 31929,
+            "maxX": 32173,
+            "maxY": 31935,
+            "centerX": 32170,
+            "centerY": 31932
           }
         }
       ],
       "spawns": [
         {
-          "name": "Rotworm",
-          "x": 32377,
-          "y": 31840,
+          "name": "Ghoul",
+          "x": 32168,
+          "y": 31929,
           "z": 10
         },
         {
-          "name": "Rotworm",
-          "x": 32376,
-          "y": 31841,
+          "name": "Ghoul",
+          "x": 32173,
+          "y": 31929,
           "z": 10
         },
         {
-          "name": "Rotworm",
-          "x": 32378,
-          "y": 31841,
+          "name": "Ghoul",
+          "x": 32172,
+          "y": 31935,
+          "z": 10
+        },
+        {
+          "name": "Ghoul",
+          "x": 32173,
+          "y": 31935,
           "z": 10
         }
       ],
-      "walkTilesFromTemple": 129
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "CARLIN-C10-007",
+      "city": "CARLIN",
+      "floor": 10,
+      "component": 45,
+      "componentTiles": 5849,
+      "creatures": 3,
+      "species": [
+        {
+          "name": "Minotaur",
+          "count": 3
+        }
+      ],
+      "extent": {
+        "minX": 32043,
+        "minY": 31604,
+        "maxX": 32047,
+        "maxY": 31605,
+        "centerX": 32045,
+        "centerY": 31604
+      },
+      "subareaId": 39,
+      "splitBySpecies": [
+        {
+          "name": "Minotaur",
+          "count": 3,
+          "extent": {
+            "minX": 32043,
+            "minY": 31604,
+            "maxX": 32047,
+            "maxY": 31605,
+            "centerX": 32045,
+            "centerY": 31604
+          }
+        }
+      ],
+      "spawns": [
+        {
+          "name": "Minotaur",
+          "x": 32043,
+          "y": 31604,
+          "z": 10
+        },
+        {
+          "name": "Minotaur",
+          "x": 32044,
+          "y": 31604,
+          "z": 10
+        },
+        {
+          "name": "Minotaur",
+          "x": 32047,
+          "y": 31605,
+          "z": 10
+        }
+      ],
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "CARLIN-C10-008",
+      "city": "CARLIN",
+      "floor": 10,
+      "component": 45,
+      "componentTiles": 5849,
+      "creatures": 3,
+      "species": [
+        {
+          "name": "Minotaur",
+          "count": 3
+        }
+      ],
+      "extent": {
+        "minX": 32116,
+        "minY": 31574,
+        "maxX": 32118,
+        "maxY": 31579,
+        "centerX": 32117,
+        "centerY": 31576
+      },
+      "subareaId": 279,
+      "splitBySpecies": [
+        {
+          "name": "Minotaur",
+          "count": 3,
+          "extent": {
+            "minX": 32116,
+            "minY": 31574,
+            "maxX": 32118,
+            "maxY": 31579,
+            "centerX": 32117,
+            "centerY": 31576
+          }
+        }
+      ],
+      "spawns": [
+        {
+          "name": "Minotaur",
+          "x": 32118,
+          "y": 31574,
+          "z": 10
+        },
+        {
+          "name": "Minotaur",
+          "x": 32116,
+          "y": 31579,
+          "z": 10
+        },
+        {
+          "name": "Minotaur",
+          "x": 32118,
+          "y": 31579,
+          "z": 10
+        }
+      ],
+      "walkTilesFromTemple": null
     },
     {
       "id": "CARLIN-C10-009",
       "city": "CARLIN",
       "floor": 10,
-      "component": 226,
+      "component": 379,
       "componentTiles": 651,
       "creatures": 3,
       "species": [
@@ -7190,8 +7955,8 @@
       "id": "CARLIN-C10-010",
       "city": "CARLIN",
       "floor": 10,
-      "component": 195,
-      "componentTiles": 761,
+      "component": 220,
+      "componentTiles": 760,
       "creatures": 49,
       "species": [
         {
@@ -7732,8 +8497,8 @@
       "id": "CARLIN-C10-011",
       "city": "CARLIN",
       "floor": 10,
-      "component": 195,
-      "componentTiles": 761,
+      "component": 220,
+      "componentTiles": 760,
       "creatures": 36,
       "species": [
         {
@@ -8076,8 +8841,144 @@
       "id": "CARLIN-C11-001",
       "city": "CARLIN",
       "floor": 11,
-      "component": 132,
-      "componentTiles": 759,
+      "component": 373,
+      "componentTiles": 124,
+      "creatures": 6,
+      "species": [
+        {
+          "name": "Ghoul",
+          "count": 2
+        },
+        {
+          "name": "Stalker",
+          "count": 1
+        },
+        {
+          "name": "Skeleton",
+          "count": 2
+        },
+        {
+          "name": "Demon Skeleton",
+          "count": 1
+        }
+      ],
+      "extent": {
+        "minX": 32169,
+        "minY": 31926,
+        "maxX": 32176,
+        "maxY": 31940,
+        "centerX": 32172,
+        "centerY": 31933
+      },
+      "subareaId": 288,
+      "splitBySpecies": [
+        {
+          "name": "Skeleton",
+          "count": 2,
+          "extent": {
+            "minX": 32169,
+            "minY": 31934,
+            "maxX": 32176,
+            "maxY": 31939,
+            "centerX": 32172,
+            "centerY": 31936
+          }
+        },
+        {
+          "name": "Demon Skeleton",
+          "count": 1,
+          "extent": {
+            "minX": 32174,
+            "minY": 31935,
+            "maxX": 32174,
+            "maxY": 31935,
+            "centerX": 32174,
+            "centerY": 31935
+          }
+        },
+        {
+          "name": "Ghoul",
+          "count": 1,
+          "extent": {
+            "minX": 32171,
+            "minY": 31927,
+            "maxX": 32171,
+            "maxY": 31927,
+            "centerX": 32171,
+            "centerY": 31927
+          }
+        },
+        {
+          "name": "Ghoul",
+          "count": 1,
+          "extent": {
+            "minX": 32174,
+            "minY": 31940,
+            "maxX": 32174,
+            "maxY": 31940,
+            "centerX": 32174,
+            "centerY": 31940
+          }
+        },
+        {
+          "name": "Stalker",
+          "count": 1,
+          "extent": {
+            "minX": 32176,
+            "minY": 31926,
+            "maxX": 32176,
+            "maxY": 31926,
+            "centerX": 32176,
+            "centerY": 31926
+          }
+        }
+      ],
+      "spawns": [
+        {
+          "name": "Stalker",
+          "x": 32176,
+          "y": 31926,
+          "z": 11
+        },
+        {
+          "name": "Ghoul",
+          "x": 32171,
+          "y": 31927,
+          "z": 11
+        },
+        {
+          "name": "Skeleton",
+          "x": 32176,
+          "y": 31934,
+          "z": 11
+        },
+        {
+          "name": "Demon Skeleton",
+          "x": 32174,
+          "y": 31935,
+          "z": 11
+        },
+        {
+          "name": "Skeleton",
+          "x": 32169,
+          "y": 31939,
+          "z": 11
+        },
+        {
+          "name": "Ghoul",
+          "x": 32174,
+          "y": 31940,
+          "z": 11
+        }
+      ],
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "CARLIN-C11-002",
+      "city": "CARLIN",
+      "floor": 11,
+      "component": 531,
+      "componentTiles": 758,
       "creatures": 5,
       "species": [
         {
@@ -8156,13 +9057,13 @@
           "z": 11
         }
       ],
-      "walkTilesFromTemple": 227
+      "walkTilesFromTemple": 399
     },
     {
-      "id": "CARLIN-C11-002",
+      "id": "CARLIN-C11-003",
       "city": "CARLIN",
       "floor": 11,
-      "component": 112,
+      "component": 127,
       "componentTiles": 114,
       "creatures": 5,
       "species": [
@@ -8261,10 +9162,10 @@
       "walkTilesFromTemple": 280
     },
     {
-      "id": "CARLIN-C11-003",
+      "id": "CARLIN-C11-004",
       "city": "CARLIN",
       "floor": 11,
-      "component": 57,
+      "component": 74,
       "componentTiles": 1144,
       "creatures": 3,
       "species": [
@@ -8351,74 +9252,10 @@
       "walkTilesFromTemple": null
     },
     {
-      "id": "CARLIN-C11-004",
-      "city": "CARLIN",
-      "floor": 11,
-      "component": 132,
-      "componentTiles": 759,
-      "creatures": 4,
-      "species": [
-        {
-          "name": "Carrion Worm",
-          "count": 4
-        }
-      ],
-      "extent": {
-        "minX": 32361,
-        "minY": 31844,
-        "maxX": 32365,
-        "maxY": 31863,
-        "centerX": 32363,
-        "centerY": 31853
-      },
-      "subareaId": null,
-      "splitBySpecies": [
-        {
-          "name": "Carrion Worm",
-          "count": 4,
-          "extent": {
-            "minX": 32361,
-            "minY": 31844,
-            "maxX": 32365,
-            "maxY": 31863,
-            "centerX": 32363,
-            "centerY": 31853
-          }
-        }
-      ],
-      "spawns": [
-        {
-          "name": "Carrion Worm",
-          "x": 32364,
-          "y": 31844,
-          "z": 11
-        },
-        {
-          "name": "Carrion Worm",
-          "x": 32361,
-          "y": 31854,
-          "z": 11
-        },
-        {
-          "name": "Carrion Worm",
-          "x": 32364,
-          "y": 31863,
-          "z": 11
-        },
-        {
-          "name": "Carrion Worm",
-          "x": 32365,
-          "y": 31863,
-          "z": 11
-        }
-      ],
-      "walkTilesFromTemple": 181
-    },
-    {
       "id": "CARLIN-C11-005",
       "city": "CARLIN",
       "floor": 11,
-      "component": 526,
+      "component": 660,
       "componentTiles": 95,
       "creatures": 3,
       "species": [
@@ -8508,7 +9345,7 @@
       "id": "CARLIN-C11-006",
       "city": "CARLIN",
       "floor": 11,
-      "component": 457,
+      "component": 557,
       "componentTiles": 137,
       "creatures": 3,
       "species": [
@@ -8579,68 +9416,160 @@
       "walkTilesFromTemple": 310
     },
     {
-      "id": "CARLIN-C11-007",
+      "id": "CARLIN-C12-001",
       "city": "CARLIN",
-      "floor": 11,
-      "component": 132,
-      "componentTiles": 759,
-      "creatures": 3,
+      "floor": 12,
+      "component": 285,
+      "componentTiles": 134,
+      "creatures": 13,
       "species": [
         {
-          "name": "Carrion Worm",
-          "count": 3
+          "name": "Ghoul",
+          "count": 6
+        },
+        {
+          "name": "Stalker",
+          "count": 2
+        },
+        {
+          "name": "Demon Skeleton",
+          "count": 5
         }
       ],
       "extent": {
-        "minX": 32375,
-        "minY": 31878,
-        "maxX": 32380,
-        "maxY": 31881,
-        "centerX": 32377,
-        "centerY": 31879
+        "minX": 32168,
+        "minY": 31926,
+        "maxX": 32179,
+        "maxY": 31938,
+        "centerX": 32173,
+        "centerY": 31932
       },
-      "subareaId": null,
+      "subareaId": 288,
       "splitBySpecies": [
         {
-          "name": "Carrion Worm",
-          "count": 3,
+          "name": "Ghoul",
+          "count": 6,
           "extent": {
-            "minX": 32375,
-            "minY": 31878,
-            "maxX": 32380,
-            "maxY": 31881,
-            "centerX": 32377,
-            "centerY": 31879
+            "minX": 32168,
+            "minY": 31930,
+            "maxX": 32175,
+            "maxY": 31938,
+            "centerX": 32171,
+            "centerY": 31934
+          }
+        },
+        {
+          "name": "Demon Skeleton",
+          "count": 5,
+          "extent": {
+            "minX": 32169,
+            "minY": 31927,
+            "maxX": 32179,
+            "maxY": 31938,
+            "centerX": 32174,
+            "centerY": 31932
+          }
+        },
+        {
+          "name": "Stalker",
+          "count": 2,
+          "extent": {
+            "minX": 32170,
+            "minY": 31926,
+            "maxX": 32179,
+            "maxY": 31927,
+            "centerX": 32174,
+            "centerY": 31926
           }
         }
       ],
       "spawns": [
         {
-          "name": "Carrion Worm",
-          "x": 32375,
-          "y": 31878,
-          "z": 11
+          "name": "Stalker",
+          "x": 32170,
+          "y": 31926,
+          "z": 12
         },
         {
-          "name": "Carrion Worm",
-          "x": 32380,
-          "y": 31880,
-          "z": 11
+          "name": "Demon Skeleton",
+          "x": 32170,
+          "y": 31927,
+          "z": 12
         },
         {
-          "name": "Carrion Worm",
-          "x": 32380,
-          "y": 31881,
-          "z": 11
+          "name": "Stalker",
+          "x": 32179,
+          "y": 31927,
+          "z": 12
+        },
+        {
+          "name": "Demon Skeleton",
+          "x": 32169,
+          "y": 31928,
+          "z": 12
+        },
+        {
+          "name": "Ghoul",
+          "x": 32175,
+          "y": 31930,
+          "z": 12
+        },
+        {
+          "name": "Ghoul",
+          "x": 32170,
+          "y": 31932,
+          "z": 12
+        },
+        {
+          "name": "Ghoul",
+          "x": 32175,
+          "y": 31932,
+          "z": 12
+        },
+        {
+          "name": "Demon Skeleton",
+          "x": 32179,
+          "y": 31932,
+          "z": 12
+        },
+        {
+          "name": "Demon Skeleton",
+          "x": 32169,
+          "y": 31933,
+          "z": 12
+        },
+        {
+          "name": "Ghoul",
+          "x": 32173,
+          "y": 31933,
+          "z": 12
+        },
+        {
+          "name": "Ghoul",
+          "x": 32168,
+          "y": 31937,
+          "z": 12
+        },
+        {
+          "name": "Ghoul",
+          "x": 32174,
+          "y": 31938,
+          "z": 12
+        },
+        {
+          "name": "Demon Skeleton",
+          "x": 32179,
+          "y": 31938,
+          "z": 12
         }
       ],
-      "walkTilesFromTemple": 177
+      "walkTilesFromTemple": null
     },
     {
-      "id": "CARLIN-C12-001",
+      "id": "CARLIN-C12-002",
       "city": "CARLIN",
       "floor": 12,
-      "component": 35,
+      "component": 39,
       "componentTiles": 1468,
       "creatures": 6,
       "species": [
@@ -8741,10 +9670,10 @@
       "walkTilesFromTemple": 340
     },
     {
-      "id": "CARLIN-C12-002",
+      "id": "CARLIN-C12-003",
       "city": "CARLIN",
       "floor": 12,
-      "component": 35,
+      "component": 39,
       "componentTiles": 1468,
       "creatures": 3,
       "species": [
@@ -8831,10 +9760,10 @@
       "walkTilesFromTemple": 352
     },
     {
-      "id": "CARLIN-C12-003",
+      "id": "CARLIN-C12-004",
       "city": "CARLIN",
       "floor": 12,
-      "component": 111,
+      "component": 125,
       "componentTiles": 420,
       "creatures": 3,
       "species": [
@@ -8921,48 +9850,42 @@
       "walkTilesFromTemple": null
     },
     {
-      "id": "CARLIN-C12-004",
+      "id": "CARLIN-C12-005",
       "city": "CARLIN",
       "floor": 12,
-      "component": 243,
-      "componentTiles": 514,
-      "creatures": 8,
+      "component": 290,
+      "componentTiles": 513,
+      "creatures": 4,
       "species": [
         {
           "name": "Corym Charlatan",
-          "count": 8
+          "count": 4
         }
       ],
       "extent": {
-        "minX": 32362,
-        "minY": 31805,
-        "maxX": 32387,
-        "maxY": 31826,
-        "centerX": 32374,
+        "minX": 32371,
+        "minY": 31810,
+        "maxX": 32382,
+        "maxY": 31820,
+        "centerX": 32376,
         "centerY": 31815
       },
       "subareaId": 271,
       "splitBySpecies": [
         {
           "name": "Corym Charlatan",
-          "count": 8,
+          "count": 4,
           "extent": {
-            "minX": 32362,
-            "minY": 31805,
-            "maxX": 32387,
-            "maxY": 31826,
-            "centerX": 32374,
+            "minX": 32371,
+            "minY": 31810,
+            "maxX": 32382,
+            "maxY": 31820,
+            "centerX": 32376,
             "centerY": 31815
           }
         }
       ],
       "spawns": [
-        {
-          "name": "Corym Charlatan",
-          "x": 32371,
-          "y": 31805,
-          "z": 12
-        },
         {
           "name": "Corym Charlatan",
           "x": 32379,
@@ -8977,20 +9900,8 @@
         },
         {
           "name": "Corym Charlatan",
-          "x": 32373,
-          "y": 31816,
-          "z": 12
-        },
-        {
-          "name": "Corym Charlatan",
           "x": 32376,
           "y": 31817,
-          "z": 12
-        },
-        {
-          "name": "Corym Charlatan",
-          "x": 32387,
-          "y": 31819,
           "z": 12
         },
         {
@@ -8998,195 +9909,15 @@
           "x": 32371,
           "y": 31820,
           "z": 12
-        },
-        {
-          "name": "Corym Charlatan",
-          "x": 32362,
-          "y": 31826,
-          "z": 12
         }
       ],
-      "walkTilesFromTemple": 221
-    },
-    {
-      "id": "CARLIN-C12-005",
-      "city": "CARLIN",
-      "floor": 12,
-      "component": 243,
-      "componentTiles": 514,
-      "creatures": 3,
-      "species": [
-        {
-          "name": "Corym Charlatan",
-          "count": 3
-        }
-      ],
-      "extent": {
-        "minX": 32381,
-        "minY": 31827,
-        "maxX": 32392,
-        "maxY": 31829,
-        "centerX": 32386,
-        "centerY": 31828
-      },
-      "subareaId": null,
-      "splitBySpecies": [
-        {
-          "name": "Corym Charlatan",
-          "count": 3,
-          "extent": {
-            "minX": 32381,
-            "minY": 31827,
-            "maxX": 32392,
-            "maxY": 31829,
-            "centerX": 32386,
-            "centerY": 31828
-          }
-        }
-      ],
-      "spawns": [
-        {
-          "name": "Corym Charlatan",
-          "x": 32381,
-          "y": 31827,
-          "z": 12
-        },
-        {
-          "name": "Corym Charlatan",
-          "x": 32391,
-          "y": 31829,
-          "z": 12
-        },
-        {
-          "name": "Corym Charlatan",
-          "x": 32392,
-          "y": 31829,
-          "z": 12
-        }
-      ],
-      "walkTilesFromTemple": 246
+      "walkTilesFromTemple": 349
     },
     {
       "id": "CARLIN-C12-006",
       "city": "CARLIN",
       "floor": 12,
-      "component": 243,
-      "componentTiles": 514,
-      "creatures": 3,
-      "species": [
-        {
-          "name": "Corym Charlatan",
-          "count": 3
-        }
-      ],
-      "extent": {
-        "minX": 32385,
-        "minY": 31794,
-        "maxX": 32397,
-        "maxY": 31796,
-        "centerX": 32391,
-        "centerY": 31795
-      },
-      "subareaId": 271,
-      "splitBySpecies": [
-        {
-          "name": "Corym Charlatan",
-          "count": 3,
-          "extent": {
-            "minX": 32385,
-            "minY": 31794,
-            "maxX": 32397,
-            "maxY": 31796,
-            "centerX": 32391,
-            "centerY": 31795
-          }
-        }
-      ],
-      "spawns": [
-        {
-          "name": "Corym Charlatan",
-          "x": 32397,
-          "y": 31794,
-          "z": 12
-        },
-        {
-          "name": "Corym Charlatan",
-          "x": 32395,
-          "y": 31795,
-          "z": 12
-        },
-        {
-          "name": "Corym Charlatan",
-          "x": 32385,
-          "y": 31796,
-          "z": 12
-        }
-      ],
-      "walkTilesFromTemple": 253
-    },
-    {
-      "id": "CARLIN-C12-007",
-      "city": "CARLIN",
-      "floor": 12,
-      "component": 243,
-      "componentTiles": 514,
-      "creatures": 3,
-      "species": [
-        {
-          "name": "Corym Charlatan",
-          "count": 3
-        }
-      ],
-      "extent": {
-        "minX": 32396,
-        "minY": 31812,
-        "maxX": 32398,
-        "maxY": 31814,
-        "centerX": 32397,
-        "centerY": 31813
-      },
-      "subareaId": null,
-      "splitBySpecies": [
-        {
-          "name": "Corym Charlatan",
-          "count": 3,
-          "extent": {
-            "minX": 32396,
-            "minY": 31812,
-            "maxX": 32398,
-            "maxY": 31814,
-            "centerX": 32397,
-            "centerY": 31813
-          }
-        }
-      ],
-      "spawns": [
-        {
-          "name": "Corym Charlatan",
-          "x": 32396,
-          "y": 31812,
-          "z": 12
-        },
-        {
-          "name": "Corym Charlatan",
-          "x": 32398,
-          "y": 31812,
-          "z": 12
-        },
-        {
-          "name": "Corym Charlatan",
-          "x": 32397,
-          "y": 31814,
-          "z": 12
-        }
-      ],
-      "walkTilesFromTemple": 255
-    },
-    {
-      "id": "CARLIN-C12-008",
-      "city": "CARLIN",
-      "floor": 12,
-      "component": 111,
+      "component": 125,
       "componentTiles": 420,
       "creatures": 3,
       "species": [
@@ -9276,7 +10007,233 @@
       "id": "CARLIN-C13-001",
       "city": "CARLIN",
       "floor": 13,
-      "component": 134,
+      "component": 563,
+      "componentTiles": 362,
+      "creatures": 13,
+      "species": [
+        {
+          "name": "Stalker",
+          "count": 4
+        },
+        {
+          "name": "Ghoul",
+          "count": 1
+        },
+        {
+          "name": "Demon Skeleton",
+          "count": 6
+        },
+        {
+          "name": "Monk",
+          "count": 2
+        }
+      ],
+      "extent": {
+        "minX": 32155,
+        "minY": 31917,
+        "maxX": 32178,
+        "maxY": 31948,
+        "centerX": 32166,
+        "centerY": 31932
+      },
+      "subareaId": 288,
+      "splitBySpecies": [
+        {
+          "name": "Demon Skeleton",
+          "count": 4,
+          "extent": {
+            "minX": 32159,
+            "minY": 31936,
+            "maxX": 32177,
+            "maxY": 31944,
+            "centerX": 32168,
+            "centerY": 31940
+          }
+        },
+        {
+          "name": "Stalker",
+          "count": 2,
+          "extent": {
+            "minX": 32175,
+            "minY": 31923,
+            "maxX": 32178,
+            "maxY": 31933,
+            "centerX": 32176,
+            "centerY": 31928
+          }
+        },
+        {
+          "name": "Demon Skeleton",
+          "count": 1,
+          "extent": {
+            "minX": 32169,
+            "minY": 31917,
+            "maxX": 32169,
+            "maxY": 31917,
+            "centerX": 32169,
+            "centerY": 31917
+          }
+        },
+        {
+          "name": "Demon Skeleton",
+          "count": 1,
+          "extent": {
+            "minX": 32155,
+            "minY": 31928,
+            "maxX": 32155,
+            "maxY": 31928,
+            "centerX": 32155,
+            "centerY": 31928
+          }
+        },
+        {
+          "name": "Ghoul",
+          "count": 1,
+          "extent": {
+            "minX": 32167,
+            "minY": 31948,
+            "maxX": 32167,
+            "maxY": 31948,
+            "centerX": 32167,
+            "centerY": 31948
+          }
+        },
+        {
+          "name": "Monk",
+          "count": 1,
+          "extent": {
+            "minX": 32173,
+            "minY": 31931,
+            "maxX": 32173,
+            "maxY": 31931,
+            "centerX": 32173,
+            "centerY": 31931
+          }
+        },
+        {
+          "name": "Monk",
+          "count": 1,
+          "extent": {
+            "minX": 32162,
+            "minY": 31942,
+            "maxX": 32162,
+            "maxY": 31942,
+            "centerX": 32162,
+            "centerY": 31942
+          }
+        },
+        {
+          "name": "Stalker",
+          "count": 1,
+          "extent": {
+            "minX": 32163,
+            "minY": 31934,
+            "maxX": 32163,
+            "maxY": 31934,
+            "centerX": 32163,
+            "centerY": 31934
+          }
+        },
+        {
+          "name": "Stalker",
+          "count": 1,
+          "extent": {
+            "minX": 32165,
+            "minY": 31948,
+            "maxX": 32165,
+            "maxY": 31948,
+            "centerX": 32165,
+            "centerY": 31948
+          }
+        }
+      ],
+      "spawns": [
+        {
+          "name": "Demon Skeleton",
+          "x": 32169,
+          "y": 31917,
+          "z": 13
+        },
+        {
+          "name": "Stalker",
+          "x": 32178,
+          "y": 31923,
+          "z": 13
+        },
+        {
+          "name": "Demon Skeleton",
+          "x": 32155,
+          "y": 31928,
+          "z": 13
+        },
+        {
+          "name": "Monk",
+          "x": 32173,
+          "y": 31931,
+          "z": 13
+        },
+        {
+          "name": "Stalker",
+          "x": 32175,
+          "y": 31933,
+          "z": 13
+        },
+        {
+          "name": "Stalker",
+          "x": 32163,
+          "y": 31934,
+          "z": 13
+        },
+        {
+          "name": "Demon Skeleton",
+          "x": 32172,
+          "y": 31936,
+          "z": 13
+        },
+        {
+          "name": "Demon Skeleton",
+          "x": 32165,
+          "y": 31940,
+          "z": 13
+        },
+        {
+          "name": "Monk",
+          "x": 32162,
+          "y": 31942,
+          "z": 13
+        },
+        {
+          "name": "Demon Skeleton",
+          "x": 32177,
+          "y": 31943,
+          "z": 13
+        },
+        {
+          "name": "Demon Skeleton",
+          "x": 32159,
+          "y": 31944,
+          "z": 13
+        },
+        {
+          "name": "Stalker",
+          "x": 32165,
+          "y": 31948,
+          "z": 13
+        },
+        {
+          "name": "Ghoul",
+          "x": 32167,
+          "y": 31948,
+          "z": 13
+        }
+      ],
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "CARLIN-C13-002",
+      "city": "CARLIN",
+      "floor": 13,
+      "component": 146,
       "componentTiles": 726,
       "creatures": 3,
       "species": [
@@ -9363,274 +10320,10 @@
       "walkTilesFromTemple": null
     },
     {
-      "id": "CARLIN-C13-002",
-      "city": "CARLIN",
-      "floor": 13,
-      "component": 177,
-      "componentTiles": 637,
-      "creatures": 6,
-      "species": [
-        {
-          "name": "Corym Skirmisher",
-          "count": 3
-        },
-        {
-          "name": "Corym Charlatan",
-          "count": 3
-        }
-      ],
-      "extent": {
-        "minX": 32388,
-        "minY": 31809,
-        "maxX": 32409,
-        "maxY": 31816,
-        "centerX": 32398,
-        "centerY": 31812
-      },
-      "subareaId": null,
-      "splitBySpecies": [
-        {
-          "name": "Corym Skirmisher",
-          "count": 3,
-          "extent": {
-            "minX": 32388,
-            "minY": 31810,
-            "maxX": 32398,
-            "maxY": 31816,
-            "centerX": 32393,
-            "centerY": 31813
-          }
-        },
-        {
-          "name": "Corym Charlatan",
-          "count": 2,
-          "extent": {
-            "minX": 32408,
-            "minY": 31816,
-            "maxX": 32409,
-            "maxY": 31816,
-            "centerX": 32408,
-            "centerY": 31816
-          }
-        },
-        {
-          "name": "Corym Charlatan",
-          "count": 1,
-          "extent": {
-            "minX": 32397,
-            "minY": 31809,
-            "maxX": 32397,
-            "maxY": 31809,
-            "centerX": 32397,
-            "centerY": 31809
-          }
-        }
-      ],
-      "spawns": [
-        {
-          "name": "Corym Charlatan",
-          "x": 32397,
-          "y": 31809,
-          "z": 13
-        },
-        {
-          "name": "Corym Skirmisher",
-          "x": 32398,
-          "y": 31810,
-          "z": 13
-        },
-        {
-          "name": "Corym Skirmisher",
-          "x": 32388,
-          "y": 31812,
-          "z": 13
-        },
-        {
-          "name": "Corym Skirmisher",
-          "x": 32396,
-          "y": 31816,
-          "z": 13
-        },
-        {
-          "name": "Corym Charlatan",
-          "x": 32408,
-          "y": 31816,
-          "z": 13
-        },
-        {
-          "name": "Corym Charlatan",
-          "x": 32409,
-          "y": 31816,
-          "z": 13
-        }
-      ],
-      "walkTilesFromTemple": 259
-    },
-    {
-      "id": "CARLIN-C13-003",
-      "city": "CARLIN",
-      "floor": 13,
-      "component": 177,
-      "componentTiles": 637,
-      "creatures": 5,
-      "species": [
-        {
-          "name": "Corym Charlatan",
-          "count": 3
-        },
-        {
-          "name": "Corym Skirmisher",
-          "count": 2
-        }
-      ],
-      "extent": {
-        "minX": 32385,
-        "minY": 31828,
-        "maxX": 32398,
-        "maxY": 31841,
-        "centerX": 32391,
-        "centerY": 31834
-      },
-      "subareaId": null,
-      "splitBySpecies": [
-        {
-          "name": "Corym Charlatan",
-          "count": 3,
-          "extent": {
-            "minX": 32385,
-            "minY": 31828,
-            "maxX": 32390,
-            "maxY": 31837,
-            "centerX": 32387,
-            "centerY": 31832
-          }
-        },
-        {
-          "name": "Corym Skirmisher",
-          "count": 2,
-          "extent": {
-            "minX": 32396,
-            "minY": 31839,
-            "maxX": 32398,
-            "maxY": 31841,
-            "centerX": 32397,
-            "centerY": 31840
-          }
-        }
-      ],
-      "spawns": [
-        {
-          "name": "Corym Charlatan",
-          "x": 32385,
-          "y": 31828,
-          "z": 13
-        },
-        {
-          "name": "Corym Charlatan",
-          "x": 32390,
-          "y": 31836,
-          "z": 13
-        },
-        {
-          "name": "Corym Charlatan",
-          "x": 32390,
-          "y": 31837,
-          "z": 13
-        },
-        {
-          "name": "Corym Skirmisher",
-          "x": 32398,
-          "y": 31839,
-          "z": 13
-        },
-        {
-          "name": "Corym Skirmisher",
-          "x": 32396,
-          "y": 31841,
-          "z": 13
-        }
-      ],
-      "walkTilesFromTemple": 278
-    },
-    {
-      "id": "CARLIN-C13-004",
-      "city": "CARLIN",
-      "floor": 13,
-      "component": 177,
-      "componentTiles": 637,
-      "creatures": 3,
-      "species": [
-        {
-          "name": "Corym Charlatan",
-          "count": 2
-        },
-        {
-          "name": "Corym Skirmisher",
-          "count": 1
-        }
-      ],
-      "extent": {
-        "minX": 32427,
-        "minY": 31822,
-        "maxX": 32428,
-        "maxY": 31824,
-        "centerX": 32427,
-        "centerY": 31823
-      },
-      "subareaId": null,
-      "splitBySpecies": [
-        {
-          "name": "Corym Charlatan",
-          "count": 2,
-          "extent": {
-            "minX": 32427,
-            "minY": 31822,
-            "maxX": 32428,
-            "maxY": 31823,
-            "centerX": 32427,
-            "centerY": 31822
-          }
-        },
-        {
-          "name": "Corym Skirmisher",
-          "count": 1,
-          "extent": {
-            "minX": 32428,
-            "minY": 31824,
-            "maxX": 32428,
-            "maxY": 31824,
-            "centerX": 32428,
-            "centerY": 31824
-          }
-        }
-      ],
-      "spawns": [
-        {
-          "name": "Corym Charlatan",
-          "x": 32428,
-          "y": 31822,
-          "z": 13
-        },
-        {
-          "name": "Corym Charlatan",
-          "x": 32427,
-          "y": 31823,
-          "z": 13
-        },
-        {
-          "name": "Corym Skirmisher",
-          "x": 32428,
-          "y": 31824,
-          "z": 13
-        }
-      ],
-      "walkTilesFromTemple": 287
-    },
-    {
       "id": "CARLIN-C14-001",
       "city": "CARLIN",
       "floor": 14,
-      "component": 224,
+      "component": 255,
       "componentTiles": 159,
       "creatures": 7,
       "species": [
@@ -9744,7 +10437,169 @@
       "id": "CARLIN-C14-002",
       "city": "CARLIN",
       "floor": 14,
-      "component": 54,
+      "component": 40,
+      "componentTiles": 1375,
+      "creatures": 7,
+      "species": [
+        {
+          "name": "Slime",
+          "count": 2
+        },
+        {
+          "name": "Bonelord",
+          "count": 1
+        },
+        {
+          "name": "Stalker",
+          "count": 1
+        },
+        {
+          "name": "Ghoul",
+          "count": 1
+        },
+        {
+          "name": "Demon Skeleton",
+          "count": 1
+        },
+        {
+          "name": "Monk",
+          "count": 1
+        }
+      ],
+      "extent": {
+        "minX": 32164,
+        "minY": 31923,
+        "maxX": 32178,
+        "maxY": 31941,
+        "centerX": 32171,
+        "centerY": 31932
+      },
+      "subareaId": 288,
+      "splitBySpecies": [
+        {
+          "name": "Slime",
+          "count": 2,
+          "extent": {
+            "minX": 32167,
+            "minY": 31924,
+            "maxX": 32176,
+            "maxY": 31931,
+            "centerX": 32171,
+            "centerY": 31927
+          }
+        },
+        {
+          "name": "Bonelord",
+          "count": 1,
+          "extent": {
+            "minX": 32165,
+            "minY": 31939,
+            "maxX": 32165,
+            "maxY": 31939,
+            "centerX": 32165,
+            "centerY": 31939
+          }
+        },
+        {
+          "name": "Demon Skeleton",
+          "count": 1,
+          "extent": {
+            "minX": 32164,
+            "minY": 31941,
+            "maxX": 32164,
+            "maxY": 31941,
+            "centerX": 32164,
+            "centerY": 31941
+          }
+        },
+        {
+          "name": "Ghoul",
+          "count": 1,
+          "extent": {
+            "minX": 32168,
+            "minY": 31933,
+            "maxX": 32168,
+            "maxY": 31933,
+            "centerX": 32168,
+            "centerY": 31933
+          }
+        },
+        {
+          "name": "Monk",
+          "count": 1,
+          "extent": {
+            "minX": 32178,
+            "minY": 31923,
+            "maxX": 32178,
+            "maxY": 31923,
+            "centerX": 32178,
+            "centerY": 31923
+          }
+        },
+        {
+          "name": "Stalker",
+          "count": 1,
+          "extent": {
+            "minX": 32177,
+            "minY": 31927,
+            "maxX": 32177,
+            "maxY": 31927,
+            "centerX": 32177,
+            "centerY": 31927
+          }
+        }
+      ],
+      "spawns": [
+        {
+          "name": "Monk",
+          "x": 32178,
+          "y": 31923,
+          "z": 14
+        },
+        {
+          "name": "Slime",
+          "x": 32176,
+          "y": 31924,
+          "z": 14
+        },
+        {
+          "name": "Stalker",
+          "x": 32177,
+          "y": 31927,
+          "z": 14
+        },
+        {
+          "name": "Slime",
+          "x": 32167,
+          "y": 31931,
+          "z": 14
+        },
+        {
+          "name": "Ghoul",
+          "x": 32168,
+          "y": 31933,
+          "z": 14
+        },
+        {
+          "name": "Bonelord",
+          "x": 32165,
+          "y": 31939,
+          "z": 14
+        },
+        {
+          "name": "Demon Skeleton",
+          "x": 32164,
+          "y": 31941,
+          "z": 14
+        }
+      ],
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "CARLIN-C14-003",
+      "city": "CARLIN",
+      "floor": 14,
+      "component": 71,
       "componentTiles": 1077,
       "creatures": 5,
       "species": [
@@ -9839,10 +10694,10 @@
       "walkTilesFromTemple": null
     },
     {
-      "id": "CARLIN-C14-003",
+      "id": "CARLIN-C14-004",
       "city": "CARLIN",
       "floor": 14,
-      "component": 54,
+      "component": 71,
       "componentTiles": 1077,
       "creatures": 5,
       "species": [
@@ -9937,10 +10792,10 @@
       "walkTilesFromTemple": null
     },
     {
-      "id": "CARLIN-C14-004",
+      "id": "CARLIN-C14-005",
       "city": "CARLIN",
       "floor": 14,
-      "component": 471,
+      "component": 632,
       "componentTiles": 146,
       "creatures": 4,
       "species": [
@@ -10029,10 +10884,10 @@
       "walkTilesFromTemple": null
     },
     {
-      "id": "CARLIN-C14-005",
+      "id": "CARLIN-C14-006",
       "city": "CARLIN",
       "floor": 14,
-      "component": 54,
+      "component": 71,
       "componentTiles": 1077,
       "creatures": 3,
       "species": [
@@ -10118,7 +10973,161 @@
       "id": "CARLIN-C15-001",
       "city": "CARLIN",
       "floor": 15,
-      "component": 174,
+      "component": 448,
+      "componentTiles": 494,
+      "creatures": 9,
+      "species": [
+        {
+          "name": "Banshee",
+          "count": 3
+        },
+        {
+          "name": "Stalker",
+          "count": 2
+        },
+        {
+          "name": "Mummy",
+          "count": 2
+        },
+        {
+          "name": "Ghost",
+          "count": 2
+        }
+      ],
+      "extent": {
+        "minX": 32185,
+        "minY": 31934,
+        "maxX": 32196,
+        "maxY": 31943,
+        "centerX": 32190,
+        "centerY": 31938
+      },
+      "subareaId": 288,
+      "splitBySpecies": [
+        {
+          "name": "Banshee",
+          "count": 3,
+          "extent": {
+            "minX": 32187,
+            "minY": 31937,
+            "maxX": 32194,
+            "maxY": 31943,
+            "centerX": 32190,
+            "centerY": 31940
+          }
+        },
+        {
+          "name": "Mummy",
+          "count": 2,
+          "extent": {
+            "minX": 32186,
+            "minY": 31935,
+            "maxX": 32194,
+            "maxY": 31940,
+            "centerX": 32190,
+            "centerY": 31937
+          }
+        },
+        {
+          "name": "Stalker",
+          "count": 2,
+          "extent": {
+            "minX": 32191,
+            "minY": 31934,
+            "maxX": 32192,
+            "maxY": 31937,
+            "centerX": 32191,
+            "centerY": 31935
+          }
+        },
+        {
+          "name": "Ghost",
+          "count": 1,
+          "extent": {
+            "minX": 32185,
+            "minY": 31940,
+            "maxX": 32185,
+            "maxY": 31940,
+            "centerX": 32185,
+            "centerY": 31940
+          }
+        },
+        {
+          "name": "Ghost",
+          "count": 1,
+          "extent": {
+            "minX": 32196,
+            "minY": 31942,
+            "maxX": 32196,
+            "maxY": 31942,
+            "centerX": 32196,
+            "centerY": 31942
+          }
+        }
+      ],
+      "spawns": [
+        {
+          "name": "Stalker",
+          "x": 32191,
+          "y": 31934,
+          "z": 15
+        },
+        {
+          "name": "Mummy",
+          "x": 32194,
+          "y": 31935,
+          "z": 15
+        },
+        {
+          "name": "Stalker",
+          "x": 32192,
+          "y": 31937,
+          "z": 15
+        },
+        {
+          "name": "Banshee",
+          "x": 32194,
+          "y": 31937,
+          "z": 15
+        },
+        {
+          "name": "Ghost",
+          "x": 32185,
+          "y": 31940,
+          "z": 15
+        },
+        {
+          "name": "Mummy",
+          "x": 32186,
+          "y": 31940,
+          "z": 15
+        },
+        {
+          "name": "Banshee",
+          "x": 32187,
+          "y": 31941,
+          "z": 15
+        },
+        {
+          "name": "Ghost",
+          "x": 32196,
+          "y": 31942,
+          "z": 15
+        },
+        {
+          "name": "Banshee",
+          "x": 32188,
+          "y": 31943,
+          "z": 15
+        }
+      ],
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "CARLIN-C15-002",
+      "city": "CARLIN",
+      "floor": 15,
+      "component": 577,
       "componentTiles": 238,
       "creatures": 5,
       "species": [
@@ -10201,10 +11210,10 @@
       "walkTilesFromTemple": null
     },
     {
-      "id": "CARLIN-C15-002",
+      "id": "CARLIN-C15-003",
       "city": "CARLIN",
       "floor": 15,
-      "component": 68,
+      "component": 319,
       "componentTiles": 132,
       "creatures": 9,
       "species": [
@@ -10367,10 +11376,10 @@
       "walkTilesFromTemple": null
     },
     {
-      "id": "CARLIN-C15-003",
+      "id": "CARLIN-C15-004",
       "city": "CARLIN",
       "floor": 15,
-      "component": 203,
+      "component": 228,
       "componentTiles": 115,
       "creatures": 8,
       "species": [
@@ -10471,10 +11480,10 @@
       "walkTilesFromTemple": null
     },
     {
-      "id": "CARLIN-C15-004",
+      "id": "CARLIN-C15-005",
       "city": "CARLIN",
       "floor": 15,
-      "component": 131,
+      "component": 140,
       "componentTiles": 807,
       "creatures": 3,
       "species": [
@@ -10529,10 +11538,10 @@
       "walkTilesFromTemple": null
     },
     {
-      "id": "CARLIN-C15-005",
+      "id": "CARLIN-C15-006",
       "city": "CARLIN",
       "floor": 15,
-      "component": 36,
+      "component": 41,
       "componentTiles": 1839,
       "creatures": 3,
       "species": [
@@ -10616,13 +11625,13 @@
           "z": 15
         }
       ],
-      "walkTilesFromTemple": 615
+      "walkTilesFromTemple": 616
     },
     {
-      "id": "CARLIN-C15-006",
+      "id": "CARLIN-C15-007",
       "city": "CARLIN",
       "floor": 15,
-      "component": 131,
+      "component": 140,
       "componentTiles": 807,
       "creatures": 3,
       "species": [
@@ -10696,44 +11705,56 @@
   "orphanSpawns": [],
   "discardedSpecies": [
     {
-      "name": "Scorpion",
-      "count": 54
+      "name": "Frost Troll",
+      "count": 64
     },
     {
       "name": "Poison Spider",
-      "count": 42
+      "count": 51
     },
     {
       "name": "Rabbit",
-      "count": 32
-    },
-    {
-      "name": "Skeleton",
-      "count": 30
+      "count": 37
     },
     {
       "name": "Cave Rat",
       "count": 29
     },
     {
+      "name": "Skeleton",
+      "count": 27
+    },
+    {
       "name": "White Deer",
       "count": 25
+    },
+    {
+      "name": "Winter Wolf",
+      "count": 22
     },
     {
       "name": "Troll",
       "count": 21
     },
     {
+      "name": "Deer",
+      "count": 20
+    },
+    {
       "name": "Bug",
+      "count": 19
+    },
+    {
+      "name": "Scorpion",
       "count": 17
     },
     {
-      "name": "Deer",
-      "count": 16
+      "name": "Rotworm",
+      "count": 15
     },
     {
       "name": "Ghoul",
-      "count": 15
+      "count": 14
     },
     {
       "name": "Snake",
@@ -10744,20 +11765,12 @@
       "count": 13
     },
     {
-      "name": "Rotworm",
-      "count": 12
-    },
-    {
       "name": "Forest Fury",
       "count": 11
     },
     {
       "name": "Rat",
-      "count": 9
-    },
-    {
-      "name": "Seagull",
-      "count": 8
+      "count": 10
     },
     {
       "name": "Wilting Leaf Golem",
@@ -10768,10 +11781,6 @@
       "count": 8
     },
     {
-      "name": "Amazon",
-      "count": 7
-    },
-    {
       "name": "Chicken",
       "count": 7
     },
@@ -10780,8 +11789,16 @@
       "count": 7
     },
     {
-      "name": "Carrion Worm",
-      "count": 6
+      "name": "Polar Bear",
+      "count": 7
+    },
+    {
+      "name": "Seagull",
+      "count": 7
+    },
+    {
+      "name": "Amazon",
+      "count": 5
     },
     {
       "name": "Dragon",
@@ -10792,8 +11809,8 @@
       "count": 5
     },
     {
-      "name": "Demon Skeleton",
-      "count": 4
+      "name": "Spider",
+      "count": 5
     },
     {
       "name": "Skeleton Warrior",
@@ -10804,11 +11821,15 @@
       "count": 4
     },
     {
-      "name": "Spider",
-      "count": 4
+      "name": "Orc Spearman",
+      "count": 3
     },
     {
-      "name": "Squirrel",
+      "name": "Valkyrie",
+      "count": 3
+    },
+    {
+      "name": "Wasp",
       "count": 3
     },
     {
@@ -10821,6 +11842,10 @@
     },
     {
       "name": "Cat",
+      "count": 2
+    },
+    {
+      "name": "Corym Charlatan",
       "count": 2
     },
     {
@@ -10844,6 +11869,10 @@
       "count": 2
     },
     {
+      "name": "Minotaur",
+      "count": 2
+    },
+    {
       "name": "Minotaur Archer",
       "count": 2
     },
@@ -10860,15 +11889,19 @@
       "count": 2
     },
     {
+      "name": "Squirrel",
+      "count": 2
+    },
+    {
+      "name": "Stalker",
+      "count": 2
+    },
+    {
       "name": "Starving Wolf",
       "count": 2
     },
     {
-      "name": "Valkyrie",
-      "count": 2
-    },
-    {
-      "name": "Wasp",
+      "name": "Water Elemental",
       "count": 2
     },
     {
@@ -10880,11 +11913,15 @@
       "count": 1
     },
     {
+      "name": "Bat",
+      "count": 1
+    },
+    {
       "name": "Butterfly",
       "count": 1
     },
     {
-      "name": "Corym Charlatan",
+      "name": "Carrion Worm",
       "count": 1
     },
     {
@@ -10900,11 +11937,11 @@
       "count": 1
     },
     {
-      "name": "Dwarf Guard",
+      "name": "Demon Skeleton",
       "count": 1
     },
     {
-      "name": "Fire Devil",
+      "name": "Dwarf Guard",
       "count": 1
     },
     {
@@ -10920,19 +11957,15 @@
       "count": 1
     },
     {
+      "name": "Orc",
+      "count": 1
+    },
+    {
       "name": "Orc Leader",
       "count": 1
     },
     {
-      "name": "Orc Spearman",
-      "count": 1
-    },
-    {
       "name": "Parrot",
-      "count": 1
-    },
-    {
-      "name": "Stalker",
       "count": 1
     },
     {
