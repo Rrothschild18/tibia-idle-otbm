@@ -253,6 +253,40 @@
       },
       "subareaId": null,
       "walkTilesFromTemple": null
+    },
+    {
+      "name": "Amazons — Fields of Glory (z1–8)",
+      "floors": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8
+      ],
+      "candidateIds": [
+        "CARLIN-C01-001",
+        "CARLIN-C02-001",
+        "CARLIN-C03-001",
+        "CARLIN-C04-001",
+        "CARLIN-C06-004",
+        "CARLIN-C07-001",
+        "CARLIN-C07-002",
+        "CARLIN-C08-018"
+      ],
+      "species": null,
+      "creatures": 35,
+      "extent": {
+        "minX": 32341,
+        "minY": 31577,
+        "maxX": 32433,
+        "maxY": 31658,
+        "centerX": 32387,
+        "centerY": 31618
+      },
+      "subareaId": 40,
+      "walkTilesFromTemple": 147
     }
   ]
 }
