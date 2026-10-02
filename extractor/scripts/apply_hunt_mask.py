@@ -64,8 +64,13 @@ def main() -> None:
     with open(os.path.join(assets_dir, f"{args.hunt_id}_{slug}-sprites-v6", "map.json"), encoding="utf-8") as h:
         bundle_map = json.load(h)
     b = bundle_map["bounds"]
-    start = bundle_map.get("start") or {"x": 0, "y": 0, "z": min(floors)}
-    entrance = [b["minX"] + start["x"], b["minY"] + start["y"], start["z"]]
+    # entrada: a editada no editor (overrides, coord de mundo) tem prioridade;
+    # senão o start do bundle.
+    if mask.get("entrance"):
+        entrance = list(mask["entrance"])
+    else:
+        start = bundle_map.get("start") or {"x": 0, "y": 0, "z": min(floors)}
+        entrance = [b["minX"] + start["x"], b["minY"] + start["y"], start["z"]]
     if (entrance[0], entrance[1]) not in mask_by_floor.get(entrance[2], set()):
         # a entrada antiga saiu da máscara; escolhe um andar que ainda tem máscara
         # (o da entrada se sobreviveu, senão o mais raso) e o tile mais próximo NELE
@@ -92,6 +97,22 @@ def main() -> None:
         build = subprocess.run(["node", "scripts/build_map.js", hunt["folder"]], cwd=EXTRACTOR_DIR)
         if build.returncode != 0:
             sys.exit(f"error: build_map.js falhou ({build.returncode})")
+
+    # monstros excluídos no editor: tira os spawns (e os defs órfãos) do respawn.json
+    excluded = set(mask.get("excludedSpecies") or [])
+    if excluded and not args.no_build:
+        respawn_path = os.path.join(EXTRACTOR_DIR, "ready-maps", city, hunt["folder"], "monsters", "respawn.json")
+        if os.path.exists(respawn_path):
+            with open(respawn_path, encoding="utf-8") as h:
+                rj = json.load(h)
+            before = len(rj.get("spawns", []))
+            rj["spawns"] = [s for s in rj.get("spawns", []) if s.get("name") not in excluded]
+            alive = {s.get("name") for s in rj["spawns"]}
+            rj["monsterDefs"] = {k: v for k, v in rj.get("monsterDefs", {}).items() if v.get("name") in alive}
+            with open(respawn_path, "w", encoding="utf-8") as h:
+                json.dump(rj, h, ensure_ascii=False)
+            print(f"[OK] excluídos {sorted(excluded)}: {before} -> {len(rj['spawns'])} spawns")
+
     print(f"[OK] {hunt['folder']} recortado. Próximo: build_hunt_fragment --export + publish.py pra chegar no jogo.")
 
 
