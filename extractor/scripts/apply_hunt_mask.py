@@ -48,8 +48,10 @@ def main() -> None:
         mask = json.load(handle)
 
     city = args.hunt_id.split("-")[0]
-    # máscara EXATA por andar: {z: {(x,y), ...}}
+    # máscara EXATA por andar: {z: {(x,y), ...}}; andar vazio = excluído da hunt
+    # (erro do nosso script que incluiu um andar que não era pra entrar).
     mask_by_floor = {int(z): {(int(x), int(y)) for x, y in cells} for z, cells in mask["floors"].items()}
+    mask_by_floor = {z: cells for z, cells in mask_by_floor.items() if cells}
     floors = set(mask_by_floor)
     union = set().union(*mask_by_floor.values()) if mask_by_floor else set()
     if not union:
@@ -112,6 +114,60 @@ def main() -> None:
             with open(respawn_path, "w", encoding="utf-8") as h:
                 json.dump(rj, h, ensure_ascii=False)
             print(f"[OK] excluídos {sorted(excluded)}: {before} -> {len(rj['spawns'])} spawns")
+
+    # monstros cravados no editor: respawn manual pra andar/área que o OTBM não
+    # tinha (falha do mapa original, não nossa). Reusa o def da espécie — que já
+    # existe na hunt — e injeta um ponto de respawn novo.
+    added = mask.get("addedSpawns") or []
+    if added and not args.no_build:
+        respawn_path = os.path.join(EXTRACTOR_DIR, "ready-maps", city, hunt["folder"], "monsters", "respawn.json")
+        map_json_path = os.path.join(EXTRACTOR_DIR, "ready-maps", city, hunt["folder"], "map.json")
+        if os.path.exists(respawn_path) and os.path.exists(map_json_path):
+            with open(respawn_path, encoding="utf-8") as h:
+                rj = json.load(h)
+            with open(map_json_path, encoding="utf-8") as h:
+                fb = json.load(h)["bounds"]
+            defs = rj.setdefault("monsterDefs", {})
+            spawns = rj.setdefault("spawns", [])
+            # def da espécie sem spawn no recorte: do bundle/janela que o editor renderizou
+            src_defs = {}
+            for cand in (
+                os.path.join(assets_dir, f"{args.hunt_id}_{slug}-sprites-v6", "window", "monsters", "respawn.json"),
+                os.path.join(assets_dir, f"{args.hunt_id}_{slug}-sprites-v6", "monsters", "respawn.json"),
+            ):
+                if os.path.exists(cand):
+                    with open(cand, encoding="utf-8") as h:
+                        src_defs = json.load(h).get("monsterDefs", {})
+                    break
+
+            def _spawntime(name):
+                for s in spawns:
+                    if s.get("name") == name and s.get("spawntime"):
+                        return s["spawntime"]
+                return 60
+
+            injected = 0
+            for a in added:
+                oid = str(a["outfitId"])
+                if oid not in defs and oid in src_defs:
+                    defs[oid] = src_defs[oid]
+                if oid not in defs:
+                    print(f"[warn] sem def pra outfit {oid} ({a.get('name')}); cravado ignorado")
+                    continue
+                wx, wy, wz = int(a["worldX"]), int(a["worldY"]), int(a["worldZ"])
+                spawns.append({
+                    "name": a.get("name") or defs[oid].get("name"),
+                    "outfitId": int(a["outfitId"]),
+                    "tileX": wx - fb["minX"],
+                    "tileY": wy - fb["minY"],
+                    "worldX": wx, "worldY": wy, "worldZ": wz,
+                    "radius": int(a.get("radius", 2)),
+                    "spawntime": _spawntime(a.get("name")),
+                })
+                injected += 1
+            with open(respawn_path, "w", encoding="utf-8") as h:
+                json.dump(rj, h, ensure_ascii=False)
+            print(f"[OK] cravados {injected} spawn(s) manual(is)")
 
     print(f"[OK] {hunt['folder']} recortado. Próximo: build_hunt_fragment --export + publish.py pra chegar no jogo.")
 
