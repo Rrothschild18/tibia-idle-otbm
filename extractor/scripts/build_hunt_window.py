@@ -77,6 +77,8 @@ def main() -> None:
     os.makedirs(dest, exist_ok=True)
     shutil.copy(os.path.join(ready, "map.json"), os.path.join(dest, "map.json"))
     shutil.copytree(os.path.join(ready, "sheets"), os.path.join(dest, "sheets"))
+    if os.path.isdir(os.path.join(ready, "monsters")):
+        shutil.copytree(os.path.join(ready, "monsters"), os.path.join(dest, "monsters"))
     print(f"[OK] janela publicada em {dest} — reabra a hunt no editor pra adicionar vizinhos")
 
 
