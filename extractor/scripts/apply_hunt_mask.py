@@ -51,7 +51,8 @@ def main() -> None:
     # máscara EXATA por andar: {z: {(x,y), ...}}; andar vazio = excluído da hunt
     # (erro do nosso script que incluiu um andar que não era pra entrar).
     mask_by_floor = {int(z): {(int(x), int(y)) for x, y in cells} for z, cells in mask["floors"].items()}
-    mask_by_floor = {z: cells for z, cells in mask_by_floor.items() if cells}
+    excluded_floors = {int(z) for z in mask.get("excludedFloors", [])}
+    mask_by_floor = {z: cells for z, cells in mask_by_floor.items() if cells and z not in excluded_floors}
     floors = set(mask_by_floor)
     union = set().union(*mask_by_floor.values()) if mask_by_floor else set()
     if not union:
