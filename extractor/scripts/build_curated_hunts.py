@@ -144,20 +144,24 @@ def write_hunt_map(
     spawn_floors=None,
     chosen_spawns=None,
     tile_in=None,
+    tile_in_floor=None,
 ) -> dict:
     folder = os.path.join(MAPS_DIR, city, hunt["folder"])
     os.makedirs(folder, exist_ok=True)
     slug = hunt["slug"]
 
     min_x, min_y, max_x, max_y = bounds
-    # `tile_in` (opcional) generaliza o recorte de caixa pra uma máscara de tiles
-    # desenhada à mão (apply_hunt_mask.py). Sem ele, o recorte é a caixa de sempre.
-    predicate = tile_in if tile_in is not None else (
-        lambda x, y: min_x <= x <= max_x and min_y <= y <= max_y
-    )
+    # Recorte, do mais específico pro geral:
+    #  - `tile_in_floor(x,y,z)`: máscara POR ANDAR desenhada no editor (exata).
+    #  - `tile_in(x,y)`: máscara 2D (mesma forma em todos os andares).
+    #  - caixa: o recorte retangular de sempre.
+    box_pred = lambda x, y: min_x <= x <= max_x and min_y <= y <= max_y
+    predicate = tile_in if tile_in is not None else box_pred
     areas = [
         (origin, nodes)
-        for origin, nodes in otbm_stream.crop_tiles(data, predicate, bounds=bounds)
+        for origin, nodes in otbm_stream.crop_tiles(
+            data, predicate, bounds=bounds, keep_column_z=tile_in_floor
+        )
         if origin[2] in crop_floors
     ]
 

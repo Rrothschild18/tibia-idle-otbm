@@ -63,7 +63,7 @@ def main() -> None:
     header = otbm_stream.map_header(data)
 
     hunt = {"id": args.hunt_id, "slug": "window", "folder": f"{args.hunt_id}_window", "name": f"{args.hunt_id} window"}
-    result = bch.write_hunt_map(city, hunt, data, header, box, floors, entrance=entrance)
+    result = bch.write_hunt_map(city, hunt, data, header, box, floors, entrance=tuple(entrance))
     print(f"[OK] janela recortada: {result['tiles']} tiles, caixa {box}, andares {sorted(floors)}")
 
     # renderiza v6 com o build_map.js

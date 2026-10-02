@@ -48,13 +48,15 @@ def main() -> None:
         mask = json.load(handle)
 
     city = args.hunt_id.split("-")[0]
-    floors = {int(z) for z in mask["floors"]}
-    union = {(int(x), int(y)) for cells in mask["floors"].values() for x, y in cells}
+    # máscara EXATA por andar: {z: {(x,y), ...}}
+    mask_by_floor = {int(z): {(int(x), int(y)) for x, y in cells} for z, cells in mask["floors"].items()}
+    floors = set(mask_by_floor)
+    union = set().union(*mask_by_floor.values()) if mask_by_floor else set()
     if not union:
         sys.exit("error: máscara vazia")
     xs = [x for x, _ in union]
     ys = [y for _, y in union]
-    box = [min(xs), min(ys), max(xs), max(ys)]
+    box = [min(xs), min(ys), max(xs), max(ys)]  # só pra otimização de bounds do crop
 
     tibia_idle = paths.TIBIA_IDLE.require(args.tibia_idle_dir)
     assets_dir = os.path.join(tibia_idle, "apps", "tibia-idle-front", "public", "assets")
@@ -64,10 +66,13 @@ def main() -> None:
     b = bundle_map["bounds"]
     start = bundle_map.get("start") or {"x": 0, "y": 0, "z": min(floors)}
     entrance = [b["minX"] + start["x"], b["minY"] + start["y"], start["z"]]
-    if (entrance[0], entrance[1]) not in union:
-        # a entrada antiga saiu da máscara; pega o tile mascarado mais próximo no mesmo andar
-        same = [(x, y) for (x, y) in union] or list(union)
-        entrance = [*min(same, key=lambda p: abs(p[0] - entrance[0]) + abs(p[1] - entrance[1])), start["z"]]
+    if (entrance[0], entrance[1]) not in mask_by_floor.get(entrance[2], set()):
+        # a entrada antiga saiu da máscara; escolhe um andar que ainda tem máscara
+        # (o da entrada se sobreviveu, senão o mais raso) e o tile mais próximo NELE
+        # — garante que o marcador cai num tile que existe no recorte.
+        target_z = entrance[2] if entrance[2] in mask_by_floor else min(floors)
+        ex, ey = min(mask_by_floor[target_z], key=lambda p: abs(p[0] - entrance[0]) + abs(p[1] - entrance[1]))
+        entrance = [ex, ey, target_z]
 
     otbm = os.path.join(bch.FULL_MAPS_DIR, city, f"{city}.otbm")
     with open(otbm, "rb") as handle:
@@ -76,7 +81,8 @@ def main() -> None:
 
     hunt = {"id": args.hunt_id, "slug": slug, "folder": f"{args.hunt_id}_{slug}", "name": args.hunt_id}
     result = bch.write_hunt_map(
-        city, hunt, data, header, box, floors, entrance=entrance, tile_in=lambda x, y: (x, y) in union
+        city, hunt, data, header, box, floors, entrance=tuple(entrance),
+        tile_in_floor=lambda x, y, z: (x, y) in mask_by_floor.get(z, set()),
     )
     print(f"[OK] re-corte pela máscara: {result['tiles']} tiles ({len(union)} na máscara), andares {sorted(floors)}")
     if not result["marked"]:

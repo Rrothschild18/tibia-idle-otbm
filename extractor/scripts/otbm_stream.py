@@ -320,7 +320,10 @@ def crop_tiles(
     keep_column: Callable[[int, int], bool],
     bounds: Optional[Tuple[int, int, int, int]] = None,
     progress: Optional[Callable[[int, int], None]] = None,
+    keep_column_z: Optional[Callable[[int, int, int], bool]] = None,
 ) -> List[Tuple[Tuple[int, int, int], List[bytes]]]:
+    """`keep_column_z(x, y, z)`, quando passado, decide o tile ciente do andar
+    (máscara por-andar do editor); senão cai no `keep_column(x, y)` 2D."""
     """Os nós de tile cujas colunas `keep_column` aceita, agrupados por área.
 
     `bounds` é `(min_x, min_y, max_x, max_y)`: uma área de 256x256 que não
@@ -356,7 +359,9 @@ def crop_tiles(
             if node_type(data, tile_start) not in (OTBM_TILE, OTBM_HOUSETILE):
                 continue
             offset_x, offset_y = tile_offsets(data, tile_start)
-            if keep_column(origin_x + offset_x, origin_y + offset_y):
+            tx, ty = origin_x + offset_x, origin_y + offset_y
+            keep = keep_column_z(tx, ty, origin_z) if keep_column_z else keep_column(tx, ty)
+            if keep:
                 nodes.append(data[tile_start:tile_end])
 
         if nodes:
