@@ -29,6 +29,7 @@ import appearance_flags
 import curated_hunts
 import hunt_candidates
 import otbm_stream
+import render_map_v6
 import update_canary_data
 from travel_graph import build_walkable_graph, extract_tile_flags, tile_distances_and_prev
 
@@ -45,6 +46,9 @@ MAPS_DIR = os.path.join(EXTRACTOR_DIR, "maps")
 HUNT_START_ACTION_ID = 3366
 HUNT_START_ITEM_ID = 352
 
+# O andar mais fundo que existe no OTBM.
+MAX_FLOOR = 15
+
 CURATION_FILE_NAME = "curation.json"
 CURATED_HUNTS_FILE_NAME = "curated-hunts.json"
 
@@ -60,6 +64,27 @@ def _load_json(path: str, what: str):
         sys.exit(f"error: {what} não encontrado: {path}")
     with open(path, encoding="utf-8") as handler:
         return json.load(handler)
+
+
+def crop_floors_for(floors) -> set:
+    """Os andares que entram no recorte, dados os andares **com spawn**.
+
+    Três coisas de uma vez, e todas sobre geometria — o spawn continua sendo só
+    o dos andares curados (`spawn_floors`):
+
+    1. Os andares do meio. A torre das amazonas tem bicho em z7, z4, z3 e z2, e
+       as escadas em z5 e z6 — sem os dois andares vazios o mapa sai em pedaços
+       que não se alcançam.
+    2. Os andares **abaixo** do mais fundo, até onde o cliente enxerga. Sem
+       eles, hunt de superfície num andar só (Wyvern Hill, z5) saía sem z6/z7:
+       o front não tinha o que desenhar por baixo e `transitions` nascia vazio.
+    3. O limite é o mesmo do front — `last_visible_floor`, de
+       `render_map_v6.py`, que por sua vez espelha o `floor-visibility.ts`. Não
+       há constante nova aqui de propósito: uma segunda régua divergiria da do
+       cliente na primeira mudança.
+    """
+    deepest = min(render_map_v6.last_visible_floor(max(floors)), MAX_FLOOR)
+    return set(range(min(floors), deepest + 1))
 
 
 def crop_spawns(source: str, destination: str, bounds, floors, chosen=None) -> int:
@@ -114,24 +139,26 @@ def write_hunt_map(
     data: bytes,
     header: dict,
     bounds,
-    floors,
+    crop_floors,
     entrance=None,
     spawn_floors=None,
     chosen_spawns=None,
+    tile_in=None,
 ) -> dict:
     folder = os.path.join(MAPS_DIR, city, hunt["folder"])
     os.makedirs(folder, exist_ok=True)
     slug = hunt["slug"]
 
     min_x, min_y, max_x, max_y = bounds
+    # `tile_in` (opcional) generaliza o recorte de caixa pra uma máscara de tiles
+    # desenhada à mão (apply_hunt_mask.py). Sem ele, o recorte é a caixa de sempre.
+    predicate = tile_in if tile_in is not None else (
+        lambda x, y: min_x <= x <= max_x and min_y <= y <= max_y
+    )
     areas = [
         (origin, nodes)
-        for origin, nodes in otbm_stream.crop_tiles(
-            data,
-            lambda x, y: min_x <= x <= max_x and min_y <= y <= max_y,
-            bounds=bounds,
-        )
-        if origin[2] in floors
+        for origin, nodes in otbm_stream.crop_tiles(data, predicate, bounds=bounds)
+        if origin[2] in crop_floors
     ]
 
     marked = False
@@ -163,7 +190,7 @@ def write_hunt_map(
         os.path.join(FULL_MAPS_DIR, city, f"{city}-monster.xml"),
         os.path.join(folder, f"{slug}-monster.xml"),
         bounds,
-        floors if spawn_floors is None else spawn_floors,
+        crop_floors if spawn_floors is None else spawn_floors,
         chosen_spawns,
     )
     for kind, content in EMPTY_XML.items():
@@ -233,11 +260,7 @@ def main():
             continue
 
         floors = set(hunt["floors"])
-        # O recorte leva os andares do meio; o spawn, não. A torre das amazonas
-        # tem bicho em z7, z4, z3 e z2, e as escadas em z5 e z6 — sem os dois
-        # andares vazios o mapa sai em pedaços que não se alcançam. Trazer só o
-        # chão deles dá a escada sem trazer bicho fraco pra hunt.
-        crop_floors = set(range(min(floors), max(floors) + 1))
+        crop_floors = crop_floors_for(floors)
         bounds = curated_hunts.crop_bounds(hunt["extent"], args.margin)
 
         anchor_of = lambda spawn: hunt_candidates.anchor_tile(spawn, walkable)
