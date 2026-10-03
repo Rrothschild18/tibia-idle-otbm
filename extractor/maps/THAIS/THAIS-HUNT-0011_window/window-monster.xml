@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32387" centery="32043" centerz="10" radius="2">
+		<monster name="Skeleton" x="1" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32396" centery="32045" centerz="10" radius="3">
+		<monster name="Skeleton" x="1" y="-1" z="10" spawntime="90" />
+		<monster name="Ghoul" x="-1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32391" centery="32055" centerz="10" radius="3">
+		<monster name="Ghoul" x="-3" y="-1" z="10" spawntime="90" />
+		<monster name="Ghoul" x="3" y="-1" z="10" spawntime="90" />
+		<monster name="Ghoul" x="0" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32355" centery="32077" centerz="10" radius="2">
+		<monster name="Dragon" x="-1" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32364" centery="32080" centerz="10" radius="2">
+		<monster name="Dragon Lord Hatchling" x="0" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32337" centery="32081" centerz="10" radius="2">
+		<monster name="Dragon Hatchling" x="1" y="-1" z="10" spawntime="90" />
+		<monster name="Dragon Lord Hatchling" x="-1" y="1" z="10" spawntime="90" />
+		<monster name="Dragon Hatchling" x="1" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32347" centery="32081" centerz="10" radius="2">
+		<monster name="Dragon" x="2" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32381" centery="32083" centerz="10" radius="6">
+		<monster name="Spider" x="1" y="-4" z="10" spawntime="90" />
+		<monster name="Spider" x="-2" y="-3" z="10" spawntime="90" />
+		<monster name="Spider" x="-2" y="-1" z="10" spawntime="90" />
+		<monster name="Carrion Worm" x="-3" y="1" z="10" spawntime="90" />
+		<monster name="Spider" x="2" y="2" z="10" spawntime="90" />
+		<monster name="Spider" x="-3" y="3" z="10" spawntime="90" />
+		<monster name="Spider" x="2" y="5" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32344" centery="32088" centerz="10" radius="2">
+		<monster name="Dragon" x="0" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32357" centery="32088" centerz="10" radius="2">
+		<monster name="Dragon" x="0" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32366" centery="32089" centerz="10" radius="2">
+		<monster name="Dragon Lord" x="-1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32354" centery="32097" centerz="10" radius="2">
+		<monster name="Dragon" x="0" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32361" centery="32099" centerz="10" radius="2">
+		<monster name="Dragon Hatchling" x="0" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32391" centery="32099" centerz="10" radius="2">
+		<monster name="Rotworm" x="-2" y="-1" z="10" spawntime="90" />
+		<monster name="Rotworm" x="1" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32349" centery="32110" centerz="10" radius="2">
+		<monster name="Rotworm" x="-2" y="0" z="10" spawntime="90" />
+		<monster name="Rotworm" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32376" centery="32111" centerz="10" radius="2">
+		<monster name="Rotworm" x="1" y="-2" z="10" spawntime="90" />
+		<monster name="Rotworm" x="2" y="0" z="10" spawntime="90" />
+		<monster name="Rotworm" x="-2" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32392" centery="32112" centerz="10" radius="2">
+		<monster name="Rotworm" x="0" y="-2" z="10" spawntime="90" />
+		<monster name="Carrion Worm" x="1" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32372" centery="32116" centerz="10" radius="2">
+		<monster name="Carrion Worm" x="0" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32383" centery="32117" centerz="10" radius="3">
+		<monster name="Rotworm" x="2" y="-3" z="10" spawntime="90" />
+		<monster name="Carrion Worm" x="0" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32397" centery="32118" centerz="10" radius="2">
+		<monster name="Carrion Worm" x="-2" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32315" centery="32122" centerz="10" radius="3">
+		<monster name="Orc" x="-1" y="-2" z="10" spawntime="90" />
+		<monster name="Orc Spearman" x="-3" y="0" z="10" spawntime="90" />
+		<monster name="Orc Warrior" x="-1" y="2" z="10" spawntime="90" />
+		<monster name="Orc Spearman" x="2" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32341" centery="32124" centerz="10" radius="2">
+		<monster name="Cave Rat" x="-1" y="-1" z="10" spawntime="90" />
+		<monster name="Cave Rat" x="-1" y="1" z="10" spawntime="90" />
+		<monster name="Cave Rat" x="1" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32353" centery="32124" centerz="10" radius="2">
+		<monster name="Rotworm" x="-1" y="-1" z="10" spawntime="90" />
+		<monster name="Rotworm" x="2" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32361" centery="32124" centerz="10" radius="2">
+		<monster name="Rotworm" x="1" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32387" centery="32124" centerz="10" radius="2">
+		<monster name="Rotworm" x="-2" y="-1" z="10" spawntime="90" />
+		<monster name="Rotworm" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32308" centery="32129" centerz="10" radius="2">
+		<monster name="Orc" x="1" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32384" centery="32129" centerz="10" radius="2">
+		<monster name="Carrion Worm" x="0" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32361" centery="32135" centerz="10" radius="4">
+		<monster name="Rotworm" x="-3" y="-4" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32376" centery="32046" centerz="11" radius="2">
+		<monster name="Ghoul" x="0" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32395" centery="32052" centerz="11" radius="2">
+		<monster name="Ghoul" x="0" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32372" centery="32053" centerz="11" radius="2">
+		<monster name="Ghoul" x="-1" y="-1" z="11" spawntime="90" />
+		<monster name="Crypt Shambler" x="1" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32380" centery="32053" centerz="11" radius="2">
+		<monster name="Ghoul" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32347" centery="32069" centerz="12" radius="3">
+		<monster name="Dragon Lord" x="-1" y="-3" z="12" spawntime="60" />
+		<monster name="Dragon Lord" x="1" y="1" z="12" spawntime="60" />
+	</monster>
+</monsters>

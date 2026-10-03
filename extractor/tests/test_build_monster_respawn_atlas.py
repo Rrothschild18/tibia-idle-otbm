@@ -36,7 +36,7 @@ def test_monster_def_references_shared_atlas_when_it_exists(tmp_path, monkeypatc
     assert "assetsRoot" not in result
     # frame keys are untouched by the atlas change
     assert monster_def["idle"] == {
-        "south": "21_0", "east": "21_1", "north": "21_2", "west": "21_3",
+        "north": "21_0", "east": "21_1", "south": "21_2", "west": "21_3",
     }
 
 
@@ -73,7 +73,7 @@ def test_idle_frame_group_with_multiple_frames_builds_an_animation(tmp_path, mon
 
     monster_def = result["monsterDefs"]["44"]
     assert monster_def["idle"] == {
-        "south": {
+        "north": {
             "frames": [f"44_{i}" for i in range(8)],
             "frameRate": 10.0,
             "loopType": "infinite",
@@ -237,6 +237,53 @@ def test_outfit_de_criatura_segue_pelo_caminho_de_sempre():
 
     anims = bpm._build_outfit_anims(223, creature)
 
-    # Ordem de criatura (south primeiro), e idle de um frame vira string.
-    assert anims["idle"]["south"] == "223_0"
-    assert anims["moving"]["south"]["frames"] == ["223_4"]
+    # Ordem de criatura (north primeiro, como o protocolo), e idle de um
+    # frame vira string.
+    assert anims["idle"]["north"] == "223_0"
+    assert anims["moving"]["north"]["frames"] == ["223_4"]
+
+
+def test_frames_de_uma_direcao_sao_intercalados_e_nao_bloco_contiguo():
+    creature = {
+        "id": 27,
+        "frameGroups": [
+            {
+                "frameGroup": "idle",
+                "spriteId": ["27_0", "27_1", "27_2", "27_3"],
+                "spriteInfo": {"patternWidth": 4},
+            },
+            {
+                "frameGroup": "moving",
+                "spriteId": [f"27_{i}" for i in range(4, 12)],
+                "spriteInfo": {"patternWidth": 4},
+            },
+        ],
+    }
+
+    anims = bpm._build_outfit_anims(27, creature)
+
+    assert anims["moving"]["north"]["frames"] == ["27_4", "27_8"]
+    assert anims["moving"]["east"]["frames"] == ["27_5", "27_9"]
+    assert anims["moving"]["south"]["frames"] == ["27_6", "27_10"]
+    assert anims["moving"]["west"]["frames"] == ["27_7", "27_11"]
+
+
+def test_outfit_de_um_frame_group_anima_parado_nas_quatro_direcoes():
+    rotworm = {
+        "id": 26,
+        "spriteId": [f"26_{i}" for i in range(12)],
+        "spriteInfo": {
+            "patternWidth": 4,
+            "animation": {
+                "loopType": "ANIMATION_LOOP_TYPE_INFINITE",
+                "spritePhase": [{"durationMin": 300, "durationMax": 300}] * 3,
+            },
+        },
+    }
+
+    anims = bpm._build_outfit_anims(26, rotworm)
+
+    assert anims["moving"]["north"]["frames"] == ["26_0", "26_4", "26_8"]
+    assert anims["idle"]["north"] == anims["moving"]["north"]
+    assert anims["idle"]["west"]["frames"] == ["26_3", "26_7", "26_11"]
+    assert set(anims["idle"]) == {"south", "east", "north", "west"}

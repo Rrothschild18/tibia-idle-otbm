@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32812" centery="31923" centerz="10" radius="3">
+		<monster name="Gloom Wolf" x="-1" y="3" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32784" centery="31930" centerz="10" radius="3">
+		<monster name="Ghost Wolf" x="3" y="3" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32791" centery="31930" centerz="10" radius="3">
+		<monster name="Gloom Wolf" x="1" y="2" z="10" spawntime="60" />
+		<monster name="Ghost Wolf" x="-3" y="3" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32784" centery="31937" centerz="10" radius="3">
+		<monster name="Ghost Wolf" x="3" y="-2" z="10" spawntime="60" />
+		<monster name="Ghost Wolf" x="1" y="-1" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32791" centery="31937" centerz="10" radius="3">
+		<monster name="Gloom Wolf" x="-2" y="-3" z="10" spawntime="60" />
+		<monster name="Ghost Wolf" x="0" y="-2" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32777" centery="31944" centerz="10" radius="3">
+		<monster name="Ghost Wolf" x="3" y="1" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32784" centery="31944" centerz="10" radius="3">
+		<monster name="Gloom Wolf" x="-1" y="0" z="10" spawntime="60" />
+		<monster name="Gloom Wolf" x="-2" y="1" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32784" centery="31951" centerz="10" radius="3">
+		<monster name="Ghost Wolf" x="0" y="-1" z="10" spawntime="60" />
+		<monster name="Ghost Wolf" x="1" y="1" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32784" centery="31958" centerz="10" radius="3">
+		<monster name="Gloom Wolf" x="3" y="2" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32791" centery="31958" centerz="10" radius="3">
+		<monster name="Gloom Wolf" x="-1" y="-3" z="10" spawntime="60" />
+		<monster name="Gloom Wolf" x="-1" y="-1" z="10" spawntime="60" />
+		<monster name="Gloom Wolf" x="0" y="1" z="10" spawntime="60" />
+		<monster name="Gloom Wolf" x="2" y="1" z="10" spawntime="60" />
+		<monster name="Gloom Wolf" x="-2" y="3" z="10" spawntime="60" />
+		<monster name="Ghost Wolf" x="2" y="3" z="10" spawntime="60" />
+	</monster>
+</monsters>

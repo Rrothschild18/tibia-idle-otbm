@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32833" centery="31910" centerz="7" radius="2">
+		<monster name="Amazon" x="2" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32864" centery="31910" centerz="7" radius="3">
+		<monster name="Amazon" x="-2" y="0" z="7" spawntime="90" />
+		<monster name="Amazon" x="-3" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32854" centery="31911" centerz="7" radius="3">
+		<monster name="Amazon" x="-2" y="0" z="7" spawntime="90" />
+		<monster name="Amazon" x="2" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32823" centery="31917" centerz="7" radius="3">
+		<monster name="Amazon" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32836" centery="31917" centerz="7" radius="2">
+		<monster name="Amazon" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32847" centery="31918" centerz="7" radius="2">
+		<monster name="Amazon" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32855" centery="31919" centerz="7" radius="2">
+		<monster name="Amazon" x="2" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32862" centery="31919" centerz="7" radius="2">
+		<monster name="Amazon" x="-1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32817" centery="31924" centerz="7" radius="2">
+		<monster name="Amazon" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32826" centery="31925" centerz="7" radius="3">
+		<monster name="Amazon" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32850" centery="31925" centerz="7" radius="2">
+		<monster name="Amazon" x="0" y="-2" z="7" spawntime="90" />
+		<monster name="Amazon" x="0" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32837" centery="31926" centerz="7" radius="2">
+		<monster name="Amazon" x="-1" y="-1" z="7" spawntime="90" />
+		<monster name="Amazon" x="2" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32861" centery="31926" centerz="7" radius="2">
+		<monster name="Amazon" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32784" centery="31930" centerz="7" radius="3">
+		<monster name="Blue Butterfly" x="2" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32826" centery="31931" centerz="7" radius="2">
+		<monster name="Amazon" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32856" centery="31931" centerz="7" radius="2">
+		<monster name="Amazon" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32865" centery="31931" centerz="7" radius="2">
+		<monster name="Amazon" x="0" y="-2" z="7" spawntime="90" />
+		<monster name="Amazon" x="0" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32842" centery="31933" centerz="7" radius="2">
+		<monster name="Amazon" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32815" centery="31935" centerz="7" radius="2">
+		<monster name="Amazon" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32834" centery="31935" centerz="7" radius="2">
+		<monster name="Amazon" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32872" centery="31936" centerz="7" radius="2">
+		<monster name="Amazon" x="-1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32826" centery="31938" centerz="7" radius="2">
+		<monster name="Amazon" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32870" centery="31945" centerz="7" radius="2">
+		<monster name="Amazon" x="-1" y="-1" z="7" spawntime="90" />
+		<monster name="Amazon" x="2" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32827" centery="31958" centerz="7" radius="2">
+		<monster name="Bat" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32807" centery="31965" centerz="7" radius="2">
+		<monster name="Snake" x="0" y="-2" z="7" spawntime="90" />
+		<monster name="Snake" x="0" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32811" centery="31972" centerz="7" radius="2">
+		<monster name="Snake" x="1" y="-1" z="7" spawntime="90" />
+		<monster name="Snake" x="-2" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32791" centery="31973" centerz="7" radius="3">
+		<monster name="Witch" x="0" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32787" centery="31974" centerz="7" radius="2">
+		<monster name="Witch" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32798" centery="31986" centerz="7" radius="3">
+		<monster name="Slime" x="1" y="1" z="7" spawntime="90" />
+		<monster name="Slime" x="0" y="3" z="7" spawntime="90" />
+		<monster name="Slime" x="2" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32838" centery="31912" centerz="8" radius="3">
+		<monster name="Amazon" x="-1" y="-3" z="8" spawntime="90" />
+		<monster name="Amazon" x="-1" y="1" z="8" spawntime="90" />
+		<monster name="Valkyrie" x="2" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32867" centery="31912" centerz="8" radius="3">
+		<monster name="Witch" x="0" y="-2" z="8" spawntime="90" />
+		<monster name="Valkyrie" x="-3" y="0" z="8" spawntime="90" />
+		<monster name="Valkyrie" x="3" y="0" z="8" spawntime="90" />
+		<monster name="Amazon" x="1" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32879" centery="31913" centerz="8" radius="2">
+		<monster name="Valkyrie" x="2" y="-1" z="8" spawntime="90" />
+		<monster name="Valkyrie" x="-2" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32849" centery="31919" centerz="8" radius="2">
+		<monster name="Valkyrie" x="0" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32870" centery="31925" centerz="8" radius="6">
+		<monster name="Valkyrie" x="-4" y="-6" z="8" spawntime="90" />
+		<monster name="Valkyrie" x="-3" y="-4" z="8" spawntime="90" />
+		<monster name="Amazon" x="-3" y="-2" z="8" spawntime="90" />
+		<monster name="Amazon" x="4" y="-2" z="8" spawntime="90" />
+		<monster name="Valkyrie" x="-6" y="0" z="8" spawntime="90" />
+		<monster name="Amazon" x="2" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32859" centery="31926" centerz="8" radius="1">
+		<monster name="Valkyrie" x="0" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32816" centery="31959" centerz="8" radius="2">
+		<monster name="Slime" x="1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32824" centery="31960" centerz="8" radius="3">
+		<monster name="Bat" x="-3" y="-2" z="8" spawntime="90" />
+		<monster name="Bat" x="0" y="-1" z="8" spawntime="90" />
+		<monster name="Bat" x="3" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32867" centery="31895" centerz="9" radius="8">
+		<monster name="Valkyrie" x="5" y="-3" z="9" spawntime="90" />
+		<monster name="Poacher" x="0" y="1" z="9" spawntime="90" />
+		<monster name="Valkyrie" x="4" y="5" z="9" spawntime="90" />
+		<monster name="Hunter" x="0" y="7" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32784" centery="31930" centerz="9" radius="3">
+		<monster name="Gloom Wolf" x="3" y="3" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="32784" centery="31944" centerz="9" radius="3">
+		<monster name="Ghost Wolf" x="2" y="3" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="32784" centery="31951" centerz="9" radius="3">
+		<monster name="Ghost Wolf" x="0" y="-2" z="9" spawntime="60" />
+	</monster>
+</monsters>

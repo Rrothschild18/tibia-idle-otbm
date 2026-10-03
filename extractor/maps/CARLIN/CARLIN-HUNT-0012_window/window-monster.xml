@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32397" centery="31706" centerz="12" radius="2">
+		<monster name="Snake" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32392" centery="31797" centerz="12" radius="3">
+		<monster name="Corym Charlatan" x="3" y="-2" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32399" centery="31797" centerz="12" radius="3">
+		<monster name="Corym Charlatan" x="-2" y="-3" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32378" centery="31811" centerz="12" radius="3">
+		<monster name="Corym Charlatan" x="1" y="-1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32385" centery="31811" centerz="12" radius="3">
+		<monster name="Corym Charlatan" x="-3" y="1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32371" centery="31818" centerz="12" radius="3">
+		<monster name="Corym Charlatan" x="0" y="2" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32378" centery="31818" centerz="12" radius="3">
+		<monster name="Corym Charlatan" x="-2" y="-1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32398" centery="31717" centerz="13" radius="3">
+		<monster name="Dragon Lord" x="0" y="0" z="13" spawntime="90" />
+	</monster>
+</monsters>

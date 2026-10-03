@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32219" centery="31860" centerz="8" radius="1">
+		<monster name="Skeleton Warrior" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32213" centery="31861" centerz="8" radius="1">
+		<monster name="Bat" x="0" y="1" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="32225" centery="31862" centerz="8" radius="1">
+		<monster name="Poison Spider" x="0" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32216" centery="31863" centerz="8" radius="1">
+		<monster name="Poison Spider" x="-1" y="0" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="32214" centery="31865" centerz="8" radius="1">
+		<monster name="Bat" x="1" y="0" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="32218" centery="31865" centerz="8" radius="1">
+		<monster name="Poison Spider" x="0" y="1" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="32223" centery="31865" centerz="8" radius="1">
+		<monster name="Skeleton Warrior" x="1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32226" centery="31865" centerz="8" radius="1">
+		<monster name="Poison Spider" x="-1" y="0" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="32216" centery="31868" centerz="8" radius="1">
+		<monster name="Bat" x="1" y="-1" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="32219" centery="31868" centerz="8" radius="1">
+		<monster name="Skeleton Warrior" x="1" y="0" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="32222" centery="31868" centerz="8" radius="1">
+		<monster name="Skeleton Warrior" x="-1" y="-1" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="32218" centery="31870" centerz="8" radius="1">
+		<monster name="Poison Spider" x="0" y="1" z="8" spawntime="60" />
+	</monster>
+</monsters>

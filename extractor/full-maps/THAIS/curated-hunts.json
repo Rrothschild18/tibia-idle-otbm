@@ -1,0 +1,397 @@
+{
+  "city": "THAIS",
+  "area": "Thais",
+  "hunts": [
+    {
+      "id": "THAIS-HUNT-0001",
+      "name": "Bears — Thais Surroundings (z7–9)",
+      "slug": "bears-thais-surroundings-z79",
+      "folder": "THAIS-HUNT-0001_bears-thais-surroundings-z79",
+      "floors": [
+        7,
+        8,
+        9
+      ],
+      "cropFloors": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "candidateIds": [
+        "THAIS-FULL-z07-61-TRIM-6017-A",
+        "THAIS-FULL-z08-579",
+        "THAIS-FULL-z09-1174",
+        "THAIS-FULL-z09-1409",
+        "THAIS-FULL-z09-3465"
+      ],
+      "creatures": 64,
+      "extent": {
+        "minX": 32400,
+        "minY": 32042,
+        "maxX": 32501,
+        "maxY": 32120,
+        "centerX": 32451,
+        "centerY": 32081
+      },
+      "subareaId": 29,
+      "entrance": {
+        "x": 32439,
+        "y": 32052,
+        "z": 7
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 42713,
+      "spawns": 64
+    },
+    {
+      "id": "THAIS-HUNT-0002",
+      "name": "Crypt Shamblers — Thais Surroundings z12",
+      "slug": "crypt-shamblers-thais-surroundings-z12",
+      "folder": "THAIS-HUNT-0002_crypt-shamblers-thais-surroundings-z12",
+      "floors": [
+        12
+      ],
+      "cropFloors": [
+        12,
+        13,
+        14
+      ],
+      "candidateIds": [
+        "THAIS-FULL-z12-1945"
+      ],
+      "creatures": 5,
+      "extent": {
+        "minX": 32361,
+        "minY": 32022,
+        "maxX": 32380,
+        "maxY": 32032,
+        "centerX": 32371,
+        "centerY": 32027
+      },
+      "subareaId": 29,
+      "entrance": {
+        "x": 32371,
+        "y": 32022,
+        "z": 12
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 3721,
+      "spawns": 5
+    },
+    {
+      "id": "THAIS-HUNT-0003",
+      "name": "Dragons — THAIS z13",
+      "slug": "dragons-thais-z13",
+      "folder": "THAIS-HUNT-0003_dragons-thais-z13",
+      "floors": [
+        13
+      ],
+      "cropFloors": [
+        13,
+        14,
+        15
+      ],
+      "candidateIds": [
+        "THAIS-FULL-z13-3238"
+      ],
+      "creatures": 1,
+      "extent": {
+        "minX": 32379,
+        "minY": 32024,
+        "maxX": 32379,
+        "maxY": 32024,
+        "centerX": 32379,
+        "centerY": 32024
+      },
+      "subareaId": null,
+      "entrance": {
+        "x": 32379,
+        "y": 32024,
+        "z": 13
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 1165,
+      "spawns": 1
+    },
+    {
+      "id": "THAIS-HUNT-0004",
+      "name": "Cyclopss — Thais Surroundings z9",
+      "slug": "cyclopss-thais-surroundings-z9",
+      "folder": "THAIS-HUNT-0004_cyclopss-thais-surroundings-z9",
+      "floors": [
+        9
+      ],
+      "cropFloors": [
+        9,
+        10,
+        11
+      ],
+      "candidateIds": [
+        "THAIS-FULL-z09-2083"
+      ],
+      "creatures": 9,
+      "extent": {
+        "minX": 32393,
+        "minY": 32372,
+        "maxX": 32421,
+        "maxY": 32410,
+        "centerX": 32407,
+        "centerY": 32391
+      },
+      "subareaId": 29,
+      "entrance": {
+        "x": 32408,
+        "y": 32372,
+        "z": 9
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 5824,
+      "spawns": 9
+    },
+    {
+      "id": "THAIS-HUNT-0005",
+      "name": "Cyclopss — Thais Surroundings z8",
+      "slug": "cyclopss-thais-surroundings-z8",
+      "folder": "THAIS-HUNT-0005_cyclopss-thais-surroundings-z8",
+      "floors": [
+        8
+      ],
+      "cropFloors": [
+        8,
+        9,
+        10
+      ],
+      "candidateIds": [
+        "THAIS-FULL-z08-3951"
+      ],
+      "creatures": 12,
+      "extent": {
+        "minX": 32394,
+        "minY": 32369,
+        "maxX": 32434,
+        "maxY": 32407,
+        "centerX": 32414,
+        "centerY": 32388
+      },
+      "subareaId": 29,
+      "entrance": {
+        "x": 32401,
+        "y": 32369,
+        "z": 8
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 9807,
+      "spawns": 12
+    },
+    {
+      "id": "THAIS-HUNT-0006",
+      "name": "Minotaur Mages — Thais Surroundings z10",
+      "slug": "minotaur-mages-thais-surroundings-z10",
+      "folder": "THAIS-HUNT-0006_minotaur-mages-thais-surroundings-z10",
+      "floors": [
+        10
+      ],
+      "cropFloors": [
+        10,
+        11,
+        12
+      ],
+      "candidateIds": [
+        "THAIS-FULL-z10-6068"
+      ],
+      "creatures": 7,
+      "extent": {
+        "minX": 32225,
+        "minY": 32387,
+        "maxX": 32283,
+        "maxY": 32402,
+        "centerX": 32254,
+        "centerY": 32395
+      },
+      "subareaId": 29,
+      "entrance": {
+        "x": 32283,
+        "y": 32387,
+        "z": 10
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 2885,
+      "spawns": 7
+    },
+    {
+      "id": "THAIS-HUNT-0007",
+      "name": "Minotaurs — Thais Surroundings z10",
+      "slug": "minotaurs-thais-surroundings-z10",
+      "folder": "THAIS-HUNT-0007_minotaurs-thais-surroundings-z10",
+      "floors": [
+        10
+      ],
+      "cropFloors": [
+        10,
+        11,
+        12
+      ],
+      "candidateIds": [
+        "THAIS-FULL-z10-949"
+      ],
+      "creatures": 5,
+      "extent": {
+        "minX": 32274,
+        "minY": 32397,
+        "maxX": 32279,
+        "maxY": 32404,
+        "centerX": 32277,
+        "centerY": 32401
+      },
+      "subareaId": 29,
+      "entrance": {
+        "x": 32275,
+        "y": 32397,
+        "z": 10
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 850,
+      "spawns": 5
+    },
+    {
+      "id": "THAIS-HUNT-0008",
+      "name": "Rotworms — Fibula z9",
+      "slug": "rotworms-fibula-z9",
+      "folder": "THAIS-HUNT-0008_rotworms-fibula-z9",
+      "floors": [
+        9
+      ],
+      "cropFloors": [
+        9,
+        10,
+        11
+      ],
+      "candidateIds": [
+        "THAIS-FULL-z09-591"
+      ],
+      "creatures": 45,
+      "extent": {
+        "minX": 32123,
+        "minY": 32359,
+        "maxX": 32221,
+        "maxY": 32436,
+        "centerX": 32172,
+        "centerY": 32398
+      },
+      "subareaId": 35,
+      "entrance": {
+        "x": 32163,
+        "y": 32359,
+        "z": 9
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 14171,
+      "spawns": 45
+    },
+    {
+      "id": "THAIS-HUNT-0009",
+      "name": "Skeletons — Fibula z10",
+      "slug": "skeletons-fibula-z10",
+      "folder": "THAIS-HUNT-0009_skeletons-fibula-z10",
+      "floors": [
+        10
+      ],
+      "cropFloors": [
+        10,
+        11,
+        12
+      ],
+      "candidateIds": [
+        "THAIS-FULL-z10-809"
+      ],
+      "creatures": 8,
+      "extent": {
+        "minX": 32172,
+        "minY": 32450,
+        "maxX": 32210,
+        "maxY": 32463,
+        "centerX": 32191,
+        "centerY": 32457
+      },
+      "subareaId": 35,
+      "entrance": {
+        "x": 32210,
+        "y": 32450,
+        "z": 10
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 2398,
+      "spawns": 8
+    },
+    {
+      "id": "THAIS-HUNT-0010",
+      "name": "Minotaurs — Thais Surroundings z15",
+      "slug": "minotaurs-thais-surroundings-z15",
+      "folder": "THAIS-HUNT-0010_minotaurs-thais-surroundings-z15",
+      "floors": [
+        15
+      ],
+      "cropFloors": [
+        15
+      ],
+      "candidateIds": [
+        "THAIS-FULL-z15-142"
+      ],
+      "creatures": 56,
+      "extent": {
+        "minX": 32378,
+        "minY": 32083,
+        "maxX": 32468,
+        "maxY": 32190,
+        "centerX": 32423,
+        "centerY": 32137
+      },
+      "subareaId": 29,
+      "entrance": {
+        "x": 32464,
+        "y": 32083,
+        "z": 15
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 12418,
+      "spawns": 56
+    },
+    {
+      "id": "THAIS-HUNT-0011",
+      "name": "Dragons — Thais Surroundings z10",
+      "slug": "dragons-thais-surroundings-z10",
+      "folder": "THAIS-HUNT-0011_dragons-thais-surroundings-z10",
+      "floors": [
+        10
+      ],
+      "cropFloors": [
+        10,
+        11,
+        12
+      ],
+      "candidateIds": [
+        "THAIS-FULL-z10-1104"
+      ],
+      "creatures": 11,
+      "extent": {
+        "minX": 32336,
+        "minY": 32076,
+        "maxX": 32365,
+        "maxY": 32100,
+        "centerX": 32351,
+        "centerY": 32088
+      },
+      "subareaId": 29,
+      "entrance": {
+        "x": 32354,
+        "y": 32076,
+        "z": 10
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 5604,
+      "spawns": 11
+    }
+  ]
+}

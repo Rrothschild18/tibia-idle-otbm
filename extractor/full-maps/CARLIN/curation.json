@@ -3,99 +3,129 @@
   "area": "Carlin",
   "subareas": [
     38,
+    39,
     40,
     43,
     271,
+    279,
+    280,
+    281,
+    288,
     456
   ],
   "hunts": [
     {
-      "name": "Cemetery — Ghostlands",
+      "name": "Corym Charlatans — Carlin City z12",
       "floors": [
-        10,
-        11,
         12
       ],
       "candidateIds": [
-        "CARLIN-C10-008",
-        "CARLIN-C11-002",
-        "CARLIN-C12-003"
+        "CARLIN-FULL-z12-290"
       ],
       "species": null,
-      "creatures": 14,
+      "creatures": 6,
       "extent": {
-        "minX": 32222,
-        "minY": 31841,
-        "maxX": 32242,
-        "maxY": 31866,
-        "centerX": 32232,
-        "centerY": 31854
+        "minX": 32371,
+        "minY": 31794,
+        "maxX": 32397,
+        "maxY": 31820,
+        "centerX": 32384,
+        "centerY": 31807
+      },
+      "subareaId": 271,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Poison Spiders — Ghostlands z8",
+      "floors": [
+        8
+      ],
+      "candidateIds": [
+        "CARLIN-FULL-z08-104"
+      ],
+      "species": null,
+      "creatures": 12,
+      "extent": {
+        "minX": 32213,
+        "minY": 31860,
+        "maxX": 32225,
+        "maxY": 31871,
+        "centerX": 32219,
+        "centerY": 31866
       },
       "subareaId": 38,
       "walkTilesFromTemple": null
     },
     {
-      "name": "Amazons Tower",
+      "name": "Amazons — Fields of Glory (z1–7)",
       "floors": [
+        1,
         2,
         3,
         4,
-        7
-      ],
-      "candidateIds": [
-        "CARLIN-C02-001",
-        "CARLIN-C03-001",
-        "CARLIN-C04-001",
-        "CARLIN-C07-004"
-      ],
-      "species": null,
-      "creatures": 20,
-      "extent": {
-        "minX": 32333,
-        "minY": 31638,
-        "maxX": 32363,
-        "maxY": 31658,
-        "centerX": 32348,
-        "centerY": 31648
-      },
-      "subareaId": 40,
-      "walkTilesFromTemple": 141
-    },
-    {
-      "name": "Amazons North East",
-      "floors": [
+        5,
         6,
         7
       ],
       "candidateIds": [
-        "CARLIN-C06-005",
-        "CARLIN-C07-009"
+        "CARLIN-FULL-z01-1274",
+        "CARLIN-FULL-z02-1441",
+        "CARLIN-FULL-z03-1502",
+        "CARLIN-FULL-z04-1665",
+        "CARLIN-FULL-z05-390",
+        "CARLIN-FULL-z06-893",
+        "CARLIN-FULL-z07-10-TRIM-6005-A"
       ],
       "species": null,
-      "creatures": 9,
+      "creatures": 40,
       "extent": {
-        "minX": 32421,
-        "minY": 31577,
-        "maxX": 32433,
-        "maxY": 31597,
-        "centerX": 32427,
-        "centerY": 31587
+        "minX": 32317,
+        "minY": 31611,
+        "maxX": 32394,
+        "maxY": 31684,
+        "centerX": 32356,
+        "centerY": 31648
       },
       "subareaId": 40,
-      "walkTilesFromTemple": 204
+      "walkTilesFromTemple": null
     },
     {
-      "name": "Ghouls — Ghostlands ",
+      "name": "Valkyries — Fields of Glory (z5–8)",
       "floors": [
-        8,
+        5,
+        6,
+        7,
+        8
+      ],
+      "candidateIds": [
+        "CARLIN-FULL-z05-1311",
+        "CARLIN-FULL-z06-945",
+        "CARLIN-FULL-z07-10-TRIM-6005-B",
+        "CARLIN-FULL-z08-150-TRIM-6005-B"
+      ],
+      "species": null,
+      "creatures": 32,
+      "extent": {
+        "minX": 32394,
+        "minY": 31577,
+        "maxX": 32464,
+        "maxY": 31631,
+        "centerX": 32429,
+        "centerY": 31604
+      },
+      "subareaId": 40,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Ghouls — Ghostlands z9",
+      "floors": [
         9
       ],
       "candidateIds": [
-        "CARLIN-C08-005",
-        "CARLIN-C09-002"
+        "CARLIN-FULL-z09-14"
       ],
       "species": null,
-      "creatures": 33,
+      "creatures": 25,
       "extent": {
         "minX": 32172,
         "minY": 31770,
@@ -105,147 +135,156 @@
         "centerY": 31791
       },
       "subareaId": 38,
-      "walkTilesFromTemple": 195
+      "walkTilesFromTemple": null
     },
     {
-      "name": "Ghouls & Skeletons — Ghostlands",
+      "name": "Ghouls — Ghostlands z10",
       "floors": [
-        11,
-        12
+        10
       ],
       "candidateIds": [
-        "CARLIN-C11-003",
-        "CARLIN-C12-001"
+        "CARLIN-FULL-z10-62"
       ],
       "species": null,
-      "creatures": 21,
+      "creatures": 9,
       "extent": {
-        "minX": 32198,
-        "minY": 31796,
-        "maxX": 32238,
-        "maxY": 31836,
-        "centerX": 32218,
-        "centerY": 31816
+        "minX": 32180,
+        "minY": 31769,
+        "maxX": 32197,
+        "maxY": 31795,
+        "centerX": 32189,
+        "centerY": 31782
       },
       "subareaId": 38,
       "walkTilesFromTemple": null
     },
     {
-      "name": "Ghouls — Carlin Surroundings",
+      "name": "Skeletons — Ghostlands z12",
       "floors": [
-        7,
         12
       ],
       "candidateIds": [
-        "CARLIN-C07-012",
-        "CARLIN-C12-001"
+        "CARLIN-FULL-z12-39"
       ],
       "species": null,
-      "creatures": 23,
+      "creatures": 36,
       "extent": {
-        "minX": 32198,
-        "minY": 31793,
-        "maxX": 32243,
-        "maxY": 31835,
-        "centerX": 32221,
-        "centerY": 31814
+        "minX": 32181,
+        "minY": 31796,
+        "maxX": 32249,
+        "maxY": 31871,
+        "centerX": 32215,
+        "centerY": 31834
       },
-      "subareaId": 43,
-      "walkTilesFromTemple": 122
+      "subareaId": 38,
+      "walkTilesFromTemple": null
     },
     {
-      "name": "Amazons Small Camp",
+      "name": "Vicious Squires — Fields of Glory z8",
       "floors": [
-        7
+        8
       ],
       "candidateIds": [
-        "CARLIN-C07-014"
+        "CARLIN-FULL-z08-22"
       ],
       "species": null,
-      "creatures": 5,
-      "extent": {
-        "minX": 32465,
-        "minY": 31776,
-        "maxX": 32482,
-        "maxY": 31783,
-        "centerX": 32474,
-        "centerY": 31780
-      },
-      "subareaId": 43,
-      "walkTilesFromTemple": 141
-    },
-    {
-      "name": "Cults — Carlin Surroundings z7",
-      "floors": [
-        8,
-        9
-      ],
-      "candidateIds": [
-        "CARLIN-C08-001",
-        "CARLIN-C09-001"
-      ],
-      "species": null,
-      "creatures": 182,
+      "creatures": 82,
       "extent": {
         "minX": 32326,
-        "minY": 31653,
+        "minY": 31657,
         "maxX": 32374,
         "maxY": 31704,
         "centerX": 32350,
+        "centerY": 31681
+      },
+      "subareaId": 40,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Vile Grandmasters — Fields of Glory z9",
+      "floors": [
+        9
+      ],
+      "candidateIds": [
+        "CARLIN-FULL-z09-340"
+      ],
+      "species": null,
+      "creatures": 100,
+      "extent": {
+        "minX": 32327,
+        "minY": 31653,
+        "maxX": 32374,
+        "maxY": 31704,
+        "centerX": 32351,
         "centerY": 31679
       },
       "subareaId": 40,
-      "walkTilesFromTemple": 132
+      "walkTilesFromTemple": null
     },
     {
-      "name": "Cults 02 — Fields of Glory",
+      "name": "Vile Grandmasters — Fields of Glory z10",
       "floors": [
-        8,
-        9,
         10
       ],
       "candidateIds": [
-        "CARLIN-C08-001",
-        "CARLIN-C09-001",
-        "CARLIN-C10-001"
+        "CARLIN-FULL-z10-220"
       ],
       "species": null,
-      "creatures": 267,
+      "creatures": 85,
       "extent": {
-        "minX": 32326,
-        "minY": 31653,
+        "minX": 32327,
+        "minY": 31656,
         "maxX": 32374,
-        "maxY": 31704,
-        "centerX": 32350,
-        "centerY": 31679
+        "maxY": 31700,
+        "centerX": 32351,
+        "centerY": 31678
       },
       "subareaId": 40,
-      "walkTilesFromTemple": 132
+      "walkTilesFromTemple": null
     },
     {
-      "name": "Spiders — Fields of Glory",
+      "name": "Rotworms — Carlin City z11",
       "floors": [
-        7,
-        8,
-        9
+        11
       ],
       "candidateIds": [
-        "CARLIN-C07-035",
-        "CARLIN-C08-018",
-        "CARLIN-C09-022"
+        "CARLIN-FULL-z11-531"
       ],
       "species": null,
-      "creatures": 11,
+      "creatures": 6,
       "extent": {
-        "minX": 32429,
-        "minY": 31627,
-        "maxX": 32450,
-        "maxY": 31640,
-        "centerX": 32440,
-        "centerY": 31634
+        "minX": 32376,
+        "minY": 31812,
+        "maxX": 32391,
+        "maxY": 31828,
+        "centerX": 32384,
+        "centerY": 31820
       },
-      "subareaId": 40,
-      "walkTilesFromTemple": 160
+      "subareaId": 271,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Corym Charlatans — Carlin City (z12–13)",
+      "floors": [
+        12,
+        13
+      ],
+      "candidateIds": [
+        "CARLIN-FULL-z12-290",
+        "CARLIN-FULL-z13-36"
+      ],
+      "species": null,
+      "creatures": 7,
+      "extent": {
+        "minX": 32371,
+        "minY": 31717,
+        "maxX": 32398,
+        "maxY": 31820,
+        "centerX": 32385,
+        "centerY": 31769
+      },
+      "subareaId": 271,
+      "walkTilesFromTemple": null
     }
   ]
 }

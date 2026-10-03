@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32707" centery="31931" centerz="8" radius="5">
+		<monster name="Toad" x="0" y="0" z="8" spawntime="60" />
+		<monster name="Toad" x="1" y="4" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="32682" centery="31940" centerz="8" radius="6">
+		<monster name="Spider" x="2" y="-3" z="8" spawntime="90" />
+		<monster name="Spider" x="-4" y="-2" z="8" spawntime="90" />
+		<monster name="Spider" x="-1" y="3" z="8" spawntime="90" />
+		<monster name="Spider" x="4" y="4" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32713" centery="31949" centerz="8" radius="1">
+		<monster name="Scorpion" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32714" centery="31959" centerz="8" radius="1">
+		<monster name="Snake" x="0" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32711" centery="31964" centerz="8" radius="1">
+		<monster name="Snake" x="-1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32689" centery="31933" centerz="9" radius="3">
+		<monster name="Poison Spider" x="3" y="-3" z="9" spawntime="90" />
+		<monster name="Poison Spider" x="-3" y="0" z="9" spawntime="90" />
+		<monster name="Poison Spider" x="1" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32689" centery="31946" centerz="9" radius="3">
+		<monster name="Poison Spider" x="-1" y="-2" z="9" spawntime="90" />
+		<monster name="Poison Spider" x="-1" y="0" z="9" spawntime="90" />
+		<monster name="Poison Spider" x="2" y="0" z="9" spawntime="90" />
+		<monster name="Poison Spider" x="1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32713" centery="31957" centerz="9" radius="2">
+		<monster name="Snake" x="2" y="-1" z="9" spawntime="90" />
+		<monster name="Snake" x="0" y="1" z="9" spawntime="90" />
+		<monster name="Snake" x="-1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32715" centery="31967" centerz="9" radius="2">
+		<monster name="Snake" x="2" y="-1" z="9" spawntime="90" />
+	</monster>
+</monsters>

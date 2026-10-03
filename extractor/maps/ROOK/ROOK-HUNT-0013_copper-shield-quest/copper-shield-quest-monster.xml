@@ -1,42 +1,14 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0"?>
 <monsters>
 	<monster centerx="1228" centery="1126" centerz="7" radius="3">
 		<monster name="Spider" x="1" y="-3" z="7" spawntime="60" />
 		<monster name="Spider" x="-1" y="0" z="7" spawntime="60" />
 	</monster>
-	<monster centerx="1196" centery="1129" centerz="7" radius="3">
-		<monster name="Wolf" x="-1" y="1" z="7" spawntime="90" />
-	</monster>
-	<monster centerx="1188" centery="1130" centerz="7" radius="3">
-		<monster name="Wolf" x="-1" y="-3" z="7" spawntime="60" />
-		<monster name="Wolf" x="1" y="3" z="7" spawntime="90" />
-	</monster>
-	<monster centerx="1181" centery="1132" centerz="7" radius="3">
-		<monster name="Wolf" x="-3" y="-3" z="7" spawntime="60" />
-		<monster name="Wolf" x="-1" y="-1" z="7" spawntime="60" />
-	</monster>
 	<monster centerx="1189" centery="1136" centerz="7" radius="3">
+		<monster name="Wolf" x="-2" y="-3" z="7" spawntime="60" />
+		<monster name="Wolf" x="0" y="-3" z="7" spawntime="90" />
+		<monster name="Wolf" x="1" y="-1" z="7" spawntime="60" />
 		<monster name="Wolf" x="3" y="2" z="7" spawntime="90" />
-	</monster>
-	<monster centerx="1201" centery="1140" centerz="7" radius="3">
-		<monster name="Wolf" x="-1" y="3" z="7" spawntime="90" />
-	</monster>
-	<monster centerx="1208" centery="1140" centerz="7" radius="3">
-		<monster name="Wolf" x="-2" y="-1" z="7" spawntime="90" />
-		<monster name="Wolf" x="0" y="-1" z="7" spawntime="60" />
-	</monster>
-	<monster centerx="1182" centery="1141" centerz="7" radius="3">
-		<monster name="Wolf" x="-1" y="3" z="7" spawntime="90" />
-	</monster>
-	<monster centerx="1188" centery="1151" centerz="7" radius="3">
-		<monster name="Wolf" x="2" y="-3" z="7" spawntime="90" />
-		<monster name="Wolf" x="0" y="1" z="7" spawntime="60" />
-	</monster>
-	<monster centerx="1195" centery="1123" centerz="8" radius="3">
-		<monster name="Bear" x="1" y="-1" z="8" spawntime="90" />
-	</monster>
-	<monster centerx="1203" centery="1129" centerz="8" radius="3">
-		<monster name="Bear" x="3" y="-3" z="8" spawntime="90" />
 	</monster>
 	<monster centerx="1217" centery="1129" centerz="8" radius="3">
 		<monster name="Bear" x="2" y="-3" z="8" spawntime="90" />
@@ -60,8 +32,11 @@
 	<monster centerx="1232" centery="1134" centerz="9" radius="1">
 		<monster name="Dragon Hatchling" x="0" y="0" z="9" spawntime="60" />
 	</monster>
-	<monster centerx="1216" centery="1140" centerz="9" radius="1">
+	<monster centerx="1222" centery="1139" centerz="9" radius="1">
 		<monster name="Dragon Hatchling" x="0" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="1208" centery="1140" centerz="9" radius="1">
+		<monster name="Dragon Hatchling" x="-1" y="-1" z="9" spawntime="60" />
 	</monster>
 	<monster centerx="1219" centery="1149" centerz="9" radius="1">
 		<monster name="Dragon Hatchling" x="0" y="0" z="9" spawntime="60" />

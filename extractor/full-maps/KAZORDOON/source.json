@@ -1,0 +1,73 @@
+{
+  "city": "KAZORDOON",
+  "area": {
+    "id": 14,
+    "name": "Kazordoon"
+  },
+  "subareas": [
+    {
+      "id": 272,
+      "name": "Kazordoon City"
+    },
+    {
+      "id": 448,
+      "name": "Kazordoon"
+    },
+    {
+      "id": 45,
+      "name": "Kazordoon Troll Den"
+    },
+    {
+      "id": 46,
+      "name": "Orc Lands"
+    },
+    {
+      "id": 47,
+      "name": "Femor Hills"
+    },
+    {
+      "id": 49,
+      "name": "Horned Fox Lair"
+    },
+    {
+      "id": 50,
+      "name": "Kazordoon Surroundings"
+    },
+    {
+      "id": 106,
+      "name": "Ulderek's Rock"
+    },
+    {
+      "id": 192,
+      "name": "Rorc Plains"
+    }
+  ],
+  "world": {
+    "file": "otservbr.otbm",
+    "bytes": 184797168
+  },
+  "shape": "square",
+  "bounds": {
+    "minX": 32368,
+    "minY": 31638,
+    "maxX": 33006,
+    "maxY": 32276
+  },
+  "columns": 110263,
+  "tiles": 2157608,
+  "tileAreas": 145028,
+  "towns": [
+    {
+      "id": 7,
+      "name": "Kazordoon",
+      "x": 32649,
+      "y": 31925,
+      "z": 11
+    }
+  ],
+  "monsterGroups": 1897,
+  "monsterEntries": 3152,
+  "npcGroups": 64,
+  "npcEntries": 65,
+  "houses": 50
+}

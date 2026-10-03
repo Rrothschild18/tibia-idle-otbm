@@ -536,7 +536,7 @@ def _render_sheet(packer: SheetPacker, sheet_key: str, frame_sources: Dict[int, 
 # MONSTERS
 # ======================================================
 
-_DIRECTIONS = ["south", "east", "north", "west"]
+_DIRECTIONS = ["north", "east", "south", "west"]
 
 
 def _load_monster_lookup() -> Dict[str, int]:
@@ -702,11 +702,26 @@ def _player_outfit_anims(outfit_id: int, data: Dict) -> Dict:
     }
 
 
+def _sprites_by_direction(sprite_ids: List[str], sprite_info: Dict) -> Dict[str, List[str]]:
+    """Os sprites de um frame group, repartidos por direção.
+
+    A ordem do cliente é direção-mais-rápida: passo 0 nas quatro direções,
+    depois passo 1, e assim por diante. Fatiar em blocos contíguos dá quatro
+    animações que misturam as direções — medido nos PNGs do Wolf, blocos
+    contíguos rendem 38 de diferença média entre quadros vizinhos contra 6,8
+    do passo intercalado.
+    """
+    n_dirs = max(1, min(sprite_info.get("patternWidth", 1), len(_DIRECTIONS)))
+    return {_DIRECTIONS[d]: sprite_ids[d::n_dirs] for d in range(n_dirs)}
+
+
 def _build_outfit_anims(outfit_id: int, data: Dict) -> Dict:
     """Build idle/moving animation data per direction from outfit JSON.
 
     Layout (see OUTFIT_SPRITES_DOCUMENTATION.md):
-      - patternWidth directions in order: south, east, north, west
+      - patternWidth directions in order: north, east, south, west (a ordem
+        do protocolo do Tibia, NORTH=0 — conferida no sprite da Spider: o
+        índice 0 mostra o abdômen perto da câmera e a cabeça longe)
       - idle:   usually 1 static sprite per direction, BUT some creature
         outfits (Wasp, Ghost, Fire Elemental — see outfit_has_addons_or_mounts
         in extract_sprites.py) loop an animation while idle too (wings,
@@ -727,24 +742,39 @@ def _build_outfit_anims(outfit_id: int, data: Dict) -> Dict:
     frame_groups = data.get("frameGroups")
 
     if not frame_groups:
-        # Single frame group (no idle/moving split)
         sprite_ids: List[str] = data.get("spriteId", [])
-        result["idle"] = {"south": sprite_ids[0] if sprite_ids else str(outfit_id)}
-        result["moving"] = {"south": {"frames": sprite_ids, "frameRate": 6, "loopType": "infinite"}}
+
+        if not sprite_ids:
+            result["idle"] = {"south": str(outfit_id)}
+            result["moving"] = {
+                "south": {"frames": [str(outfit_id)], "frameRate": 6, "loopType": "infinite"}
+            }
+            return result
+
+        sprite_info = data.get("spriteInfo", {})
+        dir_sprites = _sprites_by_direction(sprite_ids, sprite_info)
+        frame_rate, loop_type = _animation_timing(sprite_info)
+
+        result["moving"] = {
+            d: {"frames": frames, "frameRate": frame_rate, "loopType": loop_type}
+            for d, frames in dir_sprites.items()
+        }
+        result["idle"] = {
+            d: (
+                {"frames": list(frames), "frameRate": frame_rate, "loopType": loop_type}
+                if len(frames) > 1
+                else frames[0]
+            )
+            for d, frames in dir_sprites.items()
+        }
         return result
 
     for fg in frame_groups:
         fg_type = fg.get("frameGroup")  # "idle" or "moving"
         sprite_ids = fg.get("spriteId", [])
         sprite_info = fg.get("spriteInfo", {})
-        n_dirs = min(sprite_info.get("patternWidth", 1), len(_DIRECTIONS))
-        total = len(sprite_ids)
-        frames_per_dir = total // n_dirs if n_dirs else total
-
-        dir_sprites = {
-            _DIRECTIONS[d]: sprite_ids[d * frames_per_dir:(d + 1) * frames_per_dir]
-            for d in range(n_dirs)
-        }
+        dir_sprites = _sprites_by_direction(sprite_ids, sprite_info)
+        frames_per_dir = len(next(iter(dir_sprites.values()), []))
 
         if fg_type == "idle":
             idle_animates = frames_per_dir > 1

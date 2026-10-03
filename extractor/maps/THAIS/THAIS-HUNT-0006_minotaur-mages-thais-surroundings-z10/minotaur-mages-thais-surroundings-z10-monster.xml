@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32275" centery="32388" centerz="10" radius="2">
+		<monster name="Minotaur Archer" x="-1" y="0" z="10" spawntime="90" />
+		<monster name="Minotaur Archer" x="2" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32281" centery="32388" centerz="10" radius="2">
+		<monster name="Minotaur Guard" x="2" y="-1" z="10" spawntime="90" />
+		<monster name="Minotaur Guard" x="-1" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32277" centery="32398" centerz="10" radius="2">
+		<monster name="Minotaur Archer" x="-2" y="-1" z="10" spawntime="90" />
+		<monster name="Minotaur" x="2" y="1" z="10" spawntime="90" />
+		<monster name="Minotaur" x="-2" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32226" centery="32400" centerz="10" radius="2">
+		<monster name="Minotaur Mage" x="1" y="-2" z="10" spawntime="90" />
+		<monster name="Minotaur Mage" x="-1" y="2" z="10" spawntime="90" />
+		<monster name="Minotaur Mage" x="1" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32276" centery="32405" centerz="10" radius="2">
+		<monster name="Minotaur" x="-2" y="-1" z="10" spawntime="90" />
+		<monster name="Minotaur" x="2" y="-1" z="10" spawntime="90" />
+	</monster>
+</monsters>

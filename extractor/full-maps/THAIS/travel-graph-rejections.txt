@@ -1,0 +1,27 @@
+# Nós sem entrada no grafo de viagem — THAIS
+#
+# Gerado por build_travel_fragment.py. Nada aqui entrou no fragmento: são os nós que
+# ninguém consegue alcançar viajando, e o que fazer com cada um.
+
+## poi-without-edge (16)
+POI com coordenada e sem aresta — a placa existe no OTBM, mas o tile dela não
+alcança nenhum outro POI da cidade (ilhado por parede/água, ou a placa está num
+tile intransponível). Abra a coordenada no editor de mapa e mova a placa pra um
+tile caminhável ligado ao resto da cidade.
+
+  THAIS-NPC-a-confused-frog  (NPC)  x=32289 y=32294 z=9
+  THAIS-NPC-a-prisoner  (NPC)  x=32394 y=32138 z=13
+  THAIS-NPC-asralius  (NPC)  x=32096 y=32219 z=5
+  THAIS-NPC-captain-tiberius  (NPC)  x=32056 y=32368 z=6
+  THAIS-NPC-chester-kahs  (NPC)  x=32349 y=32183 z=6
+  THAIS-NPC-eclesius  (NPC)  x=32291 y=32292 z=7
+  THAIS-NPC-farhilorn-of-the-winter-court  (NPC)  x=32238 y=32048 z=13
+  THAIS-NPC-hanna  (NPC)  x=32408 y=32220 z=7
+  THAIS-NPC-henricus  (NPC)  x=32316 y=32267 z=8
+  THAIS-NPC-jack-springer  (NPC)  x=32326 y=32261 z=9
+  THAIS-NPC-lungelen  (NPC)  x=32303 y=32268 z=6
+  THAIS-NPC-robin  (NPC)  x=32289 y=32252 z=6
+  THAIS-NPC-todd  (NPC)  x=32363 y=32210 z=6
+  THAIS-NPC-trimegis  (NPC)  x=32307 y=32185 z=5
+  THAIS-NPC-weaponmaster  (NPC)  x=32085 y=31977 z=8
+  THAIS-NPC-xodet  (NPC)  x=32398 y=32222 z=7

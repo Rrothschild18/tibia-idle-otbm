@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32369" centery="32369" centerz="9" radius="1">
+		<monster name="Skeleton" x="-1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32407" centery="32371" centerz="9" radius="1">
+		<monster name="Cyclops" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32365" centery="32372" centerz="9" radius="1">
+		<monster name="Skeleton" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32380" centery="32372" centerz="9" radius="4">
+		<monster name="Skeleton" x="-2" y="-3" z="9" spawntime="90" />
+		<monster name="Skeleton" x="1" y="-2" z="9" spawntime="90" />
+		<monster name="Rotworm" x="3" y="-2" z="9" spawntime="90" />
+		<monster name="Skeleton" x="-3" y="0" z="9" spawntime="90" />
+		<monster name="Skeleton" x="1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32404" centery="32375" centerz="9" radius="1">
+		<monster name="Cyclops" x="-1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32397" centery="32376" centerz="9" radius="1">
+		<monster name="Cyclops Smith" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32371" centery="32381" centerz="9" radius="1">
+		<monster name="Bug" x="-1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32403" centery="32384" centerz="9" radius="1">
+		<monster name="Cyclops" x="1" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32360" centery="32386" centerz="9" radius="1">
+		<monster name="Poison Spider" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32367" centery="32388" centerz="9" radius="1">
+		<monster name="Bug" x="-1" y="0" z="9" spawntime="90" />
+		<monster name="Snake" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32405" centery="32389" centerz="9" radius="2">
+		<monster name="Cyclops" x="2" y="1" z="9" spawntime="90" />
+		<monster name="Cyclops" x="-2" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32360" centery="32391" centerz="9" radius="1">
+		<monster name="Bug" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32361" centery="32395" centerz="9" radius="1">
+		<monster name="Poison Spider" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32367" centery="32395" centerz="9" radius="1">
+		<monster name="Wasp" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32372" centery="32395" centerz="9" radius="1">
+		<monster name="Wasp" x="-1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32377" centery="32396" centerz="9" radius="2">
+		<monster name="Rat" x="0" y="-2" z="9" spawntime="90" />
+		<monster name="Cave Rat" x="2" y="-2" z="9" spawntime="90" />
+		<monster name="Cave Rat" x="-2" y="-1" z="9" spawntime="90" />
+		<monster name="Rat" x="1" y="-1" z="9" spawntime="90" />
+		<monster name="Rotworm" x="-2" y="0" z="9" spawntime="90" />
+		<monster name="Cave Rat" x="2" y="1" z="9" spawntime="90" />
+		<monster name="Rat" x="-2" y="2" z="9" spawntime="90" />
+		<monster name="Cave Rat" x="1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32361" centery="32399" centerz="9" radius="1">
+		<monster name="Bug" x="0" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32405" centery="32399" centerz="9" radius="2">
+		<monster name="Cyclops" x="-1" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32420" centery="32402" centerz="9" radius="1">
+		<monster name="Cyclops" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32393" centery="32410" centerz="9" radius="1">
+		<monster name="Cyclops" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32434" centery="32378" centerz="10" radius="3">
+		<monster name="Instable Sparkion" x="2" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32434" centery="32392" centerz="10" radius="3">
+		<monster name="Instable Breach Brood" x="2" y="-3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32441" centery="32392" centerz="10" radius="3">
+		<monster name="Instable Sparkion" x="-3" y="0" z="10" spawntime="90" />
+		<monster name="Instable Sparkion" x="-1" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32428" centery="32397" centerz="10" radius="1">
+		<monster name="Instable Breach Brood" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+</monsters>

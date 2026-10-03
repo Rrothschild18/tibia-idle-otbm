@@ -1462,3 +1462,166 @@ def test_matching_a_slug_to_a_folder_ignores_underscore_versus_hyphen():
     assert tg.hunt_id_for_slug("copper_shield_quest", folders) == "ROOK-HUNT-0013"
     assert tg.hunt_id_for_slug("katana_quest", folders) == "ROOK-HUNT-0014"
     assert tg.hunt_id_for_slug("sem_pasta", folders) is None
+
+
+# ======================================================
+# Teleport como aresta do grafo de viagem
+# ======================================================
+
+
+def _teleport_item(dest):
+    return {"id": 1959, "destination": {"x": dest[0], "y": dest[1], "z": dest[2]}}
+
+
+def test_extract_teleport_edges_reads_destination_in_world_coords():
+    dump = _dump([(5, 6, 7, [_teleport_item((40, 41, 9))])])
+
+    assert tg.extract_teleport_edges(dump) == [((5, 6, 7), (40, 41, 9))]
+
+
+def test_extract_teleport_edges_skips_the_decorative_zero_destination():
+    dump = _dump([(5, 6, 7, [_teleport_item((0, 0, 0))])])
+
+    assert tg.extract_teleport_edges(dump) == []
+
+
+def test_build_walkable_graph_connects_a_teleport_to_its_destination():
+    tiles = [_tile(0, 0, 7), _tile(9, 9, 9)]
+
+    graph = tg.build_walkable_graph(tiles, [((0, 0, 7), (9, 9, 9))])
+
+    assert (9, 9, 9) in graph[(0, 0, 7)]
+    assert (0, 0, 7) in graph[(9, 9, 9)]
+
+
+def test_build_walkable_graph_ignores_a_teleport_whose_end_is_off_the_cut():
+    tiles = [_tile(0, 0, 7)]
+
+    graph = tg.build_walkable_graph(tiles, [((0, 0, 7), (900, 900, 9))])
+
+    assert graph[(0, 0, 7)] == set()
+
+
+def test_build_walkable_graph_without_extra_edges_behaves_as_before():
+    tiles = [_tile(0, 0, 7), _tile(1, 0, 7)]
+
+    assert tg.build_walkable_graph(tiles) == tg.build_walkable_graph(tiles, [])
+
+
+# ======================================================
+# Ponte por componente (ilha) e fechamento transitivo
+# ======================================================
+
+
+def _island_poi(poi_id, poi_type, x, y, z=7):
+    return {"id": poi_id, "type": poi_type, "x": x, "y": y, "z": z}
+
+
+def _island_edge(a, b, tile_count=10):
+    low, high = sorted((a, b))
+    return {"from": low, "to": high, "tileCount": tile_count, "path": []}
+
+
+def test_connect_orphan_hunts_bridges_an_island_whose_hunts_link_to_each_other():
+    # A ilha tem aresta interna, então a regra antiga ("hunt sem aresta") a
+    # deixava passar e o templo não chegava em nenhuma das duas.
+    locations = [
+        _island_poi("C-TEMPLE-0001", "TEMPLE", 0, 0),
+        _island_poi("C-HUNT-0001", "HUNT", 5, 0),
+        _island_poi("C-HUNT-0002", "HUNT", 100, 0),
+        _island_poi("C-HUNT-0003", "HUNT", 105, 0),
+    ]
+    edges = [_island_edge("C-TEMPLE-0001", "C-HUNT-0001"), _island_edge("C-HUNT-0002", "C-HUNT-0003")]
+
+    bridged, invented = tg.connect_orphan_hunts(locations, list(edges))
+
+    assert len(invented) == 1
+    reachable = _reachable(bridged, "C-TEMPLE-0001")
+    assert {"C-HUNT-0001", "C-HUNT-0002", "C-HUNT-0003"} <= reachable
+
+
+def test_connect_orphan_hunts_bridges_an_island_that_only_holds_the_depot():
+    # Yalahar perdia o depot por isso: componente sem hunt nenhuma.
+    locations = [
+        _island_poi("C-TEMPLE-0001", "TEMPLE", 0, 0),
+        _island_poi("C-HUNT-0001", "HUNT", 5, 0),
+        _island_poi("C-DEPOT-0001", "DEPOT", 200, 0),
+    ]
+    edges = [_island_edge("C-TEMPLE-0001", "C-HUNT-0001")]
+
+    bridged, invented = tg.connect_orphan_hunts(locations, list(edges))
+
+    assert [link["hunt"] for link in invented] == ["C-DEPOT-0001"]
+    assert "C-DEPOT-0001" in _reachable(bridged, "C-TEMPLE-0001")
+
+
+def test_connect_orphan_hunts_leaves_an_npc_only_island_to_the_rejection_report():
+    locations = [
+        _island_poi("C-TEMPLE-0001", "TEMPLE", 0, 0),
+        _island_poi("C-HUNT-0001", "HUNT", 5, 0),
+        _island_poi("C-NPC-sozinho", "NPC", 300, 0),
+    ]
+    edges = [_island_edge("C-TEMPLE-0001", "C-HUNT-0001")]
+
+    bridged, invented = tg.connect_orphan_hunts(locations, list(edges))
+
+    assert invented == []
+    assert "C-NPC-sozinho" not in _reachable(bridged, "C-TEMPLE-0001")
+
+
+def test_connect_orphan_hunts_does_nothing_when_everything_already_connects():
+    locations = [_island_poi("C-TEMPLE-0001", "TEMPLE", 0, 0), _island_poi("C-HUNT-0001", "HUNT", 5, 0)]
+    edges = [_island_edge("C-TEMPLE-0001", "C-HUNT-0001")]
+
+    bridged, invented = tg.connect_orphan_hunts(locations, list(edges))
+
+    assert invented == []
+    assert len(bridged) == 1
+
+
+def test_close_bridged_pairs_puts_every_pair_one_hop_apart():
+    # Depois da ponte o grafo deixa de ser completo: a hunt do outro lado fica
+    # a 2+ saltos e sai da lista de viagem, que só mostra vizinho direto.
+    edges = [
+        _island_edge("C-TEMPLE-0001", "C-HUNT-0001", 10),
+        _island_edge("C-HUNT-0001", "C-HUNT-0002", 30),
+    ]
+
+    closed, added = tg.close_bridged_pairs(list(edges))
+
+    assert added == 1
+    assert frozenset(("C-TEMPLE-0001", "C-HUNT-0002")) in {
+        frozenset((e["from"], e["to"])) for e in closed
+    }
+    direct = next(
+        e for e in closed
+        if {e["from"], e["to"]} == {"C-TEMPLE-0001", "C-HUNT-0002"}
+    )
+    assert direct["tileCount"] == 40
+
+
+def test_close_bridged_pairs_is_a_noop_on_a_graph_that_is_already_complete():
+    edges = [_island_edge("A", "B"), _island_edge("B", "C"), _island_edge("A", "C")]
+
+    closed, added = tg.close_bridged_pairs(list(edges))
+
+    assert added == 0
+    assert len(closed) == 3
+
+
+def _reachable(edges, start):
+    import collections
+
+    adjacency = collections.defaultdict(set)
+    for edge in edges:
+        adjacency[edge["from"]].add(edge["to"])
+        adjacency[edge["to"]].add(edge["from"])
+    seen = {start}
+    queue = [start]
+    while queue:
+        node = queue.pop()
+        for neighbor in adjacency[node]:
+            if neighbor not in seen:
+                seen.add(neighbor)
+                queue.append(neighbor)
+    return seen

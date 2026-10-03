@@ -59,6 +59,8 @@ from travel_graph import (
     build_travel_fragment,
     build_travel_graph,
     build_walkable_graph,
+    close_bridged_pairs,
+    extract_teleport_edges,
     extract_tile_flags,
     format_rejection_report,
     hunt_id_for_slug,
@@ -271,7 +273,9 @@ def build_city_fragment(
 
     floorchange_by_id, ladder_ids = update_canary_data.read_floor_change_rules(canary_dir)
     tiles = extract_tile_flags(dump, object_defs_flags, floorchange_by_id, ladder_ids)
-    graph = build_walkable_graph(tiles)
+    teleport_edges = extract_teleport_edges(dump)
+    graph = build_walkable_graph(tiles, teleport_edges)
+    print(f"[OK] {len(teleport_edges)} teleport(s) ligando o grafo de viagem de {city}")
 
     # Templo e depot não vêm de placa: o primeiro está no nó `towns` do OTBM, o
     # segundo é o item `type="depot"`. Placa e curadoria continuam vencendo,
@@ -298,8 +302,14 @@ def build_city_fragment(
             [*sign_locations, *npc_locations], travel_graph_edges
         )
         for link in invented:
-            print(f"[~~] {link['hunt']} sem caminho no mapa — ligada a {link['anchor']} "
-                  f"por estimativa ({link['tileCount']} tiles)")
+            print(f"[~~] ilha de {link.get('hunts', 1)} hunt(s) ligada ao continente por "
+                  f"estimativa: {link['hunt']} <-> {link['anchor']} ({link['tileCount']} tiles)")
+
+        # Sem isto a ponte deixa a hunt do outro lado a 3-5 saltos da lista de
+        # viagem; o resto do grafo é completo por componente. Ver close_bridged_pairs.
+        if invented:
+            travel_graph_edges, closed = close_bridged_pairs(travel_graph_edges)
+            print(f"[OK] {closed} aresta(s) de fechamento transitivo pelas pontes")
 
     kept_locations, kept_edges, rejections = apply_graph_rejections(
         [*sign_locations, *npc_locations], travel_graph_edges, discover_hunt_maps(city)

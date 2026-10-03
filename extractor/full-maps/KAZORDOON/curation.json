@@ -1,0 +1,315 @@
+{
+  "city": "KAZORDOON",
+  "area": "Kazordoon",
+  "subareas": [
+    45,
+    46,
+    47,
+    49,
+    50,
+    106,
+    192,
+    272,
+    448
+  ],
+  "hunts": [
+    {
+      "name": "Dwarfs — Kazordoon Surroundings z8",
+      "floors": [
+        8
+      ],
+      "candidateIds": [
+        "KAZORDOON-FULL-z08-184"
+      ],
+      "species": null,
+      "creatures": 12,
+      "extent": {
+        "minX": 32496,
+        "minY": 31877,
+        "maxX": 32553,
+        "maxY": 31926,
+        "centerX": 32525,
+        "centerY": 31902
+      },
+      "subareaId": 50,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Dwarfs — Kazordoon Surroundings z9",
+      "floors": [
+        9
+      ],
+      "candidateIds": [
+        "KAZORDOON-FULL-z09-810"
+      ],
+      "species": null,
+      "creatures": 16,
+      "extent": {
+        "minX": 32458,
+        "minY": 31883,
+        "maxX": 32532,
+        "maxY": 31914,
+        "centerX": 32495,
+        "centerY": 31899
+      },
+      "subareaId": 50,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Dwarf Soldiers — Kazordoon Surroundings z10",
+      "floors": [
+        10
+      ],
+      "candidateIds": [
+        "KAZORDOON-FULL-z10-169"
+      ],
+      "species": null,
+      "creatures": 48,
+      "extent": {
+        "minX": 32441,
+        "minY": 31879,
+        "maxX": 32572,
+        "maxY": 31997,
+        "centerX": 32507,
+        "centerY": 31938
+      },
+      "subareaId": 50,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Dwarf Soldiers — Kazordoon Surroundings z11",
+      "floors": [
+        11
+      ],
+      "candidateIds": [
+        "KAZORDOON-FULL-z11-223"
+      ],
+      "species": null,
+      "creatures": 17,
+      "extent": {
+        "minX": 32458,
+        "minY": 31894,
+        "maxX": 32495,
+        "maxY": 31930,
+        "centerX": 32477,
+        "centerY": 31912
+      },
+      "subareaId": 50,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Dwarf Guards — Kazordoon Surroundings z12",
+      "floors": [
+        12
+      ],
+      "candidateIds": [
+        "KAZORDOON-FULL-z12-233"
+      ],
+      "species": null,
+      "creatures": 4,
+      "extent": {
+        "minX": 32454,
+        "minY": 31880,
+        "maxX": 32461,
+        "maxY": 31912,
+        "centerX": 32458,
+        "centerY": 31896
+      },
+      "subareaId": 50,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Dwarf Guards — Kazordoon Surroundings (z13–14)",
+      "floors": [
+        13,
+        14
+      ],
+      "candidateIds": [
+        "KAZORDOON-FULL-z13-39",
+        "KAZORDOON-FULL-z14-322"
+      ],
+      "species": null,
+      "creatures": 29,
+      "extent": {
+        "minX": 32456,
+        "minY": 31877,
+        "maxX": 32527,
+        "maxY": 31893,
+        "centerX": 32492,
+        "centerY": 31885
+      },
+      "subareaId": 50,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Dwarf Guards — Kazordoon Surroundings z13",
+      "floors": [
+        13
+      ],
+      "candidateIds": [
+        "KAZORDOON-FULL-z13-217"
+      ],
+      "species": null,
+      "creatures": 17,
+      "extent": {
+        "minX": 32486,
+        "minY": 31918,
+        "maxX": 32530,
+        "maxY": 31941,
+        "centerX": 32508,
+        "centerY": 31930
+      },
+      "subareaId": 50,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Ghouls — Kazordoon Surroundings z11",
+      "floors": [
+        11
+      ],
+      "candidateIds": [
+        "KAZORDOON-FULL-z11-96"
+      ],
+      "species": null,
+      "creatures": 6,
+      "extent": {
+        "minX": 32390,
+        "minY": 32001,
+        "maxX": 32443,
+        "maxY": 32019,
+        "centerX": 32417,
+        "centerY": 32010
+      },
+      "subareaId": 50,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Dwarf Soldiers — Kazordoon Surroundings z13",
+      "floors": [
+        13
+      ],
+      "candidateIds": [
+        "KAZORDOON-FULL-z13-189"
+      ],
+      "species": null,
+      "creatures": 58,
+      "extent": {
+        "minX": 32553,
+        "minY": 31873,
+        "maxX": 32667,
+        "maxY": 32011,
+        "centerX": 32610,
+        "centerY": 31942
+      },
+      "subareaId": 50,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Dragons — Kazordoon Surroundings z5",
+      "floors": [
+        5
+      ],
+      "candidateIds": [
+        "KAZORDOON-FULL-z05-295"
+      ],
+      "species": null,
+      "creatures": 4,
+      "extent": {
+        "minX": 32654,
+        "minY": 31880,
+        "maxX": 32662,
+        "maxY": 31917,
+        "centerX": 32658,
+        "centerY": 31899
+      },
+      "subareaId": 50,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Dwarf Soldiers — Kazordoon Surroundings z11",
+      "floors": [
+        11
+      ],
+      "candidateIds": [
+        "KAZORDOON-FULL-z11-221"
+      ],
+      "species": null,
+      "creatures": 29,
+      "extent": {
+        "minX": 32491,
+        "minY": 31952,
+        "maxX": 32552,
+        "maxY": 31994,
+        "centerX": 32522,
+        "centerY": 31973
+      },
+      "subareaId": 50,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Dragons — Femor Hills z12",
+      "floors": [
+        12
+      ],
+      "candidateIds": [
+        "KAZORDOON-FULL-z12-21"
+      ],
+      "species": null,
+      "creatures": 11,
+      "extent": {
+        "minX": 32477,
+        "minY": 31795,
+        "maxX": 32586,
+        "maxY": 31853,
+        "centerX": 32532,
+        "centerY": 31824
+      },
+      "subareaId": 47,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Dragons — Femor Hills z11",
+      "floors": [
+        11
+      ],
+      "candidateIds": [
+        "KAZORDOON-FULL-z11-92"
+      ],
+      "species": null,
+      "creatures": 12,
+      "extent": {
+        "minX": 32568,
+        "minY": 31802,
+        "maxX": 32621,
+        "maxY": 31839,
+        "centerX": 32595,
+        "centerY": 31821
+      },
+      "subareaId": 47,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Corym Charlatans — Femor Hills (z10–11)",
+      "floors": [
+        10,
+        11
+      ],
+      "candidateIds": [
+        "KAZORDOON-FULL-z10-373",
+        "KAZORDOON-FULL-z11-203"
+      ],
+      "species": null,
+      "creatures": 20,
+      "extent": {
+        "minX": 32461,
+        "minY": 31813,
+        "maxX": 32548,
+        "maxY": 31861,
+        "centerX": 32505,
+        "centerY": 31837
+      },
+      "subareaId": 47,
+      "walkTilesFromTemple": null
+    }
+  ]
+}

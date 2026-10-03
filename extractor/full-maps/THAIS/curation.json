@@ -1,0 +1,262 @@
+{
+  "city": "THAIS",
+  "area": "Thais",
+  "subareas": [
+    28,
+    29,
+    33,
+    34,
+    35,
+    120,
+    291,
+    292,
+    293,
+    295,
+    307,
+    317,
+    454,
+    478,
+    514,
+    526,
+    528
+  ],
+  "hunts": [
+    {
+      "name": "Bears — Thais Surroundings (z7–9)",
+      "floors": [
+        7,
+        8,
+        9
+      ],
+      "candidateIds": [
+        "THAIS-FULL-z07-61-TRIM-6017-A",
+        "THAIS-FULL-z08-579",
+        "THAIS-FULL-z09-1174",
+        "THAIS-FULL-z09-1409",
+        "THAIS-FULL-z09-3465"
+      ],
+      "species": null,
+      "creatures": 64,
+      "extent": {
+        "minX": 32400,
+        "minY": 32042,
+        "maxX": 32501,
+        "maxY": 32120,
+        "centerX": 32451,
+        "centerY": 32081
+      },
+      "subareaId": 29,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Crypt Shamblers — Thais Surroundings z12",
+      "floors": [
+        12
+      ],
+      "candidateIds": [
+        "THAIS-FULL-z12-1945"
+      ],
+      "species": null,
+      "creatures": 5,
+      "extent": {
+        "minX": 32361,
+        "minY": 32022,
+        "maxX": 32380,
+        "maxY": 32032,
+        "centerX": 32371,
+        "centerY": 32027
+      },
+      "subareaId": 29,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Dragons — THAIS z13",
+      "floors": [
+        13
+      ],
+      "candidateIds": [
+        "THAIS-FULL-z13-3238"
+      ],
+      "species": null,
+      "creatures": 1,
+      "extent": {
+        "minX": 32379,
+        "minY": 32024,
+        "maxX": 32379,
+        "maxY": 32024,
+        "centerX": 32379,
+        "centerY": 32024
+      },
+      "subareaId": null,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Cyclopss — Thais Surroundings z9",
+      "floors": [
+        9
+      ],
+      "candidateIds": [
+        "THAIS-FULL-z09-2083"
+      ],
+      "species": null,
+      "creatures": 9,
+      "extent": {
+        "minX": 32393,
+        "minY": 32372,
+        "maxX": 32421,
+        "maxY": 32410,
+        "centerX": 32407,
+        "centerY": 32391
+      },
+      "subareaId": 29,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Cyclopss — Thais Surroundings z8",
+      "floors": [
+        8
+      ],
+      "candidateIds": [
+        "THAIS-FULL-z08-3951"
+      ],
+      "species": null,
+      "creatures": 12,
+      "extent": {
+        "minX": 32394,
+        "minY": 32369,
+        "maxX": 32434,
+        "maxY": 32407,
+        "centerX": 32414,
+        "centerY": 32388
+      },
+      "subareaId": 29,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Minotaur Mages — Thais Surroundings z10",
+      "floors": [
+        10
+      ],
+      "candidateIds": [
+        "THAIS-FULL-z10-6068"
+      ],
+      "species": null,
+      "creatures": 7,
+      "extent": {
+        "minX": 32225,
+        "minY": 32387,
+        "maxX": 32283,
+        "maxY": 32402,
+        "centerX": 32254,
+        "centerY": 32395
+      },
+      "subareaId": 29,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Minotaurs — Thais Surroundings z10",
+      "floors": [
+        10
+      ],
+      "candidateIds": [
+        "THAIS-FULL-z10-949"
+      ],
+      "species": null,
+      "creatures": 5,
+      "extent": {
+        "minX": 32274,
+        "minY": 32397,
+        "maxX": 32279,
+        "maxY": 32404,
+        "centerX": 32277,
+        "centerY": 32401
+      },
+      "subareaId": 29,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Rotworms — Fibula z9",
+      "floors": [
+        9
+      ],
+      "candidateIds": [
+        "THAIS-FULL-z09-591"
+      ],
+      "species": null,
+      "creatures": 45,
+      "extent": {
+        "minX": 32123,
+        "minY": 32359,
+        "maxX": 32221,
+        "maxY": 32436,
+        "centerX": 32172,
+        "centerY": 32398
+      },
+      "subareaId": 35,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Skeletons — Fibula z10",
+      "floors": [
+        10
+      ],
+      "candidateIds": [
+        "THAIS-FULL-z10-809"
+      ],
+      "species": null,
+      "creatures": 8,
+      "extent": {
+        "minX": 32172,
+        "minY": 32450,
+        "maxX": 32210,
+        "maxY": 32463,
+        "centerX": 32191,
+        "centerY": 32457
+      },
+      "subareaId": 35,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Minotaurs — Thais Surroundings z15",
+      "floors": [
+        15
+      ],
+      "candidateIds": [
+        "THAIS-FULL-z15-142"
+      ],
+      "species": null,
+      "creatures": 56,
+      "extent": {
+        "minX": 32378,
+        "minY": 32083,
+        "maxX": 32468,
+        "maxY": 32190,
+        "centerX": 32423,
+        "centerY": 32137
+      },
+      "subareaId": 29,
+      "walkTilesFromTemple": null
+    },
+    {
+      "name": "Dragons — Thais Surroundings z10",
+      "floors": [
+        10
+      ],
+      "candidateIds": [
+        "THAIS-FULL-z10-1104"
+      ],
+      "species": null,
+      "creatures": 11,
+      "extent": {
+        "minX": 32336,
+        "minY": 32076,
+        "maxX": 32365,
+        "maxY": 32100,
+        "centerX": 32351,
+        "centerY": 32088
+      },
+      "subareaId": 29,
+      "walkTilesFromTemple": null
+    }
+  ]
+}

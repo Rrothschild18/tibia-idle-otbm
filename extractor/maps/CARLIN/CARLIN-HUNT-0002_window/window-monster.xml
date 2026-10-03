@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32240" centery="31833" centerz="8" radius="1">
+		<monster name="Ghoul" x="0" y="0" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="32241" centery="31838" centerz="8" radius="1">
+		<monster name="Bat" x="0" y="0" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="32243" centery="31838" centerz="8" radius="1">
+		<monster name="Bat" x="0" y="0" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="32200" centery="31839" centerz="8" radius="3">
+		<monster name="Skeleton" x="2" y="-2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32243" centery="31848" centerz="8" radius="1">
+		<monster name="Bat" x="0" y="0" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="32190" centery="31850" centerz="8" radius="3">
+		<monster name="Skeleton" x="0" y="-2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32219" centery="31860" centerz="8" radius="1">
+		<monster name="Skeleton Warrior" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32213" centery="31861" centerz="8" radius="1">
+		<monster name="Bat" x="0" y="1" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="32225" centery="31862" centerz="8" radius="1">
+		<monster name="Poison Spider" x="0" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32216" centery="31863" centerz="8" radius="1">
+		<monster name="Poison Spider" x="-1" y="0" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="32214" centery="31865" centerz="8" radius="1">
+		<monster name="Bat" x="1" y="0" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="32218" centery="31865" centerz="8" radius="1">
+		<monster name="Poison Spider" x="0" y="1" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="32223" centery="31865" centerz="8" radius="1">
+		<monster name="Skeleton Warrior" x="1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32226" centery="31865" centerz="8" radius="1">
+		<monster name="Poison Spider" x="-1" y="0" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="32216" centery="31868" centerz="8" radius="1">
+		<monster name="Bat" x="1" y="-1" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="32219" centery="31868" centerz="8" radius="1">
+		<monster name="Skeleton Warrior" x="1" y="0" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="32222" centery="31868" centerz="8" radius="1">
+		<monster name="Skeleton Warrior" x="-1" y="-1" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="32218" centery="31870" centerz="8" radius="1">
+		<monster name="Poison Spider" x="0" y="1" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="32185" centery="31839" centerz="9" radius="3">
+		<monster name="Ghoul" x="-2" y="-1" z="9" spawntime="90" />
+		<monster name="Ghoul" x="2" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32198" centery="31846" centerz="9" radius="3">
+		<monster name="Ghoul" x="-2" y="-1" z="9" spawntime="90" />
+		<monster name="Ghoul" x="2" y="-1" z="9" spawntime="90" />
+		<monster name="Ghoul" x="2" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32198" centery="31856" centerz="9" radius="3">
+		<monster name="Ghoul" x="-3" y="-2" z="9" spawntime="90" />
+		<monster name="Ghoul" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32255" centery="31862" centerz="9" radius="1">
+		<monster name="Ghoul" x="0" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="32252" centery="31863" centerz="9" radius="1">
+		<monster name="Stalker" x="0" y="1" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="32250" centery="31866" centerz="9" radius="1">
+		<monster name="Demon Skeleton" x="1" y="-1" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="32254" centery="31866" centerz="9" radius="1">
+		<monster name="Demon Skeleton" x="-1" y="-1" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="32251" centery="31868" centerz="9" radius="1">
+		<monster name="Ghoul" x="0" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="32235" centery="31842" centerz="10" radius="3">
+		<monster name="Cave Rat" x="0" y="-1" z="10" spawntime="90" />
+		<monster name="Ghoul" x="0" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32235" centery="31851" centerz="10" radius="3">
+		<monster name="Scorpion" x="-2" y="-2" z="10" spawntime="90" />
+		<monster name="Ghoul" x="0" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32207" centery="31855" centerz="10" radius="5">
+		<monster name="Slime" x="-3" y="-4" z="10" spawntime="90" />
+		<monster name="Slime" x="4" y="-3" z="10" spawntime="90" />
+		<monster name="Slime" x="-4" y="1" z="10" spawntime="90" />
+		<monster name="Slime" x="2" y="4" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32234" centery="31870" centerz="10" radius="3">
+		<monster name="Skeleton" x="0" y="-2" z="10" spawntime="90" />
+	</monster>
+</monsters>

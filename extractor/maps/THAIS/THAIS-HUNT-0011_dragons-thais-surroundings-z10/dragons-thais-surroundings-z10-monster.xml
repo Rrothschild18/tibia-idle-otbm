@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32355" centery="32077" centerz="10" radius="2">
+		<monster name="Dragon" x="-1" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32364" centery="32080" centerz="10" radius="2">
+		<monster name="Dragon Lord Hatchling" x="0" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32337" centery="32081" centerz="10" radius="2">
+		<monster name="Dragon Hatchling" x="1" y="-1" z="10" spawntime="90" />
+		<monster name="Dragon Lord Hatchling" x="-1" y="1" z="10" spawntime="90" />
+		<monster name="Dragon Hatchling" x="1" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32347" centery="32081" centerz="10" radius="2">
+		<monster name="Dragon" x="2" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32344" centery="32088" centerz="10" radius="2">
+		<monster name="Dragon" x="0" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32357" centery="32088" centerz="10" radius="2">
+		<monster name="Dragon" x="0" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32366" centery="32089" centerz="10" radius="2">
+		<monster name="Dragon Lord" x="-1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32354" centery="32097" centerz="10" radius="2">
+		<monster name="Dragon" x="0" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32361" centery="32099" centerz="10" radius="2">
+		<monster name="Dragon Hatchling" x="0" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32349" centery="32110" centerz="10" radius="2">
+		<monster name="Rotworm" x="-2" y="0" z="10" spawntime="90" />
+		<monster name="Rotworm" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32376" centery="32111" centerz="10" radius="2">
+		<monster name="Rotworm" x="1" y="-2" z="10" spawntime="90" />
+		<monster name="Rotworm" x="-2" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32372" centery="32116" centerz="10" radius="2">
+		<monster name="Carrion Worm" x="0" y="1" z="10" spawntime="90" />
+	</monster>
+</monsters>

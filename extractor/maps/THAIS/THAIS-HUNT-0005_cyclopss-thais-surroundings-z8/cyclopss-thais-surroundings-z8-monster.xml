@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32399" centery="32371" centerz="8" radius="3">
+		<monster name="Cyclops" x="2" y="-2" z="8" spawntime="90" />
+		<monster name="Cyclops" x="-1" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32412" centery="32373" centerz="8" radius="3">
+		<monster name="Cyclops" x="3" y="-1" z="8" spawntime="90" />
+		<monster name="Cyclops" x="-3" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32421" centery="32385" centerz="8" radius="1">
+		<monster name="Cyclops" x="1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32413" centery="32386" centerz="8" radius="1">
+		<monster name="Cyclops" x="-1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32419" centery="32391" centerz="8" radius="1">
+		<monster name="Cyclops" x="0" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32409" centery="32392" centerz="8" radius="1">
+		<monster name="Cyclops" x="0" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32425" centery="32392" centerz="8" radius="1">
+		<monster name="Cyclops" x="1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32435" centery="32392" centerz="8" radius="1">
+		<monster name="Cyclops" x="-1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32396" centery="32405" centerz="8" radius="3">
+		<monster name="Cyclops" x="1" y="-3" z="8" spawntime="90" />
+		<monster name="Cyclops" x="-2" y="2" z="8" spawntime="90" />
+	</monster>
+</monsters>

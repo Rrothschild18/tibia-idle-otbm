@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32838" centery="31912" centerz="8" radius="3">
+		<monster name="Amazon" x="-1" y="-3" z="8" spawntime="90" />
+		<monster name="Amazon" x="-1" y="1" z="8" spawntime="90" />
+		<monster name="Valkyrie" x="2" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32867" centery="31912" centerz="8" radius="3">
+		<monster name="Witch" x="0" y="-2" z="8" spawntime="90" />
+		<monster name="Valkyrie" x="-3" y="0" z="8" spawntime="90" />
+		<monster name="Valkyrie" x="3" y="0" z="8" spawntime="90" />
+		<monster name="Amazon" x="1" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32879" centery="31913" centerz="8" radius="2">
+		<monster name="Valkyrie" x="2" y="-1" z="8" spawntime="90" />
+		<monster name="Valkyrie" x="-2" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32849" centery="31919" centerz="8" radius="2">
+		<monster name="Valkyrie" x="0" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32870" centery="31925" centerz="8" radius="6">
+		<monster name="Valkyrie" x="-4" y="-6" z="8" spawntime="90" />
+		<monster name="Valkyrie" x="-3" y="-4" z="8" spawntime="90" />
+		<monster name="Amazon" x="-3" y="-2" z="8" spawntime="90" />
+		<monster name="Amazon" x="4" y="-2" z="8" spawntime="90" />
+		<monster name="Valkyrie" x="-6" y="0" z="8" spawntime="90" />
+		<monster name="Amazon" x="2" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32859" centery="31926" centerz="8" radius="1">
+		<monster name="Valkyrie" x="0" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32816" centery="31959" centerz="8" radius="2">
+		<monster name="Slime" x="1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32824" centery="31960" centerz="8" radius="3">
+		<monster name="Bat" x="-3" y="-2" z="8" spawntime="90" />
+		<monster name="Bat" x="0" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32867" centery="31895" centerz="9" radius="8">
+		<monster name="Valkyrie" x="5" y="-3" z="9" spawntime="90" />
+		<monster name="Poacher" x="0" y="1" z="9" spawntime="90" />
+		<monster name="Valkyrie" x="4" y="5" z="9" spawntime="90" />
+		<monster name="Hunter" x="0" y="7" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32812" centery="31923" centerz="10" radius="3">
+		<monster name="Gloom Wolf" x="-1" y="3" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32874" centery="31948" centerz="11" radius="15">
+		<monster name="Black Knight" x="0" y="-2" z="11" spawntime="80" />
+		<monster name="Bonelord" x="-6" y="1" z="11" spawntime="90" />
+		<monster name="Scorpion" x="-4" y="1" z="11" spawntime="90" />
+		<monster name="Scorpion" x="4" y="1" z="11" spawntime="90" />
+		<monster name="Bonelord" x="6" y="1" z="11" spawntime="90" />
+	</monster>
+</monsters>
