@@ -869,9 +869,9 @@ def test_build_npc_location_omits_status_for_a_real_city():
 
 def test_build_npc_locations_flags_unmatched_npc_names_without_dropping_the_location():
     npcs = [{"name": "Obi", "x": 1, "y": 1, "z": 7}, {"name": "Nobody", "x": 2, "y": 2, "z": 7}]
-    shops_by_name = {"Obi": [{"itemName": "axe", "itemId": 3274, "sell": 7}]}
+    facts = {"Obi": {"shop": [{"itemName": "axe", "itemId": 3274, "sell": 7}], "services": []}}
 
-    locations, unmatched = tg.build_npc_locations(npcs, "ROOK", shops_by_name)
+    locations, unmatched = tg.build_npc_locations(npcs, "ROOK", facts)
 
     assert [loc["id"] for loc in locations] == ["ROOK-NPC-obi", "ROOK-NPC-nobody"]
     assert "shop" in locations[0]
@@ -883,9 +883,9 @@ def test_build_npc_locations_does_not_warn_for_a_matched_file_with_no_shop_table
     # "Trainer" matched a .lua file, but that file has no npcConfig.shop
     # table at all — expected (not every NPC sells things), not a warning.
     npcs = [{"name": "Trainer", "x": 1, "y": 1, "z": 7}]
-    shops_by_name = {"Trainer": None}
+    facts = {"Trainer": {"shop": None, "services": []}}
 
-    locations, unmatched = tg.build_npc_locations(npcs, "ROOK", shops_by_name)
+    locations, unmatched = tg.build_npc_locations(npcs, "ROOK", facts)
 
     assert "shop" not in locations[0]
     assert unmatched == []

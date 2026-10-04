@@ -1208,6 +1208,42 @@ def parse_npc_shop_lua(lua_text: str) -> Optional[List[Dict]]:
     return _parse_shop_entries(_extract_braced_block(lua_text, items_table.end()))
 
 
+#: As cinco funções do motor do Canary que prestam serviço cobrado, com a
+#: assinatura exata da chamada que cada uma recebe no `.lua` do NPC. Definidas em
+#: `data/npclib/npc_system/modules.lua` (promotePlayer, learnSpell, bless,
+#: travel) e `data/npclib/npc_system/bank_system.lua` (parseBank).
+#:
+#: O `(` de `:parseBank(` não é decoração: `parseBankMessages` é outra função,
+#: chamada pelos mesmos NPCs, e um `parseBank` solto casaria com as duas.
+NPC_SERVICE_SIGNATURES = (
+    ("travel", "StdModule.travel"),
+    ("bank", ":parseBank("),
+    ("bless", "StdModule.bless"),
+    ("promote", "StdModule.promotePlayer"),
+    ("spell", "StdModule.learnSpell"),
+)
+
+
+def parse_npc_services_lua(lua_text: str) -> List[str]:
+    """A Canary npc .lua file's text -> os serviços de motor que ele presta, na
+    ordem de `NPC_SERVICE_SIGNATURES`. Lista vazia quando não presta nenhum —
+    nunca None, pela mesma razão que o extrato guarda arquivo sem shop nem
+    outfit: "não presta serviço" e "não foi olhado" têm que ser distinguíveis.
+
+    **Assinatura, não nome nem diálogo**, e isso é o ponto da função.
+    `captain_tiberius.lua` diz "I transport my passengers back to the
+    continent." e não tem keyword nenhum nem `teleportTo`; `captain_kurt.lua`
+    são 58 linhas de config sem um único keyword. Os dois parecem barqueiro e
+    nenhum dos dois é — qualquer heurística por nome aceitaria os dois, e um
+    `StdModule.travel` não aceita nenhum.
+
+    Pelo mesmo motivo nada aqui procura `removeMoneyBank`, `addItem` ou
+    `teleportTo`: esses padrões não separam loja repetível de quest de uma vez
+    só (o Blind Orc vende dez itens; o Oswald cobra 1000g uma vez). Quem precisa
+    desse corte vai à mão na `npc-allowlist.json`."""
+    return [name for name, signature in NPC_SERVICE_SIGNATURES if signature in lua_text]
+
+
 def build_npc_location(
     npc: Dict,
     city_prefix: str,
@@ -1243,24 +1279,30 @@ def build_npc_location(
 def build_npc_locations(
     npcs: List[Dict],
     city_prefix: str,
-    shops_by_name: Dict[str, Optional[List[Dict]]],
-    outfits_by_name: Optional[Dict[str, Optional[Dict]]] = None,
+    facts_by_name: Dict[str, Dict],
 ) -> Tuple[List[Dict], List[str]]:
     """Every NPC -> its Location, plus the list of NPC names with no matching
     `.lua` file at all (still get a Location — position/name — just no
     `shop` field, and the run should warn about these). A name that IS a key
-    in `shops_by_name` matched a file — its value may still be None (a
-    trainer/quest NPC with no `npcConfig.shop` table), which is expected and
-    not warning-worthy, unlike a genuinely missing file."""
+    in `facts_by_name` matched a file — seu `shop` ainda pode ser None (um NPC
+    de treino/quest sem tabela `npcConfig.shop`), o que é esperado e não é
+    motivo de warning, diferente de arquivo genuinamente ausente.
+
+    `facts_by_name` é **um** dict de `{"shop", "outfit", "services"}` por nome, e
+    não três dicts paralelos: os três são campos do mesmo fato sobre o NPC e
+    vivem lado a lado no mesmo arquivo do Canary. `services` fica no fato e
+    **não** entra na location — ele serve ao filtro, dentro do extractor, e
+    `npcSourceSchema` no `tibia-idle` descreve o que uma location de NPC é."""
     locations: List[Dict] = []
     unmatched: List[str] = []
     for npc in npcs:
         name = npc["name"]
-        if name not in shops_by_name:
+        if name not in facts_by_name:
             unmatched.append(name)
-        shop = shops_by_name.get(name)
-        outfit = (outfits_by_name or {}).get(name)
-        locations.append(build_npc_location(npc, city_prefix, shop, outfit))
+        facts = facts_by_name.get(name) or {}
+        locations.append(
+            build_npc_location(npc, city_prefix, facts.get("shop"), facts.get("outfit"))
+        )
     return locations, unmatched
 
 

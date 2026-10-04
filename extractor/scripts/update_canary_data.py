@@ -22,6 +22,7 @@ Run: uv run python extractor/scripts/update_canary_data.py [--canary-dir PATH]
 """
 
 import argparse
+import collections
 import datetime
 import glob
 import json
@@ -34,6 +35,7 @@ from travel_graph import (
     parse_floorchange_items,
     parse_ladder_items,
     parse_npc_outfit_lua,
+    parse_npc_services_lua,
     parse_npc_shop_lua,
 )
 
@@ -104,12 +106,18 @@ def read_floor_change_rules(canary_dir=None):
 
 
 def extract_npc_facts(canary_npc_dir: str) -> dict:
-    """{nome do .lua: {"shop": ..., "outfit": ...}} para **todo** arquivo.
+    """{nome do .lua: {"shop": ..., "outfit": ..., "services": [...]}} para
+    **todo** arquivo.
 
-    Todo arquivo, inclusive os sem nenhuma das duas tabelas: quem consome
+    Todo arquivo, inclusive os sem nenhuma das três coisas: quem consome
     distingue "nenhum .lua casou com esse NPC" (avisa) de "casou, mas não tem
     shop" (silencioso). Omitir os vazios colapsaria os dois casos num só e
-    produziria warning falso.
+    produziria warning falso. `services` sai lista vazia pelo mesmo motivo, em
+    vez de ausente.
+
+    `services` é o que deixa o filtro de NPC existir sem lista de nome escrita à
+    mão: `shop` responde "vende?", e ele responde "faz alguma outra coisa?" —
+    viagem, banco, bênção, promoção ou magia. Ver `parse_npc_services_lua`.
     """
     facts = {}
     for path in sorted(glob.glob(os.path.join(canary_npc_dir, "*.lua"))):
@@ -118,6 +126,7 @@ def extract_npc_facts(canary_npc_dir: str) -> dict:
         facts[os.path.basename(path)] = {
             "shop": parse_npc_shop_lua(text),
             "outfit": parse_npc_outfit_lua(text),
+            "services": parse_npc_services_lua(text),
         }
     return facts
 
@@ -178,7 +187,12 @@ def main():
         handler.write("\n")
     with_shop = sum(1 for entry in facts.values() if entry["shop"] is not None)
     with_outfit = sum(1 for entry in facts.values() if entry["outfit"] is not None)
+    by_service = collections.Counter(
+        service for entry in facts.values() for service in entry["services"]
+    )
+    services = ", ".join(f"{count} {name}" for name, count in sorted(by_service.items()))
     print(f"[OK] {len(facts)} NPCs ({with_shop} com shop, {with_outfit} com outfit) -> {vendored_npc_facts()}")
+    print(f"[OK] serviços de motor: {services}")
 
     manifest = {
         "source": "opentibiabr/canary",

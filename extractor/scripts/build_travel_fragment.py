@@ -69,6 +69,7 @@ from travel_graph import (
     parse_marker_signs,
     parse_quest_slug_markers,
     parse_npc_outfit_lua,
+    parse_npc_services_lua,
     parse_npc_shop_lua,
     parse_npc_xml,
 )
@@ -89,14 +90,24 @@ def _load_json(path, what):
         return json.load(f)
 
 
+class StaleNpcFactsError(RuntimeError):
+    """O extrato vendorizado é de antes de `services` existir."""
+
+
 def _load_npc_lua_facts_source(canary_dir=None):
-    """{nome do .lua: {"shop": ..., "outfit": ...}} — do vendor ou de um
-    checkout do Canary.
+    """{nome do .lua: {"shop": ..., "outfit": ..., "services": [...]}} — do
+    vendor ou de um checkout do Canary.
 
     O vendor é o padrão: os 1035 `.lua` (9 MB) já foram lidos uma vez e o que
     este pipeline extrai deles está versionado em
     `vendor/canary/npc-lua-facts.json`. Passar `--canary-dir` relê do checkout,
-    que é como se confere se o vendor envelheceu."""
+    que é como se confere se o vendor envelheceu.
+
+    Um vendor de antes do campo `services` **levanta**, em vez de virar
+    `services: []` por omissão: o filtro de NPC lê esse campo para decidir quem
+    entra, e um extrato velho faria ele cortar todo barqueiro, banco, bênção e
+    promoção do mapa sem uma linha de erro. Falhar alto aqui é a diferença entre
+    "rode o update" e um catálogo silenciosamente errado."""
     if canary_dir:
         npc_dir = os.path.join(canary_dir, "data-otservbr-global", "npc")
         source = {}
@@ -106,6 +117,7 @@ def _load_npc_lua_facts_source(canary_dir=None):
             source[os.path.basename(path)] = {
                 "shop": parse_npc_shop_lua(text),
                 "outfit": parse_npc_outfit_lua(text),
+                "services": parse_npc_services_lua(text),
             }
         return source, npc_dir
 
@@ -116,17 +128,26 @@ def _load_npc_lua_facts_source(canary_dir=None):
         return {}, vendored
 
     with open(vendored, "r", encoding="utf-8") as f:
-        return json.load(f), vendored
+        source = json.load(f)
+
+    if source and not any("services" in entry for entry in source.values()):
+        raise StaleNpcFactsError(
+            f"{vendored} não tem o campo `services` — é de antes do filtro de NPC. "
+            f"Rode 'uv run python extractor/scripts/update_canary_data.py --canary-dir <clone>'"
+        )
+
+    return source, vendored
 
 
 def _build_npc_lua_facts(npc_names, canary_dir=None):
-    """{npc name: (parsed shop or None, parsed outfit or None)} — a name is a
-    key only if a .lua file matched it (a None inside the tuple then means
-    "matched, but no such table"); a name genuinely absent (no file at all) is
-    the CLI's cue to warn.
+    """{npc name: {"shop", "outfit", "services"}} — a name is a key only if a
+    .lua file matched it (a None dentro do fato então quer dizer "casou, mas não
+    tem essa tabela"); a name genuinely absent (no file at all) is the CLI's cue
+    to warn.
 
-    Shop **and** outfit come from the same entry: the two live side by side in
-    the same Canary file, and splitting them would be two lookups for no gain."""
+    Os três vêm da mesma entrada, e é esse o ponto: eles vivem lado a lado no
+    mesmo arquivo do Canary, e separá-los seriam três buscas pelo mesmo nome sem
+    ganho nenhum."""
     source, origin = _load_npc_lua_facts_source(canary_dir)
     lua_filenames = list(source.keys())
     facts_by_name = {}
@@ -135,7 +156,11 @@ def _build_npc_lua_facts(npc_names, canary_dir=None):
         if filename is None:
             continue
         entry = source[filename]
-        facts_by_name[name] = (entry["shop"], entry["outfit"])
+        facts_by_name[name] = {
+            "shop": entry["shop"],
+            "outfit": entry["outfit"],
+            "services": entry.get("services") or [],
+        }
     return facts_by_name, origin
 
 
@@ -263,11 +288,7 @@ def build_city_fragment(
     lua_facts, npc_facts_origin = _build_npc_lua_facts(
         {npc["name"] for npc in npcs}, canary_dir
     )
-    shops_by_name = {name: shop for name, (shop, _) in lua_facts.items()}
-    outfits_by_name = {name: outfit for name, (_, outfit) in lua_facts.items()}
-    npc_locations, unmatched_npcs = build_npc_locations(
-        npcs, city, shops_by_name, outfits_by_name
-    )
+    npc_locations, unmatched_npcs = build_npc_locations(npcs, city, lua_facts)
     for name in unmatched_npcs:
         print(f"[WARN] NPC '{name}' sem .lua correspondente em {npc_facts_origin} — Location sem shop")
 
