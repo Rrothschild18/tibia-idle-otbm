@@ -81,25 +81,56 @@ posição do `-npc.xml`, shop do `.lua`. HUNT, TEMPLE e DEPOT carregam `huntId` 
 
 ## O resultado
 
-Medido sobre as 369 entradas dos cinco `<CIDADE>-npc.xml` (o catálogo tinha 355
-porque 14 NPCs já eram rejeitados por não ter entrada no grafo):
+O filtro, medido sobre as 369 entradas dos cinco `<CIDADE>-npc.xml`: **185 entram,
+184 saem** (149 sem shop e sem serviço, 25 duplicata de Rookgaard, 10 serviço só
+de magia).
 
-| cidade | NPCs no xml | entram | cortados |
-| --- | --- | --- | --- |
-| ROOK | 25 | 25 | 0 |
-| THAIS | 124 | 53 | 71 |
-| CARLIN | 59 | 29 | 30 |
-| KAZORDOON | 65 | 39 | 26 |
-| VENORE | 96 | 39 | 57 |
-| **total** | **369** | **185** | **184** |
+O que chegou ao catálogo é um pouco menos, porque o BFS ainda rejeita nó sem
+entrada no grafo:
 
-Motivos do corte: 149 sem shop e sem serviço, 25 duplicata de Rookgaard, 10
-serviço só de magia.
+| | antes | depois |
+| --- | --- | --- |
+| `catalog-source.json` | 38,5 MB | **10,6 MB** (−72%) |
+| arestas de `travelGraph` | 16.307 | **5.351** (−67%) |
+| locations | 432 | **256** |
+| das quais NPC | 355 | **179** |
+| HUNT / TEMPLE / DEPOT | 65 / 7 / 5 | 65 / 7 / 5 (intactos) |
 
-Os números finais do catálogo (tamanho, locations, arestas) saem do re-export da
-issue 05 — eles dependem também do BFS, que rejeita nó sem entrada, e a baseline
-de 38,5 MB foi exportada antes do `npc-reach` subir para 10 e do conserto do
-parser de `itemsTable` (commit 66518ec), então parte do delta vem de lá.
+NPCs mantidos por cidade: ROOK 25, THAIS 53, CARLIN 27, KAZORDOON 36, VENORE 38.
+
+**Duas coisas na baseline que não são deste trabalho.** O `catalog-source.json`
+de 38,5 MB foi exportado antes do commit `66518ec` (o `--npc-reach` subindo de 3
+para 10 e o conserto do parser de `itemsTable`) e antes do `5d6c819` (as hunts
+curadas das quatro cidades). O re-export traz os dois junto, então:
+
+- `ROOK-NPC-asralius` **entra** — ele estava no `travel-graph-rejections.txt` de
+  ROOK como `poi-without-edge`, e com alcance 10 passou a ser alcançável.
+- Cinco hunts de CARLIN perderam `_todo` e ganharam `huntId`, porque o
+  `curated-hunts.json` do `5d6c819` passou a dar entrada de verdade a elas. É o
+  comportamento documentado do merge: enquanto `_todo` está presente, a entrada é
+  rascunho e se regenera inteira.
+
+**A estimativa inicial de 4,5 MB errou.** Ela filtrou as arestas da baseline em
+vez de regerá-las, e as arestas novas são mais caras: `npc-reach` 10 alonga o
+trecho de aproximação, e o fechamento transitivo pelas pontes acrescenta aresta.
+10,6 MB é a medição.
+
+## Consequência no `tibia-idle` (não resolvida aqui)
+
+`contentSourceSchema.parse` aceita o catálogo novo e `runContentGate` passa em
+modo produção — 13 dos 16 testes de `catalog-source-gate.spec.ts` passam. **Três
+falham, e todos os três por contagem cravada à mão:**
+
+- `os 331 NPCs saem como POI e como NPC` — espera 355 locations de NPC, recebe 179.
+- `os 24 NPCs de Thais que repetem ROOK não chegam` — espera 24 descartados pelo
+  gate, recebe 0. Este é o teste que o trabalho torna **obsoleto por desenho**: o
+  extractor não emite mais as duplicatas, então `findRookDuplicateNpcs` não tem
+  nada para descartar. A decisão aberta é se ele fica como guarda redundante (e o
+  teste passa a afirmar zero) ou sai.
+- `as 2646 linhas de loja da fonte viram 2460` — recebe 2501.
+
+Nenhum dos três é bug deste lado, e nenhum foi tocado: são asserções de
+caracterização no repo do `tibia-idle`, que está na `main`.
 
 ## Fora de escopo
 

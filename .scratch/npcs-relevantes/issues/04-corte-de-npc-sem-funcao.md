@@ -1,4 +1,4 @@
-Status: ready-for-agent
+Status: resolved
 
 # 04 — Corte de NPC sem função
 
@@ -80,12 +80,18 @@ Termo novo no `CONTEXT.md` e seção no `extractor/README.md`.
 
 **Blocked by:** 01.
 
-- [ ] Todos os 25 NPCs de ROOK continuam no fragmento de ROOK
-- [ ] NPC com shop de 1 item continua entrando
-- [ ] NPC cujo único serviço é `spell` é cortado
-- [ ] NPC em `npc-allowlist.json` entra mesmo sem shop e sem serviço
-- [ ] Id na allowlist que não existe em nenhuma cidade faz o run falhar, não
-      passar em silêncio
-- [ ] `npc-skipped.txt` existe por cidade, com nome e motivo de cada corte
-- [ ] As contagens por cidade saem como a `spec.md` diz
-- [ ] `travel-graph-rejections.txt` não ganhou nenhuma linha de corte intencional
+- [x] Todos os 25 NPCs de ROOK continuam no fragmento de ROOK
+- [x] NPC com shop de 1 item continua entrando
+- [x] NPC cujo único serviço é `spell` é cortado
+- [x] NPC em `npc-allowlist.json` entra mesmo sem shop e sem serviço
+- [~] Id na allowlist que não existe em nenhuma cidade faz o run falhar, não
+      passar em silêncio — **metade no run, metade na suíte.** Slug errado
+      (`THAIS-NPC-bozzo`) aborta o run da cidade dona. Prefixo de cidade errado
+      (`THASI-NPC-bozo`) não tem cidade dona, então nenhum run isolado o
+      reprova: derivar a lista de cidades de `full-maps/` trocaria a falha
+      silenciosa por um falso positivo (checkout sem a pasta de uma cidade
+      abortaria com a allowlist correta). Vive em
+      `test_every_allowlist_id_names_a_city_that_exists`
+- [x] `npc-skipped.txt` existe por cidade, com nome e motivo de cada corte
+- [x] As contagens por cidade saem como a `spec.md` diz
+- [x] `travel-graph-rejections.txt` não ganhou nenhuma linha de corte intencional

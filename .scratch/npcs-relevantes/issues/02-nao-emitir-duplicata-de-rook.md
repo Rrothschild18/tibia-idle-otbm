@@ -1,4 +1,4 @@
-Status: ready-for-agent
+Status: resolved
 
 # 02 — Extractor para de emitir duplicata de Rookgaard
 
@@ -38,9 +38,13 @@ emitir.
 
 **Blocked by:** nada.
 
-- [ ] Rodar o fragmento de THAIS deixa de emitir os 25 NPCs que são cópia
+- [x] Rodar o fragmento de THAIS deixa de emitir os 25 NPCs que são cópia
       posicional de um `ROOK-NPC-*`
-- [ ] As arestas que tocavam as duplicatas não existem mais no fragmento
-- [ ] Rodar só THAIS (sem ROOK no mesmo comando) corta as mesmas 25
-- [ ] Um homônimo em posição diferente **não** é cortado — teste com `Junkar`
-- [ ] O fragmento de ROOK sai idêntico ao de antes
+- [x] As arestas que tocavam as duplicatas não existem mais no fragmento
+- [x] Rodar só THAIS (sem ROOK no mesmo comando) corta as mesmas 25
+- [x] Um homônimo em posição diferente **não** é cortado — teste com `Junkar`
+- [ ] ~~O fragmento de ROOK sai idêntico ao de antes~~ — **não sai, e não é
+      por esta ticket.** `ROOK-NPC-asralius` estava no
+      `travel-graph-rejections.txt` como `poi-without-edge` e passou a ser
+      alcançável com o `--npc-reach` 10 do commit `66518ec`, exportado pela
+      primeira vez aqui. ROOK vai de 24 para 25 NPCs; nenhum sai

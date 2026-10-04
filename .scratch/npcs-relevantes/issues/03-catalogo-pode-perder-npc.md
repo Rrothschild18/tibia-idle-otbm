@@ -1,4 +1,4 @@
-Status: ready-for-agent
+Status: resolved
 
 # 03 — Catálogo passa a poder perder NPC
 
@@ -34,13 +34,13 @@ pipeline; esta estende a mesma linha para dentro de uma coleção.
 
 **Blocked by:** nada.
 
-- [ ] Rodar com `--export` uma cidade cujo `-npc.xml` perdeu um NPC remove a
+- [x] Rodar com `--export` uma cidade cujo `-npc.xml` perdeu um NPC remove a
       location dele do `catalog-source.json`
-- [ ] Location de HUNT, TEMPLE ou DEPOT ausente do run continua no catálogo e
+- [x] Location de HUNT, TEMPLE ou DEPOT ausente do run continua no catálogo e
       continua reportada como `stale`
-- [ ] O relatório do merge distingue removida de stale, e o CLI imprime as duas
+- [x] O relatório do merge distingue removida de stale, e o CLI imprime as duas
       contagens
-- [ ] Location de NPC de **outra** cidade não é tocada quando se exporta uma
+- [x] Location de NPC de **outra** cidade não é tocada quando se exporta uma
       cidade
-- [ ] ADR escrita, com o caso concreto (355 NPCs sem `_todo` tratados como
+- [x] ADR escrita, com o caso concreto (355 NPCs sem `_todo` tratados como
       curados) como motivação

@@ -1,4 +1,4 @@
-Status: ready-for-agent
+Status: resolved
 
 # 05 — Re-export das cinco cidades
 
@@ -26,10 +26,18 @@ cortado e NPC de Venore não, e a diferença não aparece em nenhum erro.
 
 **Blocked by:** 02, 03, 04.
 
-- [ ] As cinco cidades re-exportadas no mesmo lote
-- [ ] `import-content` valida o catálogo novo sem erro de Zod
-- [ ] `nx run db:reset` passa
-- [ ] Nenhuma location de HUNT, TEMPLE ou DEPOT mudou nem desapareceu
-- [ ] Nenhuma aresta sobrou citando location que não existe mais
-- [ ] Tamanho do arquivo, contagem de locations e de arestas — antes e depois —
-      no corpo do commit
+- [x] As cinco cidades re-exportadas no mesmo lote
+- [x] `import-content` valida o catálogo novo sem erro de Zod — e `runContentGate`
+      passa em modo produção. **Mas três testes de `catalog-source-gate.spec.ts`
+      falham por contagem cravada à mão** (355 NPCs, 24 duplicatas descartadas,
+      2646 linhas de loja). Não tocados: outro repo, na `main`. Ver `spec.md`
+- [ ] `nx run db:reset` passa — **não rodado**: recria tabelas no banco, e isso
+      é decisão do usuário, não limpeza de agente
+- [~] Nenhuma location de HUNT, TEMPLE ou DEPOT desapareceu (65/7/5 antes e
+      depois). **Cinco mudaram**, e não por esta ticket: `CARLIN-HUNT-0001..0005`
+      perderam `_todo` e ganharam `huntId`, porque o `curated-hunts.json` do
+      commit `5d6c819` passou a dar entrada de verdade a elas — comportamento
+      documentado do merge para entrada que ainda é rascunho
+- [x] Nenhuma aresta sobrou citando location que não existe mais
+- [x] Tamanho do arquivo, contagem de locations e de arestas — antes e depois —
+      no corpo do commit (deste lado; o catálogo em si não foi comitado)

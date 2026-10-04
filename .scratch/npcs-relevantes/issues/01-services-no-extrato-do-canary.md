@@ -1,4 +1,4 @@
-Status: ready-for-agent
+Status: resolved
 
 # 01 — Serviço de motor no extrato do Canary
 
@@ -64,16 +64,16 @@ back-end — fatia própria, com a tela que o consome. Aqui o campo serve ao
 
 **Blocked by:** nada.
 
-- [ ] `extract_npc_facts` grava `services` para todo `.lua`, inclusive os sem
+- [x] `extract_npc_facts` grava `services` para todo `.lua`, inclusive os sem
       nenhum serviço (lista vazia, não ausente — a mesma razão pela qual os
       arquivos sem shop nem outfit continuam no extrato)
-- [ ] `npc-lua-facts.json` regenerado do clone, e o `MANIFEST.json` continua
+- [x] `npc-lua-facts.json` regenerado do clone, e o `MANIFEST.json` continua
       apontando o mesmo commit do Canary
-- [ ] Contagem no extrato regenerado: 73 `travel`, 25 `bank`, 27 `bless`,
+- [x] Contagem no extrato regenerado: 73 `travel`, 25 `bank`, 27 `bless`,
       6 `promote`, 51 `spell`
-- [ ] `--canary-dir` relê `services` do checkout, igual a `shop` e `outfit`
-- [ ] `build_npc_locations` recebe um dict de facts, não dicts paralelos
-- [ ] Teste: `parseBankMessages` sozinho **não** marca `bank`
-- [ ] Teste: `.lua` que só fala de viagem no diálogo, sem `StdModule.travel`,
+- [x] `--canary-dir` relê `services` do checkout, igual a `shop` e `outfit`
+- [x] `build_npc_locations` recebe um dict de facts, não dicts paralelos
+- [x] Teste: `parseBankMessages` sozinho **não** marca `bank`
+- [x] Teste: `.lua` que só fala de viagem no diálogo, sem `StdModule.travel`,
       sai com `services` vazio (caso Captain Tiberius)
-- [ ] Nenhum `db-fragment.json` muda: rode uma cidade antes e depois e compare
+- [x] Nenhum `db-fragment.json` muda: rode uma cidade antes e depois e compare
