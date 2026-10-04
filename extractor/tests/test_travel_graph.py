@@ -1833,7 +1833,9 @@ def test_services_are_looked_up_by_display_name():
     desambigua `Junkar` nem `Ferryman Kamil`."""
     locations = [_npc_location("THAIS", "Captain Bluebear", 1, 1, 7)]
 
-    kept, skipped = tg.filter_npc_locations(locations, {"Captain Bluebear": ["travel"]}, {})
+    kept, skipped = tg.filter_npc_locations(
+        locations, {"Captain Bluebear": {"shop": None, "services": ["travel"]}}, {}
+    )
 
     assert len(kept) == 1 and skipped == []
 
@@ -1850,6 +1852,20 @@ def test_an_allowlist_id_that_matches_no_npc_of_this_city_is_reported():
     assert unresolved == ["THAIS-NPC-nao-existe"]
 
 
+CITIES = ["ROOK", "THAIS", "CARLIN", "KAZORDOON", "VENORE"]
+
+
+def test_every_allowlist_id_names_a_city_that_exists():
+    """O prefixo de cidade errado (`THASI-NPC-bozo`) não tem cidade dona, então
+    nenhum run isolado o reprova — ele seria invisível para sempre. Quem conhece
+    todas as cidades é a suíte; ver `unresolved_allowlist_ids`."""
+    import build_travel_fragment as btf
+    import city_ids
+
+    for entry_id in btf._load_npc_allowlist():
+        assert city_ids.derive_city(entry_id) in CITIES, entry_id
+
+
 def test_the_shipped_allowlist_resolves_in_full():
     """Cada id da allowlist versionada casa com um NPC de verdade do
     `<CIDADE>-npc.xml` da sua cidade. Um typo aqui é um NPC que fica cortado
@@ -1859,7 +1875,7 @@ def test_the_shipped_allowlist_resolves_in_full():
     allowlist = btf._load_npc_allowlist()
     assert allowlist, "a allowlist versionada não deveria estar vazia"
 
-    for city in ["ROOK", "THAIS", "CARLIN", "KAZORDOON", "VENORE"]:
+    for city in CITIES:
         npcs = btf._load_city_npcs(city)
         locations, _ = tg.build_npc_locations(npcs, city, {})
         assert tg.unresolved_allowlist_ids(allowlist, locations, city) == []

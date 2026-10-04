@@ -9,7 +9,7 @@ Status: ready-for-agent
 
 Entra o NPC que satisfaz **qualquer uma**:
 
-1. **É de ROOK.** Rookgaard é a área inicial e precisa de volume. Todos os 24
+1. **É de ROOK.** Rookgaard é a área inicial e precisa de volume. Todos os 25
    ficam, com ou sem função. A isenção é pelo campo `city` da location, então
    `ROOK-NPC-cipfried` fica e a cópia de Thais cai (a 02 já a tinha cortado).
 2. **Tem `shop`.** Tamanho do inventário não entra na conta: um shop de 1 item
@@ -42,7 +42,7 @@ aqui?" seis meses depois, e enum obrigaria a inventar a taxonomia antes de
 conhecer os casos.
 
 **Não existe denylist.** Loja é lei: se vende, fica. Abrir exceção do outro lado
-convida a lista a ser preenchida por gosto, e aí voltam as 174 linhas de
+convida a lista a ser preenchida por gosto, e aí voltam as 184 linhas de
 julgamento humano — só invertidas.
 
 Os casos que vão na allowlist são os que o motor **não** declara, cada um
@@ -73,14 +73,14 @@ verificado no `.lua` (linhas em `spec.md` e na ticket 06):
 `extractor/full-maps/<CIDADE>/npc-skipped.txt`: um NPC por linha, com nome e
 motivo do corte (`sem shop e sem serviço` / `duplicata de ROOK-NPC-x` /
 `serviço só de magia`). **Não** reaproveite o `travel-graph-rejections.txt`: ele
-significa "bug de mapa, conserta e some", e enfiar 174 descartes intencionais
-nele destrói o valor dele como sinal.
+significa "bug de mapa, conserta e some", e enfiar 184 descartes intencionais
+nele destruiria o valor dele como sinal.
 
 Termo novo no `CONTEXT.md` e seção no `extractor/README.md`.
 
 **Blocked by:** 01.
 
-- [ ] Todos os 24 NPCs de ROOK continuam no fragmento de ROOK
+- [ ] Todos os 25 NPCs de ROOK continuam no fragmento de ROOK
 - [ ] NPC com shop de 1 item continua entrando
 - [ ] NPC cujo único serviço é `spell` é cortado
 - [ ] NPC em `npc-allowlist.json` entra mesmo sem shop e sem serviço

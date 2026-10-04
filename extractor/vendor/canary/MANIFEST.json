@@ -10,6 +10,6 @@
   "command": "uv run python extractor/scripts/update_canary_data.py",
   "files": {
     "items.xml": "cópia crua de data/items/items.xml",
-    "npc-lua-facts.json": "tabelas shop e outfit de data-otservbr-global/npc/*.lua"
+    "npc-lua-facts.json": "tabelas shop e outfit, mais os serviços de motor, de data-otservbr-global/npc/*.lua"
   }
 }

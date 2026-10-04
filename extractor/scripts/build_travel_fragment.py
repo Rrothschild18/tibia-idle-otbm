@@ -76,7 +76,7 @@ from travel_graph import (
     parse_npc_services_lua,
     parse_npc_shop_lua,
     filter_npc_locations,
-    find_rook_duplicates,
+    filter_rook_duplicates,
     format_npc_skip_report,
     parse_npc_xml,
     unresolved_allowlist_ids,
@@ -137,9 +137,10 @@ def _load_npc_lua_facts_source(canary_dir=None):
     with open(vendored, "r", encoding="utf-8") as f:
         source = json.load(f)
 
-    if source and not any("services" in entry for entry in source.values()):
+    if any("services" not in entry for entry in source.values()):
         raise StaleNpcFactsError(
-            f"{vendored} não tem o campo `services` — é de antes do filtro de NPC. "
+            f"{vendored} tem entrada sem o campo `services` — é de antes do filtro de NPC, "
+            f"ou foi regenerado pela metade. "
             f"Rode 'uv run python extractor/scripts/update_canary_data.py --canary-dir <clone>'"
         )
 
@@ -147,7 +148,11 @@ def _load_npc_lua_facts_source(canary_dir=None):
 
 
 class UnresolvedAllowlistError(RuntimeError):
-    """Id na `npc-allowlist.json` que não casa com NPC nenhum da cidade."""
+    """Id na `npc-allowlist.json` que este run consegue provar errado."""
+
+
+class MissingAllowlistError(RuntimeError):
+    """A `npc-allowlist.json` versionada não está no checkout."""
 
 
 def _load_npc_allowlist():
@@ -157,10 +162,13 @@ def _load_npc_allowlist():
     (`_doc`), e não ids. Guardar a explicação no arquivo em vez de num README ao
     lado é de propósito: quem abre a allowlist para mexer nela é exatamente quem
     precisa ler por que ela existe."""
-    path = os.path.join(EXTRACTOR_DIR, os.path.basename(NPC_ALLOWLIST_NAME))
+    path = os.path.join(EXTRACTOR_DIR, NPC_ALLOWLIST_NAME)
     if not os.path.exists(path):
-        print(f"[WARN] {path} não encontrado — nenhum NPC entra por curadoria")
-        return {}
+        raise MissingAllowlistError(
+            f"{path} não encontrado. O arquivo é versionado, então a ausência dele é "
+            f"checkout quebrado — e seguir sem ele derrubaria calado os NPCs que só "
+            f"entram por curadoria (barqueiro artesanal, loja por diálogo, Black Bert)"
+        )
 
     with open(path, "r", encoding="utf-8") as handler:
         return {
@@ -341,16 +349,11 @@ def build_city_fragment(
     # find_rook_duplicates.
     skipped_npcs: list = []
     if city != ROOK_CITY:
-        duplicates = find_rook_duplicates(npc_locations, _load_city_npcs(ROOK_CITY))
-        if duplicates:
-            skipped_npcs = [
-                {"id": location["id"], "name": location["displayName"],
-                 "reason": f"duplicata de {duplicates[location['id']]}"}
-                for location in npc_locations
-                if location["id"] in duplicates
-            ]
-            npc_locations = [loc for loc in npc_locations if loc["id"] not in duplicates]
-            print(f"[OK] {len(duplicates)} NPC(s) de Rookgaard duplicado(s) em {city} descartado(s)")
+        npc_locations, skipped_npcs = filter_rook_duplicates(
+            npc_locations, _load_city_npcs(ROOK_CITY, warn=True)
+        )
+        if skipped_npcs:
+            print(f"[OK] {len(skipped_npcs)} NPC(s) de Rookgaard duplicado(s) em {city} descartado(s)")
 
     # NPC que não vende, não presta serviço de motor e não está na allowlist não
     # vira destino: ele inflava o grafo (97% das arestas tocavam um NPC) sem
@@ -359,12 +362,11 @@ def build_city_fragment(
     unresolved = unresolved_allowlist_ids(allowlist, npc_locations, city)
     if unresolved:
         raise UnresolvedAllowlistError(
-            f"{NPC_ALLOWLIST_NAME} cita id de {city} que não casa com NPC nenhum: "
+            f"extractor/{NPC_ALLOWLIST_NAME} cita id que não casa com NPC nenhum: "
             f"{', '.join(unresolved)}"
         )
 
-    services_by_name = {name: facts["services"] for name, facts in lua_facts.items()}
-    npc_locations, filtered_out = filter_npc_locations(npc_locations, services_by_name, allowlist)
+    npc_locations, filtered_out = filter_npc_locations(npc_locations, lua_facts, allowlist)
     skipped_npcs.extend(filtered_out)
     print(f"[OK] {len(npc_locations)} NPC(s) de {city} entram, {len(skipped_npcs)} descartado(s)")
 

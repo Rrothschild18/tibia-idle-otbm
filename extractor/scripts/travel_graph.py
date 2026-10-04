@@ -1244,6 +1244,25 @@ def parse_npc_services_lua(lua_text: str) -> List[str]:
     return [name for name, signature in NPC_SERVICE_SIGNATURES if signature in lua_text]
 
 
+def npc_location_id(city: str, npc_name: str) -> str:
+    """`("THAIS", "Lee'Delle")` -> `"THAIS-NPC-lee-delle"`. O formato do id de NPC
+    tem um dono só: antes ele era soletrado em `build_npc_location` e de novo em
+    `find_rook_duplicates`, e três lugares sabendo escrever o mesmo id é como as
+    duas pontas passam a discordar sem ninguém notar."""
+    return f"{city.upper()}-NPC-{slugify(npc_name)}"
+
+
+def npc_slug_of(location_id: str) -> str:
+    """`"THAIS-NPC-lee-delle"` -> `"lee-delle"`. O inverso de `npc_location_id`.
+
+    Fica aqui ao lado dele e não em `city_ids`, que é o módulo que normalmente
+    deriva coisa de id: `npc_location_id` depende de `slugify`, que é deste
+    módulo, e separar o construtor do seu inverso em dois arquivos é pior do que
+    a assimetria. Mesma conta que o `npcSlugOf` do `tibia-idle` faz, e tem que
+    continuar sendo — as duas pontas comparam NPC pelo mesmo par slug+posição."""
+    return "-".join(location_id.split("-")[2:])
+
+
 def build_npc_location(
     npc: Dict,
     city_prefix: str,
@@ -1259,7 +1278,7 @@ def build_npc_location(
     city = city_prefix.upper()
     status = city_ids.derive_status(city)
     entry: Dict = {
-        "id": f"{city}-NPC-{slugify(npc['name'])}",
+        "id": npc_location_id(city, npc["name"]),
         "type": "NPC",
         "x": npc["x"],
         "y": npc["y"],
@@ -1320,15 +1339,7 @@ ROOK_CITY = "ROOK"
 #: certo de cada coisa.
 REJECTION_REPORT_NAME = "travel-graph-rejections.txt"
 NPC_SKIP_REPORT_NAME = "npc-skipped.txt"
-NPC_ALLOWLIST_NAME = "extractor/npc-allowlist.json"
-
-
-def npc_slug_of(location_id: str) -> str:
-    """`"THAIS-NPC-lee-delle"` -> `"lee-delle"`. O inverso de `build_npc_location`,
-    que monta o id com `slugify(nome)` no terceiro segmento. Mesma conta que o
-    `npcSlugOf` do `tibia-idle` faz, e tem que continuar sendo: as duas pontas
-    comparam NPC pelo mesmo par slug+posição."""
-    return "-".join(location_id.split("-")[2:])
+NPC_ALLOWLIST_NAME = "npc-allowlist.json"
 
 
 #: Os serviços de motor que fazem um NPC valer uma location. `spell` fica fora de
@@ -1346,22 +1357,24 @@ def npc_skip_reason(
 ) -> Optional[str]:
     """`None` quando o NPC entra no fragmento; o motivo do corte quando não.
 
-    Quatro portas de entrada, nesta ordem:
+    Quatro portas de entrada, mecânicas primeiro e a curada por último — a ordem
+    é inerte para o veredito (as quatro devolvem `None`) e existe para dizer qual
+    é a precedência honesta: a allowlist é escape hatch, não regra.
 
-    1. **É de ROOK.** Rookgaard é a área inicial e precisa de volume — os 24
+    1. **É de ROOK.** Rookgaard é a área inicial e precisa de volume — os 25
        ficam, com ou sem função. A isenção é pelo campo `city` do id, então
        `ROOK-NPC-cipfried` entra e a cópia de Thais não (que já saiu antes, em
        `find_rook_duplicates`).
-    2. **Está na allowlist.** O que o motor do Canary não declara: loja que vende
-       por diálogo, teleporte artesanal, serviço por moeda que não é ouro.
-    3. **Tem loja.** Tamanho do inventário não entra na conta — um shop de 1 item
+    2. **Tem loja.** Tamanho do inventário não entra na conta — um shop de 1 item
        (Albinius, Elane, Gnomette, Xelvar) é mecanicamente o mesmo nó que o de
        129. Filtrar por tamanho seria enfiar julgamento de relevância dentro da
        regra mecânica, que é exatamente o que este corte existe para não fazer.
        `shop` vazio **não** conta: é tabela que o parser leu e achou sem nada
        (ver issue 06), e quem tem item de verdade por trás disso está na
        allowlist.
-    4. **Tem serviço** em `NPC_KEPT_SERVICES`.
+    3. **Tem serviço** em `NPC_KEPT_SERVICES`.
+    4. **Está na allowlist.** O que o motor do Canary não declara: loja que vende
+       por diálogo, teleporte artesanal, serviço por moeda que não é ouro.
 
     O motivo volta separando "só presta serviço que está fora" de "não presta
     nenhum", porque os dois se consertam de formas diferentes: o primeiro é
@@ -1370,13 +1383,13 @@ def npc_skip_reason(
     """
     if city_ids.derive_city(location["id"]) == ROOK_CITY:
         return None
-    if location["id"] in allowlist:
-        return None
     if location.get("shop"):
         return None
 
     declared = set(services)
     if declared & NPC_KEPT_SERVICES:
+        return None
+    if location["id"] in allowlist:
         return None
     if declared:
         return f"serviço só de {'/'.join(sorted(declared))}"
@@ -1385,22 +1398,27 @@ def npc_skip_reason(
 
 def filter_npc_locations(
     npc_locations: List[Dict],
-    services_by_name: Dict[str, List[str]],
+    facts_by_name: Dict[str, Dict],
     allowlist: Dict[str, str],
 ) -> Tuple[List[Dict], List[Dict]]:
-    """`(entram, descartados)` — os descartados no formato que
-    `format_npc_skip_report` escreve.
+    """`(NPCs relevantes, descartados)` — os descartados no formato que
+    `format_npc_skip_report` escreve. **NPC relevante** é o termo do `CONTEXT.md`
+    para quem passa por `npc_skip_reason`.
 
-    `services_by_name` é chaveado por nome porque é de lá que o fato vem (o
-    `.lua` do Canary casa por nome de arquivo), enquanto a allowlist é chaveada
-    por id porque o nome não desambigua `Junkar` nem `Ferryman Kamil`. As duas
-    chaves são de propósito, não descuido."""
+    `facts_by_name` é o mesmo dict que `build_npc_locations` recebeu, não um
+    `services_by_name` extraído dele: a forma do fato é um dict por NPC, e
+    desmontá-lo em dicts paralelos de um campo é justo o que o prefactor da
+    ticket 01 desfez.
+
+    Ele é chaveado por **nome** porque é de lá que o fato vem (o `.lua` do Canary
+    casa por nome de arquivo), enquanto a allowlist é chaveada por **id** porque
+    o nome não desambigua `Junkar` nem `Ferryman Kamil`. As duas chaves são de
+    propósito, não descuido."""
     kept: List[Dict] = []
     skipped: List[Dict] = []
     for location in npc_locations:
-        reason = npc_skip_reason(
-            location, services_by_name.get(location["displayName"]) or [], allowlist
-        )
+        facts = facts_by_name.get(location["displayName"]) or {}
+        reason = npc_skip_reason(location, facts.get("services") or [], allowlist)
         if reason is None:
             kept.append(location)
         else:
@@ -1416,14 +1434,49 @@ def unresolved_allowlist_ids(
     """Os ids de `city` na allowlist que não casaram com NPC nenhum deste run.
 
     Um id errado é a falha silenciosa que a allowlist convida: a linha fica no
-    arquivo, o NPC continua cortado, e nada avisa. Só os ids **desta** cidade
-    são checáveis aqui — os das outras são checados quando cada uma roda."""
+    arquivo, o NPC continua cortado, e nada avisa. Dois jeitos de estar errado, e
+    **só um é checável num run**:
+
+    - **Slug errado** (`THAIS-NPC-bozzo`): só a cidade dona sabe, porque é ela
+      que tem a lista de NPCs. Este é o caso que esta função pega, e os ids das
+      outras cidades são pegos quando cada uma roda.
+    - **Prefixo de cidade errado** (`THASI-NPC-bozo`): não tem cidade dona, então
+      nenhum run isolado o reprova. Checá-lo aqui exigiria a lista de todas as
+      cidades, e derivá-la de `full-maps/` troca uma falha silenciosa por uma
+      pior: um checkout sem a pasta de Venore passaria a abortar com a allowlist
+      **correta**. Quem conhece todas as cidades é a suíte, não o run — o caso
+      vive em `test_every_allowlist_id_names_a_city_that_exists`."""
     present = {location["id"] for location in npc_locations}
     return sorted(
         entry_id
         for entry_id in allowlist
         if city_ids.derive_city(entry_id) == city and entry_id not in present
     )
+
+
+def filter_rook_duplicates(
+    npc_locations: List[Dict], rook_npcs: List[Dict]
+) -> Tuple[List[Dict], List[Dict]]:
+    """`(ficam, descartados)` — a mesma forma de `filter_npc_locations`, e por
+    isso mora aqui e não solto no CLI: os dois cortes de NPC produzem o mesmo
+    registro `{"id", "name", "reason"}` que `format_npc_skip_report` lê, e tê-lo
+    montado à mão em dois lugares é como as duas metades do relatório passam a
+    discordar de forma."""
+    duplicates = find_rook_duplicates(npc_locations, rook_npcs)
+    if not duplicates:
+        return list(npc_locations), []
+
+    kept = [loc for loc in npc_locations if loc["id"] not in duplicates]
+    skipped = [
+        {
+            "id": loc["id"],
+            "name": loc["displayName"],
+            "reason": f"duplicata de {duplicates[loc['id']]}",
+        }
+        for loc in npc_locations
+        if loc["id"] in duplicates
+    ]
+    return kept, skipped
 
 
 def format_npc_skip_report(skipped: List[Dict], city: str) -> str:
@@ -1447,7 +1500,7 @@ def format_npc_skip_report(skipped: List[Dict], city: str) -> str:
         "# Descarte intencional, não bug de mapa — quem está aqui não faz nada que",
         "# o jogo idle possa oferecer. Nó sem entrada no grafo é outro relatório",
         f"# ({REJECTION_REPORT_NAME}). Para resgatar um destes, ou ele passa a ter",
-        f"# serviço no .lua do Canary, ou entra em {NPC_ALLOWLIST_NAME} com motivo.",
+        f"# serviço no .lua do Canary, ou entra em extractor/{NPC_ALLOWLIST_NAME} com motivo.",
         "",
     ]
     for reason in sorted(by_reason):
@@ -1465,7 +1518,7 @@ def find_rook_duplicates(
     """`{id da location duplicada: id do NPC de ROOK que ela repete}`.
 
     O corte do mapa de Thais pegou a ilha de Rookgaard inteira, com coordenada
-    de mundo preservada, então os 24 NPCs de Rook existem duas vezes:
+    de mundo preservada, então os 25 NPCs de Rook existem duas vezes:
     `ROOK-NPC-obi` **e** `THAIS-NPC-obi`, mesma posição. **11 das duplicatas têm
     loja**, então nenhum filtro por relevância as pega.
 
@@ -1480,10 +1533,10 @@ def find_rook_duplicates(
     próprios nós. Só a coincidência exata de slug *e* (x, y, z) é duplicata.
 
     `rook_npcs` vem do `ROOK-npc.xml`, não do fragmento sendo gerado: rodar só a
-    cidade de Thais tem que cortar as mesmas 24.
+    cidade de Thais tem que cortar as mesmas 25.
     """
     by_key = {
-        (slugify(npc["name"]), npc["x"], npc["y"], npc["z"]): f"{ROOK_CITY}-NPC-{slugify(npc['name'])}"
+        (slugify(npc["name"]), npc["x"], npc["y"], npc["z"]): npc_location_id(ROOK_CITY, npc["name"])
         for npc in rook_npcs
     }
 

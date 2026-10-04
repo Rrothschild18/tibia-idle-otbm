@@ -201,7 +201,8 @@ def main():
         "command": "uv run python extractor/scripts/update_canary_data.py",
         "files": {
             ITEMS_XML_NAME: "cópia crua de data/items/items.xml",
-            NPC_FACTS_NAME: "tabelas shop e outfit de data-otservbr-global/npc/*.lua",
+            NPC_FACTS_NAME: "tabelas shop e outfit, mais os serviços de motor, de "
+                            "data-otservbr-global/npc/*.lua",
         },
     }
     with open(os.path.join(VENDOR_DIR, MANIFEST_NAME), "w", encoding="utf-8") as handler:

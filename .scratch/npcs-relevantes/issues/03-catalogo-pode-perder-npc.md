@@ -20,7 +20,7 @@ tratá-los como "totalmente curados" e protegê-los — exatamente o oposto do q
 eles são.
 
 **Sem esta ticket, as issues 02 e 04 não mudam uma linha do que o jogo carrega:**
-o fragmento encolhe, o merge reporta 174 `stale`, e o catálogo continua com 38,5
+o fragmento encolhe, o merge reporta 184 `stale`, e o catálogo continua com 38,5
 MB.
 
 ## A ADR

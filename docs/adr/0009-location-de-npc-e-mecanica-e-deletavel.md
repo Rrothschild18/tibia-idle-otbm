@@ -31,8 +31,8 @@ já que não há nada ali para revisar. O resultado é que o mecanismo lia "tota
 exatamente as entradas que são 100% derivadas, e as protegia. Era o oposto da intenção, invisível
 enquanto nada precisava sair.
 
-O que precisou foi o filtro de NPC (`.scratch/npcs-relevantes/`): 174 NPCs que não vendem nada nem
-prestam serviço param de ser emitidos. Sem esta ADR o fragmento encolhia, o merge imprimia 174
+O que precisou foi o filtro de NPC (`.scratch/npcs-relevantes/`): 184 NPCs que não vendem nada nem
+prestam serviço param de ser emitidos. Sem esta ADR o fragmento encolhia, o merge imprimia 184
 `stale`, e o catálogo continuava com 38,5 MB — o trabalho inteiro sem efeito nenhum sobre o jogo.
 
 ## Alternativas recusadas

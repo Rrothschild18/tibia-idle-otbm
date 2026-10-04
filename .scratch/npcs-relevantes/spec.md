@@ -16,7 +16,7 @@ porque a única coisa que o extractor sabe sobre um NPC é **onde ele está**.
 
 Um NPC entra no fragmento quando vale **uma** destas:
 
-1. É de **ROOK**. Rookgaard é a área inicial e precisa de volume — todos os 24
+1. É de **ROOK**. Rookgaard é a área inicial e precisa de volume — todos os 25
    ficam, com ou sem função.
 2. Tem `shop` (`npcConfig.shop` no `.lua` do Canary). Se vende, é comerciante,
    e o tamanho do inventário não importa: um shop de 1 item é mecanicamente o
@@ -81,15 +81,25 @@ posição do `-npc.xml`, shop do `.lua`. HUNT, TEMPLE e DEPOT carregam `huntId` 
 
 ## O resultado
 
-| | antes | depois |
-| --- | --- | --- |
-| NPCs | 355 | 181 |
-| locations | 432 | 258 |
-| arestas | 16.307 | 5.199 |
-| `catalog-source.json` | 38,5 MB | 4,5 MB |
+Medido sobre as 369 entradas dos cinco `<CIDADE>-npc.xml` (o catálogo tinha 355
+porque 14 NPCs já eram rejeitados por não ter entrada no grafo):
 
-Por cidade (mantidos/total): ROOK 24/24, THAIS 54/120, CARLIN 28/56,
-KAZORDOON 37/61, VENORE 38/94.
+| cidade | NPCs no xml | entram | cortados |
+| --- | --- | --- | --- |
+| ROOK | 25 | 25 | 0 |
+| THAIS | 124 | 53 | 71 |
+| CARLIN | 59 | 29 | 30 |
+| KAZORDOON | 65 | 39 | 26 |
+| VENORE | 96 | 39 | 57 |
+| **total** | **369** | **185** | **184** |
+
+Motivos do corte: 149 sem shop e sem serviço, 25 duplicata de Rookgaard, 10
+serviço só de magia.
+
+Os números finais do catálogo (tamanho, locations, arestas) saem do re-export da
+issue 05 — eles dependem também do BFS, que rejeita nó sem entrada, e a baseline
+de 38,5 MB foi exportada antes do `npc-reach` subir para 10 e do conserto do
+parser de `itemsTable` (commit 66518ec), então parte do delta vem de lá.
 
 ## Fora de escopo
 
