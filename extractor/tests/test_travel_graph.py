@@ -785,6 +785,37 @@ def test_parse_npc_shop_lua_extracts_items_with_optional_buy_sell():
     ]
 
 
+_XODET_LUA = """
+local internalNpcName = "Xodet"
+local itemsTable = {
+\t["potions"] = {
+\t\t{ itemName = "empty potion flask", clientId = 283, sell = 5 },
+\t\t{ itemName = "health potion", clientId = 266, buy = 50 },
+\t},
+\t["runes"] = {
+\t\t{ itemName = "sudden death rune", clientId = 3155, buy = 108 },
+\t},
+}
+
+npcConfig.shop = {}
+for _, categoryTable in pairs(itemsTable) do
+\tfor _, itemTable in ipairs(categoryTable) do
+\t\ttable.insert(npcConfig.shop, itemTable)
+\tend
+end
+"""
+
+
+def test_parse_npc_shop_lua_reads_the_items_table_filled_by_a_loop():
+    entries = tg.parse_npc_shop_lua(_XODET_LUA)
+
+    assert entries == [
+        {"itemName": "empty potion flask", "itemId": 283, "sell": 5},
+        {"itemName": "health potion", "itemId": 266, "buy": 50},
+        {"itemName": "sudden death rune", "itemId": 3155, "buy": 108},
+    ]
+
+
 def test_parse_npc_shop_lua_returns_none_when_no_shop_table():
     assert tg.parse_npc_shop_lua('local x = "no shop here"') is None
 
@@ -1383,6 +1414,16 @@ def test_build_travel_graph_npc_approach_is_one_straight_hop_at_the_end():
 
     assert edge["tileCount"] == 6
     assert edge["path"] == [0, 0, 7, 4, 0, 7, 6, 1, 7]
+
+
+def test_build_travel_graph_default_reach_crosses_a_four_tile_shop_gap():
+    graph = _line_graph(10)
+    graph[(0, 4, 7)] = set()
+    locations = [_location("A", 0, 0), _location("THAIS-NPC-xodet", 0, 4, loc_type="NPC")]
+
+    edge = tg.build_travel_graph(graph, locations)[0]
+
+    assert edge["tileCount"] == 4
 
 
 def test_build_travel_graph_keeps_the_last_walked_tile_before_the_npc_hop():

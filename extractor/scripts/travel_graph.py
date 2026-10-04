@@ -266,18 +266,19 @@ def build_sign_location(sign: Dict) -> Dict:
 _NEIGHBOR_OFFSETS = [(dx, dy) for dx in (-1, 0, 1) for dy in (-1, 0, 1) if (dx, dy) != (0, 0)]
 
 # How far from an NPC the player may stand and still count as having arrived
-# at it. Not a movement rule — it's how a shop counter is crossed: most of
-# Rookgaard's shopkeepers stand on a tile walled off by an `unpass` counter,
-# and without a reach every one of them is an unreachable destination. See
-# approach_costs for how the distance stays honest.
+# at it. Not a movement rule — it's how a shop counter is crossed: most
+# shopkeepers stand on a tile walled off by an `unpass` counter, and without a
+# reach every one of them is an unreachable destination. See approach_costs for
+# how the distance stays honest.
 #
-# 3 because that is where Rookgaard stops changing: 2 and 3 both bring in
-# every shopkeeper fully connected to the rest of the city, and 4+ only adds
-# one more NPC — by bridging ~5 tiles of solid wall to a single neighbour,
-# giving it one artificial edge and hiding a genuinely misplaced NPC from
-# the rejection report. A reach wide enough to invent a path is worse than
-# a node the report tells you to go fix.
-DEFAULT_NPC_REACH = 3
+# 10 porque o OTBM de Thais tem lojas com um vão de 4 tiles entre o NPC e o
+# primeiro tile caminhável (Xodet, a loja de poção e runa; Hanna, a de joias).
+# Com 3 elas sumiam do catálogo e ninguém comprava suprimento na cidade. O
+# custo é conhecido: um alcance largo pode ligar por uma aresta artificial um
+# NPC mal posto no mapa, em vez de deixá-lo no relatório de rejeição.
+# `approach_costs` cobra a distância Chebyshev, então o tileCount continua
+# contando o vão como tiles.
+DEFAULT_NPC_REACH = 10
 
 Node = Tuple[int, int, int]
 
@@ -979,7 +980,9 @@ def build_travel_graph(
     map produces a byte-identical fragment."""
     approaches: List[Tuple[str, Dict[Node, int]]] = [
         (loc["id"], approach_costs(
-            (loc["x"], loc["y"], loc["z"]), graph, npc_reach if loc.get("type") == "NPC" else 0
+            (loc["x"], loc["y"], loc["z"]),
+            graph,
+            npc_reach if loc.get("type") == "NPC" else 0,
         ))
         for loc in locations
     ]
@@ -1155,16 +1158,10 @@ def parse_npc_outfit_lua(lua_text: str) -> Optional[Dict]:
     return {key: int(fields[key]) for key in _OUTFIT_KEYS if key in fields}
 
 
-def parse_npc_shop_lua(lua_text: str) -> Optional[List[Dict]]:
-    """A Canary npc .lua file's text -> its `npcConfig.shop` table, or None
-    if the NPC has no shop at all (a trainer/quest NPC). `clientId` is used
-    directly as `itemId` — verified against Canary's own npc_functions.cpp
-    and items.xml, no id-translation table needed (see spec's Further Notes)."""
-    block_match = _SHOP_BLOCK_START_RE.search(lua_text)
-    if not block_match:
-        return None
+_ITEMS_TABLE_START_RE = re.compile(r"local\s+itemsTable\s*=\s*\{")
 
-    block = _extract_braced_block(lua_text, block_match.end())
+
+def _parse_shop_entries(block: str) -> List[Dict]:
     entries: List[Dict] = []
     for line in block.splitlines():
         line = line.split("--", 1)[0].strip()
@@ -1183,6 +1180,32 @@ def parse_npc_shop_lua(lua_text: str) -> Optional[List[Dict]]:
             entry["sell"] = int(fields["sell"])
         entries.append(entry)
     return entries
+
+
+def parse_npc_shop_lua(lua_text: str) -> Optional[List[Dict]]:
+    """A Canary npc .lua file's text -> its `npcConfig.shop` table, or None
+    if the NPC has no shop at all (a trainer/quest NPC). `clientId` is used
+    directly as `itemId` — verified against Canary's own npc_functions.cpp
+    and items.xml, no id-translation table needed (see spec's Further Notes).
+
+    Canary escreve a loja de dois jeitos. O antigo é a tabela por extenso em
+    `npcConfig.shop = { {...}, ... }`. O novo agrupa por categoria em
+    `local itemsTable = { ["potions"] = { {...} } }` e deixa
+    `npcConfig.shop = {}` ser preenchido por um laço no fim do arquivo — ler só
+    o `{}` vazio dava um NPC sem nada à venda (Xodet, Rachel, Sigurd...)."""
+    block_match = _SHOP_BLOCK_START_RE.search(lua_text)
+    if not block_match:
+        return None
+
+    entries = _parse_shop_entries(_extract_braced_block(lua_text, block_match.end()))
+    if entries:
+        return entries
+
+    items_table = _ITEMS_TABLE_START_RE.search(lua_text)
+    if not items_table:
+        return entries
+
+    return _parse_shop_entries(_extract_braced_block(lua_text, items_table.end()))
 
 
 def build_npc_location(

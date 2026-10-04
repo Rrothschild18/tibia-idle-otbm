@@ -628,7 +628,163 @@
     }
   },
   "alaistar.lua": {
-    "shop": [],
+    "shop": [
+      {
+        "itemName": "empty potion flask",
+        "itemId": 283,
+        "sell": 5
+      },
+      {
+        "itemName": "empty potion flask",
+        "itemId": 284,
+        "sell": 5
+      },
+      {
+        "itemName": "empty potion flask",
+        "itemId": 285,
+        "sell": 5
+      },
+      {
+        "itemName": "great health potion",
+        "itemId": 239,
+        "buy": 225
+      },
+      {
+        "itemName": "great mana potion",
+        "itemId": 238,
+        "buy": 158
+      },
+      {
+        "itemName": "great spirit potion",
+        "itemId": 7642,
+        "buy": 254
+      },
+      {
+        "itemName": "health potion",
+        "itemId": 266,
+        "buy": 50
+      },
+      {
+        "itemName": "mana potion",
+        "itemId": 268,
+        "buy": 56
+      },
+      {
+        "itemName": "strong health potion",
+        "itemId": 236,
+        "buy": 115
+      },
+      {
+        "itemName": "strong mana potion",
+        "itemId": 237,
+        "buy": 108
+      },
+      {
+        "itemName": "supreme health potion",
+        "itemId": 23375,
+        "buy": 650
+      },
+      {
+        "itemName": "ultimate health potion",
+        "itemId": 7643,
+        "buy": 379
+      },
+      {
+        "itemName": "ultimate mana potion",
+        "itemId": 23373,
+        "buy": 488
+      },
+      {
+        "itemName": "ultimate spirit potion",
+        "itemId": 23374,
+        "buy": 488
+      },
+      {
+        "itemName": "vial",
+        "itemId": 2874,
+        "sell": 5
+      },
+      {
+        "itemName": "cowbell",
+        "itemId": 21204,
+        "sell": 210
+      },
+      {
+        "itemName": "execowtioner mask",
+        "itemId": 21201,
+        "sell": 240
+      },
+      {
+        "itemName": "giant pacifier",
+        "itemId": 21199,
+        "sell": 170
+      },
+      {
+        "itemName": "glob of glooth",
+        "itemId": 21182,
+        "sell": 125
+      },
+      {
+        "itemName": "glooth injection tube",
+        "itemId": 21103,
+        "sell": 350
+      },
+      {
+        "itemName": "metal jaw",
+        "itemId": 21193,
+        "sell": 260
+      },
+      {
+        "itemName": "metal toe",
+        "itemId": 21198,
+        "sell": 430
+      },
+      {
+        "itemName": "mooh'tah shell",
+        "itemId": 21202,
+        "sell": 110
+      },
+      {
+        "itemName": "moohtant horn",
+        "itemId": 21200,
+        "sell": 140
+      },
+      {
+        "itemName": "necromantic rust",
+        "itemId": 21196,
+        "sell": 390
+      },
+      {
+        "itemName": "poisoned fang",
+        "itemId": 21195,
+        "sell": 130
+      },
+      {
+        "itemName": "seacrest hair",
+        "itemId": 21801,
+        "sell": 260
+      },
+      {
+        "itemName": "seacrest pearl",
+        "itemId": 21747,
+        "sell": 400
+      },
+      {
+        "itemName": "seacrest scale",
+        "itemId": 21800,
+        "sell": 150
+      },
+      {
+        "itemName": "slime heart",
+        "itemId": 21194,
+        "sell": 160
+      },
+      {
+        "itemName": "slimy leaf tentacle",
+        "itemId": 21197,
+        "sell": 320
+      }
+    ],
     "outfit": {
       "lookType": 133,
       "lookHead": 19,
@@ -917,7 +1073,224 @@
     "outfit": null
   },
   "alexander.lua": {
-    "shop": [],
+    "shop": [
+      {
+        "itemName": "durable exercise rod",
+        "itemId": 35283,
+        "buy": 1250000
+      },
+      {
+        "itemName": "durable exercise wand",
+        "itemId": 35284,
+        "buy": 1250000
+      },
+      {
+        "itemName": "exercise rod",
+        "itemId": 28556,
+        "buy": 347222
+      },
+      {
+        "itemName": "exercise wand",
+        "itemId": 28557,
+        "buy": 347222
+      },
+      {
+        "itemName": "lasting exercise rod",
+        "itemId": 35289,
+        "buy": 10000000
+      },
+      {
+        "itemName": "lasting exercise wand",
+        "itemId": 35290,
+        "buy": 10000000
+      },
+      {
+        "itemName": "crystal ball",
+        "itemId": 3076,
+        "buy": 530,
+        "sell": 190
+      },
+      {
+        "itemName": "life crystal",
+        "itemId": 3061,
+        "sell": 85
+      },
+      {
+        "itemName": "mind stone",
+        "itemId": 3062,
+        "sell": 170
+      },
+      {
+        "itemName": "spellbook of enlightenment",
+        "itemId": 8072,
+        "sell": 4000
+      },
+      {
+        "itemName": "spellbook of warding",
+        "itemId": 8073,
+        "sell": 8000
+      },
+      {
+        "itemName": "spellbook of mind control",
+        "itemId": 8074,
+        "sell": 13000
+      },
+      {
+        "itemName": "spellbook of lost souls",
+        "itemId": 8075,
+        "sell": 19000
+      },
+      {
+        "itemName": "spellwand",
+        "itemId": 651,
+        "sell": 299
+      },
+      {
+        "itemName": "animate dead rune",
+        "itemId": 3203,
+        "buy": 375
+      },
+      {
+        "itemName": "blank rune",
+        "itemId": 3147,
+        "buy": 10
+      },
+      {
+        "itemName": "desintegrate rune",
+        "itemId": 3197,
+        "buy": 26
+      },
+      {
+        "itemName": "energy bomb rune",
+        "itemId": 3149,
+        "buy": 203
+      },
+      {
+        "itemName": "fireball rune",
+        "itemId": 3189,
+        "buy": 30
+      },
+      {
+        "itemName": "holy missile rune",
+        "itemId": 3182,
+        "buy": 16
+      },
+      {
+        "itemName": "icicle rune",
+        "itemId": 3158,
+        "buy": 30
+      },
+      {
+        "itemName": "magic wall rune",
+        "itemId": 3180,
+        "buy": 116
+      },
+      {
+        "itemName": "paralyze rune",
+        "itemId": 3165,
+        "buy": 700
+      },
+      {
+        "itemName": "poison bomb rune",
+        "itemId": 3173,
+        "buy": 85
+      },
+      {
+        "itemName": "soulfire rune",
+        "itemId": 3195,
+        "buy": 46
+      },
+      {
+        "itemName": "stone shower rune",
+        "itemId": 3175,
+        "buy": 41
+      },
+      {
+        "itemName": "thunderstorm rune",
+        "itemId": 3202,
+        "buy": 52
+      },
+      {
+        "itemName": "wild growth rune",
+        "itemId": 3156,
+        "buy": 160
+      },
+      {
+        "itemName": "hailstorm rod",
+        "itemId": 3067,
+        "buy": 15000
+      },
+      {
+        "itemName": "moonlight rod",
+        "itemId": 3070,
+        "buy": 1000
+      },
+      {
+        "itemName": "necrotic rod",
+        "itemId": 3069,
+        "buy": 5000
+      },
+      {
+        "itemName": "northwind rod",
+        "itemId": 8083,
+        "buy": 7500
+      },
+      {
+        "itemName": "springsprout rod",
+        "itemId": 8084,
+        "buy": 18000
+      },
+      {
+        "itemName": "terra rod",
+        "itemId": 3065,
+        "buy": 10000
+      },
+      {
+        "itemName": "underworld rod",
+        "itemId": 8082,
+        "buy": 22000
+      },
+      {
+        "itemName": "wand of cosmic energy",
+        "itemId": 3073,
+        "buy": 10000
+      },
+      {
+        "itemName": "wand of decay",
+        "itemId": 3072,
+        "buy": 5000
+      },
+      {
+        "itemName": "wand of draconia",
+        "itemId": 8093,
+        "buy": 7500
+      },
+      {
+        "itemName": "wand of dragonbreath",
+        "itemId": 3075,
+        "buy": 1000
+      },
+      {
+        "itemName": "wand of inferno",
+        "itemId": 3071,
+        "buy": 15000
+      },
+      {
+        "itemName": "wand of starstorm",
+        "itemId": 8092,
+        "buy": 18000
+      },
+      {
+        "itemName": "wand of voodoo",
+        "itemId": 8094,
+        "buy": 22000
+      },
+      {
+        "itemName": "wand of vortex",
+        "itemId": 3074,
+        "buy": 500
+      }
+    ],
     "outfit": {
       "lookType": 130,
       "lookHead": 96,
@@ -1925,7 +2298,308 @@
     }
   },
   "asima.lua": {
-    "shop": [],
+    "shop": [
+      {
+        "itemName": "durable exercise rod",
+        "itemId": 35283,
+        "buy": 1250000
+      },
+      {
+        "itemName": "durable exercise wand",
+        "itemId": 35284,
+        "buy": 1250000
+      },
+      {
+        "itemName": "exercise rod",
+        "itemId": 28556,
+        "buy": 347222
+      },
+      {
+        "itemName": "exercise wand",
+        "itemId": 28557,
+        "buy": 347222
+      },
+      {
+        "itemName": "lasting exercise rod",
+        "itemId": 35289,
+        "buy": 10000000
+      },
+      {
+        "itemName": "lasting exercise wand",
+        "itemId": 35290,
+        "buy": 10000000
+      },
+      {
+        "itemName": "empty potion flask",
+        "itemId": 283,
+        "sell": 5
+      },
+      {
+        "itemName": "empty potion flask",
+        "itemId": 284,
+        "sell": 5
+      },
+      {
+        "itemName": "empty potion flask",
+        "itemId": 285,
+        "sell": 5
+      },
+      {
+        "itemName": "great health potion",
+        "itemId": 239,
+        "buy": 225
+      },
+      {
+        "itemName": "great mana potion",
+        "itemId": 238,
+        "buy": 158
+      },
+      {
+        "itemName": "great spirit potion",
+        "itemId": 7642,
+        "buy": 254
+      },
+      {
+        "itemName": "health potion",
+        "itemId": 266,
+        "buy": 50
+      },
+      {
+        "itemName": "mana potion",
+        "itemId": 268,
+        "buy": 56
+      },
+      {
+        "itemName": "strong health potion",
+        "itemId": 236,
+        "buy": 115
+      },
+      {
+        "itemName": "strong mana potion",
+        "itemId": 237,
+        "buy": 108
+      },
+      {
+        "itemName": "supreme health potion",
+        "itemId": 23375,
+        "buy": 650
+      },
+      {
+        "itemName": "ultimate health potion",
+        "itemId": 7643,
+        "buy": 379
+      },
+      {
+        "itemName": "ultimate mana potion",
+        "itemId": 23373,
+        "buy": 488
+      },
+      {
+        "itemName": "ultimate spirit potion",
+        "itemId": 23374,
+        "buy": 488
+      },
+      {
+        "itemName": "vial",
+        "itemId": 2874,
+        "sell": 5
+      },
+      {
+        "itemName": "spellwand",
+        "itemId": 651,
+        "sell": 299
+      },
+      {
+        "itemName": "spellbook",
+        "itemId": 3059,
+        "buy": 150
+      },
+      {
+        "itemName": "avalanche rune",
+        "itemId": 3161,
+        "buy": 64
+      },
+      {
+        "itemName": "blank rune",
+        "itemId": 3147,
+        "buy": 10
+      },
+      {
+        "itemName": "chameleon rune",
+        "itemId": 3178,
+        "buy": 210
+      },
+      {
+        "itemName": "convince creature rune",
+        "itemId": 3177,
+        "buy": 80
+      },
+      {
+        "itemName": "cure poison rune",
+        "itemId": 3153,
+        "buy": 65
+      },
+      {
+        "itemName": "destroy field rune",
+        "itemId": 3148,
+        "buy": 15
+      },
+      {
+        "itemName": "energy field rune",
+        "itemId": 3164,
+        "buy": 38
+      },
+      {
+        "itemName": "energy wall rune",
+        "itemId": 3166,
+        "buy": 85
+      },
+      {
+        "itemName": "explosion rune",
+        "itemId": 3200,
+        "buy": 31
+      },
+      {
+        "itemName": "fire bomb rune",
+        "itemId": 3192,
+        "buy": 147
+      },
+      {
+        "itemName": "fire field rune",
+        "itemId": 3188,
+        "buy": 28
+      },
+      {
+        "itemName": "fire wall rune",
+        "itemId": 3190,
+        "buy": 61
+      },
+      {
+        "itemName": "great fireball rune",
+        "itemId": 3191,
+        "buy": 64
+      },
+      {
+        "itemName": "heavy magic missile rune",
+        "itemId": 3198,
+        "buy": 12
+      },
+      {
+        "itemName": "intense healing rune",
+        "itemId": 3152,
+        "buy": 95
+      },
+      {
+        "itemName": "light magic missile rune",
+        "itemId": 3174,
+        "buy": 4
+      },
+      {
+        "itemName": "poison field rune",
+        "itemId": 3172,
+        "buy": 21
+      },
+      {
+        "itemName": "poison wall rune",
+        "itemId": 3176,
+        "buy": 52
+      },
+      {
+        "itemName": "sudden death rune",
+        "itemId": 3155,
+        "buy": 162
+      },
+      {
+        "itemName": "stalagmite rune",
+        "itemId": 3179,
+        "buy": 12
+      },
+      {
+        "itemName": "ultimate healing rune",
+        "itemId": 3160,
+        "buy": 175
+      },
+      {
+        "itemName": "hailstorm rod",
+        "itemId": 3067,
+        "buy": 15000
+      },
+      {
+        "itemName": "moonlight rod",
+        "itemId": 3070,
+        "buy": 1000
+      },
+      {
+        "itemName": "necrotic rod",
+        "itemId": 3069,
+        "buy": 5000
+      },
+      {
+        "itemName": "northwind rod",
+        "itemId": 8083,
+        "buy": 7500
+      },
+      {
+        "itemName": "snakebite rod",
+        "itemId": 3066,
+        "buy": 500
+      },
+      {
+        "itemName": "springsprout rod",
+        "itemId": 8084,
+        "buy": 18000
+      },
+      {
+        "itemName": "terra rod",
+        "itemId": 3065,
+        "buy": 10000
+      },
+      {
+        "itemName": "underworld rod",
+        "itemId": 8082,
+        "buy": 22000
+      },
+      {
+        "itemName": "wand of cosmic energy",
+        "itemId": 3073,
+        "buy": 10000
+      },
+      {
+        "itemName": "wand of decay",
+        "itemId": 3072,
+        "buy": 5000
+      },
+      {
+        "itemName": "wand of draconia",
+        "itemId": 8093,
+        "buy": 7500
+      },
+      {
+        "itemName": "wand of dragonbreath",
+        "itemId": 3075,
+        "buy": 1000
+      },
+      {
+        "itemName": "wand of inferno",
+        "itemId": 3071,
+        "buy": 15000
+      },
+      {
+        "itemName": "wand of starstorm",
+        "itemId": 8092,
+        "buy": 18000
+      },
+      {
+        "itemName": "wand of voodoo",
+        "itemId": 8094,
+        "buy": 22000
+      },
+      {
+        "itemName": "wand of vortex",
+        "itemId": 3074,
+        "buy": 500
+      }
+    ],
     "outfit": {
       "lookType": 138,
       "lookHead": 59,
@@ -8172,7 +8846,308 @@
     }
   },
   "chuckles.lua": {
-    "shop": [],
+    "shop": [
+      {
+        "itemName": "empty potion flask",
+        "itemId": 283,
+        "sell": 5
+      },
+      {
+        "itemName": "empty potion flask",
+        "itemId": 284,
+        "sell": 5
+      },
+      {
+        "itemName": "empty potion flask",
+        "itemId": 285,
+        "sell": 5
+      },
+      {
+        "itemName": "great health potion",
+        "itemId": 239,
+        "buy": 225
+      },
+      {
+        "itemName": "great mana potion",
+        "itemId": 238,
+        "buy": 158
+      },
+      {
+        "itemName": "great spirit potion",
+        "itemId": 7642,
+        "buy": 254
+      },
+      {
+        "itemName": "health potion",
+        "itemId": 266,
+        "buy": 50
+      },
+      {
+        "itemName": "mana potion",
+        "itemId": 268,
+        "buy": 56
+      },
+      {
+        "itemName": "strong health potion",
+        "itemId": 236,
+        "buy": 115
+      },
+      {
+        "itemName": "strong mana potion",
+        "itemId": 237,
+        "buy": 108
+      },
+      {
+        "itemName": "supreme health potion",
+        "itemId": 23375,
+        "buy": 650
+      },
+      {
+        "itemName": "ultimate health potion",
+        "itemId": 7643,
+        "buy": 379
+      },
+      {
+        "itemName": "ultimate mana potion",
+        "itemId": 23373,
+        "buy": 488
+      },
+      {
+        "itemName": "ultimate spirit potion",
+        "itemId": 23374,
+        "buy": 488
+      },
+      {
+        "itemName": "vial",
+        "itemId": 2874,
+        "sell": 5
+      },
+      {
+        "itemName": "avalanche rune",
+        "itemId": 3161,
+        "buy": 64
+      },
+      {
+        "itemName": "blank rune",
+        "itemId": 3147,
+        "buy": 10
+      },
+      {
+        "itemName": "chameleon rune",
+        "itemId": 3178,
+        "buy": 210
+      },
+      {
+        "itemName": "convince creature rune",
+        "itemId": 3177,
+        "buy": 80
+      },
+      {
+        "itemName": "cure poison rune",
+        "itemId": 3153,
+        "buy": 65
+      },
+      {
+        "itemName": "destroy field rune",
+        "itemId": 3148,
+        "buy": 15
+      },
+      {
+        "itemName": "energy field rune",
+        "itemId": 3164,
+        "buy": 38
+      },
+      {
+        "itemName": "energy wall rune",
+        "itemId": 3166,
+        "buy": 85
+      },
+      {
+        "itemName": "explosion rune",
+        "itemId": 3200,
+        "buy": 31
+      },
+      {
+        "itemName": "fire bomb rune",
+        "itemId": 3192,
+        "buy": 147
+      },
+      {
+        "itemName": "fire field rune",
+        "itemId": 3188,
+        "buy": 28
+      },
+      {
+        "itemName": "fire wall rune",
+        "itemId": 3190,
+        "buy": 61
+      },
+      {
+        "itemName": "great fireball rune",
+        "itemId": 3191,
+        "buy": 64
+      },
+      {
+        "itemName": "heavy magic missile rune",
+        "itemId": 3198,
+        "buy": 12
+      },
+      {
+        "itemName": "intense healing rune",
+        "itemId": 3152,
+        "buy": 95
+      },
+      {
+        "itemName": "light magic missile rune",
+        "itemId": 3174,
+        "buy": 4
+      },
+      {
+        "itemName": "poison field rune",
+        "itemId": 3172,
+        "buy": 21
+      },
+      {
+        "itemName": "poison wall rune",
+        "itemId": 3176,
+        "buy": 52
+      },
+      {
+        "itemName": "stalagmite rune",
+        "itemId": 3179,
+        "buy": 12
+      },
+      {
+        "itemName": "sudden death rune",
+        "itemId": 3155,
+        "buy": 162
+      },
+      {
+        "itemName": "ultimate healing rune",
+        "itemId": 3160,
+        "buy": 175
+      },
+      {
+        "itemName": "hailstorm rod",
+        "itemId": 3067,
+        "buy": 15000
+      },
+      {
+        "itemName": "moonlight rod",
+        "itemId": 3070,
+        "buy": 1000
+      },
+      {
+        "itemName": "necrotic rod",
+        "itemId": 3069,
+        "buy": 5000
+      },
+      {
+        "itemName": "northwind rod",
+        "itemId": 8083,
+        "buy": 7500
+      },
+      {
+        "itemName": "snakebite rod",
+        "itemId": 3066,
+        "buy": 500
+      },
+      {
+        "itemName": "springsprout rod",
+        "itemId": 8084,
+        "buy": 18000
+      },
+      {
+        "itemName": "terra rod",
+        "itemId": 3065,
+        "buy": 10000
+      },
+      {
+        "itemName": "underworld rod",
+        "itemId": 8082,
+        "buy": 22000
+      },
+      {
+        "itemName": "wand of cosmic energy",
+        "itemId": 3073,
+        "buy": 10000
+      },
+      {
+        "itemName": "wand of decay",
+        "itemId": 3072,
+        "buy": 5000
+      },
+      {
+        "itemName": "wand of draconia",
+        "itemId": 8093,
+        "buy": 7500
+      },
+      {
+        "itemName": "wand of dragonbreath",
+        "itemId": 3075,
+        "buy": 1000
+      },
+      {
+        "itemName": "wand of inferno",
+        "itemId": 3071,
+        "buy": 15000
+      },
+      {
+        "itemName": "wand of starstorm",
+        "itemId": 8092,
+        "buy": 18000
+      },
+      {
+        "itemName": "wand of voodoo",
+        "itemId": 8094,
+        "buy": 22000
+      },
+      {
+        "itemName": "wand of vortex",
+        "itemId": 3074,
+        "buy": 500
+      },
+      {
+        "itemName": "durable exercise rod",
+        "itemId": 35283,
+        "buy": 1250000
+      },
+      {
+        "itemName": "durable exercise wand",
+        "itemId": 35284,
+        "buy": 1250000
+      },
+      {
+        "itemName": "exercise rod",
+        "itemId": 28556,
+        "buy": 347222
+      },
+      {
+        "itemName": "exercise wand",
+        "itemId": 28557,
+        "buy": 347222
+      },
+      {
+        "itemName": "lasting exercise rod",
+        "itemId": 35289,
+        "buy": 10000000
+      },
+      {
+        "itemName": "lasting exercise wand",
+        "itemId": 35290,
+        "buy": 10000000
+      },
+      {
+        "itemName": "spellwand",
+        "itemId": 651,
+        "sell": 299
+      },
+      {
+        "itemName": "spellbook",
+        "itemId": 3059,
+        "buy": 150
+      }
+    ],
     "outfit": {
       "lookType": 99
     }
@@ -13801,7 +14776,233 @@
     }
   },
   "fenech.lua": {
-    "shop": [],
+    "shop": [
+      {
+        "itemName": "hailstorm rod",
+        "itemId": 3067,
+        "buy": 15000
+      },
+      {
+        "itemName": "moonlight rod",
+        "itemId": 3070,
+        "buy": 1000
+      },
+      {
+        "itemName": "necrotic rod",
+        "itemId": 3069,
+        "buy": 5000
+      },
+      {
+        "itemName": "northwind rod",
+        "itemId": 8083,
+        "buy": 7500
+      },
+      {
+        "itemName": "snakebite rod",
+        "itemId": 3066,
+        "buy": 500
+      },
+      {
+        "itemName": "springsprout rod",
+        "itemId": 8084,
+        "buy": 18000
+      },
+      {
+        "itemName": "terra rod",
+        "itemId": 3065,
+        "buy": 10000
+      },
+      {
+        "itemName": "underworld rod",
+        "itemId": 8082,
+        "buy": 22000
+      },
+      {
+        "itemName": "wand of cosmic energy",
+        "itemId": 3073,
+        "buy": 10000
+      },
+      {
+        "itemName": "wand of decay",
+        "itemId": 3072,
+        "buy": 5000
+      },
+      {
+        "itemName": "wand of draconia",
+        "itemId": 8093,
+        "buy": 7500
+      },
+      {
+        "itemName": "wand of dragonbreath",
+        "itemId": 3075,
+        "buy": 1000
+      },
+      {
+        "itemName": "wand of inferno",
+        "itemId": 3071,
+        "buy": 15000
+      },
+      {
+        "itemName": "wand of starstorm",
+        "itemId": 8092,
+        "buy": 18000
+      },
+      {
+        "itemName": "wand of voodoo",
+        "itemId": 8094,
+        "buy": 22000
+      },
+      {
+        "itemName": "wand of vortex",
+        "itemId": 3074,
+        "buy": 500
+      },
+      {
+        "itemName": "avalanche rune",
+        "itemId": 3161,
+        "buy": 64
+      },
+      {
+        "itemName": "blank rune",
+        "itemId": 3147,
+        "buy": 10
+      },
+      {
+        "itemName": "chameleon rune",
+        "itemId": 3178,
+        "buy": 210
+      },
+      {
+        "itemName": "convince creature rune",
+        "itemId": 3177,
+        "buy": 80
+      },
+      {
+        "itemName": "cure poison rune",
+        "itemId": 3153,
+        "buy": 65
+      },
+      {
+        "itemName": "destroy field rune",
+        "itemId": 3148,
+        "buy": 15
+      },
+      {
+        "itemName": "energy field rune",
+        "itemId": 3164,
+        "buy": 38
+      },
+      {
+        "itemName": "energy wall rune",
+        "itemId": 3166,
+        "buy": 85
+      },
+      {
+        "itemName": "explosion rune",
+        "itemId": 3200,
+        "buy": 31
+      },
+      {
+        "itemName": "fire bomb rune",
+        "itemId": 3192,
+        "buy": 147
+      },
+      {
+        "itemName": "fire field rune",
+        "itemId": 3188,
+        "buy": 28
+      },
+      {
+        "itemName": "fire wall rune",
+        "itemId": 3190,
+        "buy": 61
+      },
+      {
+        "itemName": "great fireball rune",
+        "itemId": 3191,
+        "buy": 64
+      },
+      {
+        "itemName": "heavy magic missile rune",
+        "itemId": 3198,
+        "buy": 12
+      },
+      {
+        "itemName": "intense healing rune",
+        "itemId": 3152,
+        "buy": 95
+      },
+      {
+        "itemName": "light magic missile rune",
+        "itemId": 3174,
+        "buy": 4
+      },
+      {
+        "itemName": "poison field rune",
+        "itemId": 3172,
+        "buy": 21
+      },
+      {
+        "itemName": "poison wall rune",
+        "itemId": 3176,
+        "buy": 52
+      },
+      {
+        "itemName": "stalagmite rune",
+        "itemId": 3179,
+        "buy": 12
+      },
+      {
+        "itemName": "sudden death rune",
+        "itemId": 3155,
+        "buy": 162
+      },
+      {
+        "itemName": "ultimate healing rune",
+        "itemId": 3160,
+        "buy": 175
+      },
+      {
+        "itemName": "durable exercise rod",
+        "itemId": 35283,
+        "buy": 1250000
+      },
+      {
+        "itemName": "durable exercise wand",
+        "itemId": 35284,
+        "buy": 1250000
+      },
+      {
+        "itemName": "exercise rod",
+        "itemId": 28556,
+        "buy": 347222
+      },
+      {
+        "itemName": "exercise wand",
+        "itemId": 28557,
+        "buy": 347222
+      },
+      {
+        "itemName": "lasting exercise rod",
+        "itemId": 35289,
+        "buy": 10000000
+      },
+      {
+        "itemName": "lasting exercise wand",
+        "itemId": 35290,
+        "buy": 10000000
+      },
+      {
+        "itemName": "spellwand",
+        "itemId": 651,
+        "sell": 299
+      },
+      {
+        "itemName": "spellbook",
+        "itemId": 3059,
+        "buy": 150
+      }
+    ],
     "outfit": {
       "lookType": 132,
       "lookHead": 76,
@@ -14923,11 +16124,498 @@
     }
   },
   "frans.lua": {
-    "shop": [],
+    "shop": [
+      {
+        "itemName": "moonlight rod",
+        "itemId": 3070,
+        "buy": 1000
+      },
+      {
+        "itemName": "necrotic rod",
+        "itemId": 3069,
+        "buy": 5000
+      },
+      {
+        "itemName": "snakebite rod",
+        "itemId": 3066,
+        "buy": 500
+      },
+      {
+        "itemName": "terra rod",
+        "itemId": 3065,
+        "buy": 10000
+      },
+      {
+        "itemName": "wand of cosmic energy",
+        "itemId": 3073,
+        "buy": 10000
+      },
+      {
+        "itemName": "wand of decay",
+        "itemId": 3072,
+        "buy": 5000
+      },
+      {
+        "itemName": "wand of dragonbreath",
+        "itemId": 3075,
+        "buy": 1000
+      },
+      {
+        "itemName": "wand of vortex",
+        "itemId": 3074,
+        "buy": 500
+      },
+      {
+        "itemName": "avalanche rune",
+        "itemId": 3161,
+        "buy": 64
+      },
+      {
+        "itemName": "blank rune",
+        "itemId": 3147,
+        "buy": 10
+      },
+      {
+        "itemName": "chameleon rune",
+        "itemId": 3178,
+        "buy": 210
+      },
+      {
+        "itemName": "convince creature rune",
+        "itemId": 3177,
+        "buy": 80
+      },
+      {
+        "itemName": "cure poison rune",
+        "itemId": 3153,
+        "buy": 65
+      },
+      {
+        "itemName": "destroy field rune",
+        "itemId": 3148,
+        "buy": 15
+      },
+      {
+        "itemName": "energy field rune",
+        "itemId": 3164,
+        "buy": 38
+      },
+      {
+        "itemName": "energy wall rune",
+        "itemId": 3166,
+        "buy": 85
+      },
+      {
+        "itemName": "explosion rune",
+        "itemId": 3200,
+        "buy": 31
+      },
+      {
+        "itemName": "fire bomb rune",
+        "itemId": 3192,
+        "buy": 147
+      },
+      {
+        "itemName": "fire field rune",
+        "itemId": 3188,
+        "buy": 28
+      },
+      {
+        "itemName": "fire wall rune",
+        "itemId": 3190,
+        "buy": 61
+      },
+      {
+        "itemName": "great fireball rune",
+        "itemId": 3191,
+        "buy": 64
+      },
+      {
+        "itemName": "heavy magic missile rune",
+        "itemId": 3198,
+        "buy": 12
+      },
+      {
+        "itemName": "intense healing rune",
+        "itemId": 3152,
+        "buy": 95
+      },
+      {
+        "itemName": "light magic missile rune",
+        "itemId": 3174,
+        "buy": 4
+      },
+      {
+        "itemName": "poison field rune",
+        "itemId": 3172,
+        "buy": 21
+      },
+      {
+        "itemName": "poison wall rune",
+        "itemId": 3176,
+        "buy": 52
+      },
+      {
+        "itemName": "stalagmite rune",
+        "itemId": 3179,
+        "buy": 12
+      },
+      {
+        "itemName": "sudden death rune",
+        "itemId": 3155,
+        "buy": 162
+      },
+      {
+        "itemName": "ultimate healing rune",
+        "itemId": 3160,
+        "buy": 175
+      },
+      {
+        "itemName": "durable exercise rod",
+        "itemId": 35283,
+        "buy": 1250000
+      },
+      {
+        "itemName": "durable exercise wand",
+        "itemId": 35284,
+        "buy": 1250000
+      },
+      {
+        "itemName": "exercise rod",
+        "itemId": 28556,
+        "buy": 347222
+      },
+      {
+        "itemName": "exercise wand",
+        "itemId": 28557,
+        "buy": 347222
+      },
+      {
+        "itemName": "lasting exercise rod",
+        "itemId": 35289,
+        "buy": 10000000
+      },
+      {
+        "itemName": "lasting exercise wand",
+        "itemId": 35290,
+        "buy": 10000000
+      },
+      {
+        "itemName": "spellwand",
+        "itemId": 651,
+        "sell": 299
+      },
+      {
+        "itemName": "spellbook",
+        "itemId": 3059,
+        "buy": 150
+      }
+    ],
     "outfit": null
   },
   "frederik.lua": {
-    "shop": [],
+    "shop": [
+      {
+        "itemName": "hailstorm rod",
+        "itemId": 3067,
+        "buy": 15000
+      },
+      {
+        "itemName": "moonlight rod",
+        "itemId": 3070,
+        "buy": 1000
+      },
+      {
+        "itemName": "necrotic rod",
+        "itemId": 3069,
+        "buy": 5000
+      },
+      {
+        "itemName": "northwind rod",
+        "itemId": 8083,
+        "buy": 7500
+      },
+      {
+        "itemName": "snakebite rod",
+        "itemId": 3066,
+        "buy": 500
+      },
+      {
+        "itemName": "springsprout rod",
+        "itemId": 8084,
+        "buy": 18000
+      },
+      {
+        "itemName": "terra rod",
+        "itemId": 3065,
+        "buy": 10000
+      },
+      {
+        "itemName": "underworld rod",
+        "itemId": 8082,
+        "buy": 22000
+      },
+      {
+        "itemName": "wand of cosmic energy",
+        "itemId": 3073,
+        "buy": 10000
+      },
+      {
+        "itemName": "wand of decay",
+        "itemId": 3072,
+        "buy": 5000
+      },
+      {
+        "itemName": "wand of draconia",
+        "itemId": 8093,
+        "buy": 7500
+      },
+      {
+        "itemName": "wand of dragonbreath",
+        "itemId": 3075,
+        "buy": 1000
+      },
+      {
+        "itemName": "wand of inferno",
+        "itemId": 3071,
+        "buy": 15000
+      },
+      {
+        "itemName": "wand of starstorm",
+        "itemId": 8092,
+        "buy": 18000
+      },
+      {
+        "itemName": "wand of voodoo",
+        "itemId": 8094,
+        "buy": 22000
+      },
+      {
+        "itemName": "wand of vortex",
+        "itemId": 3074,
+        "buy": 500
+      },
+      {
+        "itemName": "avalanche rune",
+        "itemId": 3161,
+        "buy": 64
+      },
+      {
+        "itemName": "blank rune",
+        "itemId": 3147,
+        "buy": 10
+      },
+      {
+        "itemName": "chameleon rune",
+        "itemId": 3178,
+        "buy": 210
+      },
+      {
+        "itemName": "convince creature rune",
+        "itemId": 3177,
+        "buy": 80
+      },
+      {
+        "itemName": "cure poison rune",
+        "itemId": 3153,
+        "buy": 65
+      },
+      {
+        "itemName": "destroy field rune",
+        "itemId": 3148,
+        "buy": 15
+      },
+      {
+        "itemName": "energy field rune",
+        "itemId": 3164,
+        "buy": 38
+      },
+      {
+        "itemName": "energy wall rune",
+        "itemId": 3166,
+        "buy": 85
+      },
+      {
+        "itemName": "explosion rune",
+        "itemId": 3200,
+        "buy": 31
+      },
+      {
+        "itemName": "fire bomb rune",
+        "itemId": 3192,
+        "buy": 147
+      },
+      {
+        "itemName": "fire field rune",
+        "itemId": 3188,
+        "buy": 28
+      },
+      {
+        "itemName": "fire wall rune",
+        "itemId": 3190,
+        "buy": 61
+      },
+      {
+        "itemName": "great fireball rune",
+        "itemId": 3191,
+        "buy": 64
+      },
+      {
+        "itemName": "heavy magic missile rune",
+        "itemId": 3198,
+        "buy": 12
+      },
+      {
+        "itemName": "intense healing rune",
+        "itemId": 3152,
+        "buy": 95
+      },
+      {
+        "itemName": "light magic missile rune",
+        "itemId": 3174,
+        "buy": 4
+      },
+      {
+        "itemName": "poison field rune",
+        "itemId": 3172,
+        "buy": 21
+      },
+      {
+        "itemName": "poison wall rune",
+        "itemId": 3176,
+        "buy": 52
+      },
+      {
+        "itemName": "stalagmite rune",
+        "itemId": 3179,
+        "buy": 12
+      },
+      {
+        "itemName": "sudden death rune",
+        "itemId": 3155,
+        "buy": 162
+      },
+      {
+        "itemName": "ultimate healing rune",
+        "itemId": 3160,
+        "buy": 175
+      },
+      {
+        "itemName": "empty potion flask",
+        "itemId": 283,
+        "sell": 5
+      },
+      {
+        "itemName": "empty potion flask",
+        "itemId": 284,
+        "sell": 5
+      },
+      {
+        "itemName": "empty potion flask",
+        "itemId": 285,
+        "sell": 5
+      },
+      {
+        "itemName": "great health potion",
+        "itemId": 239,
+        "buy": 225
+      },
+      {
+        "itemName": "great mana potion",
+        "itemId": 238,
+        "buy": 158
+      },
+      {
+        "itemName": "great spirit potion",
+        "itemId": 7642,
+        "buy": 254
+      },
+      {
+        "itemName": "health potion",
+        "itemId": 266,
+        "buy": 50
+      },
+      {
+        "itemName": "mana potion",
+        "itemId": 268,
+        "buy": 56
+      },
+      {
+        "itemName": "strong health potion",
+        "itemId": 236,
+        "buy": 115
+      },
+      {
+        "itemName": "strong mana potion",
+        "itemId": 237,
+        "buy": 108
+      },
+      {
+        "itemName": "supreme health potion",
+        "itemId": 23375,
+        "buy": 650
+      },
+      {
+        "itemName": "ultimate health potion",
+        "itemId": 7643,
+        "buy": 379
+      },
+      {
+        "itemName": "ultimate mana potion",
+        "itemId": 23373,
+        "buy": 488
+      },
+      {
+        "itemName": "ultimate spirit potion",
+        "itemId": 23374,
+        "buy": 488
+      },
+      {
+        "itemName": "vial",
+        "itemId": 2874,
+        "sell": 5
+      },
+      {
+        "itemName": "durable exercise rod",
+        "itemId": 35283,
+        "buy": 1250000
+      },
+      {
+        "itemName": "durable exercise wand",
+        "itemId": 35284,
+        "buy": 1250000
+      },
+      {
+        "itemName": "exercise rod",
+        "itemId": 28556,
+        "buy": 347222
+      },
+      {
+        "itemName": "exercise wand",
+        "itemId": 28557,
+        "buy": 347222
+      },
+      {
+        "itemName": "lasting exercise rod",
+        "itemId": 35289,
+        "buy": 10000000
+      },
+      {
+        "itemName": "lasting exercise wand",
+        "itemId": 35290,
+        "buy": 10000000
+      },
+      {
+        "itemName": "spellwand",
+        "itemId": 651,
+        "sell": 299
+      },
+      {
+        "itemName": "spellbook",
+        "itemId": 3059,
+        "buy": 150
+      }
+    ],
     "outfit": {
       "lookType": 128,
       "lookHead": 76,
@@ -16293,7 +17981,243 @@
     }
   },
   "ghorza.lua": {
-    "shop": [],
+    "shop": [
+      {
+        "itemName": "empty potion flask",
+        "itemId": 283,
+        "sell": 5
+      },
+      {
+        "itemName": "empty potion flask",
+        "itemId": 284,
+        "sell": 5
+      },
+      {
+        "itemName": "empty potion flask",
+        "itemId": 285,
+        "sell": 5
+      },
+      {
+        "itemName": "great health potion",
+        "itemId": 239,
+        "buy": 225
+      },
+      {
+        "itemName": "great mana potion",
+        "itemId": 238,
+        "buy": 158
+      },
+      {
+        "itemName": "great spirit potion",
+        "itemId": 7642,
+        "buy": 254
+      },
+      {
+        "itemName": "health potion",
+        "itemId": 266,
+        "buy": 50
+      },
+      {
+        "itemName": "mana potion",
+        "itemId": 268,
+        "buy": 56
+      },
+      {
+        "itemName": "strong health potion",
+        "itemId": 236,
+        "buy": 115
+      },
+      {
+        "itemName": "strong mana potion",
+        "itemId": 237,
+        "buy": 108
+      },
+      {
+        "itemName": "supreme health potion",
+        "itemId": 23375,
+        "buy": 650
+      },
+      {
+        "itemName": "ultimate health potion",
+        "itemId": 7643,
+        "buy": 379
+      },
+      {
+        "itemName": "ultimate mana potion",
+        "itemId": 23373,
+        "buy": 488
+      },
+      {
+        "itemName": "ultimate spirit potion",
+        "itemId": 23374,
+        "buy": 488
+      },
+      {
+        "itemName": "vial",
+        "itemId": 2874,
+        "sell": 5
+      },
+      {
+        "itemName": "animate dead rune",
+        "itemId": 3203,
+        "buy": 375
+      },
+      {
+        "itemName": "avalanche rune",
+        "itemId": 3161,
+        "buy": 64
+      },
+      {
+        "itemName": "blank rune",
+        "itemId": 3147,
+        "buy": 10
+      },
+      {
+        "itemName": "chameleon rune",
+        "itemId": 3178,
+        "buy": 210
+      },
+      {
+        "itemName": "convince creature rune",
+        "itemId": 3177,
+        "buy": 80
+      },
+      {
+        "itemName": "cure poison rune",
+        "itemId": 3153,
+        "buy": 65
+      },
+      {
+        "itemName": "destroy field rune",
+        "itemId": 3148,
+        "buy": 15
+      },
+      {
+        "itemName": "disintegrate rune",
+        "itemId": 3197,
+        "buy": 26
+      },
+      {
+        "itemName": "energy bomb rune",
+        "itemId": 3149,
+        "buy": 203
+      },
+      {
+        "itemName": "energy field rune",
+        "itemId": 3164,
+        "buy": 38
+      },
+      {
+        "itemName": "energy wall rune",
+        "itemId": 3166,
+        "buy": 85
+      },
+      {
+        "itemName": "explosion rune",
+        "itemId": 3200,
+        "buy": 31
+      },
+      {
+        "itemName": "fire bomb rune",
+        "itemId": 3192,
+        "buy": 147
+      },
+      {
+        "itemName": "fire field rune",
+        "itemId": 3188,
+        "buy": 28
+      },
+      {
+        "itemName": "fire wall rune",
+        "itemId": 3190,
+        "buy": 61
+      },
+      {
+        "itemName": "fireball rune",
+        "itemId": 3189,
+        "buy": 30
+      },
+      {
+        "itemName": "great fireball rune",
+        "itemId": 3191,
+        "buy": 64
+      },
+      {
+        "itemName": "heavy magic missile rune",
+        "itemId": 3198,
+        "buy": 12
+      },
+      {
+        "itemName": "icicle rune",
+        "itemId": 3158,
+        "buy": 30
+      },
+      {
+        "itemName": "holy missile rune",
+        "itemId": 3182,
+        "buy": 16
+      },
+      {
+        "itemName": "intense healing rune",
+        "itemId": 3152,
+        "buy": 95
+      },
+      {
+        "itemName": "light magic missile rune",
+        "itemId": 3174,
+        "buy": 4
+      },
+      {
+        "itemName": "magic wall rune",
+        "itemId": 3180,
+        "buy": 116
+      },
+      {
+        "itemName": "paralyze rune",
+        "itemId": 3165,
+        "buy": 700
+      },
+      {
+        "itemName": "poison bomb rune",
+        "itemId": 3173,
+        "buy": 85
+      },
+      {
+        "itemName": "soulfire rune",
+        "itemId": 3195,
+        "buy": 46
+      },
+      {
+        "itemName": "stalagmite rune",
+        "itemId": 3179,
+        "buy": 12
+      },
+      {
+        "itemName": "stone shower rune",
+        "itemId": 3175,
+        "buy": 41
+      },
+      {
+        "itemName": "sudden death rune",
+        "itemId": 3155,
+        "buy": 162
+      },
+      {
+        "itemName": "thunderstorm rune",
+        "itemId": 3202,
+        "buy": 52
+      },
+      {
+        "itemName": "ultimate healing rune",
+        "itemId": 3160,
+        "buy": 175
+      },
+      {
+        "itemName": "wild growth rune",
+        "itemId": 3156,
+        "buy": 160
+      }
+    ],
     "outfit": {
       "lookType": 859,
       "lookHead": 0,
@@ -17018,7 +18942,253 @@
     }
   },
   "gnomegica.lua": {
-    "shop": [],
+    "shop": [
+      {
+        "itemName": "empty potion flask",
+        "itemId": 283,
+        "sell": 5
+      },
+      {
+        "itemName": "empty potion flask",
+        "itemId": 284,
+        "sell": 5
+      },
+      {
+        "itemName": "empty potion flask",
+        "itemId": 285,
+        "sell": 5
+      },
+      {
+        "itemName": "great health potion",
+        "itemId": 239,
+        "buy": 225
+      },
+      {
+        "itemName": "great mana potion",
+        "itemId": 238,
+        "buy": 158
+      },
+      {
+        "itemName": "great spirit potion",
+        "itemId": 7642,
+        "buy": 254
+      },
+      {
+        "itemName": "health potion",
+        "itemId": 266,
+        "buy": 50
+      },
+      {
+        "itemName": "mana potion",
+        "itemId": 268,
+        "buy": 56
+      },
+      {
+        "itemName": "strong health potion",
+        "itemId": 236,
+        "buy": 115
+      },
+      {
+        "itemName": "strong mana potion",
+        "itemId": 237,
+        "buy": 108
+      },
+      {
+        "itemName": "ultimate health potion",
+        "itemId": 7643,
+        "buy": 379
+      },
+      {
+        "itemName": "vial",
+        "itemId": 2874,
+        "sell": 5
+      },
+      {
+        "itemName": "avalanche rune",
+        "itemId": 3161,
+        "buy": 64
+      },
+      {
+        "itemName": "blank rune",
+        "itemId": 3147,
+        "buy": 10
+      },
+      {
+        "itemName": "chameleon rune",
+        "itemId": 3178,
+        "buy": 210
+      },
+      {
+        "itemName": "convince creature rune",
+        "itemId": 3177,
+        "buy": 80
+      },
+      {
+        "itemName": "cure poison rune",
+        "itemId": 3153,
+        "buy": 65
+      },
+      {
+        "itemName": "destroy field rune",
+        "itemId": 3148,
+        "buy": 15
+      },
+      {
+        "itemName": "energy field rune",
+        "itemId": 3164,
+        "buy": 38
+      },
+      {
+        "itemName": "energy wall rune",
+        "itemId": 3166,
+        "buy": 85
+      },
+      {
+        "itemName": "explosion rune",
+        "itemId": 3200,
+        "buy": 31
+      },
+      {
+        "itemName": "fire bomb rune",
+        "itemId": 3192,
+        "buy": 147
+      },
+      {
+        "itemName": "fire field rune",
+        "itemId": 3188,
+        "buy": 28
+      },
+      {
+        "itemName": "fire wall rune",
+        "itemId": 3190,
+        "buy": 61
+      },
+      {
+        "itemName": "great fireball rune",
+        "itemId": 3191,
+        "buy": 64
+      },
+      {
+        "itemName": "heavy magic missile rune",
+        "itemId": 3198,
+        "buy": 12
+      },
+      {
+        "itemName": "intense healing rune",
+        "itemId": 3152,
+        "buy": 95
+      },
+      {
+        "itemName": "light magic missile rune",
+        "itemId": 3174,
+        "buy": 4
+      },
+      {
+        "itemName": "poison field rune",
+        "itemId": 3172,
+        "buy": 21
+      },
+      {
+        "itemName": "poison wall rune",
+        "itemId": 3176,
+        "buy": 52
+      },
+      {
+        "itemName": "stalagmite rune",
+        "itemId": 3179,
+        "buy": 12
+      },
+      {
+        "itemName": "sudden death rune",
+        "itemId": 3155,
+        "buy": 162
+      },
+      {
+        "itemName": "ultimate healing rune",
+        "itemId": 3160,
+        "buy": 175
+      },
+      {
+        "itemName": "moonlight rod",
+        "itemId": 3070,
+        "buy": 1000
+      },
+      {
+        "itemName": "necrotic rod",
+        "itemId": 3069,
+        "buy": 5000
+      },
+      {
+        "itemName": "snakebite rod",
+        "itemId": 3066,
+        "buy": 500
+      },
+      {
+        "itemName": "terra rod",
+        "itemId": 3065,
+        "buy": 10000
+      },
+      {
+        "itemName": "wand of cosmic energy",
+        "itemId": 3073,
+        "buy": 10000
+      },
+      {
+        "itemName": "wand of decay",
+        "itemId": 3072,
+        "buy": 5000
+      },
+      {
+        "itemName": "wand of dragonbreath",
+        "itemId": 3075,
+        "buy": 1000
+      },
+      {
+        "itemName": "wand of vortex",
+        "itemId": 3074,
+        "buy": 500
+      },
+      {
+        "itemName": "durable exercise rod",
+        "itemId": 35283,
+        "buy": 1250000
+      },
+      {
+        "itemName": "durable exercise wand",
+        "itemId": 35284,
+        "buy": 1250000
+      },
+      {
+        "itemName": "exercise rod",
+        "itemId": 28556,
+        "buy": 347222
+      },
+      {
+        "itemName": "exercise wand",
+        "itemId": 28557,
+        "buy": 347222
+      },
+      {
+        "itemName": "lasting exercise rod",
+        "itemId": 35289,
+        "buy": 10000000
+      },
+      {
+        "itemName": "lasting exercise wand",
+        "itemId": 35290,
+        "buy": 10000000
+      },
+      {
+        "itemName": "spellwand",
+        "itemId": 651,
+        "sell": 299
+      },
+      {
+        "itemName": "spellbook",
+        "itemId": 3059,
+        "buy": 150
+      }
+    ],
     "outfit": {
       "lookType": 507,
       "lookHead": 79,
@@ -20387,7 +22557,58 @@
     }
   },
   "hamish.lua": {
-    "shop": [],
+    "shop": [
+      {
+        "itemName": "health potion",
+        "itemId": 266,
+        "buy": 50
+      },
+      {
+        "itemName": "mana potion",
+        "itemId": 268,
+        "buy": 56
+      },
+      {
+        "itemName": "small health potion",
+        "itemId": 7876,
+        "buy": 20
+      },
+      {
+        "itemName": "blank rune",
+        "itemId": 3147,
+        "buy": 10
+      },
+      {
+        "itemName": "moonlight rod",
+        "itemId": 3070,
+        "buy": 1000
+      },
+      {
+        "itemName": "necrotic rod",
+        "itemId": 3069,
+        "buy": 5000
+      },
+      {
+        "itemName": "snakebite rod",
+        "itemId": 3066,
+        "buy": 500
+      },
+      {
+        "itemName": "wand of decay",
+        "itemId": 3072,
+        "buy": 5000
+      },
+      {
+        "itemName": "wand of dragonbreath",
+        "itemId": 3075,
+        "buy": 1000
+      },
+      {
+        "itemName": "wand of vortex",
+        "itemId": 3074,
+        "buy": 500
+      }
+    ],
     "outfit": {
       "lookType": 133,
       "lookHead": 19,
@@ -26230,7 +28451,413 @@
     }
   },
   "khanna.lua": {
-    "shop": [],
+    "shop": [
+      {
+        "itemName": "animate dead rune",
+        "itemId": 3203,
+        "buy": 375
+      },
+      {
+        "itemName": "avalanche rune",
+        "itemId": 3161,
+        "buy": 64
+      },
+      {
+        "itemName": "blank rune",
+        "itemId": 3147,
+        "buy": 20
+      },
+      {
+        "itemName": "chameleon rune",
+        "itemId": 3178,
+        "buy": 210
+      },
+      {
+        "itemName": "convince creature rune",
+        "itemId": 3177,
+        "buy": 80
+      },
+      {
+        "itemName": "cure poison rune",
+        "itemId": 3153,
+        "buy": 65
+      },
+      {
+        "itemName": "destroy field rune",
+        "itemId": 3148,
+        "buy": 15
+      },
+      {
+        "itemName": "desintegrate rune",
+        "itemId": 3197,
+        "buy": 26
+      },
+      {
+        "itemName": "energy field rune",
+        "itemId": 3164,
+        "buy": 38
+      },
+      {
+        "itemName": "energy wall rune",
+        "itemId": 3166,
+        "buy": 85
+      },
+      {
+        "itemName": "energy bomb rune",
+        "itemId": 3149,
+        "buy": 203
+      },
+      {
+        "itemName": "explosion rune",
+        "itemId": 3200,
+        "buy": 31
+      },
+      {
+        "itemName": "fire bomb rune",
+        "itemId": 3192,
+        "buy": 147
+      },
+      {
+        "itemName": "fire field rune",
+        "itemId": 3188,
+        "buy": 28
+      },
+      {
+        "itemName": "fire wall rune",
+        "itemId": 3190,
+        "buy": 61
+      },
+      {
+        "itemName": "fireball rune",
+        "itemId": 3189,
+        "buy": 30
+      },
+      {
+        "itemName": "great fireball rune",
+        "itemId": 3191,
+        "buy": 64
+      },
+      {
+        "itemName": "heavy magic missile rune",
+        "itemId": 3198,
+        "buy": 12
+      },
+      {
+        "itemName": "holy missile rune",
+        "itemId": 3182,
+        "buy": 16
+      },
+      {
+        "itemName": "icicle rune",
+        "itemId": 3158,
+        "buy": 30
+      },
+      {
+        "itemName": "intense healing rune",
+        "itemId": 3152,
+        "buy": 95
+      },
+      {
+        "itemName": "light magic missile rune",
+        "itemId": 3174,
+        "buy": 4
+      },
+      {
+        "itemName": "magic wall rune",
+        "itemId": 3180,
+        "buy": 116
+      },
+      {
+        "itemName": "paralyze rune",
+        "itemId": 3165,
+        "buy": 700
+      },
+      {
+        "itemName": "poison bomb rune",
+        "itemId": 3173,
+        "buy": 85
+      },
+      {
+        "itemName": "poison field rune",
+        "itemId": 3172,
+        "buy": 21
+      },
+      {
+        "itemName": "poison wall rune",
+        "itemId": 3176,
+        "buy": 52
+      },
+      {
+        "itemName": "stalagmite rune",
+        "itemId": 3179,
+        "buy": 12
+      },
+      {
+        "itemName": "stone shower rune",
+        "itemId": 3175,
+        "buy": 41
+      },
+      {
+        "itemName": "sudden death rune",
+        "itemId": 3155,
+        "buy": 162
+      },
+      {
+        "itemName": "thunderstorm rune",
+        "itemId": 3202,
+        "buy": 52
+      },
+      {
+        "itemName": "ultimate healing rune",
+        "itemId": 3160,
+        "buy": 175
+      },
+      {
+        "itemName": "wild growth rune",
+        "itemId": 3156,
+        "buy": 160
+      },
+      {
+        "itemName": "hailstorm rod",
+        "itemId": 3067,
+        "buy": 15000
+      },
+      {
+        "itemName": "moonlight rod",
+        "itemId": 3070,
+        "buy": 1000
+      },
+      {
+        "itemName": "necrotic rod",
+        "itemId": 3069,
+        "buy": 5000
+      },
+      {
+        "itemName": "northwind rod",
+        "itemId": 8083,
+        "buy": 7500
+      },
+      {
+        "itemName": "snakebite rod",
+        "itemId": 3066,
+        "buy": 500
+      },
+      {
+        "itemName": "springsprout rod",
+        "itemId": 8084,
+        "buy": 18000
+      },
+      {
+        "itemName": "terra rod",
+        "itemId": 3065,
+        "buy": 10000
+      },
+      {
+        "itemName": "underworld rod",
+        "itemId": 8082,
+        "buy": 22000
+      },
+      {
+        "itemName": "wand of cosmic energy",
+        "itemId": 3073,
+        "buy": 10000
+      },
+      {
+        "itemName": "wand of decay",
+        "itemId": 3072,
+        "buy": 5000
+      },
+      {
+        "itemName": "wand of draconia",
+        "itemId": 8093,
+        "buy": 7500
+      },
+      {
+        "itemName": "wand of dragonbreath",
+        "itemId": 3075,
+        "buy": 1000
+      },
+      {
+        "itemName": "wand of inferno",
+        "itemId": 3071,
+        "buy": 15000
+      },
+      {
+        "itemName": "wand of starstorm",
+        "itemId": 8092,
+        "buy": 18000
+      },
+      {
+        "itemName": "wand of voodoo",
+        "itemId": 8094,
+        "buy": 22000
+      },
+      {
+        "itemName": "wand of vortex",
+        "itemId": 3074,
+        "buy": 500
+      },
+      {
+        "itemName": "durable exercise rod",
+        "itemId": 35283,
+        "buy": 1250000
+      },
+      {
+        "itemName": "durable exercise wand",
+        "itemId": 35284,
+        "buy": 1250000
+      },
+      {
+        "itemName": "exercise rod",
+        "itemId": 28556,
+        "buy": 347222
+      },
+      {
+        "itemName": "exercise wand",
+        "itemId": 28557,
+        "buy": 347222
+      },
+      {
+        "itemName": "lasting exercise rod",
+        "itemId": 35289,
+        "buy": 10000000
+      },
+      {
+        "itemName": "lasting exercise wand",
+        "itemId": 35290,
+        "buy": 10000000
+      },
+      {
+        "itemName": "bashmu fang",
+        "itemId": 36820,
+        "sell": 600
+      },
+      {
+        "itemName": "bashmu feather",
+        "itemId": 36820,
+        "sell": 350
+      },
+      {
+        "itemName": "bashmu tongue",
+        "itemId": 36820,
+        "sell": 400
+      },
+      {
+        "itemName": "blue goanna scale",
+        "itemId": 31559,
+        "sell": 230
+      },
+      {
+        "itemName": "crystal ball",
+        "itemId": 3076,
+        "buy": 650
+      },
+      {
+        "itemName": "fafnar symbol",
+        "itemId": 31443,
+        "sell": 950
+      },
+      {
+        "itemName": "goanna claw",
+        "itemId": 31561,
+        "sell": 950
+      },
+      {
+        "itemName": "goanna meat",
+        "itemId": 31560,
+        "sell": 190
+      },
+      {
+        "itemName": "lamassu hoof",
+        "itemId": 31441,
+        "sell": 330
+      },
+      {
+        "itemName": "lamassu horn",
+        "itemId": 31442,
+        "sell": 240
+      },
+      {
+        "itemName": "life crystal",
+        "itemId": 3061,
+        "sell": 85
+      },
+      {
+        "itemName": "lizard heart",
+        "itemId": 31340,
+        "sell": 530
+      },
+      {
+        "itemName": "manticore ear",
+        "itemId": 31440,
+        "sell": 310
+      },
+      {
+        "itemName": "manticore tail",
+        "itemId": 31439,
+        "sell": 220
+      },
+      {
+        "itemName": "mind stone",
+        "itemId": 3062,
+        "sell": 170
+      },
+      {
+        "itemName": "old girtablilu carapace",
+        "itemId": 36972,
+        "sell": 570
+      },
+      {
+        "itemName": "red goanna scale",
+        "itemId": 31558,
+        "sell": 270
+      },
+      {
+        "itemName": "scorpion charm",
+        "itemId": 36822,
+        "sell": 620
+      },
+      {
+        "itemName": "sphinx feather",
+        "itemId": 31437,
+        "sell": 470
+      },
+      {
+        "itemName": "sphinx tiara",
+        "itemId": 31438,
+        "sell": 360
+      },
+      {
+        "itemName": "spellbook",
+        "itemId": 3059,
+        "buy": 150
+      },
+      {
+        "itemName": "spellbook of enlightenment",
+        "itemId": 8072,
+        "sell": 4000
+      },
+      {
+        "itemName": "spellbook of lost souls",
+        "itemId": 8075,
+        "sell": 19000
+      },
+      {
+        "itemName": "spellbook of mind control",
+        "itemId": 8074,
+        "sell": 13000
+      },
+      {
+        "itemName": "spellbook of warding",
+        "itemId": 8073,
+        "sell": 8000
+      },
+      {
+        "itemName": "spellwand",
+        "itemId": 651,
+        "sell": 299
+      }
+    ],
     "outfit": {
       "lookType": 138,
       "lookHead": 59,
@@ -29893,7 +32520,288 @@
     }
   },
   "mordecai.lua": {
-    "shop": [],
+    "shop": [
+      {
+        "itemName": "animate dead rune",
+        "itemId": 3203,
+        "buy": 375
+      },
+      {
+        "itemName": "avalanche rune",
+        "itemId": 3161,
+        "buy": 64
+      },
+      {
+        "itemName": "blank rune",
+        "itemId": 3147,
+        "buy": 10
+      },
+      {
+        "itemName": "chameleon rune",
+        "itemId": 3178,
+        "buy": 210
+      },
+      {
+        "itemName": "convince creature rune",
+        "itemId": 3177,
+        "buy": 80
+      },
+      {
+        "itemName": "cure poison rune",
+        "itemId": 3153,
+        "buy": 65
+      },
+      {
+        "itemName": "destroy field rune",
+        "itemId": 3148,
+        "buy": 15
+      },
+      {
+        "itemName": "desintegrate rune",
+        "itemId": 3197,
+        "buy": 26
+      },
+      {
+        "itemName": "energy field rune",
+        "itemId": 3164,
+        "buy": 38
+      },
+      {
+        "itemName": "energy wall rune",
+        "itemId": 3166,
+        "buy": 85
+      },
+      {
+        "itemName": "energy bomb rune",
+        "itemId": 3149,
+        "buy": 203
+      },
+      {
+        "itemName": "explosion rune",
+        "itemId": 3200,
+        "buy": 31
+      },
+      {
+        "itemName": "fire bomb rune",
+        "itemId": 3192,
+        "buy": 147
+      },
+      {
+        "itemName": "fire field rune",
+        "itemId": 3188,
+        "buy": 28
+      },
+      {
+        "itemName": "fire wall rune",
+        "itemId": 3190,
+        "buy": 61
+      },
+      {
+        "itemName": "fireball rune",
+        "itemId": 3189,
+        "buy": 30
+      },
+      {
+        "itemName": "great fireball rune",
+        "itemId": 3191,
+        "buy": 64
+      },
+      {
+        "itemName": "heavy magic missile rune",
+        "itemId": 3198,
+        "buy": 12
+      },
+      {
+        "itemName": "holy missile rune",
+        "itemId": 3182,
+        "buy": 16
+      },
+      {
+        "itemName": "icicle rune",
+        "itemId": 3158,
+        "buy": 30
+      },
+      {
+        "itemName": "intense healing rune",
+        "itemId": 3152,
+        "buy": 95
+      },
+      {
+        "itemName": "light magic missile rune",
+        "itemId": 3174,
+        "buy": 4
+      },
+      {
+        "itemName": "magic wall rune",
+        "itemId": 3180,
+        "buy": 116
+      },
+      {
+        "itemName": "paralyze rune",
+        "itemId": 3165,
+        "buy": 700
+      },
+      {
+        "itemName": "poison bomb rune",
+        "itemId": 3173,
+        "buy": 85
+      },
+      {
+        "itemName": "poison field rune",
+        "itemId": 3172,
+        "buy": 21
+      },
+      {
+        "itemName": "poison wall rune",
+        "itemId": 3176,
+        "buy": 52
+      },
+      {
+        "itemName": "stalagmite rune",
+        "itemId": 3179,
+        "buy": 12
+      },
+      {
+        "itemName": "stone shower rune",
+        "itemId": 3175,
+        "buy": 41
+      },
+      {
+        "itemName": "sudden death rune",
+        "itemId": 3155,
+        "buy": 162
+      },
+      {
+        "itemName": "thunderstorm rune",
+        "itemId": 3202,
+        "buy": 52
+      },
+      {
+        "itemName": "ultimate healing rune",
+        "itemId": 3160,
+        "buy": 175
+      },
+      {
+        "itemName": "wild growth rune",
+        "itemId": 3156,
+        "buy": 160
+      },
+      {
+        "itemName": "hailstorm rod",
+        "itemId": 3067,
+        "buy": 15000
+      },
+      {
+        "itemName": "moonlight rod",
+        "itemId": 3070,
+        "buy": 1000
+      },
+      {
+        "itemName": "necrotic rod",
+        "itemId": 3069,
+        "buy": 5000
+      },
+      {
+        "itemName": "northwind rod",
+        "itemId": 8083,
+        "buy": 7500
+      },
+      {
+        "itemName": "snakebite rod",
+        "itemId": 3066,
+        "buy": 500
+      },
+      {
+        "itemName": "springsprout rod",
+        "itemId": 8084,
+        "buy": 18000
+      },
+      {
+        "itemName": "terra rod",
+        "itemId": 3065,
+        "buy": 10000
+      },
+      {
+        "itemName": "underworld rod",
+        "itemId": 8082,
+        "buy": 22000
+      },
+      {
+        "itemName": "wand of cosmic energy",
+        "itemId": 3073,
+        "buy": 10000
+      },
+      {
+        "itemName": "wand of decay",
+        "itemId": 3072,
+        "buy": 5000
+      },
+      {
+        "itemName": "wand of draconia",
+        "itemId": 8093,
+        "buy": 7500
+      },
+      {
+        "itemName": "wand of dragonbreath",
+        "itemId": 3075,
+        "buy": 1000
+      },
+      {
+        "itemName": "wand of inferno",
+        "itemId": 3071,
+        "buy": 15000
+      },
+      {
+        "itemName": "wand of starstorm",
+        "itemId": 8092,
+        "buy": 18000
+      },
+      {
+        "itemName": "wand of voodoo",
+        "itemId": 8094,
+        "buy": 22000
+      },
+      {
+        "itemName": "wand of vortex",
+        "itemId": 3074,
+        "buy": 500
+      },
+      {
+        "itemName": "durable exercise rod",
+        "itemId": 35283,
+        "buy": 1250000
+      },
+      {
+        "itemName": "durable exercise wand",
+        "itemId": 35284,
+        "buy": 1250000
+      },
+      {
+        "itemName": "exercise rod",
+        "itemId": 28556,
+        "buy": 347222
+      },
+      {
+        "itemName": "exercise wand",
+        "itemId": 28557,
+        "buy": 347222
+      },
+      {
+        "itemName": "lasting exercise rod",
+        "itemId": 35289,
+        "buy": 10000000
+      },
+      {
+        "itemName": "lasting exercise wand",
+        "itemId": 35290,
+        "buy": 10000000
+      },
+      {
+        "itemName": "spellwand",
+        "itemId": 651,
+        "sell": 299
+      }
+    ],
     "outfit": {
       "lookType": 130,
       "lookHead": 38,
@@ -31077,7 +33985,323 @@
     }
   },
   "nelly.lua": {
-    "shop": [],
+    "shop": [
+      {
+        "itemName": "empty potion flask",
+        "itemId": 283,
+        "sell": 5
+      },
+      {
+        "itemName": "empty potion flask",
+        "itemId": 284,
+        "sell": 5
+      },
+      {
+        "itemName": "empty potion flask",
+        "itemId": 285,
+        "sell": 5
+      },
+      {
+        "itemName": "great health potion",
+        "itemId": 239,
+        "buy": 225
+      },
+      {
+        "itemName": "great mana potion",
+        "itemId": 238,
+        "buy": 158
+      },
+      {
+        "itemName": "great spirit potion",
+        "itemId": 7642,
+        "buy": 254
+      },
+      {
+        "itemName": "health potion",
+        "itemId": 266,
+        "buy": 50
+      },
+      {
+        "itemName": "mana potion",
+        "itemId": 268,
+        "buy": 56
+      },
+      {
+        "itemName": "strong health potion",
+        "itemId": 236,
+        "buy": 115
+      },
+      {
+        "itemName": "strong mana potion",
+        "itemId": 237,
+        "buy": 108
+      },
+      {
+        "itemName": "supreme health potion",
+        "itemId": 23375,
+        "buy": 650
+      },
+      {
+        "itemName": "ultimate health potion",
+        "itemId": 7643,
+        "buy": 379
+      },
+      {
+        "itemName": "ultimate mana potion",
+        "itemId": 23373,
+        "buy": 488
+      },
+      {
+        "itemName": "ultimate spirit potion",
+        "itemId": 23374,
+        "buy": 488
+      },
+      {
+        "itemName": "vial",
+        "itemId": 2874,
+        "sell": 5
+      },
+      {
+        "itemName": "avalanche rune",
+        "itemId": 3161,
+        "buy": 64
+      },
+      {
+        "itemName": "blank rune",
+        "itemId": 3147,
+        "buy": 10
+      },
+      {
+        "itemName": "chameleon rune",
+        "itemId": 3178,
+        "buy": 210
+      },
+      {
+        "itemName": "convince creature rune",
+        "itemId": 3177,
+        "buy": 80
+      },
+      {
+        "itemName": "cure poison rune",
+        "itemId": 3153,
+        "buy": 65
+      },
+      {
+        "itemName": "destroy field rune",
+        "itemId": 3148,
+        "buy": 15
+      },
+      {
+        "itemName": "energy field rune",
+        "itemId": 3164,
+        "buy": 38
+      },
+      {
+        "itemName": "energy wall rune",
+        "itemId": 3166,
+        "buy": 85
+      },
+      {
+        "itemName": "explosion rune",
+        "itemId": 3200,
+        "buy": 31
+      },
+      {
+        "itemName": "fire bomb rune",
+        "itemId": 3192,
+        "buy": 147
+      },
+      {
+        "itemName": "fire field rune",
+        "itemId": 3188,
+        "buy": 28
+      },
+      {
+        "itemName": "fire wall rune",
+        "itemId": 3190,
+        "buy": 61
+      },
+      {
+        "itemName": "great fireball rune",
+        "itemId": 3191,
+        "buy": 64
+      },
+      {
+        "itemName": "heavy magic missile rune",
+        "itemId": 3198,
+        "buy": 12
+      },
+      {
+        "itemName": "intense healing rune",
+        "itemId": 3152,
+        "buy": 95
+      },
+      {
+        "itemName": "light magic missile rune",
+        "itemId": 3174,
+        "buy": 4
+      },
+      {
+        "itemName": "poison field rune",
+        "itemId": 3172,
+        "buy": 21
+      },
+      {
+        "itemName": "poison wall rune",
+        "itemId": 3176,
+        "buy": 52
+      },
+      {
+        "itemName": "stalagmite rune",
+        "itemId": 3179,
+        "buy": 12
+      },
+      {
+        "itemName": "sudden death rune",
+        "itemId": 3155,
+        "buy": 162
+      },
+      {
+        "itemName": "ultimate healing rune",
+        "itemId": 3160,
+        "buy": 175
+      },
+      {
+        "itemName": "hailstorm rod",
+        "itemId": 3067,
+        "buy": 15000
+      },
+      {
+        "itemName": "moonlight rod",
+        "itemId": 3070,
+        "buy": 1000
+      },
+      {
+        "itemName": "necrotic rod",
+        "itemId": 3069,
+        "buy": 5000
+      },
+      {
+        "itemName": "northwind rod",
+        "itemId": 8083,
+        "buy": 7500
+      },
+      {
+        "itemName": "snakebite rod",
+        "itemId": 3066,
+        "buy": 500
+      },
+      {
+        "itemName": "springsprout rod",
+        "itemId": 8084,
+        "buy": 18000
+      },
+      {
+        "itemName": "terra rod",
+        "itemId": 3065,
+        "buy": 10000
+      },
+      {
+        "itemName": "underworld rod",
+        "itemId": 8082,
+        "buy": 22000
+      },
+      {
+        "itemName": "wand of cosmic energy",
+        "itemId": 3073,
+        "buy": 10000
+      },
+      {
+        "itemName": "wand of decay",
+        "itemId": 3072,
+        "buy": 5000
+      },
+      {
+        "itemName": "wand of draconia",
+        "itemId": 8093,
+        "buy": 7500
+      },
+      {
+        "itemName": "wand of dragonbreath",
+        "itemId": 3075,
+        "buy": 1000
+      },
+      {
+        "itemName": "wand of inferno",
+        "itemId": 3071,
+        "buy": 15000
+      },
+      {
+        "itemName": "wand of starstorm",
+        "itemId": 8092,
+        "buy": 18000
+      },
+      {
+        "itemName": "wand of voodoo",
+        "itemId": 8094,
+        "buy": 22000
+      },
+      {
+        "itemName": "wand of vortex",
+        "itemId": 3074,
+        "buy": 500
+      },
+      {
+        "itemName": "label",
+        "itemId": 3507,
+        "buy": 1
+      },
+      {
+        "itemName": "letter",
+        "itemId": 3505,
+        "buy": 8
+      },
+      {
+        "itemName": "parcel",
+        "itemId": 3503,
+        "buy": 15
+      },
+      {
+        "itemName": "durable exercise rod",
+        "itemId": 35283,
+        "buy": 1250000
+      },
+      {
+        "itemName": "durable exercise wand",
+        "itemId": 35284,
+        "buy": 1250000
+      },
+      {
+        "itemName": "exercise rod",
+        "itemId": 28556,
+        "buy": 347222
+      },
+      {
+        "itemName": "exercise wand",
+        "itemId": 28557,
+        "buy": 347222
+      },
+      {
+        "itemName": "lasting exercise rod",
+        "itemId": 35289,
+        "buy": 10000000
+      },
+      {
+        "itemName": "lasting exercise wand",
+        "itemId": 35290,
+        "buy": 10000000
+      },
+      {
+        "itemName": "spellwand",
+        "itemId": 651,
+        "sell": 299
+      },
+      {
+        "itemName": "spellbook",
+        "itemId": 3059,
+        "buy": 150
+      }
+    ],
     "outfit": {
       "lookType": 138,
       "lookHead": 59,
@@ -31965,7 +35189,363 @@
     }
   },
   "nipuna.lua": {
-    "shop": [],
+    "shop": [
+      {
+        "itemName": "empty potion flask",
+        "itemId": 283,
+        "sell": 5
+      },
+      {
+        "itemName": "empty potion flask",
+        "itemId": 284,
+        "sell": 5
+      },
+      {
+        "itemName": "empty potion flask",
+        "itemId": 285,
+        "sell": 5
+      },
+      {
+        "itemName": "great health potion",
+        "itemId": 239,
+        "buy": 225
+      },
+      {
+        "itemName": "great mana potion",
+        "itemId": 238,
+        "buy": 158
+      },
+      {
+        "itemName": "great spirit potion",
+        "itemId": 7642,
+        "buy": 254
+      },
+      {
+        "itemName": "health potion",
+        "itemId": 266,
+        "buy": 50
+      },
+      {
+        "itemName": "mana potion",
+        "itemId": 268,
+        "buy": 56
+      },
+      {
+        "itemName": "strong health potion",
+        "itemId": 236,
+        "buy": 115
+      },
+      {
+        "itemName": "strong mana potion",
+        "itemId": 237,
+        "buy": 108
+      },
+      {
+        "itemName": "supreme health potion",
+        "itemId": 23375,
+        "buy": 650
+      },
+      {
+        "itemName": "ultimate health potion",
+        "itemId": 7643,
+        "buy": 379
+      },
+      {
+        "itemName": "ultimate mana potion",
+        "itemId": 23373,
+        "buy": 488
+      },
+      {
+        "itemName": "ultimate spirit potion",
+        "itemId": 23374,
+        "buy": 488
+      },
+      {
+        "itemName": "vial",
+        "itemId": 2874,
+        "sell": 5
+      },
+      {
+        "itemName": "animate dead rune",
+        "itemId": 3203,
+        "buy": 375
+      },
+      {
+        "itemName": "avalanche rune",
+        "itemId": 3161,
+        "buy": 64
+      },
+      {
+        "itemName": "blank rune",
+        "itemId": 3147,
+        "buy": 10
+      },
+      {
+        "itemName": "chameleon rune",
+        "itemId": 3178,
+        "buy": 210
+      },
+      {
+        "itemName": "convince creature rune",
+        "itemId": 3177,
+        "buy": 80
+      },
+      {
+        "itemName": "cure poison rune",
+        "itemId": 3153,
+        "buy": 65
+      },
+      {
+        "itemName": "destroy field rune",
+        "itemId": 3148,
+        "buy": 15
+      },
+      {
+        "itemName": "desintegrate rune",
+        "itemId": 3197,
+        "buy": 26
+      },
+      {
+        "itemName": "energy field rune",
+        "itemId": 3164,
+        "buy": 38
+      },
+      {
+        "itemName": "energy wall rune",
+        "itemId": 3166,
+        "buy": 85
+      },
+      {
+        "itemName": "energy bomb rune",
+        "itemId": 3149,
+        "buy": 203
+      },
+      {
+        "itemName": "explosion rune",
+        "itemId": 3200,
+        "buy": 31
+      },
+      {
+        "itemName": "fire bomb rune",
+        "itemId": 3192,
+        "buy": 147
+      },
+      {
+        "itemName": "fire field rune",
+        "itemId": 3188,
+        "buy": 28
+      },
+      {
+        "itemName": "fire wall rune",
+        "itemId": 3190,
+        "buy": 61
+      },
+      {
+        "itemName": "fireball rune",
+        "itemId": 3189,
+        "buy": 30
+      },
+      {
+        "itemName": "great fireball rune",
+        "itemId": 3191,
+        "buy": 64
+      },
+      {
+        "itemName": "heavy magic missile rune",
+        "itemId": 3198,
+        "buy": 12
+      },
+      {
+        "itemName": "holy missile rune",
+        "itemId": 3182,
+        "buy": 16
+      },
+      {
+        "itemName": "icicle rune",
+        "itemId": 3158,
+        "buy": 30
+      },
+      {
+        "itemName": "intense healing rune",
+        "itemId": 3152,
+        "buy": 95
+      },
+      {
+        "itemName": "light magic missile rune",
+        "itemId": 3174,
+        "buy": 4
+      },
+      {
+        "itemName": "magic wall rune",
+        "itemId": 3180,
+        "buy": 116
+      },
+      {
+        "itemName": "paralyze rune",
+        "itemId": 3165,
+        "buy": 700
+      },
+      {
+        "itemName": "poison bomb rune",
+        "itemId": 3173,
+        "buy": 85
+      },
+      {
+        "itemName": "poison field rune",
+        "itemId": 3172,
+        "buy": 21
+      },
+      {
+        "itemName": "poison wall rune",
+        "itemId": 3176,
+        "buy": 52
+      },
+      {
+        "itemName": "stalagmite rune",
+        "itemId": 3179,
+        "buy": 12
+      },
+      {
+        "itemName": "stone shower rune",
+        "itemId": 3175,
+        "buy": 41
+      },
+      {
+        "itemName": "sudden death rune",
+        "itemId": 3155,
+        "buy": 162
+      },
+      {
+        "itemName": "thunderstorm rune",
+        "itemId": 3202,
+        "buy": 52
+      },
+      {
+        "itemName": "ultimate healing rune",
+        "itemId": 3160,
+        "buy": 175
+      },
+      {
+        "itemName": "wild growth rune",
+        "itemId": 3156,
+        "buy": 160
+      },
+      {
+        "itemName": "hailstorm rod",
+        "itemId": 3067,
+        "buy": 15000
+      },
+      {
+        "itemName": "moonlight rod",
+        "itemId": 3070,
+        "buy": 1000
+      },
+      {
+        "itemName": "necrotic rod",
+        "itemId": 3069,
+        "buy": 5000
+      },
+      {
+        "itemName": "northwind rod",
+        "itemId": 8083,
+        "buy": 7500
+      },
+      {
+        "itemName": "snakebite rod",
+        "itemId": 3066,
+        "buy": 500
+      },
+      {
+        "itemName": "springsprout rod",
+        "itemId": 8084,
+        "buy": 18000
+      },
+      {
+        "itemName": "terra rod",
+        "itemId": 3065,
+        "buy": 10000
+      },
+      {
+        "itemName": "underworld rod",
+        "itemId": 8082,
+        "buy": 22000
+      },
+      {
+        "itemName": "wand of cosmic energy",
+        "itemId": 3073,
+        "buy": 10000
+      },
+      {
+        "itemName": "wand of decay",
+        "itemId": 3072,
+        "buy": 5000
+      },
+      {
+        "itemName": "wand of draconia",
+        "itemId": 8093,
+        "buy": 7500
+      },
+      {
+        "itemName": "wand of dragonbreath",
+        "itemId": 3075,
+        "buy": 1000
+      },
+      {
+        "itemName": "wand of inferno",
+        "itemId": 3071,
+        "buy": 15000
+      },
+      {
+        "itemName": "wand of starstorm",
+        "itemId": 8092,
+        "buy": 18000
+      },
+      {
+        "itemName": "wand of voodoo",
+        "itemId": 8094,
+        "buy": 22000
+      },
+      {
+        "itemName": "wand of vortex",
+        "itemId": 3074,
+        "buy": 500
+      },
+      {
+        "itemName": "durable exercise rod",
+        "itemId": 35283,
+        "buy": 1250000
+      },
+      {
+        "itemName": "durable exercise wand",
+        "itemId": 35284,
+        "buy": 1250000
+      },
+      {
+        "itemName": "exercise rod",
+        "itemId": 28556,
+        "buy": 347222
+      },
+      {
+        "itemName": "exercise wand",
+        "itemId": 28557,
+        "buy": 347222
+      },
+      {
+        "itemName": "lasting exercise rod",
+        "itemId": 35289,
+        "buy": 10000000
+      },
+      {
+        "itemName": "lasting exercise wand",
+        "itemId": 35290,
+        "buy": 10000000
+      },
+      {
+        "itemName": "spellwand",
+        "itemId": 651,
+        "sell": 299
+      }
+    ],
     "outfit": {
       "lookType": 1539,
       "lookHead": 10,
@@ -35114,7 +38694,308 @@
     }
   },
   "rabaz.lua": {
-    "shop": [],
+    "shop": [
+      {
+        "itemName": "empty potion flask",
+        "itemId": 283,
+        "sell": 5
+      },
+      {
+        "itemName": "empty potion flask",
+        "itemId": 284,
+        "sell": 5
+      },
+      {
+        "itemName": "empty potion flask",
+        "itemId": 285,
+        "sell": 5
+      },
+      {
+        "itemName": "great health potion",
+        "itemId": 239,
+        "buy": 225
+      },
+      {
+        "itemName": "great mana potion",
+        "itemId": 238,
+        "buy": 158
+      },
+      {
+        "itemName": "great spirit potion",
+        "itemId": 7642,
+        "buy": 254
+      },
+      {
+        "itemName": "health potion",
+        "itemId": 266,
+        "buy": 50
+      },
+      {
+        "itemName": "mana potion",
+        "itemId": 268,
+        "buy": 56
+      },
+      {
+        "itemName": "strong health potion",
+        "itemId": 236,
+        "buy": 115
+      },
+      {
+        "itemName": "strong mana potion",
+        "itemId": 237,
+        "buy": 108
+      },
+      {
+        "itemName": "supreme health potion",
+        "itemId": 23375,
+        "buy": 650
+      },
+      {
+        "itemName": "ultimate health potion",
+        "itemId": 7643,
+        "buy": 379
+      },
+      {
+        "itemName": "ultimate mana potion",
+        "itemId": 23373,
+        "buy": 488
+      },
+      {
+        "itemName": "ultimate spirit potion",
+        "itemId": 23374,
+        "buy": 488
+      },
+      {
+        "itemName": "vial",
+        "itemId": 2874,
+        "sell": 5
+      },
+      {
+        "itemName": "avalanche rune",
+        "itemId": 3161,
+        "buy": 64
+      },
+      {
+        "itemName": "blank rune",
+        "itemId": 3147,
+        "buy": 10
+      },
+      {
+        "itemName": "chameleon rune",
+        "itemId": 3178,
+        "buy": 210
+      },
+      {
+        "itemName": "convince creature rune",
+        "itemId": 3177,
+        "buy": 80
+      },
+      {
+        "itemName": "cure poison rune",
+        "itemId": 3153,
+        "buy": 65
+      },
+      {
+        "itemName": "destroy field rune",
+        "itemId": 3148,
+        "buy": 15
+      },
+      {
+        "itemName": "energy field rune",
+        "itemId": 3164,
+        "buy": 38
+      },
+      {
+        "itemName": "energy wall rune",
+        "itemId": 3166,
+        "buy": 85
+      },
+      {
+        "itemName": "explosion rune",
+        "itemId": 3200,
+        "buy": 31
+      },
+      {
+        "itemName": "fire bomb rune",
+        "itemId": 3192,
+        "buy": 147
+      },
+      {
+        "itemName": "fire field rune",
+        "itemId": 3188,
+        "buy": 28
+      },
+      {
+        "itemName": "fire wall rune",
+        "itemId": 3190,
+        "buy": 61
+      },
+      {
+        "itemName": "great fireball rune",
+        "itemId": 3191,
+        "buy": 64
+      },
+      {
+        "itemName": "heavy magic missile rune",
+        "itemId": 3198,
+        "buy": 12
+      },
+      {
+        "itemName": "intense healing rune",
+        "itemId": 3152,
+        "buy": 95
+      },
+      {
+        "itemName": "light magic missile rune",
+        "itemId": 3174,
+        "buy": 4
+      },
+      {
+        "itemName": "poison field rune",
+        "itemId": 3172,
+        "buy": 21
+      },
+      {
+        "itemName": "poison wall rune",
+        "itemId": 3176,
+        "buy": 52
+      },
+      {
+        "itemName": "stalagmite rune",
+        "itemId": 3179,
+        "buy": 12
+      },
+      {
+        "itemName": "sudden death rune",
+        "itemId": 3155,
+        "buy": 162
+      },
+      {
+        "itemName": "ultimate healing rune",
+        "itemId": 3160,
+        "buy": 175
+      },
+      {
+        "itemName": "hailstorm rod",
+        "itemId": 3067,
+        "buy": 15000
+      },
+      {
+        "itemName": "moonlight rod",
+        "itemId": 3070,
+        "buy": 1000
+      },
+      {
+        "itemName": "necrotic rod",
+        "itemId": 3069,
+        "buy": 5000
+      },
+      {
+        "itemName": "northwind rod",
+        "itemId": 8083,
+        "buy": 7500
+      },
+      {
+        "itemName": "snakebite rod",
+        "itemId": 3066,
+        "buy": 500
+      },
+      {
+        "itemName": "springsprout rod",
+        "itemId": 8084,
+        "buy": 18000
+      },
+      {
+        "itemName": "terra rod",
+        "itemId": 3065,
+        "buy": 10000
+      },
+      {
+        "itemName": "underworld rod",
+        "itemId": 8082,
+        "buy": 22000
+      },
+      {
+        "itemName": "wand of cosmic energy",
+        "itemId": 3073,
+        "buy": 10000
+      },
+      {
+        "itemName": "wand of decay",
+        "itemId": 3072,
+        "buy": 5000
+      },
+      {
+        "itemName": "wand of draconia",
+        "itemId": 8093,
+        "buy": 7500
+      },
+      {
+        "itemName": "wand of dragonbreath",
+        "itemId": 3075,
+        "buy": 1000
+      },
+      {
+        "itemName": "wand of inferno",
+        "itemId": 3071,
+        "buy": 15000
+      },
+      {
+        "itemName": "wand of starstorm",
+        "itemId": 8092,
+        "buy": 18000
+      },
+      {
+        "itemName": "wand of voodoo",
+        "itemId": 8094,
+        "buy": 22000
+      },
+      {
+        "itemName": "wand of vortex",
+        "itemId": 3074,
+        "buy": 500
+      },
+      {
+        "itemName": "durable exercise rod",
+        "itemId": 35283,
+        "buy": 1250000
+      },
+      {
+        "itemName": "durable exercise wand",
+        "itemId": 35284,
+        "buy": 1250000
+      },
+      {
+        "itemName": "exercise rod",
+        "itemId": 28556,
+        "buy": 347222
+      },
+      {
+        "itemName": "exercise wand",
+        "itemId": 28557,
+        "buy": 347222
+      },
+      {
+        "itemName": "lasting exercise rod",
+        "itemId": 35289,
+        "buy": 10000000
+      },
+      {
+        "itemName": "lasting exercise wand",
+        "itemId": 35290,
+        "buy": 10000000
+      },
+      {
+        "itemName": "spellwand",
+        "itemId": 651,
+        "sell": 299
+      },
+      {
+        "itemName": "spellbook",
+        "itemId": 3059,
+        "buy": 150
+      }
+    ],
     "outfit": {
       "lookType": 130,
       "lookHead": 39,
@@ -35125,7 +39006,258 @@
     }
   },
   "rachel.lua": {
-    "shop": [],
+    "shop": [
+      {
+        "itemName": "empty potion flask",
+        "itemId": 283,
+        "sell": 5
+      },
+      {
+        "itemName": "empty potion flask",
+        "itemId": 284,
+        "sell": 5
+      },
+      {
+        "itemName": "empty potion flask",
+        "itemId": 285,
+        "sell": 5
+      },
+      {
+        "itemName": "great health potion",
+        "itemId": 239,
+        "buy": 225
+      },
+      {
+        "itemName": "great mana potion",
+        "itemId": 238,
+        "buy": 158
+      },
+      {
+        "itemName": "great spirit potion",
+        "itemId": 7642,
+        "buy": 254
+      },
+      {
+        "itemName": "health potion",
+        "itemId": 266,
+        "buy": 50
+      },
+      {
+        "itemName": "mana potion",
+        "itemId": 268,
+        "buy": 56
+      },
+      {
+        "itemName": "strong health potion",
+        "itemId": 236,
+        "buy": 115
+      },
+      {
+        "itemName": "strong mana potion",
+        "itemId": 237,
+        "buy": 108
+      },
+      {
+        "itemName": "ultimate health potion",
+        "itemId": 7643,
+        "buy": 379
+      },
+      {
+        "itemName": "vial",
+        "itemId": 2874,
+        "sell": 5
+      },
+      {
+        "itemName": "avalanche rune",
+        "itemId": 3161,
+        "buy": 64
+      },
+      {
+        "itemName": "blank rune",
+        "itemId": 3147,
+        "buy": 10
+      },
+      {
+        "itemName": "chameleon rune",
+        "itemId": 3178,
+        "buy": 210
+      },
+      {
+        "itemName": "convince creature rune",
+        "itemId": 3177,
+        "buy": 80
+      },
+      {
+        "itemName": "cure poison rune",
+        "itemId": 3153,
+        "buy": 65
+      },
+      {
+        "itemName": "destroy field rune",
+        "itemId": 3148,
+        "buy": 15
+      },
+      {
+        "itemName": "energy field rune",
+        "itemId": 3164,
+        "buy": 38
+      },
+      {
+        "itemName": "energy wall rune",
+        "itemId": 3166,
+        "buy": 85
+      },
+      {
+        "itemName": "explosion rune",
+        "itemId": 3200,
+        "buy": 31
+      },
+      {
+        "itemName": "fire bomb rune",
+        "itemId": 3192,
+        "buy": 147
+      },
+      {
+        "itemName": "fire field rune",
+        "itemId": 3188,
+        "buy": 28
+      },
+      {
+        "itemName": "fire wall rune",
+        "itemId": 3190,
+        "buy": 61
+      },
+      {
+        "itemName": "great fireball rune",
+        "itemId": 3191,
+        "buy": 64
+      },
+      {
+        "itemName": "heavy magic missile rune",
+        "itemId": 3198,
+        "buy": 12
+      },
+      {
+        "itemName": "intense healing rune",
+        "itemId": 3152,
+        "buy": 95
+      },
+      {
+        "itemName": "light magic missile rune",
+        "itemId": 3174,
+        "buy": 4
+      },
+      {
+        "itemName": "poison field rune",
+        "itemId": 3172,
+        "buy": 21
+      },
+      {
+        "itemName": "poison wall rune",
+        "itemId": 3176,
+        "buy": 52
+      },
+      {
+        "itemName": "stalagmite rune",
+        "itemId": 3179,
+        "buy": 12
+      },
+      {
+        "itemName": "sudden death rune",
+        "itemId": 3155,
+        "buy": 162
+      },
+      {
+        "itemName": "ultimate healing rune",
+        "itemId": 3160,
+        "buy": 175
+      },
+      {
+        "itemName": "moonlight rod",
+        "itemId": 3070,
+        "buy": 1000
+      },
+      {
+        "itemName": "necrotic rod",
+        "itemId": 3069,
+        "buy": 5000
+      },
+      {
+        "itemName": "snakebite rod",
+        "itemId": 3066,
+        "buy": 500
+      },
+      {
+        "itemName": "terra rod",
+        "itemId": 3065,
+        "buy": 10000
+      },
+      {
+        "itemName": "wand of cosmic energy",
+        "itemId": 3073,
+        "buy": 10000
+      },
+      {
+        "itemName": "wand of decay",
+        "itemId": 3072,
+        "buy": 5000
+      },
+      {
+        "itemName": "wand of dragonbreath",
+        "itemId": 3075,
+        "buy": 1000
+      },
+      {
+        "itemName": "wand of vortex",
+        "itemId": 3074,
+        "buy": 500
+      },
+      {
+        "itemName": "durable exercise rod",
+        "itemId": 35283,
+        "buy": 1250000
+      },
+      {
+        "itemName": "durable exercise wand",
+        "itemId": 35284,
+        "buy": 1250000
+      },
+      {
+        "itemName": "exercise rod",
+        "itemId": 28556,
+        "buy": 347222
+      },
+      {
+        "itemName": "exercise wand",
+        "itemId": 28557,
+        "buy": 347222
+      },
+      {
+        "itemName": "lasting exercise rod",
+        "itemId": 35289,
+        "buy": 10000000
+      },
+      {
+        "itemName": "lasting exercise wand",
+        "itemId": 35290,
+        "buy": 10000000
+      },
+      {
+        "itemName": "spellwand",
+        "itemId": 651,
+        "sell": 299
+      },
+      {
+        "itemName": "talon",
+        "itemId": 3034,
+        "sell": 320
+      },
+      {
+        "itemName": "spellbook",
+        "itemId": 3059,
+        "buy": 150
+      }
+    ],
     "outfit": {
       "lookType": 136,
       "lookHead": 58,
@@ -37259,7 +41391,103 @@
     }
   },
   "richard.lua": {
-    "shop": [],
+    "shop": [
+      {
+        "itemName": "backpack",
+        "itemId": 2854,
+        "buy": 10
+      },
+      {
+        "itemName": "bag",
+        "itemId": 2853,
+        "buy": 4
+      },
+      {
+        "itemName": "bread",
+        "itemId": 3600,
+        "buy": 3
+      },
+      {
+        "itemName": "carrot",
+        "itemId": 3595,
+        "buy": 1
+      },
+      {
+        "itemName": "cheese",
+        "itemId": 3607,
+        "sell": 2
+      },
+      {
+        "itemName": "cherry",
+        "itemId": 3590,
+        "buy": 1
+      },
+      {
+        "itemName": "egg",
+        "itemId": 3606,
+        "buy": 1
+      },
+      {
+        "itemName": "ham",
+        "itemId": 3582,
+        "buy": 8
+      },
+      {
+        "itemName": "meat",
+        "itemId": 3577,
+        "sell": 2
+      },
+      {
+        "itemName": "salmon",
+        "itemId": 3579,
+        "buy": 2
+      },
+      {
+        "itemName": "fishing rod",
+        "itemId": 3483,
+        "sell": 30
+      },
+      {
+        "itemName": "machete",
+        "itemId": 3308,
+        "buy": 6
+      },
+      {
+        "itemName": "pick",
+        "itemId": 3456,
+        "buy": 15
+      },
+      {
+        "itemName": "rope",
+        "itemId": 3003,
+        "sell": 8
+      },
+      {
+        "itemName": "shovel",
+        "itemId": 3457,
+        "sell": 2
+      },
+      {
+        "itemName": "torch",
+        "itemId": 2920,
+        "buy": 2
+      },
+      {
+        "itemName": "fishing rod",
+        "itemId": 3483,
+        "buy": 150
+      },
+      {
+        "itemName": "scroll",
+        "itemId": 2815,
+        "buy": 5
+      },
+      {
+        "itemName": "worm",
+        "itemId": 3492,
+        "buy": 1
+      }
+    ],
     "outfit": {
       "lookType": 472,
       "lookHead": 97,
@@ -38209,7 +42437,208 @@
     }
   },
   "romir.lua": {
-    "shop": [],
+    "shop": [
+      {
+        "itemName": "empty potion flask",
+        "itemId": 283,
+        "sell": 5
+      },
+      {
+        "itemName": "empty potion flask",
+        "itemId": 284,
+        "sell": 5
+      },
+      {
+        "itemName": "empty potion flask",
+        "itemId": 285,
+        "sell": 5
+      },
+      {
+        "itemName": "great health potion",
+        "itemId": 239,
+        "buy": 225
+      },
+      {
+        "itemName": "great mana potion",
+        "itemId": 238,
+        "buy": 158
+      },
+      {
+        "itemName": "great spirit potion",
+        "itemId": 7642,
+        "buy": 254
+      },
+      {
+        "itemName": "health potion",
+        "itemId": 266,
+        "buy": 50
+      },
+      {
+        "itemName": "mana potion",
+        "itemId": 268,
+        "buy": 56
+      },
+      {
+        "itemName": "strong health potion",
+        "itemId": 236,
+        "buy": 115
+      },
+      {
+        "itemName": "strong mana potion",
+        "itemId": 237,
+        "buy": 108
+      },
+      {
+        "itemName": "supreme health potion",
+        "itemId": 23375,
+        "buy": 650
+      },
+      {
+        "itemName": "ultimate health potion",
+        "itemId": 7643,
+        "buy": 379
+      },
+      {
+        "itemName": "ultimate mana potion",
+        "itemId": 23373,
+        "buy": 488
+      },
+      {
+        "itemName": "ultimate spirit potion",
+        "itemId": 23374,
+        "buy": 488
+      },
+      {
+        "itemName": "vial",
+        "itemId": 2874,
+        "sell": 5
+      },
+      {
+        "itemName": "blank rune",
+        "itemId": 3147,
+        "buy": 10
+      },
+      {
+        "itemName": "hailstorm rod",
+        "itemId": 3067,
+        "buy": 15000
+      },
+      {
+        "itemName": "moonlight rod",
+        "itemId": 3070,
+        "buy": 1000
+      },
+      {
+        "itemName": "necrotic rod",
+        "itemId": 3069,
+        "buy": 5000
+      },
+      {
+        "itemName": "northwind rod",
+        "itemId": 8083,
+        "buy": 7500
+      },
+      {
+        "itemName": "snakebite rod",
+        "itemId": 3066,
+        "buy": 500
+      },
+      {
+        "itemName": "springsprout rod",
+        "itemId": 8084,
+        "buy": 18000
+      },
+      {
+        "itemName": "terra rod",
+        "itemId": 3065,
+        "buy": 10000
+      },
+      {
+        "itemName": "underworld rod",
+        "itemId": 8082,
+        "buy": 22000
+      },
+      {
+        "itemName": "wand of cosmic energy",
+        "itemId": 3073,
+        "buy": 10000
+      },
+      {
+        "itemName": "wand of decay",
+        "itemId": 3072,
+        "buy": 5000
+      },
+      {
+        "itemName": "wand of draconia",
+        "itemId": 8093,
+        "buy": 7500
+      },
+      {
+        "itemName": "wand of dragonbreath",
+        "itemId": 3075,
+        "buy": 1000
+      },
+      {
+        "itemName": "wand of inferno",
+        "itemId": 3071,
+        "buy": 15000
+      },
+      {
+        "itemName": "wand of starstorm",
+        "itemId": 8092,
+        "buy": 18000
+      },
+      {
+        "itemName": "wand of voodoo",
+        "itemId": 8094,
+        "buy": 22000
+      },
+      {
+        "itemName": "wand of vortex",
+        "itemId": 3074,
+        "buy": 500
+      },
+      {
+        "itemName": "durable exercise rod",
+        "itemId": 35283,
+        "buy": 1250000
+      },
+      {
+        "itemName": "durable exercise wand",
+        "itemId": 35284,
+        "buy": 1250000
+      },
+      {
+        "itemName": "exercise rod",
+        "itemId": 28556,
+        "buy": 347222
+      },
+      {
+        "itemName": "exercise wand",
+        "itemId": 28557,
+        "buy": 347222
+      },
+      {
+        "itemName": "lasting exercise rod",
+        "itemId": 35289,
+        "buy": 10000000
+      },
+      {
+        "itemName": "lasting exercise wand",
+        "itemId": 35290,
+        "buy": 10000000
+      },
+      {
+        "itemName": "spellwand",
+        "itemId": 651,
+        "sell": 299
+      },
+      {
+        "itemName": "spellbook",
+        "itemId": 3059,
+        "buy": 150
+      }
+    ],
     "outfit": {
       "lookType": 153,
       "lookHead": 19,
@@ -40727,7 +45156,253 @@
     }
   },
   "shiriel.lua": {
-    "shop": [],
+    "shop": [
+      {
+        "itemName": "empty potion flask",
+        "itemId": 283,
+        "sell": 5
+      },
+      {
+        "itemName": "empty potion flask",
+        "itemId": 284,
+        "sell": 5
+      },
+      {
+        "itemName": "empty potion flask",
+        "itemId": 285,
+        "sell": 5
+      },
+      {
+        "itemName": "great health potion",
+        "itemId": 239,
+        "buy": 225
+      },
+      {
+        "itemName": "great mana potion",
+        "itemId": 238,
+        "buy": 158
+      },
+      {
+        "itemName": "great spirit potion",
+        "itemId": 7642,
+        "buy": 254
+      },
+      {
+        "itemName": "health potion",
+        "itemId": 266,
+        "buy": 50
+      },
+      {
+        "itemName": "mana potion",
+        "itemId": 268,
+        "buy": 56
+      },
+      {
+        "itemName": "strong health potion",
+        "itemId": 236,
+        "buy": 115
+      },
+      {
+        "itemName": "strong mana potion",
+        "itemId": 237,
+        "buy": 108
+      },
+      {
+        "itemName": "ultimate health potion",
+        "itemId": 7643,
+        "buy": 379
+      },
+      {
+        "itemName": "vial",
+        "itemId": 2874,
+        "sell": 5
+      },
+      {
+        "itemName": "avalanche rune",
+        "itemId": 3161,
+        "buy": 64
+      },
+      {
+        "itemName": "blank rune",
+        "itemId": 3147,
+        "buy": 10
+      },
+      {
+        "itemName": "chameleon rune",
+        "itemId": 3178,
+        "buy": 210
+      },
+      {
+        "itemName": "convince creature rune",
+        "itemId": 3177,
+        "buy": 80
+      },
+      {
+        "itemName": "cure poison rune",
+        "itemId": 3153,
+        "buy": 65
+      },
+      {
+        "itemName": "destroy field rune",
+        "itemId": 3148,
+        "buy": 15
+      },
+      {
+        "itemName": "energy field rune",
+        "itemId": 3164,
+        "buy": 38
+      },
+      {
+        "itemName": "energy wall rune",
+        "itemId": 3166,
+        "buy": 85
+      },
+      {
+        "itemName": "explosion rune",
+        "itemId": 3200,
+        "buy": 31
+      },
+      {
+        "itemName": "fire bomb rune",
+        "itemId": 3192,
+        "buy": 147
+      },
+      {
+        "itemName": "fire field rune",
+        "itemId": 3188,
+        "buy": 28
+      },
+      {
+        "itemName": "fire wall rune",
+        "itemId": 3190,
+        "buy": 61
+      },
+      {
+        "itemName": "great fireball rune",
+        "itemId": 3191,
+        "buy": 64
+      },
+      {
+        "itemName": "heavy magic missile rune",
+        "itemId": 3198,
+        "buy": 12
+      },
+      {
+        "itemName": "intense healing rune",
+        "itemId": 3152,
+        "buy": 95
+      },
+      {
+        "itemName": "light magic missile rune",
+        "itemId": 3174,
+        "buy": 4
+      },
+      {
+        "itemName": "poison field rune",
+        "itemId": 3172,
+        "buy": 21
+      },
+      {
+        "itemName": "poison wall rune",
+        "itemId": 3176,
+        "buy": 52
+      },
+      {
+        "itemName": "stalagmite rune",
+        "itemId": 3179,
+        "buy": 12
+      },
+      {
+        "itemName": "sudden death rune",
+        "itemId": 3155,
+        "buy": 162
+      },
+      {
+        "itemName": "ultimate healing rune",
+        "itemId": 3160,
+        "buy": 175
+      },
+      {
+        "itemName": "moonlight rod",
+        "itemId": 3070,
+        "buy": 1000
+      },
+      {
+        "itemName": "necrotic rod",
+        "itemId": 3069,
+        "buy": 5000
+      },
+      {
+        "itemName": "snakebite rod",
+        "itemId": 3066,
+        "buy": 500
+      },
+      {
+        "itemName": "terra rod",
+        "itemId": 3065,
+        "buy": 10000
+      },
+      {
+        "itemName": "wand of cosmic energy",
+        "itemId": 3073,
+        "buy": 10000
+      },
+      {
+        "itemName": "wand of decay",
+        "itemId": 3072,
+        "buy": 5000
+      },
+      {
+        "itemName": "wand of dragonbreath",
+        "itemId": 3075,
+        "buy": 1000
+      },
+      {
+        "itemName": "wand of vortex",
+        "itemId": 3074,
+        "buy": 500
+      },
+      {
+        "itemName": "durable exercise rod",
+        "itemId": 35283,
+        "buy": 1250000
+      },
+      {
+        "itemName": "durable exercise wand",
+        "itemId": 35284,
+        "buy": 1250000
+      },
+      {
+        "itemName": "exercise rod",
+        "itemId": 28556,
+        "buy": 347222
+      },
+      {
+        "itemName": "exercise wand",
+        "itemId": 28557,
+        "buy": 347222
+      },
+      {
+        "itemName": "lasting exercise rod",
+        "itemId": 35289,
+        "buy": 10000000
+      },
+      {
+        "itemName": "lasting exercise wand",
+        "itemId": 35290,
+        "buy": 10000000
+      },
+      {
+        "itemName": "spellwand",
+        "itemId": 651,
+        "sell": 299
+      },
+      {
+        "itemName": "spellbook",
+        "itemId": 3059,
+        "buy": 150
+      }
+    ],
     "outfit": {
       "lookType": 159,
       "lookHead": 1,
@@ -41114,7 +45789,253 @@
     }
   },
   "sigurd.lua": {
-    "shop": [],
+    "shop": [
+      {
+        "itemName": "empty potion flask",
+        "itemId": 283,
+        "sell": 5
+      },
+      {
+        "itemName": "empty potion flask",
+        "itemId": 284,
+        "sell": 5
+      },
+      {
+        "itemName": "empty potion flask",
+        "itemId": 285,
+        "sell": 5
+      },
+      {
+        "itemName": "great health potion",
+        "itemId": 239,
+        "buy": 225
+      },
+      {
+        "itemName": "great mana potion",
+        "itemId": 238,
+        "buy": 158
+      },
+      {
+        "itemName": "great spirit potion",
+        "itemId": 7642,
+        "buy": 254
+      },
+      {
+        "itemName": "health potion",
+        "itemId": 266,
+        "buy": 50
+      },
+      {
+        "itemName": "mana potion",
+        "itemId": 268,
+        "buy": 56
+      },
+      {
+        "itemName": "strong health potion",
+        "itemId": 236,
+        "buy": 115
+      },
+      {
+        "itemName": "strong mana potion",
+        "itemId": 237,
+        "buy": 108
+      },
+      {
+        "itemName": "ultimate health potion",
+        "itemId": 7643,
+        "buy": 379
+      },
+      {
+        "itemName": "vial",
+        "itemId": 2874,
+        "sell": 5
+      },
+      {
+        "itemName": "avalanche rune",
+        "itemId": 3161,
+        "buy": 64
+      },
+      {
+        "itemName": "blank rune",
+        "itemId": 3147,
+        "buy": 10
+      },
+      {
+        "itemName": "chameleon rune",
+        "itemId": 3178,
+        "buy": 210
+      },
+      {
+        "itemName": "convince creature rune",
+        "itemId": 3177,
+        "buy": 80
+      },
+      {
+        "itemName": "cure poison rune",
+        "itemId": 3153,
+        "buy": 65
+      },
+      {
+        "itemName": "destroy field rune",
+        "itemId": 3148,
+        "buy": 15
+      },
+      {
+        "itemName": "energy field rune",
+        "itemId": 3164,
+        "buy": 38
+      },
+      {
+        "itemName": "energy wall rune",
+        "itemId": 3166,
+        "buy": 85
+      },
+      {
+        "itemName": "explosion rune",
+        "itemId": 3200,
+        "buy": 31
+      },
+      {
+        "itemName": "fire bomb rune",
+        "itemId": 3192,
+        "buy": 147
+      },
+      {
+        "itemName": "fire field rune",
+        "itemId": 3188,
+        "buy": 28
+      },
+      {
+        "itemName": "fire wall rune",
+        "itemId": 3190,
+        "buy": 61
+      },
+      {
+        "itemName": "great fireball rune",
+        "itemId": 3191,
+        "buy": 64
+      },
+      {
+        "itemName": "heavy magic missile rune",
+        "itemId": 3198,
+        "buy": 12
+      },
+      {
+        "itemName": "intense healing rune",
+        "itemId": 3152,
+        "buy": 95
+      },
+      {
+        "itemName": "light magic missile rune",
+        "itemId": 3174,
+        "buy": 4
+      },
+      {
+        "itemName": "poison field rune",
+        "itemId": 3172,
+        "buy": 21
+      },
+      {
+        "itemName": "poison wall rune",
+        "itemId": 3176,
+        "buy": 52
+      },
+      {
+        "itemName": "stalagmite rune",
+        "itemId": 3179,
+        "buy": 12
+      },
+      {
+        "itemName": "sudden death rune",
+        "itemId": 3155,
+        "buy": 162
+      },
+      {
+        "itemName": "ultimate healing rune",
+        "itemId": 3160,
+        "buy": 175
+      },
+      {
+        "itemName": "moonlight rod",
+        "itemId": 3070,
+        "buy": 1000
+      },
+      {
+        "itemName": "necrotic rod",
+        "itemId": 3069,
+        "buy": 5000
+      },
+      {
+        "itemName": "snakebite rod",
+        "itemId": 3066,
+        "buy": 500
+      },
+      {
+        "itemName": "terra rod",
+        "itemId": 3065,
+        "buy": 10000
+      },
+      {
+        "itemName": "wand of cosmic energy",
+        "itemId": 3073,
+        "buy": 10000
+      },
+      {
+        "itemName": "wand of decay",
+        "itemId": 3072,
+        "buy": 5000
+      },
+      {
+        "itemName": "wand of dragonbreath",
+        "itemId": 3075,
+        "buy": 1000
+      },
+      {
+        "itemName": "wand of vortex",
+        "itemId": 3074,
+        "buy": 500
+      },
+      {
+        "itemName": "durable exercise rod",
+        "itemId": 35283,
+        "buy": 1250000
+      },
+      {
+        "itemName": "durable exercise wand",
+        "itemId": 35284,
+        "buy": 1250000
+      },
+      {
+        "itemName": "exercise rod",
+        "itemId": 28556,
+        "buy": 347222
+      },
+      {
+        "itemName": "exercise wand",
+        "itemId": 28557,
+        "buy": 347222
+      },
+      {
+        "itemName": "lasting exercise rod",
+        "itemId": 35289,
+        "buy": 10000000
+      },
+      {
+        "itemName": "lasting exercise wand",
+        "itemId": 35290,
+        "buy": 10000000
+      },
+      {
+        "itemName": "spellwand",
+        "itemId": 651,
+        "sell": 299
+      },
+      {
+        "itemName": "spellbook",
+        "itemId": 3059,
+        "buy": 150
+      }
+    ],
     "outfit": {
       "lookType": 69
     }
@@ -41479,7 +46400,363 @@
     }
   },
   "sundara.lua": {
-    "shop": [],
+    "shop": [
+      {
+        "itemName": "empty potion flask",
+        "itemId": 283,
+        "sell": 5
+      },
+      {
+        "itemName": "empty potion flask",
+        "itemId": 284,
+        "sell": 5
+      },
+      {
+        "itemName": "empty potion flask",
+        "itemId": 285,
+        "sell": 5
+      },
+      {
+        "itemName": "great health potion",
+        "itemId": 239,
+        "buy": 225
+      },
+      {
+        "itemName": "great mana potion",
+        "itemId": 238,
+        "buy": 158
+      },
+      {
+        "itemName": "great spirit potion",
+        "itemId": 7642,
+        "buy": 254
+      },
+      {
+        "itemName": "health potion",
+        "itemId": 266,
+        "buy": 50
+      },
+      {
+        "itemName": "mana potion",
+        "itemId": 268,
+        "buy": 56
+      },
+      {
+        "itemName": "strong health potion",
+        "itemId": 236,
+        "buy": 115
+      },
+      {
+        "itemName": "strong mana potion",
+        "itemId": 237,
+        "buy": 108
+      },
+      {
+        "itemName": "supreme health potion",
+        "itemId": 23375,
+        "buy": 650
+      },
+      {
+        "itemName": "ultimate health potion",
+        "itemId": 7643,
+        "buy": 379
+      },
+      {
+        "itemName": "ultimate mana potion",
+        "itemId": 23373,
+        "buy": 488
+      },
+      {
+        "itemName": "ultimate spirit potion",
+        "itemId": 23374,
+        "buy": 488
+      },
+      {
+        "itemName": "vial",
+        "itemId": 2874,
+        "sell": 5
+      },
+      {
+        "itemName": "animate dead rune",
+        "itemId": 3203,
+        "buy": 375
+      },
+      {
+        "itemName": "avalanche rune",
+        "itemId": 3161,
+        "buy": 64
+      },
+      {
+        "itemName": "blank rune",
+        "itemId": 3147,
+        "buy": 10
+      },
+      {
+        "itemName": "chameleon rune",
+        "itemId": 3178,
+        "buy": 210
+      },
+      {
+        "itemName": "convince creature rune",
+        "itemId": 3177,
+        "buy": 80
+      },
+      {
+        "itemName": "cure poison rune",
+        "itemId": 3153,
+        "buy": 65
+      },
+      {
+        "itemName": "destroy field rune",
+        "itemId": 3148,
+        "buy": 15
+      },
+      {
+        "itemName": "desintegrate rune",
+        "itemId": 3197,
+        "buy": 26
+      },
+      {
+        "itemName": "energy field rune",
+        "itemId": 3164,
+        "buy": 38
+      },
+      {
+        "itemName": "energy wall rune",
+        "itemId": 3166,
+        "buy": 85
+      },
+      {
+        "itemName": "energy bomb rune",
+        "itemId": 3149,
+        "buy": 203
+      },
+      {
+        "itemName": "explosion rune",
+        "itemId": 3200,
+        "buy": 31
+      },
+      {
+        "itemName": "fire bomb rune",
+        "itemId": 3192,
+        "buy": 147
+      },
+      {
+        "itemName": "fire field rune",
+        "itemId": 3188,
+        "buy": 28
+      },
+      {
+        "itemName": "fire wall rune",
+        "itemId": 3190,
+        "buy": 61
+      },
+      {
+        "itemName": "fireball rune",
+        "itemId": 3189,
+        "buy": 30
+      },
+      {
+        "itemName": "great fireball rune",
+        "itemId": 3191,
+        "buy": 64
+      },
+      {
+        "itemName": "heavy magic missile rune",
+        "itemId": 3198,
+        "buy": 12
+      },
+      {
+        "itemName": "holy missile rune",
+        "itemId": 3182,
+        "buy": 16
+      },
+      {
+        "itemName": "icicle rune",
+        "itemId": 3158,
+        "buy": 30
+      },
+      {
+        "itemName": "intense healing rune",
+        "itemId": 3152,
+        "buy": 95
+      },
+      {
+        "itemName": "light magic missile rune",
+        "itemId": 3174,
+        "buy": 4
+      },
+      {
+        "itemName": "magic wall rune",
+        "itemId": 3180,
+        "buy": 116
+      },
+      {
+        "itemName": "paralyze rune",
+        "itemId": 3165,
+        "buy": 700
+      },
+      {
+        "itemName": "poison bomb rune",
+        "itemId": 3173,
+        "buy": 85
+      },
+      {
+        "itemName": "poison field rune",
+        "itemId": 3172,
+        "buy": 21
+      },
+      {
+        "itemName": "poison wall rune",
+        "itemId": 3176,
+        "buy": 52
+      },
+      {
+        "itemName": "stalagmite rune",
+        "itemId": 3179,
+        "buy": 12
+      },
+      {
+        "itemName": "stone shower rune",
+        "itemId": 3175,
+        "buy": 41
+      },
+      {
+        "itemName": "sudden death rune",
+        "itemId": 3155,
+        "buy": 162
+      },
+      {
+        "itemName": "thunderstorm rune",
+        "itemId": 3202,
+        "buy": 52
+      },
+      {
+        "itemName": "ultimate healing rune",
+        "itemId": 3160,
+        "buy": 175
+      },
+      {
+        "itemName": "wild growth rune",
+        "itemId": 3156,
+        "buy": 160
+      },
+      {
+        "itemName": "hailstorm rod",
+        "itemId": 3067,
+        "buy": 15000
+      },
+      {
+        "itemName": "moonlight rod",
+        "itemId": 3070,
+        "buy": 1000
+      },
+      {
+        "itemName": "necrotic rod",
+        "itemId": 3069,
+        "buy": 5000
+      },
+      {
+        "itemName": "northwind rod",
+        "itemId": 8083,
+        "buy": 7500
+      },
+      {
+        "itemName": "snakebite rod",
+        "itemId": 3066,
+        "buy": 500
+      },
+      {
+        "itemName": "springsprout rod",
+        "itemId": 8084,
+        "buy": 18000
+      },
+      {
+        "itemName": "terra rod",
+        "itemId": 3065,
+        "buy": 10000
+      },
+      {
+        "itemName": "underworld rod",
+        "itemId": 8082,
+        "buy": 22000
+      },
+      {
+        "itemName": "wand of cosmic energy",
+        "itemId": 3073,
+        "buy": 10000
+      },
+      {
+        "itemName": "wand of decay",
+        "itemId": 3072,
+        "buy": 5000
+      },
+      {
+        "itemName": "wand of draconia",
+        "itemId": 8093,
+        "buy": 7500
+      },
+      {
+        "itemName": "wand of dragonbreath",
+        "itemId": 3075,
+        "buy": 1000
+      },
+      {
+        "itemName": "wand of inferno",
+        "itemId": 3071,
+        "buy": 15000
+      },
+      {
+        "itemName": "wand of starstorm",
+        "itemId": 8092,
+        "buy": 18000
+      },
+      {
+        "itemName": "wand of voodoo",
+        "itemId": 8094,
+        "buy": 22000
+      },
+      {
+        "itemName": "wand of vortex",
+        "itemId": 3074,
+        "buy": 500
+      },
+      {
+        "itemName": "durable exercise rod",
+        "itemId": 35283,
+        "buy": 1250000
+      },
+      {
+        "itemName": "durable exercise wand",
+        "itemId": 35284,
+        "buy": 1250000
+      },
+      {
+        "itemName": "exercise rod",
+        "itemId": 28556,
+        "buy": 347222
+      },
+      {
+        "itemName": "exercise wand",
+        "itemId": 28557,
+        "buy": 347222
+      },
+      {
+        "itemName": "lasting exercise rod",
+        "itemId": 35289,
+        "buy": 10000000
+      },
+      {
+        "itemName": "lasting exercise wand",
+        "itemId": 35290,
+        "buy": 10000000
+      },
+      {
+        "itemName": "spellwand",
+        "itemId": 651,
+        "sell": 299
+      }
+    ],
     "outfit": {
       "lookType": 1543,
       "lookHead": 95,
@@ -42660,7 +47937,308 @@
     }
   },
   "tandros.lua": {
-    "shop": [],
+    "shop": [
+      {
+        "itemName": "empty potion flask",
+        "itemId": 283,
+        "sell": 5
+      },
+      {
+        "itemName": "empty potion flask",
+        "itemId": 284,
+        "sell": 5
+      },
+      {
+        "itemName": "empty potion flask",
+        "itemId": 285,
+        "sell": 5
+      },
+      {
+        "itemName": "great health potion",
+        "itemId": 239,
+        "buy": 225
+      },
+      {
+        "itemName": "great mana potion",
+        "itemId": 238,
+        "buy": 158
+      },
+      {
+        "itemName": "great spirit potion",
+        "itemId": 7642,
+        "buy": 254
+      },
+      {
+        "itemName": "health potion",
+        "itemId": 266,
+        "buy": 50
+      },
+      {
+        "itemName": "mana potion",
+        "itemId": 268,
+        "buy": 56
+      },
+      {
+        "itemName": "strong health potion",
+        "itemId": 236,
+        "buy": 115
+      },
+      {
+        "itemName": "strong mana potion",
+        "itemId": 237,
+        "buy": 108
+      },
+      {
+        "itemName": "supreme health potion",
+        "itemId": 23375,
+        "buy": 650
+      },
+      {
+        "itemName": "ultimate health potion",
+        "itemId": 7643,
+        "buy": 379
+      },
+      {
+        "itemName": "ultimate mana potion",
+        "itemId": 23373,
+        "buy": 488
+      },
+      {
+        "itemName": "ultimate spirit potion",
+        "itemId": 23374,
+        "buy": 488
+      },
+      {
+        "itemName": "vial",
+        "itemId": 2874,
+        "sell": 5
+      },
+      {
+        "itemName": "avalanche rune",
+        "itemId": 3161,
+        "buy": 64
+      },
+      {
+        "itemName": "blank rune",
+        "itemId": 3147,
+        "buy": 10
+      },
+      {
+        "itemName": "chameleon rune",
+        "itemId": 3178,
+        "buy": 210
+      },
+      {
+        "itemName": "convince creature rune",
+        "itemId": 3177,
+        "buy": 80
+      },
+      {
+        "itemName": "cure poison rune",
+        "itemId": 3153,
+        "buy": 65
+      },
+      {
+        "itemName": "destroy field rune",
+        "itemId": 3148,
+        "buy": 15
+      },
+      {
+        "itemName": "energy field rune",
+        "itemId": 3164,
+        "buy": 38
+      },
+      {
+        "itemName": "energy wall rune",
+        "itemId": 3166,
+        "buy": 85
+      },
+      {
+        "itemName": "explosion rune",
+        "itemId": 3200,
+        "buy": 31
+      },
+      {
+        "itemName": "fire bomb rune",
+        "itemId": 3192,
+        "buy": 147
+      },
+      {
+        "itemName": "fire field rune",
+        "itemId": 3188,
+        "buy": 28
+      },
+      {
+        "itemName": "fire wall rune",
+        "itemId": 3190,
+        "buy": 61
+      },
+      {
+        "itemName": "great fireball rune",
+        "itemId": 3191,
+        "buy": 64
+      },
+      {
+        "itemName": "heavy magic missile rune",
+        "itemId": 3198,
+        "buy": 12
+      },
+      {
+        "itemName": "intense healing rune",
+        "itemId": 3152,
+        "buy": 95
+      },
+      {
+        "itemName": "light magic missile rune",
+        "itemId": 3174,
+        "buy": 4
+      },
+      {
+        "itemName": "poison field rune",
+        "itemId": 3172,
+        "buy": 21
+      },
+      {
+        "itemName": "poison wall rune",
+        "itemId": 3176,
+        "buy": 52
+      },
+      {
+        "itemName": "stalagmite rune",
+        "itemId": 3179,
+        "buy": 12
+      },
+      {
+        "itemName": "sudden death rune",
+        "itemId": 3155,
+        "buy": 162
+      },
+      {
+        "itemName": "ultimate healing rune",
+        "itemId": 3160,
+        "buy": 175
+      },
+      {
+        "itemName": "hailstorm rod",
+        "itemId": 3067,
+        "buy": 15000
+      },
+      {
+        "itemName": "moonlight rod",
+        "itemId": 3070,
+        "buy": 1000
+      },
+      {
+        "itemName": "necrotic rod",
+        "itemId": 3069,
+        "buy": 5000
+      },
+      {
+        "itemName": "northwind rod",
+        "itemId": 8083,
+        "buy": 7500
+      },
+      {
+        "itemName": "snakebite rod",
+        "itemId": 3066,
+        "buy": 500
+      },
+      {
+        "itemName": "springsprout rod",
+        "itemId": 8084,
+        "buy": 18000
+      },
+      {
+        "itemName": "terra rod",
+        "itemId": 3065,
+        "buy": 10000
+      },
+      {
+        "itemName": "underworld rod",
+        "itemId": 8082,
+        "buy": 22000
+      },
+      {
+        "itemName": "wand of cosmic energy",
+        "itemId": 3073,
+        "buy": 10000
+      },
+      {
+        "itemName": "wand of decay",
+        "itemId": 3072,
+        "buy": 5000
+      },
+      {
+        "itemName": "wand of draconia",
+        "itemId": 8093,
+        "buy": 7500
+      },
+      {
+        "itemName": "wand of dragonbreath",
+        "itemId": 3075,
+        "buy": 1000
+      },
+      {
+        "itemName": "wand of inferno",
+        "itemId": 3071,
+        "buy": 15000
+      },
+      {
+        "itemName": "wand of starstorm",
+        "itemId": 8092,
+        "buy": 18000
+      },
+      {
+        "itemName": "wand of voodoo",
+        "itemId": 8094,
+        "buy": 22000
+      },
+      {
+        "itemName": "wand of vortex",
+        "itemId": 3074,
+        "buy": 500
+      },
+      {
+        "itemName": "durable exercise rod",
+        "itemId": 35283,
+        "buy": 1250000
+      },
+      {
+        "itemName": "durable exercise wand",
+        "itemId": 35284,
+        "buy": 1250000
+      },
+      {
+        "itemName": "exercise rod",
+        "itemId": 28556,
+        "buy": 347222
+      },
+      {
+        "itemName": "exercise wand",
+        "itemId": 28557,
+        "buy": 347222
+      },
+      {
+        "itemName": "lasting exercise rod",
+        "itemId": 35289,
+        "buy": 10000000
+      },
+      {
+        "itemName": "lasting exercise wand",
+        "itemId": 35290,
+        "buy": 10000000
+      },
+      {
+        "itemName": "spellwand",
+        "itemId": 651,
+        "sell": 299
+      },
+      {
+        "itemName": "spellbook",
+        "itemId": 3059,
+        "buy": 150
+      }
+    ],
     "outfit": {
       "lookType": 132,
       "lookHead": 97,
@@ -44521,7 +50099,258 @@
     }
   },
   "topsy.lua": {
-    "shop": [],
+    "shop": [
+      {
+        "itemName": "empty potion flask",
+        "itemId": 283,
+        "sell": 5
+      },
+      {
+        "itemName": "empty potion flask",
+        "itemId": 284,
+        "sell": 5
+      },
+      {
+        "itemName": "empty potion flask",
+        "itemId": 285,
+        "sell": 5
+      },
+      {
+        "itemName": "great health potion",
+        "itemId": 239,
+        "buy": 225
+      },
+      {
+        "itemName": "great mana potion",
+        "itemId": 238,
+        "buy": 158
+      },
+      {
+        "itemName": "great spirit potion",
+        "itemId": 7642,
+        "buy": 254
+      },
+      {
+        "itemName": "health potion",
+        "itemId": 266,
+        "buy": 50
+      },
+      {
+        "itemName": "mana potion",
+        "itemId": 268,
+        "buy": 56
+      },
+      {
+        "itemName": "strong health potion",
+        "itemId": 236,
+        "buy": 115
+      },
+      {
+        "itemName": "strong mana potion",
+        "itemId": 237,
+        "buy": 108
+      },
+      {
+        "itemName": "ultimate health potion",
+        "itemId": 7643,
+        "buy": 379
+      },
+      {
+        "itemName": "vial",
+        "itemId": 2874,
+        "sell": 5
+      },
+      {
+        "itemName": "avalanche rune",
+        "itemId": 3161,
+        "buy": 64
+      },
+      {
+        "itemName": "blank rune",
+        "itemId": 3147,
+        "buy": 10
+      },
+      {
+        "itemName": "chameleon rune",
+        "itemId": 3178,
+        "buy": 210
+      },
+      {
+        "itemName": "convince creature rune",
+        "itemId": 3177,
+        "buy": 80
+      },
+      {
+        "itemName": "cure poison rune",
+        "itemId": 3153,
+        "buy": 65
+      },
+      {
+        "itemName": "destroy field rune",
+        "itemId": 3148,
+        "buy": 15
+      },
+      {
+        "itemName": "energy field rune",
+        "itemId": 3164,
+        "buy": 38
+      },
+      {
+        "itemName": "energy wall rune",
+        "itemId": 3166,
+        "buy": 85
+      },
+      {
+        "itemName": "explosion rune",
+        "itemId": 3200,
+        "buy": 31
+      },
+      {
+        "itemName": "fire bomb rune",
+        "itemId": 3192,
+        "buy": 147
+      },
+      {
+        "itemName": "fire field rune",
+        "itemId": 3188,
+        "buy": 28
+      },
+      {
+        "itemName": "fire wall rune",
+        "itemId": 3190,
+        "buy": 61
+      },
+      {
+        "itemName": "great fireball rune",
+        "itemId": 3191,
+        "buy": 64
+      },
+      {
+        "itemName": "heavy magic missile rune",
+        "itemId": 3198,
+        "buy": 12
+      },
+      {
+        "itemName": "intense healing rune",
+        "itemId": 3152,
+        "buy": 95
+      },
+      {
+        "itemName": "light magic missile rune",
+        "itemId": 3174,
+        "buy": 4
+      },
+      {
+        "itemName": "poison field rune",
+        "itemId": 3172,
+        "buy": 21
+      },
+      {
+        "itemName": "poison wall rune",
+        "itemId": 3176,
+        "buy": 52
+      },
+      {
+        "itemName": "stalagmite rune",
+        "itemId": 3179,
+        "buy": 12
+      },
+      {
+        "itemName": "sudden death rune",
+        "itemId": 3155,
+        "buy": 162
+      },
+      {
+        "itemName": "ultimate healing rune",
+        "itemId": 3160,
+        "buy": 175
+      },
+      {
+        "itemName": "moonlight rod",
+        "itemId": 3070,
+        "buy": 1000
+      },
+      {
+        "itemName": "necrotic rod",
+        "itemId": 3069,
+        "buy": 5000
+      },
+      {
+        "itemName": "snakebite rod",
+        "itemId": 3066,
+        "buy": 500
+      },
+      {
+        "itemName": "springsprout rod",
+        "itemId": 8084,
+        "buy": 18000
+      },
+      {
+        "itemName": "terra rod",
+        "itemId": 3065,
+        "buy": 10000
+      },
+      {
+        "itemName": "wand of cosmic energy",
+        "itemId": 3073,
+        "buy": 10000
+      },
+      {
+        "itemName": "wand of decay",
+        "itemId": 3072,
+        "buy": 5000
+      },
+      {
+        "itemName": "wand of dragonbreath",
+        "itemId": 3075,
+        "buy": 1000
+      },
+      {
+        "itemName": "wand of vortex",
+        "itemId": 3074,
+        "buy": 500
+      },
+      {
+        "itemName": "durable exercise rod",
+        "itemId": 35283,
+        "buy": 1250000
+      },
+      {
+        "itemName": "durable exercise wand",
+        "itemId": 35284,
+        "buy": 1250000
+      },
+      {
+        "itemName": "exercise rod",
+        "itemId": 28556,
+        "buy": 347222
+      },
+      {
+        "itemName": "exercise wand",
+        "itemId": 28557,
+        "buy": 347222
+      },
+      {
+        "itemName": "lasting exercise rod",
+        "itemId": 35289,
+        "buy": 10000000
+      },
+      {
+        "itemName": "lasting exercise wand",
+        "itemId": 35290,
+        "buy": 10000000
+      },
+      {
+        "itemName": "spellwand",
+        "itemId": 651,
+        "sell": 299
+      },
+      {
+        "itemName": "spellbook",
+        "itemId": 3059,
+        "buy": 150
+      }
+    ],
     "outfit": {
       "lookType": 139,
       "lookHead": 78,
@@ -49053,7 +54882,258 @@
     }
   },
   "xodet.lua": {
-    "shop": [],
+    "shop": [
+      {
+        "itemName": "empty potion flask",
+        "itemId": 283,
+        "sell": 5
+      },
+      {
+        "itemName": "empty potion flask",
+        "itemId": 284,
+        "sell": 5
+      },
+      {
+        "itemName": "empty potion flask",
+        "itemId": 285,
+        "sell": 5
+      },
+      {
+        "itemName": "great health potion",
+        "itemId": 239,
+        "buy": 225
+      },
+      {
+        "itemName": "great mana potion",
+        "itemId": 238,
+        "buy": 158
+      },
+      {
+        "itemName": "great spirit potion",
+        "itemId": 7642,
+        "buy": 254
+      },
+      {
+        "itemName": "health potion",
+        "itemId": 266,
+        "buy": 50
+      },
+      {
+        "itemName": "mana potion",
+        "itemId": 268,
+        "buy": 56
+      },
+      {
+        "itemName": "strong health potion",
+        "itemId": 236,
+        "buy": 115
+      },
+      {
+        "itemName": "strong mana potion",
+        "itemId": 237,
+        "buy": 108
+      },
+      {
+        "itemName": "ultimate health potion",
+        "itemId": 7643,
+        "buy": 379
+      },
+      {
+        "itemName": "vial",
+        "itemId": 2874,
+        "sell": 5
+      },
+      {
+        "itemName": "avalanche rune",
+        "itemId": 3161,
+        "buy": 64
+      },
+      {
+        "itemName": "blank rune",
+        "itemId": 3147,
+        "buy": 10
+      },
+      {
+        "itemName": "chameleon rune",
+        "itemId": 3178,
+        "buy": 210
+      },
+      {
+        "itemName": "convince creature rune",
+        "itemId": 3177,
+        "buy": 80
+      },
+      {
+        "itemName": "cure poison rune",
+        "itemId": 3153,
+        "buy": 65
+      },
+      {
+        "itemName": "destroy field rune",
+        "itemId": 3148,
+        "buy": 15
+      },
+      {
+        "itemName": "energy field rune",
+        "itemId": 3164,
+        "buy": 38
+      },
+      {
+        "itemName": "energy wall rune",
+        "itemId": 3166,
+        "buy": 85
+      },
+      {
+        "itemName": "explosion rune",
+        "itemId": 3200,
+        "buy": 31
+      },
+      {
+        "itemName": "fire bomb rune",
+        "itemId": 3192,
+        "buy": 147
+      },
+      {
+        "itemName": "fire field rune",
+        "itemId": 3188,
+        "buy": 28
+      },
+      {
+        "itemName": "fire wall rune",
+        "itemId": 3190,
+        "buy": 61
+      },
+      {
+        "itemName": "great fireball rune",
+        "itemId": 3191,
+        "buy": 64
+      },
+      {
+        "itemName": "heavy magic missile rune",
+        "itemId": 3198,
+        "buy": 12
+      },
+      {
+        "itemName": "intense healing rune",
+        "itemId": 3152,
+        "buy": 95
+      },
+      {
+        "itemName": "light magic missile rune",
+        "itemId": 3174,
+        "buy": 4
+      },
+      {
+        "itemName": "poison field rune",
+        "itemId": 3172,
+        "buy": 21
+      },
+      {
+        "itemName": "poison wall rune",
+        "itemId": 3176,
+        "buy": 52
+      },
+      {
+        "itemName": "stalagmite rune",
+        "itemId": 3179,
+        "buy": 12
+      },
+      {
+        "itemName": "sudden death rune",
+        "itemId": 3155,
+        "buy": 162
+      },
+      {
+        "itemName": "ultimate healing rune",
+        "itemId": 3160,
+        "buy": 175
+      },
+      {
+        "itemName": "moonlight rod",
+        "itemId": 3070,
+        "buy": 1000
+      },
+      {
+        "itemName": "necrotic rod",
+        "itemId": 3069,
+        "buy": 5000
+      },
+      {
+        "itemName": "snakebite rod",
+        "itemId": 3066,
+        "buy": 500
+      },
+      {
+        "itemName": "springsprout rod",
+        "itemId": 8084,
+        "buy": 18000
+      },
+      {
+        "itemName": "terra rod",
+        "itemId": 3065,
+        "buy": 10000
+      },
+      {
+        "itemName": "wand of cosmic energy",
+        "itemId": 3073,
+        "buy": 10000
+      },
+      {
+        "itemName": "wand of decay",
+        "itemId": 3072,
+        "buy": 5000
+      },
+      {
+        "itemName": "wand of dragonbreath",
+        "itemId": 3075,
+        "buy": 1000
+      },
+      {
+        "itemName": "wand of vortex",
+        "itemId": 3074,
+        "buy": 500
+      },
+      {
+        "itemName": "durable exercise rod",
+        "itemId": 35283,
+        "buy": 1250000
+      },
+      {
+        "itemName": "durable exercise wand",
+        "itemId": 35284,
+        "buy": 1250000
+      },
+      {
+        "itemName": "exercise rod",
+        "itemId": 28556,
+        "buy": 347222
+      },
+      {
+        "itemName": "exercise wand",
+        "itemId": 28557,
+        "buy": 347222
+      },
+      {
+        "itemName": "lasting exercise rod",
+        "itemId": 35289,
+        "buy": 10000000
+      },
+      {
+        "itemName": "lasting exercise wand",
+        "itemId": 35290,
+        "buy": 10000000
+      },
+      {
+        "itemName": "spellwand",
+        "itemId": 651,
+        "sell": 299
+      },
+      {
+        "itemName": "spellbook",
+        "itemId": 3059,
+        "buy": 150
+      }
+    ],
     "outfit": {
       "lookType": 130,
       "lookHead": 19,
