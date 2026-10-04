@@ -1666,3 +1666,85 @@ def _reachable(edges, start):
                 seen.add(neighbor)
                 queue.append(neighbor)
     return seen
+
+
+# ======================================================
+# Duplicata de Rookgaard dentro do corte de outra cidade
+# ======================================================
+
+
+ROOK_OBI = {"name": "Obi", "x": 32097, "y": 32205, "z": 7}
+
+
+def _npc_location(city, name, x, y, z):
+    return tg.build_npc_location({"name": name, "x": x, "y": y, "z": z}, city, None)
+
+
+def test_rook_npc_copied_into_another_city_is_a_duplicate():
+    """O corte do mapa de Thais pegou a ilha de Rookgaard com coordenada de mundo
+    preservada, então `THAIS-NPC-obi` é o mesmo NPC que `ROOK-NPC-obi`."""
+    thais_copy = _npc_location("THAIS", "Obi", 32097, 32205, 7)
+
+    duplicates = tg.find_rook_duplicates([thais_copy], [ROOK_OBI])
+
+    assert duplicates == {"THAIS-NPC-obi": "ROOK-NPC-obi"}
+
+
+def test_the_rook_side_is_never_its_own_duplicate():
+    """Quem ganha é ROOK — a mesma regra que o `findRookDuplicateNpcs` do
+    `tibia-idle` já aplica no import."""
+    assert tg.find_rook_duplicates([_npc_location("ROOK", "Obi", 32097, 32205, 7)], [ROOK_OBI]) == {}
+
+
+def test_a_namesake_somewhere_else_is_a_different_npc():
+    """`Junkar` existe em três lugares com `.lua` diferentes e `Ferryman Kamil`
+    em dois. Casar só pelo nome tiraria nós que o grafo precisa — por isso a
+    chave é slug **e** posição."""
+    elsewhere = _npc_location("THAIS", "Obi", 32400, 32100, 7)
+
+    assert tg.find_rook_duplicates([elsewhere], [ROOK_OBI]) == {}
+
+
+def test_same_name_one_floor_up_is_not_a_duplicate():
+    assert tg.find_rook_duplicates([_npc_location("THAIS", "Obi", 32097, 32205, 8)], [ROOK_OBI]) == {}
+
+
+def test_no_rook_xml_means_no_duplicate_is_claimed():
+    """Sem o `ROOK-npc.xml` do lado a função não inventa corte nenhum."""
+    assert tg.find_rook_duplicates([_npc_location("THAIS", "Obi", 32097, 32205, 7)], []) == {}
+
+
+def test_npc_slug_of_is_the_inverse_of_the_id_build():
+    """A conta tem que seguir igual à do `npcSlugOf` no `tibia-idle`: as duas
+    pontas comparam NPC pelo mesmo par slug+posição."""
+    location = _npc_location("THAIS", "Lee'Delle", 1, 1, 7)
+
+    assert location["id"] == "THAIS-NPC-lee-delle"
+    assert tg.npc_slug_of(location["id"]) == "lee-delle"
+
+
+# ======================================================
+# Relatório de descarte de NPC
+# ======================================================
+
+
+def test_npc_skip_report_groups_by_reason_and_points_at_the_allowlist():
+    skipped = [
+        {"id": "THAIS-NPC-obi", "name": "Obi", "reason": "duplicata de ROOK-NPC-obi"},
+        {"id": "THAIS-NPC-bozo", "name": "Bozo", "reason": "sem shop e sem serviço"},
+        {"id": "THAIS-NPC-pig", "name": "Pig", "reason": "sem shop e sem serviço"},
+    ]
+
+    report = tg.format_npc_skip_report(skipped, "THAIS")
+
+    assert "3 NPC(s) fora do fragmento" in report
+    assert "## sem shop e sem serviço (2)" in report
+    assert "## duplicata de ROOK-NPC-obi (1)" in report
+    assert tg.NPC_ALLOWLIST_NAME in report
+    # Quem lê o arquivo tem que saber que nó ilhado é o *outro* relatório.
+    assert tg.REJECTION_REPORT_NAME in report
+
+
+def test_npc_skip_report_says_so_when_nothing_was_cut():
+    """Arquivo vazio e arquivo ausente são indistinguíveis num diff; a frase não."""
+    assert "nenhum NPC descartado" in tg.format_npc_skip_report([], "ROOK")

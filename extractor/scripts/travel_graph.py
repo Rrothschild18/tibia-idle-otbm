@@ -1307,6 +1307,105 @@ def build_npc_locations(
 
 
 # ======================================================
+# Quem vira location de NPC (filtro)
+# ======================================================
+
+
+#: Rookgaard é a cidade inicial, e o corte do mapa de Thais pegou a ilha dela
+#: inteira — por isso ela aparece nas duas regras abaixo.
+ROOK_CITY = "ROOK"
+
+#: Nomes dos dois relatórios e da allowlist, aqui porque o texto do relatório de
+#: descarte cita os outros dois — quem lê o arquivo tem que saber onde é o lugar
+#: certo de cada coisa.
+REJECTION_REPORT_NAME = "travel-graph-rejections.txt"
+NPC_SKIP_REPORT_NAME = "npc-skipped.txt"
+NPC_ALLOWLIST_NAME = "extractor/npc-allowlist.json"
+
+
+def npc_slug_of(location_id: str) -> str:
+    """`"THAIS-NPC-lee-delle"` -> `"lee-delle"`. O inverso de `build_npc_location`,
+    que monta o id com `slugify(nome)` no terceiro segmento. Mesma conta que o
+    `npcSlugOf` do `tibia-idle` faz, e tem que continuar sendo: as duas pontas
+    comparam NPC pelo mesmo par slug+posição."""
+    return "-".join(location_id.split("-")[2:])
+
+
+def format_npc_skip_report(skipped: List[Dict], city: str) -> str:
+    """Os NPCs que `city` deixou de emitir, um por linha, com o motivo.
+
+    **Arquivo separado do `travel-graph-rejections.txt`, de propósito.** Aquele
+    relatório quer dizer "bug de mapa: conserta e a linha some" — é o que se
+    olha quando um destino que deveria existir não existe. Enfiar descarte
+    intencional nele destruiria o valor dele como sinal, porque passaria a ser
+    normal ele vir cheio."""
+    if not skipped:
+        return f"# {city}: nenhum NPC descartado.\n"
+
+    by_reason: Dict[str, List[Dict]] = {}
+    for entry in skipped:
+        by_reason.setdefault(entry["reason"], []).append(entry)
+
+    lines = [
+        f"# {city}: {len(skipped)} NPC(s) fora do fragmento.",
+        "#",
+        "# Descarte intencional, não bug de mapa — quem está aqui não faz nada que",
+        "# o jogo idle possa oferecer. Nó sem entrada no grafo é outro relatório",
+        f"# ({REJECTION_REPORT_NAME}). Para resgatar um destes, ou ele passa a ter",
+        f"# serviço no .lua do Canary, ou entra em {NPC_ALLOWLIST_NAME} com motivo.",
+        "",
+    ]
+    for reason in sorted(by_reason):
+        group = sorted(by_reason[reason], key=lambda entry: entry["id"])
+        lines.append(f"## {reason} ({len(group)})")
+        lines.extend(f"  {entry['id']}  {entry['name']}" for entry in group)
+        lines.append("")
+
+    return "\n".join(lines).rstrip("\n") + "\n"
+
+
+def find_rook_duplicates(
+    npc_locations: List[Dict], rook_npcs: List[Dict]
+) -> Dict[str, str]:
+    """`{id da location duplicada: id do NPC de ROOK que ela repete}`.
+
+    O corte do mapa de Thais pegou a ilha de Rookgaard inteira, com coordenada
+    de mundo preservada, então os 24 NPCs de Rook existem duas vezes:
+    `ROOK-NPC-obi` **e** `THAIS-NPC-obi`, mesma posição. **11 das duplicatas têm
+    loja**, então nenhum filtro por relevância as pega.
+
+    O `tibia-idle` já descarta a cópia não-ROOK no import
+    (`findRookDuplicateNpcs`, em `libs/models/content/src/lib/import-source.model.ts`),
+    e esta função é o mesmo corte movido para onde o dado nasce — o extractor
+    gastava 2.364 arestas de BFS gerando nó que o gate jogava fora, e qual cópia
+    ganha já estava decidido lá: ROOK ganha.
+
+    **Slug e posição, não só o nome.** `Junkar` existe em três lugares com `.lua`
+    diferentes e `Ferryman Kamil` em dois; são NPCs distintos e precisam dos seus
+    próprios nós. Só a coincidência exata de slug *e* (x, y, z) é duplicata.
+
+    `rook_npcs` vem do `ROOK-npc.xml`, não do fragmento sendo gerado: rodar só a
+    cidade de Thais tem que cortar as mesmas 24.
+    """
+    by_key = {
+        (slugify(npc["name"]), npc["x"], npc["y"], npc["z"]): f"{ROOK_CITY}-NPC-{slugify(npc['name'])}"
+        for npc in rook_npcs
+    }
+
+    duplicates: Dict[str, str] = {}
+    for location in npc_locations:
+        if city_ids.derive_city(location["id"]) == ROOK_CITY:
+            continue
+        rook_id = by_key.get(
+            (npc_slug_of(location["id"]), location["x"], location["y"], location["z"])
+        )
+        if rook_id is not None:
+            duplicates[location["id"]] = rook_id
+
+    return duplicates
+
+
+# ======================================================
 # Fragment assembly + catalog merge
 # ======================================================
 

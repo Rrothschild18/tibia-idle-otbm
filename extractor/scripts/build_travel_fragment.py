@@ -53,6 +53,9 @@ from travel_graph import (
     parse_depot_items,
     REJECTION_REASONS,
     apply_graph_rejections,
+    NPC_SKIP_REPORT_NAME,
+    REJECTION_REPORT_NAME,
+    ROOK_CITY,
     build_npc_locations,
     build_quest_slug_location,
     build_sign_location,
@@ -71,6 +74,8 @@ from travel_graph import (
     parse_npc_outfit_lua,
     parse_npc_services_lua,
     parse_npc_shop_lua,
+    find_rook_duplicates,
+    format_npc_skip_report,
     parse_npc_xml,
 )
 
@@ -79,7 +84,6 @@ EXTRACTOR_DIR = os.path.dirname(SCRIPTS_DIR)
 RAW_MAPS_DIR = os.path.join(EXTRACTOR_DIR, "raw-maps")
 FULL_MAPS_DIR = os.path.join(EXTRACTOR_DIR, "full-maps")
 MAPS_DIR = os.path.join(EXTRACTOR_DIR, "maps")
-REJECTION_REPORT_NAME = "travel-graph-rejections.txt"
 
 
 def _load_json(path, what):
@@ -137,6 +141,24 @@ def _load_npc_lua_facts_source(canary_dir=None):
         )
 
     return source, vendored
+
+
+def _load_city_npcs(city: str, warn: bool = False):
+    """`<CIDADE>-npc.xml` -> `[{"name", "x", "y", "z"}, ...]`, vazio se o arquivo
+    não existe.
+
+    Lido para duas cidades em todo run que não é de Rookgaard: a que está sendo
+    gerada, e ROOK — o lado de referência de `find_rook_duplicates`, que precisa
+    vir do xml e não do fragmento para que rodar só Thais corte as mesmas
+    duplicatas."""
+    path = os.path.join(FULL_MAPS_DIR, city, f"{city}-npc.xml")
+    if not os.path.exists(path):
+        if warn:
+            print(f"[WARN] {path} não encontrado — nenhuma Location de NPC gerada")
+        return []
+
+    with open(path, "r", encoding="utf-8") as handler:
+        return parse_npc_xml(handler.read())
 
 
 def _build_npc_lua_facts(npc_names, canary_dir=None):
@@ -277,13 +299,7 @@ def build_city_fragment(
         sign_locations = list(by_id.values())
         print(f"[OK] {len(curated_locations)} POIs de hunt curados lidos de {curated_path}")
 
-    npc_xml_path = os.path.join(FULL_MAPS_DIR, city, f"{city}-npc.xml")
-    npcs = []
-    if os.path.exists(npc_xml_path):
-        with open(npc_xml_path, "r", encoding="utf-8") as f:
-            npcs = parse_npc_xml(f.read())
-    else:
-        print(f"[WARN] {npc_xml_path} não encontrado — nenhuma Location de NPC gerada")
+    npcs = _load_city_npcs(city, warn=True)
 
     lua_facts, npc_facts_origin = _build_npc_lua_facts(
         {npc["name"] for npc in npcs}, canary_dir
@@ -291,6 +307,23 @@ def build_city_fragment(
     npc_locations, unmatched_npcs = build_npc_locations(npcs, city, lua_facts)
     for name in unmatched_npcs:
         print(f"[WARN] NPC '{name}' sem .lua correspondente em {npc_facts_origin} — Location sem shop")
+
+    # A ilha de Rookgaard está dentro do corte de Thais, então os 24 NPCs de Rook
+    # existem duas vezes. O `tibia-idle` já descarta a cópia não-ROOK no import;
+    # parar de emiti-la poupa as 2.364 arestas que ela arrastava. Ver
+    # find_rook_duplicates.
+    skipped_npcs = []
+    if city != ROOK_CITY:
+        duplicates = find_rook_duplicates(npc_locations, _load_city_npcs(ROOK_CITY))
+        if duplicates:
+            skipped_npcs = [
+                {"id": location["id"], "name": location["displayName"],
+                 "reason": f"duplicata de {duplicates[location['id']]}"}
+                for location in npc_locations
+                if location["id"] in duplicates
+            ]
+            npc_locations = [loc for loc in npc_locations if loc["id"] not in duplicates]
+            print(f"[OK] {len(duplicates)} NPC(s) de Rookgaard duplicado(s) em {city} descartado(s)")
 
     floorchange_by_id, ladder_ids = update_canary_data.read_floor_change_rules(canary_dir)
     tiles = extract_tile_flags(dump, object_defs_flags, floorchange_by_id, ladder_ids)
@@ -335,7 +368,7 @@ def build_city_fragment(
     kept_locations, kept_edges, rejections = apply_graph_rejections(
         [*sign_locations, *npc_locations], travel_graph_edges, discover_hunt_maps(city)
     )
-    return build_travel_fragment(kept_locations, kept_edges), rejections, invented
+    return build_travel_fragment(kept_locations, kept_edges), rejections, invented, skipped_npcs
 
 
 def main():
@@ -383,7 +416,7 @@ def main():
         except paths.MissingRepoError as exc:
             parser.error(str(exc))
 
-    fragment, rejections, invented = build_city_fragment(
+    fragment, rejections, invented, skipped_npcs = build_city_fragment(
         args.city, canary_dir, args.npc_reach, connect_orphans=not args.no_connect_orphans
     )
 
@@ -395,6 +428,15 @@ def main():
     if invented:
         print(f"[~~] {len(invented)} hunt(s) ligada(s) por estimativa — o mapa não tem "
               f"caminho andável até elas (corda, alçapão de script ou teleport)")
+
+    skip_path = os.path.join(FULL_MAPS_DIR, args.city, NPC_SKIP_REPORT_NAME)
+    with open(skip_path, "w", encoding="utf-8") as f:
+        f.write(format_npc_skip_report(skipped_npcs, args.city))
+    if skipped_npcs:
+        by_reason = Counter(entry["reason"] for entry in skipped_npcs)
+        print(f"[OK] {len(skipped_npcs)} NPC(s) descartado(s) -> {skip_path}")
+        for reason, count in sorted(by_reason.items()):
+            print(f"     {count} {reason}")
 
     report_path = os.path.join(FULL_MAPS_DIR, args.city, REJECTION_REPORT_NAME)
     with open(report_path, "w", encoding="utf-8") as f:
