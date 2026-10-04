@@ -170,6 +170,30 @@ encurtar as distâncias de um NPC que está em rua aberta. Essa distância é a 
 em linha reta (Chebyshev, atravessando parede); todo o resto do trajeto é caminho andado.
 _Avoid_: "raio de trade" (sugere regra de combate/jogo; isto é só como o grafo representa chegada)
 
+**Serviço de motor** (`services`) e **NPC relevante**:
+O que um NPC **faz** por dinheiro, lido do `.lua` dele no Canary pela assinatura da função do motor
+que ele chama — `travel`, `bank`, `bless`, `promote`, `spell`. É o segundo fato mecânico sobre um
+NPC, ao lado do `shop`: um responde "vende?" e o outro "faz alguma outra coisa?". **NPC relevante** é
+quem entra no fragmento: é de Rookgaard, ou tem loja, ou tem serviço numa categoria aprovada, ou
+está na allowlist curada. Quem não é nada disso não vira destino — ele inflava 97% das arestas do
+grafo sem oferecer nada que o idle possa fazer.
+_Avoid_: detectar serviço por nome ou por texto de diálogo (`captain_tiberius.lua` diz "I transport
+my passengers" e não tem mecânica nenhuma), e "NPC útil" (sugere julgamento de gosto; o corte é por
+mecânica declarada)
+
+**Duplicata de Rookgaard**:
+O mesmo NPC emitido duas vezes porque o corte do mapa de Thais pegou a ilha de Rookgaard inteira,
+com coordenada de mundo preservada: `ROOK-NPC-obi` e `THAIS-NPC-obi`, mesma posição. Identificada
+por **slug e posição**, nunca só pelo nome — `Junkar` existe em três lugares e `Ferryman Kamil` em
+dois, e são NPCs distintos. ROOK ganha, a cópia não é emitida; é a mesma regra que o
+`findRookDuplicateNpcs` do `tibia-idle` aplica no import.
+
+**Descarte de NPC** (`npc-skipped.txt`) vs. **nó sem entrada** (`travel-graph-rejections.txt`):
+Dois relatórios, e confundi-los esvazia o segundo. O **descarte** é intencional e esperado estar
+cheio: quem está lá não faz nada, e a linha só sai se alguém mudar o escopo ou pôr o NPC na
+allowlist. O **nó sem entrada** é bug de mapa e esperado estar vazio: quem está lá deveria ser
+alcançável, e a linha some quando o mapa é consertado.
+
 **Nó sem entrada** (rejeição):
 Uma location que ninguém consegue alcançar viajando, e que por isso **não entra no fragmento** — sai
 num relatório com o que existe dela. Três casos, e a diferença é o que cada um tem pra ser

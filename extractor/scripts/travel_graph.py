@@ -1331,6 +1331,101 @@ def npc_slug_of(location_id: str) -> str:
     return "-".join(location_id.split("-")[2:])
 
 
+#: Os serviços de motor que fazem um NPC valer uma location. `spell` fica fora de
+#: propósito: `StdModule.learnSpell` troca ouro por magia permanente, mas magia
+#: não é loop de idle — nove dos onze professores só fazem isso e caem.
+#:
+#: Cura também não está aqui, e o motivo é que ela é **grátis** e teto de 40 HP;
+#: a exceção real é Cipfried, que cura até 185, e ele é de ROOK — já entra pela
+#: isenção da cidade inteira.
+NPC_KEPT_SERVICES = frozenset({"travel", "bank", "bless", "promote"})
+
+
+def npc_skip_reason(
+    location: Dict, services: List[str], allowlist: Dict[str, str]
+) -> Optional[str]:
+    """`None` quando o NPC entra no fragmento; o motivo do corte quando não.
+
+    Quatro portas de entrada, nesta ordem:
+
+    1. **É de ROOK.** Rookgaard é a área inicial e precisa de volume — os 24
+       ficam, com ou sem função. A isenção é pelo campo `city` do id, então
+       `ROOK-NPC-cipfried` entra e a cópia de Thais não (que já saiu antes, em
+       `find_rook_duplicates`).
+    2. **Está na allowlist.** O que o motor do Canary não declara: loja que vende
+       por diálogo, teleporte artesanal, serviço por moeda que não é ouro.
+    3. **Tem loja.** Tamanho do inventário não entra na conta — um shop de 1 item
+       (Albinius, Elane, Gnomette, Xelvar) é mecanicamente o mesmo nó que o de
+       129. Filtrar por tamanho seria enfiar julgamento de relevância dentro da
+       regra mecânica, que é exatamente o que este corte existe para não fazer.
+       `shop` vazio **não** conta: é tabela que o parser leu e achou sem nada
+       (ver issue 06), e quem tem item de verdade por trás disso está na
+       allowlist.
+    4. **Tem serviço** em `NPC_KEPT_SERVICES`.
+
+    O motivo volta separando "só presta serviço que está fora" de "não presta
+    nenhum", porque os dois se consertam de formas diferentes: o primeiro é
+    decisão de escopo que alguém pode querer rever, o segundo é um NPC que
+    genuinamente não faz nada.
+    """
+    if city_ids.derive_city(location["id"]) == ROOK_CITY:
+        return None
+    if location["id"] in allowlist:
+        return None
+    if location.get("shop"):
+        return None
+
+    declared = set(services)
+    if declared & NPC_KEPT_SERVICES:
+        return None
+    if declared:
+        return f"serviço só de {'/'.join(sorted(declared))}"
+    return "sem shop e sem serviço"
+
+
+def filter_npc_locations(
+    npc_locations: List[Dict],
+    services_by_name: Dict[str, List[str]],
+    allowlist: Dict[str, str],
+) -> Tuple[List[Dict], List[Dict]]:
+    """`(entram, descartados)` — os descartados no formato que
+    `format_npc_skip_report` escreve.
+
+    `services_by_name` é chaveado por nome porque é de lá que o fato vem (o
+    `.lua` do Canary casa por nome de arquivo), enquanto a allowlist é chaveada
+    por id porque o nome não desambigua `Junkar` nem `Ferryman Kamil`. As duas
+    chaves são de propósito, não descuido."""
+    kept: List[Dict] = []
+    skipped: List[Dict] = []
+    for location in npc_locations:
+        reason = npc_skip_reason(
+            location, services_by_name.get(location["displayName"]) or [], allowlist
+        )
+        if reason is None:
+            kept.append(location)
+        else:
+            skipped.append(
+                {"id": location["id"], "name": location["displayName"], "reason": reason}
+            )
+    return kept, skipped
+
+
+def unresolved_allowlist_ids(
+    allowlist: Dict[str, str], npc_locations: List[Dict], city: str
+) -> List[str]:
+    """Os ids de `city` na allowlist que não casaram com NPC nenhum deste run.
+
+    Um id errado é a falha silenciosa que a allowlist convida: a linha fica no
+    arquivo, o NPC continua cortado, e nada avisa. Só os ids **desta** cidade
+    são checáveis aqui — os das outras são checados quando cada uma roda."""
+    present = {location["id"] for location in npc_locations}
+    return sorted(
+        entry_id
+        for entry_id in allowlist
+        if city_ids.derive_city(entry_id) == city and entry_id not in present
+    )
+
+
 def format_npc_skip_report(skipped: List[Dict], city: str) -> str:
     """Os NPCs que `city` deixou de emitir, um por linha, com o motivo.
 

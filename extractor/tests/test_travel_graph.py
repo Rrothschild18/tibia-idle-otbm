@@ -1,3 +1,5 @@
+import pytest
+
 import travel_graph as tg
 
 
@@ -1748,3 +1750,117 @@ def test_npc_skip_report_groups_by_reason_and_points_at_the_allowlist():
 def test_npc_skip_report_says_so_when_nothing_was_cut():
     """Arquivo vazio e arquivo ausente são indistinguíveis num diff; a frase não."""
     assert "nenhum NPC descartado" in tg.format_npc_skip_report([], "ROOK")
+
+
+# ======================================================
+# Filtro: quem vira location de NPC
+# ======================================================
+
+
+def _shop_npc(city, name):
+    location = _npc_location(city, name, 1, 1, 7)
+    location["shop"] = [{"itemName": "bread", "itemId": 3600, "buy": 3}]
+    return location
+
+
+def test_a_rook_npc_enters_with_no_shop_and_no_service():
+    """Rookgaard é a área inicial e precisa de volume — a isenção é pelo `city`
+    do id, e não pela geografia."""
+    assert tg.npc_skip_reason(_npc_location("ROOK", "Bozo", 1, 1, 7), [], {}) is None
+
+
+def test_the_same_npc_outside_rook_is_cut():
+    assert tg.npc_skip_reason(_npc_location("THAIS", "Bozo", 1, 1, 7), [], {}) == "sem shop e sem serviço"
+
+
+def test_a_shop_of_one_item_still_counts_as_a_merchant():
+    """Tamanho do inventário não entra na conta: filtrar por tamanho seria
+    enfiar julgamento de relevância dentro da regra mecânica."""
+    location = _npc_location("THAIS", "Albinius", 1, 1, 7)
+    location["shop"] = [{"itemName": "scroll", "itemId": 1949, "buy": 100}]
+
+    assert tg.npc_skip_reason(location, [], {}) is None
+
+
+def test_an_empty_shop_table_is_not_a_shop():
+    """`shop: []` é tabela que o parser leu e achou sem nada (issue 06), não um
+    comerciante. Quem tem item de verdade por trás disso está na allowlist."""
+    location = _npc_location("THAIS", "Black Bert", 1, 1, 7)
+    location["shop"] = []
+
+    assert tg.npc_skip_reason(location, [], {}) == "sem shop e sem serviço"
+
+
+@pytest.mark.parametrize("service", sorted(tg.NPC_KEPT_SERVICES))
+def test_each_kept_service_is_enough_on_its_own(service):
+    assert tg.npc_skip_reason(_npc_location("THAIS", "Someone", 1, 1, 7), [service], {}) is None
+
+
+def test_spell_alone_is_cut_and_the_reason_says_which_service():
+    """Magia está fora por decisão de escopo, não por o NPC não fazer nada — e o
+    motivo tem que distinguir os dois, porque se consertam de formas diferentes."""
+    reason = tg.npc_skip_reason(_npc_location("CARLIN", "Lea", 1, 1, 7), ["spell"], {})
+
+    assert reason == "serviço só de spell"
+
+
+def test_spell_plus_a_kept_service_enters():
+    """Cargo acumulado: Padreia ensina magia **e** vende; quem acumula entra pelo
+    que conta."""
+    assert tg.npc_skip_reason(_npc_location("CARLIN", "Padreia", 1, 1, 7), ["spell", "bless"], {}) is None
+
+
+def test_the_allowlist_lets_an_npc_in_with_nothing_else():
+    allowlist = {"VENORE-NPC-zebron": "cassino: aposta 1-99g com payout"}
+
+    assert tg.npc_skip_reason(_npc_location("VENORE", "Zebron", 1, 1, 7), [], allowlist) is None
+
+
+def test_filter_splits_kept_from_skipped_and_keeps_the_reason():
+    locations = [_shop_npc("THAIS", "Hardek"), _npc_location("THAIS", "Pig", 1, 1, 7)]
+
+    kept, skipped = tg.filter_npc_locations(locations, {}, {})
+
+    assert [loc["id"] for loc in kept] == ["THAIS-NPC-hardek"]
+    assert skipped == [
+        {"id": "THAIS-NPC-pig", "name": "Pig", "reason": "sem shop e sem serviço"}
+    ]
+
+
+def test_services_are_looked_up_by_display_name():
+    """A allowlist casa por id e os serviços por nome, e as duas chaves são de
+    propósito: o `.lua` do Canary casa por nome de arquivo, e o nome não
+    desambigua `Junkar` nem `Ferryman Kamil`."""
+    locations = [_npc_location("THAIS", "Captain Bluebear", 1, 1, 7)]
+
+    kept, skipped = tg.filter_npc_locations(locations, {"Captain Bluebear": ["travel"]}, {})
+
+    assert len(kept) == 1 and skipped == []
+
+
+def test_an_allowlist_id_that_matches_no_npc_of_this_city_is_reported():
+    """A falha silenciosa que a allowlist convida: a linha fica no arquivo, o NPC
+    continua cortado, e nada avisa."""
+    allowlist = {"THAIS-NPC-nao-existe": "typo", "THAIS-NPC-pig": "ok", "VENORE-NPC-zebron": "outra cidade"}
+
+    unresolved = tg.unresolved_allowlist_ids(
+        allowlist, [_npc_location("THAIS", "Pig", 1, 1, 7)], "THAIS"
+    )
+
+    assert unresolved == ["THAIS-NPC-nao-existe"]
+
+
+def test_the_shipped_allowlist_resolves_in_full():
+    """Cada id da allowlist versionada casa com um NPC de verdade do
+    `<CIDADE>-npc.xml` da sua cidade. Um typo aqui é um NPC que fica cortado
+    para sempre sem ninguém notar."""
+    import build_travel_fragment as btf
+
+    allowlist = btf._load_npc_allowlist()
+    assert allowlist, "a allowlist versionada não deveria estar vazia"
+
+    for city in ["ROOK", "THAIS", "CARLIN", "KAZORDOON", "VENORE"]:
+        npcs = btf._load_city_npcs(city)
+        locations, _ = tg.build_npc_locations(npcs, city, {})
+        assert tg.unresolved_allowlist_ids(allowlist, locations, city) == []
+

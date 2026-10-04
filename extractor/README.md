@@ -92,7 +92,7 @@ versionado em `extractor/vendor/canary/`:
 | Arquivo | O que é | Por que nesse formato |
 |---|---|---|
 | `items.xml` | cópia crua de `data/items/items.xml` | é um arquivo só, e é fonte de duas coisas (floorchange pro grafo, nome↔id e decay pro loot) — cru continua auditável |
-| `npc-lua-facts.json` | tabelas `shop` e `outfit` dos 1035 `.lua` de NPC | ninguém revisa 1035 arquivos num diff |
+| `npc-lua-facts.json` | tabelas `shop`/`outfit` e os `services` de motor dos 1035 `.lua` de NPC | ninguém revisa 1035 arquivos num diff |
 | `MANIFEST.json` | commit do Canary, data e comando que gerou | sem isso o vendor não tem procedência e ninguém sabe quando envelheceu |
 
 Com isso, **um clone sem Canary nenhum gera o fragmento do ROOK**:
@@ -693,6 +693,64 @@ caminhado. Para um NPC atrás de um balcão o caminho andado para a até `npc_re
 trecho de aproximação entra como o segmento reto que ele é (Chebyshev, não caminho andado). É o
 único segmento da rota que o jogador não pisa, e ele **não vem marcado** — quem desenha não
 distingue, o que é aceitável para uma linha na tela e não seria para navegação passo a passo.
+
+### Quem vira location de NPC
+
+Não é todo NPC do `<CIDADE>-npc.xml`. 97% das arestas do `travelGraph` tocavam um NPC, e a maioria
+deles é roleplay, lore, guarda que castiga insulto ou quest de uma vez só — nada que um jogo idle
+possa oferecer. Um NPC entra quando vale **uma** destas:
+
+1. **É de ROOK.** Rookgaard é a área inicial e precisa de volume; os 25 ficam, com ou sem função. A
+   isenção é pelo `city` do id, não pela geografia.
+2. **Tem `shop`.** Tamanho do inventário não entra na conta: um shop de 1 item (Albinius, Elane,
+   Gnomette, Xelvar) é mecanicamente o mesmo nó que o de 129. `shop: []` **não** conta — é tabela
+   que o parser leu e achou sem nada.
+3. **Tem `services`** em `travel`, `bank`, `bless` ou `promote`.
+4. **Está em `extractor/npc-allowlist.json`**, com motivo.
+
+`services` sai do `.lua` do Canary pela assinatura da função do motor que o NPC chama, e está
+vendorizado junto do `shop` em `vendor/canary/npc-lua-facts.json`:
+
+| serviço | assinatura | arquivos nos 1035 |
+| --- | --- | --- |
+| `travel` | `StdModule.travel` | 73 |
+| `bank` | `:parseBank(` | 25 |
+| `bless` | `StdModule.bless` | 27 |
+| `promote` | `StdModule.promotePlayer` | 6 |
+| `spell` | `StdModule.learnSpell` | 51 |
+
+**Assinatura, não nome.** `captain_tiberius.lua` diz no diálogo "I transport my passengers back to
+the continent." e não tem keyword nenhum nem `teleportTo`; `captain_kurt.lua` são 58 linhas de
+config sem um único keyword. Os dois parecem barqueiro e nenhum dos dois é. Pelo mesmo motivo nada
+procura `removeMoneyBank`/`addItem`: esse padrão não separa loja repetível de quest de uma vez só, e
+quem precisa desse corte vai à mão na allowlist.
+
+`spell` é detectado e **não** entra: ensina magia por ouro, mas não é loop de idle. Cura também
+fica fora — é grátis e teto de 40 HP; a exceção real é Cipfried (cura até 185) e ele é de ROOK.
+
+O que foi cortado sai em `full-maps/<CIDADE>/npc-skipped.txt`, com id, nome e motivo. **Não é o
+`travel-graph-rejections.txt`**: aquele quer dizer "bug de mapa, conserta e a linha some" e é
+esperado estar vazio; este é descarte intencional e é esperado estar cheio.
+
+Um id da allowlist que não casa com NPC nenhum da sua cidade **aborta o run**. É a falha silenciosa
+que uma lista curada convida: a linha fica no arquivo, o NPC continua cortado, e nada avisa.
+
+No export, location de NPC que o run não emitiu é **removida** do catálogo — ver
+`docs/adr/0009-location-de-npc-e-mecanica-e-deletavel.md`. POI continua só sendo reportado `stale`.
+
+### Duplicata de Rookgaard
+
+O corte do mapa de Thais pegou a ilha de Rookgaard inteira, com coordenada de mundo preservada, então
+os 25 NPCs de Rook existiam duas vezes: `ROOK-NPC-obi` **e** `THAIS-NPC-obi`, mesma posição. 11 das
+duplicatas têm loja, então o filtro acima não as pega. A cópia não-ROOK não é emitida, o que poupa as
+2.364 arestas que ela arrastava.
+
+Casa por **slug e posição**, nunca só pelo nome: `Junkar` existe em três lugares com `.lua`
+diferentes e `Ferryman Kamil` em dois, e são NPCs distintos que precisam dos seus próprios nós. O
+lado de ROOK vem do `ROOK-npc.xml` e não do fragmento, então rodar só Thais corta as mesmas.
+
+Isto não conserta a máscara de subárea que trouxe a ilha para dentro do corte de Thais — é bug de
+`cut_city.py` e fatia própria. Aqui o extractor só para de emitir.
 
 Migrar sinalizações antigas (ids sem o segmento `TIPO`) pro formato novo é tarefa manual de edição
 de mapa, o extractor não faz isso sozinho.
