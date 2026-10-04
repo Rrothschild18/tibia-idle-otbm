@@ -1882,19 +1882,46 @@ def merge_locations_into_catalog(
     duplicate-id check — but this function doesn't trust that) upsert into
     the same db entry instead of duplicating it.
 
-    An entry of `city` already in the db that this run's fragment no longer
-    carries (a rejected node, or a sign deleted from the OTBM) is reported as
-    `"stale"` but never removed: unlike an edge, a location holds curated
-    fields, and a node rejected on one run is often a sign the user is
-    halfway through fixing. Edges are the collection that gets replaced
-    outright (see merge_travel_graph_into_catalog)."""
-    by_id = {entry["id"]: i for i, entry in enumerate(catalog_locations)}
+    Uma entrada de `city` já no db que o fragmento deste run não carrega sai de
+    um jeito ou de outro **conforme o tipo**, e esse corte é a ADR-0009.
+
+    **POI** (`HUNT`/`TEMPLE`/`DEPOT`/`QUEST`) é reportado como `"stale"` e nunca
+    removido: ele guarda campo curado (`displayName`, `huntId`), e um nó
+    rejeitado num run é muitas vezes uma placa que alguém está no meio de
+    consertar — apagar destruiria a curadoria junto.
+
+    **NPC** é removido e reportado como `"removed"`. Não há campo curado para
+    proteger: `displayName` é o nome do próprio Canary, a posição vem do
+    `-npc.xml`, `shop` e `outfit` vêm do `.lua`. Regenerar dá exatamente o mesmo
+    valor, e os NPCs do catálogo estão **sem `_todo`** — o que fazia o merge
+    tratá-los como "totalmente curados" e protegê-los, exatamente o oposto do que
+    eles são. Sem esta remoção, o filtro de NPC encolheria o fragmento e o
+    catálogo continuaria do mesmo tamanho.
+
+    Arestas são a coleção que se substitui inteira (ver
+    merge_travel_graph_into_catalog), então nenhuma aresta sobra citando um NPC
+    removido."""
     report: Dict[str, str] = {}
 
     fragment_ids = {loc["id"] for loc in fragment_locations}
+    pruned: Set[str] = set()
     for entry in catalog_locations:
-        if city_ids.derive_city(entry["id"]) == city and entry["id"] not in fragment_ids:
+        if city_ids.derive_city(entry["id"]) != city or entry["id"] in fragment_ids:
+            continue
+        if entry.get("type") == "NPC":
+            report[entry["id"]] = "removed"
+            pruned.add(entry["id"])
+        else:
             report[entry["id"]] = "stale"
+
+    if pruned:
+        # Fatia no lugar: o contrato da função é mutar `catalog_locations`, e
+        # `by_id` só pode ser montado depois, porque remover desloca os índices.
+        catalog_locations[:] = [
+            entry for entry in catalog_locations if entry["id"] not in pruned
+        ]
+
+    by_id = {entry["id"]: i for i, entry in enumerate(catalog_locations)}
 
     for loc in fragment_locations:
         existing_index = by_id.get(loc["id"])

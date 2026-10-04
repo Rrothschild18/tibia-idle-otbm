@@ -1864,3 +1864,59 @@ def test_the_shipped_allowlist_resolves_in_full():
         locations, _ = tg.build_npc_locations(npcs, city, {})
         assert tg.unresolved_allowlist_ids(allowlist, locations, city) == []
 
+
+# ======================================================
+# Merge: NPC sai do catálogo, POI só fica stale (ADR-0009)
+# ======================================================
+
+
+def _catalog_npc(city, slug):
+    return {"id": f"{city}-NPC-{slug}", "type": "NPC", "x": 1, "y": 1, "z": 7,
+            "displayName": slug, "city": city}
+
+
+def test_an_npc_the_run_no_longer_emits_is_removed_from_the_catalog():
+    """Sem isto o filtro de NPC encolhe o fragmento e o catálogo continua do
+    mesmo tamanho — o trabalho inteiro sem efeito sobre o jogo."""
+    catalog = [_catalog_npc("THAIS", "pig"), _catalog_npc("THAIS", "hardek")]
+
+    report = tg.merge_locations_into_catalog(catalog, [_catalog_npc("THAIS", "hardek")], "THAIS")
+
+    assert [entry["id"] for entry in catalog] == ["THAIS-NPC-hardek"]
+    assert report["THAIS-NPC-pig"] == "removed"
+
+
+def test_a_poi_the_run_no_longer_emits_stays_and_is_only_reported():
+    """POI guarda `displayName`/`huntId` escolhidos à mão, e um nó rejeitado num
+    run é muitas vezes uma placa que alguém está no meio de consertar."""
+    hunt = {"id": "THAIS-HUNT-0001", "type": "HUNT", "x": 1, "y": 1, "z": 7,
+            "displayName": "Bears", "huntId": "THAIS-HUNT-0001"}
+    catalog = [hunt]
+
+    report = tg.merge_locations_into_catalog(catalog, [], "THAIS")
+
+    assert catalog == [hunt]
+    assert report["THAIS-HUNT-0001"] == "stale"
+
+
+def test_removing_an_npc_does_not_corrupt_the_upsert_of_the_ones_that_stay():
+    """Remover desloca os índices, e `by_id` é montado por índice — este é o
+    teste que pega a remoção feita no meio da iteração."""
+    catalog = [_catalog_npc("THAIS", "a"), _catalog_npc("THAIS", "b"), _catalog_npc("THAIS", "c")]
+    fresh_c = {**_catalog_npc("THAIS", "c"), "x": 99}
+
+    tg.merge_locations_into_catalog(catalog, [fresh_c, _catalog_npc("THAIS", "a")], "THAIS")
+
+    by_id = {entry["id"]: entry for entry in catalog}
+    assert set(by_id) == {"THAIS-NPC-a", "THAIS-NPC-c"}
+    assert by_id["THAIS-NPC-c"]["x"] == 99
+
+
+def test_an_npc_of_another_city_is_never_touched():
+    other = _catalog_npc("VENORE", "zebron")
+    catalog = [other, _catalog_npc("THAIS", "pig")]
+
+    report = tg.merge_locations_into_catalog(catalog, [], "THAIS")
+
+    assert other in catalog
+    assert "VENORE-NPC-zebron" not in report

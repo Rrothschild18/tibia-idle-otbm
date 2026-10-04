@@ -513,13 +513,17 @@ def main():
 
         locations = Counter(report["locations"].values())
         edges = Counter(report["travelGraph"].values())
-        print(f"     catalog: locations {locations['added']} added / {locations['updated']} updated, "
+        print(f"     catalog: locations {locations['added']} added / {locations['updated']} updated / "
+              f"{locations['removed']} removed, "
               f"travelGraph {edges['added']} added / {edges['updated']} updated / "
               f"{edges['removed']} removed -> {catalog_path}")
+        if locations["removed"]:
+            print(f"[OK] {locations['removed']} locations de NPC de {args.city} removidas do catálogo "
+                  f"(NPC é mecânico — não há curadoria para preservar; ver ADR-0009)")
         stale = sorted(loc_id for loc_id, state in report["locations"].items() if state == "stale")
         if stale:
-            print(f"[WARN] {len(stale)} locations de {args.city} continuam no catálogo sem vir deste run "
-                  f"(não foram apagadas — podem carregar displayName curado): {', '.join(stale)}")
+            print(f"[WARN] {len(stale)} POIs de {args.city} continuam no catálogo sem vir deste run "
+                  f"(não foram apagados — podem carregar displayName ou huntId curado): {', '.join(stale)}")
         print("     Rode `nx run db:reset` no tibia-idle pra o catálogo virar linha no Postgres.")
     else:
         print("     Nada foi escrito no back-end — copie o fragmento manualmente (ou rode com --export).")
