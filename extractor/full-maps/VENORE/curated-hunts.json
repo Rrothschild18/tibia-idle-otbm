@@ -1,414 +1,103 @@
 {
-  "city": "VENORE",
-  "area": "Venore",
   "hunts": [
     {
       "id": "VENORE-HUNT-0001",
       "name": "Toads — Gloom Caverns z8",
-      "slug": "toads-gloom-caverns-z8",
-      "folder": "VENORE-HUNT-0001_toads-gloom-caverns-z8",
-      "floors": [
-        8
-      ],
-      "cropFloors": [
-        8,
-        9,
-        10
-      ],
-      "candidateIds": [
-        "VENORE-FULL-z08-180"
-      ],
-      "creatures": 2,
-      "extent": {
-        "minX": 32707,
-        "minY": 31931,
-        "maxX": 32708,
-        "maxY": 31935,
-        "centerX": 32708,
-        "centerY": 31933
-      },
-      "subareaId": 239,
       "entrance": {
         "x": 32707,
         "y": 31931,
         "z": 8
-      },
-      "walkTilesFromTemple": null,
-      "tiles": 1643,
-      "spawns": 2
+      }
     },
     {
       "id": "VENORE-HUNT-0002",
       "name": "Gloom Wolfs — Green Claw Swamp z10",
-      "slug": "gloom-wolfs-green-claw-swamp-z10",
-      "folder": "VENORE-HUNT-0002_gloom-wolfs-green-claw-swamp-z10",
-      "floors": [
-        10
-      ],
-      "cropFloors": [
-        10,
-        11,
-        12
-      ],
-      "candidateIds": [
-        "VENORE-FULL-z10-135"
-      ],
-      "creatures": 20,
-      "extent": {
-        "minX": 32780,
-        "minY": 31926,
-        "maxX": 32811,
-        "maxY": 31961,
-        "centerX": 32796,
-        "centerY": 31944
-      },
-      "subareaId": 72,
       "entrance": {
         "x": 32811,
         "y": 31926,
         "z": 10
-      },
-      "walkTilesFromTemple": 430,
-      "tiles": 6514,
-      "spawns": 20
+      }
     },
     {
       "id": "VENORE-HUNT-0003",
       "name": "Amazons — Plains of Havoc z7",
-      "slug": "amazons-plains-of-havoc-z7",
-      "folder": "VENORE-HUNT-0003_amazons-plains-of-havoc-z7",
-      "floors": [
-        7
-      ],
-      "cropFloors": [
-        7,
-        8,
-        9
-      ],
-      "candidateIds": [
-        "VENORE-FULL-z07-4-TRIM-6031"
-      ],
-      "creatures": 18,
-      "extent": {
-        "minX": 32815,
-        "minY": 31910,
-        "maxX": 32855,
-        "maxY": 31958,
-        "centerX": 32835,
-        "centerY": 31934
-      },
-      "subareaId": 75,
       "entrance": {
         "x": 32828,
         "y": 31958,
         "z": 7
-      },
-      "walkTilesFromTemple": 213,
-      "tiles": 9719,
-      "spawns": 18
+      }
     },
     {
       "id": "VENORE-HUNT-0004",
       "name": "Valkyries — Amazon Camp (z8–9)",
-      "slug": "valkyries-amazon-camp-z89",
-      "folder": "VENORE-HUNT-0004_valkyries-amazon-camp-z89",
-      "floors": [
-        8,
-        9
-      ],
-      "cropFloors": [
-        8,
-        9,
-        10,
-        11
-      ],
-      "candidateIds": [
-        "VENORE-FULL-z08-273",
-        "VENORE-FULL-z09-1182"
-      ],
-      "creatures": 19,
-      "extent": {
-        "minX": 32837,
-        "minY": 31892,
-        "maxX": 32881,
-        "maxY": 31927,
-        "centerX": 32859,
-        "centerY": 31910
-      },
-      "subareaId": 69,
       "entrance": {
         "x": 32840,
         "y": 31913,
         "z": 8
-      },
-      "walkTilesFromTemple": 305,
-      "tiles": 5328,
-      "spawns": 19
+      }
     },
     {
       "id": "VENORE-HUNT-0005",
       "name": "Dragons — Venore Southern Swamp (z8–9)",
-      "slug": "dragons-venore-southern-swamp-z89",
-      "folder": "VENORE-HUNT-0005_dragons-venore-southern-swamp-z89",
-      "floors": [
-        8,
-        9
-      ],
-      "cropFloors": [
-        8,
-        9,
-        10,
-        11
-      ],
-      "candidateIds": [
-        "VENORE-FULL-z08-318",
-        "VENORE-FULL-z09-12"
-      ],
-      "creatures": 48,
-      "extent": {
-        "minX": 32811,
-        "minY": 32064,
-        "maxX": 32900,
-        "maxY": 32180,
-        "centerX": 32856,
-        "centerY": 32122
-      },
-      "subareaId": 77,
       "entrance": {
         "x": 32894,
         "y": 32164,
         "z": 9
-      },
-      "walkTilesFromTemple": 156,
-      "tiles": 45425,
-      "spawns": 48
+      }
     },
     {
       "id": "VENORE-HUNT-0006",
       "name": "Salamanders — Venore Southern Swamp z10",
-      "slug": "salamanders-venore-southern-swamp-z10",
-      "folder": "VENORE-HUNT-0006_salamanders-venore-southern-swamp-z10",
-      "floors": [
-        10
-      ],
-      "cropFloors": [
-        10,
-        11,
-        12
-      ],
-      "candidateIds": [
-        "VENORE-FULL-z10-77"
-      ],
-      "creatures": 48,
-      "extent": {
-        "minX": 32832,
-        "minY": 32129,
-        "maxX": 32941,
-        "maxY": 32217,
-        "centerX": 32887,
-        "centerY": 32173
-      },
-      "subareaId": 77,
       "entrance": {
         "x": 32872,
         "y": 32176,
         "z": 10
-      },
-      "walkTilesFromTemple": 183,
-      "tiles": 19231,
-      "spawns": 48
+      }
     },
     {
       "id": "VENORE-HUNT-0007",
       "name": "Emerald Damselflys — Venore Southern Swamp z10",
-      "slug": "emerald-damselflys-venore-southern-swamp-z10",
-      "folder": "VENORE-HUNT-0007_emerald-damselflys-venore-southern-swamp-z10",
-      "floors": [
-        10
-      ],
-      "cropFloors": [
-        10,
-        11,
-        12
-      ],
-      "candidateIds": [
-        "VENORE-FULL-z10-94"
-      ],
-      "creatures": 52,
-      "extent": {
-        "minX": 32784,
-        "minY": 32092,
-        "maxX": 32861,
-        "maxY": 32157,
-        "centerX": 32823,
-        "centerY": 32125
-      },
-      "subareaId": 77,
       "entrance": {
         "x": 32828,
         "y": 32110,
         "z": 10
-      },
-      "walkTilesFromTemple": 247,
-      "tiles": 7606,
-      "spawns": 52
+      }
     },
     {
       "id": "VENORE-HUNT-0008",
       "name": "Dragon Lords — Venore Dragon Lair (z4–8)",
-      "slug": "dragon-lords-venore-dragon-lair-z48",
-      "folder": "VENORE-HUNT-0008_dragon-lords-venore-dragon-lair-z48",
-      "floors": [
-        4,
-        5,
-        6,
-        7,
-        8
-      ],
-      "cropFloors": [
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
-      "candidateIds": [
-        "VENORE-FULL-z04-1561",
-        "VENORE-FULL-z05-532",
-        "VENORE-FULL-z05-672",
-        "VENORE-FULL-z06-1228",
-        "VENORE-FULL-z06-1895",
-        "VENORE-FULL-z06-288",
-        "VENORE-FULL-z07-4-TRIM-6038",
-        "VENORE-FULL-z08-20",
-        "VENORE-FULL-z08-318",
-        "VENORE-FULL-z08-740"
-      ],
-      "creatures": 46,
-      "extent": {
-        "minX": 32774,
-        "minY": 32121,
-        "maxX": 32851,
-        "maxY": 32177,
-        "centerX": 32813,
-        "centerY": 32149
-      },
-      "subareaId": 71,
       "entrance": {
         "x": 32851,
         "y": 32126,
         "z": 7
-      },
-      "walkTilesFromTemple": 151,
-      "tiles": 31310,
-      "spawns": 46
+      }
     },
     {
       "id": "VENORE-HUNT-0009",
       "name": "Swamp Trolls — Venore Southern Swamp z8",
-      "slug": "swamp-trolls-venore-southern-swamp-z8",
-      "folder": "VENORE-HUNT-0009_swamp-trolls-venore-southern-swamp-z8",
-      "floors": [
-        8
-      ],
-      "cropFloors": [
-        8,
-        9,
-        10
-      ],
-      "candidateIds": [
-        "VENORE-FULL-z08-86"
-      ],
-      "creatures": 47,
-      "extent": {
-        "minX": 32899,
-        "minY": 32171,
-        "maxX": 32964,
-        "maxY": 32258,
-        "centerX": 32932,
-        "centerY": 32215
-      },
-      "subareaId": 77,
       "entrance": {
         "x": 32937,
         "y": 32219,
         "z": 8
-      },
-      "walkTilesFromTemple": 169,
-      "tiles": 28220,
-      "spawns": 47
+      }
     },
     {
       "id": "VENORE-HUNT-0010",
       "name": "Corym Skirmishers — Venore Southern Swamp z11",
-      "slug": "corym-skirmishers-venore-southern-swamp-z11",
-      "folder": "VENORE-HUNT-0010_corym-skirmishers-venore-southern-swamp-z11",
-      "floors": [
-        11
-      ],
-      "cropFloors": [
-        11,
-        12,
-        13
-      ],
-      "candidateIds": [
-        "VENORE-FULL-z11-1-TRIM-6040"
-      ],
-      "creatures": 29,
-      "extent": {
-        "minX": 32930,
-        "minY": 32168,
-        "maxX": 33004,
-        "maxY": 32239,
-        "centerX": 32967,
-        "centerY": 32204
-      },
-      "subareaId": 77,
       "entrance": {
         "x": 33002,
         "y": 32169,
         "z": 11
-      },
-      "walkTilesFromTemple": 295,
-      "tiles": 8886,
-      "spawns": 29
+      }
     },
     {
       "id": "VENORE-HUNT-0011",
       "name": "Bonelords — Amazon Camp z11",
-      "slug": "bonelords-amazon-camp-z11",
-      "folder": "VENORE-HUNT-0011_bonelords-amazon-camp-z11",
-      "floors": [
-        11
-      ],
-      "cropFloors": [
-        11,
-        12,
-        13
-      ],
-      "candidateIds": [
-        "VENORE-FULL-z11-230"
-      ],
-      "creatures": 5,
-      "extent": {
-        "minX": 32868,
-        "minY": 31946,
-        "maxX": 32880,
-        "maxY": 31949,
-        "centerX": 32874,
-        "centerY": 31948
-      },
-      "subareaId": 69,
       "entrance": {
         "x": 32874,
         "y": 31946,
         "z": 11
-      },
-      "walkTilesFromTemple": null,
-      "tiles": 2727,
-      "spawns": 5
+      }
     }
   ]
 }
