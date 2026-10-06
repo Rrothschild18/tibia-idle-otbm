@@ -434,6 +434,52 @@ def town_positions(dump: Dict) -> List[Dict]:
     return towns
 
 
+def city_town(dump: Dict, city: str) -> Tuple[Optional[Dict], List[str]]:
+    """`(town, avisos)` — o town da própria cidade, entre os que o recorte trouxe.
+
+    `cut_city.py` já filtra town por máscara de subárea, e isso **não basta**:
+    ROOK, THAIS e a Island of Destiny dividem a área 24 da Cyclopedia, então o
+    recorte de THAIS traz os três e a máscara não os separa. Quem desempata é o
+    nome da área curada, que o `source.json` carrega em `area`.
+
+    Um recorte com town único dispensa o desempate, e é por isso que o fallback
+    existe: a área de ROOK é "Thais" e o town dele é "Rookgaard", então casar
+    nome deixaria Rookgaard sem templo.
+
+    Vários towns e nenhum com o nome da área devolve **nenhum** templo, de
+    propósito. Escolher o primeiro foi o bug: o id era
+    `{city}-TEMPLE-{índice}`, o índice era a ordem de descoberta, e quando o
+    recorte passou a trazer três towns o `THAIS-TEMPLE-0001` virou Rookgaard
+    carregando o `displayName` curado "Thais" — porque o merge preserva nome
+    curado e sobrescreve posição. Faltar templo quebra alto; templo no lugar
+    errado quebra calado."""
+    towns = town_positions(dump)
+    area = ((dump.get("area") or {}).get("name") or "").strip()
+    named = (
+        [town for town in towns if (town.get("name") or "").strip().casefold() == area.casefold()]
+        if area
+        else []
+    )
+
+    if len(named) == 1:
+        chosen = named[0]
+        return chosen, [
+            f"town {town.get('name') or '?'!r} no recorte de {city} não é a cidade "
+            "— fora do grafo de viagem"
+            for town in towns
+            if town is not chosen
+        ]
+
+    if len(towns) == 1:
+        return towns[0], []
+
+    found = ", ".join(repr(town.get("name") or "?") for town in towns)
+    return None, [
+        f"{city} tem {len(towns)} towns no recorte e {len(named)} com o nome da área "
+        f"{area!r}: {found} — sem templo mecânico, desempate impossível"
+    ]
+
+
 def nearest_walkable(node: Node, walkable: Set[Node], reach: int = 3) -> Optional[Node]:
     """O próprio tile, ou o andável mais próximo dele no mesmo andar.
 
@@ -480,23 +526,31 @@ def build_mechanical_city_pois(
     O templo vem do nó `towns` do OTBM; o depot, do item. São os dois POIs que
     toda cidade tem e que ninguém deveria precisar marcar à mão — sem eles uma
     cidade importada não tem de onde partir nem onde guardar.
+
+    **Um de cada, por cidade.** O depot já era (ver o comentário do critério de
+    distância abaixo); o templo passou a ser pelo mesmo motivo, e o id de ambos
+    é sempre `-0001`. Índice posicional sobre coisa descoberta no recorte é
+    identidade que escorrega: ver `city_town`.
     """
     locations: List[Dict] = []
     warnings: List[str] = []
 
-    for index, town in enumerate(town_positions(dump), start=1):
+    town, town_warnings = city_town(dump, city)
+    warnings.extend(town_warnings)
+
+    if town is not None:
         node = nearest_walkable((town["x"], town["y"], town["z"]), walkable)
         if node is None:
             warnings.append(
                 f"templo {town['name']!r} em {town['x']},{town['y']},{town['z']} "
                 "não encosta em tile andável"
             )
-            continue
-        locations.append(
-            build_city_poi(
-                f"{city}-TEMPLE-{index:04d}", "TEMPLE", node, town["name"] or f"{city} Temple"
+        else:
+            locations.append(
+                build_city_poi(
+                    f"{city}-TEMPLE-0001", "TEMPLE", node, town["name"] or f"{city} Temple"
+                )
             )
-        )
 
     town_name = next((t["name"] for t in town_positions(dump) if t.get("name")), None)
     depot_label = f"{town_name or city.capitalize()} Depot"
@@ -1997,6 +2051,87 @@ def merge_locations_into_catalog(
     return report
 
 
+def is_intercity_mesh_edge(edge: Dict) -> bool:
+    """Templo↔templo entre cidades diferentes — a malha que liga as cidades.
+
+    A unidade de identidade da malha, usada tanto para protegê-la do publish de
+    uma cidade quanto para saber o que o publish da própria malha substitui."""
+    ends = (edge["from"], edge["to"])
+    if any(city_ids.derive_type(end) != "TEMPLE" for end in ends):
+        return False
+    return city_ids.derive_city(ends[0]) != city_ids.derive_city(ends[1])
+
+
+def intercity_mesh_edges(
+    graph: Dict[Node, Set[Node]], temples: List[Dict]
+) -> Tuple[List[Dict], List[str]]:
+    """`(arestas, avisos)` — a malha templo↔templo, em tile andado de verdade.
+
+    O modelo de viagem entre cidades é: POI interno → templo da própria cidade
+    → templo do destino → POI de lá, somando as pernas. Os POIs de uma cidade
+    nunca conhecem a árvore de outra; o templo é o único ponto de junção. Então
+    a malha é exatamente o grafo completo entre os templos, e nada mais.
+
+    `build_travel_graph` já mede par a par com busca independente, então isto é
+    ele restrito aos templos, mais o descarte dos pares da mesma cidade (grafo
+    interno, não malha). Par sem rota andável **não vira aresta** — vai pro
+    aviso. É o caso de ROOK: ilha, feita à mão, sem acesso mútuo com a
+    mainland, e inventar uma ponte ali seria inventar uma viagem que o mapa não
+    permite."""
+    edges = [edge for edge in build_travel_graph(graph, temples) if is_intercity_mesh_edge(edge)]
+
+    reached = {frozenset((edge["from"], edge["to"])) for edge in edges}
+    warnings = [
+        f"sem rota andável entre {low} e {high} — fora da malha"
+        for low, high in (
+            sorted((first["id"], second["id"]))
+            for index, first in enumerate(temples)
+            for second in temples[index + 1 :]
+            if city_ids.derive_city(first["id"]) != city_ids.derive_city(second["id"])
+        )
+        if frozenset((low, high)) not in reached
+    ]
+
+    return edges, warnings
+
+
+def merge_intercity_mesh_into_catalog(
+    catalog_travel_graph: List[Dict], mesh_edges: List[Dict]
+) -> Dict[str, str]:
+    """Substitui a malha inteira no catálogo — e **só** a malha.
+
+    Espelha `merge_travel_graph_into_catalog`: substituição, não upsert, pelo
+    mesmo motivo (aresta que nenhuma busca produziu não deve sobreviver à busca
+    que deixou de produzi-la). A diferença é o escopo: aqui a unidade é a
+    malha, não uma cidade, então toda aresta de cidade fica intacta e toda
+    aresta templo↔templo entre cidades é deste run."""
+    report: Dict[str, str] = {}
+    existing_pairs = {
+        frozenset((edge["from"], edge["to"]))
+        for edge in catalog_travel_graph
+        if is_intercity_mesh_edge(edge)
+    }
+
+    for edge in catalog_travel_graph:
+        if is_intercity_mesh_edge(edge):
+            report[f"{edge['from']}<->{edge['to']}"] = "removed"
+
+    catalog_travel_graph[:] = [
+        edge for edge in catalog_travel_graph if not is_intercity_mesh_edge(edge)
+    ]
+
+    for edge in mesh_edges:
+        pair = frozenset((edge["from"], edge["to"]))
+        report[f"{edge['from']}<->{edge['to']}"] = (
+            "updated" if pair in existing_pairs else "added"
+        )
+        catalog_travel_graph.append(edge)
+
+    catalog_travel_graph.sort(key=lambda edge: (edge["from"], edge["to"]))
+
+    return report
+
+
 def merge_travel_graph_into_catalog(
     catalog_travel_graph: List[Dict], fragment_travel_graph: List[Dict], city: str
 ) -> Dict[str, str]:
@@ -2011,6 +2146,11 @@ def merge_travel_graph_into_catalog(
     one foot in `city` belongs to this run's regeneration; edges wholly
     between other cities are left exactly as they are.
 
+    **Uma exceção, e só uma:** aresta templo↔templo entre cidades diferentes é
+    a malha inter-cidade, não é de cidade nenhuma, e nenhum publish a apaga.
+    Ver `is_intercity_mesh_edge` para o porquê — sem isso a malha não sobrevive
+    ao próprio re-export que a deveria manter.
+
     Reports per unordered pair: `"added"`, `"updated"` (in the fragment,
     was already in the db) or `"removed"` (was in the db for this city, the
     fragment doesn't carry it). Always mechanical — no human curation lives
@@ -2020,6 +2160,14 @@ def merge_travel_graph_into_catalog(
         return f"{edge['from']}<->{edge['to']}"
 
     def _touches_city(edge: Dict) -> bool:
+        # A malha tem um pé em cada cidade e nenhum fragmento pode trazê-la —
+        # o fragmento de uma cidade só conhece o recorte dela. Tratá-la como
+        # "da cidade publicada" a condenava: publicar Carlin apagava
+        # Carlin↔Kazordoon, publicar Kazordoon apagava de novo, e o re-export
+        # das cinco apagou as seis. Quem a substitui é
+        # `merge_intercity_mesh_into_catalog`.
+        if is_intercity_mesh_edge(edge):
+            return False
         return city in (city_ids.derive_city(edge["from"]), city_ids.derive_city(edge["to"]))
 
     existing_pairs = {frozenset((e["from"], e["to"])) for e in catalog_travel_graph}

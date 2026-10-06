@@ -22,6 +22,16 @@ def derive_city(entry_id: str) -> str:
     return entry_id.split("-", 1)[0]
 
 
+def derive_type(entry_id: str) -> str:
+    """`"ROOK-TEMPLE-0001"` -> `"TEMPLE"` — an id's second `-`-separated segment.
+
+    Vazio quando o id não tem os três segmentos: quem pergunta o tipo está
+    classificando (a malha de viagem, por exemplo), e id fora da convenção
+    não pertence a classe nenhuma."""
+    parts = entry_id.split("-")
+    return parts[1] if len(parts) > 2 else ""
+
+
 def derive_status(city: str) -> str | None:
     """`"test"` when `city` is the fictional TEST city, absent (None)
     otherwise — never `null`/`false` on the actual catalog entry (callers

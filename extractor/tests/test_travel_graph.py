@@ -1936,3 +1936,236 @@ def test_an_npc_of_another_city_is_never_touched():
 
     assert other in catalog
     assert "VENORE-NPC-zebron" not in report
+
+
+# ======================================================
+# Templo: um por cidade, o da própria cidade
+# ======================================================
+
+
+def _town_dump(area_name, towns):
+    """Dump com `area` e `towns`, do jeito que cut_city.py escreve o source.json."""
+    return {
+        "area": {"id": 24, "name": area_name},
+        "data": {
+            "nodes": [{"features": [{"towns": towns}]}]
+        },
+    }
+
+
+def _town(name, x, y, z=7):
+    return {"townid": 1, "name": name, "x": x, "y": y, "z": z}
+
+
+def test_mechanical_temple_is_the_town_whose_name_is_the_curated_area():
+    # O recorte de THAIS traz Rookgaard e a Island of Destiny junto: as três
+    # cidades dividem a área 24 da Cyclopedia, então a máscara não as separa.
+    dump = _town_dump(
+        "Thais",
+        [
+            _town("Rookgaard", 32097, 32219),
+            _town("Island of Destiny", 32091, 32027),
+            _town("Thais", 32369, 32241),
+        ],
+    )
+    walkable = {(32097, 32219, 7), (32091, 32027, 7), (32369, 32241, 7)}
+
+    locations, warnings = tg.build_mechanical_city_pois(dump, "THAIS", walkable, set())
+    temples = [loc for loc in locations if loc["type"] == "TEMPLE"]
+
+    assert [loc["id"] for loc in temples] == ["THAIS-TEMPLE-0001"]
+    assert (temples[0]["x"], temples[0]["y"]) == (32369, 32241)
+    assert temples[0]["displayName"] == "Thais"
+    assert any("Rookgaard" in warning for warning in warnings)
+    assert any("Island of Destiny" in warning for warning in warnings)
+
+
+def test_mechanical_temple_falls_back_to_the_only_town_when_the_area_is_another_citys():
+    # ROOK é talhado da área "Thais" e o town dele é "Rookgaard": casar nome
+    # deixaria Rookgaard sem templo.
+    dump = _town_dump("Thais", [_town("Rookgaard", 32097, 32219)])
+    walkable = {(32097, 32219, 7)}
+
+    locations, warnings = tg.build_mechanical_city_pois(dump, "ROOK", walkable, set())
+    temples = [loc for loc in locations if loc["type"] == "TEMPLE"]
+
+    assert [loc["id"] for loc in temples] == ["ROOK-TEMPLE-0001"]
+    assert (temples[0]["x"], temples[0]["y"]) == (32097, 32219)
+    assert warnings == []
+
+
+def test_mechanical_temple_refuses_to_guess_between_towns_it_cannot_name():
+    # Vários towns e nenhum com o nome da área: errar em silêncio foi o bug
+    # (o id -0001 passou a apontar pra Rookgaard carregando o nome "Thais").
+    dump = _town_dump(
+        "Área Que Não Existe",
+        [_town("Alfa", 100, 100), _town("Beta", 200, 200)],
+    )
+    walkable = {(100, 100, 7), (200, 200, 7)}
+
+    locations, warnings = tg.build_mechanical_city_pois(dump, "THAIS", walkable, set())
+
+    assert [loc for loc in locations if loc["type"] == "TEMPLE"] == []
+    assert any("Alfa" in warning and "Beta" in warning for warning in warnings)
+
+
+def test_mechanical_temple_id_does_not_shift_when_a_town_appears_upstream():
+    # A invariante que o índice posicional quebrava: o templo da cidade é
+    # sempre -0001, não importa quantos towns o recorte arraste.
+    só_thais = _town_dump("Thais", [_town("Thais", 32369, 32241)])
+    com_vizinhos = _town_dump(
+        "Thais",
+        [
+            _town("Rookgaard", 32097, 32219),
+            _town("Thais", 32369, 32241),
+        ],
+    )
+    walkable = {(32097, 32219, 7), (32369, 32241, 7)}
+
+    antes, _ = tg.build_mechanical_city_pois(só_thais, "THAIS", walkable, set())
+    depois, _ = tg.build_mechanical_city_pois(com_vizinhos, "THAIS", walkable, set())
+
+    def temple(locations):
+        return next(loc for loc in locations if loc["type"] == "TEMPLE")
+
+    assert temple(antes)["id"] == temple(depois)["id"] == "THAIS-TEMPLE-0001"
+    assert (temple(antes)["x"], temple(antes)["y"]) == (temple(depois)["x"], temple(depois)["y"])
+
+
+# ======================================================
+# Malha inter-cidade: templo↔templo não é de nenhuma cidade
+# ======================================================
+
+
+def test_merge_travel_graph_keeps_the_intercity_temple_mesh():
+    # Publicar CARLIN apagava a aresta Carlin↔Kazordoon porque ela tem um pé
+    # em CARLIN — e o fragmento de CARLIN, que só conhece o recorte dele,
+    # nunca pode trazê-la. Era assim que as 6 arestas da malha morriam.
+    malha = {
+        "from": "CARLIN-TEMPLE-0001",
+        "to": "KAZORDOON-TEMPLE-0001",
+        "tileCount": 585,
+    }
+    db_edges = [malha, {"from": "CARLIN-HUNT-0001", "to": "CARLIN-TEMPLE-0001", "tileCount": 349}]
+    fragment_edges = [{"from": "CARLIN-HUNT-0001", "to": "CARLIN-TEMPLE-0001", "tileCount": 349}]
+
+    report = tg.merge_travel_graph_into_catalog(db_edges, fragment_edges, "CARLIN")
+
+    assert malha in db_edges
+    assert "CARLIN-TEMPLE-0001<->KAZORDOON-TEMPLE-0001" not in report
+
+
+def test_merge_travel_graph_still_drops_a_cross_city_edge_that_is_not_mesh():
+    # A proteção contra órfã continua: só templo↔templo entre cidades é malha.
+    db_edges = [{"from": "CARLIN-HUNT-0001", "to": "KAZORDOON-HUNT-0001", "tileCount": 99}]
+
+    report = tg.merge_travel_graph_into_catalog(db_edges, [], "CARLIN")
+
+    assert db_edges == []
+    assert report == {"CARLIN-HUNT-0001<->KAZORDOON-HUNT-0001": "removed"}
+
+
+def test_merge_travel_graph_drops_a_same_city_temple_edge():
+    # Dois templos da MESMA cidade não são malha — é grafo interno, e o
+    # fragmento daquela cidade é quem manda nele.
+    db_edges = [{"from": "THAIS-TEMPLE-0001", "to": "THAIS-TEMPLE-0002", "tileCount": 10}]
+
+    report = tg.merge_travel_graph_into_catalog(db_edges, [], "THAIS")
+
+    assert db_edges == []
+    assert report == {"THAIS-TEMPLE-0001<->THAIS-TEMPLE-0002": "removed"}
+
+
+# ======================================================
+# Malha inter-cidade: gerar e publicar
+# ======================================================
+
+
+def _corridor(length):
+    """Grafo 1-D andável de (0,0,7) até (length,0,7), 8-conectado trivial."""
+    nodes = [(x, 0, 7) for x in range(length + 1)]
+    graph = {node: set() for node in nodes}
+    for first, second in zip(nodes, nodes[1:]):
+        graph[first].add(second)
+        graph[second].add(first)
+    return graph
+
+
+def _temple(city, x):
+    return {"id": f"{city}-TEMPLE-0001", "type": "TEMPLE", "x": x, "y": 0, "z": 7}
+
+
+def test_intercity_mesh_edges_pairs_every_temple_with_real_walked_tiles():
+    graph = _corridor(30)
+    temples = [_temple("CARLIN", 0), _temple("KAZORDOON", 10), _temple("THAIS", 30)]
+
+    edges, warnings = tg.intercity_mesh_edges(graph, temples)
+
+    by_pair = {(edge["from"], edge["to"]): edge["tileCount"] for edge in edges}
+    assert by_pair == {
+        ("CARLIN-TEMPLE-0001", "KAZORDOON-TEMPLE-0001"): 10,
+        ("CARLIN-TEMPLE-0001", "THAIS-TEMPLE-0001"): 30,
+        ("KAZORDOON-TEMPLE-0001", "THAIS-TEMPLE-0001"): 20,
+    }
+    assert warnings == []
+    assert all(edge["path"] for edge in edges)
+
+
+def test_intercity_mesh_edges_report_a_pair_with_no_walkable_route():
+    # Ilha: ROOK não se liga à mainland, e isso tem que aparecer como aviso em
+    # vez de virar aresta inventada — ninguém de Rook chega na mainland.
+    graph = _corridor(10)
+    ilha = (500, 500, 7)
+    graph[ilha] = set()
+    temples = [_temple("CARLIN", 0), _temple("KAZORDOON", 10)]
+    temples.append({"id": "ROOK-TEMPLE-0001", "type": "TEMPLE", "x": 500, "y": 500, "z": 7})
+
+    edges, warnings = tg.intercity_mesh_edges(graph, temples)
+
+    pares = {(edge["from"], edge["to"]) for edge in edges}
+    assert pares == {("CARLIN-TEMPLE-0001", "KAZORDOON-TEMPLE-0001")}
+    assert any("ROOK-TEMPLE-0001" in warning for warning in warnings)
+
+
+def test_intercity_mesh_edges_never_pairs_two_temples_of_the_same_city():
+    graph = _corridor(20)
+    temples = [
+        _temple("THAIS", 0),
+        {"id": "THAIS-TEMPLE-0002", "type": "TEMPLE", "x": 10, "y": 0, "z": 7},
+        _temple("VENORE", 20),
+    ]
+
+    edges, _ = tg.intercity_mesh_edges(graph, temples)
+    pares = {(edge["from"], edge["to"]) for edge in edges}
+
+    assert ("THAIS-TEMPLE-0001", "THAIS-TEMPLE-0002") not in pares
+    assert ("THAIS-TEMPLE-0001", "VENORE-TEMPLE-0001") in pares
+
+
+def test_merge_intercity_mesh_replaces_only_the_mesh():
+    interna = {"from": "CARLIN-HUNT-0001", "to": "CARLIN-TEMPLE-0001", "tileCount": 349}
+    velha = {"from": "CARLIN-TEMPLE-0001", "to": "THAIS-TEMPLE-0001", "tileCount": 999}
+    catalog = [interna, velha]
+    mesh = [
+        {"from": "CARLIN-TEMPLE-0001", "to": "THAIS-TEMPLE-0001", "tileCount": 786},
+        {"from": "CARLIN-TEMPLE-0001", "to": "KAZORDOON-TEMPLE-0001", "tileCount": 585},
+    ]
+
+    report = tg.merge_intercity_mesh_into_catalog(catalog, mesh)
+
+    assert interna in catalog
+    assert velha not in catalog
+    assert {"from": "CARLIN-TEMPLE-0001", "to": "THAIS-TEMPLE-0001", "tileCount": 786} in catalog
+    assert report["CARLIN-TEMPLE-0001<->THAIS-TEMPLE-0001"] == "updated"
+    assert report["CARLIN-TEMPLE-0001<->KAZORDOON-TEMPLE-0001"] == "added"
+
+
+def test_merge_intercity_mesh_removes_a_pair_the_run_no_longer_reaches():
+    # Cidade que saiu do catálogo, ou par que deixou de ter rota: a aresta
+    # velha não pode ficar com distância de um mapa que não existe mais.
+    catalog = [{"from": "CARLIN-TEMPLE-0001", "to": "VENORE-TEMPLE-0001", "tileCount": 818}]
+
+    report = tg.merge_intercity_mesh_into_catalog(catalog, [])
+
+    assert catalog == []
+    assert report == {"CARLIN-TEMPLE-0001<->VENORE-TEMPLE-0001": "removed"}
