@@ -62,10 +62,12 @@ def test_build_city_fragment_warns_specifically_about_a_malformed_sign(tmp_path,
 
 
 def test_build_city_fragment_warns_specifically_about_a_duplicate_sign(tmp_path, monkeypatch, capsys):
-    # Real bug: ROOK-HUNT-0006 placed twice (same uid/text) is a perfectly
-    # well-formed id — must not be misreported as a format problem.
+    # Real bug: ROOK-DEPOT-0006 placed twice (same uid/text) is a perfectly
+    # well-formed id — must not be misreported as a format problem. O tipo é de
+    # um tile só de propósito: em HUNT/TRAINING, placa repetida é intenção (a
+    # hunt ocupa os andares marcados), e aí não há aviso nenhum.
     _write_city_fixture(
-        tmp_path, monkeypatch, [(10006, "ROOK-HUNT-0006"), (10006, "ROOK-HUNT-0006")]
+        tmp_path, monkeypatch, [(10006, "ROOK-DEPOT-0006"), (10006, "ROOK-DEPOT-0006")]
     )
 
     btf.build_city_fragment("ROOK", str(tmp_path / "no-canary-here"))

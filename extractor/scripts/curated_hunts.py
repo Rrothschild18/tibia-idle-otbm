@@ -38,33 +38,72 @@ def is_training(hunt: Dict) -> bool:
     return hunt.get("type") == "TRAINING"
 
 
-def training_hunt_from_sign(sign: Dict, max_floor: int) -> Dict:
-    """Uma placa `CIDADE-TRAINING-NNNN` (ver `travel_graph.parse_marker_signs`)
-    como uma entrada de curadoria sintética — sem candidata, sem nome digitado
-    à mão. A placa já decidiu o id; aqui só nasce o resto no formato que
-    `assign`/`build_curated_hunts` esperam de uma hunt da tela.
+def hunt_from_signs(signs: Sequence[Dict], max_floor: int) -> Dict:
+    """Uma ou mais placas com o **mesmo** id (`CIDADE-HUNT-NNNN` ou
+    `CIDADE-TRAINING-NNNN`) como uma entrada de curadoria sintética — sem
+    candidata, sem nome digitado à mão. A placa já decidiu o id; aqui só nasce o
+    resto no formato que `assign`/`build_curated_hunts` esperam de uma hunt da
+    tela.
 
-    `extent` começa um ponto (a placa) — a folga padrão (`crop_bounds`) é quem
-    vira isso num box, igual a toda hunt. `floors` é o andar da placa mais o de
-    cima e o de baixo; `crop_floors_for` ainda estende pra baixo pela regra de
-    visibilidade do cliente, como em qualquer hunt.
+    **Os andares são os andares onde você pôs placa.** Com uma placa só, valem
+    o andar dela mais o de cima e o de baixo — é o que o treino sempre fez, e
+    serve para quem marca um ponto e deixa o script decidir. Com mais de uma,
+    valem exatamente os andares marcados: aí a intenção é explícita e inventar
+    vizinhos atrapalharia. `crop_floors_for` ainda estende pra baixo pela regra
+    de visibilidade do cliente, como em qualquer hunt.
+
+    `extent` é a caixa que contém as placas — um ponto, quando é uma só. A folga
+    padrão (`crop_bounds`) é quem vira isso num box, igual a toda hunt.
+
+    A entrada é a placa de menor andar: é por onde o jogador chega.
     """
-    x, y, z = sign["x"], sign["y"], sign["z"]
-    floors = sorted({f for f in (z - 1, z, z + 1) if 0 <= f <= max_floor})
-    name = " ".join(word.capitalize() for word in sign["id"].split("-"))
+    if not signs:
+        raise ValueError("hunt_from_signs: nenhuma placa")
+
+    ids = {sign["id"] for sign in signs}
+    if len(ids) > 1:
+        raise ValueError(f"hunt_from_signs: placas de ids diferentes ({sorted(ids)})")
+
+    hunt_id = signs[0]["id"]
+    hunt_type = signs[0]["type"]
+    xs = [sign["x"] for sign in signs]
+    ys = [sign["y"] for sign in signs]
+    zs = sorted(sign["z"] for sign in signs)
+
+    if len(signs) == 1:
+        z = zs[0]
+        floors = sorted({f for f in (z - 1, z, z + 1) if 0 <= f <= max_floor})
+    else:
+        floors = sorted({z for z in zs if 0 <= z <= max_floor})
+
+    entrance = min(signs, key=lambda sign: (sign["z"], sign["x"], sign["y"]))
+    name = " ".join(word.capitalize() for word in hunt_id.split("-"))
+
     return {
-        "id": sign["id"],
-        "type": "TRAINING",
+        "id": hunt_id,
+        "type": hunt_type,
         "name": name,
         "floors": floors,
         "candidateIds": [],
         "species": None,
         "creatures": 0,
-        "extent": {"minX": x, "minY": y, "maxX": x, "maxY": y, "centerX": x, "centerY": y},
+        "extent": {
+            "minX": min(xs),
+            "minY": min(ys),
+            "maxX": max(xs),
+            "maxY": max(ys),
+            "centerX": entrance["x"],
+            "centerY": entrance["y"],
+        },
         "subareaId": None,
         "walkTilesFromTemple": None,
-        "entranceZ": z,
+        "entranceZ": entrance["z"],
     }
+
+
+def training_hunt_from_sign(sign: Dict, max_floor: int) -> Dict:
+    """Atalho histórico de uma placa só. Ver `hunt_from_signs`."""
+    return hunt_from_signs([sign], max_floor)
 
 
 # A placa pode cair numa tile não-caminhável (presa numa parede, como toda
@@ -127,23 +166,30 @@ def duplicated_candidates(hunts: Sequence[Dict]) -> Dict[str, List[str]]:
 def assign(city: str, hunts: Sequence[Dict]) -> List[Dict]:
     """A curadoria com id, slug e pasta — sem tocar em mapa nem em tile.
 
-    Uma hunt que já chega com `id` (as de treino, lidas direto da placa via
-    `training_hunt_from_sign`) passa pelo id verbatim — a placa já decidiu, e
-    não há o que atribuir. Só as sem `id` (a curadoria da tela, sempre HUNT)
-    ganham um `{CITY}-HUNT-NNNN` sequencial — por isso os dois nunca colidem:
-    nascem de mecanismos diferentes, não de um contador compartilhado.
+    **Todo hunt chega com `id`**: o de placa traz o que está escrito nela, o da
+    curadoria da tela traz o que está no `curation.json`. Até 2026-10-12 a
+    curadoria não trazia, e um contador posicional atribuía — então tirar ou
+    reordenar uma entrada renumerava todas as seguintes. O mesmo mapa virava
+    outro id, o mesmo id virava outro mapa, e o `name`/`label` escrito à mão
+    passava a descrever a hunt errada. Foi o que fez um re-export mexer em 56
+    bundles de uma vez.
+
+    Entrada sem `id` é recusada em vez de ganhar um número de fila: inventar
+    numeração é exatamente o que não pode voltar. Ver o ticket 11 de
+    `.scratch/pipeline-de-hunts/` no repo do jogo.
     """
     assigned = []
     used_slugs: Set[str] = set()
-    hunt_counter = 0
     for hunt in hunts:
-        if "id" in hunt:
-            identifier = hunt["id"]
-            fallback_slug = identifier.lower()
-        else:
-            hunt_counter += 1
-            identifier = hunt_id(city, hunt_counter)
-            fallback_slug = f"hunt-{hunt_counter:04d}"
+        if "id" not in hunt:
+            raise ValueError(
+                f"curadoria de {city} tem entrada sem `id`: {hunt.get('name', hunt)!r}. "
+                "Escolha o próximo id livre da cidade e escreva no `curation.json` — "
+                "id atribuído por posição renumera as hunts seguintes."
+            )
+
+        identifier = hunt["id"]
+        fallback_slug = identifier.lower()
         slug = slugify(hunt["name"]) or fallback_slug
         while slug in used_slugs:
             slug = f"{slug}-{identifier.split('-')[-1]}"

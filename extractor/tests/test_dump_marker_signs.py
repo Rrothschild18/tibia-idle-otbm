@@ -192,8 +192,10 @@ def test_two_signs_with_the_same_text_on_one_tile_keep_the_first_uid():
     # parse_marker_signs promotes the FIRST occurrence and reports the rest as
     # duplicates. The uid join has to agree with it: keying by position+text
     # alone, a second sign on the same tile would overwrite the first's uid and
-    # the transplant would silently re-inject the wrong one.
-    dump = _dump([(4, 4, 7, [_sign(10007, "ROOK-HUNT-0007"), _sign(10099, "ROOK-HUNT-0007")])])
+    # the transplant would silently re-inject the wrong one. O tipo é DEPOT, de
+    # um tile só: em HUNT/TRAINING, placa repetida deixou de ser duplicata e
+    # passou a ser o jeito de marcar os andares da hunt.
+    dump = _dump([(4, 4, 7, [_sign(10007, "ROOK-DEPOT-0007"), _sign(10099, "ROOK-DEPOT-0007")])])
 
     snapshot = dms.build_snapshot(dump, city="ROOK", source_commit="c", source_otbm="o")
 

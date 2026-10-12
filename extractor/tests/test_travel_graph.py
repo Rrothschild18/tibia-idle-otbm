@@ -118,21 +118,58 @@ def test_parse_marker_signs_ignores_non_sign_items_even_with_high_uid():
     assert issues == []
 
 
-def test_parse_marker_signs_reports_a_second_sign_that_reuses_the_same_id():
+def test_parse_marker_signs_reports_a_second_sign_in_a_single_tile_type():
     # Real-world case found in ROOK.otbm: two signs share a uid (a copy-paste
-    # mistake in the map editor) and ended up with identical text too — only
-    # the first becomes a location, the second is reported, never silently
-    # duplicated downstream.
+    # mistake in the map editor) and ended up with identical text too — só a
+    # primeira vira location, a segunda é reportada. Vale para os tipos de um
+    # tile só; em HUNT/TRAINING, repetir é intenção (ver o teste seguinte).
     dump = _dump([
-        (1000, 2000, 7, [_sign_item(10006, "ROOK-HUNT-0006")]),
-        (1213, 1119, 7, [_sign_item(10006, "ROOK-HUNT-0006")]),
+        (1000, 2000, 7, [_sign_item(10006, "ROOK-DEPOT-0006")]),
+        (1213, 1119, 7, [_sign_item(10006, "ROOK-DEPOT-0006")]),
     ])
 
     locations, issues = tg.parse_marker_signs(dump)
 
     assert len(locations) == 1
     assert locations[0]["x"] == 1000
-    assert issues == [{"reason": "duplicate-sign-id", "uid": 10006, "text": "ROOK-HUNT-0006", "x": 1213, "y": 1119, "z": 7}]
+    assert issues == [{"reason": "duplicate-sign-id", "uid": 10006, "text": "ROOK-DEPOT-0006", "x": 1213, "y": 1119, "z": 7}]
+
+
+def test_parse_marker_signs_takes_a_repeated_hunt_sign_as_intent():
+    """Mesmo id em vários andares é uma hunt que ocupa esses andares — é assim
+    que se marca o recorte sem passar pela curadoria da tela. O grafo continua
+    com **uma** location por id, na primeira placa; quem precisa do conjunto é o
+    recorte, via `signs_by_id`."""
+    dump = _dump([
+        (1000, 2000, 7, [_sign_item(10006, "ROOK-HUNT-0006")]),
+        (1004, 2004, 8, [_sign_item(10007, "ROOK-HUNT-0006")]),
+    ])
+
+    locations, issues = tg.parse_marker_signs(dump)
+
+    assert issues == []
+    assert len(locations) == 1
+    assert (locations[0]["x"], locations[0]["z"]) == (1000, 7)
+
+
+def test_signs_by_id_groups_every_sign_of_the_same_id():
+    dump = _dump([
+        (1000, 2000, 7, [_sign_item(10006, "ROOK-HUNT-0006")]),
+        (1004, 2004, 8, [_sign_item(10007, "ROOK-HUNT-0006")]),
+        (1500, 2500, 7, [_sign_item(10008, "ROOK-DEPOT-0001")]),
+    ])
+
+    groups = tg.signs_by_id(dump)
+
+    assert sorted(groups) == ["ROOK-DEPOT-0001", "ROOK-HUNT-0006"]
+    assert [sign["z"] for sign in groups["ROOK-HUNT-0006"]] == [7, 8]
+    assert all(sign["type"] == "HUNT" for sign in groups["ROOK-HUNT-0006"])
+
+
+def test_signs_by_id_skips_malformed_text_without_duplicating_the_report():
+    dump = _dump([(1000, 2000, 7, [_sign_item(10006, "ROOK-HUNT-00015")])])
+
+    assert tg.signs_by_id(dump) == {}
 
 
 def test_build_sign_location_derives_placeholder_display_name_and_flags_todo():
@@ -1908,8 +1945,12 @@ def test_the_shipped_allowlist_resolves_in_full():
     para sempre sem ninguém notar."""
     import build_travel_fragment as btf
 
+    # A allowlist **vazia** é estado válido desde 2026-10-11: o `npc.xml` das 5
+    # cidades foi restaurado e o filtro de relevância passou a cortar de
+    # verdade, então não há mais ninguém a resgatar à mão. O que este teste
+    # guarda é o typo — id que não casa com NPC nenhum —, e isso continua
+    # valendo quando ela volta a ter entrada.
     allowlist = btf._load_npc_allowlist()
-    assert allowlist, "a allowlist versionada não deveria estar vazia"
 
     for city in CITIES:
         npcs = btf._load_city_npcs(city)

@@ -36,6 +36,10 @@ import city_ids
 # ======================================================
 
 SIGN_ITEM_ID = 2016
+
+# Tipos em que a mesma placa repetida é intenção, não erro: a hunt ocupa os
+# andares onde ela aparece. Os outros tipos são de um tile só.
+MULTI_SIGN_TYPES = ("HUNT", "TRAINING")
 MARKER_UID_MIN = 10001
 POI_TYPES = ("HUNT", "TEMPLE", "DEPOT", "QUEST", "TRAINING")
 
@@ -112,10 +116,19 @@ def parse_marker_signs(dump: Dict) -> Tuple[List[Dict], List[Dict]]:
     doesn't match CIDADE-TIPO-NNNN (exactly 4 digits — a stray digit count,
     like the 5-digit `ROOK-HUNT-00015` typo found live, is rejected instead
     of silently minting an id nothing can ever resolve to) is reported as an
-    issue, not silently dropped. Two signs that resolve to the same id (typically a
-    copy-pasted sign that kept the old uid — a map-editing mistake) are also
-    reported: only the first occurrence becomes a location, so a duplicate
-    id can never reach the fragment/catalog and silently collide there."""
+    issue, not silently dropped.
+
+    Placa repetida depende do tipo. Em `HUNT` e `TRAINING` ela é **intenção**:
+    o mesmo id em vários andares é uma hunt que ocupa esses andares, e é assim
+    que se marca o recorte sem passar pela curadoria da tela (ver
+    `signs_by_id` e `curated_hunts.hunt_from_signs`). Nos tipos de um tile só —
+    `TEMPLE`, `DEPOT`, `NPC`, `QUEST` — repetição continua sendo erro
+    reportado, tipicamente placa copiada que ficou com o uid antigo; só a
+    primeira vira location, então id duplicado nunca chega ao catálogo para
+    colidir lá.
+
+    De qualquer forma, cada id vira **uma** location, na posição da primeira
+    placa: quem precisa do conjunto inteiro é o recorte, não o grafo."""
     locations: List[Dict] = []
     issues: List[Dict] = []
     seen_ids: Set[str] = set()
@@ -127,7 +140,8 @@ def parse_marker_signs(dump: Dict) -> Tuple[List[Dict], List[Dict]]:
             continue
 
         if text in seen_ids:
-            issues.append({"reason": "duplicate-sign-id", "uid": uid, "text": text, "x": x, "y": y, "z": z})
+            if match.group("type") not in MULTI_SIGN_TYPES:
+                issues.append({"reason": "duplicate-sign-id", "uid": uid, "text": text, "x": x, "y": y, "z": z})
             continue
         seen_ids.add(text)
 
@@ -140,6 +154,29 @@ def parse_marker_signs(dump: Dict) -> Tuple[List[Dict], List[Dict]]:
         })
 
     return locations, issues
+
+
+def signs_by_id(dump: Dict) -> Dict[str, List[Dict]]:
+    """Todas as placas de marcador agrupadas pelo id que elas escrevem.
+
+    É o que `parse_marker_signs` descarta: ele devolve uma location por id, e
+    aqui fica o conjunto inteiro — uma entrada por placa, na ordem em que o dump
+    as traz. Quem recorta precisa de todas (os andares e a caixa saem delas);
+    quem monta o grafo precisa de uma.
+
+    Placa mal formada não entra: o relatório dela é do `parse_marker_signs`, e
+    repetir o aviso aqui seria duas vozes para o mesmo defeito."""
+    groups: Dict[str, List[Dict]] = {}
+
+    for x, y, z, uid, text in iter_marker_sign_items(dump):
+        match = _SIGN_ID_RE.match(text)
+        if not match:
+            continue
+        groups.setdefault(text, []).append(
+            {"id": text, "type": match.group("type"), "x": x, "y": y, "z": z, "uid": uid}
+        )
+
+    return groups
 
 
 # =========================================================

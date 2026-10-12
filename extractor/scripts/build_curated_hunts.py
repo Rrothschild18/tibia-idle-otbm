@@ -35,6 +35,7 @@ from travel_graph import (
     build_walkable_graph,
     extract_tile_flags,
     parse_marker_signs,
+    signs_by_id,
     tile_distances_and_prev,
 )
 
@@ -209,11 +210,38 @@ def write_hunt_map(
     return {"tiles": tiles, "spawns": spawns, "folder": folder, "marked": marked}
 
 
+def merge_manifest(previous, written):
+    """O manifesto de uma rodada parcial: o que foi recortado agora substitui a
+    entrada antiga **no lugar dela**, o resto fica como estava, e id novo entra
+    no fim.
+
+    A ordem é preservada, não reordenada. Ordenar faria o arquivo oscilar entre
+    duas ordens — parcial ordenada, completa na ordem da curadoria — e todo diff
+    viria cheio de movimentação sem mudança. Sem a mescla, uma rodada parcial
+    reescrevia o arquivo com só o que acabou de sair e apagava a curadoria das
+    outras, cujas pastas continuam em disco e cujo conteúdo o `publish.py` e o
+    fragmento de hunt leem daqui.
+    """
+    recut = {hunt["id"]: hunt for hunt in written}
+    known = {hunt["id"] for hunt in previous}
+
+    return [recut.get(hunt["id"], hunt) for hunt in previous] + [
+        hunt for hunt in written if hunt["id"] not in known
+    ]
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("city")
     parser.add_argument("--margin", type=int, default=curated_hunts.DEFAULT_MARGIN_TILES)
     parser.add_argument("--canary-dir")
+    parser.add_argument(
+        "--only",
+        action="append",
+        metavar="ID",
+        help="recorta só este id (repetível). As outras hunts da cidade não são tocadas — "
+        "nem a pasta, nem o curated-hunts.json. Sem isto, recorta a cidade toda.",
+    )
     args = parser.parse_args()
 
     city = args.city
@@ -228,19 +256,50 @@ def main():
     # inteira (id, posição, andar). Placa mal formada cai em `sign_issues` e
     # não gera hunt — mesmo relatório que build_travel_fragment.py já imprime
     # pra toda placa da cidade.
-    signs, sign_issues = parse_marker_signs(dump)
+    # O relatório de placa é da cidade inteira, mesmo com `--only`: placa mal
+    # formada é defeito do mapa, e esconder o aviso porque o recorte foi parcial
+    # faria o defeito aparecer só na próxima rodada completa.
+    _, sign_issues = parse_marker_signs(dump)
     for issue in sign_issues:
         print(
             f"[WARN] placa mal formada ({issue['reason']}): uid={issue['uid']} "
             f"text={issue['text']!r} em ({issue['x']}, {issue['y']}, {issue['z']})"
         )
-    training_hunts = [
-        curated_hunts.training_hunt_from_sign(sign, MAX_FLOOR)
-        for sign in signs
-        if sign["type"] == "TRAINING"
-    ]
 
-    hunts = curated_hunts.assign(city, curation["hunts"] + training_hunts)
+    # Placa é curadoria completa: o id é dela, os andares são os que ela marca e
+    # a caixa é o box das placas do mesmo id. Vale para TRAINING e para HUNT —
+    # pôr placa é criar hunt, sem passar pela tela de curadoria.
+    curated_ids = {hunt["id"] for hunt in curation["hunts"] if "id" in hunt}
+    sign_groups = signs_by_id(dump)
+    sign_hunts = []
+    for sign_id, group in sorted(sign_groups.items()):
+        if group[0]["type"] not in ("HUNT", "TRAINING"):
+            continue
+        if not sign_id.startswith(f"{city}-"):
+            print(f"[WARN] placa {sign_id} não é de {city} — ignorada")
+            continue
+        if sign_id in curated_ids:
+            print(
+                f"[ERRO] {sign_id} está na placa e no curation.json ao mesmo tempo. "
+                "Escolha um dos dois: a placa recorta pela caixa das placas, a "
+                "curadoria recorta pela candidata. Nada foi escrito."
+            )
+            return 1
+        sign_hunts.append(curated_hunts.hunt_from_signs(group, MAX_FLOOR))
+
+    hunts = curated_hunts.assign(city, curation["hunts"] + sign_hunts)
+
+    if args.only:
+        wanted = set(args.only)
+        unknown = sorted(wanted - {hunt["id"] for hunt in hunts})
+        if unknown:
+            print(
+                f"[ERRO] {', '.join(unknown)} não existe em {city} — nem na curadoria, "
+                "nem em placa. Nada foi recortado."
+            )
+            return 1
+        hunts = [hunt for hunt in hunts if hunt["id"] in wanted]
+        print(f"[--only] recortando {len(hunts)} de {len(wanted)} id(s) pedido(s)")
     shared = curated_hunts.duplicated_candidates(curation["hunts"])
     for candidate_id, names in sorted(shared.items()):
         print(f"[WARN] {candidate_id} está em {len(names)} hunts: {', '.join(names)}")
@@ -281,8 +340,12 @@ def main():
     written = []
     for hunt in hunts:
         is_training_hunt = curated_hunts.is_training(hunt)
+        # Quem decide o recorte é a origem, não o tipo: hunt de placa (treino ou
+        # não) não tem candidata, e a caixa dela são as placas. Hunt da tela tem
+        # candidata, e a caixa sai do extent da candidata.
+        from_sign = not hunt["candidateIds"]
 
-        if not is_training_hunt:
+        if not from_sign:
             members = curated_hunts.members_of(hunt, candidates_by_id)
             if not members:
                 print(f"[WARN] {hunt['id']} {hunt['name']}: nenhuma candidata encontrada, pulando")
@@ -296,9 +359,9 @@ def main():
 
         anchor_of = lambda spawn: hunt_candidates.anchor_tile(spawn, walkable)
 
-        if is_training_hunt:
-            # Spots de treino têm entrada no centro do extent — sem candidatas,
-            # sem rota do templo. O jogador chega a pé pela cidade.
+        if from_sign:
+            # Hunt de placa tem entrada na própria placa — sem candidatas, sem
+            # rota do templo. O jogador chega a pé pela cidade.
             entrance = curated_hunts.training_entrance_of(hunt, walkable)
             cost = None
         else:
@@ -321,7 +384,7 @@ def main():
 
         chosen_spawns = (
             None
-            if is_training_hunt
+            if from_sign
             else {
                 (spawn["x"], spawn["y"], spawn["z"], spawn["name"])
                 for spawn in curated_hunts.spawns_of(members)
@@ -364,7 +427,7 @@ def main():
                 **({"isTrainingHunt": True} if is_training_hunt else {}),
             }
         )
-        if is_training_hunt:
+        if from_sign:
             # `cost` é sempre None por desenho (sem rota do templo, ver
             # comentário acima) — não é falha de rota, então não é "SEM
             # CAMINHO". Falta de `entrance`, aqui, é que seria falha real: a
@@ -379,9 +442,24 @@ def main():
         )
 
     destination = os.path.join(city_dir, CURATED_HUNTS_FILE_NAME)
+    entries = written
+
+    if args.only and os.path.isfile(destination):
+        # Rodada parcial **mescla** o manifesto: as hunts que não foram
+        # recortadas continuam valendo, e suas pastas estão intactas em disco.
+        # Reescrever o arquivo inteiro com só o que acabou de sair apagaria a
+        # curadoria das outras — o `publish.py` e o fragmento de hunt leem daqui.
+        with open(destination, "r", encoding="utf-8") as handler:
+            previous = json.load(handler).get("hunts", [])
+        entries = merge_manifest(previous, written)
+        print(
+            f"[--only] manifesto mesclado: {len(written)} recortada(s), "
+            f"{len(entries) - len(written)} preservada(s)"
+        )
+
     with open(destination, "w", encoding="utf-8") as handler:
         json.dump(
-            {"city": city, "area": curation.get("area"), "hunts": written},
+            {"city": city, "area": curation.get("area"), "hunts": entries},
             handler,
             indent=2,
             ensure_ascii=False,
@@ -389,7 +467,7 @@ def main():
         handler.write("\n")
 
     unreachable = [hunt for hunt in written if hunt["entrance"] is None]
-    print(f"\n[OK] {len(written)} hunts -> {destination}")
+    print(f"\n[OK] {len(entries)} hunts -> {destination}")
     print(f"     pastas de mapa em {os.path.join(MAPS_DIR, city)}")
     if unreachable:
         print(
