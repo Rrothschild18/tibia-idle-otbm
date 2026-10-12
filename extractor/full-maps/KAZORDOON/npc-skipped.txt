@@ -1,1 +1,44 @@
-# KAZORDOON: nenhum NPC descartado.
+# KAZORDOON: 34 NPC(s) fora do fragmento.
+#
+# Descarte intencional, não bug de mapa — quem está aqui não faz nada que
+# o jogo idle possa oferecer. Nó sem entrada no grafo é outro relatório
+# (travel-graph-rejections.txt). Para resgatar um destes, ou ele passa a ter
+# serviço no .lua do Canary, ou entra em extractor/npc-allowlist.json com motivo.
+
+## sem shop e sem serviço (32)
+  KAZORDOON-NPC-basilisk  Basilisk
+  KAZORDOON-NPC-bigfoot-soldier  Bigfoot Soldier
+  KAZORDOON-NPC-budrik  Budrik
+  KAZORDOON-NPC-caramellia  Caramellia
+  KAZORDOON-NPC-commander-stone  Commander Stone
+  KAZORDOON-NPC-doctor-gnomedix  Doctor Gnomedix
+  KAZORDOON-NPC-dronk  Dronk
+  KAZORDOON-NPC-dukosch  Dukosch
+  KAZORDOON-NPC-gnomaticus  Gnomaticus
+  KAZORDOON-NPC-gnomelvis  Gnomelvis
+  KAZORDOON-NPC-gnomenursey  Gnomenursey
+  KAZORDOON-NPC-gnomerik  Gnomerik
+  KAZORDOON-NPC-gnomespector  Gnomespector
+  KAZORDOON-NPC-gnomewart  Gnomewart
+  KAZORDOON-NPC-gnominus  Gnominus
+  KAZORDOON-NPC-grumpy-stone  Grumpy Stone
+  KAZORDOON-NPC-hemor-the-guard  Hemor, the guard
+  KAZORDOON-NPC-humgolf  Humgolf
+  KAZORDOON-NPC-humnog-the-guard  Humnog, the guard
+  KAZORDOON-NPC-jagran  Jagran
+  KAZORDOON-NPC-jimbin  Jimbin
+  KAZORDOON-NPC-kevin  Kevin
+  KAZORDOON-NPC-lesser-messenger-of-heaven  Lesser Messenger of Heaven
+  KAZORDOON-NPC-lukosch  Lukosch
+  KAZORDOON-NPC-lunch  Lunch
+  KAZORDOON-NPC-pukosch  Pukosch
+  KAZORDOON-NPC-riddler  Riddler
+  KAZORDOON-NPC-robson  Robson
+  KAZORDOON-NPC-storkus  Storkus
+  KAZORDOON-NPC-thanita  Thanita
+  KAZORDOON-NPC-the-orc-king  The Orc King
+  KAZORDOON-NPC-tulf  Tulf
+
+## serviço só de spell (2)
+  KAZORDOON-NPC-duria  Duria
+  KAZORDOON-NPC-etzel  Etzel

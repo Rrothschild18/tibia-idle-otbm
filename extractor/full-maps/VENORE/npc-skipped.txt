@@ -1,1 +1,73 @@
-# VENORE: nenhum NPC descartado.
+# VENORE: 63 NPC(s) fora do fragmento.
+#
+# Descarte intencional, não bug de mapa — quem está aqui não faz nada que
+# o jogo idle possa oferecer. Nó sem entrada no grafo é outro relatório
+# (travel-graph-rejections.txt). Para resgatar um destes, ou ele passa a ter
+# serviço no .lua do Canary, ou entra em extractor/npc-allowlist.json com motivo.
+
+## sem shop e sem serviço (60)
+  VENORE-NPC-a-dead-bureaucrat-1  A Dead Bureaucrat (1)
+  VENORE-NPC-a-dead-bureaucrat-2  A Dead Bureaucrat (2)
+  VENORE-NPC-a-dead-bureaucrat-3  A Dead Bureaucrat (3)
+  VENORE-NPC-a-dead-bureaucrat-4  A Dead Bureaucrat (4)
+  VENORE-NPC-a-ghostly-guardian  A Ghostly Guardian
+  VENORE-NPC-a-ghostly-woman  A Ghostly Woman
+  VENORE-NPC-a-strange-fellow  A Strange Fellow
+  VENORE-NPC-a-weakened-forest-fury  A Weakened Forest Fury
+  VENORE-NPC-abran-ironeye  Abran Ironeye
+  VENORE-NPC-adrenius  Adrenius
+  VENORE-NPC-alwin  Alwin
+  VENORE-NPC-appaloosa  Appaloosa
+  VENORE-NPC-ashtamor  Ashtamor
+  VENORE-NPC-bill-the-worker  Bill The Worker
+  VENORE-NPC-bob-the-worker  Bob The Worker
+  VENORE-NPC-christoph  Christoph
+  VENORE-NPC-chuck-the-worker  Chuck The Worker
+  VENORE-NPC-corym-footman  Corym Footman
+  VENORE-NPC-corym-ratter  Corym Ratter
+  VENORE-NPC-corym-servant  Corym Servant
+  VENORE-NPC-corym-slave  Corym Slave
+  VENORE-NPC-corym-worker-1  Corym Worker (1)
+  VENORE-NPC-corym-worker-2  Corym Worker (2)
+  VENORE-NPC-corym-worker-5  Corym Worker (5)
+  VENORE-NPC-dagomir  Dagomir
+  VENORE-NPC-dustrunner  Dustrunner
+  VENORE-NPC-eustacio  Eustacio
+  VENORE-NPC-frank-the-plank  Frank The Plank
+  VENORE-NPC-george-the-boyscout  George The Boyscout
+  VENORE-NPC-guide-elena  Guide Elena
+  VENORE-NPC-h-l  H.L.
+  VENORE-NPC-hagor  Hagor
+  VENORE-NPC-hugo  Hugo
+  VENORE-NPC-jack-the-worker  Jack The Worker
+  VENORE-NPC-kalvin  Kalvin
+  VENORE-NPC-kawill  Kawill
+  VENORE-NPC-leeland  Leeland
+  VENORE-NPC-lightfoot  Lightfoot
+  VENORE-NPC-lorbas  Lorbas
+  VENORE-NPC-nemal  Nemal
+  VENORE-NPC-norman-the-foreman  Norman The Foreman
+  VENORE-NPC-nurik  Nurik
+  VENORE-NPC-oldrak  Oldrak
+  VENORE-NPC-ottokar  Ottokar
+  VENORE-NPC-pat-the-worker  Pat The Worker
+  VENORE-NPC-pyro-peter  Pyro Peter
+  VENORE-NPC-rapanaio  Rapanaio
+  VENORE-NPC-roger-the-worker  Roger The Worker
+  VENORE-NPC-rottin-wood  Rottin Wood
+  VENORE-NPC-scott-the-scout  Scott The Scout
+  VENORE-NPC-shortsighted-dwarf  Shortsighted Dwarf
+  VENORE-NPC-stricken-soul  Stricken Soul
+  VENORE-NPC-talesia  Talesia
+  VENORE-NPC-the-bone-master  The Bone Master
+  VENORE-NPC-the-dream-master  The Dream Master
+  VENORE-NPC-uncle  Uncle
+  VENORE-NPC-vladruc  Vladruc
+  VENORE-NPC-warbert  Warbert
+  VENORE-NPC-wyda  Wyda
+  VENORE-NPC-zebron  Zebron
+
+## serviço só de spell (3)
+  VENORE-NPC-asrak  Asrak
+  VENORE-NPC-chatterbone  Chatterbone
+  VENORE-NPC-smiley  Smiley

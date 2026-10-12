@@ -1,1 +1,42 @@
-# CARLIN: nenhum NPC descartado.
+# CARLIN: 32 NPC(s) fora do fragmento.
+#
+# Descarte intencional, não bug de mapa — quem está aqui não faz nada que
+# o jogo idle possa oferecer. Nó sem entrada no grafo é outro relatório
+# (travel-graph-rejections.txt). Para resgatar um destes, ou ele passa a ter
+# serviço no .lua do Canary, ou entra em extractor/npc-allowlist.json com motivo.
+
+## sem shop e sem serviço (29)
+  CARLIN-NPC-a-ghostly-woman-ghostland  A Ghostly Woman (Ghostland)
+  CARLIN-NPC-ajax  Ajax
+  CARLIN-NPC-an-apparition  An Apparition
+  CARLIN-NPC-aneus  Aneus
+  CARLIN-NPC-arkarra  Arkarra
+  CARLIN-NPC-barbara  Barbara
+  CARLIN-NPC-blossom-bonecrusher  Blossom Bonecrusher
+  CARLIN-NPC-bron  Bron
+  CARLIN-NPC-bruno  Bruno
+  CARLIN-NPC-bunny-bonecrusher  Bunny Bonecrusher
+  CARLIN-NPC-busty-bonecrusher  Busty Bonecrusher
+  CARLIN-NPC-cerdras  Cerdras
+  CARLIN-NPC-costello  Costello
+  CARLIN-NPC-emma  Emma
+  CARLIN-NPC-fenbala  Fenbala
+  CARLIN-NPC-gelagos  Gelagos
+  CARLIN-NPC-graubart  Graubart
+  CARLIN-NPC-guide-alexena  Guide Alexena
+  CARLIN-NPC-huntsman  Huntsman
+  CARLIN-NPC-lothar  Lothar
+  CARLIN-NPC-marlene  Marlene
+  CARLIN-NPC-percybald  Percybald
+  CARLIN-NPC-phillip  Phillip
+  CARLIN-NPC-ruprecht  Ruprecht
+  CARLIN-NPC-shauna  Shauna
+  CARLIN-NPC-tibra  Tibra
+  CARLIN-NPC-tired-tree  Tired Tree
+  CARLIN-NPC-toothless-tim  Toothless Tim
+  CARLIN-NPC-william  William
+
+## serviço só de spell (3)
+  CARLIN-NPC-lea  Lea
+  CARLIN-NPC-padreia  Padreia
+  CARLIN-NPC-trisha  Trisha

@@ -1,2 +1,196 @@
-<?xml version="1.0"?>
-<npcs />
+<?xml version='1.0' encoding='UTF-8'?>
+<npcs>
+	<npc centerx="32661" centery="31915" centerz="0" radius="1">
+		<npc name="Uzon Back" x="0" y="0" z="0" spawntime="60" />
+	</npc>
+	<npc centerx="32588" centery="31942" centerz="0" radius="1">
+		<npc name="Gewen" x="0" y="0" z="0" spawntime="60" />
+	</npc>
+	<npc centerx="32535" centery="31773" centerz="1" radius="1">
+		<npc name="Thanita" x="0" y="0" z="1" spawntime="60" />
+	</npc>
+	<npc centerx="32586" centery="31786" centerz="1" radius="1">
+		<npc name="Caramellia" x="0" y="0" z="1" spawntime="60" />
+	</npc>
+	<npc centerx="32479" centery="31901" centerz="2" radius="1">
+		<npc name="Riddler" x="0" y="0" z="2" spawntime="60" />
+	</npc>
+	<npc centerx="32628" centery="31921" centerz="3" radius="1">
+		<npc name="Humnog, the guard" x="-1" y="0" z="3" spawntime="60" />
+	</npc>
+	<npc centerx="32625" centery="31923" centerz="3" radius="1">
+		<npc name="Emperor Kruzak" x="1" y="0" z="3" spawntime="60" />
+	</npc>
+	<npc centerx="32628" centery="31925" centerz="3" radius="1">
+		<npc name="Hemor, the guard" x="-1" y="0" z="3" spawntime="60" />
+	</npc>
+	<npc centerx="32587" centery="31926" centerz="3" radius="1">
+		<npc name="Tulf" x="0" y="0" z="3" spawntime="60" />
+	</npc>
+	<npc centerx="32536" centery="31836" centerz="4" radius="1">
+		<npc name="Uzon" x="0" y="0" z="4" spawntime="60" />
+	</npc>
+	<npc centerx="32626" centery="31916" centerz="5" radius="1">
+		<npc name="Etzel" x="0" y="0" z="5" spawntime="60" />
+	</npc>
+	<npc centerx="32630" centery="31919" centerz="5" radius="1">
+		<npc name="Sigurd" x="0" y="0" z="5" spawntime="60" />
+	</npc>
+	<npc centerx="32568" centery="32018" centerz="6" radius="1">
+		<npc name="Kevin" x="0" y="0" z="6" spawntime="60" />
+	</npc>
+	<npc centerx="32722" centery="31787" centerz="7" radius="1">
+		<npc name="Cruleo" x="0" y="0" z="7" spawntime="60" />
+	</npc>
+	<npc centerx="32619" centery="31864" centerz="7" radius="1">
+		<npc name="Grumpy Stone" x="0" y="0" z="7" spawntime="60" />
+	</npc>
+	<npc centerx="32602" centery="31875" centerz="7" radius="1">
+		<npc name="Dukosch" x="0" y="0" z="7" spawntime="60" />
+	</npc>
+	<npc centerx="32550" centery="31929" centerz="7" radius="1">
+		<npc name="Pukosch" x="0" y="0" z="7" spawntime="60" />
+	</npc>
+	<npc centerx="32617" centery="31946" centerz="7" radius="1">
+		<npc name="Lukosch" x="0" y="0" z="7" spawntime="60" />
+	</npc>
+	<npc centerx="32589" centery="31962" centerz="7" radius="1">
+		<npc name="Storkus" x="0" y="0" z="7" spawntime="60" />
+	</npc>
+	<npc centerx="32522" centery="31966" centerz="7" radius="1">
+		<npc name="Melfar" x="0" y="0" z="7" spawntime="60" />
+	</npc>
+	<npc centerx="32566" centery="32019" centerz="7" radius="1">
+		<npc name="Wally" x="0" y="0" z="7" spawntime="60" />
+	</npc>
+	<npc centerx="32536" centery="32026" centerz="7" radius="1">
+		<npc name="Lesser Messenger of Heaven" x="0" y="0" z="7" spawntime="60" />
+	</npc>
+	<npc centerx="32647" centery="31904" centerz="8" radius="1">
+		<npc name="Lokur" x="0" y="0" z="8" spawntime="60" />
+	</npc>
+	<npc centerx="32525" centery="31905" centerz="8" radius="1">
+		<npc name="Budrik" x="0" y="0" z="8" spawntime="60" />
+	</npc>
+	<npc centerx="32619" centery="31917" centerz="8" radius="1">
+		<npc name="Iwar" x="0" y="0" z="8" spawntime="60" />
+	</npc>
+	<npc centerx="32618" centery="31938" centerz="8" radius="1">
+		<npc name="Duria" x="0" y="0" z="8" spawntime="60" />
+	</npc>
+	<npc centerx="32521" centery="31959" centerz="8" radius="1">
+		<npc name="Jagran" x="0" y="0" z="8" spawntime="60" />
+	</npc>
+	<npc centerx="32983" centery="31732" centerz="9" radius="1">
+		<npc name="The Orc King" x="0" y="0" z="9" spawntime="60" />
+	</npc>
+	<npc centerx="32798" centery="31765" centerz="9" radius="1">
+		<npc name="Gnomette" x="0" y="0" z="9" spawntime="60" />
+	</npc>
+	<npc centerx="32598" centery="31880" centerz="9" radius="1">
+		<npc name="Humgolf" x="0" y="0" z="9" spawntime="60" />
+	</npc>
+	<npc centerx="32651" centery="31887" centerz="9" radius="1">
+		<npc name="Kroox" x="0" y="0" z="9" spawntime="60" />
+	</npc>
+	<npc centerx="32638" centery="31888" centerz="9" radius="1">
+		<npc name="Jimbin" x="0" y="0" z="9" spawntime="60" />
+	</npc>
+	<npc centerx="32634" centery="31889" centerz="9" radius="1">
+		<npc name="Maryza" x="0" y="0" z="9" spawntime="60" />
+	</npc>
+	<npc centerx="32664" centery="31894" centerz="9" radius="1">
+		<npc name="Uzgod" x="0" y="0" z="9" spawntime="60" />
+	</npc>
+	<npc centerx="32657" centery="31909" centerz="9" radius="1">
+		<npc name="Bezil" x="0" y="0" z="9" spawntime="60" />
+	</npc>
+	<npc centerx="32660" centery="31910" centerz="9" radius="1">
+		<npc name="Nezil" x="0" y="0" z="9" spawntime="60" />
+	</npc>
+	<npc centerx="32656" centery="31923" centerz="9" radius="1">
+		<npc name="Tezila" x="0" y="0" z="9" spawntime="60" />
+	</npc>
+	<npc centerx="32567" centery="32022" centerz="9" radius="1">
+		<npc name="Dronk" x="0" y="0" z="9" spawntime="60" />
+	</npc>
+	<npc centerx="32775" centery="31745" centerz="10" radius="1">
+		<npc name="Gnomerik" x="0" y="0" z="10" spawntime="60" />
+	</npc>
+	<npc centerx="32795" centery="31746" centerz="10" radius="1">
+		<npc name="Gnomally" x="0" y="0" z="10" spawntime="60" />
+	</npc>
+	<npc centerx="32825" centery="31750" centerz="10" radius="1">
+		<npc name="Gnomillion" x="0" y="0" z="10" spawntime="60" />
+	</npc>
+	<npc centerx="32766" centery="31755" centerz="10" radius="1">
+		<npc name="Gnomespector" x="0" y="0" z="10" spawntime="60" />
+	</npc>
+	<npc centerx="32804" centery="31758" centerz="10" radius="1">
+		<npc name="Gnominus" x="0" y="0" z="10" spawntime="60" />
+	</npc>
+	<npc centerx="32768" centery="31771" centerz="10" radius="1">
+		<npc name="Doctor Gnomedix" x="0" y="0" z="10" spawntime="60" />
+		<npc name="Gnomenursey" x="1" y="0" z="10" spawntime="60" />
+	</npc>
+	<npc centerx="32787" centery="31776" centerz="10" radius="1">
+		<npc name="Gnomejam" x="0" y="0" z="10" spawntime="60" />
+	</npc>
+	<npc centerx="32805" centery="31782" centerz="10" radius="1">
+		<npc name="Gnomegica" x="0" y="0" z="10" spawntime="60" />
+	</npc>
+	<npc centerx="32787" centery="31788" centerz="10" radius="1">
+		<npc name="Gnomerrow" x="0" y="0" z="10" spawntime="60" />
+	</npc>
+	<npc centerx="32764" centery="31789" centerz="10" radius="1">
+		<npc name="Gnomaticus" x="0" y="0" z="10" spawntime="60" />
+	</npc>
+	<npc centerx="32802" centery="31791" centerz="10" radius="1">
+		<npc name="Bigfoot Soldier" x="0" y="0" z="10" spawntime="60" />
+	</npc>
+	<npc centerx="32796" centery="31795" centerz="10" radius="1">
+		<npc name="Gnomailion" x="0" y="0" z="10" spawntime="60" />
+	</npc>
+	<npc centerx="32805" centery="31798" centerz="10" radius="1">
+		<npc name="Commander Stone" x="0" y="0" z="10" spawntime="60" />
+	</npc>
+	<npc centerx="32759" centery="31807" centerz="10" radius="1">
+		<npc name="Gnomewart" x="0" y="0" z="10" spawntime="60" />
+	</npc>
+	<npc centerx="32774" centery="31808" centerz="10" radius="1">
+		<npc name="Gnomelvis" x="0" y="0" z="10" spawntime="60" />
+	</npc>
+	<npc centerx="32556" centery="32069" centerz="10" radius="1">
+		<npc name="Junkar (Mines)" x="0" y="0" z="10" spawntime="60" />
+	</npc>
+	<npc centerx="32621" centery="31860" centerz="11" radius="1">
+		<npc name="Xelvar" x="0" y="0" z="11" spawntime="60" />
+	</npc>
+	<npc centerx="32650" centery="31894" centerz="11" radius="1">
+		<npc name="Pydar" x="0" y="0" z="11" spawntime="60" />
+	</npc>
+	<npc centerx="32649" centery="31911" centerz="11" radius="1">
+		<npc name="Ferus" x="0" y="0" z="11" spawntime="60" />
+	</npc>
+	<npc centerx="32653" centery="31926" centerz="11" radius="1">
+		<npc name="Isimov" x="0" y="0" z="11" spawntime="60" />
+	</npc>
+	<npc centerx="32564" centery="31895" centerz="12" radius="1">
+		<npc name="Talphion" x="0" y="0" z="12" spawntime="60" />
+	</npc>
+	<npc centerx="32524" centery="32023" centerz="13" radius="1">
+		<npc name="Robson" x="0" y="0" z="13" spawntime="60" />
+	</npc>
+	<npc centerx="32527" centery="32029" centerz="14" radius="1">
+		<npc name="Lunch" x="0" y="0" z="14" spawntime="60" />
+	</npc>
+	<npc centerx="32525" centery="32038" centerz="14" radius="1">
+		<npc name="Junkar (Robsons)" x="0" y="0" z="14" spawntime="60" />
+	</npc>
+	<npc centerx="32641" centery="31942" centerz="15" radius="1">
+		<npc name="Basilisk" x="0" y="0" z="15" spawntime="60" />
+	</npc>
+	<npc centerx="32659" centery="31957" centerz="15" radius="1">
+		<npc name="Brodrosch" x="0" y="0" z="15" spawntime="60" />
+	</npc>
+</npcs>
