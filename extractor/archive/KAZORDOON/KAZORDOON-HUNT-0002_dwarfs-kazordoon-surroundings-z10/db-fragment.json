@@ -1,0 +1,678 @@
+{
+  "monsters": {
+    "id": "KAZORDOON-HUNT-0002",
+    "mapId": "KAZORDOON-HUNT-0002",
+    "assetsRoot": "assets/KAZORDOON-HUNT-0002_dwarfs-kazordoon-surroundings-z10-sprites/monsters",
+    "mapBoundsRef": {
+      "minX": 32460,
+      "minY": 31898,
+      "maxX": 32492,
+      "maxY": 31925
+    },
+    "monsterDefs": {
+      "69": {
+        "name": "Dwarf",
+        "outfitId": 69,
+        "atlas": {
+          "image": "assets/outfits/69.png",
+          "json": "assets/outfits/69.json"
+        },
+        "appearance": {
+          "looktype": 69,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.5,
+            "itemId": 3723,
+            "itemName": "white mushroom",
+            "rarity": "common"
+          },
+          {
+            "countMax": 8,
+            "countMin": 1,
+            "dropChance": 0.35,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.25,
+            "itemId": 3276,
+            "itemName": "hatchet",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.15,
+            "itemId": 3274,
+            "itemName": "axe",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1,
+            "itemId": 3430,
+            "itemName": "copper shield",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1,
+            "itemId": 3456,
+            "itemName": "pick",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1,
+            "itemId": 3559,
+            "itemName": "leather legs",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.08,
+            "itemId": 3378,
+            "itemName": "studded armor",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.08,
+            "itemId": 3505,
+            "itemName": "letter",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.007,
+            "itemId": 5880,
+            "itemName": "iron ore",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.001,
+            "itemId": 3097,
+            "itemName": "dwarven ring",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 6007,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 6007
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4141
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4142
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4143
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "69_0",
+          "east": "69_1",
+          "south": "69_2",
+          "west": "69_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "69_4",
+              "69_8",
+              "69_12",
+              "69_16",
+              "69_20",
+              "69_24",
+              "69_28",
+              "69_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "69_5",
+              "69_9",
+              "69_13",
+              "69_17",
+              "69_21",
+              "69_25",
+              "69_29",
+              "69_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "69_6",
+              "69_10",
+              "69_14",
+              "69_18",
+              "69_22",
+              "69_26",
+              "69_30",
+              "69_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "69_7",
+              "69_11",
+              "69_15",
+              "69_19",
+              "69_23",
+              "69_27",
+              "69_31",
+              "69_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "71": {
+        "name": "Dwarf Soldier",
+        "outfitId": 71,
+        "atlas": {
+          "image": "assets/outfits/71.png",
+          "json": "assets/outfits/71.json"
+        },
+        "appearance": {
+          "looktype": 71,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 7,
+            "countMin": 1,
+            "dropChance": 0.4,
+            "itemId": 3446,
+            "itemName": "bolt",
+            "rarity": "common"
+          },
+          {
+            "countMax": 3,
+            "countMin": 1,
+            "dropChance": 0.4,
+            "itemId": 3723,
+            "itemName": "white mushroom",
+            "rarity": "common"
+          },
+          {
+            "countMax": 12,
+            "countMin": 1,
+            "dropChance": 0.28,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.12,
+            "itemId": 3375,
+            "itemName": "soldier helmet",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1,
+            "itemId": 3457,
+            "itemName": "shovel",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.08,
+            "itemId": 3358,
+            "itemName": "chain armor",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 3,
+            "countMin": 1,
+            "dropChance": 0.04,
+            "itemId": 7363,
+            "itemName": "piercing bolt",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.03,
+            "itemId": 3349,
+            "itemName": "crossbow",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.03,
+            "itemId": 3425,
+            "itemName": "dwarven shield",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.025,
+            "itemId": 3266,
+            "itemName": "battle axe",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.003,
+            "itemId": 5880,
+            "itemName": "iron ore",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0012,
+            "itemId": 3092,
+            "itemName": "axe ring",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 6014,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 6014
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4166
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4167
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4143
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "71_0",
+          "east": "71_1",
+          "south": "71_2",
+          "west": "71_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "71_4",
+              "71_8",
+              "71_12",
+              "71_16",
+              "71_20",
+              "71_24",
+              "71_28",
+              "71_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "71_5",
+              "71_9",
+              "71_13",
+              "71_17",
+              "71_21",
+              "71_25",
+              "71_29",
+              "71_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "71_6",
+              "71_10",
+              "71_14",
+              "71_18",
+              "71_22",
+              "71_26",
+              "71_30",
+              "71_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "71_7",
+              "71_11",
+              "71_15",
+              "71_19",
+              "71_23",
+              "71_27",
+              "71_31",
+              "71_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      }
+    },
+    "spawns": [
+      {
+        "name": "Dwarf",
+        "outfitId": 69,
+        "tileX": 19,
+        "tileY": 14,
+        "worldX": 32479,
+        "worldY": 31912,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Dwarf Soldier",
+        "outfitId": 71,
+        "tileX": 20,
+        "tileY": 12,
+        "worldX": 32480,
+        "worldY": 31910,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Dwarf",
+        "outfitId": 69,
+        "tileX": 12,
+        "tileY": 15,
+        "worldX": 32472,
+        "worldY": 31913,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      }
+    ]
+  },
+  "loot": {
+    "id": "KAZORDOON-HUNT-0002",
+    "mapId": "KAZORDOON-HUNT-0002",
+    "drops": [
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.5,
+        "itemId": 3723,
+        "itemName": "white mushroom",
+        "rarity": "common",
+        "monsterName": "Dwarf"
+      },
+      {
+        "countMax": 8,
+        "countMin": 1,
+        "dropChance": 0.35,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Dwarf"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.25,
+        "itemId": 3276,
+        "itemName": "hatchet",
+        "rarity": "common",
+        "monsterName": "Dwarf"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.15,
+        "itemId": 3274,
+        "itemName": "axe",
+        "rarity": "semi-rare",
+        "monsterName": "Dwarf"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1,
+        "itemId": 3430,
+        "itemName": "copper shield",
+        "rarity": "semi-rare",
+        "monsterName": "Dwarf"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1,
+        "itemId": 3456,
+        "itemName": "pick",
+        "rarity": "semi-rare",
+        "monsterName": "Dwarf"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1,
+        "itemId": 3559,
+        "itemName": "leather legs",
+        "rarity": "semi-rare",
+        "monsterName": "Dwarf"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.08,
+        "itemId": 3378,
+        "itemName": "studded armor",
+        "rarity": "semi-rare",
+        "monsterName": "Dwarf"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.08,
+        "itemId": 3505,
+        "itemName": "letter",
+        "rarity": "semi-rare",
+        "monsterName": "Dwarf"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.007,
+        "itemId": 5880,
+        "itemName": "iron ore",
+        "rarity": "rare",
+        "monsterName": "Dwarf"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.001,
+        "itemId": 3097,
+        "itemName": "dwarven ring",
+        "rarity": "very-rare",
+        "monsterName": "Dwarf"
+      },
+      {
+        "countMax": 7,
+        "countMin": 1,
+        "dropChance": 0.4,
+        "itemId": 3446,
+        "itemName": "bolt",
+        "rarity": "common",
+        "monsterName": "Dwarf Soldier"
+      },
+      {
+        "countMax": 3,
+        "countMin": 1,
+        "dropChance": 0.4,
+        "itemId": 3723,
+        "itemName": "white mushroom",
+        "rarity": "common",
+        "monsterName": "Dwarf Soldier"
+      },
+      {
+        "countMax": 12,
+        "countMin": 1,
+        "dropChance": 0.28,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Dwarf Soldier"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.12,
+        "itemId": 3375,
+        "itemName": "soldier helmet",
+        "rarity": "semi-rare",
+        "monsterName": "Dwarf Soldier"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1,
+        "itemId": 3457,
+        "itemName": "shovel",
+        "rarity": "semi-rare",
+        "monsterName": "Dwarf Soldier"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.08,
+        "itemId": 3358,
+        "itemName": "chain armor",
+        "rarity": "semi-rare",
+        "monsterName": "Dwarf Soldier"
+      },
+      {
+        "countMax": 3,
+        "countMin": 1,
+        "dropChance": 0.04,
+        "itemId": 7363,
+        "itemName": "piercing bolt",
+        "rarity": "rare",
+        "monsterName": "Dwarf Soldier"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.03,
+        "itemId": 3349,
+        "itemName": "crossbow",
+        "rarity": "rare",
+        "monsterName": "Dwarf Soldier"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.03,
+        "itemId": 3425,
+        "itemName": "dwarven shield",
+        "rarity": "rare",
+        "monsterName": "Dwarf Soldier"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.025,
+        "itemId": 3266,
+        "itemName": "battle axe",
+        "rarity": "rare",
+        "monsterName": "Dwarf Soldier"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.003,
+        "itemId": 5880,
+        "itemName": "iron ore",
+        "rarity": "very-rare",
+        "monsterName": "Dwarf Soldier"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0012,
+        "itemId": 3092,
+        "itemName": "axe ring",
+        "rarity": "very-rare",
+        "monsterName": "Dwarf Soldier"
+      }
+    ]
+  },
+  "hunts": {
+    "id": "KAZORDOON-HUNT-0002",
+    "mapId": "KAZORDOON-HUNT-0002",
+    "name": "Dwarfs — Kazordoon Surroundings z9",
+    "label": "Dwarfs — Kazordoon Surroundings z9",
+    "seed": "0000000000000000000000",
+    "assetsRoot": "assets/KAZORDOON-HUNT-0002_dwarfs-kazordoon-surroundings-z10-sprites-v6",
+    "mapUrl": "assets/KAZORDOON-HUNT-0002_dwarfs-kazordoon-surroundings-z10-sprites-v6/map.json",
+    "portrait": "/assets/character-default.png",
+    "monsterPreview": {
+      "name": "Dwarf",
+      "icon": "/assets/outfits/69.png",
+      "atlas": "/assets/outfits/69.json"
+    },
+    "startPosition": [
+      32476,
+      31912
+    ],
+    "city": "KAZORDOON",
+    "_todo": [
+      "revisar startPosition (centro geométrico do mapBoundsRef, pode cair fora de área andável)"
+    ]
+  }
+}

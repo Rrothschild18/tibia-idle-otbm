@@ -1,0 +1,621 @@
+{
+  "monsters": {
+    "id": "VENORE-HUNT-0009",
+    "mapId": "VENORE-HUNT-0009",
+    "assetsRoot": "assets/VENORE-HUNT-0009_venore-amazon-camp-sprites/monsters",
+    "mapBoundsRef": {
+      "minX": 32805,
+      "minY": 31898,
+      "maxX": 32884,
+      "maxY": 31959
+    },
+    "monsterDefs": {
+      "137": {
+        "name": "Amazon",
+        "outfitId": 137,
+        "atlas": {
+          "image": "assets/outfits/137-113-120-95-115-0.png",
+          "json": "assets/outfits/137-113-120-95-115-0.json"
+        },
+        "appearance": {
+          "looktype": 137,
+          "head": 113,
+          "body": 120,
+          "legs": 95,
+          "feet": 115,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.8,
+            "itemId": 3267,
+            "itemName": "dagger",
+            "rarity": "common"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.8,
+            "itemId": 3114,
+            "itemName": "skull",
+            "rarity": "common"
+          },
+          {
+            "countMax": 20,
+            "countMin": 1,
+            "dropChance": 0.4,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.3,
+            "itemId": 3602,
+            "itemName": "brown bread",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.23,
+            "itemId": 3273,
+            "itemName": "sabre",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1,
+            "itemId": 11443,
+            "itemName": "girlish hair decoration",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.052,
+            "itemId": 11444,
+            "itemName": "protective charm",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.01,
+            "itemId": 2920,
+            "itemName": "torch",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0026,
+            "itemId": 3008,
+            "itemName": "crystal necklace",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0013,
+            "itemId": 3030,
+            "itemName": "small ruby",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 18042,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 18042
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 18043
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 18044
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 18045
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "137_0",
+          "east": "137_1",
+          "south": "137_2",
+          "west": "137_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "137_0",
+              "137_4",
+              "137_8",
+              "137_12",
+              "137_16",
+              "137_20",
+              "137_24",
+              "137_28",
+              "137_32"
+            ],
+            "frameRate": 15,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "137_1",
+              "137_5",
+              "137_9",
+              "137_13",
+              "137_17",
+              "137_21",
+              "137_25",
+              "137_29",
+              "137_33"
+            ],
+            "frameRate": 15,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "137_2",
+              "137_6",
+              "137_10",
+              "137_14",
+              "137_18",
+              "137_22",
+              "137_26",
+              "137_30",
+              "137_34"
+            ],
+            "frameRate": 15,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "137_3",
+              "137_7",
+              "137_11",
+              "137_15",
+              "137_19",
+              "137_23",
+              "137_27",
+              "137_31",
+              "137_35"
+            ],
+            "frameRate": 15,
+            "loopType": "infinite"
+          }
+        }
+      }
+    },
+    "spawns": [
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 30,
+        "tileY": 12,
+        "worldX": 32835,
+        "worldY": 31910,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 57,
+        "tileY": 12,
+        "worldX": 32862,
+        "worldY": 31910,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 56,
+        "tileY": 15,
+        "worldX": 32861,
+        "worldY": 31913,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 47,
+        "tileY": 13,
+        "worldX": 32852,
+        "worldY": 31911,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 51,
+        "tileY": 13,
+        "worldX": 32856,
+        "worldY": 31911,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 19,
+        "tileY": 19,
+        "worldX": 32824,
+        "worldY": 31917,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 32,
+        "tileY": 20,
+        "worldX": 32837,
+        "worldY": 31918,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 43,
+        "tileY": 21,
+        "worldX": 32848,
+        "worldY": 31919,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 52,
+        "tileY": 20,
+        "worldX": 32857,
+        "worldY": 31918,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 56,
+        "tileY": 20,
+        "worldX": 32861,
+        "worldY": 31918,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 12,
+        "tileY": 25,
+        "worldX": 32817,
+        "worldY": 31923,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 22,
+        "tileY": 26,
+        "worldX": 32827,
+        "worldY": 31924,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 45,
+        "tileY": 25,
+        "worldX": 32850,
+        "worldY": 31923,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 45,
+        "tileY": 29,
+        "worldX": 32850,
+        "worldY": 31927,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 31,
+        "tileY": 27,
+        "worldX": 32836,
+        "worldY": 31925,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 34,
+        "tileY": 30,
+        "worldX": 32839,
+        "worldY": 31928,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 55,
+        "tileY": 28,
+        "worldX": 32860,
+        "worldY": 31926,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 21,
+        "tileY": 32,
+        "worldX": 32826,
+        "worldY": 31930,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 50,
+        "tileY": 34,
+        "worldX": 32855,
+        "worldY": 31932,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 60,
+        "tileY": 31,
+        "worldX": 32865,
+        "worldY": 31929,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 60,
+        "tileY": 35,
+        "worldX": 32865,
+        "worldY": 31933,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 38,
+        "tileY": 34,
+        "worldX": 32843,
+        "worldY": 31932,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 29,
+        "tileY": 38,
+        "worldX": 32834,
+        "worldY": 31936,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 66,
+        "tileY": 37,
+        "worldX": 32871,
+        "worldY": 31935,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 22,
+        "tileY": 40,
+        "worldX": 32827,
+        "worldY": 31938,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 64,
+        "tileY": 46,
+        "worldX": 32869,
+        "worldY": 31944,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 67,
+        "tileY": 49,
+        "worldX": 32872,
+        "worldY": 31947,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      }
+    ]
+  },
+  "loot": {
+    "id": "VENORE-HUNT-0009",
+    "mapId": "VENORE-HUNT-0009",
+    "drops": [
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.8,
+        "itemId": 3267,
+        "itemName": "dagger",
+        "rarity": "common",
+        "monsterName": "Amazon"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.8,
+        "itemId": 3114,
+        "itemName": "skull",
+        "rarity": "common",
+        "monsterName": "Amazon"
+      },
+      {
+        "countMax": 20,
+        "countMin": 1,
+        "dropChance": 0.4,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Amazon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.3,
+        "itemId": 3602,
+        "itemName": "brown bread",
+        "rarity": "common",
+        "monsterName": "Amazon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.23,
+        "itemId": 3273,
+        "itemName": "sabre",
+        "rarity": "semi-rare",
+        "monsterName": "Amazon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1,
+        "itemId": 11443,
+        "itemName": "girlish hair decoration",
+        "rarity": "semi-rare",
+        "monsterName": "Amazon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.052,
+        "itemId": 11444,
+        "itemName": "protective charm",
+        "rarity": "semi-rare",
+        "monsterName": "Amazon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.01,
+        "itemId": 2920,
+        "itemName": "torch",
+        "rarity": "rare",
+        "monsterName": "Amazon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0026,
+        "itemId": 3008,
+        "itemName": "crystal necklace",
+        "rarity": "very-rare",
+        "monsterName": "Amazon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0013,
+        "itemId": 3030,
+        "itemName": "small ruby",
+        "rarity": "very-rare",
+        "monsterName": "Amazon"
+      }
+    ]
+  },
+  "hunts": {
+    "id": "VENORE-HUNT-0009",
+    "mapId": "VENORE-HUNT-0009",
+    "name": "Swamp Trolls — Venore Southern Swamp z8",
+    "label": "Swamp Trolls — Venore Southern Swamp z8",
+    "seed": "0000000000000000000000",
+    "assetsRoot": "assets/VENORE-HUNT-0009_venore-amazon-camp-sprites-v6",
+    "mapUrl": "assets/VENORE-HUNT-0009_venore-amazon-camp-sprites-v6/map.json",
+    "portrait": "/assets/character-default.png",
+    "monsterPreview": {
+      "name": "Amazon",
+      "icon": "/assets/outfits/137-113-120-95-115-0.png",
+      "atlas": "/assets/outfits/137-113-120-95-115-0.json"
+    },
+    "startPosition": [
+      32844,
+      31928
+    ],
+    "city": "VENORE",
+    "_todo": [
+      "revisar startPosition (centro geométrico do mapBoundsRef, pode cair fora de área andável)"
+    ]
+  }
+}

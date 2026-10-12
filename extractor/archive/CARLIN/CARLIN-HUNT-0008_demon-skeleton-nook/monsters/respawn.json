@@ -1,0 +1,239 @@
+{
+  "mapBoundsRef": {
+    "minX": 32182,
+    "minY": 31853,
+    "maxX": 32206,
+    "maxY": 31877
+  },
+  "monsterDefs": {
+    "37": {
+      "name": "Demon Skeleton",
+      "outfitId": 37,
+      "atlas": {
+        "image": "assets/outfits/37.png",
+        "json": "assets/outfits/37.json"
+      },
+      "appearance": {
+        "looktype": 37,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 75,
+          "countMin": 1,
+          "dropChance": 0.97,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.2012,
+          "itemId": 266,
+          "itemName": "health potion",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.126,
+          "itemId": 9647,
+          "itemName": "demonic skeletal hand",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 3,
+          "countMin": 1,
+          "dropChance": 0.1,
+          "itemId": 3287,
+          "itemName": "throwing star",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.053,
+          "itemId": 268,
+          "itemName": "mana potion",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0527,
+          "itemId": 2920,
+          "itemName": "torch",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.05,
+          "itemId": 3413,
+          "itemName": "battle shield",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.04,
+          "itemId": 3305,
+          "itemName": "battle hammer",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0345,
+          "itemId": 3353,
+          "itemName": "iron helmet",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.029,
+          "itemId": 3027,
+          "itemName": "black pearl",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.014,
+          "itemId": 3030,
+          "itemName": "small ruby",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0069,
+          "itemId": 3078,
+          "itemName": "mysterious fetish",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0052,
+          "itemId": 3062,
+          "itemName": "mind stone",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.001,
+          "itemId": 3415,
+          "itemName": "guardian shield",
+          "rarity": "very-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 5963,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5963
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 3990
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4103
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4104
+          }
+        ]
+      },
+      "race": "undead",
+      "idle": {
+        "north": "37_0",
+        "east": "37_1",
+        "south": "37_2",
+        "west": "37_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "37_4",
+            "37_8",
+            "37_12",
+            "37_16",
+            "37_20",
+            "37_24",
+            "37_28",
+            "37_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "37_5",
+            "37_9",
+            "37_13",
+            "37_17",
+            "37_21",
+            "37_25",
+            "37_29",
+            "37_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "37_6",
+            "37_10",
+            "37_14",
+            "37_18",
+            "37_22",
+            "37_26",
+            "37_30",
+            "37_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "37_7",
+            "37_11",
+            "37_15",
+            "37_19",
+            "37_23",
+            "37_27",
+            "37_31",
+            "37_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    }
+  },
+  "spawns": [
+    {
+      "name": "Demon Skeleton",
+      "outfitId": 37,
+      "tileX": 12,
+      "tileY": 12,
+      "worldX": 32194,
+      "worldY": 31865,
+      "worldZ": 10,
+      "radius": 1,
+      "spawntime": 60
+    }
+  ]
+}

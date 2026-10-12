@@ -1,0 +1,745 @@
+{
+  "monsters": {
+    "id": "THAIS-HUNT-0011",
+    "mapId": "THAIS-HUNT-0011",
+    "assetsRoot": "assets/THAIS-HUNT-0011_wasp-tower-sprites/monsters",
+    "mapBoundsRef": {
+      "minX": 31957,
+      "minY": 32122,
+      "maxX": 32043,
+      "maxY": 32163
+    },
+    "monsterDefs": {
+      "5": {
+        "name": "Orc",
+        "outfitId": 5,
+        "atlas": {
+          "image": "assets/outfits/5.png",
+          "json": "assets/outfits/5.json"
+        },
+        "appearance": {
+          "looktype": 5,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 14,
+            "countMin": 1,
+            "dropChance": 0.8481,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1016,
+            "itemId": 3577,
+            "itemName": "meat",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0786,
+            "itemId": 3378,
+            "itemName": "studded armor",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.073,
+            "itemId": 3426,
+            "itemName": "studded shield",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0585,
+            "itemId": 3273,
+            "itemName": "sabre",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0496,
+            "itemId": 3274,
+            "itemName": "axe",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0295,
+            "itemId": 3376,
+            "itemName": "studded helmet",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.01,
+            "itemId": 23986,
+            "itemName": "heavy old tome",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0059,
+            "itemId": 11479,
+            "itemName": "orc leather",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0021,
+            "itemId": 10196,
+            "itemName": "orc tooth",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 5966,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 5966
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4001
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4002
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4317
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "5_0",
+          "east": "5_1",
+          "south": "5_2",
+          "west": "5_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "5_4",
+              "5_8",
+              "5_12",
+              "5_16",
+              "5_20",
+              "5_24",
+              "5_28",
+              "5_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "5_5",
+              "5_9",
+              "5_13",
+              "5_17",
+              "5_21",
+              "5_25",
+              "5_29",
+              "5_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "5_6",
+              "5_10",
+              "5_14",
+              "5_18",
+              "5_22",
+              "5_26",
+              "5_30",
+              "5_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "5_7",
+              "5_11",
+              "5_15",
+              "5_19",
+              "5_23",
+              "5_27",
+              "5_31",
+              "5_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "31": {
+        "name": "Deer",
+        "outfitId": 31,
+        "atlas": {
+          "image": "assets/outfits/31.png",
+          "json": "assets/outfits/31.json"
+        },
+        "appearance": {
+          "looktype": 31,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 4,
+            "countMin": 1,
+            "dropChance": 0.8,
+            "itemId": 3577,
+            "itemName": "meat",
+            "rarity": "common"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.5,
+            "itemId": 3582,
+            "itemName": "ham",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0087,
+            "itemId": 10297,
+            "itemName": "antlers",
+            "rarity": "rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 5970,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 5970
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4016
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4017
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4018
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "31_0",
+          "east": "31_1",
+          "south": "31_2",
+          "west": "31_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "31_4",
+              "31_8",
+              "31_12",
+              "31_16",
+              "31_20",
+              "31_24",
+              "31_28",
+              "31_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "31_5",
+              "31_9",
+              "31_13",
+              "31_17",
+              "31_21",
+              "31_25",
+              "31_29",
+              "31_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "31_6",
+              "31_10",
+              "31_14",
+              "31_18",
+              "31_22",
+              "31_26",
+              "31_30",
+              "31_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "31_7",
+              "31_11",
+              "31_15",
+              "31_19",
+              "31_23",
+              "31_27",
+              "31_31",
+              "31_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "27": {
+        "name": "Wolf",
+        "outfitId": 27,
+        "atlas": {
+          "image": "assets/outfits/27.png",
+          "json": "assets/outfits/27.json"
+        },
+        "appearance": {
+          "looktype": 27,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.55,
+            "itemId": 3577,
+            "itemName": "meat",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0098,
+            "itemId": 5897,
+            "itemName": "wolf paw",
+            "rarity": "rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 5968,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 5968
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4007
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4008
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4009
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "27_0",
+          "east": "27_1",
+          "south": "27_2",
+          "west": "27_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "27_4",
+              "27_8",
+              "27_12",
+              "27_16",
+              "27_20",
+              "27_24",
+              "27_28",
+              "27_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "27_5",
+              "27_9",
+              "27_13",
+              "27_17",
+              "27_21",
+              "27_25",
+              "27_29",
+              "27_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "27_6",
+              "27_10",
+              "27_14",
+              "27_18",
+              "27_22",
+              "27_26",
+              "27_30",
+              "27_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "27_7",
+              "27_11",
+              "27_15",
+              "27_19",
+              "27_23",
+              "27_27",
+              "27_31",
+              "27_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      }
+    },
+    "spawns": [
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 18,
+        "tileY": 14,
+        "worldX": 31975,
+        "worldY": 32136,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 27,
+        "tileY": 12,
+        "worldX": 31984,
+        "worldY": 32134,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 32,
+        "tileY": 17,
+        "worldX": 31989,
+        "worldY": 32139,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Deer",
+        "outfitId": 31,
+        "tileX": 27,
+        "tileY": 21,
+        "worldX": 31984,
+        "worldY": 32143,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Deer",
+        "outfitId": 31,
+        "tileX": 33,
+        "tileY": 16,
+        "worldX": 31990,
+        "worldY": 32138,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Wolf",
+        "outfitId": 27,
+        "tileX": 65,
+        "tileY": 15,
+        "worldX": 32022,
+        "worldY": 32137,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Wolf",
+        "outfitId": 27,
+        "tileX": 61,
+        "tileY": 19,
+        "worldX": 32018,
+        "worldY": 32141,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Deer",
+        "outfitId": 31,
+        "tileX": 74,
+        "tileY": 21,
+        "worldX": 32031,
+        "worldY": 32143,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 14,
+        "tileY": 24,
+        "worldX": 31971,
+        "worldY": 32146,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Deer",
+        "outfitId": 31,
+        "tileX": 72,
+        "tileY": 23,
+        "worldX": 32029,
+        "worldY": 32145,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Deer",
+        "outfitId": 31,
+        "tileX": 72,
+        "tileY": 26,
+        "worldX": 32029,
+        "worldY": 32148,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Deer",
+        "outfitId": 31,
+        "tileX": 12,
+        "tileY": 29,
+        "worldX": 31969,
+        "worldY": 32151,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      }
+    ]
+  },
+  "loot": {
+    "id": "THAIS-HUNT-0011",
+    "mapId": "THAIS-HUNT-0011",
+    "drops": [
+      {
+        "countMax": 14,
+        "countMin": 1,
+        "dropChance": 0.8481,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1016,
+        "itemId": 3577,
+        "itemName": "meat",
+        "rarity": "semi-rare",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0786,
+        "itemId": 3378,
+        "itemName": "studded armor",
+        "rarity": "semi-rare",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.073,
+        "itemId": 3426,
+        "itemName": "studded shield",
+        "rarity": "semi-rare",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0585,
+        "itemId": 3273,
+        "itemName": "sabre",
+        "rarity": "semi-rare",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0496,
+        "itemId": 3274,
+        "itemName": "axe",
+        "rarity": "rare",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0295,
+        "itemId": 3376,
+        "itemName": "studded helmet",
+        "rarity": "rare",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.01,
+        "itemId": 23986,
+        "itemName": "heavy old tome",
+        "rarity": "rare",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0059,
+        "itemId": 11479,
+        "itemName": "orc leather",
+        "rarity": "rare",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0021,
+        "itemId": 10196,
+        "itemName": "orc tooth",
+        "rarity": "very-rare",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 4,
+        "countMin": 1,
+        "dropChance": 0.8,
+        "itemId": 3577,
+        "itemName": "meat",
+        "rarity": "common",
+        "monsterName": "Deer"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.5,
+        "itemId": 3582,
+        "itemName": "ham",
+        "rarity": "common",
+        "monsterName": "Deer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0087,
+        "itemId": 10297,
+        "itemName": "antlers",
+        "rarity": "rare",
+        "monsterName": "Deer"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.55,
+        "itemId": 3577,
+        "itemName": "meat",
+        "rarity": "common",
+        "monsterName": "Wolf"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0098,
+        "itemId": 5897,
+        "itemName": "wolf paw",
+        "rarity": "rare",
+        "monsterName": "Wolf"
+      }
+    ]
+  },
+  "hunts": {
+    "id": "THAIS-HUNT-0011",
+    "mapId": "THAIS-HUNT-0011",
+    "name": "Dragons — Thais Surroundings z10",
+    "label": "Dragons — Thais Surroundings z10",
+    "seed": "0000000000000000000000",
+    "assetsRoot": "assets/THAIS-HUNT-0011_wasp-tower-sprites-v6",
+    "mapUrl": "assets/THAIS-HUNT-0011_wasp-tower-sprites-v6/map.json",
+    "portrait": "/assets/character-default.png",
+    "monsterPreview": {
+      "name": "Deer",
+      "icon": "/assets/outfits/31.png",
+      "atlas": "/assets/outfits/31.json"
+    },
+    "startPosition": [
+      32000,
+      32142
+    ],
+    "city": "THAIS",
+    "_todo": [
+      "revisar startPosition (centro geométrico do mapBoundsRef, pode cair fora de área andável)"
+    ]
+  }
+}

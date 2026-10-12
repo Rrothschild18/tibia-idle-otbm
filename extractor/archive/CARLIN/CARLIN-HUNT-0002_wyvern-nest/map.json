@@ -1,0 +1,2288 @@
+{
+  "version": 6,
+  "tilewidth": 32,
+  "tileheight": 32,
+  "width": 26,
+  "height": 25,
+  "bounds": {
+    "minX": 32216,
+    "minY": 31770,
+    "maxX": 32241,
+    "maxY": 31794
+  },
+  "defaultZ": 6,
+  "assetsRoot": "assets/CARLIN-HUNT-0002_wyvern-nest-sprites-v6",
+  "appearances": {
+    "352": {
+      "type": "random",
+      "sheet": "sheet-32",
+      "gids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "random": true,
+      "pattern": {
+        "w": 4,
+        "h": 4,
+        "d": 1
+      },
+      "automapColor": 121,
+      "flags": {
+        "fullbank": true,
+        "unmove": true,
+        "automap": true,
+        "bank": true
+      }
+    },
+    "469": {
+      "type": "static",
+      "sheet": "sheet-32",
+      "gids": [
+        16
+      ],
+      "automapColor": 210,
+      "flags": {
+        "unmove": true,
+        "automap": true,
+        "bank": true
+      }
+    },
+    "1100": {
+      "type": "random",
+      "sheet": "sheet-32",
+      "gids": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "random": true,
+      "pattern": {
+        "w": 4,
+        "h": 1,
+        "d": 2
+      },
+      "flags": {
+        "unmove": true,
+        "clip": true
+      }
+    },
+    "1101": {
+      "type": "random",
+      "sheet": "sheet-32",
+      "gids": [
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32
+      ],
+      "random": true,
+      "pattern": {
+        "w": 1,
+        "h": 4,
+        "d": 2
+      },
+      "flags": {
+        "unmove": true,
+        "clip": true
+      }
+    },
+    "1102": {
+      "type": "random",
+      "sheet": "sheet-32",
+      "gids": [
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40
+      ],
+      "random": true,
+      "pattern": {
+        "w": 4,
+        "h": 1,
+        "d": 2
+      },
+      "flags": {
+        "unmove": true,
+        "clip": true
+      }
+    },
+    "1105": {
+      "type": "random",
+      "sheet": "sheet-32",
+      "gids": [
+        41,
+        42
+      ],
+      "random": true,
+      "pattern": {
+        "w": 1,
+        "h": 1,
+        "d": 2
+      },
+      "flags": {
+        "unmove": true,
+        "clip": true
+      }
+    },
+    "1106": {
+      "type": "random",
+      "sheet": "sheet-32",
+      "gids": [
+        43,
+        44
+      ],
+      "random": true,
+      "pattern": {
+        "w": 1,
+        "h": 1,
+        "d": 2
+      },
+      "flags": {
+        "unmove": true,
+        "clip": true
+      }
+    },
+    "1109": {
+      "type": "random",
+      "sheet": "sheet-32",
+      "gids": [
+        45,
+        46
+      ],
+      "random": true,
+      "pattern": {
+        "w": 1,
+        "h": 1,
+        "d": 2
+      },
+      "flags": {
+        "unmove": true,
+        "clip": true
+      }
+    },
+    "1110": {
+      "type": "random",
+      "sheet": "sheet-32",
+      "gids": [
+        47,
+        48
+      ],
+      "random": true,
+      "pattern": {
+        "w": 1,
+        "h": 1,
+        "d": 2
+      },
+      "flags": {
+        "unmove": true,
+        "clip": true
+      }
+    },
+    "1112": {
+      "type": "random",
+      "sheet": "sheet-64",
+      "gids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "spriteWidth": 64,
+      "spriteHeight": 64,
+      "random": true,
+      "pattern": {
+        "w": 1,
+        "h": 4,
+        "d": 2
+      },
+      "automapColor": 86,
+      "flags": {
+        "unmove": true,
+        "unpass": true,
+        "unsight": true,
+        "automap": true,
+        "bottom": true
+      }
+    },
+    "1114": {
+      "type": "static",
+      "sheet": "sheet-64",
+      "gids": [
+        8
+      ],
+      "spriteWidth": 64,
+      "spriteHeight": 64,
+      "automapColor": 86,
+      "flags": {
+        "unmove": true,
+        "unpass": true,
+        "unsight": true,
+        "automap": true,
+        "bottom": true
+      }
+    },
+    "1115": {
+      "type": "random",
+      "sheet": "sheet-64",
+      "gids": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "spriteWidth": 64,
+      "spriteHeight": 64,
+      "random": true,
+      "pattern": {
+        "w": 4,
+        "h": 1,
+        "d": 2
+      },
+      "automapColor": 86,
+      "flags": {
+        "unmove": true,
+        "unpass": true,
+        "unsight": true,
+        "automap": true,
+        "bottom": true
+      }
+    },
+    "1840": {
+      "type": "static",
+      "sheet": "sheet-64",
+      "gids": [
+        17
+      ],
+      "spriteWidth": 64,
+      "spriteHeight": 64,
+      "automapColor": 86,
+      "flags": {
+        "unmove": true,
+        "unpass": true,
+        "automap": true,
+        "bottom": true
+      }
+    },
+    "1855": {
+      "type": "static",
+      "sheet": "sheet-32",
+      "gids": [
+        49
+      ],
+      "flags": {
+        "unmove": true
+      }
+    },
+    "1858": {
+      "type": "static",
+      "sheet": "sheet-32",
+      "gids": [
+        50
+      ],
+      "flags": {
+        "unmove": true
+      }
+    },
+    "3616": {
+      "type": "static",
+      "sheet": "sheet-64",
+      "gids": [
+        18
+      ],
+      "spriteWidth": 64,
+      "spriteHeight": 64,
+      "automapColor": 12,
+      "flags": {
+        "unmove": true,
+        "unpass": true,
+        "automap": true,
+        "bottom": true
+      }
+    },
+    "3626": {
+      "type": "static",
+      "sheet": "sheet-64",
+      "gids": [
+        19
+      ],
+      "spriteWidth": 64,
+      "spriteHeight": 64,
+      "automapColor": 12,
+      "flags": {
+        "unmove": true,
+        "unpass": true,
+        "automap": true,
+        "bottom": true
+      }
+    },
+    "3635": {
+      "type": "static",
+      "sheet": "sheet-64",
+      "gids": [
+        20
+      ],
+      "spriteWidth": 64,
+      "spriteHeight": 64,
+      "automapColor": 12,
+      "flags": {
+        "unmove": true,
+        "unpass": true,
+        "automap": true,
+        "bottom": true
+      }
+    },
+    "3654": {
+      "type": "static",
+      "sheet": "sheet-32",
+      "gids": [
+        51
+      ],
+      "flags": {
+        "unmove": true
+      }
+    },
+    "3656": {
+      "type": "static",
+      "sheet": "sheet-32",
+      "gids": [
+        52
+      ],
+      "flags": {
+        "unmove": true
+      }
+    },
+    "3657": {
+      "type": "static",
+      "sheet": "sheet-32",
+      "gids": [
+        53
+      ],
+      "flags": {
+        "unmove": true
+      }
+    },
+    "4394": {
+      "type": "random",
+      "sheet": "sheet-32",
+      "gids": [
+        54,
+        55
+      ],
+      "random": true,
+      "pattern": {
+        "w": 1,
+        "h": 1,
+        "d": 2
+      },
+      "automapColor": 24,
+      "flags": {
+        "fullbank": true,
+        "unmove": true,
+        "automap": true,
+        "bank": true
+      }
+    },
+    "4396": {
+      "type": "random",
+      "sheet": "sheet-32",
+      "gids": [
+        56,
+        57
+      ],
+      "random": true,
+      "pattern": {
+        "w": 1,
+        "h": 1,
+        "d": 2
+      },
+      "automapColor": 24,
+      "flags": {
+        "fullbank": true,
+        "unmove": true,
+        "automap": true,
+        "bank": true
+      }
+    },
+    "4397": {
+      "type": "random",
+      "sheet": "sheet-32",
+      "gids": [
+        58,
+        59
+      ],
+      "random": true,
+      "pattern": {
+        "w": 1,
+        "h": 1,
+        "d": 2
+      },
+      "automapColor": 24,
+      "flags": {
+        "fullbank": true,
+        "unmove": true,
+        "automap": true,
+        "bank": true
+      }
+    },
+    "4398": {
+      "type": "random",
+      "sheet": "sheet-32",
+      "gids": [
+        60,
+        61
+      ],
+      "random": true,
+      "pattern": {
+        "w": 1,
+        "h": 1,
+        "d": 2
+      },
+      "automapColor": 24,
+      "flags": {
+        "fullbank": true,
+        "unmove": true,
+        "automap": true,
+        "bank": true
+      }
+    },
+    "4401": {
+      "type": "random",
+      "sheet": "sheet-32",
+      "gids": [
+        62,
+        63
+      ],
+      "random": true,
+      "pattern": {
+        "w": 1,
+        "h": 1,
+        "d": 2
+      },
+      "automapColor": 24,
+      "flags": {
+        "fullbank": true,
+        "unmove": true,
+        "automap": true,
+        "bank": true
+      }
+    },
+    "4402": {
+      "type": "random",
+      "sheet": "sheet-32",
+      "gids": [
+        64,
+        65
+      ],
+      "random": true,
+      "pattern": {
+        "w": 1,
+        "h": 1,
+        "d": 2
+      },
+      "automapColor": 24,
+      "flags": {
+        "fullbank": true,
+        "unmove": true,
+        "automap": true,
+        "bank": true
+      }
+    },
+    "4403": {
+      "type": "random",
+      "sheet": "sheet-32",
+      "gids": [
+        66,
+        67
+      ],
+      "random": true,
+      "pattern": {
+        "w": 1,
+        "h": 1,
+        "d": 2
+      },
+      "automapColor": 24,
+      "flags": {
+        "fullbank": true,
+        "unmove": true,
+        "automap": true,
+        "bank": true
+      }
+    },
+    "4405": {
+      "type": "random",
+      "sheet": "sheet-32",
+      "gids": [
+        68,
+        69
+      ],
+      "random": true,
+      "pattern": {
+        "w": 1,
+        "h": 1,
+        "d": 2
+      },
+      "automapColor": 24,
+      "flags": {
+        "fullbank": true,
+        "unmove": true,
+        "automap": true,
+        "bank": true
+      }
+    },
+    "4406": {
+      "type": "random",
+      "sheet": "sheet-32",
+      "gids": [
+        70,
+        71
+      ],
+      "random": true,
+      "pattern": {
+        "w": 1,
+        "h": 1,
+        "d": 2
+      },
+      "automapColor": 24,
+      "flags": {
+        "fullbank": true,
+        "unmove": true,
+        "automap": true,
+        "bank": true
+      }
+    },
+    "4407": {
+      "type": "random",
+      "sheet": "sheet-32",
+      "gids": [
+        72,
+        73
+      ],
+      "random": true,
+      "pattern": {
+        "w": 1,
+        "h": 1,
+        "d": 2
+      },
+      "automapColor": 24,
+      "flags": {
+        "fullbank": true,
+        "unmove": true,
+        "automap": true,
+        "bank": true
+      }
+    },
+    "4408": {
+      "type": "random",
+      "sheet": "sheet-32",
+      "gids": [
+        74,
+        75
+      ],
+      "random": true,
+      "pattern": {
+        "w": 1,
+        "h": 1,
+        "d": 2
+      },
+      "automapColor": 24,
+      "flags": {
+        "fullbank": true,
+        "unmove": true,
+        "automap": true,
+        "bank": true
+      }
+    },
+    "4409": {
+      "type": "random",
+      "sheet": "sheet-32",
+      "gids": [
+        76,
+        77
+      ],
+      "random": true,
+      "pattern": {
+        "w": 1,
+        "h": 1,
+        "d": 2
+      },
+      "automapColor": 24,
+      "flags": {
+        "fullbank": true,
+        "unmove": true,
+        "automap": true,
+        "bank": true
+      }
+    },
+    "4445": {
+      "type": "static",
+      "sheet": "sheet-32",
+      "gids": [
+        78
+      ],
+      "flags": {
+        "unmove": true,
+        "clip": true
+      }
+    },
+    "4446": {
+      "type": "static",
+      "sheet": "sheet-32",
+      "gids": [
+        79
+      ],
+      "flags": {
+        "unmove": true,
+        "clip": true
+      }
+    },
+    "4447": {
+      "type": "static",
+      "sheet": "sheet-32",
+      "gids": [
+        80
+      ],
+      "flags": {
+        "unmove": true,
+        "clip": true
+      }
+    },
+    "4448": {
+      "type": "static",
+      "sheet": "sheet-32",
+      "gids": [
+        81
+      ],
+      "flags": {
+        "unmove": true,
+        "clip": true
+      }
+    },
+    "4449": {
+      "type": "static",
+      "sheet": "sheet-32",
+      "gids": [
+        82
+      ],
+      "flags": {
+        "unmove": true,
+        "clip": true
+      }
+    },
+    "4450": {
+      "type": "static",
+      "sheet": "sheet-32",
+      "gids": [
+        83
+      ],
+      "flags": {
+        "unmove": true,
+        "clip": true
+      }
+    },
+    "4451": {
+      "type": "static",
+      "sheet": "sheet-32",
+      "gids": [
+        84
+      ],
+      "flags": {
+        "unmove": true,
+        "clip": true
+      }
+    },
+    "4452": {
+      "type": "static",
+      "sheet": "sheet-32",
+      "gids": [
+        85
+      ],
+      "flags": {
+        "unmove": true,
+        "clip": true
+      }
+    },
+    "4453": {
+      "type": "static",
+      "sheet": "sheet-32",
+      "gids": [
+        86
+      ],
+      "flags": {
+        "unmove": true,
+        "clip": true
+      }
+    },
+    "4454": {
+      "type": "static",
+      "sheet": "sheet-32",
+      "gids": [
+        87
+      ],
+      "flags": {
+        "unmove": true,
+        "clip": true
+      }
+    },
+    "4455": {
+      "type": "static",
+      "sheet": "sheet-32",
+      "gids": [
+        88
+      ],
+      "flags": {
+        "unmove": true,
+        "clip": true
+      }
+    },
+    "4456": {
+      "type": "static",
+      "sheet": "sheet-32",
+      "gids": [
+        89
+      ],
+      "flags": {
+        "unmove": true,
+        "clip": true
+      }
+    },
+    "4457": {
+      "type": "random",
+      "sheet": "sheet-64",
+      "gids": [
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ],
+      "spriteWidth": 64,
+      "spriteHeight": 64,
+      "random": true,
+      "pattern": {
+        "w": 1,
+        "h": 4,
+        "d": 2
+      },
+      "automapColor": 86,
+      "flags": {
+        "unmove": true,
+        "unpass": true,
+        "unsight": true,
+        "automap": true,
+        "bottom": true
+      }
+    },
+    "4458": {
+      "type": "random",
+      "sheet": "sheet-64",
+      "gids": [
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36
+      ],
+      "spriteWidth": 64,
+      "spriteHeight": 64,
+      "random": true,
+      "pattern": {
+        "w": 4,
+        "h": 1,
+        "d": 2
+      },
+      "automapColor": 86,
+      "flags": {
+        "unmove": true,
+        "unpass": true,
+        "unsight": true,
+        "automap": true,
+        "bottom": true
+      }
+    },
+    "4459": {
+      "type": "static",
+      "sheet": "sheet-64",
+      "gids": [
+        37
+      ],
+      "spriteWidth": 64,
+      "spriteHeight": 64,
+      "automapColor": 86,
+      "flags": {
+        "unmove": true,
+        "unpass": true,
+        "unsight": true,
+        "automap": true,
+        "bottom": true
+      }
+    },
+    "4463": {
+      "type": "random",
+      "sheet": "sheet-64",
+      "gids": [
+        38,
+        39,
+        40,
+        41
+      ],
+      "spriteWidth": 64,
+      "spriteHeight": 64,
+      "random": true,
+      "pattern": {
+        "w": 2,
+        "h": 1,
+        "d": 2
+      },
+      "automapColor": 86,
+      "flags": {
+        "unmove": true,
+        "unpass": true,
+        "unsight": true,
+        "automap": true,
+        "bottom": true
+      }
+    },
+    "4464": {
+      "type": "random",
+      "sheet": "sheet-64",
+      "gids": [
+        42,
+        43,
+        44,
+        45
+      ],
+      "spriteWidth": 64,
+      "spriteHeight": 64,
+      "random": true,
+      "pattern": {
+        "w": 2,
+        "h": 1,
+        "d": 2
+      },
+      "automapColor": 86,
+      "flags": {
+        "unmove": true,
+        "unpass": true,
+        "unsight": true,
+        "automap": true,
+        "bottom": true
+      }
+    },
+    "4467": {
+      "type": "static",
+      "sheet": "sheet-64",
+      "gids": [
+        46
+      ],
+      "spriteWidth": 64,
+      "spriteHeight": 64,
+      "automapColor": 86,
+      "flags": {
+        "unmove": true,
+        "unpass": true,
+        "unsight": true,
+        "automap": true,
+        "bottom": true
+      }
+    },
+    "4468": {
+      "type": "static",
+      "sheet": "sheet-64",
+      "gids": [
+        47
+      ],
+      "spriteWidth": 64,
+      "spriteHeight": 64,
+      "automapColor": 86,
+      "flags": {
+        "unmove": true,
+        "unpass": true,
+        "unsight": true,
+        "automap": true,
+        "bottom": true
+      }
+    },
+    "4515": {
+      "type": "random",
+      "sheet": "sheet-32",
+      "gids": [
+        90,
+        91,
+        92,
+        93
+      ],
+      "random": true,
+      "pattern": {
+        "w": 2,
+        "h": 2,
+        "d": 1
+      },
+      "automapColor": 24,
+      "flags": {
+        "fullbank": true,
+        "unmove": true,
+        "automap": true,
+        "bank": true
+      }
+    },
+    "4516": {
+      "type": "static",
+      "sheet": "sheet-32",
+      "gids": [
+        94
+      ],
+      "automapColor": 24,
+      "flags": {
+        "fullbank": true,
+        "unmove": true,
+        "automap": true,
+        "bank": true
+      }
+    },
+    "4517": {
+      "type": "static",
+      "sheet": "sheet-32",
+      "gids": [
+        95
+      ],
+      "automapColor": 24,
+      "flags": {
+        "fullbank": true,
+        "unmove": true,
+        "automap": true,
+        "bank": true
+      }
+    },
+    "4518": {
+      "type": "static",
+      "sheet": "sheet-32",
+      "gids": [
+        96
+      ],
+      "automapColor": 24,
+      "flags": {
+        "fullbank": true,
+        "unmove": true,
+        "automap": true,
+        "bank": true
+      }
+    },
+    "4519": {
+      "type": "static",
+      "sheet": "sheet-32",
+      "gids": [
+        97
+      ],
+      "automapColor": 24,
+      "flags": {
+        "fullbank": true,
+        "unmove": true,
+        "automap": true,
+        "bank": true
+      }
+    },
+    "4520": {
+      "type": "static",
+      "sheet": "sheet-32",
+      "gids": [
+        98
+      ],
+      "automapColor": 24,
+      "flags": {
+        "fullbank": true,
+        "unmove": true,
+        "automap": true,
+        "bank": true
+      }
+    },
+    "4521": {
+      "type": "static",
+      "sheet": "sheet-32",
+      "gids": [
+        99
+      ],
+      "automapColor": 24,
+      "flags": {
+        "fullbank": true,
+        "unmove": true,
+        "automap": true,
+        "bank": true
+      }
+    },
+    "4522": {
+      "type": "static",
+      "sheet": "sheet-32",
+      "gids": [
+        100
+      ],
+      "automapColor": 24,
+      "flags": {
+        "fullbank": true,
+        "unmove": true,
+        "automap": true,
+        "bank": true
+      }
+    },
+    "4524": {
+      "type": "static",
+      "sheet": "sheet-32",
+      "gids": [
+        101
+      ],
+      "automapColor": 24,
+      "flags": {
+        "fullbank": true,
+        "unmove": true,
+        "automap": true,
+        "bank": true
+      }
+    },
+    "4525": {
+      "type": "static",
+      "sheet": "sheet-32",
+      "gids": [
+        102
+      ],
+      "automapColor": 24,
+      "flags": {
+        "fullbank": true,
+        "unmove": true,
+        "automap": true,
+        "bank": true
+      }
+    },
+    "4526": {
+      "type": "static",
+      "sheet": "sheet-32",
+      "gids": [
+        103
+      ],
+      "automapColor": 24,
+      "flags": {
+        "fullbank": true,
+        "unmove": true,
+        "automap": true,
+        "bank": true
+      }
+    },
+    "4527": {
+      "type": "static",
+      "sheet": "sheet-32",
+      "gids": [
+        104
+      ],
+      "automapColor": 24,
+      "flags": {
+        "fullbank": true,
+        "unmove": true,
+        "automap": true,
+        "bank": true
+      }
+    },
+    "4528": {
+      "type": "static",
+      "sheet": "sheet-32",
+      "gids": [
+        105
+      ],
+      "automapColor": 24,
+      "flags": {
+        "fullbank": true,
+        "unmove": true,
+        "automap": true,
+        "bank": true
+      }
+    },
+    "4529": {
+      "type": "static",
+      "sheet": "sheet-32",
+      "gids": [
+        106
+      ],
+      "automapColor": 24,
+      "flags": {
+        "fullbank": true,
+        "unmove": true,
+        "automap": true,
+        "bank": true
+      }
+    },
+    "4530": {
+      "type": "static",
+      "sheet": "sheet-32",
+      "gids": [
+        107
+      ],
+      "automapColor": 24,
+      "flags": {
+        "fullbank": true,
+        "unmove": true,
+        "automap": true,
+        "bank": true
+      }
+    },
+    "4569": {
+      "type": "static",
+      "sheet": "sheet-32",
+      "gids": [
+        108
+      ],
+      "flags": {
+        "unmove": true,
+        "clip": true
+      }
+    },
+    "4570": {
+      "type": "static",
+      "sheet": "sheet-32",
+      "gids": [
+        109
+      ],
+      "flags": {
+        "unmove": true,
+        "clip": true
+      }
+    },
+    "4572": {
+      "type": "static",
+      "sheet": "sheet-32",
+      "gids": [
+        110
+      ],
+      "flags": {
+        "unmove": true,
+        "clip": true
+      }
+    },
+    "4575": {
+      "type": "static",
+      "sheet": "sheet-32",
+      "gids": [
+        111
+      ],
+      "flags": {
+        "unmove": true,
+        "clip": true
+      }
+    },
+    "4577": {
+      "type": "static",
+      "sheet": "sheet-32",
+      "gids": [
+        112
+      ],
+      "flags": {
+        "unmove": true,
+        "clip": true
+      }
+    },
+    "4579": {
+      "type": "static",
+      "sheet": "sheet-32",
+      "gids": [
+        113
+      ],
+      "flags": {
+        "unmove": true,
+        "clip": true
+      }
+    },
+    "4581": {
+      "type": "static",
+      "sheet": "sheet-32",
+      "gids": [
+        114
+      ],
+      "flags": {
+        "unmove": true,
+        "clip": true
+      }
+    },
+    "4583": {
+      "type": "static",
+      "sheet": "sheet-32",
+      "gids": [
+        115
+      ],
+      "flags": {
+        "unmove": true,
+        "clip": true
+      }
+    },
+    "5070": {
+      "type": "animated",
+      "sheet": "sheet-64",
+      "gids": [
+        48,
+        49,
+        50,
+        51,
+        52
+      ],
+      "spriteWidth": 64,
+      "spriteHeight": 64,
+      "animated": true,
+      "animation": {
+        "appearanceId": 5070,
+        "frameDurations": [
+          100,
+          100,
+          100,
+          100,
+          100
+        ],
+        "frameDurationMs": 100,
+        "frameRate": 10.0,
+        "loop": true,
+        "synchronized": false,
+        "startFrame": 0
+      },
+      "flags": {
+        "unmove": true
+      }
+    },
+    "6219": {
+      "type": "random",
+      "sheet": "sheet-64",
+      "gids": [
+        53,
+        54,
+        55
+      ],
+      "spriteWidth": 64,
+      "spriteHeight": 64,
+      "random": true,
+      "pattern": {
+        "w": 3,
+        "h": 1,
+        "d": 1
+      },
+      "flags": {
+        "unmove": true
+      }
+    },
+    "6221": {
+      "type": "static",
+      "sheet": "sheet-64",
+      "gids": [
+        56
+      ],
+      "spriteHeight": 64,
+      "flags": {
+        "unmove": true
+      }
+    },
+    "6223": {
+      "type": "static",
+      "sheet": "sheet-64",
+      "gids": [
+        57
+      ],
+      "spriteWidth": 64,
+      "flags": {
+        "unmove": true
+      }
+    },
+    "6224": {
+      "type": "static",
+      "sheet": "sheet-64",
+      "gids": [
+        58
+      ],
+      "spriteWidth": 64,
+      "flags": {
+        "unmove": true
+      }
+    },
+    "6228": {
+      "type": "random",
+      "sheet": "sheet-64",
+      "gids": [
+        59,
+        60,
+        61
+      ],
+      "spriteHeight": 64,
+      "random": true,
+      "pattern": {
+        "w": 1,
+        "h": 3,
+        "d": 1
+      },
+      "flags": {
+        "unmove": true
+      }
+    },
+    "6230": {
+      "type": "random",
+      "sheet": "sheet-64",
+      "gids": [
+        62,
+        63,
+        64
+      ],
+      "spriteHeight": 64,
+      "random": true,
+      "pattern": {
+        "w": 1,
+        "h": 3,
+        "d": 1
+      },
+      "flags": {
+        "unmove": true
+      }
+    }
+  },
+  "sheets": {
+    "sheet-32": {
+      "image": "assets/CARLIN-HUNT-0002_wyvern-nest-sprites-v6/sheets/sheet-32.png",
+      "cellWidth": 32,
+      "cellHeight": 32,
+      "columns": 64
+    },
+    "sheet-64": {
+      "image": "assets/CARLIN-HUNT-0002_wyvern-nest-sprites-v6/sheets/sheet-64.png",
+      "cellWidth": 64,
+      "cellHeight": 64,
+      "columns": 32
+    }
+  },
+  "floors": {
+    "6": {
+      "z": 6,
+      "tiles": [
+        [
+          4,
+          0,
+          4515,
+          4453,
+          3635
+        ],
+        [
+          5,
+          0,
+          4515,
+          4449
+        ],
+        [
+          6,
+          0,
+          4521
+        ],
+        [
+          7,
+          0,
+          4515,
+          3635
+        ],
+        [
+          8,
+          0,
+          4530,
+          3635
+        ],
+        [
+          9,
+          0,
+          4515,
+          4446
+        ],
+        [
+          4,
+          1,
+          4515,
+          4448
+        ],
+        [
+          5,
+          1,
+          4516
+        ],
+        [
+          6,
+          1,
+          4529
+        ],
+        [
+          7,
+          1,
+          4524,
+          3635,
+          6223,
+          6221
+        ],
+        [
+          8,
+          1,
+          4530
+        ],
+        [
+          9,
+          1,
+          4522,
+          4450
+        ],
+        [
+          10,
+          1,
+          4525,
+          4454
+        ],
+        [
+          4,
+          2,
+          4519,
+          4448
+        ],
+        [
+          5,
+          2,
+          4515
+        ],
+        [
+          6,
+          2,
+          4515
+        ],
+        [
+          7,
+          2,
+          4515
+        ],
+        [
+          8,
+          2,
+          4519
+        ],
+        [
+          9,
+          2,
+          4525
+        ],
+        [
+          10,
+          2,
+          4522,
+          4446
+        ],
+        [
+          0,
+          3,
+          0,
+          3635
+        ],
+        [
+          2,
+          3,
+          0,
+          3635
+        ],
+        [
+          4,
+          3,
+          4515,
+          4456,
+          3635
+        ],
+        [
+          5,
+          3,
+          4515,
+          4447
+        ],
+        [
+          6,
+          3,
+          4515,
+          4452
+        ],
+        [
+          7,
+          3,
+          4515
+        ],
+        [
+          8,
+          3,
+          4526
+        ],
+        [
+          9,
+          3,
+          4526,
+          4451
+        ],
+        [
+          10,
+          3,
+          4526,
+          4455
+        ],
+        [
+          3,
+          4,
+          0,
+          3635,
+          5070,
+          6223
+        ],
+        [
+          4,
+          4,
+          0,
+          3635,
+          6224,
+          6221,
+          6223
+        ],
+        [
+          6,
+          4,
+          4521,
+          4456
+        ],
+        [
+          7,
+          4,
+          4518,
+          4447
+        ],
+        [
+          8,
+          4,
+          4527,
+          4447
+        ],
+        [
+          9,
+          4,
+          4515,
+          4455,
+          3654
+        ],
+        [
+          10,
+          4,
+          0,
+          3635
+        ],
+        [
+          10,
+          7,
+          0,
+          3635
+        ],
+        [
+          9,
+          8,
+          0,
+          3635
+        ],
+        [
+          10,
+          8,
+          0,
+          4459
+        ],
+        [
+          11,
+          8,
+          0,
+          4458
+        ],
+        [
+          12,
+          8,
+          0,
+          4458
+        ],
+        [
+          13,
+          8,
+          0,
+          4458
+        ],
+        [
+          14,
+          8,
+          0,
+          4458
+        ],
+        [
+          10,
+          9,
+          0,
+          4457
+        ],
+        [
+          11,
+          9,
+          4402,
+          4453
+        ],
+        [
+          12,
+          9,
+          4406,
+          1100,
+          4579
+        ],
+        [
+          13,
+          9,
+          4396,
+          1100,
+          4570
+        ],
+        [
+          14,
+          9,
+          4402,
+          1109,
+          4467
+        ],
+        [
+          15,
+          9,
+          0,
+          1115
+        ],
+        [
+          8,
+          10,
+          4515,
+          4453,
+          3635
+        ],
+        [
+          9,
+          10,
+          4515,
+          4445
+        ],
+        [
+          10,
+          10,
+          4515,
+          4445,
+          4457
+        ],
+        [
+          11,
+          10,
+          4401,
+          4449
+        ],
+        [
+          12,
+          10,
+          4394
+        ],
+        [
+          13,
+          10,
+          4405,
+          4579
+        ],
+        [
+          14,
+          10,
+          4403,
+          1105,
+          4570
+        ],
+        [
+          15,
+          10,
+          4394,
+          1109,
+          4569,
+          4467
+        ],
+        [
+          16,
+          10,
+          0,
+          1115
+        ],
+        [
+          7,
+          11,
+          4525,
+          4453
+        ],
+        [
+          8,
+          11,
+          4515,
+          4449
+        ],
+        [
+          9,
+          11,
+          4515
+        ],
+        [
+          10,
+          11,
+          4515,
+          4457
+        ],
+        [
+          11,
+          11,
+          4402
+        ],
+        [
+          12,
+          11,
+          4406,
+          4575
+        ],
+        [
+          13,
+          11,
+          4402,
+          4572,
+          1855
+        ],
+        [
+          14,
+          11,
+          4397,
+          4583,
+          1858
+        ],
+        [
+          15,
+          11,
+          4405,
+          1105
+        ],
+        [
+          16,
+          11,
+          4394,
+          1109,
+          4467
+        ],
+        [
+          7,
+          12,
+          4526,
+          4456
+        ],
+        [
+          8,
+          12,
+          4522,
+          4452
+        ],
+        [
+          9,
+          12,
+          4515
+        ],
+        [
+          10,
+          12,
+          4520,
+          4457
+        ],
+        [
+          11,
+          12,
+          4409
+        ],
+        [
+          12,
+          12,
+          4402,
+          4583,
+          1855,
+          352
+        ],
+        [
+          13,
+          12,
+          4397,
+          4577
+        ],
+        [
+          14,
+          12,
+          4407,
+          4583
+        ],
+        [
+          15,
+          12,
+          4409,
+          4579
+        ],
+        [
+          16,
+          12,
+          4394,
+          1101,
+          1112
+        ],
+        [
+          8,
+          13,
+          4518,
+          4448,
+          3635
+        ],
+        [
+          9,
+          13,
+          4528
+        ],
+        [
+          10,
+          13,
+          4515,
+          4457
+        ],
+        [
+          11,
+          13,
+          4409
+        ],
+        [
+          12,
+          13,
+          4409
+        ],
+        [
+          13,
+          13,
+          4402,
+          4577
+        ],
+        [
+          14,
+          13,
+          4398,
+          4581
+        ],
+        [
+          15,
+          13,
+          4401,
+          4569
+        ],
+        [
+          16,
+          13,
+          4394,
+          1101,
+          1112
+        ],
+        [
+          8,
+          14,
+          4527,
+          4448
+        ],
+        [
+          9,
+          14,
+          4519
+        ],
+        [
+          10,
+          14,
+          4529,
+          4457
+        ],
+        [
+          11,
+          14,
+          4409
+        ],
+        [
+          12,
+          14,
+          4402,
+          4579
+        ],
+        [
+          13,
+          14,
+          4403,
+          4577
+        ],
+        [
+          14,
+          14,
+          4406,
+          4579,
+          1855
+        ],
+        [
+          15,
+          14,
+          4394,
+          1106,
+          4577,
+          1114
+        ],
+        [
+          16,
+          14,
+          4394,
+          1110,
+          4468
+        ],
+        [
+          8,
+          15,
+          4519,
+          4448
+        ],
+        [
+          9,
+          15,
+          4515,
+          3656
+        ],
+        [
+          10,
+          15,
+          4515,
+          4457
+        ],
+        [
+          11,
+          15,
+          4398,
+          4451
+        ],
+        [
+          12,
+          15,
+          4408,
+          1102,
+          4579
+        ],
+        [
+          13,
+          15,
+          4408,
+          1102,
+          1858
+        ],
+        [
+          14,
+          15,
+          4406,
+          1102,
+          4570
+        ],
+        [
+          15,
+          15,
+          4405,
+          1110,
+          1112
+        ],
+        [
+          8,
+          16,
+          4515,
+          4456,
+          3635
+        ],
+        [
+          9,
+          16,
+          4515,
+          4452
+        ],
+        [
+          10,
+          16,
+          4517,
+          4451,
+          4463
+        ],
+        [
+          11,
+          16,
+          4526,
+          4455,
+          4464
+        ],
+        [
+          12,
+          16,
+          469
+        ],
+        [
+          13,
+          16,
+          469
+        ],
+        [
+          14,
+          16,
+          469
+        ],
+        [
+          8,
+          17,
+          0,
+          3635
+        ],
+        [
+          9,
+          17,
+          4515,
+          4456
+        ],
+        [
+          10,
+          17,
+          4515,
+          4455
+        ],
+        [
+          6,
+          20,
+          0,
+          3635
+        ],
+        [
+          21,
+          21,
+          4515,
+          4453
+        ],
+        [
+          22,
+          21,
+          4515,
+          4445,
+          3654
+        ],
+        [
+          23,
+          21,
+          4518,
+          4445
+        ],
+        [
+          24,
+          21,
+          4515,
+          4454,
+          3656
+        ],
+        [
+          5,
+          22,
+          0,
+          3635,
+          6223,
+          6221
+        ],
+        [
+          21,
+          22,
+          4518,
+          4448
+        ],
+        [
+          22,
+          22,
+          4527
+        ],
+        [
+          23,
+          22,
+          4528,
+          3626
+        ],
+        [
+          24,
+          22,
+          4527,
+          4450
+        ],
+        [
+          25,
+          22,
+          4515,
+          4454
+        ],
+        [
+          1,
+          23,
+          4522,
+          4456,
+          4453
+        ],
+        [
+          2,
+          23,
+          4522,
+          4454,
+          4452
+        ],
+        [
+          13,
+          23,
+          0,
+          3635,
+          5070
+        ],
+        [
+          14,
+          23,
+          0,
+          3635,
+          6228,
+          6230,
+          5070
+        ],
+        [
+          21,
+          23,
+          4515,
+          4448
+        ],
+        [
+          22,
+          23,
+          4515
+        ],
+        [
+          23,
+          23,
+          4516,
+          1840
+        ],
+        [
+          24,
+          23,
+          4529
+        ],
+        [
+          25,
+          23,
+          4515,
+          4446
+        ],
+        [
+          2,
+          24,
+          4522,
+          4455,
+          4456
+        ],
+        [
+          13,
+          24,
+          0,
+          3635,
+          5070,
+          6219
+        ],
+        [
+          14,
+          24,
+          0,
+          3635,
+          6221,
+          6219
+        ],
+        [
+          20,
+          24,
+          4515,
+          4453
+        ],
+        [
+          21,
+          24,
+          4515,
+          4449,
+          3657
+        ],
+        [
+          22,
+          24,
+          4515
+        ],
+        [
+          23,
+          24,
+          4515,
+          3616
+        ],
+        [
+          24,
+          24,
+          4515,
+          4451,
+          3657
+        ],
+        [
+          25,
+          24,
+          4515,
+          4455
+        ]
+      ]
+    }
+  },
+  "transitions": [],
+  "start": {
+    "x": 12,
+    "y": 12,
+    "z": 6
+  }
+}

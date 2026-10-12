@@ -1,0 +1,393 @@
+{
+  "mapBoundsRef": {
+    "minX": 32734,
+    "minY": 31956,
+    "maxX": 32765,
+    "maxY": 31991
+  },
+  "monsterDefs": {
+    "33": {
+      "name": "Skeleton",
+      "outfitId": 33,
+      "atlas": {
+        "image": "assets/outfits/33.png",
+        "json": "assets/outfits/33.json"
+      },
+      "appearance": {
+        "looktype": 33,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.491,
+          "itemId": 3115,
+          "itemName": "bone",
+          "rarity": "common"
+        },
+        {
+          "countMax": 10,
+          "countMin": 1,
+          "dropChance": 0.439,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.1988,
+          "itemId": 2920,
+          "itemName": "torch",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0994,
+          "itemId": 11481,
+          "itemName": "pelvis bone",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0752,
+          "itemId": 3367,
+          "itemName": "viking helmet",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0485,
+          "itemId": 3276,
+          "itemName": "hatchet",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0485,
+          "itemId": 3286,
+          "itemName": "mace",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0209,
+          "itemId": 3411,
+          "itemName": "brass shield",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0194,
+          "itemId": 3264,
+          "itemName": "sword",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.01,
+          "itemId": 23986,
+          "itemName": "heavy old tome",
+          "rarity": "rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 5972,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5972
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4024
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4156
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4157
+          }
+        ]
+      },
+      "race": "undead",
+      "idle": {
+        "north": "33_0",
+        "east": "33_1",
+        "south": "33_2",
+        "west": "33_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "33_4",
+            "33_8",
+            "33_12",
+            "33_16",
+            "33_20",
+            "33_24",
+            "33_28",
+            "33_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "33_5",
+            "33_9",
+            "33_13",
+            "33_17",
+            "33_21",
+            "33_25",
+            "33_29",
+            "33_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "33_6",
+            "33_10",
+            "33_14",
+            "33_18",
+            "33_22",
+            "33_26",
+            "33_30",
+            "33_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "33_7",
+            "33_11",
+            "33_15",
+            "33_19",
+            "33_23",
+            "33_27",
+            "33_31",
+            "33_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "44": {
+      "name": "Wasp",
+      "outfitId": 44,
+      "atlas": {
+        "image": "assets/outfits/44.png",
+        "json": "assets/outfits/44.json"
+      },
+      "appearance": {
+        "looktype": 44,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.03,
+          "itemId": 5902,
+          "itemName": "honeycomb",
+          "rarity": "rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 5989,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5989
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4080
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4081
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4082
+          }
+        ]
+      },
+      "race": "venom",
+      "idle": {
+        "north": {
+          "frames": [
+            "44_0",
+            "44_4",
+            "44_8",
+            "44_12",
+            "44_16",
+            "44_20",
+            "44_24",
+            "44_28"
+          ],
+          "frameRate": 10.0,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "44_1",
+            "44_5",
+            "44_9",
+            "44_13",
+            "44_17",
+            "44_21",
+            "44_25",
+            "44_29"
+          ],
+          "frameRate": 10.0,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "44_2",
+            "44_6",
+            "44_10",
+            "44_14",
+            "44_18",
+            "44_22",
+            "44_26",
+            "44_30"
+          ],
+          "frameRate": 10.0,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "44_3",
+            "44_7",
+            "44_11",
+            "44_15",
+            "44_19",
+            "44_23",
+            "44_27",
+            "44_31"
+          ],
+          "frameRate": 10.0,
+          "loopType": "infinite"
+        }
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "44_32",
+            "44_36",
+            "44_40",
+            "44_44",
+            "44_48",
+            "44_52",
+            "44_56",
+            "44_60"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "44_33",
+            "44_37",
+            "44_41",
+            "44_45",
+            "44_49",
+            "44_53",
+            "44_57",
+            "44_61"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "44_34",
+            "44_38",
+            "44_42",
+            "44_46",
+            "44_50",
+            "44_54",
+            "44_58",
+            "44_62"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "44_35",
+            "44_39",
+            "44_43",
+            "44_47",
+            "44_51",
+            "44_55",
+            "44_59",
+            "44_63"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    }
+  },
+  "spawns": [
+    {
+      "name": "Skeleton",
+      "outfitId": 33,
+      "tileX": 19,
+      "tileY": 12,
+      "worldX": 32753,
+      "worldY": 31968,
+      "worldZ": 7,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Wasp",
+      "outfitId": 44,
+      "tileX": 12,
+      "tileY": 17,
+      "worldX": 32746,
+      "worldY": 31973,
+      "worldZ": 7,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Wasp",
+      "outfitId": 44,
+      "tileX": 13,
+      "tileY": 23,
+      "worldX": 32747,
+      "worldY": 31979,
+      "worldZ": 7,
+      "radius": 2,
+      "spawntime": 90
+    }
+  ]
+}

@@ -1,0 +1,637 @@
+{
+  "monsters": {
+    "id": "VENORE-HUNT-0001",
+    "mapId": "VENORE-HUNT-0001",
+    "assetsRoot": "assets/VENORE-HUNT-0001_tainted-caves-sprites/monsters",
+    "mapBoundsRef": {
+      "minX": 32690,
+      "minY": 31924,
+      "maxX": 32756,
+      "maxY": 31972
+    },
+    "monsterDefs": {
+      "712": {
+        "name": "Tainted Soul",
+        "outfitId": 712,
+        "atlas": {
+          "image": "assets/outfits/712.png",
+          "json": "assets/outfits/712.json"
+        },
+        "appearance": {
+          "looktype": 712,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.01,
+            "itemId": 3030,
+            "itemName": "small ruby",
+            "rarity": "rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 21977,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 21977
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 21979
+            }
+          ]
+        },
+        "race": "undead",
+        "idle": {
+          "north": {
+            "frames": [
+              "712_0",
+              "712_4",
+              "712_8",
+              "712_12",
+              "712_16",
+              "712_20",
+              "712_24",
+              "712_28"
+            ],
+            "frameRate": 6.67,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "712_1",
+              "712_5",
+              "712_9",
+              "712_13",
+              "712_17",
+              "712_21",
+              "712_25",
+              "712_29"
+            ],
+            "frameRate": 6.67,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "712_2",
+              "712_6",
+              "712_10",
+              "712_14",
+              "712_18",
+              "712_22",
+              "712_26",
+              "712_30"
+            ],
+            "frameRate": 6.67,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "712_3",
+              "712_7",
+              "712_11",
+              "712_15",
+              "712_19",
+              "712_23",
+              "712_27",
+              "712_31"
+            ],
+            "frameRate": 6.67,
+            "loopType": "infinite"
+          }
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "712_32",
+              "712_36",
+              "712_40",
+              "712_44",
+              "712_48",
+              "712_52",
+              "712_56",
+              "712_60"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "712_33",
+              "712_37",
+              "712_41",
+              "712_45",
+              "712_49",
+              "712_53",
+              "712_57",
+              "712_61"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "712_34",
+              "712_38",
+              "712_42",
+              "712_46",
+              "712_50",
+              "712_54",
+              "712_58",
+              "712_62"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "712_35",
+              "712_39",
+              "712_43",
+              "712_47",
+              "712_51",
+              "712_55",
+              "712_59",
+              "712_63"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "44": {
+        "name": "Wasp",
+        "outfitId": 44,
+        "atlas": {
+          "image": "assets/outfits/44.png",
+          "json": "assets/outfits/44.json"
+        },
+        "appearance": {
+          "looktype": 44,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.03,
+            "itemId": 5902,
+            "itemName": "honeycomb",
+            "rarity": "rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 5989,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 5989
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4080
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4081
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4082
+            }
+          ]
+        },
+        "race": "venom",
+        "idle": {
+          "north": {
+            "frames": [
+              "44_0",
+              "44_4",
+              "44_8",
+              "44_12",
+              "44_16",
+              "44_20",
+              "44_24",
+              "44_28"
+            ],
+            "frameRate": 10.0,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "44_1",
+              "44_5",
+              "44_9",
+              "44_13",
+              "44_17",
+              "44_21",
+              "44_25",
+              "44_29"
+            ],
+            "frameRate": 10.0,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "44_2",
+              "44_6",
+              "44_10",
+              "44_14",
+              "44_18",
+              "44_22",
+              "44_26",
+              "44_30"
+            ],
+            "frameRate": 10.0,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "44_3",
+              "44_7",
+              "44_11",
+              "44_15",
+              "44_19",
+              "44_23",
+              "44_27",
+              "44_31"
+            ],
+            "frameRate": 10.0,
+            "loopType": "infinite"
+          }
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "44_32",
+              "44_36",
+              "44_40",
+              "44_44",
+              "44_48",
+              "44_52",
+              "44_56",
+              "44_60"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "44_33",
+              "44_37",
+              "44_41",
+              "44_45",
+              "44_49",
+              "44_53",
+              "44_57",
+              "44_61"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "44_34",
+              "44_38",
+              "44_42",
+              "44_46",
+              "44_50",
+              "44_54",
+              "44_58",
+              "44_62"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "44_35",
+              "44_39",
+              "44_43",
+              "44_47",
+              "44_51",
+              "44_55",
+              "44_59",
+              "44_63"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "43": {
+        "name": "Scorpion",
+        "outfitId": 43,
+        "atlas": {
+          "image": "assets/outfits/43.png",
+          "json": "assets/outfits/43.json"
+        },
+        "appearance": {
+          "looktype": 43,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0493,
+            "itemId": 9651,
+            "itemName": "scorpion tail",
+            "rarity": "rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 5988,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 5988
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4078
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4079
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4146
+            }
+          ]
+        },
+        "race": "venom",
+        "idle": {
+          "north": "43_0",
+          "east": "43_1",
+          "south": "43_2",
+          "west": "43_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "43_4",
+              "43_8",
+              "43_12",
+              "43_16",
+              "43_20",
+              "43_24",
+              "43_28",
+              "43_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "43_5",
+              "43_9",
+              "43_13",
+              "43_17",
+              "43_21",
+              "43_25",
+              "43_29",
+              "43_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "43_6",
+              "43_10",
+              "43_14",
+              "43_18",
+              "43_22",
+              "43_26",
+              "43_30",
+              "43_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "43_7",
+              "43_11",
+              "43_15",
+              "43_19",
+              "43_23",
+              "43_27",
+              "43_31",
+              "43_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      }
+    },
+    "spawns": [
+      {
+        "name": "Tainted Soul",
+        "outfitId": 712,
+        "tileX": 19,
+        "tileY": 12,
+        "worldX": 32709,
+        "worldY": 31936,
+        "worldZ": 7,
+        "radius": 5,
+        "spawntime": 60
+      },
+      {
+        "name": "Wasp",
+        "outfitId": 44,
+        "tileX": 47,
+        "tileY": 14,
+        "worldX": 32737,
+        "worldY": 31938,
+        "worldZ": 7,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Tainted Soul",
+        "outfitId": 712,
+        "tileX": 31,
+        "tileY": 14,
+        "worldX": 32721,
+        "worldY": 31938,
+        "worldZ": 7,
+        "radius": 5,
+        "spawntime": 60
+      },
+      {
+        "name": "Wasp",
+        "outfitId": 44,
+        "tileX": 54,
+        "tileY": 16,
+        "worldX": 32744,
+        "worldY": 31940,
+        "worldZ": 7,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Tainted Soul",
+        "outfitId": 712,
+        "tileX": 12,
+        "tileY": 17,
+        "worldX": 32702,
+        "worldY": 31941,
+        "worldZ": 7,
+        "radius": 5,
+        "spawntime": 60
+      },
+      {
+        "name": "Tainted Soul",
+        "outfitId": 712,
+        "tileX": 15,
+        "tileY": 20,
+        "worldX": 32705,
+        "worldY": 31944,
+        "worldZ": 7,
+        "radius": 5,
+        "spawntime": 60
+      },
+      {
+        "name": "Wasp",
+        "outfitId": 44,
+        "tileX": 49,
+        "tileY": 16,
+        "worldX": 32739,
+        "worldY": 31940,
+        "worldZ": 7,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Wasp",
+        "outfitId": 44,
+        "tileX": 53,
+        "tileY": 21,
+        "worldX": 32743,
+        "worldY": 31945,
+        "worldZ": 7,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Wasp",
+        "outfitId": 44,
+        "tileX": 43,
+        "tileY": 20,
+        "worldX": 32733,
+        "worldY": 31944,
+        "worldZ": 7,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Scorpion",
+        "outfitId": 43,
+        "tileX": 34,
+        "tileY": 23,
+        "worldX": 32724,
+        "worldY": 31947,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Scorpion",
+        "outfitId": 43,
+        "tileX": 33,
+        "tileY": 31,
+        "worldX": 32723,
+        "worldY": 31955,
+        "worldZ": 7,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Scorpion",
+        "outfitId": 43,
+        "tileX": 38,
+        "tileY": 36,
+        "worldX": 32728,
+        "worldY": 31960,
+        "worldZ": 7,
+        "radius": 1,
+        "spawntime": 90
+      }
+    ]
+  },
+  "loot": {
+    "id": "VENORE-HUNT-0001",
+    "mapId": "VENORE-HUNT-0001",
+    "drops": [
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.01,
+        "itemId": 3030,
+        "itemName": "small ruby",
+        "rarity": "rare",
+        "monsterName": "Tainted Soul"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.03,
+        "itemId": 5902,
+        "itemName": "honeycomb",
+        "rarity": "rare",
+        "monsterName": "Wasp"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0493,
+        "itemId": 9651,
+        "itemName": "scorpion tail",
+        "rarity": "rare",
+        "monsterName": "Scorpion"
+      }
+    ]
+  },
+  "hunts": {
+    "id": "VENORE-HUNT-0001",
+    "mapId": "VENORE-HUNT-0001",
+    "name": "Toads — Gloom Caverns z8",
+    "label": "Toads — Gloom Caverns z8",
+    "seed": "0000000000000000000000",
+    "assetsRoot": "assets/VENORE-HUNT-0001_tainted-caves-sprites-v6",
+    "mapUrl": "assets/VENORE-HUNT-0001_tainted-caves-sprites-v6/map.json",
+    "portrait": "/assets/character-default.png",
+    "monsterPreview": {
+      "name": "Wasp",
+      "icon": "/assets/outfits/44.png",
+      "atlas": "/assets/outfits/44.json"
+    },
+    "startPosition": [
+      32723,
+      31948
+    ],
+    "city": "VENORE",
+    "_todo": [
+      "revisar startPosition (centro geométrico do mapBoundsRef, pode cair fora de área andável)"
+    ]
+  }
+}

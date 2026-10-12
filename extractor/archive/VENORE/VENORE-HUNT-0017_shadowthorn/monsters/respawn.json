@@ -1,0 +1,905 @@
+{
+  "mapBoundsRef": {
+    "minX": 33042,
+    "minY": 32115,
+    "maxX": 33116,
+    "maxY": 32215
+  },
+  "monsterDefs": {
+    "28": {
+      "name": "Snake",
+      "outfitId": 28,
+      "atlas": {
+        "image": "assets/outfits/28.png",
+        "json": "assets/outfits/28.json"
+      },
+      "appearance": {
+        "looktype": 28,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [],
+      "corpse": {
+        "itemId": 3998,
+        "stages": [
+          {
+            "durationSeconds": 300,
+            "itemId": 3998
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 3999
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4000
+          }
+        ]
+      },
+      "race": "blood",
+      "idle": {
+        "north": "28_0",
+        "east": "28_1",
+        "south": "28_2",
+        "west": "28_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "28_4",
+            "28_8",
+            "28_12",
+            "28_16",
+            "28_20",
+            "28_24",
+            "28_28",
+            "28_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "28_5",
+            "28_9",
+            "28_13",
+            "28_17",
+            "28_21",
+            "28_25",
+            "28_29",
+            "28_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "28_6",
+            "28_10",
+            "28_14",
+            "28_18",
+            "28_22",
+            "28_26",
+            "28_30",
+            "28_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "28_7",
+            "28_11",
+            "28_15",
+            "28_19",
+            "28_23",
+            "28_27",
+            "28_31",
+            "28_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "523": {
+      "name": "Water Buffalo",
+      "outfitId": 523,
+      "atlas": {
+        "image": "assets/outfits/523.png",
+        "json": "assets/outfits/523.json"
+      },
+      "appearance": {
+        "looktype": 523,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 20,
+          "countMin": 1,
+          "dropChance": 1.0,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "always"
+        },
+        {
+          "countMax": 3,
+          "countMin": 1,
+          "dropChance": 0.392,
+          "itemId": 3582,
+          "itemName": "ham",
+          "rarity": "common"
+        },
+        {
+          "countMax": 4,
+          "countMin": 1,
+          "dropChance": 0.336,
+          "itemId": 3577,
+          "itemName": "meat",
+          "rarity": "common"
+        }
+      ],
+      "corpse": {
+        "itemId": 17421,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 17421
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 17422
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 17423
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 17424
+          }
+        ]
+      },
+      "race": "blood",
+      "idle": {
+        "north": "523_0",
+        "east": "523_1",
+        "south": "523_2",
+        "west": "523_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "523_4",
+            "523_8",
+            "523_12",
+            "523_16",
+            "523_20",
+            "523_24",
+            "523_28",
+            "523_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "523_5",
+            "523_9",
+            "523_13",
+            "523_17",
+            "523_21",
+            "523_25",
+            "523_29",
+            "523_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "523_6",
+            "523_10",
+            "523_14",
+            "523_18",
+            "523_22",
+            "523_26",
+            "523_30",
+            "523_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "523_7",
+            "523_11",
+            "523_15",
+            "523_19",
+            "523_23",
+            "523_27",
+            "523_31",
+            "523_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "530": {
+      "name": "Marsh Stalker",
+      "outfitId": 530,
+      "atlas": {
+        "image": "assets/outfits/530.png",
+        "json": "assets/outfits/530.json"
+      },
+      "appearance": {
+        "looktype": 530,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 23,
+          "countMin": 1,
+          "dropChance": 0.6409,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.2032,
+          "itemId": 3578,
+          "itemName": "fish",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.1995,
+          "itemId": 3577,
+          "itemName": "meat",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.1473,
+          "itemId": 3492,
+          "itemName": "worm",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0865,
+          "itemId": 17462,
+          "itemName": "marsh stalker feather",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0756,
+          "itemId": 3285,
+          "itemName": "longsword",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0608,
+          "itemId": 17461,
+          "itemName": "marsh stalker beak",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0483,
+          "itemId": 3003,
+          "itemName": "rope",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0011,
+          "itemId": 647,
+          "itemName": "seeds",
+          "rarity": "very-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 17428,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 17428
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 17439
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 17440
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 17441
+          }
+        ]
+      },
+      "race": "blood",
+      "idle": {
+        "north": "530_0",
+        "east": "530_1",
+        "south": "530_2",
+        "west": "530_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "530_4",
+            "530_8",
+            "530_12",
+            "530_16",
+            "530_20",
+            "530_24",
+            "530_28",
+            "530_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "530_5",
+            "530_9",
+            "530_13",
+            "530_17",
+            "530_21",
+            "530_25",
+            "530_29",
+            "530_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "530_6",
+            "530_10",
+            "530_14",
+            "530_18",
+            "530_22",
+            "530_26",
+            "530_30",
+            "530_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "530_7",
+            "530_11",
+            "530_15",
+            "530_19",
+            "530_23",
+            "530_27",
+            "530_31",
+            "530_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "414": {
+      "name": "Thornfire Wolf",
+      "outfitId": 414,
+      "atlas": {
+        "image": "assets/outfits/414.png",
+        "json": "assets/outfits/414.json"
+      },
+      "appearance": {
+        "looktype": 414,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 53,
+          "countMin": 1,
+          "dropChance": 0.64,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.34,
+          "itemId": 3577,
+          "itemName": "meat",
+          "rarity": "common"
+        },
+        {
+          "countMax": 8,
+          "countMin": 1,
+          "dropChance": 0.15,
+          "itemId": 763,
+          "itemName": "flaming arrow",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.079,
+          "itemId": 5897,
+          "itemName": "wolf paw",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.079,
+          "itemId": 9636,
+          "itemName": "fiery heart",
+          "rarity": "semi-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 12717,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 12717
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 12718
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 12719
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 12720
+          }
+        ]
+      },
+      "race": "venom",
+      "idle": {
+        "north": "414_0",
+        "east": "414_1",
+        "south": "414_2",
+        "west": "414_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "414_4",
+            "414_8"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "414_5",
+            "414_9"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "414_6",
+            "414_10"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "414_7",
+            "414_11"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "159": {
+      "name": "Firestarter",
+      "outfitId": 159,
+      "atlas": null,
+      "appearance": {
+        "looktype": 159,
+        "head": 94,
+        "body": 77,
+        "legs": 78,
+        "feet": 79,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 35,
+          "countMin": 1,
+          "dropChance": 0.79,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 12,
+          "countMin": 1,
+          "dropChance": 0.3,
+          "itemId": 763,
+          "itemName": "flaming arrow",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.2,
+          "itemId": 3592,
+          "itemName": "grapes",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.1528,
+          "itemId": 12600,
+          "itemName": "coal",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.06,
+          "itemId": 3285,
+          "itemName": "longsword",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.05,
+          "itemId": 9635,
+          "itemName": "elvish talisman",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.04,
+          "itemId": 3350,
+          "itemName": "bow",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0093,
+          "itemId": 5921,
+          "itemName": "heaven blossom",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0034,
+          "itemId": 12806,
+          "itemName": "flintstone",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.001,
+          "itemId": 7438,
+          "itemName": "elvish bow",
+          "rarity": "very-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 18318,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 18318
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 18316
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 18317
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4128
+          }
+        ]
+      },
+      "race": "blood"
+    }
+  },
+  "spawns": [
+    {
+      "name": "Snake",
+      "outfitId": 28,
+      "tileX": 18,
+      "tileY": 12,
+      "worldX": 33060,
+      "worldY": 32127,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Water Buffalo",
+      "outfitId": 523,
+      "tileX": 21,
+      "tileY": 21,
+      "worldX": 33063,
+      "worldY": 32136,
+      "worldZ": 7,
+      "radius": 1,
+      "spawntime": 60
+    },
+    {
+      "name": "Snake",
+      "outfitId": 28,
+      "tileX": 18,
+      "tileY": 31,
+      "worldX": 33060,
+      "worldY": 32146,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Marsh Stalker",
+      "outfitId": 530,
+      "tileX": 12,
+      "tileY": 34,
+      "worldX": 33054,
+      "worldY": 32149,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Thornfire Wolf",
+      "outfitId": 414,
+      "tileX": 47,
+      "tileY": 33,
+      "worldX": 33089,
+      "worldY": 32148,
+      "worldZ": 7,
+      "radius": 1,
+      "spawntime": 60
+    },
+    {
+      "name": "Thornfire Wolf",
+      "outfitId": 414,
+      "tileX": 34,
+      "tileY": 37,
+      "worldX": 33076,
+      "worldY": 32152,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 60
+    },
+    {
+      "name": "Firestarter",
+      "outfitId": 159,
+      "tileX": 39,
+      "tileY": 41,
+      "worldX": 33081,
+      "worldY": 32156,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Firestarter",
+      "outfitId": 159,
+      "tileX": 43,
+      "tileY": 36,
+      "worldX": 33085,
+      "worldY": 32151,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Firestarter",
+      "outfitId": 159,
+      "tileX": 41,
+      "tileY": 42,
+      "worldX": 33083,
+      "worldY": 32157,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Thornfire Wolf",
+      "outfitId": 414,
+      "tileX": 62,
+      "tileY": 45,
+      "worldX": 33104,
+      "worldY": 32160,
+      "worldZ": 7,
+      "radius": 1,
+      "spawntime": 60
+    },
+    {
+      "name": "Firestarter",
+      "outfitId": 159,
+      "tileX": 21,
+      "tileY": 44,
+      "worldX": 33063,
+      "worldY": 32159,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Firestarter",
+      "outfitId": 159,
+      "tileX": 19,
+      "tileY": 45,
+      "worldX": 33061,
+      "worldY": 32160,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Firestarter",
+      "outfitId": 159,
+      "tileX": 58,
+      "tileY": 47,
+      "worldX": 33100,
+      "worldY": 32162,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Firestarter",
+      "outfitId": 159,
+      "tileX": 20,
+      "tileY": 50,
+      "worldX": 33062,
+      "worldY": 32165,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Firestarter",
+      "outfitId": 159,
+      "tileX": 25,
+      "tileY": 53,
+      "worldX": 33067,
+      "worldY": 32168,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Thornfire Wolf",
+      "outfitId": 414,
+      "tileX": 48,
+      "tileY": 51,
+      "worldX": 33090,
+      "worldY": 32166,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 60
+    },
+    {
+      "name": "Firestarter",
+      "outfitId": 159,
+      "tileX": 50,
+      "tileY": 56,
+      "worldX": 33092,
+      "worldY": 32171,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Firestarter",
+      "outfitId": 159,
+      "tileX": 35,
+      "tileY": 55,
+      "worldX": 33077,
+      "worldY": 32170,
+      "worldZ": 7,
+      "radius": 5,
+      "spawntime": 90
+    },
+    {
+      "name": "Firestarter",
+      "outfitId": 159,
+      "tileX": 31,
+      "tileY": 56,
+      "worldX": 33073,
+      "worldY": 32171,
+      "worldZ": 7,
+      "radius": 5,
+      "spawntime": 90
+    },
+    {
+      "name": "Firestarter",
+      "outfitId": 159,
+      "tileX": 19,
+      "tileY": 67,
+      "worldX": 33061,
+      "worldY": 32182,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Firestarter",
+      "outfitId": 159,
+      "tileX": 27,
+      "tileY": 70,
+      "worldX": 33069,
+      "worldY": 32185,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Firestarter",
+      "outfitId": 159,
+      "tileX": 27,
+      "tileY": 78,
+      "worldX": 33069,
+      "worldY": 32193,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Firestarter",
+      "outfitId": 159,
+      "tileX": 20,
+      "tileY": 88,
+      "worldX": 33062,
+      "worldY": 32203,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    }
+  ]
+}

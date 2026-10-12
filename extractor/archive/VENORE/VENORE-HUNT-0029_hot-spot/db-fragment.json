@@ -1,0 +1,1237 @@
+{
+  "monsters": {
+    "id": "VENORE-HUNT-0029",
+    "mapId": "VENORE-HUNT-0029",
+    "assetsRoot": "assets/VENORE-HUNT-0029_hot-spot-sprites/monsters",
+    "mapBoundsRef": {
+      "minX": 32828,
+      "minY": 31890,
+      "maxX": 32886,
+      "maxY": 31942
+    },
+    "monsterDefs": {
+      "39": {
+        "name": "Dragon Lord",
+        "outfitId": 39,
+        "atlas": {
+          "image": "assets/outfits/39.png",
+          "json": "assets/outfits/39.json"
+        },
+        "appearance": {
+          "looktype": 39,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 237,
+            "countMin": 1,
+            "dropChance": 0.953,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.7979,
+            "itemId": 3583,
+            "itemName": "dragon ham",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1203,
+            "itemId": 3732,
+            "itemName": "green mushroom",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0959,
+            "itemId": 2842,
+            "itemName": "book",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 3,
+            "countMin": 1,
+            "dropChance": 0.0938,
+            "itemId": 7378,
+            "itemName": "royal spear",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 7,
+            "countMin": 1,
+            "dropChance": 0.0592,
+            "itemId": 3450,
+            "itemName": "power bolt",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0559,
+            "itemId": 3029,
+            "itemName": "small sapphire",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0455,
+            "itemId": 3051,
+            "itemName": "energy ring",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0331,
+            "itemId": 2903,
+            "itemName": "golden mug",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0194,
+            "itemId": 5882,
+            "itemName": "red dragon scale",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0115,
+            "itemId": 5948,
+            "itemName": "red dragon leather",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.008,
+            "itemId": 236,
+            "itemName": "strong health potion",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0065,
+            "itemId": 3061,
+            "itemName": "life crystal",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0052,
+            "itemId": 3373,
+            "itemName": "strange helmet",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0041,
+            "itemId": 3428,
+            "itemName": "tower shield",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0035,
+            "itemId": 3280,
+            "itemName": "fire sword",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0026,
+            "itemId": 3392,
+            "itemName": "royal helmet",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0022,
+            "itemId": 7402,
+            "itemName": "dragon slayer",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0013,
+            "itemId": 7399,
+            "itemName": "dragon lord trophy",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0009,
+            "itemId": 3386,
+            "itemName": "dragon scale mail",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 5984,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 5984
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4062
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4063
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4064
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "39_0",
+          "east": "39_1",
+          "south": "39_2",
+          "west": "39_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "39_4",
+              "39_8",
+              "39_12",
+              "39_16",
+              "39_20",
+              "39_24",
+              "39_28",
+              "39_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "39_5",
+              "39_9",
+              "39_13",
+              "39_17",
+              "39_21",
+              "39_25",
+              "39_29",
+              "39_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "39_6",
+              "39_10",
+              "39_14",
+              "39_18",
+              "39_22",
+              "39_26",
+              "39_30",
+              "39_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "39_7",
+              "39_11",
+              "39_15",
+              "39_19",
+              "39_23",
+              "39_27",
+              "39_31",
+              "39_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "509": {
+        "name": "Vulcongra",
+        "outfitId": 509,
+        "atlas": {
+          "image": "assets/outfits/509.png",
+          "json": "assets/outfits/509.json"
+        },
+        "appearance": {
+          "looktype": 509,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 100,
+            "countMin": 1,
+            "dropChance": 1.0,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "always"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1478,
+            "itemId": 3035,
+            "itemName": "platinum coin",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1244,
+            "itemId": 16130,
+            "itemName": "magma clump",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 10,
+            "countMin": 1,
+            "dropChance": 0.1042,
+            "itemId": 3587,
+            "itemName": "banana",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0938,
+            "itemId": 9636,
+            "itemName": "fiery heart",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0803,
+            "itemId": 16131,
+            "itemName": "blazing bone",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.071,
+            "itemId": 236,
+            "itemName": "strong health potion",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.071,
+            "itemId": 237,
+            "itemName": "strong mana potion",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0485,
+            "itemId": 16123,
+            "itemName": "brown crystal splinter",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0292,
+            "itemId": 3091,
+            "itemName": "sword ring",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0228,
+            "itemId": 16126,
+            "itemName": "red crystal fragment",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.01,
+            "itemId": 3071,
+            "itemName": "wand of inferno",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0097,
+            "itemId": 817,
+            "itemName": "magma amulet",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0094,
+            "itemId": 12600,
+            "itemName": "coal",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0026,
+            "itemId": 3280,
+            "itemName": "fire sword",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0014,
+            "itemId": 826,
+            "itemName": "magma coat",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 16186,
+          "stages": [
+            {
+              "durationSeconds": 300,
+              "itemId": 16186
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 16187
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 16188
+            }
+          ]
+        },
+        "race": "fire",
+        "idle": {
+          "north": "509_0",
+          "east": "509_1",
+          "south": "509_2",
+          "west": "509_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "509_4",
+              "509_8"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "509_5",
+              "509_9"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "509_6",
+              "509_10"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "509_7",
+              "509_11"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "242": {
+        "name": "Massive Fire Elemental",
+        "outfitId": 242,
+        "atlas": {
+          "image": "assets/outfits/242.png",
+          "json": "assets/outfits/242.json"
+        },
+        "appearance": {
+          "looktype": 242,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 100,
+            "countMin": 1,
+            "dropChance": 1.0,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "always"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.061,
+            "itemId": 3030,
+            "itemName": "small ruby",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0224,
+            "itemId": 3071,
+            "itemName": "wand of inferno",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0133,
+            "itemId": 8895,
+            "itemName": "rusted armor",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.013,
+            "itemId": 817,
+            "itemName": "magma amulet",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0056,
+            "itemId": 818,
+            "itemName": "magma boots",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0053,
+            "itemId": 3280,
+            "itemName": "fire sword",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0021,
+            "itemId": 821,
+            "itemName": "magma legs",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 6323,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 6323
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 6324
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 6325
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 6326
+            }
+          ]
+        },
+        "race": "fire",
+        "moving": {
+          "north": {
+            "frames": [
+              "242_0",
+              "242_4"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "242_1",
+              "242_5"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "242_2",
+              "242_6"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "242_3",
+              "242_7"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        },
+        "idle": {
+          "north": {
+            "frames": [
+              "242_0",
+              "242_4"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "242_1",
+              "242_5"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "242_2",
+              "242_6"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "242_3",
+              "242_7"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      }
+    },
+    "spawns": [
+      {
+        "name": "Dragon Lord",
+        "outfitId": 39,
+        "tileX": 40,
+        "tileY": 12,
+        "worldX": 32868,
+        "worldY": 31902,
+        "worldZ": 13,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Vulcongra",
+        "outfitId": 509,
+        "tileX": 12,
+        "tileY": 18,
+        "worldX": 32840,
+        "worldY": 31908,
+        "worldZ": 13,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Dragon Lord",
+        "outfitId": 39,
+        "tileX": 30,
+        "tileY": 20,
+        "worldX": 32858,
+        "worldY": 31910,
+        "worldZ": 13,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Dragon Lord",
+        "outfitId": 39,
+        "tileX": 31,
+        "tileY": 20,
+        "worldX": 32859,
+        "worldY": 31910,
+        "worldZ": 13,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Massive Fire Elemental",
+        "outfitId": 242,
+        "tileX": 18,
+        "tileY": 23,
+        "worldX": 32846,
+        "worldY": 31913,
+        "worldZ": 13,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Vulcongra",
+        "outfitId": 509,
+        "tileX": 46,
+        "tileY": 23,
+        "worldX": 32874,
+        "worldY": 31913,
+        "worldZ": 13,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Vulcongra",
+        "outfitId": 509,
+        "tileX": 15,
+        "tileY": 26,
+        "worldX": 32843,
+        "worldY": 31916,
+        "worldZ": 13,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Dragon Lord",
+        "outfitId": 39,
+        "tileX": 19,
+        "tileY": 30,
+        "worldX": 32847,
+        "worldY": 31920,
+        "worldZ": 13,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Vulcongra",
+        "outfitId": 509,
+        "tileX": 28,
+        "tileY": 30,
+        "worldX": 32856,
+        "worldY": 31920,
+        "worldZ": 13,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Vulcongra",
+        "outfitId": 509,
+        "tileX": 31,
+        "tileY": 31,
+        "worldX": 32859,
+        "worldY": 31921,
+        "worldZ": 13,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Massive Fire Elemental",
+        "outfitId": 242,
+        "tileX": 43,
+        "tileY": 31,
+        "worldX": 32871,
+        "worldY": 31921,
+        "worldZ": 13,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Vulcongra",
+        "outfitId": 509,
+        "tileX": 44,
+        "tileY": 37,
+        "worldX": 32872,
+        "worldY": 31927,
+        "worldZ": 13,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Dragon Lord",
+        "outfitId": 39,
+        "tileX": 41,
+        "tileY": 39,
+        "worldX": 32869,
+        "worldY": 31929,
+        "worldZ": 13,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Vulcongra",
+        "outfitId": 509,
+        "tileX": 42,
+        "tileY": 40,
+        "worldX": 32870,
+        "worldY": 31930,
+        "worldZ": 13,
+        "radius": 3,
+        "spawntime": 90
+      }
+    ]
+  },
+  "loot": {
+    "id": "VENORE-HUNT-0029",
+    "mapId": "VENORE-HUNT-0029",
+    "drops": [
+      {
+        "countMax": 237,
+        "countMin": 1,
+        "dropChance": 0.953,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Dragon Lord"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.7979,
+        "itemId": 3583,
+        "itemName": "dragon ham",
+        "rarity": "common",
+        "monsterName": "Dragon Lord"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1203,
+        "itemId": 3732,
+        "itemName": "green mushroom",
+        "rarity": "semi-rare",
+        "monsterName": "Dragon Lord"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0959,
+        "itemId": 2842,
+        "itemName": "book",
+        "rarity": "semi-rare",
+        "monsterName": "Dragon Lord"
+      },
+      {
+        "countMax": 3,
+        "countMin": 1,
+        "dropChance": 0.0938,
+        "itemId": 7378,
+        "itemName": "royal spear",
+        "rarity": "semi-rare",
+        "monsterName": "Dragon Lord"
+      },
+      {
+        "countMax": 7,
+        "countMin": 1,
+        "dropChance": 0.0592,
+        "itemId": 3450,
+        "itemName": "power bolt",
+        "rarity": "semi-rare",
+        "monsterName": "Dragon Lord"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0559,
+        "itemId": 3029,
+        "itemName": "small sapphire",
+        "rarity": "semi-rare",
+        "monsterName": "Dragon Lord"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0455,
+        "itemId": 3051,
+        "itemName": "energy ring",
+        "rarity": "rare",
+        "monsterName": "Dragon Lord"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0331,
+        "itemId": 2903,
+        "itemName": "golden mug",
+        "rarity": "rare",
+        "monsterName": "Dragon Lord"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0194,
+        "itemId": 5882,
+        "itemName": "red dragon scale",
+        "rarity": "rare",
+        "monsterName": "Dragon Lord"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0115,
+        "itemId": 5948,
+        "itemName": "red dragon leather",
+        "rarity": "rare",
+        "monsterName": "Dragon Lord"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.008,
+        "itemId": 236,
+        "itemName": "strong health potion",
+        "rarity": "rare",
+        "monsterName": "Dragon Lord"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0065,
+        "itemId": 3061,
+        "itemName": "life crystal",
+        "rarity": "rare",
+        "monsterName": "Dragon Lord"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0052,
+        "itemId": 3373,
+        "itemName": "strange helmet",
+        "rarity": "rare",
+        "monsterName": "Dragon Lord"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0041,
+        "itemId": 3428,
+        "itemName": "tower shield",
+        "rarity": "very-rare",
+        "monsterName": "Dragon Lord"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0035,
+        "itemId": 3280,
+        "itemName": "fire sword",
+        "rarity": "very-rare",
+        "monsterName": "Dragon Lord"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0026,
+        "itemId": 3392,
+        "itemName": "royal helmet",
+        "rarity": "very-rare",
+        "monsterName": "Dragon Lord"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0022,
+        "itemId": 7402,
+        "itemName": "dragon slayer",
+        "rarity": "very-rare",
+        "monsterName": "Dragon Lord"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0013,
+        "itemId": 7399,
+        "itemName": "dragon lord trophy",
+        "rarity": "very-rare",
+        "monsterName": "Dragon Lord"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0009,
+        "itemId": 3386,
+        "itemName": "dragon scale mail",
+        "rarity": "very-rare",
+        "monsterName": "Dragon Lord"
+      },
+      {
+        "countMax": 100,
+        "countMin": 1,
+        "dropChance": 1.0,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "always",
+        "monsterName": "Vulcongra"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1478,
+        "itemId": 3035,
+        "itemName": "platinum coin",
+        "rarity": "semi-rare",
+        "monsterName": "Vulcongra"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1244,
+        "itemId": 16130,
+        "itemName": "magma clump",
+        "rarity": "semi-rare",
+        "monsterName": "Vulcongra"
+      },
+      {
+        "countMax": 10,
+        "countMin": 1,
+        "dropChance": 0.1042,
+        "itemId": 3587,
+        "itemName": "banana",
+        "rarity": "semi-rare",
+        "monsterName": "Vulcongra"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0938,
+        "itemId": 9636,
+        "itemName": "fiery heart",
+        "rarity": "semi-rare",
+        "monsterName": "Vulcongra"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0803,
+        "itemId": 16131,
+        "itemName": "blazing bone",
+        "rarity": "semi-rare",
+        "monsterName": "Vulcongra"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.071,
+        "itemId": 236,
+        "itemName": "strong health potion",
+        "rarity": "semi-rare",
+        "monsterName": "Vulcongra"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.071,
+        "itemId": 237,
+        "itemName": "strong mana potion",
+        "rarity": "semi-rare",
+        "monsterName": "Vulcongra"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0485,
+        "itemId": 16123,
+        "itemName": "brown crystal splinter",
+        "rarity": "rare",
+        "monsterName": "Vulcongra"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0292,
+        "itemId": 3091,
+        "itemName": "sword ring",
+        "rarity": "rare",
+        "monsterName": "Vulcongra"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0228,
+        "itemId": 16126,
+        "itemName": "red crystal fragment",
+        "rarity": "rare",
+        "monsterName": "Vulcongra"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.01,
+        "itemId": 3071,
+        "itemName": "wand of inferno",
+        "rarity": "rare",
+        "monsterName": "Vulcongra"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0097,
+        "itemId": 817,
+        "itemName": "magma amulet",
+        "rarity": "rare",
+        "monsterName": "Vulcongra"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0094,
+        "itemId": 12600,
+        "itemName": "coal",
+        "rarity": "rare",
+        "monsterName": "Vulcongra"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0026,
+        "itemId": 3280,
+        "itemName": "fire sword",
+        "rarity": "very-rare",
+        "monsterName": "Vulcongra"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0014,
+        "itemId": 826,
+        "itemName": "magma coat",
+        "rarity": "very-rare",
+        "monsterName": "Vulcongra"
+      },
+      {
+        "countMax": 100,
+        "countMin": 1,
+        "dropChance": 1.0,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "always",
+        "monsterName": "Massive Fire Elemental"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.061,
+        "itemId": 3030,
+        "itemName": "small ruby",
+        "rarity": "semi-rare",
+        "monsterName": "Massive Fire Elemental"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0224,
+        "itemId": 3071,
+        "itemName": "wand of inferno",
+        "rarity": "rare",
+        "monsterName": "Massive Fire Elemental"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0133,
+        "itemId": 8895,
+        "itemName": "rusted armor",
+        "rarity": "rare",
+        "monsterName": "Massive Fire Elemental"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.013,
+        "itemId": 817,
+        "itemName": "magma amulet",
+        "rarity": "rare",
+        "monsterName": "Massive Fire Elemental"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0056,
+        "itemId": 818,
+        "itemName": "magma boots",
+        "rarity": "rare",
+        "monsterName": "Massive Fire Elemental"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0053,
+        "itemId": 3280,
+        "itemName": "fire sword",
+        "rarity": "rare",
+        "monsterName": "Massive Fire Elemental"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0021,
+        "itemId": 821,
+        "itemName": "magma legs",
+        "rarity": "very-rare",
+        "monsterName": "Massive Fire Elemental"
+      }
+    ]
+  },
+  "hunts": {
+    "id": "VENORE-HUNT-0029",
+    "mapId": "VENORE-HUNT-0029",
+    "name": "Hot Spot",
+    "label": "Hot Spot",
+    "seed": "0000000000000000000000",
+    "assetsRoot": "assets/VENORE-HUNT-0029_hot-spot-sprites-v6",
+    "mapUrl": "assets/VENORE-HUNT-0029_hot-spot-sprites-v6/map.json",
+    "portrait": "/assets/character-default.png",
+    "monsterPreview": {
+      "name": "Vulcongra",
+      "icon": "/assets/outfits/509.png",
+      "atlas": "/assets/outfits/509.json"
+    },
+    "startPosition": [
+      32857,
+      31916
+    ],
+    "city": "VENORE",
+    "_todo": [
+      "confirmar name/label (título gerado automaticamente do nome da pasta)",
+      "revisar startPosition (centro geométrico do mapBoundsRef, pode cair fora de área andável)"
+    ]
+  }
+}

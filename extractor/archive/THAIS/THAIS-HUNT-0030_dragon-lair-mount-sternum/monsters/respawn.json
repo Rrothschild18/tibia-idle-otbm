@@ -1,0 +1,467 @@
+{
+  "mapBoundsRef": {
+    "minX": 32349,
+    "minY": 32010,
+    "maxX": 32392,
+    "maxY": 32044
+  },
+  "monsterDefs": {
+    "65": {
+      "name": "Mummy",
+      "outfitId": 65,
+      "atlas": {
+        "image": "assets/outfits/65.png",
+        "json": "assets/outfits/65.json"
+      },
+      "appearance": {
+        "looktype": 65,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 80,
+          "countMin": 1,
+          "dropChance": 0.38,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 3,
+          "countMin": 1,
+          "dropChance": 0.19,
+          "itemId": 3492,
+          "itemName": "worm",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.1169,
+          "itemId": 11466,
+          "itemName": "flask of embalming fluid",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.1,
+          "itemId": 9649,
+          "itemName": "gauze bandage",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.058,
+          "itemId": 3046,
+          "itemName": "magic light wand",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.05,
+          "itemId": 3045,
+          "itemName": "strange talisman",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.04,
+          "itemId": 3017,
+          "itemName": "silver brooch",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.015,
+          "itemId": 3007,
+          "itemName": "crystal ring",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.01,
+          "itemId": 3027,
+          "itemName": "black pearl",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.009,
+          "itemId": 5914,
+          "itemName": "yellow piece of cloth",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0045,
+          "itemId": 3299,
+          "itemName": "poison dagger",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0017,
+          "itemId": 3429,
+          "itemName": "black shield",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.001,
+          "itemId": 3054,
+          "itemName": "silver amulet",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0001,
+          "itemId": 10290,
+          "itemName": "mini mummy",
+          "rarity": "very-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 6004,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 6004
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4130
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4131
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4132
+          }
+        ]
+      },
+      "race": "undead",
+      "idle": {
+        "north": "65_0",
+        "east": "65_1",
+        "south": "65_2",
+        "west": "65_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "65_4",
+            "65_8",
+            "65_12",
+            "65_16",
+            "65_20",
+            "65_24",
+            "65_28",
+            "65_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "65_5",
+            "65_9",
+            "65_13",
+            "65_17",
+            "65_21",
+            "65_25",
+            "65_29",
+            "65_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "65_6",
+            "65_10",
+            "65_14",
+            "65_18",
+            "65_22",
+            "65_26",
+            "65_30",
+            "65_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "65_7",
+            "65_11",
+            "65_15",
+            "65_19",
+            "65_23",
+            "65_27",
+            "65_31",
+            "65_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "100": {
+      "name": "Crypt Shambler",
+      "outfitId": 100,
+      "atlas": {
+        "image": "assets/outfits/100.png",
+        "json": "assets/outfits/100.json"
+      },
+      "appearance": {
+        "looktype": 100,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 55,
+          "countMin": 1,
+          "dropChance": 0.57,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 10,
+          "countMin": 1,
+          "dropChance": 0.09,
+          "itemId": 3492,
+          "itemName": "worm",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.05,
+          "itemId": 3115,
+          "itemName": "bone",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.05,
+          "itemId": 10283,
+          "itemName": "half-digested piece of meat",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0413,
+          "itemId": 3353,
+          "itemName": "iron helmet",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0185,
+          "itemId": 3112,
+          "itemName": "rotten meat",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.01,
+          "itemId": 3338,
+          "itemName": "bone sword",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.01,
+          "itemId": 3441,
+          "itemName": "bone shield",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 3,
+          "countMin": 1,
+          "dropChance": 0.0091,
+          "itemId": 3287,
+          "itemName": "throwing star",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0051,
+          "itemId": 3028,
+          "itemName": "small diamond",
+          "rarity": "rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 6029,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 6029
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4209
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4210
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4211
+          }
+        ]
+      },
+      "race": "undead",
+      "idle": {
+        "north": "100_0",
+        "east": "100_1",
+        "south": "100_2",
+        "west": "100_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "100_4",
+            "100_8",
+            "100_12",
+            "100_16",
+            "100_20",
+            "100_24",
+            "100_28",
+            "100_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "100_5",
+            "100_9",
+            "100_13",
+            "100_17",
+            "100_21",
+            "100_25",
+            "100_29",
+            "100_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "100_6",
+            "100_10",
+            "100_14",
+            "100_18",
+            "100_22",
+            "100_26",
+            "100_30",
+            "100_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "100_7",
+            "100_11",
+            "100_15",
+            "100_19",
+            "100_23",
+            "100_27",
+            "100_31",
+            "100_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    }
+  },
+  "spawns": [
+    {
+      "name": "Mummy",
+      "outfitId": 65,
+      "tileX": 22,
+      "tileY": 12,
+      "worldX": 32371,
+      "worldY": 32022,
+      "worldZ": 12,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Crypt Shambler",
+      "outfitId": 100,
+      "tileX": 12,
+      "tileY": 14,
+      "worldX": 32361,
+      "worldY": 32024,
+      "worldZ": 12,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Mummy",
+      "outfitId": 65,
+      "tileX": 29,
+      "tileY": 17,
+      "worldX": 32378,
+      "worldY": 32027,
+      "worldZ": 12,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Crypt Shambler",
+      "outfitId": 100,
+      "tileX": 26,
+      "tileY": 19,
+      "worldX": 32375,
+      "worldY": 32029,
+      "worldZ": 12,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Crypt Shambler",
+      "outfitId": 100,
+      "tileX": 31,
+      "tileY": 22,
+      "worldX": 32380,
+      "worldY": 32032,
+      "worldZ": 12,
+      "radius": 3,
+      "spawntime": 90
+    }
+  ]
+}

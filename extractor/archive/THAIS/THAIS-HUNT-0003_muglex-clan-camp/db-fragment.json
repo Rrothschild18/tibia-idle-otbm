@@ -1,0 +1,539 @@
+{
+  "monsters": {
+    "id": "THAIS-HUNT-0003",
+    "mapId": "THAIS-HUNT-0003",
+    "assetsRoot": "assets/THAIS-HUNT-0003_muglex-clan-camp-sprites/monsters",
+    "mapBoundsRef": {
+      "minX": 32490,
+      "minY": 32401,
+      "maxX": 32545,
+      "maxY": 32444
+    },
+    "monsterDefs": {
+      "159": {
+        "name": "Misguided Bully",
+        "outfitId": 159,
+        "atlas": null,
+        "appearance": {
+          "looktype": 159,
+          "head": 58,
+          "body": 21,
+          "legs": 41,
+          "feet": 76,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 153,
+            "countMin": 1,
+            "dropChance": 1.0,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "always"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0561,
+            "itemId": 25296,
+            "itemName": "rubbish amulet",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0493,
+            "itemId": 9058,
+            "itemName": "gold ingot",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0463,
+            "itemId": 3041,
+            "itemName": "blue gem",
+            "rarity": "rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 26125,
+          "stages": [
+            {
+              "durationSeconds": null,
+              "itemId": 26125
+            }
+          ]
+        },
+        "race": "blood"
+      },
+      "684": {
+        "name": "Misguided Thief",
+        "outfitId": 684,
+        "atlas": null,
+        "appearance": {
+          "looktype": 684,
+          "head": 58,
+          "body": 40,
+          "legs": 60,
+          "feet": 116,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 80,
+            "countMin": 1,
+            "dropChance": 1.0,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "always"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.5852,
+            "itemId": 3582,
+            "itemName": "ham",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.4716,
+            "itemId": 3577,
+            "itemName": "meat",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0966,
+            "itemId": 237,
+            "itemName": "strong mana potion",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0625,
+            "itemId": 3037,
+            "itemName": "yellow gem",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0625,
+            "itemId": 25296,
+            "itemName": "rubbish amulet",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0568,
+            "itemId": 3039,
+            "itemName": "red gem",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0568,
+            "itemId": 236,
+            "itemName": "strong health potion",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0057,
+            "itemId": 16124,
+            "itemName": "blue crystal splinter",
+            "rarity": "rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 26125,
+          "stages": [
+            {
+              "durationSeconds": null,
+              "itemId": 26125
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "684_0",
+          "east": "684_1",
+          "south": "684_2",
+          "west": "684_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "684_0",
+              "684_4",
+              "684_8",
+              "684_12",
+              "684_16",
+              "684_20",
+              "684_24",
+              "684_28",
+              "684_32"
+            ],
+            "frameRate": 15,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "684_1",
+              "684_5",
+              "684_9",
+              "684_13",
+              "684_17",
+              "684_21",
+              "684_25",
+              "684_29",
+              "684_33"
+            ],
+            "frameRate": 15,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "684_2",
+              "684_6",
+              "684_10",
+              "684_14",
+              "684_18",
+              "684_22",
+              "684_26",
+              "684_30",
+              "684_34"
+            ],
+            "frameRate": 15,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "684_3",
+              "684_7",
+              "684_11",
+              "684_15",
+              "684_19",
+              "684_23",
+              "684_27",
+              "684_31",
+              "684_35"
+            ],
+            "frameRate": 15,
+            "loopType": "infinite"
+          }
+        }
+      }
+    },
+    "spawns": [
+      {
+        "name": "Misguided Bully",
+        "outfitId": 159,
+        "tileX": 41,
+        "tileY": 12,
+        "worldX": 32531,
+        "worldY": 32413,
+        "worldZ": 9,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Misguided Thief",
+        "outfitId": 684,
+        "tileX": 42,
+        "tileY": 14,
+        "worldX": 32532,
+        "worldY": 32415,
+        "worldZ": 9,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Misguided Bully",
+        "outfitId": 159,
+        "tileX": 43,
+        "tileY": 22,
+        "worldX": 32533,
+        "worldY": 32423,
+        "worldZ": 9,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Misguided Bully",
+        "outfitId": 159,
+        "tileX": 12,
+        "tileY": 25,
+        "worldX": 32502,
+        "worldY": 32426,
+        "worldZ": 9,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Misguided Thief",
+        "outfitId": 684,
+        "tileX": 13,
+        "tileY": 29,
+        "worldX": 32503,
+        "worldY": 32430,
+        "worldZ": 9,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Misguided Bully",
+        "outfitId": 159,
+        "tileX": 18,
+        "tileY": 25,
+        "worldX": 32508,
+        "worldY": 32426,
+        "worldZ": 9,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Misguided Thief",
+        "outfitId": 684,
+        "tileX": 24,
+        "tileY": 25,
+        "worldX": 32514,
+        "worldY": 32426,
+        "worldZ": 9,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Misguided Bully",
+        "outfitId": 159,
+        "tileX": 29,
+        "tileY": 25,
+        "worldX": 32519,
+        "worldY": 32426,
+        "worldZ": 9,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Misguided Thief",
+        "outfitId": 684,
+        "tileX": 31,
+        "tileY": 25,
+        "worldX": 32521,
+        "worldY": 32426,
+        "worldZ": 9,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Misguided Bully",
+        "outfitId": 159,
+        "tileX": 35,
+        "tileY": 25,
+        "worldX": 32525,
+        "worldY": 32426,
+        "worldZ": 9,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Misguided Thief",
+        "outfitId": 684,
+        "tileX": 37,
+        "tileY": 25,
+        "worldX": 32527,
+        "worldY": 32426,
+        "worldZ": 9,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Misguided Bully",
+        "outfitId": 159,
+        "tileX": 41,
+        "tileY": 25,
+        "worldX": 32531,
+        "worldY": 32426,
+        "worldZ": 9,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Misguided Bully",
+        "outfitId": 159,
+        "tileX": 42,
+        "tileY": 29,
+        "worldX": 32532,
+        "worldY": 32430,
+        "worldZ": 9,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Misguided Bully",
+        "outfitId": 159,
+        "tileX": 41,
+        "tileY": 31,
+        "worldX": 32531,
+        "worldY": 32432,
+        "worldZ": 9,
+        "radius": 3,
+        "spawntime": 60
+      }
+    ]
+  },
+  "loot": {
+    "id": "THAIS-HUNT-0003",
+    "mapId": "THAIS-HUNT-0003",
+    "drops": [
+      {
+        "countMax": 153,
+        "countMin": 1,
+        "dropChance": 1.0,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "always",
+        "monsterName": "Misguided Bully"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0561,
+        "itemId": 25296,
+        "itemName": "rubbish amulet",
+        "rarity": "semi-rare",
+        "monsterName": "Misguided Bully"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0493,
+        "itemId": 9058,
+        "itemName": "gold ingot",
+        "rarity": "rare",
+        "monsterName": "Misguided Bully"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0463,
+        "itemId": 3041,
+        "itemName": "blue gem",
+        "rarity": "rare",
+        "monsterName": "Misguided Bully"
+      },
+      {
+        "countMax": 80,
+        "countMin": 1,
+        "dropChance": 1.0,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "always",
+        "monsterName": "Misguided Thief"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.5852,
+        "itemId": 3582,
+        "itemName": "ham",
+        "rarity": "common",
+        "monsterName": "Misguided Thief"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.4716,
+        "itemId": 3577,
+        "itemName": "meat",
+        "rarity": "common",
+        "monsterName": "Misguided Thief"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0966,
+        "itemId": 237,
+        "itemName": "strong mana potion",
+        "rarity": "semi-rare",
+        "monsterName": "Misguided Thief"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0625,
+        "itemId": 3037,
+        "itemName": "yellow gem",
+        "rarity": "semi-rare",
+        "monsterName": "Misguided Thief"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0625,
+        "itemId": 25296,
+        "itemName": "rubbish amulet",
+        "rarity": "semi-rare",
+        "monsterName": "Misguided Thief"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0568,
+        "itemId": 3039,
+        "itemName": "red gem",
+        "rarity": "semi-rare",
+        "monsterName": "Misguided Thief"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0568,
+        "itemId": 236,
+        "itemName": "strong health potion",
+        "rarity": "semi-rare",
+        "monsterName": "Misguided Thief"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0057,
+        "itemId": 16124,
+        "itemName": "blue crystal splinter",
+        "rarity": "rare",
+        "monsterName": "Misguided Thief"
+      }
+    ]
+  },
+  "hunts": {
+    "id": "THAIS-HUNT-0003",
+    "mapId": "THAIS-HUNT-0003",
+    "name": "Dragons — THAIS z13",
+    "label": "Dragons — THAIS z13",
+    "seed": "0000000000000000000000",
+    "assetsRoot": "assets/THAIS-HUNT-0003_muglex-clan-camp-sprites-v6",
+    "mapUrl": "assets/THAIS-HUNT-0003_muglex-clan-camp-sprites-v6/map.json",
+    "portrait": "/assets/character-default.png",
+    "monsterPreview": {
+      "name": "Misguided Bully",
+      "icon": "/assets/outfits/159.png",
+      "atlas": "/assets/outfits/159.json"
+    },
+    "startPosition": [
+      32518,
+      32422
+    ],
+    "city": "THAIS",
+    "_todo": [
+      "revisar startPosition (centro geométrico do mapBoundsRef, pode cair fora de área andável)"
+    ]
+  }
+}

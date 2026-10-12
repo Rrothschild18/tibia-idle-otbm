@@ -1,0 +1,3009 @@
+{
+  "monsters": {
+    "id": "THAIS-HUNT-0013",
+    "mapId": "THAIS-HUNT-0013",
+    "assetsRoot": "assets/THAIS-HUNT-0013_ancient-temple-sprites/monsters",
+    "mapBoundsRef": {
+      "minX": 32301,
+      "minY": 32109,
+      "maxX": 32437,
+      "maxY": 32284
+    },
+    "monsterDefs": {
+      "15": {
+        "name": "Troll",
+        "outfitId": 15,
+        "atlas": {
+          "image": "assets/outfits/15.png",
+          "json": "assets/outfits/15.json"
+        },
+        "appearance": {
+          "looktype": 15,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 12,
+            "countMin": 1,
+            "dropChance": 0.653,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.18,
+            "itemId": 3268,
+            "itemName": "hand axe",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.15,
+            "itemId": 3577,
+            "itemName": "meat",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.13,
+            "itemId": 3277,
+            "itemName": "spear",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.12,
+            "itemId": 3355,
+            "itemName": "leather helmet",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1,
+            "itemId": 3552,
+            "itemName": "leather boots",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0795,
+            "itemId": 3003,
+            "itemName": "rope",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.05,
+            "itemId": 3336,
+            "itemName": "studded club",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0473,
+            "itemId": 3412,
+            "itemName": "wooden shield",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.01,
+            "itemId": 9689,
+            "itemName": "bunch of troll hair",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.01,
+            "itemId": 23986,
+            "itemName": "heavy old tome",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0008,
+            "itemId": 3054,
+            "itemName": "silver amulet",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 5960,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 5960
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 3987
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 3991
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 3992
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "15_0",
+          "east": "15_1",
+          "south": "15_2",
+          "west": "15_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "15_4",
+              "15_8",
+              "15_12",
+              "15_16",
+              "15_20",
+              "15_24",
+              "15_28",
+              "15_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "15_5",
+              "15_9",
+              "15_13",
+              "15_17",
+              "15_21",
+              "15_25",
+              "15_29",
+              "15_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "15_6",
+              "15_10",
+              "15_14",
+              "15_18",
+              "15_22",
+              "15_26",
+              "15_30",
+              "15_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "15_7",
+              "15_11",
+              "15_15",
+              "15_19",
+              "15_23",
+              "15_27",
+              "15_31",
+              "15_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "30": {
+        "name": "Spider",
+        "outfitId": 30,
+        "atlas": {
+          "image": "assets/outfits/30.png",
+          "json": "assets/outfits/30.json"
+        },
+        "appearance": {
+          "looktype": 30,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 5,
+            "countMin": 1,
+            "dropChance": 0.6515,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0096,
+            "itemId": 8031,
+            "itemName": "spider fangs",
+            "rarity": "rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 5961,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 5961
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4250
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4003
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4004
+            }
+          ]
+        },
+        "race": "venom",
+        "idle": {
+          "north": "30_0",
+          "east": "30_1",
+          "south": "30_2",
+          "west": "30_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "30_4",
+              "30_8",
+              "30_12",
+              "30_16",
+              "30_20",
+              "30_24",
+              "30_28",
+              "30_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "30_5",
+              "30_9",
+              "30_13",
+              "30_17",
+              "30_21",
+              "30_25",
+              "30_29",
+              "30_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "30_6",
+              "30_10",
+              "30_14",
+              "30_18",
+              "30_22",
+              "30_26",
+              "30_30",
+              "30_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "30_7",
+              "30_11",
+              "30_15",
+              "30_19",
+              "30_23",
+              "30_27",
+              "30_31",
+              "30_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "56": {
+        "name": "Cave Rat",
+        "outfitId": 56,
+        "atlas": {
+          "image": "assets/outfits/56.png",
+          "json": "assets/outfits/56.json"
+        },
+        "appearance": {
+          "looktype": 56,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.85,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.3,
+            "itemId": 3607,
+            "itemName": "cheese",
+            "rarity": "common"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.097,
+            "itemId": 3492,
+            "itemName": "worm",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0075,
+            "itemId": 3598,
+            "itemName": "cookie",
+            "rarity": "rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 5964,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 5964
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 3994
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 3995
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 3996
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "56_0",
+          "east": "56_1",
+          "south": "56_2",
+          "west": "56_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "56_4",
+              "56_8",
+              "56_12",
+              "56_16",
+              "56_20",
+              "56_24",
+              "56_28",
+              "56_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "56_5",
+              "56_9",
+              "56_13",
+              "56_17",
+              "56_21",
+              "56_25",
+              "56_29",
+              "56_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "56_6",
+              "56_10",
+              "56_14",
+              "56_18",
+              "56_22",
+              "56_26",
+              "56_30",
+              "56_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "56_7",
+              "56_11",
+              "56_15",
+              "56_19",
+              "56_23",
+              "56_27",
+              "56_31",
+              "56_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "36": {
+        "name": "Poison Spider",
+        "outfitId": 36,
+        "atlas": {
+          "image": "assets/outfits/36.png",
+          "json": "assets/outfits/36.json"
+        },
+        "appearance": {
+          "looktype": 36,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 4,
+            "countMin": 1,
+            "dropChance": 0.75,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0114,
+            "itemId": 11485,
+            "itemName": "poison spider shell",
+            "rarity": "rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 5974,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 5974
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4029
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4066
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4125
+            }
+          ]
+        },
+        "race": "venom",
+        "idle": {
+          "north": "36_0",
+          "east": "36_1",
+          "south": "36_2",
+          "west": "36_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "36_4",
+              "36_8",
+              "36_12",
+              "36_16",
+              "36_20",
+              "36_24",
+              "36_28",
+              "36_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "36_5",
+              "36_9",
+              "36_13",
+              "36_17",
+              "36_21",
+              "36_25",
+              "36_29",
+              "36_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "36_6",
+              "36_10",
+              "36_14",
+              "36_18",
+              "36_22",
+              "36_26",
+              "36_30",
+              "36_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "36_7",
+              "36_11",
+              "36_15",
+              "36_19",
+              "36_23",
+              "36_27",
+              "36_31",
+              "36_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "21": {
+        "name": "Rat",
+        "outfitId": 21,
+        "atlas": {
+          "image": "assets/outfits/21.png",
+          "json": "assets/outfits/21.json"
+        },
+        "appearance": {
+          "looktype": 21,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 4,
+            "countMin": 1,
+            "dropChance": 1.0,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "always"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.3941,
+            "itemId": 3607,
+            "itemName": "cheese",
+            "rarity": "common"
+          }
+        ],
+        "corpse": {
+          "itemId": 5964,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 5964
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 3994
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 3995
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 3996
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "21_0",
+          "east": "21_1",
+          "south": "21_2",
+          "west": "21_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "21_4",
+              "21_8",
+              "21_12",
+              "21_16",
+              "21_20",
+              "21_24",
+              "21_28",
+              "21_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "21_5",
+              "21_9",
+              "21_13",
+              "21_17",
+              "21_21",
+              "21_25",
+              "21_29",
+              "21_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "21_6",
+              "21_10",
+              "21_14",
+              "21_18",
+              "21_22",
+              "21_26",
+              "21_30",
+              "21_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "21_7",
+              "21_11",
+              "21_15",
+              "21_19",
+              "21_23",
+              "21_27",
+              "21_31",
+              "21_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "26": {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "atlas": {
+          "image": "assets/outfits/26.png",
+          "json": "assets/outfits/26.json"
+        },
+        "appearance": {
+          "looktype": 26,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 17,
+            "countMin": 1,
+            "dropChance": 0.7176,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.2012,
+            "itemId": 3582,
+            "itemName": "ham",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.2,
+            "itemId": 3577,
+            "itemName": "meat",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1,
+            "itemId": 9692,
+            "itemName": "lump of dirt",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.045,
+            "itemId": 3286,
+            "itemName": "mace",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.03,
+            "itemId": 3264,
+            "itemName": "sword",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 3,
+            "countMin": 1,
+            "dropChance": 0.03,
+            "itemId": 3492,
+            "itemName": "worm",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0189,
+            "itemId": 3374,
+            "itemName": "legion helmet",
+            "rarity": "rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 5967,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 5967
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4266
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4267
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4145
+            }
+          ]
+        },
+        "race": "blood",
+        "moving": {
+          "north": {
+            "frames": [
+              "26_0",
+              "26_4",
+              "26_8",
+              "26_12",
+              "26_16",
+              "26_20",
+              "26_24",
+              "26_28",
+              "26_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "26_1",
+              "26_5",
+              "26_9",
+              "26_13",
+              "26_17",
+              "26_21",
+              "26_25",
+              "26_29",
+              "26_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "26_2",
+              "26_6",
+              "26_10",
+              "26_14",
+              "26_18",
+              "26_22",
+              "26_26",
+              "26_30",
+              "26_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "26_3",
+              "26_7",
+              "26_11",
+              "26_15",
+              "26_19",
+              "26_23",
+              "26_27",
+              "26_31",
+              "26_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        },
+        "idle": {
+          "north": {
+            "frames": [
+              "26_0",
+              "26_4",
+              "26_8",
+              "26_12",
+              "26_16",
+              "26_20",
+              "26_24",
+              "26_28",
+              "26_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "26_1",
+              "26_5",
+              "26_9",
+              "26_13",
+              "26_17",
+              "26_21",
+              "26_25",
+              "26_29",
+              "26_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "26_2",
+              "26_6",
+              "26_10",
+              "26_14",
+              "26_18",
+              "26_22",
+              "26_26",
+              "26_30",
+              "26_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "26_3",
+              "26_7",
+              "26_11",
+              "26_15",
+              "26_19",
+              "26_23",
+              "26_27",
+              "26_31",
+              "26_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "122": {
+        "name": "Bat",
+        "outfitId": 122,
+        "atlas": {
+          "image": "assets/outfits/122.png",
+          "json": "assets/outfits/122.json"
+        },
+        "appearance": {
+          "looktype": 122,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0122,
+            "itemId": 5894,
+            "itemName": "bat wing",
+            "rarity": "rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 6053,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 6053
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4363
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4364
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4365
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": {
+            "frames": [
+              "122_0",
+              "122_4",
+              "122_8",
+              "122_12",
+              "122_16",
+              "122_20",
+              "122_24",
+              "122_28"
+            ],
+            "frameRate": 10.0,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "122_1",
+              "122_5",
+              "122_9",
+              "122_13",
+              "122_17",
+              "122_21",
+              "122_25",
+              "122_29"
+            ],
+            "frameRate": 10.0,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "122_2",
+              "122_6",
+              "122_10",
+              "122_14",
+              "122_18",
+              "122_22",
+              "122_26",
+              "122_30"
+            ],
+            "frameRate": 10.0,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "122_3",
+              "122_7",
+              "122_11",
+              "122_15",
+              "122_19",
+              "122_23",
+              "122_27",
+              "122_31"
+            ],
+            "frameRate": 10.0,
+            "loopType": "infinite"
+          }
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "122_32",
+              "122_36",
+              "122_40",
+              "122_44",
+              "122_48",
+              "122_52",
+              "122_56",
+              "122_60"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "122_33",
+              "122_37",
+              "122_41",
+              "122_45",
+              "122_49",
+              "122_53",
+              "122_57",
+              "122_61"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "122_34",
+              "122_38",
+              "122_42",
+              "122_46",
+              "122_50",
+              "122_54",
+              "122_58",
+              "122_62"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "122_35",
+              "122_39",
+              "122_43",
+              "122_47",
+              "122_51",
+              "122_55",
+              "122_59",
+              "122_63"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      }
+    },
+    "spawns": [
+      {
+        "name": "Troll",
+        "outfitId": 15,
+        "tileX": 33,
+        "tileY": 12,
+        "worldX": 32334,
+        "worldY": 32121,
+        "worldZ": 8,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Troll",
+        "outfitId": 15,
+        "tileX": 37,
+        "tileY": 14,
+        "worldX": 32338,
+        "worldY": 32123,
+        "worldZ": 8,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Troll",
+        "outfitId": 15,
+        "tileX": 39,
+        "tileY": 20,
+        "worldX": 32340,
+        "worldY": 32129,
+        "worldZ": 8,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Troll",
+        "outfitId": 15,
+        "tileX": 54,
+        "tileY": 21,
+        "worldX": 32355,
+        "worldY": 32130,
+        "worldZ": 8,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Troll",
+        "outfitId": 15,
+        "tileX": 55,
+        "tileY": 25,
+        "worldX": 32356,
+        "worldY": 32134,
+        "worldZ": 8,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Spider",
+        "outfitId": 30,
+        "tileX": 12,
+        "tileY": 21,
+        "worldX": 32313,
+        "worldY": 32130,
+        "worldZ": 8,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Troll",
+        "outfitId": 15,
+        "tileX": 15,
+        "tileY": 21,
+        "worldX": 32316,
+        "worldY": 32130,
+        "worldZ": 8,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Spider",
+        "outfitId": 30,
+        "tileX": 12,
+        "tileY": 25,
+        "worldX": 32313,
+        "worldY": 32134,
+        "worldZ": 8,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Spider",
+        "outfitId": 30,
+        "tileX": 17,
+        "tileY": 25,
+        "worldX": 32318,
+        "worldY": 32134,
+        "worldZ": 8,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Troll",
+        "outfitId": 15,
+        "tileX": 12,
+        "tileY": 27,
+        "worldX": 32313,
+        "worldY": 32136,
+        "worldZ": 8,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Spider",
+        "outfitId": 30,
+        "tileX": 14,
+        "tileY": 27,
+        "worldX": 32315,
+        "worldY": 32136,
+        "worldZ": 8,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Spider",
+        "outfitId": 30,
+        "tileX": 18,
+        "tileY": 27,
+        "worldX": 32319,
+        "worldY": 32136,
+        "worldZ": 8,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Troll",
+        "outfitId": 15,
+        "tileX": 17,
+        "tileY": 28,
+        "worldX": 32318,
+        "worldY": 32137,
+        "worldZ": 8,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Troll",
+        "outfitId": 15,
+        "tileX": 26,
+        "tileY": 27,
+        "worldX": 32327,
+        "worldY": 32136,
+        "worldZ": 8,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Troll",
+        "outfitId": 15,
+        "tileX": 31,
+        "tileY": 28,
+        "worldX": 32332,
+        "worldY": 32137,
+        "worldZ": 8,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Troll",
+        "outfitId": 15,
+        "tileX": 28,
+        "tileY": 29,
+        "worldX": 32329,
+        "worldY": 32138,
+        "worldZ": 8,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Troll",
+        "outfitId": 15,
+        "tileX": 42,
+        "tileY": 25,
+        "worldX": 32343,
+        "worldY": 32134,
+        "worldZ": 8,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Troll",
+        "outfitId": 15,
+        "tileX": 39,
+        "tileY": 29,
+        "worldX": 32340,
+        "worldY": 32138,
+        "worldZ": 8,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Troll",
+        "outfitId": 15,
+        "tileX": 43,
+        "tileY": 29,
+        "worldX": 32344,
+        "worldY": 32138,
+        "worldZ": 8,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Troll",
+        "outfitId": 15,
+        "tileX": 47,
+        "tileY": 30,
+        "worldX": 32348,
+        "worldY": 32139,
+        "worldZ": 8,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Troll",
+        "outfitId": 15,
+        "tileX": 50,
+        "tileY": 33,
+        "worldX": 32351,
+        "worldY": 32142,
+        "worldZ": 8,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Troll",
+        "outfitId": 15,
+        "tileX": 53,
+        "tileY": 31,
+        "worldX": 32354,
+        "worldY": 32140,
+        "worldZ": 8,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Troll",
+        "outfitId": 15,
+        "tileX": 56,
+        "tileY": 34,
+        "worldX": 32357,
+        "worldY": 32143,
+        "worldZ": 8,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Troll",
+        "outfitId": 15,
+        "tileX": 38,
+        "tileY": 35,
+        "worldX": 32339,
+        "worldY": 32144,
+        "worldZ": 8,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Troll",
+        "outfitId": 15,
+        "tileX": 40,
+        "tileY": 36,
+        "worldX": 32341,
+        "worldY": 32145,
+        "worldZ": 8,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Troll",
+        "outfitId": 15,
+        "tileX": 44,
+        "tileY": 36,
+        "worldX": 32345,
+        "worldY": 32145,
+        "worldZ": 8,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Cave Rat",
+        "outfitId": 56,
+        "tileX": 39,
+        "tileY": 37,
+        "worldX": 32340,
+        "worldY": 32146,
+        "worldZ": 8,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Cave Rat",
+        "outfitId": 56,
+        "tileX": 43,
+        "tileY": 38,
+        "worldX": 32344,
+        "worldY": 32147,
+        "worldZ": 8,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Troll",
+        "outfitId": 15,
+        "tileX": 38,
+        "tileY": 40,
+        "worldX": 32339,
+        "worldY": 32149,
+        "worldZ": 8,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Troll",
+        "outfitId": 15,
+        "tileX": 42,
+        "tileY": 40,
+        "worldX": 32343,
+        "worldY": 32149,
+        "worldZ": 8,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Troll",
+        "outfitId": 15,
+        "tileX": 38,
+        "tileY": 43,
+        "worldX": 32339,
+        "worldY": 32152,
+        "worldZ": 8,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Troll",
+        "outfitId": 15,
+        "tileX": 38,
+        "tileY": 46,
+        "worldX": 32339,
+        "worldY": 32155,
+        "worldZ": 8,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Troll",
+        "outfitId": 15,
+        "tileX": 51,
+        "tileY": 42,
+        "worldX": 32352,
+        "worldY": 32151,
+        "worldZ": 8,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Troll",
+        "outfitId": 15,
+        "tileX": 49,
+        "tileY": 45,
+        "worldX": 32350,
+        "worldY": 32154,
+        "worldZ": 8,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Poison Spider",
+        "outfitId": 36,
+        "tileX": 23,
+        "tileY": 42,
+        "worldX": 32324,
+        "worldY": 32151,
+        "worldZ": 8,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Spider",
+        "outfitId": 30,
+        "tileX": 24,
+        "tileY": 45,
+        "worldX": 32325,
+        "worldY": 32154,
+        "worldZ": 8,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Spider",
+        "outfitId": 30,
+        "tileX": 21,
+        "tileY": 46,
+        "worldX": 32322,
+        "worldY": 32155,
+        "worldZ": 8,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Spider",
+        "outfitId": 30,
+        "tileX": 24,
+        "tileY": 46,
+        "worldX": 32325,
+        "worldY": 32155,
+        "worldZ": 8,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Poison Spider",
+        "outfitId": 36,
+        "tileX": 21,
+        "tileY": 48,
+        "worldX": 32322,
+        "worldY": 32157,
+        "worldZ": 8,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Troll",
+        "outfitId": 15,
+        "tileX": 47,
+        "tileY": 52,
+        "worldX": 32348,
+        "worldY": 32161,
+        "worldZ": 8,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Troll",
+        "outfitId": 15,
+        "tileX": 37,
+        "tileY": 53,
+        "worldX": 32338,
+        "worldY": 32162,
+        "worldZ": 8,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 71,
+        "tileY": 73,
+        "worldX": 32372,
+        "worldY": 32182,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 60
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 75,
+        "tileY": 74,
+        "worldX": 32376,
+        "worldY": 32183,
+        "worldZ": 8,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 77,
+        "tileY": 74,
+        "worldX": 32378,
+        "worldY": 32183,
+        "worldZ": 8,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 67,
+        "tileY": 76,
+        "worldX": 32368,
+        "worldY": 32185,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 67,
+        "tileY": 79,
+        "worldX": 32368,
+        "worldY": 32188,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 60
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 34,
+        "tileY": 80,
+        "worldX": 32335,
+        "worldY": 32189,
+        "worldZ": 8,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 40,
+        "tileY": 80,
+        "worldX": 32341,
+        "worldY": 32189,
+        "worldZ": 8,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 50,
+        "tileY": 80,
+        "worldX": 32351,
+        "worldY": 32189,
+        "worldZ": 8,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 53,
+        "tileY": 80,
+        "worldX": 32354,
+        "worldY": 32189,
+        "worldZ": 8,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Cave Rat",
+        "outfitId": 56,
+        "tileX": 123,
+        "tileY": 80,
+        "worldX": 32424,
+        "worldY": 32189,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 124,
+        "tileY": 82,
+        "worldX": 32425,
+        "worldY": 32191,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 68,
+        "tileY": 86,
+        "worldX": 32369,
+        "worldY": 32195,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 60
+      },
+      {
+        "name": "Cave Rat",
+        "outfitId": 56,
+        "tileX": 123,
+        "tileY": 89,
+        "worldX": 32424,
+        "worldY": 32198,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 68,
+        "tileY": 93,
+        "worldX": 32369,
+        "worldY": 32202,
+        "worldZ": 8,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 68,
+        "tileY": 95,
+        "worldX": 32369,
+        "worldY": 32204,
+        "worldZ": 8,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Spider",
+        "outfitId": 30,
+        "tileX": 75,
+        "tileY": 94,
+        "worldX": 32376,
+        "worldY": 32203,
+        "worldZ": 8,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Spider",
+        "outfitId": 30,
+        "tileX": 76,
+        "tileY": 97,
+        "worldX": 32377,
+        "worldY": 32206,
+        "worldZ": 8,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Spider",
+        "outfitId": 30,
+        "tileX": 78,
+        "tileY": 97,
+        "worldX": 32379,
+        "worldY": 32206,
+        "worldZ": 8,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 124,
+        "tileY": 97,
+        "worldX": 32425,
+        "worldY": 32206,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 60
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 68,
+        "tileY": 98,
+        "worldX": 32369,
+        "worldY": 32207,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 60
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 123,
+        "tileY": 102,
+        "worldX": 32424,
+        "worldY": 32211,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 60
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 67,
+        "tileY": 101,
+        "worldX": 32368,
+        "worldY": 32210,
+        "worldZ": 8,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 67,
+        "tileY": 108,
+        "worldX": 32368,
+        "worldY": 32217,
+        "worldZ": 8,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 68,
+        "tileY": 108,
+        "worldX": 32369,
+        "worldY": 32217,
+        "worldZ": 8,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 73,
+        "tileY": 105,
+        "worldX": 32374,
+        "worldY": 32214,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 77,
+        "tileY": 105,
+        "worldX": 32378,
+        "worldY": 32214,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 60
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 90,
+        "tileY": 105,
+        "worldX": 32391,
+        "worldY": 32214,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 94,
+        "tileY": 105,
+        "worldX": 32395,
+        "worldY": 32214,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 100,
+        "tileY": 105,
+        "worldX": 32401,
+        "worldY": 32214,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 60
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 99,
+        "tileY": 106,
+        "worldX": 32400,
+        "worldY": 32215,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 104,
+        "tileY": 105,
+        "worldX": 32405,
+        "worldY": 32214,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 60
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 109,
+        "tileY": 106,
+        "worldX": 32410,
+        "worldY": 32215,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 116,
+        "tileY": 105,
+        "worldX": 32417,
+        "worldY": 32214,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 118,
+        "tileY": 106,
+        "worldX": 32419,
+        "worldY": 32215,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 123,
+        "tileY": 105,
+        "worldX": 32424,
+        "worldY": 32214,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 124,
+        "tileY": 105,
+        "worldX": 32425,
+        "worldY": 32214,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 57,
+        "tileY": 106,
+        "worldX": 32358,
+        "worldY": 32215,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 60
+      },
+      {
+        "name": "Cave Rat",
+        "outfitId": 56,
+        "tileX": 84,
+        "tileY": 105,
+        "worldX": 32385,
+        "worldY": 32214,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 84,
+        "tileY": 106,
+        "worldX": 32385,
+        "worldY": 32215,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 60
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 29,
+        "tileY": 106,
+        "worldX": 32330,
+        "worldY": 32215,
+        "worldZ": 8,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 27,
+        "tileY": 108,
+        "worldX": 32328,
+        "worldY": 32217,
+        "worldZ": 8,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 27,
+        "tileY": 109,
+        "worldX": 32328,
+        "worldY": 32218,
+        "worldZ": 8,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 121,
+        "tileY": 111,
+        "worldX": 32422,
+        "worldY": 32220,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 60
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 68,
+        "tileY": 113,
+        "worldX": 32369,
+        "worldY": 32222,
+        "worldZ": 8,
+        "radius": 5,
+        "spawntime": 60
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 68,
+        "tileY": 115,
+        "worldX": 32369,
+        "worldY": 32224,
+        "worldZ": 8,
+        "radius": 5,
+        "spawntime": 60
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 67,
+        "tileY": 119,
+        "worldX": 32368,
+        "worldY": 32228,
+        "worldZ": 8,
+        "radius": 5,
+        "spawntime": 90
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 68,
+        "tileY": 119,
+        "worldX": 32369,
+        "worldY": 32228,
+        "worldZ": 8,
+        "radius": 5,
+        "spawntime": 90
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 68,
+        "tileY": 120,
+        "worldX": 32369,
+        "worldY": 32229,
+        "worldZ": 8,
+        "radius": 5,
+        "spawntime": 60
+      },
+      {
+        "name": "Cave Rat",
+        "outfitId": 56,
+        "tileX": 121,
+        "tileY": 114,
+        "worldX": 32422,
+        "worldY": 32223,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 122,
+        "tileY": 115,
+        "worldX": 32423,
+        "worldY": 32224,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 60
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 122,
+        "tileY": 116,
+        "worldX": 32423,
+        "worldY": 32225,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 60
+      },
+      {
+        "name": "Cave Rat",
+        "outfitId": 56,
+        "tileX": 123,
+        "tileY": 116,
+        "worldX": 32424,
+        "worldY": 32225,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 27,
+        "tileY": 117,
+        "worldX": 32328,
+        "worldY": 32226,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 60
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 33,
+        "tileY": 118,
+        "worldX": 32334,
+        "worldY": 32227,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 60
+      },
+      {
+        "name": "Cave Rat",
+        "outfitId": 56,
+        "tileX": 88,
+        "tileY": 117,
+        "worldX": 32389,
+        "worldY": 32226,
+        "worldZ": 8,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Cave Rat",
+        "outfitId": 56,
+        "tileX": 90,
+        "tileY": 117,
+        "worldX": 32391,
+        "worldY": 32226,
+        "worldZ": 8,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Cave Rat",
+        "outfitId": 56,
+        "tileX": 89,
+        "tileY": 119,
+        "worldX": 32390,
+        "worldY": 32228,
+        "worldZ": 8,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Cave Rat",
+        "outfitId": 56,
+        "tileX": 91,
+        "tileY": 121,
+        "worldX": 32392,
+        "worldY": 32230,
+        "worldZ": 8,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 23,
+        "tileY": 119,
+        "worldX": 32324,
+        "worldY": 32228,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 60
+      },
+      {
+        "name": "Cave Rat",
+        "outfitId": 56,
+        "tileX": 98,
+        "tileY": 121,
+        "worldX": 32399,
+        "worldY": 32230,
+        "worldZ": 8,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Cave Rat",
+        "outfitId": 56,
+        "tileX": 101,
+        "tileY": 121,
+        "worldX": 32402,
+        "worldY": 32230,
+        "worldZ": 8,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 123,
+        "tileY": 121,
+        "worldX": 32424,
+        "worldY": 32230,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Cave Rat",
+        "outfitId": 56,
+        "tileX": 124,
+        "tileY": 121,
+        "worldX": 32425,
+        "worldY": 32230,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 67,
+        "tileY": 124,
+        "worldX": 32368,
+        "worldY": 32233,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 68,
+        "tileY": 124,
+        "worldX": 32369,
+        "worldY": 32233,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 123,
+        "tileY": 126,
+        "worldX": 32424,
+        "worldY": 32235,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 1768
+      },
+      {
+        "name": "Cave Rat",
+        "outfitId": 56,
+        "tileX": 123,
+        "tileY": 127,
+        "worldX": 32424,
+        "worldY": 32236,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 38,
+        "tileY": 128,
+        "worldX": 32339,
+        "worldY": 32237,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 60
+      },
+      {
+        "name": "Cave Rat",
+        "outfitId": 56,
+        "tileX": 22,
+        "tileY": 133,
+        "worldX": 32323,
+        "worldY": 32242,
+        "worldZ": 8,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Bat",
+        "outfitId": 122,
+        "tileX": 58,
+        "tileY": 131,
+        "worldX": 32359,
+        "worldY": 32240,
+        "worldZ": 8,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 61,
+        "tileY": 133,
+        "worldX": 32362,
+        "worldY": 32242,
+        "worldZ": 8,
+        "radius": 2,
+        "spawntime": 60
+      },
+      {
+        "name": "Bat",
+        "outfitId": 122,
+        "tileX": 60,
+        "tileY": 134,
+        "worldX": 32361,
+        "worldY": 32243,
+        "worldZ": 8,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 67,
+        "tileY": 131,
+        "worldX": 32368,
+        "worldY": 32240,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 67,
+        "tileY": 133,
+        "worldX": 32368,
+        "worldY": 32242,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Cave Rat",
+        "outfitId": 56,
+        "tileX": 124,
+        "tileY": 131,
+        "worldX": 32425,
+        "worldY": 32240,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 64,
+        "tileY": 133,
+        "worldX": 32365,
+        "worldY": 32242,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 60
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 38,
+        "tileY": 136,
+        "worldX": 32339,
+        "worldY": 32245,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Cave Rat",
+        "outfitId": 56,
+        "tileX": 124,
+        "tileY": 136,
+        "worldX": 32425,
+        "worldY": 32245,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 22,
+        "tileY": 139,
+        "worldX": 32323,
+        "worldY": 32248,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 60
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 23,
+        "tileY": 139,
+        "worldX": 32324,
+        "worldY": 32248,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 60
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 37,
+        "tileY": 140,
+        "worldX": 32338,
+        "worldY": 32249,
+        "worldZ": 8,
+        "radius": 2,
+        "spawntime": 60
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 38,
+        "tileY": 143,
+        "worldX": 32339,
+        "worldY": 32252,
+        "worldZ": 8,
+        "radius": 2,
+        "spawntime": 60
+      },
+      {
+        "name": "Cave Rat",
+        "outfitId": 56,
+        "tileX": 55,
+        "tileY": 143,
+        "worldX": 32356,
+        "worldY": 32252,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 65,
+        "tileY": 142,
+        "worldX": 32366,
+        "worldY": 32251,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 60
+      },
+      {
+        "name": "Cave Rat",
+        "outfitId": 56,
+        "tileX": 47,
+        "tileY": 142,
+        "worldX": 32348,
+        "worldY": 32251,
+        "worldZ": 8,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 68,
+        "tileY": 142,
+        "worldX": 32369,
+        "worldY": 32251,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 69,
+        "tileY": 142,
+        "worldX": 32370,
+        "worldY": 32251,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 60
+      },
+      {
+        "name": "Cave Rat",
+        "outfitId": 56,
+        "tileX": 68,
+        "tileY": 143,
+        "worldX": 32369,
+        "worldY": 32252,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 70,
+        "tileY": 143,
+        "worldX": 32371,
+        "worldY": 32252,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Cave Rat",
+        "outfitId": 56,
+        "tileX": 123,
+        "tileY": 140,
+        "worldX": 32424,
+        "worldY": 32249,
+        "worldZ": 8,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Cave Rat",
+        "outfitId": 56,
+        "tileX": 124,
+        "tileY": 143,
+        "worldX": 32425,
+        "worldY": 32252,
+        "worldZ": 8,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 123,
+        "tileY": 144,
+        "worldX": 32424,
+        "worldY": 32253,
+        "worldZ": 8,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Cave Rat",
+        "outfitId": 56,
+        "tileX": 108,
+        "tileY": 146,
+        "worldX": 32409,
+        "worldY": 32255,
+        "worldZ": 8,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 110,
+        "tileY": 146,
+        "worldX": 32411,
+        "worldY": 32255,
+        "worldZ": 8,
+        "radius": 2,
+        "spawntime": 60
+      },
+      {
+        "name": "Cave Rat",
+        "outfitId": 56,
+        "tileX": 111,
+        "tileY": 146,
+        "worldX": 32412,
+        "worldY": 32255,
+        "worldZ": 8,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Cave Rat",
+        "outfitId": 56,
+        "tileX": 98,
+        "tileY": 146,
+        "worldX": 32399,
+        "worldY": 32255,
+        "worldZ": 8,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Cave Rat",
+        "outfitId": 56,
+        "tileX": 102,
+        "tileY": 146,
+        "worldX": 32403,
+        "worldY": 32255,
+        "worldZ": 8,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Cave Rat",
+        "outfitId": 56,
+        "tileX": 99,
+        "tileY": 147,
+        "worldX": 32400,
+        "worldY": 32256,
+        "worldZ": 8,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Cave Rat",
+        "outfitId": 56,
+        "tileX": 38,
+        "tileY": 150,
+        "worldX": 32339,
+        "worldY": 32259,
+        "worldZ": 8,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 37,
+        "tileY": 156,
+        "worldX": 32338,
+        "worldY": 32265,
+        "worldZ": 8,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 38,
+        "tileY": 156,
+        "worldX": 32339,
+        "worldY": 32265,
+        "worldZ": 8,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Rat",
+        "outfitId": 21,
+        "tileX": 38,
+        "tileY": 158,
+        "worldX": 32339,
+        "worldY": 32267,
+        "worldZ": 8,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Spider",
+        "outfitId": 30,
+        "tileX": 37,
+        "tileY": 160,
+        "worldX": 32338,
+        "worldY": 32269,
+        "worldZ": 8,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Spider",
+        "outfitId": 30,
+        "tileX": 39,
+        "tileY": 163,
+        "worldX": 32340,
+        "worldY": 32272,
+        "worldZ": 8,
+        "radius": 4,
+        "spawntime": 90
+      }
+    ]
+  },
+  "loot": {
+    "id": "THAIS-HUNT-0013",
+    "mapId": "THAIS-HUNT-0013",
+    "drops": [
+      {
+        "countMax": 12,
+        "countMin": 1,
+        "dropChance": 0.653,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Troll"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.18,
+        "itemId": 3268,
+        "itemName": "hand axe",
+        "rarity": "semi-rare",
+        "monsterName": "Troll"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.15,
+        "itemId": 3577,
+        "itemName": "meat",
+        "rarity": "semi-rare",
+        "monsterName": "Troll"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.13,
+        "itemId": 3277,
+        "itemName": "spear",
+        "rarity": "semi-rare",
+        "monsterName": "Troll"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.12,
+        "itemId": 3355,
+        "itemName": "leather helmet",
+        "rarity": "semi-rare",
+        "monsterName": "Troll"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1,
+        "itemId": 3552,
+        "itemName": "leather boots",
+        "rarity": "semi-rare",
+        "monsterName": "Troll"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0795,
+        "itemId": 3003,
+        "itemName": "rope",
+        "rarity": "semi-rare",
+        "monsterName": "Troll"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.05,
+        "itemId": 3336,
+        "itemName": "studded club",
+        "rarity": "semi-rare",
+        "monsterName": "Troll"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0473,
+        "itemId": 3412,
+        "itemName": "wooden shield",
+        "rarity": "rare",
+        "monsterName": "Troll"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.01,
+        "itemId": 9689,
+        "itemName": "bunch of troll hair",
+        "rarity": "rare",
+        "monsterName": "Troll"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.01,
+        "itemId": 23986,
+        "itemName": "heavy old tome",
+        "rarity": "rare",
+        "monsterName": "Troll"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0008,
+        "itemId": 3054,
+        "itemName": "silver amulet",
+        "rarity": "very-rare",
+        "monsterName": "Troll"
+      },
+      {
+        "countMax": 5,
+        "countMin": 1,
+        "dropChance": 0.6515,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Spider"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0096,
+        "itemId": 8031,
+        "itemName": "spider fangs",
+        "rarity": "rare",
+        "monsterName": "Spider"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.85,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Cave Rat"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.3,
+        "itemId": 3607,
+        "itemName": "cheese",
+        "rarity": "common",
+        "monsterName": "Cave Rat"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.097,
+        "itemId": 3492,
+        "itemName": "worm",
+        "rarity": "semi-rare",
+        "monsterName": "Cave Rat"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0075,
+        "itemId": 3598,
+        "itemName": "cookie",
+        "rarity": "rare",
+        "monsterName": "Cave Rat"
+      },
+      {
+        "countMax": 4,
+        "countMin": 1,
+        "dropChance": 0.75,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Poison Spider"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0114,
+        "itemId": 11485,
+        "itemName": "poison spider shell",
+        "rarity": "rare",
+        "monsterName": "Poison Spider"
+      },
+      {
+        "countMax": 4,
+        "countMin": 1,
+        "dropChance": 1.0,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "always",
+        "monsterName": "Rat"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.3941,
+        "itemId": 3607,
+        "itemName": "cheese",
+        "rarity": "common",
+        "monsterName": "Rat"
+      },
+      {
+        "countMax": 17,
+        "countMin": 1,
+        "dropChance": 0.7176,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Rotworm"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.2012,
+        "itemId": 3582,
+        "itemName": "ham",
+        "rarity": "semi-rare",
+        "monsterName": "Rotworm"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.2,
+        "itemId": 3577,
+        "itemName": "meat",
+        "rarity": "semi-rare",
+        "monsterName": "Rotworm"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1,
+        "itemId": 9692,
+        "itemName": "lump of dirt",
+        "rarity": "semi-rare",
+        "monsterName": "Rotworm"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.045,
+        "itemId": 3286,
+        "itemName": "mace",
+        "rarity": "rare",
+        "monsterName": "Rotworm"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.03,
+        "itemId": 3264,
+        "itemName": "sword",
+        "rarity": "rare",
+        "monsterName": "Rotworm"
+      },
+      {
+        "countMax": 3,
+        "countMin": 1,
+        "dropChance": 0.03,
+        "itemId": 3492,
+        "itemName": "worm",
+        "rarity": "rare",
+        "monsterName": "Rotworm"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0189,
+        "itemId": 3374,
+        "itemName": "legion helmet",
+        "rarity": "rare",
+        "monsterName": "Rotworm"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0122,
+        "itemId": 5894,
+        "itemName": "bat wing",
+        "rarity": "rare",
+        "monsterName": "Bat"
+      }
+    ]
+  },
+  "hunts": {
+    "id": "THAIS-HUNT-0013",
+    "mapId": "THAIS-HUNT-0013",
+    "name": "Ancient Temple",
+    "label": "Ancient Temple",
+    "seed": "0000000000000000000000",
+    "assetsRoot": "assets/THAIS-HUNT-0013_ancient-temple-sprites-v6",
+    "mapUrl": "assets/THAIS-HUNT-0013_ancient-temple-sprites-v6/map.json",
+    "portrait": "/assets/character-default.png",
+    "monsterPreview": {
+      "name": "Rat",
+      "icon": "/assets/outfits/21.png",
+      "atlas": "/assets/outfits/21.json"
+    },
+    "startPosition": [
+      32369,
+      32196
+    ],
+    "city": "THAIS",
+    "_todo": [
+      "confirmar name/label (título gerado automaticamente do nome da pasta)",
+      "revisar startPosition (centro geométrico do mapBoundsRef, pode cair fora de área andável)"
+    ]
+  }
+}

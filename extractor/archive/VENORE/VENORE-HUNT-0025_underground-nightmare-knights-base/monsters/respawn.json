@@ -1,0 +1,643 @@
+{
+  "mapBoundsRef": {
+    "minX": 32746,
+    "minY": 32316,
+    "maxX": 32809,
+    "maxY": 32383
+  },
+  "monsterDefs": {
+    "37": {
+      "name": "Demon Skeleton",
+      "outfitId": 37,
+      "atlas": {
+        "image": "assets/outfits/37.png",
+        "json": "assets/outfits/37.json"
+      },
+      "appearance": {
+        "looktype": 37,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 75,
+          "countMin": 1,
+          "dropChance": 0.97,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.2012,
+          "itemId": 266,
+          "itemName": "health potion",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.126,
+          "itemId": 9647,
+          "itemName": "demonic skeletal hand",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 3,
+          "countMin": 1,
+          "dropChance": 0.1,
+          "itemId": 3287,
+          "itemName": "throwing star",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.053,
+          "itemId": 268,
+          "itemName": "mana potion",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0527,
+          "itemId": 2920,
+          "itemName": "torch",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.05,
+          "itemId": 3413,
+          "itemName": "battle shield",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.04,
+          "itemId": 3305,
+          "itemName": "battle hammer",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0345,
+          "itemId": 3353,
+          "itemName": "iron helmet",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.029,
+          "itemId": 3027,
+          "itemName": "black pearl",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.014,
+          "itemId": 3030,
+          "itemName": "small ruby",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0069,
+          "itemId": 3078,
+          "itemName": "mysterious fetish",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0052,
+          "itemId": 3062,
+          "itemName": "mind stone",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.001,
+          "itemId": 3415,
+          "itemName": "guardian shield",
+          "rarity": "very-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 5963,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5963
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 3990
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4103
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4104
+          }
+        ]
+      },
+      "race": "undead",
+      "idle": {
+        "north": "37_0",
+        "east": "37_1",
+        "south": "37_2",
+        "west": "37_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "37_4",
+            "37_8",
+            "37_12",
+            "37_16",
+            "37_20",
+            "37_24",
+            "37_28",
+            "37_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "37_5",
+            "37_9",
+            "37_13",
+            "37_17",
+            "37_21",
+            "37_25",
+            "37_29",
+            "37_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "37_6",
+            "37_10",
+            "37_14",
+            "37_18",
+            "37_22",
+            "37_26",
+            "37_30",
+            "37_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "37_7",
+            "37_11",
+            "37_15",
+            "37_19",
+            "37_23",
+            "37_27",
+            "37_31",
+            "37_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "48": {
+      "name": "Ghost",
+      "outfitId": 48,
+      "atlas": {
+        "image": "assets/outfits/48.png",
+        "json": "assets/outfits/48.json"
+      },
+      "appearance": {
+        "looktype": 48,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.144,
+          "itemId": 3740,
+          "itemName": "shadow herb",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.1061,
+          "itemId": 3282,
+          "itemName": "morning star",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.088,
+          "itemId": 3565,
+          "itemName": "cape",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.07002,
+          "itemId": 3292,
+          "itemName": "combat knife",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0194,
+          "itemId": 5909,
+          "itemName": "white piece of cloth",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0187,
+          "itemId": 9690,
+          "itemName": "ghostly tissue",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0131,
+          "itemId": 2828,
+          "itemName": "book",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0086,
+          "itemId": 3432,
+          "itemName": "ancient shield",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0018,
+          "itemId": 3049,
+          "itemName": "stealth ring",
+          "rarity": "very-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 5993,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5993
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4094
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4158
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4159
+          }
+        ]
+      },
+      "race": "undead",
+      "idle": {
+        "north": {
+          "frames": [
+            "48_0",
+            "48_4",
+            "48_8",
+            "48_12",
+            "48_16",
+            "48_20",
+            "48_24",
+            "48_28"
+          ],
+          "frameRate": 10.0,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "48_1",
+            "48_5",
+            "48_9",
+            "48_13",
+            "48_17",
+            "48_21",
+            "48_25",
+            "48_29"
+          ],
+          "frameRate": 10.0,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "48_2",
+            "48_6",
+            "48_10",
+            "48_14",
+            "48_18",
+            "48_22",
+            "48_26",
+            "48_30"
+          ],
+          "frameRate": 10.0,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "48_3",
+            "48_7",
+            "48_11",
+            "48_15",
+            "48_19",
+            "48_23",
+            "48_27",
+            "48_31"
+          ],
+          "frameRate": 10.0,
+          "loopType": "infinite"
+        }
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "48_32",
+            "48_36",
+            "48_40",
+            "48_44",
+            "48_48",
+            "48_52",
+            "48_56",
+            "48_60"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "48_33",
+            "48_37",
+            "48_41",
+            "48_45",
+            "48_49",
+            "48_53",
+            "48_57",
+            "48_61"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "48_34",
+            "48_38",
+            "48_42",
+            "48_46",
+            "48_50",
+            "48_54",
+            "48_58",
+            "48_62"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "48_35",
+            "48_39",
+            "48_43",
+            "48_47",
+            "48_51",
+            "48_55",
+            "48_59",
+            "48_63"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    }
+  },
+  "spawns": [
+    {
+      "name": "Demon Skeleton",
+      "outfitId": 37,
+      "tileX": 18,
+      "tileY": 12,
+      "worldX": 32764,
+      "worldY": 32328,
+      "worldZ": 10,
+      "radius": 7,
+      "spawntime": 90
+    },
+    {
+      "name": "Demon Skeleton",
+      "outfitId": 37,
+      "tileX": 13,
+      "tileY": 13,
+      "worldX": 32759,
+      "worldY": 32329,
+      "worldZ": 10,
+      "radius": 7,
+      "spawntime": 90
+    },
+    {
+      "name": "Ghost",
+      "outfitId": 48,
+      "tileX": 16,
+      "tileY": 14,
+      "worldX": 32762,
+      "worldY": 32330,
+      "worldZ": 10,
+      "radius": 7,
+      "spawntime": 90
+    },
+    {
+      "name": "Demon Skeleton",
+      "outfitId": 37,
+      "tileX": 22,
+      "tileY": 15,
+      "worldX": 32768,
+      "worldY": 32331,
+      "worldZ": 10,
+      "radius": 7,
+      "spawntime": 90
+    },
+    {
+      "name": "Demon Skeleton",
+      "outfitId": 37,
+      "tileX": 12,
+      "tileY": 16,
+      "worldX": 32758,
+      "worldY": 32332,
+      "worldZ": 10,
+      "radius": 7,
+      "spawntime": 90
+    },
+    {
+      "name": "Ghost",
+      "outfitId": 48,
+      "tileX": 21,
+      "tileY": 18,
+      "worldX": 32767,
+      "worldY": 32334,
+      "worldZ": 10,
+      "radius": 7,
+      "spawntime": 90
+    },
+    {
+      "name": "Demon Skeleton",
+      "outfitId": 37,
+      "tileX": 19,
+      "tileY": 19,
+      "worldX": 32765,
+      "worldY": 32335,
+      "worldZ": 10,
+      "radius": 7,
+      "spawntime": 90
+    },
+    {
+      "name": "Demon Skeleton",
+      "outfitId": 37,
+      "tileX": 16,
+      "tileY": 20,
+      "worldX": 32762,
+      "worldY": 32336,
+      "worldZ": 10,
+      "radius": 7,
+      "spawntime": 90
+    },
+    {
+      "name": "Demon Skeleton",
+      "outfitId": 37,
+      "tileX": 24,
+      "tileY": 21,
+      "worldX": 32770,
+      "worldY": 32337,
+      "worldZ": 10,
+      "radius": 7,
+      "spawntime": 90
+    },
+    {
+      "name": "Demon Skeleton",
+      "outfitId": 37,
+      "tileX": 45,
+      "tileY": 46,
+      "worldX": 32791,
+      "worldY": 32362,
+      "worldZ": 10,
+      "radius": 5,
+      "spawntime": 90
+    },
+    {
+      "name": "Demon Skeleton",
+      "outfitId": 37,
+      "tileX": 47,
+      "tileY": 48,
+      "worldX": 32793,
+      "worldY": 32364,
+      "worldZ": 10,
+      "radius": 5,
+      "spawntime": 90
+    },
+    {
+      "name": "Demon Skeleton",
+      "outfitId": 37,
+      "tileX": 43,
+      "tileY": 52,
+      "worldX": 32789,
+      "worldY": 32368,
+      "worldZ": 10,
+      "radius": 5,
+      "spawntime": 90
+    },
+    {
+      "name": "Demon Skeleton",
+      "outfitId": 37,
+      "tileX": 47,
+      "tileY": 52,
+      "worldX": 32793,
+      "worldY": 32368,
+      "worldZ": 10,
+      "radius": 5,
+      "spawntime": 90
+    },
+    {
+      "name": "Ghost",
+      "outfitId": 48,
+      "tileX": 51,
+      "tileY": 53,
+      "worldX": 32797,
+      "worldY": 32369,
+      "worldZ": 10,
+      "radius": 5,
+      "spawntime": 90
+    },
+    {
+      "name": "Demon Skeleton",
+      "outfitId": 37,
+      "tileX": 41,
+      "tileY": 56,
+      "worldX": 32787,
+      "worldY": 32372,
+      "worldZ": 10,
+      "radius": 5,
+      "spawntime": 90
+    },
+    {
+      "name": "Demon Skeleton",
+      "outfitId": 37,
+      "tileX": 45,
+      "tileY": 56,
+      "worldX": 32791,
+      "worldY": 32372,
+      "worldZ": 10,
+      "radius": 5,
+      "spawntime": 90
+    },
+    {
+      "name": "Demon Skeleton",
+      "outfitId": 37,
+      "tileX": 50,
+      "tileY": 56,
+      "worldX": 32796,
+      "worldY": 32372,
+      "worldZ": 10,
+      "radius": 5,
+      "spawntime": 90
+    }
+  ]
+}

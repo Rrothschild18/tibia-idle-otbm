@@ -1,0 +1,187 @@
+{
+  "mapBoundsRef": {
+    "minX": 32935,
+    "minY": 32110,
+    "maxX": 32964,
+    "maxY": 32157
+  },
+  "monsterDefs": {
+    "407": {
+      "name": "Slug",
+      "outfitId": 407,
+      "atlas": {
+        "image": "assets/outfits/407.png",
+        "json": "assets/outfits/407.json"
+      },
+      "appearance": {
+        "looktype": 407,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 40,
+          "countMin": 1,
+          "dropChance": 0.62,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 3,
+          "countMin": 1,
+          "dropChance": 0.05,
+          "itemId": 3492,
+          "itemName": "worm",
+          "rarity": "semi-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 12526,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 12526
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 12533
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 12534
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 12535
+          }
+        ]
+      },
+      "race": "venom",
+      "idle": {
+        "north": "407_0",
+        "east": "407_1",
+        "south": "407_2",
+        "west": "407_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "407_4",
+            "407_8",
+            "407_12",
+            "407_16",
+            "407_20",
+            "407_24",
+            "407_28",
+            "407_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "407_5",
+            "407_9",
+            "407_13",
+            "407_17",
+            "407_21",
+            "407_25",
+            "407_29",
+            "407_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "407_6",
+            "407_10",
+            "407_14",
+            "407_18",
+            "407_22",
+            "407_26",
+            "407_30",
+            "407_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "407_7",
+            "407_11",
+            "407_15",
+            "407_19",
+            "407_23",
+            "407_27",
+            "407_31",
+            "407_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    }
+  },
+  "spawns": [
+    {
+      "name": "Slug",
+      "outfitId": 407,
+      "tileX": 15,
+      "tileY": 12,
+      "worldX": 32950,
+      "worldY": 32122,
+      "worldZ": 8,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Slug",
+      "outfitId": 407,
+      "tileX": 17,
+      "tileY": 13,
+      "worldX": 32952,
+      "worldY": 32123,
+      "worldZ": 8,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Slug",
+      "outfitId": 407,
+      "tileX": 12,
+      "tileY": 20,
+      "worldX": 32947,
+      "worldY": 32130,
+      "worldZ": 8,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Slug",
+      "outfitId": 407,
+      "tileX": 13,
+      "tileY": 29,
+      "worldX": 32948,
+      "worldY": 32139,
+      "worldZ": 8,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Slug",
+      "outfitId": 407,
+      "tileX": 16,
+      "tileY": 35,
+      "worldX": 32951,
+      "worldY": 32145,
+      "worldZ": 8,
+      "radius": 3,
+      "spawntime": 90
+    }
+  ]
+}

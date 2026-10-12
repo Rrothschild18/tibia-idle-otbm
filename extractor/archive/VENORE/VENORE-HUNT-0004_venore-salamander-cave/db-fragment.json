@@ -1,0 +1,618 @@
+{
+  "monsters": {
+    "id": "VENORE-HUNT-0004",
+    "mapId": "VENORE-HUNT-0004",
+    "assetsRoot": "assets/VENORE-HUNT-0004_venore-salamander-cave-sprites/monsters",
+    "mapBoundsRef": {
+      "minX": 32898,
+      "minY": 32129,
+      "maxX": 32945,
+      "maxY": 32171
+    },
+    "monsterDefs": {
+      "407": {
+        "name": "Slug",
+        "outfitId": 407,
+        "atlas": {
+          "image": "assets/outfits/407.png",
+          "json": "assets/outfits/407.json"
+        },
+        "appearance": {
+          "looktype": 407,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 40,
+            "countMin": 1,
+            "dropChance": 0.62,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 3,
+            "countMin": 1,
+            "dropChance": 0.05,
+            "itemId": 3492,
+            "itemName": "worm",
+            "rarity": "semi-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 12526,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 12526
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 12533
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 12534
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 12535
+            }
+          ]
+        },
+        "race": "venom",
+        "idle": {
+          "north": "407_0",
+          "east": "407_1",
+          "south": "407_2",
+          "west": "407_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "407_4",
+              "407_8",
+              "407_12",
+              "407_16",
+              "407_20",
+              "407_24",
+              "407_28",
+              "407_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "407_5",
+              "407_9",
+              "407_13",
+              "407_17",
+              "407_21",
+              "407_25",
+              "407_29",
+              "407_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "407_6",
+              "407_10",
+              "407_14",
+              "407_18",
+              "407_22",
+              "407_26",
+              "407_30",
+              "407_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "407_7",
+              "407_11",
+              "407_15",
+              "407_19",
+              "407_23",
+              "407_27",
+              "407_31",
+              "407_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "76": {
+        "name": "Swamp Troll",
+        "outfitId": 76,
+        "atlas": {
+          "image": "assets/outfits/76.png",
+          "json": "assets/outfits/76.json"
+        },
+        "appearance": {
+          "looktype": 76,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.6,
+            "itemId": 3578,
+            "itemName": "fish",
+            "rarity": "common"
+          },
+          {
+            "countMax": 5,
+            "countMin": 1,
+            "dropChance": 0.503,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.15,
+            "itemId": 2920,
+            "itemName": "torch",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.13,
+            "itemId": 3277,
+            "itemName": "spear",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1,
+            "itemId": 3120,
+            "itemName": "mouldy cheese",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.095,
+            "itemId": 3552,
+            "itemName": "leather boots",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.031,
+            "itemId": 9686,
+            "itemName": "swamp grass",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0216,
+            "itemId": 12517,
+            "itemName": "medicine pouch",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0214,
+            "itemId": 5901,
+            "itemName": "wood",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.012,
+            "itemId": 3741,
+            "itemName": "troll green",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0006,
+            "itemId": 3483,
+            "itemName": "fishing rod",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 6018,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 6018
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4176
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4177
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4178
+            }
+          ]
+        },
+        "race": "venom",
+        "idle": {
+          "north": "76_0",
+          "east": "76_1",
+          "south": "76_2",
+          "west": "76_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "76_4",
+              "76_8",
+              "76_12",
+              "76_16",
+              "76_20",
+              "76_24",
+              "76_28",
+              "76_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "76_5",
+              "76_9",
+              "76_13",
+              "76_17",
+              "76_21",
+              "76_25",
+              "76_29",
+              "76_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "76_6",
+              "76_10",
+              "76_14",
+              "76_18",
+              "76_22",
+              "76_26",
+              "76_30",
+              "76_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "76_7",
+              "76_11",
+              "76_15",
+              "76_19",
+              "76_23",
+              "76_27",
+              "76_31",
+              "76_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      }
+    },
+    "spawns": [
+      {
+        "name": "Slug",
+        "outfitId": 407,
+        "tileX": 29,
+        "tileY": 12,
+        "worldX": 32927,
+        "worldY": 32141,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Swamp Troll",
+        "outfitId": 76,
+        "tileX": 14,
+        "tileY": 19,
+        "worldX": 32912,
+        "worldY": 32148,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Slug",
+        "outfitId": 407,
+        "tileX": 21,
+        "tileY": 17,
+        "worldX": 32919,
+        "worldY": 32146,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Slug",
+        "outfitId": 407,
+        "tileX": 16,
+        "tileY": 19,
+        "worldX": 32914,
+        "worldY": 32148,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Slug",
+        "outfitId": 407,
+        "tileX": 32,
+        "tileY": 15,
+        "worldX": 32930,
+        "worldY": 32144,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Swamp Troll",
+        "outfitId": 76,
+        "tileX": 35,
+        "tileY": 16,
+        "worldX": 32933,
+        "worldY": 32145,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Slug",
+        "outfitId": 407,
+        "tileX": 12,
+        "tileY": 25,
+        "worldX": 32910,
+        "worldY": 32154,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Swamp Troll",
+        "outfitId": 76,
+        "tileX": 24,
+        "tileY": 25,
+        "worldX": 32922,
+        "worldY": 32154,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Swamp Troll",
+        "outfitId": 76,
+        "tileX": 28,
+        "tileY": 26,
+        "worldX": 32926,
+        "worldY": 32155,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Swamp Troll",
+        "outfitId": 76,
+        "tileX": 34,
+        "tileY": 23,
+        "worldX": 32932,
+        "worldY": 32152,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Swamp Troll",
+        "outfitId": 76,
+        "tileX": 30,
+        "tileY": 26,
+        "worldX": 32928,
+        "worldY": 32155,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Swamp Troll",
+        "outfitId": 76,
+        "tileX": 21,
+        "tileY": 29,
+        "worldX": 32919,
+        "worldY": 32158,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Slug",
+        "outfitId": 407,
+        "tileX": 26,
+        "tileY": 30,
+        "worldX": 32924,
+        "worldY": 32159,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      }
+    ]
+  },
+  "loot": {
+    "id": "VENORE-HUNT-0004",
+    "mapId": "VENORE-HUNT-0004",
+    "drops": [
+      {
+        "countMax": 40,
+        "countMin": 1,
+        "dropChance": 0.62,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Slug"
+      },
+      {
+        "countMax": 3,
+        "countMin": 1,
+        "dropChance": 0.05,
+        "itemId": 3492,
+        "itemName": "worm",
+        "rarity": "semi-rare",
+        "monsterName": "Slug"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.6,
+        "itemId": 3578,
+        "itemName": "fish",
+        "rarity": "common",
+        "monsterName": "Swamp Troll"
+      },
+      {
+        "countMax": 5,
+        "countMin": 1,
+        "dropChance": 0.503,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Swamp Troll"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.15,
+        "itemId": 2920,
+        "itemName": "torch",
+        "rarity": "semi-rare",
+        "monsterName": "Swamp Troll"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.13,
+        "itemId": 3277,
+        "itemName": "spear",
+        "rarity": "semi-rare",
+        "monsterName": "Swamp Troll"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1,
+        "itemId": 3120,
+        "itemName": "mouldy cheese",
+        "rarity": "semi-rare",
+        "monsterName": "Swamp Troll"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.095,
+        "itemId": 3552,
+        "itemName": "leather boots",
+        "rarity": "semi-rare",
+        "monsterName": "Swamp Troll"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.031,
+        "itemId": 9686,
+        "itemName": "swamp grass",
+        "rarity": "rare",
+        "monsterName": "Swamp Troll"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0216,
+        "itemId": 12517,
+        "itemName": "medicine pouch",
+        "rarity": "rare",
+        "monsterName": "Swamp Troll"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0214,
+        "itemId": 5901,
+        "itemName": "wood",
+        "rarity": "rare",
+        "monsterName": "Swamp Troll"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.012,
+        "itemId": 3741,
+        "itemName": "troll green",
+        "rarity": "rare",
+        "monsterName": "Swamp Troll"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0006,
+        "itemId": 3483,
+        "itemName": "fishing rod",
+        "rarity": "very-rare",
+        "monsterName": "Swamp Troll"
+      }
+    ]
+  },
+  "hunts": {
+    "id": "VENORE-HUNT-0004",
+    "mapId": "VENORE-HUNT-0004",
+    "name": "Valkyries — Amazon Camp (z8–9)",
+    "label": "Valkyries — Amazon Camp (z8–9)",
+    "seed": "0000000000000000000000",
+    "assetsRoot": "assets/VENORE-HUNT-0004_venore-salamander-cave-sprites-v6",
+    "mapUrl": "assets/VENORE-HUNT-0004_venore-salamander-cave-sprites-v6/map.json",
+    "portrait": "/assets/character-default.png",
+    "monsterPreview": {
+      "name": "Swamp Troll",
+      "icon": "/assets/outfits/76.png",
+      "atlas": "/assets/outfits/76.json"
+    },
+    "startPosition": [
+      32922,
+      32150
+    ],
+    "city": "VENORE",
+    "_todo": [
+      "revisar startPosition (centro geométrico do mapBoundsRef, pode cair fora de área andável)"
+    ]
+  }
+}

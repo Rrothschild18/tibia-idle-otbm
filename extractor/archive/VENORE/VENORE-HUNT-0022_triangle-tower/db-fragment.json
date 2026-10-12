@@ -1,0 +1,273 @@
+{
+  "monsters": {
+    "id": "VENORE-HUNT-0022",
+    "mapId": "VENORE-HUNT-0022",
+    "assetsRoot": "assets/VENORE-HUNT-0022_triangle-tower-sprites/monsters",
+    "mapBoundsRef": {
+      "minX": 32559,
+      "minY": 32114,
+      "maxX": 32592,
+      "maxY": 32155
+    },
+    "monsterDefs": {
+      "45": {
+        "name": "Bug",
+        "outfitId": 45,
+        "atlas": {
+          "image": "assets/outfits/45.png",
+          "json": "assets/outfits/45.json"
+        },
+        "appearance": {
+          "looktype": 45,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 6,
+            "countMin": 1,
+            "dropChance": 0.5117,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 3,
+            "countMin": 1,
+            "dropChance": 0.0259,
+            "itemId": 3590,
+            "itemName": "cherry",
+            "rarity": "rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 5990,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 5990
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4083
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4084
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4085
+            }
+          ]
+        },
+        "race": "venom",
+        "idle": {
+          "north": "45_0",
+          "east": "45_1",
+          "south": "45_2",
+          "west": "45_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "45_4",
+              "45_8",
+              "45_12",
+              "45_16",
+              "45_20",
+              "45_24",
+              "45_28",
+              "45_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "45_5",
+              "45_9",
+              "45_13",
+              "45_17",
+              "45_21",
+              "45_25",
+              "45_29",
+              "45_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "45_6",
+              "45_10",
+              "45_14",
+              "45_18",
+              "45_22",
+              "45_26",
+              "45_30",
+              "45_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "45_7",
+              "45_11",
+              "45_15",
+              "45_19",
+              "45_23",
+              "45_27",
+              "45_31",
+              "45_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      }
+    },
+    "spawns": [
+      {
+        "name": "Bug",
+        "outfitId": 45,
+        "tileX": 18,
+        "tileY": 12,
+        "worldX": 32577,
+        "worldY": 32126,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Bug",
+        "outfitId": 45,
+        "tileX": 12,
+        "tileY": 19,
+        "worldX": 32571,
+        "worldY": 32133,
+        "worldZ": 7,
+        "radius": 6,
+        "spawntime": 90
+      },
+      {
+        "name": "Bug",
+        "outfitId": 45,
+        "tileX": 21,
+        "tileY": 21,
+        "worldX": 32580,
+        "worldY": 32135,
+        "worldZ": 7,
+        "radius": 6,
+        "spawntime": 90
+      },
+      {
+        "name": "Bug",
+        "outfitId": 45,
+        "tileX": 15,
+        "tileY": 22,
+        "worldX": 32574,
+        "worldY": 32136,
+        "worldZ": 7,
+        "radius": 6,
+        "spawntime": 90
+      },
+      {
+        "name": "Bug",
+        "outfitId": 45,
+        "tileX": 12,
+        "tileY": 23,
+        "worldX": 32571,
+        "worldY": 32137,
+        "worldZ": 7,
+        "radius": 6,
+        "spawntime": 90
+      },
+      {
+        "name": "Bug",
+        "outfitId": 45,
+        "tileX": 21,
+        "tileY": 24,
+        "worldX": 32580,
+        "worldY": 32138,
+        "worldZ": 7,
+        "radius": 6,
+        "spawntime": 90
+      },
+      {
+        "name": "Bug",
+        "outfitId": 45,
+        "tileX": 14,
+        "tileY": 27,
+        "worldX": 32573,
+        "worldY": 32141,
+        "worldZ": 7,
+        "radius": 6,
+        "spawntime": 90
+      },
+      {
+        "name": "Bug",
+        "outfitId": 45,
+        "tileX": 19,
+        "tileY": 29,
+        "worldX": 32578,
+        "worldY": 32143,
+        "worldZ": 7,
+        "radius": 6,
+        "spawntime": 90
+      }
+    ]
+  },
+  "loot": {
+    "id": "VENORE-HUNT-0022",
+    "mapId": "VENORE-HUNT-0022",
+    "drops": [
+      {
+        "countMax": 6,
+        "countMin": 1,
+        "dropChance": 0.5117,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Bug"
+      },
+      {
+        "countMax": 3,
+        "countMin": 1,
+        "dropChance": 0.0259,
+        "itemId": 3590,
+        "itemName": "cherry",
+        "rarity": "rare",
+        "monsterName": "Bug"
+      }
+    ]
+  },
+  "hunts": {
+    "id": "VENORE-HUNT-0022",
+    "mapId": "VENORE-HUNT-0022",
+    "name": "Triangle Tower",
+    "label": "Triangle Tower",
+    "seed": "0000000000000000000000",
+    "assetsRoot": "assets/VENORE-HUNT-0022_triangle-tower-sprites-v6",
+    "mapUrl": "assets/VENORE-HUNT-0022_triangle-tower-sprites-v6/map.json",
+    "portrait": "/assets/character-default.png",
+    "monsterPreview": {
+      "name": "Bug",
+      "icon": "/assets/outfits/45.png",
+      "atlas": "/assets/outfits/45.json"
+    },
+    "startPosition": [
+      32576,
+      32134
+    ],
+    "city": "VENORE",
+    "_todo": [
+      "confirmar name/label (título gerado automaticamente do nome da pasta)",
+      "revisar startPosition (centro geométrico do mapBoundsRef, pode cair fora de área andável)"
+    ]
+  }
+}

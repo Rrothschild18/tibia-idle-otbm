@@ -1,0 +1,1244 @@
+{
+  "monsters": {
+    "id": "THAIS-HUNT-0034",
+    "mapId": "THAIS-HUNT-0034",
+    "assetsRoot": "assets/THAIS-HUNT-0034_grounds-of-damnation-tafariel-sprites/monsters",
+    "mapBoundsRef": {
+      "minX": 33463,
+      "minY": 32692,
+      "maxX": 33507,
+      "maxY": 32754
+    },
+    "monsterDefs": {
+      "854": {
+        "name": "Vexclaw",
+        "outfitId": 854,
+        "atlas": {
+          "image": "assets/outfits/854.png",
+          "json": "assets/outfits/854.json"
+        },
+        "appearance": {
+          "looktype": 854,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 200,
+            "countMin": 1,
+            "dropChance": 1.0,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "always"
+          },
+          {
+            "countMax": 6,
+            "countMin": 1,
+            "dropChance": 1.0,
+            "itemId": 3035,
+            "itemName": "platinum coin",
+            "rarity": "always"
+          },
+          {
+            "countMax": 5,
+            "countMin": 1,
+            "dropChance": 0.2601,
+            "itemId": 7642,
+            "itemName": "great spirit potion",
+            "rarity": "common"
+          },
+          {
+            "countMax": 5,
+            "countMin": 1,
+            "dropChance": 0.2521,
+            "itemId": 238,
+            "itemName": "great mana potion",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.215,
+            "itemId": 22728,
+            "itemName": "vexclaw talon",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.2073,
+            "itemId": 6499,
+            "itemName": "demonic essence",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 5,
+            "countMin": 1,
+            "dropChance": 0.1996,
+            "itemId": 7643,
+            "itemName": "ultimate health potion",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 6,
+            "countMin": 1,
+            "dropChance": 0.1994,
+            "itemId": 3731,
+            "itemName": "fire mushroom",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1894,
+            "itemId": 3306,
+            "itemName": "golden sickle",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1845,
+            "itemId": 2848,
+            "itemName": "purple tome",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 5,
+            "countMin": 1,
+            "dropChance": 0.1009,
+            "itemId": 3033,
+            "itemName": "small amethyst",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 5,
+            "countMin": 1,
+            "dropChance": 0.0979,
+            "itemId": 9057,
+            "itemName": "small topaz",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 5,
+            "countMin": 1,
+            "dropChance": 0.0977,
+            "itemId": 3032,
+            "itemName": "small emerald",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 5,
+            "countMin": 1,
+            "dropChance": 0.0959,
+            "itemId": 3030,
+            "itemName": "small ruby",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.054,
+            "itemId": 3034,
+            "itemName": "talon",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0509,
+            "itemId": 3037,
+            "itemName": "yellow gem",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0494,
+            "itemId": 8094,
+            "itemName": "wand of voodoo",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0473,
+            "itemId": 3039,
+            "itemName": "red gem",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0473,
+            "itemId": 3284,
+            "itemName": "ice rapier",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0352,
+            "itemId": 3320,
+            "itemName": "fire axe",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0225,
+            "itemId": 3048,
+            "itemName": "might ring",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0188,
+            "itemId": 3281,
+            "itemName": "giant sword",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0179,
+            "itemId": 3049,
+            "itemName": "stealth ring",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0179,
+            "itemId": 3051,
+            "itemName": "energy ring",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0136,
+            "itemId": 22727,
+            "itemName": "rift lance",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0132,
+            "itemId": 3098,
+            "itemName": "ring of healing",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0094,
+            "itemId": 3055,
+            "itemName": "platinum amulet",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0052,
+            "itemId": 3356,
+            "itemName": "devil helmet",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0037,
+            "itemId": 22867,
+            "itemName": "rift crossbow",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0037,
+            "itemId": 22866,
+            "itemName": "rift bow",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0037,
+            "itemId": 22726,
+            "itemName": "rift shield",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0037,
+            "itemId": 3420,
+            "itemName": "demon shield",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0007,
+            "itemId": 3366,
+            "itemName": "magic plate armor",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0005,
+            "itemId": 3364,
+            "itemName": "golden legs",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0003,
+            "itemId": 7382,
+            "itemName": "demonrage sword",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 22776,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 22776
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 22777
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 22778
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 22779
+            }
+          ]
+        },
+        "race": "fire",
+        "idle": {
+          "north": "854_0",
+          "east": "854_1",
+          "south": "854_2",
+          "west": "854_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "854_4",
+              "854_8",
+              "854_12",
+              "854_16",
+              "854_20",
+              "854_24",
+              "854_28",
+              "854_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "854_5",
+              "854_9",
+              "854_13",
+              "854_17",
+              "854_21",
+              "854_25",
+              "854_29",
+              "854_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "854_6",
+              "854_10",
+              "854_14",
+              "854_18",
+              "854_22",
+              "854_26",
+              "854_30",
+              "854_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "854_7",
+              "854_11",
+              "854_15",
+              "854_19",
+              "854_23",
+              "854_27",
+              "854_31",
+              "854_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "234": {
+        "name": "Dark Torturer",
+        "outfitId": 234,
+        "atlas": {
+          "image": "assets/outfits/234.png",
+          "json": "assets/outfits/234.json"
+        },
+        "appearance": {
+          "looktype": 234,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 100,
+            "countMin": 1,
+            "dropChance": 0.9,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.6,
+            "itemId": 3582,
+            "itemName": "ham",
+            "rarity": "common"
+          },
+          {
+            "countMax": 8,
+            "countMin": 1,
+            "dropChance": 0.55,
+            "itemId": 3035,
+            "itemName": "platinum coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 3,
+            "countMin": 1,
+            "dropChance": 0.33333,
+            "itemId": 6558,
+            "itemName": "flask of demonic blood",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.23,
+            "itemId": 5944,
+            "itemName": "soul orb",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.1483,
+            "itemId": 238,
+            "itemName": "great mana potion",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.1,
+            "itemId": 239,
+            "itemName": "great health potion",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0852,
+            "itemId": 6499,
+            "itemName": "demonic essence",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0525,
+            "itemId": 3461,
+            "itemName": "saw",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0505,
+            "itemId": 3554,
+            "itemName": "steel boots",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0314,
+            "itemId": 9058,
+            "itemName": "gold ingot",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.0276,
+            "itemId": 5021,
+            "itemName": "orichalcum pearl",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.02222,
+            "itemId": 5479,
+            "itemName": "cat's paw",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 5,
+            "countMin": 1,
+            "dropChance": 0.02222,
+            "itemId": 7368,
+            "itemName": "assassin star",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.02008,
+            "itemId": 6299,
+            "itemName": "death ring",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.01192,
+            "itemId": 5801,
+            "itemName": "jewelled backpack",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0085,
+            "itemId": 7412,
+            "itemName": "butcher's axe",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0048,
+            "itemId": 7388,
+            "itemName": "vile axe",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0003,
+            "itemId": 3364,
+            "itemName": "golden legs",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 6327,
+          "stages": [
+            {
+              "durationSeconds": 300,
+              "itemId": 6327
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 6328
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 6329
+            }
+          ]
+        },
+        "race": "undead",
+        "idle": {
+          "north": "234_0",
+          "east": "234_1",
+          "south": "234_2",
+          "west": "234_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "234_4",
+              "234_8"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "234_5",
+              "234_9"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "234_6",
+              "234_10"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "234_7",
+              "234_11"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      }
+    },
+    "spawns": [
+      {
+        "name": "Vexclaw",
+        "outfitId": 854,
+        "tileX": 19,
+        "tileY": 15,
+        "worldX": 33482,
+        "worldY": 32707,
+        "worldZ": 13,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Vexclaw",
+        "outfitId": 854,
+        "tileX": 26,
+        "tileY": 12,
+        "worldX": 33489,
+        "worldY": 32704,
+        "worldZ": 13,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Dark Torturer",
+        "outfitId": 234,
+        "tileX": 27,
+        "tileY": 15,
+        "worldX": 33490,
+        "worldY": 32707,
+        "worldZ": 13,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Dark Torturer",
+        "outfitId": 234,
+        "tileX": 12,
+        "tileY": 20,
+        "worldX": 33475,
+        "worldY": 32712,
+        "worldZ": 13,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Dark Torturer",
+        "outfitId": 234,
+        "tileX": 14,
+        "tileY": 20,
+        "worldX": 33477,
+        "worldY": 32712,
+        "worldZ": 13,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Vexclaw",
+        "outfitId": 854,
+        "tileX": 27,
+        "tileY": 27,
+        "worldX": 33490,
+        "worldY": 32719,
+        "worldZ": 13,
+        "radius": 1,
+        "spawntime": 60
+      },
+      {
+        "name": "Vexclaw",
+        "outfitId": 854,
+        "tileX": 26,
+        "tileY": 35,
+        "worldX": 33489,
+        "worldY": 32727,
+        "worldZ": 13,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Vexclaw",
+        "outfitId": 854,
+        "tileX": 29,
+        "tileY": 44,
+        "worldX": 33492,
+        "worldY": 32736,
+        "worldZ": 13,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Vexclaw",
+        "outfitId": 854,
+        "tileX": 32,
+        "tileY": 50,
+        "worldX": 33495,
+        "worldY": 32742,
+        "worldZ": 13,
+        "radius": 3,
+        "spawntime": 60
+      }
+    ]
+  },
+  "loot": {
+    "id": "THAIS-HUNT-0034",
+    "mapId": "THAIS-HUNT-0034",
+    "drops": [
+      {
+        "countMax": 200,
+        "countMin": 1,
+        "dropChance": 1.0,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "always",
+        "monsterName": "Vexclaw"
+      },
+      {
+        "countMax": 6,
+        "countMin": 1,
+        "dropChance": 1.0,
+        "itemId": 3035,
+        "itemName": "platinum coin",
+        "rarity": "always",
+        "monsterName": "Vexclaw"
+      },
+      {
+        "countMax": 5,
+        "countMin": 1,
+        "dropChance": 0.2601,
+        "itemId": 7642,
+        "itemName": "great spirit potion",
+        "rarity": "common",
+        "monsterName": "Vexclaw"
+      },
+      {
+        "countMax": 5,
+        "countMin": 1,
+        "dropChance": 0.2521,
+        "itemId": 238,
+        "itemName": "great mana potion",
+        "rarity": "common",
+        "monsterName": "Vexclaw"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.215,
+        "itemId": 22728,
+        "itemName": "vexclaw talon",
+        "rarity": "semi-rare",
+        "monsterName": "Vexclaw"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.2073,
+        "itemId": 6499,
+        "itemName": "demonic essence",
+        "rarity": "semi-rare",
+        "monsterName": "Vexclaw"
+      },
+      {
+        "countMax": 5,
+        "countMin": 1,
+        "dropChance": 0.1996,
+        "itemId": 7643,
+        "itemName": "ultimate health potion",
+        "rarity": "semi-rare",
+        "monsterName": "Vexclaw"
+      },
+      {
+        "countMax": 6,
+        "countMin": 1,
+        "dropChance": 0.1994,
+        "itemId": 3731,
+        "itemName": "fire mushroom",
+        "rarity": "semi-rare",
+        "monsterName": "Vexclaw"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1894,
+        "itemId": 3306,
+        "itemName": "golden sickle",
+        "rarity": "semi-rare",
+        "monsterName": "Vexclaw"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1845,
+        "itemId": 2848,
+        "itemName": "purple tome",
+        "rarity": "semi-rare",
+        "monsterName": "Vexclaw"
+      },
+      {
+        "countMax": 5,
+        "countMin": 1,
+        "dropChance": 0.1009,
+        "itemId": 3033,
+        "itemName": "small amethyst",
+        "rarity": "semi-rare",
+        "monsterName": "Vexclaw"
+      },
+      {
+        "countMax": 5,
+        "countMin": 1,
+        "dropChance": 0.0979,
+        "itemId": 9057,
+        "itemName": "small topaz",
+        "rarity": "semi-rare",
+        "monsterName": "Vexclaw"
+      },
+      {
+        "countMax": 5,
+        "countMin": 1,
+        "dropChance": 0.0977,
+        "itemId": 3032,
+        "itemName": "small emerald",
+        "rarity": "semi-rare",
+        "monsterName": "Vexclaw"
+      },
+      {
+        "countMax": 5,
+        "countMin": 1,
+        "dropChance": 0.0959,
+        "itemId": 3030,
+        "itemName": "small ruby",
+        "rarity": "semi-rare",
+        "monsterName": "Vexclaw"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.054,
+        "itemId": 3034,
+        "itemName": "talon",
+        "rarity": "semi-rare",
+        "monsterName": "Vexclaw"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0509,
+        "itemId": 3037,
+        "itemName": "yellow gem",
+        "rarity": "semi-rare",
+        "monsterName": "Vexclaw"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0494,
+        "itemId": 8094,
+        "itemName": "wand of voodoo",
+        "rarity": "rare",
+        "monsterName": "Vexclaw"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0473,
+        "itemId": 3039,
+        "itemName": "red gem",
+        "rarity": "rare",
+        "monsterName": "Vexclaw"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0473,
+        "itemId": 3284,
+        "itemName": "ice rapier",
+        "rarity": "rare",
+        "monsterName": "Vexclaw"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0352,
+        "itemId": 3320,
+        "itemName": "fire axe",
+        "rarity": "rare",
+        "monsterName": "Vexclaw"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0225,
+        "itemId": 3048,
+        "itemName": "might ring",
+        "rarity": "rare",
+        "monsterName": "Vexclaw"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0188,
+        "itemId": 3281,
+        "itemName": "giant sword",
+        "rarity": "rare",
+        "monsterName": "Vexclaw"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0179,
+        "itemId": 3049,
+        "itemName": "stealth ring",
+        "rarity": "rare",
+        "monsterName": "Vexclaw"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0179,
+        "itemId": 3051,
+        "itemName": "energy ring",
+        "rarity": "rare",
+        "monsterName": "Vexclaw"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0136,
+        "itemId": 22727,
+        "itemName": "rift lance",
+        "rarity": "rare",
+        "monsterName": "Vexclaw"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0132,
+        "itemId": 3098,
+        "itemName": "ring of healing",
+        "rarity": "rare",
+        "monsterName": "Vexclaw"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0094,
+        "itemId": 3055,
+        "itemName": "platinum amulet",
+        "rarity": "rare",
+        "monsterName": "Vexclaw"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0052,
+        "itemId": 3356,
+        "itemName": "devil helmet",
+        "rarity": "rare",
+        "monsterName": "Vexclaw"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0037,
+        "itemId": 22867,
+        "itemName": "rift crossbow",
+        "rarity": "very-rare",
+        "monsterName": "Vexclaw"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0037,
+        "itemId": 22866,
+        "itemName": "rift bow",
+        "rarity": "very-rare",
+        "monsterName": "Vexclaw"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0037,
+        "itemId": 22726,
+        "itemName": "rift shield",
+        "rarity": "very-rare",
+        "monsterName": "Vexclaw"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0037,
+        "itemId": 3420,
+        "itemName": "demon shield",
+        "rarity": "very-rare",
+        "monsterName": "Vexclaw"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0007,
+        "itemId": 3366,
+        "itemName": "magic plate armor",
+        "rarity": "very-rare",
+        "monsterName": "Vexclaw"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0005,
+        "itemId": 3364,
+        "itemName": "golden legs",
+        "rarity": "very-rare",
+        "monsterName": "Vexclaw"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0003,
+        "itemId": 7382,
+        "itemName": "demonrage sword",
+        "rarity": "very-rare",
+        "monsterName": "Vexclaw"
+      },
+      {
+        "countMax": 100,
+        "countMin": 1,
+        "dropChance": 0.9,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Dark Torturer"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.6,
+        "itemId": 3582,
+        "itemName": "ham",
+        "rarity": "common",
+        "monsterName": "Dark Torturer"
+      },
+      {
+        "countMax": 8,
+        "countMin": 1,
+        "dropChance": 0.55,
+        "itemId": 3035,
+        "itemName": "platinum coin",
+        "rarity": "common",
+        "monsterName": "Dark Torturer"
+      },
+      {
+        "countMax": 3,
+        "countMin": 1,
+        "dropChance": 0.33333,
+        "itemId": 6558,
+        "itemName": "flask of demonic blood",
+        "rarity": "common",
+        "monsterName": "Dark Torturer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.23,
+        "itemId": 5944,
+        "itemName": "soul orb",
+        "rarity": "semi-rare",
+        "monsterName": "Dark Torturer"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.1483,
+        "itemId": 238,
+        "itemName": "great mana potion",
+        "rarity": "semi-rare",
+        "monsterName": "Dark Torturer"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.1,
+        "itemId": 239,
+        "itemName": "great health potion",
+        "rarity": "semi-rare",
+        "monsterName": "Dark Torturer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0852,
+        "itemId": 6499,
+        "itemName": "demonic essence",
+        "rarity": "semi-rare",
+        "monsterName": "Dark Torturer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0525,
+        "itemId": 3461,
+        "itemName": "saw",
+        "rarity": "semi-rare",
+        "monsterName": "Dark Torturer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0505,
+        "itemId": 3554,
+        "itemName": "steel boots",
+        "rarity": "semi-rare",
+        "monsterName": "Dark Torturer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0314,
+        "itemId": 9058,
+        "itemName": "gold ingot",
+        "rarity": "rare",
+        "monsterName": "Dark Torturer"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.0276,
+        "itemId": 5021,
+        "itemName": "orichalcum pearl",
+        "rarity": "rare",
+        "monsterName": "Dark Torturer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.02222,
+        "itemId": 5479,
+        "itemName": "cat's paw",
+        "rarity": "rare",
+        "monsterName": "Dark Torturer"
+      },
+      {
+        "countMax": 5,
+        "countMin": 1,
+        "dropChance": 0.02222,
+        "itemId": 7368,
+        "itemName": "assassin star",
+        "rarity": "rare",
+        "monsterName": "Dark Torturer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.02008,
+        "itemId": 6299,
+        "itemName": "death ring",
+        "rarity": "rare",
+        "monsterName": "Dark Torturer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.01192,
+        "itemId": 5801,
+        "itemName": "jewelled backpack",
+        "rarity": "rare",
+        "monsterName": "Dark Torturer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0085,
+        "itemId": 7412,
+        "itemName": "butcher's axe",
+        "rarity": "rare",
+        "monsterName": "Dark Torturer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0048,
+        "itemId": 7388,
+        "itemName": "vile axe",
+        "rarity": "very-rare",
+        "monsterName": "Dark Torturer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0003,
+        "itemId": 3364,
+        "itemName": "golden legs",
+        "rarity": "very-rare",
+        "monsterName": "Dark Torturer"
+      }
+    ]
+  },
+  "hunts": {
+    "id": "THAIS-HUNT-0034",
+    "mapId": "THAIS-HUNT-0034",
+    "name": "Grounds Of Damnation Tafariel",
+    "label": "Grounds Of Damnation Tafariel",
+    "seed": "0000000000000000000000",
+    "assetsRoot": "assets/THAIS-HUNT-0034_grounds-of-damnation-tafariel-sprites-v6",
+    "mapUrl": "assets/THAIS-HUNT-0034_grounds-of-damnation-tafariel-sprites-v6/map.json",
+    "portrait": "/assets/character-default.png",
+    "monsterPreview": {
+      "name": "Vexclaw",
+      "icon": "/assets/outfits/854.png",
+      "atlas": "/assets/outfits/854.json"
+    },
+    "startPosition": [
+      33485,
+      32723
+    ],
+    "city": "THAIS",
+    "_todo": [
+      "confirmar name/label (título gerado automaticamente do nome da pasta)",
+      "revisar startPosition (centro geométrico do mapBoundsRef, pode cair fora de área andável)"
+    ]
+  }
+}

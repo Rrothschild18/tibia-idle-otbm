@@ -1,0 +1,3416 @@
+{
+  "monsters": {
+    "id": "CARLIN-HUNT-0009",
+    "mapId": "CARLIN-HUNT-0009",
+    "assetsRoot": "assets/CARLIN-HUNT-0009_trolls-carlin-surroundings-z810-sprites/monsters",
+    "mapBoundsRef": {
+      "minX": 32315,
+      "minY": 31644,
+      "maxX": 32471,
+      "maxY": 31817
+    },
+    "monsterDefs": {
+      "15": {
+        "name": "Troll",
+        "outfitId": 15,
+        "atlas": {
+          "image": "assets/outfits/15.png",
+          "json": "assets/outfits/15.json"
+        },
+        "appearance": {
+          "looktype": 15,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 12,
+            "countMin": 1,
+            "dropChance": 0.653,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.18,
+            "itemId": 3268,
+            "itemName": "hand axe",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.15,
+            "itemId": 3577,
+            "itemName": "meat",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.13,
+            "itemId": 3277,
+            "itemName": "spear",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.12,
+            "itemId": 3355,
+            "itemName": "leather helmet",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1,
+            "itemId": 3552,
+            "itemName": "leather boots",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0795,
+            "itemId": 3003,
+            "itemName": "rope",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.05,
+            "itemId": 3336,
+            "itemName": "studded club",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0473,
+            "itemId": 3412,
+            "itemName": "wooden shield",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.01,
+            "itemId": 9689,
+            "itemName": "bunch of troll hair",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.01,
+            "itemId": 23986,
+            "itemName": "heavy old tome",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0008,
+            "itemId": 3054,
+            "itemName": "silver amulet",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 5960,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 5960
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 3987
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 3991
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 3992
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "15_0",
+          "east": "15_1",
+          "south": "15_2",
+          "west": "15_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "15_4",
+              "15_8",
+              "15_12",
+              "15_16",
+              "15_20",
+              "15_24",
+              "15_28",
+              "15_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "15_5",
+              "15_9",
+              "15_13",
+              "15_17",
+              "15_21",
+              "15_25",
+              "15_29",
+              "15_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "15_6",
+              "15_10",
+              "15_14",
+              "15_18",
+              "15_22",
+              "15_26",
+              "15_30",
+              "15_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "15_7",
+              "15_11",
+              "15_15",
+              "15_19",
+              "15_23",
+              "15_27",
+              "15_31",
+              "15_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "134": {
+        "name": "Cult Enforcer",
+        "outfitId": 134,
+        "atlas": {
+          "image": "assets/outfits/134-95-19-57-76-1.png",
+          "json": "assets/outfits/134-95-19-57-76-1.json"
+        },
+        "appearance": {
+          "looktype": 134,
+          "head": 95,
+          "body": 19,
+          "legs": 57,
+          "feet": 76,
+          "addons": 1
+        },
+        "loot": [
+          {
+            "countMax": 10,
+            "countMin": 1,
+            "dropChance": 0.9045,
+            "itemId": 3446,
+            "itemName": "bolt",
+            "rarity": "common"
+          },
+          {
+            "countMax": 30,
+            "countMin": 1,
+            "dropChance": 0.7541,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.154,
+            "itemId": 3592,
+            "itemName": "grapes",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.1234,
+            "itemId": 239,
+            "itemName": "great health potion",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.05,
+            "itemId": 3577,
+            "itemName": "meat",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.01,
+            "itemId": 3003,
+            "itemName": "rope",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.01,
+            "itemId": 3572,
+            "itemName": "scarf",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0083,
+            "itemId": 3349,
+            "itemName": "crossbow",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0083,
+            "itemId": 2815,
+            "itemName": "scroll",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0083,
+            "itemId": 3028,
+            "itemName": "small diamond",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0083,
+            "itemId": 3269,
+            "itemName": "halberd",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0076,
+            "itemId": 3563,
+            "itemName": "green tunic",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.007,
+            "itemId": 3048,
+            "itemName": "might ring",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0033,
+            "itemId": 3415,
+            "itemName": "guardian shield",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0023,
+            "itemId": 3371,
+            "itemName": "knight legs",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.002,
+            "itemId": 3369,
+            "itemName": "warrior helmet",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0013,
+            "itemId": 3279,
+            "itemName": "war hammer",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 22017,
+          "stages": [
+            {
+              "durationSeconds": 300,
+              "itemId": 22017
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 22018
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 22019
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "134_0",
+          "east": "134_1",
+          "south": "134_2",
+          "west": "134_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "134_0",
+              "134_4",
+              "134_8",
+              "134_12",
+              "134_16",
+              "134_20",
+              "134_24",
+              "134_28",
+              "134_32"
+            ],
+            "frameRate": 15,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "134_1",
+              "134_5",
+              "134_9",
+              "134_13",
+              "134_17",
+              "134_21",
+              "134_25",
+              "134_29",
+              "134_33"
+            ],
+            "frameRate": 15,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "134_2",
+              "134_6",
+              "134_10",
+              "134_14",
+              "134_18",
+              "134_22",
+              "134_26",
+              "134_30",
+              "134_34"
+            ],
+            "frameRate": 15,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "134_3",
+              "134_7",
+              "134_11",
+              "134_15",
+              "134_19",
+              "134_23",
+              "134_27",
+              "134_31",
+              "134_35"
+            ],
+            "frameRate": 15,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "132": {
+        "name": "Cult Believer",
+        "outfitId": 132,
+        "atlas": {
+          "image": "assets/outfits/132-98-96-39-38-1.png",
+          "json": "assets/outfits/132-98-96-39-38-1.json"
+        },
+        "appearance": {
+          "looktype": 132,
+          "head": 98,
+          "body": 96,
+          "legs": 39,
+          "feet": 38,
+          "addons": 1
+        },
+        "loot": [
+          {
+            "countMax": 10,
+            "countMin": 1,
+            "dropChance": 0.9045,
+            "itemId": 3446,
+            "itemName": "bolt",
+            "rarity": "common"
+          },
+          {
+            "countMax": 30,
+            "countMin": 1,
+            "dropChance": 0.7541,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.154,
+            "itemId": 3592,
+            "itemName": "grapes",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.1234,
+            "itemId": 239,
+            "itemName": "great health potion",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.05,
+            "itemId": 3577,
+            "itemName": "meat",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.01,
+            "itemId": 3003,
+            "itemName": "rope",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.01,
+            "itemId": 3572,
+            "itemName": "scarf",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0083,
+            "itemId": 3349,
+            "itemName": "crossbow",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0083,
+            "itemId": 2815,
+            "itemName": "scroll",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0083,
+            "itemId": 3028,
+            "itemName": "small diamond",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0083,
+            "itemId": 3269,
+            "itemName": "halberd",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0076,
+            "itemId": 3563,
+            "itemName": "green tunic",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.007,
+            "itemId": 3048,
+            "itemName": "might ring",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0033,
+            "itemId": 3415,
+            "itemName": "guardian shield",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0023,
+            "itemId": 3371,
+            "itemName": "knight legs",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.002,
+            "itemId": 3369,
+            "itemName": "warrior helmet",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0013,
+            "itemId": 3279,
+            "itemName": "war hammer",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 22017,
+          "stages": [
+            {
+              "durationSeconds": 300,
+              "itemId": 22017
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 22018
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 22019
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "132_0",
+          "east": "132_1",
+          "south": "132_2",
+          "west": "132_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "132_0",
+              "132_4",
+              "132_8",
+              "132_12",
+              "132_16",
+              "132_20",
+              "132_24",
+              "132_28",
+              "132_32"
+            ],
+            "frameRate": 15,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "132_1",
+              "132_5",
+              "132_9",
+              "132_13",
+              "132_17",
+              "132_21",
+              "132_25",
+              "132_29",
+              "132_33"
+            ],
+            "frameRate": 15,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "132_2",
+              "132_6",
+              "132_10",
+              "132_14",
+              "132_18",
+              "132_22",
+              "132_26",
+              "132_30",
+              "132_34"
+            ],
+            "frameRate": 15,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "132_3",
+              "132_7",
+              "132_11",
+              "132_15",
+              "132_19",
+              "132_23",
+              "132_27",
+              "132_31",
+              "132_35"
+            ],
+            "frameRate": 15,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "268": {
+        "name": "Vile Grandmaster",
+        "outfitId": 268,
+        "atlas": {
+          "image": "assets/outfits/268-59-19-95-94-1.png",
+          "json": "assets/outfits/268-59-19-95-94-1.json"
+        },
+        "appearance": {
+          "looktype": 268,
+          "head": 59,
+          "body": 19,
+          "legs": 95,
+          "feet": 94,
+          "addons": 1
+        },
+        "loot": [
+          {
+            "countMax": 30,
+            "countMin": 1,
+            "dropChance": 0.7541,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.7541,
+            "itemId": 3035,
+            "itemName": "platinum coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0161,
+            "itemId": 3269,
+            "itemName": "halberd",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0151,
+            "itemId": 3003,
+            "itemName": "rope",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 4,
+            "countMin": 1,
+            "dropChance": 0.0121,
+            "itemId": 7364,
+            "itemName": "sniper arrow",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0121,
+            "itemId": 3592,
+            "itemName": "grapes",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.0121,
+            "itemId": 3577,
+            "itemName": "meat",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0121,
+            "itemId": 239,
+            "itemName": "great health potion",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0091,
+            "itemId": 11510,
+            "itemName": "scroll of heroic deeds",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0091,
+            "itemId": 11450,
+            "itemName": "small notebook",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.0081,
+            "itemId": 3030,
+            "itemName": "small ruby",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.0081,
+            "itemId": 3029,
+            "itemName": "small sapphire",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0051,
+            "itemId": 3658,
+            "itemName": "red rose",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0051,
+            "itemId": 3004,
+            "itemName": "wedding ring",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0031,
+            "itemId": 3381,
+            "itemName": "crown armor",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0031,
+            "itemId": 3385,
+            "itemName": "crown helmet",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0021,
+            "itemId": 5911,
+            "itemName": "red piece of cloth",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0021,
+            "itemId": 3279,
+            "itemName": "war hammer",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0021,
+            "itemId": 3280,
+            "itemName": "fire sword",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0021,
+            "itemId": 3419,
+            "itemName": "crown shield",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0021,
+            "itemId": 3055,
+            "itemName": "platinum amulet",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0011,
+            "itemId": 3382,
+            "itemName": "crown legs",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 22023,
+          "stages": [
+            {
+              "durationSeconds": 300,
+              "itemId": 22023
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 22024
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 22025
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "268_0",
+          "east": "268_1",
+          "south": "268_2",
+          "west": "268_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "268_0",
+              "268_4",
+              "268_8",
+              "268_12",
+              "268_16",
+              "268_20",
+              "268_24",
+              "268_28",
+              "268_32"
+            ],
+            "frameRate": 15,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "268_1",
+              "268_5",
+              "268_9",
+              "268_13",
+              "268_17",
+              "268_21",
+              "268_25",
+              "268_29",
+              "268_33"
+            ],
+            "frameRate": 15,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "268_2",
+              "268_6",
+              "268_10",
+              "268_14",
+              "268_18",
+              "268_22",
+              "268_26",
+              "268_30",
+              "268_34"
+            ],
+            "frameRate": 15,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "268_3",
+              "268_7",
+              "268_11",
+              "268_15",
+              "268_19",
+              "268_23",
+              "268_27",
+              "268_31",
+              "268_35"
+            ],
+            "frameRate": 15,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "131": {
+        "name": "Vicious Squire",
+        "outfitId": 131,
+        "atlas": {
+          "image": "assets/outfits/131-97-24-73-116-1.png",
+          "json": "assets/outfits/131-97-24-73-116-1.json"
+        },
+        "appearance": {
+          "looktype": 131,
+          "head": 97,
+          "body": 24,
+          "legs": 73,
+          "feet": 116,
+          "addons": 1
+        },
+        "loot": [
+          {
+            "countMax": 10,
+            "countMin": 1,
+            "dropChance": 0.9045,
+            "itemId": 3446,
+            "itemName": "bolt",
+            "rarity": "common"
+          },
+          {
+            "countMax": 30,
+            "countMin": 1,
+            "dropChance": 0.7541,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.154,
+            "itemId": 3592,
+            "itemName": "grapes",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.1234,
+            "itemId": 239,
+            "itemName": "great health potion",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.05,
+            "itemId": 3577,
+            "itemName": "meat",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.01,
+            "itemId": 3003,
+            "itemName": "rope",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.01,
+            "itemId": 3572,
+            "itemName": "scarf",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0083,
+            "itemId": 3349,
+            "itemName": "crossbow",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0083,
+            "itemId": 2815,
+            "itemName": "scroll",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0083,
+            "itemId": 3028,
+            "itemName": "small diamond",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0083,
+            "itemId": 3269,
+            "itemName": "halberd",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0076,
+            "itemId": 3563,
+            "itemName": "green tunic",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.007,
+            "itemId": 3048,
+            "itemName": "might ring",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0033,
+            "itemId": 3415,
+            "itemName": "guardian shield",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0023,
+            "itemId": 3371,
+            "itemName": "knight legs",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.002,
+            "itemId": 3369,
+            "itemName": "warrior helmet",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0013,
+            "itemId": 3279,
+            "itemName": "war hammer",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 22017,
+          "stages": [
+            {
+              "durationSeconds": 300,
+              "itemId": 22017
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 22018
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 22019
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "131_0",
+          "east": "131_1",
+          "south": "131_2",
+          "west": "131_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "131_0",
+              "131_4",
+              "131_8",
+              "131_12",
+              "131_16",
+              "131_20",
+              "131_24",
+              "131_28",
+              "131_32"
+            ],
+            "frameRate": 15,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "131_1",
+              "131_5",
+              "131_9",
+              "131_13",
+              "131_17",
+              "131_21",
+              "131_25",
+              "131_29",
+              "131_33"
+            ],
+            "frameRate": 15,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "131_2",
+              "131_6",
+              "131_10",
+              "131_14",
+              "131_18",
+              "131_22",
+              "131_26",
+              "131_30",
+              "131_34"
+            ],
+            "frameRate": 15,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "131_3",
+              "131_7",
+              "131_11",
+              "131_15",
+              "131_19",
+              "131_23",
+              "131_27",
+              "131_31",
+              "131_35"
+            ],
+            "frameRate": 15,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "145": {
+        "name": "Cult Scholar",
+        "outfitId": 145,
+        "atlas": {
+          "image": "assets/outfits/145-19-77-3-20-1.png",
+          "json": "assets/outfits/145-19-77-3-20-1.json"
+        },
+        "appearance": {
+          "looktype": 145,
+          "head": 19,
+          "body": 77,
+          "legs": 3,
+          "feet": 20,
+          "addons": 1
+        },
+        "loot": [
+          {
+            "countMax": 10,
+            "countMin": 1,
+            "dropChance": 0.9045,
+            "itemId": 3446,
+            "itemName": "bolt",
+            "rarity": "common"
+          },
+          {
+            "countMax": 30,
+            "countMin": 1,
+            "dropChance": 0.7541,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.154,
+            "itemId": 3592,
+            "itemName": "grapes",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.1234,
+            "itemId": 239,
+            "itemName": "great health potion",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.05,
+            "itemId": 3577,
+            "itemName": "meat",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.01,
+            "itemId": 3003,
+            "itemName": "rope",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.01,
+            "itemId": 3572,
+            "itemName": "scarf",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0083,
+            "itemId": 3349,
+            "itemName": "crossbow",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0083,
+            "itemId": 2815,
+            "itemName": "scroll",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0083,
+            "itemId": 3028,
+            "itemName": "small diamond",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0083,
+            "itemId": 3269,
+            "itemName": "halberd",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0076,
+            "itemId": 3563,
+            "itemName": "green tunic",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.007,
+            "itemId": 3048,
+            "itemName": "might ring",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0033,
+            "itemId": 3415,
+            "itemName": "guardian shield",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0023,
+            "itemId": 3371,
+            "itemName": "knight legs",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.002,
+            "itemId": 3369,
+            "itemName": "warrior helmet",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0013,
+            "itemId": 3279,
+            "itemName": "war hammer",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 22017,
+          "stages": [
+            {
+              "durationSeconds": 300,
+              "itemId": 22017
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 22018
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 22019
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "145_0",
+          "east": "145_1",
+          "south": "145_2",
+          "west": "145_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "145_0",
+              "145_4",
+              "145_8",
+              "145_12",
+              "145_16",
+              "145_20",
+              "145_24",
+              "145_28",
+              "145_32"
+            ],
+            "frameRate": 15,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "145_1",
+              "145_5",
+              "145_9",
+              "145_13",
+              "145_17",
+              "145_21",
+              "145_25",
+              "145_29",
+              "145_33"
+            ],
+            "frameRate": 15,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "145_2",
+              "145_6",
+              "145_10",
+              "145_14",
+              "145_18",
+              "145_22",
+              "145_26",
+              "145_30",
+              "145_34"
+            ],
+            "frameRate": 15,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "145_3",
+              "145_7",
+              "145_11",
+              "145_15",
+              "145_19",
+              "145_23",
+              "145_27",
+              "145_31",
+              "145_35"
+            ],
+            "frameRate": 15,
+            "loopType": "infinite"
+          }
+        }
+      }
+    },
+    "spawns": [
+      {
+        "name": "Troll",
+        "outfitId": 15,
+        "tileX": 121,
+        "tileY": 146,
+        "worldX": 32436,
+        "worldY": 31790,
+        "worldZ": 8,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Troll",
+        "outfitId": 15,
+        "tileX": 128,
+        "tileY": 146,
+        "worldX": 32443,
+        "worldY": 31790,
+        "worldZ": 8,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Troll",
+        "outfitId": 15,
+        "tileX": 130,
+        "tileY": 150,
+        "worldX": 32445,
+        "worldY": 31794,
+        "worldZ": 8,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Troll",
+        "outfitId": 15,
+        "tileX": 135,
+        "tileY": 149,
+        "worldX": 32450,
+        "worldY": 31793,
+        "worldZ": 8,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Troll",
+        "outfitId": 15,
+        "tileX": 138,
+        "tileY": 152,
+        "worldX": 32453,
+        "worldY": 31796,
+        "worldZ": 8,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Troll",
+        "outfitId": 15,
+        "tileX": 141,
+        "tileY": 158,
+        "worldX": 32456,
+        "worldY": 31802,
+        "worldZ": 8,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Troll",
+        "outfitId": 15,
+        "tileX": 144,
+        "tileY": 161,
+        "worldX": 32459,
+        "worldY": 31805,
+        "worldZ": 8,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Cult Enforcer",
+        "outfitId": 134,
+        "tileX": 21,
+        "tileY": 15,
+        "worldX": 32336,
+        "worldY": 31659,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Cult Believer",
+        "outfitId": 132,
+        "tileX": 22,
+        "tileY": 15,
+        "worldX": 32337,
+        "worldY": 31659,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Vile Grandmaster",
+        "outfitId": 268,
+        "tileX": 21,
+        "tileY": 16,
+        "worldX": 32336,
+        "worldY": 31660,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Vile Grandmaster",
+        "outfitId": 268,
+        "tileX": 58,
+        "tileY": 12,
+        "worldX": 32373,
+        "worldY": 31656,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 60
+      },
+      {
+        "name": "Vile Grandmaster",
+        "outfitId": 268,
+        "tileX": 59,
+        "tileY": 12,
+        "worldX": 32374,
+        "worldY": 31656,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 60
+      },
+      {
+        "name": "Cult Believer",
+        "outfitId": 132,
+        "tileX": 58,
+        "tileY": 13,
+        "worldX": 32373,
+        "worldY": 31657,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 60
+      },
+      {
+        "name": "Cult Believer",
+        "outfitId": 132,
+        "tileX": 14,
+        "tileY": 15,
+        "worldX": 32329,
+        "worldY": 31659,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 60
+      },
+      {
+        "name": "Vile Grandmaster",
+        "outfitId": 268,
+        "tileX": 13,
+        "tileY": 16,
+        "worldX": 32328,
+        "worldY": 31660,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 60
+      },
+      {
+        "name": "Vicious Squire",
+        "outfitId": 131,
+        "tileX": 16,
+        "tileY": 16,
+        "worldX": 32331,
+        "worldY": 31660,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 60
+      },
+      {
+        "name": "Vicious Squire",
+        "outfitId": 131,
+        "tileX": 25,
+        "tileY": 15,
+        "worldX": 32340,
+        "worldY": 31659,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 60
+      },
+      {
+        "name": "Vile Grandmaster",
+        "outfitId": 268,
+        "tileX": 28,
+        "tileY": 16,
+        "worldX": 32343,
+        "worldY": 31660,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 60
+      },
+      {
+        "name": "Vile Grandmaster",
+        "outfitId": 268,
+        "tileX": 33,
+        "tileY": 16,
+        "worldX": 32348,
+        "worldY": 31660,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 60
+      },
+      {
+        "name": "Cult Believer",
+        "outfitId": 132,
+        "tileX": 39,
+        "tileY": 15,
+        "worldX": 32354,
+        "worldY": 31659,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 60
+      },
+      {
+        "name": "Vile Grandmaster",
+        "outfitId": 268,
+        "tileX": 38,
+        "tileY": 16,
+        "worldX": 32353,
+        "worldY": 31660,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 60
+      },
+      {
+        "name": "Cult Enforcer",
+        "outfitId": 134,
+        "tileX": 40,
+        "tileY": 16,
+        "worldX": 32355,
+        "worldY": 31660,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 60
+      },
+      {
+        "name": "Vicious Squire",
+        "outfitId": 131,
+        "tileX": 41,
+        "tileY": 16,
+        "worldX": 32356,
+        "worldY": 31660,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 60
+      },
+      {
+        "name": "Vile Grandmaster",
+        "outfitId": 268,
+        "tileX": 13,
+        "tileY": 22,
+        "worldX": 32328,
+        "worldY": 31666,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 60
+      },
+      {
+        "name": "Cult Enforcer",
+        "outfitId": 134,
+        "tileX": 47,
+        "tileY": 14,
+        "worldX": 32362,
+        "worldY": 31658,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 60
+      },
+      {
+        "name": "Vicious Squire",
+        "outfitId": 131,
+        "tileX": 45,
+        "tileY": 16,
+        "worldX": 32360,
+        "worldY": 31660,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 60
+      },
+      {
+        "name": "Vile Grandmaster",
+        "outfitId": 268,
+        "tileX": 48,
+        "tileY": 16,
+        "worldX": 32363,
+        "worldY": 31660,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 60
+      },
+      {
+        "name": "Cult Enforcer",
+        "outfitId": 134,
+        "tileX": 50,
+        "tileY": 19,
+        "worldX": 32365,
+        "worldY": 31663,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 60
+      },
+      {
+        "name": "Vile Grandmaster",
+        "outfitId": 268,
+        "tileX": 51,
+        "tileY": 20,
+        "worldX": 32366,
+        "worldY": 31664,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 60
+      },
+      {
+        "name": "Cult Believer",
+        "outfitId": 132,
+        "tileX": 53,
+        "tileY": 21,
+        "worldX": 32368,
+        "worldY": 31665,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 60
+      },
+      {
+        "name": "Vile Grandmaster",
+        "outfitId": 268,
+        "tileX": 56,
+        "tileY": 21,
+        "worldX": 32371,
+        "worldY": 31665,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Vicious Squire",
+        "outfitId": 131,
+        "tileX": 58,
+        "tileY": 21,
+        "worldX": 32373,
+        "worldY": 31665,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Cult Enforcer",
+        "outfitId": 134,
+        "tileX": 38,
+        "tileY": 22,
+        "worldX": 32353,
+        "worldY": 31666,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 60
+      },
+      {
+        "name": "Vile Grandmaster",
+        "outfitId": 268,
+        "tileX": 35,
+        "tileY": 26,
+        "worldX": 32350,
+        "worldY": 31670,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 15
+      },
+      {
+        "name": "Vile Grandmaster",
+        "outfitId": 268,
+        "tileX": 29,
+        "tileY": 23,
+        "worldX": 32344,
+        "worldY": 31667,
+        "worldZ": 10,
+        "radius": 1,
+        "spawntime": 15
+      },
+      {
+        "name": "Vicious Squire",
+        "outfitId": 131,
+        "tileX": 13,
+        "tileY": 28,
+        "worldX": 32328,
+        "worldY": 31672,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 60
+      },
+      {
+        "name": "Cult Scholar",
+        "outfitId": 145,
+        "tileX": 29,
+        "tileY": 28,
+        "worldX": 32344,
+        "worldY": 31672,
+        "worldZ": 10,
+        "radius": 1,
+        "spawntime": 15
+      },
+      {
+        "name": "Cult Scholar",
+        "outfitId": 145,
+        "tileX": 38,
+        "tileY": 28,
+        "worldX": 32353,
+        "worldY": 31672,
+        "worldZ": 10,
+        "radius": 1,
+        "spawntime": 15
+      },
+      {
+        "name": "Cult Believer",
+        "outfitId": 132,
+        "tileX": 13,
+        "tileY": 30,
+        "worldX": 32328,
+        "worldY": 31674,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 60
+      },
+      {
+        "name": "Vile Grandmaster",
+        "outfitId": 268,
+        "tileX": 14,
+        "tileY": 31,
+        "worldX": 32329,
+        "worldY": 31675,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 60
+      },
+      {
+        "name": "Vile Grandmaster",
+        "outfitId": 268,
+        "tileX": 18,
+        "tileY": 31,
+        "worldX": 32333,
+        "worldY": 31675,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 60
+      },
+      {
+        "name": "Vicious Squire",
+        "outfitId": 131,
+        "tileX": 12,
+        "tileY": 33,
+        "worldX": 32327,
+        "worldY": 31677,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 60
+      },
+      {
+        "name": "Vicious Squire",
+        "outfitId": 131,
+        "tileX": 24,
+        "tileY": 30,
+        "worldX": 32339,
+        "worldY": 31674,
+        "worldZ": 10,
+        "radius": 1,
+        "spawntime": 15
+      },
+      {
+        "name": "Vicious Squire",
+        "outfitId": 131,
+        "tileX": 23,
+        "tileY": 31,
+        "worldX": 32338,
+        "worldY": 31675,
+        "worldZ": 10,
+        "radius": 1,
+        "spawntime": 15
+      },
+      {
+        "name": "Vile Grandmaster",
+        "outfitId": 268,
+        "tileX": 43,
+        "tileY": 30,
+        "worldX": 32358,
+        "worldY": 31674,
+        "worldZ": 10,
+        "radius": 1,
+        "spawntime": 15
+      },
+      {
+        "name": "Cult Scholar",
+        "outfitId": 145,
+        "tileX": 49,
+        "tileY": 30,
+        "worldX": 32364,
+        "worldY": 31674,
+        "worldZ": 10,
+        "radius": 1,
+        "spawntime": 15
+      },
+      {
+        "name": "Vicious Squire",
+        "outfitId": 131,
+        "tileX": 54,
+        "tileY": 30,
+        "worldX": 32369,
+        "worldY": 31674,
+        "worldZ": 10,
+        "radius": 1,
+        "spawntime": 15
+      },
+      {
+        "name": "Vile Grandmaster",
+        "outfitId": 268,
+        "tileX": 32,
+        "tileY": 31,
+        "worldX": 32347,
+        "worldY": 31675,
+        "worldZ": 10,
+        "radius": 1,
+        "spawntime": 15
+      },
+      {
+        "name": "Cult Scholar",
+        "outfitId": 145,
+        "tileX": 59,
+        "tileY": 31,
+        "worldX": 32374,
+        "worldY": 31675,
+        "worldZ": 10,
+        "radius": 1,
+        "spawntime": 15
+      },
+      {
+        "name": "Vicious Squire",
+        "outfitId": 131,
+        "tileX": 50,
+        "tileY": 34,
+        "worldX": 32365,
+        "worldY": 31678,
+        "worldZ": 10,
+        "radius": 1,
+        "spawntime": 15
+      },
+      {
+        "name": "Vicious Squire",
+        "outfitId": 131,
+        "tileX": 59,
+        "tileY": 34,
+        "worldX": 32374,
+        "worldY": 31678,
+        "worldZ": 10,
+        "radius": 1,
+        "spawntime": 15
+      },
+      {
+        "name": "Vicious Squire",
+        "outfitId": 131,
+        "tileX": 58,
+        "tileY": 35,
+        "worldX": 32373,
+        "worldY": 31679,
+        "worldZ": 10,
+        "radius": 1,
+        "spawntime": 15
+      },
+      {
+        "name": "Cult Scholar",
+        "outfitId": 145,
+        "tileX": 43,
+        "tileY": 35,
+        "worldX": 32358,
+        "worldY": 31679,
+        "worldZ": 10,
+        "radius": 1,
+        "spawntime": 15
+      },
+      {
+        "name": "Cult Scholar",
+        "outfitId": 145,
+        "tileX": 27,
+        "tileY": 36,
+        "worldX": 32342,
+        "worldY": 31680,
+        "worldZ": 10,
+        "radius": 1,
+        "spawntime": 15
+      },
+      {
+        "name": "Vicious Squire",
+        "outfitId": 131,
+        "tileX": 49,
+        "tileY": 36,
+        "worldX": 32364,
+        "worldY": 31680,
+        "worldZ": 10,
+        "radius": 1,
+        "spawntime": 15
+      },
+      {
+        "name": "Vile Grandmaster",
+        "outfitId": 268,
+        "tileX": 13,
+        "tileY": 38,
+        "worldX": 32328,
+        "worldY": 31682,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 60
+      },
+      {
+        "name": "Cult Believer",
+        "outfitId": 132,
+        "tileX": 15,
+        "tileY": 38,
+        "worldX": 32330,
+        "worldY": 31682,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 60
+      },
+      {
+        "name": "Cult Believer",
+        "outfitId": 132,
+        "tileX": 18,
+        "tileY": 38,
+        "worldX": 32333,
+        "worldY": 31682,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 60
+      },
+      {
+        "name": "Vile Grandmaster",
+        "outfitId": 268,
+        "tileX": 19,
+        "tileY": 38,
+        "worldX": 32334,
+        "worldY": 31682,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 60
+      },
+      {
+        "name": "Vicious Squire",
+        "outfitId": 131,
+        "tileX": 16,
+        "tileY": 39,
+        "worldX": 32331,
+        "worldY": 31683,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 60
+      },
+      {
+        "name": "Vicious Squire",
+        "outfitId": 131,
+        "tileX": 20,
+        "tileY": 38,
+        "worldX": 32335,
+        "worldY": 31682,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Vicious Squire",
+        "outfitId": 131,
+        "tileX": 21,
+        "tileY": 41,
+        "worldX": 32336,
+        "worldY": 31685,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Vile Grandmaster",
+        "outfitId": 268,
+        "tileX": 22,
+        "tileY": 43,
+        "worldX": 32337,
+        "worldY": 31687,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Cult Scholar",
+        "outfitId": 145,
+        "tileX": 24,
+        "tileY": 43,
+        "worldX": 32339,
+        "worldY": 31687,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 15
+      },
+      {
+        "name": "Cult Enforcer",
+        "outfitId": 134,
+        "tileX": 29,
+        "tileY": 42,
+        "worldX": 32344,
+        "worldY": 31686,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Cult Scholar",
+        "outfitId": 145,
+        "tileX": 34,
+        "tileY": 39,
+        "worldX": 32349,
+        "worldY": 31683,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 15
+      },
+      {
+        "name": "Vile Grandmaster",
+        "outfitId": 268,
+        "tileX": 35,
+        "tileY": 40,
+        "worldX": 32350,
+        "worldY": 31684,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Cult Enforcer",
+        "outfitId": 134,
+        "tileX": 35,
+        "tileY": 44,
+        "worldX": 32350,
+        "worldY": 31688,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Vile Grandmaster",
+        "outfitId": 268,
+        "tileX": 58,
+        "tileY": 42,
+        "worldX": 32373,
+        "worldY": 31686,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 60
+      },
+      {
+        "name": "Cult Enforcer",
+        "outfitId": 134,
+        "tileX": 58,
+        "tileY": 45,
+        "worldX": 32373,
+        "worldY": 31689,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 60
+      },
+      {
+        "name": "Vile Grandmaster",
+        "outfitId": 268,
+        "tileX": 59,
+        "tileY": 47,
+        "worldX": 32374,
+        "worldY": 31691,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 60
+      },
+      {
+        "name": "Cult Believer",
+        "outfitId": 132,
+        "tileX": 54,
+        "tileY": 49,
+        "worldX": 32369,
+        "worldY": 31693,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 60
+      },
+      {
+        "name": "Vile Grandmaster",
+        "outfitId": 268,
+        "tileX": 17,
+        "tileY": 49,
+        "worldX": 32332,
+        "worldY": 31693,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Vicious Squire",
+        "outfitId": 131,
+        "tileX": 34,
+        "tileY": 46,
+        "worldX": 32349,
+        "worldY": 31690,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Cult Scholar",
+        "outfitId": 145,
+        "tileX": 33,
+        "tileY": 48,
+        "worldX": 32348,
+        "worldY": 31692,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 15
+      },
+      {
+        "name": "Vile Grandmaster",
+        "outfitId": 268,
+        "tileX": 37,
+        "tileY": 48,
+        "worldX": 32352,
+        "worldY": 31692,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Cult Enforcer",
+        "outfitId": 134,
+        "tileX": 38,
+        "tileY": 48,
+        "worldX": 32353,
+        "worldY": 31692,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Vicious Squire",
+        "outfitId": 131,
+        "tileX": 32,
+        "tileY": 49,
+        "worldX": 32347,
+        "worldY": 31693,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Vicious Squire",
+        "outfitId": 131,
+        "tileX": 58,
+        "tileY": 50,
+        "worldX": 32373,
+        "worldY": 31694,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Vile Grandmaster",
+        "outfitId": 268,
+        "tileX": 53,
+        "tileY": 51,
+        "worldX": 32368,
+        "worldY": 31695,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Vicious Squire",
+        "outfitId": 131,
+        "tileX": 25,
+        "tileY": 50,
+        "worldX": 32340,
+        "worldY": 31694,
+        "worldZ": 10,
+        "radius": 1,
+        "spawntime": 15
+      },
+      {
+        "name": "Vicious Squire",
+        "outfitId": 131,
+        "tileX": 45,
+        "tileY": 51,
+        "worldX": 32360,
+        "worldY": 31695,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 60
+      },
+      {
+        "name": "Vicious Squire",
+        "outfitId": 131,
+        "tileX": 49,
+        "tileY": 51,
+        "worldX": 32364,
+        "worldY": 31695,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 60
+      },
+      {
+        "name": "Cult Scholar",
+        "outfitId": 145,
+        "tileX": 21,
+        "tileY": 51,
+        "worldX": 32336,
+        "worldY": 31695,
+        "worldZ": 10,
+        "radius": 1,
+        "spawntime": 15
+      },
+      {
+        "name": "Vicious Squire",
+        "outfitId": 131,
+        "tileX": 29,
+        "tileY": 52,
+        "worldX": 32344,
+        "worldY": 31696,
+        "worldZ": 10,
+        "radius": 1,
+        "spawntime": 15
+      },
+      {
+        "name": "Vicious Squire",
+        "outfitId": 131,
+        "tileX": 16,
+        "tileY": 54,
+        "worldX": 32331,
+        "worldY": 31698,
+        "worldZ": 10,
+        "radius": 1,
+        "spawntime": 15
+      },
+      {
+        "name": "Cult Scholar",
+        "outfitId": 145,
+        "tileX": 13,
+        "tileY": 55,
+        "worldX": 32328,
+        "worldY": 31699,
+        "worldZ": 10,
+        "radius": 1,
+        "spawntime": 15
+      },
+      {
+        "name": "Cult Enforcer",
+        "outfitId": 134,
+        "tileX": 34,
+        "tileY": 55,
+        "worldX": 32349,
+        "worldY": 31699,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Vile Grandmaster",
+        "outfitId": 268,
+        "tileX": 36,
+        "tileY": 55,
+        "worldX": 32351,
+        "worldY": 31699,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Cult Believer",
+        "outfitId": 132,
+        "tileX": 53,
+        "tileY": 52,
+        "worldX": 32368,
+        "worldY": 31696,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Vile Grandmaster",
+        "outfitId": 268,
+        "tileX": 55,
+        "tileY": 56,
+        "worldX": 32370,
+        "worldY": 31700,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Cult Scholar",
+        "outfitId": 145,
+        "tileX": 58,
+        "tileY": 56,
+        "worldX": 32373,
+        "worldY": 31700,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 15
+      }
+    ]
+  },
+  "loot": {
+    "id": "CARLIN-HUNT-0009",
+    "mapId": "CARLIN-HUNT-0009",
+    "drops": [
+      {
+        "countMax": 12,
+        "countMin": 1,
+        "dropChance": 0.653,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Troll"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.18,
+        "itemId": 3268,
+        "itemName": "hand axe",
+        "rarity": "semi-rare",
+        "monsterName": "Troll"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.15,
+        "itemId": 3577,
+        "itemName": "meat",
+        "rarity": "semi-rare",
+        "monsterName": "Troll"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.13,
+        "itemId": 3277,
+        "itemName": "spear",
+        "rarity": "semi-rare",
+        "monsterName": "Troll"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.12,
+        "itemId": 3355,
+        "itemName": "leather helmet",
+        "rarity": "semi-rare",
+        "monsterName": "Troll"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1,
+        "itemId": 3552,
+        "itemName": "leather boots",
+        "rarity": "semi-rare",
+        "monsterName": "Troll"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0795,
+        "itemId": 3003,
+        "itemName": "rope",
+        "rarity": "semi-rare",
+        "monsterName": "Troll"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.05,
+        "itemId": 3336,
+        "itemName": "studded club",
+        "rarity": "semi-rare",
+        "monsterName": "Troll"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0473,
+        "itemId": 3412,
+        "itemName": "wooden shield",
+        "rarity": "rare",
+        "monsterName": "Troll"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.01,
+        "itemId": 9689,
+        "itemName": "bunch of troll hair",
+        "rarity": "rare",
+        "monsterName": "Troll"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.01,
+        "itemId": 23986,
+        "itemName": "heavy old tome",
+        "rarity": "rare",
+        "monsterName": "Troll"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0008,
+        "itemId": 3054,
+        "itemName": "silver amulet",
+        "rarity": "very-rare",
+        "monsterName": "Troll"
+      },
+      {
+        "countMax": 10,
+        "countMin": 1,
+        "dropChance": 0.9045,
+        "itemId": 3446,
+        "itemName": "bolt",
+        "rarity": "common",
+        "monsterName": "Cult Enforcer"
+      },
+      {
+        "countMax": 30,
+        "countMin": 1,
+        "dropChance": 0.7541,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Cult Enforcer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.154,
+        "itemId": 3592,
+        "itemName": "grapes",
+        "rarity": "semi-rare",
+        "monsterName": "Cult Enforcer"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.1234,
+        "itemId": 239,
+        "itemName": "great health potion",
+        "rarity": "semi-rare",
+        "monsterName": "Cult Enforcer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.05,
+        "itemId": 3577,
+        "itemName": "meat",
+        "rarity": "semi-rare",
+        "monsterName": "Cult Enforcer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.01,
+        "itemId": 3003,
+        "itemName": "rope",
+        "rarity": "rare",
+        "monsterName": "Cult Enforcer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.01,
+        "itemId": 3572,
+        "itemName": "scarf",
+        "rarity": "rare",
+        "monsterName": "Cult Enforcer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0083,
+        "itemId": 3349,
+        "itemName": "crossbow",
+        "rarity": "rare",
+        "monsterName": "Cult Enforcer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0083,
+        "itemId": 2815,
+        "itemName": "scroll",
+        "rarity": "rare",
+        "monsterName": "Cult Enforcer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0083,
+        "itemId": 3028,
+        "itemName": "small diamond",
+        "rarity": "rare",
+        "monsterName": "Cult Enforcer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0083,
+        "itemId": 3269,
+        "itemName": "halberd",
+        "rarity": "rare",
+        "monsterName": "Cult Enforcer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0076,
+        "itemId": 3563,
+        "itemName": "green tunic",
+        "rarity": "rare",
+        "monsterName": "Cult Enforcer"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.007,
+        "itemId": 3048,
+        "itemName": "might ring",
+        "rarity": "rare",
+        "monsterName": "Cult Enforcer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0033,
+        "itemId": 3415,
+        "itemName": "guardian shield",
+        "rarity": "very-rare",
+        "monsterName": "Cult Enforcer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0023,
+        "itemId": 3371,
+        "itemName": "knight legs",
+        "rarity": "very-rare",
+        "monsterName": "Cult Enforcer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.002,
+        "itemId": 3369,
+        "itemName": "warrior helmet",
+        "rarity": "very-rare",
+        "monsterName": "Cult Enforcer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0013,
+        "itemId": 3279,
+        "itemName": "war hammer",
+        "rarity": "very-rare",
+        "monsterName": "Cult Enforcer"
+      },
+      {
+        "countMax": 10,
+        "countMin": 1,
+        "dropChance": 0.9045,
+        "itemId": 3446,
+        "itemName": "bolt",
+        "rarity": "common",
+        "monsterName": "Cult Believer"
+      },
+      {
+        "countMax": 30,
+        "countMin": 1,
+        "dropChance": 0.7541,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Cult Believer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.154,
+        "itemId": 3592,
+        "itemName": "grapes",
+        "rarity": "semi-rare",
+        "monsterName": "Cult Believer"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.1234,
+        "itemId": 239,
+        "itemName": "great health potion",
+        "rarity": "semi-rare",
+        "monsterName": "Cult Believer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.05,
+        "itemId": 3577,
+        "itemName": "meat",
+        "rarity": "semi-rare",
+        "monsterName": "Cult Believer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.01,
+        "itemId": 3003,
+        "itemName": "rope",
+        "rarity": "rare",
+        "monsterName": "Cult Believer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.01,
+        "itemId": 3572,
+        "itemName": "scarf",
+        "rarity": "rare",
+        "monsterName": "Cult Believer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0083,
+        "itemId": 3349,
+        "itemName": "crossbow",
+        "rarity": "rare",
+        "monsterName": "Cult Believer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0083,
+        "itemId": 2815,
+        "itemName": "scroll",
+        "rarity": "rare",
+        "monsterName": "Cult Believer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0083,
+        "itemId": 3028,
+        "itemName": "small diamond",
+        "rarity": "rare",
+        "monsterName": "Cult Believer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0083,
+        "itemId": 3269,
+        "itemName": "halberd",
+        "rarity": "rare",
+        "monsterName": "Cult Believer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0076,
+        "itemId": 3563,
+        "itemName": "green tunic",
+        "rarity": "rare",
+        "monsterName": "Cult Believer"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.007,
+        "itemId": 3048,
+        "itemName": "might ring",
+        "rarity": "rare",
+        "monsterName": "Cult Believer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0033,
+        "itemId": 3415,
+        "itemName": "guardian shield",
+        "rarity": "very-rare",
+        "monsterName": "Cult Believer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0023,
+        "itemId": 3371,
+        "itemName": "knight legs",
+        "rarity": "very-rare",
+        "monsterName": "Cult Believer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.002,
+        "itemId": 3369,
+        "itemName": "warrior helmet",
+        "rarity": "very-rare",
+        "monsterName": "Cult Believer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0013,
+        "itemId": 3279,
+        "itemName": "war hammer",
+        "rarity": "very-rare",
+        "monsterName": "Cult Believer"
+      },
+      {
+        "countMax": 30,
+        "countMin": 1,
+        "dropChance": 0.7541,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Vile Grandmaster"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.7541,
+        "itemId": 3035,
+        "itemName": "platinum coin",
+        "rarity": "common",
+        "monsterName": "Vile Grandmaster"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0161,
+        "itemId": 3269,
+        "itemName": "halberd",
+        "rarity": "rare",
+        "monsterName": "Vile Grandmaster"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0151,
+        "itemId": 3003,
+        "itemName": "rope",
+        "rarity": "rare",
+        "monsterName": "Vile Grandmaster"
+      },
+      {
+        "countMax": 4,
+        "countMin": 1,
+        "dropChance": 0.0121,
+        "itemId": 7364,
+        "itemName": "sniper arrow",
+        "rarity": "rare",
+        "monsterName": "Vile Grandmaster"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0121,
+        "itemId": 3592,
+        "itemName": "grapes",
+        "rarity": "rare",
+        "monsterName": "Vile Grandmaster"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.0121,
+        "itemId": 3577,
+        "itemName": "meat",
+        "rarity": "rare",
+        "monsterName": "Vile Grandmaster"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0121,
+        "itemId": 239,
+        "itemName": "great health potion",
+        "rarity": "rare",
+        "monsterName": "Vile Grandmaster"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0091,
+        "itemId": 11510,
+        "itemName": "scroll of heroic deeds",
+        "rarity": "rare",
+        "monsterName": "Vile Grandmaster"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0091,
+        "itemId": 11450,
+        "itemName": "small notebook",
+        "rarity": "rare",
+        "monsterName": "Vile Grandmaster"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.0081,
+        "itemId": 3030,
+        "itemName": "small ruby",
+        "rarity": "rare",
+        "monsterName": "Vile Grandmaster"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.0081,
+        "itemId": 3029,
+        "itemName": "small sapphire",
+        "rarity": "rare",
+        "monsterName": "Vile Grandmaster"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0051,
+        "itemId": 3658,
+        "itemName": "red rose",
+        "rarity": "rare",
+        "monsterName": "Vile Grandmaster"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0051,
+        "itemId": 3004,
+        "itemName": "wedding ring",
+        "rarity": "rare",
+        "monsterName": "Vile Grandmaster"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0031,
+        "itemId": 3381,
+        "itemName": "crown armor",
+        "rarity": "very-rare",
+        "monsterName": "Vile Grandmaster"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0031,
+        "itemId": 3385,
+        "itemName": "crown helmet",
+        "rarity": "very-rare",
+        "monsterName": "Vile Grandmaster"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0021,
+        "itemId": 5911,
+        "itemName": "red piece of cloth",
+        "rarity": "very-rare",
+        "monsterName": "Vile Grandmaster"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0021,
+        "itemId": 3279,
+        "itemName": "war hammer",
+        "rarity": "very-rare",
+        "monsterName": "Vile Grandmaster"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0021,
+        "itemId": 3280,
+        "itemName": "fire sword",
+        "rarity": "very-rare",
+        "monsterName": "Vile Grandmaster"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0021,
+        "itemId": 3419,
+        "itemName": "crown shield",
+        "rarity": "very-rare",
+        "monsterName": "Vile Grandmaster"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0021,
+        "itemId": 3055,
+        "itemName": "platinum amulet",
+        "rarity": "very-rare",
+        "monsterName": "Vile Grandmaster"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0011,
+        "itemId": 3382,
+        "itemName": "crown legs",
+        "rarity": "very-rare",
+        "monsterName": "Vile Grandmaster"
+      },
+      {
+        "countMax": 10,
+        "countMin": 1,
+        "dropChance": 0.9045,
+        "itemId": 3446,
+        "itemName": "bolt",
+        "rarity": "common",
+        "monsterName": "Vicious Squire"
+      },
+      {
+        "countMax": 30,
+        "countMin": 1,
+        "dropChance": 0.7541,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Vicious Squire"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.154,
+        "itemId": 3592,
+        "itemName": "grapes",
+        "rarity": "semi-rare",
+        "monsterName": "Vicious Squire"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.1234,
+        "itemId": 239,
+        "itemName": "great health potion",
+        "rarity": "semi-rare",
+        "monsterName": "Vicious Squire"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.05,
+        "itemId": 3577,
+        "itemName": "meat",
+        "rarity": "semi-rare",
+        "monsterName": "Vicious Squire"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.01,
+        "itemId": 3003,
+        "itemName": "rope",
+        "rarity": "rare",
+        "monsterName": "Vicious Squire"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.01,
+        "itemId": 3572,
+        "itemName": "scarf",
+        "rarity": "rare",
+        "monsterName": "Vicious Squire"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0083,
+        "itemId": 3349,
+        "itemName": "crossbow",
+        "rarity": "rare",
+        "monsterName": "Vicious Squire"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0083,
+        "itemId": 2815,
+        "itemName": "scroll",
+        "rarity": "rare",
+        "monsterName": "Vicious Squire"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0083,
+        "itemId": 3028,
+        "itemName": "small diamond",
+        "rarity": "rare",
+        "monsterName": "Vicious Squire"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0083,
+        "itemId": 3269,
+        "itemName": "halberd",
+        "rarity": "rare",
+        "monsterName": "Vicious Squire"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0076,
+        "itemId": 3563,
+        "itemName": "green tunic",
+        "rarity": "rare",
+        "monsterName": "Vicious Squire"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.007,
+        "itemId": 3048,
+        "itemName": "might ring",
+        "rarity": "rare",
+        "monsterName": "Vicious Squire"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0033,
+        "itemId": 3415,
+        "itemName": "guardian shield",
+        "rarity": "very-rare",
+        "monsterName": "Vicious Squire"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0023,
+        "itemId": 3371,
+        "itemName": "knight legs",
+        "rarity": "very-rare",
+        "monsterName": "Vicious Squire"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.002,
+        "itemId": 3369,
+        "itemName": "warrior helmet",
+        "rarity": "very-rare",
+        "monsterName": "Vicious Squire"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0013,
+        "itemId": 3279,
+        "itemName": "war hammer",
+        "rarity": "very-rare",
+        "monsterName": "Vicious Squire"
+      },
+      {
+        "countMax": 10,
+        "countMin": 1,
+        "dropChance": 0.9045,
+        "itemId": 3446,
+        "itemName": "bolt",
+        "rarity": "common",
+        "monsterName": "Cult Scholar"
+      },
+      {
+        "countMax": 30,
+        "countMin": 1,
+        "dropChance": 0.7541,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Cult Scholar"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.154,
+        "itemId": 3592,
+        "itemName": "grapes",
+        "rarity": "semi-rare",
+        "monsterName": "Cult Scholar"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.1234,
+        "itemId": 239,
+        "itemName": "great health potion",
+        "rarity": "semi-rare",
+        "monsterName": "Cult Scholar"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.05,
+        "itemId": 3577,
+        "itemName": "meat",
+        "rarity": "semi-rare",
+        "monsterName": "Cult Scholar"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.01,
+        "itemId": 3003,
+        "itemName": "rope",
+        "rarity": "rare",
+        "monsterName": "Cult Scholar"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.01,
+        "itemId": 3572,
+        "itemName": "scarf",
+        "rarity": "rare",
+        "monsterName": "Cult Scholar"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0083,
+        "itemId": 3349,
+        "itemName": "crossbow",
+        "rarity": "rare",
+        "monsterName": "Cult Scholar"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0083,
+        "itemId": 2815,
+        "itemName": "scroll",
+        "rarity": "rare",
+        "monsterName": "Cult Scholar"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0083,
+        "itemId": 3028,
+        "itemName": "small diamond",
+        "rarity": "rare",
+        "monsterName": "Cult Scholar"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0083,
+        "itemId": 3269,
+        "itemName": "halberd",
+        "rarity": "rare",
+        "monsterName": "Cult Scholar"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0076,
+        "itemId": 3563,
+        "itemName": "green tunic",
+        "rarity": "rare",
+        "monsterName": "Cult Scholar"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.007,
+        "itemId": 3048,
+        "itemName": "might ring",
+        "rarity": "rare",
+        "monsterName": "Cult Scholar"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0033,
+        "itemId": 3415,
+        "itemName": "guardian shield",
+        "rarity": "very-rare",
+        "monsterName": "Cult Scholar"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0023,
+        "itemId": 3371,
+        "itemName": "knight legs",
+        "rarity": "very-rare",
+        "monsterName": "Cult Scholar"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.002,
+        "itemId": 3369,
+        "itemName": "warrior helmet",
+        "rarity": "very-rare",
+        "monsterName": "Cult Scholar"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0013,
+        "itemId": 3279,
+        "itemName": "war hammer",
+        "rarity": "very-rare",
+        "monsterName": "Cult Scholar"
+      }
+    ]
+  },
+  "hunts": {
+    "id": "CARLIN-HUNT-0009",
+    "mapId": "CARLIN-HUNT-0009",
+    "name": "Vile Grandmasters — Fields of Glory z9",
+    "label": "Vile Grandmasters — Fields of Glory z9",
+    "seed": "0000000000000000000000",
+    "assetsRoot": "assets/CARLIN-HUNT-0009_trolls-carlin-surroundings-z810-sprites-v6",
+    "mapUrl": "assets/CARLIN-HUNT-0009_trolls-carlin-surroundings-z810-sprites-v6/map.json",
+    "portrait": "/assets/character-default.png",
+    "monsterPreview": {
+      "name": "Vile Grandmaster",
+      "icon": "/assets/outfits/268-59-19-95-94-1.png",
+      "atlas": "/assets/outfits/268-59-19-95-94-1.json"
+    },
+    "startPosition": [
+      32393,
+      31730
+    ],
+    "city": "CARLIN",
+    "_todo": [
+      "revisar startPosition (centro geométrico do mapBoundsRef, pode cair fora de área andável)"
+    ]
+  }
+}

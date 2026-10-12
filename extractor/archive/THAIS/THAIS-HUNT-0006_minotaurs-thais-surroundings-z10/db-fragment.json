@@ -1,0 +1,700 @@
+{
+  "monsters": {
+    "id": "THAIS-HUNT-0006",
+    "mapId": "THAIS-HUNT-0006",
+    "assetsRoot": "assets/THAIS-HUNT-0006_minotaurs-thais-surroundings-z10-sprites/monsters",
+    "mapBoundsRef": {
+      "minX": 32262,
+      "minY": 32385,
+      "maxX": 32291,
+      "maxY": 32416
+    },
+    "monsterDefs": {
+      "24": {
+        "name": "Minotaur Archer",
+        "outfitId": 24,
+        "atlas": {
+          "image": "assets/outfits/24.png",
+          "json": "assets/outfits/24.json"
+        },
+        "appearance": {
+          "looktype": 24,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 20,
+            "countMin": 1,
+            "dropChance": 0.9045,
+            "itemId": 3446,
+            "itemName": "bolt",
+            "rarity": "common"
+          },
+          {
+            "countMax": 30,
+            "countMin": 1,
+            "dropChance": 0.7541,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.154,
+            "itemId": 11451,
+            "itemName": "broken crossbow",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 4,
+            "countMin": 1,
+            "dropChance": 0.1234,
+            "itemId": 7363,
+            "itemName": "piercing bolt",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0826,
+            "itemId": 11483,
+            "itemName": "piece of archer armor",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.05,
+            "itemId": 3577,
+            "itemName": "meat",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.0199,
+            "itemId": 11472,
+            "itemName": "minotaur horn",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.019,
+            "itemId": 5878,
+            "itemName": "minotaur leather",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0083,
+            "itemId": 3349,
+            "itemName": "crossbow",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0053,
+            "itemId": 3359,
+            "itemName": "brass armor",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0053,
+            "itemId": 3377,
+            "itemName": "scale armor",
+            "rarity": "rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 5982,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 5982
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4052
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4053
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4013
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "24_0",
+          "east": "24_1",
+          "south": "24_2",
+          "west": "24_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "24_4",
+              "24_8",
+              "24_12",
+              "24_16",
+              "24_20",
+              "24_24",
+              "24_28",
+              "24_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "24_5",
+              "24_9",
+              "24_13",
+              "24_17",
+              "24_21",
+              "24_25",
+              "24_29",
+              "24_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "24_6",
+              "24_10",
+              "24_14",
+              "24_18",
+              "24_22",
+              "24_26",
+              "24_30",
+              "24_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "24_7",
+              "24_11",
+              "24_15",
+              "24_19",
+              "24_23",
+              "24_27",
+              "24_31",
+              "24_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "25": {
+        "name": "Minotaur",
+        "outfitId": 25,
+        "atlas": {
+          "image": "assets/outfits/25.png",
+          "json": "assets/outfits/25.json"
+        },
+        "appearance": {
+          "looktype": 25,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 25,
+            "countMin": 1,
+            "dropChance": 0.675,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.2002,
+            "itemId": 3410,
+            "itemName": "plate shield",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1284,
+            "itemId": 3286,
+            "itemName": "mace",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1,
+            "itemId": 3358,
+            "itemName": "chain armor",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.077,
+            "itemId": 3354,
+            "itemName": "brass helmet",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.05,
+            "itemId": 3264,
+            "itemName": "sword",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.05,
+            "itemId": 3577,
+            "itemName": "meat",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.04,
+            "itemId": 3274,
+            "itemName": "axe",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.0209,
+            "itemId": 11472,
+            "itemName": "minotaur horn",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0099,
+            "itemId": 5878,
+            "itemName": "minotaur leather",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0031,
+            "itemId": 3457,
+            "itemName": "shovel",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0011,
+            "itemId": 3056,
+            "itemName": "bronze amulet",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 5969,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 5969
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4011
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4012
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4013
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "25_0",
+          "east": "25_1",
+          "south": "25_2",
+          "west": "25_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "25_4",
+              "25_8",
+              "25_12",
+              "25_16",
+              "25_20",
+              "25_24",
+              "25_28",
+              "25_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "25_5",
+              "25_9",
+              "25_13",
+              "25_17",
+              "25_21",
+              "25_25",
+              "25_29",
+              "25_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "25_6",
+              "25_10",
+              "25_14",
+              "25_18",
+              "25_22",
+              "25_26",
+              "25_30",
+              "25_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "25_7",
+              "25_11",
+              "25_15",
+              "25_19",
+              "25_23",
+              "25_27",
+              "25_31",
+              "25_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      }
+    },
+    "spawns": [
+      {
+        "name": "Minotaur Archer",
+        "outfitId": 24,
+        "tileX": 13,
+        "tileY": 12,
+        "worldX": 32275,
+        "worldY": 32397,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Minotaur",
+        "outfitId": 25,
+        "tileX": 17,
+        "tileY": 14,
+        "worldX": 32279,
+        "worldY": 32399,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Minotaur",
+        "outfitId": 25,
+        "tileX": 13,
+        "tileY": 15,
+        "worldX": 32275,
+        "worldY": 32400,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Minotaur",
+        "outfitId": 25,
+        "tileX": 12,
+        "tileY": 19,
+        "worldX": 32274,
+        "worldY": 32404,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Minotaur",
+        "outfitId": 25,
+        "tileX": 16,
+        "tileY": 19,
+        "worldX": 32278,
+        "worldY": 32404,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      }
+    ]
+  },
+  "loot": {
+    "id": "THAIS-HUNT-0006",
+    "mapId": "THAIS-HUNT-0006",
+    "drops": [
+      {
+        "countMax": 20,
+        "countMin": 1,
+        "dropChance": 0.9045,
+        "itemId": 3446,
+        "itemName": "bolt",
+        "rarity": "common",
+        "monsterName": "Minotaur Archer"
+      },
+      {
+        "countMax": 30,
+        "countMin": 1,
+        "dropChance": 0.7541,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Minotaur Archer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.154,
+        "itemId": 11451,
+        "itemName": "broken crossbow",
+        "rarity": "semi-rare",
+        "monsterName": "Minotaur Archer"
+      },
+      {
+        "countMax": 4,
+        "countMin": 1,
+        "dropChance": 0.1234,
+        "itemId": 7363,
+        "itemName": "piercing bolt",
+        "rarity": "semi-rare",
+        "monsterName": "Minotaur Archer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0826,
+        "itemId": 11483,
+        "itemName": "piece of archer armor",
+        "rarity": "semi-rare",
+        "monsterName": "Minotaur Archer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.05,
+        "itemId": 3577,
+        "itemName": "meat",
+        "rarity": "semi-rare",
+        "monsterName": "Minotaur Archer"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.0199,
+        "itemId": 11472,
+        "itemName": "minotaur horn",
+        "rarity": "rare",
+        "monsterName": "Minotaur Archer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.019,
+        "itemId": 5878,
+        "itemName": "minotaur leather",
+        "rarity": "rare",
+        "monsterName": "Minotaur Archer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0083,
+        "itemId": 3349,
+        "itemName": "crossbow",
+        "rarity": "rare",
+        "monsterName": "Minotaur Archer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0053,
+        "itemId": 3359,
+        "itemName": "brass armor",
+        "rarity": "rare",
+        "monsterName": "Minotaur Archer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0053,
+        "itemId": 3377,
+        "itemName": "scale armor",
+        "rarity": "rare",
+        "monsterName": "Minotaur Archer"
+      },
+      {
+        "countMax": 25,
+        "countMin": 1,
+        "dropChance": 0.675,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Minotaur"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.2002,
+        "itemId": 3410,
+        "itemName": "plate shield",
+        "rarity": "semi-rare",
+        "monsterName": "Minotaur"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1284,
+        "itemId": 3286,
+        "itemName": "mace",
+        "rarity": "semi-rare",
+        "monsterName": "Minotaur"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1,
+        "itemId": 3358,
+        "itemName": "chain armor",
+        "rarity": "semi-rare",
+        "monsterName": "Minotaur"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.077,
+        "itemId": 3354,
+        "itemName": "brass helmet",
+        "rarity": "semi-rare",
+        "monsterName": "Minotaur"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.05,
+        "itemId": 3264,
+        "itemName": "sword",
+        "rarity": "semi-rare",
+        "monsterName": "Minotaur"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.05,
+        "itemId": 3577,
+        "itemName": "meat",
+        "rarity": "semi-rare",
+        "monsterName": "Minotaur"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.04,
+        "itemId": 3274,
+        "itemName": "axe",
+        "rarity": "rare",
+        "monsterName": "Minotaur"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.0209,
+        "itemId": 11472,
+        "itemName": "minotaur horn",
+        "rarity": "rare",
+        "monsterName": "Minotaur"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0099,
+        "itemId": 5878,
+        "itemName": "minotaur leather",
+        "rarity": "rare",
+        "monsterName": "Minotaur"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0031,
+        "itemId": 3457,
+        "itemName": "shovel",
+        "rarity": "very-rare",
+        "monsterName": "Minotaur"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0011,
+        "itemId": 3056,
+        "itemName": "bronze amulet",
+        "rarity": "very-rare",
+        "monsterName": "Minotaur"
+      }
+    ]
+  },
+  "hunts": {
+    "id": "THAIS-HUNT-0006",
+    "mapId": "THAIS-HUNT-0006",
+    "name": "Minotaur Mages — Thais Surroundings z10",
+    "label": "Minotaur Mages — Thais Surroundings z10",
+    "seed": "0000000000000000000000",
+    "assetsRoot": "assets/THAIS-HUNT-0006_minotaurs-thais-surroundings-z10-sprites-v6",
+    "mapUrl": "assets/THAIS-HUNT-0006_minotaurs-thais-surroundings-z10-sprites-v6/map.json",
+    "portrait": "/assets/character-default.png",
+    "monsterPreview": {
+      "name": "Minotaur",
+      "icon": "/assets/outfits/25.png",
+      "atlas": "/assets/outfits/25.json"
+    },
+    "startPosition": [
+      32276,
+      32400
+    ],
+    "city": "THAIS",
+    "_todo": [
+      "revisar startPosition (centro geométrico do mapBoundsRef, pode cair fora de área andável)"
+    ]
+  }
+}

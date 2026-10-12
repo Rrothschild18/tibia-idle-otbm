@@ -1,0 +1,412 @@
+{
+  "monsters": {
+    "id": "CARLIN-HUNT-0005",
+    "mapId": "CARLIN-HUNT-0005",
+    "assetsRoot": "assets/CARLIN-HUNT-0005_amazon-camp-west-sprites/monsters",
+    "mapBoundsRef": {
+      "minX": 32406,
+      "minY": 31565,
+      "maxX": 32445,
+      "maxY": 31610
+    },
+    "monsterDefs": {
+      "137": {
+        "name": "Amazon",
+        "outfitId": 137,
+        "atlas": {
+          "image": "assets/outfits/137-113-120-95-115-0.png",
+          "json": "assets/outfits/137-113-120-95-115-0.json"
+        },
+        "appearance": {
+          "looktype": 137,
+          "head": 113,
+          "body": 120,
+          "legs": 95,
+          "feet": 115,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.8,
+            "itemId": 3267,
+            "itemName": "dagger",
+            "rarity": "common"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.8,
+            "itemId": 3114,
+            "itemName": "skull",
+            "rarity": "common"
+          },
+          {
+            "countMax": 20,
+            "countMin": 1,
+            "dropChance": 0.4,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.3,
+            "itemId": 3602,
+            "itemName": "brown bread",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.23,
+            "itemId": 3273,
+            "itemName": "sabre",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1,
+            "itemId": 11443,
+            "itemName": "girlish hair decoration",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.052,
+            "itemId": 11444,
+            "itemName": "protective charm",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.01,
+            "itemId": 2920,
+            "itemName": "torch",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0026,
+            "itemId": 3008,
+            "itemName": "crystal necklace",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0013,
+            "itemId": 3030,
+            "itemName": "small ruby",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 18042,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 18042
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 18043
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 18044
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 18045
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "137_0",
+          "east": "137_1",
+          "south": "137_2",
+          "west": "137_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "137_0",
+              "137_4",
+              "137_8",
+              "137_12",
+              "137_16",
+              "137_20",
+              "137_24",
+              "137_28",
+              "137_32"
+            ],
+            "frameRate": 15,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "137_1",
+              "137_5",
+              "137_9",
+              "137_13",
+              "137_17",
+              "137_21",
+              "137_25",
+              "137_29",
+              "137_33"
+            ],
+            "frameRate": 15,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "137_2",
+              "137_6",
+              "137_10",
+              "137_14",
+              "137_18",
+              "137_22",
+              "137_26",
+              "137_30",
+              "137_34"
+            ],
+            "frameRate": 15,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "137_3",
+              "137_7",
+              "137_11",
+              "137_15",
+              "137_19",
+              "137_23",
+              "137_27",
+              "137_31",
+              "137_35"
+            ],
+            "frameRate": 15,
+            "loopType": "infinite"
+          }
+        }
+      }
+    },
+    "spawns": [
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 20,
+        "tileY": 12,
+        "worldX": 32426,
+        "worldY": 31577,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 18,
+        "tileY": 15,
+        "worldX": 32424,
+        "worldY": 31580,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 15,
+        "tileY": 22,
+        "worldX": 32421,
+        "worldY": 31587,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 19,
+        "tileY": 22,
+        "worldX": 32425,
+        "worldY": 31587,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 18,
+        "tileY": 25,
+        "worldX": 32424,
+        "worldY": 31590,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 25,
+        "tileY": 29,
+        "worldX": 32431,
+        "worldY": 31594,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 27,
+        "tileY": 31,
+        "worldX": 32433,
+        "worldY": 31596,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 12,
+        "tileY": 33,
+        "worldX": 32418,
+        "worldY": 31598,
+        "worldZ": 7,
+        "radius": 1,
+        "spawntime": 60
+      }
+    ]
+  },
+  "loot": {
+    "id": "CARLIN-HUNT-0005",
+    "mapId": "CARLIN-HUNT-0005",
+    "drops": [
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.8,
+        "itemId": 3267,
+        "itemName": "dagger",
+        "rarity": "common",
+        "monsterName": "Amazon"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.8,
+        "itemId": 3114,
+        "itemName": "skull",
+        "rarity": "common",
+        "monsterName": "Amazon"
+      },
+      {
+        "countMax": 20,
+        "countMin": 1,
+        "dropChance": 0.4,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Amazon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.3,
+        "itemId": 3602,
+        "itemName": "brown bread",
+        "rarity": "common",
+        "monsterName": "Amazon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.23,
+        "itemId": 3273,
+        "itemName": "sabre",
+        "rarity": "semi-rare",
+        "monsterName": "Amazon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1,
+        "itemId": 11443,
+        "itemName": "girlish hair decoration",
+        "rarity": "semi-rare",
+        "monsterName": "Amazon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.052,
+        "itemId": 11444,
+        "itemName": "protective charm",
+        "rarity": "semi-rare",
+        "monsterName": "Amazon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.01,
+        "itemId": 2920,
+        "itemName": "torch",
+        "rarity": "rare",
+        "monsterName": "Amazon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0026,
+        "itemId": 3008,
+        "itemName": "crystal necklace",
+        "rarity": "very-rare",
+        "monsterName": "Amazon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0013,
+        "itemId": 3030,
+        "itemName": "small ruby",
+        "rarity": "very-rare",
+        "monsterName": "Amazon"
+      }
+    ]
+  },
+  "hunts": {
+    "id": "CARLIN-HUNT-0005",
+    "mapId": "CARLIN-HUNT-0005",
+    "name": "Ghouls — Ghostlands z9",
+    "label": "Ghouls — Ghostlands z9",
+    "seed": "0000000000000000000000",
+    "assetsRoot": "assets/CARLIN-HUNT-0005_amazon-camp-west-sprites-v6",
+    "mapUrl": "assets/CARLIN-HUNT-0005_amazon-camp-west-sprites-v6/map.json",
+    "portrait": "/assets/character-default.png",
+    "monsterPreview": {
+      "name": "Amazon",
+      "icon": "/assets/outfits/137-113-120-95-115-0.png",
+      "atlas": "/assets/outfits/137-113-120-95-115-0.json"
+    },
+    "startPosition": [
+      32426,
+      31588
+    ],
+    "city": "CARLIN",
+    "_todo": [
+      "revisar startPosition (centro geométrico do mapBoundsRef, pode cair fora de área andável)"
+    ]
+  }
+}

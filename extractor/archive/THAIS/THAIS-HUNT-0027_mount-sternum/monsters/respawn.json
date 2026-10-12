@@ -1,0 +1,187 @@
+{
+  "mapBoundsRef": {
+    "minX": 32467,
+    "minY": 32055,
+    "maxX": 32496,
+    "maxY": 32085
+  },
+  "monsterDefs": {
+    "36": {
+      "name": "Poison Spider",
+      "outfitId": 36,
+      "atlas": {
+        "image": "assets/outfits/36.png",
+        "json": "assets/outfits/36.json"
+      },
+      "appearance": {
+        "looktype": 36,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 4,
+          "countMin": 1,
+          "dropChance": 0.75,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0114,
+          "itemId": 11485,
+          "itemName": "poison spider shell",
+          "rarity": "rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 5974,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5974
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4029
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4066
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4125
+          }
+        ]
+      },
+      "race": "venom",
+      "idle": {
+        "north": "36_0",
+        "east": "36_1",
+        "south": "36_2",
+        "west": "36_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "36_4",
+            "36_8",
+            "36_12",
+            "36_16",
+            "36_20",
+            "36_24",
+            "36_28",
+            "36_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "36_5",
+            "36_9",
+            "36_13",
+            "36_17",
+            "36_21",
+            "36_25",
+            "36_29",
+            "36_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "36_6",
+            "36_10",
+            "36_14",
+            "36_18",
+            "36_22",
+            "36_26",
+            "36_30",
+            "36_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "36_7",
+            "36_11",
+            "36_15",
+            "36_19",
+            "36_23",
+            "36_27",
+            "36_31",
+            "36_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    }
+  },
+  "spawns": [
+    {
+      "name": "Poison Spider",
+      "outfitId": 36,
+      "tileX": 16,
+      "tileY": 12,
+      "worldX": 32483,
+      "worldY": 32067,
+      "worldZ": 7,
+      "radius": 4,
+      "spawntime": 90
+    },
+    {
+      "name": "Poison Spider",
+      "outfitId": 36,
+      "tileX": 13,
+      "tileY": 14,
+      "worldX": 32480,
+      "worldY": 32069,
+      "worldZ": 7,
+      "radius": 4,
+      "spawntime": 90
+    },
+    {
+      "name": "Poison Spider",
+      "outfitId": 36,
+      "tileX": 17,
+      "tileY": 16,
+      "worldX": 32484,
+      "worldY": 32071,
+      "worldZ": 7,
+      "radius": 4,
+      "spawntime": 90
+    },
+    {
+      "name": "Poison Spider",
+      "outfitId": 36,
+      "tileX": 12,
+      "tileY": 17,
+      "worldX": 32479,
+      "worldY": 32072,
+      "worldZ": 7,
+      "radius": 4,
+      "spawntime": 90
+    },
+    {
+      "name": "Poison Spider",
+      "outfitId": 36,
+      "tileX": 13,
+      "tileY": 18,
+      "worldX": 32480,
+      "worldY": 32073,
+      "worldZ": 7,
+      "radius": 4,
+      "spawntime": 90
+    }
+  ]
+}

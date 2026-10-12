@@ -1,0 +1,406 @@
+{
+  "mapBoundsRef": {
+    "minX": 32598,
+    "minY": 32114,
+    "maxX": 32672,
+    "maxY": 32154
+  },
+  "monsterDefs": {
+    "41": {
+      "name": "Lion",
+      "outfitId": 41,
+      "atlas": {
+        "image": "assets/outfits/41.png",
+        "json": "assets/outfits/41.json"
+      },
+      "appearance": {
+        "looktype": 41,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 4,
+          "countMin": 1,
+          "dropChance": 0.45,
+          "itemId": 3577,
+          "itemName": "meat",
+          "rarity": "common"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.1843,
+          "itemId": 3582,
+          "itemName": "ham",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.014,
+          "itemId": 9691,
+          "itemName": "lion's mane",
+          "rarity": "rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 5986,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5986
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4070
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4071
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4072
+          }
+        ]
+      },
+      "race": "blood",
+      "idle": {
+        "north": "41_0",
+        "east": "41_1",
+        "south": "41_2",
+        "west": "41_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "41_4",
+            "41_8",
+            "41_12",
+            "41_16",
+            "41_20",
+            "41_24",
+            "41_28",
+            "41_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "41_5",
+            "41_9",
+            "41_13",
+            "41_17",
+            "41_21",
+            "41_25",
+            "41_29",
+            "41_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "41_6",
+            "41_10",
+            "41_14",
+            "41_18",
+            "41_22",
+            "41_26",
+            "41_30",
+            "41_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "41_7",
+            "41_11",
+            "41_15",
+            "41_19",
+            "41_23",
+            "41_27",
+            "41_31",
+            "41_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "43": {
+      "name": "Scorpion",
+      "outfitId": 43,
+      "atlas": {
+        "image": "assets/outfits/43.png",
+        "json": "assets/outfits/43.json"
+      },
+      "appearance": {
+        "looktype": 43,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0493,
+          "itemId": 9651,
+          "itemName": "scorpion tail",
+          "rarity": "rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 5988,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5988
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4078
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4079
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4146
+          }
+        ]
+      },
+      "race": "venom",
+      "idle": {
+        "north": "43_0",
+        "east": "43_1",
+        "south": "43_2",
+        "west": "43_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "43_4",
+            "43_8",
+            "43_12",
+            "43_16",
+            "43_20",
+            "43_24",
+            "43_28",
+            "43_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "43_5",
+            "43_9",
+            "43_13",
+            "43_17",
+            "43_21",
+            "43_25",
+            "43_29",
+            "43_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "43_6",
+            "43_10",
+            "43_14",
+            "43_18",
+            "43_22",
+            "43_26",
+            "43_30",
+            "43_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "43_7",
+            "43_11",
+            "43_15",
+            "43_19",
+            "43_23",
+            "43_27",
+            "43_31",
+            "43_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    }
+  },
+  "spawns": [
+    {
+      "name": "Lion",
+      "outfitId": 41,
+      "tileX": 54,
+      "tileY": 13,
+      "worldX": 32652,
+      "worldY": 32127,
+      "worldZ": 7,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Lion",
+      "outfitId": 41,
+      "tileX": 59,
+      "tileY": 12,
+      "worldX": 32657,
+      "worldY": 32126,
+      "worldZ": 7,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Lion",
+      "outfitId": 41,
+      "tileX": 62,
+      "tileY": 16,
+      "worldX": 32660,
+      "worldY": 32130,
+      "worldZ": 7,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Scorpion",
+      "outfitId": 43,
+      "tileX": 41,
+      "tileY": 14,
+      "worldX": 32639,
+      "worldY": 32128,
+      "worldZ": 7,
+      "radius": 4,
+      "spawntime": 90
+    },
+    {
+      "name": "Scorpion",
+      "outfitId": 43,
+      "tileX": 47,
+      "tileY": 16,
+      "worldX": 32645,
+      "worldY": 32130,
+      "worldZ": 7,
+      "radius": 4,
+      "spawntime": 90
+    },
+    {
+      "name": "Scorpion",
+      "outfitId": 43,
+      "tileX": 42,
+      "tileY": 19,
+      "worldX": 32640,
+      "worldY": 32133,
+      "worldZ": 7,
+      "radius": 4,
+      "spawntime": 90
+    },
+    {
+      "name": "Scorpion",
+      "outfitId": 43,
+      "tileX": 48,
+      "tileY": 19,
+      "worldX": 32646,
+      "worldY": 32133,
+      "worldZ": 7,
+      "radius": 4,
+      "spawntime": 90
+    },
+    {
+      "name": "Scorpion",
+      "outfitId": 43,
+      "tileX": 40,
+      "tileY": 21,
+      "worldX": 32638,
+      "worldY": 32135,
+      "worldZ": 7,
+      "radius": 4,
+      "spawntime": 90
+    },
+    {
+      "name": "Lion",
+      "outfitId": 41,
+      "tileX": 25,
+      "tileY": 12,
+      "worldX": 32623,
+      "worldY": 32126,
+      "worldZ": 7,
+      "radius": 9,
+      "spawntime": 90
+    },
+    {
+      "name": "Lion",
+      "outfitId": 41,
+      "tileX": 17,
+      "tileY": 15,
+      "worldX": 32615,
+      "worldY": 32129,
+      "worldZ": 7,
+      "radius": 9,
+      "spawntime": 90
+    },
+    {
+      "name": "Lion",
+      "outfitId": 41,
+      "tileX": 19,
+      "tileY": 21,
+      "worldX": 32617,
+      "worldY": 32135,
+      "worldZ": 7,
+      "radius": 9,
+      "spawntime": 90
+    },
+    {
+      "name": "Lion",
+      "outfitId": 41,
+      "tileX": 12,
+      "tileY": 23,
+      "worldX": 32610,
+      "worldY": 32137,
+      "worldZ": 7,
+      "radius": 9,
+      "spawntime": 90
+    },
+    {
+      "name": "Lion",
+      "outfitId": 41,
+      "tileX": 22,
+      "tileY": 26,
+      "worldX": 32620,
+      "worldY": 32140,
+      "worldZ": 7,
+      "radius": 9,
+      "spawntime": 90
+    },
+    {
+      "name": "Lion",
+      "outfitId": 41,
+      "tileX": 15,
+      "tileY": 28,
+      "worldX": 32613,
+      "worldY": 32142,
+      "worldZ": 7,
+      "radius": 9,
+      "spawntime": 90
+    }
+  ]
+}

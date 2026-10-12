@@ -1,0 +1,1134 @@
+{
+  "mapBoundsRef": {
+    "minX": 32383,
+    "minY": 31956,
+    "maxX": 32564,
+    "maxY": 32022
+  },
+  "monsterDefs": {
+    "33": {
+      "name": "Skeleton",
+      "outfitId": 33,
+      "atlas": {
+        "image": "assets/outfits/33.png",
+        "json": "assets/outfits/33.json"
+      },
+      "appearance": {
+        "looktype": 33,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.491,
+          "itemId": 3115,
+          "itemName": "bone",
+          "rarity": "common"
+        },
+        {
+          "countMax": 10,
+          "countMin": 1,
+          "dropChance": 0.439,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.1988,
+          "itemId": 2920,
+          "itemName": "torch",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0994,
+          "itemId": 11481,
+          "itemName": "pelvis bone",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0752,
+          "itemId": 3367,
+          "itemName": "viking helmet",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0485,
+          "itemId": 3276,
+          "itemName": "hatchet",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0485,
+          "itemId": 3286,
+          "itemName": "mace",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0209,
+          "itemId": 3411,
+          "itemName": "brass shield",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0194,
+          "itemId": 3264,
+          "itemName": "sword",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.01,
+          "itemId": 23986,
+          "itemName": "heavy old tome",
+          "rarity": "rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 5972,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5972
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4024
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4156
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4157
+          }
+        ]
+      },
+      "race": "undead",
+      "idle": {
+        "north": "33_0",
+        "east": "33_1",
+        "south": "33_2",
+        "west": "33_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "33_4",
+            "33_8",
+            "33_12",
+            "33_16",
+            "33_20",
+            "33_24",
+            "33_28",
+            "33_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "33_5",
+            "33_9",
+            "33_13",
+            "33_17",
+            "33_21",
+            "33_25",
+            "33_29",
+            "33_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "33_6",
+            "33_10",
+            "33_14",
+            "33_18",
+            "33_22",
+            "33_26",
+            "33_30",
+            "33_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "33_7",
+            "33_11",
+            "33_15",
+            "33_19",
+            "33_23",
+            "33_27",
+            "33_31",
+            "33_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "18": {
+      "name": "Ghoul",
+      "outfitId": 18,
+      "atlas": {
+        "image": "assets/outfits/18.png",
+        "json": "assets/outfits/18.json"
+      },
+      "appearance": {
+        "looktype": 18,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 30,
+          "countMin": 1,
+          "dropChance": 0.68,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.1447,
+          "itemId": 10291,
+          "itemName": "rotten piece of cloth",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.096,
+          "itemId": 3492,
+          "itemName": "worm",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0513,
+          "itemId": 11467,
+          "itemName": "ghoul snack",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.05,
+          "itemId": 2920,
+          "itemName": "torch",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.01,
+          "itemId": 3377,
+          "itemName": "scale armor",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.01,
+          "itemId": 5913,
+          "itemName": "brown piece of cloth",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.01,
+          "itemId": 23986,
+          "itemName": "heavy old tome",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0099,
+          "itemId": 3367,
+          "itemName": "viking helmet",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0095,
+          "itemId": 11484,
+          "itemName": "pile of grave earth",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0024,
+          "itemId": 3114,
+          "itemName": "skull",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0018,
+          "itemId": 3052,
+          "itemName": "life ring",
+          "rarity": "very-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 5976,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5976
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4034
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4035
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4036
+          }
+        ]
+      },
+      "race": "blood",
+      "idle": {
+        "north": "18_0",
+        "east": "18_1",
+        "south": "18_2",
+        "west": "18_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "18_4",
+            "18_8",
+            "18_12",
+            "18_16",
+            "18_20",
+            "18_24",
+            "18_28",
+            "18_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "18_5",
+            "18_9",
+            "18_13",
+            "18_17",
+            "18_21",
+            "18_25",
+            "18_29",
+            "18_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "18_6",
+            "18_10",
+            "18_14",
+            "18_18",
+            "18_22",
+            "18_26",
+            "18_30",
+            "18_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "18_7",
+            "18_11",
+            "18_15",
+            "18_19",
+            "18_23",
+            "18_27",
+            "18_31",
+            "18_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "71": {
+      "name": "Dwarf Soldier",
+      "outfitId": 71,
+      "atlas": {
+        "image": "assets/outfits/71.png",
+        "json": "assets/outfits/71.json"
+      },
+      "appearance": {
+        "looktype": 71,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 7,
+          "countMin": 1,
+          "dropChance": 0.4,
+          "itemId": 3446,
+          "itemName": "bolt",
+          "rarity": "common"
+        },
+        {
+          "countMax": 3,
+          "countMin": 1,
+          "dropChance": 0.4,
+          "itemId": 3723,
+          "itemName": "white mushroom",
+          "rarity": "common"
+        },
+        {
+          "countMax": 12,
+          "countMin": 1,
+          "dropChance": 0.28,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.12,
+          "itemId": 3375,
+          "itemName": "soldier helmet",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.1,
+          "itemId": 3457,
+          "itemName": "shovel",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.08,
+          "itemId": 3358,
+          "itemName": "chain armor",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 3,
+          "countMin": 1,
+          "dropChance": 0.04,
+          "itemId": 7363,
+          "itemName": "piercing bolt",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.03,
+          "itemId": 3349,
+          "itemName": "crossbow",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.03,
+          "itemId": 3425,
+          "itemName": "dwarven shield",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.025,
+          "itemId": 3266,
+          "itemName": "battle axe",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.003,
+          "itemId": 5880,
+          "itemName": "iron ore",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0012,
+          "itemId": 3092,
+          "itemName": "axe ring",
+          "rarity": "very-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 6014,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 6014
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4166
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4167
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4143
+          }
+        ]
+      },
+      "race": "blood",
+      "idle": {
+        "north": "71_0",
+        "east": "71_1",
+        "south": "71_2",
+        "west": "71_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "71_4",
+            "71_8",
+            "71_12",
+            "71_16",
+            "71_20",
+            "71_24",
+            "71_28",
+            "71_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "71_5",
+            "71_9",
+            "71_13",
+            "71_17",
+            "71_21",
+            "71_25",
+            "71_29",
+            "71_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "71_6",
+            "71_10",
+            "71_14",
+            "71_18",
+            "71_22",
+            "71_26",
+            "71_30",
+            "71_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "71_7",
+            "71_11",
+            "71_15",
+            "71_19",
+            "71_23",
+            "71_27",
+            "71_31",
+            "71_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "70": {
+      "name": "Dwarf Guard",
+      "outfitId": 70,
+      "atlas": {
+        "image": "assets/outfits/70.png",
+        "json": "assets/outfits/70.json"
+      },
+      "appearance": {
+        "looktype": 70,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.55,
+          "itemId": 3723,
+          "itemName": "white mushroom",
+          "rarity": "common"
+        },
+        {
+          "countMax": 30,
+          "countMin": 1,
+          "dropChance": 0.4,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.4,
+          "itemId": 3552,
+          "itemName": "leather boots",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.092,
+          "itemId": 3377,
+          "itemName": "scale armor",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.06,
+          "itemId": 3413,
+          "itemName": "battle shield",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.04,
+          "itemId": 3305,
+          "itemName": "battle hammer",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.016,
+          "itemId": 3351,
+          "itemName": "steel helmet",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.006,
+          "itemId": 3275,
+          "itemName": "double axe",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0051,
+          "itemId": 5880,
+          "itemName": "iron ore",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0038,
+          "itemId": 266,
+          "itemName": "health potion",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0028,
+          "itemId": 12600,
+          "itemName": "coal",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0019,
+          "itemId": 3092,
+          "itemName": "axe ring",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0014,
+          "itemId": 3033,
+          "itemName": "small amethyst",
+          "rarity": "very-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 6013,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 6013
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4164
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4165
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4143
+          }
+        ]
+      },
+      "race": "blood",
+      "idle": {
+        "north": "70_0",
+        "east": "70_1",
+        "south": "70_2",
+        "west": "70_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "70_4",
+            "70_8",
+            "70_12",
+            "70_16",
+            "70_20",
+            "70_24",
+            "70_28",
+            "70_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "70_5",
+            "70_9",
+            "70_13",
+            "70_17",
+            "70_21",
+            "70_25",
+            "70_29",
+            "70_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "70_6",
+            "70_10",
+            "70_14",
+            "70_18",
+            "70_22",
+            "70_26",
+            "70_30",
+            "70_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "70_7",
+            "70_11",
+            "70_15",
+            "70_19",
+            "70_23",
+            "70_27",
+            "70_31",
+            "70_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    }
+  },
+  "spawns": [
+    {
+      "name": "Skeleton",
+      "outfitId": 33,
+      "tileX": 38,
+      "tileY": 37,
+      "worldX": 32421,
+      "worldY": 31993,
+      "worldZ": 10,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Ghoul",
+      "outfitId": 18,
+      "tileX": 33,
+      "tileY": 44,
+      "worldX": 32416,
+      "worldY": 32000,
+      "worldZ": 10,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Ghoul",
+      "outfitId": 18,
+      "tileX": 12,
+      "tileY": 45,
+      "worldX": 32395,
+      "worldY": 32001,
+      "worldZ": 10,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Skeleton",
+      "outfitId": 33,
+      "tileX": 28,
+      "tileY": 50,
+      "worldX": 32411,
+      "worldY": 32006,
+      "worldZ": 10,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Skeleton",
+      "outfitId": 33,
+      "tileX": 22,
+      "tileY": 52,
+      "worldX": 32405,
+      "worldY": 32008,
+      "worldZ": 10,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Ghoul",
+      "outfitId": 18,
+      "tileX": 39,
+      "tileY": 54,
+      "worldX": 32422,
+      "worldY": 32010,
+      "worldZ": 10,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Dwarf Soldier",
+      "outfitId": 71,
+      "tileX": 157,
+      "tileY": 12,
+      "worldX": 32540,
+      "worldY": 31968,
+      "worldZ": 11,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Dwarf Soldier",
+      "outfitId": 71,
+      "tileX": 128,
+      "tileY": 18,
+      "worldX": 32511,
+      "worldY": 31974,
+      "worldZ": 11,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Dwarf Soldier",
+      "outfitId": 71,
+      "tileX": 149,
+      "tileY": 18,
+      "worldX": 32532,
+      "worldY": 31974,
+      "worldZ": 11,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Dwarf Soldier",
+      "outfitId": 71,
+      "tileX": 108,
+      "tileY": 23,
+      "worldX": 32491,
+      "worldY": 31979,
+      "worldZ": 11,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Dwarf Soldier",
+      "outfitId": 71,
+      "tileX": 111,
+      "tileY": 24,
+      "worldX": 32494,
+      "worldY": 31980,
+      "worldZ": 11,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Dwarf Soldier",
+      "outfitId": 71,
+      "tileX": 113,
+      "tileY": 24,
+      "worldX": 32496,
+      "worldY": 31980,
+      "worldZ": 11,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Dwarf Soldier",
+      "outfitId": 71,
+      "tileX": 116,
+      "tileY": 25,
+      "worldX": 32499,
+      "worldY": 31981,
+      "worldZ": 11,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Dwarf Guard",
+      "outfitId": 70,
+      "tileX": 120,
+      "tileY": 21,
+      "worldX": 32503,
+      "worldY": 31977,
+      "worldZ": 11,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Dwarf Soldier",
+      "outfitId": 71,
+      "tileX": 124,
+      "tileY": 25,
+      "worldX": 32507,
+      "worldY": 31981,
+      "worldZ": 11,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Dwarf Soldier",
+      "outfitId": 71,
+      "tileX": 129,
+      "tileY": 23,
+      "worldX": 32512,
+      "worldY": 31979,
+      "worldZ": 11,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Dwarf Soldier",
+      "outfitId": 71,
+      "tileX": 131,
+      "tileY": 24,
+      "worldX": 32514,
+      "worldY": 31980,
+      "worldZ": 11,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Dwarf Soldier",
+      "outfitId": 71,
+      "tileX": 142,
+      "tileY": 21,
+      "worldX": 32525,
+      "worldY": 31977,
+      "worldZ": 11,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Dwarf Soldier",
+      "outfitId": 71,
+      "tileX": 146,
+      "tileY": 20,
+      "worldX": 32529,
+      "worldY": 31976,
+      "worldZ": 11,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Dwarf Soldier",
+      "outfitId": 71,
+      "tileX": 151,
+      "tileY": 20,
+      "worldX": 32534,
+      "worldY": 31976,
+      "worldZ": 11,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Dwarf Soldier",
+      "outfitId": 71,
+      "tileX": 152,
+      "tileY": 21,
+      "worldX": 32535,
+      "worldY": 31977,
+      "worldZ": 11,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Dwarf Soldier",
+      "outfitId": 71,
+      "tileX": 159,
+      "tileY": 20,
+      "worldX": 32542,
+      "worldY": 31976,
+      "worldZ": 11,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Dwarf Soldier",
+      "outfitId": 71,
+      "tileX": 158,
+      "tileY": 21,
+      "worldX": 32541,
+      "worldY": 31977,
+      "worldZ": 11,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Dwarf Soldier",
+      "outfitId": 71,
+      "tileX": 160,
+      "tileY": 20,
+      "worldX": 32543,
+      "worldY": 31976,
+      "worldZ": 11,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Dwarf Soldier",
+      "outfitId": 71,
+      "tileX": 162,
+      "tileY": 20,
+      "worldX": 32545,
+      "worldY": 31976,
+      "worldZ": 11,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Dwarf Soldier",
+      "outfitId": 71,
+      "tileX": 165,
+      "tileY": 23,
+      "worldX": 32548,
+      "worldY": 31979,
+      "worldZ": 11,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Dwarf Soldier",
+      "outfitId": 71,
+      "tileX": 132,
+      "tileY": 31,
+      "worldX": 32515,
+      "worldY": 31987,
+      "worldZ": 11,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Dwarf Soldier",
+      "outfitId": 71,
+      "tileX": 166,
+      "tileY": 28,
+      "worldX": 32549,
+      "worldY": 31984,
+      "worldZ": 11,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Dwarf Soldier",
+      "outfitId": 71,
+      "tileX": 166,
+      "tileY": 33,
+      "worldX": 32549,
+      "worldY": 31989,
+      "worldZ": 11,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Dwarf Guard",
+      "outfitId": 70,
+      "tileX": 169,
+      "tileY": 38,
+      "worldX": 32552,
+      "worldY": 31994,
+      "worldZ": 11,
+      "radius": 3,
+      "spawntime": 90
+    }
+  ]
+}

@@ -1,0 +1,1359 @@
+{
+  "mapBoundsRef": {
+    "minX": 32441,
+    "minY": 31925,
+    "maxX": 32481,
+    "maxY": 31979
+  },
+  "monsterDefs": {
+    "24": {
+      "name": "Minotaur Archer",
+      "outfitId": 24,
+      "atlas": {
+        "image": "assets/outfits/24.png",
+        "json": "assets/outfits/24.json"
+      },
+      "appearance": {
+        "looktype": 24,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 20,
+          "countMin": 1,
+          "dropChance": 0.9045,
+          "itemId": 3446,
+          "itemName": "bolt",
+          "rarity": "common"
+        },
+        {
+          "countMax": 30,
+          "countMin": 1,
+          "dropChance": 0.7541,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.154,
+          "itemId": 11451,
+          "itemName": "broken crossbow",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 4,
+          "countMin": 1,
+          "dropChance": 0.1234,
+          "itemId": 7363,
+          "itemName": "piercing bolt",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0826,
+          "itemId": 11483,
+          "itemName": "piece of archer armor",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.05,
+          "itemId": 3577,
+          "itemName": "meat",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.0199,
+          "itemId": 11472,
+          "itemName": "minotaur horn",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.019,
+          "itemId": 5878,
+          "itemName": "minotaur leather",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0083,
+          "itemId": 3349,
+          "itemName": "crossbow",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0053,
+          "itemId": 3359,
+          "itemName": "brass armor",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0053,
+          "itemId": 3377,
+          "itemName": "scale armor",
+          "rarity": "rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 5982,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5982
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4052
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4053
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4013
+          }
+        ]
+      },
+      "race": "blood",
+      "idle": {
+        "north": "24_0",
+        "east": "24_1",
+        "south": "24_2",
+        "west": "24_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "24_4",
+            "24_8",
+            "24_12",
+            "24_16",
+            "24_20",
+            "24_24",
+            "24_28",
+            "24_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "24_5",
+            "24_9",
+            "24_13",
+            "24_17",
+            "24_21",
+            "24_25",
+            "24_29",
+            "24_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "24_6",
+            "24_10",
+            "24_14",
+            "24_18",
+            "24_22",
+            "24_26",
+            "24_30",
+            "24_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "24_7",
+            "24_11",
+            "24_15",
+            "24_19",
+            "24_23",
+            "24_27",
+            "24_31",
+            "24_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "23": {
+      "name": "Minotaur Mage",
+      "outfitId": 23,
+      "atlas": {
+        "image": "assets/outfits/23.png",
+        "json": "assets/outfits/23.json"
+      },
+      "appearance": {
+        "looktype": 23,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 35,
+          "countMin": 1,
+          "dropChance": 0.8578,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 8,
+          "countMin": 1,
+          "dropChance": 0.15003,
+          "itemId": 3595,
+          "itemName": "carrot",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.0643,
+          "itemId": 11473,
+          "itemName": "purple robe",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0519,
+          "itemId": 3559,
+          "itemName": "leather legs",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0495,
+          "itemId": 2920,
+          "itemName": "torch",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.0302,
+          "itemId": 11472,
+          "itemName": "minotaur horn",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.03,
+          "itemId": 3355,
+          "itemName": "leather helmet",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0229,
+          "itemId": 5878,
+          "itemName": "minotaur leather",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.01,
+          "itemId": 7425,
+          "itemName": "taurus mace",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.006,
+          "itemId": 3073,
+          "itemName": "wand of cosmic energy",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0049,
+          "itemId": 268,
+          "itemName": "mana potion",
+          "rarity": "very-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 5981,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5981
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4047
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4048
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4013
+          }
+        ]
+      },
+      "race": "blood",
+      "idle": {
+        "north": "23_0",
+        "east": "23_1",
+        "south": "23_2",
+        "west": "23_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "23_4",
+            "23_8",
+            "23_12",
+            "23_16",
+            "23_20",
+            "23_24",
+            "23_28",
+            "23_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "23_5",
+            "23_9",
+            "23_13",
+            "23_17",
+            "23_21",
+            "23_25",
+            "23_29",
+            "23_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "23_6",
+            "23_10",
+            "23_14",
+            "23_18",
+            "23_22",
+            "23_26",
+            "23_30",
+            "23_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "23_7",
+            "23_11",
+            "23_15",
+            "23_19",
+            "23_23",
+            "23_27",
+            "23_31",
+            "23_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "29": {
+      "name": "Minotaur Guard",
+      "outfitId": 29,
+      "atlas": {
+        "image": "assets/outfits/29.png",
+        "json": "assets/outfits/29.json"
+      },
+      "appearance": {
+        "looktype": 29,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 20,
+          "countMin": 1,
+          "dropChance": 0.5964,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.0833,
+          "itemId": 11472,
+          "itemName": "minotaur horn",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0504,
+          "itemId": 11482,
+          "itemName": "piece of warrior armor",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0439,
+          "itemId": 3359,
+          "itemName": "brass armor",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0298,
+          "itemId": 3358,
+          "itemName": "chain armor",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0215,
+          "itemId": 3413,
+          "itemName": "battle shield",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.01,
+          "itemId": 5878,
+          "itemName": "minotaur leather",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0048,
+          "itemId": 3483,
+          "itemName": "fishing rod",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.004,
+          "itemId": 3275,
+          "itemName": "double axe",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.004,
+          "itemId": 266,
+          "itemName": "health potion",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0008,
+          "itemId": 7401,
+          "itemName": "minotaur trophy",
+          "rarity": "very-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 5983,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5983
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4057
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4058
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4013
+          }
+        ]
+      },
+      "race": "blood",
+      "idle": {
+        "north": "29_0",
+        "east": "29_1",
+        "south": "29_2",
+        "west": "29_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "29_4",
+            "29_8",
+            "29_12",
+            "29_16",
+            "29_20",
+            "29_24",
+            "29_28",
+            "29_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "29_5",
+            "29_9",
+            "29_13",
+            "29_17",
+            "29_21",
+            "29_25",
+            "29_29",
+            "29_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "29_6",
+            "29_10",
+            "29_14",
+            "29_18",
+            "29_22",
+            "29_26",
+            "29_30",
+            "29_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "29_7",
+            "29_11",
+            "29_15",
+            "29_19",
+            "29_23",
+            "29_27",
+            "29_31",
+            "29_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "25": {
+      "name": "Minotaur",
+      "outfitId": 25,
+      "atlas": {
+        "image": "assets/outfits/25.png",
+        "json": "assets/outfits/25.json"
+      },
+      "appearance": {
+        "looktype": 25,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 25,
+          "countMin": 1,
+          "dropChance": 0.675,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.2002,
+          "itemId": 3410,
+          "itemName": "plate shield",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.1284,
+          "itemId": 3286,
+          "itemName": "mace",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.1,
+          "itemId": 3358,
+          "itemName": "chain armor",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.077,
+          "itemId": 3354,
+          "itemName": "brass helmet",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.05,
+          "itemId": 3264,
+          "itemName": "sword",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.05,
+          "itemId": 3577,
+          "itemName": "meat",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.04,
+          "itemId": 3274,
+          "itemName": "axe",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.0209,
+          "itemId": 11472,
+          "itemName": "minotaur horn",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0099,
+          "itemId": 5878,
+          "itemName": "minotaur leather",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0031,
+          "itemId": 3457,
+          "itemName": "shovel",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0011,
+          "itemId": 3056,
+          "itemName": "bronze amulet",
+          "rarity": "very-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 5969,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5969
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4011
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4012
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4013
+          }
+        ]
+      },
+      "race": "blood",
+      "idle": {
+        "north": "25_0",
+        "east": "25_1",
+        "south": "25_2",
+        "west": "25_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "25_4",
+            "25_8",
+            "25_12",
+            "25_16",
+            "25_20",
+            "25_24",
+            "25_28",
+            "25_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "25_5",
+            "25_9",
+            "25_13",
+            "25_17",
+            "25_21",
+            "25_25",
+            "25_29",
+            "25_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "25_6",
+            "25_10",
+            "25_14",
+            "25_18",
+            "25_22",
+            "25_26",
+            "25_30",
+            "25_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "25_7",
+            "25_11",
+            "25_15",
+            "25_19",
+            "25_23",
+            "25_27",
+            "25_31",
+            "25_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "122": {
+      "name": "Bat",
+      "outfitId": 122,
+      "atlas": {
+        "image": "assets/outfits/122.png",
+        "json": "assets/outfits/122.json"
+      },
+      "appearance": {
+        "looktype": 122,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0122,
+          "itemId": 5894,
+          "itemName": "bat wing",
+          "rarity": "rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 6053,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 6053
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4363
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4364
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4365
+          }
+        ]
+      },
+      "race": "blood",
+      "idle": {
+        "north": {
+          "frames": [
+            "122_0",
+            "122_4",
+            "122_8",
+            "122_12",
+            "122_16",
+            "122_20",
+            "122_24",
+            "122_28"
+          ],
+          "frameRate": 10.0,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "122_1",
+            "122_5",
+            "122_9",
+            "122_13",
+            "122_17",
+            "122_21",
+            "122_25",
+            "122_29"
+          ],
+          "frameRate": 10.0,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "122_2",
+            "122_6",
+            "122_10",
+            "122_14",
+            "122_18",
+            "122_22",
+            "122_26",
+            "122_30"
+          ],
+          "frameRate": 10.0,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "122_3",
+            "122_7",
+            "122_11",
+            "122_15",
+            "122_19",
+            "122_23",
+            "122_27",
+            "122_31"
+          ],
+          "frameRate": 10.0,
+          "loopType": "infinite"
+        }
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "122_32",
+            "122_36",
+            "122_40",
+            "122_44",
+            "122_48",
+            "122_52",
+            "122_56",
+            "122_60"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "122_33",
+            "122_37",
+            "122_41",
+            "122_45",
+            "122_49",
+            "122_53",
+            "122_57",
+            "122_61"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "122_34",
+            "122_38",
+            "122_42",
+            "122_46",
+            "122_50",
+            "122_54",
+            "122_58",
+            "122_62"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "122_35",
+            "122_39",
+            "122_43",
+            "122_47",
+            "122_51",
+            "122_55",
+            "122_59",
+            "122_63"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    }
+  },
+  "spawns": [
+    {
+      "name": "Minotaur Archer",
+      "outfitId": 24,
+      "tileX": 22,
+      "tileY": 21,
+      "worldX": 32463,
+      "worldY": 31946,
+      "worldZ": 3,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Minotaur Archer",
+      "outfitId": 24,
+      "tileX": 20,
+      "tileY": 24,
+      "worldX": 32461,
+      "worldY": 31949,
+      "worldZ": 3,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Minotaur Archer",
+      "outfitId": 24,
+      "tileX": 24,
+      "tileY": 24,
+      "worldX": 32465,
+      "worldY": 31949,
+      "worldZ": 3,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Minotaur Archer",
+      "outfitId": 24,
+      "tileX": 22,
+      "tileY": 25,
+      "worldX": 32463,
+      "worldY": 31950,
+      "worldZ": 3,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Minotaur Archer",
+      "outfitId": 24,
+      "tileX": 20,
+      "tileY": 36,
+      "worldX": 32461,
+      "worldY": 31961,
+      "worldZ": 3,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Minotaur Archer",
+      "outfitId": 24,
+      "tileX": 26,
+      "tileY": 35,
+      "worldX": 32467,
+      "worldY": 31960,
+      "worldZ": 3,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Minotaur Archer",
+      "outfitId": 24,
+      "tileX": 24,
+      "tileY": 38,
+      "worldX": 32465,
+      "worldY": 31963,
+      "worldZ": 3,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Minotaur Mage",
+      "outfitId": 23,
+      "tileX": 26,
+      "tileY": 38,
+      "worldX": 32467,
+      "worldY": 31963,
+      "worldZ": 3,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Minotaur Archer",
+      "outfitId": 24,
+      "tileX": 21,
+      "tileY": 24,
+      "worldX": 32462,
+      "worldY": 31949,
+      "worldZ": 4,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Minotaur Archer",
+      "outfitId": 24,
+      "tileX": 19,
+      "tileY": 28,
+      "worldX": 32460,
+      "worldY": 31953,
+      "worldZ": 4,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Minotaur Guard",
+      "outfitId": 29,
+      "tileX": 25,
+      "tileY": 28,
+      "worldX": 32466,
+      "worldY": 31953,
+      "worldZ": 4,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Minotaur Archer",
+      "outfitId": 24,
+      "tileX": 22,
+      "tileY": 30,
+      "worldX": 32463,
+      "worldY": 31955,
+      "worldZ": 4,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Minotaur Guard",
+      "outfitId": 29,
+      "tileX": 26,
+      "tileY": 30,
+      "worldX": 32467,
+      "worldY": 31955,
+      "worldZ": 4,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Minotaur Archer",
+      "outfitId": 24,
+      "tileX": 17,
+      "tileY": 31,
+      "worldX": 32458,
+      "worldY": 31956,
+      "worldZ": 4,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Minotaur Archer",
+      "outfitId": 24,
+      "tileX": 22,
+      "tileY": 37,
+      "worldX": 32463,
+      "worldY": 31962,
+      "worldZ": 4,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Minotaur Mage",
+      "outfitId": 23,
+      "tileX": 25,
+      "tileY": 37,
+      "worldX": 32466,
+      "worldY": 31962,
+      "worldZ": 4,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Minotaur Mage",
+      "outfitId": 23,
+      "tileX": 23,
+      "tileY": 41,
+      "worldX": 32464,
+      "worldY": 31966,
+      "worldZ": 4,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Minotaur Archer",
+      "outfitId": 24,
+      "tileX": 27,
+      "tileY": 42,
+      "worldX": 32468,
+      "worldY": 31967,
+      "worldZ": 4,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Minotaur Guard",
+      "outfitId": 29,
+      "tileX": 21,
+      "tileY": 25,
+      "worldX": 32462,
+      "worldY": 31950,
+      "worldZ": 6,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Minotaur Guard",
+      "outfitId": 29,
+      "tileX": 18,
+      "tileY": 28,
+      "worldX": 32459,
+      "worldY": 31953,
+      "worldZ": 6,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Minotaur Archer",
+      "outfitId": 24,
+      "tileX": 19,
+      "tileY": 32,
+      "worldX": 32460,
+      "worldY": 31957,
+      "worldZ": 6,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Minotaur Archer",
+      "outfitId": 24,
+      "tileX": 25,
+      "tileY": 31,
+      "worldX": 32466,
+      "worldY": 31956,
+      "worldZ": 6,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Minotaur Archer",
+      "outfitId": 24,
+      "tileX": 24,
+      "tileY": 34,
+      "worldX": 32465,
+      "worldY": 31959,
+      "worldZ": 6,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Minotaur",
+      "outfitId": 25,
+      "tileX": 26,
+      "tileY": 17,
+      "worldX": 32467,
+      "worldY": 31942,
+      "worldZ": 7,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Minotaur",
+      "outfitId": 25,
+      "tileX": 16,
+      "tileY": 24,
+      "worldX": 32457,
+      "worldY": 31949,
+      "worldZ": 7,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Minotaur Archer",
+      "outfitId": 24,
+      "tileX": 21,
+      "tileY": 26,
+      "worldX": 32462,
+      "worldY": 31951,
+      "worldZ": 7,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Minotaur Guard",
+      "outfitId": 29,
+      "tileX": 20,
+      "tileY": 28,
+      "worldX": 32461,
+      "worldY": 31953,
+      "worldZ": 7,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Minotaur Guard",
+      "outfitId": 29,
+      "tileX": 22,
+      "tileY": 30,
+      "worldX": 32463,
+      "worldY": 31955,
+      "worldZ": 7,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Minotaur",
+      "outfitId": 25,
+      "tileX": 12,
+      "tileY": 29,
+      "worldX": 32453,
+      "worldY": 31954,
+      "worldZ": 7,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Minotaur Archer",
+      "outfitId": 24,
+      "tileX": 23,
+      "tileY": 32,
+      "worldX": 32464,
+      "worldY": 31957,
+      "worldZ": 7,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Minotaur",
+      "outfitId": 25,
+      "tileX": 24,
+      "tileY": 39,
+      "worldX": 32465,
+      "worldY": 31964,
+      "worldZ": 8,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Minotaur",
+      "outfitId": 25,
+      "tileX": 25,
+      "tileY": 38,
+      "worldX": 32466,
+      "worldY": 31963,
+      "worldZ": 8,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Minotaur",
+      "outfitId": 25,
+      "tileX": 27,
+      "tileY": 42,
+      "worldX": 32468,
+      "worldY": 31967,
+      "worldZ": 8,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Bat",
+      "outfitId": 122,
+      "tileX": 28,
+      "tileY": 42,
+      "worldX": 32469,
+      "worldY": 31967,
+      "worldZ": 8,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Minotaur",
+      "outfitId": 25,
+      "tileX": 25,
+      "tileY": 12,
+      "worldX": 32466,
+      "worldY": 31937,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Minotaur",
+      "outfitId": 25,
+      "tileX": 16,
+      "tileY": 19,
+      "worldX": 32457,
+      "worldY": 31944,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Minotaur Archer",
+      "outfitId": 24,
+      "tileX": 12,
+      "tileY": 20,
+      "worldX": 32453,
+      "worldY": 31945,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    }
+  ]
+}

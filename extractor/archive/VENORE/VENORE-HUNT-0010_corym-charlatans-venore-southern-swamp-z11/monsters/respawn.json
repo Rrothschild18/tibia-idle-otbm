@@ -1,0 +1,156 @@
+{
+  "mapBoundsRef": {
+    "minX": 32950,
+    "minY": 32188,
+    "maxX": 32974,
+    "maxY": 32212
+  },
+  "monsterDefs": {
+    "532": {
+      "name": "Corym Charlatan",
+      "outfitId": 532,
+      "atlas": null,
+      "appearance": {
+        "looktype": 532,
+        "head": 0,
+        "body": 78,
+        "legs": 59,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 35,
+          "countMin": 1,
+          "dropChance": 0.5,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.14285,
+          "itemId": 17821,
+          "itemName": "rat cheese",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.125,
+          "itemId": 17820,
+          "itemName": "soft cheese",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.1,
+          "itemId": 3607,
+          "itemName": "cheese",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.07692,
+          "itemId": 17809,
+          "itemName": "bola",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.07142,
+          "itemId": 17819,
+          "itemName": "earflap",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.05882,
+          "itemId": 17817,
+          "itemName": "cheese cutter",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.00909,
+          "itemId": 17812,
+          "itemName": "ratana",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.00854,
+          "itemId": 17813,
+          "itemName": "life preserver",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.00537,
+          "itemId": 17846,
+          "itemName": "leather harness",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.00518,
+          "itemId": 17818,
+          "itemName": "cheesy figurine",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.00492,
+          "itemId": 17810,
+          "itemName": "spike shield",
+          "rarity": "very-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 17445,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 17445
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 17448
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 17449
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 17450
+          }
+        ]
+      },
+      "race": "blood"
+    }
+  },
+  "spawns": [
+    {
+      "name": "Corym Charlatan",
+      "outfitId": 532,
+      "tileX": 12,
+      "tileY": 12,
+      "worldX": 32962,
+      "worldY": 32200,
+      "worldZ": 11,
+      "radius": 3,
+      "spawntime": 90
+    }
+  ]
+}

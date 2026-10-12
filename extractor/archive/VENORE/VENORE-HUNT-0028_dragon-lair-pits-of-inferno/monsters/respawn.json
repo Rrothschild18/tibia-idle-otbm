@@ -1,0 +1,922 @@
+{
+  "mapBoundsRef": {
+    "minX": 32728,
+    "minY": 32293,
+    "maxX": 32833,
+    "maxY": 32376
+  },
+  "monsterDefs": {
+    "39": {
+      "name": "Dragon Lord",
+      "outfitId": 39,
+      "atlas": {
+        "image": "assets/outfits/39.png",
+        "json": "assets/outfits/39.json"
+      },
+      "appearance": {
+        "looktype": 39,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 237,
+          "countMin": 1,
+          "dropChance": 0.953,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.7979,
+          "itemId": 3583,
+          "itemName": "dragon ham",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.1203,
+          "itemId": 3732,
+          "itemName": "green mushroom",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0959,
+          "itemId": 2842,
+          "itemName": "book",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 3,
+          "countMin": 1,
+          "dropChance": 0.0938,
+          "itemId": 7378,
+          "itemName": "royal spear",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 7,
+          "countMin": 1,
+          "dropChance": 0.0592,
+          "itemId": 3450,
+          "itemName": "power bolt",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0559,
+          "itemId": 3029,
+          "itemName": "small sapphire",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0455,
+          "itemId": 3051,
+          "itemName": "energy ring",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0331,
+          "itemId": 2903,
+          "itemName": "golden mug",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0194,
+          "itemId": 5882,
+          "itemName": "red dragon scale",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0115,
+          "itemId": 5948,
+          "itemName": "red dragon leather",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.008,
+          "itemId": 236,
+          "itemName": "strong health potion",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0065,
+          "itemId": 3061,
+          "itemName": "life crystal",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0052,
+          "itemId": 3373,
+          "itemName": "strange helmet",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0041,
+          "itemId": 3428,
+          "itemName": "tower shield",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0035,
+          "itemId": 3280,
+          "itemName": "fire sword",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0026,
+          "itemId": 3392,
+          "itemName": "royal helmet",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0022,
+          "itemId": 7402,
+          "itemName": "dragon slayer",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0013,
+          "itemId": 7399,
+          "itemName": "dragon lord trophy",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0009,
+          "itemId": 3386,
+          "itemName": "dragon scale mail",
+          "rarity": "very-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 5984,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5984
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4062
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4063
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4064
+          }
+        ]
+      },
+      "race": "blood",
+      "idle": {
+        "north": "39_0",
+        "east": "39_1",
+        "south": "39_2",
+        "west": "39_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "39_4",
+            "39_8",
+            "39_12",
+            "39_16",
+            "39_20",
+            "39_24",
+            "39_28",
+            "39_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "39_5",
+            "39_9",
+            "39_13",
+            "39_17",
+            "39_21",
+            "39_25",
+            "39_29",
+            "39_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "39_6",
+            "39_10",
+            "39_14",
+            "39_18",
+            "39_22",
+            "39_26",
+            "39_30",
+            "39_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "39_7",
+            "39_11",
+            "39_15",
+            "39_19",
+            "39_23",
+            "39_27",
+            "39_31",
+            "39_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "34": {
+      "name": "Dragon",
+      "outfitId": 34,
+      "atlas": {
+        "image": "assets/outfits/34.png",
+        "json": "assets/outfits/34.json"
+      },
+      "appearance": {
+        "looktype": 34,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 102,
+          "countMin": 1,
+          "dropChance": 0.8992,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.6627,
+          "itemId": 3583,
+          "itemName": "dragon ham",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.1565,
+          "itemId": 3409,
+          "itemName": "steel shield",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0968,
+          "itemId": 11457,
+          "itemName": "dragon's tail",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0912,
+          "itemId": 3349,
+          "itemName": "crossbow",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 10,
+          "countMin": 1,
+          "dropChance": 0.0806,
+          "itemId": 3449,
+          "itemName": "burst arrow",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0383,
+          "itemId": 3285,
+          "itemName": "longsword",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0349,
+          "itemId": 3351,
+          "itemName": "steel helmet",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.027,
+          "itemId": 3301,
+          "itemName": "broadsword",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.02029,
+          "itemId": 3557,
+          "itemName": "plate legs",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0158,
+          "itemId": 3275,
+          "itemName": "double axe",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0113,
+          "itemId": 236,
+          "itemName": "strong health potion",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0107,
+          "itemId": 5877,
+          "itemName": "green dragon leather",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0101,
+          "itemId": 5920,
+          "itemName": "green dragon scale",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0056,
+          "itemId": 3071,
+          "itemName": "wand of inferno",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0045,
+          "itemId": 3028,
+          "itemName": "small diamond",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0023,
+          "itemId": 3297,
+          "itemName": "serpent sword",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0023,
+          "itemId": 3322,
+          "itemName": "dragon hammer",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0017,
+          "itemId": 7430,
+          "itemName": "dragonbone staff",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0017,
+          "itemId": 3061,
+          "itemName": "life crystal",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0011,
+          "itemId": 3416,
+          "itemName": "dragon shield",
+          "rarity": "very-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 5973,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5973
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4025
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4026
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4027
+          }
+        ]
+      },
+      "race": "blood",
+      "idle": {
+        "north": "34_0",
+        "east": "34_1",
+        "south": "34_2",
+        "west": "34_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "34_4",
+            "34_8",
+            "34_12",
+            "34_16",
+            "34_20",
+            "34_24",
+            "34_28",
+            "34_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "34_5",
+            "34_9",
+            "34_13",
+            "34_17",
+            "34_21",
+            "34_25",
+            "34_29",
+            "34_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "34_6",
+            "34_10",
+            "34_14",
+            "34_18",
+            "34_22",
+            "34_26",
+            "34_30",
+            "34_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "34_7",
+            "34_11",
+            "34_15",
+            "34_19",
+            "34_23",
+            "34_27",
+            "34_31",
+            "34_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    }
+  },
+  "spawns": [
+    {
+      "name": "Dragon Lord",
+      "outfitId": 39,
+      "tileX": 39,
+      "tileY": 12,
+      "worldX": 32767,
+      "worldY": 32305,
+      "worldZ": 12,
+      "radius": 5,
+      "spawntime": 90
+    },
+    {
+      "name": "Dragon Lord",
+      "outfitId": 39,
+      "tileX": 37,
+      "tileY": 17,
+      "worldX": 32765,
+      "worldY": 32310,
+      "worldZ": 12,
+      "radius": 5,
+      "spawntime": 90
+    },
+    {
+      "name": "Dragon Lord",
+      "outfitId": 39,
+      "tileX": 43,
+      "tileY": 17,
+      "worldX": 32771,
+      "worldY": 32310,
+      "worldZ": 12,
+      "radius": 5,
+      "spawntime": 90
+    },
+    {
+      "name": "Dragon",
+      "outfitId": 34,
+      "tileX": 65,
+      "tileY": 13,
+      "worldX": 32793,
+      "worldY": 32306,
+      "worldZ": 12,
+      "radius": 5,
+      "spawntime": 90
+    },
+    {
+      "name": "Dragon Lord",
+      "outfitId": 39,
+      "tileX": 68,
+      "tileY": 15,
+      "worldX": 32796,
+      "worldY": 32308,
+      "worldZ": 12,
+      "radius": 5,
+      "spawntime": 90
+    },
+    {
+      "name": "Dragon Lord",
+      "outfitId": 39,
+      "tileX": 69,
+      "tileY": 19,
+      "worldX": 32797,
+      "worldY": 32312,
+      "worldZ": 12,
+      "radius": 5,
+      "spawntime": 90
+    },
+    {
+      "name": "Dragon",
+      "outfitId": 34,
+      "tileX": 66,
+      "tileY": 22,
+      "worldX": 32794,
+      "worldY": 32315,
+      "worldZ": 12,
+      "radius": 5,
+      "spawntime": 90
+    },
+    {
+      "name": "Dragon",
+      "outfitId": 34,
+      "tileX": 62,
+      "tileY": 27,
+      "worldX": 32790,
+      "worldY": 32320,
+      "worldZ": 12,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Dragon Lord",
+      "outfitId": 39,
+      "tileX": 78,
+      "tileY": 29,
+      "worldX": 32806,
+      "worldY": 32322,
+      "worldZ": 12,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Dragon Lord",
+      "outfitId": 39,
+      "tileX": 61,
+      "tileY": 32,
+      "worldX": 32789,
+      "worldY": 32325,
+      "worldZ": 12,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Dragon Lord",
+      "outfitId": 39,
+      "tileX": 27,
+      "tileY": 36,
+      "worldX": 32755,
+      "worldY": 32329,
+      "worldZ": 12,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Dragon Lord",
+      "outfitId": 39,
+      "tileX": 41,
+      "tileY": 34,
+      "worldX": 32769,
+      "worldY": 32327,
+      "worldZ": 12,
+      "radius": 4,
+      "spawntime": 90
+    },
+    {
+      "name": "Dragon Lord",
+      "outfitId": 39,
+      "tileX": 36,
+      "tileY": 37,
+      "worldX": 32764,
+      "worldY": 32330,
+      "worldZ": 12,
+      "radius": 4,
+      "spawntime": 90
+    },
+    {
+      "name": "Dragon Lord",
+      "outfitId": 39,
+      "tileX": 42,
+      "tileY": 40,
+      "worldX": 32770,
+      "worldY": 32333,
+      "worldZ": 12,
+      "radius": 4,
+      "spawntime": 90
+    },
+    {
+      "name": "Dragon Lord",
+      "outfitId": 39,
+      "tileX": 17,
+      "tileY": 39,
+      "worldX": 32745,
+      "worldY": 32332,
+      "worldZ": 12,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Dragon",
+      "outfitId": 34,
+      "tileX": 73,
+      "tileY": 38,
+      "worldX": 32801,
+      "worldY": 32331,
+      "worldZ": 12,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Dragon Lord",
+      "outfitId": 39,
+      "tileX": 87,
+      "tileY": 39,
+      "worldX": 32815,
+      "worldY": 32332,
+      "worldZ": 12,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Dragon Lord",
+      "outfitId": 39,
+      "tileX": 93,
+      "tileY": 41,
+      "worldX": 32821,
+      "worldY": 32334,
+      "worldZ": 12,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Dragon",
+      "outfitId": 34,
+      "tileX": 82,
+      "tileY": 42,
+      "worldX": 32810,
+      "worldY": 32335,
+      "worldZ": 12,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Dragon Lord",
+      "outfitId": 39,
+      "tileX": 48,
+      "tileY": 43,
+      "worldX": 32776,
+      "worldY": 32336,
+      "worldZ": 12,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Dragon Lord",
+      "outfitId": 39,
+      "tileX": 60,
+      "tileY": 40,
+      "worldX": 32788,
+      "worldY": 32333,
+      "worldZ": 12,
+      "radius": 4,
+      "spawntime": 90
+    },
+    {
+      "name": "Dragon",
+      "outfitId": 34,
+      "tileX": 62,
+      "tileY": 43,
+      "worldX": 32790,
+      "worldY": 32336,
+      "worldZ": 12,
+      "radius": 4,
+      "spawntime": 90
+    },
+    {
+      "name": "Dragon Lord",
+      "outfitId": 39,
+      "tileX": 58,
+      "tileY": 47,
+      "worldX": 32786,
+      "worldY": 32340,
+      "worldZ": 12,
+      "radius": 4,
+      "spawntime": 90
+    },
+    {
+      "name": "Dragon Lord",
+      "outfitId": 39,
+      "tileX": 68,
+      "tileY": 46,
+      "worldX": 32796,
+      "worldY": 32339,
+      "worldZ": 12,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Dragon Lord",
+      "outfitId": 39,
+      "tileX": 91,
+      "tileY": 49,
+      "worldX": 32819,
+      "worldY": 32342,
+      "worldZ": 12,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Dragon",
+      "outfitId": 34,
+      "tileX": 77,
+      "tileY": 52,
+      "worldX": 32805,
+      "worldY": 32345,
+      "worldZ": 12,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Dragon Lord",
+      "outfitId": 39,
+      "tileX": 16,
+      "tileY": 48,
+      "worldX": 32744,
+      "worldY": 32341,
+      "worldZ": 12,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Dragon Lord",
+      "outfitId": 39,
+      "tileX": 20,
+      "tileY": 53,
+      "worldX": 32748,
+      "worldY": 32346,
+      "worldZ": 12,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Dragon Lord",
+      "outfitId": 39,
+      "tileX": 12,
+      "tileY": 54,
+      "worldX": 32740,
+      "worldY": 32347,
+      "worldZ": 12,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Dragon Lord",
+      "outfitId": 39,
+      "tileX": 17,
+      "tileY": 58,
+      "worldX": 32745,
+      "worldY": 32351,
+      "worldZ": 12,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Dragon Lord",
+      "outfitId": 39,
+      "tileX": 88,
+      "tileY": 56,
+      "worldX": 32816,
+      "worldY": 32349,
+      "worldZ": 12,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Dragon Lord",
+      "outfitId": 39,
+      "tileX": 47,
+      "tileY": 64,
+      "worldX": 32775,
+      "worldY": 32357,
+      "worldZ": 12,
+      "radius": 5,
+      "spawntime": 90
+    },
+    {
+      "name": "Dragon Lord",
+      "outfitId": 39,
+      "tileX": 40,
+      "tileY": 67,
+      "worldX": 32768,
+      "worldY": 32360,
+      "worldZ": 12,
+      "radius": 5,
+      "spawntime": 90
+    },
+    {
+      "name": "Dragon Lord",
+      "outfitId": 39,
+      "tileX": 45,
+      "tileY": 71,
+      "worldX": 32773,
+      "worldY": 32364,
+      "worldZ": 12,
+      "radius": 5,
+      "spawntime": 90
+    }
+  ]
+}

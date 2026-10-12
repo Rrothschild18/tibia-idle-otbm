@@ -1,0 +1,762 @@
+{
+  "mapBoundsRef": {
+    "minX": 32157,
+    "minY": 31812,
+    "maxX": 32214,
+    "maxY": 31849
+  },
+  "monsterDefs": {
+    "56": {
+      "name": "Cave Rat",
+      "outfitId": 56,
+      "atlas": {
+        "image": "assets/outfits/56.png",
+        "json": "assets/outfits/56.json"
+      },
+      "appearance": {
+        "looktype": 56,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.85,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.3,
+          "itemId": 3607,
+          "itemName": "cheese",
+          "rarity": "common"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.097,
+          "itemId": 3492,
+          "itemName": "worm",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0075,
+          "itemId": 3598,
+          "itemName": "cookie",
+          "rarity": "rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 5964,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5964
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 3994
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 3995
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 3996
+          }
+        ]
+      },
+      "race": "blood",
+      "idle": {
+        "north": "56_0",
+        "east": "56_1",
+        "south": "56_2",
+        "west": "56_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "56_4",
+            "56_8",
+            "56_12",
+            "56_16",
+            "56_20",
+            "56_24",
+            "56_28",
+            "56_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "56_5",
+            "56_9",
+            "56_13",
+            "56_17",
+            "56_21",
+            "56_25",
+            "56_29",
+            "56_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "56_6",
+            "56_10",
+            "56_14",
+            "56_18",
+            "56_22",
+            "56_26",
+            "56_30",
+            "56_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "56_7",
+            "56_11",
+            "56_15",
+            "56_19",
+            "56_23",
+            "56_27",
+            "56_31",
+            "56_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "36": {
+      "name": "Poison Spider",
+      "outfitId": 36,
+      "atlas": {
+        "image": "assets/outfits/36.png",
+        "json": "assets/outfits/36.json"
+      },
+      "appearance": {
+        "looktype": 36,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 4,
+          "countMin": 1,
+          "dropChance": 0.75,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0114,
+          "itemId": 11485,
+          "itemName": "poison spider shell",
+          "rarity": "rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 5974,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5974
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4029
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4066
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4125
+          }
+        ]
+      },
+      "race": "venom",
+      "idle": {
+        "north": "36_0",
+        "east": "36_1",
+        "south": "36_2",
+        "west": "36_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "36_4",
+            "36_8",
+            "36_12",
+            "36_16",
+            "36_20",
+            "36_24",
+            "36_28",
+            "36_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "36_5",
+            "36_9",
+            "36_13",
+            "36_17",
+            "36_21",
+            "36_25",
+            "36_29",
+            "36_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "36_6",
+            "36_10",
+            "36_14",
+            "36_18",
+            "36_22",
+            "36_26",
+            "36_30",
+            "36_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "36_7",
+            "36_11",
+            "36_15",
+            "36_19",
+            "36_23",
+            "36_27",
+            "36_31",
+            "36_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "18": {
+      "name": "Ghoul",
+      "outfitId": 18,
+      "atlas": {
+        "image": "assets/outfits/18.png",
+        "json": "assets/outfits/18.json"
+      },
+      "appearance": {
+        "looktype": 18,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 30,
+          "countMin": 1,
+          "dropChance": 0.68,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.1447,
+          "itemId": 10291,
+          "itemName": "rotten piece of cloth",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.096,
+          "itemId": 3492,
+          "itemName": "worm",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0513,
+          "itemId": 11467,
+          "itemName": "ghoul snack",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.05,
+          "itemId": 2920,
+          "itemName": "torch",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.01,
+          "itemId": 3377,
+          "itemName": "scale armor",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.01,
+          "itemId": 5913,
+          "itemName": "brown piece of cloth",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.01,
+          "itemId": 23986,
+          "itemName": "heavy old tome",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0099,
+          "itemId": 3367,
+          "itemName": "viking helmet",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0095,
+          "itemId": 11484,
+          "itemName": "pile of grave earth",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0024,
+          "itemId": 3114,
+          "itemName": "skull",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0018,
+          "itemId": 3052,
+          "itemName": "life ring",
+          "rarity": "very-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 5976,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5976
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4034
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4035
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4036
+          }
+        ]
+      },
+      "race": "blood",
+      "idle": {
+        "north": "18_0",
+        "east": "18_1",
+        "south": "18_2",
+        "west": "18_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "18_4",
+            "18_8",
+            "18_12",
+            "18_16",
+            "18_20",
+            "18_24",
+            "18_28",
+            "18_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "18_5",
+            "18_9",
+            "18_13",
+            "18_17",
+            "18_21",
+            "18_25",
+            "18_29",
+            "18_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "18_6",
+            "18_10",
+            "18_14",
+            "18_18",
+            "18_22",
+            "18_26",
+            "18_30",
+            "18_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "18_7",
+            "18_11",
+            "18_15",
+            "18_19",
+            "18_23",
+            "18_27",
+            "18_31",
+            "18_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "33": {
+      "name": "Skeleton",
+      "outfitId": 33,
+      "atlas": {
+        "image": "assets/outfits/33.png",
+        "json": "assets/outfits/33.json"
+      },
+      "appearance": {
+        "looktype": 33,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.491,
+          "itemId": 3115,
+          "itemName": "bone",
+          "rarity": "common"
+        },
+        {
+          "countMax": 10,
+          "countMin": 1,
+          "dropChance": 0.439,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.1988,
+          "itemId": 2920,
+          "itemName": "torch",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0994,
+          "itemId": 11481,
+          "itemName": "pelvis bone",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0752,
+          "itemId": 3367,
+          "itemName": "viking helmet",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0485,
+          "itemId": 3276,
+          "itemName": "hatchet",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0485,
+          "itemId": 3286,
+          "itemName": "mace",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0209,
+          "itemId": 3411,
+          "itemName": "brass shield",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0194,
+          "itemId": 3264,
+          "itemName": "sword",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.01,
+          "itemId": 23986,
+          "itemName": "heavy old tome",
+          "rarity": "rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 5972,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5972
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4024
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4156
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4157
+          }
+        ]
+      },
+      "race": "undead",
+      "idle": {
+        "north": "33_0",
+        "east": "33_1",
+        "south": "33_2",
+        "west": "33_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "33_4",
+            "33_8",
+            "33_12",
+            "33_16",
+            "33_20",
+            "33_24",
+            "33_28",
+            "33_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "33_5",
+            "33_9",
+            "33_13",
+            "33_17",
+            "33_21",
+            "33_25",
+            "33_29",
+            "33_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "33_6",
+            "33_10",
+            "33_14",
+            "33_18",
+            "33_22",
+            "33_26",
+            "33_30",
+            "33_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "33_7",
+            "33_11",
+            "33_15",
+            "33_19",
+            "33_23",
+            "33_27",
+            "33_31",
+            "33_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    }
+  },
+  "spawns": [
+    {
+      "name": "Cave Rat",
+      "outfitId": 56,
+      "tileX": 14,
+      "tileY": 13,
+      "worldX": 32171,
+      "worldY": 31825,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Poison Spider",
+      "outfitId": 36,
+      "tileX": 17,
+      "tileY": 15,
+      "worldX": 32174,
+      "worldY": 31827,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Poison Spider",
+      "outfitId": 36,
+      "tileX": 12,
+      "tileY": 16,
+      "worldX": 32169,
+      "worldY": 31828,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Cave Rat",
+      "outfitId": 56,
+      "tileX": 15,
+      "tileY": 17,
+      "worldX": 32172,
+      "worldY": 31829,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Cave Rat",
+      "outfitId": 56,
+      "tileX": 26,
+      "tileY": 12,
+      "worldX": 32183,
+      "worldY": 31824,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Cave Rat",
+      "outfitId": 56,
+      "tileX": 27,
+      "tileY": 14,
+      "worldX": 32184,
+      "worldY": 31826,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Cave Rat",
+      "outfitId": 56,
+      "tileX": 23,
+      "tileY": 16,
+      "worldX": 32180,
+      "worldY": 31828,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Ghoul",
+      "outfitId": 18,
+      "tileX": 32,
+      "tileY": 14,
+      "worldX": 32189,
+      "worldY": 31826,
+      "worldZ": 8,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Poison Spider",
+      "outfitId": 36,
+      "tileX": 35,
+      "tileY": 15,
+      "worldX": 32192,
+      "worldY": 31827,
+      "worldZ": 8,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Skeleton",
+      "outfitId": 33,
+      "tileX": 45,
+      "tileY": 25,
+      "worldX": 32202,
+      "worldY": 31837,
+      "worldZ": 8,
+      "radius": 3,
+      "spawntime": 90
+    }
+  ]
+}

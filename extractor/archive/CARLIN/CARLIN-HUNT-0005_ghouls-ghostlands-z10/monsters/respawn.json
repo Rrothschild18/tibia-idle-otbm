@@ -1,0 +1,527 @@
+{
+  "mapBoundsRef": {
+    "minX": 32168,
+    "minY": 31757,
+    "maxX": 32209,
+    "maxY": 31807
+  },
+  "monsterDefs": {
+    "18": {
+      "name": "Ghoul",
+      "outfitId": 18,
+      "atlas": {
+        "image": "assets/outfits/18.png",
+        "json": "assets/outfits/18.json"
+      },
+      "appearance": {
+        "looktype": 18,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 30,
+          "countMin": 1,
+          "dropChance": 0.68,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.1447,
+          "itemId": 10291,
+          "itemName": "rotten piece of cloth",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.096,
+          "itemId": 3492,
+          "itemName": "worm",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0513,
+          "itemId": 11467,
+          "itemName": "ghoul snack",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.05,
+          "itemId": 2920,
+          "itemName": "torch",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.01,
+          "itemId": 3377,
+          "itemName": "scale armor",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.01,
+          "itemId": 5913,
+          "itemName": "brown piece of cloth",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.01,
+          "itemId": 23986,
+          "itemName": "heavy old tome",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0099,
+          "itemId": 3367,
+          "itemName": "viking helmet",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0095,
+          "itemId": 11484,
+          "itemName": "pile of grave earth",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0024,
+          "itemId": 3114,
+          "itemName": "skull",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0018,
+          "itemId": 3052,
+          "itemName": "life ring",
+          "rarity": "very-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 5976,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5976
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4034
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4035
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4036
+          }
+        ]
+      },
+      "race": "blood",
+      "idle": {
+        "north": "18_0",
+        "east": "18_1",
+        "south": "18_2",
+        "west": "18_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "18_4",
+            "18_8",
+            "18_12",
+            "18_16",
+            "18_20",
+            "18_24",
+            "18_28",
+            "18_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "18_5",
+            "18_9",
+            "18_13",
+            "18_17",
+            "18_21",
+            "18_25",
+            "18_29",
+            "18_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "18_6",
+            "18_10",
+            "18_14",
+            "18_18",
+            "18_22",
+            "18_26",
+            "18_30",
+            "18_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "18_7",
+            "18_11",
+            "18_15",
+            "18_19",
+            "18_23",
+            "18_27",
+            "18_31",
+            "18_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "37": {
+      "name": "Demon Skeleton",
+      "outfitId": 37,
+      "atlas": {
+        "image": "assets/outfits/37.png",
+        "json": "assets/outfits/37.json"
+      },
+      "appearance": {
+        "looktype": 37,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 75,
+          "countMin": 1,
+          "dropChance": 0.97,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.2012,
+          "itemId": 266,
+          "itemName": "health potion",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.126,
+          "itemId": 9647,
+          "itemName": "demonic skeletal hand",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 3,
+          "countMin": 1,
+          "dropChance": 0.1,
+          "itemId": 3287,
+          "itemName": "throwing star",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.053,
+          "itemId": 268,
+          "itemName": "mana potion",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0527,
+          "itemId": 2920,
+          "itemName": "torch",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.05,
+          "itemId": 3413,
+          "itemName": "battle shield",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.04,
+          "itemId": 3305,
+          "itemName": "battle hammer",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0345,
+          "itemId": 3353,
+          "itemName": "iron helmet",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.029,
+          "itemId": 3027,
+          "itemName": "black pearl",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.014,
+          "itemId": 3030,
+          "itemName": "small ruby",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0069,
+          "itemId": 3078,
+          "itemName": "mysterious fetish",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0052,
+          "itemId": 3062,
+          "itemName": "mind stone",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.001,
+          "itemId": 3415,
+          "itemName": "guardian shield",
+          "rarity": "very-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 5963,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5963
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 3990
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4103
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4104
+          }
+        ]
+      },
+      "race": "undead",
+      "idle": {
+        "north": "37_0",
+        "east": "37_1",
+        "south": "37_2",
+        "west": "37_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "37_4",
+            "37_8",
+            "37_12",
+            "37_16",
+            "37_20",
+            "37_24",
+            "37_28",
+            "37_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "37_5",
+            "37_9",
+            "37_13",
+            "37_17",
+            "37_21",
+            "37_25",
+            "37_29",
+            "37_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "37_6",
+            "37_10",
+            "37_14",
+            "37_18",
+            "37_22",
+            "37_26",
+            "37_30",
+            "37_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "37_7",
+            "37_11",
+            "37_15",
+            "37_19",
+            "37_23",
+            "37_27",
+            "37_31",
+            "37_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    }
+  },
+  "spawns": [
+    {
+      "name": "Ghoul",
+      "outfitId": 18,
+      "tileX": 29,
+      "tileY": 12,
+      "worldX": 32197,
+      "worldY": 31769,
+      "worldZ": 10,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Demon Skeleton",
+      "outfitId": 37,
+      "tileX": 28,
+      "tileY": 16,
+      "worldX": 32196,
+      "worldY": 31773,
+      "worldZ": 10,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Ghoul",
+      "outfitId": 18,
+      "tileX": 12,
+      "tileY": 18,
+      "worldX": 32180,
+      "worldY": 31775,
+      "worldZ": 10,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Demon Skeleton",
+      "outfitId": 37,
+      "tileX": 15,
+      "tileY": 22,
+      "worldX": 32183,
+      "worldY": 31779,
+      "worldZ": 10,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Ghoul",
+      "outfitId": 18,
+      "tileX": 23,
+      "tileY": 25,
+      "worldX": 32191,
+      "worldY": 31782,
+      "worldZ": 10,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Ghoul",
+      "outfitId": 18,
+      "tileX": 27,
+      "tileY": 28,
+      "worldX": 32195,
+      "worldY": 31785,
+      "worldZ": 10,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Demon Skeleton",
+      "outfitId": 37,
+      "tileX": 15,
+      "tileY": 36,
+      "worldX": 32183,
+      "worldY": 31793,
+      "worldZ": 10,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Ghoul",
+      "outfitId": 18,
+      "tileX": 13,
+      "tileY": 38,
+      "worldX": 32181,
+      "worldY": 31795,
+      "worldZ": 10,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Ghoul",
+      "outfitId": 18,
+      "tileX": 25,
+      "tileY": 37,
+      "worldX": 32193,
+      "worldY": 31794,
+      "worldZ": 10,
+      "radius": 3,
+      "spawntime": 90
+    }
+  ]
+}

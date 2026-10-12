@@ -1,0 +1,256 @@
+{
+  "mapBoundsRef": {
+    "minX": 32357,
+    "minY": 32114,
+    "maxX": 32386,
+    "maxY": 32144
+  },
+  "monsterDefs": {
+    "15": {
+      "name": "Troll",
+      "outfitId": 15,
+      "atlas": {
+        "image": "assets/outfits/15.png",
+        "json": "assets/outfits/15.json"
+      },
+      "appearance": {
+        "looktype": 15,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 12,
+          "countMin": 1,
+          "dropChance": 0.653,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.18,
+          "itemId": 3268,
+          "itemName": "hand axe",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.15,
+          "itemId": 3577,
+          "itemName": "meat",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.13,
+          "itemId": 3277,
+          "itemName": "spear",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.12,
+          "itemId": 3355,
+          "itemName": "leather helmet",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.1,
+          "itemId": 3552,
+          "itemName": "leather boots",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0795,
+          "itemId": 3003,
+          "itemName": "rope",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.05,
+          "itemId": 3336,
+          "itemName": "studded club",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0473,
+          "itemId": 3412,
+          "itemName": "wooden shield",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.01,
+          "itemId": 9689,
+          "itemName": "bunch of troll hair",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.01,
+          "itemId": 23986,
+          "itemName": "heavy old tome",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0008,
+          "itemId": 3054,
+          "itemName": "silver amulet",
+          "rarity": "very-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 5960,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5960
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 3987
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 3991
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 3992
+          }
+        ]
+      },
+      "race": "blood",
+      "idle": {
+        "north": "15_0",
+        "east": "15_1",
+        "south": "15_2",
+        "west": "15_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "15_4",
+            "15_8",
+            "15_12",
+            "15_16",
+            "15_20",
+            "15_24",
+            "15_28",
+            "15_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "15_5",
+            "15_9",
+            "15_13",
+            "15_17",
+            "15_21",
+            "15_25",
+            "15_29",
+            "15_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "15_6",
+            "15_10",
+            "15_14",
+            "15_18",
+            "15_22",
+            "15_26",
+            "15_30",
+            "15_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "15_7",
+            "15_11",
+            "15_15",
+            "15_19",
+            "15_23",
+            "15_27",
+            "15_31",
+            "15_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    }
+  },
+  "spawns": [
+    {
+      "name": "Troll",
+      "outfitId": 15,
+      "tileX": 16,
+      "tileY": 12,
+      "worldX": 32373,
+      "worldY": 32126,
+      "worldZ": 8,
+      "radius": 4,
+      "spawntime": 90
+    },
+    {
+      "name": "Troll",
+      "outfitId": 15,
+      "tileX": 17,
+      "tileY": 15,
+      "worldX": 32374,
+      "worldY": 32129,
+      "worldZ": 8,
+      "radius": 4,
+      "spawntime": 90
+    },
+    {
+      "name": "Troll",
+      "outfitId": 15,
+      "tileX": 14,
+      "tileY": 16,
+      "worldX": 32371,
+      "worldY": 32130,
+      "worldZ": 8,
+      "radius": 4,
+      "spawntime": 90
+    },
+    {
+      "name": "Troll",
+      "outfitId": 15,
+      "tileX": 12,
+      "tileY": 18,
+      "worldX": 32369,
+      "worldY": 32132,
+      "worldZ": 8,
+      "radius": 4,
+      "spawntime": 90
+    }
+  ]
+}

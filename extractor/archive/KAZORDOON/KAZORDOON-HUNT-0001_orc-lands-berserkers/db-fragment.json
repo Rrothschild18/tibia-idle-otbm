@@ -1,0 +1,4254 @@
+{
+  "monsters": {
+    "id": "KAZORDOON-HUNT-0001",
+    "mapId": "KAZORDOON-HUNT-0001",
+    "assetsRoot": "assets/KAZORDOON-HUNT-0001_orc-lands-berserkers-sprites/monsters",
+    "mapBoundsRef": {
+      "minX": 32880,
+      "minY": 31697,
+      "maxX": 32998,
+      "maxY": 31818
+    },
+    "monsterDefs": {
+      "16": {
+        "name": "Bear",
+        "outfitId": 16,
+        "atlas": {
+          "image": "assets/outfits/16.png",
+          "json": "assets/outfits/16.json"
+        },
+        "appearance": {
+          "looktype": 16,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 4,
+            "countMin": 1,
+            "dropChance": 0.3975,
+            "itemId": 3577,
+            "itemName": "meat",
+            "rarity": "common"
+          },
+          {
+            "countMax": 3,
+            "countMin": 1,
+            "dropChance": 0.2,
+            "itemId": 3582,
+            "itemName": "ham",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.02,
+            "itemId": 5896,
+            "itemName": "bear paw",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0046,
+            "itemId": 5902,
+            "itemName": "honeycomb",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 5975,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 5975
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4291
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4292
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4293
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "16_0",
+          "east": "16_1",
+          "south": "16_2",
+          "west": "16_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "16_4",
+              "16_8",
+              "16_12",
+              "16_16",
+              "16_20",
+              "16_24",
+              "16_28",
+              "16_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "16_5",
+              "16_9",
+              "16_13",
+              "16_17",
+              "16_21",
+              "16_25",
+              "16_29",
+              "16_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "16_6",
+              "16_10",
+              "16_14",
+              "16_18",
+              "16_22",
+              "16_26",
+              "16_30",
+              "16_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "16_7",
+              "16_11",
+              "16_15",
+              "16_19",
+              "16_23",
+              "16_27",
+              "16_31",
+              "16_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "7": {
+        "name": "Orc Warrior",
+        "outfitId": 7,
+        "atlas": {
+          "image": "assets/outfits/7.png",
+          "json": "assets/outfits/7.json"
+        },
+        "appearance": {
+          "looktype": 7,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 15,
+            "countMin": 1,
+            "dropChance": 0.65,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.15,
+            "itemId": 3577,
+            "itemName": "meat",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.108,
+            "itemId": 11453,
+            "itemName": "broken helmet",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0736,
+            "itemId": 3358,
+            "itemName": "chain armor",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.04,
+            "itemId": 11479,
+            "itemName": "orc leather",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.01,
+            "itemId": 23986,
+            "itemName": "heavy old tome",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0098,
+            "itemId": 11480,
+            "itemName": "skull belt",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.007,
+            "itemId": 10196,
+            "itemName": "orc tooth",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0056,
+            "itemId": 3430,
+            "itemName": "copper shield",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0012,
+            "itemId": 3299,
+            "itemName": "poison dagger",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 5979,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 5979
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4043
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4044
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4147
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "7_0",
+          "east": "7_1",
+          "south": "7_2",
+          "west": "7_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "7_4",
+              "7_8",
+              "7_12",
+              "7_16",
+              "7_20",
+              "7_24",
+              "7_28",
+              "7_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "7_5",
+              "7_9",
+              "7_13",
+              "7_17",
+              "7_21",
+              "7_25",
+              "7_29",
+              "7_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "7_6",
+              "7_10",
+              "7_14",
+              "7_18",
+              "7_22",
+              "7_26",
+              "7_30",
+              "7_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "7_7",
+              "7_11",
+              "7_15",
+              "7_19",
+              "7_23",
+              "7_27",
+              "7_31",
+              "7_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "50": {
+        "name": "Orc Spearman",
+        "outfitId": 50,
+        "atlas": {
+          "image": "assets/outfits/50.png",
+          "json": "assets/outfits/50.json"
+        },
+        "appearance": {
+          "looktype": 50,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.302,
+            "itemId": 3577,
+            "itemName": "meat",
+            "rarity": "common"
+          },
+          {
+            "countMax": 11,
+            "countMin": 1,
+            "dropChance": 0.2505,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1744,
+            "itemId": 3277,
+            "itemName": "spear",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1,
+            "itemId": 3362,
+            "itemName": "studded legs",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.09,
+            "itemId": 3376,
+            "itemName": "studded helmet",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.03,
+            "itemId": 3308,
+            "itemName": "machete",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.023,
+            "itemId": 11479,
+            "itemName": "orc leather",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.01,
+            "itemId": 23986,
+            "itemName": "heavy old tome",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0015,
+            "itemId": 10196,
+            "itemName": "orc tooth",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 5996,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 5996
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4101
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4102
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4147
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "50_0",
+          "east": "50_1",
+          "south": "50_2",
+          "west": "50_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "50_4",
+              "50_8",
+              "50_12",
+              "50_16",
+              "50_20",
+              "50_24",
+              "50_28",
+              "50_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "50_5",
+              "50_9",
+              "50_13",
+              "50_17",
+              "50_21",
+              "50_25",
+              "50_29",
+              "50_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "50_6",
+              "50_10",
+              "50_14",
+              "50_18",
+              "50_22",
+              "50_26",
+              "50_30",
+              "50_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "50_7",
+              "50_11",
+              "50_15",
+              "50_19",
+              "50_23",
+              "50_27",
+              "50_31",
+              "50_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "8": {
+        "name": "Orc Berserker",
+        "outfitId": 8,
+        "atlas": {
+          "image": "assets/outfits/8.png",
+          "json": "assets/outfits/8.json"
+        },
+        "appearance": {
+          "looktype": 8,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 12,
+            "countMin": 1,
+            "dropChance": 0.54,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.104,
+            "itemId": 3582,
+            "itemName": "ham",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.094,
+            "itemId": 11477,
+            "itemName": "orcish gear",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0728,
+            "itemId": 3269,
+            "itemName": "halberd",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0611,
+            "itemId": 3266,
+            "itemName": "battle axe",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.05,
+            "itemId": 3347,
+            "itemName": "hunting spear",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.04,
+            "itemId": 11479,
+            "itemName": "orc leather",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.03,
+            "itemId": 10196,
+            "itemName": "orc tooth",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0089,
+            "itemId": 3358,
+            "itemName": "chain armor",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0083,
+            "itemId": 2914,
+            "itemName": "lamp",
+            "rarity": "rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 5980,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 5980
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4045
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4046
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4147
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "8_0",
+          "east": "8_1",
+          "south": "8_2",
+          "west": "8_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "8_4",
+              "8_8",
+              "8_12",
+              "8_16",
+              "8_20",
+              "8_24",
+              "8_28",
+              "8_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "8_5",
+              "8_9",
+              "8_13",
+              "8_17",
+              "8_21",
+              "8_25",
+              "8_29",
+              "8_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "8_6",
+              "8_10",
+              "8_14",
+              "8_18",
+              "8_22",
+              "8_26",
+              "8_30",
+              "8_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "8_7",
+              "8_11",
+              "8_15",
+              "8_19",
+              "8_23",
+              "8_27",
+              "8_31",
+              "8_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "5": {
+        "name": "Orc",
+        "outfitId": 5,
+        "atlas": {
+          "image": "assets/outfits/5.png",
+          "json": "assets/outfits/5.json"
+        },
+        "appearance": {
+          "looktype": 5,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 14,
+            "countMin": 1,
+            "dropChance": 0.8481,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1016,
+            "itemId": 3577,
+            "itemName": "meat",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0786,
+            "itemId": 3378,
+            "itemName": "studded armor",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.073,
+            "itemId": 3426,
+            "itemName": "studded shield",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0585,
+            "itemId": 3273,
+            "itemName": "sabre",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0496,
+            "itemId": 3274,
+            "itemName": "axe",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0295,
+            "itemId": 3376,
+            "itemName": "studded helmet",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.01,
+            "itemId": 23986,
+            "itemName": "heavy old tome",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0059,
+            "itemId": 11479,
+            "itemName": "orc leather",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0021,
+            "itemId": 10196,
+            "itemName": "orc tooth",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 5966,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 5966
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4001
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4002
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4317
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "5_0",
+          "east": "5_1",
+          "south": "5_2",
+          "west": "5_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "5_4",
+              "5_8",
+              "5_12",
+              "5_16",
+              "5_20",
+              "5_24",
+              "5_28",
+              "5_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "5_5",
+              "5_9",
+              "5_13",
+              "5_17",
+              "5_21",
+              "5_25",
+              "5_29",
+              "5_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "5_6",
+              "5_10",
+              "5_14",
+              "5_18",
+              "5_22",
+              "5_26",
+              "5_30",
+              "5_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "5_7",
+              "5_11",
+              "5_15",
+              "5_19",
+              "5_23",
+              "5_27",
+              "5_31",
+              "5_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "27": {
+        "name": "Wolf",
+        "outfitId": 27,
+        "atlas": {
+          "image": "assets/outfits/27.png",
+          "json": "assets/outfits/27.json"
+        },
+        "appearance": {
+          "looktype": 27,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.55,
+            "itemId": 3577,
+            "itemName": "meat",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0098,
+            "itemId": 5897,
+            "itemName": "wolf paw",
+            "rarity": "rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 5968,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 5968
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4007
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4008
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4009
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "27_0",
+          "east": "27_1",
+          "south": "27_2",
+          "west": "27_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "27_4",
+              "27_8",
+              "27_12",
+              "27_16",
+              "27_20",
+              "27_24",
+              "27_28",
+              "27_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "27_5",
+              "27_9",
+              "27_13",
+              "27_17",
+              "27_21",
+              "27_25",
+              "27_29",
+              "27_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "27_6",
+              "27_10",
+              "27_14",
+              "27_18",
+              "27_22",
+              "27_26",
+              "27_30",
+              "27_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "27_7",
+              "27_11",
+              "27_15",
+              "27_19",
+              "27_23",
+              "27_27",
+              "27_31",
+              "27_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "6": {
+        "name": "Orc Shaman",
+        "outfitId": 6,
+        "atlas": {
+          "image": "assets/outfits/6.png",
+          "json": "assets/outfits/6.json"
+        },
+        "appearance": {
+          "looktype": 6,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 5,
+            "countMin": 1,
+            "dropChance": 0.9,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.106,
+            "itemId": 3597,
+            "itemName": "corncob",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.103,
+            "itemId": 11452,
+            "itemName": "broken shamanic staff",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0875,
+            "itemId": 3358,
+            "itemName": "chain armor",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0686,
+            "itemId": 11478,
+            "itemName": "shamanic hood",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0485,
+            "itemId": 3277,
+            "itemName": "spear",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.043,
+            "itemId": 11479,
+            "itemName": "orc leather",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.021,
+            "itemId": 10196,
+            "itemName": "orc tooth",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.01,
+            "itemId": 3072,
+            "itemName": "wand of decay",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.01,
+            "itemId": 23986,
+            "itemName": "heavy old tome",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0052,
+            "itemId": 2824,
+            "itemName": "book",
+            "rarity": "rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 5978,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 5978
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4041
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4042
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4147
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "6_0",
+          "east": "6_1",
+          "south": "6_2",
+          "west": "6_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "6_4",
+              "6_8",
+              "6_12",
+              "6_16",
+              "6_20",
+              "6_24",
+              "6_28",
+              "6_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "6_5",
+              "6_9",
+              "6_13",
+              "6_17",
+              "6_21",
+              "6_25",
+              "6_29",
+              "6_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "6_6",
+              "6_10",
+              "6_14",
+              "6_18",
+              "6_22",
+              "6_26",
+              "6_30",
+              "6_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "6_7",
+              "6_11",
+              "6_15",
+              "6_19",
+              "6_23",
+              "6_27",
+              "6_31",
+              "6_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "59": {
+        "name": "Orc Leader",
+        "outfitId": 59,
+        "atlas": {
+          "image": "assets/outfits/59.png",
+          "json": "assets/outfits/59.json"
+        },
+        "appearance": {
+          "looktype": 59,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.294,
+            "itemId": 3578,
+            "itemName": "fish",
+            "rarity": "common"
+          },
+          {
+            "countMax": 35,
+            "countMin": 1,
+            "dropChance": 0.28,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1951,
+            "itemId": 11479,
+            "itemName": "orc leather",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 4,
+            "countMin": 1,
+            "dropChance": 0.0995,
+            "itemId": 3298,
+            "itemName": "throwing knife",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0965,
+            "itemId": 3725,
+            "itemName": "brown mushroom",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0392,
+            "itemId": 3091,
+            "itemName": "sword ring",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.031,
+            "itemId": 3372,
+            "itemName": "brass legs",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.028,
+            "itemId": 3285,
+            "itemName": "longsword",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.024,
+            "itemId": 7378,
+            "itemName": "royal spear",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.02008,
+            "itemId": 11480,
+            "itemName": "skull belt",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0186,
+            "itemId": 3307,
+            "itemName": "scimitar",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0165,
+            "itemId": 3357,
+            "itemName": "plate armor",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0165,
+            "itemId": 3410,
+            "itemName": "plate shield",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0103,
+            "itemId": 10196,
+            "itemName": "orc tooth",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0061,
+            "itemId": 3301,
+            "itemName": "broadsword",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0055,
+            "itemId": 266,
+            "itemName": "health potion",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0044,
+            "itemId": 3557,
+            "itemName": "plate legs",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0018,
+            "itemId": 3369,
+            "itemName": "warrior helmet",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 6001,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 6001
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4119
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4120
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4147
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "59_0",
+          "east": "59_1",
+          "south": "59_2",
+          "west": "59_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "59_4",
+              "59_8"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "59_5",
+              "59_9"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "59_6",
+              "59_10"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "59_7",
+              "59_11"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "60": {
+        "name": "Pig",
+        "outfitId": 60,
+        "atlas": {
+          "image": "assets/outfits/60.png",
+          "json": "assets/outfits/60.json"
+        },
+        "appearance": {
+          "looktype": 60,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 4,
+            "countMin": 1,
+            "dropChance": 0.64,
+            "itemId": 3577,
+            "itemName": "meat",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0095,
+            "itemId": 9693,
+            "itemName": "pig foot",
+            "rarity": "rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 6000,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 6000
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4116
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4117
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4118
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "60_0",
+          "east": "60_1",
+          "south": "60_2",
+          "west": "60_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "60_4",
+              "60_8",
+              "60_12",
+              "60_16",
+              "60_20",
+              "60_24",
+              "60_28",
+              "60_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "60_5",
+              "60_9",
+              "60_13",
+              "60_17",
+              "60_21",
+              "60_25",
+              "60_29",
+              "60_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "60_6",
+              "60_10",
+              "60_14",
+              "60_18",
+              "60_22",
+              "60_26",
+              "60_30",
+              "60_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "60_7",
+              "60_11",
+              "60_15",
+              "60_19",
+              "60_23",
+              "60_27",
+              "60_31",
+              "60_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "111": {
+        "name": "Chicken",
+        "outfitId": 111,
+        "atlas": {
+          "image": "assets/outfits/111.png",
+          "json": "assets/outfits/111.json"
+        },
+        "appearance": {
+          "looktype": 111,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.2,
+            "itemId": 5890,
+            "itemName": "chicken feather",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 3,
+            "countMin": 1,
+            "dropChance": 0.1,
+            "itemId": 3492,
+            "itemName": "worm",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.0212,
+            "itemId": 3577,
+            "itemName": "meat",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0095,
+            "itemId": 3606,
+            "itemName": "egg",
+            "rarity": "rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 6042,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 6042
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4330
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4331
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4332
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "111_0",
+          "east": "111_1",
+          "south": "111_2",
+          "west": "111_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "111_4",
+              "111_8",
+              "111_12",
+              "111_16",
+              "111_20",
+              "111_24",
+              "111_28",
+              "111_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "111_5",
+              "111_9",
+              "111_13",
+              "111_17",
+              "111_21",
+              "111_25",
+              "111_29",
+              "111_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "111_6",
+              "111_10",
+              "111_14",
+              "111_18",
+              "111_22",
+              "111_26",
+              "111_30",
+              "111_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "111_7",
+              "111_11",
+              "111_15",
+              "111_19",
+              "111_23",
+              "111_27",
+              "111_31",
+              "111_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "22": {
+        "name": "Cyclops",
+        "outfitId": 22,
+        "atlas": {
+          "image": "assets/outfits/22.png",
+          "json": "assets/outfits/22.json"
+        },
+        "appearance": {
+          "looktype": 22,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 47,
+            "countMin": 1,
+            "dropChance": 0.82,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.3007,
+            "itemId": 3577,
+            "itemName": "meat",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.08,
+            "itemId": 3294,
+            "itemName": "short sword",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0493,
+            "itemId": 9657,
+            "itemName": "cyclops toe",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.025,
+            "itemId": 3410,
+            "itemName": "plate shield",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.014,
+            "itemId": 3413,
+            "itemName": "battle shield",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.01003,
+            "itemId": 3269,
+            "itemName": "halberd",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.01,
+            "itemId": 23986,
+            "itemName": "heavy old tome",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0022,
+            "itemId": 3384,
+            "itemName": "dark helmet",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0021,
+            "itemId": 266,
+            "itemName": "health potion",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0019,
+            "itemId": 3012,
+            "itemName": "wolf tooth chain",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0009,
+            "itemId": 3093,
+            "itemName": "club ring",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0008,
+            "itemId": 7398,
+            "itemName": "cyclops trophy",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 5962,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 5962
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 3989
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4299
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4300
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "22_0",
+          "east": "22_1",
+          "south": "22_2",
+          "west": "22_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "22_4",
+              "22_8",
+              "22_12",
+              "22_16",
+              "22_20",
+              "22_24",
+              "22_28",
+              "22_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "22_5",
+              "22_9",
+              "22_13",
+              "22_17",
+              "22_21",
+              "22_25",
+              "22_29",
+              "22_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "22_6",
+              "22_10",
+              "22_14",
+              "22_18",
+              "22_22",
+              "22_26",
+              "22_30",
+              "22_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "22_7",
+              "22_11",
+              "22_15",
+              "22_19",
+              "22_23",
+              "22_27",
+              "22_31",
+              "22_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      }
+    },
+    "spawns": [
+      {
+        "name": "Bear",
+        "outfitId": 16,
+        "tileX": 94,
+        "tileY": 12,
+        "worldX": 32974,
+        "worldY": 31709,
+        "worldZ": 7,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Bear",
+        "outfitId": 16,
+        "tileX": 96,
+        "tileY": 12,
+        "worldX": 32976,
+        "worldY": 31709,
+        "worldZ": 7,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Bear",
+        "outfitId": 16,
+        "tileX": 96,
+        "tileY": 16,
+        "worldX": 32976,
+        "worldY": 31713,
+        "worldZ": 7,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Bear",
+        "outfitId": 16,
+        "tileX": 100,
+        "tileY": 16,
+        "worldX": 32980,
+        "worldY": 31713,
+        "worldZ": 7,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Warrior",
+        "outfitId": 7,
+        "tileX": 95,
+        "tileY": 18,
+        "worldX": 32975,
+        "worldY": 31715,
+        "worldZ": 7,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Warrior",
+        "outfitId": 7,
+        "tileX": 100,
+        "tileY": 18,
+        "worldX": 32980,
+        "worldY": 31715,
+        "worldZ": 7,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Bear",
+        "outfitId": 16,
+        "tileX": 98,
+        "tileY": 19,
+        "worldX": 32978,
+        "worldY": 31716,
+        "worldZ": 7,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Spearman",
+        "outfitId": 50,
+        "tileX": 99,
+        "tileY": 20,
+        "worldX": 32979,
+        "worldY": 31717,
+        "worldZ": 7,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Berserker",
+        "outfitId": 8,
+        "tileX": 91,
+        "tileY": 21,
+        "worldX": 32971,
+        "worldY": 31718,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Spearman",
+        "outfitId": 50,
+        "tileX": 88,
+        "tileY": 22,
+        "worldX": 32968,
+        "worldY": 31719,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 91,
+        "tileY": 22,
+        "worldX": 32971,
+        "worldY": 31719,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Wolf",
+        "outfitId": 27,
+        "tileX": 88,
+        "tileY": 24,
+        "worldX": 32968,
+        "worldY": 31721,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Berserker",
+        "outfitId": 8,
+        "tileX": 86,
+        "tileY": 25,
+        "worldX": 32966,
+        "worldY": 31722,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Shaman",
+        "outfitId": 6,
+        "tileX": 90,
+        "tileY": 26,
+        "worldX": 32970,
+        "worldY": 31723,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Berserker",
+        "outfitId": 8,
+        "tileX": 75,
+        "tileY": 26,
+        "worldX": 32955,
+        "worldY": 31723,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Wolf",
+        "outfitId": 27,
+        "tileX": 78,
+        "tileY": 26,
+        "worldX": 32958,
+        "worldY": 31723,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Wolf",
+        "outfitId": 27,
+        "tileX": 78,
+        "tileY": 28,
+        "worldX": 32958,
+        "worldY": 31725,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Berserker",
+        "outfitId": 8,
+        "tileX": 96,
+        "tileY": 27,
+        "worldX": 32976,
+        "worldY": 31724,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Bear",
+        "outfitId": 16,
+        "tileX": 101,
+        "tileY": 28,
+        "worldX": 32981,
+        "worldY": 31725,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Spearman",
+        "outfitId": 50,
+        "tileX": 100,
+        "tileY": 30,
+        "worldX": 32980,
+        "worldY": 31727,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Wolf",
+        "outfitId": 27,
+        "tileX": 81,
+        "tileY": 28,
+        "worldX": 32961,
+        "worldY": 31725,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 84,
+        "tileY": 30,
+        "worldX": 32964,
+        "worldY": 31727,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Berserker",
+        "outfitId": 8,
+        "tileX": 82,
+        "tileY": 31,
+        "worldX": 32962,
+        "worldY": 31728,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Berserker",
+        "outfitId": 8,
+        "tileX": 77,
+        "tileY": 33,
+        "worldX": 32957,
+        "worldY": 31730,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Shaman",
+        "outfitId": 6,
+        "tileX": 87,
+        "tileY": 30,
+        "worldX": 32967,
+        "worldY": 31727,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Warrior",
+        "outfitId": 7,
+        "tileX": 90,
+        "tileY": 31,
+        "worldX": 32970,
+        "worldY": 31728,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Berserker",
+        "outfitId": 8,
+        "tileX": 88,
+        "tileY": 33,
+        "worldX": 32968,
+        "worldY": 31730,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Warrior",
+        "outfitId": 7,
+        "tileX": 91,
+        "tileY": 33,
+        "worldX": 32971,
+        "worldY": 31730,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Spearman",
+        "outfitId": 50,
+        "tileX": 93,
+        "tileY": 33,
+        "worldX": 32973,
+        "worldY": 31730,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Berserker",
+        "outfitId": 8,
+        "tileX": 90,
+        "tileY": 35,
+        "worldX": 32970,
+        "worldY": 31732,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Warrior",
+        "outfitId": 7,
+        "tileX": 89,
+        "tileY": 36,
+        "worldX": 32969,
+        "worldY": 31733,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Warrior",
+        "outfitId": 7,
+        "tileX": 85,
+        "tileY": 42,
+        "worldX": 32965,
+        "worldY": 31739,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Warrior",
+        "outfitId": 7,
+        "tileX": 86,
+        "tileY": 42,
+        "worldX": 32966,
+        "worldY": 31739,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Berserker",
+        "outfitId": 8,
+        "tileX": 83,
+        "tileY": 44,
+        "worldX": 32963,
+        "worldY": 31741,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Warrior",
+        "outfitId": 7,
+        "tileX": 91,
+        "tileY": 40,
+        "worldX": 32971,
+        "worldY": 31737,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Spearman",
+        "outfitId": 50,
+        "tileX": 90,
+        "tileY": 42,
+        "worldX": 32970,
+        "worldY": 31739,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Berserker",
+        "outfitId": 8,
+        "tileX": 100,
+        "tileY": 41,
+        "worldX": 32980,
+        "worldY": 31738,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Berserker",
+        "outfitId": 8,
+        "tileX": 103,
+        "tileY": 44,
+        "worldX": 32983,
+        "worldY": 31741,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Spearman",
+        "outfitId": 50,
+        "tileX": 75,
+        "tileY": 41,
+        "worldX": 32955,
+        "worldY": 31738,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Spearman",
+        "outfitId": 50,
+        "tileX": 77,
+        "tileY": 41,
+        "worldX": 32957,
+        "worldY": 31738,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 76,
+        "tileY": 42,
+        "worldX": 32956,
+        "worldY": 31739,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Warrior",
+        "outfitId": 7,
+        "tileX": 74,
+        "tileY": 43,
+        "worldX": 32954,
+        "worldY": 31740,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Berserker",
+        "outfitId": 8,
+        "tileX": 77,
+        "tileY": 44,
+        "worldX": 32957,
+        "worldY": 31741,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 85,
+        "tileY": 48,
+        "worldX": 32965,
+        "worldY": 31745,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Berserker",
+        "outfitId": 8,
+        "tileX": 89,
+        "tileY": 52,
+        "worldX": 32969,
+        "worldY": 31749,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Berserker",
+        "outfitId": 8,
+        "tileX": 92,
+        "tileY": 54,
+        "worldX": 32972,
+        "worldY": 31751,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Leader",
+        "outfitId": 59,
+        "tileX": 97,
+        "tileY": 51,
+        "worldX": 32977,
+        "worldY": 31748,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Berserker",
+        "outfitId": 8,
+        "tileX": 98,
+        "tileY": 53,
+        "worldX": 32978,
+        "worldY": 31750,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Berserker",
+        "outfitId": 8,
+        "tileX": 75,
+        "tileY": 53,
+        "worldX": 32955,
+        "worldY": 31750,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Spearman",
+        "outfitId": 50,
+        "tileX": 77,
+        "tileY": 54,
+        "worldX": 32957,
+        "worldY": 31751,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 76,
+        "tileY": 55,
+        "worldX": 32956,
+        "worldY": 31752,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Warrior",
+        "outfitId": 7,
+        "tileX": 79,
+        "tileY": 56,
+        "worldX": 32959,
+        "worldY": 31753,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Berserker",
+        "outfitId": 8,
+        "tileX": 68,
+        "tileY": 61,
+        "worldX": 32948,
+        "worldY": 31758,
+        "worldZ": 7,
+        "radius": 5,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Berserker",
+        "outfitId": 8,
+        "tileX": 85,
+        "tileY": 57,
+        "worldX": 32965,
+        "worldY": 31754,
+        "worldZ": 7,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Berserker",
+        "outfitId": 8,
+        "tileX": 102,
+        "tileY": 57,
+        "worldX": 32982,
+        "worldY": 31754,
+        "worldZ": 7,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Spearman",
+        "outfitId": 50,
+        "tileX": 77,
+        "tileY": 59,
+        "worldX": 32957,
+        "worldY": 31756,
+        "worldZ": 7,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Shaman",
+        "outfitId": 6,
+        "tileX": 91,
+        "tileY": 58,
+        "worldX": 32971,
+        "worldY": 31755,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Shaman",
+        "outfitId": 6,
+        "tileX": 94,
+        "tileY": 59,
+        "worldX": 32974,
+        "worldY": 31756,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Shaman",
+        "outfitId": 6,
+        "tileX": 94,
+        "tileY": 62,
+        "worldX": 32974,
+        "worldY": 31759,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Warrior",
+        "outfitId": 7,
+        "tileX": 70,
+        "tileY": 62,
+        "worldX": 32950,
+        "worldY": 31759,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Warrior",
+        "outfitId": 7,
+        "tileX": 67,
+        "tileY": 65,
+        "worldX": 32947,
+        "worldY": 31762,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Berserker",
+        "outfitId": 8,
+        "tileX": 71,
+        "tileY": 65,
+        "worldX": 32951,
+        "worldY": 31762,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Spearman",
+        "outfitId": 50,
+        "tileX": 69,
+        "tileY": 66,
+        "worldX": 32949,
+        "worldY": 31763,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Warrior",
+        "outfitId": 7,
+        "tileX": 106,
+        "tileY": 61,
+        "worldX": 32986,
+        "worldY": 31758,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Shaman",
+        "outfitId": 6,
+        "tileX": 82,
+        "tileY": 64,
+        "worldX": 32962,
+        "worldY": 31761,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 84,
+        "tileY": 34,
+        "worldX": 32964,
+        "worldY": 31731,
+        "worldZ": 7,
+        "radius": 30,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 99,
+        "tileY": 35,
+        "worldX": 32979,
+        "worldY": 31732,
+        "worldZ": 7,
+        "radius": 30,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 98,
+        "tileY": 65,
+        "worldX": 32978,
+        "worldY": 31762,
+        "worldZ": 7,
+        "radius": 30,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Spearman",
+        "outfitId": 50,
+        "tileX": 71,
+        "tileY": 70,
+        "worldX": 32951,
+        "worldY": 31767,
+        "worldZ": 7,
+        "radius": 30,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 76,
+        "tileY": 71,
+        "worldX": 32956,
+        "worldY": 31768,
+        "worldZ": 7,
+        "radius": 30,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Shaman",
+        "outfitId": 6,
+        "tileX": 73,
+        "tileY": 72,
+        "worldX": 32953,
+        "worldY": 31769,
+        "worldZ": 7,
+        "radius": 30,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Spearman",
+        "outfitId": 50,
+        "tileX": 78,
+        "tileY": 72,
+        "worldX": 32958,
+        "worldY": 31769,
+        "worldZ": 7,
+        "radius": 30,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 88,
+        "tileY": 72,
+        "worldX": 32968,
+        "worldY": 31769,
+        "worldZ": 7,
+        "radius": 30,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Shaman",
+        "outfitId": 6,
+        "tileX": 80,
+        "tileY": 73,
+        "worldX": 32960,
+        "worldY": 31770,
+        "worldZ": 7,
+        "radius": 30,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 70,
+        "tileY": 75,
+        "worldX": 32950,
+        "worldY": 31772,
+        "worldZ": 7,
+        "radius": 30,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 85,
+        "tileY": 75,
+        "worldX": 32965,
+        "worldY": 31772,
+        "worldZ": 7,
+        "radius": 30,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 87,
+        "tileY": 75,
+        "worldX": 32967,
+        "worldY": 31772,
+        "worldZ": 7,
+        "radius": 30,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Spearman",
+        "outfitId": 50,
+        "tileX": 72,
+        "tileY": 76,
+        "worldX": 32952,
+        "worldY": 31773,
+        "worldZ": 7,
+        "radius": 30,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Spearman",
+        "outfitId": 50,
+        "tileX": 77,
+        "tileY": 76,
+        "worldX": 32957,
+        "worldY": 31773,
+        "worldZ": 7,
+        "radius": 30,
+        "spawntime": 90
+      },
+      {
+        "name": "Pig",
+        "outfitId": 60,
+        "tileX": 81,
+        "tileY": 76,
+        "worldX": 32961,
+        "worldY": 31773,
+        "worldZ": 7,
+        "radius": 30,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Spearman",
+        "outfitId": 50,
+        "tileX": 70,
+        "tileY": 78,
+        "worldX": 32950,
+        "worldY": 31775,
+        "worldZ": 7,
+        "radius": 30,
+        "spawntime": 90
+      },
+      {
+        "name": "Chicken",
+        "outfitId": 111,
+        "tileX": 69,
+        "tileY": 79,
+        "worldX": 32949,
+        "worldY": 31776,
+        "worldZ": 7,
+        "radius": 30,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Spearman",
+        "outfitId": 50,
+        "tileX": 73,
+        "tileY": 79,
+        "worldX": 32953,
+        "worldY": 31776,
+        "worldZ": 7,
+        "radius": 30,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 91,
+        "tileY": 79,
+        "worldX": 32971,
+        "worldY": 31776,
+        "worldZ": 7,
+        "radius": 30,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Spearman",
+        "outfitId": 50,
+        "tileX": 77,
+        "tileY": 82,
+        "worldX": 32957,
+        "worldY": 31779,
+        "worldZ": 7,
+        "radius": 30,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Warrior",
+        "outfitId": 7,
+        "tileX": 80,
+        "tileY": 82,
+        "worldX": 32960,
+        "worldY": 31779,
+        "worldZ": 7,
+        "radius": 30,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Warrior",
+        "outfitId": 7,
+        "tileX": 97,
+        "tileY": 84,
+        "worldX": 32977,
+        "worldY": 31781,
+        "worldZ": 7,
+        "radius": 30,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Warrior",
+        "outfitId": 7,
+        "tileX": 96,
+        "tileY": 87,
+        "worldX": 32976,
+        "worldY": 31784,
+        "worldZ": 7,
+        "radius": 30,
+        "spawntime": 90
+      },
+      {
+        "name": "Chicken",
+        "outfitId": 111,
+        "tileX": 70,
+        "tileY": 89,
+        "worldX": 32950,
+        "worldY": 31786,
+        "worldZ": 7,
+        "radius": 30,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Berserker",
+        "outfitId": 8,
+        "tileX": 90,
+        "tileY": 90,
+        "worldX": 32970,
+        "worldY": 31787,
+        "worldZ": 7,
+        "radius": 30,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Warrior",
+        "outfitId": 7,
+        "tileX": 96,
+        "tileY": 90,
+        "worldX": 32976,
+        "worldY": 31787,
+        "worldZ": 7,
+        "radius": 30,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Berserker",
+        "outfitId": 8,
+        "tileX": 95,
+        "tileY": 92,
+        "worldX": 32975,
+        "worldY": 31789,
+        "worldZ": 7,
+        "radius": 30,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Berserker",
+        "outfitId": 8,
+        "tileX": 90,
+        "tileY": 93,
+        "worldX": 32970,
+        "worldY": 31790,
+        "worldZ": 7,
+        "radius": 30,
+        "spawntime": 90
+      },
+      {
+        "name": "Cyclops",
+        "outfitId": 22,
+        "tileX": 17,
+        "tileY": 71,
+        "worldX": 32897,
+        "worldY": 31768,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Spearman",
+        "outfitId": 50,
+        "tileX": 19,
+        "tileY": 72,
+        "worldX": 32899,
+        "worldY": 31769,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Shaman",
+        "outfitId": 6,
+        "tileX": 20,
+        "tileY": 75,
+        "worldX": 32900,
+        "worldY": 31772,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Berserker",
+        "outfitId": 8,
+        "tileX": 24,
+        "tileY": 76,
+        "worldX": 32904,
+        "worldY": 31773,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Berserker",
+        "outfitId": 8,
+        "tileX": 27,
+        "tileY": 77,
+        "worldX": 32907,
+        "worldY": 31774,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Berserker",
+        "outfitId": 8,
+        "tileX": 13,
+        "tileY": 76,
+        "worldX": 32893,
+        "worldY": 31773,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Warrior",
+        "outfitId": 7,
+        "tileX": 15,
+        "tileY": 79,
+        "worldX": 32895,
+        "worldY": 31776,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Spearman",
+        "outfitId": 50,
+        "tileX": 68,
+        "tileY": 75,
+        "worldX": 32948,
+        "worldY": 31772,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Chicken",
+        "outfitId": 111,
+        "tileX": 67,
+        "tileY": 78,
+        "worldX": 32947,
+        "worldY": 31775,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Shaman",
+        "outfitId": 6,
+        "tileX": 68,
+        "tileY": 78,
+        "worldX": 32948,
+        "worldY": 31775,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Shaman",
+        "outfitId": 6,
+        "tileX": 18,
+        "tileY": 81,
+        "worldX": 32898,
+        "worldY": 31778,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Berserker",
+        "outfitId": 8,
+        "tileX": 17,
+        "tileY": 83,
+        "worldX": 32897,
+        "worldY": 31780,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 20,
+        "tileY": 83,
+        "worldX": 32900,
+        "worldY": 31780,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 31,
+        "tileY": 86,
+        "worldX": 32911,
+        "worldY": 31783,
+        "worldZ": 7,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Shaman",
+        "outfitId": 6,
+        "tileX": 29,
+        "tileY": 87,
+        "worldX": 32909,
+        "worldY": 31784,
+        "worldZ": 7,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Berserker",
+        "outfitId": 8,
+        "tileX": 33,
+        "tileY": 87,
+        "worldX": 32913,
+        "worldY": 31784,
+        "worldZ": 7,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Leader",
+        "outfitId": 59,
+        "tileX": 33,
+        "tileY": 90,
+        "worldX": 32913,
+        "worldY": 31787,
+        "worldZ": 7,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Berserker",
+        "outfitId": 8,
+        "tileX": 30,
+        "tileY": 91,
+        "worldX": 32910,
+        "worldY": 31788,
+        "worldZ": 7,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 60,
+        "tileY": 89,
+        "worldX": 32940,
+        "worldY": 31786,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Warrior",
+        "outfitId": 7,
+        "tileX": 21,
+        "tileY": 92,
+        "worldX": 32901,
+        "worldY": 31789,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Shaman",
+        "outfitId": 6,
+        "tileX": 43,
+        "tileY": 93,
+        "worldX": 32923,
+        "worldY": 31790,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Berserker",
+        "outfitId": 8,
+        "tileX": 48,
+        "tileY": 95,
+        "worldX": 32928,
+        "worldY": 31792,
+        "worldZ": 7,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Berserker",
+        "outfitId": 8,
+        "tileX": 54,
+        "tileY": 93,
+        "worldX": 32934,
+        "worldY": 31790,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Berserker",
+        "outfitId": 8,
+        "tileX": 51,
+        "tileY": 97,
+        "worldX": 32931,
+        "worldY": 31794,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 54,
+        "tileY": 97,
+        "worldX": 32934,
+        "worldY": 31794,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Berserker",
+        "outfitId": 8,
+        "tileX": 55,
+        "tileY": 97,
+        "worldX": 32935,
+        "worldY": 31794,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Berserker",
+        "outfitId": 8,
+        "tileX": 86,
+        "tileY": 95,
+        "worldX": 32966,
+        "worldY": 31792,
+        "worldZ": 7,
+        "radius": 6,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Berserker",
+        "outfitId": 8,
+        "tileX": 97,
+        "tileY": 96,
+        "worldX": 32977,
+        "worldY": 31793,
+        "worldZ": 7,
+        "radius": 6,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Berserker",
+        "outfitId": 8,
+        "tileX": 91,
+        "tileY": 97,
+        "worldX": 32971,
+        "worldY": 31794,
+        "worldZ": 7,
+        "radius": 6,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Warrior",
+        "outfitId": 7,
+        "tileX": 90,
+        "tileY": 100,
+        "worldX": 32970,
+        "worldY": 31797,
+        "worldZ": 7,
+        "radius": 6,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Berserker",
+        "outfitId": 8,
+        "tileX": 12,
+        "tileY": 99,
+        "worldX": 32892,
+        "worldY": 31796,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Shaman",
+        "outfitId": 6,
+        "tileX": 37,
+        "tileY": 98,
+        "worldX": 32917,
+        "worldY": 31795,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Leader",
+        "outfitId": 59,
+        "tileX": 70,
+        "tileY": 96,
+        "worldX": 32950,
+        "worldY": 31793,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Leader",
+        "outfitId": 59,
+        "tileX": 72,
+        "tileY": 98,
+        "worldX": 32952,
+        "worldY": 31795,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Berserker",
+        "outfitId": 8,
+        "tileX": 23,
+        "tileY": 98,
+        "worldX": 32903,
+        "worldY": 31795,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Warrior",
+        "outfitId": 7,
+        "tileX": 26,
+        "tileY": 100,
+        "worldX": 32906,
+        "worldY": 31797,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 59,
+        "tileY": 99,
+        "worldX": 32939,
+        "worldY": 31796,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 37,
+        "tileY": 103,
+        "worldX": 32917,
+        "worldY": 31800,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Warrior",
+        "outfitId": 7,
+        "tileX": 39,
+        "tileY": 103,
+        "worldX": 32919,
+        "worldY": 31800,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Warrior",
+        "outfitId": 7,
+        "tileX": 48,
+        "tileY": 103,
+        "worldX": 32928,
+        "worldY": 31800,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Warrior",
+        "outfitId": 7,
+        "tileX": 26,
+        "tileY": 108,
+        "worldX": 32906,
+        "worldY": 31805,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Warrior",
+        "outfitId": 7,
+        "tileX": 58,
+        "tileY": 107,
+        "worldX": 32938,
+        "worldY": 31804,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Berserker",
+        "outfitId": 8,
+        "tileX": 94,
+        "tileY": 105,
+        "worldX": 32974,
+        "worldY": 31802,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Warrior",
+        "outfitId": 7,
+        "tileX": 96,
+        "tileY": 109,
+        "worldX": 32976,
+        "worldY": 31806,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      }
+    ]
+  },
+  "loot": {
+    "id": "KAZORDOON-HUNT-0001",
+    "mapId": "KAZORDOON-HUNT-0001",
+    "drops": [
+      {
+        "countMax": 4,
+        "countMin": 1,
+        "dropChance": 0.3975,
+        "itemId": 3577,
+        "itemName": "meat",
+        "rarity": "common",
+        "monsterName": "Bear"
+      },
+      {
+        "countMax": 3,
+        "countMin": 1,
+        "dropChance": 0.2,
+        "itemId": 3582,
+        "itemName": "ham",
+        "rarity": "semi-rare",
+        "monsterName": "Bear"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.02,
+        "itemId": 5896,
+        "itemName": "bear paw",
+        "rarity": "rare",
+        "monsterName": "Bear"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0046,
+        "itemId": 5902,
+        "itemName": "honeycomb",
+        "rarity": "very-rare",
+        "monsterName": "Bear"
+      },
+      {
+        "countMax": 15,
+        "countMin": 1,
+        "dropChance": 0.65,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Orc Warrior"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.15,
+        "itemId": 3577,
+        "itemName": "meat",
+        "rarity": "semi-rare",
+        "monsterName": "Orc Warrior"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.108,
+        "itemId": 11453,
+        "itemName": "broken helmet",
+        "rarity": "semi-rare",
+        "monsterName": "Orc Warrior"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0736,
+        "itemId": 3358,
+        "itemName": "chain armor",
+        "rarity": "semi-rare",
+        "monsterName": "Orc Warrior"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.04,
+        "itemId": 11479,
+        "itemName": "orc leather",
+        "rarity": "rare",
+        "monsterName": "Orc Warrior"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.01,
+        "itemId": 23986,
+        "itemName": "heavy old tome",
+        "rarity": "rare",
+        "monsterName": "Orc Warrior"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0098,
+        "itemId": 11480,
+        "itemName": "skull belt",
+        "rarity": "rare",
+        "monsterName": "Orc Warrior"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.007,
+        "itemId": 10196,
+        "itemName": "orc tooth",
+        "rarity": "rare",
+        "monsterName": "Orc Warrior"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0056,
+        "itemId": 3430,
+        "itemName": "copper shield",
+        "rarity": "rare",
+        "monsterName": "Orc Warrior"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0012,
+        "itemId": 3299,
+        "itemName": "poison dagger",
+        "rarity": "very-rare",
+        "monsterName": "Orc Warrior"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.302,
+        "itemId": 3577,
+        "itemName": "meat",
+        "rarity": "common",
+        "monsterName": "Orc Spearman"
+      },
+      {
+        "countMax": 11,
+        "countMin": 1,
+        "dropChance": 0.2505,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Orc Spearman"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1744,
+        "itemId": 3277,
+        "itemName": "spear",
+        "rarity": "semi-rare",
+        "monsterName": "Orc Spearman"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1,
+        "itemId": 3362,
+        "itemName": "studded legs",
+        "rarity": "semi-rare",
+        "monsterName": "Orc Spearman"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.09,
+        "itemId": 3376,
+        "itemName": "studded helmet",
+        "rarity": "semi-rare",
+        "monsterName": "Orc Spearman"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.03,
+        "itemId": 3308,
+        "itemName": "machete",
+        "rarity": "rare",
+        "monsterName": "Orc Spearman"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.023,
+        "itemId": 11479,
+        "itemName": "orc leather",
+        "rarity": "rare",
+        "monsterName": "Orc Spearman"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.01,
+        "itemId": 23986,
+        "itemName": "heavy old tome",
+        "rarity": "rare",
+        "monsterName": "Orc Spearman"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0015,
+        "itemId": 10196,
+        "itemName": "orc tooth",
+        "rarity": "very-rare",
+        "monsterName": "Orc Spearman"
+      },
+      {
+        "countMax": 12,
+        "countMin": 1,
+        "dropChance": 0.54,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Orc Berserker"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.104,
+        "itemId": 3582,
+        "itemName": "ham",
+        "rarity": "semi-rare",
+        "monsterName": "Orc Berserker"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.094,
+        "itemId": 11477,
+        "itemName": "orcish gear",
+        "rarity": "semi-rare",
+        "monsterName": "Orc Berserker"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0728,
+        "itemId": 3269,
+        "itemName": "halberd",
+        "rarity": "semi-rare",
+        "monsterName": "Orc Berserker"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0611,
+        "itemId": 3266,
+        "itemName": "battle axe",
+        "rarity": "semi-rare",
+        "monsterName": "Orc Berserker"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.05,
+        "itemId": 3347,
+        "itemName": "hunting spear",
+        "rarity": "semi-rare",
+        "monsterName": "Orc Berserker"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.04,
+        "itemId": 11479,
+        "itemName": "orc leather",
+        "rarity": "rare",
+        "monsterName": "Orc Berserker"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.03,
+        "itemId": 10196,
+        "itemName": "orc tooth",
+        "rarity": "rare",
+        "monsterName": "Orc Berserker"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0089,
+        "itemId": 3358,
+        "itemName": "chain armor",
+        "rarity": "rare",
+        "monsterName": "Orc Berserker"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0083,
+        "itemId": 2914,
+        "itemName": "lamp",
+        "rarity": "rare",
+        "monsterName": "Orc Berserker"
+      },
+      {
+        "countMax": 14,
+        "countMin": 1,
+        "dropChance": 0.8481,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1016,
+        "itemId": 3577,
+        "itemName": "meat",
+        "rarity": "semi-rare",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0786,
+        "itemId": 3378,
+        "itemName": "studded armor",
+        "rarity": "semi-rare",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.073,
+        "itemId": 3426,
+        "itemName": "studded shield",
+        "rarity": "semi-rare",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0585,
+        "itemId": 3273,
+        "itemName": "sabre",
+        "rarity": "semi-rare",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0496,
+        "itemId": 3274,
+        "itemName": "axe",
+        "rarity": "rare",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0295,
+        "itemId": 3376,
+        "itemName": "studded helmet",
+        "rarity": "rare",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.01,
+        "itemId": 23986,
+        "itemName": "heavy old tome",
+        "rarity": "rare",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0059,
+        "itemId": 11479,
+        "itemName": "orc leather",
+        "rarity": "rare",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0021,
+        "itemId": 10196,
+        "itemName": "orc tooth",
+        "rarity": "very-rare",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.55,
+        "itemId": 3577,
+        "itemName": "meat",
+        "rarity": "common",
+        "monsterName": "Wolf"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0098,
+        "itemId": 5897,
+        "itemName": "wolf paw",
+        "rarity": "rare",
+        "monsterName": "Wolf"
+      },
+      {
+        "countMax": 5,
+        "countMin": 1,
+        "dropChance": 0.9,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Orc Shaman"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.106,
+        "itemId": 3597,
+        "itemName": "corncob",
+        "rarity": "semi-rare",
+        "monsterName": "Orc Shaman"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.103,
+        "itemId": 11452,
+        "itemName": "broken shamanic staff",
+        "rarity": "semi-rare",
+        "monsterName": "Orc Shaman"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0875,
+        "itemId": 3358,
+        "itemName": "chain armor",
+        "rarity": "semi-rare",
+        "monsterName": "Orc Shaman"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0686,
+        "itemId": 11478,
+        "itemName": "shamanic hood",
+        "rarity": "semi-rare",
+        "monsterName": "Orc Shaman"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0485,
+        "itemId": 3277,
+        "itemName": "spear",
+        "rarity": "rare",
+        "monsterName": "Orc Shaman"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.043,
+        "itemId": 11479,
+        "itemName": "orc leather",
+        "rarity": "rare",
+        "monsterName": "Orc Shaman"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.021,
+        "itemId": 10196,
+        "itemName": "orc tooth",
+        "rarity": "rare",
+        "monsterName": "Orc Shaman"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.01,
+        "itemId": 3072,
+        "itemName": "wand of decay",
+        "rarity": "rare",
+        "monsterName": "Orc Shaman"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.01,
+        "itemId": 23986,
+        "itemName": "heavy old tome",
+        "rarity": "rare",
+        "monsterName": "Orc Shaman"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0052,
+        "itemId": 2824,
+        "itemName": "book",
+        "rarity": "rare",
+        "monsterName": "Orc Shaman"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.294,
+        "itemId": 3578,
+        "itemName": "fish",
+        "rarity": "common",
+        "monsterName": "Orc Leader"
+      },
+      {
+        "countMax": 35,
+        "countMin": 1,
+        "dropChance": 0.28,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Orc Leader"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1951,
+        "itemId": 11479,
+        "itemName": "orc leather",
+        "rarity": "semi-rare",
+        "monsterName": "Orc Leader"
+      },
+      {
+        "countMax": 4,
+        "countMin": 1,
+        "dropChance": 0.0995,
+        "itemId": 3298,
+        "itemName": "throwing knife",
+        "rarity": "semi-rare",
+        "monsterName": "Orc Leader"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0965,
+        "itemId": 3725,
+        "itemName": "brown mushroom",
+        "rarity": "semi-rare",
+        "monsterName": "Orc Leader"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0392,
+        "itemId": 3091,
+        "itemName": "sword ring",
+        "rarity": "rare",
+        "monsterName": "Orc Leader"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.031,
+        "itemId": 3372,
+        "itemName": "brass legs",
+        "rarity": "rare",
+        "monsterName": "Orc Leader"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.028,
+        "itemId": 3285,
+        "itemName": "longsword",
+        "rarity": "rare",
+        "monsterName": "Orc Leader"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.024,
+        "itemId": 7378,
+        "itemName": "royal spear",
+        "rarity": "rare",
+        "monsterName": "Orc Leader"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.02008,
+        "itemId": 11480,
+        "itemName": "skull belt",
+        "rarity": "rare",
+        "monsterName": "Orc Leader"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0186,
+        "itemId": 3307,
+        "itemName": "scimitar",
+        "rarity": "rare",
+        "monsterName": "Orc Leader"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0165,
+        "itemId": 3357,
+        "itemName": "plate armor",
+        "rarity": "rare",
+        "monsterName": "Orc Leader"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0165,
+        "itemId": 3410,
+        "itemName": "plate shield",
+        "rarity": "rare",
+        "monsterName": "Orc Leader"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0103,
+        "itemId": 10196,
+        "itemName": "orc tooth",
+        "rarity": "rare",
+        "monsterName": "Orc Leader"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0061,
+        "itemId": 3301,
+        "itemName": "broadsword",
+        "rarity": "rare",
+        "monsterName": "Orc Leader"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0055,
+        "itemId": 266,
+        "itemName": "health potion",
+        "rarity": "rare",
+        "monsterName": "Orc Leader"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0044,
+        "itemId": 3557,
+        "itemName": "plate legs",
+        "rarity": "very-rare",
+        "monsterName": "Orc Leader"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0018,
+        "itemId": 3369,
+        "itemName": "warrior helmet",
+        "rarity": "very-rare",
+        "monsterName": "Orc Leader"
+      },
+      {
+        "countMax": 4,
+        "countMin": 1,
+        "dropChance": 0.64,
+        "itemId": 3577,
+        "itemName": "meat",
+        "rarity": "common",
+        "monsterName": "Pig"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0095,
+        "itemId": 9693,
+        "itemName": "pig foot",
+        "rarity": "rare",
+        "monsterName": "Pig"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.2,
+        "itemId": 5890,
+        "itemName": "chicken feather",
+        "rarity": "semi-rare",
+        "monsterName": "Chicken"
+      },
+      {
+        "countMax": 3,
+        "countMin": 1,
+        "dropChance": 0.1,
+        "itemId": 3492,
+        "itemName": "worm",
+        "rarity": "semi-rare",
+        "monsterName": "Chicken"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.0212,
+        "itemId": 3577,
+        "itemName": "meat",
+        "rarity": "rare",
+        "monsterName": "Chicken"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0095,
+        "itemId": 3606,
+        "itemName": "egg",
+        "rarity": "rare",
+        "monsterName": "Chicken"
+      },
+      {
+        "countMax": 47,
+        "countMin": 1,
+        "dropChance": 0.82,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Cyclops"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.3007,
+        "itemId": 3577,
+        "itemName": "meat",
+        "rarity": "common",
+        "monsterName": "Cyclops"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.08,
+        "itemId": 3294,
+        "itemName": "short sword",
+        "rarity": "semi-rare",
+        "monsterName": "Cyclops"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0493,
+        "itemId": 9657,
+        "itemName": "cyclops toe",
+        "rarity": "rare",
+        "monsterName": "Cyclops"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.025,
+        "itemId": 3410,
+        "itemName": "plate shield",
+        "rarity": "rare",
+        "monsterName": "Cyclops"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.014,
+        "itemId": 3413,
+        "itemName": "battle shield",
+        "rarity": "rare",
+        "monsterName": "Cyclops"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.01003,
+        "itemId": 3269,
+        "itemName": "halberd",
+        "rarity": "rare",
+        "monsterName": "Cyclops"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.01,
+        "itemId": 23986,
+        "itemName": "heavy old tome",
+        "rarity": "rare",
+        "monsterName": "Cyclops"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0022,
+        "itemId": 3384,
+        "itemName": "dark helmet",
+        "rarity": "very-rare",
+        "monsterName": "Cyclops"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0021,
+        "itemId": 266,
+        "itemName": "health potion",
+        "rarity": "very-rare",
+        "monsterName": "Cyclops"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0019,
+        "itemId": 3012,
+        "itemName": "wolf tooth chain",
+        "rarity": "very-rare",
+        "monsterName": "Cyclops"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0009,
+        "itemId": 3093,
+        "itemName": "club ring",
+        "rarity": "very-rare",
+        "monsterName": "Cyclops"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0008,
+        "itemId": 7398,
+        "itemName": "cyclops trophy",
+        "rarity": "very-rare",
+        "monsterName": "Cyclops"
+      }
+    ]
+  },
+  "hunts": {
+    "id": "KAZORDOON-HUNT-0001",
+    "mapId": "KAZORDOON-HUNT-0001",
+    "name": "Dwarfs — Kazordoon Surroundings z8",
+    "label": "Dwarfs — Kazordoon Surroundings z8",
+    "seed": "0000000000000000000000",
+    "assetsRoot": "assets/KAZORDOON-HUNT-0001_orc-lands-berserkers-sprites-v6",
+    "mapUrl": "assets/KAZORDOON-HUNT-0001_orc-lands-berserkers-sprites-v6/map.json",
+    "portrait": "/assets/character-default.png",
+    "monsterPreview": {
+      "name": "Orc Berserker",
+      "icon": "/assets/outfits/8.png",
+      "atlas": "/assets/outfits/8.json"
+    },
+    "startPosition": [
+      32939,
+      31758
+    ],
+    "city": "KAZORDOON",
+    "_todo": [
+      "revisar startPosition (centro geométrico do mapBoundsRef, pode cair fora de área andável)"
+    ]
+  }
+}

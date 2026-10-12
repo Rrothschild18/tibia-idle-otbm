@@ -1,0 +1,829 @@
+{
+  "mapBoundsRef": {
+    "minX": 32111,
+    "minY": 32347,
+    "maxX": 32195,
+    "maxY": 32448
+  },
+  "monsterDefs": {
+    "192": {
+      "name": "Carrion Worm",
+      "outfitId": 192,
+      "atlas": {
+        "image": "assets/outfits/192.png",
+        "json": "assets/outfits/192.json"
+      },
+      "appearance": {
+        "looktype": 192,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 45,
+          "countMin": 1,
+          "dropChance": 0.5,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.1,
+          "itemId": 10275,
+          "itemName": "carrion worm fang",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.0946,
+          "itemId": 3577,
+          "itemName": "meat",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.021,
+          "itemId": 3492,
+          "itemName": "worm",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0021,
+          "itemId": 12600,
+          "itemName": "coal",
+          "rarity": "very-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 6069,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 6069
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 5539
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 5540
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 5541
+          }
+        ]
+      },
+      "race": "blood",
+      "moving": {
+        "north": {
+          "frames": [
+            "192_0",
+            "192_4",
+            "192_8",
+            "192_12",
+            "192_16",
+            "192_20",
+            "192_24",
+            "192_28",
+            "192_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "192_1",
+            "192_5",
+            "192_9",
+            "192_13",
+            "192_17",
+            "192_21",
+            "192_25",
+            "192_29",
+            "192_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "192_2",
+            "192_6",
+            "192_10",
+            "192_14",
+            "192_18",
+            "192_22",
+            "192_26",
+            "192_30",
+            "192_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "192_3",
+            "192_7",
+            "192_11",
+            "192_15",
+            "192_19",
+            "192_23",
+            "192_27",
+            "192_31",
+            "192_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      },
+      "idle": {
+        "north": {
+          "frames": [
+            "192_0",
+            "192_4",
+            "192_8",
+            "192_12",
+            "192_16",
+            "192_20",
+            "192_24",
+            "192_28",
+            "192_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "192_1",
+            "192_5",
+            "192_9",
+            "192_13",
+            "192_17",
+            "192_21",
+            "192_25",
+            "192_29",
+            "192_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "192_2",
+            "192_6",
+            "192_10",
+            "192_14",
+            "192_18",
+            "192_22",
+            "192_26",
+            "192_30",
+            "192_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "192_3",
+            "192_7",
+            "192_11",
+            "192_15",
+            "192_19",
+            "192_23",
+            "192_27",
+            "192_31",
+            "192_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "26": {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "atlas": {
+        "image": "assets/outfits/26.png",
+        "json": "assets/outfits/26.json"
+      },
+      "appearance": {
+        "looktype": 26,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 17,
+          "countMin": 1,
+          "dropChance": 0.7176,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.2012,
+          "itemId": 3582,
+          "itemName": "ham",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.2,
+          "itemId": 3577,
+          "itemName": "meat",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.1,
+          "itemId": 9692,
+          "itemName": "lump of dirt",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.045,
+          "itemId": 3286,
+          "itemName": "mace",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.03,
+          "itemId": 3264,
+          "itemName": "sword",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 3,
+          "countMin": 1,
+          "dropChance": 0.03,
+          "itemId": 3492,
+          "itemName": "worm",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0189,
+          "itemId": 3374,
+          "itemName": "legion helmet",
+          "rarity": "rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 5967,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5967
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4266
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4267
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4145
+          }
+        ]
+      },
+      "race": "blood",
+      "moving": {
+        "north": {
+          "frames": [
+            "26_0",
+            "26_4",
+            "26_8",
+            "26_12",
+            "26_16",
+            "26_20",
+            "26_24",
+            "26_28",
+            "26_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "26_1",
+            "26_5",
+            "26_9",
+            "26_13",
+            "26_17",
+            "26_21",
+            "26_25",
+            "26_29",
+            "26_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "26_2",
+            "26_6",
+            "26_10",
+            "26_14",
+            "26_18",
+            "26_22",
+            "26_26",
+            "26_30",
+            "26_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "26_3",
+            "26_7",
+            "26_11",
+            "26_15",
+            "26_19",
+            "26_23",
+            "26_27",
+            "26_31",
+            "26_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      },
+      "idle": {
+        "north": {
+          "frames": [
+            "26_0",
+            "26_4",
+            "26_8",
+            "26_12",
+            "26_16",
+            "26_20",
+            "26_24",
+            "26_28",
+            "26_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "26_1",
+            "26_5",
+            "26_9",
+            "26_13",
+            "26_17",
+            "26_21",
+            "26_25",
+            "26_29",
+            "26_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "26_2",
+            "26_6",
+            "26_10",
+            "26_14",
+            "26_18",
+            "26_22",
+            "26_26",
+            "26_30",
+            "26_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "26_3",
+            "26_7",
+            "26_11",
+            "26_15",
+            "26_19",
+            "26_23",
+            "26_27",
+            "26_31",
+            "26_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    }
+  },
+  "spawns": [
+    {
+      "name": "Carrion Worm",
+      "outfitId": 192,
+      "tileX": 52,
+      "tileY": 12,
+      "worldX": 32163,
+      "worldY": 32359,
+      "worldZ": 9,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Carrion Worm",
+      "outfitId": 192,
+      "tileX": 51,
+      "tileY": 14,
+      "worldX": 32162,
+      "worldY": 32361,
+      "worldZ": 9,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 72,
+      "tileY": 17,
+      "worldX": 32183,
+      "worldY": 32364,
+      "worldZ": 9,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 43,
+      "tileY": 20,
+      "worldX": 32154,
+      "worldY": 32367,
+      "worldZ": 9,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 64,
+      "tileY": 20,
+      "worldX": 32175,
+      "worldY": 32367,
+      "worldZ": 9,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 28,
+      "tileY": 21,
+      "worldX": 32139,
+      "worldY": 32368,
+      "worldZ": 9,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 72,
+      "tileY": 24,
+      "worldX": 32183,
+      "worldY": 32371,
+      "worldZ": 9,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 37,
+      "tileY": 22,
+      "worldX": 32148,
+      "worldY": 32369,
+      "worldZ": 9,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 40,
+      "tileY": 25,
+      "worldX": 32151,
+      "worldY": 32372,
+      "worldZ": 9,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 59,
+      "tileY": 25,
+      "worldX": 32170,
+      "worldY": 32372,
+      "worldZ": 9,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 32,
+      "tileY": 25,
+      "worldX": 32143,
+      "worldY": 32372,
+      "worldZ": 9,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 30,
+      "tileY": 26,
+      "worldX": 32141,
+      "worldY": 32373,
+      "worldZ": 9,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 25,
+      "tileY": 28,
+      "worldX": 32136,
+      "worldY": 32375,
+      "worldZ": 9,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 24,
+      "tileY": 35,
+      "worldX": 32135,
+      "worldY": 32382,
+      "worldZ": 9,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Carrion Worm",
+      "outfitId": 192,
+      "tileX": 30,
+      "tileY": 36,
+      "worldX": 32141,
+      "worldY": 32383,
+      "worldZ": 9,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 17,
+      "tileY": 39,
+      "worldX": 32128,
+      "worldY": 32386,
+      "worldZ": 9,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Carrion Worm",
+      "outfitId": 192,
+      "tileX": 29,
+      "tileY": 42,
+      "worldX": 32140,
+      "worldY": 32389,
+      "worldZ": 9,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 21,
+      "tileY": 42,
+      "worldX": 32132,
+      "worldY": 32389,
+      "worldZ": 9,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 23,
+      "tileY": 44,
+      "worldX": 32134,
+      "worldY": 32391,
+      "worldZ": 9,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 19,
+      "tileY": 48,
+      "worldX": 32130,
+      "worldY": 32395,
+      "worldZ": 9,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 21,
+      "tileY": 54,
+      "worldX": 32132,
+      "worldY": 32401,
+      "worldZ": 9,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 18,
+      "tileY": 60,
+      "worldX": 32129,
+      "worldY": 32407,
+      "worldZ": 9,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 22,
+      "tileY": 67,
+      "worldX": 32133,
+      "worldY": 32414,
+      "worldZ": 9,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 25,
+      "tileY": 69,
+      "worldX": 32136,
+      "worldY": 32416,
+      "worldZ": 9,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 22,
+      "tileY": 71,
+      "worldX": 32133,
+      "worldY": 32418,
+      "worldZ": 9,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 32,
+      "tileY": 73,
+      "worldX": 32143,
+      "worldY": 32420,
+      "worldZ": 9,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 18,
+      "tileY": 76,
+      "worldX": 32129,
+      "worldY": 32423,
+      "worldZ": 9,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 55,
+      "tileY": 77,
+      "worldX": 32166,
+      "worldY": 32424,
+      "worldZ": 9,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 39,
+      "tileY": 80,
+      "worldX": 32150,
+      "worldY": 32427,
+      "worldZ": 9,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 56,
+      "tileY": 81,
+      "worldX": 32167,
+      "worldY": 32428,
+      "worldZ": 9,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 12,
+      "tileY": 81,
+      "worldX": 32123,
+      "worldY": 32428,
+      "worldZ": 9,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 15,
+      "tileY": 83,
+      "worldX": 32126,
+      "worldY": 32430,
+      "worldZ": 9,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 45,
+      "tileY": 84,
+      "worldX": 32156,
+      "worldY": 32431,
+      "worldZ": 9,
+      "radius": 1,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 35,
+      "tileY": 87,
+      "worldX": 32146,
+      "worldY": 32434,
+      "worldZ": 9,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 38,
+      "tileY": 89,
+      "worldX": 32149,
+      "worldY": 32436,
+      "worldZ": 9,
+      "radius": 2,
+      "spawntime": 90
+    }
+  ]
+}

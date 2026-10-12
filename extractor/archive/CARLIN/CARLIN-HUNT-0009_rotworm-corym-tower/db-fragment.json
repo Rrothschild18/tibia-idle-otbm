@@ -1,0 +1,1221 @@
+{
+  "monsters": {
+    "id": "CARLIN-HUNT-0009",
+    "mapId": "CARLIN-HUNT-0009",
+    "assetsRoot": "assets/CARLIN-HUNT-0009_rotworm-corym-tower-sprites/monsters",
+    "mapBoundsRef": {
+      "minX": 32326,
+      "minY": 31793,
+      "maxX": 32410,
+      "maxY": 31893
+    },
+    "monsterDefs": {
+      "26": {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "atlas": {
+          "image": "assets/outfits/26.png",
+          "json": "assets/outfits/26.json"
+        },
+        "appearance": {
+          "looktype": 26,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 17,
+            "countMin": 1,
+            "dropChance": 0.7176,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.2012,
+            "itemId": 3582,
+            "itemName": "ham",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.2,
+            "itemId": 3577,
+            "itemName": "meat",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1,
+            "itemId": 9692,
+            "itemName": "lump of dirt",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.045,
+            "itemId": 3286,
+            "itemName": "mace",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.03,
+            "itemId": 3264,
+            "itemName": "sword",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 3,
+            "countMin": 1,
+            "dropChance": 0.03,
+            "itemId": 3492,
+            "itemName": "worm",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0189,
+            "itemId": 3374,
+            "itemName": "legion helmet",
+            "rarity": "rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 5967,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 5967
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4266
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4267
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4145
+            }
+          ]
+        },
+        "race": "blood",
+        "moving": {
+          "north": {
+            "frames": [
+              "26_0",
+              "26_4",
+              "26_8",
+              "26_12",
+              "26_16",
+              "26_20",
+              "26_24",
+              "26_28",
+              "26_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "26_1",
+              "26_5",
+              "26_9",
+              "26_13",
+              "26_17",
+              "26_21",
+              "26_25",
+              "26_29",
+              "26_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "26_2",
+              "26_6",
+              "26_10",
+              "26_14",
+              "26_18",
+              "26_22",
+              "26_26",
+              "26_30",
+              "26_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "26_3",
+              "26_7",
+              "26_11",
+              "26_15",
+              "26_19",
+              "26_23",
+              "26_27",
+              "26_31",
+              "26_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        },
+        "idle": {
+          "north": {
+            "frames": [
+              "26_0",
+              "26_4",
+              "26_8",
+              "26_12",
+              "26_16",
+              "26_20",
+              "26_24",
+              "26_28",
+              "26_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "26_1",
+              "26_5",
+              "26_9",
+              "26_13",
+              "26_17",
+              "26_21",
+              "26_25",
+              "26_29",
+              "26_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "26_2",
+              "26_6",
+              "26_10",
+              "26_14",
+              "26_18",
+              "26_22",
+              "26_26",
+              "26_30",
+              "26_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "26_3",
+              "26_7",
+              "26_11",
+              "26_15",
+              "26_19",
+              "26_23",
+              "26_27",
+              "26_31",
+              "26_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "192": {
+        "name": "Carrion Worm",
+        "outfitId": 192,
+        "atlas": {
+          "image": "assets/outfits/192.png",
+          "json": "assets/outfits/192.json"
+        },
+        "appearance": {
+          "looktype": 192,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 45,
+            "countMin": 1,
+            "dropChance": 0.5,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1,
+            "itemId": 10275,
+            "itemName": "carrion worm fang",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.0946,
+            "itemId": 3577,
+            "itemName": "meat",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.021,
+            "itemId": 3492,
+            "itemName": "worm",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0021,
+            "itemId": 12600,
+            "itemName": "coal",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 6069,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 6069
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 5539
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 5540
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 5541
+            }
+          ]
+        },
+        "race": "blood",
+        "moving": {
+          "north": {
+            "frames": [
+              "192_0",
+              "192_4",
+              "192_8",
+              "192_12",
+              "192_16",
+              "192_20",
+              "192_24",
+              "192_28",
+              "192_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "192_1",
+              "192_5",
+              "192_9",
+              "192_13",
+              "192_17",
+              "192_21",
+              "192_25",
+              "192_29",
+              "192_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "192_2",
+              "192_6",
+              "192_10",
+              "192_14",
+              "192_18",
+              "192_22",
+              "192_26",
+              "192_30",
+              "192_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "192_3",
+              "192_7",
+              "192_11",
+              "192_15",
+              "192_19",
+              "192_23",
+              "192_27",
+              "192_31",
+              "192_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        },
+        "idle": {
+          "north": {
+            "frames": [
+              "192_0",
+              "192_4",
+              "192_8",
+              "192_12",
+              "192_16",
+              "192_20",
+              "192_24",
+              "192_28",
+              "192_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "192_1",
+              "192_5",
+              "192_9",
+              "192_13",
+              "192_17",
+              "192_21",
+              "192_25",
+              "192_29",
+              "192_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "192_2",
+              "192_6",
+              "192_10",
+              "192_14",
+              "192_18",
+              "192_22",
+              "192_26",
+              "192_30",
+              "192_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "192_3",
+              "192_7",
+              "192_11",
+              "192_15",
+              "192_19",
+              "192_23",
+              "192_27",
+              "192_31",
+              "192_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "532": {
+        "name": "Corym Charlatan",
+        "outfitId": 532,
+        "atlas": null,
+        "appearance": {
+          "looktype": 532,
+          "head": 0,
+          "body": 78,
+          "legs": 59,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 35,
+            "countMin": 1,
+            "dropChance": 0.5,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.14285,
+            "itemId": 17821,
+            "itemName": "rat cheese",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.125,
+            "itemId": 17820,
+            "itemName": "soft cheese",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1,
+            "itemId": 3607,
+            "itemName": "cheese",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.07692,
+            "itemId": 17809,
+            "itemName": "bola",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.07142,
+            "itemId": 17819,
+            "itemName": "earflap",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.05882,
+            "itemId": 17817,
+            "itemName": "cheese cutter",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.00909,
+            "itemId": 17812,
+            "itemName": "ratana",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.00854,
+            "itemId": 17813,
+            "itemName": "life preserver",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.00537,
+            "itemId": 17846,
+            "itemName": "leather harness",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.00518,
+            "itemId": 17818,
+            "itemName": "cheesy figurine",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.00492,
+            "itemId": 17810,
+            "itemName": "spike shield",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 17445,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 17445
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 17448
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 17449
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 17450
+            }
+          ]
+        },
+        "race": "blood"
+      }
+    },
+    "spawns": [
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 29,
+        "tileY": 27,
+        "worldX": 32355,
+        "worldY": 31820,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 49,
+        "tileY": 37,
+        "worldX": 32375,
+        "worldY": 31830,
+        "worldZ": 10,
+        "radius": 1,
+        "spawntime": 60
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 48,
+        "tileY": 38,
+        "worldX": 32374,
+        "worldY": 31831,
+        "worldZ": 10,
+        "radius": 1,
+        "spawntime": 60
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 26,
+        "tileY": 36,
+        "worldX": 32352,
+        "worldY": 31829,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 23,
+        "tileY": 41,
+        "worldX": 32349,
+        "worldY": 31834,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 34,
+        "tileY": 36,
+        "worldX": 32360,
+        "worldY": 31829,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 40,
+        "tileY": 40,
+        "worldX": 32366,
+        "worldY": 31833,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 12,
+        "tileY": 47,
+        "worldX": 32338,
+        "worldY": 31840,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 20,
+        "tileY": 45,
+        "worldX": 32346,
+        "worldY": 31838,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 36,
+        "tileY": 46,
+        "worldX": 32362,
+        "worldY": 31839,
+        "worldZ": 10,
+        "radius": 1,
+        "spawntime": 60
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 35,
+        "tileY": 47,
+        "worldX": 32361,
+        "worldY": 31840,
+        "worldZ": 10,
+        "radius": 1,
+        "spawntime": 60
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 51,
+        "tileY": 47,
+        "worldX": 32377,
+        "worldY": 31840,
+        "worldZ": 10,
+        "radius": 1,
+        "spawntime": 60
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 50,
+        "tileY": 48,
+        "worldX": 32376,
+        "worldY": 31841,
+        "worldZ": 10,
+        "radius": 1,
+        "spawntime": 60
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 52,
+        "tileY": 48,
+        "worldX": 32378,
+        "worldY": 31841,
+        "worldZ": 10,
+        "radius": 1,
+        "spawntime": 60
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 16,
+        "tileY": 50,
+        "worldX": 32342,
+        "worldY": 31843,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 34,
+        "tileY": 57,
+        "worldX": 32360,
+        "worldY": 31850,
+        "worldZ": 10,
+        "radius": 1,
+        "spawntime": 60
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 35,
+        "tileY": 57,
+        "worldX": 32361,
+        "worldY": 31850,
+        "worldZ": 10,
+        "radius": 1,
+        "spawntime": 60
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 38,
+        "tileY": 64,
+        "worldX": 32364,
+        "worldY": 31857,
+        "worldZ": 10,
+        "radius": 1,
+        "spawntime": 60
+      },
+      {
+        "name": "Carrion Worm",
+        "outfitId": 192,
+        "tileX": 49,
+        "tileY": 85,
+        "worldX": 32375,
+        "worldY": 31878,
+        "worldZ": 11,
+        "radius": 1,
+        "spawntime": 60
+      },
+      {
+        "name": "Carrion Worm",
+        "outfitId": 192,
+        "tileX": 54,
+        "tileY": 87,
+        "worldX": 32380,
+        "worldY": 31880,
+        "worldZ": 11,
+        "radius": 1,
+        "spawntime": 60
+      },
+      {
+        "name": "Carrion Worm",
+        "outfitId": 192,
+        "tileX": 54,
+        "tileY": 88,
+        "worldX": 32380,
+        "worldY": 31881,
+        "worldZ": 11,
+        "radius": 1,
+        "spawntime": 60
+      },
+      {
+        "name": "Corym Charlatan",
+        "outfitId": 532,
+        "tileX": 45,
+        "tileY": 12,
+        "worldX": 32371,
+        "worldY": 31805,
+        "worldZ": 12,
+        "radius": 1,
+        "spawntime": 60
+      },
+      {
+        "name": "Corym Charlatan",
+        "outfitId": 532,
+        "tileX": 53,
+        "tileY": 17,
+        "worldX": 32379,
+        "worldY": 31810,
+        "worldZ": 12,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Corym Charlatan",
+        "outfitId": 532,
+        "tileX": 56,
+        "tileY": 19,
+        "worldX": 32382,
+        "worldY": 31812,
+        "worldZ": 12,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Corym Charlatan",
+        "outfitId": 532,
+        "tileX": 70,
+        "tileY": 19,
+        "worldX": 32396,
+        "worldY": 31812,
+        "worldZ": 12,
+        "radius": 1,
+        "spawntime": 60
+      },
+      {
+        "name": "Corym Charlatan",
+        "outfitId": 532,
+        "tileX": 72,
+        "tileY": 19,
+        "worldX": 32398,
+        "worldY": 31812,
+        "worldZ": 12,
+        "radius": 1,
+        "spawntime": 60
+      },
+      {
+        "name": "Corym Charlatan",
+        "outfitId": 532,
+        "tileX": 71,
+        "tileY": 21,
+        "worldX": 32397,
+        "worldY": 31814,
+        "worldZ": 12,
+        "radius": 1,
+        "spawntime": 60
+      },
+      {
+        "name": "Corym Charlatan",
+        "outfitId": 532,
+        "tileX": 47,
+        "tileY": 23,
+        "worldX": 32373,
+        "worldY": 31816,
+        "worldZ": 12,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Corym Charlatan",
+        "outfitId": 532,
+        "tileX": 45,
+        "tileY": 27,
+        "worldX": 32371,
+        "worldY": 31820,
+        "worldZ": 12,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Corym Charlatan",
+        "outfitId": 532,
+        "tileX": 50,
+        "tileY": 24,
+        "worldX": 32376,
+        "worldY": 31817,
+        "worldZ": 12,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Corym Charlatan",
+        "outfitId": 532,
+        "tileX": 61,
+        "tileY": 26,
+        "worldX": 32387,
+        "worldY": 31819,
+        "worldZ": 12,
+        "radius": 1,
+        "spawntime": 60
+      },
+      {
+        "name": "Corym Charlatan",
+        "outfitId": 532,
+        "tileX": 36,
+        "tileY": 33,
+        "worldX": 32362,
+        "worldY": 31826,
+        "worldZ": 12,
+        "radius": 1,
+        "spawntime": 60
+      },
+      {
+        "name": "Corym Charlatan",
+        "outfitId": 532,
+        "tileX": 55,
+        "tileY": 34,
+        "worldX": 32381,
+        "worldY": 31827,
+        "worldZ": 12,
+        "radius": 1,
+        "spawntime": 60
+      },
+      {
+        "name": "Corym Charlatan",
+        "outfitId": 532,
+        "tileX": 65,
+        "tileY": 36,
+        "worldX": 32391,
+        "worldY": 31829,
+        "worldZ": 12,
+        "radius": 1,
+        "spawntime": 60
+      },
+      {
+        "name": "Corym Charlatan",
+        "outfitId": 532,
+        "tileX": 66,
+        "tileY": 36,
+        "worldX": 32392,
+        "worldY": 31829,
+        "worldZ": 12,
+        "radius": 1,
+        "spawntime": 60
+      }
+    ]
+  },
+  "loot": {
+    "id": "CARLIN-HUNT-0009",
+    "mapId": "CARLIN-HUNT-0009",
+    "drops": [
+      {
+        "countMax": 17,
+        "countMin": 1,
+        "dropChance": 0.7176,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Rotworm"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.2012,
+        "itemId": 3582,
+        "itemName": "ham",
+        "rarity": "semi-rare",
+        "monsterName": "Rotworm"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.2,
+        "itemId": 3577,
+        "itemName": "meat",
+        "rarity": "semi-rare",
+        "monsterName": "Rotworm"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1,
+        "itemId": 9692,
+        "itemName": "lump of dirt",
+        "rarity": "semi-rare",
+        "monsterName": "Rotworm"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.045,
+        "itemId": 3286,
+        "itemName": "mace",
+        "rarity": "rare",
+        "monsterName": "Rotworm"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.03,
+        "itemId": 3264,
+        "itemName": "sword",
+        "rarity": "rare",
+        "monsterName": "Rotworm"
+      },
+      {
+        "countMax": 3,
+        "countMin": 1,
+        "dropChance": 0.03,
+        "itemId": 3492,
+        "itemName": "worm",
+        "rarity": "rare",
+        "monsterName": "Rotworm"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0189,
+        "itemId": 3374,
+        "itemName": "legion helmet",
+        "rarity": "rare",
+        "monsterName": "Rotworm"
+      },
+      {
+        "countMax": 45,
+        "countMin": 1,
+        "dropChance": 0.5,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Carrion Worm"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1,
+        "itemId": 10275,
+        "itemName": "carrion worm fang",
+        "rarity": "semi-rare",
+        "monsterName": "Carrion Worm"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.0946,
+        "itemId": 3577,
+        "itemName": "meat",
+        "rarity": "semi-rare",
+        "monsterName": "Carrion Worm"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.021,
+        "itemId": 3492,
+        "itemName": "worm",
+        "rarity": "rare",
+        "monsterName": "Carrion Worm"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0021,
+        "itemId": 12600,
+        "itemName": "coal",
+        "rarity": "very-rare",
+        "monsterName": "Carrion Worm"
+      },
+      {
+        "countMax": 35,
+        "countMin": 1,
+        "dropChance": 0.5,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Corym Charlatan"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.14285,
+        "itemId": 17821,
+        "itemName": "rat cheese",
+        "rarity": "semi-rare",
+        "monsterName": "Corym Charlatan"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.125,
+        "itemId": 17820,
+        "itemName": "soft cheese",
+        "rarity": "semi-rare",
+        "monsterName": "Corym Charlatan"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1,
+        "itemId": 3607,
+        "itemName": "cheese",
+        "rarity": "semi-rare",
+        "monsterName": "Corym Charlatan"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.07692,
+        "itemId": 17809,
+        "itemName": "bola",
+        "rarity": "semi-rare",
+        "monsterName": "Corym Charlatan"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.07142,
+        "itemId": 17819,
+        "itemName": "earflap",
+        "rarity": "semi-rare",
+        "monsterName": "Corym Charlatan"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.05882,
+        "itemId": 17817,
+        "itemName": "cheese cutter",
+        "rarity": "semi-rare",
+        "monsterName": "Corym Charlatan"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.00909,
+        "itemId": 17812,
+        "itemName": "ratana",
+        "rarity": "rare",
+        "monsterName": "Corym Charlatan"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.00854,
+        "itemId": 17813,
+        "itemName": "life preserver",
+        "rarity": "rare",
+        "monsterName": "Corym Charlatan"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.00537,
+        "itemId": 17846,
+        "itemName": "leather harness",
+        "rarity": "rare",
+        "monsterName": "Corym Charlatan"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.00518,
+        "itemId": 17818,
+        "itemName": "cheesy figurine",
+        "rarity": "rare",
+        "monsterName": "Corym Charlatan"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.00492,
+        "itemId": 17810,
+        "itemName": "spike shield",
+        "rarity": "very-rare",
+        "monsterName": "Corym Charlatan"
+      }
+    ]
+  },
+  "hunts": {
+    "id": "CARLIN-HUNT-0009",
+    "mapId": "CARLIN-HUNT-0009",
+    "name": "Vile Grandmasters — Fields of Glory z9",
+    "label": "Vile Grandmasters — Fields of Glory z9",
+    "seed": "0000000000000000000000",
+    "assetsRoot": "assets/CARLIN-HUNT-0009_rotworm-corym-tower-sprites-v6",
+    "mapUrl": "assets/CARLIN-HUNT-0009_rotworm-corym-tower-sprites-v6/map.json",
+    "portrait": "/assets/character-default.png",
+    "monsterPreview": {
+      "name": "Rotworm",
+      "icon": "/assets/outfits/26.png",
+      "atlas": "/assets/outfits/26.json"
+    },
+    "startPosition": [
+      32368,
+      31843
+    ],
+    "city": "CARLIN",
+    "_todo": [
+      "revisar startPosition (centro geométrico do mapBoundsRef, pode cair fora de área andável)"
+    ]
+  }
+}

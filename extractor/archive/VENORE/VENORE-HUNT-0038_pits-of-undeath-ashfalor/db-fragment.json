@@ -1,0 +1,1761 @@
+{
+  "monsters": {
+    "id": "VENORE-HUNT-0038",
+    "mapId": "VENORE-HUNT-0038",
+    "assetsRoot": "assets/VENORE-HUNT-0038_pits-of-undeath-ashfalor-sprites/monsters",
+    "mapBoundsRef": {
+      "minX": 32816,
+      "minY": 32254,
+      "maxX": 32849,
+      "maxY": 32300
+    },
+    "monsterDefs": {
+      "99": {
+        "name": "Lich",
+        "outfitId": 99,
+        "atlas": {
+          "image": "assets/outfits/99.png",
+          "json": "assets/outfits/99.json"
+        },
+        "appearance": {
+          "looktype": 99,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 139,
+            "countMin": 1,
+            "dropChance": 1.0,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "always"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1972,
+            "itemId": 3035,
+            "itemName": "platinum coin",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1,
+            "itemId": 3059,
+            "itemName": "spellbook",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.075,
+            "itemId": 237,
+            "itemName": "strong mana potion",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 3,
+            "countMin": 1,
+            "dropChance": 0.0596,
+            "itemId": 3027,
+            "itemName": "black pearl",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.05,
+            "itemId": 3026,
+            "itemName": "white pearl",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 3,
+            "countMin": 1,
+            "dropChance": 0.0243,
+            "itemId": 9057,
+            "itemName": "small topaz",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.02422,
+            "itemId": 3432,
+            "itemName": "ancient shield",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 3,
+            "countMin": 1,
+            "dropChance": 0.0223,
+            "itemId": 3032,
+            "itemName": "small emerald",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0154,
+            "itemId": 3098,
+            "itemName": "ring of healing",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0074,
+            "itemId": 3373,
+            "itemName": "strange helmet",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0069,
+            "itemId": 3037,
+            "itemName": "yellow gem",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0055,
+            "itemId": 3324,
+            "itemName": "skull staff",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0045,
+            "itemId": 3055,
+            "itemName": "platinum amulet",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0035,
+            "itemId": 3062,
+            "itemName": "mind stone",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0035,
+            "itemId": 3435,
+            "itemName": "castle shield",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.002,
+            "itemId": 820,
+            "itemName": "lightning boots",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0015,
+            "itemId": 3567,
+            "itemName": "blue robe",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.001,
+            "itemId": 12304,
+            "itemName": "maxilla maximus",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 6028,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 6028
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4206
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4207
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4208
+            }
+          ]
+        },
+        "race": "undead",
+        "idle": {
+          "north": "99_0",
+          "east": "99_1",
+          "south": "99_2",
+          "west": "99_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "99_4",
+              "99_8",
+              "99_12",
+              "99_16",
+              "99_20",
+              "99_24",
+              "99_28",
+              "99_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "99_5",
+              "99_9",
+              "99_13",
+              "99_17",
+              "99_21",
+              "99_25",
+              "99_29",
+              "99_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "99_6",
+              "99_10",
+              "99_14",
+              "99_18",
+              "99_22",
+              "99_26",
+              "99_30",
+              "99_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "99_7",
+              "99_11",
+              "99_15",
+              "99_19",
+              "99_23",
+              "99_27",
+              "99_31",
+              "99_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "231": {
+        "name": "Undead Dragon",
+        "outfitId": 231,
+        "atlas": {
+          "image": "assets/outfits/231.png",
+          "json": "assets/outfits/231.json"
+        },
+        "appearance": {
+          "looktype": 231,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 100,
+            "countMin": 1,
+            "dropChance": 0.91,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 5,
+            "countMin": 1,
+            "dropChance": 0.52,
+            "itemId": 3035,
+            "itemName": "platinum coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.3338,
+            "itemId": 10316,
+            "itemName": "unholy bone",
+            "rarity": "common"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.2837,
+            "itemId": 3029,
+            "itemName": "small sapphire",
+            "rarity": "common"
+          },
+          {
+            "countMax": 5,
+            "countMin": 1,
+            "dropChance": 0.2665,
+            "itemId": 7368,
+            "itemName": "assassin star",
+            "rarity": "common"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.2278,
+            "itemId": 3027,
+            "itemName": "black pearl",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.2149,
+            "itemId": 238,
+            "itemName": "great mana potion",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.212,
+            "itemId": 239,
+            "itemName": "great health potion",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 15,
+            "countMin": 1,
+            "dropChance": 0.1519,
+            "itemId": 3450,
+            "itemName": "power bolt",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1418,
+            "itemId": 5925,
+            "itemName": "hardened bone",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1246,
+            "itemId": 6499,
+            "itemName": "demonic essence",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.06002,
+            "itemId": 2903,
+            "itemName": "golden mug",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.055,
+            "itemId": 3370,
+            "itemName": "knight armor",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.04,
+            "itemId": 7430,
+            "itemName": "dragonbone staff",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.025,
+            "itemId": 3061,
+            "itemName": "life crystal",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0172,
+            "itemId": 3392,
+            "itemName": "royal helmet",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0129,
+            "itemId": 3342,
+            "itemName": "war axe",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0115,
+            "itemId": 6299,
+            "itemName": "death ring",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0086,
+            "itemId": 3360,
+            "itemName": "golden armor",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0086,
+            "itemId": 7402,
+            "itemName": "dragon slayer",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0086,
+            "itemId": 10438,
+            "itemName": "spellweaver's robe",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0057,
+            "itemId": 9058,
+            "itemName": "gold ingot",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0043,
+            "itemId": 8057,
+            "itemName": "divine plate",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0029,
+            "itemId": 8061,
+            "itemName": "skullcracker armor",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 6305,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 6305
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 6306
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 6307
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 6308
+            }
+          ]
+        },
+        "race": "undead",
+        "idle": {
+          "north": "231_0",
+          "east": "231_1",
+          "south": "231_2",
+          "west": "231_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "231_4",
+              "231_8",
+              "231_12",
+              "231_16",
+              "231_20",
+              "231_24",
+              "231_28",
+              "231_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "231_5",
+              "231_9",
+              "231_13",
+              "231_17",
+              "231_21",
+              "231_25",
+              "231_29",
+              "231_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "231_6",
+              "231_10",
+              "231_14",
+              "231_18",
+              "231_22",
+              "231_26",
+              "231_30",
+              "231_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "231_7",
+              "231_11",
+              "231_15",
+              "231_19",
+              "231_23",
+              "231_27",
+              "231_31",
+              "231_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "35": {
+        "name": "Demon",
+        "outfitId": 35,
+        "atlas": {
+          "image": "assets/outfits/35.png",
+          "json": "assets/outfits/35.json"
+        },
+        "appearance": {
+          "looktype": 35,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 100,
+            "countMin": 1,
+            "dropChance": 1.0,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "always"
+          },
+          {
+            "countMax": 8,
+            "countMin": 1,
+            "dropChance": 0.9054,
+            "itemId": 3035,
+            "itemName": "platinum coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 3,
+            "countMin": 1,
+            "dropChance": 0.2222,
+            "itemId": 238,
+            "itemName": "great mana potion",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 6,
+            "countMin": 1,
+            "dropChance": 0.1966,
+            "itemId": 3731,
+            "itemName": "fire mushroom",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 3,
+            "countMin": 1,
+            "dropChance": 0.1954,
+            "itemId": 7643,
+            "itemName": "ultimate health potion",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 3,
+            "countMin": 1,
+            "dropChance": 0.1851,
+            "itemId": 7642,
+            "itemName": "great spirit potion",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1492,
+            "itemId": 5954,
+            "itemName": "demon horn",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1463,
+            "itemId": 6499,
+            "itemName": "demonic essence",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 10,
+            "countMin": 1,
+            "dropChance": 0.1255,
+            "itemId": 7368,
+            "itemName": "assassin star",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 5,
+            "countMin": 1,
+            "dropChance": 0.0969,
+            "itemId": 3032,
+            "itemName": "small emerald",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 5,
+            "countMin": 1,
+            "dropChance": 0.0747,
+            "itemId": 9057,
+            "itemName": "small topaz",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 5,
+            "countMin": 1,
+            "dropChance": 0.0743,
+            "itemId": 3030,
+            "itemName": "small ruby",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 5,
+            "countMin": 1,
+            "dropChance": 0.0725,
+            "itemId": 3033,
+            "itemName": "small amethyst",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0403,
+            "itemId": 3320,
+            "itemName": "fire axe",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0343,
+            "itemId": 3034,
+            "itemName": "talon",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.02854,
+            "itemId": 3060,
+            "itemName": "orb",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0222,
+            "itemId": 3039,
+            "itemName": "red gem",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0217,
+            "itemId": 3049,
+            "itemName": "stealth ring",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0199,
+            "itemId": 3098,
+            "itemName": "ring of healing",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0198,
+            "itemId": 3281,
+            "itemName": "giant sword",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0189,
+            "itemId": 3048,
+            "itemName": "might ring",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0155,
+            "itemId": 3284,
+            "itemName": "ice rapier",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0144,
+            "itemId": 3306,
+            "itemName": "golden sickle",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0118,
+            "itemId": 2848,
+            "itemName": "purple tome",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0118,
+            "itemId": 3356,
+            "itemName": "devil helmet",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0105,
+            "itemId": 3063,
+            "itemName": "gold ring",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0074,
+            "itemId": 3420,
+            "itemName": "demon shield",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0068,
+            "itemId": 3055,
+            "itemName": "platinum amulet",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0048,
+            "itemId": 3414,
+            "itemName": "mastermind shield",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0044,
+            "itemId": 3364,
+            "itemName": "golden legs",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0013,
+            "itemId": 3366,
+            "itemName": "magic plate armor",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0009,
+            "itemId": 7393,
+            "itemName": "demon trophy",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0007,
+            "itemId": 7382,
+            "itemName": "demonrage sword",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 5995,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 5995
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4097
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4098
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4099
+            }
+          ]
+        },
+        "race": "fire",
+        "idle": {
+          "north": "35_0",
+          "east": "35_1",
+          "south": "35_2",
+          "west": "35_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "35_4",
+              "35_8",
+              "35_12",
+              "35_16",
+              "35_20",
+              "35_24",
+              "35_28",
+              "35_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "35_5",
+              "35_9",
+              "35_13",
+              "35_17",
+              "35_21",
+              "35_25",
+              "35_29",
+              "35_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "35_6",
+              "35_10",
+              "35_14",
+              "35_18",
+              "35_22",
+              "35_26",
+              "35_30",
+              "35_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "35_7",
+              "35_11",
+              "35_15",
+              "35_19",
+              "35_23",
+              "35_27",
+              "35_31",
+              "35_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      }
+    },
+    "spawns": [
+      {
+        "name": "Lich",
+        "outfitId": 99,
+        "tileX": 13,
+        "tileY": 12,
+        "worldX": 32829,
+        "worldY": 32266,
+        "worldZ": 15,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Undead Dragon",
+        "outfitId": 231,
+        "tileX": 14,
+        "tileY": 15,
+        "worldX": 32830,
+        "worldY": 32269,
+        "worldZ": 15,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Demon",
+        "outfitId": 35,
+        "tileX": 21,
+        "tileY": 12,
+        "worldX": 32837,
+        "worldY": 32266,
+        "worldZ": 15,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Undead Dragon",
+        "outfitId": 231,
+        "tileX": 18,
+        "tileY": 15,
+        "worldX": 32834,
+        "worldY": 32269,
+        "worldZ": 15,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Lich",
+        "outfitId": 99,
+        "tileX": 13,
+        "tileY": 20,
+        "worldX": 32829,
+        "worldY": 32274,
+        "worldZ": 15,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Lich",
+        "outfitId": 99,
+        "tileX": 18,
+        "tileY": 18,
+        "worldX": 32834,
+        "worldY": 32272,
+        "worldZ": 15,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Lich",
+        "outfitId": 99,
+        "tileX": 19,
+        "tileY": 25,
+        "worldX": 32835,
+        "worldY": 32279,
+        "worldZ": 15,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Lich",
+        "outfitId": 99,
+        "tileX": 14,
+        "tileY": 27,
+        "worldX": 32830,
+        "worldY": 32281,
+        "worldZ": 15,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Lich",
+        "outfitId": 99,
+        "tileX": 21,
+        "tileY": 32,
+        "worldX": 32837,
+        "worldY": 32286,
+        "worldZ": 15,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Lich",
+        "outfitId": 99,
+        "tileX": 12,
+        "tileY": 34,
+        "worldX": 32828,
+        "worldY": 32288,
+        "worldZ": 15,
+        "radius": 2,
+        "spawntime": 90
+      }
+    ]
+  },
+  "loot": {
+    "id": "VENORE-HUNT-0038",
+    "mapId": "VENORE-HUNT-0038",
+    "drops": [
+      {
+        "countMax": 139,
+        "countMin": 1,
+        "dropChance": 1.0,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "always",
+        "monsterName": "Lich"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1972,
+        "itemId": 3035,
+        "itemName": "platinum coin",
+        "rarity": "semi-rare",
+        "monsterName": "Lich"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1,
+        "itemId": 3059,
+        "itemName": "spellbook",
+        "rarity": "semi-rare",
+        "monsterName": "Lich"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.075,
+        "itemId": 237,
+        "itemName": "strong mana potion",
+        "rarity": "semi-rare",
+        "monsterName": "Lich"
+      },
+      {
+        "countMax": 3,
+        "countMin": 1,
+        "dropChance": 0.0596,
+        "itemId": 3027,
+        "itemName": "black pearl",
+        "rarity": "semi-rare",
+        "monsterName": "Lich"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.05,
+        "itemId": 3026,
+        "itemName": "white pearl",
+        "rarity": "semi-rare",
+        "monsterName": "Lich"
+      },
+      {
+        "countMax": 3,
+        "countMin": 1,
+        "dropChance": 0.0243,
+        "itemId": 9057,
+        "itemName": "small topaz",
+        "rarity": "rare",
+        "monsterName": "Lich"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.02422,
+        "itemId": 3432,
+        "itemName": "ancient shield",
+        "rarity": "rare",
+        "monsterName": "Lich"
+      },
+      {
+        "countMax": 3,
+        "countMin": 1,
+        "dropChance": 0.0223,
+        "itemId": 3032,
+        "itemName": "small emerald",
+        "rarity": "rare",
+        "monsterName": "Lich"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0154,
+        "itemId": 3098,
+        "itemName": "ring of healing",
+        "rarity": "rare",
+        "monsterName": "Lich"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0074,
+        "itemId": 3373,
+        "itemName": "strange helmet",
+        "rarity": "rare",
+        "monsterName": "Lich"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0069,
+        "itemId": 3037,
+        "itemName": "yellow gem",
+        "rarity": "rare",
+        "monsterName": "Lich"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0055,
+        "itemId": 3324,
+        "itemName": "skull staff",
+        "rarity": "rare",
+        "monsterName": "Lich"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0045,
+        "itemId": 3055,
+        "itemName": "platinum amulet",
+        "rarity": "very-rare",
+        "monsterName": "Lich"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0035,
+        "itemId": 3062,
+        "itemName": "mind stone",
+        "rarity": "very-rare",
+        "monsterName": "Lich"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0035,
+        "itemId": 3435,
+        "itemName": "castle shield",
+        "rarity": "very-rare",
+        "monsterName": "Lich"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.002,
+        "itemId": 820,
+        "itemName": "lightning boots",
+        "rarity": "very-rare",
+        "monsterName": "Lich"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0015,
+        "itemId": 3567,
+        "itemName": "blue robe",
+        "rarity": "very-rare",
+        "monsterName": "Lich"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.001,
+        "itemId": 12304,
+        "itemName": "maxilla maximus",
+        "rarity": "very-rare",
+        "monsterName": "Lich"
+      },
+      {
+        "countMax": 100,
+        "countMin": 1,
+        "dropChance": 0.91,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Undead Dragon"
+      },
+      {
+        "countMax": 5,
+        "countMin": 1,
+        "dropChance": 0.52,
+        "itemId": 3035,
+        "itemName": "platinum coin",
+        "rarity": "common",
+        "monsterName": "Undead Dragon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.3338,
+        "itemId": 10316,
+        "itemName": "unholy bone",
+        "rarity": "common",
+        "monsterName": "Undead Dragon"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.2837,
+        "itemId": 3029,
+        "itemName": "small sapphire",
+        "rarity": "common",
+        "monsterName": "Undead Dragon"
+      },
+      {
+        "countMax": 5,
+        "countMin": 1,
+        "dropChance": 0.2665,
+        "itemId": 7368,
+        "itemName": "assassin star",
+        "rarity": "common",
+        "monsterName": "Undead Dragon"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.2278,
+        "itemId": 3027,
+        "itemName": "black pearl",
+        "rarity": "semi-rare",
+        "monsterName": "Undead Dragon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.2149,
+        "itemId": 238,
+        "itemName": "great mana potion",
+        "rarity": "semi-rare",
+        "monsterName": "Undead Dragon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.212,
+        "itemId": 239,
+        "itemName": "great health potion",
+        "rarity": "semi-rare",
+        "monsterName": "Undead Dragon"
+      },
+      {
+        "countMax": 15,
+        "countMin": 1,
+        "dropChance": 0.1519,
+        "itemId": 3450,
+        "itemName": "power bolt",
+        "rarity": "semi-rare",
+        "monsterName": "Undead Dragon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1418,
+        "itemId": 5925,
+        "itemName": "hardened bone",
+        "rarity": "semi-rare",
+        "monsterName": "Undead Dragon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1246,
+        "itemId": 6499,
+        "itemName": "demonic essence",
+        "rarity": "semi-rare",
+        "monsterName": "Undead Dragon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.06002,
+        "itemId": 2903,
+        "itemName": "golden mug",
+        "rarity": "semi-rare",
+        "monsterName": "Undead Dragon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.055,
+        "itemId": 3370,
+        "itemName": "knight armor",
+        "rarity": "semi-rare",
+        "monsterName": "Undead Dragon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.04,
+        "itemId": 7430,
+        "itemName": "dragonbone staff",
+        "rarity": "rare",
+        "monsterName": "Undead Dragon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.025,
+        "itemId": 3061,
+        "itemName": "life crystal",
+        "rarity": "rare",
+        "monsterName": "Undead Dragon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0172,
+        "itemId": 3392,
+        "itemName": "royal helmet",
+        "rarity": "rare",
+        "monsterName": "Undead Dragon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0129,
+        "itemId": 3342,
+        "itemName": "war axe",
+        "rarity": "rare",
+        "monsterName": "Undead Dragon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0115,
+        "itemId": 6299,
+        "itemName": "death ring",
+        "rarity": "rare",
+        "monsterName": "Undead Dragon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0086,
+        "itemId": 3360,
+        "itemName": "golden armor",
+        "rarity": "rare",
+        "monsterName": "Undead Dragon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0086,
+        "itemId": 7402,
+        "itemName": "dragon slayer",
+        "rarity": "rare",
+        "monsterName": "Undead Dragon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0086,
+        "itemId": 10438,
+        "itemName": "spellweaver's robe",
+        "rarity": "rare",
+        "monsterName": "Undead Dragon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0057,
+        "itemId": 9058,
+        "itemName": "gold ingot",
+        "rarity": "rare",
+        "monsterName": "Undead Dragon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0043,
+        "itemId": 8057,
+        "itemName": "divine plate",
+        "rarity": "very-rare",
+        "monsterName": "Undead Dragon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0029,
+        "itemId": 8061,
+        "itemName": "skullcracker armor",
+        "rarity": "very-rare",
+        "monsterName": "Undead Dragon"
+      },
+      {
+        "countMax": 100,
+        "countMin": 1,
+        "dropChance": 1.0,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "always",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 8,
+        "countMin": 1,
+        "dropChance": 0.9054,
+        "itemId": 3035,
+        "itemName": "platinum coin",
+        "rarity": "common",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 3,
+        "countMin": 1,
+        "dropChance": 0.2222,
+        "itemId": 238,
+        "itemName": "great mana potion",
+        "rarity": "semi-rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 6,
+        "countMin": 1,
+        "dropChance": 0.1966,
+        "itemId": 3731,
+        "itemName": "fire mushroom",
+        "rarity": "semi-rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 3,
+        "countMin": 1,
+        "dropChance": 0.1954,
+        "itemId": 7643,
+        "itemName": "ultimate health potion",
+        "rarity": "semi-rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 3,
+        "countMin": 1,
+        "dropChance": 0.1851,
+        "itemId": 7642,
+        "itemName": "great spirit potion",
+        "rarity": "semi-rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1492,
+        "itemId": 5954,
+        "itemName": "demon horn",
+        "rarity": "semi-rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1463,
+        "itemId": 6499,
+        "itemName": "demonic essence",
+        "rarity": "semi-rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 10,
+        "countMin": 1,
+        "dropChance": 0.1255,
+        "itemId": 7368,
+        "itemName": "assassin star",
+        "rarity": "semi-rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 5,
+        "countMin": 1,
+        "dropChance": 0.0969,
+        "itemId": 3032,
+        "itemName": "small emerald",
+        "rarity": "semi-rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 5,
+        "countMin": 1,
+        "dropChance": 0.0747,
+        "itemId": 9057,
+        "itemName": "small topaz",
+        "rarity": "semi-rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 5,
+        "countMin": 1,
+        "dropChance": 0.0743,
+        "itemId": 3030,
+        "itemName": "small ruby",
+        "rarity": "semi-rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 5,
+        "countMin": 1,
+        "dropChance": 0.0725,
+        "itemId": 3033,
+        "itemName": "small amethyst",
+        "rarity": "semi-rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0403,
+        "itemId": 3320,
+        "itemName": "fire axe",
+        "rarity": "rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0343,
+        "itemId": 3034,
+        "itemName": "talon",
+        "rarity": "rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.02854,
+        "itemId": 3060,
+        "itemName": "orb",
+        "rarity": "rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0222,
+        "itemId": 3039,
+        "itemName": "red gem",
+        "rarity": "rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0217,
+        "itemId": 3049,
+        "itemName": "stealth ring",
+        "rarity": "rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0199,
+        "itemId": 3098,
+        "itemName": "ring of healing",
+        "rarity": "rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0198,
+        "itemId": 3281,
+        "itemName": "giant sword",
+        "rarity": "rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0189,
+        "itemId": 3048,
+        "itemName": "might ring",
+        "rarity": "rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0155,
+        "itemId": 3284,
+        "itemName": "ice rapier",
+        "rarity": "rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0144,
+        "itemId": 3306,
+        "itemName": "golden sickle",
+        "rarity": "rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0118,
+        "itemId": 2848,
+        "itemName": "purple tome",
+        "rarity": "rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0118,
+        "itemId": 3356,
+        "itemName": "devil helmet",
+        "rarity": "rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0105,
+        "itemId": 3063,
+        "itemName": "gold ring",
+        "rarity": "rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0074,
+        "itemId": 3420,
+        "itemName": "demon shield",
+        "rarity": "rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0068,
+        "itemId": 3055,
+        "itemName": "platinum amulet",
+        "rarity": "rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0048,
+        "itemId": 3414,
+        "itemName": "mastermind shield",
+        "rarity": "very-rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0044,
+        "itemId": 3364,
+        "itemName": "golden legs",
+        "rarity": "very-rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0013,
+        "itemId": 3366,
+        "itemName": "magic plate armor",
+        "rarity": "very-rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0009,
+        "itemId": 7393,
+        "itemName": "demon trophy",
+        "rarity": "very-rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0007,
+        "itemId": 7382,
+        "itemName": "demonrage sword",
+        "rarity": "very-rare",
+        "monsterName": "Demon"
+      }
+    ]
+  },
+  "hunts": {
+    "id": "VENORE-HUNT-0038",
+    "mapId": "VENORE-HUNT-0038",
+    "name": "Pits Of Undeath Ashfalor",
+    "label": "Pits Of Undeath Ashfalor",
+    "seed": "0000000000000000000000",
+    "assetsRoot": "assets/VENORE-HUNT-0038_pits-of-undeath-ashfalor-sprites-v6",
+    "mapUrl": "assets/VENORE-HUNT-0038_pits-of-undeath-ashfalor-sprites-v6/map.json",
+    "portrait": "/assets/character-default.png",
+    "monsterPreview": {
+      "name": "Lich",
+      "icon": "/assets/outfits/99.png",
+      "atlas": "/assets/outfits/99.json"
+    },
+    "startPosition": [
+      32832,
+      32277
+    ],
+    "city": "VENORE",
+    "_todo": [
+      "confirmar name/label (título gerado automaticamente do nome da pasta)",
+      "revisar startPosition (centro geométrico do mapBoundsRef, pode cair fora de área andável)"
+    ]
+  }
+}

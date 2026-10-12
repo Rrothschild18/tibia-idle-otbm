@@ -1,0 +1,295 @@
+{
+  "mapBoundsRef": {
+    "minX": 32465,
+    "minY": 31841,
+    "maxX": 32489,
+    "maxY": 31865
+  },
+  "monsterDefs": {
+    "34": {
+      "name": "Dragon",
+      "outfitId": 34,
+      "atlas": {
+        "image": "assets/outfits/34.png",
+        "json": "assets/outfits/34.json"
+      },
+      "appearance": {
+        "looktype": 34,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 102,
+          "countMin": 1,
+          "dropChance": 0.8992,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.6627,
+          "itemId": 3583,
+          "itemName": "dragon ham",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.1565,
+          "itemId": 3409,
+          "itemName": "steel shield",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0968,
+          "itemId": 11457,
+          "itemName": "dragon's tail",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0912,
+          "itemId": 3349,
+          "itemName": "crossbow",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 10,
+          "countMin": 1,
+          "dropChance": 0.0806,
+          "itemId": 3449,
+          "itemName": "burst arrow",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0383,
+          "itemId": 3285,
+          "itemName": "longsword",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0349,
+          "itemId": 3351,
+          "itemName": "steel helmet",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.027,
+          "itemId": 3301,
+          "itemName": "broadsword",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.02029,
+          "itemId": 3557,
+          "itemName": "plate legs",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0158,
+          "itemId": 3275,
+          "itemName": "double axe",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0113,
+          "itemId": 236,
+          "itemName": "strong health potion",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0107,
+          "itemId": 5877,
+          "itemName": "green dragon leather",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0101,
+          "itemId": 5920,
+          "itemName": "green dragon scale",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0056,
+          "itemId": 3071,
+          "itemName": "wand of inferno",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0045,
+          "itemId": 3028,
+          "itemName": "small diamond",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0023,
+          "itemId": 3297,
+          "itemName": "serpent sword",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0023,
+          "itemId": 3322,
+          "itemName": "dragon hammer",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0017,
+          "itemId": 7430,
+          "itemName": "dragonbone staff",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0017,
+          "itemId": 3061,
+          "itemName": "life crystal",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0011,
+          "itemId": 3416,
+          "itemName": "dragon shield",
+          "rarity": "very-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 5973,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5973
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4025
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4026
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4027
+          }
+        ]
+      },
+      "race": "blood",
+      "idle": {
+        "north": "34_0",
+        "east": "34_1",
+        "south": "34_2",
+        "west": "34_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "34_4",
+            "34_8",
+            "34_12",
+            "34_16",
+            "34_20",
+            "34_24",
+            "34_28",
+            "34_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "34_5",
+            "34_9",
+            "34_13",
+            "34_17",
+            "34_21",
+            "34_25",
+            "34_29",
+            "34_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "34_6",
+            "34_10",
+            "34_14",
+            "34_18",
+            "34_22",
+            "34_26",
+            "34_30",
+            "34_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "34_7",
+            "34_11",
+            "34_15",
+            "34_19",
+            "34_23",
+            "34_27",
+            "34_31",
+            "34_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    }
+  },
+  "spawns": [
+    {
+      "name": "Dragon",
+      "outfitId": 34,
+      "tileX": 12,
+      "tileY": 12,
+      "worldX": 32477,
+      "worldY": 31853,
+      "worldZ": 12,
+      "radius": 3,
+      "spawntime": 90
+    }
+  ]
+}

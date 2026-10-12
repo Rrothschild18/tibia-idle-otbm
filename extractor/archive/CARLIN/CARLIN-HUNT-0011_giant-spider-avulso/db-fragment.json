@@ -1,0 +1,382 @@
+{
+  "monsters": {
+    "id": "CARLIN-HUNT-0011",
+    "mapId": "CARLIN-HUNT-0011",
+    "assetsRoot": "assets/CARLIN-HUNT-0011_giant-spider-avulso-sprites/monsters",
+    "mapBoundsRef": {
+      "minX": 32279,
+      "minY": 31895,
+      "maxX": 32303,
+      "maxY": 31919
+    },
+    "monsterDefs": {
+      "38": {
+        "name": "Giant Spider",
+        "outfitId": 38,
+        "atlas": {
+          "image": "assets/outfits/38.png",
+          "json": "assets/outfits/38.json"
+        },
+        "appearance": {
+          "looktype": 38,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 195,
+            "countMin": 1,
+            "dropChance": 0.9999,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 12,
+            "countMin": 1,
+            "dropChance": 0.1195,
+            "itemId": 3448,
+            "itemName": "poison arrow",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0998,
+            "itemId": 3357,
+            "itemName": "plate armor",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.08333,
+            "itemId": 3557,
+            "itemName": "plate legs",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.051,
+            "itemId": 3265,
+            "itemName": "two handed sword",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0498,
+            "itemId": 3351,
+            "itemName": "steel helmet",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0355,
+            "itemId": 236,
+            "itemName": "strong health potion",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0199,
+            "itemId": 5879,
+            "itemName": "spider silk",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0084,
+            "itemId": 3371,
+            "itemName": "knight legs",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0071,
+            "itemId": 3053,
+            "itemName": "time ring",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.005,
+            "itemId": 3370,
+            "itemName": "knight armor",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0028,
+            "itemId": 3055,
+            "itemName": "platinum amulet",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0027,
+            "itemId": 828,
+            "itemName": "lightning headband",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 5977,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 5977
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4038
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4039
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4040
+            }
+          ]
+        },
+        "race": "venom",
+        "idle": {
+          "north": "38_0",
+          "east": "38_1",
+          "south": "38_2",
+          "west": "38_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "38_4",
+              "38_8",
+              "38_12",
+              "38_16",
+              "38_20",
+              "38_24",
+              "38_28",
+              "38_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "38_5",
+              "38_9",
+              "38_13",
+              "38_17",
+              "38_21",
+              "38_25",
+              "38_29",
+              "38_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "38_6",
+              "38_10",
+              "38_14",
+              "38_18",
+              "38_22",
+              "38_26",
+              "38_30",
+              "38_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "38_7",
+              "38_11",
+              "38_15",
+              "38_19",
+              "38_23",
+              "38_27",
+              "38_31",
+              "38_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      }
+    },
+    "spawns": [
+      {
+        "name": "Giant Spider",
+        "outfitId": 38,
+        "tileX": 12,
+        "tileY": 12,
+        "worldX": 32291,
+        "worldY": 31907,
+        "worldZ": 11,
+        "radius": 1,
+        "spawntime": 60
+      }
+    ]
+  },
+  "loot": {
+    "id": "CARLIN-HUNT-0011",
+    "mapId": "CARLIN-HUNT-0011",
+    "drops": [
+      {
+        "countMax": 195,
+        "countMin": 1,
+        "dropChance": 0.9999,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Giant Spider"
+      },
+      {
+        "countMax": 12,
+        "countMin": 1,
+        "dropChance": 0.1195,
+        "itemId": 3448,
+        "itemName": "poison arrow",
+        "rarity": "semi-rare",
+        "monsterName": "Giant Spider"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0998,
+        "itemId": 3357,
+        "itemName": "plate armor",
+        "rarity": "semi-rare",
+        "monsterName": "Giant Spider"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.08333,
+        "itemId": 3557,
+        "itemName": "plate legs",
+        "rarity": "semi-rare",
+        "monsterName": "Giant Spider"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.051,
+        "itemId": 3265,
+        "itemName": "two handed sword",
+        "rarity": "semi-rare",
+        "monsterName": "Giant Spider"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0498,
+        "itemId": 3351,
+        "itemName": "steel helmet",
+        "rarity": "rare",
+        "monsterName": "Giant Spider"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0355,
+        "itemId": 236,
+        "itemName": "strong health potion",
+        "rarity": "rare",
+        "monsterName": "Giant Spider"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0199,
+        "itemId": 5879,
+        "itemName": "spider silk",
+        "rarity": "rare",
+        "monsterName": "Giant Spider"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0084,
+        "itemId": 3371,
+        "itemName": "knight legs",
+        "rarity": "rare",
+        "monsterName": "Giant Spider"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0071,
+        "itemId": 3053,
+        "itemName": "time ring",
+        "rarity": "rare",
+        "monsterName": "Giant Spider"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.005,
+        "itemId": 3370,
+        "itemName": "knight armor",
+        "rarity": "rare",
+        "monsterName": "Giant Spider"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0028,
+        "itemId": 3055,
+        "itemName": "platinum amulet",
+        "rarity": "very-rare",
+        "monsterName": "Giant Spider"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0027,
+        "itemId": 828,
+        "itemName": "lightning headband",
+        "rarity": "very-rare",
+        "monsterName": "Giant Spider"
+      }
+    ]
+  },
+  "hunts": {
+    "id": "CARLIN-HUNT-0011",
+    "mapId": "CARLIN-HUNT-0011",
+    "name": "Rotworms — Carlin City z11",
+    "label": "Rotworms — Carlin City z11",
+    "seed": "0000000000000000000000",
+    "assetsRoot": "assets/CARLIN-HUNT-0011_giant-spider-avulso-sprites-v6",
+    "mapUrl": "assets/CARLIN-HUNT-0011_giant-spider-avulso-sprites-v6/map.json",
+    "portrait": "/assets/character-default.png",
+    "monsterPreview": {
+      "name": "Giant Spider",
+      "icon": "/assets/outfits/38.png",
+      "atlas": "/assets/outfits/38.json"
+    },
+    "startPosition": [
+      32291,
+      31907
+    ],
+    "city": "CARLIN",
+    "_todo": [
+      "revisar startPosition (centro geométrico do mapBoundsRef, pode cair fora de área andável)"
+    ]
+  }
+}

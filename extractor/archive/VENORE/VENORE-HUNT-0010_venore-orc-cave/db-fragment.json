@@ -1,0 +1,1751 @@
+{
+  "monsters": {
+    "id": "VENORE-HUNT-0010",
+    "mapId": "VENORE-HUNT-0010",
+    "assetsRoot": "assets/VENORE-HUNT-0010_venore-orc-cave-sprites/monsters",
+    "mapBoundsRef": {
+      "minX": 33024,
+      "minY": 32016,
+      "maxX": 33095,
+      "maxY": 32103
+    },
+    "monsterDefs": {
+      "28": {
+        "name": "Snake",
+        "outfitId": 28,
+        "atlas": {
+          "image": "assets/outfits/28.png",
+          "json": "assets/outfits/28.json"
+        },
+        "appearance": {
+          "looktype": 28,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [],
+        "corpse": {
+          "itemId": 3998,
+          "stages": [
+            {
+              "durationSeconds": 300,
+              "itemId": 3998
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 3999
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4000
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "28_0",
+          "east": "28_1",
+          "south": "28_2",
+          "west": "28_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "28_4",
+              "28_8",
+              "28_12",
+              "28_16",
+              "28_20",
+              "28_24",
+              "28_28",
+              "28_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "28_5",
+              "28_9",
+              "28_13",
+              "28_17",
+              "28_21",
+              "28_25",
+              "28_29",
+              "28_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "28_6",
+              "28_10",
+              "28_14",
+              "28_18",
+              "28_22",
+              "28_26",
+              "28_30",
+              "28_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "28_7",
+              "28_11",
+              "28_15",
+              "28_19",
+              "28_23",
+              "28_27",
+              "28_31",
+              "28_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "5": {
+        "name": "Orc",
+        "outfitId": 5,
+        "atlas": {
+          "image": "assets/outfits/5.png",
+          "json": "assets/outfits/5.json"
+        },
+        "appearance": {
+          "looktype": 5,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 14,
+            "countMin": 1,
+            "dropChance": 0.8481,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1016,
+            "itemId": 3577,
+            "itemName": "meat",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0786,
+            "itemId": 3378,
+            "itemName": "studded armor",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.073,
+            "itemId": 3426,
+            "itemName": "studded shield",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0585,
+            "itemId": 3273,
+            "itemName": "sabre",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0496,
+            "itemId": 3274,
+            "itemName": "axe",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0295,
+            "itemId": 3376,
+            "itemName": "studded helmet",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.01,
+            "itemId": 23986,
+            "itemName": "heavy old tome",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0059,
+            "itemId": 11479,
+            "itemName": "orc leather",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0021,
+            "itemId": 10196,
+            "itemName": "orc tooth",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 5966,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 5966
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4001
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4002
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4317
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "5_0",
+          "east": "5_1",
+          "south": "5_2",
+          "west": "5_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "5_4",
+              "5_8",
+              "5_12",
+              "5_16",
+              "5_20",
+              "5_24",
+              "5_28",
+              "5_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "5_5",
+              "5_9",
+              "5_13",
+              "5_17",
+              "5_21",
+              "5_25",
+              "5_29",
+              "5_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "5_6",
+              "5_10",
+              "5_14",
+              "5_18",
+              "5_22",
+              "5_26",
+              "5_30",
+              "5_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "5_7",
+              "5_11",
+              "5_15",
+              "5_19",
+              "5_23",
+              "5_27",
+              "5_31",
+              "5_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "530": {
+        "name": "Marsh Stalker",
+        "outfitId": 530,
+        "atlas": {
+          "image": "assets/outfits/530.png",
+          "json": "assets/outfits/530.json"
+        },
+        "appearance": {
+          "looktype": 530,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 23,
+            "countMin": 1,
+            "dropChance": 0.6409,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.2032,
+            "itemId": 3578,
+            "itemName": "fish",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.1995,
+            "itemId": 3577,
+            "itemName": "meat",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.1473,
+            "itemId": 3492,
+            "itemName": "worm",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0865,
+            "itemId": 17462,
+            "itemName": "marsh stalker feather",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0756,
+            "itemId": 3285,
+            "itemName": "longsword",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0608,
+            "itemId": 17461,
+            "itemName": "marsh stalker beak",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0483,
+            "itemId": 3003,
+            "itemName": "rope",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0011,
+            "itemId": 647,
+            "itemName": "seeds",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 17428,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 17428
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 17439
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 17440
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 17441
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "530_0",
+          "east": "530_1",
+          "south": "530_2",
+          "west": "530_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "530_4",
+              "530_8",
+              "530_12",
+              "530_16",
+              "530_20",
+              "530_24",
+              "530_28",
+              "530_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "530_5",
+              "530_9",
+              "530_13",
+              "530_17",
+              "530_21",
+              "530_25",
+              "530_29",
+              "530_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "530_6",
+              "530_10",
+              "530_14",
+              "530_18",
+              "530_22",
+              "530_26",
+              "530_30",
+              "530_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "530_7",
+              "530_11",
+              "530_15",
+              "530_19",
+              "530_23",
+              "530_27",
+              "530_31",
+              "530_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "535": {
+        "name": "Swampling",
+        "outfitId": 535,
+        "atlas": {
+          "image": "assets/outfits/535.png",
+          "json": "assets/outfits/535.json"
+        },
+        "appearance": {
+          "looktype": 535,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 12,
+            "countMin": 1,
+            "dropChance": 0.849,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.199,
+            "itemId": 17822,
+            "itemName": "swampling moss",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1487,
+            "itemId": 17823,
+            "itemName": "piece of swampling wood",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 5,
+            "countMin": 1,
+            "dropChance": 0.1022,
+            "itemId": 3723,
+            "itemName": "white mushroom",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0741,
+            "itemId": 17824,
+            "itemName": "swampling club",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0508,
+            "itemId": 3003,
+            "itemName": "rope",
+            "rarity": "semi-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 17622,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 17622
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 17623
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 17624
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 17625
+            }
+          ]
+        },
+        "race": "venom",
+        "idle": {
+          "north": "535_0",
+          "east": "535_1",
+          "south": "535_2",
+          "west": "535_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "535_4",
+              "535_8",
+              "535_12",
+              "535_16",
+              "535_20",
+              "535_24",
+              "535_28",
+              "535_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "535_5",
+              "535_9",
+              "535_13",
+              "535_17",
+              "535_21",
+              "535_25",
+              "535_29",
+              "535_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "535_6",
+              "535_10",
+              "535_14",
+              "535_18",
+              "535_22",
+              "535_26",
+              "535_30",
+              "535_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "535_7",
+              "535_11",
+              "535_15",
+              "535_19",
+              "535_23",
+              "535_27",
+              "535_31",
+              "535_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "129": {
+        "name": "Adventurer",
+        "outfitId": 129,
+        "atlas": {
+          "image": "assets/outfits/129-93-15-72-80-0.png",
+          "json": "assets/outfits/129-93-15-72-80-0.json"
+        },
+        "appearance": {
+          "looktype": 129,
+          "head": 93,
+          "body": 15,
+          "legs": 72,
+          "feet": 80,
+          "addons": 0
+        },
+        "loot": [],
+        "corpse": {
+          "itemId": 18034,
+          "stages": [
+            {
+              "durationSeconds": 300,
+              "itemId": 18034
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 18035
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 18036
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "129_0",
+          "east": "129_1",
+          "south": "129_2",
+          "west": "129_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "129_0",
+              "129_4",
+              "129_8",
+              "129_12",
+              "129_16",
+              "129_20",
+              "129_24",
+              "129_28",
+              "129_32"
+            ],
+            "frameRate": 15,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "129_1",
+              "129_5",
+              "129_9",
+              "129_13",
+              "129_17",
+              "129_21",
+              "129_25",
+              "129_29",
+              "129_33"
+            ],
+            "frameRate": 15,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "129_2",
+              "129_6",
+              "129_10",
+              "129_14",
+              "129_18",
+              "129_22",
+              "129_26",
+              "129_30",
+              "129_34"
+            ],
+            "frameRate": 15,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "129_3",
+              "129_7",
+              "129_11",
+              "129_15",
+              "129_19",
+              "129_23",
+              "129_27",
+              "129_31",
+              "129_35"
+            ],
+            "frameRate": 15,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "74": {
+        "name": "Rabbit",
+        "outfitId": 74,
+        "atlas": {
+          "image": "assets/outfits/74.png",
+          "json": "assets/outfits/74.json"
+        },
+        "appearance": {
+          "looktype": 74,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.8562,
+            "itemId": 3577,
+            "itemName": "meat",
+            "rarity": "common"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.1,
+            "itemId": 3595,
+            "itemName": "carrot",
+            "rarity": "semi-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 6017,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 6017
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4301
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4302
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4303
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "74_0",
+          "east": "74_1",
+          "south": "74_2",
+          "west": "74_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "74_4",
+              "74_8",
+              "74_12",
+              "74_16",
+              "74_20",
+              "74_24",
+              "74_28",
+              "74_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "74_5",
+              "74_9",
+              "74_13",
+              "74_17",
+              "74_21",
+              "74_25",
+              "74_29",
+              "74_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "74_6",
+              "74_10",
+              "74_14",
+              "74_18",
+              "74_22",
+              "74_26",
+              "74_30",
+              "74_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "74_7",
+              "74_11",
+              "74_15",
+              "74_19",
+              "74_23",
+              "74_27",
+              "74_31",
+              "74_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "294": {
+        "name": "Wisp",
+        "outfitId": 294,
+        "atlas": {
+          "image": "assets/outfits/294.png",
+          "json": "assets/outfits/294.json"
+        },
+        "appearance": {
+          "looktype": 294,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0022,
+            "itemId": 9604,
+            "itemName": "moon backpack",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 6323,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 6323
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 6324
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 6325
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 6326
+            }
+          ]
+        },
+        "race": "undead",
+        "idle": {
+          "north": {
+            "frames": [
+              "294_0",
+              "294_4",
+              "294_8",
+              "294_12",
+              "294_16",
+              "294_20",
+              "294_24",
+              "294_28"
+            ],
+            "frameRate": 6.67,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "294_1",
+              "294_5",
+              "294_9",
+              "294_13",
+              "294_17",
+              "294_21",
+              "294_25",
+              "294_29"
+            ],
+            "frameRate": 6.67,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "294_2",
+              "294_6",
+              "294_10",
+              "294_14",
+              "294_18",
+              "294_22",
+              "294_26",
+              "294_30"
+            ],
+            "frameRate": 6.67,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "294_3",
+              "294_7",
+              "294_11",
+              "294_15",
+              "294_19",
+              "294_23",
+              "294_27",
+              "294_31"
+            ],
+            "frameRate": 6.67,
+            "loopType": "infinite"
+          }
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "294_32",
+              "294_36",
+              "294_40",
+              "294_44",
+              "294_48",
+              "294_52",
+              "294_56",
+              "294_60"
+            ],
+            "frameRate": 3.81,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "294_33",
+              "294_37",
+              "294_41",
+              "294_45",
+              "294_49",
+              "294_53",
+              "294_57",
+              "294_61"
+            ],
+            "frameRate": 3.81,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "294_34",
+              "294_38",
+              "294_42",
+              "294_46",
+              "294_50",
+              "294_54",
+              "294_58",
+              "294_62"
+            ],
+            "frameRate": 3.81,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "294_35",
+              "294_39",
+              "294_43",
+              "294_47",
+              "294_51",
+              "294_55",
+              "294_59",
+              "294_63"
+            ],
+            "frameRate": 3.81,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "227": {
+        "name": "Butterfly",
+        "outfitId": 227,
+        "atlas": {
+          "image": "assets/outfits/227.png",
+          "json": "assets/outfits/227.json"
+        },
+        "appearance": {
+          "looktype": 227,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [],
+        "corpse": {
+          "itemId": 4993,
+          "stages": [
+            {
+              "durationSeconds": 60,
+              "itemId": 4993
+            },
+            {
+              "durationSeconds": null,
+              "itemId": 4378
+            }
+          ]
+        },
+        "race": "venom",
+        "idle": {
+          "north": {
+            "frames": [
+              "227_0",
+              "227_4",
+              "227_8",
+              "227_12",
+              "227_16",
+              "227_20",
+              "227_24",
+              "227_28"
+            ],
+            "frameRate": 11.43,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "227_1",
+              "227_5",
+              "227_9",
+              "227_13",
+              "227_17",
+              "227_21",
+              "227_25",
+              "227_29"
+            ],
+            "frameRate": 11.43,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "227_2",
+              "227_6",
+              "227_10",
+              "227_14",
+              "227_18",
+              "227_22",
+              "227_26",
+              "227_30"
+            ],
+            "frameRate": 11.43,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "227_3",
+              "227_7",
+              "227_11",
+              "227_15",
+              "227_19",
+              "227_23",
+              "227_27",
+              "227_31"
+            ],
+            "frameRate": 11.43,
+            "loopType": "infinite"
+          }
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "227_32",
+              "227_36",
+              "227_40",
+              "227_44",
+              "227_48",
+              "227_52",
+              "227_56",
+              "227_60"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "227_33",
+              "227_37",
+              "227_41",
+              "227_45",
+              "227_49",
+              "227_53",
+              "227_57",
+              "227_61"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "227_34",
+              "227_38",
+              "227_42",
+              "227_46",
+              "227_50",
+              "227_54",
+              "227_58",
+              "227_62"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "227_35",
+              "227_39",
+              "227_43",
+              "227_47",
+              "227_51",
+              "227_55",
+              "227_59",
+              "227_63"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      }
+    },
+    "spawns": [
+      {
+        "name": "Snake",
+        "outfitId": 28,
+        "tileX": 36,
+        "tileY": 12,
+        "worldX": 33060,
+        "worldY": 32028,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 35,
+        "tileY": 13,
+        "worldX": 33059,
+        "worldY": 32029,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Snake",
+        "outfitId": 28,
+        "tileX": 34,
+        "tileY": 14,
+        "worldX": 33058,
+        "worldY": 32030,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 33,
+        "tileY": 15,
+        "worldX": 33057,
+        "worldY": 32031,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Marsh Stalker",
+        "outfitId": 530,
+        "tileX": 26,
+        "tileY": 17,
+        "worldX": 33050,
+        "worldY": 32033,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Snake",
+        "outfitId": 28,
+        "tileX": 36,
+        "tileY": 17,
+        "worldX": 33060,
+        "worldY": 32033,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Swampling",
+        "outfitId": 535,
+        "tileX": 33,
+        "tileY": 22,
+        "worldX": 33057,
+        "worldY": 32038,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Adventurer",
+        "outfitId": 129,
+        "tileX": 55,
+        "tileY": 26,
+        "worldX": 33079,
+        "worldY": 32042,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Adventurer",
+        "outfitId": 129,
+        "tileX": 52,
+        "tileY": 27,
+        "worldX": 33076,
+        "worldY": 32043,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Marsh Stalker",
+        "outfitId": 530,
+        "tileX": 46,
+        "tileY": 32,
+        "worldX": 33070,
+        "worldY": 32048,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Adventurer",
+        "outfitId": 129,
+        "tileX": 35,
+        "tileY": 41,
+        "worldX": 33059,
+        "worldY": 32057,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Snake",
+        "outfitId": 28,
+        "tileX": 42,
+        "tileY": 41,
+        "worldX": 33066,
+        "worldY": 32057,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Adventurer",
+        "outfitId": 129,
+        "tileX": 24,
+        "tileY": 50,
+        "worldX": 33048,
+        "worldY": 32066,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Rabbit",
+        "outfitId": 74,
+        "tileX": 36,
+        "tileY": 44,
+        "worldX": 33060,
+        "worldY": 32060,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Rabbit",
+        "outfitId": 74,
+        "tileX": 32,
+        "tileY": 47,
+        "worldX": 33056,
+        "worldY": 32063,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Marsh Stalker",
+        "outfitId": 530,
+        "tileX": 55,
+        "tileY": 50,
+        "worldX": 33079,
+        "worldY": 32066,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Snake",
+        "outfitId": 28,
+        "tileX": 23,
+        "tileY": 56,
+        "worldX": 33047,
+        "worldY": 32072,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Adventurer",
+        "outfitId": 129,
+        "tileX": 12,
+        "tileY": 60,
+        "worldX": 33036,
+        "worldY": 32076,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Snake",
+        "outfitId": 28,
+        "tileX": 21,
+        "tileY": 63,
+        "worldX": 33045,
+        "worldY": 32079,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Wisp",
+        "outfitId": 294,
+        "tileX": 50,
+        "tileY": 60,
+        "worldX": 33074,
+        "worldY": 32076,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Wisp",
+        "outfitId": 294,
+        "tileX": 57,
+        "tileY": 64,
+        "worldX": 33081,
+        "worldY": 32080,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Swampling",
+        "outfitId": 535,
+        "tileX": 59,
+        "tileY": 62,
+        "worldX": 33083,
+        "worldY": 32078,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Snake",
+        "outfitId": 28,
+        "tileX": 18,
+        "tileY": 67,
+        "worldX": 33042,
+        "worldY": 32083,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Adventurer",
+        "outfitId": 129,
+        "tileX": 45,
+        "tileY": 67,
+        "worldX": 33069,
+        "worldY": 32083,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Butterfly",
+        "outfitId": 227,
+        "tileX": 39,
+        "tileY": 72,
+        "worldX": 33063,
+        "worldY": 32088,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Butterfly",
+        "outfitId": 227,
+        "tileX": 42,
+        "tileY": 73,
+        "worldX": 33066,
+        "worldY": 32089,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Snake",
+        "outfitId": 28,
+        "tileX": 46,
+        "tileY": 74,
+        "worldX": 33070,
+        "worldY": 32090,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Snake",
+        "outfitId": 28,
+        "tileX": 49,
+        "tileY": 75,
+        "worldX": 33073,
+        "worldY": 32091,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      }
+    ]
+  },
+  "loot": {
+    "id": "VENORE-HUNT-0010",
+    "mapId": "VENORE-HUNT-0010",
+    "drops": [
+      {
+        "countMax": 14,
+        "countMin": 1,
+        "dropChance": 0.8481,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1016,
+        "itemId": 3577,
+        "itemName": "meat",
+        "rarity": "semi-rare",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0786,
+        "itemId": 3378,
+        "itemName": "studded armor",
+        "rarity": "semi-rare",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.073,
+        "itemId": 3426,
+        "itemName": "studded shield",
+        "rarity": "semi-rare",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0585,
+        "itemId": 3273,
+        "itemName": "sabre",
+        "rarity": "semi-rare",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0496,
+        "itemId": 3274,
+        "itemName": "axe",
+        "rarity": "rare",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0295,
+        "itemId": 3376,
+        "itemName": "studded helmet",
+        "rarity": "rare",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.01,
+        "itemId": 23986,
+        "itemName": "heavy old tome",
+        "rarity": "rare",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0059,
+        "itemId": 11479,
+        "itemName": "orc leather",
+        "rarity": "rare",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0021,
+        "itemId": 10196,
+        "itemName": "orc tooth",
+        "rarity": "very-rare",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 23,
+        "countMin": 1,
+        "dropChance": 0.6409,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Marsh Stalker"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.2032,
+        "itemId": 3578,
+        "itemName": "fish",
+        "rarity": "semi-rare",
+        "monsterName": "Marsh Stalker"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.1995,
+        "itemId": 3577,
+        "itemName": "meat",
+        "rarity": "semi-rare",
+        "monsterName": "Marsh Stalker"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.1473,
+        "itemId": 3492,
+        "itemName": "worm",
+        "rarity": "semi-rare",
+        "monsterName": "Marsh Stalker"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0865,
+        "itemId": 17462,
+        "itemName": "marsh stalker feather",
+        "rarity": "semi-rare",
+        "monsterName": "Marsh Stalker"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0756,
+        "itemId": 3285,
+        "itemName": "longsword",
+        "rarity": "semi-rare",
+        "monsterName": "Marsh Stalker"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0608,
+        "itemId": 17461,
+        "itemName": "marsh stalker beak",
+        "rarity": "semi-rare",
+        "monsterName": "Marsh Stalker"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0483,
+        "itemId": 3003,
+        "itemName": "rope",
+        "rarity": "rare",
+        "monsterName": "Marsh Stalker"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0011,
+        "itemId": 647,
+        "itemName": "seeds",
+        "rarity": "very-rare",
+        "monsterName": "Marsh Stalker"
+      },
+      {
+        "countMax": 12,
+        "countMin": 1,
+        "dropChance": 0.849,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Swampling"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.199,
+        "itemId": 17822,
+        "itemName": "swampling moss",
+        "rarity": "semi-rare",
+        "monsterName": "Swampling"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1487,
+        "itemId": 17823,
+        "itemName": "piece of swampling wood",
+        "rarity": "semi-rare",
+        "monsterName": "Swampling"
+      },
+      {
+        "countMax": 5,
+        "countMin": 1,
+        "dropChance": 0.1022,
+        "itemId": 3723,
+        "itemName": "white mushroom",
+        "rarity": "semi-rare",
+        "monsterName": "Swampling"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0741,
+        "itemId": 17824,
+        "itemName": "swampling club",
+        "rarity": "semi-rare",
+        "monsterName": "Swampling"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0508,
+        "itemId": 3003,
+        "itemName": "rope",
+        "rarity": "semi-rare",
+        "monsterName": "Swampling"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.8562,
+        "itemId": 3577,
+        "itemName": "meat",
+        "rarity": "common",
+        "monsterName": "Rabbit"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.1,
+        "itemId": 3595,
+        "itemName": "carrot",
+        "rarity": "semi-rare",
+        "monsterName": "Rabbit"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0022,
+        "itemId": 9604,
+        "itemName": "moon backpack",
+        "rarity": "very-rare",
+        "monsterName": "Wisp"
+      }
+    ]
+  },
+  "hunts": {
+    "id": "VENORE-HUNT-0010",
+    "mapId": "VENORE-HUNT-0010",
+    "name": "Corym Skirmishers — Venore Southern Swamp z11",
+    "label": "Corym Skirmishers — Venore Southern Swamp z11",
+    "seed": "0000000000000000000000",
+    "assetsRoot": "assets/VENORE-HUNT-0010_venore-orc-cave-sprites-v6",
+    "mapUrl": "assets/VENORE-HUNT-0010_venore-orc-cave-sprites-v6/map.json",
+    "portrait": "/assets/character-default.png",
+    "monsterPreview": {
+      "name": "Snake",
+      "icon": "/assets/outfits/28.png",
+      "atlas": "/assets/outfits/28.json"
+    },
+    "startPosition": [
+      33060,
+      32060
+    ],
+    "city": "VENORE",
+    "_todo": [
+      "revisar startPosition (centro geométrico do mapBoundsRef, pode cair fora de área andável)"
+    ]
+  }
+}

@@ -1,0 +1,5134 @@
+{
+  "monsters": {
+    "id": "THAIS-HUNT-0031",
+    "mapId": "THAIS-HUNT-0031",
+    "assetsRoot": "assets/THAIS-HUNT-0031_thais-dragon-lair-sprites/monsters",
+    "mapBoundsRef": {
+      "minX": 32265,
+      "minY": 32064,
+      "maxX": 32425,
+      "maxY": 32206
+    },
+    "monsterDefs": {
+      "34": {
+        "name": "Dragon",
+        "outfitId": 34,
+        "atlas": {
+          "image": "assets/outfits/34.png",
+          "json": "assets/outfits/34.json"
+        },
+        "appearance": {
+          "looktype": 34,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 102,
+            "countMin": 1,
+            "dropChance": 0.8992,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.6627,
+            "itemId": 3583,
+            "itemName": "dragon ham",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1565,
+            "itemId": 3409,
+            "itemName": "steel shield",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0968,
+            "itemId": 11457,
+            "itemName": "dragon's tail",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0912,
+            "itemId": 3349,
+            "itemName": "crossbow",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 10,
+            "countMin": 1,
+            "dropChance": 0.0806,
+            "itemId": 3449,
+            "itemName": "burst arrow",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0383,
+            "itemId": 3285,
+            "itemName": "longsword",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0349,
+            "itemId": 3351,
+            "itemName": "steel helmet",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.027,
+            "itemId": 3301,
+            "itemName": "broadsword",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.02029,
+            "itemId": 3557,
+            "itemName": "plate legs",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0158,
+            "itemId": 3275,
+            "itemName": "double axe",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0113,
+            "itemId": 236,
+            "itemName": "strong health potion",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0107,
+            "itemId": 5877,
+            "itemName": "green dragon leather",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0101,
+            "itemId": 5920,
+            "itemName": "green dragon scale",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0056,
+            "itemId": 3071,
+            "itemName": "wand of inferno",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0045,
+            "itemId": 3028,
+            "itemName": "small diamond",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0023,
+            "itemId": 3297,
+            "itemName": "serpent sword",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0023,
+            "itemId": 3322,
+            "itemName": "dragon hammer",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0017,
+            "itemId": 7430,
+            "itemName": "dragonbone staff",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0017,
+            "itemId": 3061,
+            "itemName": "life crystal",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0011,
+            "itemId": 3416,
+            "itemName": "dragon shield",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 5973,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 5973
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4025
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4026
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4027
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "34_0",
+          "east": "34_1",
+          "south": "34_2",
+          "west": "34_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "34_4",
+              "34_8",
+              "34_12",
+              "34_16",
+              "34_20",
+              "34_24",
+              "34_28",
+              "34_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "34_5",
+              "34_9",
+              "34_13",
+              "34_17",
+              "34_21",
+              "34_25",
+              "34_29",
+              "34_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "34_6",
+              "34_10",
+              "34_14",
+              "34_18",
+              "34_22",
+              "34_26",
+              "34_30",
+              "34_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "34_7",
+              "34_11",
+              "34_15",
+              "34_19",
+              "34_23",
+              "34_27",
+              "34_31",
+              "34_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "272": {
+        "name": "Dragon Lord Hatchling",
+        "outfitId": 272,
+        "atlas": {
+          "image": "assets/outfits/272.png",
+          "json": "assets/outfits/272.json"
+        },
+        "appearance": {
+          "looktype": 272,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.7791,
+            "itemId": 3583,
+            "itemName": "dragon ham",
+            "rarity": "common"
+          },
+          {
+            "countMax": 121,
+            "countMin": 1,
+            "dropChance": 0.7269,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.012,
+            "itemId": 268,
+            "itemName": "mana potion",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0049,
+            "itemId": 3732,
+            "itemName": "green mushroom",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.001,
+            "itemId": 818,
+            "itemName": "magma boots",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 270,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 270
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 272
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 273
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 275
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "272_0",
+          "east": "272_1",
+          "south": "272_2",
+          "west": "272_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "272_4",
+              "272_8",
+              "272_12",
+              "272_16",
+              "272_20",
+              "272_24",
+              "272_28",
+              "272_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "272_5",
+              "272_9",
+              "272_13",
+              "272_17",
+              "272_21",
+              "272_25",
+              "272_29",
+              "272_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "272_6",
+              "272_10",
+              "272_14",
+              "272_18",
+              "272_22",
+              "272_26",
+              "272_30",
+              "272_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "272_7",
+              "272_11",
+              "272_15",
+              "272_19",
+              "272_23",
+              "272_27",
+              "272_31",
+              "272_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "271": {
+        "name": "Dragon Hatchling",
+        "outfitId": 271,
+        "atlas": {
+          "image": "assets/outfits/271.png",
+          "json": "assets/outfits/271.json"
+        },
+        "appearance": {
+          "looktype": 271,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 50,
+            "countMin": 1,
+            "dropChance": 0.9554,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.8304,
+            "itemId": 3583,
+            "itemName": "dragon ham",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0357,
+            "itemId": 11457,
+            "itemName": "dragon's tail",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0047,
+            "itemId": 266,
+            "itemName": "health potion",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 269,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 269
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 271
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 274
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 275
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "271_0",
+          "east": "271_1",
+          "south": "271_2",
+          "west": "271_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "271_4",
+              "271_8",
+              "271_12",
+              "271_16",
+              "271_20",
+              "271_24",
+              "271_28",
+              "271_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "271_5",
+              "271_9",
+              "271_13",
+              "271_17",
+              "271_21",
+              "271_25",
+              "271_29",
+              "271_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "271_6",
+              "271_10",
+              "271_14",
+              "271_18",
+              "271_22",
+              "271_26",
+              "271_30",
+              "271_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "271_7",
+              "271_11",
+              "271_15",
+              "271_19",
+              "271_23",
+              "271_27",
+              "271_31",
+              "271_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "30": {
+        "name": "Spider",
+        "outfitId": 30,
+        "atlas": {
+          "image": "assets/outfits/30.png",
+          "json": "assets/outfits/30.json"
+        },
+        "appearance": {
+          "looktype": 30,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 5,
+            "countMin": 1,
+            "dropChance": 0.6515,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0096,
+            "itemId": 8031,
+            "itemName": "spider fangs",
+            "rarity": "rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 5961,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 5961
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4250
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4003
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4004
+            }
+          ]
+        },
+        "race": "venom",
+        "idle": {
+          "north": "30_0",
+          "east": "30_1",
+          "south": "30_2",
+          "west": "30_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "30_4",
+              "30_8",
+              "30_12",
+              "30_16",
+              "30_20",
+              "30_24",
+              "30_28",
+              "30_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "30_5",
+              "30_9",
+              "30_13",
+              "30_17",
+              "30_21",
+              "30_25",
+              "30_29",
+              "30_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "30_6",
+              "30_10",
+              "30_14",
+              "30_18",
+              "30_22",
+              "30_26",
+              "30_30",
+              "30_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "30_7",
+              "30_11",
+              "30_15",
+              "30_19",
+              "30_23",
+              "30_27",
+              "30_31",
+              "30_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "192": {
+        "name": "Carrion Worm",
+        "outfitId": 192,
+        "atlas": {
+          "image": "assets/outfits/192.png",
+          "json": "assets/outfits/192.json"
+        },
+        "appearance": {
+          "looktype": 192,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 45,
+            "countMin": 1,
+            "dropChance": 0.5,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1,
+            "itemId": 10275,
+            "itemName": "carrion worm fang",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.0946,
+            "itemId": 3577,
+            "itemName": "meat",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.021,
+            "itemId": 3492,
+            "itemName": "worm",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0021,
+            "itemId": 12600,
+            "itemName": "coal",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 6069,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 6069
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 5539
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 5540
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 5541
+            }
+          ]
+        },
+        "race": "blood",
+        "moving": {
+          "north": {
+            "frames": [
+              "192_0",
+              "192_4",
+              "192_8",
+              "192_12",
+              "192_16",
+              "192_20",
+              "192_24",
+              "192_28",
+              "192_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "192_1",
+              "192_5",
+              "192_9",
+              "192_13",
+              "192_17",
+              "192_21",
+              "192_25",
+              "192_29",
+              "192_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "192_2",
+              "192_6",
+              "192_10",
+              "192_14",
+              "192_18",
+              "192_22",
+              "192_26",
+              "192_30",
+              "192_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "192_3",
+              "192_7",
+              "192_11",
+              "192_15",
+              "192_19",
+              "192_23",
+              "192_27",
+              "192_31",
+              "192_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        },
+        "idle": {
+          "north": {
+            "frames": [
+              "192_0",
+              "192_4",
+              "192_8",
+              "192_12",
+              "192_16",
+              "192_20",
+              "192_24",
+              "192_28",
+              "192_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "192_1",
+              "192_5",
+              "192_9",
+              "192_13",
+              "192_17",
+              "192_21",
+              "192_25",
+              "192_29",
+              "192_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "192_2",
+              "192_6",
+              "192_10",
+              "192_14",
+              "192_18",
+              "192_22",
+              "192_26",
+              "192_30",
+              "192_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "192_3",
+              "192_7",
+              "192_11",
+              "192_15",
+              "192_19",
+              "192_23",
+              "192_27",
+              "192_31",
+              "192_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "39": {
+        "name": "Dragon Lord",
+        "outfitId": 39,
+        "atlas": {
+          "image": "assets/outfits/39.png",
+          "json": "assets/outfits/39.json"
+        },
+        "appearance": {
+          "looktype": 39,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 237,
+            "countMin": 1,
+            "dropChance": 0.953,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.7979,
+            "itemId": 3583,
+            "itemName": "dragon ham",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1203,
+            "itemId": 3732,
+            "itemName": "green mushroom",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0959,
+            "itemId": 2842,
+            "itemName": "book",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 3,
+            "countMin": 1,
+            "dropChance": 0.0938,
+            "itemId": 7378,
+            "itemName": "royal spear",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 7,
+            "countMin": 1,
+            "dropChance": 0.0592,
+            "itemId": 3450,
+            "itemName": "power bolt",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0559,
+            "itemId": 3029,
+            "itemName": "small sapphire",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0455,
+            "itemId": 3051,
+            "itemName": "energy ring",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0331,
+            "itemId": 2903,
+            "itemName": "golden mug",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0194,
+            "itemId": 5882,
+            "itemName": "red dragon scale",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0115,
+            "itemId": 5948,
+            "itemName": "red dragon leather",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.008,
+            "itemId": 236,
+            "itemName": "strong health potion",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0065,
+            "itemId": 3061,
+            "itemName": "life crystal",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0052,
+            "itemId": 3373,
+            "itemName": "strange helmet",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0041,
+            "itemId": 3428,
+            "itemName": "tower shield",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0035,
+            "itemId": 3280,
+            "itemName": "fire sword",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0026,
+            "itemId": 3392,
+            "itemName": "royal helmet",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0022,
+            "itemId": 7402,
+            "itemName": "dragon slayer",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0013,
+            "itemId": 7399,
+            "itemName": "dragon lord trophy",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0009,
+            "itemId": 3386,
+            "itemName": "dragon scale mail",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 5984,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 5984
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4062
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4063
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4064
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "39_0",
+          "east": "39_1",
+          "south": "39_2",
+          "west": "39_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "39_4",
+              "39_8",
+              "39_12",
+              "39_16",
+              "39_20",
+              "39_24",
+              "39_28",
+              "39_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "39_5",
+              "39_9",
+              "39_13",
+              "39_17",
+              "39_21",
+              "39_25",
+              "39_29",
+              "39_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "39_6",
+              "39_10",
+              "39_14",
+              "39_18",
+              "39_22",
+              "39_26",
+              "39_30",
+              "39_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "39_7",
+              "39_11",
+              "39_15",
+              "39_19",
+              "39_23",
+              "39_27",
+              "39_31",
+              "39_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "26": {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "atlas": {
+          "image": "assets/outfits/26.png",
+          "json": "assets/outfits/26.json"
+        },
+        "appearance": {
+          "looktype": 26,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 17,
+            "countMin": 1,
+            "dropChance": 0.7176,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.2012,
+            "itemId": 3582,
+            "itemName": "ham",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.2,
+            "itemId": 3577,
+            "itemName": "meat",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1,
+            "itemId": 9692,
+            "itemName": "lump of dirt",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.045,
+            "itemId": 3286,
+            "itemName": "mace",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.03,
+            "itemId": 3264,
+            "itemName": "sword",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 3,
+            "countMin": 1,
+            "dropChance": 0.03,
+            "itemId": 3492,
+            "itemName": "worm",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0189,
+            "itemId": 3374,
+            "itemName": "legion helmet",
+            "rarity": "rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 5967,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 5967
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4266
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4267
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4145
+            }
+          ]
+        },
+        "race": "blood",
+        "moving": {
+          "north": {
+            "frames": [
+              "26_0",
+              "26_4",
+              "26_8",
+              "26_12",
+              "26_16",
+              "26_20",
+              "26_24",
+              "26_28",
+              "26_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "26_1",
+              "26_5",
+              "26_9",
+              "26_13",
+              "26_17",
+              "26_21",
+              "26_25",
+              "26_29",
+              "26_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "26_2",
+              "26_6",
+              "26_10",
+              "26_14",
+              "26_18",
+              "26_22",
+              "26_26",
+              "26_30",
+              "26_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "26_3",
+              "26_7",
+              "26_11",
+              "26_15",
+              "26_19",
+              "26_23",
+              "26_27",
+              "26_31",
+              "26_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        },
+        "idle": {
+          "north": {
+            "frames": [
+              "26_0",
+              "26_4",
+              "26_8",
+              "26_12",
+              "26_16",
+              "26_20",
+              "26_24",
+              "26_28",
+              "26_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "26_1",
+              "26_5",
+              "26_9",
+              "26_13",
+              "26_17",
+              "26_21",
+              "26_25",
+              "26_29",
+              "26_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "26_2",
+              "26_6",
+              "26_10",
+              "26_14",
+              "26_18",
+              "26_22",
+              "26_26",
+              "26_30",
+              "26_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "26_3",
+              "26_7",
+              "26_11",
+              "26_15",
+              "26_19",
+              "26_23",
+              "26_27",
+              "26_31",
+              "26_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "33": {
+        "name": "Skeleton",
+        "outfitId": 33,
+        "atlas": {
+          "image": "assets/outfits/33.png",
+          "json": "assets/outfits/33.json"
+        },
+        "appearance": {
+          "looktype": 33,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.491,
+            "itemId": 3115,
+            "itemName": "bone",
+            "rarity": "common"
+          },
+          {
+            "countMax": 10,
+            "countMin": 1,
+            "dropChance": 0.439,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1988,
+            "itemId": 2920,
+            "itemName": "torch",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0994,
+            "itemId": 11481,
+            "itemName": "pelvis bone",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0752,
+            "itemId": 3367,
+            "itemName": "viking helmet",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0485,
+            "itemId": 3276,
+            "itemName": "hatchet",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0485,
+            "itemId": 3286,
+            "itemName": "mace",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0209,
+            "itemId": 3411,
+            "itemName": "brass shield",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0194,
+            "itemId": 3264,
+            "itemName": "sword",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.01,
+            "itemId": 23986,
+            "itemName": "heavy old tome",
+            "rarity": "rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 5972,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 5972
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4024
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4156
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4157
+            }
+          ]
+        },
+        "race": "undead",
+        "idle": {
+          "north": "33_0",
+          "east": "33_1",
+          "south": "33_2",
+          "west": "33_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "33_4",
+              "33_8",
+              "33_12",
+              "33_16",
+              "33_20",
+              "33_24",
+              "33_28",
+              "33_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "33_5",
+              "33_9",
+              "33_13",
+              "33_17",
+              "33_21",
+              "33_25",
+              "33_29",
+              "33_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "33_6",
+              "33_10",
+              "33_14",
+              "33_18",
+              "33_22",
+              "33_26",
+              "33_30",
+              "33_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "33_7",
+              "33_11",
+              "33_15",
+              "33_19",
+              "33_23",
+              "33_27",
+              "33_31",
+              "33_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "5": {
+        "name": "Orc",
+        "outfitId": 5,
+        "atlas": {
+          "image": "assets/outfits/5.png",
+          "json": "assets/outfits/5.json"
+        },
+        "appearance": {
+          "looktype": 5,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 14,
+            "countMin": 1,
+            "dropChance": 0.8481,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1016,
+            "itemId": 3577,
+            "itemName": "meat",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0786,
+            "itemId": 3378,
+            "itemName": "studded armor",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.073,
+            "itemId": 3426,
+            "itemName": "studded shield",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0585,
+            "itemId": 3273,
+            "itemName": "sabre",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0496,
+            "itemId": 3274,
+            "itemName": "axe",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0295,
+            "itemId": 3376,
+            "itemName": "studded helmet",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.01,
+            "itemId": 23986,
+            "itemName": "heavy old tome",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0059,
+            "itemId": 11479,
+            "itemName": "orc leather",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0021,
+            "itemId": 10196,
+            "itemName": "orc tooth",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 5966,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 5966
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4001
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4002
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4317
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "5_0",
+          "east": "5_1",
+          "south": "5_2",
+          "west": "5_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "5_4",
+              "5_8",
+              "5_12",
+              "5_16",
+              "5_20",
+              "5_24",
+              "5_28",
+              "5_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "5_5",
+              "5_9",
+              "5_13",
+              "5_17",
+              "5_21",
+              "5_25",
+              "5_29",
+              "5_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "5_6",
+              "5_10",
+              "5_14",
+              "5_18",
+              "5_22",
+              "5_26",
+              "5_30",
+              "5_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "5_7",
+              "5_11",
+              "5_15",
+              "5_19",
+              "5_23",
+              "5_27",
+              "5_31",
+              "5_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "50": {
+        "name": "Orc Spearman",
+        "outfitId": 50,
+        "atlas": {
+          "image": "assets/outfits/50.png",
+          "json": "assets/outfits/50.json"
+        },
+        "appearance": {
+          "looktype": 50,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.302,
+            "itemId": 3577,
+            "itemName": "meat",
+            "rarity": "common"
+          },
+          {
+            "countMax": 11,
+            "countMin": 1,
+            "dropChance": 0.2505,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1744,
+            "itemId": 3277,
+            "itemName": "spear",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1,
+            "itemId": 3362,
+            "itemName": "studded legs",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.09,
+            "itemId": 3376,
+            "itemName": "studded helmet",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.03,
+            "itemId": 3308,
+            "itemName": "machete",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.023,
+            "itemId": 11479,
+            "itemName": "orc leather",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.01,
+            "itemId": 23986,
+            "itemName": "heavy old tome",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0015,
+            "itemId": 10196,
+            "itemName": "orc tooth",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 5996,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 5996
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4101
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4102
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4147
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "50_0",
+          "east": "50_1",
+          "south": "50_2",
+          "west": "50_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "50_4",
+              "50_8",
+              "50_12",
+              "50_16",
+              "50_20",
+              "50_24",
+              "50_28",
+              "50_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "50_5",
+              "50_9",
+              "50_13",
+              "50_17",
+              "50_21",
+              "50_25",
+              "50_29",
+              "50_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "50_6",
+              "50_10",
+              "50_14",
+              "50_18",
+              "50_22",
+              "50_26",
+              "50_30",
+              "50_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "50_7",
+              "50_11",
+              "50_15",
+              "50_19",
+              "50_23",
+              "50_27",
+              "50_31",
+              "50_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "7": {
+        "name": "Orc Warrior",
+        "outfitId": 7,
+        "atlas": {
+          "image": "assets/outfits/7.png",
+          "json": "assets/outfits/7.json"
+        },
+        "appearance": {
+          "looktype": 7,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 15,
+            "countMin": 1,
+            "dropChance": 0.65,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.15,
+            "itemId": 3577,
+            "itemName": "meat",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.108,
+            "itemId": 11453,
+            "itemName": "broken helmet",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0736,
+            "itemId": 3358,
+            "itemName": "chain armor",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.04,
+            "itemId": 11479,
+            "itemName": "orc leather",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.01,
+            "itemId": 23986,
+            "itemName": "heavy old tome",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0098,
+            "itemId": 11480,
+            "itemName": "skull belt",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.007,
+            "itemId": 10196,
+            "itemName": "orc tooth",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0056,
+            "itemId": 3430,
+            "itemName": "copper shield",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0012,
+            "itemId": 3299,
+            "itemName": "poison dagger",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 5979,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 5979
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4043
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4044
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4147
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "7_0",
+          "east": "7_1",
+          "south": "7_2",
+          "west": "7_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "7_4",
+              "7_8",
+              "7_12",
+              "7_16",
+              "7_20",
+              "7_24",
+              "7_28",
+              "7_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "7_5",
+              "7_9",
+              "7_13",
+              "7_17",
+              "7_21",
+              "7_25",
+              "7_29",
+              "7_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "7_6",
+              "7_10",
+              "7_14",
+              "7_18",
+              "7_22",
+              "7_26",
+              "7_30",
+              "7_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "7_7",
+              "7_11",
+              "7_15",
+              "7_19",
+              "7_23",
+              "7_27",
+              "7_31",
+              "7_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "56": {
+        "name": "Cave Rat",
+        "outfitId": 56,
+        "atlas": {
+          "image": "assets/outfits/56.png",
+          "json": "assets/outfits/56.json"
+        },
+        "appearance": {
+          "looktype": 56,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.85,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.3,
+            "itemId": 3607,
+            "itemName": "cheese",
+            "rarity": "common"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.097,
+            "itemId": 3492,
+            "itemName": "worm",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0075,
+            "itemId": 3598,
+            "itemName": "cookie",
+            "rarity": "rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 5964,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 5964
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 3994
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 3995
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 3996
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "56_0",
+          "east": "56_1",
+          "south": "56_2",
+          "west": "56_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "56_4",
+              "56_8",
+              "56_12",
+              "56_16",
+              "56_20",
+              "56_24",
+              "56_28",
+              "56_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "56_5",
+              "56_9",
+              "56_13",
+              "56_17",
+              "56_21",
+              "56_25",
+              "56_29",
+              "56_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "56_6",
+              "56_10",
+              "56_14",
+              "56_18",
+              "56_22",
+              "56_26",
+              "56_30",
+              "56_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "56_7",
+              "56_11",
+              "56_15",
+              "56_19",
+              "56_23",
+              "56_27",
+              "56_31",
+              "56_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "6": {
+        "name": "Orc Shaman",
+        "outfitId": 6,
+        "atlas": {
+          "image": "assets/outfits/6.png",
+          "json": "assets/outfits/6.json"
+        },
+        "appearance": {
+          "looktype": 6,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 5,
+            "countMin": 1,
+            "dropChance": 0.9,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.106,
+            "itemId": 3597,
+            "itemName": "corncob",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.103,
+            "itemId": 11452,
+            "itemName": "broken shamanic staff",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0875,
+            "itemId": 3358,
+            "itemName": "chain armor",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0686,
+            "itemId": 11478,
+            "itemName": "shamanic hood",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0485,
+            "itemId": 3277,
+            "itemName": "spear",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.043,
+            "itemId": 11479,
+            "itemName": "orc leather",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.021,
+            "itemId": 10196,
+            "itemName": "orc tooth",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.01,
+            "itemId": 3072,
+            "itemName": "wand of decay",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.01,
+            "itemId": 23986,
+            "itemName": "heavy old tome",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0052,
+            "itemId": 2824,
+            "itemName": "book",
+            "rarity": "rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 5978,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 5978
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4041
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4042
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4147
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "6_0",
+          "east": "6_1",
+          "south": "6_2",
+          "west": "6_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "6_4",
+              "6_8",
+              "6_12",
+              "6_16",
+              "6_20",
+              "6_24",
+              "6_28",
+              "6_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "6_5",
+              "6_9",
+              "6_13",
+              "6_17",
+              "6_21",
+              "6_25",
+              "6_29",
+              "6_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "6_6",
+              "6_10",
+              "6_14",
+              "6_18",
+              "6_22",
+              "6_26",
+              "6_30",
+              "6_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "6_7",
+              "6_11",
+              "6_15",
+              "6_19",
+              "6_23",
+              "6_27",
+              "6_31",
+              "6_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "122": {
+        "name": "Bat",
+        "outfitId": 122,
+        "atlas": {
+          "image": "assets/outfits/122.png",
+          "json": "assets/outfits/122.json"
+        },
+        "appearance": {
+          "looktype": 122,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0122,
+            "itemId": 5894,
+            "itemName": "bat wing",
+            "rarity": "rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 6053,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 6053
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4363
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4364
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4365
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": {
+            "frames": [
+              "122_0",
+              "122_4",
+              "122_8",
+              "122_12",
+              "122_16",
+              "122_20",
+              "122_24",
+              "122_28"
+            ],
+            "frameRate": 10.0,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "122_1",
+              "122_5",
+              "122_9",
+              "122_13",
+              "122_17",
+              "122_21",
+              "122_25",
+              "122_29"
+            ],
+            "frameRate": 10.0,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "122_2",
+              "122_6",
+              "122_10",
+              "122_14",
+              "122_18",
+              "122_22",
+              "122_26",
+              "122_30"
+            ],
+            "frameRate": 10.0,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "122_3",
+              "122_7",
+              "122_11",
+              "122_15",
+              "122_19",
+              "122_23",
+              "122_27",
+              "122_31"
+            ],
+            "frameRate": 10.0,
+            "loopType": "infinite"
+          }
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "122_32",
+              "122_36",
+              "122_40",
+              "122_44",
+              "122_48",
+              "122_52",
+              "122_56",
+              "122_60"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "122_33",
+              "122_37",
+              "122_41",
+              "122_45",
+              "122_49",
+              "122_53",
+              "122_57",
+              "122_61"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "122_34",
+              "122_38",
+              "122_42",
+              "122_46",
+              "122_50",
+              "122_54",
+              "122_58",
+              "122_62"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "122_35",
+              "122_39",
+              "122_43",
+              "122_47",
+              "122_51",
+              "122_55",
+              "122_59",
+              "122_63"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      }
+    },
+    "spawns": [
+      {
+        "name": "Dragon",
+        "outfitId": 34,
+        "tileX": 89,
+        "tileY": 12,
+        "worldX": 32354,
+        "worldY": 32076,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Dragon Lord Hatchling",
+        "outfitId": 272,
+        "tileX": 99,
+        "tileY": 17,
+        "worldX": 32364,
+        "worldY": 32081,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Dragon Hatchling",
+        "outfitId": 271,
+        "tileX": 73,
+        "tileY": 16,
+        "worldX": 32338,
+        "worldY": 32080,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Dragon Lord Hatchling",
+        "outfitId": 272,
+        "tileX": 71,
+        "tileY": 18,
+        "worldX": 32336,
+        "worldY": 32082,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Dragon Hatchling",
+        "outfitId": 271,
+        "tileX": 73,
+        "tileY": 19,
+        "worldX": 32338,
+        "worldY": 32083,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Dragon",
+        "outfitId": 34,
+        "tileX": 84,
+        "tileY": 19,
+        "worldX": 32349,
+        "worldY": 32083,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Spider",
+        "outfitId": 30,
+        "tileX": 117,
+        "tileY": 15,
+        "worldX": 32382,
+        "worldY": 32079,
+        "worldZ": 10,
+        "radius": 6,
+        "spawntime": 90
+      },
+      {
+        "name": "Spider",
+        "outfitId": 30,
+        "tileX": 114,
+        "tileY": 16,
+        "worldX": 32379,
+        "worldY": 32080,
+        "worldZ": 10,
+        "radius": 6,
+        "spawntime": 90
+      },
+      {
+        "name": "Spider",
+        "outfitId": 30,
+        "tileX": 114,
+        "tileY": 18,
+        "worldX": 32379,
+        "worldY": 32082,
+        "worldZ": 10,
+        "radius": 6,
+        "spawntime": 90
+      },
+      {
+        "name": "Carrion Worm",
+        "outfitId": 192,
+        "tileX": 113,
+        "tileY": 20,
+        "worldX": 32378,
+        "worldY": 32084,
+        "worldZ": 10,
+        "radius": 6,
+        "spawntime": 90
+      },
+      {
+        "name": "Spider",
+        "outfitId": 30,
+        "tileX": 118,
+        "tileY": 21,
+        "worldX": 32383,
+        "worldY": 32085,
+        "worldZ": 10,
+        "radius": 6,
+        "spawntime": 90
+      },
+      {
+        "name": "Spider",
+        "outfitId": 30,
+        "tileX": 113,
+        "tileY": 22,
+        "worldX": 32378,
+        "worldY": 32086,
+        "worldZ": 10,
+        "radius": 6,
+        "spawntime": 90
+      },
+      {
+        "name": "Spider",
+        "outfitId": 30,
+        "tileX": 118,
+        "tileY": 24,
+        "worldX": 32383,
+        "worldY": 32088,
+        "worldZ": 10,
+        "radius": 6,
+        "spawntime": 90
+      },
+      {
+        "name": "Dragon",
+        "outfitId": 34,
+        "tileX": 79,
+        "tileY": 23,
+        "worldX": 32344,
+        "worldY": 32087,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Dragon",
+        "outfitId": 34,
+        "tileX": 92,
+        "tileY": 25,
+        "worldX": 32357,
+        "worldY": 32089,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Dragon Lord",
+        "outfitId": 39,
+        "tileX": 100,
+        "tileY": 25,
+        "worldX": 32365,
+        "worldY": 32089,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Dragon",
+        "outfitId": 34,
+        "tileX": 89,
+        "tileY": 34,
+        "worldX": 32354,
+        "worldY": 32098,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Dragon Hatchling",
+        "outfitId": 271,
+        "tileX": 96,
+        "tileY": 36,
+        "worldX": 32361,
+        "worldY": 32100,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 124,
+        "tileY": 34,
+        "worldX": 32389,
+        "worldY": 32098,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 127,
+        "tileY": 36,
+        "worldX": 32392,
+        "worldY": 32100,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Skeleton",
+        "outfitId": 33,
+        "tileX": 139,
+        "tileY": 38,
+        "worldX": 32404,
+        "worldY": 32102,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 90
+      },
+      {
+        "name": "Skeleton",
+        "outfitId": 33,
+        "tileX": 143,
+        "tileY": 38,
+        "worldX": 32408,
+        "worldY": 32102,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 90
+      },
+      {
+        "name": "Skeleton",
+        "outfitId": 33,
+        "tileX": 144,
+        "tileY": 40,
+        "worldX": 32409,
+        "worldY": 32104,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 90
+      },
+      {
+        "name": "Skeleton",
+        "outfitId": 33,
+        "tileX": 140,
+        "tileY": 44,
+        "worldX": 32405,
+        "worldY": 32108,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 90
+      },
+      {
+        "name": "Skeleton",
+        "outfitId": 33,
+        "tileX": 143,
+        "tileY": 45,
+        "worldX": 32408,
+        "worldY": 32109,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 112,
+        "tileY": 45,
+        "worldX": 32377,
+        "worldY": 32109,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 113,
+        "tileY": 47,
+        "worldX": 32378,
+        "worldY": 32111,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 109,
+        "tileY": 48,
+        "worldX": 32374,
+        "worldY": 32112,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 127,
+        "tileY": 46,
+        "worldX": 32392,
+        "worldY": 32110,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Carrion Worm",
+        "outfitId": 192,
+        "tileX": 128,
+        "tileY": 49,
+        "worldX": 32393,
+        "worldY": 32113,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Carrion Worm",
+        "outfitId": 192,
+        "tileX": 107,
+        "tileY": 53,
+        "worldX": 32372,
+        "worldY": 32117,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Carrion Worm",
+        "outfitId": 192,
+        "tileX": 130,
+        "tileY": 54,
+        "worldX": 32395,
+        "worldY": 32118,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Carrion Worm",
+        "outfitId": 192,
+        "tileX": 133,
+        "tileY": 54,
+        "worldX": 32398,
+        "worldY": 32118,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 49,
+        "tileY": 56,
+        "worldX": 32314,
+        "worldY": 32120,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Spearman",
+        "outfitId": 50,
+        "tileX": 47,
+        "tileY": 58,
+        "worldX": 32312,
+        "worldY": 32122,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Warrior",
+        "outfitId": 7,
+        "tileX": 49,
+        "tileY": 60,
+        "worldX": 32314,
+        "worldY": 32124,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Spearman",
+        "outfitId": 50,
+        "tileX": 52,
+        "tileY": 60,
+        "worldX": 32317,
+        "worldY": 32124,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 37,
+        "tileY": 57,
+        "worldX": 32302,
+        "worldY": 32121,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 36,
+        "tileY": 60,
+        "worldX": 32301,
+        "worldY": 32124,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Spearman",
+        "outfitId": 50,
+        "tileX": 33,
+        "tileY": 61,
+        "worldX": 32298,
+        "worldY": 32125,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Cave Rat",
+        "outfitId": 56,
+        "tileX": 75,
+        "tileY": 59,
+        "worldX": 32340,
+        "worldY": 32123,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Cave Rat",
+        "outfitId": 56,
+        "tileX": 75,
+        "tileY": 61,
+        "worldX": 32340,
+        "worldY": 32125,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Cave Rat",
+        "outfitId": 56,
+        "tileX": 77,
+        "tileY": 61,
+        "worldX": 32342,
+        "worldY": 32125,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 87,
+        "tileY": 59,
+        "worldX": 32352,
+        "worldY": 32123,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 90,
+        "tileY": 61,
+        "worldX": 32355,
+        "worldY": 32125,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 97,
+        "tileY": 61,
+        "worldX": 32362,
+        "worldY": 32125,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 120,
+        "tileY": 59,
+        "worldX": 32385,
+        "worldY": 32123,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 123,
+        "tileY": 60,
+        "worldX": 32388,
+        "worldY": 32124,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 44,
+        "tileY": 64,
+        "worldX": 32309,
+        "worldY": 32128,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Carrion Worm",
+        "outfitId": 192,
+        "tileX": 132,
+        "tileY": 69,
+        "worldX": 32397,
+        "worldY": 32133,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 129,
+        "tileY": 70,
+        "worldX": 32394,
+        "worldY": 32134,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Spearman",
+        "outfitId": 50,
+        "tileX": 19,
+        "tileY": 69,
+        "worldX": 32284,
+        "worldY": 32133,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Warrior",
+        "outfitId": 7,
+        "tileX": 15,
+        "tileY": 71,
+        "worldX": 32280,
+        "worldY": 32135,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Warrior",
+        "outfitId": 7,
+        "tileX": 22,
+        "tileY": 71,
+        "worldX": 32287,
+        "worldY": 32135,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Spearman",
+        "outfitId": 50,
+        "tileX": 20,
+        "tileY": 74,
+        "worldX": 32285,
+        "worldY": 32138,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 93,
+        "tileY": 67,
+        "worldX": 32358,
+        "worldY": 32131,
+        "worldZ": 10,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 96,
+        "tileY": 69,
+        "worldX": 32361,
+        "worldY": 32133,
+        "worldZ": 10,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 98,
+        "tileY": 73,
+        "worldX": 32363,
+        "worldY": 32137,
+        "worldZ": 10,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Warrior",
+        "outfitId": 7,
+        "tileX": 29,
+        "tileY": 72,
+        "worldX": 32294,
+        "worldY": 32136,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 35,
+        "tileY": 72,
+        "worldX": 32300,
+        "worldY": 32136,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Shaman",
+        "outfitId": 6,
+        "tileX": 33,
+        "tileY": 73,
+        "worldX": 32298,
+        "worldY": 32137,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 73,
+        "tileY": 71,
+        "worldX": 32338,
+        "worldY": 32135,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Shaman",
+        "outfitId": 6,
+        "tileX": 75,
+        "tileY": 74,
+        "worldX": 32340,
+        "worldY": 32138,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 72,
+        "tileY": 75,
+        "worldX": 32337,
+        "worldY": 32139,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 107,
+        "tileY": 69,
+        "worldX": 32372,
+        "worldY": 32133,
+        "worldZ": 10,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 108,
+        "tileY": 71,
+        "worldX": 32373,
+        "worldY": 32135,
+        "worldZ": 10,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 113,
+        "tileY": 71,
+        "worldX": 32378,
+        "worldY": 32135,
+        "worldZ": 10,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 112,
+        "tileY": 74,
+        "worldX": 32377,
+        "worldY": 32138,
+        "worldZ": 10,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Carrion Worm",
+        "outfitId": 192,
+        "tileX": 106,
+        "tileY": 75,
+        "worldX": 32371,
+        "worldY": 32139,
+        "worldZ": 10,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 58,
+        "tileY": 70,
+        "worldX": 32323,
+        "worldY": 32134,
+        "worldZ": 10,
+        "radius": 6,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Warrior",
+        "outfitId": 7,
+        "tileX": 51,
+        "tileY": 72,
+        "worldX": 32316,
+        "worldY": 32136,
+        "worldZ": 10,
+        "radius": 6,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 48,
+        "tileY": 74,
+        "worldX": 32313,
+        "worldY": 32138,
+        "worldZ": 10,
+        "radius": 6,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 59,
+        "tileY": 74,
+        "worldX": 32324,
+        "worldY": 32138,
+        "worldZ": 10,
+        "radius": 6,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Warrior",
+        "outfitId": 7,
+        "tileX": 53,
+        "tileY": 75,
+        "worldX": 32318,
+        "worldY": 32139,
+        "worldZ": 10,
+        "radius": 6,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Warrior",
+        "outfitId": 7,
+        "tileX": 56,
+        "tileY": 78,
+        "worldX": 32321,
+        "worldY": 32142,
+        "worldZ": 10,
+        "radius": 6,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 135,
+        "tileY": 73,
+        "worldX": 32400,
+        "worldY": 32137,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 139,
+        "tileY": 74,
+        "worldX": 32404,
+        "worldY": 32138,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 136,
+        "tileY": 76,
+        "worldX": 32401,
+        "worldY": 32140,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Carrion Worm",
+        "outfitId": 192,
+        "tileX": 144,
+        "tileY": 73,
+        "worldX": 32409,
+        "worldY": 32137,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Carrion Worm",
+        "outfitId": 192,
+        "tileX": 148,
+        "tileY": 77,
+        "worldX": 32413,
+        "worldY": 32141,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 110,
+        "tileY": 80,
+        "worldX": 32375,
+        "worldY": 32144,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 107,
+        "tileY": 83,
+        "worldX": 32372,
+        "worldY": 32147,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 30,
+        "tileY": 82,
+        "worldX": 32295,
+        "worldY": 32146,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Carrion Worm",
+        "outfitId": 192,
+        "tileX": 145,
+        "tileY": 82,
+        "worldX": 32410,
+        "worldY": 32146,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 12,
+        "tileY": 83,
+        "worldX": 32277,
+        "worldY": 32147,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 15,
+        "tileY": 86,
+        "worldX": 32280,
+        "worldY": 32150,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 132,
+        "tileY": 86,
+        "worldX": 32397,
+        "worldY": 32150,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 136,
+        "tileY": 86,
+        "worldX": 32401,
+        "worldY": 32150,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Carrion Worm",
+        "outfitId": 192,
+        "tileX": 134,
+        "tileY": 88,
+        "worldX": 32399,
+        "worldY": 32152,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Warrior",
+        "outfitId": 7,
+        "tileX": 65,
+        "tileY": 85,
+        "worldX": 32330,
+        "worldY": 32149,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Spearman",
+        "outfitId": 50,
+        "tileX": 68,
+        "tileY": 85,
+        "worldX": 32333,
+        "worldY": 32149,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Warrior",
+        "outfitId": 7,
+        "tileX": 69,
+        "tileY": 88,
+        "worldX": 32334,
+        "worldY": 32152,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Spearman",
+        "outfitId": 50,
+        "tileX": 66,
+        "tileY": 89,
+        "worldX": 32331,
+        "worldY": 32153,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Warrior",
+        "outfitId": 7,
+        "tileX": 30,
+        "tileY": 89,
+        "worldX": 32295,
+        "worldY": 32153,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Spearman",
+        "outfitId": 50,
+        "tileX": 32,
+        "tileY": 93,
+        "worldX": 32297,
+        "worldY": 32157,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 34,
+        "tileY": 95,
+        "worldX": 32299,
+        "worldY": 32159,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 113,
+        "tileY": 87,
+        "worldX": 32378,
+        "worldY": 32151,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 109,
+        "tileY": 89,
+        "worldX": 32374,
+        "worldY": 32153,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 111,
+        "tileY": 90,
+        "worldX": 32376,
+        "worldY": 32154,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 116,
+        "tileY": 93,
+        "worldX": 32381,
+        "worldY": 32157,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 110,
+        "tileY": 94,
+        "worldX": 32375,
+        "worldY": 32158,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 114,
+        "tileY": 94,
+        "worldX": 32379,
+        "worldY": 32158,
+        "worldZ": 10,
+        "radius": 5,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 134,
+        "tileY": 91,
+        "worldX": 32399,
+        "worldY": 32155,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 137,
+        "tileY": 91,
+        "worldX": 32402,
+        "worldY": 32155,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 138,
+        "tileY": 95,
+        "worldX": 32403,
+        "worldY": 32159,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 125,
+        "tileY": 93,
+        "worldX": 32390,
+        "worldY": 32157,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 128,
+        "tileY": 95,
+        "worldX": 32393,
+        "worldY": 32159,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Carrion Worm",
+        "outfitId": 192,
+        "tileX": 130,
+        "tileY": 97,
+        "worldX": 32395,
+        "worldY": 32161,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Spearman",
+        "outfitId": 50,
+        "tileX": 42,
+        "tileY": 98,
+        "worldX": 32307,
+        "worldY": 32162,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Spearman",
+        "outfitId": 50,
+        "tileX": 45,
+        "tileY": 103,
+        "worldX": 32310,
+        "worldY": 32167,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Spearman",
+        "outfitId": 50,
+        "tileX": 60,
+        "tileY": 101,
+        "worldX": 32325,
+        "worldY": 32165,
+        "worldZ": 10,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 118,
+        "tileY": 100,
+        "worldX": 32383,
+        "worldY": 32164,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Bat",
+        "outfitId": 122,
+        "tileX": 118,
+        "tileY": 102,
+        "worldX": 32383,
+        "worldY": 32166,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 135,
+        "tileY": 101,
+        "worldX": 32400,
+        "worldY": 32165,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc Warrior",
+        "outfitId": 7,
+        "tileX": 54,
+        "tileY": 103,
+        "worldX": 32319,
+        "worldY": 32167,
+        "worldZ": 10,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 106,
+        "tileY": 102,
+        "worldX": 32371,
+        "worldY": 32166,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 116,
+        "tileY": 109,
+        "worldX": 32381,
+        "worldY": 32173,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 107,
+        "tileY": 114,
+        "worldX": 32372,
+        "worldY": 32178,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 109,
+        "tileY": 117,
+        "worldX": 32374,
+        "worldY": 32181,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 118,
+        "tileY": 115,
+        "worldX": 32383,
+        "worldY": 32179,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 107,
+        "tileY": 121,
+        "worldX": 32372,
+        "worldY": 32185,
+        "worldZ": 10,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Carrion Worm",
+        "outfitId": 192,
+        "tileX": 121,
+        "tileY": 120,
+        "worldX": 32386,
+        "worldY": 32184,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 124,
+        "tileY": 123,
+        "worldX": 32389,
+        "worldY": 32187,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 122,
+        "tileY": 126,
+        "worldX": 32387,
+        "worldY": 32190,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 136,
+        "tileY": 125,
+        "worldX": 32401,
+        "worldY": 32189,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Rotworm",
+        "outfitId": 26,
+        "tileX": 107,
+        "tileY": 125,
+        "worldX": 32372,
+        "worldY": 32189,
+        "worldZ": 10,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Bat",
+        "outfitId": 122,
+        "tileX": 132,
+        "tileY": 126,
+        "worldX": 32397,
+        "worldY": 32190,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Carrion Worm",
+        "outfitId": 192,
+        "tileX": 128,
+        "tileY": 127,
+        "worldX": 32393,
+        "worldY": 32191,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Carrion Worm",
+        "outfitId": 192,
+        "tileX": 132,
+        "tileY": 130,
+        "worldX": 32397,
+        "worldY": 32194,
+        "worldZ": 10,
+        "radius": 2,
+        "spawntime": 90
+      }
+    ]
+  },
+  "loot": {
+    "id": "THAIS-HUNT-0031",
+    "mapId": "THAIS-HUNT-0031",
+    "drops": [
+      {
+        "countMax": 102,
+        "countMin": 1,
+        "dropChance": 0.8992,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Dragon"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.6627,
+        "itemId": 3583,
+        "itemName": "dragon ham",
+        "rarity": "common",
+        "monsterName": "Dragon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1565,
+        "itemId": 3409,
+        "itemName": "steel shield",
+        "rarity": "semi-rare",
+        "monsterName": "Dragon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0968,
+        "itemId": 11457,
+        "itemName": "dragon's tail",
+        "rarity": "semi-rare",
+        "monsterName": "Dragon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0912,
+        "itemId": 3349,
+        "itemName": "crossbow",
+        "rarity": "semi-rare",
+        "monsterName": "Dragon"
+      },
+      {
+        "countMax": 10,
+        "countMin": 1,
+        "dropChance": 0.0806,
+        "itemId": 3449,
+        "itemName": "burst arrow",
+        "rarity": "semi-rare",
+        "monsterName": "Dragon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0383,
+        "itemId": 3285,
+        "itemName": "longsword",
+        "rarity": "rare",
+        "monsterName": "Dragon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0349,
+        "itemId": 3351,
+        "itemName": "steel helmet",
+        "rarity": "rare",
+        "monsterName": "Dragon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.027,
+        "itemId": 3301,
+        "itemName": "broadsword",
+        "rarity": "rare",
+        "monsterName": "Dragon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.02029,
+        "itemId": 3557,
+        "itemName": "plate legs",
+        "rarity": "rare",
+        "monsterName": "Dragon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0158,
+        "itemId": 3275,
+        "itemName": "double axe",
+        "rarity": "rare",
+        "monsterName": "Dragon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0113,
+        "itemId": 236,
+        "itemName": "strong health potion",
+        "rarity": "rare",
+        "monsterName": "Dragon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0107,
+        "itemId": 5877,
+        "itemName": "green dragon leather",
+        "rarity": "rare",
+        "monsterName": "Dragon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0101,
+        "itemId": 5920,
+        "itemName": "green dragon scale",
+        "rarity": "rare",
+        "monsterName": "Dragon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0056,
+        "itemId": 3071,
+        "itemName": "wand of inferno",
+        "rarity": "rare",
+        "monsterName": "Dragon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0045,
+        "itemId": 3028,
+        "itemName": "small diamond",
+        "rarity": "very-rare",
+        "monsterName": "Dragon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0023,
+        "itemId": 3297,
+        "itemName": "serpent sword",
+        "rarity": "very-rare",
+        "monsterName": "Dragon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0023,
+        "itemId": 3322,
+        "itemName": "dragon hammer",
+        "rarity": "very-rare",
+        "monsterName": "Dragon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0017,
+        "itemId": 7430,
+        "itemName": "dragonbone staff",
+        "rarity": "very-rare",
+        "monsterName": "Dragon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0017,
+        "itemId": 3061,
+        "itemName": "life crystal",
+        "rarity": "very-rare",
+        "monsterName": "Dragon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0011,
+        "itemId": 3416,
+        "itemName": "dragon shield",
+        "rarity": "very-rare",
+        "monsterName": "Dragon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.7791,
+        "itemId": 3583,
+        "itemName": "dragon ham",
+        "rarity": "common",
+        "monsterName": "Dragon Lord Hatchling"
+      },
+      {
+        "countMax": 121,
+        "countMin": 1,
+        "dropChance": 0.7269,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Dragon Lord Hatchling"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.012,
+        "itemId": 268,
+        "itemName": "mana potion",
+        "rarity": "rare",
+        "monsterName": "Dragon Lord Hatchling"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0049,
+        "itemId": 3732,
+        "itemName": "green mushroom",
+        "rarity": "very-rare",
+        "monsterName": "Dragon Lord Hatchling"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.001,
+        "itemId": 818,
+        "itemName": "magma boots",
+        "rarity": "very-rare",
+        "monsterName": "Dragon Lord Hatchling"
+      },
+      {
+        "countMax": 50,
+        "countMin": 1,
+        "dropChance": 0.9554,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Dragon Hatchling"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.8304,
+        "itemId": 3583,
+        "itemName": "dragon ham",
+        "rarity": "common",
+        "monsterName": "Dragon Hatchling"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0357,
+        "itemId": 11457,
+        "itemName": "dragon's tail",
+        "rarity": "rare",
+        "monsterName": "Dragon Hatchling"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0047,
+        "itemId": 266,
+        "itemName": "health potion",
+        "rarity": "very-rare",
+        "monsterName": "Dragon Hatchling"
+      },
+      {
+        "countMax": 5,
+        "countMin": 1,
+        "dropChance": 0.6515,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Spider"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0096,
+        "itemId": 8031,
+        "itemName": "spider fangs",
+        "rarity": "rare",
+        "monsterName": "Spider"
+      },
+      {
+        "countMax": 45,
+        "countMin": 1,
+        "dropChance": 0.5,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Carrion Worm"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1,
+        "itemId": 10275,
+        "itemName": "carrion worm fang",
+        "rarity": "semi-rare",
+        "monsterName": "Carrion Worm"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.0946,
+        "itemId": 3577,
+        "itemName": "meat",
+        "rarity": "semi-rare",
+        "monsterName": "Carrion Worm"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.021,
+        "itemId": 3492,
+        "itemName": "worm",
+        "rarity": "rare",
+        "monsterName": "Carrion Worm"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0021,
+        "itemId": 12600,
+        "itemName": "coal",
+        "rarity": "very-rare",
+        "monsterName": "Carrion Worm"
+      },
+      {
+        "countMax": 237,
+        "countMin": 1,
+        "dropChance": 0.953,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Dragon Lord"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.7979,
+        "itemId": 3583,
+        "itemName": "dragon ham",
+        "rarity": "common",
+        "monsterName": "Dragon Lord"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1203,
+        "itemId": 3732,
+        "itemName": "green mushroom",
+        "rarity": "semi-rare",
+        "monsterName": "Dragon Lord"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0959,
+        "itemId": 2842,
+        "itemName": "book",
+        "rarity": "semi-rare",
+        "monsterName": "Dragon Lord"
+      },
+      {
+        "countMax": 3,
+        "countMin": 1,
+        "dropChance": 0.0938,
+        "itemId": 7378,
+        "itemName": "royal spear",
+        "rarity": "semi-rare",
+        "monsterName": "Dragon Lord"
+      },
+      {
+        "countMax": 7,
+        "countMin": 1,
+        "dropChance": 0.0592,
+        "itemId": 3450,
+        "itemName": "power bolt",
+        "rarity": "semi-rare",
+        "monsterName": "Dragon Lord"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0559,
+        "itemId": 3029,
+        "itemName": "small sapphire",
+        "rarity": "semi-rare",
+        "monsterName": "Dragon Lord"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0455,
+        "itemId": 3051,
+        "itemName": "energy ring",
+        "rarity": "rare",
+        "monsterName": "Dragon Lord"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0331,
+        "itemId": 2903,
+        "itemName": "golden mug",
+        "rarity": "rare",
+        "monsterName": "Dragon Lord"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0194,
+        "itemId": 5882,
+        "itemName": "red dragon scale",
+        "rarity": "rare",
+        "monsterName": "Dragon Lord"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0115,
+        "itemId": 5948,
+        "itemName": "red dragon leather",
+        "rarity": "rare",
+        "monsterName": "Dragon Lord"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.008,
+        "itemId": 236,
+        "itemName": "strong health potion",
+        "rarity": "rare",
+        "monsterName": "Dragon Lord"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0065,
+        "itemId": 3061,
+        "itemName": "life crystal",
+        "rarity": "rare",
+        "monsterName": "Dragon Lord"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0052,
+        "itemId": 3373,
+        "itemName": "strange helmet",
+        "rarity": "rare",
+        "monsterName": "Dragon Lord"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0041,
+        "itemId": 3428,
+        "itemName": "tower shield",
+        "rarity": "very-rare",
+        "monsterName": "Dragon Lord"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0035,
+        "itemId": 3280,
+        "itemName": "fire sword",
+        "rarity": "very-rare",
+        "monsterName": "Dragon Lord"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0026,
+        "itemId": 3392,
+        "itemName": "royal helmet",
+        "rarity": "very-rare",
+        "monsterName": "Dragon Lord"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0022,
+        "itemId": 7402,
+        "itemName": "dragon slayer",
+        "rarity": "very-rare",
+        "monsterName": "Dragon Lord"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0013,
+        "itemId": 7399,
+        "itemName": "dragon lord trophy",
+        "rarity": "very-rare",
+        "monsterName": "Dragon Lord"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0009,
+        "itemId": 3386,
+        "itemName": "dragon scale mail",
+        "rarity": "very-rare",
+        "monsterName": "Dragon Lord"
+      },
+      {
+        "countMax": 17,
+        "countMin": 1,
+        "dropChance": 0.7176,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Rotworm"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.2012,
+        "itemId": 3582,
+        "itemName": "ham",
+        "rarity": "semi-rare",
+        "monsterName": "Rotworm"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.2,
+        "itemId": 3577,
+        "itemName": "meat",
+        "rarity": "semi-rare",
+        "monsterName": "Rotworm"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1,
+        "itemId": 9692,
+        "itemName": "lump of dirt",
+        "rarity": "semi-rare",
+        "monsterName": "Rotworm"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.045,
+        "itemId": 3286,
+        "itemName": "mace",
+        "rarity": "rare",
+        "monsterName": "Rotworm"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.03,
+        "itemId": 3264,
+        "itemName": "sword",
+        "rarity": "rare",
+        "monsterName": "Rotworm"
+      },
+      {
+        "countMax": 3,
+        "countMin": 1,
+        "dropChance": 0.03,
+        "itemId": 3492,
+        "itemName": "worm",
+        "rarity": "rare",
+        "monsterName": "Rotworm"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0189,
+        "itemId": 3374,
+        "itemName": "legion helmet",
+        "rarity": "rare",
+        "monsterName": "Rotworm"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.491,
+        "itemId": 3115,
+        "itemName": "bone",
+        "rarity": "common",
+        "monsterName": "Skeleton"
+      },
+      {
+        "countMax": 10,
+        "countMin": 1,
+        "dropChance": 0.439,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Skeleton"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1988,
+        "itemId": 2920,
+        "itemName": "torch",
+        "rarity": "semi-rare",
+        "monsterName": "Skeleton"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0994,
+        "itemId": 11481,
+        "itemName": "pelvis bone",
+        "rarity": "semi-rare",
+        "monsterName": "Skeleton"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0752,
+        "itemId": 3367,
+        "itemName": "viking helmet",
+        "rarity": "semi-rare",
+        "monsterName": "Skeleton"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0485,
+        "itemId": 3276,
+        "itemName": "hatchet",
+        "rarity": "rare",
+        "monsterName": "Skeleton"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0485,
+        "itemId": 3286,
+        "itemName": "mace",
+        "rarity": "rare",
+        "monsterName": "Skeleton"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0209,
+        "itemId": 3411,
+        "itemName": "brass shield",
+        "rarity": "rare",
+        "monsterName": "Skeleton"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0194,
+        "itemId": 3264,
+        "itemName": "sword",
+        "rarity": "rare",
+        "monsterName": "Skeleton"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.01,
+        "itemId": 23986,
+        "itemName": "heavy old tome",
+        "rarity": "rare",
+        "monsterName": "Skeleton"
+      },
+      {
+        "countMax": 14,
+        "countMin": 1,
+        "dropChance": 0.8481,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1016,
+        "itemId": 3577,
+        "itemName": "meat",
+        "rarity": "semi-rare",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0786,
+        "itemId": 3378,
+        "itemName": "studded armor",
+        "rarity": "semi-rare",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.073,
+        "itemId": 3426,
+        "itemName": "studded shield",
+        "rarity": "semi-rare",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0585,
+        "itemId": 3273,
+        "itemName": "sabre",
+        "rarity": "semi-rare",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0496,
+        "itemId": 3274,
+        "itemName": "axe",
+        "rarity": "rare",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0295,
+        "itemId": 3376,
+        "itemName": "studded helmet",
+        "rarity": "rare",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.01,
+        "itemId": 23986,
+        "itemName": "heavy old tome",
+        "rarity": "rare",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0059,
+        "itemId": 11479,
+        "itemName": "orc leather",
+        "rarity": "rare",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0021,
+        "itemId": 10196,
+        "itemName": "orc tooth",
+        "rarity": "very-rare",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.302,
+        "itemId": 3577,
+        "itemName": "meat",
+        "rarity": "common",
+        "monsterName": "Orc Spearman"
+      },
+      {
+        "countMax": 11,
+        "countMin": 1,
+        "dropChance": 0.2505,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Orc Spearman"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1744,
+        "itemId": 3277,
+        "itemName": "spear",
+        "rarity": "semi-rare",
+        "monsterName": "Orc Spearman"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1,
+        "itemId": 3362,
+        "itemName": "studded legs",
+        "rarity": "semi-rare",
+        "monsterName": "Orc Spearman"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.09,
+        "itemId": 3376,
+        "itemName": "studded helmet",
+        "rarity": "semi-rare",
+        "monsterName": "Orc Spearman"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.03,
+        "itemId": 3308,
+        "itemName": "machete",
+        "rarity": "rare",
+        "monsterName": "Orc Spearman"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.023,
+        "itemId": 11479,
+        "itemName": "orc leather",
+        "rarity": "rare",
+        "monsterName": "Orc Spearman"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.01,
+        "itemId": 23986,
+        "itemName": "heavy old tome",
+        "rarity": "rare",
+        "monsterName": "Orc Spearman"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0015,
+        "itemId": 10196,
+        "itemName": "orc tooth",
+        "rarity": "very-rare",
+        "monsterName": "Orc Spearman"
+      },
+      {
+        "countMax": 15,
+        "countMin": 1,
+        "dropChance": 0.65,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Orc Warrior"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.15,
+        "itemId": 3577,
+        "itemName": "meat",
+        "rarity": "semi-rare",
+        "monsterName": "Orc Warrior"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.108,
+        "itemId": 11453,
+        "itemName": "broken helmet",
+        "rarity": "semi-rare",
+        "monsterName": "Orc Warrior"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0736,
+        "itemId": 3358,
+        "itemName": "chain armor",
+        "rarity": "semi-rare",
+        "monsterName": "Orc Warrior"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.04,
+        "itemId": 11479,
+        "itemName": "orc leather",
+        "rarity": "rare",
+        "monsterName": "Orc Warrior"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.01,
+        "itemId": 23986,
+        "itemName": "heavy old tome",
+        "rarity": "rare",
+        "monsterName": "Orc Warrior"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0098,
+        "itemId": 11480,
+        "itemName": "skull belt",
+        "rarity": "rare",
+        "monsterName": "Orc Warrior"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.007,
+        "itemId": 10196,
+        "itemName": "orc tooth",
+        "rarity": "rare",
+        "monsterName": "Orc Warrior"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0056,
+        "itemId": 3430,
+        "itemName": "copper shield",
+        "rarity": "rare",
+        "monsterName": "Orc Warrior"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0012,
+        "itemId": 3299,
+        "itemName": "poison dagger",
+        "rarity": "very-rare",
+        "monsterName": "Orc Warrior"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.85,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Cave Rat"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.3,
+        "itemId": 3607,
+        "itemName": "cheese",
+        "rarity": "common",
+        "monsterName": "Cave Rat"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.097,
+        "itemId": 3492,
+        "itemName": "worm",
+        "rarity": "semi-rare",
+        "monsterName": "Cave Rat"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0075,
+        "itemId": 3598,
+        "itemName": "cookie",
+        "rarity": "rare",
+        "monsterName": "Cave Rat"
+      },
+      {
+        "countMax": 5,
+        "countMin": 1,
+        "dropChance": 0.9,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Orc Shaman"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.106,
+        "itemId": 3597,
+        "itemName": "corncob",
+        "rarity": "semi-rare",
+        "monsterName": "Orc Shaman"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.103,
+        "itemId": 11452,
+        "itemName": "broken shamanic staff",
+        "rarity": "semi-rare",
+        "monsterName": "Orc Shaman"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0875,
+        "itemId": 3358,
+        "itemName": "chain armor",
+        "rarity": "semi-rare",
+        "monsterName": "Orc Shaman"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0686,
+        "itemId": 11478,
+        "itemName": "shamanic hood",
+        "rarity": "semi-rare",
+        "monsterName": "Orc Shaman"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0485,
+        "itemId": 3277,
+        "itemName": "spear",
+        "rarity": "rare",
+        "monsterName": "Orc Shaman"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.043,
+        "itemId": 11479,
+        "itemName": "orc leather",
+        "rarity": "rare",
+        "monsterName": "Orc Shaman"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.021,
+        "itemId": 10196,
+        "itemName": "orc tooth",
+        "rarity": "rare",
+        "monsterName": "Orc Shaman"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.01,
+        "itemId": 3072,
+        "itemName": "wand of decay",
+        "rarity": "rare",
+        "monsterName": "Orc Shaman"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.01,
+        "itemId": 23986,
+        "itemName": "heavy old tome",
+        "rarity": "rare",
+        "monsterName": "Orc Shaman"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0052,
+        "itemId": 2824,
+        "itemName": "book",
+        "rarity": "rare",
+        "monsterName": "Orc Shaman"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0122,
+        "itemId": 5894,
+        "itemName": "bat wing",
+        "rarity": "rare",
+        "monsterName": "Bat"
+      }
+    ]
+  },
+  "hunts": {
+    "id": "THAIS-HUNT-0031",
+    "mapId": "THAIS-HUNT-0031",
+    "name": "Thais Dragon Lair",
+    "label": "Thais Dragon Lair",
+    "seed": "0000000000000000000000",
+    "assetsRoot": "assets/THAIS-HUNT-0031_thais-dragon-lair-sprites-v6",
+    "mapUrl": "assets/THAIS-HUNT-0031_thais-dragon-lair-sprites-v6/map.json",
+    "portrait": "/assets/character-default.png",
+    "monsterPreview": {
+      "name": "Rotworm",
+      "icon": "/assets/outfits/26.png",
+      "atlas": "/assets/outfits/26.json"
+    },
+    "startPosition": [
+      32345,
+      32135
+    ],
+    "city": "THAIS",
+    "_todo": [
+      "confirmar name/label (título gerado automaticamente do nome da pasta)",
+      "revisar startPosition (centro geométrico do mapBoundsRef, pode cair fora de área andável)"
+    ]
+  }
+}

@@ -1,0 +1,454 @@
+{
+  "mapBoundsRef": {
+    "minX": 32321,
+    "minY": 31626,
+    "maxX": 32375,
+    "maxY": 31670
+  },
+  "monsterDefs": {
+    "137": {
+      "name": "Amazon",
+      "outfitId": 137,
+      "atlas": {
+        "image": "assets/outfits/137-113-120-95-115-0.png",
+        "json": "assets/outfits/137-113-120-95-115-0.json"
+      },
+      "appearance": {
+        "looktype": 137,
+        "head": 113,
+        "body": 120,
+        "legs": 95,
+        "feet": 115,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.8,
+          "itemId": 3267,
+          "itemName": "dagger",
+          "rarity": "common"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.8,
+          "itemId": 3114,
+          "itemName": "skull",
+          "rarity": "common"
+        },
+        {
+          "countMax": 20,
+          "countMin": 1,
+          "dropChance": 0.4,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.3,
+          "itemId": 3602,
+          "itemName": "brown bread",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.23,
+          "itemId": 3273,
+          "itemName": "sabre",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.1,
+          "itemId": 11443,
+          "itemName": "girlish hair decoration",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.052,
+          "itemId": 11444,
+          "itemName": "protective charm",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.01,
+          "itemId": 2920,
+          "itemName": "torch",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0026,
+          "itemId": 3008,
+          "itemName": "crystal necklace",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0013,
+          "itemId": 3030,
+          "itemName": "small ruby",
+          "rarity": "very-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 18042,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 18042
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 18043
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 18044
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 18045
+          }
+        ]
+      },
+      "race": "blood",
+      "idle": {
+        "north": "137_0",
+        "east": "137_1",
+        "south": "137_2",
+        "west": "137_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "137_0",
+            "137_4",
+            "137_8",
+            "137_12",
+            "137_16",
+            "137_20",
+            "137_24",
+            "137_28",
+            "137_32"
+          ],
+          "frameRate": 15,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "137_1",
+            "137_5",
+            "137_9",
+            "137_13",
+            "137_17",
+            "137_21",
+            "137_25",
+            "137_29",
+            "137_33"
+          ],
+          "frameRate": 15,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "137_2",
+            "137_6",
+            "137_10",
+            "137_14",
+            "137_18",
+            "137_22",
+            "137_26",
+            "137_30",
+            "137_34"
+          ],
+          "frameRate": 15,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "137_3",
+            "137_7",
+            "137_11",
+            "137_15",
+            "137_19",
+            "137_23",
+            "137_27",
+            "137_31",
+            "137_35"
+          ],
+          "frameRate": 15,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "223": {
+      "name": "Seagull",
+      "outfitId": 223,
+      "atlas": {
+        "image": "assets/outfits/223.png",
+        "json": "assets/outfits/223.json"
+      },
+      "appearance": {
+        "looktype": 223,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [],
+      "corpse": {
+        "itemId": 6076,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 6076
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 5727
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 5728
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 5729
+          }
+        ]
+      },
+      "race": "blood",
+      "idle": {
+        "north": {
+          "frames": [
+            "223_0",
+            "223_4",
+            "223_8",
+            "223_12",
+            "223_16",
+            "223_20",
+            "223_24",
+            "223_28"
+          ],
+          "frameRate": 10.0,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "223_1",
+            "223_5",
+            "223_9",
+            "223_13",
+            "223_17",
+            "223_21",
+            "223_25",
+            "223_29"
+          ],
+          "frameRate": 10.0,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "223_2",
+            "223_6",
+            "223_10",
+            "223_14",
+            "223_18",
+            "223_22",
+            "223_26",
+            "223_30"
+          ],
+          "frameRate": 10.0,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "223_3",
+            "223_7",
+            "223_11",
+            "223_15",
+            "223_19",
+            "223_23",
+            "223_27",
+            "223_31"
+          ],
+          "frameRate": 10.0,
+          "loopType": "infinite"
+        }
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "223_32",
+            "223_36",
+            "223_40",
+            "223_44",
+            "223_48",
+            "223_52",
+            "223_56",
+            "223_60"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "223_33",
+            "223_37",
+            "223_41",
+            "223_45",
+            "223_49",
+            "223_53",
+            "223_57",
+            "223_61"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "223_34",
+            "223_38",
+            "223_42",
+            "223_46",
+            "223_50",
+            "223_54",
+            "223_58",
+            "223_62"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "223_35",
+            "223_39",
+            "223_43",
+            "223_47",
+            "223_51",
+            "223_55",
+            "223_59",
+            "223_63"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    }
+  },
+  "spawns": [
+    {
+      "name": "Amazon",
+      "outfitId": 137,
+      "tileX": 42,
+      "tileY": 12,
+      "worldX": 32363,
+      "worldY": 31638,
+      "worldZ": 7,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Amazon",
+      "outfitId": 137,
+      "tileX": 34,
+      "tileY": 16,
+      "worldX": 32355,
+      "worldY": 31642,
+      "worldZ": 7,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Amazon",
+      "outfitId": 137,
+      "tileX": 33,
+      "tileY": 18,
+      "worldX": 32354,
+      "worldY": 31644,
+      "worldZ": 7,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Amazon",
+      "outfitId": 137,
+      "tileX": 20,
+      "tileY": 24,
+      "worldX": 32341,
+      "worldY": 31650,
+      "worldZ": 7,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Amazon",
+      "outfitId": 137,
+      "tileX": 28,
+      "tileY": 26,
+      "worldX": 32349,
+      "worldY": 31652,
+      "worldZ": 7,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Amazon",
+      "outfitId": 137,
+      "tileX": 35,
+      "tileY": 25,
+      "worldX": 32356,
+      "worldY": 31651,
+      "worldZ": 7,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Amazon",
+      "outfitId": 137,
+      "tileX": 26,
+      "tileY": 30,
+      "worldX": 32347,
+      "worldY": 31656,
+      "worldZ": 7,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Amazon",
+      "outfitId": 137,
+      "tileX": 25,
+      "tileY": 32,
+      "worldX": 32346,
+      "worldY": 31658,
+      "worldZ": 7,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Seagull",
+      "outfitId": 223,
+      "tileX": 12,
+      "tileY": 31,
+      "worldX": 32333,
+      "worldY": 31657,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    }
+  ]
+}

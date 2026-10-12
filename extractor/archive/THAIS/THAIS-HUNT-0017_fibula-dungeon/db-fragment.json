@@ -1,0 +1,790 @@
+{
+  "monsters": {
+    "id": "THAIS-HUNT-0017",
+    "mapId": "THAIS-HUNT-0017",
+    "assetsRoot": "assets/THAIS-HUNT-0017_fibula-dungeon-sprites/monsters",
+    "mapBoundsRef": {
+      "minX": 32126,
+      "minY": 32391,
+      "maxX": 32233,
+      "maxY": 32465
+    },
+    "monsterDefs": {
+      "27": {
+        "name": "Wolf",
+        "outfitId": 27,
+        "atlas": {
+          "image": "assets/outfits/27.png",
+          "json": "assets/outfits/27.json"
+        },
+        "appearance": {
+          "looktype": 27,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.55,
+            "itemId": 3577,
+            "itemName": "meat",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0098,
+            "itemId": 5897,
+            "itemName": "wolf paw",
+            "rarity": "rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 5968,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 5968
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4007
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4008
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4009
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "27_0",
+          "east": "27_1",
+          "south": "27_2",
+          "west": "27_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "27_4",
+              "27_8",
+              "27_12",
+              "27_16",
+              "27_20",
+              "27_24",
+              "27_28",
+              "27_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "27_5",
+              "27_9",
+              "27_13",
+              "27_17",
+              "27_21",
+              "27_25",
+              "27_29",
+              "27_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "27_6",
+              "27_10",
+              "27_14",
+              "27_18",
+              "27_22",
+              "27_26",
+              "27_30",
+              "27_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "27_7",
+              "27_11",
+              "27_15",
+              "27_19",
+              "27_23",
+              "27_27",
+              "27_31",
+              "27_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "223": {
+        "name": "Seagull",
+        "outfitId": 223,
+        "atlas": {
+          "image": "assets/outfits/223.png",
+          "json": "assets/outfits/223.json"
+        },
+        "appearance": {
+          "looktype": 223,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [],
+        "corpse": {
+          "itemId": 6076,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 6076
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 5727
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 5728
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 5729
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": {
+            "frames": [
+              "223_0",
+              "223_4",
+              "223_8",
+              "223_12",
+              "223_16",
+              "223_20",
+              "223_24",
+              "223_28"
+            ],
+            "frameRate": 10.0,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "223_1",
+              "223_5",
+              "223_9",
+              "223_13",
+              "223_17",
+              "223_21",
+              "223_25",
+              "223_29"
+            ],
+            "frameRate": 10.0,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "223_2",
+              "223_6",
+              "223_10",
+              "223_14",
+              "223_18",
+              "223_22",
+              "223_26",
+              "223_30"
+            ],
+            "frameRate": 10.0,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "223_3",
+              "223_7",
+              "223_11",
+              "223_15",
+              "223_19",
+              "223_23",
+              "223_27",
+              "223_31"
+            ],
+            "frameRate": 10.0,
+            "loopType": "infinite"
+          }
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "223_32",
+              "223_36",
+              "223_40",
+              "223_44",
+              "223_48",
+              "223_52",
+              "223_56",
+              "223_60"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "223_33",
+              "223_37",
+              "223_41",
+              "223_45",
+              "223_49",
+              "223_53",
+              "223_57",
+              "223_61"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "223_34",
+              "223_38",
+              "223_42",
+              "223_46",
+              "223_50",
+              "223_54",
+              "223_58",
+              "223_62"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "223_35",
+              "223_39",
+              "223_43",
+              "223_47",
+              "223_51",
+              "223_55",
+              "223_59",
+              "223_63"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "5": {
+        "name": "Orc",
+        "outfitId": 5,
+        "atlas": {
+          "image": "assets/outfits/5.png",
+          "json": "assets/outfits/5.json"
+        },
+        "appearance": {
+          "looktype": 5,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 14,
+            "countMin": 1,
+            "dropChance": 0.8481,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1016,
+            "itemId": 3577,
+            "itemName": "meat",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0786,
+            "itemId": 3378,
+            "itemName": "studded armor",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.073,
+            "itemId": 3426,
+            "itemName": "studded shield",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0585,
+            "itemId": 3273,
+            "itemName": "sabre",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0496,
+            "itemId": 3274,
+            "itemName": "axe",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0295,
+            "itemId": 3376,
+            "itemName": "studded helmet",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.01,
+            "itemId": 23986,
+            "itemName": "heavy old tome",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0059,
+            "itemId": 11479,
+            "itemName": "orc leather",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0021,
+            "itemId": 10196,
+            "itemName": "orc tooth",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 5966,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 5966
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4001
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4002
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4317
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "5_0",
+          "east": "5_1",
+          "south": "5_2",
+          "west": "5_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "5_4",
+              "5_8",
+              "5_12",
+              "5_16",
+              "5_20",
+              "5_24",
+              "5_28",
+              "5_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "5_5",
+              "5_9",
+              "5_13",
+              "5_17",
+              "5_21",
+              "5_25",
+              "5_29",
+              "5_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "5_6",
+              "5_10",
+              "5_14",
+              "5_18",
+              "5_22",
+              "5_26",
+              "5_30",
+              "5_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "5_7",
+              "5_11",
+              "5_15",
+              "5_19",
+              "5_23",
+              "5_27",
+              "5_31",
+              "5_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      }
+    },
+    "spawns": [
+      {
+        "name": "Wolf",
+        "outfitId": 27,
+        "tileX": 19,
+        "tileY": 44,
+        "worldX": 32145,
+        "worldY": 32435,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Wolf",
+        "outfitId": 27,
+        "tileX": 23,
+        "tileY": 49,
+        "worldX": 32149,
+        "worldY": 32440,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Wolf",
+        "outfitId": 27,
+        "tileX": 27,
+        "tileY": 57,
+        "worldX": 32153,
+        "worldY": 32448,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Wolf",
+        "outfitId": 27,
+        "tileX": 31,
+        "tileY": 61,
+        "worldX": 32157,
+        "worldY": 32452,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Seagull",
+        "outfitId": 223,
+        "tileX": 22,
+        "tileY": 61,
+        "worldX": 32148,
+        "worldY": 32452,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Seagull",
+        "outfitId": 223,
+        "tileX": 12,
+        "tileY": 62,
+        "worldX": 32138,
+        "worldY": 32453,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 72,
+        "tileY": 12,
+        "worldX": 32198,
+        "worldY": 32403,
+        "worldZ": 9,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 70,
+        "tileY": 13,
+        "worldX": 32196,
+        "worldY": 32404,
+        "worldZ": 9,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 91,
+        "tileY": 13,
+        "worldX": 32217,
+        "worldY": 32404,
+        "worldZ": 9,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 95,
+        "tileY": 16,
+        "worldX": 32221,
+        "worldY": 32407,
+        "worldZ": 9,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 70,
+        "tileY": 17,
+        "worldX": 32196,
+        "worldY": 32408,
+        "worldZ": 9,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 91,
+        "tileY": 18,
+        "worldX": 32217,
+        "worldY": 32409,
+        "worldZ": 9,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 77,
+        "tileY": 19,
+        "worldX": 32203,
+        "worldY": 32410,
+        "worldZ": 9,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 83,
+        "tileY": 20,
+        "worldX": 32209,
+        "worldY": 32411,
+        "worldZ": 9,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 72,
+        "tileY": 22,
+        "worldX": 32198,
+        "worldY": 32413,
+        "worldZ": 9,
+        "radius": 1,
+        "spawntime": 90
+      },
+      {
+        "name": "Orc",
+        "outfitId": 5,
+        "tileX": 76,
+        "tileY": 26,
+        "worldX": 32202,
+        "worldY": 32417,
+        "worldZ": 9,
+        "radius": 1,
+        "spawntime": 90
+      }
+    ]
+  },
+  "loot": {
+    "id": "THAIS-HUNT-0017",
+    "mapId": "THAIS-HUNT-0017",
+    "drops": [
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.55,
+        "itemId": 3577,
+        "itemName": "meat",
+        "rarity": "common",
+        "monsterName": "Wolf"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0098,
+        "itemId": 5897,
+        "itemName": "wolf paw",
+        "rarity": "rare",
+        "monsterName": "Wolf"
+      },
+      {
+        "countMax": 14,
+        "countMin": 1,
+        "dropChance": 0.8481,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1016,
+        "itemId": 3577,
+        "itemName": "meat",
+        "rarity": "semi-rare",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0786,
+        "itemId": 3378,
+        "itemName": "studded armor",
+        "rarity": "semi-rare",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.073,
+        "itemId": 3426,
+        "itemName": "studded shield",
+        "rarity": "semi-rare",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0585,
+        "itemId": 3273,
+        "itemName": "sabre",
+        "rarity": "semi-rare",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0496,
+        "itemId": 3274,
+        "itemName": "axe",
+        "rarity": "rare",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0295,
+        "itemId": 3376,
+        "itemName": "studded helmet",
+        "rarity": "rare",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.01,
+        "itemId": 23986,
+        "itemName": "heavy old tome",
+        "rarity": "rare",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0059,
+        "itemId": 11479,
+        "itemName": "orc leather",
+        "rarity": "rare",
+        "monsterName": "Orc"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0021,
+        "itemId": 10196,
+        "itemName": "orc tooth",
+        "rarity": "very-rare",
+        "monsterName": "Orc"
+      }
+    ]
+  },
+  "hunts": {
+    "id": "THAIS-HUNT-0017",
+    "mapId": "THAIS-HUNT-0017",
+    "name": "Fibula Dungeon",
+    "label": "Fibula Dungeon",
+    "seed": "0000000000000000000000",
+    "assetsRoot": "assets/THAIS-HUNT-0017_fibula-dungeon-sprites-v6",
+    "mapUrl": "assets/THAIS-HUNT-0017_fibula-dungeon-sprites-v6/map.json",
+    "portrait": "/assets/character-default.png",
+    "monsterPreview": {
+      "name": "Orc",
+      "icon": "/assets/outfits/5.png",
+      "atlas": "/assets/outfits/5.json"
+    },
+    "startPosition": [
+      32180,
+      32428
+    ],
+    "city": "THAIS",
+    "_todo": [
+      "confirmar name/label (título gerado automaticamente do nome da pasta)",
+      "revisar startPosition (centro geométrico do mapBoundsRef, pode cair fora de área andável)"
+    ]
+  }
+}

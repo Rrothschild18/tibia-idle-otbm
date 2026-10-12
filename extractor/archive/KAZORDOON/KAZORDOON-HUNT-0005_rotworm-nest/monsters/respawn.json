@@ -1,0 +1,872 @@
+{
+  "mapBoundsRef": {
+    "minX": 32471,
+    "minY": 31886,
+    "maxX": 32560,
+    "maxY": 31964
+  },
+  "monsterDefs": {
+    "26": {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "atlas": {
+        "image": "assets/outfits/26.png",
+        "json": "assets/outfits/26.json"
+      },
+      "appearance": {
+        "looktype": 26,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 17,
+          "countMin": 1,
+          "dropChance": 0.7176,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.2012,
+          "itemId": 3582,
+          "itemName": "ham",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.2,
+          "itemId": 3577,
+          "itemName": "meat",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.1,
+          "itemId": 9692,
+          "itemName": "lump of dirt",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.045,
+          "itemId": 3286,
+          "itemName": "mace",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.03,
+          "itemId": 3264,
+          "itemName": "sword",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 3,
+          "countMin": 1,
+          "dropChance": 0.03,
+          "itemId": 3492,
+          "itemName": "worm",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0189,
+          "itemId": 3374,
+          "itemName": "legion helmet",
+          "rarity": "rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 5967,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5967
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4266
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4267
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4145
+          }
+        ]
+      },
+      "race": "blood",
+      "moving": {
+        "north": {
+          "frames": [
+            "26_0",
+            "26_4",
+            "26_8",
+            "26_12",
+            "26_16",
+            "26_20",
+            "26_24",
+            "26_28",
+            "26_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "26_1",
+            "26_5",
+            "26_9",
+            "26_13",
+            "26_17",
+            "26_21",
+            "26_25",
+            "26_29",
+            "26_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "26_2",
+            "26_6",
+            "26_10",
+            "26_14",
+            "26_18",
+            "26_22",
+            "26_26",
+            "26_30",
+            "26_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "26_3",
+            "26_7",
+            "26_11",
+            "26_15",
+            "26_19",
+            "26_23",
+            "26_27",
+            "26_31",
+            "26_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      },
+      "idle": {
+        "north": {
+          "frames": [
+            "26_0",
+            "26_4",
+            "26_8",
+            "26_12",
+            "26_16",
+            "26_20",
+            "26_24",
+            "26_28",
+            "26_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "26_1",
+            "26_5",
+            "26_9",
+            "26_13",
+            "26_17",
+            "26_21",
+            "26_25",
+            "26_29",
+            "26_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "26_2",
+            "26_6",
+            "26_10",
+            "26_14",
+            "26_18",
+            "26_22",
+            "26_26",
+            "26_30",
+            "26_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "26_3",
+            "26_7",
+            "26_11",
+            "26_15",
+            "26_19",
+            "26_23",
+            "26_27",
+            "26_31",
+            "26_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "69": {
+      "name": "Dwarf",
+      "outfitId": 69,
+      "atlas": {
+        "image": "assets/outfits/69.png",
+        "json": "assets/outfits/69.json"
+      },
+      "appearance": {
+        "looktype": 69,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.5,
+          "itemId": 3723,
+          "itemName": "white mushroom",
+          "rarity": "common"
+        },
+        {
+          "countMax": 8,
+          "countMin": 1,
+          "dropChance": 0.35,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.25,
+          "itemId": 3276,
+          "itemName": "hatchet",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.15,
+          "itemId": 3274,
+          "itemName": "axe",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.1,
+          "itemId": 3430,
+          "itemName": "copper shield",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.1,
+          "itemId": 3456,
+          "itemName": "pick",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.1,
+          "itemId": 3559,
+          "itemName": "leather legs",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.08,
+          "itemId": 3378,
+          "itemName": "studded armor",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.08,
+          "itemId": 3505,
+          "itemName": "letter",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.007,
+          "itemId": 5880,
+          "itemName": "iron ore",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.001,
+          "itemId": 3097,
+          "itemName": "dwarven ring",
+          "rarity": "very-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 6007,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 6007
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4141
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4142
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4143
+          }
+        ]
+      },
+      "race": "blood",
+      "idle": {
+        "north": "69_0",
+        "east": "69_1",
+        "south": "69_2",
+        "west": "69_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "69_4",
+            "69_8",
+            "69_12",
+            "69_16",
+            "69_20",
+            "69_24",
+            "69_28",
+            "69_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "69_5",
+            "69_9",
+            "69_13",
+            "69_17",
+            "69_21",
+            "69_25",
+            "69_29",
+            "69_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "69_6",
+            "69_10",
+            "69_14",
+            "69_18",
+            "69_22",
+            "69_26",
+            "69_30",
+            "69_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "69_7",
+            "69_11",
+            "69_15",
+            "69_19",
+            "69_23",
+            "69_27",
+            "69_31",
+            "69_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    }
+  },
+  "spawns": [
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 43,
+      "tileY": 12,
+      "worldX": 32514,
+      "worldY": 31898,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 30,
+      "tileY": 13,
+      "worldX": 32501,
+      "worldY": 31899,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Dwarf",
+      "outfitId": 69,
+      "tileX": 38,
+      "tileY": 19,
+      "worldX": 32509,
+      "worldY": 31905,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 46,
+      "tileY": 13,
+      "worldX": 32517,
+      "worldY": 31899,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 48,
+      "tileY": 16,
+      "worldX": 32519,
+      "worldY": 31902,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 23,
+      "tileY": 22,
+      "worldX": 32494,
+      "worldY": 31908,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 23,
+      "tileY": 24,
+      "worldX": 32494,
+      "worldY": 31910,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Dwarf",
+      "outfitId": 69,
+      "tileX": 34,
+      "tileY": 20,
+      "worldX": 32505,
+      "worldY": 31906,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Dwarf",
+      "outfitId": 69,
+      "tileX": 30,
+      "tileY": 22,
+      "worldX": 32501,
+      "worldY": 31908,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 47,
+      "tileY": 24,
+      "worldX": 32518,
+      "worldY": 31910,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Dwarf",
+      "outfitId": 69,
+      "tileX": 22,
+      "tileY": 27,
+      "worldX": 32493,
+      "worldY": 31913,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Dwarf",
+      "outfitId": 69,
+      "tileX": 21,
+      "tileY": 28,
+      "worldX": 32492,
+      "worldY": 31914,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 22,
+      "tileY": 29,
+      "worldX": 32493,
+      "worldY": 31915,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Dwarf",
+      "outfitId": 69,
+      "tileX": 29,
+      "tileY": 27,
+      "worldX": 32500,
+      "worldY": 31913,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Dwarf",
+      "outfitId": 69,
+      "tileX": 23,
+      "tileY": 28,
+      "worldX": 32494,
+      "worldY": 31914,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 12,
+      "tileY": 39,
+      "worldX": 32483,
+      "worldY": 31925,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 15,
+      "tileY": 39,
+      "worldX": 32486,
+      "worldY": 31925,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 17,
+      "tileY": 34,
+      "worldX": 32488,
+      "worldY": 31920,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Dwarf",
+      "outfitId": 69,
+      "tileX": 17,
+      "tileY": 36,
+      "worldX": 32488,
+      "worldY": 31922,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Dwarf",
+      "outfitId": 69,
+      "tileX": 33,
+      "tileY": 34,
+      "worldX": 32504,
+      "worldY": 31920,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Dwarf",
+      "outfitId": 69,
+      "tileX": 34,
+      "tileY": 42,
+      "worldX": 32505,
+      "worldY": 31928,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Dwarf",
+      "outfitId": 69,
+      "tileX": 35,
+      "tileY": 47,
+      "worldX": 32506,
+      "worldY": 31933,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 53,
+      "tileY": 42,
+      "worldX": 32524,
+      "worldY": 31928,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 53,
+      "tileY": 46,
+      "worldX": 32524,
+      "worldY": 31932,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 56,
+      "tileY": 46,
+      "worldX": 32527,
+      "worldY": 31932,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 57,
+      "tileY": 46,
+      "worldX": 32528,
+      "worldY": 31932,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 69,
+      "tileY": 41,
+      "worldX": 32540,
+      "worldY": 31927,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Dwarf",
+      "outfitId": 69,
+      "tileX": 68,
+      "tileY": 46,
+      "worldX": 32539,
+      "worldY": 31932,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 71,
+      "tileY": 46,
+      "worldX": 32542,
+      "worldY": 31932,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Dwarf",
+      "outfitId": 69,
+      "tileX": 69,
+      "tileY": 47,
+      "worldX": 32540,
+      "worldY": 31933,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 77,
+      "tileY": 42,
+      "worldX": 32548,
+      "worldY": 31928,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Dwarf",
+      "outfitId": 69,
+      "tileX": 73,
+      "tileY": 44,
+      "worldX": 32544,
+      "worldY": 31930,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Dwarf",
+      "outfitId": 69,
+      "tileX": 37,
+      "tileY": 53,
+      "worldX": 32508,
+      "worldY": 31939,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 54,
+      "tileY": 49,
+      "worldX": 32525,
+      "worldY": 31935,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 66,
+      "tileY": 54,
+      "worldX": 32537,
+      "worldY": 31940,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Dwarf",
+      "outfitId": 69,
+      "tileX": 38,
+      "tileY": 57,
+      "worldX": 32509,
+      "worldY": 31943,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 38,
+      "tileY": 60,
+      "worldX": 32509,
+      "worldY": 31946,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 47,
+      "tileY": 59,
+      "worldX": 32518,
+      "worldY": 31945,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rotworm",
+      "outfitId": 26,
+      "tileX": 67,
+      "tileY": 56,
+      "worldX": 32538,
+      "worldY": 31942,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Dwarf",
+      "outfitId": 69,
+      "tileX": 38,
+      "tileY": 66,
+      "worldX": 32509,
+      "worldY": 31952,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    }
+  ]
+}

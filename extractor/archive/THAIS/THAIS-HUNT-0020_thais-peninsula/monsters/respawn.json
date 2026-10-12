@@ -1,0 +1,176 @@
+{
+  "mapBoundsRef": {
+    "minX": 32465,
+    "minY": 32277,
+    "maxX": 32501,
+    "maxY": 32305
+  },
+  "monsterDefs": {
+    "74": {
+      "name": "Rabbit",
+      "outfitId": 74,
+      "atlas": {
+        "image": "assets/outfits/74.png",
+        "json": "assets/outfits/74.json"
+      },
+      "appearance": {
+        "looktype": 74,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.8562,
+          "itemId": 3577,
+          "itemName": "meat",
+          "rarity": "common"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.1,
+          "itemId": 3595,
+          "itemName": "carrot",
+          "rarity": "semi-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 6017,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 6017
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4301
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4302
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4303
+          }
+        ]
+      },
+      "race": "blood",
+      "idle": {
+        "north": "74_0",
+        "east": "74_1",
+        "south": "74_2",
+        "west": "74_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "74_4",
+            "74_8",
+            "74_12",
+            "74_16",
+            "74_20",
+            "74_24",
+            "74_28",
+            "74_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "74_5",
+            "74_9",
+            "74_13",
+            "74_17",
+            "74_21",
+            "74_25",
+            "74_29",
+            "74_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "74_6",
+            "74_10",
+            "74_14",
+            "74_18",
+            "74_22",
+            "74_26",
+            "74_30",
+            "74_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "74_7",
+            "74_11",
+            "74_15",
+            "74_19",
+            "74_23",
+            "74_27",
+            "74_31",
+            "74_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    }
+  },
+  "spawns": [
+    {
+      "name": "Rabbit",
+      "outfitId": 74,
+      "tileX": 14,
+      "tileY": 12,
+      "worldX": 32479,
+      "worldY": 32289,
+      "worldZ": 7,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Rabbit",
+      "outfitId": 74,
+      "tileX": 12,
+      "tileY": 15,
+      "worldX": 32477,
+      "worldY": 32292,
+      "worldZ": 7,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Rabbit",
+      "outfitId": 74,
+      "tileX": 24,
+      "tileY": 15,
+      "worldX": 32489,
+      "worldY": 32292,
+      "worldZ": 7,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Rabbit",
+      "outfitId": 74,
+      "tileX": 20,
+      "tileY": 16,
+      "worldX": 32485,
+      "worldY": 32293,
+      "worldZ": 7,
+      "radius": 2,
+      "spawntime": 90
+    }
+  ]
+}

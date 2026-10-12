@@ -1,0 +1,1266 @@
+{
+  "monsters": {
+    "id": "VENORE-HUNT-0007",
+    "mapId": "VENORE-HUNT-0007",
+    "assetsRoot": "assets/VENORE-HUNT-0007_marsh-stalkers-green-claw-swamp-z10-sprites/monsters",
+    "mapBoundsRef": {
+      "minX": 32816,
+      "minY": 32080,
+      "maxX": 32873,
+      "maxY": 32135
+    },
+    "monsterDefs": {
+      "528": {
+        "name": "Emerald Damselfly",
+        "outfitId": 528,
+        "atlas": {
+          "image": "assets/outfits/528.png",
+          "json": "assets/outfits/528.json"
+        },
+        "appearance": {
+          "looktype": 528,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 18,
+            "countMin": 1,
+            "dropChance": 0.9,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1183,
+            "itemId": 17458,
+            "itemName": "damselfly wing",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0997,
+            "itemId": 17463,
+            "itemName": "damselfly eye",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 5,
+            "countMin": 1,
+            "dropChance": 0.0757,
+            "itemId": 3447,
+            "itemName": "arrow",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.043,
+            "itemId": 3003,
+            "itemName": "rope",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0358,
+            "itemId": 266,
+            "itemName": "health potion",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0355,
+            "itemId": 268,
+            "itemName": "mana potion",
+            "rarity": "rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 17426,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 17426
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 17433
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 17434
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 17435
+            }
+          ]
+        },
+        "race": "venom",
+        "moving": {
+          "north": {
+            "frames": [
+              "528_0",
+              "528_4",
+              "528_8",
+              "528_12",
+              "528_16",
+              "528_20",
+              "528_24",
+              "528_28"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "528_1",
+              "528_5",
+              "528_9",
+              "528_13",
+              "528_17",
+              "528_21",
+              "528_25",
+              "528_29"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "528_2",
+              "528_6",
+              "528_10",
+              "528_14",
+              "528_18",
+              "528_22",
+              "528_26",
+              "528_30"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "528_3",
+              "528_7",
+              "528_11",
+              "528_15",
+              "528_19",
+              "528_23",
+              "528_27",
+              "528_31"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        },
+        "idle": {
+          "north": {
+            "frames": [
+              "528_0",
+              "528_4",
+              "528_8",
+              "528_12",
+              "528_16",
+              "528_20",
+              "528_24",
+              "528_28"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "528_1",
+              "528_5",
+              "528_9",
+              "528_13",
+              "528_17",
+              "528_21",
+              "528_25",
+              "528_29"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "528_2",
+              "528_6",
+              "528_10",
+              "528_14",
+              "528_18",
+              "528_22",
+              "528_26",
+              "528_30"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "528_3",
+              "528_7",
+              "528_11",
+              "528_15",
+              "528_19",
+              "528_23",
+              "528_27",
+              "528_31"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "530": {
+        "name": "Marsh Stalker",
+        "outfitId": 530,
+        "atlas": {
+          "image": "assets/outfits/530.png",
+          "json": "assets/outfits/530.json"
+        },
+        "appearance": {
+          "looktype": 530,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 23,
+            "countMin": 1,
+            "dropChance": 0.6409,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.2032,
+            "itemId": 3578,
+            "itemName": "fish",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.1995,
+            "itemId": 3577,
+            "itemName": "meat",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.1473,
+            "itemId": 3492,
+            "itemName": "worm",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0865,
+            "itemId": 17462,
+            "itemName": "marsh stalker feather",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0756,
+            "itemId": 3285,
+            "itemName": "longsword",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0608,
+            "itemId": 17461,
+            "itemName": "marsh stalker beak",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0483,
+            "itemId": 3003,
+            "itemName": "rope",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0011,
+            "itemId": 647,
+            "itemName": "seeds",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 17428,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 17428
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 17439
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 17440
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 17441
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "530_0",
+          "east": "530_1",
+          "south": "530_2",
+          "west": "530_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "530_4",
+              "530_8",
+              "530_12",
+              "530_16",
+              "530_20",
+              "530_24",
+              "530_28",
+              "530_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "530_5",
+              "530_9",
+              "530_13",
+              "530_17",
+              "530_21",
+              "530_25",
+              "530_29",
+              "530_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "530_6",
+              "530_10",
+              "530_14",
+              "530_18",
+              "530_22",
+              "530_26",
+              "530_30",
+              "530_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "530_7",
+              "530_11",
+              "530_15",
+              "530_19",
+              "530_23",
+              "530_27",
+              "530_31",
+              "530_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "535": {
+        "name": "Swampling",
+        "outfitId": 535,
+        "atlas": {
+          "image": "assets/outfits/535.png",
+          "json": "assets/outfits/535.json"
+        },
+        "appearance": {
+          "looktype": 535,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 12,
+            "countMin": 1,
+            "dropChance": 0.849,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.199,
+            "itemId": 17822,
+            "itemName": "swampling moss",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1487,
+            "itemId": 17823,
+            "itemName": "piece of swampling wood",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 5,
+            "countMin": 1,
+            "dropChance": 0.1022,
+            "itemId": 3723,
+            "itemName": "white mushroom",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0741,
+            "itemId": 17824,
+            "itemName": "swampling club",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0508,
+            "itemId": 3003,
+            "itemName": "rope",
+            "rarity": "semi-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 17622,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 17622
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 17623
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 17624
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 17625
+            }
+          ]
+        },
+        "race": "venom",
+        "idle": {
+          "north": "535_0",
+          "east": "535_1",
+          "south": "535_2",
+          "west": "535_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "535_4",
+              "535_8",
+              "535_12",
+              "535_16",
+              "535_20",
+              "535_24",
+              "535_28",
+              "535_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "535_5",
+              "535_9",
+              "535_13",
+              "535_17",
+              "535_21",
+              "535_25",
+              "535_29",
+              "535_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "535_6",
+              "535_10",
+              "535_14",
+              "535_18",
+              "535_22",
+              "535_26",
+              "535_30",
+              "535_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "535_7",
+              "535_11",
+              "535_15",
+              "535_19",
+              "535_23",
+              "535_27",
+              "535_31",
+              "535_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "529": {
+        "name": "Salamander",
+        "outfitId": 529,
+        "atlas": {
+          "image": "assets/outfits/529.png",
+          "json": "assets/outfits/529.json"
+        },
+        "appearance": {
+          "looktype": 529,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 15,
+            "countMin": 1,
+            "dropChance": 1.0,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "always"
+          },
+          {
+            "countMax": 3,
+            "countMin": 1,
+            "dropChance": 0.0789,
+            "itemId": 3447,
+            "itemName": "arrow",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0519,
+            "itemId": 3003,
+            "itemName": "rope",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0378,
+            "itemId": 3286,
+            "itemName": "mace",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0218,
+            "itemId": 3354,
+            "itemName": "brass helmet",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0148,
+            "itemId": 266,
+            "itemName": "health potion",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0074,
+            "itemId": 3350,
+            "itemName": "bow",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0049,
+            "itemId": 3307,
+            "itemName": "scimitar",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 17427,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 17427
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 17436
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 17437
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 17438
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "529_0",
+          "east": "529_1",
+          "south": "529_2",
+          "west": "529_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "529_4",
+              "529_8",
+              "529_12",
+              "529_16",
+              "529_20",
+              "529_24",
+              "529_28",
+              "529_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "529_5",
+              "529_9",
+              "529_13",
+              "529_17",
+              "529_21",
+              "529_25",
+              "529_29",
+              "529_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "529_6",
+              "529_10",
+              "529_14",
+              "529_18",
+              "529_22",
+              "529_26",
+              "529_30",
+              "529_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "529_7",
+              "529_11",
+              "529_15",
+              "529_19",
+              "529_23",
+              "529_27",
+              "529_31",
+              "529_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      }
+    },
+    "spawns": [
+      {
+        "name": "Emerald Damselfly",
+        "outfitId": 528,
+        "tileX": 19,
+        "tileY": 14,
+        "worldX": 32835,
+        "worldY": 32094,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Emerald Damselfly",
+        "outfitId": 528,
+        "tileX": 25,
+        "tileY": 12,
+        "worldX": 32841,
+        "worldY": 32092,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Emerald Damselfly",
+        "outfitId": 528,
+        "tileX": 19,
+        "tileY": 16,
+        "worldX": 32835,
+        "worldY": 32096,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Marsh Stalker",
+        "outfitId": 530,
+        "tileX": 18,
+        "tileY": 18,
+        "worldX": 32834,
+        "worldY": 32098,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Marsh Stalker",
+        "outfitId": 530,
+        "tileX": 25,
+        "tileY": 16,
+        "worldX": 32841,
+        "worldY": 32096,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Emerald Damselfly",
+        "outfitId": 528,
+        "tileX": 28,
+        "tileY": 18,
+        "worldX": 32844,
+        "worldY": 32098,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Marsh Stalker",
+        "outfitId": 530,
+        "tileX": 29,
+        "tileY": 18,
+        "worldX": 32845,
+        "worldY": 32098,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Marsh Stalker",
+        "outfitId": 530,
+        "tileX": 30,
+        "tileY": 18,
+        "worldX": 32846,
+        "worldY": 32098,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Marsh Stalker",
+        "outfitId": 530,
+        "tileX": 21,
+        "tileY": 23,
+        "worldX": 32837,
+        "worldY": 32103,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Swampling",
+        "outfitId": 535,
+        "tileX": 24,
+        "tileY": 24,
+        "worldX": 32840,
+        "worldY": 32104,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Salamander",
+        "outfitId": 529,
+        "tileX": 32,
+        "tileY": 23,
+        "worldX": 32848,
+        "worldY": 32103,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Emerald Damselfly",
+        "outfitId": 528,
+        "tileX": 44,
+        "tileY": 22,
+        "worldX": 32860,
+        "worldY": 32102,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Marsh Stalker",
+        "outfitId": 530,
+        "tileX": 44,
+        "tileY": 24,
+        "worldX": 32860,
+        "worldY": 32104,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Emerald Damselfly",
+        "outfitId": 528,
+        "tileX": 12,
+        "tileY": 30,
+        "worldX": 32828,
+        "worldY": 32110,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Marsh Stalker",
+        "outfitId": 530,
+        "tileX": 12,
+        "tileY": 31,
+        "worldX": 32828,
+        "worldY": 32111,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Salamander",
+        "outfitId": 529,
+        "tileX": 12,
+        "tileY": 32,
+        "worldX": 32828,
+        "worldY": 32112,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Marsh Stalker",
+        "outfitId": 530,
+        "tileX": 20,
+        "tileY": 30,
+        "worldX": 32836,
+        "worldY": 32110,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Emerald Damselfly",
+        "outfitId": 528,
+        "tileX": 37,
+        "tileY": 33,
+        "worldX": 32853,
+        "worldY": 32113,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Marsh Stalker",
+        "outfitId": 530,
+        "tileX": 45,
+        "tileY": 31,
+        "worldX": 32861,
+        "worldY": 32111,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Marsh Stalker",
+        "outfitId": 530,
+        "tileX": 36,
+        "tileY": 38,
+        "worldX": 32852,
+        "worldY": 32118,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Swampling",
+        "outfitId": 535,
+        "tileX": 43,
+        "tileY": 36,
+        "worldX": 32859,
+        "worldY": 32116,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Emerald Damselfly",
+        "outfitId": 528,
+        "tileX": 37,
+        "tileY": 43,
+        "worldX": 32853,
+        "worldY": 32123,
+        "worldZ": 10,
+        "radius": 3,
+        "spawntime": 90
+      }
+    ]
+  },
+  "loot": {
+    "id": "VENORE-HUNT-0007",
+    "mapId": "VENORE-HUNT-0007",
+    "drops": [
+      {
+        "countMax": 18,
+        "countMin": 1,
+        "dropChance": 0.9,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Emerald Damselfly"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1183,
+        "itemId": 17458,
+        "itemName": "damselfly wing",
+        "rarity": "semi-rare",
+        "monsterName": "Emerald Damselfly"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0997,
+        "itemId": 17463,
+        "itemName": "damselfly eye",
+        "rarity": "semi-rare",
+        "monsterName": "Emerald Damselfly"
+      },
+      {
+        "countMax": 5,
+        "countMin": 1,
+        "dropChance": 0.0757,
+        "itemId": 3447,
+        "itemName": "arrow",
+        "rarity": "semi-rare",
+        "monsterName": "Emerald Damselfly"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.043,
+        "itemId": 3003,
+        "itemName": "rope",
+        "rarity": "rare",
+        "monsterName": "Emerald Damselfly"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0358,
+        "itemId": 266,
+        "itemName": "health potion",
+        "rarity": "rare",
+        "monsterName": "Emerald Damselfly"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0355,
+        "itemId": 268,
+        "itemName": "mana potion",
+        "rarity": "rare",
+        "monsterName": "Emerald Damselfly"
+      },
+      {
+        "countMax": 23,
+        "countMin": 1,
+        "dropChance": 0.6409,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Marsh Stalker"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.2032,
+        "itemId": 3578,
+        "itemName": "fish",
+        "rarity": "semi-rare",
+        "monsterName": "Marsh Stalker"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.1995,
+        "itemId": 3577,
+        "itemName": "meat",
+        "rarity": "semi-rare",
+        "monsterName": "Marsh Stalker"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.1473,
+        "itemId": 3492,
+        "itemName": "worm",
+        "rarity": "semi-rare",
+        "monsterName": "Marsh Stalker"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0865,
+        "itemId": 17462,
+        "itemName": "marsh stalker feather",
+        "rarity": "semi-rare",
+        "monsterName": "Marsh Stalker"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0756,
+        "itemId": 3285,
+        "itemName": "longsword",
+        "rarity": "semi-rare",
+        "monsterName": "Marsh Stalker"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0608,
+        "itemId": 17461,
+        "itemName": "marsh stalker beak",
+        "rarity": "semi-rare",
+        "monsterName": "Marsh Stalker"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0483,
+        "itemId": 3003,
+        "itemName": "rope",
+        "rarity": "rare",
+        "monsterName": "Marsh Stalker"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0011,
+        "itemId": 647,
+        "itemName": "seeds",
+        "rarity": "very-rare",
+        "monsterName": "Marsh Stalker"
+      },
+      {
+        "countMax": 12,
+        "countMin": 1,
+        "dropChance": 0.849,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Swampling"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.199,
+        "itemId": 17822,
+        "itemName": "swampling moss",
+        "rarity": "semi-rare",
+        "monsterName": "Swampling"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1487,
+        "itemId": 17823,
+        "itemName": "piece of swampling wood",
+        "rarity": "semi-rare",
+        "monsterName": "Swampling"
+      },
+      {
+        "countMax": 5,
+        "countMin": 1,
+        "dropChance": 0.1022,
+        "itemId": 3723,
+        "itemName": "white mushroom",
+        "rarity": "semi-rare",
+        "monsterName": "Swampling"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0741,
+        "itemId": 17824,
+        "itemName": "swampling club",
+        "rarity": "semi-rare",
+        "monsterName": "Swampling"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0508,
+        "itemId": 3003,
+        "itemName": "rope",
+        "rarity": "semi-rare",
+        "monsterName": "Swampling"
+      },
+      {
+        "countMax": 15,
+        "countMin": 1,
+        "dropChance": 1.0,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "always",
+        "monsterName": "Salamander"
+      },
+      {
+        "countMax": 3,
+        "countMin": 1,
+        "dropChance": 0.0789,
+        "itemId": 3447,
+        "itemName": "arrow",
+        "rarity": "semi-rare",
+        "monsterName": "Salamander"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0519,
+        "itemId": 3003,
+        "itemName": "rope",
+        "rarity": "semi-rare",
+        "monsterName": "Salamander"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0378,
+        "itemId": 3286,
+        "itemName": "mace",
+        "rarity": "rare",
+        "monsterName": "Salamander"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0218,
+        "itemId": 3354,
+        "itemName": "brass helmet",
+        "rarity": "rare",
+        "monsterName": "Salamander"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0148,
+        "itemId": 266,
+        "itemName": "health potion",
+        "rarity": "rare",
+        "monsterName": "Salamander"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0074,
+        "itemId": 3350,
+        "itemName": "bow",
+        "rarity": "rare",
+        "monsterName": "Salamander"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0049,
+        "itemId": 3307,
+        "itemName": "scimitar",
+        "rarity": "very-rare",
+        "monsterName": "Salamander"
+      }
+    ]
+  },
+  "hunts": {
+    "id": "VENORE-HUNT-0007",
+    "mapId": "VENORE-HUNT-0007",
+    "name": "Emerald Damselflys — Venore Southern Swamp z10",
+    "label": "Emerald Damselflys — Venore Southern Swamp z10",
+    "seed": "0000000000000000000000",
+    "assetsRoot": "assets/VENORE-HUNT-0007_marsh-stalkers-green-claw-swamp-z10-sprites-v6",
+    "mapUrl": "assets/VENORE-HUNT-0007_marsh-stalkers-green-claw-swamp-z10-sprites-v6/map.json",
+    "portrait": "/assets/character-default.png",
+    "monsterPreview": {
+      "name": "Marsh Stalker",
+      "icon": "/assets/outfits/530.png",
+      "atlas": "/assets/outfits/530.json"
+    },
+    "startPosition": [
+      32844,
+      32108
+    ],
+    "city": "VENORE",
+    "_todo": [
+      "revisar startPosition (centro geométrico do mapBoundsRef, pode cair fora de área andável)"
+    ]
+  }
+}

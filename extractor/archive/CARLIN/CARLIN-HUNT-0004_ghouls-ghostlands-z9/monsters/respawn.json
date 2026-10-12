@@ -1,0 +1,588 @@
+{
+  "mapBoundsRef": {
+    "minX": 32160,
+    "minY": 31758,
+    "maxX": 32224,
+    "maxY": 31824
+  },
+  "monsterDefs": {
+    "18": {
+      "name": "Ghoul",
+      "outfitId": 18,
+      "atlas": {
+        "image": "assets/outfits/18.png",
+        "json": "assets/outfits/18.json"
+      },
+      "appearance": {
+        "looktype": 18,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 30,
+          "countMin": 1,
+          "dropChance": 0.68,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.1447,
+          "itemId": 10291,
+          "itemName": "rotten piece of cloth",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.096,
+          "itemId": 3492,
+          "itemName": "worm",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0513,
+          "itemId": 11467,
+          "itemName": "ghoul snack",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.05,
+          "itemId": 2920,
+          "itemName": "torch",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.01,
+          "itemId": 3377,
+          "itemName": "scale armor",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.01,
+          "itemId": 5913,
+          "itemName": "brown piece of cloth",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.01,
+          "itemId": 23986,
+          "itemName": "heavy old tome",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0099,
+          "itemId": 3367,
+          "itemName": "viking helmet",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0095,
+          "itemId": 11484,
+          "itemName": "pile of grave earth",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0024,
+          "itemId": 3114,
+          "itemName": "skull",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0018,
+          "itemId": 3052,
+          "itemName": "life ring",
+          "rarity": "very-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 5976,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5976
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4034
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4035
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4036
+          }
+        ]
+      },
+      "race": "blood",
+      "idle": {
+        "north": "18_0",
+        "east": "18_1",
+        "south": "18_2",
+        "west": "18_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "18_4",
+            "18_8",
+            "18_12",
+            "18_16",
+            "18_20",
+            "18_24",
+            "18_28",
+            "18_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "18_5",
+            "18_9",
+            "18_13",
+            "18_17",
+            "18_21",
+            "18_25",
+            "18_29",
+            "18_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "18_6",
+            "18_10",
+            "18_14",
+            "18_18",
+            "18_22",
+            "18_26",
+            "18_30",
+            "18_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "18_7",
+            "18_11",
+            "18_15",
+            "18_19",
+            "18_23",
+            "18_27",
+            "18_31",
+            "18_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "43": {
+      "name": "Scorpion",
+      "outfitId": 43,
+      "atlas": {
+        "image": "assets/outfits/43.png",
+        "json": "assets/outfits/43.json"
+      },
+      "appearance": {
+        "looktype": 43,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0493,
+          "itemId": 9651,
+          "itemName": "scorpion tail",
+          "rarity": "rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 5988,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5988
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4078
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4079
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4146
+          }
+        ]
+      },
+      "race": "venom",
+      "idle": {
+        "north": "43_0",
+        "east": "43_1",
+        "south": "43_2",
+        "west": "43_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "43_4",
+            "43_8",
+            "43_12",
+            "43_16",
+            "43_20",
+            "43_24",
+            "43_28",
+            "43_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "43_5",
+            "43_9",
+            "43_13",
+            "43_17",
+            "43_21",
+            "43_25",
+            "43_29",
+            "43_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "43_6",
+            "43_10",
+            "43_14",
+            "43_18",
+            "43_22",
+            "43_26",
+            "43_30",
+            "43_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "43_7",
+            "43_11",
+            "43_15",
+            "43_19",
+            "43_23",
+            "43_27",
+            "43_31",
+            "43_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    }
+  },
+  "spawns": [
+    {
+      "name": "Ghoul",
+      "outfitId": 18,
+      "tileX": 29,
+      "tileY": 14,
+      "worldX": 32189,
+      "worldY": 31772,
+      "worldZ": 9,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Scorpion",
+      "outfitId": 43,
+      "tileX": 30,
+      "tileY": 15,
+      "worldX": 32190,
+      "worldY": 31773,
+      "worldZ": 9,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Ghoul",
+      "outfitId": 18,
+      "tileX": 39,
+      "tileY": 12,
+      "worldX": 32199,
+      "worldY": 31770,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Scorpion",
+      "outfitId": 43,
+      "tileX": 42,
+      "tileY": 13,
+      "worldX": 32202,
+      "worldY": 31771,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Ghoul",
+      "outfitId": 18,
+      "tileX": 37,
+      "tileY": 15,
+      "worldX": 32197,
+      "worldY": 31773,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Ghoul",
+      "outfitId": 18,
+      "tileX": 41,
+      "tileY": 16,
+      "worldX": 32201,
+      "worldY": 31774,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Ghoul",
+      "outfitId": 18,
+      "tileX": 33,
+      "tileY": 26,
+      "worldX": 32193,
+      "worldY": 31784,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Scorpion",
+      "outfitId": 43,
+      "tileX": 33,
+      "tileY": 28,
+      "worldX": 32193,
+      "worldY": 31786,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Ghoul",
+      "outfitId": 18,
+      "tileX": 35,
+      "tileY": 31,
+      "worldX": 32195,
+      "worldY": 31789,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Ghoul",
+      "outfitId": 18,
+      "tileX": 23,
+      "tileY": 32,
+      "worldX": 32183,
+      "worldY": 31790,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Scorpion",
+      "outfitId": 43,
+      "tileX": 24,
+      "tileY": 34,
+      "worldX": 32184,
+      "worldY": 31792,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Scorpion",
+      "outfitId": 43,
+      "tileX": 41,
+      "tileY": 32,
+      "worldX": 32201,
+      "worldY": 31790,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Ghoul",
+      "outfitId": 18,
+      "tileX": 46,
+      "tileY": 33,
+      "worldX": 32206,
+      "worldY": 31791,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Ghoul",
+      "outfitId": 18,
+      "tileX": 15,
+      "tileY": 34,
+      "worldX": 32175,
+      "worldY": 31792,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Scorpion",
+      "outfitId": 43,
+      "tileX": 13,
+      "tileY": 37,
+      "worldX": 32173,
+      "worldY": 31795,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Ghoul",
+      "outfitId": 18,
+      "tileX": 33,
+      "tileY": 37,
+      "worldX": 32193,
+      "worldY": 31795,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Ghoul",
+      "outfitId": 18,
+      "tileX": 52,
+      "tileY": 42,
+      "worldX": 32212,
+      "worldY": 31800,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Ghoul",
+      "outfitId": 18,
+      "tileX": 50,
+      "tileY": 44,
+      "worldX": 32210,
+      "worldY": 31802,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Scorpion",
+      "outfitId": 43,
+      "tileX": 12,
+      "tileY": 46,
+      "worldX": 32172,
+      "worldY": 31804,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Scorpion",
+      "outfitId": 43,
+      "tileX": 15,
+      "tileY": 48,
+      "worldX": 32175,
+      "worldY": 31806,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Ghoul",
+      "outfitId": 18,
+      "tileX": 37,
+      "tileY": 49,
+      "worldX": 32197,
+      "worldY": 31807,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Ghoul",
+      "outfitId": 18,
+      "tileX": 40,
+      "tileY": 53,
+      "worldX": 32200,
+      "worldY": 31811,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Scorpion",
+      "outfitId": 43,
+      "tileX": 27,
+      "tileY": 52,
+      "worldX": 32187,
+      "worldY": 31810,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Ghoul",
+      "outfitId": 18,
+      "tileX": 29,
+      "tileY": 54,
+      "worldX": 32189,
+      "worldY": 31812,
+      "worldZ": 9,
+      "radius": 3,
+      "spawntime": 90
+    }
+  ]
+}

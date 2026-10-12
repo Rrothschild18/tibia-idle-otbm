@@ -1,0 +1,177 @@
+{
+  "monsters": {
+    "id": "VENORE-HUNT-0007",
+    "mapId": "VENORE-HUNT-0007",
+    "assetsRoot": "assets/VENORE-HUNT-0007_little-corym-s-cave-sprites/monsters",
+    "mapBoundsRef": {
+      "minX": 32995,
+      "minY": 32140,
+      "maxX": 33026,
+      "maxY": 32167
+    },
+    "monsterDefs": {
+      "28": {
+        "name": "Snake",
+        "outfitId": 28,
+        "atlas": {
+          "image": "assets/outfits/28.png",
+          "json": "assets/outfits/28.json"
+        },
+        "appearance": {
+          "looktype": 28,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [],
+        "corpse": {
+          "itemId": 3998,
+          "stages": [
+            {
+              "durationSeconds": 300,
+              "itemId": 3998
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 3999
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4000
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "28_0",
+          "east": "28_1",
+          "south": "28_2",
+          "west": "28_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "28_4",
+              "28_8",
+              "28_12",
+              "28_16",
+              "28_20",
+              "28_24",
+              "28_28",
+              "28_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "28_5",
+              "28_9",
+              "28_13",
+              "28_17",
+              "28_21",
+              "28_25",
+              "28_29",
+              "28_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "28_6",
+              "28_10",
+              "28_14",
+              "28_18",
+              "28_22",
+              "28_26",
+              "28_30",
+              "28_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "28_7",
+              "28_11",
+              "28_15",
+              "28_19",
+              "28_23",
+              "28_27",
+              "28_31",
+              "28_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      }
+    },
+    "spawns": [
+      {
+        "name": "Snake",
+        "outfitId": 28,
+        "tileX": 12,
+        "tileY": 13,
+        "worldX": 33007,
+        "worldY": 32153,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Snake",
+        "outfitId": 28,
+        "tileX": 13,
+        "tileY": 15,
+        "worldX": 33008,
+        "worldY": 32155,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Snake",
+        "outfitId": 28,
+        "tileX": 19,
+        "tileY": 12,
+        "worldX": 33014,
+        "worldY": 32152,
+        "worldZ": 7,
+        "radius": 3,
+        "spawntime": 90
+      }
+    ]
+  },
+  "loot": {
+    "id": "VENORE-HUNT-0007",
+    "mapId": "VENORE-HUNT-0007",
+    "drops": []
+  },
+  "hunts": {
+    "id": "VENORE-HUNT-0007",
+    "mapId": "VENORE-HUNT-0007",
+    "name": "Emerald Damselflys — Venore Southern Swamp z10",
+    "label": "Emerald Damselflys — Venore Southern Swamp z10",
+    "seed": "0000000000000000000000",
+    "assetsRoot": "assets/VENORE-HUNT-0007_little-corym-s-cave-sprites-v6",
+    "mapUrl": "assets/VENORE-HUNT-0007_little-corym-s-cave-sprites-v6/map.json",
+    "portrait": "/assets/character-default.png",
+    "monsterPreview": {
+      "name": "Snake",
+      "icon": "/assets/outfits/28.png",
+      "atlas": "/assets/outfits/28.json"
+    },
+    "startPosition": [
+      33010,
+      32154
+    ],
+    "city": "VENORE",
+    "_todo": [
+      "revisar startPosition (centro geométrico do mapBoundsRef, pode cair fora de área andável)"
+    ]
+  }
+}

@@ -1,0 +1,905 @@
+{
+  "monsters": {
+    "id": "VENORE-HUNT-0034",
+    "mapId": "VENORE-HUNT-0034",
+    "assetsRoot": "assets/VENORE-HUNT-0034_pits-of-destruction-apocalypse-sprites/monsters",
+    "mapBoundsRef": {
+      "minX": 32858,
+      "minY": 32275,
+      "maxX": 32887,
+      "maxY": 32301
+    },
+    "monsterDefs": {
+      "236": {
+        "name": "Destroyer",
+        "outfitId": 236,
+        "atlas": {
+          "image": "assets/outfits/236.png",
+          "json": "assets/outfits/236.json"
+        },
+        "appearance": {
+          "looktype": 236,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 341,
+            "countMin": 1,
+            "dropChance": 0.925,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 6,
+            "countMin": 1,
+            "dropChance": 0.4,
+            "itemId": 3577,
+            "itemName": "meat",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1385,
+            "itemId": 6499,
+            "itemName": "demonic essence",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.105,
+            "itemId": 3304,
+            "itemName": "crowbar",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 12,
+            "countMin": 1,
+            "dropChance": 0.0835,
+            "itemId": 3449,
+            "itemName": "burst arrow",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0625,
+            "itemId": 3383,
+            "itemName": "dark armor",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.0585,
+            "itemId": 3033,
+            "itemName": "small amethyst",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0535,
+            "itemId": 5944,
+            "itemName": "soul orb",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0485,
+            "itemId": 3456,
+            "itemName": "pick",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0485,
+            "itemId": 10298,
+            "itemName": "metal spike",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.034,
+            "itemId": 3357,
+            "itemName": "plate armor",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 3,
+            "countMin": 1,
+            "dropChance": 0.0225,
+            "itemId": 3035,
+            "itemName": "platinum coin",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0125,
+            "itemId": 3281,
+            "itemName": "giant sword",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.01,
+            "itemId": 239,
+            "itemName": "great health potion",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.008,
+            "itemId": 7427,
+            "itemName": "chaos mace",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.005,
+            "itemId": 3008,
+            "itemName": "crystal necklace",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.004,
+            "itemId": 7419,
+            "itemName": "dreaded cleaver",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.003,
+            "itemId": 3554,
+            "itemName": "steel boots",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0025,
+            "itemId": 6299,
+            "itemName": "death ring",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0007,
+            "itemId": 3062,
+            "itemName": "mind stone",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0001,
+            "itemId": 5741,
+            "itemName": "skull helmet",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 6319,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 6319
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 6320
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 6321
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 6322
+            }
+          ]
+        },
+        "race": "undead",
+        "idle": {
+          "north": "236_0",
+          "east": "236_1",
+          "south": "236_2",
+          "west": "236_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "236_4",
+              "236_8",
+              "236_12",
+              "236_16"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "236_5",
+              "236_9",
+              "236_13",
+              "236_17"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "236_6",
+              "236_10",
+              "236_14",
+              "236_18"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "236_7",
+              "236_11",
+              "236_15",
+              "236_19"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "149": {
+        "name": "Fury",
+        "outfitId": 149,
+        "atlas": {
+          "image": "assets/outfits/149-94-77-78-79-1.png",
+          "json": "assets/outfits/149-94-77-78-79-1.json"
+        },
+        "appearance": {
+          "looktype": 149,
+          "head": 94,
+          "body": 77,
+          "legs": 78,
+          "feet": 79,
+          "addons": 1
+        },
+        "loot": [
+          {
+            "countMax": 100,
+            "countMin": 1,
+            "dropChance": 0.98,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 3,
+            "countMin": 1,
+            "dropChance": 0.35,
+            "itemId": 6558,
+            "itemName": "flask of demonic blood",
+            "rarity": "common"
+          },
+          {
+            "countMax": 4,
+            "countMin": 1,
+            "dropChance": 0.2928,
+            "itemId": 8016,
+            "itemName": "jalapeno pepper",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.225,
+            "itemId": 6499,
+            "itemName": "demonic essence",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.2155,
+            "itemId": 5944,
+            "itemName": "soul orb",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.2,
+            "itemId": 3065,
+            "itemName": "terra rod",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.105,
+            "itemId": 239,
+            "itemName": "great health potion",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.04,
+            "itemId": 5911,
+            "itemName": "red piece of cloth",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 4,
+            "countMin": 1,
+            "dropChance": 0.028,
+            "itemId": 3035,
+            "itemName": "platinum coin",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.02,
+            "itemId": 7456,
+            "itemName": "noble axe",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 4,
+            "countMin": 1,
+            "dropChance": 0.015,
+            "itemId": 5021,
+            "itemName": "orichalcum pearl",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0079,
+            "itemId": 3554,
+            "itemName": "steel boots",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0066,
+            "itemId": 7404,
+            "itemName": "assassin dagger",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0041,
+            "itemId": 3007,
+            "itemName": "crystal ring",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0013,
+            "itemId": 3364,
+            "itemName": "golden legs",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0006,
+            "itemId": 6300,
+            "itemName": "death ring",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 18118,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 18118
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 18119
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 18120
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 18121
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "149_0",
+          "east": "149_1",
+          "south": "149_2",
+          "west": "149_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "149_0",
+              "149_4",
+              "149_8",
+              "149_12",
+              "149_16",
+              "149_20",
+              "149_24",
+              "149_28",
+              "149_32"
+            ],
+            "frameRate": 15,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "149_1",
+              "149_5",
+              "149_9",
+              "149_13",
+              "149_17",
+              "149_21",
+              "149_25",
+              "149_29",
+              "149_33"
+            ],
+            "frameRate": 15,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "149_2",
+              "149_6",
+              "149_10",
+              "149_14",
+              "149_18",
+              "149_22",
+              "149_26",
+              "149_30",
+              "149_34"
+            ],
+            "frameRate": 15,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "149_3",
+              "149_7",
+              "149_11",
+              "149_15",
+              "149_19",
+              "149_23",
+              "149_27",
+              "149_31",
+              "149_35"
+            ],
+            "frameRate": 15,
+            "loopType": "infinite"
+          }
+        }
+      }
+    },
+    "spawns": [
+      {
+        "name": "Destroyer",
+        "outfitId": 236,
+        "tileX": 12,
+        "tileY": 12,
+        "worldX": 32870,
+        "worldY": 32287,
+        "worldZ": 15,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Fury",
+        "outfitId": 149,
+        "tileX": 17,
+        "tileY": 12,
+        "worldX": 32875,
+        "worldY": 32287,
+        "worldZ": 15,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Destroyer",
+        "outfitId": 236,
+        "tileX": 15,
+        "tileY": 14,
+        "worldX": 32873,
+        "worldY": 32289,
+        "worldZ": 15,
+        "radius": 4,
+        "spawntime": 90
+      }
+    ]
+  },
+  "loot": {
+    "id": "VENORE-HUNT-0034",
+    "mapId": "VENORE-HUNT-0034",
+    "drops": [
+      {
+        "countMax": 341,
+        "countMin": 1,
+        "dropChance": 0.925,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Destroyer"
+      },
+      {
+        "countMax": 6,
+        "countMin": 1,
+        "dropChance": 0.4,
+        "itemId": 3577,
+        "itemName": "meat",
+        "rarity": "common",
+        "monsterName": "Destroyer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1385,
+        "itemId": 6499,
+        "itemName": "demonic essence",
+        "rarity": "semi-rare",
+        "monsterName": "Destroyer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.105,
+        "itemId": 3304,
+        "itemName": "crowbar",
+        "rarity": "semi-rare",
+        "monsterName": "Destroyer"
+      },
+      {
+        "countMax": 12,
+        "countMin": 1,
+        "dropChance": 0.0835,
+        "itemId": 3449,
+        "itemName": "burst arrow",
+        "rarity": "semi-rare",
+        "monsterName": "Destroyer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0625,
+        "itemId": 3383,
+        "itemName": "dark armor",
+        "rarity": "semi-rare",
+        "monsterName": "Destroyer"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.0585,
+        "itemId": 3033,
+        "itemName": "small amethyst",
+        "rarity": "semi-rare",
+        "monsterName": "Destroyer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0535,
+        "itemId": 5944,
+        "itemName": "soul orb",
+        "rarity": "semi-rare",
+        "monsterName": "Destroyer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0485,
+        "itemId": 3456,
+        "itemName": "pick",
+        "rarity": "rare",
+        "monsterName": "Destroyer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0485,
+        "itemId": 10298,
+        "itemName": "metal spike",
+        "rarity": "rare",
+        "monsterName": "Destroyer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.034,
+        "itemId": 3357,
+        "itemName": "plate armor",
+        "rarity": "rare",
+        "monsterName": "Destroyer"
+      },
+      {
+        "countMax": 3,
+        "countMin": 1,
+        "dropChance": 0.0225,
+        "itemId": 3035,
+        "itemName": "platinum coin",
+        "rarity": "rare",
+        "monsterName": "Destroyer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0125,
+        "itemId": 3281,
+        "itemName": "giant sword",
+        "rarity": "rare",
+        "monsterName": "Destroyer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.01,
+        "itemId": 239,
+        "itemName": "great health potion",
+        "rarity": "rare",
+        "monsterName": "Destroyer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.008,
+        "itemId": 7427,
+        "itemName": "chaos mace",
+        "rarity": "rare",
+        "monsterName": "Destroyer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.005,
+        "itemId": 3008,
+        "itemName": "crystal necklace",
+        "rarity": "rare",
+        "monsterName": "Destroyer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.004,
+        "itemId": 7419,
+        "itemName": "dreaded cleaver",
+        "rarity": "very-rare",
+        "monsterName": "Destroyer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.003,
+        "itemId": 3554,
+        "itemName": "steel boots",
+        "rarity": "very-rare",
+        "monsterName": "Destroyer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0025,
+        "itemId": 6299,
+        "itemName": "death ring",
+        "rarity": "very-rare",
+        "monsterName": "Destroyer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0007,
+        "itemId": 3062,
+        "itemName": "mind stone",
+        "rarity": "very-rare",
+        "monsterName": "Destroyer"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0001,
+        "itemId": 5741,
+        "itemName": "skull helmet",
+        "rarity": "very-rare",
+        "monsterName": "Destroyer"
+      },
+      {
+        "countMax": 100,
+        "countMin": 1,
+        "dropChance": 0.98,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Fury"
+      },
+      {
+        "countMax": 3,
+        "countMin": 1,
+        "dropChance": 0.35,
+        "itemId": 6558,
+        "itemName": "flask of demonic blood",
+        "rarity": "common",
+        "monsterName": "Fury"
+      },
+      {
+        "countMax": 4,
+        "countMin": 1,
+        "dropChance": 0.2928,
+        "itemId": 8016,
+        "itemName": "jalapeno pepper",
+        "rarity": "common",
+        "monsterName": "Fury"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.225,
+        "itemId": 6499,
+        "itemName": "demonic essence",
+        "rarity": "semi-rare",
+        "monsterName": "Fury"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.2155,
+        "itemId": 5944,
+        "itemName": "soul orb",
+        "rarity": "semi-rare",
+        "monsterName": "Fury"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.2,
+        "itemId": 3065,
+        "itemName": "terra rod",
+        "rarity": "semi-rare",
+        "monsterName": "Fury"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.105,
+        "itemId": 239,
+        "itemName": "great health potion",
+        "rarity": "semi-rare",
+        "monsterName": "Fury"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.04,
+        "itemId": 5911,
+        "itemName": "red piece of cloth",
+        "rarity": "rare",
+        "monsterName": "Fury"
+      },
+      {
+        "countMax": 4,
+        "countMin": 1,
+        "dropChance": 0.028,
+        "itemId": 3035,
+        "itemName": "platinum coin",
+        "rarity": "rare",
+        "monsterName": "Fury"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.02,
+        "itemId": 7456,
+        "itemName": "noble axe",
+        "rarity": "rare",
+        "monsterName": "Fury"
+      },
+      {
+        "countMax": 4,
+        "countMin": 1,
+        "dropChance": 0.015,
+        "itemId": 5021,
+        "itemName": "orichalcum pearl",
+        "rarity": "rare",
+        "monsterName": "Fury"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0079,
+        "itemId": 3554,
+        "itemName": "steel boots",
+        "rarity": "rare",
+        "monsterName": "Fury"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0066,
+        "itemId": 7404,
+        "itemName": "assassin dagger",
+        "rarity": "rare",
+        "monsterName": "Fury"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0041,
+        "itemId": 3007,
+        "itemName": "crystal ring",
+        "rarity": "very-rare",
+        "monsterName": "Fury"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0013,
+        "itemId": 3364,
+        "itemName": "golden legs",
+        "rarity": "very-rare",
+        "monsterName": "Fury"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0006,
+        "itemId": 6300,
+        "itemName": "death ring",
+        "rarity": "very-rare",
+        "monsterName": "Fury"
+      }
+    ]
+  },
+  "hunts": {
+    "id": "VENORE-HUNT-0034",
+    "mapId": "VENORE-HUNT-0034",
+    "name": "Pits Of Destruction Apocalypse",
+    "label": "Pits Of Destruction Apocalypse",
+    "seed": "0000000000000000000000",
+    "assetsRoot": "assets/VENORE-HUNT-0034_pits-of-destruction-apocalypse-sprites-v6",
+    "mapUrl": "assets/VENORE-HUNT-0034_pits-of-destruction-apocalypse-sprites-v6/map.json",
+    "portrait": "/assets/character-default.png",
+    "monsterPreview": {
+      "name": "Destroyer",
+      "icon": "/assets/outfits/236.png",
+      "atlas": "/assets/outfits/236.json"
+    },
+    "startPosition": [
+      32872,
+      32288
+    ],
+    "city": "VENORE",
+    "_todo": [
+      "confirmar name/label (título gerado automaticamente do nome da pasta)",
+      "revisar startPosition (centro geométrico do mapBoundsRef, pode cair fora de área andável)"
+    ]
+  }
+}

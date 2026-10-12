@@ -1,0 +1,525 @@
+{
+  "monsters": {
+    "id": "KAZORDOON-HUNT-0004",
+    "mapId": "KAZORDOON-HUNT-0004",
+    "assetsRoot": "assets/KAZORDOON-HUNT-0004_dwarf-guards-kazordoon-surroundings-z12-sprites/monsters",
+    "mapBoundsRef": {
+      "minX": 32453,
+      "minY": 31866,
+      "maxX": 32506,
+      "maxY": 31916
+    },
+    "monsterDefs": {
+      "70": {
+        "name": "Dwarf Guard",
+        "outfitId": 70,
+        "atlas": {
+          "image": "assets/outfits/70.png",
+          "json": "assets/outfits/70.json"
+        },
+        "appearance": {
+          "looktype": 70,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.55,
+            "itemId": 3723,
+            "itemName": "white mushroom",
+            "rarity": "common"
+          },
+          {
+            "countMax": 30,
+            "countMin": 1,
+            "dropChance": 0.4,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.4,
+            "itemId": 3552,
+            "itemName": "leather boots",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.092,
+            "itemId": 3377,
+            "itemName": "scale armor",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.06,
+            "itemId": 3413,
+            "itemName": "battle shield",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.04,
+            "itemId": 3305,
+            "itemName": "battle hammer",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.016,
+            "itemId": 3351,
+            "itemName": "steel helmet",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.006,
+            "itemId": 3275,
+            "itemName": "double axe",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0051,
+            "itemId": 5880,
+            "itemName": "iron ore",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0038,
+            "itemId": 266,
+            "itemName": "health potion",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0028,
+            "itemId": 12600,
+            "itemName": "coal",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0019,
+            "itemId": 3092,
+            "itemName": "axe ring",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0014,
+            "itemId": 3033,
+            "itemName": "small amethyst",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 6013,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 6013
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4164
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4165
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4143
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "70_0",
+          "east": "70_1",
+          "south": "70_2",
+          "west": "70_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "70_4",
+              "70_8",
+              "70_12",
+              "70_16",
+              "70_20",
+              "70_24",
+              "70_28",
+              "70_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "70_5",
+              "70_9",
+              "70_13",
+              "70_17",
+              "70_21",
+              "70_25",
+              "70_29",
+              "70_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "70_6",
+              "70_10",
+              "70_14",
+              "70_18",
+              "70_22",
+              "70_26",
+              "70_30",
+              "70_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "70_7",
+              "70_11",
+              "70_15",
+              "70_19",
+              "70_23",
+              "70_27",
+              "70_31",
+              "70_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      }
+    },
+    "spawns": [
+      {
+        "name": "Dwarf Guard",
+        "outfitId": 70,
+        "tileX": 19,
+        "tileY": 12,
+        "worldX": 32472,
+        "worldY": 31878,
+        "worldZ": 12,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Dwarf Guard",
+        "outfitId": 70,
+        "tileX": 36,
+        "tileY": 14,
+        "worldX": 32489,
+        "worldY": 31880,
+        "worldZ": 12,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Dwarf Guard",
+        "outfitId": 70,
+        "tileX": 37,
+        "tileY": 18,
+        "worldX": 32490,
+        "worldY": 31884,
+        "worldZ": 12,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Dwarf Guard",
+        "outfitId": 70,
+        "tileX": 12,
+        "tileY": 21,
+        "worldX": 32465,
+        "worldY": 31887,
+        "worldZ": 12,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Dwarf Guard",
+        "outfitId": 70,
+        "tileX": 18,
+        "tileY": 20,
+        "worldX": 32471,
+        "worldY": 31886,
+        "worldZ": 12,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Dwarf Guard",
+        "outfitId": 70,
+        "tileX": 21,
+        "tileY": 19,
+        "worldX": 32474,
+        "worldY": 31885,
+        "worldZ": 12,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Dwarf Guard",
+        "outfitId": 70,
+        "tileX": 13,
+        "tileY": 26,
+        "worldX": 32466,
+        "worldY": 31892,
+        "worldZ": 12,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Dwarf Guard",
+        "outfitId": 70,
+        "tileX": 22,
+        "tileY": 32,
+        "worldX": 32475,
+        "worldY": 31898,
+        "worldZ": 12,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Dwarf Guard",
+        "outfitId": 70,
+        "tileX": 23,
+        "tileY": 32,
+        "worldX": 32476,
+        "worldY": 31898,
+        "worldZ": 12,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Dwarf Guard",
+        "outfitId": 70,
+        "tileX": 28,
+        "tileY": 32,
+        "worldX": 32481,
+        "worldY": 31898,
+        "worldZ": 12,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Dwarf Guard",
+        "outfitId": 70,
+        "tileX": 41,
+        "tileY": 28,
+        "worldX": 32494,
+        "worldY": 31894,
+        "worldZ": 12,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Dwarf Guard",
+        "outfitId": 70,
+        "tileX": 26,
+        "tileY": 38,
+        "worldX": 32479,
+        "worldY": 31904,
+        "worldZ": 12,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Dwarf Guard",
+        "outfitId": 70,
+        "tileX": 30,
+        "tileY": 33,
+        "worldX": 32483,
+        "worldY": 31899,
+        "worldZ": 12,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Dwarf Guard",
+        "outfitId": 70,
+        "tileX": 31,
+        "tileY": 36,
+        "worldX": 32484,
+        "worldY": 31902,
+        "worldZ": 12,
+        "radius": 3,
+        "spawntime": 90
+      }
+    ]
+  },
+  "loot": {
+    "id": "KAZORDOON-HUNT-0004",
+    "mapId": "KAZORDOON-HUNT-0004",
+    "drops": [
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.55,
+        "itemId": 3723,
+        "itemName": "white mushroom",
+        "rarity": "common",
+        "monsterName": "Dwarf Guard"
+      },
+      {
+        "countMax": 30,
+        "countMin": 1,
+        "dropChance": 0.4,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Dwarf Guard"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.4,
+        "itemId": 3552,
+        "itemName": "leather boots",
+        "rarity": "common",
+        "monsterName": "Dwarf Guard"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.092,
+        "itemId": 3377,
+        "itemName": "scale armor",
+        "rarity": "semi-rare",
+        "monsterName": "Dwarf Guard"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.06,
+        "itemId": 3413,
+        "itemName": "battle shield",
+        "rarity": "semi-rare",
+        "monsterName": "Dwarf Guard"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.04,
+        "itemId": 3305,
+        "itemName": "battle hammer",
+        "rarity": "rare",
+        "monsterName": "Dwarf Guard"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.016,
+        "itemId": 3351,
+        "itemName": "steel helmet",
+        "rarity": "rare",
+        "monsterName": "Dwarf Guard"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.006,
+        "itemId": 3275,
+        "itemName": "double axe",
+        "rarity": "rare",
+        "monsterName": "Dwarf Guard"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0051,
+        "itemId": 5880,
+        "itemName": "iron ore",
+        "rarity": "rare",
+        "monsterName": "Dwarf Guard"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0038,
+        "itemId": 266,
+        "itemName": "health potion",
+        "rarity": "very-rare",
+        "monsterName": "Dwarf Guard"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0028,
+        "itemId": 12600,
+        "itemName": "coal",
+        "rarity": "very-rare",
+        "monsterName": "Dwarf Guard"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0019,
+        "itemId": 3092,
+        "itemName": "axe ring",
+        "rarity": "very-rare",
+        "monsterName": "Dwarf Guard"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0014,
+        "itemId": 3033,
+        "itemName": "small amethyst",
+        "rarity": "very-rare",
+        "monsterName": "Dwarf Guard"
+      }
+    ]
+  },
+  "hunts": {
+    "id": "KAZORDOON-HUNT-0004",
+    "mapId": "KAZORDOON-HUNT-0004",
+    "name": "Dwarf Soldiers — Kazordoon Surroundings z11",
+    "label": "Dwarf Soldiers — Kazordoon Surroundings z11",
+    "seed": "0000000000000000000000",
+    "assetsRoot": "assets/KAZORDOON-HUNT-0004_dwarf-guards-kazordoon-surroundings-z12-sprites-v6",
+    "mapUrl": "assets/KAZORDOON-HUNT-0004_dwarf-guards-kazordoon-surroundings-z12-sprites-v6/map.json",
+    "portrait": "/assets/character-default.png",
+    "monsterPreview": {
+      "name": "Dwarf Guard",
+      "icon": "/assets/outfits/70.png",
+      "atlas": "/assets/outfits/70.json"
+    },
+    "startPosition": [
+      32480,
+      31891
+    ],
+    "city": "KAZORDOON",
+    "_todo": [
+      "revisar startPosition (centro geométrico do mapBoundsRef, pode cair fora de área andável)"
+    ]
+  }
+}

@@ -1,0 +1,1653 @@
+{
+  "mapBoundsRef": {
+    "minX": 32748,
+    "minY": 32215,
+    "maxX": 32801,
+    "maxY": 32260
+  },
+  "monsterDefs": {
+    "232": {
+      "name": "Lost Soul",
+      "outfitId": 232,
+      "atlas": {
+        "image": "assets/outfits/232.png",
+        "json": "assets/outfits/232.json"
+      },
+      "appearance": {
+        "looktype": 232,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 198,
+          "countMin": 1,
+          "dropChance": 1.0,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "always"
+        },
+        {
+          "countMax": 7,
+          "countMin": 1,
+          "dropChance": 1.0,
+          "itemId": 3035,
+          "itemName": "platinum coin",
+          "rarity": "always"
+        },
+        {
+          "countMax": 3,
+          "countMin": 1,
+          "dropChance": 0.3525,
+          "itemId": 3147,
+          "itemName": "blank rune",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.3301,
+          "itemId": 10316,
+          "itemName": "unholy bone",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.15,
+          "itemId": 3039,
+          "itemName": "red gem",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.15,
+          "itemId": 5944,
+          "itemName": "soul orb",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.142,
+          "itemId": 238,
+          "itemName": "great mana potion",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 3,
+          "countMin": 1,
+          "dropChance": 0.12,
+          "itemId": 3027,
+          "itemName": "black pearl",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 3,
+          "countMin": 1,
+          "dropChance": 0.1,
+          "itemId": 3026,
+          "itemName": "white pearl",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.088,
+          "itemId": 239,
+          "itemName": "great health potion",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.075,
+          "itemId": 6499,
+          "itemName": "demonic essence",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0495,
+          "itemId": 5806,
+          "itemName": "silver goblet",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.035,
+          "itemId": 8896,
+          "itemName": "slightly rusted armor",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0278,
+          "itemId": 3081,
+          "itemName": "stone skin amulet",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0217,
+          "itemId": 6299,
+          "itemName": "death ring",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.015,
+          "itemId": 3016,
+          "itemName": "ruby necklace",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0125,
+          "itemId": 6525,
+          "itemName": "skeleton decoration",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.01,
+          "itemId": 7413,
+          "itemName": "titan axe",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0085,
+          "itemId": 3324,
+          "itemName": "skull staff",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0074,
+          "itemId": 3428,
+          "itemName": "tower shield",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0074,
+          "itemId": 7407,
+          "itemName": "haunted blade",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0017,
+          "itemId": 5741,
+          "itemName": "skull helmet",
+          "rarity": "very-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 6309,
+        "stages": [
+          {
+            "durationSeconds": 300,
+            "itemId": 6309
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 6318
+          }
+        ]
+      },
+      "race": "undead",
+      "idle": {
+        "north": "232_0",
+        "east": "232_1",
+        "south": "232_2",
+        "west": "232_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "232_4",
+            "232_8",
+            "232_12",
+            "232_16",
+            "232_20",
+            "232_24",
+            "232_28",
+            "232_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "232_5",
+            "232_9",
+            "232_13",
+            "232_17",
+            "232_21",
+            "232_25",
+            "232_29",
+            "232_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "232_6",
+            "232_10",
+            "232_14",
+            "232_18",
+            "232_22",
+            "232_26",
+            "232_30",
+            "232_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "232_7",
+            "232_11",
+            "232_15",
+            "232_19",
+            "232_23",
+            "232_27",
+            "232_31",
+            "232_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "234": {
+      "name": "Dark Torturer",
+      "outfitId": 234,
+      "atlas": {
+        "image": "assets/outfits/234.png",
+        "json": "assets/outfits/234.json"
+      },
+      "appearance": {
+        "looktype": 234,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 100,
+          "countMin": 1,
+          "dropChance": 0.9,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.6,
+          "itemId": 3582,
+          "itemName": "ham",
+          "rarity": "common"
+        },
+        {
+          "countMax": 8,
+          "countMin": 1,
+          "dropChance": 0.55,
+          "itemId": 3035,
+          "itemName": "platinum coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 3,
+          "countMin": 1,
+          "dropChance": 0.33333,
+          "itemId": 6558,
+          "itemName": "flask of demonic blood",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.23,
+          "itemId": 5944,
+          "itemName": "soul orb",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.1483,
+          "itemId": 238,
+          "itemName": "great mana potion",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.1,
+          "itemId": 239,
+          "itemName": "great health potion",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0852,
+          "itemId": 6499,
+          "itemName": "demonic essence",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0525,
+          "itemId": 3461,
+          "itemName": "saw",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0505,
+          "itemId": 3554,
+          "itemName": "steel boots",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0314,
+          "itemId": 9058,
+          "itemName": "gold ingot",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.0276,
+          "itemId": 5021,
+          "itemName": "orichalcum pearl",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.02222,
+          "itemId": 5479,
+          "itemName": "cat's paw",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 5,
+          "countMin": 1,
+          "dropChance": 0.02222,
+          "itemId": 7368,
+          "itemName": "assassin star",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.02008,
+          "itemId": 6299,
+          "itemName": "death ring",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.01192,
+          "itemId": 5801,
+          "itemName": "jewelled backpack",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0085,
+          "itemId": 7412,
+          "itemName": "butcher's axe",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0048,
+          "itemId": 7388,
+          "itemName": "vile axe",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0003,
+          "itemId": 3364,
+          "itemName": "golden legs",
+          "rarity": "very-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 6327,
+        "stages": [
+          {
+            "durationSeconds": 300,
+            "itemId": 6327
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 6328
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 6329
+          }
+        ]
+      },
+      "race": "undead",
+      "idle": {
+        "north": "234_0",
+        "east": "234_1",
+        "south": "234_2",
+        "west": "234_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "234_4",
+            "234_8"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "234_5",
+            "234_9"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "234_6",
+            "234_10"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "234_7",
+            "234_11"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "78": {
+      "name": "Banshee",
+      "outfitId": 78,
+      "atlas": {
+        "image": "assets/outfits/78.png",
+        "json": "assets/outfits/78.json"
+      },
+      "appearance": {
+        "looktype": 78,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.7,
+          "itemId": 2917,
+          "itemName": "candlestick",
+          "rarity": "common"
+        },
+        {
+          "countMax": 80,
+          "countMin": 1,
+          "dropChance": 0.3,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.087,
+          "itemId": 3054,
+          "itemName": "silver amulet",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0605,
+          "itemId": 3568,
+          "itemName": "simple dress",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0481,
+          "itemId": 11446,
+          "itemName": "hair of a banshee",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0415,
+          "itemId": 10420,
+          "itemName": "petrified scream",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0203,
+          "itemId": 3027,
+          "itemName": "black pearl",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0135,
+          "itemId": 3299,
+          "itemName": "poison dagger",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0125,
+          "itemId": 3017,
+          "itemName": "silver brooch",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0101,
+          "itemId": 3026,
+          "itemName": "white pearl",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0091,
+          "itemId": 2949,
+          "itemName": "lyre",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0082,
+          "itemId": 3081,
+          "itemName": "stone skin amulet",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0073,
+          "itemId": 3098,
+          "itemName": "ring of healing",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.007,
+          "itemId": 3567,
+          "itemName": "blue robe",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0068,
+          "itemId": 237,
+          "itemName": "strong mana potion",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0052,
+          "itemId": 3059,
+          "itemName": "spellbook",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0046,
+          "itemId": 3004,
+          "itemName": "wedding ring",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0034,
+          "itemId": 811,
+          "itemName": "terra mantle",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0015,
+          "itemId": 3566,
+          "itemName": "red robe",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0007,
+          "itemId": 3061,
+          "itemName": "life crystal",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0006,
+          "itemId": 3007,
+          "itemName": "crystal ring",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0004,
+          "itemId": 12320,
+          "itemName": "sweet smelling bait",
+          "rarity": "very-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 6019,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 6019
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4179
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4180
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4181
+          }
+        ]
+      },
+      "race": "undead",
+      "idle": {
+        "north": "78_0",
+        "east": "78_1",
+        "south": "78_2",
+        "west": "78_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "78_4",
+            "78_8"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "78_5",
+            "78_9"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "78_6",
+            "78_10"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "78_7",
+            "78_11"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "35": {
+      "name": "Demon",
+      "outfitId": 35,
+      "atlas": {
+        "image": "assets/outfits/35.png",
+        "json": "assets/outfits/35.json"
+      },
+      "appearance": {
+        "looktype": 35,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 100,
+          "countMin": 1,
+          "dropChance": 1.0,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "always"
+        },
+        {
+          "countMax": 8,
+          "countMin": 1,
+          "dropChance": 0.9054,
+          "itemId": 3035,
+          "itemName": "platinum coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 3,
+          "countMin": 1,
+          "dropChance": 0.2222,
+          "itemId": 238,
+          "itemName": "great mana potion",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 6,
+          "countMin": 1,
+          "dropChance": 0.1966,
+          "itemId": 3731,
+          "itemName": "fire mushroom",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 3,
+          "countMin": 1,
+          "dropChance": 0.1954,
+          "itemId": 7643,
+          "itemName": "ultimate health potion",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 3,
+          "countMin": 1,
+          "dropChance": 0.1851,
+          "itemId": 7642,
+          "itemName": "great spirit potion",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.1492,
+          "itemId": 5954,
+          "itemName": "demon horn",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.1463,
+          "itemId": 6499,
+          "itemName": "demonic essence",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 10,
+          "countMin": 1,
+          "dropChance": 0.1255,
+          "itemId": 7368,
+          "itemName": "assassin star",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 5,
+          "countMin": 1,
+          "dropChance": 0.0969,
+          "itemId": 3032,
+          "itemName": "small emerald",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 5,
+          "countMin": 1,
+          "dropChance": 0.0747,
+          "itemId": 9057,
+          "itemName": "small topaz",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 5,
+          "countMin": 1,
+          "dropChance": 0.0743,
+          "itemId": 3030,
+          "itemName": "small ruby",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 5,
+          "countMin": 1,
+          "dropChance": 0.0725,
+          "itemId": 3033,
+          "itemName": "small amethyst",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0403,
+          "itemId": 3320,
+          "itemName": "fire axe",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0343,
+          "itemId": 3034,
+          "itemName": "talon",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.02854,
+          "itemId": 3060,
+          "itemName": "orb",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0222,
+          "itemId": 3039,
+          "itemName": "red gem",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0217,
+          "itemId": 3049,
+          "itemName": "stealth ring",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0199,
+          "itemId": 3098,
+          "itemName": "ring of healing",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0198,
+          "itemId": 3281,
+          "itemName": "giant sword",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0189,
+          "itemId": 3048,
+          "itemName": "might ring",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0155,
+          "itemId": 3284,
+          "itemName": "ice rapier",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0144,
+          "itemId": 3306,
+          "itemName": "golden sickle",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0118,
+          "itemId": 2848,
+          "itemName": "purple tome",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0118,
+          "itemId": 3356,
+          "itemName": "devil helmet",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0105,
+          "itemId": 3063,
+          "itemName": "gold ring",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0074,
+          "itemId": 3420,
+          "itemName": "demon shield",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0068,
+          "itemId": 3055,
+          "itemName": "platinum amulet",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0048,
+          "itemId": 3414,
+          "itemName": "mastermind shield",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0044,
+          "itemId": 3364,
+          "itemName": "golden legs",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0013,
+          "itemId": 3366,
+          "itemName": "magic plate armor",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0009,
+          "itemId": 7393,
+          "itemName": "demon trophy",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0007,
+          "itemId": 7382,
+          "itemName": "demonrage sword",
+          "rarity": "very-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 5995,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5995
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4097
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4098
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4099
+          }
+        ]
+      },
+      "race": "fire",
+      "idle": {
+        "north": "35_0",
+        "east": "35_1",
+        "south": "35_2",
+        "west": "35_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "35_4",
+            "35_8",
+            "35_12",
+            "35_16",
+            "35_20",
+            "35_24",
+            "35_28",
+            "35_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "35_5",
+            "35_9",
+            "35_13",
+            "35_17",
+            "35_21",
+            "35_25",
+            "35_29",
+            "35_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "35_6",
+            "35_10",
+            "35_14",
+            "35_18",
+            "35_22",
+            "35_26",
+            "35_30",
+            "35_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "35_7",
+            "35_11",
+            "35_15",
+            "35_19",
+            "35_23",
+            "35_27",
+            "35_31",
+            "35_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    }
+  },
+  "spawns": [
+    {
+      "name": "Lost Soul",
+      "outfitId": 232,
+      "tileX": 29,
+      "tileY": 11,
+      "worldX": 32777,
+      "worldY": 32226,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Lost Soul",
+      "outfitId": 232,
+      "tileX": 23,
+      "tileY": 13,
+      "worldX": 32771,
+      "worldY": 32228,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 200
+    },
+    {
+      "name": "Dark Torturer",
+      "outfitId": 234,
+      "tileX": 29,
+      "tileY": 13,
+      "worldX": 32777,
+      "worldY": 32228,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Banshee",
+      "outfitId": 78,
+      "tileX": 27,
+      "tileY": 15,
+      "worldX": 32775,
+      "worldY": 32230,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Dark Torturer",
+      "outfitId": 234,
+      "tileX": 20,
+      "tileY": 16,
+      "worldX": 32768,
+      "worldY": 32231,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 200
+    },
+    {
+      "name": "Dark Torturer",
+      "outfitId": 234,
+      "tileX": 25,
+      "tileY": 17,
+      "worldX": 32773,
+      "worldY": 32232,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 200
+    },
+    {
+      "name": "Lost Soul",
+      "outfitId": 232,
+      "tileX": 19,
+      "tileY": 18,
+      "worldX": 32767,
+      "worldY": 32233,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 200
+    },
+    {
+      "name": "Banshee",
+      "outfitId": 78,
+      "tileX": 20,
+      "tileY": 20,
+      "worldX": 32768,
+      "worldY": 32235,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Lost Soul",
+      "outfitId": 232,
+      "tileX": 26,
+      "tileY": 20,
+      "worldX": 32774,
+      "worldY": 32235,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Lost Soul",
+      "outfitId": 232,
+      "tileX": 23,
+      "tileY": 22,
+      "worldX": 32771,
+      "worldY": 32237,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 200
+    },
+    {
+      "name": "Lost Soul",
+      "outfitId": 232,
+      "tileX": 36,
+      "tileY": 12,
+      "worldX": 32784,
+      "worldY": 32227,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Dark Torturer",
+      "outfitId": 234,
+      "tileX": 39,
+      "tileY": 12,
+      "worldX": 32787,
+      "worldY": 32227,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Dark Torturer",
+      "outfitId": 234,
+      "tileX": 33,
+      "tileY": 14,
+      "worldX": 32781,
+      "worldY": 32229,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Lost Soul",
+      "outfitId": 232,
+      "tileX": 34,
+      "tileY": 15,
+      "worldX": 32782,
+      "worldY": 32230,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Dark Torturer",
+      "outfitId": 234,
+      "tileX": 37,
+      "tileY": 15,
+      "worldX": 32785,
+      "worldY": 32230,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Dark Torturer",
+      "outfitId": 234,
+      "tileX": 40,
+      "tileY": 15,
+      "worldX": 32788,
+      "worldY": 32230,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Dark Torturer",
+      "outfitId": 234,
+      "tileX": 40,
+      "tileY": 17,
+      "worldX": 32788,
+      "worldY": 32232,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Lost Soul",
+      "outfitId": 232,
+      "tileX": 33,
+      "tileY": 18,
+      "worldX": 32781,
+      "worldY": 32233,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Banshee",
+      "outfitId": 78,
+      "tileX": 39,
+      "tileY": 18,
+      "worldX": 32787,
+      "worldY": 32233,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Lost Soul",
+      "outfitId": 232,
+      "tileX": 36,
+      "tileY": 19,
+      "worldX": 32784,
+      "worldY": 32234,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Lost Soul",
+      "outfitId": 232,
+      "tileX": 39,
+      "tileY": 20,
+      "worldX": 32787,
+      "worldY": 32235,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Lost Soul",
+      "outfitId": 232,
+      "tileX": 34,
+      "tileY": 22,
+      "worldX": 32782,
+      "worldY": 32237,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Demon",
+      "outfitId": 35,
+      "tileX": 14,
+      "tileY": 27,
+      "worldX": 32762,
+      "worldY": 32242,
+      "worldZ": 15,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Dark Torturer",
+      "outfitId": 234,
+      "tileX": 11,
+      "tileY": 29,
+      "worldX": 32759,
+      "worldY": 32244,
+      "worldZ": 15,
+      "radius": 2,
+      "spawntime": 200
+    },
+    {
+      "name": "Lost Soul",
+      "outfitId": 232,
+      "tileX": 27,
+      "tileY": 24,
+      "worldX": 32775,
+      "worldY": 32239,
+      "worldZ": 15,
+      "radius": 4,
+      "spawntime": 90
+    },
+    {
+      "name": "Dark Torturer",
+      "outfitId": 234,
+      "tileX": 29,
+      "tileY": 26,
+      "worldX": 32777,
+      "worldY": 32241,
+      "worldZ": 15,
+      "radius": 4,
+      "spawntime": 90
+    },
+    {
+      "name": "Dark Torturer",
+      "outfitId": 234,
+      "tileX": 25,
+      "tileY": 28,
+      "worldX": 32773,
+      "worldY": 32243,
+      "worldZ": 15,
+      "radius": 4,
+      "spawntime": 200
+    },
+    {
+      "name": "Lost Soul",
+      "outfitId": 232,
+      "tileX": 29,
+      "tileY": 28,
+      "worldX": 32777,
+      "worldY": 32243,
+      "worldZ": 15,
+      "radius": 4,
+      "spawntime": 90
+    },
+    {
+      "name": "Lost Soul",
+      "outfitId": 232,
+      "tileX": 24,
+      "tileY": 31,
+      "worldX": 32772,
+      "worldY": 32246,
+      "worldZ": 15,
+      "radius": 4,
+      "spawntime": 200
+    },
+    {
+      "name": "Lost Soul",
+      "outfitId": 232,
+      "tileX": 27,
+      "tileY": 31,
+      "worldX": 32775,
+      "worldY": 32246,
+      "worldZ": 15,
+      "radius": 4,
+      "spawntime": 90
+    },
+    {
+      "name": "Dark Torturer",
+      "outfitId": 234,
+      "tileX": 34,
+      "tileY": 26,
+      "worldX": 32782,
+      "worldY": 32241,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Lost Soul",
+      "outfitId": 232,
+      "tileX": 37,
+      "tileY": 26,
+      "worldX": 32785,
+      "worldY": 32241,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Demon",
+      "outfitId": 35,
+      "tileX": 36,
+      "tileY": 28,
+      "worldX": 32784,
+      "worldY": 32243,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Lost Soul",
+      "outfitId": 232,
+      "tileX": 39,
+      "tileY": 28,
+      "worldX": 32787,
+      "worldY": 32243,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Demon",
+      "outfitId": 35,
+      "tileX": 41,
+      "tileY": 29,
+      "worldX": 32789,
+      "worldY": 32244,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Banshee",
+      "outfitId": 78,
+      "tileX": 33,
+      "tileY": 30,
+      "worldX": 32781,
+      "worldY": 32245,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Banshee",
+      "outfitId": 78,
+      "tileX": 37,
+      "tileY": 30,
+      "worldX": 32785,
+      "worldY": 32245,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Dark Torturer",
+      "outfitId": 234,
+      "tileX": 39,
+      "tileY": 30,
+      "worldX": 32787,
+      "worldY": 32245,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Lost Soul",
+      "outfitId": 232,
+      "tileX": 41,
+      "tileY": 31,
+      "worldX": 32789,
+      "worldY": 32246,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Demon",
+      "outfitId": 35,
+      "tileX": 39,
+      "tileY": 32,
+      "worldX": 32787,
+      "worldY": 32247,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Banshee",
+      "outfitId": 78,
+      "tileX": 35,
+      "tileY": 33,
+      "worldX": 32783,
+      "worldY": 32248,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Dark Torturer",
+      "outfitId": 234,
+      "tileX": 37,
+      "tileY": 33,
+      "worldX": 32785,
+      "worldY": 32248,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Lost Soul",
+      "outfitId": 232,
+      "tileX": 36,
+      "tileY": 35,
+      "worldX": 32784,
+      "worldY": 32250,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Lost Soul",
+      "outfitId": 232,
+      "tileX": 19,
+      "tileY": 34,
+      "worldX": 32767,
+      "worldY": 32249,
+      "worldZ": 15,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Dark Torturer",
+      "outfitId": 234,
+      "tileX": 22,
+      "tileY": 35,
+      "worldX": 32770,
+      "worldY": 32250,
+      "worldZ": 15,
+      "radius": 2,
+      "spawntime": 200
+    },
+    {
+      "name": "Dark Torturer",
+      "outfitId": 234,
+      "tileX": 26,
+      "tileY": 36,
+      "worldX": 32774,
+      "worldY": 32251,
+      "worldZ": 15,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Dark Torturer",
+      "outfitId": 234,
+      "tileX": 30,
+      "tileY": 36,
+      "worldX": 32778,
+      "worldY": 32251,
+      "worldZ": 15,
+      "radius": 2,
+      "spawntime": 90
+    }
+  ]
+}

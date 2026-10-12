@@ -1,0 +1,3647 @@
+{
+  "mapBoundsRef": {
+    "minX": 32768,
+    "minY": 32265,
+    "maxX": 32868,
+    "maxY": 32365
+  },
+  "monsterDefs": {
+    "35": {
+      "name": "Demon",
+      "outfitId": 35,
+      "atlas": {
+        "image": "assets/outfits/35.png",
+        "json": "assets/outfits/35.json"
+      },
+      "appearance": {
+        "looktype": 35,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 100,
+          "countMin": 1,
+          "dropChance": 1.0,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "always"
+        },
+        {
+          "countMax": 8,
+          "countMin": 1,
+          "dropChance": 0.9054,
+          "itemId": 3035,
+          "itemName": "platinum coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 3,
+          "countMin": 1,
+          "dropChance": 0.2222,
+          "itemId": 238,
+          "itemName": "great mana potion",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 6,
+          "countMin": 1,
+          "dropChance": 0.1966,
+          "itemId": 3731,
+          "itemName": "fire mushroom",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 3,
+          "countMin": 1,
+          "dropChance": 0.1954,
+          "itemId": 7643,
+          "itemName": "ultimate health potion",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 3,
+          "countMin": 1,
+          "dropChance": 0.1851,
+          "itemId": 7642,
+          "itemName": "great spirit potion",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.1492,
+          "itemId": 5954,
+          "itemName": "demon horn",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.1463,
+          "itemId": 6499,
+          "itemName": "demonic essence",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 10,
+          "countMin": 1,
+          "dropChance": 0.1255,
+          "itemId": 7368,
+          "itemName": "assassin star",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 5,
+          "countMin": 1,
+          "dropChance": 0.0969,
+          "itemId": 3032,
+          "itemName": "small emerald",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 5,
+          "countMin": 1,
+          "dropChance": 0.0747,
+          "itemId": 9057,
+          "itemName": "small topaz",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 5,
+          "countMin": 1,
+          "dropChance": 0.0743,
+          "itemId": 3030,
+          "itemName": "small ruby",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 5,
+          "countMin": 1,
+          "dropChance": 0.0725,
+          "itemId": 3033,
+          "itemName": "small amethyst",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0403,
+          "itemId": 3320,
+          "itemName": "fire axe",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0343,
+          "itemId": 3034,
+          "itemName": "talon",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.02854,
+          "itemId": 3060,
+          "itemName": "orb",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0222,
+          "itemId": 3039,
+          "itemName": "red gem",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0217,
+          "itemId": 3049,
+          "itemName": "stealth ring",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0199,
+          "itemId": 3098,
+          "itemName": "ring of healing",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0198,
+          "itemId": 3281,
+          "itemName": "giant sword",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0189,
+          "itemId": 3048,
+          "itemName": "might ring",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0155,
+          "itemId": 3284,
+          "itemName": "ice rapier",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0144,
+          "itemId": 3306,
+          "itemName": "golden sickle",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0118,
+          "itemId": 2848,
+          "itemName": "purple tome",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0118,
+          "itemId": 3356,
+          "itemName": "devil helmet",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0105,
+          "itemId": 3063,
+          "itemName": "gold ring",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0074,
+          "itemId": 3420,
+          "itemName": "demon shield",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0068,
+          "itemId": 3055,
+          "itemName": "platinum amulet",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0048,
+          "itemId": 3414,
+          "itemName": "mastermind shield",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0044,
+          "itemId": 3364,
+          "itemName": "golden legs",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0013,
+          "itemId": 3366,
+          "itemName": "magic plate armor",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0009,
+          "itemId": 7393,
+          "itemName": "demon trophy",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0007,
+          "itemId": 7382,
+          "itemName": "demonrage sword",
+          "rarity": "very-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 5995,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5995
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4097
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4098
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4099
+          }
+        ]
+      },
+      "race": "fire",
+      "idle": {
+        "north": "35_0",
+        "east": "35_1",
+        "south": "35_2",
+        "west": "35_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "35_4",
+            "35_8",
+            "35_12",
+            "35_16",
+            "35_20",
+            "35_24",
+            "35_28",
+            "35_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "35_5",
+            "35_9",
+            "35_13",
+            "35_17",
+            "35_21",
+            "35_25",
+            "35_29",
+            "35_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "35_6",
+            "35_10",
+            "35_14",
+            "35_18",
+            "35_22",
+            "35_26",
+            "35_30",
+            "35_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "35_7",
+            "35_11",
+            "35_15",
+            "35_19",
+            "35_23",
+            "35_27",
+            "35_31",
+            "35_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "230": {
+      "name": "Hand of Cursed Fate",
+      "outfitId": 230,
+      "atlas": {
+        "image": "assets/outfits/230.png",
+        "json": "assets/outfits/230.json"
+      },
+      "appearance": {
+        "looktype": 230,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 100,
+          "countMin": 1,
+          "dropChance": 1.0,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "always"
+        },
+        {
+          "countMax": 7,
+          "countMin": 1,
+          "dropChance": 1.0,
+          "itemId": 3035,
+          "itemName": "platinum coin",
+          "rarity": "always"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.31111,
+          "itemId": 5944,
+          "itemName": "soul orb",
+          "rarity": "common"
+        },
+        {
+          "countMax": 4,
+          "countMin": 1,
+          "dropChance": 0.3,
+          "itemId": 6558,
+          "itemName": "flask of demonic blood",
+          "rarity": "common"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.1999,
+          "itemId": 238,
+          "itemName": "great mana potion",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.18,
+          "itemId": 7643,
+          "itemName": "ultimate health potion",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.12,
+          "itemId": 6499,
+          "itemName": "demonic essence",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 4,
+          "countMin": 1,
+          "dropChance": 0.11,
+          "itemId": 3029,
+          "itemName": "small sapphire",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0909,
+          "itemId": 3062,
+          "itemName": "mind stone",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0874,
+          "itemId": 3084,
+          "itemName": "protection amulet",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 5,
+          "countMin": 1,
+          "dropChance": 0.07692,
+          "itemId": 7368,
+          "itemName": "assassin star",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0594,
+          "itemId": 3037,
+          "itemName": "yellow gem",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0559,
+          "itemId": 3071,
+          "itemName": "wand of inferno",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0455,
+          "itemId": 3370,
+          "itemName": "knight armor",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 8,
+          "countMin": 1,
+          "dropChance": 0.042,
+          "itemId": 3155,
+          "itemName": "sudden death rune",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.035,
+          "itemId": 3010,
+          "itemName": "emerald bangle",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0315,
+          "itemId": 3051,
+          "itemName": "energy ring",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0175,
+          "itemId": 6299,
+          "itemName": "death ring",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.014,
+          "itemId": 3381,
+          "itemName": "crown armor",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.01005,
+          "itemId": 3055,
+          "itemName": "platinum amulet",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.007,
+          "itemId": 3036,
+          "itemName": "violet gem",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.007,
+          "itemId": 3324,
+          "itemName": "skull staff",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.007,
+          "itemId": 9058,
+          "itemName": "gold ingot",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0054,
+          "itemId": 3079,
+          "itemName": "boots of haste",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.00495,
+          "itemId": 7414,
+          "itemName": "abyss hammer",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.00247,
+          "itemId": 5668,
+          "itemName": "mysterious voodoo skull",
+          "rarity": "very-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 6311,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 6311
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 6312
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 6313
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 6314
+          }
+        ]
+      },
+      "race": "blood",
+      "idle": {
+        "north": "230_0",
+        "east": "230_1",
+        "south": "230_2",
+        "west": "230_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "230_4",
+            "230_8"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "230_5",
+            "230_9"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "230_6",
+            "230_10"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "230_7",
+            "230_11"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "233": {
+      "name": "Betrayed Wraith",
+      "outfitId": 233,
+      "atlas": {
+        "image": "assets/outfits/233.png",
+        "json": "assets/outfits/233.json"
+      },
+      "appearance": {
+        "looktype": 233,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 200,
+          "countMin": 1,
+          "dropChance": 1.0,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "always"
+        },
+        {
+          "countMax": 8,
+          "countMin": 1,
+          "dropChance": 1.0,
+          "itemId": 3035,
+          "itemName": "platinum coin",
+          "rarity": "always"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.6525,
+          "itemId": 6558,
+          "itemName": "flask of demonic blood",
+          "rarity": "common"
+        },
+        {
+          "countMax": 5,
+          "countMin": 1,
+          "dropChance": 0.5,
+          "itemId": 3450,
+          "itemName": "power bolt",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.1943,
+          "itemId": 6499,
+          "itemName": "demonic essence",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.1841,
+          "itemId": 10316,
+          "itemName": "unholy bone",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.1541,
+          "itemId": 7643,
+          "itemName": "ultimate health potion",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 3,
+          "countMin": 1,
+          "dropChance": 0.15,
+          "itemId": 238,
+          "itemName": "great mana potion",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 4,
+          "countMin": 1,
+          "dropChance": 0.118,
+          "itemId": 3028,
+          "itemName": "small diamond",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 5,
+          "countMin": 1,
+          "dropChance": 0.1078,
+          "itemId": 7368,
+          "itemName": "assassin star",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.1,
+          "itemId": 5944,
+          "itemName": "soul orb",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.08,
+          "itemId": 5021,
+          "itemName": "orichalcum pearl",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0189,
+          "itemId": 7386,
+          "itemName": "mercenary sword",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0039,
+          "itemId": 5741,
+          "itemName": "skull helmet",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0039,
+          "itemId": 6299,
+          "itemName": "death ring",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0016,
+          "itemId": 5799,
+          "itemName": "golden figurine",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0008,
+          "itemId": 7416,
+          "itemName": "bloody edge",
+          "rarity": "very-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 6315,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 6315
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 6316
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 6317
+          }
+        ]
+      },
+      "race": "undead",
+      "idle": {
+        "north": "233_0",
+        "east": "233_1",
+        "south": "233_2",
+        "west": "233_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "233_4",
+            "233_8"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "233_5",
+            "233_9"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "233_6",
+            "233_10"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "233_7",
+            "233_11"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "235": {
+      "name": "Spectre",
+      "outfitId": 235,
+      "atlas": {
+        "image": "assets/outfits/235.png",
+        "json": "assets/outfits/235.json"
+      },
+      "appearance": {
+        "looktype": 235,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 100,
+          "countMin": 1,
+          "dropChance": 0.99,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.3031,
+          "itemId": 3147,
+          "itemName": "blank rune",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.098,
+          "itemId": 3073,
+          "itemName": "wand of cosmic energy",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0962,
+          "itemId": 2949,
+          "itemName": "lyre",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0627,
+          "itemId": 6499,
+          "itemName": "demonic essence",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.06005,
+          "itemId": 5944,
+          "itemName": "soul orb",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 7,
+          "countMin": 1,
+          "dropChance": 0.0385,
+          "itemId": 3035,
+          "itemName": "platinum coin",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.038,
+          "itemId": 5909,
+          "itemName": "white piece of cloth",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.01,
+          "itemId": 10310,
+          "itemName": "shiny stone",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0096,
+          "itemId": 3017,
+          "itemName": "silver brooch",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0092,
+          "itemId": 238,
+          "itemName": "great mana potion",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.007,
+          "itemId": 7383,
+          "itemName": "relic sword",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0028,
+          "itemId": 6299,
+          "itemName": "death ring",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0019,
+          "itemId": 3049,
+          "itemName": "stealth ring",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0011,
+          "itemId": 3019,
+          "itemName": "demonbone amulet",
+          "rarity": "very-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 6347,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 6347
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 6348
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 6349
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 6350
+          }
+        ]
+      },
+      "race": "undead",
+      "idle": {
+        "north": "235_0",
+        "east": "235_1",
+        "south": "235_2",
+        "west": "235_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "235_4",
+            "235_8"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "235_5",
+            "235_9"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "235_6",
+            "235_10"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "235_7",
+            "235_11"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "99": {
+      "name": "Lich",
+      "outfitId": 99,
+      "atlas": {
+        "image": "assets/outfits/99.png",
+        "json": "assets/outfits/99.json"
+      },
+      "appearance": {
+        "looktype": 99,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 139,
+          "countMin": 1,
+          "dropChance": 1.0,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "always"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.1972,
+          "itemId": 3035,
+          "itemName": "platinum coin",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.1,
+          "itemId": 3059,
+          "itemName": "spellbook",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.075,
+          "itemId": 237,
+          "itemName": "strong mana potion",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 3,
+          "countMin": 1,
+          "dropChance": 0.0596,
+          "itemId": 3027,
+          "itemName": "black pearl",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.05,
+          "itemId": 3026,
+          "itemName": "white pearl",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 3,
+          "countMin": 1,
+          "dropChance": 0.0243,
+          "itemId": 9057,
+          "itemName": "small topaz",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.02422,
+          "itemId": 3432,
+          "itemName": "ancient shield",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 3,
+          "countMin": 1,
+          "dropChance": 0.0223,
+          "itemId": 3032,
+          "itemName": "small emerald",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0154,
+          "itemId": 3098,
+          "itemName": "ring of healing",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0074,
+          "itemId": 3373,
+          "itemName": "strange helmet",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0069,
+          "itemId": 3037,
+          "itemName": "yellow gem",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0055,
+          "itemId": 3324,
+          "itemName": "skull staff",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0045,
+          "itemId": 3055,
+          "itemName": "platinum amulet",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0035,
+          "itemId": 3062,
+          "itemName": "mind stone",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0035,
+          "itemId": 3435,
+          "itemName": "castle shield",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.002,
+          "itemId": 820,
+          "itemName": "lightning boots",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0015,
+          "itemId": 3567,
+          "itemName": "blue robe",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.001,
+          "itemId": 12304,
+          "itemName": "maxilla maximus",
+          "rarity": "very-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 6028,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 6028
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4206
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4207
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4208
+          }
+        ]
+      },
+      "race": "undead",
+      "idle": {
+        "north": "99_0",
+        "east": "99_1",
+        "south": "99_2",
+        "west": "99_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "99_4",
+            "99_8",
+            "99_12",
+            "99_16",
+            "99_20",
+            "99_24",
+            "99_28",
+            "99_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "99_5",
+            "99_9",
+            "99_13",
+            "99_17",
+            "99_21",
+            "99_25",
+            "99_29",
+            "99_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "99_6",
+            "99_10",
+            "99_14",
+            "99_18",
+            "99_22",
+            "99_26",
+            "99_30",
+            "99_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "99_7",
+            "99_11",
+            "99_15",
+            "99_19",
+            "99_23",
+            "99_27",
+            "99_31",
+            "99_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "231": {
+      "name": "Undead Dragon",
+      "outfitId": 231,
+      "atlas": {
+        "image": "assets/outfits/231.png",
+        "json": "assets/outfits/231.json"
+      },
+      "appearance": {
+        "looktype": 231,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 100,
+          "countMin": 1,
+          "dropChance": 0.91,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 5,
+          "countMin": 1,
+          "dropChance": 0.52,
+          "itemId": 3035,
+          "itemName": "platinum coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.3338,
+          "itemId": 10316,
+          "itemName": "unholy bone",
+          "rarity": "common"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.2837,
+          "itemId": 3029,
+          "itemName": "small sapphire",
+          "rarity": "common"
+        },
+        {
+          "countMax": 5,
+          "countMin": 1,
+          "dropChance": 0.2665,
+          "itemId": 7368,
+          "itemName": "assassin star",
+          "rarity": "common"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.2278,
+          "itemId": 3027,
+          "itemName": "black pearl",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.2149,
+          "itemId": 238,
+          "itemName": "great mana potion",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.212,
+          "itemId": 239,
+          "itemName": "great health potion",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 15,
+          "countMin": 1,
+          "dropChance": 0.1519,
+          "itemId": 3450,
+          "itemName": "power bolt",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.1418,
+          "itemId": 5925,
+          "itemName": "hardened bone",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.1246,
+          "itemId": 6499,
+          "itemName": "demonic essence",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.06002,
+          "itemId": 2903,
+          "itemName": "golden mug",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.055,
+          "itemId": 3370,
+          "itemName": "knight armor",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.04,
+          "itemId": 7430,
+          "itemName": "dragonbone staff",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.025,
+          "itemId": 3061,
+          "itemName": "life crystal",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0172,
+          "itemId": 3392,
+          "itemName": "royal helmet",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0129,
+          "itemId": 3342,
+          "itemName": "war axe",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0115,
+          "itemId": 6299,
+          "itemName": "death ring",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0086,
+          "itemId": 3360,
+          "itemName": "golden armor",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0086,
+          "itemId": 7402,
+          "itemName": "dragon slayer",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0086,
+          "itemId": 10438,
+          "itemName": "spellweaver's robe",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0057,
+          "itemId": 9058,
+          "itemName": "gold ingot",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0043,
+          "itemId": 8057,
+          "itemName": "divine plate",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0029,
+          "itemId": 8061,
+          "itemName": "skullcracker armor",
+          "rarity": "very-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 6305,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 6305
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 6306
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 6307
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 6308
+          }
+        ]
+      },
+      "race": "undead",
+      "idle": {
+        "north": "231_0",
+        "east": "231_1",
+        "south": "231_2",
+        "west": "231_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "231_4",
+            "231_8",
+            "231_12",
+            "231_16",
+            "231_20",
+            "231_24",
+            "231_28",
+            "231_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "231_5",
+            "231_9",
+            "231_13",
+            "231_17",
+            "231_21",
+            "231_25",
+            "231_29",
+            "231_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "231_6",
+            "231_10",
+            "231_14",
+            "231_18",
+            "231_22",
+            "231_26",
+            "231_30",
+            "231_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "231_7",
+            "231_11",
+            "231_15",
+            "231_19",
+            "231_23",
+            "231_27",
+            "231_31",
+            "231_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "247": {
+      "name": "Plaguesmith",
+      "outfitId": 247,
+      "atlas": {
+        "image": "assets/outfits/247.png",
+        "json": "assets/outfits/247.json"
+      },
+      "appearance": {
+        "looktype": 247,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 100,
+          "countMin": 1,
+          "dropChance": 1.0,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "always"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.6,
+          "itemId": 3122,
+          "itemName": "dirty cape",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.5,
+          "itemId": 3120,
+          "itemName": "mouldy cheese",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.29,
+          "itemId": 3282,
+          "itemName": "morning star",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.2,
+          "itemId": 3110,
+          "itemName": "piece of iron",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.2,
+          "itemId": 3265,
+          "itemName": "two handed sword",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.2,
+          "itemId": 3305,
+          "itemName": "battle hammer",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.2,
+          "itemId": 3409,
+          "itemName": "steel shield",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.11111,
+          "itemId": 5944,
+          "itemName": "soul orb",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.1,
+          "itemId": 239,
+          "itemName": "great health potion",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.09033,
+          "itemId": 6499,
+          "itemName": "demonic essence",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 4,
+          "countMin": 1,
+          "dropChance": 0.07692,
+          "itemId": 7365,
+          "itemName": "onyx arrow",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.07142,
+          "itemId": 3035,
+          "itemName": "platinum coin",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0625,
+          "itemId": 3371,
+          "itemName": "knight legs",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 3,
+          "countMin": 1,
+          "dropChance": 0.05,
+          "itemId": 3033,
+          "itemName": "small amethyst",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.04761,
+          "itemId": 3093,
+          "itemName": "club ring",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.04347,
+          "itemId": 3092,
+          "itemName": "axe ring",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.02127,
+          "itemId": 3279,
+          "itemName": "war hammer",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.02,
+          "itemId": 3017,
+          "itemName": "silver brooch",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.01234,
+          "itemId": 5887,
+          "itemName": "piece of royal steel",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.01123,
+          "itemId": 3554,
+          "itemName": "steel boots",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0103,
+          "itemId": 5889,
+          "itemName": "piece of draconian steel",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0101,
+          "itemId": 5888,
+          "itemName": "piece of hell steel",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.00952,
+          "itemId": 3332,
+          "itemName": "hammer of wrath",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0054,
+          "itemId": 8896,
+          "itemName": "slightly rusted armor",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.00341,
+          "itemId": 3010,
+          "itemName": "emerald bangle",
+          "rarity": "very-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 6515,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 6515
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 6519
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 6520
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 6521
+          }
+        ]
+      },
+      "race": "venom",
+      "idle": {
+        "north": "247_0",
+        "east": "247_1",
+        "south": "247_2",
+        "west": "247_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "247_4",
+            "247_8"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "247_5",
+            "247_9"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "247_6",
+            "247_10"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "247_7",
+            "247_11"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "246": {
+      "name": "Blightwalker",
+      "outfitId": 246,
+      "atlas": {
+        "image": "assets/outfits/246.png",
+        "json": "assets/outfits/246.json"
+      },
+      "appearance": {
+        "looktype": 246,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 197,
+          "countMin": 1,
+          "dropChance": 1.0,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "always"
+        },
+        {
+          "countMax": 5,
+          "countMin": 1,
+          "dropChance": 1.0,
+          "itemId": 3035,
+          "itemName": "platinum coin",
+          "rarity": "always"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.5,
+          "itemId": 3605,
+          "itemName": "bunch of wheat",
+          "rarity": "common"
+        },
+        {
+          "countMax": 3,
+          "countMin": 1,
+          "dropChance": 0.3136,
+          "itemId": 238,
+          "itemName": "great mana potion",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.28,
+          "itemId": 6499,
+          "itemName": "demonic essence",
+          "rarity": "common"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.2625,
+          "itemId": 3147,
+          "itemName": "blank rune",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.2372,
+          "itemId": 5944,
+          "itemName": "soul orb",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.15,
+          "itemId": 9688,
+          "itemName": "bundle of cursed straw",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.1472,
+          "itemId": 7643,
+          "itemName": "ultimate health potion",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.1,
+          "itemId": 3067,
+          "itemName": "hailstorm rod",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 10,
+          "countMin": 1,
+          "dropChance": 0.059,
+          "itemId": 7368,
+          "itemName": "assassin star",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0527,
+          "itemId": 9058,
+          "itemName": "gold ingot",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0445,
+          "itemId": 281,
+          "itemName": "giant shimmering pearl",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0445,
+          "itemId": 282,
+          "itemName": "giant shimmering pearl",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.043,
+          "itemId": 647,
+          "itemName": "seeds",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.03,
+          "itemId": 3453,
+          "itemName": "scythe",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.025,
+          "itemId": 812,
+          "itemName": "terra legs",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0205,
+          "itemId": 3083,
+          "itemName": "garlic necklace",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0187,
+          "itemId": 3063,
+          "itemName": "gold ring",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0152,
+          "itemId": 3324,
+          "itemName": "skull staff",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0141,
+          "itemId": 6299,
+          "itemName": "death ring",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0105,
+          "itemId": 811,
+          "itemName": "terra mantle",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0035,
+          "itemId": 3306,
+          "itemName": "golden sickle",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0012,
+          "itemId": 3057,
+          "itemName": "amulet of loss",
+          "rarity": "very-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 6353,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 6353
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 6354
+          }
+        ]
+      },
+      "race": "undead",
+      "idle": {
+        "north": "246_0",
+        "east": "246_1",
+        "south": "246_2",
+        "west": "246_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "246_4",
+            "246_8"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "246_5",
+            "246_9"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "246_6",
+            "246_10"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "246_7",
+            "246_11"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "245": {
+      "name": "Nightmare",
+      "outfitId": 245,
+      "atlas": {
+        "image": "assets/outfits/245.png",
+        "json": "assets/outfits/245.json"
+      },
+      "appearance": {
+        "looktype": 245,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 100,
+          "countMin": 1,
+          "dropChance": 1.0,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "always"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.29,
+          "itemId": 3582,
+          "itemName": "ham",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.2,
+          "itemId": 5944,
+          "itemName": "soul orb",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.19666,
+          "itemId": 6558,
+          "itemName": "flask of demonic blood",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.1524,
+          "itemId": 10306,
+          "itemName": "essence of a bad dream",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.1,
+          "itemId": 6499,
+          "itemName": "demonic essence",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 4,
+          "countMin": 1,
+          "dropChance": 0.0909,
+          "itemId": 3450,
+          "itemName": "power bolt",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0909,
+          "itemId": 10312,
+          "itemName": "scythe leg",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 3,
+          "countMin": 1,
+          "dropChance": 0.02564,
+          "itemId": 3035,
+          "itemName": "platinum coin",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.01298,
+          "itemId": 6299,
+          "itemName": "death ring",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0099,
+          "itemId": 3432,
+          "itemName": "ancient shield",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.00961,
+          "itemId": 3371,
+          "itemName": "knight legs",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.00337,
+          "itemId": 3079,
+          "itemName": "boots of haste",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.00337,
+          "itemId": 6525,
+          "itemName": "skeleton decoration",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.00123,
+          "itemId": 5668,
+          "itemName": "mysterious voodoo skull",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.00095,
+          "itemId": 3342,
+          "itemName": "war axe",
+          "rarity": "very-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 6339,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 6339
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 6340
+          },
+          {
+            "durationSeconds": 30,
+            "itemId": 6341
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 6342
+          }
+        ]
+      },
+      "race": "blood",
+      "idle": {
+        "north": "245_0",
+        "east": "245_1",
+        "south": "245_2",
+        "west": "245_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "245_4",
+            "245_8"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "245_5",
+            "245_9"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "245_6",
+            "245_10"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "245_7",
+            "245_11"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "241": {
+      "name": "Phantasm",
+      "outfitId": 241,
+      "atlas": {
+        "image": "assets/outfits/241.png",
+        "json": "assets/outfits/241.json"
+      },
+      "appearance": {
+        "looktype": 241,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 100,
+          "countMin": 1,
+          "dropChance": 0.88,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 4,
+          "countMin": 1,
+          "dropChance": 0.8773,
+          "itemId": 3035,
+          "itemName": "platinum coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.3275,
+          "itemId": 238,
+          "itemName": "great mana potion",
+          "rarity": "common"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.2693,
+          "itemId": 3740,
+          "itemName": "shadow herb",
+          "rarity": "common"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.225,
+          "itemId": 3147,
+          "itemName": "blank rune",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.1632,
+          "itemId": 6499,
+          "itemName": "demonic essence",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.1468,
+          "itemId": 7643,
+          "itemName": "ultimate health potion",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 3,
+          "countMin": 1,
+          "dropChance": 0.1457,
+          "itemId": 3033,
+          "itemName": "small amethyst",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 3,
+          "countMin": 1,
+          "dropChance": 0.1281,
+          "itemId": 9057,
+          "itemName": "small topaz",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 3,
+          "countMin": 1,
+          "dropChance": 0.1216,
+          "itemId": 3030,
+          "itemName": "small ruby",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 3,
+          "countMin": 1,
+          "dropChance": 0.1019,
+          "itemId": 3032,
+          "itemName": "small emerald",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0066,
+          "itemId": 3381,
+          "itemName": "crown armor",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0055,
+          "itemId": 3049,
+          "itemName": "stealth ring",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0055,
+          "itemId": 7451,
+          "itemName": "shadow sceptre",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0033,
+          "itemId": 6299,
+          "itemName": "death ring",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0011,
+          "itemId": 7414,
+          "itemName": "abyss hammer",
+          "rarity": "very-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 6343,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 6343
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 6344
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 6345
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 6346
+          }
+        ]
+      },
+      "race": "undead",
+      "idle": {
+        "north": "241_0",
+        "east": "241_1",
+        "south": "241_2",
+        "west": "241_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "241_4",
+            "241_8",
+            "241_12",
+            "241_16",
+            "241_20",
+            "241_24",
+            "241_28",
+            "241_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "241_5",
+            "241_9",
+            "241_13",
+            "241_17",
+            "241_21",
+            "241_25",
+            "241_29",
+            "241_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "241_6",
+            "241_10",
+            "241_14",
+            "241_18",
+            "241_22",
+            "241_26",
+            "241_30",
+            "241_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "241_7",
+            "241_11",
+            "241_15",
+            "241_19",
+            "241_23",
+            "241_27",
+            "241_31",
+            "241_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "19": {
+      "name": "Son of Verminor",
+      "outfitId": 19,
+      "atlas": {
+        "image": "assets/outfits/19.png",
+        "json": "assets/outfits/19.json"
+      },
+      "appearance": {
+        "looktype": 19,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [],
+      "corpse": {
+        "itemId": 105,
+        "stages": [
+          {
+            "durationSeconds": 248,
+            "itemId": 105
+          }
+        ]
+      },
+      "race": "venom",
+      "idle": {
+        "north": {
+          "frames": [
+            "19_0",
+            "19_4",
+            "19_8",
+            "19_12",
+            "19_16",
+            "19_20",
+            "19_24",
+            "19_28"
+          ],
+          "frameRate": 6.67,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "19_1",
+            "19_5",
+            "19_9",
+            "19_13",
+            "19_17",
+            "19_21",
+            "19_25",
+            "19_29"
+          ],
+          "frameRate": 6.67,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "19_2",
+            "19_6",
+            "19_10",
+            "19_14",
+            "19_18",
+            "19_22",
+            "19_26",
+            "19_30"
+          ],
+          "frameRate": 6.67,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "19_3",
+            "19_7",
+            "19_11",
+            "19_15",
+            "19_19",
+            "19_23",
+            "19_27",
+            "19_31"
+          ],
+          "frameRate": 6.67,
+          "loopType": "infinite"
+        }
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "19_32",
+            "19_36",
+            "19_40",
+            "19_44",
+            "19_48",
+            "19_52",
+            "19_56",
+            "19_60"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "19_33",
+            "19_37",
+            "19_41",
+            "19_45",
+            "19_49",
+            "19_53",
+            "19_57",
+            "19_61"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "19_34",
+            "19_38",
+            "19_42",
+            "19_46",
+            "19_50",
+            "19_54",
+            "19_58",
+            "19_62"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "19_35",
+            "19_39",
+            "19_43",
+            "19_47",
+            "19_51",
+            "19_55",
+            "19_59",
+            "19_63"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    }
+  },
+  "spawns": [
+    {
+      "name": "Demon",
+      "outfitId": 35,
+      "tileX": 20,
+      "tileY": 12,
+      "worldX": 32788,
+      "worldY": 32277,
+      "worldZ": 15,
+      "radius": 5,
+      "spawntime": 90
+    },
+    {
+      "name": "Demon",
+      "outfitId": 35,
+      "tileX": 15,
+      "tileY": 13,
+      "worldX": 32783,
+      "worldY": 32278,
+      "worldZ": 15,
+      "radius": 5,
+      "spawntime": 90
+    },
+    {
+      "name": "Hand of Cursed Fate",
+      "outfitId": 230,
+      "tileX": 19,
+      "tileY": 14,
+      "worldX": 32787,
+      "worldY": 32279,
+      "worldZ": 15,
+      "radius": 5,
+      "spawntime": 90
+    },
+    {
+      "name": "Betrayed Wraith",
+      "outfitId": 233,
+      "tileX": 22,
+      "tileY": 14,
+      "worldX": 32790,
+      "worldY": 32279,
+      "worldZ": 15,
+      "radius": 5,
+      "spawntime": 90
+    },
+    {
+      "name": "Betrayed Wraith",
+      "outfitId": 233,
+      "tileX": 15,
+      "tileY": 16,
+      "worldX": 32783,
+      "worldY": 32281,
+      "worldZ": 15,
+      "radius": 5,
+      "spawntime": 90
+    },
+    {
+      "name": "Demon",
+      "outfitId": 35,
+      "tileX": 18,
+      "tileY": 17,
+      "worldX": 32786,
+      "worldY": 32282,
+      "worldZ": 15,
+      "radius": 5,
+      "spawntime": 90
+    },
+    {
+      "name": "Hand of Cursed Fate",
+      "outfitId": 230,
+      "tileX": 22,
+      "tileY": 17,
+      "worldX": 32790,
+      "worldY": 32282,
+      "worldZ": 15,
+      "radius": 5,
+      "spawntime": 90
+    },
+    {
+      "name": "Hand of Cursed Fate",
+      "outfitId": 230,
+      "tileX": 13,
+      "tileY": 18,
+      "worldX": 32781,
+      "worldY": 32283,
+      "worldZ": 15,
+      "radius": 5,
+      "spawntime": 90
+    },
+    {
+      "name": "Betrayed Wraith",
+      "outfitId": 233,
+      "tileX": 20,
+      "tileY": 18,
+      "worldX": 32788,
+      "worldY": 32283,
+      "worldZ": 15,
+      "radius": 5,
+      "spawntime": 90
+    },
+    {
+      "name": "Betrayed Wraith",
+      "outfitId": 233,
+      "tileX": 16,
+      "tileY": 19,
+      "worldX": 32784,
+      "worldY": 32284,
+      "worldZ": 15,
+      "radius": 5,
+      "spawntime": 90
+    },
+    {
+      "name": "Betrayed Wraith",
+      "outfitId": 233,
+      "tileX": 12,
+      "tileY": 21,
+      "worldX": 32780,
+      "worldY": 32286,
+      "worldZ": 15,
+      "radius": 5,
+      "spawntime": 90
+    },
+    {
+      "name": "Hand of Cursed Fate",
+      "outfitId": 230,
+      "tileX": 17,
+      "tileY": 21,
+      "worldX": 32785,
+      "worldY": 32286,
+      "worldZ": 15,
+      "radius": 5,
+      "spawntime": 90
+    },
+    {
+      "name": "Betrayed Wraith",
+      "outfitId": 233,
+      "tileX": 22,
+      "tileY": 21,
+      "worldX": 32790,
+      "worldY": 32286,
+      "worldZ": 15,
+      "radius": 5,
+      "spawntime": 90
+    },
+    {
+      "name": "Spectre",
+      "outfitId": 235,
+      "tileX": 15,
+      "tileY": 23,
+      "worldX": 32783,
+      "worldY": 32288,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Betrayed Wraith",
+      "outfitId": 233,
+      "tileX": 23,
+      "tileY": 24,
+      "worldX": 32791,
+      "worldY": 32289,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Spectre",
+      "outfitId": 235,
+      "tileX": 20,
+      "tileY": 25,
+      "worldX": 32788,
+      "worldY": 32290,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Betrayed Wraith",
+      "outfitId": 233,
+      "tileX": 17,
+      "tileY": 27,
+      "worldX": 32785,
+      "worldY": 32292,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Spectre",
+      "outfitId": 235,
+      "tileX": 14,
+      "tileY": 28,
+      "worldX": 32782,
+      "worldY": 32293,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Spectre",
+      "outfitId": 235,
+      "tileX": 23,
+      "tileY": 28,
+      "worldX": 32791,
+      "worldY": 32293,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Hand of Cursed Fate",
+      "outfitId": 230,
+      "tileX": 20,
+      "tileY": 29,
+      "worldX": 32788,
+      "worldY": 32294,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Hand of Cursed Fate",
+      "outfitId": 230,
+      "tileX": 13,
+      "tileY": 31,
+      "worldX": 32781,
+      "worldY": 32296,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Hand of Cursed Fate",
+      "outfitId": 230,
+      "tileX": 15,
+      "tileY": 34,
+      "worldX": 32783,
+      "worldY": 32299,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Spectre",
+      "outfitId": 235,
+      "tileX": 20,
+      "tileY": 35,
+      "worldX": 32788,
+      "worldY": 32300,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Demon",
+      "outfitId": 35,
+      "tileX": 65,
+      "tileY": 34,
+      "worldX": 32833,
+      "worldY": 32299,
+      "worldZ": 15,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Spectre",
+      "outfitId": 235,
+      "tileX": 18,
+      "tileY": 39,
+      "worldX": 32786,
+      "worldY": 32304,
+      "worldZ": 15,
+      "radius": 5,
+      "spawntime": 90
+    },
+    {
+      "name": "Betrayed Wraith",
+      "outfitId": 233,
+      "tileX": 19,
+      "tileY": 42,
+      "worldX": 32787,
+      "worldY": 32307,
+      "worldZ": 15,
+      "radius": 5,
+      "spawntime": 90
+    },
+    {
+      "name": "Spectre",
+      "outfitId": 235,
+      "tileX": 16,
+      "tileY": 44,
+      "worldX": 32784,
+      "worldY": 32309,
+      "worldZ": 15,
+      "radius": 5,
+      "spawntime": 90
+    },
+    {
+      "name": "Spectre",
+      "outfitId": 235,
+      "tileX": 19,
+      "tileY": 44,
+      "worldX": 32787,
+      "worldY": 32309,
+      "worldZ": 15,
+      "radius": 5,
+      "spawntime": 90
+    },
+    {
+      "name": "Lich",
+      "outfitId": 99,
+      "tileX": 65,
+      "tileY": 39,
+      "worldX": 32833,
+      "worldY": 32304,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Lich",
+      "outfitId": 99,
+      "tileX": 70,
+      "tileY": 42,
+      "worldX": 32838,
+      "worldY": 32307,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Undead Dragon",
+      "outfitId": 231,
+      "tileX": 67,
+      "tileY": 43,
+      "worldX": 32835,
+      "worldY": 32308,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Undead Dragon",
+      "outfitId": 231,
+      "tileX": 72,
+      "tileY": 44,
+      "worldX": 32840,
+      "worldY": 32309,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Lich",
+      "outfitId": 99,
+      "tileX": 71,
+      "tileY": 45,
+      "worldX": 32839,
+      "worldY": 32310,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Lich",
+      "outfitId": 99,
+      "tileX": 66,
+      "tileY": 46,
+      "worldX": 32834,
+      "worldY": 32311,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Undead Dragon",
+      "outfitId": 231,
+      "tileX": 75,
+      "tileY": 46,
+      "worldX": 32843,
+      "worldY": 32311,
+      "worldZ": 15,
+      "radius": 6,
+      "spawntime": 90
+    },
+    {
+      "name": "Plaguesmith",
+      "outfitId": 247,
+      "tileX": 84,
+      "tileY": 60,
+      "worldX": 32852,
+      "worldY": 32325,
+      "worldZ": 15,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Plaguesmith",
+      "outfitId": 247,
+      "tileX": 88,
+      "tileY": 61,
+      "worldX": 32856,
+      "worldY": 32326,
+      "worldZ": 15,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Plaguesmith",
+      "outfitId": 247,
+      "tileX": 85,
+      "tileY": 63,
+      "worldX": 32853,
+      "worldY": 32328,
+      "worldZ": 15,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Blightwalker",
+      "outfitId": 246,
+      "tileX": 87,
+      "tileY": 64,
+      "worldX": 32855,
+      "worldY": 32329,
+      "worldZ": 15,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Nightmare",
+      "outfitId": 245,
+      "tileX": 36,
+      "tileY": 61,
+      "worldX": 32804,
+      "worldY": 32326,
+      "worldZ": 15,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Phantasm",
+      "outfitId": 241,
+      "tileX": 37,
+      "tileY": 64,
+      "worldX": 32805,
+      "worldY": 32329,
+      "worldZ": 15,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Phantasm",
+      "outfitId": 241,
+      "tileX": 41,
+      "tileY": 64,
+      "worldX": 32809,
+      "worldY": 32329,
+      "worldZ": 15,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Phantasm",
+      "outfitId": 241,
+      "tileX": 35,
+      "tileY": 65,
+      "worldX": 32803,
+      "worldY": 32330,
+      "worldZ": 15,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Nightmare",
+      "outfitId": 245,
+      "tileX": 40,
+      "tileY": 65,
+      "worldX": 32808,
+      "worldY": 32330,
+      "worldZ": 15,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Blightwalker",
+      "outfitId": 246,
+      "tileX": 67,
+      "tileY": 62,
+      "worldX": 32835,
+      "worldY": 32327,
+      "worldZ": 15,
+      "radius": 4,
+      "spawntime": 90
+    },
+    {
+      "name": "Blightwalker",
+      "outfitId": 246,
+      "tileX": 69,
+      "tileY": 63,
+      "worldX": 32837,
+      "worldY": 32328,
+      "worldZ": 15,
+      "radius": 4,
+      "spawntime": 90
+    },
+    {
+      "name": "Plaguesmith",
+      "outfitId": 247,
+      "tileX": 68,
+      "tileY": 66,
+      "worldX": 32836,
+      "worldY": 32331,
+      "worldZ": 15,
+      "radius": 4,
+      "spawntime": 90
+    },
+    {
+      "name": "Blightwalker",
+      "outfitId": 246,
+      "tileX": 66,
+      "tileY": 69,
+      "worldX": 32834,
+      "worldY": 32334,
+      "worldZ": 15,
+      "radius": 4,
+      "spawntime": 90
+    },
+    {
+      "name": "Plaguesmith",
+      "outfitId": 247,
+      "tileX": 70,
+      "tileY": 69,
+      "worldX": 32838,
+      "worldY": 32334,
+      "worldZ": 15,
+      "radius": 4,
+      "spawntime": 90
+    },
+    {
+      "name": "Plaguesmith",
+      "outfitId": 247,
+      "tileX": 78,
+      "tileY": 67,
+      "worldX": 32846,
+      "worldY": 32332,
+      "worldZ": 15,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Plaguesmith",
+      "outfitId": 247,
+      "tileX": 80,
+      "tileY": 68,
+      "worldX": 32848,
+      "worldY": 32333,
+      "worldZ": 15,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Blightwalker",
+      "outfitId": 246,
+      "tileX": 75,
+      "tileY": 69,
+      "worldX": 32843,
+      "worldY": 32334,
+      "worldZ": 15,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Blightwalker",
+      "outfitId": 246,
+      "tileX": 84,
+      "tileY": 66,
+      "worldX": 32852,
+      "worldY": 32331,
+      "worldZ": 15,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Blightwalker",
+      "outfitId": 246,
+      "tileX": 88,
+      "tileY": 66,
+      "worldX": 32856,
+      "worldY": 32331,
+      "worldZ": 15,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Plaguesmith",
+      "outfitId": 247,
+      "tileX": 86,
+      "tileY": 68,
+      "worldX": 32854,
+      "worldY": 32333,
+      "worldZ": 15,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Son of Verminor",
+      "outfitId": 19,
+      "tileX": 88,
+      "tileY": 69,
+      "worldX": 32856,
+      "worldY": 32334,
+      "worldZ": 15,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Son of Verminor",
+      "outfitId": 19,
+      "tileX": 87,
+      "tileY": 70,
+      "worldX": 32855,
+      "worldY": 32335,
+      "worldZ": 15,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Plaguesmith",
+      "outfitId": 247,
+      "tileX": 85,
+      "tileY": 71,
+      "worldX": 32853,
+      "worldY": 32336,
+      "worldZ": 15,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Nightmare",
+      "outfitId": 245,
+      "tileX": 35,
+      "tileY": 80,
+      "worldX": 32803,
+      "worldY": 32345,
+      "worldZ": 15,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Blightwalker",
+      "outfitId": 246,
+      "tileX": 75,
+      "tileY": 75,
+      "worldX": 32843,
+      "worldY": 32340,
+      "worldZ": 15,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Blightwalker",
+      "outfitId": 246,
+      "tileX": 79,
+      "tileY": 76,
+      "worldX": 32847,
+      "worldY": 32341,
+      "worldZ": 15,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Blightwalker",
+      "outfitId": 246,
+      "tileX": 76,
+      "tileY": 78,
+      "worldX": 32844,
+      "worldY": 32343,
+      "worldZ": 15,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Plaguesmith",
+      "outfitId": 247,
+      "tileX": 79,
+      "tileY": 79,
+      "worldX": 32847,
+      "worldY": 32344,
+      "worldZ": 15,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Blightwalker",
+      "outfitId": 246,
+      "tileX": 77,
+      "tileY": 80,
+      "worldX": 32845,
+      "worldY": 32345,
+      "worldZ": 15,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Plaguesmith",
+      "outfitId": 247,
+      "tileX": 85,
+      "tileY": 77,
+      "worldX": 32853,
+      "worldY": 32342,
+      "worldZ": 15,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Blightwalker",
+      "outfitId": 246,
+      "tileX": 88,
+      "tileY": 78,
+      "worldX": 32856,
+      "worldY": 32343,
+      "worldZ": 15,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Plaguesmith",
+      "outfitId": 247,
+      "tileX": 87,
+      "tileY": 81,
+      "worldX": 32855,
+      "worldY": 32346,
+      "worldZ": 15,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Nightmare",
+      "outfitId": 245,
+      "tileX": 34,
+      "tileY": 85,
+      "worldX": 32802,
+      "worldY": 32350,
+      "worldZ": 15,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Phantasm",
+      "outfitId": 241,
+      "tileX": 30,
+      "tileY": 86,
+      "worldX": 32798,
+      "worldY": 32351,
+      "worldZ": 15,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Plaguesmith",
+      "outfitId": 247,
+      "tileX": 69,
+      "tileY": 81,
+      "worldX": 32837,
+      "worldY": 32346,
+      "worldZ": 15,
+      "radius": 4,
+      "spawntime": 90
+    },
+    {
+      "name": "Blightwalker",
+      "outfitId": 246,
+      "tileX": 72,
+      "tileY": 81,
+      "worldX": 32840,
+      "worldY": 32346,
+      "worldZ": 15,
+      "radius": 4,
+      "spawntime": 90
+    },
+    {
+      "name": "Blightwalker",
+      "outfitId": 246,
+      "tileX": 67,
+      "tileY": 82,
+      "worldX": 32835,
+      "worldY": 32347,
+      "worldZ": 15,
+      "radius": 4,
+      "spawntime": 90
+    },
+    {
+      "name": "Son of Verminor",
+      "outfitId": 19,
+      "tileX": 67,
+      "tileY": 83,
+      "worldX": 32835,
+      "worldY": 32348,
+      "worldZ": 15,
+      "radius": 4,
+      "spawntime": 90
+    },
+    {
+      "name": "Blightwalker",
+      "outfitId": 246,
+      "tileX": 69,
+      "tileY": 83,
+      "worldX": 32837,
+      "worldY": 32348,
+      "worldZ": 15,
+      "radius": 4,
+      "spawntime": 90
+    },
+    {
+      "name": "Son of Verminor",
+      "outfitId": 19,
+      "tileX": 70,
+      "tileY": 84,
+      "worldX": 32838,
+      "worldY": 32349,
+      "worldZ": 15,
+      "radius": 4,
+      "spawntime": 90
+    },
+    {
+      "name": "Son of Verminor",
+      "outfitId": 19,
+      "tileX": 69,
+      "tileY": 87,
+      "worldX": 32837,
+      "worldY": 32352,
+      "worldZ": 15,
+      "radius": 4,
+      "spawntime": 90
+    },
+    {
+      "name": "Plaguesmith",
+      "outfitId": 247,
+      "tileX": 67,
+      "tileY": 88,
+      "worldX": 32835,
+      "worldY": 32353,
+      "worldZ": 15,
+      "radius": 4,
+      "spawntime": 90
+    },
+    {
+      "name": "Plaguesmith",
+      "outfitId": 247,
+      "tileX": 72,
+      "tileY": 88,
+      "worldX": 32840,
+      "worldY": 32353,
+      "worldZ": 15,
+      "radius": 4,
+      "spawntime": 90
+    },
+    {
+      "name": "Phantasm",
+      "outfitId": 241,
+      "tileX": 18,
+      "tileY": 85,
+      "worldX": 32786,
+      "worldY": 32350,
+      "worldZ": 15,
+      "radius": 2,
+      "spawntime": 90
+    },
+    {
+      "name": "Phantasm",
+      "outfitId": 241,
+      "tileX": 24,
+      "tileY": 86,
+      "worldX": 32792,
+      "worldY": 32351,
+      "worldZ": 15,
+      "radius": 2,
+      "spawntime": 90
+    }
+  ]
+}

@@ -1,0 +1,311 @@
+{
+  "mapBoundsRef": {
+    "minX": 32204,
+    "minY": 31896,
+    "maxX": 32245,
+    "maxY": 31928
+  },
+  "monsterDefs": {
+    "43": {
+      "name": "Scorpion",
+      "outfitId": 43,
+      "atlas": {
+        "image": "assets/outfits/43.png",
+        "json": "assets/outfits/43.json"
+      },
+      "appearance": {
+        "looktype": 43,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0493,
+          "itemId": 9651,
+          "itemName": "scorpion tail",
+          "rarity": "rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 5988,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5988
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4078
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4079
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4146
+          }
+        ]
+      },
+      "race": "venom",
+      "idle": {
+        "north": "43_0",
+        "east": "43_1",
+        "south": "43_2",
+        "west": "43_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "43_4",
+            "43_8",
+            "43_12",
+            "43_16",
+            "43_20",
+            "43_24",
+            "43_28",
+            "43_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "43_5",
+            "43_9",
+            "43_13",
+            "43_17",
+            "43_21",
+            "43_25",
+            "43_29",
+            "43_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "43_6",
+            "43_10",
+            "43_14",
+            "43_18",
+            "43_22",
+            "43_26",
+            "43_30",
+            "43_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "43_7",
+            "43_11",
+            "43_15",
+            "43_19",
+            "43_23",
+            "43_27",
+            "43_31",
+            "43_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    }
+  },
+  "spawns": [
+    {
+      "name": "Scorpion",
+      "outfitId": 43,
+      "tileX": 27,
+      "tileY": 12,
+      "worldX": 32231,
+      "worldY": 31908,
+      "worldZ": 11,
+      "radius": 1,
+      "spawntime": 60
+    },
+    {
+      "name": "Scorpion",
+      "outfitId": 43,
+      "tileX": 28,
+      "tileY": 12,
+      "worldX": 32232,
+      "worldY": 31908,
+      "worldZ": 11,
+      "radius": 1,
+      "spawntime": 60
+    },
+    {
+      "name": "Scorpion",
+      "outfitId": 43,
+      "tileX": 28,
+      "tileY": 13,
+      "worldX": 32232,
+      "worldY": 31909,
+      "worldZ": 11,
+      "radius": 1,
+      "spawntime": 60
+    },
+    {
+      "name": "Scorpion",
+      "outfitId": 43,
+      "tileX": 28,
+      "tileY": 14,
+      "worldX": 32232,
+      "worldY": 31910,
+      "worldZ": 11,
+      "radius": 1,
+      "spawntime": 60
+    },
+    {
+      "name": "Scorpion",
+      "outfitId": 43,
+      "tileX": 29,
+      "tileY": 14,
+      "worldX": 32233,
+      "worldY": 31910,
+      "worldZ": 11,
+      "radius": 1,
+      "spawntime": 60
+    },
+    {
+      "name": "Scorpion",
+      "outfitId": 43,
+      "tileX": 12,
+      "tileY": 13,
+      "worldX": 32216,
+      "worldY": 31909,
+      "worldZ": 11,
+      "radius": 1,
+      "spawntime": 60
+    },
+    {
+      "name": "Scorpion",
+      "outfitId": 43,
+      "tileX": 13,
+      "tileY": 14,
+      "worldX": 32217,
+      "worldY": 31910,
+      "worldZ": 11,
+      "radius": 1,
+      "spawntime": 60
+    },
+    {
+      "name": "Scorpion",
+      "outfitId": 43,
+      "tileX": 14,
+      "tileY": 14,
+      "worldX": 32218,
+      "worldY": 31910,
+      "worldZ": 11,
+      "radius": 1,
+      "spawntime": 60
+    },
+    {
+      "name": "Scorpion",
+      "outfitId": 43,
+      "tileX": 13,
+      "tileY": 15,
+      "worldX": 32217,
+      "worldY": 31911,
+      "worldZ": 11,
+      "radius": 1,
+      "spawntime": 60
+    },
+    {
+      "name": "Scorpion",
+      "outfitId": 43,
+      "tileX": 22,
+      "tileY": 14,
+      "worldX": 32226,
+      "worldY": 31910,
+      "worldZ": 11,
+      "radius": 1,
+      "spawntime": 60
+    },
+    {
+      "name": "Scorpion",
+      "outfitId": 43,
+      "tileX": 21,
+      "tileY": 15,
+      "worldX": 32225,
+      "worldY": 31911,
+      "worldZ": 11,
+      "radius": 1,
+      "spawntime": 60
+    },
+    {
+      "name": "Scorpion",
+      "outfitId": 43,
+      "tileX": 22,
+      "tileY": 15,
+      "worldX": 32226,
+      "worldY": 31911,
+      "worldZ": 11,
+      "radius": 1,
+      "spawntime": 60
+    },
+    {
+      "name": "Scorpion",
+      "outfitId": 43,
+      "tileX": 23,
+      "tileY": 16,
+      "worldX": 32227,
+      "worldY": 31912,
+      "worldZ": 11,
+      "radius": 1,
+      "spawntime": 60
+    },
+    {
+      "name": "Scorpion",
+      "outfitId": 43,
+      "tileX": 27,
+      "tileY": 18,
+      "worldX": 32231,
+      "worldY": 31914,
+      "worldZ": 11,
+      "radius": 1,
+      "spawntime": 60
+    },
+    {
+      "name": "Scorpion",
+      "outfitId": 43,
+      "tileX": 26,
+      "tileY": 19,
+      "worldX": 32230,
+      "worldY": 31915,
+      "worldZ": 11,
+      "radius": 1,
+      "spawntime": 60
+    },
+    {
+      "name": "Scorpion",
+      "outfitId": 43,
+      "tileX": 27,
+      "tileY": 19,
+      "worldX": 32231,
+      "worldY": 31915,
+      "worldZ": 11,
+      "radius": 1,
+      "spawntime": 60
+    },
+    {
+      "name": "Scorpion",
+      "outfitId": 43,
+      "tileX": 28,
+      "tileY": 20,
+      "worldX": 32232,
+      "worldY": 31916,
+      "worldZ": 11,
+      "radius": 1,
+      "spawntime": 60
+    }
+  ]
+}

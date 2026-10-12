@@ -15,6 +15,15 @@ extractor/atlases/
 extractor/raw-maps/**
 extractor/ready-maps/**
 
+# extractor/archive/<CIDADE>/<ID>_<slug>/ é a exceção, e é versionado de
+# propósito: são recortes assados que NÃO têm fonte em extractor/maps/, então
+# "regenerável" é mentira para eles — recriá-los custa um recorte novo do dump de
+# 638 MB, com a curadoria da época. Guardar o assado é mais barato que repetir o
+# recorte, e é o que faz uma hunt de reserva entrar no jogo por cópia
+# (publish.py + hunt-add) em vez de pipeline. Recorte de Rookgaard sob id de
+# cidade do continente não entra: Rookgaard é região própria, e eles já existem
+# sob ROOK-*. Pastas *_window também não — nada no jogo lê a saída de window.
+
 # Full-city map output (extractor/full-maps/<name>/): map.json + metadata.json
 # ARE versioned (inspection artifact for the travel-graph pipeline — see
 # .scratch/travel-graph-and-locations), but the baked sheet PNGs and the

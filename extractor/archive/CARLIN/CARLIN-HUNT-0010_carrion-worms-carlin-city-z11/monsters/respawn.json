@@ -1,0 +1,227 @@
+{
+  "mapBoundsRef": {
+    "minX": 32364,
+    "minY": 31816,
+    "maxX": 32388,
+    "maxY": 31840
+  },
+  "monsterDefs": {
+    "192": {
+      "name": "Carrion Worm",
+      "outfitId": 192,
+      "atlas": {
+        "image": "assets/outfits/192.png",
+        "json": "assets/outfits/192.json"
+      },
+      "appearance": {
+        "looktype": 192,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 45,
+          "countMin": 1,
+          "dropChance": 0.5,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.1,
+          "itemId": 10275,
+          "itemName": "carrion worm fang",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.0946,
+          "itemId": 3577,
+          "itemName": "meat",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.021,
+          "itemId": 3492,
+          "itemName": "worm",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0021,
+          "itemId": 12600,
+          "itemName": "coal",
+          "rarity": "very-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 6069,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 6069
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 5539
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 5540
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 5541
+          }
+        ]
+      },
+      "race": "blood",
+      "moving": {
+        "north": {
+          "frames": [
+            "192_0",
+            "192_4",
+            "192_8",
+            "192_12",
+            "192_16",
+            "192_20",
+            "192_24",
+            "192_28",
+            "192_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "192_1",
+            "192_5",
+            "192_9",
+            "192_13",
+            "192_17",
+            "192_21",
+            "192_25",
+            "192_29",
+            "192_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "192_2",
+            "192_6",
+            "192_10",
+            "192_14",
+            "192_18",
+            "192_22",
+            "192_26",
+            "192_30",
+            "192_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "192_3",
+            "192_7",
+            "192_11",
+            "192_15",
+            "192_19",
+            "192_23",
+            "192_27",
+            "192_31",
+            "192_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      },
+      "idle": {
+        "north": {
+          "frames": [
+            "192_0",
+            "192_4",
+            "192_8",
+            "192_12",
+            "192_16",
+            "192_20",
+            "192_24",
+            "192_28",
+            "192_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "192_1",
+            "192_5",
+            "192_9",
+            "192_13",
+            "192_17",
+            "192_21",
+            "192_25",
+            "192_29",
+            "192_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "192_2",
+            "192_6",
+            "192_10",
+            "192_14",
+            "192_18",
+            "192_22",
+            "192_26",
+            "192_30",
+            "192_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "192_3",
+            "192_7",
+            "192_11",
+            "192_15",
+            "192_19",
+            "192_23",
+            "192_27",
+            "192_31",
+            "192_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    }
+  },
+  "spawns": [
+    {
+      "name": "Carrion Worm",
+      "outfitId": 192,
+      "tileX": 12,
+      "tileY": 12,
+      "worldX": 32376,
+      "worldY": 31828,
+      "worldZ": 11,
+      "radius": 3,
+      "spawntime": 90
+    }
+  ]
+}

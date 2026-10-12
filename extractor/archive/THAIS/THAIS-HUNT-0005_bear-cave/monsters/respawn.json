@@ -1,0 +1,1290 @@
+{
+  "mapBoundsRef": {
+    "minX": 32106,
+    "minY": 32168,
+    "maxX": 32189,
+    "maxY": 32234
+  },
+  "monsterDefs": {
+    "31": {
+      "name": "Deer",
+      "outfitId": 31,
+      "atlas": {
+        "image": "assets/outfits/31.png",
+        "json": "assets/outfits/31.json"
+      },
+      "appearance": {
+        "looktype": 31,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 4,
+          "countMin": 1,
+          "dropChance": 0.8,
+          "itemId": 3577,
+          "itemName": "meat",
+          "rarity": "common"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.5,
+          "itemId": 3582,
+          "itemName": "ham",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0087,
+          "itemId": 10297,
+          "itemName": "antlers",
+          "rarity": "rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 5970,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5970
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4016
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4017
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4018
+          }
+        ]
+      },
+      "race": "blood",
+      "idle": {
+        "north": "31_0",
+        "east": "31_1",
+        "south": "31_2",
+        "west": "31_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "31_4",
+            "31_8",
+            "31_12",
+            "31_16",
+            "31_20",
+            "31_24",
+            "31_28",
+            "31_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "31_5",
+            "31_9",
+            "31_13",
+            "31_17",
+            "31_21",
+            "31_25",
+            "31_29",
+            "31_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "31_6",
+            "31_10",
+            "31_14",
+            "31_18",
+            "31_22",
+            "31_26",
+            "31_30",
+            "31_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "31_7",
+            "31_11",
+            "31_15",
+            "31_19",
+            "31_23",
+            "31_27",
+            "31_31",
+            "31_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "30": {
+      "name": "Spider",
+      "outfitId": 30,
+      "atlas": {
+        "image": "assets/outfits/30.png",
+        "json": "assets/outfits/30.json"
+      },
+      "appearance": {
+        "looktype": 30,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 5,
+          "countMin": 1,
+          "dropChance": 0.6515,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0096,
+          "itemId": 8031,
+          "itemName": "spider fangs",
+          "rarity": "rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 5961,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5961
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4250
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4003
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4004
+          }
+        ]
+      },
+      "race": "venom",
+      "idle": {
+        "north": "30_0",
+        "east": "30_1",
+        "south": "30_2",
+        "west": "30_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "30_4",
+            "30_8",
+            "30_12",
+            "30_16",
+            "30_20",
+            "30_24",
+            "30_28",
+            "30_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "30_5",
+            "30_9",
+            "30_13",
+            "30_17",
+            "30_21",
+            "30_25",
+            "30_29",
+            "30_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "30_6",
+            "30_10",
+            "30_14",
+            "30_18",
+            "30_22",
+            "30_26",
+            "30_30",
+            "30_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "30_7",
+            "30_11",
+            "30_15",
+            "30_19",
+            "30_23",
+            "30_27",
+            "30_31",
+            "30_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "27": {
+      "name": "Wolf",
+      "outfitId": 27,
+      "atlas": {
+        "image": "assets/outfits/27.png",
+        "json": "assets/outfits/27.json"
+      },
+      "appearance": {
+        "looktype": 27,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.55,
+          "itemId": 3577,
+          "itemName": "meat",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0098,
+          "itemId": 5897,
+          "itemName": "wolf paw",
+          "rarity": "rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 5968,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5968
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4007
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4008
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4009
+          }
+        ]
+      },
+      "race": "blood",
+      "idle": {
+        "north": "27_0",
+        "east": "27_1",
+        "south": "27_2",
+        "west": "27_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "27_4",
+            "27_8",
+            "27_12",
+            "27_16",
+            "27_20",
+            "27_24",
+            "27_28",
+            "27_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "27_5",
+            "27_9",
+            "27_13",
+            "27_17",
+            "27_21",
+            "27_25",
+            "27_29",
+            "27_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "27_6",
+            "27_10",
+            "27_14",
+            "27_18",
+            "27_22",
+            "27_26",
+            "27_30",
+            "27_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "27_7",
+            "27_11",
+            "27_15",
+            "27_19",
+            "27_23",
+            "27_27",
+            "27_31",
+            "27_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "45": {
+      "name": "Bug",
+      "outfitId": 45,
+      "atlas": {
+        "image": "assets/outfits/45.png",
+        "json": "assets/outfits/45.json"
+      },
+      "appearance": {
+        "looktype": 45,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 6,
+          "countMin": 1,
+          "dropChance": 0.5117,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 3,
+          "countMin": 1,
+          "dropChance": 0.0259,
+          "itemId": 3590,
+          "itemName": "cherry",
+          "rarity": "rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 5990,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5990
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4083
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4084
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4085
+          }
+        ]
+      },
+      "race": "venom",
+      "idle": {
+        "north": "45_0",
+        "east": "45_1",
+        "south": "45_2",
+        "west": "45_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "45_4",
+            "45_8",
+            "45_12",
+            "45_16",
+            "45_20",
+            "45_24",
+            "45_28",
+            "45_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "45_5",
+            "45_9",
+            "45_13",
+            "45_17",
+            "45_21",
+            "45_25",
+            "45_29",
+            "45_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "45_6",
+            "45_10",
+            "45_14",
+            "45_18",
+            "45_22",
+            "45_26",
+            "45_30",
+            "45_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "45_7",
+            "45_11",
+            "45_15",
+            "45_19",
+            "45_23",
+            "45_27",
+            "45_31",
+            "45_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "36": {
+      "name": "Poison Spider",
+      "outfitId": 36,
+      "atlas": {
+        "image": "assets/outfits/36.png",
+        "json": "assets/outfits/36.json"
+      },
+      "appearance": {
+        "looktype": 36,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 4,
+          "countMin": 1,
+          "dropChance": 0.75,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0114,
+          "itemId": 11485,
+          "itemName": "poison spider shell",
+          "rarity": "rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 5974,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5974
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4029
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4066
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4125
+          }
+        ]
+      },
+      "race": "venom",
+      "idle": {
+        "north": "36_0",
+        "east": "36_1",
+        "south": "36_2",
+        "west": "36_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "36_4",
+            "36_8",
+            "36_12",
+            "36_16",
+            "36_20",
+            "36_24",
+            "36_28",
+            "36_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "36_5",
+            "36_9",
+            "36_13",
+            "36_17",
+            "36_21",
+            "36_25",
+            "36_29",
+            "36_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "36_6",
+            "36_10",
+            "36_14",
+            "36_18",
+            "36_22",
+            "36_26",
+            "36_30",
+            "36_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "36_7",
+            "36_11",
+            "36_15",
+            "36_19",
+            "36_23",
+            "36_27",
+            "36_31",
+            "36_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "28": {
+      "name": "Snake",
+      "outfitId": 28,
+      "atlas": {
+        "image": "assets/outfits/28.png",
+        "json": "assets/outfits/28.json"
+      },
+      "appearance": {
+        "looktype": 28,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [],
+      "corpse": {
+        "itemId": 3998,
+        "stages": [
+          {
+            "durationSeconds": 300,
+            "itemId": 3998
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 3999
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4000
+          }
+        ]
+      },
+      "race": "blood",
+      "idle": {
+        "north": "28_0",
+        "east": "28_1",
+        "south": "28_2",
+        "west": "28_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "28_4",
+            "28_8",
+            "28_12",
+            "28_16",
+            "28_20",
+            "28_24",
+            "28_28",
+            "28_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "28_5",
+            "28_9",
+            "28_13",
+            "28_17",
+            "28_21",
+            "28_25",
+            "28_29",
+            "28_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "28_6",
+            "28_10",
+            "28_14",
+            "28_18",
+            "28_22",
+            "28_26",
+            "28_30",
+            "28_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "28_7",
+            "28_11",
+            "28_15",
+            "28_19",
+            "28_23",
+            "28_27",
+            "28_31",
+            "28_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "21": {
+      "name": "Rat",
+      "outfitId": 21,
+      "atlas": {
+        "image": "assets/outfits/21.png",
+        "json": "assets/outfits/21.json"
+      },
+      "appearance": {
+        "looktype": 21,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 4,
+          "countMin": 1,
+          "dropChance": 1.0,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "always"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.3941,
+          "itemId": 3607,
+          "itemName": "cheese",
+          "rarity": "common"
+        }
+      ],
+      "corpse": {
+        "itemId": 5964,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 5964
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 3994
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 3995
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 3996
+          }
+        ]
+      },
+      "race": "blood",
+      "idle": {
+        "north": "21_0",
+        "east": "21_1",
+        "south": "21_2",
+        "west": "21_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "21_4",
+            "21_8",
+            "21_12",
+            "21_16",
+            "21_20",
+            "21_24",
+            "21_28",
+            "21_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "21_5",
+            "21_9",
+            "21_13",
+            "21_17",
+            "21_21",
+            "21_25",
+            "21_29",
+            "21_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "21_6",
+            "21_10",
+            "21_14",
+            "21_18",
+            "21_22",
+            "21_26",
+            "21_30",
+            "21_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "21_7",
+            "21_11",
+            "21_15",
+            "21_19",
+            "21_23",
+            "21_27",
+            "21_31",
+            "21_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    }
+  },
+  "spawns": [
+    {
+      "name": "Deer",
+      "outfitId": 31,
+      "tileX": 28,
+      "tileY": 16,
+      "worldX": 32134,
+      "worldY": 32184,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Spider",
+      "outfitId": 30,
+      "tileX": 54,
+      "tileY": 12,
+      "worldX": 32160,
+      "worldY": 32180,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Spider",
+      "outfitId": 30,
+      "tileX": 54,
+      "tileY": 15,
+      "worldX": 32160,
+      "worldY": 32183,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Spider",
+      "outfitId": 30,
+      "tileX": 59,
+      "tileY": 15,
+      "worldX": 32165,
+      "worldY": 32183,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Spider",
+      "outfitId": 30,
+      "tileX": 70,
+      "tileY": 14,
+      "worldX": 32176,
+      "worldY": 32182,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Spider",
+      "outfitId": 30,
+      "tileX": 14,
+      "tileY": 21,
+      "worldX": 32120,
+      "worldY": 32189,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Spider",
+      "outfitId": 30,
+      "tileX": 15,
+      "tileY": 22,
+      "worldX": 32121,
+      "worldY": 32190,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Spider",
+      "outfitId": 30,
+      "tileX": 21,
+      "tileY": 19,
+      "worldX": 32127,
+      "worldY": 32187,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Spider",
+      "outfitId": 30,
+      "tileX": 21,
+      "tileY": 21,
+      "worldX": 32127,
+      "worldY": 32189,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Wolf",
+      "outfitId": 27,
+      "tileX": 35,
+      "tileY": 19,
+      "worldX": 32141,
+      "worldY": 32187,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Wolf",
+      "outfitId": 27,
+      "tileX": 40,
+      "tileY": 22,
+      "worldX": 32146,
+      "worldY": 32190,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Bug",
+      "outfitId": 45,
+      "tileX": 54,
+      "tileY": 20,
+      "worldX": 32160,
+      "worldY": 32188,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Bug",
+      "outfitId": 45,
+      "tileX": 54,
+      "tileY": 22,
+      "worldX": 32160,
+      "worldY": 32190,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Bug",
+      "outfitId": 45,
+      "tileX": 57,
+      "tileY": 24,
+      "worldX": 32163,
+      "worldY": 32192,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Poison Spider",
+      "outfitId": 36,
+      "tileX": 61,
+      "tileY": 19,
+      "worldX": 32167,
+      "worldY": 32187,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Poison Spider",
+      "outfitId": 36,
+      "tileX": 71,
+      "tileY": 18,
+      "worldX": 32177,
+      "worldY": 32186,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Spider",
+      "outfitId": 30,
+      "tileX": 67,
+      "tileY": 22,
+      "worldX": 32173,
+      "worldY": 32190,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Deer",
+      "outfitId": 31,
+      "tileX": 16,
+      "tileY": 29,
+      "worldX": 32122,
+      "worldY": 32197,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Deer",
+      "outfitId": 31,
+      "tileX": 27,
+      "tileY": 30,
+      "worldX": 32133,
+      "worldY": 32198,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Snake",
+      "outfitId": 28,
+      "tileX": 28,
+      "tileY": 36,
+      "worldX": 32134,
+      "worldY": 32204,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Snake",
+      "outfitId": 28,
+      "tileX": 30,
+      "tileY": 36,
+      "worldX": 32136,
+      "worldY": 32204,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Snake",
+      "outfitId": 28,
+      "tileX": 30,
+      "tileY": 37,
+      "worldX": 32136,
+      "worldY": 32205,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Snake",
+      "outfitId": 28,
+      "tileX": 30,
+      "tileY": 38,
+      "worldX": 32136,
+      "worldY": 32206,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Wolf",
+      "outfitId": 27,
+      "tileX": 47,
+      "tileY": 36,
+      "worldX": 32153,
+      "worldY": 32204,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Spider",
+      "outfitId": 30,
+      "tileX": 23,
+      "tileY": 40,
+      "worldX": 32129,
+      "worldY": 32208,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Spider",
+      "outfitId": 30,
+      "tileX": 23,
+      "tileY": 42,
+      "worldX": 32129,
+      "worldY": 32210,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rat",
+      "outfitId": 21,
+      "tileX": 18,
+      "tileY": 43,
+      "worldX": 32124,
+      "worldY": 32211,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Snake",
+      "outfitId": 28,
+      "tileX": 22,
+      "tileY": 44,
+      "worldX": 32128,
+      "worldY": 32212,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Wolf",
+      "outfitId": 27,
+      "tileX": 41,
+      "tileY": 39,
+      "worldX": 32147,
+      "worldY": 32207,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Wolf",
+      "outfitId": 27,
+      "tileX": 42,
+      "tileY": 40,
+      "worldX": 32148,
+      "worldY": 32208,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Wolf",
+      "outfitId": 27,
+      "tileX": 51,
+      "tileY": 45,
+      "worldX": 32157,
+      "worldY": 32213,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Snake",
+      "outfitId": 28,
+      "tileX": 12,
+      "tileY": 47,
+      "worldX": 32118,
+      "worldY": 32215,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Spider",
+      "outfitId": 30,
+      "tileX": 18,
+      "tileY": 50,
+      "worldX": 32124,
+      "worldY": 32218,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rat",
+      "outfitId": 21,
+      "tileX": 20,
+      "tileY": 51,
+      "worldX": 32126,
+      "worldY": 32219,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Spider",
+      "outfitId": 30,
+      "tileX": 17,
+      "tileY": 52,
+      "worldX": 32123,
+      "worldY": 32220,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rat",
+      "outfitId": 21,
+      "tileX": 26,
+      "tileY": 49,
+      "worldX": 32132,
+      "worldY": 32217,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Wolf",
+      "outfitId": 27,
+      "tileX": 50,
+      "tileY": 47,
+      "worldX": 32156,
+      "worldY": 32215,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Wolf",
+      "outfitId": 27,
+      "tileX": 49,
+      "tileY": 49,
+      "worldX": 32155,
+      "worldY": 32217,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Wolf",
+      "outfitId": 27,
+      "tileX": 52,
+      "tileY": 49,
+      "worldX": 32158,
+      "worldY": 32217,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Snake",
+      "outfitId": 28,
+      "tileX": 24,
+      "tileY": 53,
+      "worldX": 32130,
+      "worldY": 32221,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Snake",
+      "outfitId": 28,
+      "tileX": 25,
+      "tileY": 54,
+      "worldX": 32131,
+      "worldY": 32222,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    }
+  ]
+}

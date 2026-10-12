@@ -1,0 +1,1634 @@
+{
+  "monsters": {
+    "id": "THAIS-HUNT-0001",
+    "mapId": "THAIS-HUNT-0001",
+    "assetsRoot": "assets/THAIS-HUNT-0001_cyclopss-mount-sternum-z713-sprites/monsters",
+    "mapBoundsRef": {
+      "minX": 32422,
+      "minY": 32035,
+      "maxX": 32510,
+      "maxY": 32132
+    },
+    "monsterDefs": {
+      "22": {
+        "name": "Cyclops",
+        "outfitId": 22,
+        "atlas": {
+          "image": "assets/outfits/22.png",
+          "json": "assets/outfits/22.json"
+        },
+        "appearance": {
+          "looktype": 22,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 47,
+            "countMin": 1,
+            "dropChance": 0.82,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.3007,
+            "itemId": 3577,
+            "itemName": "meat",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.08,
+            "itemId": 3294,
+            "itemName": "short sword",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0493,
+            "itemId": 9657,
+            "itemName": "cyclops toe",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.025,
+            "itemId": 3410,
+            "itemName": "plate shield",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.014,
+            "itemId": 3413,
+            "itemName": "battle shield",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.01003,
+            "itemId": 3269,
+            "itemName": "halberd",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.01,
+            "itemId": 23986,
+            "itemName": "heavy old tome",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0022,
+            "itemId": 3384,
+            "itemName": "dark helmet",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0021,
+            "itemId": 266,
+            "itemName": "health potion",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0019,
+            "itemId": 3012,
+            "itemName": "wolf tooth chain",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0009,
+            "itemId": 3093,
+            "itemName": "club ring",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0008,
+            "itemId": 7398,
+            "itemName": "cyclops trophy",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 5962,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 5962
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 3989
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4299
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4300
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "22_0",
+          "east": "22_1",
+          "south": "22_2",
+          "west": "22_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "22_4",
+              "22_8",
+              "22_12",
+              "22_16",
+              "22_20",
+              "22_24",
+              "22_28",
+              "22_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "22_5",
+              "22_9",
+              "22_13",
+              "22_17",
+              "22_21",
+              "22_25",
+              "22_29",
+              "22_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "22_6",
+              "22_10",
+              "22_14",
+              "22_18",
+              "22_22",
+              "22_26",
+              "22_30",
+              "22_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "22_7",
+              "22_11",
+              "22_15",
+              "22_19",
+              "22_23",
+              "22_27",
+              "22_31",
+              "22_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "280": {
+        "name": "Cyclops Drone",
+        "outfitId": 280,
+        "atlas": {
+          "image": "assets/outfits/280.png",
+          "json": "assets/outfits/280.json"
+        },
+        "appearance": {
+          "looktype": 280,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 30,
+            "countMin": 1,
+            "dropChance": 0.82,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.5043,
+            "itemId": 3577,
+            "itemName": "meat",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.08,
+            "itemId": 3294,
+            "itemName": "short sword",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0675,
+            "itemId": 9657,
+            "itemName": "cyclops toe",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.02,
+            "itemId": 3410,
+            "itemName": "plate shield",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.016,
+            "itemId": 3413,
+            "itemName": "battle shield",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0068,
+            "itemId": 3269,
+            "itemName": "halberd",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0052,
+            "itemId": 236,
+            "itemName": "strong health potion",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0019,
+            "itemId": 3384,
+            "itemName": "dark helmet",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0012,
+            "itemId": 7398,
+            "itemName": "cyclops trophy",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0009,
+            "itemId": 3093,
+            "itemName": "club ring",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 771,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 771
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 772
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 773
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 659
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "280_0",
+          "east": "280_1",
+          "south": "280_2",
+          "west": "280_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "280_4",
+              "280_8",
+              "280_12",
+              "280_16",
+              "280_20",
+              "280_24",
+              "280_28",
+              "280_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "280_5",
+              "280_9",
+              "280_13",
+              "280_17",
+              "280_21",
+              "280_25",
+              "280_29",
+              "280_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "280_6",
+              "280_10",
+              "280_14",
+              "280_18",
+              "280_22",
+              "280_26",
+              "280_30",
+              "280_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "280_7",
+              "280_11",
+              "280_15",
+              "280_19",
+              "280_23",
+              "280_27",
+              "280_31",
+              "280_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "277": {
+        "name": "Cyclops Smith",
+        "outfitId": 277,
+        "atlas": {
+          "image": "assets/outfits/277.png",
+          "json": "assets/outfits/277.json"
+        },
+        "appearance": {
+          "looktype": 277,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 70,
+            "countMin": 1,
+            "dropChance": 0.8292,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.4995,
+            "itemId": 3577,
+            "itemName": "meat",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1028,
+            "itemId": 9657,
+            "itemName": "cyclops toe",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0619,
+            "itemId": 3413,
+            "itemName": "battle shield",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0545,
+            "itemId": 3266,
+            "itemName": "battle axe",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.052,
+            "itemId": 3305,
+            "itemName": "battle hammer",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.02,
+            "itemId": 3330,
+            "itemName": "heavy machete",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.02,
+            "itemId": 3410,
+            "itemName": "plate shield",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0088,
+            "itemId": 3275,
+            "itemName": "double axe",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0039,
+            "itemId": 236,
+            "itemName": "strong health potion",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.002,
+            "itemId": 3384,
+            "itemName": "dark helmet",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0015,
+            "itemId": 7452,
+            "itemName": "spiked squelcher",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0014,
+            "itemId": 7398,
+            "itemName": "cyclops trophy",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0009,
+            "itemId": 3093,
+            "itemName": "club ring",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 656,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 656
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 657
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 658
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 659
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "277_0",
+          "east": "277_1",
+          "south": "277_2",
+          "west": "277_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "277_4",
+              "277_8",
+              "277_12",
+              "277_16",
+              "277_20",
+              "277_24",
+              "277_28",
+              "277_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "277_5",
+              "277_9",
+              "277_13",
+              "277_17",
+              "277_21",
+              "277_25",
+              "277_29",
+              "277_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "277_6",
+              "277_10",
+              "277_14",
+              "277_18",
+              "277_22",
+              "277_26",
+              "277_30",
+              "277_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "277_7",
+              "277_11",
+              "277_15",
+              "277_19",
+              "277_23",
+              "277_27",
+              "277_31",
+              "277_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "219": {
+        "name": "Tarantula",
+        "outfitId": 219,
+        "atlas": {
+          "image": "assets/outfits/219.png",
+          "json": "assets/outfits/219.json"
+        },
+        "appearance": {
+          "looktype": 219,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 40,
+            "countMin": 1,
+            "dropChance": 0.79,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1,
+            "itemId": 10281,
+            "itemName": "tarantula egg",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0482,
+            "itemId": 8031,
+            "itemName": "spider fangs",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0305,
+            "itemId": 3372,
+            "itemName": "brass legs",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.02,
+            "itemId": 3410,
+            "itemName": "plate shield",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0099,
+            "itemId": 3351,
+            "itemName": "steel helmet",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0012,
+            "itemId": 3053,
+            "itemName": "time ring",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 6060,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 6060
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4385
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4386
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4387
+            }
+          ]
+        },
+        "race": "venom",
+        "idle": {
+          "north": "219_0",
+          "east": "219_1",
+          "south": "219_2",
+          "west": "219_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "219_4",
+              "219_8",
+              "219_12",
+              "219_16",
+              "219_20",
+              "219_24",
+              "219_28",
+              "219_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "219_5",
+              "219_9",
+              "219_13",
+              "219_17",
+              "219_21",
+              "219_25",
+              "219_29",
+              "219_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "219_6",
+              "219_10",
+              "219_14",
+              "219_18",
+              "219_22",
+              "219_26",
+              "219_30",
+              "219_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "219_7",
+              "219_11",
+              "219_15",
+              "219_19",
+              "219_23",
+              "219_27",
+              "219_31",
+              "219_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      }
+    },
+    "spawns": [
+      {
+        "name": "Cyclops",
+        "outfitId": 22,
+        "tileX": 29,
+        "tileY": 30,
+        "worldX": 32451,
+        "worldY": 32065,
+        "worldZ": 7,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Cyclops",
+        "outfitId": 22,
+        "tileX": 36,
+        "tileY": 33,
+        "worldX": 32458,
+        "worldY": 32068,
+        "worldZ": 7,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Cyclops",
+        "outfitId": 22,
+        "tileX": 29,
+        "tileY": 36,
+        "worldX": 32451,
+        "worldY": 32071,
+        "worldZ": 7,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Cyclops",
+        "outfitId": 22,
+        "tileX": 35,
+        "tileY": 37,
+        "worldX": 32457,
+        "worldY": 32072,
+        "worldZ": 7,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Cyclops",
+        "outfitId": 22,
+        "tileX": 38,
+        "tileY": 38,
+        "worldX": 32460,
+        "worldY": 32073,
+        "worldZ": 7,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Cyclops",
+        "outfitId": 22,
+        "tileX": 43,
+        "tileY": 39,
+        "worldX": 32465,
+        "worldY": 32074,
+        "worldZ": 7,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Cyclops",
+        "outfitId": 22,
+        "tileX": 38,
+        "tileY": 42,
+        "worldX": 32460,
+        "worldY": 32077,
+        "worldZ": 7,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Cyclops",
+        "outfitId": 22,
+        "tileX": 43,
+        "tileY": 45,
+        "worldX": 32465,
+        "worldY": 32080,
+        "worldZ": 7,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Cyclops",
+        "outfitId": 22,
+        "tileX": 30,
+        "tileY": 34,
+        "worldX": 32452,
+        "worldY": 32069,
+        "worldZ": 8,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Cyclops",
+        "outfitId": 22,
+        "tileX": 26,
+        "tileY": 36,
+        "worldX": 32448,
+        "worldY": 32071,
+        "worldZ": 8,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Cyclops",
+        "outfitId": 22,
+        "tileX": 33,
+        "tileY": 45,
+        "worldX": 32455,
+        "worldY": 32080,
+        "worldZ": 8,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Cyclops",
+        "outfitId": 22,
+        "tileX": 24,
+        "tileY": 53,
+        "worldX": 32446,
+        "worldY": 32088,
+        "worldZ": 8,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Cyclops",
+        "outfitId": 22,
+        "tileX": 38,
+        "tileY": 59,
+        "worldX": 32460,
+        "worldY": 32094,
+        "worldZ": 8,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Cyclops Drone",
+        "outfitId": 280,
+        "tileX": 15,
+        "tileY": 58,
+        "worldX": 32437,
+        "worldY": 32093,
+        "worldZ": 8,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Cyclops",
+        "outfitId": 22,
+        "tileX": 14,
+        "tileY": 62,
+        "worldX": 32436,
+        "worldY": 32097,
+        "worldZ": 8,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Cyclops",
+        "outfitId": 22,
+        "tileX": 16,
+        "tileY": 65,
+        "worldX": 32438,
+        "worldY": 32100,
+        "worldZ": 8,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Cyclops",
+        "outfitId": 22,
+        "tileX": 31,
+        "tileY": 60,
+        "worldX": 32453,
+        "worldY": 32095,
+        "worldZ": 8,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Cyclops",
+        "outfitId": 22,
+        "tileX": 34,
+        "tileY": 69,
+        "worldX": 32456,
+        "worldY": 32104,
+        "worldZ": 8,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Cyclops",
+        "outfitId": 22,
+        "tileX": 45,
+        "tileY": 76,
+        "worldX": 32467,
+        "worldY": 32111,
+        "worldZ": 8,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Cyclops",
+        "outfitId": 22,
+        "tileX": 39,
+        "tileY": 77,
+        "worldX": 32461,
+        "worldY": 32112,
+        "worldZ": 8,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Cyclops Smith",
+        "outfitId": 277,
+        "tileX": 42,
+        "tileY": 80,
+        "worldX": 32464,
+        "worldY": 32115,
+        "worldZ": 8,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Cyclops",
+        "outfitId": 22,
+        "tileX": 57,
+        "tileY": 79,
+        "worldX": 32479,
+        "worldY": 32114,
+        "worldZ": 8,
+        "radius": 5,
+        "spawntime": 90
+      },
+      {
+        "name": "Cyclops Smith",
+        "outfitId": 277,
+        "tileX": 54,
+        "tileY": 81,
+        "worldX": 32476,
+        "worldY": 32116,
+        "worldZ": 8,
+        "radius": 5,
+        "spawntime": 90
+      },
+      {
+        "name": "Cyclops",
+        "outfitId": 22,
+        "tileX": 55,
+        "tileY": 85,
+        "worldX": 32477,
+        "worldY": 32120,
+        "worldZ": 8,
+        "radius": 5,
+        "spawntime": 90
+      },
+      {
+        "name": "Cyclops",
+        "outfitId": 22,
+        "tileX": 56,
+        "tileY": 33,
+        "worldX": 32478,
+        "worldY": 32068,
+        "worldZ": 9,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Cyclops Smith",
+        "outfitId": 277,
+        "tileX": 60,
+        "tileY": 34,
+        "worldX": 32482,
+        "worldY": 32069,
+        "worldZ": 9,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Cyclops",
+        "outfitId": 22,
+        "tileX": 57,
+        "tileY": 40,
+        "worldX": 32479,
+        "worldY": 32075,
+        "worldZ": 9,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Cyclops Smith",
+        "outfitId": 277,
+        "tileX": 48,
+        "tileY": 42,
+        "worldX": 32470,
+        "worldY": 32077,
+        "worldZ": 9,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Cyclops",
+        "outfitId": 22,
+        "tileX": 48,
+        "tileY": 46,
+        "worldX": 32470,
+        "worldY": 32081,
+        "worldZ": 9,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Cyclops Smith",
+        "outfitId": 277,
+        "tileX": 43,
+        "tileY": 47,
+        "worldX": 32465,
+        "worldY": 32082,
+        "worldZ": 9,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Cyclops",
+        "outfitId": 22,
+        "tileX": 12,
+        "tileY": 47,
+        "worldX": 32434,
+        "worldY": 32082,
+        "worldZ": 9,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Cyclops",
+        "outfitId": 22,
+        "tileX": 17,
+        "tileY": 49,
+        "worldX": 32439,
+        "worldY": 32084,
+        "worldZ": 9,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Cyclops",
+        "outfitId": 22,
+        "tileX": 14,
+        "tileY": 52,
+        "worldX": 32436,
+        "worldY": 32087,
+        "worldZ": 9,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Cyclops",
+        "outfitId": 22,
+        "tileX": 18,
+        "tileY": 54,
+        "worldX": 32440,
+        "worldY": 32089,
+        "worldZ": 9,
+        "radius": 4,
+        "spawntime": 90
+      },
+      {
+        "name": "Cyclops",
+        "outfitId": 22,
+        "tileX": 52,
+        "tileY": 52,
+        "worldX": 32474,
+        "worldY": 32087,
+        "worldZ": 9,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Cyclops Drone",
+        "outfitId": 280,
+        "tileX": 36,
+        "tileY": 52,
+        "worldX": 32458,
+        "worldY": 32087,
+        "worldZ": 9,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Tarantula",
+        "outfitId": 219,
+        "tileX": 76,
+        "tileY": 12,
+        "worldX": 32498,
+        "worldY": 32047,
+        "worldZ": 13,
+        "radius": 3,
+        "spawntime": 90
+      }
+    ]
+  },
+  "loot": {
+    "id": "THAIS-HUNT-0001",
+    "mapId": "THAIS-HUNT-0001",
+    "drops": [
+      {
+        "countMax": 47,
+        "countMin": 1,
+        "dropChance": 0.82,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Cyclops"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.3007,
+        "itemId": 3577,
+        "itemName": "meat",
+        "rarity": "common",
+        "monsterName": "Cyclops"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.08,
+        "itemId": 3294,
+        "itemName": "short sword",
+        "rarity": "semi-rare",
+        "monsterName": "Cyclops"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0493,
+        "itemId": 9657,
+        "itemName": "cyclops toe",
+        "rarity": "rare",
+        "monsterName": "Cyclops"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.025,
+        "itemId": 3410,
+        "itemName": "plate shield",
+        "rarity": "rare",
+        "monsterName": "Cyclops"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.014,
+        "itemId": 3413,
+        "itemName": "battle shield",
+        "rarity": "rare",
+        "monsterName": "Cyclops"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.01003,
+        "itemId": 3269,
+        "itemName": "halberd",
+        "rarity": "rare",
+        "monsterName": "Cyclops"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.01,
+        "itemId": 23986,
+        "itemName": "heavy old tome",
+        "rarity": "rare",
+        "monsterName": "Cyclops"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0022,
+        "itemId": 3384,
+        "itemName": "dark helmet",
+        "rarity": "very-rare",
+        "monsterName": "Cyclops"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0021,
+        "itemId": 266,
+        "itemName": "health potion",
+        "rarity": "very-rare",
+        "monsterName": "Cyclops"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0019,
+        "itemId": 3012,
+        "itemName": "wolf tooth chain",
+        "rarity": "very-rare",
+        "monsterName": "Cyclops"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0009,
+        "itemId": 3093,
+        "itemName": "club ring",
+        "rarity": "very-rare",
+        "monsterName": "Cyclops"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0008,
+        "itemId": 7398,
+        "itemName": "cyclops trophy",
+        "rarity": "very-rare",
+        "monsterName": "Cyclops"
+      },
+      {
+        "countMax": 30,
+        "countMin": 1,
+        "dropChance": 0.82,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Cyclops Drone"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.5043,
+        "itemId": 3577,
+        "itemName": "meat",
+        "rarity": "common",
+        "monsterName": "Cyclops Drone"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.08,
+        "itemId": 3294,
+        "itemName": "short sword",
+        "rarity": "semi-rare",
+        "monsterName": "Cyclops Drone"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0675,
+        "itemId": 9657,
+        "itemName": "cyclops toe",
+        "rarity": "semi-rare",
+        "monsterName": "Cyclops Drone"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.02,
+        "itemId": 3410,
+        "itemName": "plate shield",
+        "rarity": "rare",
+        "monsterName": "Cyclops Drone"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.016,
+        "itemId": 3413,
+        "itemName": "battle shield",
+        "rarity": "rare",
+        "monsterName": "Cyclops Drone"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0068,
+        "itemId": 3269,
+        "itemName": "halberd",
+        "rarity": "rare",
+        "monsterName": "Cyclops Drone"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0052,
+        "itemId": 236,
+        "itemName": "strong health potion",
+        "rarity": "rare",
+        "monsterName": "Cyclops Drone"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0019,
+        "itemId": 3384,
+        "itemName": "dark helmet",
+        "rarity": "very-rare",
+        "monsterName": "Cyclops Drone"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0012,
+        "itemId": 7398,
+        "itemName": "cyclops trophy",
+        "rarity": "very-rare",
+        "monsterName": "Cyclops Drone"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0009,
+        "itemId": 3093,
+        "itemName": "club ring",
+        "rarity": "very-rare",
+        "monsterName": "Cyclops Drone"
+      },
+      {
+        "countMax": 70,
+        "countMin": 1,
+        "dropChance": 0.8292,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Cyclops Smith"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.4995,
+        "itemId": 3577,
+        "itemName": "meat",
+        "rarity": "common",
+        "monsterName": "Cyclops Smith"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1028,
+        "itemId": 9657,
+        "itemName": "cyclops toe",
+        "rarity": "semi-rare",
+        "monsterName": "Cyclops Smith"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0619,
+        "itemId": 3413,
+        "itemName": "battle shield",
+        "rarity": "semi-rare",
+        "monsterName": "Cyclops Smith"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0545,
+        "itemId": 3266,
+        "itemName": "battle axe",
+        "rarity": "semi-rare",
+        "monsterName": "Cyclops Smith"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.052,
+        "itemId": 3305,
+        "itemName": "battle hammer",
+        "rarity": "semi-rare",
+        "monsterName": "Cyclops Smith"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.02,
+        "itemId": 3330,
+        "itemName": "heavy machete",
+        "rarity": "rare",
+        "monsterName": "Cyclops Smith"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.02,
+        "itemId": 3410,
+        "itemName": "plate shield",
+        "rarity": "rare",
+        "monsterName": "Cyclops Smith"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0088,
+        "itemId": 3275,
+        "itemName": "double axe",
+        "rarity": "rare",
+        "monsterName": "Cyclops Smith"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0039,
+        "itemId": 236,
+        "itemName": "strong health potion",
+        "rarity": "very-rare",
+        "monsterName": "Cyclops Smith"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.002,
+        "itemId": 3384,
+        "itemName": "dark helmet",
+        "rarity": "very-rare",
+        "monsterName": "Cyclops Smith"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0015,
+        "itemId": 7452,
+        "itemName": "spiked squelcher",
+        "rarity": "very-rare",
+        "monsterName": "Cyclops Smith"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0014,
+        "itemId": 7398,
+        "itemName": "cyclops trophy",
+        "rarity": "very-rare",
+        "monsterName": "Cyclops Smith"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0009,
+        "itemId": 3093,
+        "itemName": "club ring",
+        "rarity": "very-rare",
+        "monsterName": "Cyclops Smith"
+      },
+      {
+        "countMax": 40,
+        "countMin": 1,
+        "dropChance": 0.79,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Tarantula"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1,
+        "itemId": 10281,
+        "itemName": "tarantula egg",
+        "rarity": "semi-rare",
+        "monsterName": "Tarantula"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0482,
+        "itemId": 8031,
+        "itemName": "spider fangs",
+        "rarity": "rare",
+        "monsterName": "Tarantula"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0305,
+        "itemId": 3372,
+        "itemName": "brass legs",
+        "rarity": "rare",
+        "monsterName": "Tarantula"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.02,
+        "itemId": 3410,
+        "itemName": "plate shield",
+        "rarity": "rare",
+        "monsterName": "Tarantula"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0099,
+        "itemId": 3351,
+        "itemName": "steel helmet",
+        "rarity": "rare",
+        "monsterName": "Tarantula"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0012,
+        "itemId": 3053,
+        "itemName": "time ring",
+        "rarity": "very-rare",
+        "monsterName": "Tarantula"
+      }
+    ]
+  },
+  "hunts": {
+    "id": "THAIS-HUNT-0001",
+    "mapId": "THAIS-HUNT-0001",
+    "name": "Bears — Thais Surroundings (z7–9)",
+    "label": "Bears — Thais Surroundings (z7–9)",
+    "seed": "0000000000000000000000",
+    "assetsRoot": "assets/THAIS-HUNT-0001_cyclopss-mount-sternum-z713-sprites-v6",
+    "mapUrl": "assets/THAIS-HUNT-0001_cyclopss-mount-sternum-z713-sprites-v6/map.json",
+    "portrait": "/assets/character-default.png",
+    "monsterPreview": {
+      "name": "Cyclops",
+      "icon": "/assets/outfits/22.png",
+      "atlas": "/assets/outfits/22.json"
+    },
+    "startPosition": [
+      32466,
+      32084
+    ],
+    "city": "THAIS",
+    "_todo": [
+      "revisar startPosition (centro geométrico do mapBoundsRef, pode cair fora de área andável)"
+    ]
+  }
+}

@@ -1,0 +1,273 @@
+{
+  "mapBoundsRef": {
+    "minX": 32642,
+    "minY": 31872,
+    "maxX": 32670,
+    "maxY": 31894
+  },
+  "monsterDefs": {
+    "239": {
+      "name": "Wyvern",
+      "outfitId": 239,
+      "atlas": {
+        "image": "assets/outfits/239.png",
+        "json": "assets/outfits/239.json"
+      },
+      "appearance": {
+        "looktype": 239,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 90,
+          "countMin": 1,
+          "dropChance": 1.0,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "always"
+        },
+        {
+          "countMax": 3,
+          "countMin": 1,
+          "dropChance": 0.605,
+          "itemId": 3583,
+          "itemName": "dragon ham",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.123,
+          "itemId": 9644,
+          "itemName": "wyvern talisman",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.05,
+          "itemId": 3029,
+          "itemName": "small sapphire",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.034,
+          "itemId": 3450,
+          "itemName": "power bolt",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.025,
+          "itemId": 236,
+          "itemName": "strong health potion",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0081,
+          "itemId": 3071,
+          "itemName": "wand of inferno",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0054,
+          "itemId": 3010,
+          "itemName": "emerald bangle",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0041,
+          "itemId": 7408,
+          "itemName": "wyvern fang",
+          "rarity": "very-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 6301,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 6301
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 6302
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 6303
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 6304
+          }
+        ]
+      },
+      "race": "blood",
+      "idle": {
+        "north": {
+          "frames": [
+            "239_0",
+            "239_4",
+            "239_8",
+            "239_12",
+            "239_16",
+            "239_20",
+            "239_24",
+            "239_28"
+          ],
+          "frameRate": 10.0,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "239_1",
+            "239_5",
+            "239_9",
+            "239_13",
+            "239_17",
+            "239_21",
+            "239_25",
+            "239_29"
+          ],
+          "frameRate": 10.0,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "239_2",
+            "239_6",
+            "239_10",
+            "239_14",
+            "239_18",
+            "239_22",
+            "239_26",
+            "239_30"
+          ],
+          "frameRate": 10.0,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "239_3",
+            "239_7",
+            "239_11",
+            "239_15",
+            "239_19",
+            "239_23",
+            "239_27",
+            "239_31"
+          ],
+          "frameRate": 10.0,
+          "loopType": "infinite"
+        }
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "239_32",
+            "239_36",
+            "239_40",
+            "239_44",
+            "239_48",
+            "239_52",
+            "239_56",
+            "239_60"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "239_33",
+            "239_37",
+            "239_41",
+            "239_45",
+            "239_49",
+            "239_53",
+            "239_57",
+            "239_61"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "239_34",
+            "239_38",
+            "239_42",
+            "239_46",
+            "239_50",
+            "239_54",
+            "239_58",
+            "239_62"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "239_35",
+            "239_39",
+            "239_43",
+            "239_47",
+            "239_51",
+            "239_55",
+            "239_59",
+            "239_63"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    }
+  },
+  "spawns": [
+    {
+      "name": "Wyvern",
+      "outfitId": 239,
+      "tileX": 27,
+      "tileY": 6,
+      "worldX": 32669,
+      "worldY": 31878,
+      "worldZ": 6,
+      "radius": 1,
+      "spawntime": 60
+    },
+    {
+      "name": "Wyvern",
+      "outfitId": 239,
+      "tileX": 12,
+      "tileY": 8,
+      "worldX": 32654,
+      "worldY": 31880,
+      "worldZ": 6,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Wyvern",
+      "outfitId": 239,
+      "tileX": 12,
+      "tileY": 10,
+      "worldX": 32654,
+      "worldY": 31882,
+      "worldZ": 6,
+      "radius": 3,
+      "spawntime": 60
+    }
+  ]
+}

@@ -1,0 +1,2121 @@
+{
+  "monsters": {
+    "id": "VENORE-HUNT-0035",
+    "mapId": "VENORE-HUNT-0035",
+    "assetsRoot": "assets/VENORE-HUNT-0035_pits-of-fire-infernatil-sprites/monsters",
+    "mapBoundsRef": {
+      "minX": 32845,
+      "minY": 32199,
+      "maxX": 32925,
+      "maxY": 32257
+    },
+    "monsterDefs": {
+      "243": {
+        "name": "Hellfire Fighter",
+        "outfitId": 243,
+        "atlas": {
+          "image": "assets/outfits/243.png",
+          "json": "assets/outfits/243.json"
+        },
+        "appearance": {
+          "looktype": 243,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 100,
+            "countMin": 1,
+            "dropChance": 1.0,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "always"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.5,
+            "itemId": 3124,
+            "itemName": "burnt scroll",
+            "rarity": "common"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.3,
+            "itemId": 3147,
+            "itemName": "blank rune",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.145,
+            "itemId": 6499,
+            "itemName": "demonic essence",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1215,
+            "itemId": 5944,
+            "itemName": "soul orb",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0957,
+            "itemId": 9636,
+            "itemName": "fiery heart",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0945,
+            "itemId": 3071,
+            "itemName": "wand of inferno",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0506,
+            "itemId": 9664,
+            "itemName": "piece of hellfire armor",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0414,
+            "itemId": 3280,
+            "itemName": "fire sword",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.022,
+            "itemId": 3010,
+            "itemName": "emerald bangle",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.014,
+            "itemId": 3028,
+            "itemName": "small diamond",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.00682,
+            "itemId": 821,
+            "itemName": "magma legs",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0067,
+            "itemId": 12600,
+            "itemName": "coal",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0044,
+            "itemId": 3320,
+            "itemName": "fire axe",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0038,
+            "itemId": 826,
+            "itemName": "magma coat",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0038,
+            "itemId": 946,
+            "itemName": "eternal flames",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0019,
+            "itemId": 3019,
+            "itemName": "demonbone amulet",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 6323,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 6323
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 6324
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 6325
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 6326
+            }
+          ]
+        },
+        "race": "fire",
+        "moving": {
+          "north": {
+            "frames": [
+              "243_0",
+              "243_4"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "243_1",
+              "243_5"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "243_2",
+              "243_6"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "243_3",
+              "243_7"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        },
+        "idle": {
+          "north": {
+            "frames": [
+              "243_0",
+              "243_4"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "243_1",
+              "243_5"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "243_2",
+              "243_6"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "243_3",
+              "243_7"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "240": {
+        "name": "Hellhound",
+        "outfitId": 240,
+        "atlas": {
+          "image": "assets/outfits/240.png",
+          "json": "assets/outfits/240.json"
+        },
+        "appearance": {
+          "looktype": 240,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 7,
+            "countMin": 1,
+            "dropChance": 1.0,
+            "itemId": 3035,
+            "itemName": "platinum coin",
+            "rarity": "always"
+          },
+          {
+            "countMax": 3,
+            "countMin": 1,
+            "dropChance": 0.3,
+            "itemId": 238,
+            "itemName": "great mana potion",
+            "rarity": "common"
+          },
+          {
+            "countMax": 14,
+            "countMin": 1,
+            "dropChance": 0.3,
+            "itemId": 3582,
+            "itemName": "ham",
+            "rarity": "common"
+          },
+          {
+            "countMax": 10,
+            "countMin": 1,
+            "dropChance": 0.25,
+            "itemId": 7368,
+            "itemName": "assassin star",
+            "rarity": "common"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.2,
+            "itemId": 6558,
+            "itemName": "flask of demonic blood",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.2,
+            "itemId": 6499,
+            "itemName": "demonic essence",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.2,
+            "itemId": 7642,
+            "itemName": "great spirit potion",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.2,
+            "itemId": 9637,
+            "itemName": "hellhound slobber",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.2,
+            "itemId": 5944,
+            "itemName": "soul orb",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.16,
+            "itemId": 7643,
+            "itemName": "ultimate health potion",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.125,
+            "itemId": 16131,
+            "itemName": "blazing bone",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1,
+            "itemId": 9636,
+            "itemName": "fiery heart",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1,
+            "itemId": 5925,
+            "itemName": "hardened bone",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 3,
+            "countMin": 1,
+            "dropChance": 0.1,
+            "itemId": 3032,
+            "itemName": "small emerald",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 3,
+            "countMin": 1,
+            "dropChance": 0.1,
+            "itemId": 3030,
+            "itemName": "small ruby",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 3,
+            "countMin": 1,
+            "dropChance": 0.1,
+            "itemId": 9057,
+            "itemName": "small topaz",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 4,
+            "countMin": 1,
+            "dropChance": 0.092,
+            "itemId": 3027,
+            "itemName": "black pearl",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.075,
+            "itemId": 3318,
+            "itemName": "knight axe",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.07,
+            "itemId": 3280,
+            "itemName": "fire sword",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.07,
+            "itemId": 3071,
+            "itemName": "wand of inferno",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.06,
+            "itemId": 5914,
+            "itemName": "yellow piece of cloth",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.05,
+            "itemId": 5910,
+            "itemName": "green piece of cloth",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.045,
+            "itemId": 3039,
+            "itemName": "red gem",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.045,
+            "itemId": 3037,
+            "itemName": "yellow gem",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.03,
+            "itemId": 817,
+            "itemName": "magma amulet",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.03,
+            "itemId": 5911,
+            "itemName": "red piece of cloth",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.02,
+            "itemId": 7426,
+            "itemName": "amber staff",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.015,
+            "itemId": 9058,
+            "itemName": "gold ingot",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.015,
+            "itemId": 818,
+            "itemName": "magma boots",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.01,
+            "itemId": 3281,
+            "itemName": "giant sword",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.01,
+            "itemId": 3038,
+            "itemName": "green gem",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.01,
+            "itemId": 821,
+            "itemName": "magma legs",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.01,
+            "itemId": 7421,
+            "itemName": "onyx flail",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.01,
+            "itemId": 6553,
+            "itemName": "ruthless axe",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.009,
+            "itemId": 3116,
+            "itemName": "big bone",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.009,
+            "itemId": 827,
+            "itemName": "magma monocle",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.008,
+            "itemId": 826,
+            "itemName": "magma coat",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.004,
+            "itemId": 4871,
+            "itemName": "explorer brooch",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 6331,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 6331
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 6332
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 6333
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 6334
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "240_0",
+          "east": "240_1",
+          "south": "240_2",
+          "west": "240_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "240_4",
+              "240_8"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "240_5",
+              "240_9"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "240_6",
+              "240_10"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "240_7",
+              "240_11"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "35": {
+        "name": "Demon",
+        "outfitId": 35,
+        "atlas": {
+          "image": "assets/outfits/35.png",
+          "json": "assets/outfits/35.json"
+        },
+        "appearance": {
+          "looktype": 35,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 100,
+            "countMin": 1,
+            "dropChance": 1.0,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "always"
+          },
+          {
+            "countMax": 8,
+            "countMin": 1,
+            "dropChance": 0.9054,
+            "itemId": 3035,
+            "itemName": "platinum coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 3,
+            "countMin": 1,
+            "dropChance": 0.2222,
+            "itemId": 238,
+            "itemName": "great mana potion",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 6,
+            "countMin": 1,
+            "dropChance": 0.1966,
+            "itemId": 3731,
+            "itemName": "fire mushroom",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 3,
+            "countMin": 1,
+            "dropChance": 0.1954,
+            "itemId": 7643,
+            "itemName": "ultimate health potion",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 3,
+            "countMin": 1,
+            "dropChance": 0.1851,
+            "itemId": 7642,
+            "itemName": "great spirit potion",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1492,
+            "itemId": 5954,
+            "itemName": "demon horn",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1463,
+            "itemId": 6499,
+            "itemName": "demonic essence",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 10,
+            "countMin": 1,
+            "dropChance": 0.1255,
+            "itemId": 7368,
+            "itemName": "assassin star",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 5,
+            "countMin": 1,
+            "dropChance": 0.0969,
+            "itemId": 3032,
+            "itemName": "small emerald",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 5,
+            "countMin": 1,
+            "dropChance": 0.0747,
+            "itemId": 9057,
+            "itemName": "small topaz",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 5,
+            "countMin": 1,
+            "dropChance": 0.0743,
+            "itemId": 3030,
+            "itemName": "small ruby",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 5,
+            "countMin": 1,
+            "dropChance": 0.0725,
+            "itemId": 3033,
+            "itemName": "small amethyst",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0403,
+            "itemId": 3320,
+            "itemName": "fire axe",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0343,
+            "itemId": 3034,
+            "itemName": "talon",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.02854,
+            "itemId": 3060,
+            "itemName": "orb",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0222,
+            "itemId": 3039,
+            "itemName": "red gem",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0217,
+            "itemId": 3049,
+            "itemName": "stealth ring",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0199,
+            "itemId": 3098,
+            "itemName": "ring of healing",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0198,
+            "itemId": 3281,
+            "itemName": "giant sword",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0189,
+            "itemId": 3048,
+            "itemName": "might ring",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0155,
+            "itemId": 3284,
+            "itemName": "ice rapier",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0144,
+            "itemId": 3306,
+            "itemName": "golden sickle",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0118,
+            "itemId": 2848,
+            "itemName": "purple tome",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0118,
+            "itemId": 3356,
+            "itemName": "devil helmet",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0105,
+            "itemId": 3063,
+            "itemName": "gold ring",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0074,
+            "itemId": 3420,
+            "itemName": "demon shield",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0068,
+            "itemId": 3055,
+            "itemName": "platinum amulet",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0048,
+            "itemId": 3414,
+            "itemName": "mastermind shield",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0044,
+            "itemId": 3364,
+            "itemName": "golden legs",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0013,
+            "itemId": 3366,
+            "itemName": "magic plate armor",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0009,
+            "itemId": 7393,
+            "itemName": "demon trophy",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0007,
+            "itemId": 7382,
+            "itemName": "demonrage sword",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 5995,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 5995
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4097
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 4098
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 4099
+            }
+          ]
+        },
+        "race": "fire",
+        "idle": {
+          "north": "35_0",
+          "east": "35_1",
+          "south": "35_2",
+          "west": "35_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "35_4",
+              "35_8",
+              "35_12",
+              "35_16",
+              "35_20",
+              "35_24",
+              "35_28",
+              "35_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "35_5",
+              "35_9",
+              "35_13",
+              "35_17",
+              "35_21",
+              "35_25",
+              "35_29",
+              "35_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "35_6",
+              "35_10",
+              "35_14",
+              "35_18",
+              "35_22",
+              "35_26",
+              "35_30",
+              "35_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "35_7",
+              "35_11",
+              "35_15",
+              "35_19",
+              "35_23",
+              "35_27",
+              "35_31",
+              "35_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      }
+    },
+    "spawns": [
+      {
+        "name": "Hellfire Fighter",
+        "outfitId": 243,
+        "tileX": 62,
+        "tileY": 12,
+        "worldX": 32907,
+        "worldY": 32211,
+        "worldZ": 15,
+        "radius": 5,
+        "spawntime": 90
+      },
+      {
+        "name": "Hellfire Fighter",
+        "outfitId": 243,
+        "tileX": 64,
+        "tileY": 13,
+        "worldX": 32909,
+        "worldY": 32212,
+        "worldZ": 15,
+        "radius": 5,
+        "spawntime": 90
+      },
+      {
+        "name": "Hellhound",
+        "outfitId": 240,
+        "tileX": 66,
+        "tileY": 14,
+        "worldX": 32911,
+        "worldY": 32213,
+        "worldZ": 15,
+        "radius": 5,
+        "spawntime": 90
+      },
+      {
+        "name": "Hellfire Fighter",
+        "outfitId": 243,
+        "tileX": 70,
+        "tileY": 14,
+        "worldX": 32915,
+        "worldY": 32213,
+        "worldZ": 15,
+        "radius": 5,
+        "spawntime": 90
+      },
+      {
+        "name": "Hellhound",
+        "outfitId": 240,
+        "tileX": 61,
+        "tileY": 15,
+        "worldX": 32906,
+        "worldY": 32214,
+        "worldZ": 15,
+        "radius": 5,
+        "spawntime": 90
+      },
+      {
+        "name": "Demon",
+        "outfitId": 35,
+        "tileX": 65,
+        "tileY": 16,
+        "worldX": 32910,
+        "worldY": 32215,
+        "worldZ": 15,
+        "radius": 5,
+        "spawntime": 90
+      },
+      {
+        "name": "Hellfire Fighter",
+        "outfitId": 243,
+        "tileX": 68,
+        "tileY": 16,
+        "worldX": 32913,
+        "worldY": 32215,
+        "worldZ": 15,
+        "radius": 5,
+        "spawntime": 90
+      },
+      {
+        "name": "Hellhound",
+        "outfitId": 240,
+        "tileX": 61,
+        "tileY": 20,
+        "worldX": 32906,
+        "worldY": 32219,
+        "worldZ": 15,
+        "radius": 5,
+        "spawntime": 90
+      },
+      {
+        "name": "Hellfire Fighter",
+        "outfitId": 243,
+        "tileX": 54,
+        "tileY": 19,
+        "worldX": 32899,
+        "worldY": 32218,
+        "worldZ": 15,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Hellhound",
+        "outfitId": 240,
+        "tileX": 23,
+        "tileY": 19,
+        "worldX": 32868,
+        "worldY": 32218,
+        "worldZ": 15,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Hellfire Fighter",
+        "outfitId": 243,
+        "tileX": 45,
+        "tileY": 18,
+        "worldX": 32890,
+        "worldY": 32217,
+        "worldZ": 15,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Hellfire Fighter",
+        "outfitId": 243,
+        "tileX": 50,
+        "tileY": 18,
+        "worldX": 32895,
+        "worldY": 32217,
+        "worldZ": 15,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Hellfire Fighter",
+        "outfitId": 243,
+        "tileX": 48,
+        "tileY": 22,
+        "worldX": 32893,
+        "worldY": 32221,
+        "worldZ": 15,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Hellfire Fighter",
+        "outfitId": 243,
+        "tileX": 31,
+        "tileY": 23,
+        "worldX": 32876,
+        "worldY": 32222,
+        "worldZ": 15,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Hellhound",
+        "outfitId": 240,
+        "tileX": 18,
+        "tileY": 25,
+        "worldX": 32863,
+        "worldY": 32224,
+        "worldZ": 15,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Hellfire Fighter",
+        "outfitId": 243,
+        "tileX": 48,
+        "tileY": 29,
+        "worldX": 32893,
+        "worldY": 32228,
+        "worldZ": 15,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Hellfire Fighter",
+        "outfitId": 243,
+        "tileX": 39,
+        "tileY": 28,
+        "worldX": 32884,
+        "worldY": 32227,
+        "worldZ": 15,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Hellfire Fighter",
+        "outfitId": 243,
+        "tileX": 12,
+        "tileY": 28,
+        "worldX": 32857,
+        "worldY": 32227,
+        "worldZ": 15,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Hellfire Fighter",
+        "outfitId": 243,
+        "tileX": 13,
+        "tileY": 31,
+        "worldX": 32858,
+        "worldY": 32230,
+        "worldZ": 15,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Hellhound",
+        "outfitId": 240,
+        "tileX": 48,
+        "tileY": 34,
+        "worldX": 32893,
+        "worldY": 32233,
+        "worldZ": 15,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Hellfire Fighter",
+        "outfitId": 243,
+        "tileX": 39,
+        "tileY": 35,
+        "worldX": 32884,
+        "worldY": 32234,
+        "worldZ": 15,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Hellfire Fighter",
+        "outfitId": 243,
+        "tileX": 38,
+        "tileY": 40,
+        "worldX": 32883,
+        "worldY": 32239,
+        "worldZ": 15,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Hellfire Fighter",
+        "outfitId": 243,
+        "tileX": 46,
+        "tileY": 39,
+        "worldX": 32891,
+        "worldY": 32238,
+        "worldZ": 15,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Hellhound",
+        "outfitId": 240,
+        "tileX": 49,
+        "tileY": 39,
+        "worldX": 32894,
+        "worldY": 32238,
+        "worldZ": 15,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Hellhound",
+        "outfitId": 240,
+        "tileX": 49,
+        "tileY": 42,
+        "worldX": 32894,
+        "worldY": 32241,
+        "worldZ": 15,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Demon",
+        "outfitId": 35,
+        "tileX": 48,
+        "tileY": 46,
+        "worldX": 32893,
+        "worldY": 32245,
+        "worldZ": 15,
+        "radius": 2,
+        "spawntime": 90
+      }
+    ]
+  },
+  "loot": {
+    "id": "VENORE-HUNT-0035",
+    "mapId": "VENORE-HUNT-0035",
+    "drops": [
+      {
+        "countMax": 100,
+        "countMin": 1,
+        "dropChance": 1.0,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "always",
+        "monsterName": "Hellfire Fighter"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.5,
+        "itemId": 3124,
+        "itemName": "burnt scroll",
+        "rarity": "common",
+        "monsterName": "Hellfire Fighter"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.3,
+        "itemId": 3147,
+        "itemName": "blank rune",
+        "rarity": "common",
+        "monsterName": "Hellfire Fighter"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.145,
+        "itemId": 6499,
+        "itemName": "demonic essence",
+        "rarity": "semi-rare",
+        "monsterName": "Hellfire Fighter"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1215,
+        "itemId": 5944,
+        "itemName": "soul orb",
+        "rarity": "semi-rare",
+        "monsterName": "Hellfire Fighter"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0957,
+        "itemId": 9636,
+        "itemName": "fiery heart",
+        "rarity": "semi-rare",
+        "monsterName": "Hellfire Fighter"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0945,
+        "itemId": 3071,
+        "itemName": "wand of inferno",
+        "rarity": "semi-rare",
+        "monsterName": "Hellfire Fighter"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0506,
+        "itemId": 9664,
+        "itemName": "piece of hellfire armor",
+        "rarity": "semi-rare",
+        "monsterName": "Hellfire Fighter"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0414,
+        "itemId": 3280,
+        "itemName": "fire sword",
+        "rarity": "rare",
+        "monsterName": "Hellfire Fighter"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.022,
+        "itemId": 3010,
+        "itemName": "emerald bangle",
+        "rarity": "rare",
+        "monsterName": "Hellfire Fighter"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.014,
+        "itemId": 3028,
+        "itemName": "small diamond",
+        "rarity": "rare",
+        "monsterName": "Hellfire Fighter"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.00682,
+        "itemId": 821,
+        "itemName": "magma legs",
+        "rarity": "rare",
+        "monsterName": "Hellfire Fighter"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0067,
+        "itemId": 12600,
+        "itemName": "coal",
+        "rarity": "rare",
+        "monsterName": "Hellfire Fighter"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0044,
+        "itemId": 3320,
+        "itemName": "fire axe",
+        "rarity": "very-rare",
+        "monsterName": "Hellfire Fighter"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0038,
+        "itemId": 826,
+        "itemName": "magma coat",
+        "rarity": "very-rare",
+        "monsterName": "Hellfire Fighter"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0038,
+        "itemId": 946,
+        "itemName": "eternal flames",
+        "rarity": "very-rare",
+        "monsterName": "Hellfire Fighter"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0019,
+        "itemId": 3019,
+        "itemName": "demonbone amulet",
+        "rarity": "very-rare",
+        "monsterName": "Hellfire Fighter"
+      },
+      {
+        "countMax": 7,
+        "countMin": 1,
+        "dropChance": 1.0,
+        "itemId": 3035,
+        "itemName": "platinum coin",
+        "rarity": "always",
+        "monsterName": "Hellhound"
+      },
+      {
+        "countMax": 3,
+        "countMin": 1,
+        "dropChance": 0.3,
+        "itemId": 238,
+        "itemName": "great mana potion",
+        "rarity": "common",
+        "monsterName": "Hellhound"
+      },
+      {
+        "countMax": 14,
+        "countMin": 1,
+        "dropChance": 0.3,
+        "itemId": 3582,
+        "itemName": "ham",
+        "rarity": "common",
+        "monsterName": "Hellhound"
+      },
+      {
+        "countMax": 10,
+        "countMin": 1,
+        "dropChance": 0.25,
+        "itemId": 7368,
+        "itemName": "assassin star",
+        "rarity": "common",
+        "monsterName": "Hellhound"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.2,
+        "itemId": 6558,
+        "itemName": "flask of demonic blood",
+        "rarity": "semi-rare",
+        "monsterName": "Hellhound"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.2,
+        "itemId": 6499,
+        "itemName": "demonic essence",
+        "rarity": "semi-rare",
+        "monsterName": "Hellhound"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.2,
+        "itemId": 7642,
+        "itemName": "great spirit potion",
+        "rarity": "semi-rare",
+        "monsterName": "Hellhound"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.2,
+        "itemId": 9637,
+        "itemName": "hellhound slobber",
+        "rarity": "semi-rare",
+        "monsterName": "Hellhound"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.2,
+        "itemId": 5944,
+        "itemName": "soul orb",
+        "rarity": "semi-rare",
+        "monsterName": "Hellhound"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.16,
+        "itemId": 7643,
+        "itemName": "ultimate health potion",
+        "rarity": "semi-rare",
+        "monsterName": "Hellhound"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.125,
+        "itemId": 16131,
+        "itemName": "blazing bone",
+        "rarity": "semi-rare",
+        "monsterName": "Hellhound"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1,
+        "itemId": 9636,
+        "itemName": "fiery heart",
+        "rarity": "semi-rare",
+        "monsterName": "Hellhound"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1,
+        "itemId": 5925,
+        "itemName": "hardened bone",
+        "rarity": "semi-rare",
+        "monsterName": "Hellhound"
+      },
+      {
+        "countMax": 3,
+        "countMin": 1,
+        "dropChance": 0.1,
+        "itemId": 3032,
+        "itemName": "small emerald",
+        "rarity": "semi-rare",
+        "monsterName": "Hellhound"
+      },
+      {
+        "countMax": 3,
+        "countMin": 1,
+        "dropChance": 0.1,
+        "itemId": 3030,
+        "itemName": "small ruby",
+        "rarity": "semi-rare",
+        "monsterName": "Hellhound"
+      },
+      {
+        "countMax": 3,
+        "countMin": 1,
+        "dropChance": 0.1,
+        "itemId": 9057,
+        "itemName": "small topaz",
+        "rarity": "semi-rare",
+        "monsterName": "Hellhound"
+      },
+      {
+        "countMax": 4,
+        "countMin": 1,
+        "dropChance": 0.092,
+        "itemId": 3027,
+        "itemName": "black pearl",
+        "rarity": "semi-rare",
+        "monsterName": "Hellhound"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.075,
+        "itemId": 3318,
+        "itemName": "knight axe",
+        "rarity": "semi-rare",
+        "monsterName": "Hellhound"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.07,
+        "itemId": 3280,
+        "itemName": "fire sword",
+        "rarity": "semi-rare",
+        "monsterName": "Hellhound"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.07,
+        "itemId": 3071,
+        "itemName": "wand of inferno",
+        "rarity": "semi-rare",
+        "monsterName": "Hellhound"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.06,
+        "itemId": 5914,
+        "itemName": "yellow piece of cloth",
+        "rarity": "semi-rare",
+        "monsterName": "Hellhound"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.05,
+        "itemId": 5910,
+        "itemName": "green piece of cloth",
+        "rarity": "semi-rare",
+        "monsterName": "Hellhound"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.045,
+        "itemId": 3039,
+        "itemName": "red gem",
+        "rarity": "rare",
+        "monsterName": "Hellhound"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.045,
+        "itemId": 3037,
+        "itemName": "yellow gem",
+        "rarity": "rare",
+        "monsterName": "Hellhound"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.03,
+        "itemId": 817,
+        "itemName": "magma amulet",
+        "rarity": "rare",
+        "monsterName": "Hellhound"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.03,
+        "itemId": 5911,
+        "itemName": "red piece of cloth",
+        "rarity": "rare",
+        "monsterName": "Hellhound"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.02,
+        "itemId": 7426,
+        "itemName": "amber staff",
+        "rarity": "rare",
+        "monsterName": "Hellhound"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.015,
+        "itemId": 9058,
+        "itemName": "gold ingot",
+        "rarity": "rare",
+        "monsterName": "Hellhound"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.015,
+        "itemId": 818,
+        "itemName": "magma boots",
+        "rarity": "rare",
+        "monsterName": "Hellhound"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.01,
+        "itemId": 3281,
+        "itemName": "giant sword",
+        "rarity": "rare",
+        "monsterName": "Hellhound"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.01,
+        "itemId": 3038,
+        "itemName": "green gem",
+        "rarity": "rare",
+        "monsterName": "Hellhound"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.01,
+        "itemId": 821,
+        "itemName": "magma legs",
+        "rarity": "rare",
+        "monsterName": "Hellhound"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.01,
+        "itemId": 7421,
+        "itemName": "onyx flail",
+        "rarity": "rare",
+        "monsterName": "Hellhound"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.01,
+        "itemId": 6553,
+        "itemName": "ruthless axe",
+        "rarity": "rare",
+        "monsterName": "Hellhound"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.009,
+        "itemId": 3116,
+        "itemName": "big bone",
+        "rarity": "rare",
+        "monsterName": "Hellhound"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.009,
+        "itemId": 827,
+        "itemName": "magma monocle",
+        "rarity": "rare",
+        "monsterName": "Hellhound"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.008,
+        "itemId": 826,
+        "itemName": "magma coat",
+        "rarity": "rare",
+        "monsterName": "Hellhound"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.004,
+        "itemId": 4871,
+        "itemName": "explorer brooch",
+        "rarity": "very-rare",
+        "monsterName": "Hellhound"
+      },
+      {
+        "countMax": 100,
+        "countMin": 1,
+        "dropChance": 1.0,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "always",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 8,
+        "countMin": 1,
+        "dropChance": 0.9054,
+        "itemId": 3035,
+        "itemName": "platinum coin",
+        "rarity": "common",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 3,
+        "countMin": 1,
+        "dropChance": 0.2222,
+        "itemId": 238,
+        "itemName": "great mana potion",
+        "rarity": "semi-rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 6,
+        "countMin": 1,
+        "dropChance": 0.1966,
+        "itemId": 3731,
+        "itemName": "fire mushroom",
+        "rarity": "semi-rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 3,
+        "countMin": 1,
+        "dropChance": 0.1954,
+        "itemId": 7643,
+        "itemName": "ultimate health potion",
+        "rarity": "semi-rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 3,
+        "countMin": 1,
+        "dropChance": 0.1851,
+        "itemId": 7642,
+        "itemName": "great spirit potion",
+        "rarity": "semi-rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1492,
+        "itemId": 5954,
+        "itemName": "demon horn",
+        "rarity": "semi-rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1463,
+        "itemId": 6499,
+        "itemName": "demonic essence",
+        "rarity": "semi-rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 10,
+        "countMin": 1,
+        "dropChance": 0.1255,
+        "itemId": 7368,
+        "itemName": "assassin star",
+        "rarity": "semi-rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 5,
+        "countMin": 1,
+        "dropChance": 0.0969,
+        "itemId": 3032,
+        "itemName": "small emerald",
+        "rarity": "semi-rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 5,
+        "countMin": 1,
+        "dropChance": 0.0747,
+        "itemId": 9057,
+        "itemName": "small topaz",
+        "rarity": "semi-rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 5,
+        "countMin": 1,
+        "dropChance": 0.0743,
+        "itemId": 3030,
+        "itemName": "small ruby",
+        "rarity": "semi-rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 5,
+        "countMin": 1,
+        "dropChance": 0.0725,
+        "itemId": 3033,
+        "itemName": "small amethyst",
+        "rarity": "semi-rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0403,
+        "itemId": 3320,
+        "itemName": "fire axe",
+        "rarity": "rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0343,
+        "itemId": 3034,
+        "itemName": "talon",
+        "rarity": "rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.02854,
+        "itemId": 3060,
+        "itemName": "orb",
+        "rarity": "rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0222,
+        "itemId": 3039,
+        "itemName": "red gem",
+        "rarity": "rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0217,
+        "itemId": 3049,
+        "itemName": "stealth ring",
+        "rarity": "rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0199,
+        "itemId": 3098,
+        "itemName": "ring of healing",
+        "rarity": "rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0198,
+        "itemId": 3281,
+        "itemName": "giant sword",
+        "rarity": "rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0189,
+        "itemId": 3048,
+        "itemName": "might ring",
+        "rarity": "rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0155,
+        "itemId": 3284,
+        "itemName": "ice rapier",
+        "rarity": "rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0144,
+        "itemId": 3306,
+        "itemName": "golden sickle",
+        "rarity": "rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0118,
+        "itemId": 2848,
+        "itemName": "purple tome",
+        "rarity": "rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0118,
+        "itemId": 3356,
+        "itemName": "devil helmet",
+        "rarity": "rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0105,
+        "itemId": 3063,
+        "itemName": "gold ring",
+        "rarity": "rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0074,
+        "itemId": 3420,
+        "itemName": "demon shield",
+        "rarity": "rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0068,
+        "itemId": 3055,
+        "itemName": "platinum amulet",
+        "rarity": "rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0048,
+        "itemId": 3414,
+        "itemName": "mastermind shield",
+        "rarity": "very-rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0044,
+        "itemId": 3364,
+        "itemName": "golden legs",
+        "rarity": "very-rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0013,
+        "itemId": 3366,
+        "itemName": "magic plate armor",
+        "rarity": "very-rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0009,
+        "itemId": 7393,
+        "itemName": "demon trophy",
+        "rarity": "very-rare",
+        "monsterName": "Demon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0007,
+        "itemId": 7382,
+        "itemName": "demonrage sword",
+        "rarity": "very-rare",
+        "monsterName": "Demon"
+      }
+    ]
+  },
+  "hunts": {
+    "id": "VENORE-HUNT-0035",
+    "mapId": "VENORE-HUNT-0035",
+    "name": "Pits Of Fire Infernatil",
+    "label": "Pits Of Fire Infernatil",
+    "seed": "0000000000000000000000",
+    "assetsRoot": "assets/VENORE-HUNT-0035_pits-of-fire-infernatil-sprites-v6",
+    "mapUrl": "assets/VENORE-HUNT-0035_pits-of-fire-infernatil-sprites-v6/map.json",
+    "portrait": "/assets/character-default.png",
+    "monsterPreview": {
+      "name": "Hellfire Fighter",
+      "icon": "/assets/outfits/243.png",
+      "atlas": "/assets/outfits/243.json"
+    },
+    "startPosition": [
+      32885,
+      32228
+    ],
+    "city": "VENORE",
+    "_todo": [
+      "confirmar name/label (título gerado automaticamente do nome da pasta)",
+      "revisar startPosition (centro geométrico do mapBoundsRef, pode cair fora de área andável)"
+    ]
+  }
+}

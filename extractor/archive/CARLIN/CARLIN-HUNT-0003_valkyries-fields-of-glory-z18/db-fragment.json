@@ -1,0 +1,1472 @@
+{
+  "monsters": {
+    "id": "CARLIN-HUNT-0003",
+    "mapId": "CARLIN-HUNT-0003",
+    "assetsRoot": "assets/CARLIN-HUNT-0003_valkyries-fields-of-glory-z18-sprites/monsters",
+    "mapBoundsRef": {
+      "minX": 32329,
+      "minY": 31565,
+      "maxX": 32445,
+      "maxY": 31670
+    },
+    "monsterDefs": {
+      "137": {
+        "name": "Amazon",
+        "outfitId": 137,
+        "atlas": {
+          "image": "assets/outfits/137-113-120-95-115-0.png",
+          "json": "assets/outfits/137-113-120-95-115-0.json"
+        },
+        "appearance": {
+          "looktype": 137,
+          "head": 113,
+          "body": 120,
+          "legs": 95,
+          "feet": 115,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.8,
+            "itemId": 3267,
+            "itemName": "dagger",
+            "rarity": "common"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.8,
+            "itemId": 3114,
+            "itemName": "skull",
+            "rarity": "common"
+          },
+          {
+            "countMax": 20,
+            "countMin": 1,
+            "dropChance": 0.4,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.3,
+            "itemId": 3602,
+            "itemName": "brown bread",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.23,
+            "itemId": 3273,
+            "itemName": "sabre",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1,
+            "itemId": 11443,
+            "itemName": "girlish hair decoration",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.052,
+            "itemId": 11444,
+            "itemName": "protective charm",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.01,
+            "itemId": 2920,
+            "itemName": "torch",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0026,
+            "itemId": 3008,
+            "itemName": "crystal necklace",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0013,
+            "itemId": 3030,
+            "itemName": "small ruby",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 18042,
+          "stages": [
+            {
+              "durationSeconds": 10,
+              "itemId": 18042
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 18043
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 18044
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 18045
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "137_0",
+          "east": "137_1",
+          "south": "137_2",
+          "west": "137_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "137_0",
+              "137_4",
+              "137_8",
+              "137_12",
+              "137_16",
+              "137_20",
+              "137_24",
+              "137_28",
+              "137_32"
+            ],
+            "frameRate": 15,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "137_1",
+              "137_5",
+              "137_9",
+              "137_13",
+              "137_17",
+              "137_21",
+              "137_25",
+              "137_29",
+              "137_33"
+            ],
+            "frameRate": 15,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "137_2",
+              "137_6",
+              "137_10",
+              "137_14",
+              "137_18",
+              "137_22",
+              "137_26",
+              "137_30",
+              "137_34"
+            ],
+            "frameRate": 15,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "137_3",
+              "137_7",
+              "137_11",
+              "137_15",
+              "137_19",
+              "137_23",
+              "137_27",
+              "137_31",
+              "137_35"
+            ],
+            "frameRate": 15,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "139": {
+        "name": "Valkyrie",
+        "outfitId": 139,
+        "atlas": {
+          "image": "assets/outfits/139-113-38-76-96-0.png",
+          "json": "assets/outfits/139-113-38-76-96-0.json"
+        },
+        "appearance": {
+          "looktype": 139,
+          "head": 113,
+          "body": 38,
+          "legs": 76,
+          "feet": 96,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 3,
+            "countMin": 1,
+            "dropChance": 0.55,
+            "itemId": 3277,
+            "itemName": "spear",
+            "rarity": "common"
+          },
+          {
+            "countMax": 12,
+            "countMin": 1,
+            "dropChance": 0.32,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.3,
+            "itemId": 3577,
+            "itemName": "meat",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1,
+            "itemId": 3358,
+            "itemName": "chain armor",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 2,
+            "countMin": 1,
+            "dropChance": 0.075,
+            "itemId": 3585,
+            "itemName": "red apple",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.059,
+            "itemId": 11443,
+            "itemName": "girlish hair decoration",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.05155,
+            "itemId": 3347,
+            "itemName": "hunting spear",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.032,
+            "itemId": 11444,
+            "itemName": "protective charm",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.011,
+            "itemId": 3084,
+            "itemName": "protection amulet",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0083,
+            "itemId": 3357,
+            "itemName": "plate armor",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0076,
+            "itemId": 3114,
+            "itemName": "skull",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.005,
+            "itemId": 266,
+            "itemName": "health potion",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0043,
+            "itemId": 3275,
+            "itemName": "double axe",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0013,
+            "itemId": 3028,
+            "itemName": "small diamond",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 18242,
+          "stages": [
+            {
+              "durationSeconds": 300,
+              "itemId": 18242
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 18243
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 18244
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "139_0",
+          "east": "139_1",
+          "south": "139_2",
+          "west": "139_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "139_0",
+              "139_4",
+              "139_8",
+              "139_12",
+              "139_16",
+              "139_20",
+              "139_24",
+              "139_28",
+              "139_32"
+            ],
+            "frameRate": 15,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "139_1",
+              "139_5",
+              "139_9",
+              "139_13",
+              "139_17",
+              "139_21",
+              "139_25",
+              "139_29",
+              "139_33"
+            ],
+            "frameRate": 15,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "139_2",
+              "139_6",
+              "139_10",
+              "139_14",
+              "139_18",
+              "139_22",
+              "139_26",
+              "139_30",
+              "139_34"
+            ],
+            "frameRate": 15,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "139_3",
+              "139_7",
+              "139_11",
+              "139_15",
+              "139_19",
+              "139_23",
+              "139_27",
+              "139_31",
+              "139_35"
+            ],
+            "frameRate": 15,
+            "loopType": "infinite"
+          }
+        }
+      },
+      "54": {
+        "name": "Witch",
+        "outfitId": 54,
+        "atlas": {
+          "image": "assets/outfits/54.png",
+          "json": "assets/outfits/54.json"
+        },
+        "appearance": {
+          "looktype": 54,
+          "head": 0,
+          "body": 0,
+          "legs": 0,
+          "feet": 0,
+          "addons": 0
+        },
+        "loot": [
+          {
+            "countMax": 40,
+            "countMin": 1,
+            "dropChance": 0.64,
+            "itemId": 3031,
+            "itemName": "gold coin",
+            "rarity": "common"
+          },
+          {
+            "countMax": 8,
+            "countMin": 1,
+            "dropChance": 0.2975,
+            "itemId": 3598,
+            "itemName": "cookie",
+            "rarity": "common"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1012,
+            "itemId": 3012,
+            "itemName": "wolf tooth chain",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.1,
+            "itemId": 9652,
+            "itemName": "witch broom",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0895,
+            "itemId": 3736,
+            "itemName": "star herb",
+            "rarity": "semi-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0495,
+            "itemId": 3552,
+            "itemName": "leather boots",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0487,
+            "itemId": 3565,
+            "itemName": "cape",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0391,
+            "itemId": 3293,
+            "itemName": "sickle",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0201,
+            "itemId": 3562,
+            "itemName": "coat",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0114,
+            "itemId": 3069,
+            "itemName": "necrotic rod",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.01,
+            "itemId": 3083,
+            "itemName": "garlic necklace",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0092,
+            "itemId": 12548,
+            "itemName": "bag of apple slices",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.005,
+            "itemId": 3290,
+            "itemName": "silver dagger",
+            "rarity": "rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0008,
+            "itemId": 9653,
+            "itemName": "witch hat",
+            "rarity": "very-rare"
+          },
+          {
+            "countMax": 1,
+            "countMin": 1,
+            "dropChance": 0.0001,
+            "itemId": 10294,
+            "itemName": "stuffed toad",
+            "rarity": "very-rare"
+          }
+        ],
+        "corpse": {
+          "itemId": 18254,
+          "stages": [
+            {
+              "durationSeconds": 300,
+              "itemId": 18254
+            },
+            {
+              "durationSeconds": 300,
+              "itemId": 18255
+            },
+            {
+              "durationSeconds": 60,
+              "itemId": 18256
+            }
+          ]
+        },
+        "race": "blood",
+        "idle": {
+          "north": "54_0",
+          "east": "54_1",
+          "south": "54_2",
+          "west": "54_3"
+        },
+        "moving": {
+          "north": {
+            "frames": [
+              "54_4",
+              "54_8",
+              "54_12",
+              "54_16",
+              "54_20",
+              "54_24",
+              "54_28",
+              "54_32"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "east": {
+            "frames": [
+              "54_5",
+              "54_9",
+              "54_13",
+              "54_17",
+              "54_21",
+              "54_25",
+              "54_29",
+              "54_33"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "south": {
+            "frames": [
+              "54_6",
+              "54_10",
+              "54_14",
+              "54_18",
+              "54_22",
+              "54_26",
+              "54_30",
+              "54_34"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          },
+          "west": {
+            "frames": [
+              "54_7",
+              "54_11",
+              "54_15",
+              "54_19",
+              "54_23",
+              "54_27",
+              "54_31",
+              "54_35"
+            ],
+            "frameRate": 3.33,
+            "loopType": "infinite"
+          }
+        }
+      }
+    },
+    "spawns": [
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 27,
+        "tileY": 78,
+        "worldX": 32356,
+        "worldY": 31643,
+        "worldZ": 1,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Valkyrie",
+        "outfitId": 139,
+        "tileX": 25,
+        "tileY": 80,
+        "worldX": 32354,
+        "worldY": 31645,
+        "worldZ": 1,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 28,
+        "tileY": 80,
+        "worldX": 32357,
+        "worldY": 31645,
+        "worldZ": 1,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Valkyrie",
+        "outfitId": 139,
+        "tileX": 26,
+        "tileY": 81,
+        "worldX": 32355,
+        "worldY": 31646,
+        "worldZ": 1,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 25,
+        "tileY": 78,
+        "worldX": 32354,
+        "worldY": 31643,
+        "worldZ": 2,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 26,
+        "tileY": 78,
+        "worldX": 32355,
+        "worldY": 31643,
+        "worldZ": 2,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Valkyrie",
+        "outfitId": 139,
+        "tileX": 27,
+        "tileY": 80,
+        "worldX": 32356,
+        "worldY": 31645,
+        "worldZ": 2,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Witch",
+        "outfitId": 54,
+        "tileX": 26,
+        "tileY": 81,
+        "worldX": 32355,
+        "worldY": 31646,
+        "worldZ": 2,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 27,
+        "tileY": 77,
+        "worldX": 32356,
+        "worldY": 31642,
+        "worldZ": 3,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 24,
+        "tileY": 79,
+        "worldX": 32353,
+        "worldY": 31644,
+        "worldZ": 3,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Valkyrie",
+        "outfitId": 139,
+        "tileX": 25,
+        "tileY": 81,
+        "worldX": 32354,
+        "worldY": 31646,
+        "worldZ": 3,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 27,
+        "tileY": 77,
+        "worldX": 32356,
+        "worldY": 31642,
+        "worldZ": 4,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 25,
+        "tileY": 79,
+        "worldX": 32354,
+        "worldY": 31644,
+        "worldZ": 4,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Valkyrie",
+        "outfitId": 139,
+        "tileX": 25,
+        "tileY": 80,
+        "worldX": 32354,
+        "worldY": 31645,
+        "worldZ": 4,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 26,
+        "tileY": 80,
+        "worldX": 32355,
+        "worldY": 31645,
+        "worldZ": 4,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Valkyrie",
+        "outfitId": 139,
+        "tileX": 102,
+        "tileY": 27,
+        "worldX": 32431,
+        "worldY": 31592,
+        "worldZ": 5,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Valkyrie",
+        "outfitId": 139,
+        "tileX": 101,
+        "tileY": 29,
+        "worldX": 32430,
+        "worldY": 31594,
+        "worldZ": 5,
+        "radius": 3,
+        "spawntime": 60
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 27,
+        "tileY": 77,
+        "worldX": 32356,
+        "worldY": 31642,
+        "worldZ": 5,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Valkyrie",
+        "outfitId": 139,
+        "tileX": 25,
+        "tileY": 80,
+        "worldX": 32354,
+        "worldY": 31645,
+        "worldZ": 5,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 102,
+        "tileY": 27,
+        "worldX": 32431,
+        "worldY": 31592,
+        "worldZ": 6,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Valkyrie",
+        "outfitId": 139,
+        "tileX": 102,
+        "tileY": 29,
+        "worldX": 32431,
+        "worldY": 31594,
+        "worldZ": 6,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 102,
+        "tileY": 32,
+        "worldX": 32431,
+        "worldY": 31597,
+        "worldZ": 6,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 27,
+        "tileY": 78,
+        "worldX": 32356,
+        "worldY": 31643,
+        "worldZ": 6,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 26,
+        "tileY": 80,
+        "worldX": 32355,
+        "worldY": 31645,
+        "worldZ": 6,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 97,
+        "tileY": 12,
+        "worldX": 32426,
+        "worldY": 31577,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 95,
+        "tileY": 15,
+        "worldX": 32424,
+        "worldY": 31580,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 92,
+        "tileY": 22,
+        "worldX": 32421,
+        "worldY": 31587,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 95,
+        "tileY": 25,
+        "worldX": 32424,
+        "worldY": 31590,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 102,
+        "tileY": 29,
+        "worldX": 32431,
+        "worldY": 31594,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 104,
+        "tileY": 31,
+        "worldX": 32433,
+        "worldY": 31596,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 34,
+        "tileY": 73,
+        "worldX": 32363,
+        "worldY": 31638,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 26,
+        "tileY": 77,
+        "worldX": 32355,
+        "worldY": 31642,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 25,
+        "tileY": 79,
+        "worldX": 32354,
+        "worldY": 31644,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 12,
+        "tileY": 85,
+        "worldX": 32341,
+        "worldY": 31650,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 20,
+        "tileY": 87,
+        "worldX": 32349,
+        "worldY": 31652,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 27,
+        "tileY": 86,
+        "worldX": 32356,
+        "worldY": 31651,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 18,
+        "tileY": 91,
+        "worldX": 32347,
+        "worldY": 31656,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 17,
+        "tileY": 93,
+        "worldX": 32346,
+        "worldY": 31658,
+        "worldZ": 7,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 81,
+        "tileY": 25,
+        "worldX": 32410,
+        "worldY": 31590,
+        "worldZ": 8,
+        "radius": 2,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 88,
+        "tileY": 24,
+        "worldX": 32417,
+        "worldY": 31589,
+        "worldZ": 8,
+        "radius": 3,
+        "spawntime": 90
+      },
+      {
+        "name": "Amazon",
+        "outfitId": 137,
+        "tileX": 91,
+        "tileY": 29,
+        "worldX": 32420,
+        "worldY": 31594,
+        "worldZ": 8,
+        "radius": 3,
+        "spawntime": 90
+      }
+    ]
+  },
+  "loot": {
+    "id": "CARLIN-HUNT-0003",
+    "mapId": "CARLIN-HUNT-0003",
+    "drops": [
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.8,
+        "itemId": 3267,
+        "itemName": "dagger",
+        "rarity": "common",
+        "monsterName": "Amazon"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.8,
+        "itemId": 3114,
+        "itemName": "skull",
+        "rarity": "common",
+        "monsterName": "Amazon"
+      },
+      {
+        "countMax": 20,
+        "countMin": 1,
+        "dropChance": 0.4,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Amazon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.3,
+        "itemId": 3602,
+        "itemName": "brown bread",
+        "rarity": "common",
+        "monsterName": "Amazon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.23,
+        "itemId": 3273,
+        "itemName": "sabre",
+        "rarity": "semi-rare",
+        "monsterName": "Amazon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1,
+        "itemId": 11443,
+        "itemName": "girlish hair decoration",
+        "rarity": "semi-rare",
+        "monsterName": "Amazon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.052,
+        "itemId": 11444,
+        "itemName": "protective charm",
+        "rarity": "semi-rare",
+        "monsterName": "Amazon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.01,
+        "itemId": 2920,
+        "itemName": "torch",
+        "rarity": "rare",
+        "monsterName": "Amazon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0026,
+        "itemId": 3008,
+        "itemName": "crystal necklace",
+        "rarity": "very-rare",
+        "monsterName": "Amazon"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0013,
+        "itemId": 3030,
+        "itemName": "small ruby",
+        "rarity": "very-rare",
+        "monsterName": "Amazon"
+      },
+      {
+        "countMax": 3,
+        "countMin": 1,
+        "dropChance": 0.55,
+        "itemId": 3277,
+        "itemName": "spear",
+        "rarity": "common",
+        "monsterName": "Valkyrie"
+      },
+      {
+        "countMax": 12,
+        "countMin": 1,
+        "dropChance": 0.32,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Valkyrie"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.3,
+        "itemId": 3577,
+        "itemName": "meat",
+        "rarity": "common",
+        "monsterName": "Valkyrie"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1,
+        "itemId": 3358,
+        "itemName": "chain armor",
+        "rarity": "semi-rare",
+        "monsterName": "Valkyrie"
+      },
+      {
+        "countMax": 2,
+        "countMin": 1,
+        "dropChance": 0.075,
+        "itemId": 3585,
+        "itemName": "red apple",
+        "rarity": "semi-rare",
+        "monsterName": "Valkyrie"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.059,
+        "itemId": 11443,
+        "itemName": "girlish hair decoration",
+        "rarity": "semi-rare",
+        "monsterName": "Valkyrie"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.05155,
+        "itemId": 3347,
+        "itemName": "hunting spear",
+        "rarity": "semi-rare",
+        "monsterName": "Valkyrie"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.032,
+        "itemId": 11444,
+        "itemName": "protective charm",
+        "rarity": "rare",
+        "monsterName": "Valkyrie"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.011,
+        "itemId": 3084,
+        "itemName": "protection amulet",
+        "rarity": "rare",
+        "monsterName": "Valkyrie"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0083,
+        "itemId": 3357,
+        "itemName": "plate armor",
+        "rarity": "rare",
+        "monsterName": "Valkyrie"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0076,
+        "itemId": 3114,
+        "itemName": "skull",
+        "rarity": "rare",
+        "monsterName": "Valkyrie"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.005,
+        "itemId": 266,
+        "itemName": "health potion",
+        "rarity": "rare",
+        "monsterName": "Valkyrie"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0043,
+        "itemId": 3275,
+        "itemName": "double axe",
+        "rarity": "very-rare",
+        "monsterName": "Valkyrie"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0013,
+        "itemId": 3028,
+        "itemName": "small diamond",
+        "rarity": "very-rare",
+        "monsterName": "Valkyrie"
+      },
+      {
+        "countMax": 40,
+        "countMin": 1,
+        "dropChance": 0.64,
+        "itemId": 3031,
+        "itemName": "gold coin",
+        "rarity": "common",
+        "monsterName": "Witch"
+      },
+      {
+        "countMax": 8,
+        "countMin": 1,
+        "dropChance": 0.2975,
+        "itemId": 3598,
+        "itemName": "cookie",
+        "rarity": "common",
+        "monsterName": "Witch"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1012,
+        "itemId": 3012,
+        "itemName": "wolf tooth chain",
+        "rarity": "semi-rare",
+        "monsterName": "Witch"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.1,
+        "itemId": 9652,
+        "itemName": "witch broom",
+        "rarity": "semi-rare",
+        "monsterName": "Witch"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0895,
+        "itemId": 3736,
+        "itemName": "star herb",
+        "rarity": "semi-rare",
+        "monsterName": "Witch"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0495,
+        "itemId": 3552,
+        "itemName": "leather boots",
+        "rarity": "rare",
+        "monsterName": "Witch"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0487,
+        "itemId": 3565,
+        "itemName": "cape",
+        "rarity": "rare",
+        "monsterName": "Witch"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0391,
+        "itemId": 3293,
+        "itemName": "sickle",
+        "rarity": "rare",
+        "monsterName": "Witch"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0201,
+        "itemId": 3562,
+        "itemName": "coat",
+        "rarity": "rare",
+        "monsterName": "Witch"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0114,
+        "itemId": 3069,
+        "itemName": "necrotic rod",
+        "rarity": "rare",
+        "monsterName": "Witch"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.01,
+        "itemId": 3083,
+        "itemName": "garlic necklace",
+        "rarity": "rare",
+        "monsterName": "Witch"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0092,
+        "itemId": 12548,
+        "itemName": "bag of apple slices",
+        "rarity": "rare",
+        "monsterName": "Witch"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.005,
+        "itemId": 3290,
+        "itemName": "silver dagger",
+        "rarity": "rare",
+        "monsterName": "Witch"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0008,
+        "itemId": 9653,
+        "itemName": "witch hat",
+        "rarity": "very-rare",
+        "monsterName": "Witch"
+      },
+      {
+        "countMax": 1,
+        "countMin": 1,
+        "dropChance": 0.0001,
+        "itemId": 10294,
+        "itemName": "stuffed toad",
+        "rarity": "very-rare",
+        "monsterName": "Witch"
+      }
+    ]
+  },
+  "hunts": {
+    "id": "CARLIN-HUNT-0003",
+    "mapId": "CARLIN-HUNT-0003",
+    "name": "Amazons — Fields of Glory (z1–7)",
+    "label": "Amazons — Fields of Glory (z1–7)",
+    "seed": "0000000000000000000000",
+    "assetsRoot": "assets/CARLIN-HUNT-0003_valkyries-fields-of-glory-z18-sprites-v6",
+    "mapUrl": "assets/CARLIN-HUNT-0003_valkyries-fields-of-glory-z18-sprites-v6/map.json",
+    "portrait": "/assets/character-default.png",
+    "monsterPreview": {
+      "name": "Amazon",
+      "icon": "/assets/outfits/137-113-120-95-115-0.png",
+      "atlas": "/assets/outfits/137-113-120-95-115-0.json"
+    },
+    "startPosition": [
+      32387,
+      31618
+    ],
+    "city": "CARLIN",
+    "_todo": [
+      "revisar startPosition (centro geométrico do mapBoundsRef, pode cair fora de área andável)"
+    ]
+  }
+}

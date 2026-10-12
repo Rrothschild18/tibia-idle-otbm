@@ -1,0 +1,810 @@
+{
+  "mapBoundsRef": {
+    "minX": 32466,
+    "minY": 32028,
+    "maxX": 32518,
+    "maxY": 32072
+  },
+  "monsterDefs": {
+    "305": {
+      "name": "Mutated Rat",
+      "outfitId": 305,
+      "atlas": {
+        "image": "assets/outfits/305.png",
+        "json": "assets/outfits/305.json"
+      },
+      "appearance": {
+        "looktype": 305,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 130,
+          "countMin": 1,
+          "dropChance": 0.785,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.2024,
+          "itemId": 3114,
+          "itemName": "skull",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0492,
+          "itemId": 3735,
+          "itemName": "stone herb",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.038,
+          "itemId": 9668,
+          "itemName": "mutated rat tail",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0375,
+          "itemId": 3410,
+          "itemName": "plate shield",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0299,
+          "itemId": 3269,
+          "itemName": "halberd",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0139,
+          "itemId": 3732,
+          "itemName": "green mushroom",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0095,
+          "itemId": 3120,
+          "itemName": "mouldy cheese",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0056,
+          "itemId": 266,
+          "itemName": "health potion",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0054,
+          "itemId": 3049,
+          "itemName": "stealth ring",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.003,
+          "itemId": 8072,
+          "itemName": "spellbook of enlightenment",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0005,
+          "itemId": 3428,
+          "itemName": "tower shield",
+          "rarity": "very-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 8957,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 8957
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 8958
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 8959
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 8960
+          }
+        ]
+      },
+      "race": "blood",
+      "idle": {
+        "north": "305_0",
+        "east": "305_1",
+        "south": "305_2",
+        "west": "305_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "305_4",
+            "305_8",
+            "305_12"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "305_5",
+            "305_9",
+            "305_13"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "305_6",
+            "305_10",
+            "305_14"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "305_7",
+            "305_11",
+            "305_15"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "301": {
+      "name": "Earth Elemental",
+      "outfitId": 301,
+      "atlas": {
+        "image": "assets/outfits/301.png",
+        "json": "assets/outfits/301.json"
+      },
+      "appearance": {
+        "looktype": 301,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 100,
+          "countMin": 1,
+          "dropChance": 0.93,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.2046,
+          "itemId": 10305,
+          "itemName": "lump of earth",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 30,
+          "countMin": 1,
+          "dropChance": 0.2016,
+          "itemId": 774,
+          "itemName": "earth arrow",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 10,
+          "countMin": 1,
+          "dropChance": 0.1,
+          "itemId": 1781,
+          "itemName": "small stone",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.1,
+          "itemId": 3147,
+          "itemName": "blank rune",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0191,
+          "itemId": 237,
+          "itemName": "strong mana potion",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0062,
+          "itemId": 9057,
+          "itemName": "small topaz",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0057,
+          "itemId": 10422,
+          "itemName": "clay lump",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0047,
+          "itemId": 12600,
+          "itemName": "coal",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0035,
+          "itemId": 8894,
+          "itemName": "heavily rusted armor",
+          "rarity": "very-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 8105,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 8105
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 8106
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 8107
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 8108
+          }
+        ]
+      },
+      "race": "undead",
+      "idle": {
+        "north": "301_0",
+        "east": "301_1",
+        "south": "301_2",
+        "west": "301_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "301_4",
+            "301_8",
+            "301_12",
+            "301_16",
+            "301_20",
+            "301_24",
+            "301_28",
+            "301_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "301_5",
+            "301_9",
+            "301_13",
+            "301_17",
+            "301_21",
+            "301_25",
+            "301_29",
+            "301_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "301_6",
+            "301_10",
+            "301_14",
+            "301_18",
+            "301_22",
+            "301_26",
+            "301_30",
+            "301_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "301_7",
+            "301_11",
+            "301_15",
+            "301_19",
+            "301_23",
+            "301_27",
+            "301_31",
+            "301_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "299": {
+      "name": "Bog Raider",
+      "outfitId": 299,
+      "atlas": {
+        "image": "assets/outfits/299.png",
+        "json": "assets/outfits/299.json"
+      },
+      "appearance": {
+        "looktype": 299,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 105,
+          "countMin": 1,
+          "dropChance": 0.9209,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0987,
+          "itemId": 9667,
+          "itemName": "boggy dreads",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0203,
+          "itemId": 239,
+          "itemName": "great health potion",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0201,
+          "itemId": 7642,
+          "itemName": "great spirit potion",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0102,
+          "itemId": 8084,
+          "itemName": "springsprout rod",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0075,
+          "itemId": 7643,
+          "itemName": "ultimate health potion",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0058,
+          "itemId": 8044,
+          "itemName": "belted cape",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.002,
+          "itemId": 3557,
+          "itemName": "plate legs",
+          "rarity": "very-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0014,
+          "itemId": 8063,
+          "itemName": "paladin armor",
+          "rarity": "very-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 8123,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 8123
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 8124
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 8125
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 8126
+          }
+        ]
+      },
+      "race": "venom",
+      "idle": {
+        "north": "299_0",
+        "east": "299_1",
+        "south": "299_2",
+        "west": "299_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "299_4",
+            "299_8",
+            "299_12",
+            "299_16",
+            "299_20",
+            "299_24",
+            "299_28",
+            "299_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "299_5",
+            "299_9",
+            "299_13",
+            "299_17",
+            "299_21",
+            "299_25",
+            "299_29",
+            "299_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "299_6",
+            "299_10",
+            "299_14",
+            "299_18",
+            "299_22",
+            "299_26",
+            "299_30",
+            "299_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "299_7",
+            "299_11",
+            "299_15",
+            "299_19",
+            "299_23",
+            "299_27",
+            "299_31",
+            "299_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "101": {
+      "name": "Bonebeast",
+      "outfitId": 101,
+      "atlas": {
+        "image": "assets/outfits/101.png",
+        "json": "assets/outfits/101.json"
+      },
+      "appearance": {
+        "looktype": 101,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 90,
+          "countMin": 1,
+          "dropChance": 0.5,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.4775,
+          "itemId": 3115,
+          "itemName": "bone",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.2,
+          "itemId": 3114,
+          "itemName": "skull",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0978,
+          "itemId": 10277,
+          "itemName": "bony tail",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.08,
+          "itemId": 3357,
+          "itemName": "plate armor",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0495,
+          "itemId": 3337,
+          "itemName": "bone club",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.02,
+          "itemId": 3441,
+          "itemName": "bone shield",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0135,
+          "itemId": 3732,
+          "itemName": "green mushroom",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0096,
+          "itemId": 5925,
+          "itemName": "hardened bone",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0054,
+          "itemId": 266,
+          "itemName": "health potion",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0012,
+          "itemId": 10244,
+          "itemName": "bonebeast trophy",
+          "rarity": "very-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 6030,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 6030
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4212
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4213
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4214
+          }
+        ]
+      },
+      "race": "undead",
+      "idle": {
+        "north": "101_0",
+        "east": "101_1",
+        "south": "101_2",
+        "west": "101_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "101_4",
+            "101_8",
+            "101_12",
+            "101_16",
+            "101_20",
+            "101_24",
+            "101_28",
+            "101_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "101_5",
+            "101_9",
+            "101_13",
+            "101_17",
+            "101_21",
+            "101_25",
+            "101_29",
+            "101_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "101_6",
+            "101_10",
+            "101_14",
+            "101_18",
+            "101_22",
+            "101_26",
+            "101_30",
+            "101_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "101_7",
+            "101_11",
+            "101_15",
+            "101_19",
+            "101_23",
+            "101_27",
+            "101_31",
+            "101_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    }
+  },
+  "spawns": [
+    {
+      "name": "Mutated Rat",
+      "outfitId": 305,
+      "tileX": 30,
+      "tileY": 12,
+      "worldX": 32496,
+      "worldY": 32040,
+      "worldZ": 14,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Earth Elemental",
+      "outfitId": 301,
+      "tileX": 28,
+      "tileY": 15,
+      "worldX": 32494,
+      "worldY": 32043,
+      "worldZ": 14,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Bog Raider",
+      "outfitId": 299,
+      "tileX": 40,
+      "tileY": 22,
+      "worldX": 32506,
+      "worldY": 32050,
+      "worldZ": 14,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Bog Raider",
+      "outfitId": 299,
+      "tileX": 12,
+      "tileY": 27,
+      "worldX": 32478,
+      "worldY": 32055,
+      "worldZ": 14,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Bonebeast",
+      "outfitId": 101,
+      "tileX": 22,
+      "tileY": 30,
+      "worldX": 32488,
+      "worldY": 32058,
+      "worldZ": 14,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Bonebeast",
+      "outfitId": 101,
+      "tileX": 21,
+      "tileY": 32,
+      "worldX": 32487,
+      "worldY": 32060,
+      "worldZ": 14,
+      "radius": 3,
+      "spawntime": 90
+    }
+  ]
+}

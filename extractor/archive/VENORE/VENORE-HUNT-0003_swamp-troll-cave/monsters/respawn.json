@@ -1,0 +1,967 @@
+{
+  "mapBoundsRef": {
+    "minX": 32923,
+    "minY": 32199,
+    "maxX": 32978,
+    "maxY": 32249
+  },
+  "monsterDefs": {
+    "76": {
+      "name": "Swamp Troll",
+      "outfitId": 76,
+      "atlas": {
+        "image": "assets/outfits/76.png",
+        "json": "assets/outfits/76.json"
+      },
+      "appearance": {
+        "looktype": 76,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.6,
+          "itemId": 3578,
+          "itemName": "fish",
+          "rarity": "common"
+        },
+        {
+          "countMax": 5,
+          "countMin": 1,
+          "dropChance": 0.503,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.15,
+          "itemId": 2920,
+          "itemName": "torch",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.13,
+          "itemId": 3277,
+          "itemName": "spear",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.1,
+          "itemId": 3120,
+          "itemName": "mouldy cheese",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.095,
+          "itemId": 3552,
+          "itemName": "leather boots",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.031,
+          "itemId": 9686,
+          "itemName": "swamp grass",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0216,
+          "itemId": 12517,
+          "itemName": "medicine pouch",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0214,
+          "itemId": 5901,
+          "itemName": "wood",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.012,
+          "itemId": 3741,
+          "itemName": "troll green",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0006,
+          "itemId": 3483,
+          "itemName": "fishing rod",
+          "rarity": "very-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 6018,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 6018
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4176
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4177
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4178
+          }
+        ]
+      },
+      "race": "venom",
+      "idle": {
+        "north": "76_0",
+        "east": "76_1",
+        "south": "76_2",
+        "west": "76_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "76_4",
+            "76_8",
+            "76_12",
+            "76_16",
+            "76_20",
+            "76_24",
+            "76_28",
+            "76_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "76_5",
+            "76_9",
+            "76_13",
+            "76_17",
+            "76_21",
+            "76_25",
+            "76_29",
+            "76_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "76_6",
+            "76_10",
+            "76_14",
+            "76_18",
+            "76_22",
+            "76_26",
+            "76_30",
+            "76_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "76_7",
+            "76_11",
+            "76_15",
+            "76_19",
+            "76_23",
+            "76_27",
+            "76_31",
+            "76_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "74": {
+      "name": "Rabbit",
+      "outfitId": 74,
+      "atlas": {
+        "image": "assets/outfits/74.png",
+        "json": "assets/outfits/74.json"
+      },
+      "appearance": {
+        "looktype": 74,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.8562,
+          "itemId": 3577,
+          "itemName": "meat",
+          "rarity": "common"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.1,
+          "itemId": 3595,
+          "itemName": "carrot",
+          "rarity": "semi-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 6017,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 6017
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4301
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 4302
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 4303
+          }
+        ]
+      },
+      "race": "blood",
+      "idle": {
+        "north": "74_0",
+        "east": "74_1",
+        "south": "74_2",
+        "west": "74_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "74_4",
+            "74_8",
+            "74_12",
+            "74_16",
+            "74_20",
+            "74_24",
+            "74_28",
+            "74_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "74_5",
+            "74_9",
+            "74_13",
+            "74_17",
+            "74_21",
+            "74_25",
+            "74_29",
+            "74_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "74_6",
+            "74_10",
+            "74_14",
+            "74_18",
+            "74_22",
+            "74_26",
+            "74_30",
+            "74_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "74_7",
+            "74_11",
+            "74_15",
+            "74_19",
+            "74_23",
+            "74_27",
+            "74_31",
+            "74_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "530": {
+      "name": "Marsh Stalker",
+      "outfitId": 530,
+      "atlas": {
+        "image": "assets/outfits/530.png",
+        "json": "assets/outfits/530.json"
+      },
+      "appearance": {
+        "looktype": 530,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 23,
+          "countMin": 1,
+          "dropChance": 0.6409,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.2032,
+          "itemId": 3578,
+          "itemName": "fish",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.1995,
+          "itemId": 3577,
+          "itemName": "meat",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 2,
+          "countMin": 1,
+          "dropChance": 0.1473,
+          "itemId": 3492,
+          "itemName": "worm",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0865,
+          "itemId": 17462,
+          "itemName": "marsh stalker feather",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0756,
+          "itemId": 3285,
+          "itemName": "longsword",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0608,
+          "itemId": 17461,
+          "itemName": "marsh stalker beak",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0483,
+          "itemId": 3003,
+          "itemName": "rope",
+          "rarity": "rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0011,
+          "itemId": 647,
+          "itemName": "seeds",
+          "rarity": "very-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 17428,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 17428
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 17439
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 17440
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 17441
+          }
+        ]
+      },
+      "race": "blood",
+      "idle": {
+        "north": "530_0",
+        "east": "530_1",
+        "south": "530_2",
+        "west": "530_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "530_4",
+            "530_8",
+            "530_12",
+            "530_16",
+            "530_20",
+            "530_24",
+            "530_28",
+            "530_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "530_5",
+            "530_9",
+            "530_13",
+            "530_17",
+            "530_21",
+            "530_25",
+            "530_29",
+            "530_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "530_6",
+            "530_10",
+            "530_14",
+            "530_18",
+            "530_22",
+            "530_26",
+            "530_30",
+            "530_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "530_7",
+            "530_11",
+            "530_15",
+            "530_19",
+            "530_23",
+            "530_27",
+            "530_31",
+            "530_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "523": {
+      "name": "Water Buffalo",
+      "outfitId": 523,
+      "atlas": {
+        "image": "assets/outfits/523.png",
+        "json": "assets/outfits/523.json"
+      },
+      "appearance": {
+        "looktype": 523,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 20,
+          "countMin": 1,
+          "dropChance": 1.0,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "always"
+        },
+        {
+          "countMax": 3,
+          "countMin": 1,
+          "dropChance": 0.392,
+          "itemId": 3582,
+          "itemName": "ham",
+          "rarity": "common"
+        },
+        {
+          "countMax": 4,
+          "countMin": 1,
+          "dropChance": 0.336,
+          "itemId": 3577,
+          "itemName": "meat",
+          "rarity": "common"
+        }
+      ],
+      "corpse": {
+        "itemId": 17421,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 17421
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 17422
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 17423
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 17424
+          }
+        ]
+      },
+      "race": "blood",
+      "idle": {
+        "north": "523_0",
+        "east": "523_1",
+        "south": "523_2",
+        "west": "523_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "523_4",
+            "523_8",
+            "523_12",
+            "523_16",
+            "523_20",
+            "523_24",
+            "523_28",
+            "523_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "523_5",
+            "523_9",
+            "523_13",
+            "523_17",
+            "523_21",
+            "523_25",
+            "523_29",
+            "523_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "523_6",
+            "523_10",
+            "523_14",
+            "523_18",
+            "523_22",
+            "523_26",
+            "523_30",
+            "523_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "523_7",
+            "523_11",
+            "523_15",
+            "523_19",
+            "523_23",
+            "523_27",
+            "523_31",
+            "523_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    },
+    "535": {
+      "name": "Swampling",
+      "outfitId": 535,
+      "atlas": {
+        "image": "assets/outfits/535.png",
+        "json": "assets/outfits/535.json"
+      },
+      "appearance": {
+        "looktype": 535,
+        "head": 0,
+        "body": 0,
+        "legs": 0,
+        "feet": 0,
+        "addons": 0
+      },
+      "loot": [
+        {
+          "countMax": 12,
+          "countMin": 1,
+          "dropChance": 0.849,
+          "itemId": 3031,
+          "itemName": "gold coin",
+          "rarity": "common"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.199,
+          "itemId": 17822,
+          "itemName": "swampling moss",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.1487,
+          "itemId": 17823,
+          "itemName": "piece of swampling wood",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 5,
+          "countMin": 1,
+          "dropChance": 0.1022,
+          "itemId": 3723,
+          "itemName": "white mushroom",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0741,
+          "itemId": 17824,
+          "itemName": "swampling club",
+          "rarity": "semi-rare"
+        },
+        {
+          "countMax": 1,
+          "countMin": 1,
+          "dropChance": 0.0508,
+          "itemId": 3003,
+          "itemName": "rope",
+          "rarity": "semi-rare"
+        }
+      ],
+      "corpse": {
+        "itemId": 17622,
+        "stages": [
+          {
+            "durationSeconds": 10,
+            "itemId": 17622
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 17623
+          },
+          {
+            "durationSeconds": 300,
+            "itemId": 17624
+          },
+          {
+            "durationSeconds": 60,
+            "itemId": 17625
+          }
+        ]
+      },
+      "race": "venom",
+      "idle": {
+        "north": "535_0",
+        "east": "535_1",
+        "south": "535_2",
+        "west": "535_3"
+      },
+      "moving": {
+        "north": {
+          "frames": [
+            "535_4",
+            "535_8",
+            "535_12",
+            "535_16",
+            "535_20",
+            "535_24",
+            "535_28",
+            "535_32"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "east": {
+          "frames": [
+            "535_5",
+            "535_9",
+            "535_13",
+            "535_17",
+            "535_21",
+            "535_25",
+            "535_29",
+            "535_33"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "south": {
+          "frames": [
+            "535_6",
+            "535_10",
+            "535_14",
+            "535_18",
+            "535_22",
+            "535_26",
+            "535_30",
+            "535_34"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        },
+        "west": {
+          "frames": [
+            "535_7",
+            "535_11",
+            "535_15",
+            "535_19",
+            "535_23",
+            "535_27",
+            "535_31",
+            "535_35"
+          ],
+          "frameRate": 3.33,
+          "loopType": "infinite"
+        }
+      }
+    }
+  },
+  "spawns": [
+    {
+      "name": "Swamp Troll",
+      "outfitId": 76,
+      "tileX": 12,
+      "tileY": 13,
+      "worldX": 32935,
+      "worldY": 32212,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Rabbit",
+      "outfitId": 74,
+      "tileX": 16,
+      "tileY": 13,
+      "worldX": 32939,
+      "worldY": 32212,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Marsh Stalker",
+      "outfitId": 530,
+      "tileX": 41,
+      "tileY": 12,
+      "worldX": 32964,
+      "worldY": 32211,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Water Buffalo",
+      "outfitId": 523,
+      "tileX": 42,
+      "tileY": 14,
+      "worldX": 32965,
+      "worldY": 32213,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 60
+    },
+    {
+      "name": "Water Buffalo",
+      "outfitId": 523,
+      "tileX": 43,
+      "tileY": 14,
+      "worldX": 32966,
+      "worldY": 32213,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 60
+    },
+    {
+      "name": "Water Buffalo",
+      "outfitId": 523,
+      "tileX": 33,
+      "tileY": 14,
+      "worldX": 32956,
+      "worldY": 32213,
+      "worldZ": 7,
+      "radius": 1,
+      "spawntime": 60
+    },
+    {
+      "name": "Water Buffalo",
+      "outfitId": 523,
+      "tileX": 34,
+      "tileY": 14,
+      "worldX": 32957,
+      "worldY": 32213,
+      "worldZ": 7,
+      "radius": 1,
+      "spawntime": 60
+    },
+    {
+      "name": "Swamp Troll",
+      "outfitId": 76,
+      "tileX": 23,
+      "tileY": 15,
+      "worldX": 32946,
+      "worldY": 32214,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Swamp Troll",
+      "outfitId": 76,
+      "tileX": 20,
+      "tileY": 20,
+      "worldX": 32943,
+      "worldY": 32219,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Water Buffalo",
+      "outfitId": 523,
+      "tileX": 41,
+      "tileY": 18,
+      "worldX": 32964,
+      "worldY": 32217,
+      "worldZ": 7,
+      "radius": 1,
+      "spawntime": 60
+    },
+    {
+      "name": "Water Buffalo",
+      "outfitId": 523,
+      "tileX": 42,
+      "tileY": 19,
+      "worldX": 32965,
+      "worldY": 32218,
+      "worldZ": 7,
+      "radius": 1,
+      "spawntime": 60
+    },
+    {
+      "name": "Water Buffalo",
+      "outfitId": 523,
+      "tileX": 39,
+      "tileY": 23,
+      "worldX": 32962,
+      "worldY": 32222,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 60
+    },
+    {
+      "name": "Water Buffalo",
+      "outfitId": 523,
+      "tileX": 39,
+      "tileY": 25,
+      "worldX": 32962,
+      "worldY": 32224,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 60
+    },
+    {
+      "name": "Swampling",
+      "outfitId": 535,
+      "tileX": 38,
+      "tileY": 27,
+      "worldX": 32961,
+      "worldY": 32226,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Swampling",
+      "outfitId": 535,
+      "tileX": 37,
+      "tileY": 29,
+      "worldX": 32960,
+      "worldY": 32228,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Swampling",
+      "outfitId": 535,
+      "tileX": 41,
+      "tileY": 29,
+      "worldX": 32964,
+      "worldY": 32228,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    },
+    {
+      "name": "Swampling",
+      "outfitId": 535,
+      "tileX": 33,
+      "tileY": 38,
+      "worldX": 32956,
+      "worldY": 32237,
+      "worldZ": 7,
+      "radius": 3,
+      "spawntime": 90
+    }
+  ]
+}
