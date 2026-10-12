@@ -15,34 +15,13 @@
     "está aqui?` seis meses depois, e enum obrigaria a inventar a taxonomia",
     "antes de conhecer os casos. Não existe denylist — loja é lei.",
     "",
-    "Ver .scratch/npcs-relevantes/spec.md"
-  ],
-
-  "THAIS-NPC-palomino": "travel artesanal: coche Thais->Venore, 125g, repetível (palomino.lua:77,83) + aluguel de montaria 500g/24h",
-  "THAIS-NPC-bozo": "loja por diálogo: mace of the fury 250g (bozo.lua:899)",
-  "THAIS-NPC-dermot": "loja por diálogo: dungeon key de Fibula 2000g (dermot.lua:79)",
-  "THAIS-NPC-chester-kahs": "loja por diálogo: reposição de scroll 1000g (chester_kahs.lua:149)",
-  "THAIS-NPC-emael": "loja por diálogo: podium of vigour 1.000.000g (emael.lua:70)",
-  "THAIS-NPC-walter-jaeger": "cosmético pago: loja inteira de outfit/addon/mount por Hunting Task Points (walter_jaeger.lua:319-473)",
-  "THAIS-NPC-black-bert": "PALIATIVO da issue 06: compra 129 raridades/troféus, mas o .lua usa `itemname`/`clientid` minúsculo e o parser registra shop vazio. Remover esta linha quando a 06 fechar",
-  "THAIS-NPC-yana": "PALIATIVO da issue 06: vende 14 itens, mas o .lua usa `clientId` + `npcConfig.currency` (gold token) e o parser registra shop vazio. Remover esta linha quando a 06 fechar",
-
-  "CARLIN-NPC-padreia": "loja por diálogo: vermin poison 50g (padreia.lua:88). O learnSpell dela não conta — magia está fora",
-  "CARLIN-NPC-ruprecht": "loja sazonal: 20+ itens comprados com present bag, repetível (ruprecht.lua:56-76)",
-
-  "KAZORDOON-NPC-riddler": "travel artesanal: charada que teleporta, repetível (riddler.lua:141,146,152,156)",
-  "KAZORDOON-NPC-dukosch": "passe de vagonete: 250g por 7 dias, habilita os vagonetes de minério (dukosch.lua:70-71)",
-  "KAZORDOON-NPC-lukosch": "passe de vagonete: idem (lukosch.lua:70-71)",
-  "KAZORDOON-NPC-pukosch": "passe de vagonete: idem (pukosch.lua:70-71)",
-  "KAZORDOON-NPC-robson": "loja por diálogo: parcel 15g, label 1g (robson.lua:74,84)",
-  "KAZORDOON-NPC-gnominus": "loja por diálogo: mushroom beer 10g (gnominus.lua:85)",
-  "KAZORDOON-NPC-storkus": "XP repetível: troca vampire token por rank + XP em 6 degraus (storkus.lua:140-185)",
-  "KAZORDOON-NPC-commander-stone": "rank repetível: 4 missões Bigfoot a cada 20h (commander_stone.lua:65,85,89)",
-
-  "VENORE-NPC-kawill": "pré-requisito de bênção: sem ele, StdModule.bless com bless==3 recusa (modules.lua:174) e o Pydar de Kazordoon fica inalcançável",
-  "VENORE-NPC-appaloosa": "travel artesanal: coche Venore->Thais, 125g, repetível (appaloosa.lua:76,82) + aluguel de montaria 500g/24h",
-  "VENORE-NPC-eustacio": "travel artesanal: barco pra Rascacoon, repetível (eustacio.lua:82-90)",
-  "VENORE-NPC-oldrak": "loja por diálogo: hallowed axe 1000g, repetível (oldrak.lua:139)",
-  "VENORE-NPC-zebron": "cassino: aposta 1-99g com payout, repetível (zebron.lua:74,114)",
-  "VENORE-NPC-rottin-wood": "XP repetível: missões com cooldown (rottin_wood.lua:113,124)"
+    "Ver .scratch/npcs-relevantes/spec.md",
+    "",
+    "ESVAZIADA em 2026-10-12: as cinco cidades perderam o npc.xml inteiro",
+    "(ver .scratch/npcs-relevantes/npcs-zerados-2026-10-12.md para a lista",
+    "completa com o motivo de cada um, preservada de antes do esvaziamento).",
+    "Toda entrada apontava pra um NPC que não existe mais no mapa — mantê-las",
+    "aqui faria UnresolvedAllowlistError abortar todo --export. Reabra as que",
+    "voltarem a existir."
+  ]
 }

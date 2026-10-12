@@ -3,12 +3,4 @@
 # Gerado por build_travel_fragment.py. Nada aqui entrou no fragmento: são os nós que
 # ninguém consegue alcançar viajando, e o que fazer com cada um.
 
-## poi-without-edge (3)
-POI com coordenada e sem aresta — a placa existe no OTBM, mas o tile dela não
-alcança nenhum outro POI da cidade (ilhado por parede/água, ou a placa está num
-tile intransponível). Abra a coordenada no editor de mapa e mova a placa pra um
-tile caminhável ligado ao resto da cidade.
-
-  KAZORDOON-NPC-emperor-kruzak  (NPC)  x=32626 y=31923 z=3
-  KAZORDOON-NPC-riddler  (NPC)  x=32479 y=31901 z=2
-  KAZORDOON-NPC-uzon-back  (NPC)  x=32661 y=31915 z=0
+Nenhum nó rejeitado.
