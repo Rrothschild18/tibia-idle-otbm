@@ -11,7 +11,7 @@ import curated_hunts as ch
 
 
 # ======================================================
-# training_hunt_from_sign
+# hunt_from_signs (uma placa só)
 # ======================================================
 
 
@@ -19,23 +19,23 @@ def _sign(sign_id, x=1000, y=2000, z=8):
     return {"id": sign_id, "type": "TRAINING", "x": x, "y": y, "z": z}
 
 
-def test_training_hunt_from_sign_uses_the_sign_floor_and_its_neighbours():
-    hunt = ch.training_hunt_from_sign(_sign("CARLIN-TRAINING-0001", z=8), max_floor=15)
+def test_hunt_from_one_sign_uses_the_sign_floor_and_its_neighbours():
+    hunt = ch.hunt_from_signs([_sign("CARLIN-TRAINING-0001", z=8)], max_floor=15)
 
     assert hunt["floors"] == [7, 8, 9]
     assert hunt["entranceZ"] == 8
 
 
-def test_training_hunt_from_sign_never_crosses_the_map_floor_bounds():
-    hunt = ch.training_hunt_from_sign(_sign("CARLIN-TRAINING-0001", z=0), max_floor=15)
+def test_hunt_from_one_sign_never_crosses_the_map_floor_bounds():
+    hunt = ch.hunt_from_signs([_sign("CARLIN-TRAINING-0001", z=0)], max_floor=15)
     assert hunt["floors"] == [0, 1]
 
-    hunt = ch.training_hunt_from_sign(_sign("CARLIN-TRAINING-0001", z=15), max_floor=15)
+    hunt = ch.hunt_from_signs([_sign("CARLIN-TRAINING-0001", z=15)], max_floor=15)
     assert hunt["floors"] == [14, 15]
 
 
-def test_training_hunt_from_sign_extent_is_a_point_at_the_sign():
-    hunt = ch.training_hunt_from_sign(_sign("CARLIN-TRAINING-0001", x=1000, y=2000, z=8), max_floor=15)
+def test_hunt_from_one_sign_extent_is_a_point_at_the_sign():
+    hunt = ch.hunt_from_signs([_sign("CARLIN-TRAINING-0001", x=1000, y=2000, z=8)], max_floor=15)
 
     assert hunt["extent"] == {
         "minX": 1000, "minY": 2000, "maxX": 1000, "maxY": 2000,
@@ -43,13 +43,13 @@ def test_training_hunt_from_sign_extent_is_a_point_at_the_sign():
     }
 
 
-def test_training_hunt_from_sign_derives_a_readable_name_from_the_id():
-    hunt = ch.training_hunt_from_sign(_sign("CARLIN-TRAINING-0001"), max_floor=15)
+def test_hunt_from_one_sign_derives_a_readable_name_from_the_id():
+    hunt = ch.hunt_from_signs([_sign("CARLIN-TRAINING-0001")], max_floor=15)
     assert hunt["name"] == "Carlin Training 0001"
 
 
-def test_training_hunt_from_sign_carries_the_sign_id_and_no_candidates():
-    hunt = ch.training_hunt_from_sign(_sign("CARLIN-TRAINING-0001"), max_floor=15)
+def test_hunt_from_one_sign_carries_the_sign_id_and_no_candidates():
+    hunt = ch.hunt_from_signs([_sign("CARLIN-TRAINING-0001")], max_floor=15)
 
     assert hunt["id"] == "CARLIN-TRAINING-0001"
     assert hunt["type"] == "TRAINING"
@@ -97,7 +97,7 @@ def test_assign_does_not_renumber_when_an_entry_is_removed():
 
 
 def test_assign_passes_through_a_hunt_that_already_carries_an_id():
-    training = ch.training_hunt_from_sign(_sign("CARLIN-TRAINING-0003"), max_floor=15)
+    training = ch.hunt_from_signs([_sign("CARLIN-TRAINING-0003")], max_floor=15)
 
     assigned = ch.assign("CARLIN", [training])
 
@@ -106,7 +106,7 @@ def test_assign_passes_through_a_hunt_that_already_carries_an_id():
 
 
 def test_assign_never_lets_training_ids_collide_with_hunt_ids():
-    training = ch.training_hunt_from_sign(_sign("CARLIN-TRAINING-0001"), max_floor=15)
+    training = ch.hunt_from_signs([_sign("CARLIN-TRAINING-0001")], max_floor=15)
     hunts = [
         training,
         {"id": "CARLIN-HUNT-0001", "name": "Rats"},
@@ -176,7 +176,7 @@ def test_hunt_from_signs_refuses_a_mixed_group():
 
 
 def test_build_location_sets_type_training_and_a_huntid_with_no_todo():
-    training = ch.training_hunt_from_sign(_sign("CARLIN-TRAINING-0001"), max_floor=15)
+    training = ch.hunt_from_signs([_sign("CARLIN-TRAINING-0001")], max_floor=15)
     hunt = ch.assign("CARLIN", [training])[0]
 
     location = ch.build_location(hunt, (1000, 2000, 8))
@@ -192,32 +192,32 @@ def test_is_training_is_false_for_a_regular_hunt():
 
 
 # ======================================================
-# training_entrance_of
+# sign_entrance_of
 # ======================================================
 
 
-def test_training_entrance_of_uses_the_signs_own_tile_when_walkable():
-    hunt = ch.training_hunt_from_sign(_sign("CARLIN-TRAINING-0001", x=1000, y=2000, z=8), max_floor=15)
+def test_sign_entrance_of_uses_the_signs_own_tile_when_walkable():
+    hunt = ch.hunt_from_signs([_sign("CARLIN-TRAINING-0001", x=1000, y=2000, z=8)], max_floor=15)
     walkable = {(1000, 2000, 8)}
 
-    assert ch.training_entrance_of(hunt, walkable) == (1000, 2000, 8)
+    assert ch.sign_entrance_of(hunt, walkable) == (1000, 2000, 8)
 
 
-def test_training_entrance_of_falls_back_to_a_cardinal_neighbor():
-    hunt = ch.training_hunt_from_sign(_sign("CARLIN-TRAINING-0001", x=1000, y=2000, z=8), max_floor=15)
+def test_sign_entrance_of_falls_back_to_a_cardinal_neighbor():
+    hunt = ch.hunt_from_signs([_sign("CARLIN-TRAINING-0001", x=1000, y=2000, z=8)], max_floor=15)
     walkable = {(1001, 2000, 8)}
 
-    assert ch.training_entrance_of(hunt, walkable) == (1001, 2000, 8)
+    assert ch.sign_entrance_of(hunt, walkable) == (1001, 2000, 8)
 
 
-def test_training_entrance_of_never_looks_diagonally():
-    hunt = ch.training_hunt_from_sign(_sign("CARLIN-TRAINING-0001", x=1000, y=2000, z=8), max_floor=15)
+def test_sign_entrance_of_never_looks_diagonally():
+    hunt = ch.hunt_from_signs([_sign("CARLIN-TRAINING-0001", x=1000, y=2000, z=8)], max_floor=15)
     walkable = {(1001, 2001, 8)}
 
-    assert ch.training_entrance_of(hunt, walkable) is None
+    assert ch.sign_entrance_of(hunt, walkable) is None
 
 
-def test_training_entrance_of_is_none_without_any_walkable_neighbor():
-    hunt = ch.training_hunt_from_sign(_sign("CARLIN-TRAINING-0001", x=1000, y=2000, z=8), max_floor=15)
+def test_sign_entrance_of_is_none_without_any_walkable_neighbor():
+    hunt = ch.hunt_from_signs([_sign("CARLIN-TRAINING-0001", x=1000, y=2000, z=8)], max_floor=15)
 
-    assert ch.training_entrance_of(hunt, walkable=set()) is None
+    assert ch.sign_entrance_of(hunt, walkable=set()) is None

@@ -122,7 +122,7 @@ def parse_marker_signs(dump: Dict) -> Tuple[List[Dict], List[Dict]]:
     o mesmo id em vários andares é uma hunt que ocupa esses andares, e é assim
     que se marca o recorte sem passar pela curadoria da tela (ver
     `signs_by_id` e `curated_hunts.hunt_from_signs`). Nos tipos de um tile só —
-    `TEMPLE`, `DEPOT`, `NPC`, `QUEST` — repetição continua sendo erro
+    `TEMPLE`, `DEPOT` e `QUEST`, os outros que `POI_TYPES` admite — repetição continua sendo erro
     reportado, tipicamente placa copiada que ficou com o uid antigo; só a
     primeira vira location, então id duplicado nunca chega ao catálogo para
     colidir lá.

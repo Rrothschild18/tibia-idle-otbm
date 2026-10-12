@@ -362,7 +362,7 @@ def main():
         if from_sign:
             # Hunt de placa tem entrada na própria placa — sem candidatas, sem
             # rota do templo. O jogador chega a pé pela cidade.
-            entrance = curated_hunts.training_entrance_of(hunt, walkable)
+            entrance = curated_hunts.sign_entrance_of(hunt, walkable)
             cost = None
         else:
             entrance, cost = curated_hunts.entrance_of(members, distances, anchor_of)
@@ -479,4 +479,8 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    # `raise SystemExit(main())`, e não `main()` solto: as recusas deste script
+    # (`--only` com id inexistente, id na placa e no curation.json ao mesmo
+    # tempo) devolvem 1, e com `main()` solto o processo saía com 0 — o erro
+    # aparecia na tela e o passo seguinte do caminho de autoria seguia adiante.
+    raise SystemExit(main())

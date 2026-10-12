@@ -11,7 +11,7 @@ O que está aqui entra no jogo **por cópia**, sem pipeline:
 
 ```
 uv run python extractor/scripts/publish.py <CIDADE>/<ID>_<slug>
-bunx nx run tibia-idle-api:hunt-add -- --from <pasta> --name "<nome de jogador>"
+bunx nx run hunt-add:add -- --from <pasta-publicada-em-public/assets> --name "<nome de jogador>"
 ```
 
 Duas coisas não entram, por regra:

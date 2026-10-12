@@ -20,7 +20,6 @@ from typing import Dict, Iterable, List, Optional, Sequence, Set, Tuple
 Node = Tuple[int, int, int]
 
 DEFAULT_MARGIN_TILES = 12
-HUNT_ID_FORMAT = "{city}-HUNT-{index:04d}"
 
 
 def slugify(name: str) -> str:
@@ -28,10 +27,6 @@ def slugify(name: str) -> str:
     ascii_only = normalized.encode("ascii", "ignore").decode("ascii")
     slug = re.sub(r"[^a-zA-Z0-9]+", "-", ascii_only).strip("-").lower()
     return re.sub(r"-{2,}", "-", slug)
-
-
-def hunt_id(city: str, index: int) -> str:
-    return HUNT_ID_FORMAT.format(city=city, index=index)
 
 
 def is_training(hunt: Dict) -> bool:
@@ -101,23 +96,18 @@ def hunt_from_signs(signs: Sequence[Dict], max_floor: int) -> Dict:
     }
 
 
-def training_hunt_from_sign(sign: Dict, max_floor: int) -> Dict:
-    """Atalho histórico de uma placa só. Ver `hunt_from_signs`."""
-    return hunt_from_signs([sign], max_floor)
-
-
 # A placa pode cair numa tile não-caminhável (presa numa parede, como toda
 # placa do Tibia tende a ficar) — por isso a entrada busca o próprio ponto e
 # os quatro vizinhos cardeais. Sem diagonal de propósito: é a mesma regra que
 # o pathfinding do jogo usa (ver ADR/memória "pathfinding evita diagonal"),
 # não uma lista inventada aqui.
-TRAINING_ENTRANCE_OFFSETS: Tuple[Tuple[int, int], ...] = ((0, 0), (1, 0), (-1, 0), (0, 1), (0, -1))
+SIGN_ENTRANCE_OFFSETS: Tuple[Tuple[int, int], ...] = ((0, 0), (1, 0), (-1, 0), (0, 1), (0, -1))
 
 
-def training_entrance_of(hunt: Dict, walkable: Set[Node]) -> Optional[Node]:
+def sign_entrance_of(hunt: Dict, walkable: Set[Node]) -> Optional[Node]:
     """O tile de entrada de um spot de treino: o próprio ponto da placa (centro
-    do extent, que `training_hunt_from_sign` grava como a posição exata da
-    placa), ou o vizinho cardeal mais próximo que seja caminhável.
+    do extent, que `hunt_from_signs` grava como a posição exata da placa de
+    entrada), ou o vizinho cardeal mais próximo que seja caminhável.
 
     Sem candidata e sem rota do templo — o jogador chega a pé pela cidade, daí
     não comparar com `entrance_of` (que busca o tile mais barato a partir do
@@ -129,7 +119,7 @@ def training_entrance_of(hunt: Dict, walkable: Set[Node]) -> Optional[Node]:
     return next(
         (
             (cx + dx, cy + dy, cz)
-            for dx, dy in TRAINING_ENTRANCE_OFFSETS
+            for dx, dy in SIGN_ENTRANCE_OFFSETS
             if (cx + dx, cy + dy, cz) in walkable
         ),
         None,
