@@ -6,7 +6,11 @@ jogo não precisa dos 1.400 monstros para desenhar dez hunts.
 
 O arquivo é acumulativo por natureza: rodar de novo com uma cidade a mais só
 acrescenta. Cada execução reescreve o arquivo inteiro a partir dos mapas que
-existem, então um monstro que deixou de nascer sai junto.
+existem, então um monstro que deixou de nascer sai junto — **menos** os nomes em
+`tools/monster-catalog/extra-monsters.json`, do lado do jogo, que é onde ficam os
+monstros que mapa nenhum spawna e que o jogo ainda precisa (o spec de paridade do
+mainland guarda os números deles). Sem essa exceção, um recorte novo que deixasse
+de spawnar um monstro derrubava o template dele e o spec de paridade junto.
 
     uv run python extractor/scripts/build_monster_stats.py
 """
@@ -29,6 +33,7 @@ EXTRACTOR_DIR = os.path.dirname(SCRIPTS_DIR)
 READY_MAPS_DIR = os.path.join(EXTRACTOR_DIR, "ready-maps")
 RESPAWN_RELPATH = os.path.join("monsters", "respawn.json")
 OUTPUT_RELPATH = os.path.join("apps", "tibia-idle-api", "content", "hunts", "monster-stats.json")
+EXTRA_NAMES_RELPATH = os.path.join("tools", "monster-catalog", "extra-monsters.json")
 
 
 def spawned_monster_names(root: str = READY_MAPS_DIR) -> Set[str]:
@@ -43,6 +48,16 @@ def spawned_monster_names(root: str = READY_MAPS_DIR) -> Set[str]:
             if spawn.get("name"):
                 names.add(spawn["name"])
     return names
+
+
+def extra_monster_names(front: str) -> Set[str]:
+    """Os nomes que o jogo pede mesmo sem mapa que os spawne, lidos do mesmo
+    arquivo que o gerador de combate já usa — uma lista só, não duas."""
+    path = os.path.join(front, EXTRA_NAMES_RELPATH)
+    if not os.path.isfile(path):
+        return set()
+    with open(path, "r", encoding="utf-8") as handler:
+        return set(json.load(handler))
 
 
 def missing_names(names: Set[str], stats: Dict[str, Dict]) -> List[str]:
@@ -73,6 +88,9 @@ def main() -> int:
     if not names:
         print(f"[ERRO] nenhum {RESPAWN_RELPATH} em {READY_MAPS_DIR} — rode build_map.js antes")
         return 1
+
+    extra = extra_monster_names(front)
+    names |= extra
 
     stats = monster_stats.build_monster_stats(canary, names)
     absent = missing_names(names, stats)

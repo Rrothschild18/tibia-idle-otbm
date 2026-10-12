@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="33036" centery="32105" centerz="8" radius="3">
+		<monster name="Swampling" x="0" y="-2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33015" centery="32112" centerz="8" radius="3">
+		<monster name="Rotworm" x="-1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33022" centery="32112" centerz="8" radius="3">
+		<monster name="Rotworm" x="3" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33050" centery="32119" centerz="8" radius="3">
+		<monster name="Rotworm" x="-3" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33029" centery="32126" centerz="8" radius="3">
+		<monster name="Rotworm" x="2" y="-3" z="8" spawntime="90" />
+		<monster name="Rotworm" x="3" y="-3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33015" centery="32147" centerz="8" radius="3">
+		<monster name="Little Corym Charlatan" x="1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33022" centery="32147" centerz="8" radius="3">
+		<monster name="Little Corym Charlatan" x="-2" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33036" centery="32147" centerz="8" radius="3">
+		<monster name="Little Corym Charlatan" x="-1" y="2" z="8" spawntime="90" />
+	</monster>
+</monsters>

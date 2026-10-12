@@ -1,5 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <monsters>
+	<monster centerx="32318" centery="31823" centerz="8" radius="2">
+		<monster name="Slime" x="-1" y="-1" z="8" spawntime="60" />
+		<monster name="Slime" x="-2" y="0" z="8" spawntime="60" />
+	</monster>
 	<monster centerx="32309" centery="31822" centerz="9" radius="3">
 		<monster name="Slime" x="-1" y="-1" z="9" spawntime="90" />
 		<monster name="Slime" x="2" y="1" z="9" spawntime="90" />

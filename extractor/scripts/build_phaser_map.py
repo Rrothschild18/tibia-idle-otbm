@@ -509,7 +509,7 @@ def _render_sheet(packer: SheetPacker, sheet_key: str, frame_sources: Dict[int, 
             continue
         rect = packer.gid_to_rect(sheet_key, gid)
         with Image.open(source_path) as sprite_img:
-            canvas.paste(sprite_img.convert("RGBA"), (rect["x"], rect["y"]))
+            canvas.alpha_composite(sprite_img.convert("RGBA"), (rect["x"], rect["y"]))
     return canvas
 
 

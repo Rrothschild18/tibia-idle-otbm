@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32502" centery="32257" centerz="6" radius="2">
+		<monster name="Scorpion" x="-1" y="-1" z="6" spawntime="90" />
+		<monster name="Scorpion" x="2" y="1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32475" centery="32217" centerz="7" radius="6">
+		<monster name="Snake" x="0" y="-6" z="7" spawntime="60" />
+		<monster name="Snake" x="1" y="0" z="7" spawntime="60" />
+		<monster name="Snake" x="2" y="2" z="7" spawntime="60" />
+		<monster name="Snake" x="3" y="5" z="7" spawntime="60" />
+	</monster>
+	<monster centerx="32474" centery="32227" centerz="7" radius="2">
+		<monster name="Poison Spider" x="2" y="1" z="7" spawntime="60" />
+	</monster>
+	<monster centerx="32504" centery="32235" centerz="7" radius="2">
+		<monster name="Troll" x="0" y="0" z="7" spawntime="60" />
+		<monster name="Troll" x="1" y="1" z="7" spawntime="60" />
+	</monster>
+	<monster centerx="32508" centery="32246" centerz="7" radius="2">
+		<monster name="Orc" x="-1" y="-1" z="7" spawntime="90" />
+		<monster name="Wasp" x="2" y="-1" z="7" spawntime="90" />
+		<monster name="Wasp" x="-2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32471" centery="32247" centerz="7" radius="3">
+		<monster name="Troll" x="3" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32479" centery="32247" centerz="7" radius="3">
+		<monster name="Troll" x="0" y="-3" z="7" spawntime="90" />
+		<monster name="Troll" x="-1" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32512" centery="32254" centerz="7" radius="2">
+		<monster name="Orc" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32480" centery="32261" centerz="7" radius="3">
+		<monster name="Troll" x="3" y="-3" z="7" spawntime="90" />
+		<monster name="Troll" x="-1" y="-2" z="7" spawntime="90" />
+		<monster name="Troll" x="2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32507" centery="32257" centerz="8" radius="2">
+		<monster name="Orc" x="1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32498" centery="32268" centerz="8" radius="2">
+		<monster name="Troll" x="0" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32507" centery="32268" centerz="8" radius="2">
+		<monster name="Troll" x="-2" y="-2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32504" centery="32245" centerz="9" radius="3">
+		<monster name="Orc" x="2" y="0" z="9" spawntime="90" />
+		<monster name="Orc" x="-1" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32501" centery="32251" centerz="9" radius="1">
+		<monster name="Orc" x="-1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32477" centery="32252" centerz="9" radius="7">
+		<monster name="Rotworm" x="0" y="-6" z="9" spawntime="90" />
+		<monster name="Rotworm" x="5" y="-1" z="9" spawntime="90" />
+		<monster name="Rotworm" x="-3" y="5" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32525" centery="32246" centerz="10" radius="3">
+		<monster name="Scorpion" x="1" y="-3" z="10" spawntime="90" />
+		<monster name="Orc Warrior" x="-2" y="1" z="10" spawntime="90" />
+		<monster name="Scorpion" x="1" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32512" centery="32248" centerz="10" radius="2">
+		<monster name="Orc Warrior" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32519" centery="32258" centerz="10" radius="2">
+		<monster name="Orc" x="-2" y="-2" z="10" spawntime="90" />
+		<monster name="Orc" x="0" y="1" z="10" spawntime="90" />
+	</monster>
+</monsters>

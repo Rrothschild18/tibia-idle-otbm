@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32959" centery="32168" centerz="7" radius="3">
+		<monster name="Snake" x="-1" y="1" z="7" spawntime="90" />
+		<monster name="Snake" x="0" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32966" centery="32168" centerz="7" radius="3">
+		<monster name="Snake" x="0" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33001" centery="32168" centerz="7" radius="3">
+		<monster name="Snake" x="-3" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32973" centery="32175" centerz="7" radius="3">
+		<monster name="Snake" x="1" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32980" centery="32175" centerz="7" radius="3">
+		<monster name="Snake" x="-2" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32975" centery="32185" centerz="7" radius="1">
+		<monster name="Slime" x="0" y="0" z="7" spawntime="60" />
+		<monster name="Slime" x="0" y="1" z="7" spawntime="60" />
+	</monster>
+	<monster centerx="32980" centery="32210" centerz="7" radius="3">
+		<monster name="Swampling" x="3" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32987" centery="32210" centerz="7" radius="3">
+		<monster name="Snake" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+</monsters>
