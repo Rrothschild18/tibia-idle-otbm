@@ -98,6 +98,123 @@
         "y": 32076,
         "z": 10
       }
+    },
+    {
+      "id": "THAIS-TRAINING-0002",
+      "type": "TRAINING",
+      "name": "Thais Training 0002",
+      "slug": "thais-training-0002",
+      "folder": "THAIS-TRAINING-0002_thais-training-0002",
+      "floors": [
+        10,
+        11,
+        12
+      ],
+      "cropFloors": [
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "candidateIds": [],
+      "creatures": 0,
+      "extent": {
+        "minX": 32373,
+        "minY": 32139,
+        "maxX": 32373,
+        "maxY": 32139,
+        "centerX": 32373,
+        "centerY": 32139
+      },
+      "subareaId": null,
+      "entrance": {
+        "x": 32373,
+        "y": 32139,
+        "z": 11
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 1868,
+      "spawns": 15,
+      "isTrainingHunt": true
+    },
+    {
+      "id": "THAIS-TRAINING-0003",
+      "type": "TRAINING",
+      "name": "Thais Training 0003",
+      "slug": "thais-training-0003",
+      "folder": "THAIS-TRAINING-0003_thais-training-0003",
+      "floors": [
+        10,
+        11,
+        12
+      ],
+      "cropFloors": [
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "candidateIds": [],
+      "creatures": 0,
+      "extent": {
+        "minX": 32402,
+        "minY": 32165,
+        "maxX": 32402,
+        "maxY": 32165,
+        "centerX": 32402,
+        "centerY": 32165
+      },
+      "subareaId": null,
+      "entrance": {
+        "x": 32402,
+        "y": 32165,
+        "z": 11
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 2043,
+      "spawns": 14,
+      "isTrainingHunt": true
+    },
+    {
+      "id": "THAIS-TRAINING-0001",
+      "type": "TRAINING",
+      "name": "Thais Training 0001",
+      "slug": "thais-training-0001",
+      "folder": "THAIS-TRAINING-0001_thais-training-0001",
+      "floors": [
+        6,
+        7,
+        8
+      ],
+      "cropFloors": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "candidateIds": [],
+      "creatures": 0,
+      "extent": {
+        "minX": 32506,
+        "minY": 32235,
+        "maxX": 32506,
+        "maxY": 32235,
+        "centerX": 32506,
+        "centerY": 32235
+      },
+      "subareaId": null,
+      "entrance": {
+        "x": 32506,
+        "y": 32235,
+        "z": 7
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 2248,
+      "spawns": 5,
+      "isTrainingHunt": true
     }
   ]
 }

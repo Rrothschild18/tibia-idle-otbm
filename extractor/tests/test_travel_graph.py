@@ -38,6 +38,26 @@ def test_parse_marker_signs_accepts_a_well_formed_id_in_reserved_uid_range():
     assert issues == []
 
 
+def test_parse_marker_signs_accepts_a_training_sign():
+    dump = _dump([(1000, 2000, 7, [_sign_item(10001, "CARLIN-TRAINING-0001")])])
+
+    locations, issues = tg.parse_marker_signs(dump)
+
+    assert locations == [{"id": "CARLIN-TRAINING-0001", "type": "TRAINING", "x": 1000, "y": 2000, "z": 7}]
+    assert issues == []
+
+
+def test_parse_marker_signs_reports_a_malformed_training_sign_without_generating_a_point():
+    dump = _dump([(1000, 2000, 7, [_sign_item(10001, "CARLIN-TRAINING-001")])])
+
+    locations, issues = tg.parse_marker_signs(dump)
+
+    assert locations == []
+    assert issues == [
+        {"reason": "invalid-sign-format", "uid": 10001, "text": "CARLIN-TRAINING-001", "x": 1000, "y": 2000, "z": 7}
+    ]
+
+
 def test_parse_marker_signs_ignores_uid_outside_reserved_range():
     dump = _dump([(1000, 2000, 7, [_sign_item(500, "ROOK-HUNT-0001")])])
 
@@ -1596,6 +1616,22 @@ def test_connect_orphan_hunts_bridges_an_island_that_only_holds_the_depot():
 
     assert [link["hunt"] for link in invented] == ["C-DEPOT-0001"]
     assert "C-DEPOT-0001" in _reachable(bridged, "C-TEMPLE-0001")
+
+
+def test_connect_orphan_hunts_bridges_an_island_that_only_holds_a_training_spot():
+    # Mesmo caso do depot: um spot de treino ilhado também vale a ponte, não
+    # só hunt — a placa de treino pode cair num bolsão isolado igual.
+    locations = [
+        _island_poi("C-TEMPLE-0001", "TEMPLE", 0, 0),
+        _island_poi("C-HUNT-0001", "HUNT", 5, 0),
+        _island_poi("C-TRAINING-0001", "TRAINING", 200, 0),
+    ]
+    edges = [_island_edge("C-TEMPLE-0001", "C-HUNT-0001")]
+
+    bridged, invented = tg.connect_orphan_hunts(locations, list(edges))
+
+    assert [link["hunt"] for link in invented] == ["C-TRAINING-0001"]
+    assert "C-TRAINING-0001" in _reachable(bridged, "C-TEMPLE-0001")
 
 
 def test_connect_orphan_hunts_leaves_an_npc_only_island_to_the_rejection_report():

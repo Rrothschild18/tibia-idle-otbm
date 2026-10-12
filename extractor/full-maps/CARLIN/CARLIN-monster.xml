@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0"?>
 <monsters>
 	<monster centerx="32355" centery="31645" centerz="1" radius="2">
 		<monster name="Amazon" x="1" y="-2" z="1" spawntime="90" />
@@ -730,6 +730,10 @@
 	<monster centerx="32211" centery="31854" centerz="7" radius="3">
 		<monster name="Slime" x="3" y="0" z="7" spawntime="90" />
 	</monster>
+	<monster centerx="32201" centery="31855" centerz="7" radius="3">
+		<monster name="Slime" x="-3" y="0" z="7" spawntime="90" />
+		<monster name="Slime" x="0" y="1" z="7" spawntime="90" />
+	</monster>
 	<monster centerx="32221" centery="31860" centerz="7" radius="3">
 		<monster name="Bat" x="-1" y="0" z="7" spawntime="90" />
 	</monster>
@@ -1316,17 +1320,10 @@
 		<monster name="Troll" x="-2" y="-2" z="8" spawntime="90" />
 		<monster name="Troll" x="1" y="1" z="8" spawntime="90" />
 	</monster>
-	<monster centerx="32321" centery="31812" centerz="8" radius="2">
-		<monster name="Bug" x="-2" y="-1" z="8" spawntime="90" />
-	</monster>
 	<monster centerx="32222" centery="31814" centerz="8" radius="3">
 		<monster name="Skeleton" x="2" y="-2" z="8" spawntime="90" />
 		<monster name="Skeleton" x="-1" y="1" z="8" spawntime="90" />
 		<monster name="Skeleton" x="1" y="2" z="8" spawntime="90" />
-	</monster>
-	<monster centerx="32329" centery="31814" centerz="8" radius="2">
-		<monster name="Bug" x="-1" y="-2" z="8" spawntime="90" />
-		<monster name="Bug" x="0" y="2" z="8" spawntime="90" />
 	</monster>
 	<monster centerx="32374" centery="31814" centerz="8" radius="3">
 		<monster name="Bug" x="-2" y="-1" z="8" spawntime="90" />
@@ -1343,21 +1340,18 @@
 		<monster name="Poison Spider" x="-2" y="2" z="8" spawntime="90" />
 		<monster name="Spider" x="2" y="2" z="8" spawntime="90" />
 	</monster>
-	<monster centerx="32340" centery="31818" centerz="8" radius="2">
-		<monster name="Bug" x="0" y="1" z="8" spawntime="90" />
-	</monster>
 	<monster centerx="32350" centery="31819" centerz="8" radius="2">
 		<monster name="Bug" x="-1" y="-2" z="8" spawntime="90" />
 		<monster name="Bug" x="-2" y="0" z="8" spawntime="90" />
 		<monster name="Bug" x="1" y="1" z="8" spawntime="90" />
 	</monster>
-	<monster centerx="32317" centery="31822" centerz="8" radius="2">
-		<monster name="Bug" x="2" y="0" z="8" spawntime="90" />
-		<monster name="Bug" x="0" y="1" z="8" spawntime="90" />
-	</monster>
 	<monster centerx="32363" centery="31822" centerz="8" radius="3">
 		<monster name="Bug" x="-1" y="-1" z="8" spawntime="90" />
 		<monster name="Bug" x="2" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32318" centery="31823" centerz="8" radius="2">
+		<monster name="Slime" x="-1" y="-1" z="8" spawntime="60" />
+		<monster name="Slime" x="-2" y="0" z="8" spawntime="60" />
 	</monster>
 	<monster centerx="32190" centery="31826" centerz="8" radius="3">
 		<monster name="Ghoul" x="-1" y="0" z="8" spawntime="90" />
@@ -1923,6 +1917,7 @@
 	</monster>
 	<monster centerx="32302" centery="31780" centerz="9" radius="3">
 		<monster name="Rotworm" x="0" y="-1" z="9" spawntime="90" />
+		<monster name="Rotworm" x="2" y="2" z="9" spawntime="90" />
 	</monster>
 	<monster centerx="32194" centery="31787" centerz="9" radius="3">
 		<monster name="Ghoul" x="-1" y="-3" z="9" spawntime="90" />

@@ -1,26 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <monsters>
-	<monster centerx="32805" centery="32080" centerz="8" radius="1">
-		<monster name="Rotworm" x="-1" y="0" z="8" spawntime="90" />
-	</monster>
-	<monster centerx="32840" centery="32080" centerz="8" radius="1">
-		<monster name="Rotworm" x="-1" y="0" z="8" spawntime="90" />
-	</monster>
-	<monster centerx="32834" centery="32081" centerz="8" radius="1">
-		<monster name="Rotworm" x="1" y="0" z="8" spawntime="90" />
-	</monster>
-	<monster centerx="32819" centery="32084" centerz="8" radius="3">
-		<monster name="Rotworm" x="2" y="3" z="8" spawntime="90" />
-	</monster>
-	<monster centerx="32804" centery="32092" centerz="8" radius="1">
-		<monster name="Rotworm" x="-1" y="0" z="8" spawntime="90" />
-	</monster>
-	<monster centerx="32803" centery="32095" centerz="8" radius="1">
-		<monster name="Rotworm" x="0" y="0" z="8" spawntime="90" />
-	</monster>
-	<monster centerx="32861" centery="32126" centerz="8" radius="3">
-		<monster name="Scorpion" x="2" y="2" z="8" spawntime="90" />
-	</monster>
 	<monster centerx="32818" centery="32134" centerz="8" radius="5">
 		<monster name="Dragon Hatchling" x="-1" y="-3" z="8" spawntime="90" />
 		<monster name="Dragon" x="-3" y="-2" z="8" spawntime="90" />
@@ -34,54 +13,15 @@
 		<monster name="Dragon" x="-4" y="0" z="8" spawntime="90" />
 		<monster name="Dragon" x="5" y="3" z="8" spawntime="90" />
 	</monster>
-	<monster centerx="32861" centery="32147" centerz="8" radius="3">
-		<monster name="Scorpion" x="2" y="-1" z="8" spawntime="90" />
-	</monster>
 	<monster centerx="32812" centery="32158" centerz="8" radius="3">
 		<monster name="Dragon" x="3" y="1" z="8" spawntime="90" />
 		<monster name="Dragon Hatchling" x="1" y="3" z="8" spawntime="90" />
-	</monster>
-	<monster centerx="32833" centery="32161" centerz="8" radius="3">
-		<monster name="Dragon" x="3" y="-3" z="8" spawntime="90" />
-		<monster name="Dragon" x="-2" y="-2" z="8" spawntime="90" />
-		<monster name="Dragon Hatchling" x="-3" y="3" z="8" spawntime="90" />
-		<monster name="Dragon" x="1" y="3" z="8" spawntime="90" />
-	</monster>
-	<monster centerx="32805" centery="32168" centerz="8" radius="3">
-		<monster name="Scorpion" x="-2" y="3" z="8" spawntime="90" />
-	</monster>
-	<monster centerx="32861" centery="32168" centerz="8" radius="3">
-		<monster name="Scorpion" x="-2" y="-2" z="8" spawntime="90" />
-		<monster name="Scorpion" x="1" y="0" z="8" spawntime="90" />
-		<monster name="Scorpion" x="2" y="0" z="8" spawntime="90" />
-	</monster>
-	<monster centerx="32868" centery="32168" centerz="8" radius="3">
-		<monster name="Scorpion" x="-3" y="0" z="8" spawntime="90" />
-	</monster>
-	<monster centerx="32812" centery="32175" centerz="8" radius="3">
-		<monster name="Scorpion" x="-1" y="-1" z="8" spawntime="90" />
-		<monster name="Scorpion" x="-3" y="0" z="8" spawntime="90" />
-	</monster>
-	<monster centerx="32861" centery="32175" centerz="8" radius="3">
-		<monster name="Scorpion" x="2" y="2" z="8" spawntime="90" />
-	</monster>
-	<monster centerx="32868" centery="32175" centerz="8" radius="3">
-		<monster name="Scorpion" x="2" y="-2" z="8" spawntime="90" />
-		<monster name="Scorpion" x="-2" y="1" z="8" spawntime="90" />
-		<monster name="Scorpion" x="-3" y="3" z="8" spawntime="90" />
-	</monster>
-	<monster centerx="32861" centery="32182" centerz="8" radius="3">
-		<monster name="Scorpion" x="2" y="-2" z="8" spawntime="90" />
 	</monster>
 	<monster centerx="32868" centery="32063" centerz="9" radius="3">
 		<monster name="Marsh Stalker" x="2" y="1" z="9" spawntime="90" />
 	</monster>
 	<monster centerx="32875" centery="32063" centerz="9" radius="3">
 		<monster name="Emerald Damselfly" x="2" y="1" z="9" spawntime="90" />
-	</monster>
-	<monster centerx="32825" centery="32068" centerz="9" radius="2">
-		<monster name="Rotworm" x="-1" y="-2" z="9" spawntime="90" />
-		<monster name="Rotworm" x="1" y="0" z="9" spawntime="90" />
 	</monster>
 	<monster centerx="32861" centery="32070" centerz="9" radius="3">
 		<monster name="Emerald Damselfly" x="-1" y="0" z="9" spawntime="90" />
@@ -90,57 +30,14 @@
 		<monster name="Swampling" x="3" y="2" z="9" spawntime="90" />
 		<monster name="Emerald Damselfly" x="1" y="3" z="9" spawntime="90" />
 	</monster>
-	<monster centerx="32846" centery="32073" centerz="9" radius="2">
-		<monster name="Rotworm" x="-1" y="1" z="9" spawntime="90" />
-	</monster>
-	<monster centerx="32834" centery="32076" centerz="9" radius="1">
-		<monster name="Rotworm" x="-1" y="-1" z="9" spawntime="90" />
-	</monster>
-	<monster centerx="32800" centery="32077" centerz="9" radius="1">
-		<monster name="Carrion Worm" x="1" y="-1" z="9" spawntime="90" />
-	</monster>
-	<monster centerx="32812" centery="32077" centerz="9" radius="3">
-		<monster name="Rotworm" x="0" y="-1" z="9" spawntime="90" />
-		<monster name="Rotworm" x="2" y="2" z="9" spawntime="90" />
-	</monster>
 	<monster centerx="32861" centery="32077" centerz="9" radius="3">
 		<monster name="Marsh Stalker" x="1" y="-1" z="9" spawntime="90" />
-	</monster>
-	<monster centerx="32843" centery="32080" centerz="9" radius="1">
-		<monster name="Rotworm" x="-1" y="-1" z="9" spawntime="90" />
-	</monster>
-	<monster centerx="32836" centery="32082" centerz="9" radius="1">
-		<monster name="Rotworm" x="-1" y="0" z="9" spawntime="90" />
-	</monster>
-	<monster centerx="32802" centery="32083" centerz="9" radius="1">
-		<monster name="Rotworm" x="0" y="-1" z="9" spawntime="90" />
-	</monster>
-	<monster centerx="32847" centery="32084" centerz="9" radius="3">
-		<monster name="Rotworm" x="0" y="-1" z="9" spawntime="90" />
 	</monster>
 	<monster centerx="32868" centery="32084" centerz="9" radius="3">
 		<monster name="Emerald Damselfly" x="2" y="-1" z="9" spawntime="90" />
 	</monster>
-	<monster centerx="32799" centery="32088" centerz="9" radius="1">
-		<monster name="Rotworm" x="0" y="1" z="9" spawntime="90" />
-	</monster>
-	<monster centerx="32803" centery="32090" centerz="9" radius="1">
-		<monster name="Rotworm" x="0" y="0" z="9" spawntime="90" />
-	</monster>
-	<monster centerx="32826" centery="32091" centerz="9" radius="3">
-		<monster name="Rotworm" x="1" y="0" z="9" spawntime="90" />
-	</monster>
-	<monster centerx="32854" centery="32091" centerz="9" radius="3">
-		<monster name="Carrion Worm" x="3" y="-2" z="9" spawntime="90" />
-	</monster>
 	<monster centerx="32889" centery="32091" centerz="9" radius="3">
 		<monster name="Emerald Damselfly" x="0" y="-3" z="9" spawntime="90" />
-	</monster>
-	<monster centerx="32817" centery="32092" centerz="9" radius="1">
-		<monster name="Rotworm" x="0" y="-1" z="9" spawntime="90" />
-	</monster>
-	<monster centerx="32819" centery="32098" centerz="9" radius="3">
-		<monster name="Rotworm" x="0" y="-1" z="9" spawntime="90" />
 	</monster>
 	<monster centerx="32875" centery="32098" centerz="9" radius="3">
 		<monster name="Swampling" x="2" y="-2" z="9" spawntime="90" />
@@ -160,9 +57,6 @@
 	</monster>
 	<monster centerx="32896" centery="32105" centerz="9" radius="3">
 		<monster name="Marsh Stalker" x="0" y="-1" z="9" spawntime="90" />
-	</monster>
-	<monster centerx="32812" centery="32112" centerz="9" radius="3">
-		<monster name="Carrion Worm" x="3" y="3" z="9" spawntime="90" />
 	</monster>
 	<monster centerx="32826" centery="32112" centerz="9" radius="3">
 		<monster name="Emerald Damselfly" x="0" y="0" z="9" spawntime="90" />
@@ -200,50 +94,17 @@
 		<monster name="Emerald Damselfly" x="0" y="1" z="9" spawntime="90" />
 		<monster name="Marsh Stalker" x="1" y="3" z="9" spawntime="90" />
 	</monster>
-	<monster centerx="32836" centery="32132" centerz="9" radius="5">
-		<monster name="Dragon Lord" x="5" y="-3" z="9" spawntime="90" />
-		<monster name="Dragon Lord" x="-4" y="-1" z="9" spawntime="90" />
-	</monster>
 	<monster centerx="32812" centery="32133" centerz="9" radius="3">
 		<monster name="Marsh Stalker" x="2" y="0" z="9" spawntime="90" />
 	</monster>
 	<monster centerx="32819" centery="32133" centerz="9" radius="3">
 		<monster name="Swampling" x="-2" y="-3" z="9" spawntime="90" />
 	</monster>
-	<monster centerx="32882" centery="32133" centerz="9" radius="3">
-		<monster name="Scorpion" x="-3" y="-3" z="9" spawntime="90" />
-	</monster>
-	<monster centerx="32840" centery="32140" centerz="9" radius="3">
-		<monster name="Dragon Lord Hatchling" x="3" y="0" z="9" spawntime="90" />
-		<monster name="Dragon" x="0" y="2" z="9" spawntime="90" />
-	</monster>
-	<monster centerx="32854" centery="32154" centerz="9" radius="3">
-		<monster name="Dragon" x="-1" y="1" z="9" spawntime="90" />
-		<monster name="Dragon Lord" x="-3" y="3" z="9" spawntime="90" />
-	</monster>
-	<monster centerx="32868" centery="32154" centerz="9" radius="3">
-		<monster name="Dragon" x="-2" y="-2" z="9" spawntime="90" />
-		<monster name="Dragon Lord" x="2" y="1" z="9" spawntime="90" />
-	</monster>
-	<monster centerx="32875" centery="32154" centerz="9" radius="3">
-		<monster name="Dragon Lord Hatchling" x="-1" y="1" z="9" spawntime="90" />
-		<monster name="Dragon Lord" x="3" y="3" z="9" spawntime="90" />
-	</monster>
 	<monster centerx="32896" centery="32161" centerz="9" radius="3">
 		<monster name="Salamander" x="-2" y="3" z="9" spawntime="90" />
 	</monster>
-	<monster centerx="32814" centery="32164" centerz="9" radius="3">
-		<monster name="Dragon" x="2" y="-2" z="9" spawntime="90" />
-		<monster name="Dragon" x="-2" y="3" z="9" spawntime="90" />
-		<monster name="Dragon" x="2" y="3" z="9" spawntime="90" />
-	</monster>
 	<monster centerx="32882" centery="32168" centerz="9" radius="3">
 		<monster name="Salamander" x="2" y="-2" z="9" spawntime="90" />
-	</monster>
-	<monster centerx="32840" centery="32175" centerz="9" radius="3">
-		<monster name="Dragon Lord" x="2" y="-2" z="9" spawntime="90" />
-		<monster name="Dragon" x="-2" y="0" z="9" spawntime="90" />
-		<monster name="Dragon Lord" x="0" y="2" z="9" spawntime="90" />
 	</monster>
 	<monster centerx="32875" centery="32175" centerz="9" radius="3">
 		<monster name="Salamander" x="3" y="0" z="9" spawntime="90" />
@@ -256,210 +117,7 @@
 	<monster centerx="32903" centery="32175" centerz="9" radius="3">
 		<monster name="Salamander" x="-3" y="1" z="9" spawntime="90" />
 	</monster>
-	<monster centerx="32861" centery="32182" centerz="9" radius="3">
-		<monster name="Scorpion" x="-2" y="1" z="9" spawntime="90" />
-	</monster>
 	<monster centerx="32882" centery="32182" centerz="9" radius="3">
 		<monster name="Salamander" x="-1" y="-2" z="9" spawntime="90" />
-	</monster>
-	<monster centerx="32805" centery="32189" centerz="9" radius="3">
-		<monster name="Scorpion" x="3" y="-3" z="9" spawntime="90" />
-		<monster name="Scorpion" x="2" y="-2" z="9" spawntime="90" />
-	</monster>
-	<monster centerx="32854" centery="32189" centerz="9" radius="3">
-		<monster name="Scorpion" x="3" y="-3" z="9" spawntime="90" />
-	</monster>
-	<monster centerx="32861" centery="32189" centerz="9" radius="3">
-		<monster name="Scorpion" x="-3" y="-2" z="9" spawntime="90" />
-	</monster>
-	<monster centerx="32903" centery="32189" centerz="9" radius="3">
-		<monster name="Cave Rat" x="-2" y="2" z="9" spawntime="90" />
-		<monster name="Cave Rat" x="0" y="3" z="9" spawntime="90" />
-	</monster>
-	<monster centerx="32889" centery="32063" centerz="10" radius="3">
-		<monster name="Salamander" x="-3" y="-1" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32833" centery="32091" centerz="10" radius="3">
-		<monster name="Emerald Damselfly" x="2" y="3" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32840" centery="32091" centerz="10" radius="3">
-		<monster name="Emerald Damselfly" x="1" y="1" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32833" centery="32098" centerz="10" radius="3">
-		<monster name="Emerald Damselfly" x="2" y="-2" z="10" spawntime="90" />
-		<monster name="Marsh Stalker" x="1" y="0" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32840" centery="32098" centerz="10" radius="3">
-		<monster name="Marsh Stalker" x="1" y="-2" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32847" centery="32098" centerz="10" radius="3">
-		<monster name="Emerald Damselfly" x="-3" y="0" z="10" spawntime="90" />
-		<monster name="Marsh Stalker" x="-2" y="0" z="10" spawntime="90" />
-		<monster name="Marsh Stalker" x="-1" y="0" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32840" centery="32105" centerz="10" radius="3">
-		<monster name="Marsh Stalker" x="-3" y="-2" z="10" spawntime="90" />
-		<monster name="Swampling" x="0" y="-1" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32847" centery="32105" centerz="10" radius="3">
-		<monster name="Salamander" x="1" y="-2" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32861" centery="32105" centerz="10" radius="3">
-		<monster name="Emerald Damselfly" x="-1" y="-3" z="10" spawntime="90" />
-		<monster name="Marsh Stalker" x="-1" y="-1" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32812" centery="32112" centerz="10" radius="3">
-		<monster name="Emerald Damselfly" x="2" y="3" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32826" centery="32112" centerz="10" radius="3">
-		<monster name="Emerald Damselfly" x="2" y="-2" z="10" spawntime="90" />
-		<monster name="Marsh Stalker" x="2" y="-1" z="10" spawntime="90" />
-		<monster name="Salamander" x="2" y="0" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32833" centery="32112" centerz="10" radius="3">
-		<monster name="Marsh Stalker" x="3" y="-2" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32854" centery="32112" centerz="10" radius="3">
-		<monster name="Emerald Damselfly" x="-1" y="1" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32861" centery="32112" centerz="10" radius="3">
-		<monster name="Marsh Stalker" x="0" y="-1" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32854" centery="32119" centerz="10" radius="3">
-		<monster name="Marsh Stalker" x="-2" y="-1" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32861" centery="32119" centerz="10" radius="3">
-		<monster name="Swampling" x="-2" y="-3" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32812" centery="32126" centerz="10" radius="3">
-		<monster name="Emerald Damselfly" x="-3" y="-3" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32819" centery="32126" centerz="10" radius="3">
-		<monster name="Emerald Damselfly" x="-1" y="2" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32854" centery="32126" centerz="10" radius="3">
-		<monster name="Emerald Damselfly" x="-1" y="-3" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32875" centery="32126" centerz="10" radius="3">
-		<monster name="Salamander" x="3" y="3" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32805" centery="32133" centerz="10" radius="3">
-		<monster name="Marsh Stalker" x="1" y="0" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32812" centery="32133" centerz="10" radius="3">
-		<monster name="Emerald Damselfly" x="-3" y="-3" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32819" centery="32133" centerz="10" radius="3">
-		<monster name="Emerald Damselfly" x="0" y="1" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32847" centery="32133" centerz="10" radius="3">
-		<monster name="Salamander" x="0" y="2" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32854" centery="32133" centerz="10" radius="3">
-		<monster name="Salamander" x="-1" y="3" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32861" centery="32133" centerz="10" radius="3">
-		<monster name="Marsh Stalker" x="-1" y="1" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32882" centery="32133" centerz="10" radius="3">
-		<monster name="Salamander" x="0" y="-3" z="10" spawntime="90" />
-		<monster name="Salamander" x="1" y="-3" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32889" centery="32133" centerz="10" radius="3">
-		<monster name="Salamander" x="-3" y="-1" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32812" centery="32140" centerz="10" radius="3">
-		<monster name="Salamander" x="3" y="0" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32847" centery="32140" centerz="10" radius="3">
-		<monster name="Emerald Damselfly" x="1" y="-2" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32854" centery="32140" centerz="10" radius="3">
-		<monster name="Marsh Stalker" x="-3" y="-3" z="10" spawntime="90" />
-		<monster name="Emerald Damselfly" x="3" y="-1" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32861" centery="32140" centerz="10" radius="3">
-		<monster name="Marsh Stalker" x="-1" y="-1" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32889" centery="32140" centerz="10" radius="3">
-		<monster name="Salamander" x="-3" y="0" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32812" centery="32147" centerz="10" radius="3">
-		<monster name="Emerald Damselfly" x="2" y="0" z="10" spawntime="90" />
-		<monster name="Swampling" x="2" y="3" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32819" centery="32147" centerz="10" radius="3">
-		<monster name="Salamander" x="-2" y="-2" z="10" spawntime="90" />
-		<monster name="Salamander" x="-3" y="-1" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32889" centery="32147" centerz="10" radius="3">
-		<monster name="Swampling" x="-2" y="-1" z="10" spawntime="90" />
-		<monster name="Salamander" x="-3" y="1" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32910" centery="32147" centerz="10" radius="3">
-		<monster name="Swamp Troll" x="2" y="1" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32805" centery="32154" centerz="10" radius="3">
-		<monster name="Salamander" x="-1" y="2" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32812" centery="32154" centerz="10" radius="3">
-		<monster name="Emerald Damselfly" x="-3" y="-1" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32882" centery="32154" centerz="10" radius="3">
-		<monster name="Salamander" x="3" y="-3" z="10" spawntime="90" />
-		<monster name="Emerald Damselfly" x="1" y="2" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32889" centery="32154" centerz="10" radius="3">
-		<monster name="Salamander" x="0" y="2" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32910" centery="32154" centerz="10" radius="3">
-		<monster name="Slug" x="0" y="0" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32833" centery="32161" centerz="10" radius="3">
-		<monster name="Salamander" x="-1" y="1" z="10" spawntime="90" />
-		<monster name="Salamander" x="1" y="1" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32840" centery="32161" centerz="10" radius="3">
-		<monster name="Salamander" x="-3" y="2" z="10" spawntime="90" />
-		<monster name="Emerald Damselfly" x="-3" y="3" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32875" centery="32161" centerz="10" radius="3">
-		<monster name="Salamander" x="2" y="3" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32889" centery="32161" centerz="10" radius="3">
-		<monster name="Salamander" x="-2" y="2" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32847" centery="32168" centerz="10" radius="3">
-		<monster name="Emerald Damselfly" x="-1" y="3" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32854" centery="32168" centerz="10" radius="3">
-		<monster name="Swampling" x="-2" y="3" z="10" spawntime="90" />
-		<monster name="Salamander" x="2" y="3" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32861" centery="32168" centerz="10" radius="3">
-		<monster name="Salamander" x="3" y="0" z="10" spawntime="90" />
-		<monster name="Salamander" x="-1" y="3" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32868" centery="32168" centerz="10" radius="3">
-		<monster name="Salamander" x="-2" y="0" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32875" centery="32168" centerz="10" radius="3">
-		<monster name="Salamander" x="1" y="-3" z="10" spawntime="90" />
-		<monster name="Salamander" x="-1" y="-2" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32833" centery="32175" centerz="10" radius="3">
-		<monster name="Salamander" x="1" y="2" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32840" centery="32175" centerz="10" radius="3">
-		<monster name="Salamander" x="-2" y="1" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32847" centery="32175" centerz="10" radius="3">
-		<monster name="Salamander" x="-2" y="-2" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32875" centery="32175" centerz="10" radius="3">
-		<monster name="Salamander" x="-3" y="1" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32910" centery="32189" centerz="10" radius="3">
-		<monster name="Salamander" x="-3" y="-2" z="10" spawntime="90" />
 	</monster>
 </monsters>

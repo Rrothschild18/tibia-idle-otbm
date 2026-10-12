@@ -118,6 +118,7 @@ def build_hunts_entry(
 
     city = city_ids.derive_city(map_id)
     status = city_ids.derive_status(city)
+    is_training = map_id.split("-")[1] == "TRAINING" if map_id.count("-") >= 2 else False
 
     entry = {
         "id": map_id,
@@ -143,6 +144,8 @@ def build_hunts_entry(
         "city": city,
         "_todo": todo,
     }
+    if is_training:
+        entry["isTrainingHunt"] = True
     if status is not None:
         entry["status"] = status
     return entry

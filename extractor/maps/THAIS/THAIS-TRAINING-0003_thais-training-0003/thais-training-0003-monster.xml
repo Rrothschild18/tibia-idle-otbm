@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32401" centery="32157" centerz="10" radius="2">
+		<monster name="Rotworm" x="-2" y="-2" z="10" spawntime="90" />
+		<monster name="Rotworm" x="1" y="-2" z="10" spawntime="90" />
+		<monster name="Rotworm" x="2" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32392" centery="32159" centerz="10" radius="3">
+		<monster name="Rotworm" x="-2" y="-2" z="10" spawntime="90" />
+		<monster name="Rotworm" x="1" y="0" z="10" spawntime="90" />
+		<monster name="Carrion Worm" x="3" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32399" centery="32165" centerz="10" radius="2">
+		<monster name="Rotworm" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32393" centery="32167" centerz="10" radius="2">
+		<monster name="Carrion Worm" x="1" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32395" centery="32176" centerz="10" radius="2">
+		<monster name="Bat" x="1" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32389" centery="32156" centerz="11" radius="1">
+		<monster name="Poison Spider" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32405" centery="32165" centerz="11" radius="2">
+		<monster name="Slime" x="-2" y="-1" z="11" spawntime="90" />
+		<monster name="Slime" x="-2" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32390" centery="32179" centerz="11" radius="4">
+		<monster name="Poison Spider" x="3" y="-2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32410" centery="32176" centerz="12" radius="2">
+		<monster name="Skeleton" x="0" y="1" z="12" spawntime="90" />
+	</monster>
+</monsters>

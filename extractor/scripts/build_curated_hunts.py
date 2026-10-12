@@ -31,7 +31,12 @@ import hunt_candidates
 import otbm_stream
 import render_map_v6
 import update_canary_data
-from travel_graph import build_walkable_graph, extract_tile_flags, tile_distances_and_prev
+from travel_graph import (
+    build_walkable_graph,
+    extract_tile_flags,
+    parse_marker_signs,
+    tile_distances_and_prev,
+)
 
 SCRIPTS_DIR = os.path.dirname(os.path.abspath(__file__))
 EXTRACTOR_DIR = os.path.dirname(SCRIPTS_DIR)
@@ -217,12 +222,29 @@ def main():
     candidates_doc = _load_json(os.path.join(city_dir, "candidates.json"), "candidatas")
     candidates_by_id = {c["id"]: c for c in candidates_doc["candidates"]}
 
-    hunts = curated_hunts.assign(city, curation["hunts"])
+    dump = _load_json(os.path.join(RAW_MAPS_DIR, f"{city}.raw.json"), "dump OTBM")
+
+    # Treino não passa pela tela: a placa CIDADE-TRAINING-NNNN já é a curadoria
+    # inteira (id, posição, andar). Placa mal formada cai em `sign_issues` e
+    # não gera hunt — mesmo relatório que build_travel_fragment.py já imprime
+    # pra toda placa da cidade.
+    signs, sign_issues = parse_marker_signs(dump)
+    for issue in sign_issues:
+        print(
+            f"[WARN] placa mal formada ({issue['reason']}): uid={issue['uid']} "
+            f"text={issue['text']!r} em ({issue['x']}, {issue['y']}, {issue['z']})"
+        )
+    training_hunts = [
+        curated_hunts.training_hunt_from_sign(sign, MAX_FLOOR)
+        for sign in signs
+        if sign["type"] == "TRAINING"
+    ]
+
+    hunts = curated_hunts.assign(city, curation["hunts"] + training_hunts)
     shared = curated_hunts.duplicated_candidates(curation["hunts"])
     for candidate_id, names in sorted(shared.items()):
         print(f"[WARN] {candidate_id} está em {len(names)} hunts: {', '.join(names)}")
 
-    dump = _load_json(os.path.join(RAW_MAPS_DIR, f"{city}.raw.json"), "dump OTBM")
     flags_by_id = appearance_flags.load_flags(city)
     floorchange_by_id, ladder_ids = update_canary_data.read_floor_change_rules(args.canary_dir)
     tiles = extract_tile_flags(dump, flags_by_id, floorchange_by_id, ladder_ids)
@@ -258,37 +280,53 @@ def main():
 
     written = []
     for hunt in hunts:
-        members = curated_hunts.members_of(hunt, candidates_by_id)
-        if not members:
-            print(f"[WARN] {hunt['id']} {hunt['name']}: nenhuma candidata encontrada, pulando")
-            continue
+        is_training_hunt = curated_hunts.is_training(hunt)
+
+        if not is_training_hunt:
+            members = curated_hunts.members_of(hunt, candidates_by_id)
+            if not members:
+                print(f"[WARN] {hunt['id']} {hunt['name']}: nenhuma candidata encontrada, pulando")
+                continue
+        else:
+            members = []
 
         floors = set(hunt["floors"])
         crop_floors = crop_floors_for(floors)
         bounds = curated_hunts.crop_bounds(hunt["extent"], args.margin)
 
         anchor_of = lambda spawn: hunt_candidates.anchor_tile(spawn, walkable)
-        entrance, cost = curated_hunts.entrance_of(members, distances, anchor_of)
-        if entrance is None:
-            # Sem rota, a entrada vira um tile andável qualquer da hunt. A
-            # location existe de propósito: assim ela cai no relatório de
-            # rejeição como `poi-without-edge`, com coordenada para abrir no
-            # editor, em vez de sumir como "hunt sem placa".
-            entrance = next(
-                (
-                    node
-                    for node in (
-                        anchor_of(spawn) for spawn in curated_hunts.spawns_of(members)
-                    )
-                    if node is not None
-                ),
-                None,
-            )
 
-        chosen_spawns = {
-            (spawn["x"], spawn["y"], spawn["z"], spawn["name"])
-            for spawn in curated_hunts.spawns_of(members)
-        }
+        if is_training_hunt:
+            # Spots de treino têm entrada no centro do extent — sem candidatas,
+            # sem rota do templo. O jogador chega a pé pela cidade.
+            entrance = curated_hunts.training_entrance_of(hunt, walkable)
+            cost = None
+        else:
+            entrance, cost = curated_hunts.entrance_of(members, distances, anchor_of)
+            if entrance is None:
+                # Sem rota, a entrada vira um tile andável qualquer da hunt. A
+                # location existe de propósito: assim ela cai no relatório de
+                # rejeição como `poi-without-edge`, com coordenada para abrir no
+                # editor, em vez de sumir como "hunt sem placa".
+                entrance = next(
+                    (
+                        node
+                        for node in (
+                            anchor_of(spawn) for spawn in curated_hunts.spawns_of(members)
+                        )
+                        if node is not None
+                    ),
+                    None,
+                )
+
+        chosen_spawns = (
+            None
+            if is_training_hunt
+            else {
+                (spawn["x"], spawn["y"], spawn["z"], spawn["name"])
+                for spawn in curated_hunts.spawns_of(members)
+            }
+        )
         result = write_hunt_map(
             city,
             hunt,
@@ -305,6 +343,7 @@ def main():
         written.append(
             {
                 "id": hunt["id"],
+                "type": "TRAINING" if is_training_hunt else "HUNT",
                 "name": hunt["name"].strip(),
                 "slug": hunt["slug"],
                 "folder": hunt["folder"],
@@ -322,12 +361,21 @@ def main():
                 "walkTilesFromTemple": cost,
                 "tiles": result["tiles"],
                 "spawns": result["spawns"],
+                **({"isTrainingHunt": True} if is_training_hunt else {}),
             }
         )
-        reach = f"templo+{cost}" if cost is not None else "SEM CAMINHO"
+        if is_training_hunt:
+            # `cost` é sempre None por desenho (sem rota do templo, ver
+            # comentário acima) — não é falha de rota, então não é "SEM
+            # CAMINHO". Falta de `entrance`, aqui, é que seria falha real: a
+            # placa caiu sem vizinho caminhável.
+            reach = "A PÉ" if entrance is not None else "SEM ENTRADA"
+        else:
+            reach = f"templo+{cost}" if cost is not None else "SEM CAMINHO"
+        training_label = " [TRAINING]" if is_training_hunt else ""
         print(
-            f"[OK] {hunt['id']:<18} {result['tiles']:>6} tiles, {result['spawns']:>3} bichos, "
-            f"z{sorted(floors)} {reach:>12}  {hunt['name'].strip()}"
+            f"[OK] {hunt['id']:<22} {result['tiles']:>6} tiles, {result['spawns']:>3} bichos, "
+            f"z{sorted(floors)} {reach:>12}{training_label}  {hunt['name'].strip()}"
         )
 
     destination = os.path.join(city_dir, CURATED_HUNTS_FILE_NAME)

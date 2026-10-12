@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0"?>
 <monsters>
 	<monster centerx="32588" centery="31923" centerz="1" radius="3">
 		<monster name="Dwarf Guard" x="-2" y="1" z="1" spawntime="90" />
@@ -3169,6 +3169,10 @@
 		<monster name="Spider" x="2" y="0" z="8" spawntime="90" />
 		<monster name="Spider" x="-2" y="1" z="8" spawntime="90" />
 	</monster>
+	<monster centerx="32512" centery="31950" centerz="8" radius="1">
+		<monster name="Dwarf" x="0" y="-1" z="8" spawntime="60" />
+		<monster name="Dwarf" x="0" y="0" z="8" spawntime="60" />
+	</monster>
 	<monster centerx="32455" centery="31951" centerz="8" radius="3">
 		<monster name="Minotaur Archer" x="-1" y="-3" z="8" spawntime="90" />
 	</monster>
@@ -5944,6 +5948,10 @@
 	</monster>
 	<monster centerx="32552" centery="31896" centerz="14" radius="1">
 		<monster name="Dwarf Guard" x="1" y="-1" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="32458" centery="31899" centerz="14" radius="1">
+		<monster name="Slime" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Slime" x="1" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="32518" centery="31902" centerz="14" radius="3">
 		<monster name="Dwarf Guard" x="0" y="-3" z="14" spawntime="90" />

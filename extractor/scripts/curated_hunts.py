@@ -34,6 +34,69 @@ def hunt_id(city: str, index: int) -> str:
     return HUNT_ID_FORMAT.format(city=city, index=index)
 
 
+def is_training(hunt: Dict) -> bool:
+    return hunt.get("type") == "TRAINING"
+
+
+def training_hunt_from_sign(sign: Dict, max_floor: int) -> Dict:
+    """Uma placa `CIDADE-TRAINING-NNNN` (ver `travel_graph.parse_marker_signs`)
+    como uma entrada de curadoria sintética — sem candidata, sem nome digitado
+    à mão. A placa já decidiu o id; aqui só nasce o resto no formato que
+    `assign`/`build_curated_hunts` esperam de uma hunt da tela.
+
+    `extent` começa um ponto (a placa) — a folga padrão (`crop_bounds`) é quem
+    vira isso num box, igual a toda hunt. `floors` é o andar da placa mais o de
+    cima e o de baixo; `crop_floors_for` ainda estende pra baixo pela regra de
+    visibilidade do cliente, como em qualquer hunt.
+    """
+    x, y, z = sign["x"], sign["y"], sign["z"]
+    floors = sorted({f for f in (z - 1, z, z + 1) if 0 <= f <= max_floor})
+    name = " ".join(word.capitalize() for word in sign["id"].split("-"))
+    return {
+        "id": sign["id"],
+        "type": "TRAINING",
+        "name": name,
+        "floors": floors,
+        "candidateIds": [],
+        "species": None,
+        "creatures": 0,
+        "extent": {"minX": x, "minY": y, "maxX": x, "maxY": y, "centerX": x, "centerY": y},
+        "subareaId": None,
+        "walkTilesFromTemple": None,
+        "entranceZ": z,
+    }
+
+
+# A placa pode cair numa tile não-caminhável (presa numa parede, como toda
+# placa do Tibia tende a ficar) — por isso a entrada busca o próprio ponto e
+# os quatro vizinhos cardeais. Sem diagonal de propósito: é a mesma regra que
+# o pathfinding do jogo usa (ver ADR/memória "pathfinding evita diagonal"),
+# não uma lista inventada aqui.
+TRAINING_ENTRANCE_OFFSETS: Tuple[Tuple[int, int], ...] = ((0, 0), (1, 0), (-1, 0), (0, 1), (0, -1))
+
+
+def training_entrance_of(hunt: Dict, walkable: Set[Node]) -> Optional[Node]:
+    """O tile de entrada de um spot de treino: o próprio ponto da placa (centro
+    do extent, que `training_hunt_from_sign` grava como a posição exata da
+    placa), ou o vizinho cardeal mais próximo que seja caminhável.
+
+    Sem candidata e sem rota do templo — o jogador chega a pé pela cidade, daí
+    não comparar com `entrance_of` (que busca o tile mais barato a partir do
+    templo entre os spawns escolhidos): aqui não há spawn escolhido nenhum.
+    """
+    cx = hunt["extent"]["centerX"]
+    cy = hunt["extent"]["centerY"]
+    cz = hunt["entranceZ"]
+    return next(
+        (
+            (cx + dx, cy + dy, cz)
+            for dx, dy in TRAINING_ENTRANCE_OFFSETS
+            if (cx + dx, cy + dy, cz) in walkable
+        ),
+        None,
+    )
+
+
 def folder_name(hunt_id_value: str, slug: str) -> str:
     return f"{hunt_id_value}_{slug}"
 
@@ -62,15 +125,29 @@ def duplicated_candidates(hunts: Sequence[Dict]) -> Dict[str, List[str]]:
 
 
 def assign(city: str, hunts: Sequence[Dict]) -> List[Dict]:
-    """A curadoria com id, slug e pasta — sem tocar em mapa nem em tile."""
+    """A curadoria com id, slug e pasta — sem tocar em mapa nem em tile.
+
+    Uma hunt que já chega com `id` (as de treino, lidas direto da placa via
+    `training_hunt_from_sign`) passa pelo id verbatim — a placa já decidiu, e
+    não há o que atribuir. Só as sem `id` (a curadoria da tela, sempre HUNT)
+    ganham um `{CITY}-HUNT-NNNN` sequencial — por isso os dois nunca colidem:
+    nascem de mecanismos diferentes, não de um contador compartilhado.
+    """
     assigned = []
     used_slugs: Set[str] = set()
-    for index, hunt in enumerate(hunts, start=1):
-        slug = slugify(hunt["name"]) or f"hunt-{index:04d}"
+    hunt_counter = 0
+    for hunt in hunts:
+        if "id" in hunt:
+            identifier = hunt["id"]
+            fallback_slug = identifier.lower()
+        else:
+            hunt_counter += 1
+            identifier = hunt_id(city, hunt_counter)
+            fallback_slug = f"hunt-{hunt_counter:04d}"
+        slug = slugify(hunt["name"]) or fallback_slug
         while slug in used_slugs:
-            slug = f"{slug}-{index:04d}"
+            slug = f"{slug}-{identifier.split('-')[-1]}"
         used_slugs.add(slug)
-        identifier = hunt_id(city, index)
         assigned.append(
             {
                 **hunt,
@@ -118,7 +195,7 @@ def entrance_of(
 
 
 def build_location(hunt: Dict, entrance: Node) -> Dict:
-    """A hunt curada como uma `locations` de tipo HUNT, no formato do catálogo.
+    """A hunt curada como uma `locations` de tipo HUNT ou TRAINING, no formato do catálogo.
 
     É o que a placa no OTBM produzia em Rookgaard, com duas diferenças: o
     `displayName` já vem curado (você o digitou na tela) e o `huntId` não tem o
@@ -128,9 +205,10 @@ def build_location(hunt: Dict, entrance: Node) -> Dict:
     x, y, z = entrance
     city = city_ids.derive_city(hunt["id"])
     status = city_ids.derive_status(city)
+    loc_type = "TRAINING" if is_training(hunt) else "HUNT"
     entry = {
         "id": hunt["id"],
-        "type": "HUNT",
+        "type": loc_type,
         "x": x,
         "y": y,
         "z": z,

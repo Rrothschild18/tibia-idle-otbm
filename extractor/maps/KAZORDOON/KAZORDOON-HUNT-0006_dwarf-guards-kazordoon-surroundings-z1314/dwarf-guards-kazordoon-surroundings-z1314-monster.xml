@@ -60,10 +60,11 @@
 	<monster centerx="32518" centery="31895" centerz="13" radius="3">
 		<monster name="Dwarf Guard" x="-2" y="-2" z="13" spawntime="90" />
 	</monster>
-	<monster centerx="32455" centery="31902" centerz="13" radius="3">
-		<monster name="Slime" x="3" y="-2" z="13" spawntime="90" />
+	<monster centerx="32462" centery="31888" centerz="14" radius="3">
+		<monster name="Slime" x="0" y="-1" z="14" spawntime="90" />
+		<monster name="Slime" x="-2" y="2" z="14" spawntime="90" />
 	</monster>
-	<monster centerx="32462" centery="31902" centerz="13" radius="3">
-		<monster name="Slime" x="-3" y="-3" z="13" spawntime="90" />
+	<monster centerx="32455" centery="31895" centerz="14" radius="3">
+		<monster name="Slime" x="1" y="-3" z="14" spawntime="90" />
 	</monster>
 </monsters>

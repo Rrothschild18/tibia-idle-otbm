@@ -40,38 +40,10 @@
 	<monster centerx="32490" centery="31846" centerz="10" radius="3">
 		<monster name="Corym Skirmisher" x="-1" y="2" z="10" spawntime="90" />
 	</monster>
-	<monster centerx="32525" centery="31846" centerz="10" radius="3">
-		<monster name="Corym Skirmisher" x="3" y="3" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32546" centery="31846" centerz="10" radius="3">
-		<monster name="Corym Skirmisher" x="-2" y="2" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32525" centery="31853" centerz="10" radius="3">
-		<monster name="Corym Vanguard" x="3" y="-3" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32546" centery="31853" centerz="10" radius="3">
-		<monster name="Corym Vanguard" x="-3" y="-3" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32560" centery="31853" centerz="10" radius="3">
-		<monster name="Corym Charlatan" x="0" y="3" z="10" spawntime="90" />
-	</monster>
 	<monster centerx="32504" centery="31860" centerz="10" radius="3">
 		<monster name="Corym Charlatan" x="0" y="-1" z="10" spawntime="90" />
 		<monster name="Corym Skirmisher" x="3" y="0" z="10" spawntime="90" />
 		<monster name="Corym Charlatan" x="2" y="1" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32546" centery="31867" centerz="10" radius="3">
-		<monster name="Corym Charlatan" x="2" y="1" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32553" centery="31874" centerz="10" radius="3">
-		<monster name="Corym Charlatan" x="1" y="-1" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32511" centery="31825" centerz="11" radius="3">
-		<monster name="Dragon" x="-2" y="1" z="11" spawntime="90" />
-	</monster>
-	<monster centerx="32553" centery="31825" centerz="11" radius="3">
-		<monster name="Dragon" x="3" y="-3" z="11" spawntime="90" />
-		<monster name="Dragon" x="0" y="0" z="11" spawntime="90" />
 	</monster>
 	<monster centerx="32462" centery="31832" centerz="11" radius="3">
 		<monster name="Corym Charlatan" x="-1" y="-1" z="11" spawntime="90" />
@@ -81,55 +53,5 @@
 	</monster>
 	<monster centerx="32476" centery="31832" centerz="11" radius="3">
 		<monster name="Corym Skirmisher" x="-2" y="2" z="11" spawntime="90" />
-	</monster>
-	<monster centerx="32504" centery="31832" centerz="11" radius="3">
-		<monster name="Dragon" x="0" y="-2" z="11" spawntime="90" />
-	</monster>
-	<monster centerx="32511" centery="31832" centerz="11" radius="3">
-		<monster name="Dragon" x="-3" y="-1" z="11" spawntime="90" />
-	</monster>
-	<monster centerx="32511" centery="31839" centerz="11" radius="3">
-		<monster name="Dragon" x="-2" y="0" z="11" spawntime="90" />
-	</monster>
-	<monster centerx="32525" centery="31839" centerz="11" radius="3">
-		<monster name="Dragon" x="-2" y="3" z="11" spawntime="90" />
-	</monster>
-	<monster centerx="32497" centery="31846" centerz="11" radius="3">
-		<monster name="Dragon Hatchling" x="0" y="0" z="11" spawntime="90" />
-	</monster>
-	<monster centerx="32532" centery="31846" centerz="11" radius="3">
-		<monster name="Dragon" x="1" y="3" z="11" spawntime="90" />
-	</monster>
-	<monster centerx="32546" centery="31846" centerz="11" radius="3">
-		<monster name="Dragon" x="3" y="-3" z="11" spawntime="90" />
-	</monster>
-	<monster centerx="32504" centery="31853" centerz="11" radius="3">
-		<monster name="Dragon Hatchling" x="-2" y="-3" z="11" spawntime="90" />
-	</monster>
-	<monster centerx="32525" centery="31853" centerz="11" radius="3">
-		<monster name="Dragon" x="-1" y="0" z="11" spawntime="90" />
-	</monster>
-	<monster centerx="32483" centery="31860" centerz="11" radius="3">
-		<monster name="Dragon Hatchling" x="-3" y="-3" z="11" spawntime="90" />
-	</monster>
-	<monster centerx="32560" centery="31860" centerz="11" radius="3">
-		<monster name="Corym Charlatan" x="0" y="-1" z="11" spawntime="90" />
-	</monster>
-	<monster centerx="32518" centery="31818" centerz="12" radius="3">
-		<monster name="Dragon" x="0" y="1" z="12" spawntime="90" />
-	</monster>
-	<monster centerx="32546" centery="31818" centerz="12" radius="3">
-		<monster name="Dragon" x="3" y="-3" z="12" spawntime="90" />
-	</monster>
-	<monster centerx="32490" centery="31825" centerz="12" radius="3">
-		<monster name="Dragon" x="3" y="-3" z="12" spawntime="90" />
-		<monster name="Dragon" x="-3" y="-2" z="12" spawntime="90" />
-	</monster>
-	<monster centerx="32504" centery="31839" centerz="12" radius="3">
-		<monster name="Dragon" x="0" y="0" z="12" spawntime="90" />
-		<monster name="Dragon" x="1" y="1" z="12" spawntime="90" />
-	</monster>
-	<monster centerx="32476" centery="31853" centerz="12" radius="3">
-		<monster name="Dragon" x="1" y="0" z="12" spawntime="90" />
 	</monster>
 </monsters>

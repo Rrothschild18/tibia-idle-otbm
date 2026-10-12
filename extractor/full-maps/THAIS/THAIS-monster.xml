@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0"?>
 <monsters>
 	<monster centerx="32502" centery="32069" centerz="2" radius="3">
 		<monster name="Bat" x="-1" y="-1" z="2" spawntime="90" />
@@ -1214,14 +1214,15 @@
 		<monster name="Horse" x="4" y="2" z="7" spawntime="90" />
 		<monster name="Brown Horse" x="1" y="3" z="7" spawntime="90" />
 	</monster>
+	<monster centerx="32504" centery="32235" centerz="7" radius="2">
+		<monster name="Troll" x="0" y="0" z="7" spawntime="60" />
+		<monster name="Troll" x="1" y="1" z="7" spawntime="60" />
+	</monster>
 	<monster centerx="32406" centery="32237" centerz="7" radius="2">
 		<monster name="Sheep" x="-1" y="-1" z="7" spawntime="90" />
 		<monster name="Sheep" x="1" y="-1" z="7" spawntime="90" />
 		<monster name="Sheep" x="-1" y="1" z="7" spawntime="90" />
 		<monster name="Sheep" x="2" y="1" z="7" spawntime="90" />
-	</monster>
-	<monster centerx="32498" centery="32237" centerz="7" radius="2">
-		<monster name="Troll" x="2" y="0" z="7" spawntime="60" />
 	</monster>
 	<monster centerx="32000" centery="32238" centerz="7" radius="3">
 		<monster name="Snake" x="2" y="2" z="7" spawntime="90" />
@@ -1245,9 +1246,6 @@
 		<monster name="Chicken" x="2" y="-2" z="7" spawntime="90" />
 		<monster name="Chicken" x="1" y="-1" z="7" spawntime="90" />
 		<monster name="Chicken" x="2" y="2" z="7" spawntime="90" />
-	</monster>
-	<monster centerx="32492" centery="32242" centerz="7" radius="2">
-		<monster name="Troll" x="0" y="-2" z="7" spawntime="60" />
 	</monster>
 	<monster centerx="32457" centery="32243" centerz="7" radius="3">
 		<monster name="Wolf" x="3" y="-3" z="7" spawntime="90" />
@@ -5331,12 +5329,13 @@
 	<monster centerx="32028" centery="32140" centerz="11" radius="3">
 		<monster name="Rat" x="2" y="2" z="11" spawntime="90" />
 	</monster>
+	<monster centerx="32374" centery="32140" centerz="11" radius="1">
+		<monster name="Rotworm" x="0" y="0" z="11" spawntime="90" />
+		<monster name="Rotworm" x="-1" y="1" z="11" spawntime="90" />
+	</monster>
 	<monster centerx="32355" centery="32141" centerz="11" radius="2">
 		<monster name="Rotworm" x="-1" y="-2" z="11" spawntime="90" />
 		<monster name="Rotworm" x="0" y="2" z="11" spawntime="90" />
-	</monster>
-	<monster centerx="32375" centery="32143" centerz="11" radius="1">
-		<monster name="Rotworm" x="0" y="1" z="11" spawntime="90" />
 	</monster>
 	<monster centerx="32391" centery="32143" centerz="11" radius="2">
 		<monster name="Rotworm" x="2" y="-2" z="11" spawntime="90" />
@@ -5406,9 +5405,6 @@
 	<monster centerx="32389" centery="32156" centerz="11" radius="1">
 		<monster name="Poison Spider" x="1" y="0" z="11" spawntime="90" />
 	</monster>
-	<monster centerx="32405" centery="32160" centerz="11" radius="2">
-		<monster name="Slime" x="0" y="-1" z="11" spawntime="90" />
-	</monster>
 	<monster centerx="31986" centery="32161" centerz="11" radius="3">
 		<monster name="Rat" x="1" y="2" z="11" spawntime="90" />
 	</monster>
@@ -5418,6 +5414,10 @@
 	</monster>
 	<monster centerx="32390" centery="32163" centerz="11" radius="1">
 		<monster name="Poison Spider" x="-1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32405" centery="32165" centerz="11" radius="2">
+		<monster name="Slime" x="-2" y="-1" z="11" spawntime="90" />
+		<monster name="Slime" x="-2" y="0" z="11" spawntime="90" />
 	</monster>
 	<monster centerx="32014" centery="32168" centerz="11" radius="3">
 		<monster name="Rat" x="-1" y="-3" z="11" spawntime="90" />

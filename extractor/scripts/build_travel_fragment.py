@@ -1,6 +1,6 @@
 """
 CLI: generate the {locations, travelGraph} fragment tibia-idle's back-end
-needs for a city's travel graph — sign-marked POIs (HUNT/TEMPLE/DEPOT/QUEST)
+needs for a city's travel graph — sign-marked POIs (HUNT/TEMPLE/DEPOT/QUEST/TRAINING)
 plus every NPC's location and shop, all of them nodes measured against each
 other over the same graph of walkable tiles — and optionally write it into
 the catalog with --export. See travel_graph.py for the pure logic,

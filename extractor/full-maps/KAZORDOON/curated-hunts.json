@@ -1,130 +1,630 @@
 {
+  "city": "KAZORDOON",
+  "area": "Kazordoon",
   "hunts": [
     {
       "id": "KAZORDOON-HUNT-0001",
       "name": "Dwarfs — Kazordoon Surroundings z8",
+      "slug": "dwarfs-kazordoon-surroundings-z8",
+      "folder": "KAZORDOON-HUNT-0001_dwarfs-kazordoon-surroundings-z8",
+      "floors": [
+        8
+      ],
+      "cropFloors": [
+        8,
+        9,
+        10
+      ],
+      "candidateIds": [
+        "KAZORDOON-FULL-z08-184"
+      ],
+      "creatures": 12,
+      "extent": {
+        "minX": 32496,
+        "minY": 31877,
+        "maxX": 32553,
+        "maxY": 31926,
+        "centerX": 32525,
+        "centerY": 31902
+      },
+      "subareaId": 50,
       "entrance": {
         "x": 32526,
         "y": 31913,
         "z": 8
-      }
+      },
+      "walkTilesFromTemple": 291,
+      "tiles": 18078,
+      "spawns": 12,
+      "type": "HUNT"
     },
     {
       "id": "KAZORDOON-HUNT-0002",
       "name": "Dwarfs — Kazordoon Surroundings z9",
+      "slug": "dwarfs-kazordoon-surroundings-z9",
+      "folder": "KAZORDOON-HUNT-0002_dwarfs-kazordoon-surroundings-z9",
+      "floors": [
+        9
+      ],
+      "cropFloors": [
+        9,
+        10,
+        11
+      ],
+      "candidateIds": [
+        "KAZORDOON-FULL-z09-810"
+      ],
+      "creatures": 16,
+      "extent": {
+        "minX": 32458,
+        "minY": 31883,
+        "maxX": 32532,
+        "maxY": 31914,
+        "centerX": 32495,
+        "centerY": 31899
+      },
+      "subareaId": 50,
       "entrance": {
         "x": 32520,
         "y": 31888,
         "z": 9
-      }
+      },
+      "walkTilesFromTemple": 324,
+      "tiles": 16632,
+      "spawns": 16,
+      "type": "HUNT"
     },
     {
       "id": "KAZORDOON-HUNT-0003",
       "name": "Dwarf Soldiers — Kazordoon Surroundings z10",
+      "slug": "dwarf-soldiers-kazordoon-surroundings-z10",
+      "folder": "KAZORDOON-HUNT-0003_dwarf-soldiers-kazordoon-surroundings-z10",
+      "floors": [
+        10
+      ],
+      "cropFloors": [
+        10,
+        11,
+        12
+      ],
+      "candidateIds": [
+        "KAZORDOON-FULL-z10-169"
+      ],
+      "creatures": 48,
+      "extent": {
+        "minX": 32441,
+        "minY": 31879,
+        "maxX": 32572,
+        "maxY": 31997,
+        "centerX": 32507,
+        "centerY": 31938
+      },
+      "subareaId": 50,
       "entrance": {
         "x": 32561,
         "y": 31990,
         "z": 10
-      }
+      },
+      "walkTilesFromTemple": 323,
+      "tiles": 64123,
+      "spawns": 48,
+      "type": "HUNT"
     },
     {
       "id": "KAZORDOON-HUNT-0004",
       "name": "Dwarf Soldiers — Kazordoon Surroundings z11",
+      "slug": "dwarf-soldiers-kazordoon-surroundings-z11",
+      "folder": "KAZORDOON-HUNT-0004_dwarf-soldiers-kazordoon-surroundings-z11",
+      "floors": [
+        11
+      ],
+      "cropFloors": [
+        11,
+        12,
+        13
+      ],
+      "candidateIds": [
+        "KAZORDOON-FULL-z11-223"
+      ],
+      "creatures": 17,
+      "extent": {
+        "minX": 32458,
+        "minY": 31894,
+        "maxX": 32495,
+        "maxY": 31930,
+        "centerX": 32477,
+        "centerY": 31912
+      },
+      "subareaId": 50,
       "entrance": {
         "x": 32475,
         "y": 31904,
         "z": 11
-      }
+      },
+      "walkTilesFromTemple": 381,
+      "tiles": 11346,
+      "spawns": 17,
+      "type": "HUNT"
     },
     {
       "id": "KAZORDOON-HUNT-0005",
       "name": "Dwarf Guards — Kazordoon Surroundings z12",
+      "slug": "dwarf-guards-kazordoon-surroundings-z12",
+      "folder": "KAZORDOON-HUNT-0005_dwarf-guards-kazordoon-surroundings-z12",
+      "floors": [
+        12
+      ],
+      "cropFloors": [
+        12,
+        13,
+        14
+      ],
+      "candidateIds": [
+        "KAZORDOON-FULL-z12-233"
+      ],
+      "creatures": 4,
+      "extent": {
+        "minX": 32454,
+        "minY": 31880,
+        "maxX": 32461,
+        "maxY": 31912,
+        "centerX": 32458,
+        "centerY": 31896
+      },
+      "subareaId": 50,
       "entrance": {
         "x": 32460,
         "y": 31911,
         "z": 12
-      }
+      },
+      "walkTilesFromTemple": 437,
+      "tiles": 5470,
+      "spawns": 4,
+      "type": "HUNT"
     },
     {
       "id": "KAZORDOON-HUNT-0006",
       "name": "Dwarf Guards — Kazordoon Surroundings (z13–14)",
+      "slug": "dwarf-guards-kazordoon-surroundings-z1314",
+      "folder": "KAZORDOON-HUNT-0006_dwarf-guards-kazordoon-surroundings-z1314",
+      "floors": [
+        13,
+        14
+      ],
+      "cropFloors": [
+        13,
+        14,
+        15
+      ],
+      "candidateIds": [
+        "KAZORDOON-FULL-z13-39",
+        "KAZORDOON-FULL-z14-322"
+      ],
+      "creatures": 29,
+      "extent": {
+        "minX": 32456,
+        "minY": 31877,
+        "maxX": 32527,
+        "maxY": 31893,
+        "centerX": 32492,
+        "centerY": 31885
+      },
+      "subareaId": 50,
       "entrance": {
         "x": 32476,
         "y": 31878,
         "z": 13
-      }
+      },
+      "walkTilesFromTemple": 427,
+      "tiles": 11729,
+      "spawns": 29,
+      "type": "HUNT"
     },
     {
       "id": "KAZORDOON-HUNT-0007",
       "name": "Dwarf Guards — Kazordoon Surroundings z13",
+      "slug": "dwarf-guards-kazordoon-surroundings-z13",
+      "folder": "KAZORDOON-HUNT-0007_dwarf-guards-kazordoon-surroundings-z13",
+      "floors": [
+        13
+      ],
+      "cropFloors": [
+        13,
+        14,
+        15
+      ],
+      "candidateIds": [
+        "KAZORDOON-FULL-z13-217"
+      ],
+      "creatures": 17,
+      "extent": {
+        "minX": 32486,
+        "minY": 31918,
+        "maxX": 32530,
+        "maxY": 31941,
+        "centerX": 32508,
+        "centerY": 31930
+      },
+      "subareaId": 50,
       "entrance": {
         "x": 32488,
         "y": 31918,
         "z": 13
-      }
+      },
+      "walkTilesFromTemple": 495,
+      "tiles": 9789,
+      "spawns": 17,
+      "type": "HUNT"
     },
     {
       "id": "KAZORDOON-HUNT-0008",
       "name": "Ghouls — Kazordoon Surroundings z11",
+      "slug": "ghouls-kazordoon-surroundings-z11",
+      "folder": "KAZORDOON-HUNT-0008_ghouls-kazordoon-surroundings-z11",
+      "floors": [
+        11
+      ],
+      "cropFloors": [
+        11,
+        12,
+        13
+      ],
+      "candidateIds": [
+        "KAZORDOON-FULL-z11-96"
+      ],
+      "creatures": 6,
+      "extent": {
+        "minX": 32390,
+        "minY": 32001,
+        "maxX": 32443,
+        "maxY": 32019,
+        "centerX": 32417,
+        "centerY": 32010
+      },
+      "subareaId": 50,
       "entrance": {
         "x": 32419,
         "y": 32018,
         "z": 11
-      }
+      },
+      "walkTilesFromTemple": 488,
+      "tiles": 9998,
+      "spawns": 6,
+      "type": "HUNT"
     },
     {
       "id": "KAZORDOON-HUNT-0009",
       "name": "Dwarf Soldiers — Kazordoon Surroundings z13",
+      "slug": "dwarf-soldiers-kazordoon-surroundings-z13",
+      "folder": "KAZORDOON-HUNT-0009_dwarf-soldiers-kazordoon-surroundings-z13",
+      "floors": [
+        13
+      ],
+      "cropFloors": [
+        13,
+        14,
+        15
+      ],
+      "candidateIds": [
+        "KAZORDOON-FULL-z13-189"
+      ],
+      "creatures": 58,
+      "extent": {
+        "minX": 32553,
+        "minY": 31873,
+        "maxX": 32667,
+        "maxY": 32011,
+        "centerX": 32610,
+        "centerY": 31942
+      },
+      "subareaId": 50,
       "entrance": {
         "x": 32665,
         "y": 31944,
         "z": 13
-      }
+      },
+      "walkTilesFromTemple": 142,
+      "tiles": 59171,
+      "spawns": 58,
+      "type": "HUNT"
     },
     {
       "id": "KAZORDOON-HUNT-0010",
       "name": "Dragons — Kazordoon Surroundings z5",
+      "slug": "dragons-kazordoon-surroundings-z5",
+      "folder": "KAZORDOON-HUNT-0010_dragons-kazordoon-surroundings-z5",
+      "floors": [
+        5
+      ],
+      "cropFloors": [
+        5,
+        6,
+        7
+      ],
+      "candidateIds": [
+        "KAZORDOON-FULL-z05-295"
+      ],
+      "creatures": 4,
+      "extent": {
+        "minX": 32654,
+        "minY": 31880,
+        "maxX": 32662,
+        "maxY": 31917,
+        "centerX": 32658,
+        "centerY": 31899
+      },
+      "subareaId": 50,
       "entrance": {
         "x": 32654,
         "y": 31910,
         "z": 5
-      }
+      },
+      "walkTilesFromTemple": 361,
+      "tiles": 4605,
+      "spawns": 4,
+      "type": "HUNT"
     },
     {
       "id": "KAZORDOON-HUNT-0011",
       "name": "Dwarf Soldiers — Kazordoon Surroundings z11",
+      "slug": "dwarf-soldiers-kazordoon-surroundings-z11-0011",
+      "folder": "KAZORDOON-HUNT-0011_dwarf-soldiers-kazordoon-surroundings-z11-0011",
+      "floors": [
+        11
+      ],
+      "cropFloors": [
+        11,
+        12,
+        13
+      ],
+      "candidateIds": [
+        "KAZORDOON-FULL-z11-221"
+      ],
+      "creatures": 29,
+      "extent": {
+        "minX": 32491,
+        "minY": 31952,
+        "maxX": 32552,
+        "maxY": 31994,
+        "centerX": 32522,
+        "centerY": 31973
+      },
+      "subareaId": 50,
       "entrance": {
         "x": 32521,
         "y": 31963,
         "z": 11
-      }
+      },
+      "walkTilesFromTemple": 325,
+      "tiles": 15361,
+      "spawns": 29,
+      "type": "HUNT"
     },
     {
       "id": "KAZORDOON-HUNT-0012",
       "name": "Dragons — Femor Hills z12",
+      "slug": "dragons-femor-hills-z12",
+      "folder": "KAZORDOON-HUNT-0012_dragons-femor-hills-z12",
+      "floors": [
+        12
+      ],
+      "cropFloors": [
+        12,
+        13,
+        14
+      ],
+      "candidateIds": [
+        "KAZORDOON-FULL-z12-21"
+      ],
+      "creatures": 11,
+      "extent": {
+        "minX": 32477,
+        "minY": 31795,
+        "maxX": 32586,
+        "maxY": 31853,
+        "centerX": 32532,
+        "centerY": 31824
+      },
+      "subareaId": 47,
       "entrance": {
         "x": 32586,
         "y": 31804,
         "z": 12
-      }
+      },
+      "walkTilesFromTemple": 517,
+      "tiles": 21139,
+      "spawns": 11,
+      "type": "HUNT"
     },
     {
       "id": "KAZORDOON-HUNT-0013",
       "name": "Dragons — Femor Hills z11",
+      "slug": "dragons-femor-hills-z11",
+      "folder": "KAZORDOON-HUNT-0013_dragons-femor-hills-z11",
+      "floors": [
+        11
+      ],
+      "cropFloors": [
+        11,
+        12,
+        13
+      ],
+      "candidateIds": [
+        "KAZORDOON-FULL-z11-92"
+      ],
+      "creatures": 12,
+      "extent": {
+        "minX": 32568,
+        "minY": 31802,
+        "maxX": 32621,
+        "maxY": 31839,
+        "centerX": 32595,
+        "centerY": 31821
+      },
+      "subareaId": 47,
       "entrance": {
         "x": 32568,
         "y": 31839,
         "z": 11
-      }
+      },
+      "walkTilesFromTemple": 471,
+      "tiles": 10758,
+      "spawns": 12,
+      "type": "HUNT"
     },
     {
       "id": "KAZORDOON-HUNT-0014",
       "name": "Corym Charlatans — Femor Hills (z10–11)",
+      "slug": "corym-charlatans-femor-hills-z1011",
+      "folder": "KAZORDOON-HUNT-0014_corym-charlatans-femor-hills-z1011",
+      "floors": [
+        10,
+        11
+      ],
+      "cropFloors": [
+        10,
+        11,
+        12,
+        13
+      ],
+      "candidateIds": [
+        "KAZORDOON-FULL-z10-373",
+        "KAZORDOON-FULL-z11-203"
+      ],
+      "creatures": 20,
+      "extent": {
+        "minX": 32461,
+        "minY": 31813,
+        "maxX": 32548,
+        "maxY": 31861,
+        "centerX": 32505,
+        "centerY": 31837
+      },
+      "subareaId": 47,
       "entrance": {
         "x": 32548,
         "y": 31823,
         "z": 10
-      }
+      },
+      "walkTilesFromTemple": 502,
+      "tiles": 25472,
+      "spawns": 20,
+      "type": "HUNT"
+    },
+    {
+      "id": "KAZORDOON-TRAINING-0003",
+      "name": "Kazordoon Training 0003",
+      "slug": "kazordoon-training-0003",
+      "folder": "KAZORDOON-TRAINING-0003_kazordoon-training-0003",
+      "floors": [
+        13,
+        14,
+        15
+      ],
+      "cropFloors": [
+        13,
+        14,
+        15
+      ],
+      "candidateIds": [],
+      "creatures": 0,
+      "extent": {
+        "minX": 32459,
+        "minY": 31900,
+        "maxX": 32459,
+        "maxY": 31900,
+        "centerX": 32459,
+        "centerY": 31900
+      },
+      "subareaId": null,
+      "entrance": {
+        "x": 32459,
+        "y": 31900,
+        "z": 14
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 1875,
+      "spawns": 9,
+      "isTrainingHunt": true,
+      "type": "TRAINING"
+    },
+    {
+      "id": "KAZORDOON-TRAINING-0001",
+      "name": "Kazordoon Training 0001",
+      "slug": "kazordoon-training-0001",
+      "folder": "KAZORDOON-TRAINING-0001_kazordoon-training-0001",
+      "floors": [
+        7,
+        8,
+        9
+      ],
+      "cropFloors": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "candidateIds": [],
+      "creatures": 0,
+      "extent": {
+        "minX": 32477,
+        "minY": 31949,
+        "maxX": 32477,
+        "maxY": 31949,
+        "centerX": 32477,
+        "centerY": 31949
+      },
+      "subareaId": null,
+      "entrance": {
+        "x": 32477,
+        "y": 31949,
+        "z": 8
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 3125,
+      "spawns": 7,
+      "isTrainingHunt": true,
+      "type": "TRAINING"
+    },
+    {
+      "id": "KAZORDOON-TRAINING-0002",
+      "name": "Kazordoon Training 0002",
+      "slug": "kazordoon-training-0002",
+      "folder": "KAZORDOON-TRAINING-0002_kazordoon-training-0002",
+      "floors": [
+        7,
+        8,
+        9
+      ],
+      "cropFloors": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "candidateIds": [],
+      "creatures": 0,
+      "extent": {
+        "minX": 32513,
+        "minY": 31949,
+        "maxX": 32513,
+        "maxY": 31949,
+        "centerX": 32513,
+        "centerY": 31949
+      },
+      "subareaId": null,
+      "entrance": {
+        "x": 32513,
+        "y": 31949,
+        "z": 8
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 3125,
+      "spawns": 15,
+      "isTrainingHunt": true,
+      "type": "TRAINING"
     }
   ]
 }

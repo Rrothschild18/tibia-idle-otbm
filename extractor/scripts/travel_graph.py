@@ -8,7 +8,7 @@ build_travel_fragment.py for the CLI that reads/writes files and
 Five independent concerns, kept as separate function groups so each is
 testable with tiny in-memory fixtures (no real .otbm/map.json/.lua touched):
 
-1. Marker-sign parsing — POIs (HUNT/TEMPLE/DEPOT/QUEST) marked in the OTBM
+1. Marker-sign parsing — POIs (HUNT/TEMPLE/DEPOT/QUEST/TRAINING) marked in the OTBM
    with sign item 2016 at a reserved uid (10001+), text = "CIDADE-TIPO-INCREMENTAL".
 2. Walkability graph + tile distances — the tileCount between two locations,
    walked over real tiles rather than measured across the coordinates.
@@ -37,7 +37,7 @@ import city_ids
 
 SIGN_ITEM_ID = 2016
 MARKER_UID_MIN = 10001
-POI_TYPES = ("HUNT", "TEMPLE", "DEPOT", "QUEST")
+POI_TYPES = ("HUNT", "TEMPLE", "DEPOT", "QUEST", "TRAINING")
 
 # Itens que são entrada de ferramenta pelo próprio id, sem depender de uid.
 #
@@ -1633,12 +1633,14 @@ def connect_orphan_hunts(
     for island in islands:
         # Hunt é o motivo original da ponte; templo e depot entraram porque
         # toda cidade precisa dos dois, e Yalahar perdia o seu — o depot dela
-        # cai num componente sem hunt nenhuma e era rejeitado. Componente só
-        # de NPC continua indo pro relatório: aquilo é bug de mapa.
+        # cai num componente sem hunt nenhuma e era rejeitado. Training entrou
+        # pelo mesmo motivo de hunt: a placa pode cair num bolsão isolado tanto
+        # quanto uma hunt. Componente só de NPC continua indo pro relatório:
+        # aquilo é bug de mapa.
         hunts = sorted(
             name
             for name in island
-            if by_id[name]["type"] in ("HUNT", "TEMPLE", "DEPOT")
+            if by_id[name]["type"] in ("HUNT", "TEMPLE", "DEPOT", "TRAINING")
         )
         if not hunts:
             continue
