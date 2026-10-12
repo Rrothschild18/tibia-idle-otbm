@@ -288,6 +288,33 @@ def monster_appearances() -> List[Dict]:
     return [seen[key] for key in sorted(seen)]
 
 
+def _npc_outfits() -> List[Dict]:
+    """O `outfit` de toda location NPC dos cinco fragmentos de cidade — a
+    mesma fonte que `build_travel_fragment.py --export` grava em
+    `locations[].outfit` no catalog-source.json."""
+    outfits: List[Dict] = []
+    pattern = os.path.join(EXTRACTOR_DIR, "full-maps", "*", "db-fragment.json")
+    for path in glob.glob(pattern):
+        with open(path, "r", encoding="utf-8") as handler:
+            for location in json.load(handler).get("locations", []):
+                outfit = location.get("outfit")
+                if location.get("type") == "NPC" and outfit:
+                    outfits.append(outfit)
+    return outfits
+
+
+def npc_outfit_ids() -> Set[int]:
+    """Os looktypes que algum NPC usa, lidos dos `db-fragment.json` de cidade.
+
+    Sem isto, um NPC com looktype exclusivo de criatura (Dwarf, Gnome — fora
+    do catálogo de outfit selecionável do jogador) nunca entra no recorte de
+    `extract_sprites.py`: o sprite dele nunca é extraído do cliente, e o NPC
+    fica sem outfit nenhum — o mesmo defeito que a Amazon tinha antes de
+    `monster_outfit_ids` existir, só que do lado do NPC.
+    """
+    return {outfit["lookType"] for outfit in _npc_outfits()}
+
+
 def main():
     ids = _list_outfit_ids()
     baked = 0
@@ -299,7 +326,7 @@ def main():
         else:
             skipped.append(outfit_id)
 
-    humanoids = sorted(set(skipped) & monster_outfit_ids())
+    humanoids = sorted(set(skipped) & (monster_outfit_ids() | npc_outfit_ids()))
     for outfit_id in humanoids:
         if bake_outfit(outfit_id, as_monster=True) is not None:
             baked += 1

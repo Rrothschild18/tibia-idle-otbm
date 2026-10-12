@@ -411,21 +411,32 @@ uv run python extractor/scripts/pipeline.py --stage maps # só um estágio
 uv run python extractor/scripts/pipeline.py --all --force
 ```
 
-Onze estágios, nesta ordem:
+Treze estágios, nesta ordem:
 
 | Estágio | Consome | Produz |
 |---|---|---|
-| `sprites` | `assets/` do cliente | `sprites/{items,outfits,effects,missiles}/` |
+| `sprites` | `assets/` do cliente | `sprites/{items,effects,missiles}/` |
 | `items` | `sprites/items/` | `atlases/items-{static,animated}/`, `items-index.json` |
-| `outfit-atlas` | `sprites/outfits/` | `atlases/outfits/` (criatura, 1 por outfit) |
-| `player-outfit-sheets` | `sprites/outfits/` | `atlases/player-outfits/` (jogador, grade 24 col.) |
-| `maps` | `maps/`, `sprites/items/` | `ready-maps/` (map.json + sheets + respawn) |
-| `effect-atlas` | `sprites/effects/` | `atlases/effects/` |
-| `corpse-atlas` | `ready-maps/`, `monster-loot.json` | `atlases/corpses/` |
-| `pool-atlas` | `sprites/items/` | `atlases/pools/` |
+| `maps` (1ª passada) | `maps/`, `sprites/items/` | `ready-maps/` (map.json + sheets + respawn, sem atlas de cor ainda) |
 | `flags` | `raw-maps/ROOK.raw.json`, `sprites/items/` | `appearance-flags/ROOK.json` |
 | `minimap` | dump, tabela de flags | `full-maps/ROOK/minimap/z*.png` + `bounds.json` |
 | `travel-graph` | dump, tabela de flags, vendor | `full-maps/ROOK/db-fragment.json` |
+| `sprites-outfits` | `assets/` do cliente, `ready-maps/*/*/monsters/respawn.json`, `full-maps/*/db-fragment.json` | `sprites/outfits/` |
+| `outfit-atlas` | `sprites/outfits/` | `atlases/outfits/` (criatura, 1 por outfit ou por aparência) |
+| `player-outfit-sheets` | `sprites/outfits/` | `atlases/player-outfits/` (jogador, grade 24 col.) |
+| `maps` (2ª passada, `maps-recolor`) | `maps/`, `sprites/items/`, `atlases/outfits/` | `ready-maps/` de novo — agora com a referência de atlas resolvida |
+| `effect-atlas` | `sprites/effects/` | `atlases/effects/` |
+| `corpse-atlas` | `ready-maps/`, `monster-loot.json` | `atlases/corpses/` |
+| `pool-atlas` | `sprites/items/` | `atlases/pools/` |
+
+`maps` roda duas vezes de propósito — **build, bake, build**, não um bug de ordem. A 1ª
+passada é quem descobre, em `ready-maps/*/*/monsters/respawn.json`, quais aparências (outfit +
+cor + addon) algum monstro humanoide precisa; `travel-graph` descobre o mesmo do lado do NPC, em
+`full-maps/*/db-fragment.json`. Só depois disso `sprites-outfits`/`outfit-atlas` sabem o que
+extrair e bakear — e só depois de bakeado a 2ª passada de `maps` (`maps-recolor`) consegue
+preencher a referência de atlas que a 1ª deixou em `None`, com o aviso `[WARN] Atlas … não
+encontrado`. Pular a 2ª passada é exatamente o defeito que fez a Amazon (outfit 137, usado por
+quatro cores) voltar a sair com a paleta padrão da Hunter depois de um re-run do pipeline.
 
 Publicar é o passo separado: [`publish.py`](#publish-o-único-comando-que-escreve-no-tibia-idle).
 

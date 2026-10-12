@@ -352,3 +352,46 @@ def test_bake_monster_appearance_survives_a_missing_addon_layer(tmp_path, monkey
     )
 
     assert list(atlas["frames"].keys()) == ["132_0"]
+
+
+# ---------------------------------------------------------------------------
+# npc_outfit_ids
+# ---------------------------------------------------------------------------
+
+def _write_db_fragment(extractor_dir, city, locations):
+    city_dir = os.path.join(extractor_dir, "full-maps", city)
+    os.makedirs(city_dir, exist_ok=True)
+    with open(os.path.join(city_dir, "db-fragment.json"), "w", encoding="utf-8") as handler:
+        json.dump({"locations": locations, "travelGraph": []}, handler)
+
+
+def test_npc_outfit_ids_reads_looktype_from_every_city_fragment(tmp_path, monkeypatch):
+    monkeypatch.setattr(boa, "EXTRACTOR_DIR", str(tmp_path))
+    _write_db_fragment(str(tmp_path), "KAZORDOON", [
+        {"id": "KAZORDOON-NPC-storkus", "type": "NPC",
+         "outfit": {"lookType": 160, "lookHead": 57, "lookBody": 59}},
+        {"id": "KAZORDOON-NPC-gnomette", "type": "NPC",
+         "outfit": {"lookType": 507, "lookHead": 94}},
+    ])
+    _write_db_fragment(str(tmp_path), "THAIS", [
+        {"id": "THAIS-NPC-obi", "type": "NPC", "outfit": {"lookType": 130}},
+    ])
+
+    assert boa.npc_outfit_ids() == {160, 507, 130}
+
+
+def test_npc_outfit_ids_ignores_non_npc_locations_and_npcs_without_outfit(tmp_path, monkeypatch):
+    monkeypatch.setattr(boa, "EXTRACTOR_DIR", str(tmp_path))
+    _write_db_fragment(str(tmp_path), "ROOK", [
+        {"id": "ROOK-TEMPLE-0001", "type": "TEMPLE"},
+        {"id": "ROOK-NPC-sem-outfit", "type": "NPC"},
+        {"id": "ROOK-NPC-obi", "type": "NPC", "outfit": {"lookType": 130}},
+    ])
+
+    assert boa.npc_outfit_ids() == {130}
+
+
+def test_npc_outfit_ids_is_empty_without_any_city_fragment(tmp_path, monkeypatch):
+    monkeypatch.setattr(boa, "EXTRACTOR_DIR", str(tmp_path))
+
+    assert boa.npc_outfit_ids() == set()

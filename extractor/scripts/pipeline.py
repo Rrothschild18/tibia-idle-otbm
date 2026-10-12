@@ -22,6 +22,7 @@ entra pelo meio.
 """
 
 import argparse
+import glob
 import hashlib
 import json
 import os
@@ -183,17 +184,31 @@ def build_stages():
     sprites = os.path.join(EXTRACTOR_DIR, "sprites")
     atlases = os.path.join(EXTRACTOR_DIR, "atlases")
     maps_dir = os.path.join(EXTRACTOR_DIR, "maps")
+    full_maps_dir = os.path.join(EXTRACTOR_DIR, "full-maps")
+    ready_maps_dir = os.path.join(EXTRACTOR_DIR, "ready-maps")
     vendor = os.path.join(EXTRACTOR_DIR, "vendor", "canary")
 
     fetch_cmd = "uv run python extractor/scripts/fetch_assets.py"
 
+    # As aparências (cor + addon) que outfit-atlas/player-outfit-sheets
+    # precisam bakear só existem depois que `maps` (monstro, em
+    # ready-maps/*/*/monsters/respawn.json) e `travel-graph:<cidade>` (NPC, em
+    # full-maps/<cidade>/db-fragment.json) já rodaram uma vez — são os mesmos
+    # dois glob que `bake_outfit_atlas.monster_outfit_ids`/`npc_outfit_ids`
+    # leem. Entram no hash de `sprites-outfits` pelo mesmo motivo do
+    # `assets-manifest.json`: sem isto, um monstro ou NPC novo nunca dispara
+    # reextração, porque o cliente não mudou.
+    respawn_jsons = sorted(glob.glob(
+        os.path.join(ready_maps_dir, "*", "*", "monsters", "respawn.json")
+    ))
+    db_fragments = sorted(glob.glob(os.path.join(full_maps_dir, "*", "db-fragment.json")))
+
     stages = [
         Stage(
             "sprites",
-            "recorta os PNGs do cliente para extractor/sprites/",
+            "recorta os PNGs de item/efeito/missile para extractor/sprites/",
             py + [os.path.join(SCRIPTS_DIR, "extract_sprites.py"),
-                  "--group", "items", "--group", "outfits",
-                  "--group", "effects", "--group", "missiles"],
+                  "--group", "items", "--group", "effects", "--group", "missiles"],
             # A pasta assets/ do cliente é a exceção declarada: o manifesto já
             # decide essa versão por checksum, hashear centenas de MB não paga.
             inputs=[os.path.join(EXTRACTOR_DIR, "assets-manifest.json")],
@@ -206,6 +221,59 @@ def build_stages():
             inputs=[os.path.join(sprites, "items")],
             requires=[(os.path.join(sprites, "items"),
                        "uv run python extractor/scripts/extract_sprites.py --group items")],
+        ),
+        Stage(
+            "maps",
+            "OTBM -> map.json + sheets/ + respawn.json de todo hunt (1ª "
+            "passada — descobre quais aparências de outfit vão precisar de "
+            "atlas; o atlas em si ainda não existe, então o respawn.json "
+            "sai sem a referência)",
+            ["node", os.path.join(SCRIPTS_DIR, "build_map.js"), "--all"],
+            inputs=[maps_dir, os.path.join(sprites, "items")],
+            requires=[(maps_dir, "adicione um .otbm em extractor/maps/<CIDADE>/<pasta>/")],
+        ),
+    ]
+
+    for city in _cities():
+        dump = os.path.join(EXTRACTOR_DIR, "raw-maps", f"{city}.raw.json")
+        stages.extend([
+            Stage(
+                f"flags:{city}",
+                f"tabela de flags por appearance de {city}, para o travel-graph",
+                py + [os.path.join(SCRIPTS_DIR, "build_appearance_flags.py"), city],
+                inputs=[dump, os.path.join(sprites, "items")],
+                requires=[(dump, f"node extractor/scripts/dump_otbm.js {city}")],
+            ),
+            Stage(
+                f"minimap:{city}",
+                f"PNG indexado por andar do minimapa de {city}, um pixel por tile",
+                py + [os.path.join(SCRIPTS_DIR, "build_city_minimap.py"), city],
+                # Só o dump e as cores — nenhum sprite. É por isso que a cidade
+                # inteira tem minimapa e não tem map.json.
+                inputs=[dump, os.path.join(EXTRACTOR_DIR, "appearance-flags", f"{city}.json")],
+                requires=[(dump, f"node extractor/scripts/dump_otbm.js {city}")],
+            ),
+            Stage(
+                f"travel-graph:{city}",
+                f"locations + travelGraph de {city} — descobre quais aparências de "
+                f"outfit um NPC precisa, pro mesmo motivo que `maps` descobre do monstro",
+                py + [os.path.join(SCRIPTS_DIR, "build_travel_fragment.py"), city],
+                inputs=[dump,
+                        os.path.join(EXTRACTOR_DIR, "appearance-flags", f"{city}.json"),
+                        vendor],
+                requires=[(vendor, "uv run python extractor/scripts/update_canary_data.py")],
+            ),
+        ])
+
+    stages.extend([
+        Stage(
+            "sprites-outfits",
+            "recorta os PNGs de outfit — depois de `maps` e `travel-graph`, que "
+            "são quem sabe quais aparências (monstro humanoide ou NPC) existem",
+            py + [os.path.join(SCRIPTS_DIR, "extract_sprites.py"), "--group", "outfits"],
+            inputs=[os.path.join(EXTRACTOR_DIR, "assets-manifest.json"),
+                    *respawn_jsons, *db_fragments],
+            requires=[(client_assets, fetch_cmd)],
         ),
         Stage(
             "outfit-atlas",
@@ -224,10 +292,13 @@ def build_stages():
                        "uv run python extractor/scripts/extract_sprites.py --group outfits")],
         ),
         Stage(
-            "maps",
-            "OTBM -> map.json + sheets/ + respawn.json de todo hunt",
+            "maps-recolor",
+            "refaz o respawn.json de todo hunt (2ª passada) — agora que "
+            "outfit-atlas já bakeou, o atlas por aparência de cada humanoide "
+            "resolve de verdade em vez de cair no aviso [WARN] e no fallback "
+            "sem cor (ver `build_phaser_map._outfit_atlas_ref`)",
             ["node", os.path.join(SCRIPTS_DIR, "build_map.js"), "--all"],
-            inputs=[maps_dir, os.path.join(sprites, "items")],
+            inputs=[maps_dir, os.path.join(sprites, "items"), os.path.join(atlases, "outfits")],
             requires=[(maps_dir, "adicione um .otbm em extractor/maps/<CIDADE>/<pasta>/")],
         ),
         Stage(
@@ -253,37 +324,7 @@ def build_stages():
             py + [os.path.join(SCRIPTS_DIR, "bake_pool_atlas.py")],
             inputs=[os.path.join(sprites, "items")],
         ),
-    ]
-
-    for city in _cities():
-        dump = os.path.join(EXTRACTOR_DIR, "raw-maps", f"{city}.raw.json")
-        stages.extend([
-            Stage(
-                f"flags:{city}",
-                f"tabela de flags por appearance de {city}, para o travel-graph",
-                py + [os.path.join(SCRIPTS_DIR, "build_appearance_flags.py"), city],
-                inputs=[dump, os.path.join(sprites, "items")],
-                requires=[(dump, f"node extractor/scripts/dump_otbm.js {city}")],
-            ),
-            Stage(
-                f"minimap:{city}",
-                f"PNG indexado por andar do minimapa de {city}, um pixel por tile",
-                py + [os.path.join(SCRIPTS_DIR, "build_city_minimap.py"), city],
-                # Só o dump e as cores — nenhum sprite. É por isso que a cidade
-                # inteira tem minimapa e não tem map.json.
-                inputs=[dump, os.path.join(EXTRACTOR_DIR, "appearance-flags", f"{city}.json")],
-                requires=[(dump, f"node extractor/scripts/dump_otbm.js {city}")],
-            ),
-            Stage(
-                f"travel-graph:{city}",
-                f"locations + travelGraph de {city}",
-                py + [os.path.join(SCRIPTS_DIR, "build_travel_fragment.py"), city],
-                inputs=[dump,
-                        os.path.join(EXTRACTOR_DIR, "appearance-flags", f"{city}.json"),
-                        vendor],
-                requires=[(vendor, "uv run python extractor/scripts/update_canary_data.py")],
-            ),
-        ])
+    ])
 
     return stages
 

@@ -381,16 +381,19 @@ def extract_group(appearances, group_name: str):
     total_pngs = 0
     skipped = 0
     players = 0
-    monster_only = 0
+    creature_only = 0
 
-    # Monstro humanoide que não é outfit de jogador (Corym, por exemplo) usa
-    # a mesma forma (addon, montaria, layer) e cai no `has_non_creature_axis`
-    # abaixo só por não estar no catálogo fixo — mas tem respawn de verdade
-    # pedindo essa aparência, então sai pelo mesmo caminho que um outfit de
-    # jogador. Lido de ready-maps/*/*/monsters/respawn.json, já gerados por
-    # build_map.js antes de rodar esta extração.
-    monster_outfit_ids = (
-        bake_outfit_atlas.monster_outfit_ids() if group_name == "outfits" else set()
+    # Monstro ou NPC humanoide que não é outfit de jogador (Corym e Dwarf, por
+    # exemplo) usa a mesma forma (addon, montaria, layer) e cai no
+    # `has_non_creature_axis` abaixo só por não estar no catálogo fixo — mas
+    # tem respawn ou location de verdade pedindo essa aparência, então sai
+    # pelo mesmo caminho que um outfit de jogador. Lido de
+    # ready-maps/*/*/monsters/respawn.json e full-maps/*/db-fragment.json, já
+    # gerados por build_map.js e build_travel_fragment.py antes de rodar esta
+    # extração.
+    creature_outfit_ids = (
+        bake_outfit_atlas.monster_outfit_ids() | bake_outfit_atlas.npc_outfit_ids()
+        if group_name == "outfits" else set()
     )
 
     for appearance in appearances:
@@ -404,9 +407,9 @@ def extract_group(appearances, group_name: str):
             players += 1
             continue
 
-        if group_name == "outfits" and app_id in monster_outfit_ids and has_non_creature_axis(appearance):
+        if group_name == "outfits" and app_id in creature_outfit_ids and has_non_creature_axis(appearance):
             total_pngs += extract_player_outfit(appearance, group_dir)
-            monster_only += 1
+            creature_only += 1
             continue
 
         # O resto que mexe nesses eixos é appearance de criatura fora do
@@ -548,8 +551,8 @@ def extract_group(appearances, group_name: str):
     print(f"[OK] {group_name}: {total_pngs} PNGs extraidos")
     if players:
         print(f"  [player] {players} outfits de jogador (sem montaria; addons variam por outfit)")
-    if monster_only:
-        print(f"  [monster] {monster_only} outfits exclusivos de monstro (fora do catálogo de jogador)")
+    if creature_only:
+        print(f"  [creature] {creature_only} outfits exclusivos de monstro ou NPC (fora do catálogo de jogador)")
     if skipped:
         print(f"  [skip] {skipped} appearances ignoradas (eixo de addon/montaria/layer)")
 

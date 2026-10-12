@@ -213,6 +213,40 @@ def test_no_stage_hardcodes_a_city_in_its_command():
             assert city in " ".join(stage.command)
 
 
+def test_outfit_sprites_run_only_after_maps_and_every_travel_graph():
+    """O defeito do ticket: `outfit-atlas`/`sprites-outfits` descobrem quais
+    aparências existem lendo `ready-maps/*/*/monsters/respawn.json` (que
+    `maps` escreve) e `full-maps/*/db-fragment.json` (que `travel-graph`
+    escreve). Rodar antes deles bakeia vazio e a Amazon volta pra paleta da
+    Hunter — foi exatamente isso que `pipeline --all` fazia antes deste
+    teste existir."""
+    names = [stage.name for stage in pipeline.build_stages()]
+
+    maps_index = names.index("maps")
+    outfits_index = names.index("sprites-outfits")
+
+    assert maps_index < outfits_index
+    for name in names:
+        if name.startswith("travel-graph:"):
+            assert names.index(name) < outfits_index, name
+
+
+def test_maps_runs_a_second_time_after_outfit_atlas_to_resolve_the_reference():
+    """A 2ª passada (`maps-recolor`) é quem preenche o `atlas` que a 1ª deixa
+    em `None` — sem ela o respawn.json fica com o aviso `[WARN] Atlas … não
+    encontrado` pra sempre, mesmo com o atlas já bakeado em disco."""
+    names = [stage.name for stage in pipeline.build_stages()]
+
+    assert names.index("outfit-atlas") < names.index("maps-recolor")
+    assert names.index("player-outfit-sheets") < names.index("maps-recolor")
+
+
+def test_maps_recolor_is_stale_when_the_outfit_atlas_changes():
+    stage = next(s for s in pipeline.build_stages() if s.name == "maps-recolor")
+
+    assert any(entry.endswith(os.path.join("atlases", "outfits")) for entry in stage.inputs)
+
+
 def test_every_bake_script_is_reachable_from_the_pipeline():
     """O `bake_player_outfit_sheet.py` ficou fora do pipeline na primeira
     versão: os 242 outfits de jogador eram extraídos e nunca bakeados, e nada
