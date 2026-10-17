@@ -170,7 +170,26 @@ def main() -> None:
                 json.dump(rj, h, ensure_ascii=False)
             print(f"[OK] cravados {injected} spawn(s) manual(is)")
 
-    print(f"[OK] {hunt['folder']} recortado. Próximo: build_hunt_fragment --export + publish.py pra chegar no jogo.")
+    # O fragmento é regerado aqui, e não deixado pro próximo passo, porque é
+    # dele que o `hunt-add` lê o respawn — e o `publish.py` **não** o regera. A
+    # exclusão de espécie acima entrava no `monsters/respawn.json` e não no
+    # fragmento, então a espécie excluída voltava pro servidor com o bundle
+    # certo em mãos. Sem `--export`: quem escreve no jogo é o `hunt-add`.
+    if not args.no_build:
+        fragment = subprocess.run(
+            [
+                sys.executable,
+                os.path.join(SCRIPTS_DIR, "build_hunt_fragment.py"),
+                hunt["folder"],
+                "--map-id",
+                args.hunt_id,
+            ],
+            cwd=SCRIPTS_DIR,
+        )
+        if fragment.returncode != 0:
+            sys.exit(f"error: build_hunt_fragment.py falhou ({fragment.returncode})")
+
+    print(f"[OK] {hunt['folder']} recortado. Próximo: publish.py + hunt-add pra chegar no jogo.")
 
 
 if __name__ == "__main__":
