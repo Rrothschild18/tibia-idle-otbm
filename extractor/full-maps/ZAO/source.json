@@ -1,0 +1,93 @@
+{
+  "city": "ZAO",
+  "area": {
+    "id": 8,
+    "name": "Zao"
+  },
+  "subareas": [
+    {
+      "id": 449,
+      "name": "Zao"
+    },
+    {
+      "id": 141,
+      "name": "Zao Orc Fortress"
+    },
+    {
+      "id": 125,
+      "name": "Vengoth"
+    },
+    {
+      "id": 142,
+      "name": "Zao Steppe"
+    },
+    {
+      "id": 143,
+      "name": "Zzaion"
+    },
+    {
+      "id": 144,
+      "name": "Dragonblaze Peaks"
+    },
+    {
+      "id": 145,
+      "name": "Muggy Plains"
+    },
+    {
+      "id": 148,
+      "name": "Razachai"
+    },
+    {
+      "id": 149,
+      "name": "Corrupted Gardens"
+    },
+    {
+      "id": 150,
+      "name": "Emperor's Castle"
+    },
+    {
+      "id": 151,
+      "name": "Chazorai"
+    },
+    {
+      "id": 152,
+      "name": "Spirittrails"
+    },
+    {
+      "id": 511,
+      "name": "Norcferatu Fortress"
+    },
+    {
+      "id": 319,
+      "name": "Falcon Bastion"
+    }
+  ],
+  "world": {
+    "file": "otservbr.otbm",
+    "bytes": 184797168
+  },
+  "shape": "square",
+  "bounds": {
+    "minX": 32805,
+    "minY": 30992,
+    "maxX": 33453,
+    "maxY": 31640
+  },
+  "columns": 174462,
+  "tiles": 1641458,
+  "tileAreas": 113115,
+  "towns": [
+    {
+      "id": 12,
+      "name": "Farmine",
+      "x": 33023,
+      "y": 31521,
+      "z": 11
+    }
+  ],
+  "monsterGroups": 4698,
+  "monsterEntries": 5552,
+  "npcGroups": 45,
+  "npcEntries": 45,
+  "houses": 1
+}
