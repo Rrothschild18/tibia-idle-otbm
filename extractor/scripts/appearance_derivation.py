@@ -86,7 +86,7 @@ def derived_flags(raw_flags: dict, sprite_info: dict) -> dict:
 # engordariam a tabela versionada sem consumidor nenhum.
 CONSUMED_RAW_FLAGS = (
     "fullbank", "unmove", "unpass", "unsight", "automap", "bank",
-    "clip", "bottom", "top", "hang", "usable", "forceuse",
+    "clip", "bottom", "top", "hang", "usable", "forceuse", "dont_hide",
 )
 
 

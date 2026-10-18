@@ -293,6 +293,7 @@ def analyze_item(appearance_id: int) -> Dict:
     has_hang = flags.get("hang", False)
     has_usable = flags.get("usable", False)
     has_forceuse = flags.get("forceuse", False)
+    has_dont_hide = flags.get("dont_hide", False)
 
     # Positioning, not classification: `shift` moves this sprite's own pixels
     # and does not accumulate; `elevation` (the appearances' `height` flag)
@@ -307,6 +308,16 @@ def analyze_item(appearance_id: int) -> Dict:
     )
     height_raw = flags.get("height")
     elevation = height_raw.get("elevation", 0) if isinstance(height_raw, dict) else 0
+
+    # `brightness`/`color` da flag `light` do protobuf — intensidade do raio
+    # (em tiles) e índice na paleta RGB 6x6x6 do client, não a paleta HSI de
+    # outfit. Mesmo tratamento posicional de `shift`/`elevation`: fora do
+    # `flags` dict, ausente quando intensidade é zero.
+    light_raw = flags.get("light")
+    light = (
+        {"intensity": light_raw.get("brightness", 0), "color": light_raw.get("color", 0)}
+        if isinstance(light_raw, dict) else None
+    )
 
     # Extract sprite info for bounding calculations
     pattern_width = sprite_info.get("patternWidth", 1)
@@ -349,6 +360,7 @@ def analyze_item(appearance_id: int) -> Dict:
             "hang": has_hang,
             "usable": has_usable,
             "forceuse": has_forceuse,
+            "dont_hide": has_dont_hide,
             "isRoof": is_roof,
             "isFloorTransition": is_floor_transition,
             "hookDirection": hook_direction,
@@ -362,6 +374,7 @@ def analyze_item(appearance_id: int) -> Dict:
         "shift": shift,
         "elevation": elevation,
         "automapColor": appearance_derivation.automap_color(flags),
+        "light": light,
         "sprites": [],
         "maxSpriteHeight": TILE_SIZE,
         "issues": []

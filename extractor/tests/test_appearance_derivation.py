@@ -73,6 +73,17 @@ def test_automap_and_bank_become_booleans():
     assert result["bank"] is True
 
 
+def test_dont_hide_flows_through_pipeline_flags():
+    """`tile.cpp:855` do mehah-client lê esta flag pra decidir o que não
+    esmaecer quando o chão está sob telhado — dependência direta do
+    esmaecimento de andar."""
+    assert ad.pipeline_flags({"dont_hide": True}, {})["dont_hide"] is True
+
+
+def test_dont_hide_defaults_to_false_when_absent():
+    assert ad.pipeline_flags({}, {})["dont_hide"] is False
+
+
 def test_the_real_rook_table_still_has_floor_transitions():
     """Regressão direta do bug: a tabela versionada tem que carregar as
     transições de andar do ROOK. Zero aqui significa grafo sem escadas.

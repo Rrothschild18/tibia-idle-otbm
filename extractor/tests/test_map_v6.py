@@ -6,7 +6,7 @@ from sheet_packer import SheetPacker
 
 def _analysis(appearance_id, *, flags=None, width=32, height=32, frame_count=1,
               source_path=None, animated=False, random=False, shift=None,
-              elevation=0, automap_color=0, type_="static"):
+              elevation=0, automap_color=0, light=None, type_="static"):
     return {
         "appearanceId": appearance_id,
         "type": "animated" if animated else ("random" if random else type_),
@@ -22,6 +22,7 @@ def _analysis(appearance_id, *, flags=None, width=32, height=32, frame_count=1,
         "shift": shift,
         "elevation": elevation,
         "automapColor": automap_color,
+        "light": light,
         "spriteInfo": {"patternWidth": 1, "patternHeight": 1, "patternDepth": 1,
                        "boundingSquare": 32},
         "sprites": [
@@ -315,6 +316,23 @@ def test_automap_color_zero_is_left_out():
     assert "automapColor" not in doc["appearances"]["1"]
 
 
+# ── luz ───────────────────────────────────────────────────────────────────
+
+
+def test_light_is_emitted_when_intensity_is_non_zero():
+    analyses = {1385: _analysis(1385, light={"intensity": 4, "color": 206})}
+    doc, _ = _build(analyses, _dump([(0, 0, None, [1385])]))
+
+    assert doc["appearances"]["1385"]["light"] == {"intensity": 4, "color": 206}
+
+
+def test_a_zero_intensity_light_is_left_out():
+    analyses = {1: _analysis(1, light={"intensity": 0, "color": 0})}
+    doc, _ = _build(analyses, _dump([(0, 0, None, [1])]))
+
+    assert "light" not in doc["appearances"]["1"]
+
+
 def test_an_empty_dump_still_produces_a_readable_document():
     doc, frame_sources = _build({}, {"data": {"nodes": []}})
 
@@ -358,6 +376,15 @@ def test_the_floor_transition_flag_survives_because_it_is_game_logic():
     doc, _ = _build(analyses, _dump([(0, 0, None, [386])]))
 
     assert doc["appearances"]["386"]["flags"]["isFloorTransition"] is True
+
+
+def test_dont_hide_survives_because_the_floor_fade_needs_it():
+    # Raw flag, not derived — `tile.cpp:855` do mehah-client lê exatamente
+    # isto pra decidir o que não esmaecer quando o chão está sob telhado.
+    analyses = {386: _analysis(386, flags={"dont_hide": True, "unmove": True})}
+    doc, _ = _build(analyses, _dump([(0, 0, None, [386])]))
+
+    assert doc["appearances"]["386"]["flags"]["dont_hide"] is True
 
 
 # ── empty tiles ───────────────────────────────────────────────────────────
