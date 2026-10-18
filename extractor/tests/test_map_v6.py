@@ -6,7 +6,8 @@ from sheet_packer import SheetPacker
 
 def _analysis(appearance_id, *, flags=None, width=32, height=32, frame_count=1,
               source_path=None, animated=False, random=False, shift=None,
-              elevation=0, automap_color=0, light=None, type_="static"):
+              elevation=0, automap_color=0, light=None, is_opaque=False,
+              type_="static"):
     return {
         "appearanceId": appearance_id,
         "type": "animated" if animated else ("random" if random else type_),
@@ -24,7 +25,7 @@ def _analysis(appearance_id, *, flags=None, width=32, height=32, frame_count=1,
         "automapColor": automap_color,
         "light": light,
         "spriteInfo": {"patternWidth": 1, "patternHeight": 1, "patternDepth": 1,
-                       "boundingSquare": 32},
+                       "boundingSquare": 32, "isOpaque": is_opaque},
         "sprites": [
             {
                 "spriteId": f"{appearance_id}_{i}",
@@ -331,6 +332,24 @@ def test_a_zero_intensity_light_is_left_out():
     doc, _ = _build(analyses, _dump([(0, 0, None, [1])]))
 
     assert "light" not in doc["appearances"]["1"]
+
+
+def test_is_opaque_is_emitted_when_true():
+    # `Map::isCovered` do mehah-client (map.cpp:736-756) sobe andar por andar
+    # perguntando se o tile lá é opaco — `fullbank` (chão) ou `isOpaque` (item,
+    # SpriteInfo.is_opaque). É o sinal real de esmaecimento de telhado, não
+    # `isRoof` (heurístico só do Rookgaard, confirmado vazio num prédio real).
+    analyses = {1270: _analysis(1270, is_opaque=True)}
+    doc, _ = _build(analyses, _dump([(0, 0, None, [1270])]))
+
+    assert doc["appearances"]["1270"]["isOpaque"] is True
+
+
+def test_is_opaque_false_is_left_out():
+    analyses = {1: _analysis(1, is_opaque=False)}
+    doc, _ = _build(analyses, _dump([(0, 0, None, [1])]))
+
+    assert "isOpaque" not in doc["appearances"]["1"]
 
 
 def test_an_empty_dump_still_produces_a_readable_document():

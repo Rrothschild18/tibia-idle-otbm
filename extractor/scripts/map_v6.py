@@ -129,6 +129,12 @@ def _appearance_entry(analysis: Dict, packer, frame_sources: Dict[str, Dict[int,
     if pattern["w"] * pattern["h"] * pattern["d"] > 1:
         entry["pattern"] = pattern
 
+    # `SpriteInfo.is_opaque`, não uma `AppearanceFlags` — é o sinal que
+    # `Tile::isFullyOpaque` do mehah-client usa (junto de `fullbank`) pra
+    # decidir o que esconde a visão de um andar abaixo.
+    if sprite_info.get("isOpaque"):
+        entry["isOpaque"] = True
+
     # Both are pure positioning, and both are absent far more often than
     # present — emitting the zero would be noise in every tile of every map.
     shift = analysis.get("shift") or {}

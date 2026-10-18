@@ -369,7 +369,8 @@ def analyze_item(appearance_id: int) -> Dict:
             "patternWidth": pattern_width,
             "patternHeight": pattern_height,
             "patternDepth": pattern_depth,
-            "boundingSquare": bounding_square
+            "boundingSquare": bounding_square,
+            "isOpaque": bool(sprite_info.get("isOpaque", False)),
         },
         "shift": shift,
         "elevation": elevation,

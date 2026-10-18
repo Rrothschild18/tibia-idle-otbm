@@ -432,6 +432,7 @@ def extract_group(appearances, group_name: str):
                         "patternDepth": info.pattern_depth,
                         "layers": info.layers,
                         "patternFrames": info.pattern_frames,
+                        "isOpaque": info.is_opaque,
                     },
                 }
 
@@ -479,6 +480,7 @@ def extract_group(appearances, group_name: str):
                         "patternDepth": info.pattern_depth,
                         "layers": info.layers,
                         "patternFrames": info.pattern_frames,
+                        "isOpaque": info.is_opaque,
                     },
                 }
 
