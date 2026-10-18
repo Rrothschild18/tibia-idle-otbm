@@ -1,4 +1,6 @@
 {
+  "city": "THAIS",
+  "area": "Thais",
   "hunts": [
     {
       "id": "THAIS-HUNT-0001",
@@ -215,6 +217,42 @@
       "tiles": 2248,
       "spawns": 5,
       "isTrainingHunt": true
+    },
+    {
+      "id": "THAIS-ARENA-0001",
+      "type": "HUNT",
+      "name": "Adventurers' Guild",
+      "slug": "adventurers-guild",
+      "folder": "THAIS-ARENA-0001_adventurers-guild",
+      "floors": [
+        6,
+        7
+      ],
+      "cropFloors": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "candidateIds": [],
+      "creatures": 0,
+      "extent": {
+        "minX": 32185,
+        "minY": 32263,
+        "maxX": 32216,
+        "maxY": 32313,
+        "centerX": 32200,
+        "centerY": 32303
+      },
+      "subareaId": 307,
+      "entrance": {
+        "x": 32200,
+        "y": 32303,
+        "z": 7
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 5715,
+      "spawns": 2
     }
   ]
 }

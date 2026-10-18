@@ -22,6 +22,28 @@
   ],
   "hunts": [
     {
+      "id": "THAIS-ARENA-0001",
+      "name": "Adventurers' Guild",
+      "floors": [
+        6,
+        7
+      ],
+      "candidateIds": [],
+      "entranceZ": 7,
+      "species": null,
+      "creatures": 0,
+      "extent": {
+        "minX": 32185,
+        "minY": 32263,
+        "maxX": 32216,
+        "maxY": 32313,
+        "centerX": 32200,
+        "centerY": 32303
+      },
+      "subareaId": 307,
+      "walkTilesFromTemple": null
+    },
+    {
       "id": "THAIS-HUNT-0001",
       "name": "Bears — Thais Surroundings (z7–9)",
       "floors": [
