@@ -236,6 +236,14 @@ def main():
     parser.add_argument("--margin", type=int, default=curated_hunts.DEFAULT_MARGIN_TILES)
     parser.add_argument("--canary-dir")
     parser.add_argument(
+        "--candidates",
+        default="candidates.json",
+        metavar="ARQUIVO",
+        help="arquivo de candidatas dentro de full-maps/<CIDADE>/. O padrão é a saída de "
+        "`build_hunt_candidates.py`; `candidates-full.json` é a de "
+        "`build_full_floor_candidates.py`, que agrupa por andar inteiro.",
+    )
+    parser.add_argument(
         "--only",
         action="append",
         metavar="ID",
@@ -247,7 +255,7 @@ def main():
     city = args.city
     city_dir = os.path.join(FULL_MAPS_DIR, city)
     curation = _load_json(os.path.join(city_dir, CURATION_FILE_NAME), "curadoria")
-    candidates_doc = _load_json(os.path.join(city_dir, "candidates.json"), "candidatas")
+    candidates_doc = _load_json(os.path.join(city_dir, args.candidates), "candidatas")
     candidates_by_id = {c["id"]: c for c in candidates_doc["candidates"]}
 
     dump = _load_json(os.path.join(RAW_MAPS_DIR, f"{city}.raw.json"), "dump OTBM")

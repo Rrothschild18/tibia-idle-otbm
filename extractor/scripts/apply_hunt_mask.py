@@ -38,6 +38,11 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("hunt_id")
     parser.add_argument("--tibia-idle-dir")
+    parser.add_argument(
+        "--slug",
+        help="slug da pasta de uma hunt que ainda NÃO tem bundle publicado — é o caso do "
+        "split de andar feito no editor. Sem isto, o slug é descoberto no bundle.",
+    )
     parser.add_argument("--no-build", action="store_true", help="só recorta, não roda build_map.js")
     args = parser.parse_args()
 
@@ -63,15 +68,23 @@ def main() -> None:
 
     tibia_idle = paths.TIBIA_IDLE.require(args.tibia_idle_dir)
     assets_dir = os.path.join(tibia_idle, "apps", "tibia-idle-front", "public", "assets")
-    slug = _bundle_slug(assets_dir, args.hunt_id)
-    with open(os.path.join(assets_dir, f"{args.hunt_id}_{slug}-sprites-v6", "map.json"), encoding="utf-8") as h:
-        bundle_map = json.load(h)
-    b = bundle_map["bounds"]
+    # Hunt nascida de split de andar ainda não tem bundle: o slug vem por flag e
+    # não há start pra ler. Fora desse caso, os dois saem do bundle publicado.
+    slug = args.slug or _bundle_slug(assets_dir, args.hunt_id)
     # entrada: a editada no editor (overrides, coord de mundo) tem prioridade;
-    # senão o start do bundle.
+    # senão o start do bundle — e, numa hunt sem bundle, o centro da máscara,
+    # que o ajuste logo abaixo encosta num tile que existe de verdade.
     if mask.get("entrance"):
         entrance = list(mask["entrance"])
+    elif args.slug:
+        entrance = [(min(xs) + max(xs)) // 2, (min(ys) + max(ys)) // 2, min(floors)]
     else:
+        with open(
+            os.path.join(assets_dir, f"{args.hunt_id}_{slug}-sprites-v6", "map.json"),
+            encoding="utf-8",
+        ) as handle:
+            bundle_map = json.load(handle)
+        b = bundle_map["bounds"]
         start = bundle_map.get("start") or {"x": 0, "y": 0, "z": min(floors)}
         entrance = [b["minX"] + start["x"], b["minY"] + start["y"], start["z"]]
     if (entrance[0], entrance[1]) not in mask_by_floor.get(entrance[2], set()):
