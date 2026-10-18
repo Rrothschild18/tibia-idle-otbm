@@ -100,12 +100,28 @@ def main() -> None:
         data = handle.read()
     header = otbm_stream.map_header(data)
 
+    # O fundo. Os andares que o cliente enxerga **por baixo** da máscara entram
+    # na geometria com a silhueta 2D dela, e ficam fora do spawn: hunt de um
+    # andar — e todo fork, que é sempre de um andar — saía sem chão embaixo, e o
+    # front desenhava vazio no lugar. A régua é a mesma que
+    # `build_curated_hunts.crop_floors_for` já aplicava no caminho da curadoria
+    # (`floor-visibility.ts`: acima do solo enxerga até o nível do mar, no
+    # subsolo dois andares abaixo); o que faltava era aplicá-la aqui.
+    #
+    # Andar **acima** do mais raso da máscara nunca volta, porque o fundo só
+    # desce. Andar excluído que caia abaixo dele volta como cenário, sem bicho:
+    # é o que tira o vazio sem ressuscitar a hunt que você tirou de lá.
+    crop_floors = bch.crop_floors_for(floors)
+    backdrop = sorted(crop_floors - floors)
     hunt = {"id": args.hunt_id, "slug": slug, "folder": f"{args.hunt_id}_{slug}", "name": args.hunt_id}
     result = bch.write_hunt_map(
-        city, hunt, data, header, box, floors, entrance=tuple(entrance),
-        tile_in_floor=lambda x, y, z: (x, y) in mask_by_floor.get(z, set()),
+        city, hunt, data, header, box, crop_floors, entrance=tuple(entrance),
+        spawn_floors=floors,
+        tile_in_floor=lambda x, y, z: (x, y) in (mask_by_floor[z] if z in mask_by_floor else union),
     )
     print(f"[OK] re-corte pela máscara: {result['tiles']} tiles ({len(union)} na máscara), andares {sorted(floors)}")
+    if backdrop:
+        print(f"     fundo (geometria, sem bicho): andares {backdrop}")
     if not result["marked"]:
         sys.exit("error: entrada fora do recorte — sem marcador de start")
 
