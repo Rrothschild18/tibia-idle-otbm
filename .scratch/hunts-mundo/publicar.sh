@@ -4,7 +4,7 @@
 set -euo pipefail
 cd /home/rroth/Projects/tibia-idle-otbm
 city="$1"
-uv run python extractor/scripts/build_curated_hunts.py "$city" --candidates candidates-full.json
+uv run python extractor/scripts/build_curated_hunts.py "$city" --candidates candidates-full.json --all-spawns --margin 24
 # As pastas de recorte nascem em maps/; ready-maps/ é saída do build_map.js.
 for dir in extractor/maps/"$city"/*/; do
   folder="$(basename "$dir")"

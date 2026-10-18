@@ -236,6 +236,13 @@ def main():
     parser.add_argument("--margin", type=int, default=curated_hunts.DEFAULT_MARGIN_TILES)
     parser.add_argument("--canary-dir")
     parser.add_argument(
+        "--all-spawns",
+        action="store_true",
+        help="não filtra spawn por candidata: fica todo monstro que cai na caixa e nos "
+        "andares da hunt. É o que o re-corte por máscara já faz, e o que faz uma hunt de "
+        "vários andares nascer com bicho em todos eles.",
+    )
+    parser.add_argument(
         "--candidates",
         default="candidates.json",
         metavar="ARQUIVO",
@@ -390,9 +397,14 @@ def main():
                     None,
                 )
 
+        # A lista branca de spawn vem das candidatas, e é ela que faz uma hunt de
+        # três andares nascer com bicho só no andar da candidata: os outros
+        # andares entram na geometria e saem vazios. `--all-spawns` desliga o
+        # filtro, igual ao caminho de placa (`from_sign`) e ao re-corte por
+        # máscara, que leva tudo que cai na caixa.
         chosen_spawns = (
             None
-            if from_sign
+            if from_sign or args.all_spawns
             else {
                 (spawn["x"], spawn["y"], spawn["z"], spawn["name"])
                 for spawn in curated_hunts.spawns_of(members)

@@ -19,6 +19,7 @@ import os
 HERE = os.path.dirname(os.path.abspath(__file__))
 EXTRACTOR = os.path.join(HERE, "..", "..", "extractor")
 FIRST_ID = 101
+MAX_FLOOR = 15
 
 
 def read(path):
@@ -153,11 +154,18 @@ def main():
         while name in used_names:
             name = f"{name} ({candidate['component']})"
         used_names.add(name)
+        # Andar da candidata mais um acima e um abaixo: a candidata é de um andar
+        # só, e hunt de um andar só não dá pra analisar — o bicho bom está no
+        # andar de cima metade das vezes, e sem ele no recorte não há o que
+        # pintar no editor. Com `--all-spawns` no recorte, os três vêm com
+        # monstro.
+        floor = candidate["floor"]
+        floors = [z for z in (floor - 1, floor, floor + 1) if 0 <= z <= MAX_FLOOR]
         hunts.append(
             {
                 "id": f"{args.city}-HUNT-{FIRST_ID + offset:04d}",
                 "name": name,
-                "floors": [candidate["floor"]],
+                "floors": floors,
                 "candidateIds": [candidate["id"]],
                 "species": None,
                 "creatures": candidate["creatures"],
