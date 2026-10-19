@@ -178,6 +178,11 @@ def main() -> None:
 
             injected = 0
             for a in added:
+                # Cravado em andar excluído não entra: o andar não é da hunt, e
+                # injetar o spawn dele punha de volta o bicho que a exclusão
+                # acabou de tirar.
+                if int(a["worldZ"]) in excluded_floors:
+                    continue
                 oid = str(a["outfitId"])
                 if oid not in defs and oid in src_defs:
                     defs[oid] = src_defs[oid]
