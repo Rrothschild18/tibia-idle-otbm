@@ -1,0 +1,642 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32758" centery="31270" centerz="6" radius="2">
+		<monster name="Elf Arcanist" x="1" y="-1" z="6" spawntime="90" />
+		<monster name="Elf Scout" x="-2" y="0" z="6" spawntime="60" />
+		<monster name="Elf Arcanist" x="0" y="2" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32754" centery="31276" centerz="6" radius="2">
+		<monster name="Elf Scout" x="1" y="-2" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32771" centery="31279" centerz="6" radius="2">
+		<monster name="Elf Arcanist" x="0" y="-2" z="6" spawntime="90" />
+		<monster name="Elf Arcanist" x="-2" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32831" centery="31283" centerz="6" radius="1">
+		<monster name="Smuggler" x="0" y="-1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32831" centery="31287" centerz="6" radius="1">
+		<monster name="Amazon" x="0" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32768" centery="31289" centerz="6" radius="2">
+		<monster name="Elf Arcanist" x="-1" y="-2" z="6" spawntime="90" />
+		<monster name="Elf Arcanist" x="0" y="-2" z="6" spawntime="90" />
+		<monster name="Elf Scout" x="1" y="2" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32841" centery="31289" centerz="6" radius="3">
+		<monster name="Bandit" x="0" y="-3" z="6" spawntime="90" />
+		<monster name="Bandit" x="-2" y="2" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32831" centery="31294" centerz="6" radius="1">
+		<monster name="Smuggler" x="-1" y="-1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32758" centery="31295" centerz="6" radius="2">
+		<monster name="Elf Arcanist" x="0" y="-2" z="6" spawntime="90" />
+		<monster name="Elf Arcanist" x="1" y="2" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32845" centery="31300" centerz="6" radius="2">
+		<monster name="Bandit" x="-1" y="-1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32812" centery="31301" centerz="6" radius="1">
+		<monster name="Smuggler" x="1" y="1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32839" centery="31302" centerz="6" radius="2">
+		<monster name="Barbarian Skullhunter" x="2" y="-1" z="6" spawntime="90" />
+		<monster name="Amazon" x="-1" y="2" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32803" centery="31305" centerz="6" radius="1">
+		<monster name="Smuggler" x="-1" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32818" centery="31306" centerz="6" radius="1">
+		<monster name="Amazon" x="-1" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32799" centery="31310" centerz="6" radius="1">
+		<monster name="Mad Scientist" x="-1" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32851" centery="31311" centerz="6" radius="2">
+		<monster name="Amazon" x="1" y="-1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32827" centery="31312" centerz="6" radius="1">
+		<monster name="Amazon" x="-1" y="1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32839" centery="31312" centerz="6" radius="3">
+		<monster name="Barbarian Headsplitter" x="-1" y="-2" z="6" spawntime="90" />
+		<monster name="Valkyrie" x="-2" y="1" z="6" spawntime="90" />
+		<monster name="Hunter" x="2" y="2" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32817" centery="31313" centerz="6" radius="1">
+		<monster name="Barbarian Skullhunter" x="0" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32793" centery="31319" centerz="6" radius="1">
+		<monster name="Gladiator" x="1" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32800" centery="31321" centerz="6" radius="1">
+		<monster name="Barbarian Skullhunter" x="0" y="1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32811" centery="31321" centerz="6" radius="1">
+		<monster name="Valkyrie" x="-1" y="-1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32838" centery="31321" centerz="6" radius="3">
+		<monster name="Smuggler" x="1" y="-3" z="6" spawntime="90" />
+		<monster name="Smuggler" x="-1" y="0" z="6" spawntime="90" />
+		<monster name="Valkyrie" x="-2" y="3" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32857" centery="31323" centerz="6" radius="3">
+		<monster name="Bandit" x="0" y="-3" z="6" spawntime="90" />
+		<monster name="Smuggler" x="3" y="0" z="6" spawntime="90" />
+		<monster name="Bandit" x="-3" y="1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32868" centery="31323" centerz="6" radius="3">
+		<monster name="Smuggler" x="2" y="-3" z="6" spawntime="90" />
+		<monster name="Smuggler" x="0" y="2" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32818" centery="31324" centerz="6" radius="1">
+		<monster name="Valkyrie" x="-1" y="1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32826" centery="31326" centerz="6" radius="1">
+		<monster name="Smuggler" x="-1" y="1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32818" centery="31335" centerz="6" radius="2">
+		<monster name="Smuggler" x="1" y="-1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32853" centery="31341" centerz="6" radius="1">
+		<monster name="Smuggler" x="0" y="-1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32841" centery="31344" centerz="6" radius="1">
+		<monster name="Smuggler" x="0" y="-1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32810" centery="31345" centerz="6" radius="1">
+		<monster name="Gang Member" x="1" y="1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32805" centery="31349" centerz="6" radius="1">
+		<monster name="Pirate Corsair" x="1" y="1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32853" centery="31353" centerz="6" radius="2">
+		<monster name="Gang Member" x="-1" y="1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32799" centery="31354" centerz="6" radius="1">
+		<monster name="Gang Member" x="-1" y="0" z="6" spawntime="90" />
+		<monster name="Gang Member" x="-1" y="1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32842" centery="31354" centerz="6" radius="2">
+		<monster name="Monk" x="0" y="1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32831" centery="31355" centerz="6" radius="2">
+		<monster name="Bandit" x="-2" y="0" z="6" spawntime="90" />
+		<monster name="Smuggler" x="1" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32854" centery="31362" centerz="6" radius="2">
+		<monster name="Bandit" x="2" y="-2" z="6" spawntime="90" />
+		<monster name="Bandit" x="-2" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32800" centery="31365" centerz="6" radius="2">
+		<monster name="Gang Member" x="-1" y="1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32792" centery="31366" centerz="6" radius="2">
+		<monster name="Gang Member" x="1" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32870" centery="31255" centerz="7" radius="1">
+		<monster name="Bandit" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32874" centery="31255" centerz="7" radius="1">
+		<monster name="Rat" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32883" centery="31255" centerz="7" radius="1">
+		<monster name="Dog" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32879" centery="31256" centerz="7" radius="1">
+		<monster name="Amazon" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32877" centery="31260" centerz="7" radius="1">
+		<monster name="Bug" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32886" centery="31261" centerz="7" radius="2">
+		<monster name="Bug" x="-1" y="2" z="7" spawntime="90" />
+		<monster name="Cat" x="1" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32873" centery="31262" centerz="7" radius="1">
+		<monster name="Rat" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32894" centery="31262" centerz="7" radius="2">
+		<monster name="Amazon" x="-2" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32757" centery="31264" centerz="7" radius="2">
+		<monster name="Elf" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32854" centery="31264" centerz="7" radius="2">
+		<monster name="Spider" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32877" centery="31265" centerz="7" radius="1">
+		<monster name="Crazed Beggar" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32873" centery="31266" centerz="7" radius="1">
+		<monster name="Cat" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32757" centery="31270" centerz="7" radius="2">
+		<monster name="Elf" x="-2" y="-2" z="7" spawntime="90" />
+		<monster name="Elf Scout" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32886" centery="31270" centerz="7" radius="2">
+		<monster name="Bug" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32847" centery="31271" centerz="7" radius="2">
+		<monster name="Spider" x="1" y="-2" z="7" spawntime="90" />
+		<monster name="Spider" x="0" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32855" centery="31271" centerz="7" radius="2">
+		<monster name="Smuggler" x="-1" y="-2" z="7" spawntime="90" />
+		<monster name="Crazed Beggar" x="1" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32861" centery="31271" centerz="7" radius="2">
+		<monster name="Spider" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32874" centery="31271" centerz="7" radius="2">
+		<monster name="Smuggler" x="-1" y="1" z="7" spawntime="90" />
+		<monster name="Damaged Worker Golem" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32753" centery="31276" centerz="7" radius="2">
+		<monster name="Elf" x="2" y="-2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32830" centery="31276" centerz="7" radius="2">
+		<monster name="Wild Warrior" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32767" centery="31277" centerz="7" radius="3">
+		<monster name="Elf" x="-2" y="-2" z="7" spawntime="90" />
+		<monster name="Elf Scout" x="3" y="0" z="7" spawntime="90" />
+		<monster name="Elf" x="2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32869" centery="31277" centerz="7" radius="1">
+		<monster name="Dog" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32856" centery="31279" centerz="7" radius="1">
+		<monster name="Bandit" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32863" centery="31279" centerz="7" radius="1">
+		<monster name="Bandit" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32759" centery="31281" centerz="7" radius="1">
+		<monster name="Elf Scout" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32840" centery="31284" centerz="7" radius="2">
+		<monster name="Wild Warrior" x="2" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32875" centery="31284" centerz="7" radius="2">
+		<monster name="Wolf" x="0" y="-1" z="7" spawntime="90" />
+		<monster name="Wolf" x="0" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32885" centery="31284" centerz="7" radius="2">
+		<monster name="Dwarf" x="-2" y="-2" z="7" spawntime="90" />
+		<monster name="Bug" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32862" centery="31285" centerz="7" radius="1">
+		<monster name="Smuggler" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32831" centery="31287" centerz="7" radius="2">
+		<monster name="Amazon" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32854" centery="31288" centerz="7" radius="1">
+		<monster name="Centipede" x="-1" y="-1" z="7" spawntime="90" />
+		<monster name="Pig" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32767" centery="31289" centerz="7" radius="3">
+		<monster name="Elf" x="-2" y="-2" z="7" spawntime="90" />
+		<monster name="Elf Scout" x="2" y="-2" z="7" spawntime="90" />
+		<monster name="Elf" x="1" y="2" z="7" spawntime="90" />
+		<monster name="Elf Scout" x="1" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32893" centery="31289" centerz="7" radius="2">
+		<monster name="Pig" x="-1" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32886" centery="31290" centerz="7" radius="2">
+		<monster name="Dwarf" x="0" y="-1" z="7" spawntime="90" />
+		<monster name="Pig" x="-2" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32839" centery="31291" centerz="7" radius="2">
+		<monster name="Amazon" x="1" y="-1" z="7" spawntime="90" />
+		<monster name="Valkyrie" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32844" centery="31291" centerz="7" radius="1">
+		<monster name="Wild Warrior" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32869" centery="31291" centerz="7" radius="2">
+		<monster name="Wolf" x="-2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32757" centery="31293" centerz="7" radius="2">
+		<monster name="Elf" x="1" y="-2" z="7" spawntime="90" />
+		<monster name="Elf" x="-2" y="1" z="7" spawntime="90" />
+		<monster name="Elf Scout" x="2" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32863" centery="31293" centerz="7" radius="2">
+		<monster name="Dark Apprentice" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32831" centery="31294" centerz="7" radius="2">
+		<monster name="Gang Member" x="2" y="-2" z="7" spawntime="90" />
+		<monster name="Valkyrie" x="-2" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32886" centery="31297" centerz="7" radius="2">
+		<monster name="Crazed Beggar" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32894" centery="31297" centerz="7" radius="4">
+		<monster name="Crazed Beggar" x="-2" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32836" centery="31298" centerz="7" radius="1">
+		<monster name="Wild Warrior" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32869" centery="31298" centerz="7" radius="2">
+		<monster name="Wolf" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32813" centery="31300" centerz="7" radius="1">
+		<monster name="Amazon" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32822" centery="31300" centerz="7" radius="1">
+		<monster name="Gang Member" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32875" centery="31300" centerz="7" radius="3">
+		<monster name="Poison Spider" x="2" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32806" centery="31301" centerz="7" radius="1">
+		<monster name="Valkyrie" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32818" centery="31301" centerz="7" radius="1">
+		<monster name="Amazon" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32840" centery="31301" centerz="7" radius="1">
+		<monster name="Gang Member" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32880" centery="31303" centerz="7" radius="2">
+		<monster name="Dark Apprentice" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32886" centery="31303" centerz="7" radius="2">
+		<monster name="Dwarf" x="-1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32826" centery="31304" centerz="7" radius="1">
+		<monster name="Gang Member" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32802" centery="31305" centerz="7" radius="1">
+		<monster name="Amazon" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32869" centery="31306" centerz="7" radius="1">
+		<monster name="Poison Spider" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32892" centery="31306" centerz="7" radius="2">
+		<monster name="Bug" x="0" y="-2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32787" centery="31307" centerz="7" radius="2">
+		<monster name="Mad Scientist" x="1" y="0" z="7" spawntime="90" />
+		<monster name="Mad Scientist" x="2" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32851" centery="31307" centerz="7" radius="1">
+		<monster name="Gang Member" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32875" centery="31307" centerz="7" radius="1">
+		<monster name="Assassin" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32818" centery="31309" centerz="7" radius="1">
+		<monster name="Amazon" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32837" centery="31309" centerz="7" radius="1">
+		<monster name="Gang Member" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32884" centery="31309" centerz="7" radius="2">
+		<monster name="Spider" x="-2" y="-2" z="7" spawntime="90" />
+		<monster name="Crazed Beggar" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32793" centery="31312" centerz="7" radius="2">
+		<monster name="Mad Scientist" x="-1" y="-1" z="7" spawntime="90" />
+		<monster name="Mad Scientist" x="0" y="2" z="7" spawntime="90" />
+		<monster name="Gang Member" x="2" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32850" centery="31312" centerz="7" radius="1">
+		<monster name="Gang Member" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32817" centery="31313" centerz="7" radius="1">
+		<monster name="Gang Member" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32823" centery="31313" centerz="7" radius="1">
+		<monster name="Bandit" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32829" centery="31313" centerz="7" radius="1">
+		<monster name="Bandit" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32834" centery="31315" centerz="7" radius="1">
+		<monster name="Crazed Beggar" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32837" centery="31316" centerz="7" radius="1">
+		<monster name="Wild Warrior" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32843" centery="31316" centerz="7" radius="1">
+		<monster name="Hunter" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32852" centery="31316" centerz="7" radius="1">
+		<monster name="Gang Member" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32858" centery="31318" centerz="7" radius="1">
+		<monster name="Gang Member" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32867" centery="31318" centerz="7" radius="1">
+		<monster name="Bandit" x="-1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32793" centery="31319" centerz="7" radius="1">
+		<monster name="Gang Member" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32831" centery="31319" centerz="7" radius="1">
+		<monster name="Valkyrie" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32807" centery="31320" centerz="7" radius="1">
+		<monster name="Amazon" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32817" centery="31320" centerz="7" radius="1">
+		<monster name="Amazon" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32859" centery="31322" centerz="7" radius="1">
+		<monster name="Hunter" x="-1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32867" centery="31322" centerz="7" radius="1">
+		<monster name="Amazon" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32797" centery="31323" centerz="7" radius="1">
+		<monster name="Gang Member" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32823" centery="31323" centerz="7" radius="1">
+		<monster name="Valkyrie" x="-1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32830" centery="31325" centerz="7" radius="1">
+		<monster name="Gang Member" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32848" centery="31325" centerz="7" radius="1">
+		<monster name="Gang Member" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32853" centery="31325" centerz="7" radius="1">
+		<monster name="Gang Member" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32836" centery="31326" centerz="7" radius="1">
+		<monster name="Crazed Beggar" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32784" centery="31327" centerz="7" radius="2">
+		<monster name="Gang Member" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32825" centery="31327" centerz="7" radius="1">
+		<monster name="Valkyrie" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32868" centery="31327" centerz="7" radius="1">
+		<monster name="Bandit" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32820" centery="31328" centerz="7" radius="1">
+		<monster name="Crazed Beggar" x="0" y="-1" z="7" spawntime="90" />
+		<monster name="Crazed Beggar" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32791" centery="31329" centerz="7" radius="2">
+		<monster name="Gang Member" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32882" centery="31332" centerz="7" radius="2">
+		<monster name="Chicken" x="-1" y="-2" z="7" spawntime="90" />
+		<monster name="Gang Member" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32849" centery="31333" centerz="7" radius="1">
+		<monster name="Gang Member" x="1" y="-1" z="7" spawntime="90" />
+		<monster name="Gang Member" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32892" centery="31333" centerz="7" radius="1">
+		<monster name="Larva" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32863" centery="31334" centerz="7" radius="1">
+		<monster name="Crocodile" x="-1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32779" centery="31335" centerz="7" radius="2">
+		<monster name="Gang Member" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32837" centery="31337" centerz="7" radius="1">
+		<monster name="Gang Member" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32829" centery="31338" centerz="7" radius="1">
+		<monster name="Hunter" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32863" centery="31338" centerz="7" radius="1">
+		<monster name="Bandit" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32796" centery="31339" centerz="7" radius="1">
+		<monster name="Amazon" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32881" centery="31339" centerz="7" radius="3">
+		<monster name="Crazed Beggar" x="2" y="-3" z="7" spawntime="90" />
+		<monster name="Rat" x="0" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32893" centery="31339" centerz="7" radius="3">
+		<monster name="Crazed Beggar" x="-3" y="-1" z="7" spawntime="90" />
+		<monster name="Rat" x="-2" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32854" centery="31342" centerz="7" radius="2">
+		<monster name="Amazon" x="-2" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32860" centery="31342" centerz="7" radius="1">
+		<monster name="Crocodile" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32822" centery="31343" centerz="7" radius="1">
+		<monster name="Goblin Assassin" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32778" centery="31344" centerz="7" radius="2">
+		<monster name="Hunter" x="2" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32888" centery="31344" centerz="7" radius="2">
+		<monster name="Cat" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32800" centery="31346" centerz="7" radius="3">
+		<monster name="Amazon" x="1" y="-3" z="7" spawntime="90" />
+		<monster name="Nomad" x="-2" y="0" z="7" spawntime="90" />
+		<monster name="Hunter" x="2" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32840" centery="31346" centerz="7" radius="2">
+		<monster name="Amazon" x="2" y="-2" z="7" spawntime="90" />
+		<monster name="Hunter" x="-2" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32882" centery="31346" centerz="7" radius="2">
+		<monster name="Rat" x="-1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32850" centery="31347" centerz="7" radius="2">
+		<monster name="Amazon" x="0" y="-2" z="7" spawntime="90" />
+		<monster name="Nomad" x="-2" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32833" centery="31348" centerz="7" radius="2">
+		<monster name="Amazon" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32858" centery="31348" centerz="7" radius="2">
+		<monster name="Nomad" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32787" centery="31350" centerz="7" radius="1">
+		<monster name="Gang Member" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32820" centery="31352" centerz="7" radius="1">
+		<monster name="Amazon" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32884" centery="31352" centerz="7" radius="2">
+		<monster name="Poison Spider" x="1" y="-2" z="7" spawntime="90" />
+		<monster name="Poison Spider" x="-1" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32852" centery="31353" centerz="7" radius="2">
+		<monster name="Nomad" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32798" centery="31355" centerz="7" radius="2">
+		<monster name="Elf" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32787" centery="31356" centerz="7" radius="1">
+		<monster name="Crocodile" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32806" centery="31357" centerz="7" radius="4">
+		<monster name="Nomad" x="0" y="-4" z="7" spawntime="90" />
+		<monster name="Amazon" x="4" y="-2" z="7" spawntime="90" />
+		<monster name="Nomad" x="0" y="2" z="7" spawntime="90" />
+		<monster name="Nomad" x="-4" y="4" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32837" centery="31358" centerz="7" radius="1">
+		<monster name="Gang Member" x="-1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32797" centery="31360" centerz="7" radius="1">
+		<monster name="Crocodile" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32826" centery="31360" centerz="7" radius="1">
+		<monster name="Goblin Assassin" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32842" centery="31360" centerz="7" radius="1">
+		<monster name="Nomad" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32833" centery="31361" centerz="7" radius="1">
+		<monster name="Amazon" x="-1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32787" centery="31364" centerz="7" radius="1">
+		<monster name="Crocodile" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32826" centery="31364" centerz="7" radius="1">
+		<monster name="Smuggler" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32848" centery="31364" centerz="7" radius="2">
+		<monster name="Amazon" x="0" y="-2" z="7" spawntime="90" />
+		<monster name="Nomad" x="0" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32799" centery="31365" centerz="7" radius="1">
+		<monster name="Gang Member" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32810" centery="31366" centerz="7" radius="1">
+		<monster name="Crocodile" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32816" centery="31366" centerz="7" radius="1">
+		<monster name="Smuggler" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32827" centery="31369" centerz="7" radius="1">
+		<monster name="Crocodile" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32777" centery="31255" centerz="8" radius="2">
+		<monster name="Centipede" x="2" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32763" centery="31256" centerz="8" radius="2">
+		<monster name="Cave Rat" x="1" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32823" centery="31257" centerz="8" radius="2">
+		<monster name="Cave Rat" x="-1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32804" centery="31259" centerz="8" radius="2">
+		<monster name="Cave Rat" x="0" y="-2" z="8" spawntime="90" />
+		<monster name="Cave Rat" x="2" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32783" centery="31260" centerz="8" radius="2">
+		<monster name="Cave Rat" x="1" y="-1" z="8" spawntime="90" />
+		<monster name="Cave Rat" x="1" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32838" centery="31260" centerz="8" radius="2">
+		<monster name="Cave Rat" x="-2" y="-1" z="8" spawntime="90" />
+		<monster name="Cave Rat" x="1" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32776" centery="31262" centerz="8" radius="2">
+		<monster name="Centipede" x="0" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32765" centery="31268" centerz="8" radius="2">
+		<monster name="Bug" x="-2" y="-1" z="8" spawntime="90" />
+		<monster name="Bug" x="2" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32783" centery="31269" centerz="8" radius="2">
+		<monster name="Cave Rat" x="2" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32854" centery="31272" centerz="8" radius="2">
+		<monster name="Damaged Worker Golem" x="2" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32861" centery="31272" centerz="8" radius="2">
+		<monster name="Damaged Worker Golem" x="1" y="-2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32783" centery="31278" centerz="8" radius="2">
+		<monster name="Cave Rat" x="1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32858" centery="31280" centerz="8" radius="2">
+		<monster name="Damaged Worker Golem" x="1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32783" centery="31286" centerz="8" radius="2">
+		<monster name="Cave Rat" x="1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32875" centery="31293" centerz="8" radius="3">
+		<monster name="Damaged Worker Golem" x="3" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32800" centery="31298" centerz="8" radius="2">
+		<monster name="Centipede" x="-1" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32796" centery="31311" centerz="8" radius="2">
+		<monster name="Centipede" x="2" y="0" z="8" spawntime="90" />
+		<monster name="Slime" x="-1" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32889" centery="31314" centerz="8" radius="3">
+		<monster name="Damaged Worker Golem" x="0" y="0" z="8" spawntime="90" />
+		<monster name="Worker Golem" x="-2" y="1" z="8" spawntime="90" />
+		<monster name="Damaged Worker Golem" x="2" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32889" centery="31321" centerz="8" radius="3">
+		<monster name="Damaged Worker Golem" x="0" y="-3" z="8" spawntime="90" />
+		<monster name="Damaged Worker Golem" x="2" y="-3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32784" centery="31325" centerz="8" radius="2">
+		<monster name="Slime" x="1" y="-2" z="8" spawntime="90" />
+		<monster name="Slime" x="-2" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32777" centery="31342" centerz="8" radius="2">
+		<monster name="Centipede" x="-1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32771" centery="31351" centerz="8" radius="2">
+		<monster name="Centipede" x="1" y="-1" z="8" spawntime="90" />
+	</monster>
+</monsters>

@@ -1,0 +1,341 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32602" centery="32840" centerz="8" radius="3">
+		<monster name="Corym Vanguard" x="2" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32623" centery="32840" centerz="8" radius="3">
+		<monster name="Corym Skirmisher" x="-1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32748" centery="32841" centerz="8" radius="4">
+		<monster name="Tarantula" x="-1" y="4" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32616" centery="32847" centerz="8" radius="3">
+		<monster name="Corym Skirmisher" x="-3" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32672" centery="32847" centerz="8" radius="3">
+		<monster name="Corym Vanguard" x="1" y="-3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32602" centery="32854" centerz="8" radius="3">
+		<monster name="Corym Charlatan" x="2" y="-3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32651" centery="32854" centerz="8" radius="3">
+		<monster name="Corym Skirmisher" x="0" y="-3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32672" centery="32854" centerz="8" radius="3">
+		<monster name="Corym Skirmisher" x="-1" y="-2" z="8" spawntime="90" />
+		<monster name="Corym Charlatan" x="-1" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32689" centery="32857" centerz="8" radius="4">
+		<monster name="Dworc Venomsniper" x="-2" y="-2" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="2" y="-1" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="3" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32700" centery="32857" centerz="8" radius="4">
+		<monster name="Dworc Venomsniper" x="0" y="-2" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="0" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32609" centery="32861" centerz="8" radius="3">
+		<monster name="Corym Skirmisher" x="2" y="-3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32644" centery="32861" centerz="8" radius="3">
+		<monster name="Corym Skirmisher" x="2" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32693" centery="32867" centerz="8" radius="4">
+		<monster name="Dworc Venomsniper" x="3" y="-2" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="4" y="-2" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="-2" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32761" centery="32869" centerz="8" radius="6">
+		<monster name="Dworc Voodoomaster" x="1" y="-4" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="-2" y="-3" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="4" y="-2" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="-3" y="2" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="1" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32678" centery="32872" centerz="8" radius="7">
+		<monster name="Dworc Fleshhunter" x="0" y="-6" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="3" y="-4" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="-6" y="-3" z="8" spawntime="90" />
+		<monster name="Dworc Voodoomaster" x="4" y="0" z="8" spawntime="90" />
+		<monster name="Centipede" x="7" y="0" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="-6" y="2" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="-2" y="3" z="8" spawntime="90" />
+		<monster name="Centipede" x="7" y="3" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="-4" y="4" z="8" spawntime="90" />
+		<monster name="Dworc Voodoomaster" x="0" y="4" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32712" centery="32874" centerz="8" radius="7">
+		<monster name="Dworc Fleshhunter" x="-5" y="-6" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="0" y="-5" z="8" spawntime="90" />
+		<monster name="Dworc Voodoomaster" x="-4" y="-4" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="-6" y="-2" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="1" y="-2" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="-1" y="-1" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="5" y="-1" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="3" y="1" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="4" y="1" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="3" y="2" z="8" spawntime="90" />
+		<monster name="Dworc Voodoomaster" x="-3" y="3" z="8" spawntime="90" />
+		<monster name="Dworc Voodoomaster" x="4" y="3" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="-7" y="4" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="2" y="5" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="2" y="6" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32632" centery="32876" centerz="8" radius="5">
+		<monster name="Dworc Venomsniper" x="0" y="-4" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="2" y="-4" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="-5" y="-2" z="8" spawntime="90" />
+		<monster name="Dworc Voodoomaster" x="5" y="-2" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="3" y="0" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="4" y="1" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="2" y="2" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="-4" y="3" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="-1" y="4" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="0" y="5" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32695" centery="32877" centerz="8" radius="4">
+		<monster name="Dworc Voodoomaster" x="-2" y="-2" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="1" y="-1" z="8" spawntime="90" />
+		<monster name="Dworc Voodoomaster" x="-1" y="1" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="3" y="1" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="3" y="4" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32654" centery="32882" centerz="8" radius="5">
+		<monster name="Dworc Venomsniper" x="0" y="-4" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="-3" y="-2" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="-3" y="0" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="4" y="0" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="0" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32631" centery="32885" centerz="8" radius="2">
+		<monster name="Centipede" x="-2" y="-1" z="8" spawntime="90" />
+		<monster name="Centipede" x="1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32745" centery="32885" centerz="8" radius="5">
+		<monster name="Dworc Voodoomaster" x="-2" y="-5" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="1" y="-5" z="8" spawntime="90" />
+		<monster name="Dworc Voodoomaster" x="4" y="-5" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="-4" y="-4" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="1" y="-4" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="-4" y="-1" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="4" y="-1" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="-1" y="2" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="-4" y="3" z="8" spawntime="90" />
+		<monster name="Dworc Voodoomaster" x="-1" y="4" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="1" y="4" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="-5" y="5" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="3" y="5" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32671" centery="32888" centerz="8" radius="4">
+		<monster name="Dworc Venomsniper" x="0" y="-3" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="3" y="-1" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="-4" y="1" z="8" spawntime="90" />
+		<monster name="Dworc Voodoomaster" x="-2" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32635" centery="32892" centerz="8" radius="2">
+		<monster name="Dworc Fleshhunter" x="-1" y="-2" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="-2" y="-1" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="1" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32690" centery="32893" centerz="8" radius="7">
+		<monster name="Dworc Fleshhunter" x="0" y="-5" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="2" y="-3" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="-5" y="1" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="2" y="2" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="3" y="3" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="-4" y="5" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="-6" y="6" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32768" centery="32895" centerz="8" radius="6">
+		<monster name="Centipede" x="-3" y="-4" z="8" spawntime="90" />
+		<monster name="Centipede" x="2" y="-2" z="8" spawntime="90" />
+		<monster name="Centipede" x="-3" y="0" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="-4" y="4" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="-5" y="6" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32641" centery="32897" centerz="8" radius="2">
+		<monster name="Dworc Venomsniper" x="-2" y="-2" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="0" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32652" centery="32898" centerz="8" radius="5">
+		<monster name="Dworc Venomsniper" x="0" y="-5" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="-5" y="-4" z="8" spawntime="90" />
+		<monster name="Dworc Voodoomaster" x="4" y="-3" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="5" y="-2" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="-4" y="-1" z="8" spawntime="90" />
+		<monster name="Dworc Voodoomaster" x="5" y="1" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="-4" y="3" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="0" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32710" centery="32898" centerz="8" radius="7">
+		<monster name="Dworc Venomsniper" x="0" y="-6" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="2" y="-3" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="2" y="-2" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="-5" y="-1" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="6" y="-1" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="-5" y="0" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="2" y="0" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="1" y="3" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="-3" y="4" z="8" spawntime="90" />
+		<monster name="Centipede" x="-1" y="6" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32672" centery="32901" centerz="8" radius="4">
+		<monster name="Centipede" x="1" y="-3" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="-2" y="-2" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="2" y="-1" z="8" spawntime="90" />
+		<monster name="Centipede" x="2" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32738" centery="32901" centerz="8" radius="4">
+		<monster name="Dworc Venomsniper" x="1" y="-4" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="3" y="-2" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="-1" y="-1" z="8" spawntime="90" />
+		<monster name="Dworc Voodoomaster" x="2" y="-1" z="8" spawntime="90" />
+		<monster name="Centipede" x="-4" y="1" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="2" y="1" z="8" spawntime="90" />
+		<monster name="Centipede" x="0" y="2" z="8" spawntime="90" />
+		<monster name="Centipede" x="-4" y="4" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32652" centery="32911" centerz="8" radius="5">
+		<monster name="Dworc Venomsniper" x="1" y="-4" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="-3" y="0" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="2" y="0" z="8" spawntime="90" />
+		<monster name="Dworc Voodoomaster" x="-5" y="2" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="2" y="2" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="3" y="5" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32760" centery="32911" centerz="8" radius="4">
+		<monster name="Dworc Fleshhunter" x="4" y="-1" z="8" spawntime="90" />
+		<monster name="Centipede" x="1" y="0" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="-1" y="2" z="8" spawntime="90" />
+		<monster name="Centipede" x="0" y="4" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32773" centery="32912" centerz="8" radius="6">
+		<monster name="Dworc Voodoomaster" x="2" y="-5" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="-3" y="-4" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="-1" y="-4" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="6" y="-4" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="3" y="-3" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="-4" y="-2" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="-4" y="-1" z="8" spawntime="90" />
+		<monster name="Dworc Voodoomaster" x="3" y="1" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="5" y="1" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="-4" y="3" z="8" spawntime="90" />
+		<monster name="Dworc Voodoomaster" x="0" y="4" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="4" y="4" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32682" centery="32913" centerz="8" radius="4">
+		<monster name="Dworc Fleshhunter" x="-2" y="-3" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="0" y="-2" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="2" y="-2" z="8" spawntime="90" />
+		<monster name="Centipede" x="3" y="1" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="3" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32697" centery="32913" centerz="8" radius="4">
+		<monster name="Dworc Fleshhunter" x="3" y="-3" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="0" y="-2" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="2" y="-1" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="-1" y="1" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="-4" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32713" centery="32913" centerz="8" radius="4">
+		<monster name="Dworc Fleshhunter" x="-3" y="-4" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="-3" y="-3" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="3" y="-2" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="1" y="-1" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="0" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32726" centery="32913" centerz="8" radius="4">
+		<monster name="Centipede" x="3" y="-4" z="8" spawntime="90" />
+		<monster name="Centipede" x="0" y="-3" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="-2" y="-1" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="3" y="2" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="0" y="4" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32742" centery="32914" centerz="8" radius="6">
+		<monster name="Dworc Fleshhunter" x="-4" y="-4" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="0" y="-4" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="3" y="-4" z="8" spawntime="90" />
+		<monster name="Dworc Voodoomaster" x="2" y="-2" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="4" y="0" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="-5" y="2" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="2" y="2" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="-1" y="4" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="-2" y="5" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32637" centery="32916" centerz="8" radius="5">
+		<monster name="Centipede" x="-2" y="-2" z="8" spawntime="90" />
+		<monster name="Centipede" x="3" y="-1" z="8" spawntime="90" />
+		<monster name="Centipede" x="1" y="2" z="8" spawntime="90" />
+		<monster name="Centipede" x="-4" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32668" centery="32917" centerz="8" radius="6">
+		<monster name="Dworc Voodoomaster" x="-3" y="-4" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="-1" y="-4" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="3" y="-4" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="-4" y="-3" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="4" y="-1" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="-4" y="0" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="6" y="0" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="-1" y="1" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="-5" y="2" z="8" spawntime="90" />
+		<monster name="Dworc Voodoomaster" x="3" y="3" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="-4" y="4" z="8" spawntime="90" />
+		<monster name="Centipede" x="-1" y="4" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32722" centery="32924" centerz="8" radius="4">
+		<monster name="Dworc Fleshhunter" x="-4" y="-2" z="8" spawntime="90" />
+		<monster name="Dworc Voodoomaster" x="-2" y="0" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="4" y="0" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="-4" y="2" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="-2" y="2" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="2" y="2" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="0" y="4" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32755" centery="32931" centerz="8" radius="6">
+		<monster name="Dworc Fleshhunter" x="-4" y="-6" z="8" spawntime="90" />
+		<monster name="Dworc Voodoomaster" x="2" y="-5" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="-4" y="-2" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="-3" y="-2" z="8" spawntime="90" />
+		<monster name="Centipede" x="5" y="-2" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="-5" y="-1" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="-3" y="-1" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="5" y="0" z="8" spawntime="90" />
+		<monster name="Dworc Voodoomaster" x="-6" y="1" z="8" spawntime="90" />
+		<monster name="Dworc Voodoomaster" x="4" y="1" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="-4" y="3" z="8" spawntime="90" />
+		<monster name="Centipede" x="-1" y="4" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="4" y="4" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="-2" y="5" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32692" centery="32935" centerz="8" radius="7">
+		<monster name="Dworc Venomsniper" x="-1" y="-7" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="0" y="-6" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="5" y="-5" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="-4" y="-3" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="3" y="-3" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="6" y="-3" z="8" spawntime="90" />
+		<monster name="Dworc Fleshhunter" x="-2" y="-2" z="8" spawntime="90" />
+		<monster name="Dworc Voodoomaster" x="-5" y="-1" z="8" spawntime="90" />
+		<monster name="Dworc Voodoomaster" x="7" y="-1" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="3" y="1" z="8" spawntime="90" />
+		<monster name="Dworc Voodoomaster" x="7" y="1" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="6" y="2" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="-6" y="3" z="8" spawntime="90" />
+		<monster name="Dworc Voodoomaster" x="-6" y="4" z="8" spawntime="90" />
+		<monster name="Centipede" x="-2" y="4" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="-4" y="6" z="8" spawntime="90" />
+		<monster name="Dworc Venomsniper" x="0" y="7" z="8" spawntime="90" />
+		<monster name="Centipede" x="1" y="7" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32720" centery="32935" centerz="8" radius="4">
+		<monster name="Centipede" x="0" y="-4" z="8" spawntime="90" />
+		<monster name="Centipede" x="0" y="-3" z="8" spawntime="90" />
+		<monster name="Centipede" x="0" y="-1" z="8" spawntime="90" />
+		<monster name="Centipede" x="2" y="0" z="8" spawntime="90" />
+		<monster name="Centipede" x="-3" y="1" z="8" spawntime="90" />
+		<monster name="Centipede" x="-1" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32678" centery="32966" centerz="8" radius="1">
+		<monster name="Quara Pincher Scout" x="0" y="0" z="8" spawntime="60" />
+	</monster>
+</monsters>

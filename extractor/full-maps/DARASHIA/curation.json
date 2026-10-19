@@ -1,0 +1,267 @@
+{
+  "city": "DARASHIA",
+  "area": "Northern Darama",
+  "subareas": [
+    452,
+    296,
+    64,
+    82,
+    66,
+    68,
+    217
+  ],
+  "hunts": [
+    {
+      "id": "DARASHIA-HUNT-0101",
+      "name": "Hyaena Lairs",
+      "floors": [
+        10,
+        11,
+        12
+      ],
+      "candidateIds": [
+        "DARASHIA-FULL-z11-140"
+      ],
+      "species": null,
+      "creatures": 276,
+      "extent": {
+        "minX": 33130,
+        "minY": 32339,
+        "maxX": 33211,
+        "maxY": 32541,
+        "centerX": 33170,
+        "centerY": 32440
+      },
+      "subareaId": 68,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "DARASHIA-HUNT-0102",
+      "name": "Diremaws — Northern Darama Desert z15",
+      "floors": [
+        14,
+        15
+      ],
+      "candidateIds": [
+        "DARASHIA-FULL-z15-6"
+      ],
+      "species": null,
+      "creatures": 222,
+      "extent": {
+        "minX": 33211,
+        "minY": 32262,
+        "maxX": 33370,
+        "maxY": 32375,
+        "centerX": 33290,
+        "centerY": 32318
+      },
+      "subareaId": 68,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "DARASHIA-HUNT-0103",
+      "name": "Terramites — Darashia City z9",
+      "floors": [
+        8,
+        9,
+        10
+      ],
+      "candidateIds": [
+        "DARASHIA-FULL-z09-121"
+      ],
+      "species": null,
+      "creatures": 54,
+      "extent": {
+        "minX": 33190,
+        "minY": 32389,
+        "maxX": 33241,
+        "maxY": 32471,
+        "centerX": 33215,
+        "centerY": 32430
+      },
+      "subareaId": 296,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "DARASHIA-HUNT-0104",
+      "name": "Rotworms — Northern Darama Desert z8",
+      "floors": [
+        7,
+        8,
+        9
+      ],
+      "candidateIds": [
+        "DARASHIA-FULL-z08-296"
+      ],
+      "species": null,
+      "creatures": 35,
+      "extent": {
+        "minX": 33109,
+        "minY": 32404,
+        "maxX": 33166,
+        "maxY": 32460,
+        "centerX": 33137,
+        "centerY": 32432
+      },
+      "subareaId": 68,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "DARASHIA-HUNT-0105",
+      "name": "Deeper Drefia",
+      "floors": [
+        9,
+        10,
+        11
+      ],
+      "candidateIds": [
+        "DARASHIA-FULL-z10-45"
+      ],
+      "species": null,
+      "creatures": 171,
+      "extent": {
+        "minX": 32960,
+        "minY": 32312,
+        "maxX": 33104,
+        "maxY": 32494,
+        "centerX": 33032,
+        "centerY": 32403
+      },
+      "subareaId": 66,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "DARASHIA-HUNT-0106",
+      "name": "Vampire Crypts",
+      "floors": [
+        10,
+        11,
+        12
+      ],
+      "candidateIds": [
+        "DARASHIA-FULL-z11-42"
+      ],
+      "species": null,
+      "creatures": 94,
+      "extent": {
+        "minX": 32966,
+        "minY": 32373,
+        "maxX": 33049,
+        "maxY": 32438,
+        "centerX": 33007,
+        "centerY": 32405
+      },
+      "subareaId": 68,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "DARASHIA-HUNT-0109",
+      "name": "Daramian Minotaur Pyramid",
+      "floors": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "candidateIds": [
+        "DARASHIA-FULL-z05-745",
+        "DARASHIA-FULL-z06-334",
+        "DARASHIA-FULL-z08-533",
+        "DARASHIA-FULL-z09-818",
+        "DARASHIA-FULL-z10-798",
+        "DARASHIA-FULL-z11-2175",
+        "DARASHIA-FULL-z11-1000",
+        "DARASHIA-FULL-z11-1688"
+      ],
+      "species": null,
+      "creatures": 71,
+      "extent": {
+        "minX": 33299,
+        "minY": 32277,
+        "maxX": 33315,
+        "maxY": 32293,
+        "centerX": 33307,
+        "centerY": 32285
+      },
+      "subareaId": 64,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "DARASHIA-HUNT-0110",
+      "name": "Dragon Lords — Northern Darama Desert",
+      "floors": [
+        10,
+        11,
+        12
+      ],
+      "candidateIds": [
+        "DARASHIA-FULL-z10-309",
+        "DARASHIA-FULL-z11-165",
+        "DARASHIA-FULL-z12-1270"
+      ],
+      "species": null,
+      "creatures": 47,
+      "extent": {
+        "minX": 33196,
+        "minY": 32202,
+        "maxX": 33269,
+        "maxY": 32311,
+        "centerX": 33232,
+        "centerY": 32256
+      },
+      "subareaId": 68,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "DARASHIA-HUNT-0111",
+      "name": "Drefia Wyrm Caves",
+      "floors": [
+        13,
+        14
+      ],
+      "candidateIds": [
+        "DARASHIA-FULL-z13-193",
+        "DARASHIA-FULL-z14-135"
+      ],
+      "species": null,
+      "creatures": 114,
+      "extent": {
+        "minX": 33040,
+        "minY": 32350,
+        "maxX": 33109,
+        "maxY": 32427,
+        "centerX": 33074,
+        "centerY": 32388
+      },
+      "subareaId": 68,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "DARASHIA-HUNT-0118",
+      "name": "Putrid Mummies — Caverna Exanima",
+      "floors": [
+        11,
+        12
+      ],
+      "candidateIds": [
+        "DARASHIA-FULL-z12-73",
+        "DARASHIA-FULL-z11-25"
+      ],
+      "species": null,
+      "creatures": 140,
+      "extent": {
+        "minX": 33288,
+        "minY": 32244,
+        "maxX": 33493,
+        "maxY": 32317,
+        "centerX": 33390,
+        "centerY": 32280
+      },
+      "subareaId": null,
+      "walkTilesFromTemple": null
+    }
+  ]
+}

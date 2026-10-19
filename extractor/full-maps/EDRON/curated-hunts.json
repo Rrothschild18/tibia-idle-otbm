@@ -1,0 +1,246 @@
+{
+  "city": "EDRON",
+  "area": "Edron",
+  "hunts": [
+    {
+      "id": "EDRON-HUNT-0101",
+      "type": "HUNT",
+      "name": "Spellreaper Inferniarchs — Azzilon Castle z10",
+      "slug": "spellreaper-inferniarchs-azzilon-castle-z10",
+      "folder": "EDRON-HUNT-0101_spellreaper-inferniarchs-azzilon-castle-z10",
+      "floors": [
+        9,
+        10,
+        11
+      ],
+      "cropFloors": [
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "candidateIds": [
+        "EDRON-FULL-z10-173"
+      ],
+      "creatures": 206,
+      "extent": {
+        "minX": 33774,
+        "minY": 32293,
+        "maxX": 33879,
+        "maxY": 32400,
+        "centerX": 33826,
+        "centerY": 32346
+      },
+      "subareaId": 504,
+      "entrance": {
+        "x": 33850,
+        "y": 32293,
+        "z": 10
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 63340,
+      "spawns": 557
+    },
+    {
+      "id": "EDRON-HUNT-0102",
+      "type": "HUNT",
+      "name": "Unholy Cemetery",
+      "slug": "unholy-cemetery",
+      "folder": "EDRON-HUNT-0102_unholy-cemetery",
+      "floors": [
+        6,
+        7,
+        8
+      ],
+      "cropFloors": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "candidateIds": [
+        "EDRON-FULL-z07-135"
+      ],
+      "creatures": 117,
+      "extent": {
+        "minX": 33096,
+        "minY": 31629,
+        "maxX": 33250,
+        "maxY": 31748,
+        "centerX": 33173,
+        "centerY": 31688
+      },
+      "subareaId": 63,
+      "entrance": {
+        "x": 33220,
+        "y": 31741,
+        "z": 7
+      },
+      "walkTilesFromTemple": 199,
+      "tiles": 125394,
+      "spawns": 327
+    },
+    {
+      "id": "EDRON-HUNT-0103",
+      "type": "HUNT",
+      "name": "Earth Elementals — Edron Surroundings z8",
+      "slug": "earth-elementals-edron-surroundings-z8",
+      "folder": "EDRON-HUNT-0103_earth-elementals-edron-surroundings-z8",
+      "floors": [
+        7,
+        8,
+        9
+      ],
+      "cropFloors": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "candidateIds": [
+        "EDRON-FULL-z08-417"
+      ],
+      "creatures": 17,
+      "extent": {
+        "minX": 33139,
+        "minY": 31701,
+        "maxX": 33173,
+        "maxY": 31754,
+        "centerX": 33156,
+        "centerY": 31727
+      },
+      "subareaId": 63,
+      "entrance": {
+        "x": 33153,
+        "y": 31730,
+        "z": 8
+      },
+      "walkTilesFromTemple": 285,
+      "tiles": 34017,
+      "spawns": 114
+    },
+    {
+      "id": "EDRON-HUNT-0104",
+      "type": "HUNT",
+      "name": "Rotworms — Edron Castle z9",
+      "slug": "rotworms-edron-castle-z9",
+      "folder": "EDRON-HUNT-0104_rotworms-edron-castle-z9",
+      "floors": [
+        8,
+        9,
+        10
+      ],
+      "cropFloors": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "candidateIds": [
+        "EDRON-FULL-z09-1464"
+      ],
+      "creatures": 10,
+      "extent": {
+        "minX": 33227,
+        "minY": 31827,
+        "maxX": 33242,
+        "maxY": 31855,
+        "centerX": 33234,
+        "centerY": 31841
+      },
+      "subareaId": 275,
+      "entrance": {
+        "x": 33240,
+        "y": 31836,
+        "z": 9
+      },
+      "walkTilesFromTemple": 254,
+      "tiles": 17291,
+      "spawns": 39
+    },
+    {
+      "id": "EDRON-HUNT-0105",
+      "type": "HUNT",
+      "name": "Cyclopss — Edron Surroundings z8",
+      "slug": "cyclopss-edron-surroundings-z8",
+      "folder": "EDRON-HUNT-0105_cyclopss-edron-surroundings-z8",
+      "floors": [
+        7,
+        8,
+        9
+      ],
+      "cropFloors": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "candidateIds": [
+        "EDRON-FULL-z08-13"
+      ],
+      "creatures": 81,
+      "extent": {
+        "minX": 33178,
+        "minY": 31655,
+        "maxX": 33302,
+        "maxY": 31730,
+        "centerX": 33240,
+        "centerY": 31692
+      },
+      "subareaId": 63,
+      "entrance": {
+        "x": 33245,
+        "y": 31696,
+        "z": 8
+      },
+      "walkTilesFromTemple": 249,
+      "tiles": 95469,
+      "spawns": 333
+    },
+    {
+      "id": "EDRON-HUNT-0106",
+      "type": "HUNT",
+      "name": "Edron Orc Cave",
+      "slug": "edron-orc-cave",
+      "folder": "EDRON-HUNT-0106_edron-orc-cave",
+      "floors": [
+        6,
+        7,
+        8
+      ],
+      "cropFloors": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "candidateIds": [
+        "EDRON-FULL-z07-422"
+      ],
+      "creatures": 49,
+      "extent": {
+        "minX": 33135,
+        "minY": 31848,
+        "maxX": 33183,
+        "maxY": 31909,
+        "centerX": 33159,
+        "centerY": 31878
+      },
+      "subareaId": 59,
+      "entrance": {
+        "x": 33150,
+        "y": 31848,
+        "z": 7
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 39548,
+      "spawns": 116
+    }
+  ]
+}

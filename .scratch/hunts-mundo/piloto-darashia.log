@@ -1,0 +1,30 @@
+[OK] 7 subáreas, 56,509 colunas de tile:
+        452  Northern Darama
+        296  Darashia City
+         64  Daramian Minotaur Pyramid
+         82  Ashta'daramai
+         66  Drefia
+         68  Northern Darama Desert
+        217  Lion's Rock
+[..] otservbr.otbm: 185 MB lidos
+[OK] recorte quadrado de 401 tiles de lado (máscara + 16 de folga)
+[..] --spawns-box: o monstro entra pela caixa quadrada, não pela máscara
+     100,000 áreas varridas, 0 tiles mantidos
+     200,000 áreas varridas, 0 tiles mantidos
+     300,000 áreas varridas, 0 tiles mantidos
+     400,000 áreas varridas, 0 tiles mantidos
+     500,000 áreas varridas, 0 tiles mantidos
+     600,000 áreas varridas, 0 tiles mantidos
+     700,000 áreas varridas, 0 tiles mantidos
+     800,000 áreas varridas, 19,929 tiles mantidos
+     900,000 áreas varridas, 663,056 tiles mantidos
+     1,000,000 áreas varridas, 964,236 tiles mantidos
+     1,100,000 áreas varridas, 964,236 tiles mantidos
+[OK] 964,236 tiles em 64,912 áreas, andares 0..15 -> /home/rroth/Projects/tibia-idle-otbm/extractor/full-maps/DARASHIA (122s)
+[OK] 3088 spawns (5339 criaturas), 36 NPCs, 76 casas, 1 towns
+[OK] 434 ids com floorchange e 17 escadas de mão lidos de /home/rroth/Projects/tibia-idle-otbm/extractor/vendor/canary/items.xml
+[OK] DARASHIA: 313 componentes (5258 criaturas), 81 órfãos -> /home/rroth/Projects/tibia-idle-otbm/extractor/full-maps/DARASHIA/candidates-full.json
+
+real	2m8.984s
+user	2m7.956s
+sys	0m0.657s

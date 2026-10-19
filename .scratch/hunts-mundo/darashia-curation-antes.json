@@ -1,0 +1,548 @@
+[
+  {
+    "id": "DARASHIA-HUNT-0101",
+    "name": "Hyaena Lairs",
+    "floors": [
+      10,
+      11,
+      12
+    ],
+    "extent": {
+      "minX": 33130,
+      "minY": 32346,
+      "maxX": 33211,
+      "maxY": 32526,
+      "centerX": 33170,
+      "centerY": 32436
+    },
+    "candidates": [
+      {
+        "id": "DARASHIA-FULL-z11-79",
+        "floor": 11,
+        "creatures": 276,
+        "extent": {
+          "minX": 33130,
+          "minY": 32339,
+          "maxX": 33211,
+          "maxY": 32541,
+          "centerX": 33170,
+          "centerY": 32440
+        },
+        "species": [
+          "Werehyaena",
+          "Werehyaena Shaman"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "DARASHIA-HUNT-0102",
+    "name": "Diremaws — Northern Darama Desert z15",
+    "floors": [
+      14,
+      15
+    ],
+    "extent": {
+      "minX": 33211,
+      "minY": 32262,
+      "maxX": 33342,
+      "maxY": 32375,
+      "centerX": 33276,
+      "centerY": 32318
+    },
+    "candidates": [
+      {
+        "id": "DARASHIA-FULL-z15-9",
+        "floor": 15,
+        "creatures": 198,
+        "extent": {
+          "minX": 33211,
+          "minY": 32262,
+          "maxX": 33342,
+          "maxY": 32375,
+          "centerX": 33276,
+          "centerY": 32318
+        },
+        "species": [
+          "Diremaw",
+          "Deepworm",
+          "Spit Nettle"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "DARASHIA-HUNT-0103",
+    "name": "Terramites — Darashia City z9",
+    "floors": [
+      8,
+      9,
+      10
+    ],
+    "extent": {
+      "minX": 33190,
+      "minY": 32389,
+      "maxX": 33241,
+      "maxY": 32471,
+      "centerX": 33215,
+      "centerY": 32430
+    },
+    "candidates": [
+      {
+        "id": "DARASHIA-FULL-z09-1",
+        "floor": 9,
+        "creatures": 54,
+        "extent": {
+          "minX": 33190,
+          "minY": 32389,
+          "maxX": 33241,
+          "maxY": 32471,
+          "centerX": 33215,
+          "centerY": 32430
+        },
+        "species": [
+          "Terramite"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "DARASHIA-HUNT-0104",
+    "name": "Rotworms — Northern Darama Desert z8",
+    "floors": [
+      7,
+      8,
+      9
+    ],
+    "extent": {
+      "minX": 33109,
+      "minY": 32404,
+      "maxX": 33166,
+      "maxY": 32460,
+      "centerX": 33137,
+      "centerY": 32432
+    },
+    "candidates": [
+      {
+        "id": "DARASHIA-FULL-z08-103",
+        "floor": 8,
+        "creatures": 35,
+        "extent": {
+          "minX": 33109,
+          "minY": 32404,
+          "maxX": 33166,
+          "maxY": 32460,
+          "centerX": 33137,
+          "centerY": 32432
+        },
+        "species": [
+          "Rotworm"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "DARASHIA-HUNT-0105",
+    "name": "Deeper Drefia",
+    "floors": [
+      9,
+      10,
+      11
+    ],
+    "extent": {
+      "minX": 32960,
+      "minY": 32312,
+      "maxX": 33104,
+      "maxY": 32494,
+      "centerX": 33032,
+      "centerY": 32403
+    },
+    "candidates": [
+      {
+        "id": "DARASHIA-FULL-z10-6",
+        "floor": 10,
+        "creatures": 171,
+        "extent": {
+          "minX": 32960,
+          "minY": 32312,
+          "maxX": 33104,
+          "maxY": 32494,
+          "centerX": 33032,
+          "centerY": 32403
+        },
+        "species": [
+          "Necromancer",
+          "Demon Skeleton",
+          "Priestess"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "DARASHIA-HUNT-0106",
+    "name": "Vampire Crypts",
+    "floors": [
+      10,
+      11,
+      12
+    ],
+    "extent": {
+      "minX": 32966,
+      "minY": 32373,
+      "maxX": 33049,
+      "maxY": 32438,
+      "centerX": 33007,
+      "centerY": 32405
+    },
+    "candidates": [
+      {
+        "id": "DARASHIA-FULL-z11-19",
+        "floor": 11,
+        "creatures": 94,
+        "extent": {
+          "minX": 32966,
+          "minY": 32373,
+          "maxX": 33049,
+          "maxY": 32438,
+          "centerX": 33007,
+          "centerY": 32405
+        },
+        "species": [
+          "Demon Skeleton",
+          "Necromancer",
+          "Ghoul"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "DARASHIA-HUNT-0109",
+    "name": "Daramian Minotaur Pyramid",
+    "floors": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "extent": {
+      "minX": 33299,
+      "minY": 32277,
+      "maxX": 33315,
+      "maxY": 32293,
+      "centerX": 33307,
+      "centerY": 32285
+    },
+    "candidates": [
+      {
+        "id": "DARASHIA-FULL-z05-293",
+        "floor": 5,
+        "creatures": 5,
+        "extent": {
+          "minX": 33303,
+          "minY": 32280,
+          "maxX": 33310,
+          "maxY": 32290,
+          "centerX": 33306,
+          "centerY": 32285
+        },
+        "species": [
+          "Minotaur"
+        ]
+      },
+      {
+        "id": "DARASHIA-FULL-z06-85",
+        "floor": 6,
+        "creatures": 8,
+        "extent": {
+          "minX": 33301,
+          "minY": 32279,
+          "maxX": 33313,
+          "maxY": 32293,
+          "centerX": 33307,
+          "centerY": 32286
+        },
+        "species": [
+          "Minotaur"
+        ]
+      },
+      {
+        "id": "DARASHIA-FULL-z08-244",
+        "floor": 8,
+        "creatures": 13,
+        "extent": {
+          "minX": 33302,
+          "minY": 32279,
+          "maxX": 33315,
+          "maxY": 32292,
+          "centerX": 33308,
+          "centerY": 32285
+        },
+        "species": [
+          "Minotaur",
+          "Minotaur Guard"
+        ]
+      },
+      {
+        "id": "DARASHIA-FULL-z09-219",
+        "floor": 9,
+        "creatures": 14,
+        "extent": {
+          "minX": 33299,
+          "minY": 32277,
+          "maxX": 33315,
+          "maxY": 32292,
+          "centerX": 33307,
+          "centerY": 32284
+        },
+        "species": [
+          "Minotaur Guard",
+          "Minotaur Archer"
+        ]
+      },
+      {
+        "id": "DARASHIA-FULL-z10-58",
+        "floor": 10,
+        "creatures": 15,
+        "extent": {
+          "minX": 33300,
+          "minY": 32277,
+          "maxX": 33314,
+          "maxY": 32293,
+          "centerX": 33307,
+          "centerY": 32285
+        },
+        "species": [
+          "Minotaur Guard",
+          "Minotaur Mage",
+          "Minotaur Archer"
+        ]
+      },
+      {
+        "id": "DARASHIA-FULL-z11-525",
+        "floor": 11,
+        "creatures": 5,
+        "extent": {
+          "minX": 33299,
+          "minY": 32277,
+          "maxX": 33305,
+          "maxY": 32286,
+          "centerX": 33302,
+          "centerY": 32281
+        },
+        "species": [
+          "Minotaur Mage"
+        ]
+      },
+      {
+        "id": "DARASHIA-FULL-z11-414",
+        "floor": 11,
+        "creatures": 6,
+        "extent": {
+          "minX": 33300,
+          "minY": 32289,
+          "maxX": 33310,
+          "maxY": 32293,
+          "centerX": 33305,
+          "centerY": 32291
+        },
+        "species": [
+          "Minotaur Archer",
+          "Minotaur Guard",
+          "Minotaur Mage"
+        ]
+      },
+      {
+        "id": "DARASHIA-FULL-z11-180",
+        "floor": 11,
+        "creatures": 5,
+        "extent": {
+          "minX": 33313,
+          "minY": 32287,
+          "maxX": 33315,
+          "maxY": 32293,
+          "centerX": 33314,
+          "centerY": 32290
+        },
+        "species": [
+          "Minotaur Guard",
+          "Minotaur Mage"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "DARASHIA-HUNT-0110",
+    "name": "Dragon Lords — Northern Darama Desert",
+    "floors": [
+      10,
+      11,
+      12
+    ],
+    "extent": {
+      "minX": 33200,
+      "minY": 32258,
+      "maxX": 33269,
+      "maxY": 32311,
+      "centerX": 33234,
+      "centerY": 32284
+    },
+    "candidates": [
+      {
+        "id": "DARASHIA-FULL-z10-129",
+        "floor": 10,
+        "creatures": 19,
+        "extent": {
+          "minX": 33201,
+          "minY": 32202,
+          "maxX": 33263,
+          "maxY": 32286,
+          "centerX": 33232,
+          "centerY": 32244
+        },
+        "species": [
+          "Dragon"
+        ]
+      },
+      {
+        "id": "DARASHIA-FULL-z11-53",
+        "floor": 11,
+        "creatures": 24,
+        "extent": {
+          "minX": 33196,
+          "minY": 32233,
+          "maxX": 33269,
+          "maxY": 32311,
+          "centerX": 33232,
+          "centerY": 32272
+        },
+        "species": [
+          "Dragon Lord"
+        ]
+      },
+      {
+        "id": "DARASHIA-FULL-z12-407",
+        "floor": 12,
+        "creatures": 4,
+        "extent": {
+          "minX": 33231,
+          "minY": 32273,
+          "maxX": 33237,
+          "maxY": 32281,
+          "centerX": 33234,
+          "centerY": 32277
+        },
+        "species": [
+          "Dragon Lord"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "DARASHIA-HUNT-0111",
+    "name": "Drefia Wyrm Caves",
+    "floors": [
+      13,
+      14
+    ],
+    "extent": {
+      "minX": 33040,
+      "minY": 32350,
+      "maxX": 33109,
+      "maxY": 32427,
+      "centerX": 33074,
+      "centerY": 32388
+    },
+    "candidates": [
+      {
+        "id": "DARASHIA-FULL-z13-111",
+        "floor": 13,
+        "creatures": 23,
+        "extent": {
+          "minX": 33058,
+          "minY": 32367,
+          "maxX": 33109,
+          "maxY": 32420,
+          "centerX": 33083,
+          "centerY": 32393
+        },
+        "species": [
+          "Wyrm"
+        ]
+      },
+      {
+        "id": "DARASHIA-FULL-z14-3",
+        "floor": 14,
+        "creatures": 91,
+        "extent": {
+          "minX": 33040,
+          "minY": 32350,
+          "maxX": 33107,
+          "maxY": 32427,
+          "centerX": 33073,
+          "centerY": 32388
+        },
+        "species": [
+          "Elder Wyrm",
+          "Wyrm"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "DARASHIA-HUNT-0118",
+    "name": "Putrid Mummies — Caverna Exanima",
+    "floors": [
+      11,
+      12
+    ],
+    "extent": {
+      "minX": 33288,
+      "minY": 32244,
+      "maxX": 33345,
+      "maxY": 32309,
+      "centerX": 33316,
+      "centerY": 32276
+    },
+    "candidates": [
+      {
+        "id": "DARASHIA-FULL-z12-241",
+        "floor": 12,
+        "creatures": 18,
+        "extent": {
+          "minX": 33288,
+          "minY": 32244,
+          "maxX": 33345,
+          "maxY": 32296,
+          "centerX": 33316,
+          "centerY": 32270
+        },
+        "species": [
+          "Giant Spider",
+          "Bonebeast",
+          "Putrid Mummy"
+        ]
+      },
+      {
+        "id": "DARASHIA-FULL-z11-357",
+        "floor": 11,
+        "creatures": 10,
+        "extent": {
+          "minX": 33330,
+          "minY": 32258,
+          "maxX": 33345,
+          "maxY": 32309,
+          "centerX": 33337,
+          "centerY": 32283
+        },
+        "species": [
+          "Bonebeast",
+          "Giant Spider",
+          "Putrid Mummy"
+        ]
+      }
+    ]
+  }
+]

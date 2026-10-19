@@ -1,0 +1,251 @@
+######## ABDENDRIEL
+ABDENDRIEL-HUNT-0101  z10   55 bichos   81 de lado  [mais densa]  Blemished Spawns — Ab'Dendriel Surroundings z10
+    Blemished Spawn x26, Eyeless Devourer x22, Afflicted Strider x7
+ABDENDRIEL-HUNT-0102  z11   50 bichos  111 de lado  [mais densa]  Hellgate
+    Troll x37, Troll Champion x13
+ABDENDRIEL-HUNT-0103  z 9   18 bichos   54 de lado  [espécie única]  Wasps — Ab'Dendriel City z9
+    Wasp x18
+ABDENDRIEL-HUNT-0104  z15   14 bichos   17 de lado  [espécie única]  Bugs — Ab'Dendriel City z15
+    Bug x14
+ABDENDRIEL-HUNT-0105  z 8   25 bichos   53 de lado  [wiki lvl 8+]  Ab'Dendriel Underground
+    Rotworm x7, Skeleton x6, Ghoul x1, Poison Spider x5
+ABDENDRIEL-HUNT-0106  z 8   24 bichos   18 de lado  [wiki lvl 19+]  Elvenbane
+    Orc x5, Orc Spearman x5, Orc Warrior x5, Minotaur x4
+
+[OK] 6 hunts -> /home/rroth/Projects/tibia-idle-otbm/.scratch/hunts-mundo/../../extractor/full-maps/ABDENDRIEL/curation.json
+[OK] 434 ids com floorchange e 17 escadas de mão lidos de /home/rroth/Projects/tibia-idle-otbm/extractor/vendor/canary/items.xml
+[OK] ABDENDRIEL-HUNT-0101    19966 tiles,  55 bichos, z[10]  SEM CAMINHO  Blemished Spawns — Ab'Dendriel Surroundings z10
+[OK] ABDENDRIEL-HUNT-0102    37092 tiles,  50 bichos, z[11]   templo+110  Hellgate
+[OK] ABDENDRIEL-HUNT-0103    11841 tiles,  18 bichos, z[9]   templo+168  Wasps — Ab'Dendriel City z9
+[OK] ABDENDRIEL-HUNT-0104     1345 tiles,  14 bichos, z[15]   templo+756  Bugs — Ab'Dendriel City z15
+[OK] ABDENDRIEL-HUNT-0105    13375 tiles,  25 bichos, z[8]   templo+144  Ab'Dendriel Underground
+[OK] ABDENDRIEL-HUNT-0106     3901 tiles,  24 bichos, z[8]   templo+204  Elvenbane
+
+[OK] 6 hunts -> /home/rroth/Projects/tibia-idle-otbm/extractor/full-maps/ABDENDRIEL/curated-hunts.json
+     pastas de mapa em /home/rroth/Projects/tibia-idle-otbm/extractor/maps/ABDENDRIEL
+
+=== ABDENDRIEL-HUNT-0101_blemished-spawns-ab-dendriel-surroundings-z10 ===
+✔ ABDENDRIEL-HUNT-0101_blemished-spawns-ab-dendriel-surroundings-z10.raw.json gerado
+[OK] 434 ids com floorchange e 17 escadas de mão lidos de /home/rroth/Projects/tibia-idle-otbm/extractor/vendor/canary/items.xml
+[OK] respawn.json gerado em /home/rroth/Projects/tibia-idle-otbm/extractor/ready-maps/ABDENDRIEL/ABDENDRIEL-HUNT-0101_blemished-spawns-ab-dendriel-surroundings-z10/monsters/respawn.json
+     3 defs de monstros | 55 spawns
+[OK] Mapa gerado em /home/rroth/Projects/tibia-idle-otbm/extractor/ready-maps/ABDENDRIEL/ABDENDRIEL-HUNT-0101_blemished-spawns-ab-dendriel-surroundings-z10/map.json
+     19966 tiles | 318 aparências | 2 folhas
+
+1/1 mapas gerados com sucesso.
+[OK] ABDENDRIEL-HUNT-0101_blemished-spawns-ab-dendriel-surroundings-z10: 4 copiados, 0 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/ABDENDRIEL-HUNT-0101_blemished-spawns-ab-dendriel-surroundings-z10-sprites-v6
+[OK] atlases/corpses/: 0 copiados, 2 já atualizados
+[OK] atlases/effects/: 0 copiados, 2 já atualizados
+[OK] atlases/items-animated/: 0 copiados, 16 já atualizados
+[OK] atlases/items-static/: 0 copiados, 8 já atualizados
+[OK] atlases/outfits/: 0 copiados, 2308 já atualizados
+[OK] atlases/player-outfits/: 0 copiados, 532 já atualizados
+[OK] atlases/pools/: 0 copiados, 2 já atualizados
+[OK] atlases/items-index.json: já atualizado
+[OK] minimapa de ABDENDRIEL: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/ABDENDRIEL
+[OK] minimapa de ANKRAHMUN: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/ANKRAHMUN
+[OK] minimapa de CARLIN: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/CARLIN
+[OK] minimapa de DARASHIA: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/DARASHIA
+[OK] minimapa de EDRON: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/EDRON
+[OK] minimapa de KAZORDOON: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/KAZORDOON
+[OK] minimapa de LIBERTYBAY: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/LIBERTYBAY
+[OK] minimapa de PORTHOPE: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/PORTHOPE
+[OK] minimapa de ROOK: 0 copiados, 15 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/ROOK
+[OK] minimapa de SVARGROND: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/SVARGROND
+[OK] minimapa de THAIS: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/THAIS
+[OK] minimapa de VENORE: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/VENORE
+[OK] minimapa de YALAHAR: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/YALAHAR
+[OK] minimapa de ZAO: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/ZAO
+[OK] candidatas de CARLIN: 0 arquivo(s) -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/new-hunts/CARLIN
+[OK] candidatas de KAZORDOON: 0 arquivo(s) -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/new-hunts/KAZORDOON
+[OK] candidatas de THAIS: 0 arquivo(s) -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/new-hunts/THAIS
+[OK] candidatas de VENORE: 0 arquivo(s) -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/new-hunts/VENORE
+
+=== ABDENDRIEL-HUNT-0102_hellgate ===
+✔ ABDENDRIEL-HUNT-0102_hellgate.raw.json gerado
+[OK] 434 ids com floorchange e 17 escadas de mão lidos de /home/rroth/Projects/tibia-idle-otbm/extractor/vendor/canary/items.xml
+[OK] respawn.json gerado em /home/rroth/Projects/tibia-idle-otbm/extractor/ready-maps/ABDENDRIEL/ABDENDRIEL-HUNT-0102_hellgate/monsters/respawn.json
+     2 defs de monstros | 50 spawns
+[OK] Mapa gerado em /home/rroth/Projects/tibia-idle-otbm/extractor/ready-maps/ABDENDRIEL/ABDENDRIEL-HUNT-0102_hellgate/map.json
+     37091 tiles | 370 aparências | 2 folhas
+
+1/1 mapas gerados com sucesso.
+[OK] ABDENDRIEL-HUNT-0102_hellgate: 4 copiados, 0 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/ABDENDRIEL-HUNT-0102_hellgate-sprites-v6
+[OK] atlases/corpses/: 0 copiados, 2 já atualizados
+[OK] atlases/effects/: 0 copiados, 2 já atualizados
+[OK] atlases/items-animated/: 0 copiados, 16 já atualizados
+[OK] atlases/items-static/: 0 copiados, 8 já atualizados
+[OK] atlases/outfits/: 0 copiados, 2308 já atualizados
+[OK] atlases/player-outfits/: 0 copiados, 532 já atualizados
+[OK] atlases/pools/: 0 copiados, 2 já atualizados
+[OK] atlases/items-index.json: já atualizado
+[OK] minimapa de ABDENDRIEL: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/ABDENDRIEL
+[OK] minimapa de ANKRAHMUN: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/ANKRAHMUN
+[OK] minimapa de CARLIN: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/CARLIN
+[OK] minimapa de DARASHIA: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/DARASHIA
+[OK] minimapa de EDRON: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/EDRON
+[OK] minimapa de KAZORDOON: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/KAZORDOON
+[OK] minimapa de LIBERTYBAY: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/LIBERTYBAY
+[OK] minimapa de PORTHOPE: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/PORTHOPE
+[OK] minimapa de ROOK: 0 copiados, 15 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/ROOK
+[OK] minimapa de SVARGROND: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/SVARGROND
+[OK] minimapa de THAIS: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/THAIS
+[OK] minimapa de VENORE: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/VENORE
+[OK] minimapa de YALAHAR: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/YALAHAR
+[OK] minimapa de ZAO: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/ZAO
+[OK] candidatas de CARLIN: 0 arquivo(s) -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/new-hunts/CARLIN
+[OK] candidatas de KAZORDOON: 0 arquivo(s) -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/new-hunts/KAZORDOON
+[OK] candidatas de THAIS: 0 arquivo(s) -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/new-hunts/THAIS
+[OK] candidatas de VENORE: 0 arquivo(s) -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/new-hunts/VENORE
+
+=== ABDENDRIEL-HUNT-0103_wasps-ab-dendriel-city-z9 ===
+✔ ABDENDRIEL-HUNT-0103_wasps-ab-dendriel-city-z9.raw.json gerado
+[OK] 434 ids com floorchange e 17 escadas de mão lidos de /home/rroth/Projects/tibia-idle-otbm/extractor/vendor/canary/items.xml
+[OK] respawn.json gerado em /home/rroth/Projects/tibia-idle-otbm/extractor/ready-maps/ABDENDRIEL/ABDENDRIEL-HUNT-0103_wasps-ab-dendriel-city-z9/monsters/respawn.json
+     1 defs de monstros | 18 spawns
+[OK] Mapa gerado em /home/rroth/Projects/tibia-idle-otbm/extractor/ready-maps/ABDENDRIEL/ABDENDRIEL-HUNT-0103_wasps-ab-dendriel-city-z9/map.json
+     11841 tiles | 248 aparências | 2 folhas
+
+1/1 mapas gerados com sucesso.
+[OK] ABDENDRIEL-HUNT-0103_wasps-ab-dendriel-city-z9: 4 copiados, 0 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/ABDENDRIEL-HUNT-0103_wasps-ab-dendriel-city-z9-sprites-v6
+[OK] atlases/corpses/: 0 copiados, 2 já atualizados
+[OK] atlases/effects/: 0 copiados, 2 já atualizados
+[OK] atlases/items-animated/: 0 copiados, 16 já atualizados
+[OK] atlases/items-static/: 0 copiados, 8 já atualizados
+[OK] atlases/outfits/: 0 copiados, 2308 já atualizados
+[OK] atlases/player-outfits/: 0 copiados, 532 já atualizados
+[OK] atlases/pools/: 0 copiados, 2 já atualizados
+[OK] atlases/items-index.json: já atualizado
+[OK] minimapa de ABDENDRIEL: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/ABDENDRIEL
+[OK] minimapa de ANKRAHMUN: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/ANKRAHMUN
+[OK] minimapa de CARLIN: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/CARLIN
+[OK] minimapa de DARASHIA: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/DARASHIA
+[OK] minimapa de EDRON: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/EDRON
+[OK] minimapa de KAZORDOON: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/KAZORDOON
+[OK] minimapa de LIBERTYBAY: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/LIBERTYBAY
+[OK] minimapa de PORTHOPE: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/PORTHOPE
+[OK] minimapa de ROOK: 0 copiados, 15 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/ROOK
+[OK] minimapa de SVARGROND: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/SVARGROND
+[OK] minimapa de THAIS: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/THAIS
+[OK] minimapa de VENORE: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/VENORE
+[OK] minimapa de YALAHAR: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/YALAHAR
+[OK] minimapa de ZAO: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/ZAO
+[OK] candidatas de CARLIN: 0 arquivo(s) -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/new-hunts/CARLIN
+[OK] candidatas de KAZORDOON: 0 arquivo(s) -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/new-hunts/KAZORDOON
+[OK] candidatas de THAIS: 0 arquivo(s) -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/new-hunts/THAIS
+[OK] candidatas de VENORE: 0 arquivo(s) -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/new-hunts/VENORE
+
+=== ABDENDRIEL-HUNT-0104_bugs-ab-dendriel-city-z15 ===
+✔ ABDENDRIEL-HUNT-0104_bugs-ab-dendriel-city-z15.raw.json gerado
+[OK] 434 ids com floorchange e 17 escadas de mão lidos de /home/rroth/Projects/tibia-idle-otbm/extractor/vendor/canary/items.xml
+[OK] respawn.json gerado em /home/rroth/Projects/tibia-idle-otbm/extractor/ready-maps/ABDENDRIEL/ABDENDRIEL-HUNT-0104_bugs-ab-dendriel-city-z15/monsters/respawn.json
+     1 defs de monstros | 14 spawns
+[OK] Mapa gerado em /home/rroth/Projects/tibia-idle-otbm/extractor/ready-maps/ABDENDRIEL/ABDENDRIEL-HUNT-0104_bugs-ab-dendriel-city-z15/map.json
+     1345 tiles | 34 aparências | 1 folhas
+
+1/1 mapas gerados com sucesso.
+[OK] ABDENDRIEL-HUNT-0104_bugs-ab-dendriel-city-z15: 3 copiados, 0 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/ABDENDRIEL-HUNT-0104_bugs-ab-dendriel-city-z15-sprites-v6
+[OK] atlases/corpses/: 0 copiados, 2 já atualizados
+[OK] atlases/effects/: 0 copiados, 2 já atualizados
+[OK] atlases/items-animated/: 0 copiados, 16 já atualizados
+[OK] atlases/items-static/: 0 copiados, 8 já atualizados
+[OK] atlases/outfits/: 0 copiados, 2308 já atualizados
+[OK] atlases/player-outfits/: 0 copiados, 532 já atualizados
+[OK] atlases/pools/: 0 copiados, 2 já atualizados
+[OK] atlases/items-index.json: já atualizado
+[OK] minimapa de ABDENDRIEL: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/ABDENDRIEL
+[OK] minimapa de ANKRAHMUN: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/ANKRAHMUN
+[OK] minimapa de CARLIN: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/CARLIN
+[OK] minimapa de DARASHIA: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/DARASHIA
+[OK] minimapa de EDRON: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/EDRON
+[OK] minimapa de KAZORDOON: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/KAZORDOON
+[OK] minimapa de LIBERTYBAY: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/LIBERTYBAY
+[OK] minimapa de PORTHOPE: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/PORTHOPE
+[OK] minimapa de ROOK: 0 copiados, 15 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/ROOK
+[OK] minimapa de SVARGROND: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/SVARGROND
+[OK] minimapa de THAIS: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/THAIS
+[OK] minimapa de VENORE: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/VENORE
+[OK] minimapa de YALAHAR: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/YALAHAR
+[OK] minimapa de ZAO: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/ZAO
+[OK] candidatas de CARLIN: 0 arquivo(s) -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/new-hunts/CARLIN
+[OK] candidatas de KAZORDOON: 0 arquivo(s) -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/new-hunts/KAZORDOON
+[OK] candidatas de THAIS: 0 arquivo(s) -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/new-hunts/THAIS
+[OK] candidatas de VENORE: 0 arquivo(s) -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/new-hunts/VENORE
+
+=== ABDENDRIEL-HUNT-0105_ab-dendriel-underground ===
+✔ ABDENDRIEL-HUNT-0105_ab-dendriel-underground.raw.json gerado
+[OK] 434 ids com floorchange e 17 escadas de mão lidos de /home/rroth/Projects/tibia-idle-otbm/extractor/vendor/canary/items.xml
+[OK] respawn.json gerado em /home/rroth/Projects/tibia-idle-otbm/extractor/ready-maps/ABDENDRIEL/ABDENDRIEL-HUNT-0105_ab-dendriel-underground/monsters/respawn.json
+     7 defs de monstros | 25 spawns
+[OK] Mapa gerado em /home/rroth/Projects/tibia-idle-otbm/extractor/ready-maps/ABDENDRIEL/ABDENDRIEL-HUNT-0105_ab-dendriel-underground/map.json
+     13375 tiles | 508 aparências | 2 folhas
+
+1/1 mapas gerados com sucesso.
+[OK] ABDENDRIEL-HUNT-0105_ab-dendriel-underground: 4 copiados, 0 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/ABDENDRIEL-HUNT-0105_ab-dendriel-underground-sprites-v6
+[OK] atlases/corpses/: 0 copiados, 2 já atualizados
+[OK] atlases/effects/: 0 copiados, 2 já atualizados
+[OK] atlases/items-animated/: 0 copiados, 16 já atualizados
+[OK] atlases/items-static/: 0 copiados, 8 já atualizados
+[OK] atlases/outfits/: 0 copiados, 2308 já atualizados
+[OK] atlases/player-outfits/: 0 copiados, 532 já atualizados
+[OK] atlases/pools/: 0 copiados, 2 já atualizados
+[OK] atlases/items-index.json: já atualizado
+[OK] minimapa de ABDENDRIEL: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/ABDENDRIEL
+[OK] minimapa de ANKRAHMUN: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/ANKRAHMUN
+[OK] minimapa de CARLIN: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/CARLIN
+[OK] minimapa de DARASHIA: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/DARASHIA
+[OK] minimapa de EDRON: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/EDRON
+[OK] minimapa de KAZORDOON: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/KAZORDOON
+[OK] minimapa de LIBERTYBAY: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/LIBERTYBAY
+[OK] minimapa de PORTHOPE: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/PORTHOPE
+[OK] minimapa de ROOK: 0 copiados, 15 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/ROOK
+[OK] minimapa de SVARGROND: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/SVARGROND
+[OK] minimapa de THAIS: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/THAIS
+[OK] minimapa de VENORE: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/VENORE
+[OK] minimapa de YALAHAR: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/YALAHAR
+[OK] minimapa de ZAO: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/ZAO
+[OK] candidatas de CARLIN: 0 arquivo(s) -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/new-hunts/CARLIN
+[OK] candidatas de KAZORDOON: 0 arquivo(s) -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/new-hunts/KAZORDOON
+[OK] candidatas de THAIS: 0 arquivo(s) -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/new-hunts/THAIS
+[OK] candidatas de VENORE: 0 arquivo(s) -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/new-hunts/VENORE
+
+=== ABDENDRIEL-HUNT-0106_elvenbane ===
+✔ ABDENDRIEL-HUNT-0106_elvenbane.raw.json gerado
+[OK] 434 ids com floorchange e 17 escadas de mão lidos de /home/rroth/Projects/tibia-idle-otbm/extractor/vendor/canary/items.xml
+[OK] respawn.json gerado em /home/rroth/Projects/tibia-idle-otbm/extractor/ready-maps/ABDENDRIEL/ABDENDRIEL-HUNT-0106_elvenbane/monsters/respawn.json
+     6 defs de monstros | 24 spawns
+[OK] Mapa gerado em /home/rroth/Projects/tibia-idle-otbm/extractor/ready-maps/ABDENDRIEL/ABDENDRIEL-HUNT-0106_elvenbane/map.json
+     3901 tiles | 69 aparências | 2 folhas
+
+1/1 mapas gerados com sucesso.
+[OK] ABDENDRIEL-HUNT-0106_elvenbane: 4 copiados, 0 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/ABDENDRIEL-HUNT-0106_elvenbane-sprites-v6
+[OK] atlases/corpses/: 0 copiados, 2 já atualizados
+[OK] atlases/effects/: 0 copiados, 2 já atualizados
+[OK] atlases/items-animated/: 0 copiados, 16 já atualizados
+[OK] atlases/items-static/: 0 copiados, 8 já atualizados
+[OK] atlases/outfits/: 0 copiados, 2308 já atualizados
+[OK] atlases/player-outfits/: 0 copiados, 532 já atualizados
+[OK] atlases/pools/: 0 copiados, 2 já atualizados
+[OK] atlases/items-index.json: já atualizado
+[OK] minimapa de ABDENDRIEL: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/ABDENDRIEL
+[OK] minimapa de ANKRAHMUN: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/ANKRAHMUN
+[OK] minimapa de CARLIN: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/CARLIN
+[OK] minimapa de DARASHIA: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/DARASHIA
+[OK] minimapa de EDRON: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/EDRON
+[OK] minimapa de KAZORDOON: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/KAZORDOON
+[OK] minimapa de LIBERTYBAY: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/LIBERTYBAY
+[OK] minimapa de PORTHOPE: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/PORTHOPE
+[OK] minimapa de ROOK: 0 copiados, 15 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/ROOK
+[OK] minimapa de SVARGROND: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/SVARGROND
+[OK] minimapa de THAIS: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/THAIS
+[OK] minimapa de VENORE: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/VENORE
+[OK] minimapa de YALAHAR: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/YALAHAR
+[OK] minimapa de ZAO: 0 copiados, 17 já atualizados -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/minimaps/ZAO
+[OK] candidatas de CARLIN: 0 arquivo(s) -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/new-hunts/CARLIN
+[OK] candidatas de KAZORDOON: 0 arquivo(s) -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/new-hunts/KAZORDOON
+[OK] candidatas de THAIS: 0 arquivo(s) -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/new-hunts/THAIS
+[OK] candidatas de VENORE: 0 arquivo(s) -> /home/rroth/Projects/tibia-idle/apps/tibia-idle-front/public/assets/new-hunts/VENORE
+
+real	0m33.995s
+user	0m32.028s
+sys	0m1.336s

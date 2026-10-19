@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="33568" centery="31223" centerz="8" radius="3">
+		<monster name="Spitter" x="0" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33575" centery="31223" centerz="8" radius="3">
+		<monster name="Kollos" x="1" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33589" centery="31230" centerz="8" radius="3">
+		<monster name="Spidris" x="0" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33575" centery="31265" centerz="8" radius="1">
+		<monster name="Swarmer" x="1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33579" centery="31278" centerz="8" radius="1">
+		<monster name="Crawler" x="1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33580" centery="31278" centerz="8" radius="1">
+		<monster name="Crawler" x="1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33578" centery="31280" centerz="8" radius="1">
+		<monster name="Crawler" x="1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33579" centery="31283" centerz="8" radius="1">
+		<monster name="Swarmer" x="1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33579" centery="31288" centerz="8" radius="1">
+		<monster name="Swarmer" x="1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33561" centery="31230" centerz="9" radius="3">
+		<monster name="Insectoid Worker" x="2" y="-1" z="9" spawntime="90" />
+		<monster name="Insectoid Worker" x="3" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33568" centery="31230" centerz="9" radius="3">
+		<monster name="Crawler" x="-1" y="-2" z="9" spawntime="90" />
+		<monster name="Crawler" x="-2" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33568" centery="31237" centerz="9" radius="3">
+		<monster name="Insectoid Worker" x="0" y="-2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33575" centery="31237" centerz="9" radius="3">
+		<monster name="Insectoid Worker" x="2" y="-3" z="9" spawntime="90" />
+		<monster name="Crawler" x="-3" y="1" z="9" spawntime="90" />
+		<monster name="Crawler" x="0" y="1" z="9" spawntime="90" />
+		<monster name="Crawler" x="-3" y="2" z="9" spawntime="90" />
+		<monster name="Crawler" x="-2" y="2" z="9" spawntime="90" />
+		<monster name="Crawler" x="-1" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33582" centery="31249" centerz="9" radius="1">
+		<monster name="Floor Blob" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33598" centery="31257" centerz="9" radius="1">
+		<monster name="Floor Blob" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33582" centery="31258" centerz="9" radius="1">
+		<monster name="Floor Blob" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33578" centery="31261" centerz="9" radius="1">
+		<monster name="Floor Blob" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33592" centery="31263" centerz="9" radius="1">
+		<monster name="Floor Blob" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33578" centery="31264" centerz="9" radius="1">
+		<monster name="Floor Blob" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33595" centery="31264" centerz="9" radius="1">
+		<monster name="Floor Blob" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33595" centery="31266" centerz="9" radius="1">
+		<monster name="Floor Blob" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33588" centery="31269" centerz="9" radius="1">
+		<monster name="Floor Blob" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33585" centery="31271" centerz="9" radius="1">
+		<monster name="Floor Blob" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33594" centery="31276" centerz="9" radius="1">
+		<monster name="Floor Blob" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+</monsters>

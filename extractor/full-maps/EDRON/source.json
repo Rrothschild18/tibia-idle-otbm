@@ -1,0 +1,94 @@
+{
+  "city": "EDRON",
+  "area": {
+    "id": 7,
+    "name": "Edron"
+  },
+  "subareas": [
+    {
+      "id": 327,
+      "name": "Cake Keep Isle"
+    },
+    {
+      "id": 455,
+      "name": "Edron"
+    },
+    {
+      "id": 60,
+      "name": "Edron Dragon Lair"
+    },
+    {
+      "id": 275,
+      "name": "Edron Castle"
+    },
+    {
+      "id": 57,
+      "name": "Edron Troll Den"
+    },
+    {
+      "id": 58,
+      "name": "Edron Goblin Den"
+    },
+    {
+      "id": 59,
+      "name": "Edron Orc Lands"
+    },
+    {
+      "id": 61,
+      "name": "Cyclopolis"
+    },
+    {
+      "id": 63,
+      "name": "Edron Surroundings"
+    },
+    {
+      "id": 286,
+      "name": "Cormaya"
+    },
+    {
+      "id": 242,
+      "name": "Edron Hero Fortress"
+    },
+    {
+      "id": 243,
+      "name": "Grimvale"
+    },
+    {
+      "id": 274,
+      "name": "Stonehome"
+    },
+    {
+      "id": 504,
+      "name": "Azzilon Castle"
+    }
+  ],
+  "world": {
+    "file": "otservbr.otbm",
+    "bytes": 184797168
+  },
+  "shape": "square",
+  "bounds": {
+    "minX": 32906,
+    "minY": 31447,
+    "maxX": 34054,
+    "maxY": 32595
+  },
+  "columns": 64359,
+  "monsterScope": "box",
+  "tiles": 5509691,
+  "tileAreas": 365220,
+  "towns": [
+    {
+      "id": 11,
+      "name": "Edron",
+      "x": 33217,
+      "y": 31814,
+      "z": 8
+    }
+  ],
+  "monsterGroups": 16513,
+  "monsterEntries": 25930,
+  "npcGroups": 61,
+  "npcEntries": 61,
+  "houses": 134
+}

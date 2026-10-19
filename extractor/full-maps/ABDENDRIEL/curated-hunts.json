@@ -1,0 +1,242 @@
+{
+  "city": "ABDENDRIEL",
+  "area": "Ab'Dendriel",
+  "hunts": [
+    {
+      "id": "ABDENDRIEL-HUNT-0101",
+      "type": "HUNT",
+      "name": "Blemished Spawns — Ab'Dendriel Surroundings z10",
+      "slug": "blemished-spawns-ab-dendriel-surroundings-z10",
+      "folder": "ABDENDRIEL-HUNT-0101_blemished-spawns-ab-dendriel-surroundings-z10",
+      "floors": [
+        9,
+        10,
+        11
+      ],
+      "cropFloors": [
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "candidateIds": [
+        "ABDENDRIEL-FULL-z10-24"
+      ],
+      "creatures": 76,
+      "extent": {
+        "minX": 32603,
+        "minY": 31731,
+        "maxX": 32685,
+        "maxY": 31801,
+        "centerX": 32644,
+        "centerY": 31766
+      },
+      "subareaId": 55,
+      "entrance": {
+        "x": 32638,
+        "y": 31731,
+        "z": 10
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 40292,
+      "spawns": 168
+    },
+    {
+      "id": "ABDENDRIEL-HUNT-0102",
+      "type": "HUNT",
+      "name": "Hellgate",
+      "slug": "hellgate",
+      "folder": "ABDENDRIEL-HUNT-0102_hellgate",
+      "floors": [
+        10,
+        11,
+        12
+      ],
+      "cropFloors": [
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "candidateIds": [
+        "ABDENDRIEL-FULL-z11-102"
+      ],
+      "creatures": 58,
+      "extent": {
+        "minX": 32619,
+        "minY": 31598,
+        "maxX": 32738,
+        "maxY": 31670,
+        "centerX": 32678,
+        "centerY": 31634
+      },
+      "subareaId": 273,
+      "entrance": {
+        "x": 32667,
+        "y": 31632,
+        "z": 11
+      },
+      "walkTilesFromTemple": 110,
+      "tiles": 84646,
+      "spawns": 147
+    },
+    {
+      "id": "ABDENDRIEL-HUNT-0103",
+      "type": "HUNT",
+      "name": "Wasps — Ab'Dendriel City z9",
+      "slug": "wasps-ab-dendriel-city-z9",
+      "folder": "ABDENDRIEL-HUNT-0103_wasps-ab-dendriel-city-z9",
+      "floors": [
+        8,
+        9,
+        10
+      ],
+      "cropFloors": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "candidateIds": [
+        "ABDENDRIEL-FULL-z09-52"
+      ],
+      "creatures": 18,
+      "extent": {
+        "minX": 32596,
+        "minY": 31673,
+        "maxX": 32650,
+        "maxY": 31710,
+        "centerX": 32623,
+        "centerY": 31691
+      },
+      "subareaId": 273,
+      "entrance": {
+        "x": 32615,
+        "y": 31698,
+        "z": 9
+      },
+      "walkTilesFromTemple": 168,
+      "tiles": 29894,
+      "spawns": 86
+    },
+    {
+      "id": "ABDENDRIEL-HUNT-0104",
+      "type": "HUNT",
+      "name": "Bugs — Ab'Dendriel City z15",
+      "slug": "bugs-ab-dendriel-city-z15",
+      "folder": "ABDENDRIEL-HUNT-0104_bugs-ab-dendriel-city-z15",
+      "floors": [
+        14,
+        15
+      ],
+      "cropFloors": [
+        14,
+        15
+      ],
+      "candidateIds": [
+        "ABDENDRIEL-FULL-z15-870"
+      ],
+      "creatures": 14,
+      "extent": {
+        "minX": 32693,
+        "minY": 31595,
+        "maxX": 32703,
+        "maxY": 31612,
+        "centerX": 32698,
+        "centerY": 31603
+      },
+      "subareaId": 273,
+      "entrance": {
+        "x": 32698,
+        "y": 31602,
+        "z": 15
+      },
+      "walkTilesFromTemple": 756,
+      "tiles": 6322,
+      "spawns": 22
+    },
+    {
+      "id": "ABDENDRIEL-HUNT-0105",
+      "type": "HUNT",
+      "name": "Ab'Dendriel Underground",
+      "slug": "ab-dendriel-underground",
+      "folder": "ABDENDRIEL-HUNT-0105_ab-dendriel-underground",
+      "floors": [
+        7,
+        8,
+        9
+      ],
+      "cropFloors": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "candidateIds": [
+        "ABDENDRIEL-FULL-z08-16"
+      ],
+      "creatures": 28,
+      "extent": {
+        "minX": 32691,
+        "minY": 31588,
+        "maxX": 32724,
+        "maxY": 31648,
+        "centerX": 32707,
+        "centerY": 31618
+      },
+      "subareaId": 273,
+      "entrance": {
+        "x": 32699,
+        "y": 31595,
+        "z": 8
+      },
+      "walkTilesFromTemple": 144,
+      "tiles": 41091,
+      "spawns": 47
+    },
+    {
+      "id": "ABDENDRIEL-HUNT-0106",
+      "type": "HUNT",
+      "name": "Elvenbane",
+      "slug": "elvenbane",
+      "folder": "ABDENDRIEL-HUNT-0106_elvenbane",
+      "floors": [
+        7,
+        8,
+        9
+      ],
+      "cropFloors": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "candidateIds": [
+        "ABDENDRIEL-FULL-z08-80"
+      ],
+      "creatures": 24,
+      "extent": {
+        "minX": 32581,
+        "minY": 31639,
+        "maxX": 32599,
+        "maxY": 31653,
+        "centerX": 32590,
+        "centerY": 31646
+      },
+      "subareaId": 54,
+      "entrance": {
+        "x": 32582,
+        "y": 31651,
+        "z": 8
+      },
+      "walkTilesFromTemple": 204,
+      "tiles": 14879,
+      "spawns": 53
+    }
+  ]
+}

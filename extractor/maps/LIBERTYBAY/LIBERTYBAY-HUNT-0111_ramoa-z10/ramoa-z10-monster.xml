@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="31912" centery="32559" centerz="10" radius="5">
+		<monster name="Vampire" x="0" y="-3" z="10" spawntime="90" />
+		<monster name="Necromancer" x="3" y="-1" z="10" spawntime="90" />
+		<monster name="Priestess" x="-1" y="1" z="10" spawntime="90" />
+		<monster name="Vampire" x="2" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="31927" centery="32559" centerz="10" radius="5">
+		<monster name="Demon Skeleton" x="-2" y="-3" z="10" spawntime="90" />
+		<monster name="Priestess" x="-2" y="0" z="10" spawntime="90" />
+		<monster name="Lich" x="2" y="0" z="10" spawntime="90" />
+		<monster name="Lich" x="-4" y="2" z="10" spawntime="90" />
+		<monster name="Demon Skeleton" x="4" y="2" z="10" spawntime="90" />
+		<monster name="Demon Skeleton" x="2" y="5" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="31946" centery="32559" centerz="10" radius="5">
+		<monster name="Lich" x="0" y="-2" z="10" spawntime="90" />
+		<monster name="Necromancer" x="-3" y="-1" z="10" spawntime="90" />
+		<monster name="Demon Skeleton" x="4" y="-1" z="10" spawntime="90" />
+		<monster name="Lich" x="-1" y="3" z="10" spawntime="90" />
+		<monster name="Necromancer" x="3" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="31966" centery="32559" centerz="10" radius="5">
+		<monster name="Necromancer" x="-2" y="-2" z="10" spawntime="90" />
+		<monster name="Demon Skeleton" x="3" y="-2" z="10" spawntime="90" />
+		<monster name="Bonebeast" x="1" y="0" z="10" spawntime="90" />
+		<monster name="Necromancer" x="2" y="1" z="10" spawntime="90" />
+		<monster name="Demon Skeleton" x="-4" y="2" z="10" spawntime="90" />
+		<monster name="Demon Skeleton" x="0" y="5" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="31979" centery="32560" centerz="10" radius="4">
+		<monster name="Lich" x="-2" y="-4" z="10" spawntime="90" />
+		<monster name="Necromancer" x="-1" y="-2" z="10" spawntime="90" />
+		<monster name="Priestess" x="3" y="-2" z="10" spawntime="90" />
+		<monster name="Lich" x="2" y="4" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="31912" centery="32576" centerz="10" radius="5">
+		<monster name="Necromancer" x="2" y="-4" z="10" spawntime="90" />
+		<monster name="Demon Skeleton" x="0" y="-3" z="10" spawntime="90" />
+		<monster name="Lich" x="1" y="0" z="10" spawntime="90" />
+		<monster name="Demon Skeleton" x="-2" y="1" z="10" spawntime="90" />
+		<monster name="Demon Skeleton" x="3" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="31947" centery="32576" centerz="10" radius="5">
+		<monster name="Necromancer" x="2" y="-3" z="10" spawntime="90" />
+		<monster name="Demon Skeleton" x="1" y="0" z="10" spawntime="90" />
+		<monster name="Necromancer" x="-2" y="1" z="10" spawntime="90" />
+		<monster name="Necromancer" x="3" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="31980" centery="32576" centerz="10" radius="4">
+		<monster name="Necromancer" x="0" y="-2" z="10" spawntime="90" />
+		<monster name="Necromancer" x="2" y="0" z="10" spawntime="90" />
+		<monster name="Necromancer" x="-2" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="31927" centery="32577" centerz="10" radius="2">
+		<monster name="Mummy" x="0" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="31963" centery="32577" centerz="10" radius="5">
+		<monster name="Demon Skeleton" x="3" y="-3" z="10" spawntime="90" />
+		<monster name="Mummy" x="-1" y="-1" z="10" spawntime="90" />
+		<monster name="Demon Skeleton" x="2" y="1" z="10" spawntime="90" />
+		<monster name="Vampire" x="-4" y="3" z="10" spawntime="90" />
+		<monster name="Lich" x="0" y="4" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="31936" centery="32584" centerz="10" radius="3">
+		<monster name="Demon Skeleton" x="-3" y="-3" z="10" spawntime="90" />
+		<monster name="Demon Skeleton" x="0" y="-1" z="10" spawntime="90" />
+		<monster name="Mummy" x="-1" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="31964" centery="32591" centerz="10" radius="6">
+		<monster name="Demon Skeleton" x="-4" y="-4" z="10" spawntime="90" />
+		<monster name="Necromancer" x="-1" y="-4" z="10" spawntime="90" />
+		<monster name="Vampire" x="-5" y="-1" z="10" spawntime="90" />
+		<monster name="Priestess" x="5" y="-1" z="10" spawntime="90" />
+		<monster name="Necromancer" x="2" y="2" z="10" spawntime="90" />
+		<monster name="Priestess" x="-2" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="31919" centery="32593" centerz="10" radius="3">
+		<monster name="Bog Raider" x="2" y="-1" z="10" spawntime="90" />
+		<monster name="Bog Raider" x="-2" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="31947" centery="32593" centerz="10" radius="4">
+		<monster name="Bonebeast" x="3" y="-1" z="10" spawntime="90" />
+		<monster name="Demon Skeleton" x="-2" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="31913" centery="32609" centerz="10" radius="3">
+		<monster name="Bog Raider" x="-1" y="-1" z="10" spawntime="90" />
+	</monster>
+</monsters>

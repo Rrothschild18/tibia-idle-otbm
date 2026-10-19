@@ -1,0 +1,261 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32673" centery="32579" centerz="7" radius="3">
+		<monster name="Terror Bird" x="-3" y="-2" z="7" spawntime="90" />
+		<monster name="Terror Bird" x="3" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32692" centery="32587" centerz="7" radius="3">
+		<monster name="Terror Bird" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32714" centery="32587" centerz="7" radius="3">
+		<monster name="Snake" x="-2" y="-2" z="7" spawntime="90" />
+		<monster name="Slime" x="2" y="-2" z="7" spawntime="90" />
+		<monster name="Slime" x="-2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32654" centery="32590" centerz="7" radius="2">
+		<monster name="Centipede" x="-2" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32674" centery="32590" centerz="7" radius="3">
+		<monster name="Slime" x="-1" y="-2" z="7" spawntime="90" />
+		<monster name="Slime" x="2" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32648" centery="32596" centerz="7" radius="2">
+		<monster name="Crocodile" x="-2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32707" centery="32596" centerz="7" radius="3">
+		<monster name="Slime" x="2" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32655" centery="32602" centerz="7" radius="2">
+		<monster name="Cobra" x="-1" y="-2" z="7" spawntime="90" />
+		<monster name="Crocodile" x="-1" y="0" z="7" spawntime="90" />
+		<monster name="Slime" x="-2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32725" centery="32602" centerz="7" radius="5">
+		<monster name="Terror Bird" x="-1" y="-2" z="7" spawntime="90" />
+		<monster name="Cobra" x="1" y="3" z="7" spawntime="90" />
+		<monster name="Snake" x="-1" y="4" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32643" centery="32604" centerz="7" radius="2">
+		<monster name="Slime" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32692" centery="32606" centerz="7" radius="3">
+		<monster name="Snake" x="-2" y="-2" z="7" spawntime="90" />
+		<monster name="Crocodile" x="2" y="-1" z="7" spawntime="90" />
+		<monster name="Crocodile" x="-1" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32711" centery="32608" centerz="7" radius="3">
+		<monster name="Centipede" x="0" y="-2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32650" centery="32609" centerz="7" radius="2">
+		<monster name="Slime" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32676" centery="32610" centerz="7" radius="3">
+		<monster name="Slime" x="0" y="0" z="7" spawntime="90" />
+		<monster name="Swamp Troll" x="3" y="0" z="7" spawntime="90" />
+		<monster name="Swamp Troll" x="-2" y="1" z="7" spawntime="90" />
+		<monster name="Swamp Troll" x="3" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32659" centery="32615" centerz="7" radius="2">
+		<monster name="Crocodile" x="1" y="-1" z="7" spawntime="90" />
+		<monster name="Crocodile" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32701" centery="32615" centerz="7" radius="3">
+		<monster name="Centipede" x="0" y="-1" z="7" spawntime="90" />
+		<monster name="Centipede" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32718" centery="32620" centerz="7" radius="5">
+		<monster name="Spider" x="-5" y="-4" z="7" spawntime="90" />
+		<monster name="Spider" x="2" y="-4" z="7" spawntime="90" />
+		<monster name="Crocodile" x="-2" y="-2" z="7" spawntime="90" />
+		<monster name="Crocodile" x="-3" y="2" z="7" spawntime="90" />
+		<monster name="Spider" x="2" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32653" centery="32622" centerz="7" radius="2">
+		<monster name="Snake" x="-2" y="0" z="7" spawntime="90" />
+		<monster name="Crocodile" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32689" centery="32622" centerz="7" radius="3">
+		<monster name="Cobra" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32663" centery="32624" centerz="7" radius="2">
+		<monster name="Crocodile" x="2" y="0" z="7" spawntime="90" />
+		<monster name="Snake" x="-1" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32681" centery="32635" centerz="7" radius="5">
+		<monster name="Swamp Troll" x="1" y="-5" z="7" spawntime="90" />
+		<monster name="Swamp Troll" x="2" y="0" z="7" spawntime="90" />
+		<monster name="Spider" x="3" y="1" z="7" spawntime="90" />
+		<monster name="Spider" x="3" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32696" centery="32635" centerz="7" radius="5">
+		<monster name="Centipede" x="-4" y="-3" z="7" spawntime="90" />
+		<monster name="Centipede" x="-2" y="-2" z="7" spawntime="90" />
+		<monster name="Swamp Troll" x="2" y="3" z="7" spawntime="90" />
+		<monster name="Spider" x="4" y="4" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32711" centery="32635" centerz="7" radius="5">
+		<monster name="Swamp Troll" x="-2" y="-3" z="7" spawntime="90" />
+		<monster name="Bug" x="1" y="0" z="7" spawntime="90" />
+		<monster name="Bug" x="2" y="1" z="7" spawntime="90" />
+		<monster name="Terror Bird" x="4" y="5" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32728" centery="32637" centerz="7" radius="5">
+		<monster name="Bug" x="-3" y="-2" z="7" spawntime="90" />
+		<monster name="Bug" x="-3" y="1" z="7" spawntime="90" />
+		<monster name="Wasp" x="-4" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32658" centery="32644" centerz="7" radius="3">
+		<monster name="Snake" x="-2" y="-1" z="7" spawntime="90" />
+		<monster name="Bug" x="0" y="-1" z="7" spawntime="60" />
+		<monster name="Bug" x="1" y="2" z="7" spawntime="60" />
+	</monster>
+	<monster centerx="32693" centery="32574" centerz="8" radius="3">
+		<monster name="Swamp Troll" x="3" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32700" centery="32574" centerz="8" radius="3">
+		<monster name="Swamp Troll" x="-3" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32693" centery="32581" centerz="8" radius="3">
+		<monster name="Swamp Troll" x="-3" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32665" centery="32588" centerz="8" radius="3">
+		<monster name="Swamp Troll" x="3" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32672" centery="32588" centerz="8" radius="3">
+		<monster name="Swamp Troll" x="-3" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32672" centery="32595" centerz="8" radius="3">
+		<monster name="Swamp Troll" x="1" y="0" z="8" spawntime="90" />
+		<monster name="Swamp Troll" x="2" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32679" centery="32595" centerz="8" radius="3">
+		<monster name="Swamp Troll" x="-2" y="-3" z="8" spawntime="90" />
+		<monster name="Swamp Troll" x="2" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32686" centery="32595" centerz="8" radius="3">
+		<monster name="Swamp Troll" x="0" y="-2" z="8" spawntime="90" />
+		<monster name="Swamp Troll" x="-2" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32693" centery="32595" centerz="8" radius="3">
+		<monster name="Swamp Troll" x="0" y="-2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32700" centery="32595" centerz="8" radius="3">
+		<monster name="Swamp Troll" x="1" y="-1" z="8" spawntime="90" />
+		<monster name="Swamp Troll" x="2" y="1" z="8" spawntime="90" />
+		<monster name="Swamp Troll" x="-1" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32679" centery="32602" centerz="8" radius="3">
+		<monster name="Swamp Troll" x="1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32693" centery="32602" centerz="8" radius="3">
+		<monster name="Swamp Troll" x="-3" y="-2" z="8" spawntime="90" />
+		<monster name="Swamp Troll" x="-2" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32679" centery="32609" centerz="8" radius="3">
+		<monster name="Swamp Troll" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32686" centery="32609" centerz="8" radius="3">
+		<monster name="Swamp Troll" x="-3" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32693" centery="32609" centerz="8" radius="3">
+		<monster name="Swamp Troll" x="-3" y="-3" z="8" spawntime="90" />
+		<monster name="Swamp Troll" x="1" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32686" centery="32623" centerz="8" radius="3">
+		<monster name="Swamp Troll" x="-2" y="-2" z="8" spawntime="90" />
+		<monster name="Swamp Troll" x="-1" y="-2" z="8" spawntime="90" />
+		<monster name="Swamp Troll" x="-2" y="0" z="8" spawntime="90" />
+		<monster name="Swamp Troll" x="-1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32665" centery="32644" centerz="8" radius="3">
+		<monster name="Gazer Spectre" x="-3" y="1" z="8" spawntime="60" />
+		<monster name="Gazer Spectre" x="3" y="1" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="32705" centery="32645" centerz="8" radius="3">
+		<monster name="Gazer Spectre" x="-3" y="0" z="8" spawntime="60" />
+		<monster name="Gazer Spectre" x="2" y="0" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="32651" centery="32647" centerz="8" radius="3">
+		<monster name="Gazer Spectre" x="2" y="-1" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="32686" centery="32588" centerz="9" radius="3">
+		<monster name="Swamp Troll" x="1" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32686" centery="32595" centerz="9" radius="3">
+		<monster name="Swamp Troll" x="-1" y="-2" z="9" spawntime="90" />
+		<monster name="Swamp Troll" x="3" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32700" centery="32595" centerz="9" radius="3">
+		<monster name="Swamp Troll" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32679" centery="32602" centerz="9" radius="3">
+		<monster name="Swamp Troll" x="1" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32686" centery="32602" centerz="9" radius="3">
+		<monster name="Swamp Troll" x="-3" y="0" z="9" spawntime="90" />
+		<monster name="Swamp Troll" x="-2" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32700" centery="32602" centerz="9" radius="3">
+		<monster name="Swamp Troll" x="3" y="-1" z="9" spawntime="90" />
+		<monster name="Swamp Troll" x="1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32679" centery="32609" centerz="9" radius="3">
+		<monster name="Swamp Troll" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32707" centery="32609" centerz="9" radius="3">
+		<monster name="Poison Spider" x="1" y="-2" z="9" spawntime="90" />
+		<monster name="Skeleton" x="0" y="-1" z="9" spawntime="90" />
+		<monster name="Skeleton" x="3" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32665" centery="32616" centerz="9" radius="3">
+		<monster name="Swamp Troll" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32679" centery="32616" centerz="9" radius="3">
+		<monster name="Swamp Troll" x="1" y="-3" z="9" spawntime="90" />
+		<monster name="Swamp Troll" x="2" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32707" centery="32616" centerz="9" radius="3">
+		<monster name="Poison Spider" x="0" y="-3" z="9" spawntime="90" />
+		<monster name="Poison Spider" x="-1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32714" centery="32616" centerz="9" radius="3">
+		<monster name="Skeleton" x="-2" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32665" centery="32623" centerz="9" radius="3">
+		<monster name="Swamp Troll" x="0" y="-3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32679" centery="32623" centerz="9" radius="3">
+		<monster name="Poison Spider" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32707" centery="32623" centerz="9" radius="3">
+		<monster name="Swamp Troll" x="-1" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32679" centery="32630" centerz="9" radius="3">
+		<monster name="Swamp Troll" x="-1" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32686" centery="32630" centerz="9" radius="3">
+		<monster name="Skeleton" x="-2" y="-1" z="9" spawntime="90" />
+		<monster name="Swamp Troll" x="3" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32707" centery="32630" centerz="9" radius="3">
+		<monster name="Swamp Troll" x="3" y="1" z="9" spawntime="90" />
+		<monster name="Swamp Troll" x="1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32714" centery="32630" centerz="9" radius="3">
+		<monster name="Swamp Troll" x="-2" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32679" centery="32637" centerz="9" radius="3">
+		<monster name="Swamp Troll" x="-2" y="-3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32686" centery="32637" centerz="9" radius="3">
+		<monster name="Swamp Troll" x="-3" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32693" centery="32637" centerz="9" radius="3">
+		<monster name="Swamp Troll" x="0" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32693" centery="32644" centerz="9" radius="3">
+		<monster name="Swamp Troll" x="1" y="-2" z="9" spawntime="90" />
+		<monster name="Swamp Troll" x="3" y="-1" z="9" spawntime="90" />
+		<monster name="Swamp Troll" x="3" y="0" z="9" spawntime="90" />
+	</monster>
+</monsters>

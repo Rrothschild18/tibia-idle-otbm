@@ -128,4 +128,18 @@
 	<monster centerx="32812" centery="32154" centerz="10" radius="3">
 		<monster name="Emerald Damselfly" x="-3" y="-1" z="10" spawntime="90" />
 	</monster>
+	<monster centerx="32833" centery="32161" centerz="10" radius="3">
+		<monster name="Salamander" x="-1" y="1" z="10" spawntime="90" />
+		<monster name="Salamander" x="1" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32840" centery="32161" centerz="10" radius="3">
+		<monster name="Salamander" x="-3" y="2" z="10" spawntime="90" />
+		<monster name="Emerald Damselfly" x="-3" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32861" centery="32168" centerz="10" radius="3">
+		<monster name="Salamander" x="3" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32868" centery="32168" centerz="10" radius="3">
+		<monster name="Salamander" x="-2" y="0" z="10" spawntime="90" />
+	</monster>
 </monsters>

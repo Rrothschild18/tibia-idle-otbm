@@ -1,0 +1,246 @@
+{
+  "city": "YALAHAR",
+  "area": "Yalahar",
+  "hunts": [
+    {
+      "id": "YALAHAR-HUNT-0101",
+      "type": "HUNT",
+      "name": "Factory Quarter",
+      "slug": "factory-quarter",
+      "folder": "YALAHAR-HUNT-0101_factory-quarter",
+      "floors": [
+        6,
+        7,
+        8
+      ],
+      "cropFloors": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "candidateIds": [
+        "YALAHAR-FULL-z07-50"
+      ],
+      "creatures": 170,
+      "extent": {
+        "minX": 32847,
+        "minY": 31225,
+        "maxX": 32971,
+        "maxY": 31354,
+        "centerX": 32909,
+        "centerY": 31289
+      },
+      "subareaId": 129,
+      "entrance": {
+        "x": 32878,
+        "y": 31225,
+        "z": 7
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 72961,
+      "spawns": 304
+    },
+    {
+      "id": "YALAHAR-HUNT-0102",
+      "type": "HUNT",
+      "name": "Trade Quarter",
+      "slug": "trade-quarter",
+      "folder": "YALAHAR-HUNT-0102_trade-quarter",
+      "floors": [
+        6,
+        7,
+        8
+      ],
+      "cropFloors": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "candidateIds": [
+        "YALAHAR-FULL-z07-93"
+      ],
+      "creatures": 89,
+      "extent": {
+        "minX": 32779,
+        "minY": 31277,
+        "maxX": 32868,
+        "maxY": 31370,
+        "centerX": 32823,
+        "centerY": 31323
+      },
+      "subareaId": 127,
+      "entrance": {
+        "x": 32831,
+        "y": 31277,
+        "z": 7
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 56061,
+      "spawns": 255
+    },
+    {
+      "id": "YALAHAR-HUNT-0103",
+      "type": "HUNT",
+      "name": "Minotaurs — Yalahar Foreigner Quarter z7",
+      "slug": "minotaurs-yalahar-foreigner-quarter-z7",
+      "folder": "YALAHAR-HUNT-0103_minotaurs-yalahar-foreigner-quarter-z7",
+      "floors": [
+        6,
+        7,
+        8
+      ],
+      "cropFloors": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "candidateIds": [
+        "YALAHAR-FULL-z07-165"
+      ],
+      "creatures": 25,
+      "extent": {
+        "minX": 32725,
+        "minY": 31309,
+        "maxX": 32752,
+        "maxY": 31342,
+        "centerX": 32738,
+        "centerY": 31325
+      },
+      "subareaId": 134,
+      "entrance": {
+        "x": 32740,
+        "y": 31309,
+        "z": 7
+      },
+      "walkTilesFromTemple": 137,
+      "tiles": 21883,
+      "spawns": 151
+    },
+    {
+      "id": "YALAHAR-HUNT-0104",
+      "type": "HUNT",
+      "name": "Arena and Zoo Quarter",
+      "slug": "arena-and-zoo-quarter",
+      "folder": "YALAHAR-HUNT-0104_arena-and-zoo-quarter",
+      "floors": [
+        5,
+        6,
+        7
+      ],
+      "cropFloors": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "candidateIds": [
+        "YALAHAR-FULL-z06-14"
+      ],
+      "creatures": 19,
+      "extent": {
+        "minX": 32652,
+        "minY": 31216,
+        "maxX": 32700,
+        "maxY": 31242,
+        "centerX": 32676,
+        "centerY": 31229
+      },
+      "subareaId": 133,
+      "entrance": {
+        "x": 32676,
+        "y": 31216,
+        "z": 6
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 17503,
+      "spawns": 136
+    },
+    {
+      "id": "YALAHAR-HUNT-0105",
+      "type": "HUNT",
+      "name": "Foreigner Quarter",
+      "slug": "foreigner-quarter",
+      "folder": "YALAHAR-HUNT-0105_foreigner-quarter",
+      "floors": [
+        5,
+        6,
+        7
+      ],
+      "cropFloors": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "candidateIds": [
+        "YALAHAR-FULL-z06-114"
+      ],
+      "creatures": 73,
+      "extent": {
+        "minX": 32630,
+        "minY": 31282,
+        "maxX": 32739,
+        "maxY": 31369,
+        "centerX": 32684,
+        "centerY": 31325
+      },
+      "subareaId": 134,
+      "entrance": {
+        "x": 32691,
+        "y": 31332,
+        "z": 6
+      },
+      "walkTilesFromTemple": 161,
+      "tiles": 46872,
+      "spawns": 371
+    },
+    {
+      "id": "YALAHAR-HUNT-0106",
+      "type": "HUNT",
+      "name": "Foreigner Quarter z7",
+      "slug": "foreigner-quarter-z7",
+      "folder": "YALAHAR-HUNT-0106_foreigner-quarter-z7",
+      "floors": [
+        6,
+        7,
+        8
+      ],
+      "cropFloors": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "candidateIds": [
+        "YALAHAR-FULL-z07-17"
+      ],
+      "creatures": 71,
+      "extent": {
+        "minX": 32658,
+        "minY": 31262,
+        "maxX": 32738,
+        "maxY": 31361,
+        "centerX": 32698,
+        "centerY": 31311
+      },
+      "subareaId": 134,
+      "entrance": {
+        "x": 32726,
+        "y": 31291,
+        "z": 7
+      },
+      "walkTilesFromTemple": 117,
+      "tiles": 51960,
+      "spawns": 382
+    }
+  ]
+}

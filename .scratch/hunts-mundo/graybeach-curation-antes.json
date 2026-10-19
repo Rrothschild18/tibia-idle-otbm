@@ -1,0 +1,144 @@
+[
+  {
+    "id": "GRAYBEACH-HUNT-0101",
+    "name": "Hive Main Structure",
+    "candidates": [
+      {
+        "id": "GRAYBEACH-FULL-z07-4",
+        "floor": 7,
+        "creatures": 387,
+        "extent": {
+          "minX": 33446,
+          "minY": 31170,
+          "maxX": 33610,
+          "maxY": 31361,
+          "centerX": 33528,
+          "centerY": 31265
+        },
+        "species": [
+          "Insectoid Worker",
+          "Swarmer",
+          "Waspoid"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "GRAYBEACH-HUNT-0102",
+    "name": "Zarganash",
+    "candidates": [
+      {
+        "id": "GRAYBEACH-FULL-z10-38",
+        "floor": 10,
+        "creatures": 102,
+        "extent": {
+          "minX": 33550,
+          "minY": 31440,
+          "maxX": 33646,
+          "maxY": 31533,
+          "centerX": 33598,
+          "centerY": 31486
+        },
+        "species": [
+          "Flimsy Lost Soul",
+          "Mean Lost Soul",
+          "Freakish Lost Soul"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "GRAYBEACH-HUNT-0103",
+    "name": "Floor Blobs — Hive Pyramids z9",
+    "candidates": [
+      {
+        "id": "GRAYBEACH-FULL-z09-104",
+        "floor": 9,
+        "creatures": 11,
+        "extent": {
+          "minX": 33579,
+          "minY": 31249,
+          "maxX": 33599,
+          "maxY": 31276,
+          "centerX": 33589,
+          "centerY": 31262
+        },
+        "species": [
+          "Floor Blob"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "GRAYBEACH-HUNT-0104",
+    "name": "Lava Grotto",
+    "candidates": [
+      {
+        "id": "GRAYBEACH-FULL-z13-199",
+        "floor": 13,
+        "creatures": 48,
+        "extent": {
+          "minX": 33529,
+          "minY": 31258,
+          "maxX": 33568,
+          "maxY": 31311,
+          "centerX": 33548,
+          "centerY": 31284
+        },
+        "species": [
+          "Deepling Spellsinger",
+          "Manta Ray",
+          "Deepling Warrior"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "GRAYBEACH-HUNT-0105",
+    "name": "Deepling Temple Complex",
+    "candidates": [
+      {
+        "id": "GRAYBEACH-FULL-z13-66",
+        "floor": 13,
+        "creatures": 35,
+        "extent": {
+          "minX": 33438,
+          "minY": 31271,
+          "maxX": 33505,
+          "maxY": 31299,
+          "centerX": 33471,
+          "centerY": 31285
+        },
+        "species": [
+          "Deepling Scout",
+          "Deepling Warrior",
+          "Deepling Spellsinger"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "GRAYBEACH-HUNT-0106",
+    "name": "Spitters — Hive Secondary Structure z5",
+    "candidates": [
+      {
+        "id": "GRAYBEACH-FULL-z05-84",
+        "floor": 5,
+        "creatures": 75,
+        "extent": {
+          "minX": 33476,
+          "minY": 31169,
+          "maxX": 33535,
+          "maxY": 31224,
+          "centerX": 33505,
+          "centerY": 31196
+        },
+        "species": [
+          "Spitter",
+          "Spidris",
+          "Waspoid"
+        ]
+      }
+    ]
+  }
+]

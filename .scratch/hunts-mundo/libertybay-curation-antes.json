@@ -1,0 +1,142 @@
+[
+  {
+    "id": "LIBERTYBAY-HUNT-0101",
+    "name": "Laguna Islands",
+    "candidates": [
+      {
+        "id": "LIBERTYBAY-FULL-z07-44",
+        "floor": 7,
+        "creatures": 155,
+        "extent": {
+          "minX": 32331,
+          "minY": 32901,
+          "maxX": 32434,
+          "maxY": 32993,
+          "centerX": 32382,
+          "centerY": 32947
+        },
+        "species": [
+          "Crocodile",
+          "Tortoise",
+          "Toad"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "LIBERTYBAY-HUNT-0102",
+    "name": "Rotworms — Liberty Bay Surroundings z9",
+    "candidates": [
+      {
+        "id": "LIBERTYBAY-FULL-z09-57",
+        "floor": 9,
+        "creatures": 154,
+        "extent": {
+          "minX": 32166,
+          "minY": 32686,
+          "maxX": 32277,
+          "maxY": 32856,
+          "centerX": 32221,
+          "centerY": 32771
+        },
+        "species": [
+          "Rotworm",
+          "Tarantula",
+          "Centipede"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "LIBERTYBAY-HUNT-0103",
+    "name": "Vandura Mountains",
+    "candidates": [
+      {
+        "id": "LIBERTYBAY-FULL-z02-131",
+        "floor": 2,
+        "creatures": 22,
+        "extent": {
+          "minX": 32390,
+          "minY": 32728,
+          "maxX": 32429,
+          "maxY": 32775,
+          "centerX": 32409,
+          "centerY": 32751
+        },
+        "species": [
+          "Wyrm"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "LIBERTYBAY-HUNT-0104",
+    "name": "Crypt Warriors — Bounac z9",
+    "candidates": [
+      {
+        "id": "LIBERTYBAY-FULL-z09-96",
+        "floor": 9,
+        "creatures": 20,
+        "extent": {
+          "minX": 32432,
+          "minY": 32480,
+          "maxX": 32470,
+          "maxY": 32533,
+          "centerX": 32451,
+          "centerY": 32506
+        },
+        "species": [
+          "Crypt Warrior"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "LIBERTYBAY-HUNT-0105",
+    "name": "Ramoa",
+    "candidates": [
+      {
+        "id": "LIBERTYBAY-FULL-z07-143",
+        "floor": 7,
+        "creatures": 100,
+        "extent": {
+          "minX": 31898,
+          "minY": 32538,
+          "maxX": 31967,
+          "maxY": 32607,
+          "centerX": 31932,
+          "centerY": 32572
+        },
+        "species": [
+          "Bonebeast",
+          "Demon Skeleton",
+          "Crypt Shambler"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "LIBERTYBAY-HUNT-0106",
+    "name": "Nargor",
+    "candidates": [
+      {
+        "id": "LIBERTYBAY-FULL-z06-72",
+        "floor": 6,
+        "creatures": 90,
+        "extent": {
+          "minX": 31931,
+          "minY": 32795,
+          "maxX": 32061,
+          "maxY": 32903,
+          "centerX": 31996,
+          "centerY": 32849
+        },
+        "species": [
+          "Pirate Marauder",
+          "Smuggler",
+          "Pirate Cutthroat"
+        ]
+      }
+    ]
+  }
+]

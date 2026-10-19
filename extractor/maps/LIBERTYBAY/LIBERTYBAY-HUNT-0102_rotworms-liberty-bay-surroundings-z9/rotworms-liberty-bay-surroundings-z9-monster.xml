@@ -1,0 +1,626 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32154" centery="32665" centerz="9" radius="3">
+		<monster name="Demon Skeleton" x="3" y="-2" z="9" spawntime="90" />
+		<monster name="Crypt Shambler" x="-1" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32161" centery="32665" centerz="9" radius="3">
+		<monster name="Crypt Shambler" x="-2" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32168" centery="32665" centerz="9" radius="3">
+		<monster name="Crypt Shambler" x="3" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32175" centery="32665" centerz="9" radius="3">
+		<monster name="Gargoyle" x="-1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32182" centery="32665" centerz="9" radius="3">
+		<monster name="Mummy" x="-2" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32189" centery="32665" centerz="9" radius="3">
+		<monster name="Gargoyle" x="-3" y="-2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32196" centery="32665" centerz="9" radius="3">
+		<monster name="Gargoyle" x="-2" y="-3" z="9" spawntime="90" />
+		<monster name="Gargoyle" x="2" y="-3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32203" centery="32665" centerz="9" radius="3">
+		<monster name="Crypt Shambler" x="0" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32210" centery="32665" centerz="9" radius="3">
+		<monster name="Mummy" x="-2" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32280" centery="32665" centerz="9" radius="3">
+		<monster name="Crypt Shambler" x="-2" y="1" z="9" spawntime="90" />
+		<monster name="Demon Skeleton" x="2" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32287" centery="32665" centerz="9" radius="3">
+		<monster name="Crypt Shambler" x="0" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32294" centery="32665" centerz="9" radius="3">
+		<monster name="Gargoyle" x="1" y="-2" z="9" spawntime="90" />
+		<monster name="Gargoyle" x="2" y="0" z="9" spawntime="90" />
+		<monster name="Gargoyle" x="-2" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32161" centery="32672" centerz="9" radius="3">
+		<monster name="Demon Skeleton" x="1" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32168" centery="32672" centerz="9" radius="3">
+		<monster name="Crypt Shambler" x="1" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32175" centery="32672" centerz="9" radius="3">
+		<monster name="Mummy" x="1" y="-2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32182" centery="32672" centerz="9" radius="3">
+		<monster name="Mummy" x="-3" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32196" centery="32672" centerz="9" radius="3">
+		<monster name="Mummy" x="3" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32203" centery="32672" centerz="9" radius="3">
+		<monster name="Mummy" x="-1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32210" centery="32672" centerz="9" radius="3">
+		<monster name="Crypt Shambler" x="-2" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32273" centery="32672" centerz="9" radius="3">
+		<monster name="Crypt Shambler" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32280" centery="32672" centerz="9" radius="3">
+		<monster name="Crypt Shambler" x="-1" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32301" centery="32672" centerz="9" radius="3">
+		<monster name="Gargoyle" x="-2" y="-3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32140" centery="32679" centerz="9" radius="3">
+		<monster name="Demon Skeleton" x="2" y="-2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32147" centery="32679" centerz="9" radius="3">
+		<monster name="Demon Skeleton" x="-1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32154" centery="32679" centerz="9" radius="3">
+		<monster name="Demon Skeleton" x="2" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32203" centery="32679" centerz="9" radius="3">
+		<monster name="Mummy" x="1" y="0" z="9" spawntime="90" />
+		<monster name="Mummy" x="2" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32210" centery="32679" centerz="9" radius="3">
+		<monster name="Mummy" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32273" centery="32679" centerz="9" radius="3">
+		<monster name="Crypt Shambler" x="-3" y="-3" z="9" spawntime="90" />
+		<monster name="Demon Skeleton" x="3" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32140" centery="32686" centerz="9" radius="3">
+		<monster name="Ghost" x="3" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32147" centery="32686" centerz="9" radius="3">
+		<monster name="Gargoyle" x="2" y="-3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32273" centery="32686" centerz="9" radius="3">
+		<monster name="Zombie" x="1" y="-2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32248" centery="32687" centerz="9" radius="2">
+		<monster name="Carrion Worm" x="-2" y="-1" z="9" spawntime="90" />
+		<monster name="Carrion Worm" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32235" centery="32688" centerz="9" radius="2">
+		<monster name="Centipede" x="-1" y="-1" z="9" spawntime="90" />
+		<monster name="Centipede" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32154" centery="32693" centerz="9" radius="3">
+		<monster name="Demon Skeleton" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32248" centery="32698" centerz="9" radius="2">
+		<monster name="Rotworm" x="1" y="-2" z="9" spawntime="90" />
+		<monster name="Rotworm" x="-1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32147" centery="32700" centerz="9" radius="3">
+		<monster name="Demon Skeleton" x="-2" y="-3" z="9" spawntime="90" />
+		<monster name="Crypt Shambler" x="-2" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32237" centery="32705" centerz="9" radius="2">
+		<monster name="Rotworm" x="-1" y="-1" z="9" spawntime="90" />
+		<monster name="Centipede" x="1" y="-1" z="9" spawntime="90" />
+		<monster name="Rotworm" x="1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32222" centery="32709" centerz="9" radius="2">
+		<monster name="Rotworm" x="-1" y="-1" z="9" spawntime="90" />
+		<monster name="Rotworm" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32190" centery="32711" centerz="9" radius="2">
+		<monster name="Rotworm" x="1" y="-1" z="9" spawntime="90" />
+		<monster name="Rotworm" x="-1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32212" centery="32711" centerz="9" radius="2">
+		<monster name="Rotworm" x="1" y="-2" z="9" spawntime="90" />
+		<monster name="Rotworm" x="-1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32229" centery="32712" centerz="9" radius="2">
+		<monster name="Rotworm" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32174" centery="32713" centerz="9" radius="2">
+		<monster name="Tarantula" x="0" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32259" centery="32713" centerz="9" radius="2">
+		<monster name="Centipede" x="-1" y="-1" z="9" spawntime="90" />
+		<monster name="Centipede" x="1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32203" centery="32714" centerz="9" radius="2">
+		<monster name="Carrion Worm" x="-2" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32271" centery="32715" centerz="9" radius="2">
+		<monster name="Rotworm" x="-1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32181" centery="32718" centerz="9" radius="2">
+		<monster name="Rotworm" x="-1" y="-1" z="9" spawntime="90" />
+		<monster name="Rotworm" x="0" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32209" centery="32719" centerz="9" radius="2">
+		<monster name="Rotworm" x="-1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32245" centery="32719" centerz="9" radius="2">
+		<monster name="Rotworm" x="-1" y="-1" z="9" spawntime="90" />
+		<monster name="Rotworm" x="1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32189" centery="32721" centerz="9" radius="2">
+		<monster name="Rotworm" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32236" centery="32721" centerz="9" radius="3">
+		<monster name="Tarantula" x="-1" y="0" z="9" spawntime="90" />
+		<monster name="Tarantula" x="1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32265" centery="32724" centerz="9" radius="2">
+		<monster name="Rotworm" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32259" centery="32725" centerz="9" radius="2">
+		<monster name="Rotworm" x="1" y="-2" z="9" spawntime="90" />
+		<monster name="Rotworm" x="0" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32211" centery="32726" centerz="9" radius="2">
+		<monster name="Centipede" x="2" y="0" z="9" spawntime="90" />
+		<monster name="Tarantula" x="0" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32197" centery="32727" centerz="9" radius="2">
+		<monster name="Centipede" x="-2" y="-1" z="9" spawntime="90" />
+		<monster name="Centipede" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32182" centery="32729" centerz="9" radius="2">
+		<monster name="Rotworm" x="0" y="-1" z="9" spawntime="90" />
+		<monster name="Rotworm" x="1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32275" centery="32729" centerz="9" radius="2">
+		<monster name="Centipede" x="0" y="-1" z="9" spawntime="90" />
+		<monster name="Rotworm" x="-2" y="1" z="9" spawntime="90" />
+		<monster name="Rotworm" x="2" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32227" centery="32731" centerz="9" radius="2">
+		<monster name="Rotworm" x="0" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32219" centery="32732" centerz="9" radius="2">
+		<monster name="Centipede" x="-2" y="-2" z="9" spawntime="90" />
+		<monster name="Centipede" x="2" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32252" centery="32733" centerz="9" radius="2">
+		<monster name="Tarantula" x="0" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32201" centery="32734" centerz="9" radius="2">
+		<monster name="Rotworm" x="1" y="-2" z="9" spawntime="90" />
+		<monster name="Centipede" x="-1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32211" centery="32735" centerz="9" radius="2">
+		<monster name="Centipede" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32186" centery="32737" centerz="9" radius="2">
+		<monster name="Rotworm" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32237" centery="32737" centerz="9" radius="2">
+		<monster name="Rotworm" x="-1" y="-1" z="9" spawntime="90" />
+		<monster name="Rotworm" x="1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32257" centery="32741" centerz="9" radius="2">
+		<monster name="Centipede" x="-1" y="0" z="9" spawntime="90" />
+		<monster name="Centipede" x="1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32190" centery="32743" centerz="9" radius="2">
+		<monster name="Centipede" x="-1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32207" centery="32743" centerz="9" radius="2">
+		<monster name="Tarantula" x="0" y="-2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32216" centery="32744" centerz="9" radius="2">
+		<monster name="Tarantula" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32181" centery="32745" centerz="9" radius="1">
+		<monster name="Rotworm" x="-1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32248" centery="32746" centerz="9" radius="2">
+		<monster name="Centipede" x="-1" y="-1" z="9" spawntime="90" />
+		<monster name="Rotworm" x="2" y="-1" z="9" spawntime="90" />
+		<monster name="Centipede" x="0" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32228" centery="32747" centerz="9" radius="2">
+		<monster name="Rotworm" x="2" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32196" centery="32748" centerz="9" radius="2">
+		<monster name="Centipede" x="-1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32273" centery="32749" centerz="9" radius="2">
+		<monster name="Rotworm" x="1" y="-1" z="9" spawntime="90" />
+		<monster name="Centipede" x="-2" y="1" z="9" spawntime="90" />
+		<monster name="Carrion Worm" x="1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32186" centery="32750" centerz="9" radius="2">
+		<monster name="Rotworm" x="-2" y="-2" z="9" spawntime="90" />
+		<monster name="Centipede" x="0" y="-2" z="9" spawntime="90" />
+		<monster name="Rotworm" x="2" y="1" z="9" spawntime="90" />
+		<monster name="Rotworm" x="-1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32203" centery="32750" centerz="9" radius="2">
+		<monster name="Rotworm" x="-1" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32261" centery="32751" centerz="9" radius="2">
+		<monster name="Rotworm" x="-2" y="-2" z="9" spawntime="90" />
+		<monster name="Rotworm" x="1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32242" centery="32755" centerz="9" radius="2">
+		<monster name="Centipede" x="2" y="-1" z="9" spawntime="90" />
+		<monster name="Centipede" x="-1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32235" centery="32756" centerz="9" radius="2">
+		<monster name="Rotworm" x="-1" y="0" z="9" spawntime="90" />
+		<monster name="Rotworm" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32193" centery="32759" centerz="9" radius="2">
+		<monster name="Tarantula" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32263" centery="32760" centerz="9" radius="2">
+		<monster name="Centipede" x="0" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32269" centery="32760" centerz="9" radius="2">
+		<monster name="Rotworm" x="1" y="-1" z="9" spawntime="90" />
+		<monster name="Rotworm" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32186" centery="32761" centerz="9" radius="2">
+		<monster name="Tarantula" x="-1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32167" centery="32763" centerz="9" radius="1">
+		<monster name="Rotworm" x="-1" y="-1" z="9" spawntime="90" />
+		<monster name="Centipede" x="1" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32228" centery="32764" centerz="9" radius="3">
+		<monster name="Rotworm" x="0" y="1" z="9" spawntime="90" />
+		<monster name="Centipede" x="2" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32247" centery="32764" centerz="9" radius="2">
+		<monster name="Rotworm" x="-1" y="0" z="9" spawntime="90" />
+		<monster name="Centipede" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32174" centery="32765" centerz="9" radius="1">
+		<monster name="Rotworm" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32209" centery="32766" centerz="9" radius="3">
+		<monster name="Rotworm" x="2" y="-2" z="9" spawntime="90" />
+		<monster name="Rotworm" x="-2" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32165" centery="32767" centerz="9" radius="1">
+		<monster name="Centipede" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32178" centery="32770" centerz="9" radius="1">
+		<monster name="Rotworm" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32196" centery="32770" centerz="9" radius="1">
+		<monster name="Carrion Worm" x="-1" y="-1" z="9" spawntime="90" />
+		<monster name="Carrion Worm" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32256" centery="32772" centerz="9" radius="3">
+		<monster name="Rotworm" x="0" y="-1" z="9" spawntime="90" />
+		<monster name="Centipede" x="-1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32235" centery="32774" centerz="9" radius="3">
+		<monster name="Centipede" x="-2" y="1" z="9" spawntime="90" />
+		<monster name="Rotworm" x="0" y="1" z="9" spawntime="90" />
+		<monster name="Centipede" x="3" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32179" centery="32775" centerz="9" radius="1">
+		<monster name="Rotworm" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32175" centery="32780" centerz="9" radius="1">
+		<monster name="Rotworm" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32263" centery="32781" centerz="9" radius="3">
+		<monster name="Rotworm" x="2" y="-2" z="9" spawntime="90" />
+		<monster name="Rotworm" x="0" y="3" z="9" spawntime="90" />
+		<monster name="Centipede" x="3" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32209" centery="32782" centerz="9" radius="3">
+		<monster name="Rotworm" x="3" y="-3" z="9" spawntime="90" />
+		<monster name="Rotworm" x="-2" y="-1" z="9" spawntime="90" />
+		<monster name="Rotworm" x="-2" y="2" z="9" spawntime="90" />
+		<monster name="Rotworm" x="2" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32244" centery="32787" centerz="9" radius="3">
+		<monster name="Centipede" x="-2" y="-1" z="9" spawntime="90" />
+		<monster name="Centipede" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32254" centery="32787" centerz="9" radius="1">
+		<monster name="Rotworm" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32220" centery="32789" centerz="9" radius="3">
+		<monster name="Rotworm" x="1" y="-2" z="9" spawntime="90" />
+		<monster name="Rotworm" x="1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32200" centery="32790" centerz="9" radius="1">
+		<monster name="Rotworm" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32211" centery="32790" centerz="9" radius="1">
+		<monster name="Rotworm" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32256" centery="32791" centerz="9" radius="1">
+		<monster name="Rotworm" x="0" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32164" centery="32792" centerz="9" radius="1">
+		<monster name="Tarantula" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32171" centery="32792" centerz="9" radius="1">
+		<monster name="Rotworm" x="1" y="-1" z="9" spawntime="90" />
+		<monster name="Rotworm" x="-1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32176" centery="32793" centerz="9" radius="1">
+		<monster name="Carrion Worm" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32231" centery="32793" centerz="9" radius="1">
+		<monster name="Tarantula" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32260" centery="32793" centerz="9" radius="1">
+		<monster name="Rotworm" x="-1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32195" centery="32794" centerz="9" radius="1">
+		<monster name="Rotworm" x="-1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32296" centery="32795" centerz="9" radius="1">
+		<monster name="Corym Skirmisher" x="0" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="32300" centery="32795" centerz="9" radius="1">
+		<monster name="Corym Charlatan" x="0" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="32180" centery="32797" centerz="9" radius="1">
+		<monster name="Centipede" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32188" centery="32798" centerz="9" radius="1">
+		<monster name="Rotworm" x="1" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32244" centery="32799" centerz="9" radius="3">
+		<monster name="Rotworm" x="-1" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32230" centery="32800" centerz="9" radius="1">
+		<monster name="Tarantula" x="1" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32295" centery="32800" centerz="9" radius="1">
+		<monster name="Corym Skirmisher" x="0" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="32263" centery="32802" centerz="9" radius="1">
+		<monster name="Rotworm" x="0" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32215" centery="32803" centerz="9" radius="1">
+		<monster name="Rotworm" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32171" centery="32805" centerz="9" radius="1">
+		<monster name="Centipede" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32259" centery="32807" centerz="9" radius="1">
+		<monster name="Rotworm" x="-1" y="0" z="9" spawntime="90" />
+		<monster name="Rotworm" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32180" centery="32809" centerz="9" radius="1">
+		<monster name="Centipede" x="-1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32168" centery="32810" centerz="9" radius="1">
+		<monster name="Centipede" x="1" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32248" centery="32811" centerz="9" radius="2">
+		<monster name="Rotworm" x="0" y="-1" z="9" spawntime="90" />
+		<monster name="Rotworm" x="0" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32242" centery="32812" centerz="9" radius="1">
+		<monster name="Rotworm" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32181" centery="32813" centerz="9" radius="1">
+		<monster name="Centipede" x="-1" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32295" centery="32813" centerz="9" radius="1">
+		<monster name="Corym Skirmisher" x="0" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="32280" centery="32814" centerz="9" radius="1">
+		<monster name="Corym Charlatan" x="1" y="1" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="32236" centery="32815" centerz="9" radius="1">
+		<monster name="Rotworm" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32183" centery="32817" centerz="9" radius="1">
+		<monster name="Rotworm" x="0" y="-1" z="9" spawntime="90" />
+		<monster name="Rotworm" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32250" centery="32817" centerz="9" radius="1">
+		<monster name="Rotworm" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32215" centery="32818" centerz="9" radius="1">
+		<monster name="Rotworm" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32234" centery="32819" centerz="9" radius="1">
+		<monster name="Rotworm" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32280" centery="32819" centerz="9" radius="1">
+		<monster name="Corym Charlatan" x="1" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="32220" centery="32822" centerz="9" radius="1">
+		<monster name="Rotworm" x="-1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32195" centery="32823" centerz="9" radius="1">
+		<monster name="Rotworm" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32234" centery="32823" centerz="9" radius="1">
+		<monster name="Rotworm" x="-1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32221" centery="32828" centerz="9" radius="1">
+		<monster name="Rotworm" x="1" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32246" centery="32829" centerz="9" radius="1">
+		<monster name="Rotworm" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32280" centery="32830" centerz="9" radius="1">
+		<monster name="Corym Skirmisher" x="0" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="32199" centery="32832" centerz="9" radius="1">
+		<monster name="Centipede" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32221" centery="32835" centerz="9" radius="1">
+		<monster name="Rotworm" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32245" centery="32835" centerz="9" radius="1">
+		<monster name="Rotworm" x="1" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32274" centery="32835" centerz="9" radius="1">
+		<monster name="Corym Skirmisher" x="0" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="32199" centery="32837" centerz="9" radius="1">
+		<monster name="Rotworm" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32281" centery="32837" centerz="9" radius="1">
+		<monster name="Corym Skirmisher" x="0" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="32241" centery="32838" centerz="9" radius="1">
+		<monster name="Rotworm" x="1" y="-1" z="9" spawntime="90" />
+		<monster name="Rotworm" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32274" centery="32838" centerz="9" radius="1">
+		<monster name="Corym Charlatan" x="0" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="32277" centery="32838" centerz="9" radius="1">
+		<monster name="Corym Skirmisher" x="0" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="32153" centery="32843" centerz="9" radius="1">
+		<monster name="Waspoid" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32166" centery="32843" centerz="9" radius="1">
+		<monster name="Waspoid" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32154" centery="32844" centerz="9" radius="1">
+		<monster name="Spitter" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32162" centery="32845" centerz="9" radius="1">
+		<monster name="Waspoid" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32166" centery="32845" centerz="9" radius="1">
+		<monster name="Spitter" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32169" centery="32845" centerz="9" radius="1">
+		<monster name="Spitter" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32203" centery="32852" centerz="9" radius="1">
+		<monster name="Rotworm" x="1" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32147" centery="32854" centerz="9" radius="3">
+		<monster name="Spitter" x="3" y="-2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32154" centery="32854" centerz="9" radius="3">
+		<monster name="Insectoid Worker" x="-3" y="-1" z="9" spawntime="90" />
+		<monster name="Insectoid Worker" x="1" y="-1" z="9" spawntime="90" />
+		<monster name="Swarmer" x="3" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32161" centery="32854" centerz="9" radius="3">
+		<monster name="Spitter" x="-3" y="-3" z="9" spawntime="90" />
+		<monster name="Crawler" x="3" y="-3" z="9" spawntime="90" />
+		<monster name="Crawler" x="-3" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32168" centery="32854" centerz="9" radius="3">
+		<monster name="Waspoid" x="-3" y="1" z="9" spawntime="90" />
+		<monster name="Waspoid" x="1" y="2" z="9" spawntime="90" />
+		<monster name="Spidris" x="-1" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32214" centery="32854" centerz="9" radius="1">
+		<monster name="Centipede" x="-1" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32208" centery="32855" centerz="9" radius="1">
+		<monster name="Centipede" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32154" centery="32861" centerz="9" radius="3">
+		<monster name="Crawler" x="-1" y="-3" z="9" spawntime="90" />
+		<monster name="Kollos" x="2" y="0" z="9" spawntime="90" />
+		<monster name="Crawler" x="3" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32168" centery="32861" centerz="9" radius="3">
+		<monster name="Waspoid" x="0" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32252" centery="32861" centerz="9" radius="3">
+		<monster name="Quara Constrictor" x="0" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32259" centery="32861" centerz="9" radius="3">
+		<monster name="Quara Pincher" x="0" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32160" centery="32864" centerz="9" radius="1">
+		<monster name="Spidris" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32165" centery="32866" centerz="9" radius="1">
+		<monster name="Kollos" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32252" centery="32866" centerz="9" radius="1">
+		<monster name="Quara Predator" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32264" centery="32867" centerz="9" radius="1">
+		<monster name="Quara Hydromancer" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32154" centery="32868" centerz="9" radius="3">
+		<monster name="Spidris" x="1" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32161" centery="32868" centerz="9" radius="3">
+		<monster name="Kollos" x="-2" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32245" centery="32868" centerz="9" radius="3">
+		<monster name="Quara Predator" x="-1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32259" centery="32868" centerz="9" radius="3">
+		<monster name="Quara Predator" x="-3" y="-3" z="9" spawntime="90" />
+		<monster name="Quara Predator" x="2" y="-3" z="9" spawntime="90" />
+		<monster name="Quara Pincher" x="0" y="-2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32263" centery="32870" centerz="9" radius="1">
+		<monster name="Quara Predator" x="0" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32266" centery="32870" centerz="9" radius="1">
+		<monster name="Quara Pincher" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32240" centery="32872" centerz="9" radius="1">
+		<monster name="Quara Hydromancer" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32275" centery="32874" centerz="9" radius="1">
+		<monster name="Quara Predator" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32244" centery="32875" centerz="9" radius="1">
+		<monster name="Quara Pincher" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32266" centery="32875" centerz="9" radius="3">
+		<monster name="Quara Constrictor" x="2" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32280" centery="32875" centerz="9" radius="3">
+		<monster name="Quara Pincher" x="-3" y="-2" z="9" spawntime="90" />
+		<monster name="Quara Mantassin" x="-1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32273" centery="32876" centerz="9" radius="1">
+		<monster name="Quara Hydromancer" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32243" centery="32877" centerz="9" radius="1">
+		<monster name="Quara Predator" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32245" centery="32882" centerz="9" radius="3">
+		<monster name="Quara Pincher" x="2" y="-3" z="9" spawntime="90" />
+		<monster name="Quara Pincher" x="0" y="-2" z="9" spawntime="90" />
+		<monster name="Quara Hydromancer" x="3" y="-2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32266" centery="32882" centerz="9" radius="3">
+		<monster name="Quara Constrictor" x="3" y="-3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32273" centery="32882" centerz="9" radius="3">
+		<monster name="Quara Mantassin" x="-3" y="-3" z="9" spawntime="90" />
+	</monster>
+</monsters>

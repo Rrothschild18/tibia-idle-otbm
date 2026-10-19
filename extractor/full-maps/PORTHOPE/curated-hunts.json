@@ -1,0 +1,246 @@
+{
+  "city": "PORTHOPE",
+  "area": "Tiquanda",
+  "hunts": [
+    {
+      "id": "PORTHOPE-HUNT-0101",
+      "type": "HUNT",
+      "name": "Tiquanda/Trapwood",
+      "slug": "tiquanda-trapwood",
+      "folder": "PORTHOPE-HUNT-0101_tiquanda-trapwood",
+      "floors": [
+        7,
+        8,
+        9
+      ],
+      "cropFloors": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "candidateIds": [
+        "PORTHOPE-FULL-z08-207"
+      ],
+      "creatures": 228,
+      "extent": {
+        "minX": 32627,
+        "minY": 32865,
+        "maxX": 32779,
+        "maxY": 32942,
+        "centerX": 32703,
+        "centerY": 32903
+      },
+      "subareaId": 92,
+      "entrance": {
+        "x": 32635,
+        "y": 32876,
+        "z": 8
+      },
+      "walkTilesFromTemple": 141,
+      "tiles": 90096,
+      "spawns": 437
+    },
+    {
+      "id": "PORTHOPE-HUNT-0102",
+      "type": "HUNT",
+      "name": "Kongras — Banuta z9",
+      "slug": "kongras-banuta-z9",
+      "folder": "PORTHOPE-HUNT-0102_kongras-banuta-z9",
+      "floors": [
+        8,
+        9,
+        10
+      ],
+      "cropFloors": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "candidateIds": [
+        "PORTHOPE-FULL-z09-15"
+      ],
+      "creatures": 148,
+      "extent": {
+        "minX": 32744,
+        "minY": 32489,
+        "maxX": 32858,
+        "maxY": 32589,
+        "centerX": 32801,
+        "centerY": 32539
+      },
+      "subareaId": 86,
+      "entrance": {
+        "x": 32800,
+        "y": 32546,
+        "z": 9
+      },
+      "walkTilesFromTemple": 282,
+      "tiles": 98716,
+      "spawns": 414
+    },
+    {
+      "id": "PORTHOPE-HUNT-0103",
+      "type": "HUNT",
+      "name": "Port Hope Swamp Trolls",
+      "slug": "port-hope-swamp-trolls",
+      "folder": "PORTHOPE-HUNT-0103_port-hope-swamp-trolls",
+      "floors": [
+        7,
+        8,
+        9
+      ],
+      "cropFloors": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "candidateIds": [
+        "PORTHOPE-FULL-z08-70"
+      ],
+      "creatures": 26,
+      "extent": {
+        "minX": 32668,
+        "minY": 32573,
+        "maxX": 32702,
+        "maxY": 32623,
+        "centerX": 32685,
+        "centerY": 32598
+      },
+      "subareaId": 92,
+      "entrance": {
+        "x": 32679,
+        "y": 32609,
+        "z": 8
+      },
+      "walkTilesFromTemple": 151,
+      "tiles": 29038,
+      "spawns": 124
+    },
+    {
+      "id": "PORTHOPE-HUNT-0104",
+      "type": "HUNT",
+      "name": "Southern Terramite Tunnels",
+      "slug": "southern-terramite-tunnels",
+      "folder": "PORTHOPE-HUNT-0104_southern-terramite-tunnels",
+      "floors": [
+        7,
+        8,
+        9
+      ],
+      "cropFloors": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "candidateIds": [
+        "PORTHOPE-FULL-z08-457"
+      ],
+      "creatures": 23,
+      "extent": {
+        "minX": 32978,
+        "minY": 32681,
+        "maxX": 33048,
+        "maxY": 32711,
+        "centerX": 33013,
+        "centerY": 32696
+      },
+      "subareaId": 107,
+      "entrance": {
+        "x": 32978,
+        "y": 32686,
+        "z": 8
+      },
+      "walkTilesFromTemple": 419,
+      "tiles": 38161,
+      "spawns": 142
+    },
+    {
+      "id": "PORTHOPE-HUNT-0105",
+      "type": "HUNT",
+      "name": "Kha'zeel Dragon Lairs/Tiquanda",
+      "slug": "kha-zeel-dragon-lairs-tiquanda",
+      "folder": "PORTHOPE-HUNT-0105_kha-zeel-dragon-lairs-tiquanda",
+      "floors": [
+        6,
+        7,
+        8
+      ],
+      "cropFloors": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "candidateIds": [
+        "PORTHOPE-FULL-z07-54"
+      ],
+      "creatures": 137,
+      "extent": {
+        "minX": 32921,
+        "minY": 32482,
+        "maxX": 33023,
+        "maxY": 32593,
+        "centerX": 32972,
+        "centerY": 32537
+      },
+      "subareaId": 90,
+      "entrance": {
+        "x": 33013,
+        "y": 32560,
+        "z": 7
+      },
+      "walkTilesFromTemple": 830,
+      "tiles": 83990,
+      "spawns": 286
+    },
+    {
+      "id": "PORTHOPE-HUNT-0106",
+      "type": "HUNT",
+      "name": "Banuta",
+      "slug": "banuta",
+      "folder": "PORTHOPE-HUNT-0106_banuta",
+      "floors": [
+        7,
+        8,
+        9
+      ],
+      "cropFloors": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "candidateIds": [
+        "PORTHOPE-FULL-z08-7"
+      ],
+      "creatures": 124,
+      "extent": {
+        "minX": 32752,
+        "minY": 32492,
+        "maxX": 32852,
+        "maxY": 32576,
+        "centerX": 32802,
+        "centerY": 32534
+      },
+      "subareaId": 86,
+      "entrance": {
+        "x": 32772,
+        "y": 32568,
+        "z": 8
+      },
+      "walkTilesFromTemple": 213,
+      "tiles": 89308,
+      "spawns": 413
+    }
+  ]
+}

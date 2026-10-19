@@ -8,6 +8,9 @@
 		<monster name="Swamp Troll" x="-1" y="-1" z="8" spawntime="90" />
 		<monster name="Swamp Troll" x="1" y="0" z="8" spawntime="90" />
 	</monster>
+	<monster centerx="32973" centery="32175" centerz="8" radius="3">
+		<monster name="Snake" x="-3" y="3" z="8" spawntime="90" />
+	</monster>
 	<monster centerx="32942" centery="32178" centerz="8" radius="2">
 		<monster name="Swamp Troll" x="1" y="-1" z="8" spawntime="90" />
 		<monster name="Swamp Troll" x="-1" y="1" z="8" spawntime="90" />
@@ -18,6 +21,13 @@
 	<monster centerx="32935" centery="32182" centerz="8" radius="2">
 		<monster name="Swamp Troll" x="2" y="-1" z="8" spawntime="90" />
 		<monster name="Swamp Troll" x="1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32966" centery="32182" centerz="8" radius="3">
+		<monster name="Snake" x="2" y="-2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32973" centery="32182" centerz="8" radius="3">
+		<monster name="Bat" x="2" y="1" z="8" spawntime="90" />
+		<monster name="Snake" x="-1" y="2" z="8" spawntime="90" />
 	</monster>
 	<monster centerx="32918" centery="32187" centerz="8" radius="2">
 		<monster name="Swamp Troll" x="1" y="1" z="8" spawntime="90" />
@@ -82,6 +92,8 @@
 		<monster name="Swamp Troll" x="0" y="1" z="8" spawntime="90" />
 	</monster>
 	<monster centerx="32903" centery="32239" centerz="8" radius="3">
+		<monster name="Swamp Troll" x="-3" y="-1" z="8" spawntime="90" />
+		<monster name="Swamp Troll" x="-3" y="0" z="8" spawntime="90" />
 		<monster name="Swamp Troll" x="3" y="0" z="8" spawntime="90" />
 	</monster>
 	<monster centerx="32913" centery="32239" centerz="8" radius="2">

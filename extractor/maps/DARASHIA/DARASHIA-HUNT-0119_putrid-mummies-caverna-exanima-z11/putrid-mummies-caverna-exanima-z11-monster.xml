@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="33344" centery="32259" centerz="11" radius="3">
+		<monster name="Putrid Mummy" x="1" y="-1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33337" centery="32260" centerz="11" radius="3">
+		<monster name="Bonebeast" x="3" y="-2" z="11" spawntime="60" />
+		<monster name="Giant Spider" x="0" y="-1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33265" centery="32261" centerz="11" radius="4">
+		<monster name="Dragon Lord" x="4" y="-3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33330" centery="32266" centerz="11" radius="3">
+		<monster name="Putrid Mummy" x="1" y="1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33330" centery="32273" centerz="11" radius="3">
+		<monster name="Bonebeast" x="0" y="1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33302" centery="32279" centerz="11" radius="3">
+		<monster name="Minotaur Mage" x="2" y="-2" z="11" spawntime="90" />
+		<monster name="Minotaur Mage" x="-3" y="0" z="11" spawntime="90" />
+		<monster name="Minotaur Mage" x="-1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33311" centery="32281" centerz="11" radius="2">
+		<monster name="Mummy" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33268" centery="32282" centerz="11" radius="4">
+		<monster name="Dragon Lord" x="0" y="-1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33303" centery="32286" centerz="11" radius="2">
+		<monster name="Minotaur Mage" x="-1" y="0" z="11" spawntime="90" />
+		<monster name="Minotaur Mage" x="2" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33337" centery="32287" centerz="11" radius="3">
+		<monster name="Bonebeast" x="-1" y="-3" z="11" spawntime="60" />
+		<monster name="Putrid Mummy" x="0" y="-1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33308" centery="32288" centerz="11" radius="1">
+		<monster name="Minotaur Archer" x="1" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33314" centery="32288" centerz="11" radius="1">
+		<monster name="Minotaur Mage" x="0" y="-1" z="11" spawntime="90" />
+		<monster name="Minotaur Guard" x="-1" y="1" z="11" spawntime="90" />
+		<monster name="Minotaur Guard" x="1" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33301" centery="32291" centerz="11" radius="2">
+		<monster name="Minotaur Mage" x="0" y="-1" z="11" spawntime="90" />
+		<monster name="Minotaur Guard" x="-1" y="1" z="11" spawntime="90" />
+		<monster name="Minotaur Archer" x="2" y="1" z="11" spawntime="90" />
+		<monster name="Minotaur Mage" x="1" y="2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33309" centery="32292" centerz="11" radius="1">
+		<monster name="Minotaur Guard" x="1" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33314" centery="32292" centerz="11" radius="1">
+		<monster name="Minotaur Guard" x="-1" y="1" z="11" spawntime="90" />
+		<monster name="Minotaur Guard" x="1" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33262" centery="32300" centerz="11" radius="4">
+		<monster name="Dragon Lord" x="4" y="-2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33337" centery="32301" centerz="11" radius="3">
+		<monster name="Bonebeast" x="-2" y="-3" z="11" spawntime="60" />
+		<monster name="Putrid Mummy" x="0" y="2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33344" centery="32308" centerz="11" radius="3">
+		<monster name="Bonebeast" x="-1" y="1" z="11" spawntime="60" />
+	</monster>
+</monsters>

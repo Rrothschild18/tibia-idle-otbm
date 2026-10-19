@@ -1,0 +1,167 @@
+{
+  "city": "SVARGROND",
+  "area": "Hrodmir",
+  "subareas": [
+    298,
+    113,
+    458,
+    109,
+    110,
+    111,
+    112,
+    114,
+    116,
+    117,
+    201,
+    202,
+    287,
+    289,
+    290
+  ],
+  "hunts": [
+    {
+      "id": "SVARGROND-HUNT-0101",
+      "name": "Barbarian Settlements",
+      "floors": [
+        5,
+        6,
+        7
+      ],
+      "candidateIds": [
+        "SVARGROND-FULL-z06-57"
+      ],
+      "species": null,
+      "creatures": 127,
+      "extent": {
+        "minX": 32089,
+        "minY": 31200,
+        "maxX": 32196,
+        "maxY": 31351,
+        "centerX": 32142,
+        "centerY": 31275
+      },
+      "subareaId": 458,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "SVARGROND-HUNT-0102",
+      "name": "Formorgar Mines",
+      "floors": [
+        9,
+        10,
+        11
+      ],
+      "candidateIds": [
+        "SVARGROND-FULL-z10-3"
+      ],
+      "species": null,
+      "creatures": 122,
+      "extent": {
+        "minX": 32158,
+        "minY": 31014,
+        "maxX": 32330,
+        "maxY": 31174,
+        "centerX": 32244,
+        "centerY": 31094
+      },
+      "subareaId": 298,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "SVARGROND-HUNT-0103",
+      "name": "Formorgar Glacier/Crystal Spiders",
+      "floors": [
+        2,
+        3,
+        4
+      ],
+      "candidateIds": [
+        "SVARGROND-FULL-z03-512"
+      ],
+      "species": null,
+      "creatures": 13,
+      "extent": {
+        "minX": 32055,
+        "minY": 31166,
+        "maxX": 32091,
+        "maxY": 31207,
+        "centerX": 32073,
+        "centerY": 31186
+      },
+      "subareaId": 114,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "SVARGROND-HUNT-0104",
+      "name": "Formorgar Glacier/Mammoths",
+      "floors": [
+        4,
+        5,
+        6
+      ],
+      "candidateIds": [
+        "SVARGROND-FULL-z05-16"
+      ],
+      "species": null,
+      "creatures": 93,
+      "extent": {
+        "minX": 32093,
+        "minY": 31029,
+        "maxX": 32264,
+        "maxY": 31186,
+        "centerX": 32178,
+        "centerY": 31107
+      },
+      "subareaId": 458,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "SVARGROND-HUNT-0105",
+      "name": "Tyrsung",
+      "floors": [
+        7,
+        8,
+        9
+      ],
+      "candidateIds": [
+        "SVARGROND-FULL-z08-163"
+      ],
+      "species": null,
+      "creatures": 38,
+      "extent": {
+        "minX": 32362,
+        "minY": 31210,
+        "maxX": 32440,
+        "maxY": 31303,
+        "centerX": 32401,
+        "centerY": 31256
+      },
+      "subareaId": 113,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "SVARGROND-HUNT-0106",
+      "name": "Chakoya Toolshapers — Grimlund z10",
+      "floors": [
+        9,
+        10,
+        11
+      ],
+      "candidateIds": [
+        "SVARGROND-FULL-z10-378"
+      ],
+      "species": null,
+      "creatures": 120,
+      "extent": {
+        "minX": 32413,
+        "minY": 31020,
+        "maxX": 32509,
+        "maxY": 31101,
+        "centerX": 32461,
+        "centerY": 31060
+      },
+      "subareaId": 112,
+      "walkTilesFromTemple": null
+    }
+  ]
+}

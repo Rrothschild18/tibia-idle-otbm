@@ -1,0 +1,169 @@
+{
+  "city": "LIBERTYBAY",
+  "area": "Vandura",
+  "subareas": [
+    462,
+    95,
+    312,
+    94,
+    96,
+    282,
+    97,
+    98,
+    99,
+    228,
+    100,
+    101,
+    102,
+    283,
+    284,
+    285,
+    391
+  ],
+  "hunts": [
+    {
+      "id": "LIBERTYBAY-HUNT-0101",
+      "name": "Laguna Islands",
+      "floors": [
+        6,
+        7,
+        8
+      ],
+      "candidateIds": [
+        "LIBERTYBAY-FULL-z07-30"
+      ],
+      "species": null,
+      "creatures": 155,
+      "extent": {
+        "minX": 32331,
+        "minY": 32901,
+        "maxX": 32434,
+        "maxY": 32993,
+        "centerX": 32382,
+        "centerY": 32947
+      },
+      "subareaId": 100,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "LIBERTYBAY-HUNT-0102",
+      "name": "Rotworms — Liberty Bay Surroundings z9",
+      "floors": [
+        8,
+        9,
+        10
+      ],
+      "candidateIds": [
+        "LIBERTYBAY-FULL-z09-45"
+      ],
+      "species": null,
+      "creatures": 158,
+      "extent": {
+        "minX": 32164,
+        "minY": 32686,
+        "maxX": 32277,
+        "maxY": 32856,
+        "centerX": 32220,
+        "centerY": 32771
+      },
+      "subareaId": 95,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "LIBERTYBAY-HUNT-0103",
+      "name": "Vandura Mountains",
+      "floors": [
+        1,
+        2,
+        3
+      ],
+      "candidateIds": [
+        "LIBERTYBAY-FULL-z02-114"
+      ],
+      "species": null,
+      "creatures": 22,
+      "extent": {
+        "minX": 32390,
+        "minY": 32728,
+        "maxX": 32429,
+        "maxY": 32775,
+        "centerX": 32409,
+        "centerY": 32751
+      },
+      "subareaId": 95,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "LIBERTYBAY-HUNT-0104",
+      "name": "Crypt Warriors — Bounac z9",
+      "floors": [
+        8,
+        9,
+        10
+      ],
+      "candidateIds": [
+        "LIBERTYBAY-FULL-z09-237"
+      ],
+      "species": null,
+      "creatures": 23,
+      "extent": {
+        "minX": 32432,
+        "minY": 32480,
+        "maxX": 32470,
+        "maxY": 32535,
+        "centerX": 32451,
+        "centerY": 32507
+      },
+      "subareaId": 391,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "LIBERTYBAY-HUNT-0105",
+      "name": "Ramoa",
+      "floors": [
+        6,
+        7,
+        8
+      ],
+      "candidateIds": [
+        "LIBERTYBAY-FULL-z07-269"
+      ],
+      "species": null,
+      "creatures": 100,
+      "extent": {
+        "minX": 31898,
+        "minY": 32538,
+        "maxX": 31967,
+        "maxY": 32607,
+        "centerX": 31932,
+        "centerY": 32572
+      },
+      "subareaId": 283,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "LIBERTYBAY-HUNT-0106",
+      "name": "Nargor",
+      "floors": [
+        5,
+        6,
+        7
+      ],
+      "candidateIds": [
+        "LIBERTYBAY-FULL-z06-213"
+      ],
+      "species": null,
+      "creatures": 96,
+      "extent": {
+        "minX": 31931,
+        "minY": 32795,
+        "maxX": 32061,
+        "maxY": 32903,
+        "centerX": 31996,
+        "centerY": 32849
+      },
+      "subareaId": 97,
+      "walkTilesFromTemple": null
+    }
+  ]
+}

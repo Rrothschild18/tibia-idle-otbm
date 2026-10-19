@@ -1,0 +1,238 @@
+{
+  "city": "ZAO",
+  "area": "Zao",
+  "subareas": [
+    449,
+    141,
+    125,
+    142,
+    143,
+    144,
+    145,
+    148,
+    149,
+    150,
+    151,
+    152,
+    511,
+    319
+  ],
+  "hunts": [
+    {
+      "id": "ZAO-HUNT-0101",
+      "name": "Black Serpent Dungeon",
+      "floors": [
+        8,
+        9,
+        10
+      ],
+      "candidateIds": [
+        "ZAO-FULL-z09-123"
+      ],
+      "species": null,
+      "creatures": 54,
+      "extent": {
+        "minX": 33253,
+        "minY": 31082,
+        "maxX": 33331,
+        "maxY": 31203,
+        "centerX": 33292,
+        "centerY": 31142
+      },
+      "subareaId": 145,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "ZAO-HUNT-0102",
+      "name": "Draken Warmasters — Razachai z3",
+      "floors": [
+        2,
+        3,
+        4
+      ],
+      "candidateIds": [
+        "ZAO-FULL-z03-272"
+      ],
+      "species": null,
+      "creatures": 104,
+      "extent": {
+        "minX": 33030,
+        "minY": 31077,
+        "maxX": 33122,
+        "maxY": 31281,
+        "centerX": 33076,
+        "centerY": 31179
+      },
+      "subareaId": 148,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "ZAO-HUNT-0103",
+      "name": "Dragonblaze Peaks",
+      "floors": [
+        6,
+        7,
+        8
+      ],
+      "candidateIds": [
+        "ZAO-FULL-z07-13"
+      ],
+      "species": null,
+      "creatures": 241,
+      "extent": {
+        "minX": 33137,
+        "minY": 31132,
+        "maxX": 33354,
+        "maxY": 31305,
+        "centerX": 33245,
+        "centerY": 31218
+      },
+      "subareaId": 145,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "ZAO-HUNT-0104",
+      "name": "Dragolisks — Muggy Plains z13",
+      "floors": [
+        12,
+        13,
+        14
+      ],
+      "candidateIds": [
+        "ZAO-FULL-z13-122"
+      ],
+      "species": null,
+      "creatures": 202,
+      "extent": {
+        "minX": 33182,
+        "minY": 31063,
+        "maxX": 33345,
+        "maxY": 31194,
+        "centerX": 33263,
+        "centerY": 31128
+      },
+      "subareaId": 145,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "ZAO-HUNT-0105",
+      "name": "Vengoth",
+      "floors": [
+        6,
+        7,
+        8
+      ],
+      "candidateIds": [
+        "ZAO-FULL-z07-96"
+      ],
+      "species": null,
+      "creatures": 115,
+      "extent": {
+        "minX": 32869,
+        "minY": 31456,
+        "maxX": 32978,
+        "maxY": 31564,
+        "centerX": 32923,
+        "centerY": 31510
+      },
+      "subareaId": 125,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "ZAO-HUNT-0106",
+      "name": "Muggy Plains",
+      "floors": [
+        7,
+        8,
+        9
+      ],
+      "candidateIds": [
+        "ZAO-FULL-z08-78"
+      ],
+      "species": null,
+      "creatures": 25,
+      "extent": {
+        "minX": 33256,
+        "minY": 31110,
+        "maxX": 33305,
+        "maxY": 31189,
+        "centerX": 33280,
+        "centerY": 31149
+      },
+      "subareaId": 145,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "ZAO-HUNT-0107",
+      "name": "Gnarlhounds — Zao Steppe z8",
+      "floors": [
+        7,
+        8,
+        9
+      ],
+      "candidateIds": [
+        "ZAO-FULL-z08-17"
+      ],
+      "species": null,
+      "creatures": 16,
+      "extent": {
+        "minX": 33034,
+        "minY": 31483,
+        "maxX": 33088,
+        "maxY": 31528,
+        "centerX": 33061,
+        "centerY": 31505
+      },
+      "subareaId": 142,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "ZAO-HUNT-0108",
+      "name": "Zzaion",
+      "floors": [
+        6,
+        7,
+        8
+      ],
+      "candidateIds": [
+        "ZAO-FULL-z07-133"
+      ],
+      "species": null,
+      "creatures": 75,
+      "extent": {
+        "minX": 33258,
+        "minY": 31502,
+        "maxX": 33355,
+        "maxY": 31617,
+        "centerX": 33306,
+        "centerY": 31559
+      },
+      "subareaId": 143,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "ZAO-HUNT-0110",
+      "name": "Killer Caimans — Zao Steppe",
+      "floors": [
+        8,
+        9
+      ],
+      "candidateIds": [
+        "ZAO-FULL-z08-1129",
+        "ZAO-FULL-z09-1405"
+      ],
+      "species": null,
+      "creatures": 22,
+      "extent": {
+        "minX": 33113,
+        "minY": 31416,
+        "maxX": 33164,
+        "maxY": 31465,
+        "centerX": 33138,
+        "centerY": 31440
+      },
+      "subareaId": 142,
+      "walkTilesFromTemple": null
+    }
+  ]
+}

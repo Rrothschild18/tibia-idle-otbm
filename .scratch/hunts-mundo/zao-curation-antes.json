@@ -1,0 +1,189 @@
+[
+  {
+    "id": "ZAO-HUNT-0101",
+    "name": "Black Serpent Dungeon",
+    "candidates": [
+      {
+        "id": "ZAO-FULL-z09-101",
+        "floor": 9,
+        "creatures": 51,
+        "extent": {
+          "minX": 33253,
+          "minY": 31082,
+          "maxX": 33331,
+          "maxY": 31203,
+          "centerX": 33292,
+          "centerY": 31142
+        },
+        "species": [
+          "Lizard Chosen",
+          "Ghastly Dragon"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ZAO-HUNT-0102",
+    "name": "Draken Warmasters — Razachai z3",
+    "candidates": [
+      {
+        "id": "ZAO-FULL-z03-142",
+        "floor": 3,
+        "creatures": 104,
+        "extent": {
+          "minX": 33030,
+          "minY": 31077,
+          "maxX": 33122,
+          "maxY": 31281,
+          "centerX": 33076,
+          "centerY": 31179
+        },
+        "species": [
+          "Draken Warmaster",
+          "Draken Spellweaver",
+          "Draken Elite"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ZAO-HUNT-0103",
+    "name": "Dragonblaze Peaks",
+    "candidates": [
+      {
+        "id": "ZAO-FULL-z07-11",
+        "floor": 7,
+        "creatures": 241,
+        "extent": {
+          "minX": 33137,
+          "minY": 31132,
+          "maxX": 33354,
+          "maxY": 31305,
+          "centerX": 33245,
+          "centerY": 31218
+        },
+        "species": [
+          "Dragon",
+          "Lizard Legionnaire",
+          "Lizard High Guard"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ZAO-HUNT-0104",
+    "name": "Dragolisks — Muggy Plains z13",
+    "candidates": [
+      {
+        "id": "ZAO-FULL-z13-100",
+        "floor": 13,
+        "creatures": 181,
+        "extent": {
+          "minX": 33182,
+          "minY": 31063,
+          "maxX": 33345,
+          "maxY": 31194,
+          "centerX": 33263,
+          "centerY": 31128
+        },
+        "species": [
+          "Dragolisk",
+          "Wardragon",
+          "Mega Dragon"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ZAO-HUNT-0105",
+    "name": "Vengoth",
+    "candidates": [
+      {
+        "id": "ZAO-FULL-z07-67",
+        "floor": 7,
+        "creatures": 115,
+        "extent": {
+          "minX": 32869,
+          "minY": 31456,
+          "maxX": 32978,
+          "maxY": 31564,
+          "centerX": 32923,
+          "centerY": 31510
+        },
+        "species": [
+          "Tarantula",
+          "Demon Skeleton",
+          "War Wolf"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ZAO-HUNT-0106",
+    "name": "Muggy Plains",
+    "candidates": [
+      {
+        "id": "ZAO-FULL-z08-65",
+        "floor": 8,
+        "creatures": 25,
+        "extent": {
+          "minX": 33256,
+          "minY": 31110,
+          "maxX": 33305,
+          "maxY": 31189,
+          "centerX": 33280,
+          "centerY": 31149
+        },
+        "species": [
+          "Brimstone Bug"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ZAO-HUNT-0107",
+    "name": "Gnarlhounds — Zao Steppe z8",
+    "candidates": [
+      {
+        "id": "ZAO-FULL-z08-16",
+        "floor": 8,
+        "creatures": 16,
+        "extent": {
+          "minX": 33034,
+          "minY": 31483,
+          "maxX": 33088,
+          "maxY": 31528,
+          "centerX": 33061,
+          "centerY": 31505
+        },
+        "species": [
+          "Gnarlhound"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ZAO-HUNT-0108",
+    "name": "Zzaion",
+    "candidates": [
+      {
+        "id": "ZAO-FULL-z07-109",
+        "floor": 7,
+        "creatures": 75,
+        "extent": {
+          "minX": 33258,
+          "minY": 31502,
+          "maxX": 33355,
+          "maxY": 31617,
+          "centerX": 33306,
+          "centerY": 31559
+        },
+        "species": [
+          "Lizard Templar",
+          "Lizard Snakecharmer",
+          "Lizard Sentinel"
+        ]
+      }
+    ]
+  }
+]

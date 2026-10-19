@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32942" centery="31449" centerz="8" radius="5">
+		<monster name="Spectre" x="2" y="0" z="8" spawntime="90" />
+		<monster name="Werewolf" x="-4" y="1" z="8" spawntime="90" />
+		<monster name="Vampire Bride" x="4" y="4" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32952" centery="31449" centerz="8" radius="3">
+		<monster name="Banshee" x="2" y="-1" z="8" spawntime="90" />
+		<monster name="Mutated Bat" x="-2" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32959" centery="31450" centerz="8" radius="2">
+		<monster name="Nightstalker" x="1" y="-1" z="8" spawntime="90" />
+		<monster name="Bonebeast" x="-2" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32966" centery="31450" centerz="8" radius="2">
+		<monster name="Vampire Bride" x="-1" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32950" centery="31454" centerz="8" radius="1">
+		<monster name="Vampire Bride" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32961" centery="31458" centerz="8" radius="3">
+		<monster name="Bonebeast" x="-2" y="-2" z="8" spawntime="90" />
+		<monster name="Nightstalker" x="3" y="-2" z="8" spawntime="90" />
+		<monster name="Nightstalker" x="-2" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32952" centery="31460" centerz="8" radius="3">
+		<monster name="Mutated Bat" x="-2" y="-1" z="8" spawntime="90" />
+		<monster name="Banshee" x="2" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32943" centery="31461" centerz="8" radius="4">
+		<monster name="Nightmare Scion" x="0" y="-4" z="8" spawntime="90" />
+		<monster name="Vampire Bride" x="-2" y="-1" z="8" spawntime="90" />
+		<monster name="Nightmare Scion" x="4" y="1" z="8" spawntime="90" />
+		<monster name="Banshee" x="0" y="4" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32950" centery="31466" centerz="8" radius="1">
+		<monster name="Vampire Bride" x="1" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32960" centery="31467" centerz="8" radius="3">
+		<monster name="Gargoyle" x="-2" y="-2" z="8" spawntime="90" />
+		<monster name="Tarantula" x="3" y="-1" z="8" spawntime="90" />
+		<monster name="Gargoyle" x="2" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32940" centery="31473" centerz="8" radius="4">
+		<monster name="Zombie" x="3" y="-4" z="8" spawntime="90" />
+		<monster name="Zombie" x="2" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32951" centery="31473" centerz="8" radius="3">
+		<monster name="Zombie" x="2" y="-2" z="8" spawntime="90" />
+		<monster name="Vampire" x="-1" y="-1" z="8" spawntime="90" />
+		<monster name="Zombie" x="-1" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32962" centery="31475" centerz="8" radius="3">
+		<monster name="Gargoyle" x="-1" y="-3" z="8" spawntime="90" />
+		<monster name="Bonelord" x="0" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32949" centery="31445" centerz="9" radius="2">
+		<monster name="Nightstalker" x="-1" y="1" z="9" spawntime="90" />
+		<monster name="Mutated Bat" x="2" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32957" centery="31446" centerz="9" radius="2">
+		<monster name="Vampire Bride" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32969" centery="31449" centerz="9" radius="2">
+		<monster name="Rat" x="0" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32953" centery="31450" centerz="9" radius="2">
+		<monster name="Mutated Bat" x="2" y="-1" z="9" spawntime="90" />
+		<monster name="Bonebeast" x="-1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32942" centery="31451" centerz="9" radius="3">
+		<monster name="Vampire Bride" x="-2" y="-2" z="9" spawntime="90" />
+		<monster name="Mutated Bat" x="2" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32962" centery="31451" centerz="9" radius="2">
+		<monster name="Vampire Bride" x="-1" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32954" centery="31455" centerz="9" radius="2">
+		<monster name="Vampire Bride" x="1" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32945" centery="31459" centerz="9" radius="4">
+		<monster name="Vampire Bride" x="4" y="-4" z="9" spawntime="90" />
+		<monster name="Nightmare Scion" x="-4" y="-1" z="9" spawntime="90" />
+		<monster name="Bonebeast" x="-1" y="-1" z="9" spawntime="90" />
+		<monster name="Vampire Bride" x="4" y="1" z="9" spawntime="90" />
+		<monster name="Mutated Bat" x="-1" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32962" centery="31459" centerz="9" radius="4">
+		<monster name="Vampire Bride" x="2" y="-4" z="9" spawntime="90" />
+		<monster name="Nightstalker" x="-3" y="-2" z="9" spawntime="90" />
+		<monster name="Vampire Bride" x="-1" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32954" centery="31461" centerz="9" radius="2">
+		<monster name="Mutated Bat" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32959" centery="31467" centerz="9" radius="3">
+		<monster name="Skeleton" x="3" y="-1" z="9" spawntime="90" />
+		<monster name="Vampire" x="1" y="0" z="9" spawntime="90" />
+		<monster name="Demon Skeleton" x="-2" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32946" centery="31471" centerz="9" radius="5">
+		<monster name="Zombie" x="-1" y="-5" z="9" spawntime="90" />
+		<monster name="Dark Torturer" x="4" y="-5" z="9" spawntime="90" />
+		<monster name="Vampire" x="0" y="-3" z="9" spawntime="90" />
+		<monster name="Zombie" x="-4" y="-1" z="9" spawntime="90" />
+		<monster name="Vampire" x="-4" y="1" z="9" spawntime="90" />
+		<monster name="Vampire" x="3" y="3" z="9" spawntime="90" />
+		<monster name="Zombie" x="0" y="5" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32961" centery="31475" centerz="9" radius="3">
+		<monster name="Bat" x="1" y="-2" z="9" spawntime="90" />
+		<monster name="Vampire" x="-3" y="0" z="9" spawntime="90" />
+		<monster name="Vampire" x="2" y="0" z="9" spawntime="90" />
+		<monster name="Bat" x="-2" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32952" centery="31447" centerz="10" radius="3">
+		<monster name="Vampire Bride" x="0" y="-3" z="10" spawntime="90" />
+		<monster name="Mutated Bat" x="0" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32952" centery="31452" centerz="10" radius="1">
+		<monster name="Vampire Bride" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32947" centery="31460" centerz="10" radius="3">
+		<monster name="Vampire Bride" x="-1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32958" centery="31460" centerz="10" radius="3">
+		<monster name="Vampire" x="2" y="-1" z="10" spawntime="90" />
+		<monster name="Vampire Bride" x="-1" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32936" centery="31462" centerz="10" radius="3">
+		<monster name="Vampire Bride" x="2" y="-1" z="10" spawntime="90" />
+		<monster name="Mutated Bat" x="-1" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32969" centery="31462" centerz="10" radius="3">
+		<monster name="Mutated Bat" x="1" y="-1" z="10" spawntime="90" />
+		<monster name="Vampire Bride" x="-1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32948" centery="31468" centerz="10" radius="3">
+		<monster name="Vampire Bride" x="3" y="-2" z="10" spawntime="90" />
+		<monster name="Vampire" x="0" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32958" centery="31468" centerz="10" radius="3">
+		<monster name="Vampire" x="1" y="-1" z="10" spawntime="90" />
+		<monster name="Vampire Bride" x="-2" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32952" centery="31478" centerz="10" radius="3">
+		<monster name="Mutated Bat" x="-1" y="-2" z="10" spawntime="90" />
+		<monster name="Vampire Bride" x="2" y="1" z="10" spawntime="90" />
+	</monster>
+</monsters>

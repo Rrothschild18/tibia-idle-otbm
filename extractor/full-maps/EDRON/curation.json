@@ -1,0 +1,166 @@
+{
+  "city": "EDRON",
+  "area": "Edron",
+  "subareas": [
+    327,
+    455,
+    60,
+    275,
+    57,
+    58,
+    59,
+    61,
+    63,
+    286,
+    242,
+    243,
+    274,
+    504
+  ],
+  "hunts": [
+    {
+      "id": "EDRON-HUNT-0101",
+      "name": "Spellreaper Inferniarchs — Azzilon Castle z10",
+      "floors": [
+        9,
+        10,
+        11
+      ],
+      "candidateIds": [
+        "EDRON-FULL-z10-173"
+      ],
+      "species": null,
+      "creatures": 206,
+      "extent": {
+        "minX": 33774,
+        "minY": 32293,
+        "maxX": 33879,
+        "maxY": 32400,
+        "centerX": 33826,
+        "centerY": 32346
+      },
+      "subareaId": 504,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "EDRON-HUNT-0102",
+      "name": "Unholy Cemetery",
+      "floors": [
+        6,
+        7,
+        8
+      ],
+      "candidateIds": [
+        "EDRON-FULL-z07-135"
+      ],
+      "species": null,
+      "creatures": 117,
+      "extent": {
+        "minX": 33096,
+        "minY": 31629,
+        "maxX": 33250,
+        "maxY": 31748,
+        "centerX": 33173,
+        "centerY": 31688
+      },
+      "subareaId": 63,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "EDRON-HUNT-0103",
+      "name": "Earth Elementals — Edron Surroundings z8",
+      "floors": [
+        7,
+        8,
+        9
+      ],
+      "candidateIds": [
+        "EDRON-FULL-z08-417"
+      ],
+      "species": null,
+      "creatures": 17,
+      "extent": {
+        "minX": 33139,
+        "minY": 31701,
+        "maxX": 33173,
+        "maxY": 31754,
+        "centerX": 33156,
+        "centerY": 31727
+      },
+      "subareaId": 63,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "EDRON-HUNT-0104",
+      "name": "Rotworms — Edron Castle z9",
+      "floors": [
+        8,
+        9,
+        10
+      ],
+      "candidateIds": [
+        "EDRON-FULL-z09-1464"
+      ],
+      "species": null,
+      "creatures": 10,
+      "extent": {
+        "minX": 33227,
+        "minY": 31827,
+        "maxX": 33242,
+        "maxY": 31855,
+        "centerX": 33234,
+        "centerY": 31841
+      },
+      "subareaId": 275,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "EDRON-HUNT-0105",
+      "name": "Cyclopss — Edron Surroundings z8",
+      "floors": [
+        7,
+        8,
+        9
+      ],
+      "candidateIds": [
+        "EDRON-FULL-z08-13"
+      ],
+      "species": null,
+      "creatures": 81,
+      "extent": {
+        "minX": 33178,
+        "minY": 31655,
+        "maxX": 33302,
+        "maxY": 31730,
+        "centerX": 33240,
+        "centerY": 31692
+      },
+      "subareaId": 63,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "EDRON-HUNT-0106",
+      "name": "Edron Orc Cave",
+      "floors": [
+        6,
+        7,
+        8
+      ],
+      "candidateIds": [
+        "EDRON-FULL-z07-422"
+      ],
+      "species": null,
+      "creatures": 49,
+      "extent": {
+        "minX": 33135,
+        "minY": 31848,
+        "maxX": 33183,
+        "maxY": 31909,
+        "centerX": 33159,
+        "centerY": 31878
+      },
+      "subareaId": 59,
+      "walkTilesFromTemple": null
+    }
+  ]
+}

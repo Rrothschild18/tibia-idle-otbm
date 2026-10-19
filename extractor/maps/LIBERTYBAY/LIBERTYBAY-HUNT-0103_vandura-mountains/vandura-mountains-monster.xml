@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32403" centery="32736" centerz="1" radius="2">
+		<monster name="Behemoth" x="0" y="0" z="1" spawntime="90" />
+	</monster>
+	<monster centerx="32410" centery="32738" centerz="1" radius="2">
+		<monster name="Behemoth" x="0" y="0" z="1" spawntime="90" />
+	</monster>
+	<monster centerx="32396" centery="32742" centerz="1" radius="2">
+		<monster name="Behemoth" x="1" y="0" z="1" spawntime="90" />
+	</monster>
+	<monster centerx="32404" centery="32747" centerz="1" radius="2">
+		<monster name="Behemoth" x="1" y="-1" z="1" spawntime="90" />
+	</monster>
+	<monster centerx="32412" centery="32752" centerz="1" radius="2">
+		<monster name="Behemoth" x="0" y="0" z="1" spawntime="90" />
+	</monster>
+	<monster centerx="32402" centery="32758" centerz="1" radius="3">
+		<monster name="Behemoth" x="0" y="-1" z="1" spawntime="90" />
+	</monster>
+	<monster centerx="32411" centery="32765" centerz="1" radius="3">
+		<monster name="Medusa" x="0" y="-1" z="1" spawntime="90" />
+	</monster>
+	<monster centerx="32423" centery="32772" centerz="1" radius="2">
+		<monster name="Tarantula" x="0" y="-1" z="1" spawntime="90" />
+	</monster>
+	<monster centerx="32405" centery="32729" centerz="2" radius="4">
+		<monster name="Wyrm" x="-3" y="-1" z="2" spawntime="90" />
+		<monster name="Wyrm" x="3" y="0" z="2" spawntime="90" />
+		<monster name="Wyrm" x="-1" y="2" z="2" spawntime="90" />
+	</monster>
+	<monster centerx="32395" centery="32733" centerz="2" radius="2">
+		<monster name="Wyrm" x="1" y="0" z="2" spawntime="90" />
+	</monster>
+	<monster centerx="32414" centery="32735" centerz="2" radius="2">
+		<monster name="Wyrm" x="1" y="1" z="2" spawntime="90" />
+	</monster>
+	<monster centerx="32390" centery="32739" centerz="2" radius="2">
+		<monster name="Wyrm" x="2" y="-1" z="2" spawntime="90" />
+	</monster>
+	<monster centerx="32416" centery="32743" centerz="2" radius="3">
+		<monster name="Wyrm" x="0" y="-1" z="2" spawntime="90" />
+		<monster name="Wyrm" x="2" y="3" z="2" spawntime="90" />
+	</monster>
+	<monster centerx="32398" centery="32747" centerz="2" radius="2">
+		<monster name="Wyrm" x="1" y="-1" z="2" spawntime="90" />
+	</monster>
+	<monster centerx="32409" centery="32751" centerz="2" radius="2">
+		<monster name="Wyrm" x="1" y="-1" z="2" spawntime="90" />
+	</monster>
+	<monster centerx="32423" centery="32751" centerz="2" radius="2">
+		<monster name="Wyrm" x="2" y="1" z="2" spawntime="90" />
+	</monster>
+	<monster centerx="32401" centery="32753" centerz="2" radius="2">
+		<monster name="Wyrm" x="0" y="1" z="2" spawntime="90" />
+	</monster>
+	<monster centerx="32394" centery="32757" centerz="2" radius="2">
+		<monster name="Wyrm" x="-1" y="1" z="2" spawntime="90" />
+	</monster>
+	<monster centerx="32419" centery="32761" centerz="2" radius="3">
+		<monster name="Wyrm" x="-1" y="0" z="2" spawntime="90" />
+	</monster>
+	<monster centerx="32428" centery="32761" centerz="2" radius="2">
+		<monster name="Wyrm" x="1" y="2" z="2" spawntime="90" />
+	</monster>
+	<monster centerx="32403" centery="32764" centerz="2" radius="2">
+		<monster name="Wyrm" x="-1" y="-2" z="2" spawntime="90" />
+		<monster name="Wyrm" x="2" y="1" z="2" spawntime="90" />
+	</monster>
+	<monster centerx="32419" centery="32770" centerz="2" radius="2">
+		<monster name="Wyrm" x="-2" y="-2" z="2" spawntime="90" />
+		<monster name="Wyrm" x="2" y="1" z="2" spawntime="90" />
+	</monster>
+	<monster centerx="32410" centery="32772" centerz="2" radius="2">
+		<monster name="Wyrm" x="1" y="0" z="2" spawntime="90" />
+	</monster>
+	<monster centerx="32393" centery="32773" centerz="2" radius="3">
+		<monster name="Wyrm" x="3" y="0" z="2" spawntime="90" />
+		<monster name="Wyrm" x="-3" y="2" z="2" spawntime="90" />
+	</monster>
+	<monster centerx="32432" centery="32775" centerz="2" radius="2">
+		<monster name="Centipede" x="1" y="0" z="2" spawntime="90" />
+	</monster>
+	<monster centerx="32413" centery="32781" centerz="2" radius="2">
+		<monster name="Centipede" x="0" y="1" z="2" spawntime="90" />
+	</monster>
+	<monster centerx="32401" centery="32723" centerz="3" radius="2">
+		<monster name="Energy Elemental" x="1" y="0" z="3" spawntime="90" />
+	</monster>
+	<monster centerx="32417" centery="32731" centerz="3" radius="2">
+		<monster name="Wyrm" x="0" y="-1" z="3" spawntime="90" />
+	</monster>
+	<monster centerx="32384" centery="32733" centerz="3" radius="2">
+		<monster name="Energy Elemental" x="0" y="0" z="3" spawntime="90" />
+	</monster>
+	<monster centerx="32404" centery="32733" centerz="3" radius="2">
+		<monster name="Wyrm" x="1" y="-1" z="3" spawntime="90" />
+	</monster>
+	<monster centerx="32394" centery="32739" centerz="3" radius="2">
+		<monster name="Wyrm" x="1" y="0" z="3" spawntime="90" />
+	</monster>
+	<monster centerx="32410" centery="32739" centerz="3" radius="2">
+		<monster name="Wyrm" x="0" y="-1" z="3" spawntime="90" />
+	</monster>
+	<monster centerx="32383" centery="32742" centerz="3" radius="2">
+		<monster name="Wyrm" x="1" y="0" z="3" spawntime="90" />
+	</monster>
+	<monster centerx="32408" centery="32746" centerz="3" radius="3">
+		<monster name="Energy Elemental" x="2" y="-2" z="3" spawntime="90" />
+		<monster name="Wyrm" x="-3" y="-1" z="3" spawntime="90" />
+		<monster name="Wyrm" x="2" y="0" z="3" spawntime="90" />
+	</monster>
+	<monster centerx="32416" centery="32749" centerz="3" radius="3">
+		<monster name="Energy Elemental" x="-2" y="0" z="3" spawntime="90" />
+		<monster name="Wyrm" x="1" y="2" z="3" spawntime="90" />
+	</monster>
+	<monster centerx="32433" centery="32751" centerz="3" radius="3">
+		<monster name="Wyrm" x="-2" y="-1" z="3" spawntime="90" />
+		<monster name="Wyrm" x="2" y="2" z="3" spawntime="90" />
+	</monster>
+	<monster centerx="32406" centery="32753" centerz="3" radius="2">
+		<monster name="Wyrm" x="0" y="0" z="3" spawntime="90" />
+	</monster>
+	<monster centerx="32422" centery="32757" centerz="3" radius="3">
+		<monster name="Wyrm" x="0" y="1" z="3" spawntime="90" />
+	</monster>
+	<monster centerx="32403" centery="32760" centerz="3" radius="2">
+		<monster name="Wyrm" x="-1" y="-1" z="3" spawntime="90" />
+	</monster>
+	<monster centerx="32408" centery="32767" centerz="3" radius="2">
+		<monster name="Energy Elemental" x="0" y="1" z="3" spawntime="90" />
+	</monster>
+	<monster centerx="32388" centery="32768" centerz="3" radius="2">
+		<monster name="Wyrm" x="0" y="0" z="3" spawntime="90" />
+	</monster>
+	<monster centerx="32395" centery="32771" centerz="3" radius="2">
+		<monster name="Energy Elemental" x="1" y="0" z="3" spawntime="90" />
+	</monster>
+	<monster centerx="32429" centery="32773" centerz="3" radius="2">
+		<monster name="Energy Elemental" x="-1" y="0" z="3" spawntime="90" />
+	</monster>
+	<monster centerx="32385" centery="32777" centerz="3" radius="2">
+		<monster name="Centipede" x="1" y="0" z="3" spawntime="90" />
+	</monster>
+	<monster centerx="32408" centery="32777" centerz="3" radius="2">
+		<monster name="Wyrm" x="0" y="1" z="3" spawntime="90" />
+	</monster>
+	<monster centerx="32414" centery="32778" centerz="3" radius="2">
+		<monster name="Wyrm" x="1" y="0" z="3" spawntime="90" />
+	</monster>
+	<monster centerx="32397" centery="32787" centerz="3" radius="3">
+		<monster name="Centipede" x="1" y="-1" z="3" spawntime="90" />
+		<monster name="Centipede" x="-2" y="1" z="3" spawntime="90" />
+	</monster>
+</monsters>

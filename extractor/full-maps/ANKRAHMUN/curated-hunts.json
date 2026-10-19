@@ -1,0 +1,226 @@
+{
+  "city": "ANKRAHMUN",
+  "area": "Southern Darama",
+  "hunts": [
+    {
+      "id": "ANKRAHMUN-HUNT-0101",
+      "type": "HUNT",
+      "name": "Daramian Scarab Lairs",
+      "slug": "daramian-scarab-lairs",
+      "folder": "ANKRAHMUN-HUNT-0101_daramian-scarab-lairs",
+      "floors": [
+        9
+      ],
+      "cropFloors": [
+        9,
+        10,
+        11
+      ],
+      "candidateIds": [
+        "ANKRAHMUN-FULL-z09-48"
+      ],
+      "creatures": 152,
+      "extent": {
+        "minX": 33184,
+        "minY": 32568,
+        "maxX": 33285,
+        "maxY": 32690,
+        "centerX": 33234,
+        "centerY": 32629
+      },
+      "subareaId": 85,
+      "entrance": {
+        "x": 33224,
+        "y": 32643,
+        "z": 9
+      },
+      "walkTilesFromTemple": 237,
+      "tiles": 54167,
+      "spawns": 152
+    },
+    {
+      "id": "ANKRAHMUN-HUNT-0102",
+      "type": "HUNT",
+      "name": "Cave Rats — Ankrahmun City z9",
+      "slug": "cave-rats-ankrahmun-city-z9",
+      "folder": "ANKRAHMUN-HUNT-0102_cave-rats-ankrahmun-city-z9",
+      "floors": [
+        9
+      ],
+      "cropFloors": [
+        9,
+        10,
+        11
+      ],
+      "candidateIds": [
+        "ANKRAHMUN-FULL-z09-177"
+      ],
+      "creatures": 17,
+      "extent": {
+        "minX": 33063,
+        "minY": 32860,
+        "maxX": 33095,
+        "maxY": 32887,
+        "centerX": 33079,
+        "centerY": 32873
+      },
+      "subareaId": 297,
+      "entrance": {
+        "x": 33070,
+        "y": 32876,
+        "z": 9
+      },
+      "walkTilesFromTemple": 155,
+      "tiles": 7134,
+      "spawns": 17
+    },
+    {
+      "id": "ANKRAHMUN-HUNT-0103",
+      "type": "HUNT",
+      "name": "Dragons — Kha'zeel Dragon Lairs z7",
+      "slug": "dragons-kha-zeel-dragon-lairs-z7",
+      "folder": "ANKRAHMUN-HUNT-0103_dragons-kha-zeel-dragon-lairs-z7",
+      "floors": [
+        6,
+        7,
+        8
+      ],
+      "cropFloors": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "candidateIds": [
+        "ANKRAHMUN-FULL-z07-223"
+      ],
+      "creatures": 11,
+      "extent": {
+        "minX": 33038,
+        "minY": 32641,
+        "maxX": 33076,
+        "maxY": 32652,
+        "centerX": 33057,
+        "centerY": 32646
+      },
+      "subareaId": 84,
+      "entrance": {
+        "x": 33038,
+        "y": 32648,
+        "z": 7
+      },
+      "walkTilesFromTemple": 426,
+      "tiles": 24546,
+      "spawns": 36
+    },
+    {
+      "id": "ANKRAHMUN-HUNT-0104",
+      "type": "HUNT",
+      "name": "Larva Caves",
+      "slug": "larva-caves",
+      "folder": "ANKRAHMUN-HUNT-0104_larva-caves",
+      "floors": [
+        11
+      ],
+      "cropFloors": [
+        11,
+        12,
+        13
+      ],
+      "candidateIds": [
+        "ANKRAHMUN-FULL-z11-160"
+      ],
+      "creatures": 52,
+      "extent": {
+        "minX": 33033,
+        "minY": 32757,
+        "maxX": 33082,
+        "maxY": 32796,
+        "centerX": 33057,
+        "centerY": 32776
+      },
+      "subareaId": 85,
+      "entrance": {
+        "x": 33054,
+        "y": 32779,
+        "z": 11
+      },
+      "walkTilesFromTemple": 234,
+      "tiles": 11872,
+      "spawns": 52
+    },
+    {
+      "id": "ANKRAHMUN-HUNT-0105",
+      "type": "HUNT",
+      "name": "Larva Caves z11",
+      "slug": "larva-caves-z11",
+      "folder": "ANKRAHMUN-HUNT-0105_larva-caves-z11",
+      "floors": [
+        11
+      ],
+      "cropFloors": [
+        11,
+        12,
+        13
+      ],
+      "candidateIds": [
+        "ANKRAHMUN-FULL-z11-9"
+      ],
+      "creatures": 37,
+      "extent": {
+        "minX": 32983,
+        "minY": 32543,
+        "maxX": 33085,
+        "maxY": 32665,
+        "centerX": 33034,
+        "centerY": 32604
+      },
+      "subareaId": 84,
+      "entrance": {
+        "x": 33082,
+        "y": 32543,
+        "z": 11
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 44565,
+      "spawns": 37
+    },
+    {
+      "id": "ANKRAHMUN-HUNT-0106",
+      "type": "HUNT",
+      "name": "Mummys — Southern Darama Desert z13",
+      "slug": "mummys-southern-darama-desert-z13",
+      "folder": "ANKRAHMUN-HUNT-0106_mummys-southern-darama-desert-z13",
+      "floors": [
+        13
+      ],
+      "cropFloors": [
+        13,
+        14,
+        15
+      ],
+      "candidateIds": [
+        "ANKRAHMUN-FULL-z13-18"
+      ],
+      "creatures": 147,
+      "extent": {
+        "minX": 33003,
+        "minY": 32645,
+        "maxX": 33153,
+        "maxY": 32776,
+        "centerX": 33078,
+        "centerY": 32710
+      },
+      "subareaId": 85,
+      "entrance": {
+        "x": 33077,
+        "y": 32645,
+        "z": 13
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 52119,
+      "spawns": 147
+    }
+  ]
+}

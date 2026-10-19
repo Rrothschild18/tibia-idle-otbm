@@ -1,0 +1,852 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32736" centery="31261" centerz="5" radius="1">
+		<monster name="Orc Berserker" x="1" y="-1" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32708" centery="31263" centerz="5" radius="1">
+		<monster name="Orc Berserker" x="-1" y="-1" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32721" centery="31263" centerz="5" radius="1">
+		<monster name="Orc Warlord" x="0" y="0" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32701" centery="31266" centerz="5" radius="2">
+		<monster name="Stalker" x="2" y="-2" z="5" spawntime="90" />
+		<monster name="Stalker" x="-2" y="1" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32708" centery="31269" centerz="5" radius="1">
+		<monster name="Orc Berserker" x="-1" y="-1" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32712" centery="31273" centerz="5" radius="1">
+		<monster name="Orc Berserker" x="0" y="-1" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32731" centery="31274" centerz="5" radius="1">
+		<monster name="Orc Berserker" x="0" y="0" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32703" centery="31277" centerz="5" radius="2">
+		<monster name="Assassin" x="-2" y="-2" z="5" spawntime="90" />
+		<monster name="Dark Monk" x="2" y="-1" z="5" spawntime="90" />
+		<monster name="Dark Monk" x="1" y="2" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32721" centery="31281" centerz="5" radius="1">
+		<monster name="Orc Berserker" x="-1" y="0" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32699" centery="31287" centerz="5" radius="2">
+		<monster name="Assassin" x="0" y="-1" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32672" centery="31289" centerz="5" radius="2">
+		<monster name="Nomad" x="0" y="0" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32683" centery="31290" centerz="5" radius="2">
+		<monster name="Nomad" x="0" y="0" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32698" centery="31294" centerz="5" radius="2">
+		<monster name="Assassin" x="-1" y="0" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32683" centery="31300" centerz="5" radius="2">
+		<monster name="Nomad" x="2" y="1" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32709" centery="31300" centerz="5" radius="2">
+		<monster name="Barbarian Headsplitter" x="-1" y="-1" z="5" spawntime="60" />
+		<monster name="Barbarian Headsplitter" x="2" y="-1" z="5" spawntime="60" />
+		<monster name="Valkyrie" x="0" y="1" z="5" spawntime="60" />
+	</monster>
+	<monster centerx="32672" centery="31301" centerz="5" radius="2">
+		<monster name="Nomad" x="1" y="-1" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32640" centery="31305" centerz="5" radius="2">
+		<monster name="Pirate Buccaneer" x="-2" y="-2" z="5" spawntime="60" />
+		<monster name="Pirate Cutthroat" x="2" y="-1" z="5" spawntime="60" />
+		<monster name="Pirate Cutthroat" x="-2" y="0" z="5" spawntime="60" />
+		<monster name="Pirate Buccaneer" x="1" y="0" z="5" spawntime="60" />
+	</monster>
+	<monster centerx="32746" centery="31316" centerz="5" radius="2">
+		<monster name="Minotaur Mage" x="-1" y="-2" z="5" spawntime="90" />
+		<monster name="Minotaur Guard" x="1" y="-2" z="5" spawntime="90" />
+		<monster name="Minotaur Guard" x="-1" y="2" z="5" spawntime="90" />
+		<monster name="Minotaur Mage" x="1" y="2" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32728" centery="31322" centerz="5" radius="2">
+		<monster name="Minotaur Guard" x="-2" y="-2" z="5" spawntime="90" />
+		<monster name="Minotaur Guard" x="1" y="2" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32707" centery="31323" centerz="5" radius="3">
+		<monster name="Gang Member" x="2" y="-2" z="5" spawntime="90" />
+		<monster name="Stalker" x="-3" y="1" z="5" spawntime="90" />
+		<monster name="Gang Member" x="2" y="3" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32652" centery="31333" centerz="5" radius="1">
+		<monster name="Pirate Corsair" x="-1" y="-1" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32728" centery="31335" centerz="5" radius="4">
+		<monster name="Minotaur Archer" x="-4" y="-4" z="5" spawntime="90" />
+		<monster name="Minotaur Mage" x="0" y="-4" z="5" spawntime="90" />
+		<monster name="Minotaur Guard" x="1" y="0" z="5" spawntime="90" />
+		<monster name="Minotaur Mage" x="-4" y="2" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32673" centery="31336" centerz="5" radius="1">
+		<monster name="Pirate Corsair" x="-1" y="-1" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32732" centery="31343" centerz="5" radius="2">
+		<monster name="Minotaur Archer" x="-2" y="-2" z="5" spawntime="90" />
+		<monster name="Minotaur Guard" x="-2" y="1" z="5" spawntime="90" />
+		<monster name="Minotaur Archer" x="1" y="1" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32721" centery="31263" centerz="6" radius="2">
+		<monster name="Orc Warlord" x="-1" y="-1" z="6" spawntime="90" />
+		<monster name="Orc Berserker" x="1" y="1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32709" centery="31264" centerz="6" radius="1">
+		<monster name="Orc Berserker" x="0" y="-1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32701" centery="31266" centerz="6" radius="2">
+		<monster name="Assassin" x="1" y="-2" z="6" spawntime="90" />
+		<monster name="Assassin" x="-2" y="1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32661" centery="31267" centerz="6" radius="2">
+		<monster name="Quara Constrictor Scout" x="0" y="1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32749" centery="31270" centerz="6" radius="2">
+		<monster name="Elf Scout" x="-1" y="0" z="6" spawntime="60" />
+		<monster name="Elf" x="1" y="0" z="6" spawntime="90" />
+		<monster name="Elf Arcanist" x="-2" y="1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32758" centery="31270" centerz="6" radius="2">
+		<monster name="Elf Arcanist" x="1" y="-1" z="6" spawntime="90" />
+		<monster name="Elf Scout" x="-2" y="0" z="6" spawntime="60" />
+		<monster name="Elf Arcanist" x="0" y="2" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32700" centery="31276" centerz="6" radius="2">
+		<monster name="Assassin" x="-1" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32706" centery="31276" centerz="6" radius="2">
+		<monster name="Dark Monk" x="1" y="-1" z="6" spawntime="90" />
+		<monster name="Dark Monk" x="1" y="2" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32754" centery="31276" centerz="6" radius="2">
+		<monster name="Elf Scout" x="1" y="-2" z="6" spawntime="90" />
+		<monster name="Elf" x="-2" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32634" centery="31282" centerz="6" radius="1">
+		<monster name="Pirate Marauder" x="0" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32639" centery="31282" centerz="6" radius="1">
+		<monster name="Pirate Marauder" x="-1" y="0" z="6" spawntime="13185" />
+		<monster name="Pirate Marauder" x="0" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32631" centery="31285" centerz="6" radius="1">
+		<monster name="Pirate Buccaneer" x="0" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32742" centery="31285" centerz="6" radius="2">
+		<monster name="Elf Arcanist" x="-1" y="-2" z="6" spawntime="60" />
+		<monster name="Elf Arcanist" x="2" y="-2" z="6" spawntime="90" />
+		<monster name="Elf Scout" x="-2" y="0" z="6" spawntime="90" />
+		<monster name="Elf Scout" x="2" y="2" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32699" centery="31287" centerz="6" radius="2">
+		<monster name="Amazon" x="1" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32632" centery="31288" centerz="6" radius="1">
+		<monster name="Pirate Marauder" x="0" y="0" z="6" spawntime="90" />
+		<monster name="Pirate Buccaneer" x="0" y="1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32671" centery="31288" centerz="6" radius="2">
+		<monster name="Nomad" x="-1" y="1" z="6" spawntime="90" />
+		<monster name="Nomad" x="1" y="1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32677" centery="31288" centerz="6" radius="2">
+		<monster name="Nomad" x="1" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32683" centery="31288" centerz="6" radius="2">
+		<monster name="Nomad" x="1" y="1" z="6" spawntime="90" />
+		<monster name="Nomad" x="2" y="1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32694" centery="31291" centerz="6" radius="2">
+		<monster name="Valkyrie" x="-1" y="-1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32641" centery="31294" centerz="6" radius="1">
+		<monster name="Pirate Marauder" x="0" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32758" centery="31295" centerz="6" radius="2">
+		<monster name="Elf Arcanist" x="0" y="-2" z="6" spawntime="90" />
+		<monster name="Elf Arcanist" x="1" y="2" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32642" centery="31296" centerz="6" radius="1">
+		<monster name="Pirate Buccaneer" x="0" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32632" centery="31297" centerz="6" radius="1">
+		<monster name="Pirate Buccaneer" x="0" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32698" centery="31298" centerz="6" radius="2">
+		<monster name="Amazon" x="0" y="-2" z="6" spawntime="90" />
+		<monster name="Amazon" x="-1" y="2" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32642" centery="31299" centerz="6" radius="1">
+		<monster name="Pirate Buccaneer" x="0" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32670" centery="31300" centerz="6" radius="2">
+		<monster name="Nomad" x="0" y="-1" z="6" spawntime="90" />
+		<monster name="Nomad" x="1" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32677" centery="31300" centerz="6" radius="2">
+		<monster name="Nomad" x="0" y="1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32707" centery="31300" centerz="6" radius="2">
+		<monster name="Barbarian Headsplitter" x="-2" y="0" z="6" spawntime="90" />
+		<monster name="Valkyrie" x="2" y="1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32632" centery="31301" centerz="6" radius="2">
+		<monster name="Pirate Buccaneer" x="1" y="-2" z="6" spawntime="90" />
+		<monster name="Pirate Marauder" x="-2" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32683" centery="31301" centerz="6" radius="2">
+		<monster name="Nomad" x="2" y="-2" z="6" spawntime="90" />
+		<monster name="Nomad" x="0" y="1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32726" centery="31301" centerz="6" radius="2">
+		<monster name="Gang Member" x="0" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32750" centery="31301" centerz="6" radius="2">
+		<monster name="Elf Arcanist" x="-1" y="-1" z="6" spawntime="90" />
+		<monster name="Elf Arcanist" x="-1" y="1" z="6" spawntime="60" />
+	</monster>
+	<monster centerx="32657" centery="31303" centerz="6" radius="1">
+		<monster name="Pirate Marauder" x="0" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32658" centery="31305" centerz="6" radius="1">
+		<monster name="Pirate Marauder" x="0" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32632" centery="31308" centerz="6" radius="2">
+		<monster name="Pirate Buccaneer" x="0" y="-1" z="6" spawntime="90" />
+		<monster name="Pirate Buccaneer" x="-2" y="1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32682" centery="31308" centerz="6" radius="1">
+		<monster name="Elf Arcanist" x="1" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32690" centery="31308" centerz="6" radius="2">
+		<monster name="Valkyrie" x="-1" y="-1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32698" centery="31308" centerz="6" radius="2">
+		<monster name="Valkyrie" x="1" y="-1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32719" centery="31308" centerz="6" radius="2">
+		<monster name="Gang Member" x="1" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32746" centery="31310" centerz="6" radius="2">
+		<monster name="Minotaur Archer" x="2" y="-1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32665" centery="31311" centerz="6" radius="2">
+		<monster name="Pirate Cutthroat" x="-1" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32732" centery="31311" centerz="6" radius="2">
+		<monster name="Minotaur Guard" x="1" y="-2" z="6" spawntime="90" />
+		<monster name="Minotaur Archer" x="-2" y="2" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32658" centery="31314" centerz="6" radius="1">
+		<monster name="Pirate Marauder" x="0" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32666" centery="31314" centerz="6" radius="1">
+		<monster name="Pirate Cutthroat" x="0" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32716" centery="31315" centerz="6" radius="2">
+		<monster name="Gang Member" x="0" y="-1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32745" centery="31317" centerz="6" radius="2">
+		<monster name="Minotaur Guard" x="2" y="-2" z="6" spawntime="90" />
+		<monster name="Minotaur Archer" x="1" y="1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32659" centery="31318" centerz="6" radius="2">
+		<monster name="Pirate Cutthroat" x="-1" y="1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32729" centery="31318" centerz="6" radius="2">
+		<monster name="Minotaur Guard" x="-1" y="2" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32668" centery="31319" centerz="6" radius="2">
+		<monster name="Pirate Marauder" x="2" y="0" z="6" spawntime="90" />
+		<monster name="Pirate Marauder" x="-1" y="1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32673" centery="31319" centerz="6" radius="1">
+		<monster name="Pirate Marauder" x="0" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32680" centery="31319" centerz="6" radius="1">
+		<monster name="Pirate Marauder" x="0" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32680" centery="31323" centerz="6" radius="2">
+		<monster name="Pirate Marauder" x="0" y="-1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32707" centery="31323" centerz="6" radius="3">
+		<monster name="Dark Monk" x="2" y="-3" z="6" spawntime="90" />
+		<monster name="Lizard Templar" x="-3" y="0" z="6" spawntime="90" />
+		<monster name="Dark Monk" x="-2" y="3" z="6" spawntime="90" />
+		<monster name="Lizard Templar" x="3" y="3" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32680" centery="31326" centerz="6" radius="1">
+		<monster name="Pirate Marauder" x="0" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32746" centery="31326" centerz="6" radius="3">
+		<monster name="Minotaur Guard" x="-3" y="-2" z="6" spawntime="90" />
+		<monster name="Minotaur Archer" x="2" y="-2" z="6" spawntime="90" />
+		<monster name="Minotaur Guard" x="2" y="3" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32681" centery="31330" centerz="6" radius="2">
+		<monster name="Pirate Cutthroat" x="-2" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32691" centery="31330" centerz="6" radius="2">
+		<monster name="Pirate Marauder" x="-1" y="-1" z="6" spawntime="90" />
+		<monster name="Pirate Marauder" x="0" y="2" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32686" centery="31331" centerz="6" radius="1">
+		<monster name="Pirate Marauder" x="0" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32633" centery="31332" centerz="6" radius="2">
+		<monster name="Pirate Buccaneer" x="0" y="1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32727" centery="31333" centerz="6" radius="2">
+		<monster name="Minotaur Guard" x="-1" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32746" centery="31333" centerz="6" radius="2">
+		<monster name="Minotaur Archer" x="-1" y="-1" z="6" spawntime="60" />
+		<monster name="Minotaur Guard" x="-1" y="1" z="6" spawntime="90" />
+		<monster name="Minotaur Guard" x="2" y="2" z="6" spawntime="60" />
+	</monster>
+	<monster centerx="32646" centery="31334" centerz="6" radius="3">
+		<monster name="Pirate Buccaneer" x="-2" y="-2" z="6" spawntime="90" />
+		<monster name="Pirate Marauder" x="2" y="-2" z="6" spawntime="90" />
+		<monster name="Pirate Buccaneer" x="2" y="-1" z="6" spawntime="90" />
+		<monster name="Pirate Marauder" x="-1" y="2" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32664" centery="31335" centerz="6" radius="1">
+		<monster name="Pirate Buccaneer" x="0" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32696" centery="31335" centerz="6" radius="1">
+		<monster name="Pirate Marauder" x="0" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32633" centery="31336" centerz="6" radius="1">
+		<monster name="Pirate Buccaneer" x="0" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32660" centery="31336" centerz="6" radius="2">
+		<monster name="Pirate Marauder" x="-2" y="-1" z="6" spawntime="90" />
+		<monster name="Pirate Marauder" x="1" y="2" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32667" centery="31336" centerz="6" radius="2">
+		<monster name="Pirate Marauder" x="2" y="-1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32691" centery="31336" centerz="6" radius="2">
+		<monster name="Pirate Marauder" x="-1" y="-1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32681" centery="31337" centerz="6" radius="2">
+		<monster name="Pirate Cutthroat" x="-1" y="1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32663" centery="31338" centerz="6" radius="1">
+		<monster name="Pirate Buccaneer" x="0" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32704" centery="31338" centerz="6" radius="2">
+		<monster name="Pirate Cutthroat" x="-1" y="-2" z="6" spawntime="90" />
+		<monster name="Pirate Marauder" x="-1" y="1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32718" centery="31339" centerz="6" radius="2">
+		<monster name="Dwarf Guard" x="-1" y="1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32707" centery="31340" centerz="6" radius="1">
+		<monster name="Pirate Buccaneer" x="0" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32633" centery="31341" centerz="6" radius="2">
+		<monster name="Pirate Marauder" x="-1" y="-1" z="6" spawntime="90" />
+		<monster name="Pirate Buccaneer" x="1" y="2" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32739" centery="31341" centerz="6" radius="2">
+		<monster name="Minotaur Guard" x="-1" y="-2" z="6" spawntime="60" />
+		<monster name="Minotaur Guard" x="1" y="-1" z="6" spawntime="90" />
+		<monster name="Minotaur Guard" x="-2" y="1" z="6" spawntime="60" />
+	</monster>
+	<monster centerx="32642" centery="31342" centerz="6" radius="1">
+		<monster name="Pirate Buccaneer" x="0" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32680" centery="31342" centerz="6" radius="1">
+		<monster name="Pirate Marauder" x="0" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32639" centery="31343" centerz="6" radius="2">
+		<monster name="Pirate Buccaneer" x="0" y="1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32647" centery="31343" centerz="6" radius="2">
+		<monster name="Pirate Marauder" x="-2" y="2" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32653" centery="31343" centerz="6" radius="1">
+		<monster name="Pirate Marauder" x="0" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32731" centery="31343" centerz="6" radius="2">
+		<monster name="Minotaur Guard" x="0" y="-1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32659" centery="31344" centerz="6" radius="2">
+		<monster name="Pirate Marauder" x="-1" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32663" centery="31345" centerz="6" radius="1">
+		<monster name="Pirate Marauder" x="0" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32719" centery="31345" centerz="6" radius="2">
+		<monster name="Hunter" x="1" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32678" centery="31346" centerz="6" radius="3">
+		<monster name="Pirate Marauder" x="-1" y="1" z="6" spawntime="90" />
+		<monster name="Pirate Marauder" x="3" y="3" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32709" centery="31346" centerz="6" radius="2">
+		<monster name="Pirate Marauder" x="0" y="1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32669" centery="31347" centerz="6" radius="2">
+		<monster name="Pirate Marauder" x="-1" y="-1" z="6" spawntime="90" />
+		<monster name="Pirate Cutthroat" x="2" y="2" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32663" centery="31348" centerz="6" radius="1">
+		<monster name="Pirate Marauder" x="0" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32730" centery="31351" centerz="6" radius="2">
+		<monster name="Lizard Sentinel" x="2" y="-2" z="6" spawntime="90" />
+		<monster name="Lizard Templar" x="-2" y="1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32739" centery="31353" centerz="6" radius="2">
+		<monster name="Lizard Templar" x="1" y="1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32714" centery="31355" centerz="6" radius="2">
+		<monster name="Pirate Cutthroat" x="0" y="-1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32709" centery="31356" centerz="6" radius="1">
+		<monster name="Pirate Buccaneer" x="0" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32721" centery="31360" centerz="6" radius="2">
+		<monster name="Pirate Marauder" x="1" y="-1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32725" centery="31360" centerz="6" radius="1">
+		<monster name="Pirate Buccaneer" x="0" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32729" centery="31361" centerz="6" radius="2">
+		<monster name="Pirate Cutthroat" x="-1" y="0" z="6" spawntime="90" />
+		<monster name="Pirate Marauder" x="0" y="2" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32729" centery="31368" centerz="6" radius="2">
+		<monster name="Pirate Buccaneer" x="2" y="-2" z="6" spawntime="90" />
+		<monster name="Pirate Marauder" x="1" y="-1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32732" centery="31369" centerz="6" radius="1">
+		<monster name="Pirate Buccaneer" x="0" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32737" centery="31369" centerz="6" radius="2">
+		<monster name="Pirate Cutthroat" x="0" y="-1" z="6" spawntime="90" />
+		<monster name="Pirate Marauder" x="2" y="-1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32616" centery="31394" centerz="6" radius="3">
+		<monster name="Cyclops" x="-1" y="-2" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32678" centery="31260" centerz="7" radius="3">
+		<monster name="Cave Rat" x="-2" y="-1" z="7" spawntime="90" />
+		<monster name="Snake" x="3" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32729" centery="31260" centerz="7" radius="2">
+		<monster name="Orc Spearman" x="-1" y="0" z="7" spawntime="90" />
+		<monster name="Orc Warrior" x="0" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32659" centery="31261" centerz="7" radius="3">
+		<monster name="Cave Rat" x="-1" y="-2" z="7" spawntime="90" />
+		<monster name="Panda" x="3" y="-2" z="7" spawntime="90" />
+		<monster name="Carrion Worm" x="-3" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32694" centery="31262" centerz="7" radius="2">
+		<monster name="Cat" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32701" centery="31262" centerz="7" radius="2">
+		<monster name="Crazed Beggar" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32723" centery="31262" centerz="7" radius="2">
+		<monster name="Orc Warrior" x="1" y="-1" z="7" spawntime="90" />
+		<monster name="Orc Spearman" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32757" centery="31264" centerz="7" radius="2">
+		<monster name="Elf" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32713" centery="31265" centerz="7" radius="4">
+		<monster name="Orc Warrior" x="-3" y="-4" z="7" spawntime="90" />
+		<monster name="Orc Warrior" x="4" y="-3" z="7" spawntime="90" />
+		<monster name="Orc Spearman" x="0" y="-2" z="7" spawntime="90" />
+		<monster name="Orc Spearman" x="3" y="-1" z="7" spawntime="90" />
+		<monster name="Orc Warrior" x="4" y="3" z="7" spawntime="90" />
+		<monster name="Orc Warrior" x="-4" y="4" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32650" centery="31266" centerz="7" radius="2">
+		<monster name="Blue Butterfly" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32729" centery="31266" centerz="7" radius="2">
+		<monster name="Orc Spearman" x="-1" y="-1" z="7" spawntime="90" />
+		<monster name="Orc Spearman" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32700" centery="31268" centerz="7" radius="2">
+		<monster name="Gang Member" x="2" y="-1" z="7" spawntime="90" />
+		<monster name="Gang Member" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32666" centery="31270" centerz="7" radius="2">
+		<monster name="Quara Constrictor" x="1" y="-2" z="7" spawntime="90" />
+		<monster name="Quara Mantassin" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32749" centery="31270" centerz="7" radius="2">
+		<monster name="Elf Scout" x="-1" y="-1" z="7" spawntime="90" />
+		<monster name="Elf" x="2" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32757" centery="31270" centerz="7" radius="2">
+		<monster name="Elf" x="-2" y="-2" z="7" spawntime="90" />
+		<monster name="Elf Scout" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32723" centery="31272" centerz="7" radius="2">
+		<monster name="Orc Warrior" x="-2" y="-1" z="7" spawntime="90" />
+		<monster name="Orc Warrior" x="2" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32714" centery="31273" centerz="7" radius="2">
+		<monster name="Orc Warrior" x="2" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32743" centery="31274" centerz="7" radius="2">
+		<monster name="Elf" x="2" y="-2" z="7" spawntime="90" />
+		<monster name="Elf" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32699" centery="31276" centerz="7" radius="2">
+		<monster name="Gang Member" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32706" centery="31276" centerz="7" radius="2">
+		<monster name="Gang Member" x="0" y="-2" z="7" spawntime="90" />
+		<monster name="Gang Member" x="-1" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32753" centery="31276" centerz="7" radius="2">
+		<monster name="Elf" x="2" y="-2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32723" centery="31278" centerz="7" radius="2">
+		<monster name="Orc Spearman" x="2" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32665" centery="31280" centerz="7" radius="1">
+		<monster name="Swamp Troll" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32669" centery="31280" centerz="7" radius="1">
+		<monster name="Wild Warrior" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32674" centery="31280" centerz="7" radius="1">
+		<monster name="Nomad" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32660" centery="31281" centerz="7" radius="1">
+		<monster name="Dworc Venomsniper" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32759" centery="31281" centerz="7" radius="1">
+		<monster name="Elf Scout" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32753" centery="31282" centerz="7" radius="2">
+		<monster name="Elf Scout" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32689" centery="31284" centerz="7" radius="1">
+		<monster name="Cat" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32659" centery="31285" centerz="7" radius="1">
+		<monster name="Goblin" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32707" centery="31285" centerz="7" radius="2">
+		<monster name="Gang Member" x="-2" y="-1" z="7" spawntime="90" />
+		<monster name="Gang Member" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32741" centery="31285" centerz="7" radius="2">
+		<monster name="Elf Scout" x="1" y="-1" z="7" spawntime="90" />
+		<monster name="Elf" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32699" centery="31287" centerz="7" radius="2">
+		<monster name="Amazon" x="-2" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32713" centery="31287" centerz="7" radius="2">
+		<monster name="Goblin" x="-1" y="-1" z="7" spawntime="90" />
+		<monster name="Goblin" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32664" centery="31288" centerz="7" radius="3">
+		<monster name="Cat" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32678" centery="31288" centerz="7" radius="1">
+		<monster name="Nomad" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32747" centery="31288" centerz="7" radius="2">
+		<monster name="Elf Scout" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32671" centery="31289" centerz="7" radius="1">
+		<monster name="Nomad" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32684" centery="31289" centerz="7" radius="1">
+		<monster name="Nomad" x="-1" y="-1" z="7" spawntime="90" />
+		<monster name="Nomad" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32692" centery="31289" centerz="7" radius="1">
+		<monster name="Gang Member" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32707" centery="31292" centerz="7" radius="2">
+		<monster name="Cat" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32725" centery="31292" centerz="7" radius="2">
+		<monster name="Crazed Beggar" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32738" centery="31292" centerz="7" radius="2">
+		<monster name="Elf" x="2" y="0" z="7" spawntime="90" />
+		<monster name="Elf" x="-2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32640" centery="31293" centerz="7" radius="2">
+		<monster name="Pirate Cutthroat" x="1" y="0" z="7" spawntime="90" />
+		<monster name="Pirate Marauder" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32757" centery="31293" centerz="7" radius="2">
+		<monster name="Elf" x="1" y="-2" z="7" spawntime="90" />
+		<monster name="Elf" x="-2" y="1" z="7" spawntime="90" />
+		<monster name="Elf Scout" x="2" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32692" centery="31295" centerz="7" radius="1">
+		<monster name="Gang Member" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32748" centery="31295" centerz="7" radius="1">
+		<monster name="Elf" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32665" centery="31296" centerz="7" radius="2">
+		<monster name="Goblin" x="2" y="-2" z="7" spawntime="90" />
+		<monster name="Nomad" x="-2" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32640" centery="31299" centerz="7" radius="2">
+		<monster name="Pirate Cutthroat" x="-1" y="0" z="7" spawntime="90" />
+		<monster name="Pirate Marauder" x="-2" y="2" z="7" spawntime="90" />
+		<monster name="Pirate Cutthroat" x="2" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32717" centery="31299" centerz="7" radius="2">
+		<monster name="Lizard Sentinel" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32671" centery="31300" centerz="7" radius="1">
+		<monster name="Nomad" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32677" centery="31300" centerz="7" radius="1">
+		<monster name="Nomad" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32707" centery="31300" centerz="7" radius="2">
+		<monster name="Goblin" x="-2" y="-1" z="7" spawntime="90" />
+		<monster name="Gang Member" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32666" centery="31301" centerz="7" radius="1">
+		<monster name="Dworc Fleshhunter" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32684" centery="31301" centerz="7" radius="1">
+		<monster name="Nomad" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32731" centery="31301" centerz="7" radius="2">
+		<monster name="Cat" x="-1" y="-2" z="7" spawntime="60" />
+		<monster name="Smuggler" x="-1" y="0" z="7" spawntime="60" />
+	</monster>
+	<monster centerx="32748" centery="31301" centerz="7" radius="2">
+		<monster name="Elf Scout" x="-2" y="1" z="7" spawntime="90" />
+		<monster name="Elf Scout" x="2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32690" centery="31303" centerz="7" radius="2">
+		<monster name="Amazon" x="1" y="-2" z="7" spawntime="90" />
+		<monster name="Troll" x="-2" y="1" z="7" spawntime="90" />
+		<monster name="Troll Champion" x="2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32678" centery="31304" centerz="7" radius="1">
+		<monster name="Gang Member" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32672" centery="31305" centerz="7" radius="1">
+		<monster name="Troll" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32698" centery="31308" centerz="7" radius="3">
+		<monster name="Gang Member" x="0" y="-3" z="7" spawntime="90" />
+		<monster name="Gang Member" x="2" y="2" z="7" spawntime="90" />
+		<monster name="Gang Member" x="-1" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32719" centery="31308" centerz="7" radius="2">
+		<monster name="Gang Member" x="-1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32676" centery="31309" centerz="7" radius="2">
+		<monster name="Smuggler" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32682" centery="31309" centerz="7" radius="2">
+		<monster name="Smuggler" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32670" centery="31310" centerz="7" radius="2">
+		<monster name="Nomad" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32707" centery="31310" centerz="7" radius="3">
+		<monster name="Amazon" x="2" y="-2" z="7" spawntime="90" />
+		<monster name="Goblin" x="-3" y="2" z="7" spawntime="90" />
+		<monster name="Crazed Beggar" x="3" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32732" centery="31310" centerz="7" radius="2">
+		<monster name="Minotaur" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32739" centery="31310" centerz="7" radius="2">
+		<monster name="Minotaur" x="1" y="-1" z="7" spawntime="90" />
+		<monster name="Minotaur" x="-1" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32746" centery="31310" centerz="7" radius="2">
+		<monster name="Minotaur" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32722" centery="31313" centerz="7" radius="1">
+		<monster name="Smuggler" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32715" centery="31314" centerz="7" radius="2">
+		<monster name="Gang Member" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32750" centery="31315" centerz="7" radius="2">
+		<monster name="Minotaur" x="2" y="-1" z="7" spawntime="60" />
+	</monster>
+	<monster centerx="32729" centery="31316" centerz="7" radius="2">
+		<monster name="Minotaur" x="0" y="0" z="7" spawntime="90" />
+		<monster name="Minotaur" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32658" centery="31317" centerz="7" radius="3">
+		<monster name="Pirate Cutthroat" x="0" y="-2" z="7" spawntime="90" />
+		<monster name="Pirate Cutthroat" x="-1" y="0" z="7" spawntime="90" />
+		<monster name="Pirate Cutthroat" x="1" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32698" centery="31317" centerz="7" radius="2">
+		<monster name="Amazon" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32746" centery="31317" centerz="7" radius="2">
+		<monster name="Minotaur" x="-1" y="-1" z="7" spawntime="90" />
+		<monster name="Minotaur" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32716" centery="31320" centerz="7" radius="2">
+		<monster name="Dog" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32737" centery="31320" centerz="7" radius="2">
+		<monster name="Minotaur" x="2" y="-1" z="7" spawntime="90" />
+		<monster name="Minotaur" x="-2" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32686" centery="31322" centerz="7" radius="2">
+		<monster name="Smuggler" x="-2" y="-1" z="7" spawntime="90" />
+		<monster name="Gang Member" x="1" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32727" centery="31322" centerz="7" radius="2">
+		<monster name="Minotaur" x="2" y="0" z="7" spawntime="90" />
+		<monster name="Minotaur" x="-2" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32693" centery="31323" centerz="7" radius="2">
+		<monster name="Bandit" x="1" y="-2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32708" centery="31323" centerz="7" radius="3">
+		<monster name="Gang Member" x="3" y="-2" z="7" spawntime="90" />
+		<monster name="Wild Warrior" x="-3" y="0" z="7" spawntime="90" />
+		<monster name="Gang Member" x="0" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32744" centery="31325" centerz="7" radius="2">
+		<monster name="Minotaur" x="1" y="-2" z="7" spawntime="90" />
+		<monster name="Minotaur" x="-2" y="1" z="7" spawntime="90" />
+		<monster name="Minotaur" x="2" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32711" centery="31332" centerz="7" radius="2">
+		<monster name="Dworc Fleshhunter" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32735" centery="31332" centerz="7" radius="3">
+		<monster name="Minotaur" x="0" y="-2" z="7" spawntime="90" />
+		<monster name="Minotaur" x="-3" y="3" z="7" spawntime="90" />
+		<monster name="Minotaur" x="2" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32646" centery="31333" centerz="7" radius="3">
+		<monster name="Pirate Buccaneer" x="3" y="0" z="7" spawntime="90" />
+		<monster name="Pirate Cutthroat" x="-3" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32726" centery="31334" centerz="7" radius="3">
+		<monster name="Minotaur" x="1" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32744" centery="31334" centerz="7" radius="3">
+		<monster name="Minotaur" x="1" y="-2" z="7" spawntime="90" />
+		<monster name="Minotaur" x="1" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32661" centery="31336" centerz="7" radius="3">
+		<monster name="Pirate Buccaneer" x="-3" y="0" z="7" spawntime="90" />
+		<monster name="Pirate Buccaneer" x="3" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32670" centery="31336" centerz="7" radius="3">
+		<monster name="Pirate Marauder" x="-1" y="-1" z="7" spawntime="90" />
+		<monster name="Pirate Marauder" x="2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32718" centery="31338" centerz="7" radius="1">
+		<monster name="Smuggler" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32688" centery="31339" centerz="7" radius="1">
+		<monster name="Pirate Marauder" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32691" centery="31339" centerz="7" radius="1">
+		<monster name="Pirate Marauder" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32740" centery="31341" centerz="7" radius="2">
+		<monster name="Minotaur" x="2" y="-1" z="7" spawntime="90" />
+		<monster name="Minotaur" x="-2" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32701" centery="31343" centerz="7" radius="2">
+		<monster name="Pirate Cutthroat" x="-2" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32732" centery="31343" centerz="7" radius="1">
+		<monster name="Minotaur" x="-1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32687" centery="31345" centerz="7" radius="2">
+		<monster name="Pirate Marauder" x="0" y="-2" z="7" spawntime="90" />
+		<monster name="Pirate Cutthroat" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32719" centery="31345" centerz="7" radius="2">
+		<monster name="Hunter" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32724" centery="31345" centerz="7" radius="1">
+		<monster name="Pig" x="-1" y="-1" z="7" spawntime="90" />
+		<monster name="Pig" x="0" y="-1" z="7" spawntime="90" />
+		<monster name="Pig" x="1" y="0" z="7" spawntime="90" />
+		<monster name="Pig" x="-1" y="1" z="7" spawntime="90" />
+		<monster name="Pig" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32704" centery="31348" centerz="7" radius="1">
+		<monster name="Pirate Marauder" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32714" centery="31349" centerz="7" radius="2">
+		<monster name="Valkyrie" x="-1" y="-2" z="7" spawntime="90" />
+		<monster name="Crazed Beggar" x="2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32702" centery="31351" centerz="7" radius="1">
+		<monster name="Pirate Marauder" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32731" centery="31351" centerz="7" radius="2">
+		<monster name="Gang Member" x="-1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32693" centery="31352" centerz="7" radius="2">
+		<monster name="Pirate Marauder" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32739" centery="31353" centerz="7" radius="2">
+		<monster name="Lizard Templar" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32708" centery="31359" centerz="7" radius="2">
+		<monster name="Pirate Marauder" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32737" centery="31362" centerz="7" radius="2">
+		<monster name="Lizard Sentinel" x="-1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32716" centery="31364" centerz="7" radius="2">
+		<monster name="Pirate Marauder" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32702" centery="31367" centerz="7" radius="2">
+		<monster name="Pirate Marauder" x="-2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32707" centery="31367" centerz="7" radius="1">
+		<monster name="Pirate Marauder" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32725" centery="31367" centerz="7" radius="1">
+		<monster name="Pirate Buccaneer" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32707" centery="31369" centerz="7" radius="1">
+		<monster name="Pirate Marauder" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32725" centery="31371" centerz="7" radius="1">
+		<monster name="Pirate Buccaneer" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32720" centery="31372" centerz="7" radius="2">
+		<monster name="Pirate Marauder" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32708" centery="31373" centerz="7" radius="2">
+		<monster name="Pirate Marauder" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32720" centery="31378" centerz="7" radius="2">
+		<monster name="Pirate Marauder" x="0" y="-2" z="7" spawntime="90" />
+		<monster name="Pirate Marauder" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32734" centery="31379" centerz="7" radius="2">
+		<monster name="Pirate Marauder" x="0" y="-2" z="7" spawntime="90" />
+		<monster name="Pirate Marauder" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+</monsters>

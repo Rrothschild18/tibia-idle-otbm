@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="33130" centery="31838" centerz="7" radius="6">
+		<monster name="Bug" x="-3" y="-4" z="7" spawntime="90" />
+		<monster name="Bug" x="-2" y="-1" z="7" spawntime="90" />
+		<monster name="Bug" x="1" y="-1" z="7" spawntime="90" />
+		<monster name="Bug" x="0" y="1" z="7" spawntime="90" />
+		<monster name="Deer" x="-5" y="3" z="7" spawntime="90" />
+		<monster name="Seagull" x="3" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33117" centery="31845" centerz="7" radius="3">
+		<monster name="Deer" x="2" y="-1" z="7" spawntime="90" />
+		<monster name="Goblin" x="-3" y="1" z="7" spawntime="90" />
+		<monster name="Seagull" x="3" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33153" centery="31850" centerz="7" radius="3">
+		<monster name="Poison Spider" x="-3" y="-2" z="7" spawntime="90" />
+		<monster name="Poison Spider" x="0" y="1" z="7" spawntime="90" />
+		<monster name="Poison Spider" x="3" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33146" centery="31852" centerz="7" radius="2">
+		<monster name="Orc" x="2" y="-2" z="7" spawntime="90" />
+		<monster name="Snake" x="-1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33139" centery="31857" centerz="7" radius="3">
+		<monster name="Snake" x="-2" y="-3" z="7" spawntime="90" />
+		<monster name="Deer" x="1" y="-3" z="7" spawntime="90" />
+		<monster name="Deer" x="-2" y="0" z="7" spawntime="90" />
+		<monster name="Snake" x="-1" y="2" z="7" spawntime="90" />
+		<monster name="Snake" x="3" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33163" centery="31868" centerz="7" radius="5">
+		<monster name="Deer" x="-3" y="-5" z="7" spawntime="90" />
+		<monster name="Poison Spider" x="1" y="-4" z="7" spawntime="90" />
+		<monster name="Poison Spider" x="-5" y="-2" z="7" spawntime="90" />
+		<monster name="Poison Spider" x="-1" y="-2" z="7" spawntime="90" />
+		<monster name="Poison Spider" x="-2" y="0" z="7" spawntime="90" />
+		<monster name="Poison Spider" x="4" y="3" z="7" spawntime="90" />
+		<monster name="Poison Spider" x="-4" y="4" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33135" centery="31870" centerz="7" radius="2">
+		<monster name="Deer" x="1" y="-2" z="7" spawntime="90" />
+		<monster name="Deer" x="0" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33179" centery="31877" centerz="7" radius="4">
+		<monster name="Orc Spearman" x="3" y="-4" z="7" spawntime="90" />
+		<monster name="Orc Warrior" x="0" y="-2" z="7" spawntime="90" />
+		<monster name="Orc" x="-3" y="-1" z="7" spawntime="90" />
+		<monster name="Orc" x="3" y="0" z="7" spawntime="90" />
+		<monster name="Orc" x="0" y="2" z="7" spawntime="90" />
+		<monster name="Orc" x="4" y="4" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33151" centery="31878" centerz="7" radius="2">
+		<monster name="Orc" x="2" y="-2" z="7" spawntime="90" />
+		<monster name="Wisp" x="-2" y="1" z="7" spawntime="90" />
+		<monster name="Orc" x="2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33143" centery="31879" centerz="7" radius="3">
+		<monster name="Orc Spearman" x="3" y="-3" z="7" spawntime="90" />
+		<monster name="Orc Spearman" x="-1" y="-2" z="7" spawntime="90" />
+		<monster name="Orc Warrior" x="1" y="0" z="7" spawntime="90" />
+		<monster name="Orc Spearman" x="3" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33141" centery="31888" centerz="7" radius="3">
+		<monster name="Poison Spider" x="2" y="-2" z="7" spawntime="90" />
+		<monster name="Deer" x="-3" y="0" z="7" spawntime="90" />
+		<monster name="Orc" x="1" y="1" z="7" spawntime="90" />
+		<monster name="Poison Spider" x="-1" y="2" z="7" spawntime="90" />
+		<monster name="Poison Spider" x="3" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33180" centery="31895" centerz="7" radius="4">
+		<monster name="Poison Spider" x="2" y="-4" z="7" spawntime="90" />
+		<monster name="Orc Spearman" x="-2" y="-3" z="7" spawntime="90" />
+		<monster name="Poison Spider" x="0" y="-3" z="7" spawntime="90" />
+		<monster name="Poison Spider" x="-3" y="-1" z="7" spawntime="90" />
+		<monster name="Poison Spider" x="1" y="2" z="7" spawntime="90" />
+		<monster name="Orc Spearman" x="3" y="2" z="7" spawntime="90" />
+		<monster name="Orc Spearman" x="-1" y="4" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33172" centery="31901" centerz="7" radius="2">
+		<monster name="Orc Warrior" x="2" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33157" centery="31905" centerz="7" radius="2">
+		<monster name="Orc Warrior" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33164" centery="31907" centerz="7" radius="2">
+		<monster name="Orc Warrior" x="-1" y="-2" z="7" spawntime="90" />
+		<monster name="Orc Warrior" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33177" centery="31910" centerz="7" radius="2">
+		<monster name="Orc Spearman" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33107" centery="31848" centerz="8" radius="7">
+		<monster name="Goblin" x="6" y="-6" z="8" spawntime="90" />
+		<monster name="Goblin" x="5" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33169" centery="31883" centerz="8" radius="2">
+		<monster name="Orc Spearman" x="2" y="0" z="8" spawntime="90" />
+		<monster name="Orc Spearman" x="-1" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33168" centery="31892" centerz="8" radius="3">
+		<monster name="Orc Spearman" x="-2" y="-3" z="8" spawntime="90" />
+		<monster name="Orc" x="3" y="-2" z="8" spawntime="90" />
+		<monster name="Orc" x="2" y="0" z="8" spawntime="90" />
+		<monster name="Orc Spearman" x="-3" y="1" z="8" spawntime="90" />
+		<monster name="Orc" x="0" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33190" centery="31895" centerz="8" radius="3">
+		<monster name="Werebadger" x="2" y="2" z="8" spawntime="60" />
+		<monster name="Werefox" x="3" y="2" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33160" centery="31897" centerz="8" radius="2">
+		<monster name="Orc" x="1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33153" centery="31900" centerz="8" radius="3">
+		<monster name="Orc" x="1" y="-1" z="8" spawntime="90" />
+		<monster name="Orc Spearman" x="3" y="0" z="8" spawntime="90" />
+		<monster name="Orc Spearman" x="0" y="2" z="8" spawntime="90" />
+		<monster name="Orc" x="2" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33160" centery="31908" centerz="8" radius="3">
+		<monster name="Poison Spider" x="0" y="-2" z="8" spawntime="90" />
+		<monster name="Orc Spearman" x="2" y="-2" z="8" spawntime="90" />
+		<monster name="Poison Spider" x="1" y="0" z="8" spawntime="90" />
+		<monster name="Orc Spearman" x="1" y="1" z="8" spawntime="90" />
+		<monster name="Poison Spider" x="1" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33157" centery="31915" centerz="8" radius="2">
+		<monster name="Poison Spider" x="-2" y="-2" z="8" spawntime="90" />
+		<monster name="Orc" x="2" y="-2" z="8" spawntime="90" />
+		<monster name="Orc Spearman" x="0" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33140" centery="31916" centerz="8" radius="5">
+		<monster name="Orc Spearman" x="-2" y="-5" z="8" spawntime="90" />
+		<monster name="Poison Spider" x="-1" y="-3" z="8" spawntime="90" />
+		<monster name="Orc" x="2" y="-3" z="8" spawntime="90" />
+		<monster name="Orc Warrior" x="1" y="-1" z="8" spawntime="90" />
+		<monster name="Orc Spearman" x="-3" y="0" z="8" spawntime="90" />
+		<monster name="Orc Warrior" x="3" y="0" z="8" spawntime="90" />
+		<monster name="Poison Spider" x="4" y="0" z="8" spawntime="90" />
+		<monster name="Orc" x="-1" y="1" z="8" spawntime="90" />
+		<monster name="Poison Spider" x="2" y="2" z="8" spawntime="90" />
+		<monster name="Orc" x="4" y="2" z="8" spawntime="90" />
+		<monster name="Poison Spider" x="0" y="3" z="8" spawntime="90" />
+		<monster name="Orc Spearman" x="-1" y="4" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33183" centery="31916" centerz="8" radius="3">
+		<monster name="Wereboar" x="2" y="-1" z="8" spawntime="60" />
+		<monster name="Fox" x="3" y="1" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33190" centery="31916" centerz="8" radius="3">
+		<monster name="Werebadger" x="3" y="-3" z="8" spawntime="60" />
+		<monster name="Fox" x="-3" y="1" z="8" spawntime="60" />
+		<monster name="Werebadger" x="-2" y="2" z="8" spawntime="60" />
+		<monster name="Werefox" x="0" y="3" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33161" centery="31918" centerz="8" radius="2">
+		<monster name="Orc Warrior" x="-1" y="-1" z="8" spawntime="90" />
+		<monster name="Orc" x="1" y="0" z="8" spawntime="90" />
+		<monster name="Orc Spearman" x="1" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33153" centery="31922" centerz="8" radius="2">
+		<monster name="Orc Spearman" x="1" y="-2" z="8" spawntime="90" />
+		<monster name="Orc" x="1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33190" centery="31923" centerz="8" radius="3">
+		<monster name="Fox" x="0" y="-1" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33166" centery="31924" centerz="8" radius="2">
+		<monster name="Orc Spearman" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33158" centery="31928" centerz="8" radius="1">
+		<monster name="Orc" x="1" y="-1" z="8" spawntime="90" />
+		<monster name="Poison Spider" x="-1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33190" centery="31930" centerz="8" radius="3">
+		<monster name="Werefox" x="3" y="0" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33151" centery="31932" centerz="8" radius="3">
+		<monster name="Orc Spearman" x="-2" y="-2" z="8" spawntime="90" />
+		<monster name="Orc Warrior" x="1" y="-2" z="8" spawntime="90" />
+		<monster name="Orc" x="0" y="1" z="8" spawntime="90" />
+		<monster name="Orc Spearman" x="2" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33163" centery="31932" centerz="8" radius="2">
+		<monster name="Poison Spider" x="2" y="-2" z="8" spawntime="90" />
+		<monster name="Poison Spider" x="-1" y="0" z="8" spawntime="90" />
+	</monster>
+</monsters>

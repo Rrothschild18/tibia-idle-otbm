@@ -1,0 +1,50 @@
+[OK] 7 subáreas, 56,509 colunas de tile:
+        452  Northern Darama
+        296  Darashia City
+         64  Daramian Minotaur Pyramid
+         82  Ashta'daramai
+         66  Drefia
+         68  Northern Darama Desert
+        217  Lion's Rock
+[..] otservbr.otbm: 185 MB lidos
+[OK] recorte quadrado de 711 tiles de lado (máscara + 171 de folga)
+[..] --spawns-box: o monstro entra pela caixa quadrada, não pela máscara
+     100,000 áreas varridas, 0 tiles mantidos
+     200,000 áreas varridas, 0 tiles mantidos
+     300,000 áreas varridas, 0 tiles mantidos
+     400,000 áreas varridas, 0 tiles mantidos
+     500,000 áreas varridas, 0 tiles mantidos
+     600,000 áreas varridas, 0 tiles mantidos
+     700,000 áreas varridas, 0 tiles mantidos
+     800,000 áreas varridas, 347,500 tiles mantidos
+     900,000 áreas varridas, 1,561,163 tiles mantidos
+     1,000,000 áreas varridas, 2,693,391 tiles mantidos
+     1,100,000 áreas varridas, 2,785,425 tiles mantidos
+[OK] 2,785,425 tiles em 185,923 áreas, andares 0..15 -> /home/rroth/Projects/tibia-idle-otbm/extractor/full-maps/DARASHIA (128s)
+[OK] 8063 spawns (14401 criaturas), 36 NPCs, 76 casas, 1 towns
+✔ DARASHIA.raw.json gerado
+[OK] 9925 appearances com flag -> /home/rroth/Projects/tibia-idle-otbm/extractor/appearance-flags/DARASHIA.json
+     (10309 ids na cidade, 0 sem metadado extraído)
+[OK] z0: 3036 tiles (2982 com cor) -> z0.png (2.2 KB)
+[OK] z1: 7157 tiles (7035 com cor) -> z1.png (3.4 KB)
+[OK] z2: 12471 tiles (12273 com cor) -> z2.png (4.7 KB)
+[OK] z3: 19415 tiles (18889 com cor) -> z3.png (6.0 KB)
+[OK] z4: 32377 tiles (30077 com cor) -> z4.png (7.8 KB)
+[OK] z5: 48477 tiles (44999 com cor) -> z5.png (12.6 KB)
+[OK] z6: 60699 tiles (55938 com cor) -> z6.png (16.9 KB)
+[OK] z7: 495669 tiles (495479 com cor) -> z7.png (51.5 KB)
+[OK] z8: 351958 tiles (218229 com cor) -> z8.png (39.5 KB)
+[OK] z9: 352492 tiles (218765 com cor) -> z9.png (38.9 KB)
+[OK] z10: 342678 tiles (235087 com cor) -> z10.png (36.8 KB)
+[OK] z11: 296577 tiles (232931 com cor) -> z11.png (30.7 KB)
+[OK] z12: 228630 tiles (181411 com cor) -> z12.png (22.7 KB)
+[OK] z13: 208433 tiles (164753 com cor) -> z13.png (25.0 KB)
+[OK] z14: 196634 tiles (144623 com cor) -> z14.png (21.6 KB)
+[OK] z15: 128722 tiles (112954 com cor) -> z15.png (18.0 KB)
+[OK] 16 andares, 2785425 tiles, 711x711 -> /home/rroth/Projects/tibia-idle-otbm/extractor/full-maps/DARASHIA/minimap
+[OK] 434 ids com floorchange e 17 escadas de mão lidos de /home/rroth/Projects/tibia-idle-otbm/extractor/vendor/canary/items.xml
+[OK] DARASHIA: 769 componentes (14296 criaturas), 105 órfãos -> /home/rroth/Projects/tibia-idle-otbm/extractor/full-maps/DARASHIA/candidates-full.json
+
+real	2m54.109s
+user	2m51.283s
+sys	0m3.916s

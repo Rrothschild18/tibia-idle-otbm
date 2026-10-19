@@ -1,0 +1,607 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="33128" centery="32321" centerz="11" radius="1">
+		<monster name="Werelion" x="0" y="1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33126" centery="32324" centerz="11" radius="1">
+		<monster name="Werelion" x="1" y="-1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33129" centery="32324" centerz="11" radius="1">
+		<monster name="White Lion" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33132" centery="32325" centerz="11" radius="1">
+		<monster name="White Lion" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33140" centery="32325" centerz="11" radius="1">
+		<monster name="Werelion" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33140" centery="32328" centerz="11" radius="1">
+		<monster name="Werelion" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33137" centery="32330" centerz="11" radius="1">
+		<monster name="Werelioness" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33135" centery="32332" centerz="11" radius="1">
+		<monster name="Werelioness" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33162" centery="32336" centerz="11" radius="3">
+		<monster name="Werehyaena" x="2" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33162" centery="32343" centerz="11" radius="3">
+		<monster name="Werehyaena" x="3" y="-1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33211" centery="32343" centerz="11" radius="3">
+		<monster name="Werehyaena" x="-3" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33169" centery="32350" centerz="11" radius="3">
+		<monster name="Werehyaena" x="-1" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33211" centery="32350" centerz="11" radius="3">
+		<monster name="Werehyaena" x="-3" y="-1" z="11" spawntime="60" />
+		<monster name="Werehyaena Shaman" x="-3" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33155" centery="32357" centerz="11" radius="3">
+		<monster name="Werehyaena" x="3" y="0" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="-1" y="2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33162" centery="32357" centerz="11" radius="3">
+		<monster name="Werehyaena" x="1" y="-3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33169" centery="32357" centerz="11" radius="3">
+		<monster name="Werehyaena" x="-2" y="-3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33190" centery="32357" centerz="11" radius="3">
+		<monster name="Werehyaena Shaman" x="0" y="-1" z="11" spawntime="60" />
+		<monster name="Werehyaena Shaman" x="3" y="-1" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="0" y="2" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="2" y="2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33197" centery="32357" centerz="11" radius="3">
+		<monster name="Werehyaena" x="3" y="-3" z="11" spawntime="60" />
+		<monster name="Werehyaena Shaman" x="2" y="-2" z="11" spawntime="60" />
+		<monster name="Werehyaena Shaman" x="1" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33204" centery="32357" centerz="11" radius="3">
+		<monster name="Werehyaena" x="-3" y="3" z="11" spawntime="60" />
+		<monster name="Werehyaena Shaman" x="-1" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33183" centery="32364" centerz="11" radius="3">
+		<monster name="Werehyaena" x="-2" y="-3" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="-1" y="-3" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="-2" y="-1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33190" centery="32364" centerz="11" radius="3">
+		<monster name="Werehyaena" x="1" y="-3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33204" centery="32364" centerz="11" radius="3">
+		<monster name="Werehyaena Shaman" x="-2" y="-2" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="1" y="-2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33211" centery="32364" centerz="11" radius="3">
+		<monster name="Werehyaena" x="-3" y="-2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33148" centery="32365" centerz="11" radius="3">
+		<monster name="Werehyaena" x="2" y="-3" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="-1" y="1" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="0" y="1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33148" centery="32371" centerz="11" radius="3">
+		<monster name="Werehyaena Shaman" x="-1" y="-2" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="1" y="0" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="-1" y="1" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="0" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33176" centery="32371" centerz="11" radius="3">
+		<monster name="Werehyaena Shaman" x="-1" y="0" z="11" spawntime="60" />
+		<monster name="Werehyaena Shaman" x="-2" y="2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33197" centery="32371" centerz="11" radius="3">
+		<monster name="Werehyaena Shaman" x="3" y="-2" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="2" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33148" centery="32378" centerz="11" radius="3">
+		<monster name="Werehyaena Shaman" x="-1" y="-2" z="11" spawntime="60" />
+		<monster name="Werehyaena Shaman" x="-1" y="1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33169" centery="32378" centerz="11" radius="3">
+		<monster name="Werehyaena" x="0" y="1" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="2" y="1" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="0" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33176" centery="32378" centerz="11" radius="3">
+		<monster name="Werehyaena" x="-2" y="-2" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="-2" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33204" centery="32378" centerz="11" radius="3">
+		<monster name="Werehyaena" x="-2" y="-3" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="-3" y="-2" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="1" y="1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33141" centery="32385" centerz="11" radius="3">
+		<monster name="Werehyaena" x="-2" y="-2" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="0" y="-2" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="-1" y="0" z="11" spawntime="60" />
+		<monster name="Werehyaena Shaman" x="0" y="2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33204" centery="32385" centerz="11" radius="3">
+		<monster name="Werehyaena" x="1" y="-3" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="-2" y="1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33141" centery="32392" centerz="11" radius="3">
+		<monster name="Werehyaena Shaman" x="1" y="-3" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="2" y="0" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="2" y="2" z="11" spawntime="60" />
+		<monster name="Werehyaena Shaman" x="-1" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33148" centery="32392" centerz="11" radius="3">
+		<monster name="Werehyaena" x="-3" y="1" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="1" y="2" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="3" y="2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33162" centery="32392" centerz="11" radius="3">
+		<monster name="Werehyaena Shaman" x="2" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33197" centery="32392" centerz="11" radius="3">
+		<monster name="Werehyaena" x="1" y="0" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="-1" y="3" z="11" spawntime="60" />
+		<monster name="Werehyaena Shaman" x="0" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33127" centery="32399" centerz="11" radius="3">
+		<monster name="Werehyaena" x="3" y="2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33134" centery="32399" centerz="11" radius="3">
+		<monster name="Werehyaena" x="-2" y="1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33141" centery="32399" centerz="11" radius="3">
+		<monster name="Werehyaena Shaman" x="-2" y="-2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33148" centery="32399" centerz="11" radius="3">
+		<monster name="Werehyaena" x="2" y="-3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33155" centery="32399" centerz="11" radius="3">
+		<monster name="Werehyaena" x="1" y="-1" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="3" y="-1" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="1" y="1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33162" centery="32399" centerz="11" radius="3">
+		<monster name="Werehyaena Shaman" x="2" y="-2" z="11" spawntime="60" />
+		<monster name="Werehyaena Shaman" x="-2" y="0" z="11" spawntime="60" />
+		<monster name="Werehyaena Shaman" x="-2" y="2" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="3" y="2" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="1" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33169" centery="32399" centerz="11" radius="3">
+		<monster name="Werehyaena Shaman" x="-2" y="1" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="3" y="2" z="11" spawntime="60" />
+		<monster name="Werehyaena Shaman" x="-3" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33190" centery="32399" centerz="11" radius="3">
+		<monster name="Werehyaena" x="1" y="0" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="3" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33197" centery="32399" centerz="11" radius="3">
+		<monster name="Werehyaena" x="1" y="-3" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="-2" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33204" centery="32399" centerz="11" radius="3">
+		<monster name="Werehyaena Shaman" x="-2" y="-1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33162" centery="32406" centerz="11" radius="3">
+		<monster name="Werehyaena" x="2" y="-2" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="-1" y="2" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="1" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33169" centery="32406" centerz="11" radius="3">
+		<monster name="Werehyaena Shaman" x="-3" y="-1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33176" centery="32406" centerz="11" radius="3">
+		<monster name="Werehyaena" x="-3" y="-3" z="11" spawntime="60" />
+		<monster name="Werehyaena Shaman" x="3" y="1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33184" centery="32406" centerz="11" radius="3">
+		<monster name="Werehyaena Shaman" x="-2" y="-1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33197" centery="32406" centerz="11" radius="3">
+		<monster name="Werehyaena" x="-2" y="1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33155" centery="32413" centerz="11" radius="3">
+		<monster name="Werehyaena Shaman" x="2" y="-3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33162" centery="32413" centerz="11" radius="3">
+		<monster name="Werehyaena" x="0" y="-2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33169" centery="32413" centerz="11" radius="3">
+		<monster name="Werehyaena" x="2" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33204" centery="32413" centerz="11" radius="3">
+		<monster name="Werehyaena Shaman" x="3" y="-1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33211" centery="32413" centerz="11" radius="3">
+		<monster name="Werehyaena" x="-3" y="-1" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="-2" y="-1" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="-3" y="2" z="11" spawntime="60" />
+		<monster name="Werehyaena Shaman" x="0" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33134" centery="32420" centerz="11" radius="3">
+		<monster name="Werehyaena" x="-2" y="0" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="2" y="0" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="0" y="2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33141" centery="32420" centerz="11" radius="3">
+		<monster name="Werehyaena Shaman" x="-2" y="0" z="11" spawntime="60" />
+		<monster name="Werehyaena Shaman" x="-3" y="3" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="1" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33176" centery="32420" centerz="11" radius="3">
+		<monster name="Werehyaena Shaman" x="0" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33190" centery="32420" centerz="11" radius="3">
+		<monster name="Werehyaena" x="1" y="2" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="3" y="2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33197" centery="32420" centerz="11" radius="3">
+		<monster name="Werehyaena" x="-2" y="2" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="3" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33204" centery="32420" centerz="11" radius="3">
+		<monster name="Werehyaena Shaman" x="2" y="-1" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="-2" y="2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33141" centery="32427" centerz="11" radius="3">
+		<monster name="Werehyaena" x="3" y="-3" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="1" y="-1" z="11" spawntime="60" />
+		<monster name="Werehyaena Shaman" x="1" y="0" z="11" spawntime="60" />
+		<monster name="Werehyaena Shaman" x="2" y="1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33148" centery="32427" centerz="11" radius="3">
+		<monster name="Werehyaena" x="-1" y="0" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="1" y="0" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="3" y="1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33155" centery="32427" centerz="11" radius="3">
+		<monster name="Werehyaena Shaman" x="0" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33176" centery="32427" centerz="11" radius="3">
+		<monster name="Werehyaena Shaman" x="1" y="-3" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="2" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33183" centery="32427" centerz="11" radius="3">
+		<monster name="Werehyaena" x="-3" y="-1" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33204" centery="32427" centerz="11" radius="3">
+		<monster name="Werehyaena" x="-1" y="-3" z="11" spawntime="60" />
+		<monster name="Werehyaena Shaman" x="-1" y="-1" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="3" y="0" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="2" y="1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33141" centery="32434" centerz="11" radius="3">
+		<monster name="Werehyaena" x="2" y="2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33155" centery="32434" centerz="11" radius="3">
+		<monster name="Werehyaena" x="0" y="-2" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="2" y="-2" z="11" spawntime="60" />
+		<monster name="Werehyaena Shaman" x="2" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33176" centery="32434" centerz="11" radius="3">
+		<monster name="Werehyaena" x="-2" y="3" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="0" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33204" centery="32434" centerz="11" radius="3">
+		<monster name="Werehyaena" x="1" y="-2" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="-3" y="2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33141" centery="32441" centerz="11" radius="3">
+		<monster name="Werehyaena" x="1" y="-3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33162" centery="32441" centerz="11" radius="3">
+		<monster name="Werehyaena Shaman" x="3" y="0" z="11" spawntime="60" />
+		<monster name="Werehyaena Shaman" x="3" y="2" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="-1" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33176" centery="32441" centerz="11" radius="3">
+		<monster name="Werehyaena" x="-1" y="-2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33190" centery="32441" centerz="11" radius="3">
+		<monster name="Werehyaena" x="2" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33197" centery="32441" centerz="11" radius="3">
+		<monster name="Werehyaena Shaman" x="-2" y="0" z="11" spawntime="60" />
+		<monster name="Werehyaena Shaman" x="-1" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33204" centery="32441" centerz="11" radius="3">
+		<monster name="Werehyaena" x="-3" y="-3" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="-2" y="-2" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="0" y="1" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="3" y="1" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="3" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33211" centery="32441" centerz="11" radius="3">
+		<monster name="Werehyaena Shaman" x="-2" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33155" centery="32448" centerz="11" radius="3">
+		<monster name="Werehyaena Shaman" x="0" y="1" z="11" spawntime="60" />
+		<monster name="Werehyaena Shaman" x="1" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33162" centery="32448" centerz="11" radius="3">
+		<monster name="Werehyaena" x="0" y="-2" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="3" y="2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33169" centery="32448" centerz="11" radius="3">
+		<monster name="Werehyaena" x="0" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33183" centery="32448" centerz="11" radius="3">
+		<monster name="Werehyaena" x="0" y="-1" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="2" y="-1" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="1" y="1" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="-1" y="2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33190" centery="32448" centerz="11" radius="3">
+		<monster name="Werehyaena" x="3" y="-2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33197" centery="32448" centerz="11" radius="3">
+		<monster name="Werehyaena" x="-1" y="-3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33211" centery="32448" centerz="11" radius="3">
+		<monster name="Werehyaena Shaman" x="-3" y="-1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33141" centery="32455" centerz="11" radius="3">
+		<monster name="Werehyaena" x="-1" y="-3" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="-1" y="-2" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="0" y="-1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33148" centery="32455" centerz="11" radius="3">
+		<monster name="Werehyaena Shaman" x="3" y="-2" z="11" spawntime="60" />
+		<monster name="Werehyaena Shaman" x="-3" y="0" z="11" spawntime="60" />
+		<monster name="Werehyaena Shaman" x="3" y="0" z="11" spawntime="60" />
+		<monster name="Werehyaena Shaman" x="-3" y="2" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="1" y="2" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="3" y="2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33155" centery="32455" centerz="11" radius="3">
+		<monster name="Werehyaena Shaman" x="-3" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33162" centery="32455" centerz="11" radius="3">
+		<monster name="Werehyaena" x="3" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33169" centery="32455" centerz="11" radius="3">
+		<monster name="Werehyaena" x="0" y="-2" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="1" y="-2" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="1" y="-1" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="0" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33183" centery="32455" centerz="11" radius="3">
+		<monster name="Werehyaena" x="-1" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33148" centery="32462" centerz="11" radius="3">
+		<monster name="Werehyaena" x="2" y="-3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33155" centery="32462" centerz="11" radius="3">
+		<monster name="Werehyaena" x="-2" y="1" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="0" y="1" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="-1" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33162" centery="32462" centerz="11" radius="3">
+		<monster name="Werehyaena" x="1" y="-3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33169" centery="32462" centerz="11" radius="3">
+		<monster name="Werehyaena" x="0" y="-3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33148" centery="32469" centerz="11" radius="3">
+		<monster name="Werehyaena" x="0" y="-1" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="2" y="-1" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="-1" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33155" centery="32469" centerz="11" radius="3">
+		<monster name="Werehyaena Shaman" x="2" y="-1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33162" centery="32469" centerz="11" radius="3">
+		<monster name="Werehyaena Shaman" x="-3" y="-2" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="1" y="2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33169" centery="32469" centerz="11" radius="3">
+		<monster name="Werehyaena" x="-2" y="2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33176" centery="32469" centerz="11" radius="3">
+		<monster name="Werehyaena" x="-1" y="-2" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="1" y="-2" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="-1" y="-1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33162" centery="32476" centerz="11" radius="3">
+		<monster name="Werehyaena" x="-1" y="-3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33127" centery="32483" centerz="11" radius="3">
+		<monster name="Werehyaena Shaman" x="3" y="2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33134" centery="32483" centerz="11" radius="3">
+		<monster name="Werehyaena" x="2" y="3" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="3" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33141" centery="32483" centerz="11" radius="3">
+		<monster name="Werehyaena" x="-2" y="-3" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="-3" y="-1" z="11" spawntime="60" />
+		<monster name="Werehyaena Shaman" x="-3" y="0" z="11" spawntime="60" />
+		<monster name="Werehyaena Shaman" x="-2" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33169" centery="32483" centerz="11" radius="3">
+		<monster name="Werehyaena" x="1" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33211" centery="32489" centerz="11" radius="3">
+		<monster name="Carrion Worm" x="-2" y="0" z="11" spawntime="90" />
+		<monster name="Carrion Worm" x="0" y="2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33127" centery="32490" centerz="11" radius="3">
+		<monster name="Werehyaena Shaman" x="3" y="-3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33134" centery="32490" centerz="11" radius="3">
+		<monster name="Werehyaena" x="2" y="-2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33162" centery="32490" centerz="11" radius="3">
+		<monster name="Werehyaena Shaman" x="-1" y="-2" z="11" spawntime="60" />
+		<monster name="Werehyaena Shaman" x="1" y="-2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33169" centery="32490" centerz="11" radius="3">
+		<monster name="Werehyaena" x="-1" y="-2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33176" centery="32490" centerz="11" radius="3">
+		<monster name="Werehyaena Shaman" x="1" y="-3" z="11" spawntime="60" />
+		<monster name="Werehyaena Shaman" x="1" y="-1" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="0" y="1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33183" centery="32490" centerz="11" radius="3">
+		<monster name="Werehyaena" x="-2" y="1" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="1" y="1" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="-3" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33134" centery="32497" centerz="11" radius="3">
+		<monster name="Werehyaena" x="1" y="-2" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="3" y="-2" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="1" y="-1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33155" centery="32497" centerz="11" radius="3">
+		<monster name="Werehyaena" x="2" y="-3" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="3" y="-3" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="3" y="-1" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="2" y="2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33162" centery="32497" centerz="11" radius="3">
+		<monster name="Werehyaena" x="-2" y="-2" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="0" y="0" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="2" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33176" centery="32497" centerz="11" radius="3">
+		<monster name="Werehyaena" x="-2" y="2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33183" centery="32497" centerz="11" radius="3">
+		<monster name="Werehyaena" x="-1" y="2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33127" centery="32504" centerz="11" radius="3">
+		<monster name="Werehyaena" x="3" y="1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33134" centery="32504" centerz="11" radius="3">
+		<monster name="Werehyaena Shaman" x="-3" y="-3" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="-2" y="0" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="-3" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33169" centery="32504" centerz="11" radius="3">
+		<monster name="Werehyaena Shaman" x="1" y="-3" z="11" spawntime="60" />
+		<monster name="Werehyaena Shaman" x="3" y="1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33176" centery="32504" centerz="11" radius="3">
+		<monster name="Werehyaena" x="3" y="-2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33134" centery="32511" centerz="11" radius="3">
+		<monster name="Werehyaena Shaman" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33169" centery="32511" centerz="11" radius="3">
+		<monster name="Werehyaena Shaman" x="3" y="-3" z="11" spawntime="60" />
+		<monster name="Werehyaena Shaman" x="1" y="0" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="-2" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33141" centery="32518" centerz="11" radius="3">
+		<monster name="Werehyaena" x="-2" y="-3" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="-3" y="-2" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="3" y="2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33148" centery="32518" centerz="11" radius="3">
+		<monster name="Werehyaena" x="-2" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33162" centery="32518" centerz="11" radius="3">
+		<monster name="Werehyaena" x="3" y="-1" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="3" y="1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33169" centery="32518" centerz="11" radius="3">
+		<monster name="Werehyaena" x="-3" y="-2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33228" centery="32521" centerz="11" radius="6">
+		<monster name="Larva" x="-3" y="-4" z="11" spawntime="90" />
+		<monster name="Ancient Scarab" x="3" y="-4" z="11" spawntime="90" />
+		<monster name="Scarab" x="1" y="-3" z="11" spawntime="90" />
+		<monster name="Ancient Scarab" x="-5" y="0" z="11" spawntime="90" />
+		<monster name="Larva" x="4" y="0" z="11" spawntime="90" />
+		<monster name="Scarab" x="-4" y="2" z="11" spawntime="90" />
+		<monster name="Larva" x="-2" y="3" z="11" spawntime="90" />
+		<monster name="Scarab" x="5" y="3" z="11" spawntime="90" />
+		<monster name="Ancient Scarab" x="2" y="4" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33127" centery="32525" centerz="11" radius="3">
+		<monster name="Werehyaena" x="3" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33134" centery="32525" centerz="11" radius="3">
+		<monster name="Werehyaena" x="0" y="-3" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="-1" y="-2" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="-3" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33148" centery="32525" centerz="11" radius="3">
+		<monster name="Werehyaena" x="-3" y="-3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33155" centery="32525" centerz="11" radius="3">
+		<monster name="Werehyaena" x="-1" y="-1" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="1" y="-1" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="0" y="1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33162" centery="32525" centerz="11" radius="3">
+		<monster name="Werehyaena Shaman" x="-2" y="-2" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="1" y="-2" z="11" spawntime="60" />
+		<monster name="Werehyaena Shaman" x="-2" y="0" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="3" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33169" centery="32525" centerz="11" radius="3">
+		<monster name="Werehyaena" x="-3" y="-2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33127" centery="32532" centerz="11" radius="3">
+		<monster name="Werehyaena" x="3" y="-2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33134" centery="32532" centerz="11" radius="3">
+		<monster name="Werehyaena Shaman" x="-2" y="-1" z="11" spawntime="60" />
+		<monster name="Werehyaena Shaman" x="-2" y="1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33141" centery="32532" centerz="11" radius="3">
+		<monster name="Werehyaena" x="3" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33148" centery="32532" centerz="11" radius="3">
+		<monster name="Werehyaena" x="-2" y="0" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="-3" y="2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33156" centery="32532" centerz="11" radius="3">
+		<monster name="Werehyaena Shaman" x="1" y="-1" z="11" spawntime="60" />
+		<monster name="Werehyaena Shaman" x="1" y="1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33162" centery="32532" centerz="11" radius="3">
+		<monster name="Werehyaena" x="-1" y="0" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="1" y="0" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="0" y="2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33176" centery="32532" centerz="11" radius="3">
+		<monster name="Werehyaena Shaman" x="-3" y="-1" z="11" spawntime="60" />
+		<monster name="Werehyaena Shaman" x="-1" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33213" centery="32534" centerz="11" radius="4">
+		<monster name="Ancient Scarab" x="-2" y="-1" z="11" spawntime="90" />
+		<monster name="Larva" x="2" y="-1" z="11" spawntime="90" />
+		<monster name="Scarab" x="-1" y="3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33229" centery="32535" centerz="11" radius="5">
+		<monster name="Scarab" x="4" y="-3" z="11" spawntime="90" />
+		<monster name="Larva" x="-3" y="-2" z="11" spawntime="90" />
+		<monster name="Scarab" x="1" y="3" z="11" spawntime="90" />
+		<monster name="Ancient Scarab" x="3" y="4" z="11" spawntime="90" />
+		<monster name="Scarab" x="-4" y="5" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33155" centery="32539" centerz="11" radius="3">
+		<monster name="Werehyaena" x="-2" y="-3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33169" centery="32539" centerz="11" radius="3">
+		<monster name="Werehyaena" x="-2" y="0" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="0" y="0" z="11" spawntime="60" />
+		<monster name="Werehyaena" x="-1" y="2" z="11" spawntime="60" />
+		<monster name="Werehyaena Shaman" x="0" y="2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33212" centery="32546" centerz="11" radius="6">
+		<monster name="Scarab" x="2" y="-3" z="11" spawntime="90" />
+		<monster name="Ancient Scarab" x="-4" y="-2" z="11" spawntime="90" />
+		<monster name="Ancient Scarab" x="5" y="-2" z="11" spawntime="90" />
+		<monster name="Scarab" x="-4" y="2" z="11" spawntime="90" />
+		<monster name="Ancient Scarab" x="0" y="4" z="11" spawntime="90" />
+	</monster>
+</monsters>

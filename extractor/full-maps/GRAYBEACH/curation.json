@@ -1,0 +1,157 @@
+{
+  "city": "GRAYBEACH",
+  "area": "Quirefang",
+  "subareas": [
+    302,
+    167,
+    168,
+    169,
+    507
+  ],
+  "hunts": [
+    {
+      "id": "GRAYBEACH-HUNT-0101",
+      "name": "Hive Main Structure",
+      "floors": [
+        6,
+        7,
+        8
+      ],
+      "candidateIds": [
+        "GRAYBEACH-FULL-z07-9"
+      ],
+      "species": null,
+      "creatures": 387,
+      "extent": {
+        "minX": 33446,
+        "minY": 31170,
+        "maxX": 33610,
+        "maxY": 31361,
+        "centerX": 33528,
+        "centerY": 31265
+      },
+      "subareaId": 168,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "GRAYBEACH-HUNT-0102",
+      "name": "Zarganash",
+      "floors": [
+        9,
+        10,
+        11
+      ],
+      "candidateIds": [
+        "GRAYBEACH-FULL-z10-274"
+      ],
+      "species": null,
+      "creatures": 143,
+      "extent": {
+        "minX": 33550,
+        "minY": 31440,
+        "maxX": 33654,
+        "maxY": 31540,
+        "centerX": 33602,
+        "centerY": 31490
+      },
+      "subareaId": 507,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "GRAYBEACH-HUNT-0103",
+      "name": "Floor Blobs — Hive Pyramids z9",
+      "floors": [
+        8,
+        9,
+        10
+      ],
+      "candidateIds": [
+        "GRAYBEACH-FULL-z09-149"
+      ],
+      "species": null,
+      "creatures": 11,
+      "extent": {
+        "minX": 33579,
+        "minY": 31249,
+        "maxX": 33599,
+        "maxY": 31276,
+        "centerX": 33589,
+        "centerY": 31262
+      },
+      "subareaId": 168,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "GRAYBEACH-HUNT-0104",
+      "name": "Lava Grotto",
+      "floors": [
+        12,
+        13,
+        14
+      ],
+      "candidateIds": [
+        "GRAYBEACH-FULL-z13-373"
+      ],
+      "species": null,
+      "creatures": 48,
+      "extent": {
+        "minX": 33529,
+        "minY": 31258,
+        "maxX": 33568,
+        "maxY": 31311,
+        "centerX": 33548,
+        "centerY": 31284
+      },
+      "subareaId": 168,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "GRAYBEACH-HUNT-0105",
+      "name": "Deepling Temple Complex",
+      "floors": [
+        12,
+        13,
+        14
+      ],
+      "candidateIds": [
+        "GRAYBEACH-FULL-z13-202"
+      ],
+      "species": null,
+      "creatures": 38,
+      "extent": {
+        "minX": 33434,
+        "minY": 31271,
+        "maxX": 33505,
+        "maxY": 31299,
+        "centerX": 33469,
+        "centerY": 31285
+      },
+      "subareaId": 302,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "GRAYBEACH-HUNT-0106",
+      "name": "Spitters — Hive Secondary Structure z5",
+      "floors": [
+        4,
+        5,
+        6
+      ],
+      "candidateIds": [
+        "GRAYBEACH-FULL-z05-127"
+      ],
+      "species": null,
+      "creatures": 75,
+      "extent": {
+        "minX": 33476,
+        "minY": 31169,
+        "maxX": 33535,
+        "maxY": 31224,
+        "centerX": 33505,
+        "centerY": 31196
+      },
+      "subareaId": 169,
+      "walkTilesFromTemple": null
+    }
+  ]
+}

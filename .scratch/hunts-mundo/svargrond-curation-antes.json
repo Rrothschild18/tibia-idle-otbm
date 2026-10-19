@@ -1,0 +1,143 @@
+[
+  {
+    "id": "SVARGROND-HUNT-0101",
+    "name": "Barbarian Settlements",
+    "candidates": [
+      {
+        "id": "SVARGROND-FULL-z06-34",
+        "floor": 6,
+        "creatures": 127,
+        "extent": {
+          "minX": 32089,
+          "minY": 31200,
+          "maxX": 32196,
+          "maxY": 31351,
+          "centerX": 32142,
+          "centerY": 31275
+        },
+        "species": [
+          "Polar Bear",
+          "Mammoth",
+          "Badger"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SVARGROND-HUNT-0102",
+    "name": "Formorgar Mines",
+    "candidates": [
+      {
+        "id": "SVARGROND-FULL-z10-2",
+        "floor": 10,
+        "creatures": 112,
+        "extent": {
+          "minX": 32158,
+          "minY": 31017,
+          "maxX": 32327,
+          "maxY": 31174,
+          "centerX": 32242,
+          "centerY": 31095
+        },
+        "species": [
+          "Ice Golem",
+          "Crystal Spider",
+          "Acolyte of the Cult"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SVARGROND-HUNT-0103",
+    "name": "Formorgar Glacier/Crystal Spiders",
+    "candidates": [
+      {
+        "id": "SVARGROND-FULL-z03-263",
+        "floor": 3,
+        "creatures": 13,
+        "extent": {
+          "minX": 32055,
+          "minY": 31166,
+          "maxX": 32091,
+          "maxY": 31207,
+          "centerX": 32073,
+          "centerY": 31186
+        },
+        "species": [
+          "Crystal Spider"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SVARGROND-HUNT-0104",
+    "name": "Formorgar Glacier/Mammoths",
+    "candidates": [
+      {
+        "id": "SVARGROND-FULL-z05-12",
+        "floor": 5,
+        "creatures": 93,
+        "extent": {
+          "minX": 32093,
+          "minY": 31029,
+          "maxX": 32264,
+          "maxY": 31186,
+          "centerX": 32178,
+          "centerY": 31107
+        },
+        "species": [
+          "Frost Troll",
+          "Polar Bear",
+          "Winter Wolf"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SVARGROND-HUNT-0105",
+    "name": "Tyrsung",
+    "candidates": [
+      {
+        "id": "SVARGROND-FULL-z08-98",
+        "floor": 8,
+        "creatures": 38,
+        "extent": {
+          "minX": 32362,
+          "minY": 31210,
+          "maxX": 32440,
+          "maxY": 31303,
+          "centerX": 32401,
+          "centerY": 31256
+        },
+        "species": [
+          "Frost Giant",
+          "Frost Giantess"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SVARGROND-HUNT-0106",
+    "name": "Chakoya Toolshapers — Grimlund z10",
+    "candidates": [
+      {
+        "id": "SVARGROND-FULL-z10-198",
+        "floor": 10,
+        "creatures": 61,
+        "extent": {
+          "minX": 32413,
+          "minY": 31054,
+          "maxX": 32483,
+          "maxY": 31101,
+          "centerX": 32448,
+          "centerY": 31077
+        },
+        "species": [
+          "Chakoya Toolshaper",
+          "Chakoya Windcaller",
+          "Chakoya Tribewarden"
+        ]
+      }
+    ]
+  }
+]

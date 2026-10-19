@@ -1,0 +1,141 @@
+[
+  {
+    "id": "ABDENDRIEL-HUNT-0101",
+    "name": "Blemished Spawns — Ab'Dendriel Surroundings z10",
+    "candidates": [
+      {
+        "id": "ABDENDRIEL-FULL-z10-12",
+        "floor": 10,
+        "creatures": 55,
+        "extent": {
+          "minX": 32604,
+          "minY": 31731,
+          "maxX": 32685,
+          "maxY": 31801,
+          "centerX": 32644,
+          "centerY": 31766
+        },
+        "species": [
+          "Blemished Spawn",
+          "Eyeless Devourer",
+          "Afflicted Strider"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ABDENDRIEL-HUNT-0102",
+    "name": "Hellgate",
+    "candidates": [
+      {
+        "id": "ABDENDRIEL-FULL-z11-67",
+        "floor": 11,
+        "creatures": 50,
+        "extent": {
+          "minX": 32621,
+          "minY": 31598,
+          "maxX": 32732,
+          "maxY": 31670,
+          "centerX": 32676,
+          "centerY": 31634
+        },
+        "species": [
+          "Troll",
+          "Troll Champion"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ABDENDRIEL-HUNT-0103",
+    "name": "Wasps — Ab'Dendriel City z9",
+    "candidates": [
+      {
+        "id": "ABDENDRIEL-FULL-z09-17",
+        "floor": 9,
+        "creatures": 18,
+        "extent": {
+          "minX": 32596,
+          "minY": 31673,
+          "maxX": 32650,
+          "maxY": 31710,
+          "centerX": 32623,
+          "centerY": 31691
+        },
+        "species": [
+          "Wasp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ABDENDRIEL-HUNT-0104",
+    "name": "Bugs — Ab'Dendriel City z15",
+    "candidates": [
+      {
+        "id": "ABDENDRIEL-FULL-z15-109",
+        "floor": 15,
+        "creatures": 14,
+        "extent": {
+          "minX": 32693,
+          "minY": 31595,
+          "maxX": 32703,
+          "maxY": 31612,
+          "centerX": 32698,
+          "centerY": 31603
+        },
+        "species": [
+          "Bug"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ABDENDRIEL-HUNT-0105",
+    "name": "Ab'Dendriel Underground",
+    "candidates": [
+      {
+        "id": "ABDENDRIEL-FULL-z08-15",
+        "floor": 8,
+        "creatures": 25,
+        "extent": {
+          "minX": 32691,
+          "minY": 31595,
+          "maxX": 32724,
+          "maxY": 31648,
+          "centerX": 32707,
+          "centerY": 31621
+        },
+        "species": [
+          "Rotworm",
+          "Skeleton",
+          "Ghoul"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ABDENDRIEL-HUNT-0106",
+    "name": "Elvenbane",
+    "candidates": [
+      {
+        "id": "ABDENDRIEL-FULL-z08-57",
+        "floor": 8,
+        "creatures": 24,
+        "extent": {
+          "minX": 32581,
+          "minY": 31639,
+          "maxX": 32599,
+          "maxY": 31653,
+          "centerX": 32590,
+          "centerY": 31646
+        },
+        "species": [
+          "Orc",
+          "Orc Spearman",
+          "Orc Warrior"
+        ]
+      }
+    ]
+  }
+]

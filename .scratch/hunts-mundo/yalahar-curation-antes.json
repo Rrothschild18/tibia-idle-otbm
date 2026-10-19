@@ -1,0 +1,142 @@
+[
+  {
+    "id": "YALAHAR-HUNT-0101",
+    "name": "Factory Quarter",
+    "candidates": [
+      {
+        "id": "YALAHAR-FULL-z07-50",
+        "floor": 7,
+        "creatures": 170,
+        "extent": {
+          "minX": 32847,
+          "minY": 31225,
+          "maxX": 32971,
+          "maxY": 31354,
+          "centerX": 32909,
+          "centerY": 31289
+        },
+        "species": [
+          "Wolf",
+          "Dwarf",
+          "Larva"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "YALAHAR-HUNT-0102",
+    "name": "Trade Quarter",
+    "candidates": [
+      {
+        "id": "YALAHAR-FULL-z07-93",
+        "floor": 7,
+        "creatures": 89,
+        "extent": {
+          "minX": 32779,
+          "minY": 31277,
+          "maxX": 32868,
+          "maxY": 31370,
+          "centerX": 32823,
+          "centerY": 31323
+        },
+        "species": [
+          "Amazon",
+          "Nomad",
+          "Crocodile"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "YALAHAR-HUNT-0103",
+    "name": "Minotaurs — Yalahar Foreigner Quarter z7",
+    "candidates": [
+      {
+        "id": "YALAHAR-FULL-z07-165",
+        "floor": 7,
+        "creatures": 25,
+        "extent": {
+          "minX": 32725,
+          "minY": 31309,
+          "maxX": 32752,
+          "maxY": 31342,
+          "centerX": 32738,
+          "centerY": 31325
+        },
+        "species": [
+          "Minotaur"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "YALAHAR-HUNT-0104",
+    "name": "Arena and Zoo Quarter",
+    "candidates": [
+      {
+        "id": "YALAHAR-FULL-z06-14",
+        "floor": 6,
+        "creatures": 19,
+        "extent": {
+          "minX": 32652,
+          "minY": 31216,
+          "maxX": 32700,
+          "maxY": 31242,
+          "centerX": 32676,
+          "centerY": 31229
+        },
+        "species": [
+          "Gladiator"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "YALAHAR-HUNT-0105",
+    "name": "Foreigner Quarter",
+    "candidates": [
+      {
+        "id": "YALAHAR-FULL-z06-114",
+        "floor": 6,
+        "creatures": 73,
+        "extent": {
+          "minX": 32630,
+          "minY": 31282,
+          "maxX": 32739,
+          "maxY": 31369,
+          "centerX": 32684,
+          "centerY": 31325
+        },
+        "species": [
+          "Pirate Marauder",
+          "Pirate Buccaneer",
+          "Pirate Cutthroat"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "YALAHAR-HUNT-0106",
+    "name": "Foreigner Quarter z7",
+    "candidates": [
+      {
+        "id": "YALAHAR-FULL-z07-17",
+        "floor": 7,
+        "creatures": 71,
+        "extent": {
+          "minX": 32658,
+          "minY": 31262,
+          "maxX": 32738,
+          "maxY": 31361,
+          "centerX": 32698,
+          "centerY": 31311
+        },
+        "species": [
+          "Nomad",
+          "Goblin",
+          "Amazon"
+        ]
+      }
+    ]
+  }
+]

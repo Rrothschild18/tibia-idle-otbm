@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="33065" centery="32863" centerz="9" radius="3">
+		<monster name="Cave Rat" x="-2" y="-3" z="9" spawntime="90" />
+		<monster name="Cave Rat" x="3" y="-3" z="9" spawntime="90" />
+		<monster name="Cave Rat" x="3" y="0" z="9" spawntime="90" />
+		<monster name="Cave Rat" x="-2" y="1" z="9" spawntime="90" />
+		<monster name="Cave Rat" x="3" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33068" centery="32872" centerz="9" radius="2">
+		<monster name="Cave Rat" x="1" y="-1" z="9" spawntime="90" />
+		<monster name="Cave Rat" x="-1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33080" centery="32873" centerz="9" radius="2">
+		<monster name="Cave Rat" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33071" centery="32876" centerz="9" radius="2">
+		<monster name="Cave Rat" x="2" y="-1" z="9" spawntime="90" />
+		<monster name="Cave Rat" x="-1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33086" centery="32876" centerz="9" radius="1">
+		<monster name="Cave Rat" x="-1" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33093" centery="32880" centerz="9" radius="2">
+		<monster name="Cave Rat" x="-2" y="-2" z="9" spawntime="90" />
+		<monster name="Cave Rat" x="2" y="0" z="9" spawntime="90" />
+		<monster name="Cave Rat" x="-2" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33067" centery="32881" centerz="9" radius="2">
+		<monster name="Cave Rat" x="-1" y="-1" z="9" spawntime="90" />
+		<monster name="Cave Rat" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33062" centery="32886" centerz="9" radius="2">
+		<monster name="Cave Rat" x="2" y="1" z="9" spawntime="90" />
+	</monster>
+</monsters>

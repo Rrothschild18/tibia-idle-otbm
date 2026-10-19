@@ -1,0 +1,142 @@
+[
+  {
+    "id": "EDRON-HUNT-0101",
+    "name": "Spellreaper Inferniarchs — Azzilon Castle z10",
+    "candidates": [
+      {
+        "id": "EDRON-FULL-z10-12",
+        "floor": 10,
+        "creatures": 135,
+        "extent": {
+          "minX": 33783,
+          "minY": 32314,
+          "maxX": 33873,
+          "maxY": 32400,
+          "centerX": 33828,
+          "centerY": 32357
+        },
+        "species": [
+          "Spellreaper Inferniarch",
+          "Hellhunter Inferniarch",
+          "Brinebrute Inferniarch"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "EDRON-HUNT-0102",
+    "name": "Unholy Cemetery",
+    "candidates": [
+      {
+        "id": "EDRON-FULL-z07-25",
+        "floor": 7,
+        "creatures": 117,
+        "extent": {
+          "minX": 33096,
+          "minY": 31629,
+          "maxX": 33250,
+          "maxY": 31748,
+          "centerX": 33173,
+          "centerY": 31688
+        },
+        "species": [
+          "Wolf",
+          "Bear",
+          "Skeleton"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "EDRON-HUNT-0103",
+    "name": "Earth Elementals — Edron Surroundings z8",
+    "candidates": [
+      {
+        "id": "EDRON-FULL-z08-391",
+        "floor": 8,
+        "creatures": 12,
+        "extent": {
+          "minX": 33139,
+          "minY": 31701,
+          "maxX": 33173,
+          "maxY": 31731,
+          "centerX": 33156,
+          "centerY": 31716
+        },
+        "species": [
+          "Earth Elemental"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "EDRON-HUNT-0104",
+    "name": "Rotworms — Edron Castle z9",
+    "candidates": [
+      {
+        "id": "EDRON-FULL-z09-354",
+        "floor": 9,
+        "creatures": 10,
+        "extent": {
+          "minX": 33227,
+          "minY": 31827,
+          "maxX": 33242,
+          "maxY": 31855,
+          "centerX": 33234,
+          "centerY": 31841
+        },
+        "species": [
+          "Rotworm"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "EDRON-HUNT-0105",
+    "name": "Cyclopss — Edron Surroundings z8",
+    "candidates": [
+      {
+        "id": "EDRON-FULL-z08-24",
+        "floor": 8,
+        "creatures": 65,
+        "extent": {
+          "minX": 33178,
+          "minY": 31655,
+          "maxX": 33302,
+          "maxY": 31730,
+          "centerX": 33240,
+          "centerY": 31692
+        },
+        "species": [
+          "Cyclops",
+          "Dwarf Soldier",
+          "Dwarf Guard"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "EDRON-HUNT-0106",
+    "name": "Edron Orc Cave",
+    "candidates": [
+      {
+        "id": "EDRON-FULL-z07-304",
+        "floor": 7,
+        "creatures": 49,
+        "extent": {
+          "minX": 33135,
+          "minY": 31848,
+          "maxX": 33183,
+          "maxY": 31909,
+          "centerX": 33159,
+          "centerY": 31878
+        },
+        "species": [
+          "Orc",
+          "Orc Spearman",
+          "Orc Warrior"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,287 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="33077" centery="32644" centerz="13" radius="2">
+		<monster name="Vampire" x="0" y="1" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33089" centery="32644" centerz="13" radius="2">
+		<monster name="Lich" x="1" y="1" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33126" centery="32649" centerz="13" radius="5">
+		<monster name="Vampire" x="0" y="-4" z="13" spawntime="90" />
+		<monster name="Stalker" x="2" y="-3" z="13" spawntime="90" />
+		<monster name="Ghost" x="-2" y="-2" z="13" spawntime="90" />
+		<monster name="Ghost" x="5" y="-1" z="13" spawntime="90" />
+		<monster name="Stalker" x="-3" y="0" z="13" spawntime="90" />
+		<monster name="Ghost" x="-5" y="1" z="13" spawntime="90" />
+		<monster name="Stalker" x="4" y="2" z="13" spawntime="90" />
+		<monster name="Stalker" x="-4" y="4" z="13" spawntime="90" />
+		<monster name="Ghost" x="-1" y="4" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33106" centery="32650" centerz="13" radius="5">
+		<monster name="Vampire" x="1" y="-5" z="13" spawntime="90" />
+		<monster name="Ghost" x="-2" y="-4" z="13" spawntime="90" />
+		<monster name="Ghost" x="4" y="-3" z="13" spawntime="90" />
+		<monster name="Vampire" x="-4" y="-1" z="13" spawntime="90" />
+		<monster name="Vampire" x="3" y="-1" z="13" spawntime="90" />
+		<monster name="Ghost" x="1" y="2" z="13" spawntime="90" />
+		<monster name="Ghost" x="3" y="2" z="13" spawntime="90" />
+		<monster name="Ghost" x="-3" y="3" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33083" centery="32653" centerz="13" radius="5">
+		<monster name="Mummy" x="-3" y="-5" z="13" spawntime="90" />
+		<monster name="Stalker" x="4" y="-5" z="13" spawntime="90" />
+		<monster name="Mummy" x="1" y="-4" z="13" spawntime="90" />
+		<monster name="Stalker" x="-4" y="-3" z="13" spawntime="90" />
+		<monster name="Stalker" x="-1" y="-2" z="13" spawntime="90" />
+		<monster name="Mummy" x="5" y="-2" z="13" spawntime="90" />
+		<monster name="Mummy" x="-5" y="-1" z="13" spawntime="90" />
+		<monster name="Stalker" x="-3" y="1" z="13" spawntime="90" />
+		<monster name="Stalker" x="4" y="1" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33052" centery="32662" centerz="13" radius="5">
+		<monster name="Bonelord" x="-4" y="-3" z="13" spawntime="90" />
+		<monster name="Lich" x="4" y="-3" z="13" spawntime="90" />
+		<monster name="Bonelord" x="0" y="-1" z="13" spawntime="90" />
+		<monster name="Vampire" x="-5" y="3" z="13" spawntime="90" />
+		<monster name="Vampire" x="1" y="3" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33073" centery="32667" centerz="13" radius="2">
+		<monster name="Mummy" x="1" y="1" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33126" centery="32671" centerz="13" radius="2">
+		<monster name="Ghost" x="-1" y="-2" z="13" spawntime="90" />
+		<monster name="Vampire" x="2" y="0" z="13" spawntime="90" />
+		<monster name="Ghost" x="2" y="2" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33094" centery="32673" centerz="13" radius="5">
+		<monster name="Mummy" x="0" y="-4" z="13" spawntime="90" />
+		<monster name="Gargoyle" x="-3" y="-2" z="13" spawntime="90" />
+		<monster name="Gargoyle" x="4" y="-1" z="13" spawntime="90" />
+		<monster name="Mummy" x="-4" y="0" z="13" spawntime="90" />
+		<monster name="Mummy" x="3" y="0" z="13" spawntime="90" />
+		<monster name="Gargoyle" x="1" y="2" z="13" spawntime="90" />
+		<monster name="Vampire" x="-3" y="3" z="13" spawntime="90" />
+		<monster name="Vampire" x="1" y="3" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33029" centery="32675" centerz="13" radius="4">
+		<monster name="Crypt Shambler" x="0" y="-2" z="13" spawntime="90" />
+		<monster name="Crypt Shambler" x="-3" y="0" z="13" spawntime="90" />
+		<monster name="Crypt Shambler" x="3" y="0" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33073" centery="32675" centerz="13" radius="2">
+		<monster name="Mummy" x="1" y="0" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33160" centery="32678" centerz="13" radius="5">
+		<monster name="Gargoyle" x="-3" y="-4" z="13" spawntime="90" />
+		<monster name="Crypt Shambler" x="2" y="-4" z="13" spawntime="90" />
+		<monster name="Gargoyle" x="2" y="0" z="13" spawntime="90" />
+		<monster name="Mummy" x="1" y="1" z="13" spawntime="90" />
+		<monster name="Crypt Shambler" x="-3" y="3" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33115" centery="32683" centerz="13" radius="3">
+		<monster name="Mummy" x="-1" y="-2" z="13" spawntime="90" />
+		<monster name="Mummy" x="-1" y="2" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33126" centery="32683" centerz="13" radius="4">
+		<monster name="Ghoul" x="4" y="-4" z="13" spawntime="90" />
+		<monster name="Ghoul" x="-3" y="-3" z="13" spawntime="90" />
+		<monster name="Ghoul" x="-2" y="2" z="13" spawntime="90" />
+		<monster name="Vampire" x="0" y="4" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33138" centery="32683" centerz="13" radius="2">
+		<monster name="Ghost" x="0" y="-2" z="13" spawntime="90" />
+		<monster name="Vampire" x="1" y="0" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33006" centery="32684" centerz="13" radius="5">
+		<monster name="Crypt Shambler" x="1" y="-5" z="13" spawntime="90" />
+		<monster name="Crypt Shambler" x="-2" y="-1" z="13" spawntime="90" />
+		<monster name="Crypt Shambler" x="4" y="-1" z="13" spawntime="90" />
+		<monster name="Mummy" x="2" y="2" z="13" spawntime="90" />
+		<monster name="Mummy" x="-3" y="3" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33099" centery="32692" centerz="13" radius="5">
+		<monster name="Ghost" x="0" y="-4" z="13" spawntime="90" />
+		<monster name="Ghost" x="3" y="-2" z="13" spawntime="90" />
+		<monster name="Bonelord" x="1" y="0" z="13" spawntime="90" />
+		<monster name="Ghost" x="-3" y="1" z="13" spawntime="90" />
+		<monster name="Ghost" x="2" y="4" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33115" centery="32694" centerz="13" radius="2">
+		<monster name="Mummy" x="0" y="1" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33126" centery="32694" centerz="13" radius="3">
+		<monster name="Stalker" x="0" y="-2" z="13" spawntime="90" />
+		<monster name="Stalker" x="-3" y="1" z="13" spawntime="90" />
+		<monster name="Stalker" x="3" y="1" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33051" centery="32695" centerz="13" radius="5">
+		<monster name="Crypt Shambler" x="0" y="-3" z="13" spawntime="90" />
+		<monster name="Bonelord" x="-3" y="-2" z="13" spawntime="90" />
+		<monster name="Bonelord" x="3" y="-2" z="13" spawntime="90" />
+		<monster name="Crypt Shambler" x="3" y="1" z="13" spawntime="90" />
+		<monster name="Vampire" x="-1" y="3" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33018" centery="32697" centerz="13" radius="4">
+		<monster name="Vampire" x="-2" y="-2" z="13" spawntime="90" />
+		<monster name="Bonelord" x="1" y="0" z="13" spawntime="90" />
+		<monster name="Vampire" x="-4" y="2" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33080" centery="32697" centerz="13" radius="5">
+		<monster name="Green Djinn" x="0" y="-2" z="13" spawntime="90" />
+		<monster name="Mummy" x="2" y="-2" z="13" spawntime="90" />
+		<monster name="Mummy" x="-2" y="1" z="13" spawntime="90" />
+		<monster name="Mummy" x="1" y="3" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33121" centery="32706" centerz="13" radius="2">
+		<monster name="Mummy" x="-1" y="1" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33131" centery="32706" centerz="13" radius="2">
+		<monster name="Ghoul" x="-1" y="-1" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33157" centery="32708" centerz="13" radius="5">
+		<monster name="Mummy" x="0" y="-5" z="13" spawntime="90" />
+		<monster name="Gargoyle" x="3" y="-5" z="13" spawntime="90" />
+		<monster name="Vampire" x="-2" y="-2" z="13" spawntime="90" />
+		<monster name="Mummy" x="-1" y="-2" z="13" spawntime="90" />
+		<monster name="Crypt Shambler" x="2" y="-2" z="13" spawntime="90" />
+		<monster name="Gargoyle" x="5" y="0" z="13" spawntime="90" />
+		<monster name="Crypt Shambler" x="2" y="2" z="13" spawntime="90" />
+		<monster name="Gargoyle" x="-1" y="5" z="13" spawntime="90" />
+		<monster name="Mummy" x="2" y="5" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33110" centery="32712" centerz="13" radius="5">
+		<monster name="Mummy" x="-3" y="-3" z="13" spawntime="90" />
+		<monster name="Mummy" x="2" y="-3" z="13" spawntime="90" />
+		<monster name="Mummy" x="0" y="0" z="13" spawntime="90" />
+		<monster name="Ghost" x="-1" y="2" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33121" centery="32714" centerz="13" radius="2">
+		<monster name="Mummy" x="1" y="-2" z="13" spawntime="90" />
+		<monster name="Mummy" x="-1" y="2" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33131" centery="32714" centerz="13" radius="2">
+		<monster name="Ghoul" x="0" y="-2" z="13" spawntime="90" />
+		<monster name="Ghoul" x="1" y="2" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33076" centery="32717" centerz="13" radius="5">
+		<monster name="Bonelord" x="2" y="-3" z="13" spawntime="90" />
+		<monster name="Bonelord" x="-4" y="-2" z="13" spawntime="90" />
+		<monster name="Mummy" x="2" y="-2" z="13" spawntime="90" />
+		<monster name="Mummy" x="-3" y="-1" z="13" spawntime="90" />
+		<monster name="Bonelord" x="3" y="1" z="13" spawntime="90" />
+		<monster name="Mummy" x="-4" y="3" z="13" spawntime="90" />
+		<monster name="Mummy" x="3" y="3" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33019" centery="32720" centerz="13" radius="4">
+		<monster name="Ghost" x="1" y="-3" z="13" spawntime="90" />
+		<monster name="Green Djinn" x="-2" y="0" z="13" spawntime="90" />
+		<monster name="Ghost" x="4" y="0" z="13" spawntime="90" />
+		<monster name="Ghost" x="0" y="4" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33047" centery="32727" centerz="13" radius="6">
+		<monster name="Bonelord" x="-2" y="-5" z="13" spawntime="90" />
+		<monster name="Stalker" x="2" y="-4" z="13" spawntime="90" />
+		<monster name="Stalker" x="-1" y="-3" z="13" spawntime="90" />
+		<monster name="Green Djinn" x="-3" y="-1" z="13" spawntime="90" />
+		<monster name="Stalker" x="5" y="0" z="13" spawntime="90" />
+		<monster name="Bonelord" x="-4" y="2" z="13" spawntime="90" />
+		<monster name="Stalker" x="-4" y="4" z="13" spawntime="90" />
+		<monster name="Bonelord" x="0" y="4" z="13" spawntime="90" />
+		<monster name="Stalker" x="2" y="6" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33121" centery="32732" centerz="13" radius="4">
+		<monster name="Mummy" x="0" y="-2" z="13" spawntime="90" />
+		<monster name="Ghost" x="2" y="-1" z="13" spawntime="90" />
+		<monster name="Mummy" x="-4" y="1" z="13" spawntime="90" />
+		<monster name="Ghost" x="-1" y="1" z="13" spawntime="90" />
+		<monster name="Mummy" x="2" y="2" z="13" spawntime="90" />
+		<monster name="Ghost" x="-2" y="3" z="13" spawntime="90" />
+		<monster name="Mummy" x="0" y="3" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33150" centery="32741" centerz="13" radius="5">
+		<monster name="Bonelord" x="-2" y="-2" z="13" spawntime="90" />
+		<monster name="Green Djinn" x="3" y="-1" z="13" spawntime="90" />
+		<monster name="Green Djinn" x="0" y="1" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33083" centery="32744" centerz="13" radius="3">
+		<monster name="Bonelord" x="-1" y="-2" z="13" spawntime="90" />
+		<monster name="Stalker" x="3" y="0" z="13" spawntime="90" />
+		<monster name="Bonelord" x="0" y="2" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33092" centery="32744" centerz="13" radius="3">
+		<monster name="Stalker" x="-1" y="-1" z="13" spawntime="90" />
+		<monster name="Stalker" x="3" y="-1" z="13" spawntime="90" />
+		<monster name="Stalker" x="1" y="1" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33115" centery="32744" centerz="13" radius="5">
+		<monster name="Mummy" x="-4" y="-2" z="13" spawntime="90" />
+		<monster name="Vampire" x="0" y="-2" z="13" spawntime="90" />
+		<monster name="Vampire" x="3" y="0" z="13" spawntime="90" />
+		<monster name="Mummy" x="-4" y="2" z="13" spawntime="90" />
+		<monster name="Vampire" x="0" y="2" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33037" centery="32745" centerz="13" radius="4">
+		<monster name="Mummy" x="1" y="-2" z="13" spawntime="90" />
+		<monster name="Mummy" x="-3" y="1" z="13" spawntime="90" />
+		<monster name="Mummy" x="2" y="2" z="13" spawntime="90" />
+		<monster name="Mummy" x="0" y="4" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33014" centery="32746" centerz="13" radius="4">
+		<monster name="Vampire" x="0" y="-4" z="13" spawntime="90" />
+		<monster name="Ghost" x="4" y="-4" z="13" spawntime="90" />
+		<monster name="Ghost" x="-2" y="-3" z="13" spawntime="90" />
+		<monster name="Vampire" x="-4" y="1" z="13" spawntime="90" />
+		<monster name="Vampire" x="0" y="3" z="13" spawntime="90" />
+		<monster name="Ghost" x="4" y="3" z="13" spawntime="90" />
+		<monster name="Ghost" x="-2" y="4" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33131" centery="32749" centerz="13" radius="4">
+		<monster name="Ghost" x="0" y="-4" z="13" spawntime="90" />
+		<monster name="Ghost" x="-3" y="-3" z="13" spawntime="90" />
+		<monster name="Vampire" x="2" y="-1" z="13" spawntime="90" />
+		<monster name="Slime" x="-3" y="0" z="13" spawntime="90" />
+		<monster name="Vampire" x="-1" y="1" z="13" spawntime="90" />
+		<monster name="Ghost" x="3" y="1" z="13" spawntime="90" />
+		<monster name="Ghost" x="-3" y="2" z="13" spawntime="90" />
+		<monster name="Slime" x="1" y="2" z="13" spawntime="90" />
+		<monster name="Vampire" x="3" y="2" z="13" spawntime="90" />
+		<monster name="Vampire" x="-3" y="3" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33058" centery="32756" centerz="13" radius="8">
+		<monster name="Ghost" x="-3" y="-8" z="13" spawntime="90" />
+		<monster name="Ghost" x="2" y="-7" z="13" spawntime="90" />
+		<monster name="Stalker" x="0" y="-6" z="13" spawntime="90" />
+		<monster name="Vampire" x="-5" y="-4" z="13" spawntime="90" />
+		<monster name="Ghost" x="-1" y="-2" z="13" spawntime="90" />
+		<monster name="Stalker" x="2" y="-2" z="13" spawntime="90" />
+		<monster name="Ghost" x="6" y="-1" z="13" spawntime="90" />
+		<monster name="Stalker" x="-5" y="0" z="13" spawntime="90" />
+		<monster name="Vampire" x="0" y="0" z="13" spawntime="90" />
+		<monster name="Vampire" x="5" y="2" z="13" spawntime="90" />
+		<monster name="Bonelord" x="-5" y="3" z="13" spawntime="90" />
+		<monster name="Stalker" x="-2" y="3" z="13" spawntime="90" />
+		<monster name="Bonelord" x="3" y="3" z="13" spawntime="90" />
+		<monster name="Stalker" x="5" y="5" z="13" spawntime="90" />
+		<monster name="Vampire" x="-1" y="6" z="13" spawntime="90" />
+		<monster name="Ghost" x="3" y="6" z="13" spawntime="90" />
+		<monster name="Stalker" x="-4" y="7" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33085" centery="32772" centerz="13" radius="5">
+		<monster name="Bonelord" x="0" y="-4" z="13" spawntime="90" />
+		<monster name="Slime" x="4" y="-2" z="13" spawntime="90" />
+		<monster name="Bonelord" x="-4" y="0" z="13" spawntime="90" />
+		<monster name="Bonelord" x="3" y="2" z="13" spawntime="90" />
+		<monster name="Slime" x="1" y="3" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="33120" centery="32772" centerz="13" radius="5">
+		<monster name="Vampire" x="-3" y="-5" z="13" spawntime="90" />
+		<monster name="Vampire" x="1" y="-4" z="13" spawntime="90" />
+		<monster name="Ghost" x="-3" y="-3" z="13" spawntime="90" />
+		<monster name="Stalker" x="-1" y="-3" z="13" spawntime="90" />
+		<monster name="Bonelord" x="3" y="-3" z="13" spawntime="90" />
+		<monster name="Ghost" x="-4" y="2" z="13" spawntime="90" />
+		<monster name="Vampire" x="3" y="2" z="13" spawntime="90" />
+		<monster name="Bonelord" x="0" y="3" z="13" spawntime="90" />
+		<monster name="Stalker" x="0" y="4" z="13" spawntime="90" />
+	</monster>
+</monsters>

@@ -1,0 +1,78 @@
+{
+  "city": "PORTHOPE",
+  "area": {
+    "id": 19,
+    "name": "Tiquanda"
+  },
+  "subareas": [
+    {
+      "id": 459,
+      "name": "Tiquanda"
+    },
+    {
+      "id": 86,
+      "name": "Banuta"
+    },
+    {
+      "id": 238,
+      "name": "Medusa Tower"
+    },
+    {
+      "id": 309,
+      "name": "Port Hope City"
+    },
+    {
+      "id": 87,
+      "name": "Chor"
+    },
+    {
+      "id": 90,
+      "name": "Forbidden Lands of Tiquanda"
+    },
+    {
+      "id": 475,
+      "name": "Oskayaat"
+    },
+    {
+      "id": 92,
+      "name": "Port Hope Surroundings"
+    },
+    {
+      "id": 235,
+      "name": "Asura Palace"
+    },
+    {
+      "id": 107,
+      "name": "Kha'zeel Mountains"
+    }
+  ],
+  "world": {
+    "file": "otservbr.otbm",
+    "bytes": 184797168
+  },
+  "shape": "square",
+  "bounds": {
+    "minX": 32349,
+    "minY": 32181,
+    "maxX": 33399,
+    "maxY": 33231
+  },
+  "columns": 198958,
+  "monsterScope": "box",
+  "tiles": 4479726,
+  "tileAreas": 297860,
+  "towns": [
+    {
+      "id": 15,
+      "name": "Port Hope",
+      "x": 32594,
+      "y": 32745,
+      "z": 7
+    }
+  ],
+  "monsterGroups": 11761,
+  "monsterEntries": 22769,
+  "npcGroups": 34,
+  "npcEntries": 34,
+  "houses": 42
+}

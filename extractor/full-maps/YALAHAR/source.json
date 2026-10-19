@@ -1,0 +1,90 @@
+{
+  "city": "YALAHAR",
+  "area": {
+    "id": 27,
+    "name": "Yalahar"
+  },
+  "subareas": [
+    {
+      "id": 134,
+      "name": "Yalahar Foreigner Quarter"
+    },
+    {
+      "id": 461,
+      "name": "Yalahar"
+    },
+    {
+      "id": 299,
+      "name": "Yalahar Centre"
+    },
+    {
+      "id": 127,
+      "name": "Yalahar Trade Quarter"
+    },
+    {
+      "id": 128,
+      "name": "Yalahar Sunken Quarter"
+    },
+    {
+      "id": 129,
+      "name": "Yalahar Factory Quarter"
+    },
+    {
+      "id": 130,
+      "name": "Yalahar Magician Quarter"
+    },
+    {
+      "id": 131,
+      "name": "Yalahar Cemetery Quarter"
+    },
+    {
+      "id": 132,
+      "name": "Yalahar Alchemist Quarter"
+    },
+    {
+      "id": 133,
+      "name": "Yalahar Arena Quarter"
+    },
+    {
+      "id": 135,
+      "name": "Mistrock"
+    },
+    {
+      "id": 136,
+      "name": "Fenrock"
+    },
+    {
+      "id": 138,
+      "name": "Isle of Evil"
+    }
+  ],
+  "world": {
+    "file": "otservbr.otbm",
+    "bytes": 184797168
+  },
+  "shape": "square",
+  "bounds": {
+    "minX": 32324,
+    "minY": 30838,
+    "maxX": 33166,
+    "maxY": 31680
+  },
+  "columns": 106522,
+  "monsterScope": "box",
+  "tiles": 2275786,
+  "tileAreas": 151173,
+  "towns": [
+    {
+      "id": 17,
+      "name": "Yalahar",
+      "x": 32787,
+      "y": 31276,
+      "z": 7
+    }
+  ],
+  "monsterGroups": 6996,
+  "monsterEntries": 9861,
+  "npcGroups": 54,
+  "npcEntries": 54,
+  "houses": 23
+}

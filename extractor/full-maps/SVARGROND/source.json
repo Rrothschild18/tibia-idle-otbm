@@ -1,0 +1,98 @@
+{
+  "city": "SVARGROND",
+  "area": {
+    "id": 23,
+    "name": "Hrodmir"
+  },
+  "subareas": [
+    {
+      "id": 298,
+      "name": "Svargrond City"
+    },
+    {
+      "id": 113,
+      "name": "Tyrsung"
+    },
+    {
+      "id": 458,
+      "name": "Hrodmir"
+    },
+    {
+      "id": 109,
+      "name": "Nibelor"
+    },
+    {
+      "id": 110,
+      "name": "Okolnir"
+    },
+    {
+      "id": 111,
+      "name": "Helheim"
+    },
+    {
+      "id": 112,
+      "name": "Grimlund"
+    },
+    {
+      "id": 114,
+      "name": "Formorgar Glacier"
+    },
+    {
+      "id": 116,
+      "name": "Krimhorn"
+    },
+    {
+      "id": 117,
+      "name": "Svargrond Surroundings"
+    },
+    {
+      "id": 201,
+      "name": "Chyllfroest Chakoya Caves"
+    },
+    {
+      "id": 202,
+      "name": "Chyllfroest Icefire Caves"
+    },
+    {
+      "id": 287,
+      "name": "Inukaya"
+    },
+    {
+      "id": 289,
+      "name": "Bittermor"
+    },
+    {
+      "id": 290,
+      "name": "Ragnir"
+    }
+  ],
+  "world": {
+    "file": "otservbr.otbm",
+    "bytes": 184797168
+  },
+  "shape": "square",
+  "bounds": {
+    "minX": 31730,
+    "minY": 30761,
+    "maxX": 32678,
+    "maxY": 31709
+  },
+  "columns": 139758,
+  "monsterScope": "box",
+  "tiles": 2289703,
+  "tileAreas": 146917,
+  "towns": [
+    {
+      "id": 16,
+      "name": "Svargrond",
+      "x": 32212,
+      "y": 31132,
+      "z": 7
+    }
+  ],
+  "monsterGroups": 4842,
+  "monsterEntries": 7893,
+  "npcGroups": 38,
+  "npcEntries": 38,
+  "houses": 61
+}

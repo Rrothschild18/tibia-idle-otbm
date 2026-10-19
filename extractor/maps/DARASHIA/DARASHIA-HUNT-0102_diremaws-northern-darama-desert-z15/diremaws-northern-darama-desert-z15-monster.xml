@@ -1,0 +1,559 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="33297" centery="32331" centerz="14" radius="3">
+		<monster name="Vexclaw" x="0" y="-1" z="14" spawntime="60" />
+		<monster name="Hellflayer" x="3" y="-1" z="14" spawntime="60" />
+		<monster name="Vexclaw" x="1" y="1" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33325" centery="32331" centerz="14" radius="1">
+		<monster name="Vexclaw" x="0" y="0" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="33329" centery="32331" centerz="14" radius="1">
+		<monster name="Hellflayer" x="0" y="0" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="33329" centery="32336" centerz="14" radius="1">
+		<monster name="Hellflayer" x="0" y="-1" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="33304" centery="32338" centerz="14" radius="3">
+		<monster name="Grimeleech" x="2" y="3" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33311" centery="32338" centerz="14" radius="3">
+		<monster name="Demon" x="-1" y="0" z="14" spawntime="60" />
+		<monster name="Grimeleech" x="-2" y="2" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33318" centery="32338" centerz="14" radius="3">
+		<monster name="Hellflayer" x="2" y="-2" z="14" spawntime="90" />
+		<monster name="Demon" x="2" y="1" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="33332" centery="32338" centerz="14" radius="3">
+		<monster name="Vexclaw" x="3" y="1" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="33339" centery="32341" centerz="14" radius="3">
+		<monster name="Grimeleech" x="0" y="-2" z="14" spawntime="90" />
+		<monster name="Grimeleech" x="-2" y="0" z="14" spawntime="90" />
+		<monster name="Hellflayer" x="1" y="0" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="33311" centery="32345" centerz="14" radius="3">
+		<monster name="Vexclaw" x="-2" y="-3" z="14" spawntime="60" />
+		<monster name="Grimeleech" x="-1" y="-2" z="14" spawntime="60" />
+		<monster name="Grimeleech" x="1" y="-2" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="33306" centery="32349" centerz="14" radius="1">
+		<monster name="Hellflayer" x="0" y="0" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="33297" centery="32352" centerz="14" radius="3">
+		<monster name="Grimeleech" x="-2" y="2" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="33325" centery="32352" centerz="14" radius="3">
+		<monster name="Vexclaw" x="0" y="1" z="14" spawntime="90" />
+		<monster name="Hellflayer" x="0" y="3" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="33332" centery="32352" centerz="14" radius="3">
+		<monster name="Vexclaw" x="-2" y="1" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="33297" centery="32359" centerz="14" radius="3">
+		<monster name="Demon" x="-1" y="-1" z="14" spawntime="90" />
+		<monster name="Hellflayer" x="2" y="-1" z="14" spawntime="90" />
+		<monster name="Demon" x="1" y="3" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="33304" centery="32366" centerz="14" radius="3">
+		<monster name="Hellflayer" x="-2" y="-2" z="14" spawntime="90" />
+		<monster name="Vexclaw" x="0" y="3" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="33325" centery="32373" centerz="14" radius="3">
+		<monster name="Vexclaw" x="-3" y="1" z="14" spawntime="90" />
+		<monster name="Demon" x="3" y="3" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="33346" centery="32373" centerz="14" radius="3">
+		<monster name="Vexclaw" x="-2" y="-3" z="14" spawntime="90" />
+		<monster name="Grimeleech" x="2" y="-3" z="14" spawntime="90" />
+		<monster name="Grimeleech" x="1" y="-1" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="33328" centery="32378" centerz="14" radius="3">
+		<monster name="Hellflayer" x="1" y="1" z="14" spawntime="90" />
+		<monster name="Fire Elemental" x="2" y="1" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="33326" centery="32393" centerz="14" radius="3">
+		<monster name="Hellflayer" x="2" y="0" z="14" spawntime="90" />
+		<monster name="Fire Elemental" x="-1" y="1" z="14" spawntime="90" />
+		<monster name="Demon" x="3" y="2" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="33297" centery="32394" centerz="14" radius="3">
+		<monster name="Grimeleech" x="2" y="-3" z="14" spawntime="60" />
+		<monster name="Grimeleech" x="3" y="-2" z="14" spawntime="60" />
+		<monster name="Demon" x="3" y="-1" z="14" spawntime="60" />
+		<monster name="Demon" x="1" y="1" z="14" spawntime="60" />
+		<monster name="Hellflayer" x="-1" y="2" z="14" spawntime="60" />
+		<monster name="Demon" x="3" y="2" z="14" spawntime="60" />
+		<monster name="Fire Elemental" x="0" y="3" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33297" centery="32401" centerz="14" radius="3">
+		<monster name="Grimeleech" x="0" y="-2" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33288" centery="32259" centerz="15" radius="3">
+		<monster name="Mole" x="-3" y="3" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33218" centery="32266" centerz="15" radius="3">
+		<monster name="Deepworm" x="0" y="3" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33239" centery="32266" centerz="15" radius="3">
+		<monster name="Deepworm" x="-3" y="3" z="15" spawntime="60" />
+		<monster name="Diremaw" x="3" y="3" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33267" centery="32266" centerz="15" radius="3">
+		<monster name="Spit Nettle" x="-1" y="2" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33288" centery="32266" centerz="15" radius="3">
+		<monster name="Diremaw" x="1" y="-3" z="15" spawntime="60" />
+		<monster name="Diremaw" x="1" y="-2" z="15" spawntime="60" />
+		<monster name="Spit Nettle" x="3" y="-1" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33295" centery="32266" centerz="15" radius="3">
+		<monster name="Diremaw" x="-1" y="2" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33302" centery="32266" centerz="15" radius="3">
+		<monster name="Diremaw" x="-1" y="3" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33323" centery="32266" centerz="15" radius="3">
+		<monster name="Diremaw" x="-2" y="-1" z="15" spawntime="60" />
+		<monster name="Spit Nettle" x="3" y="3" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33330" centery="32266" centerz="15" radius="3">
+		<monster name="Deepworm" x="-1" y="2" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33337" centery="32266" centerz="15" radius="3">
+		<monster name="Diremaw" x="2" y="1" z="15" spawntime="60" />
+		<monster name="Diremaw" x="2" y="2" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33255" centery="32268" centerz="15" radius="1">
+		<monster name="Deepworm" x="0" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33272" centery="32268" centerz="15" radius="1">
+		<monster name="Deepworm" x="0" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33279" centery="32268" centerz="15" radius="1">
+		<monster name="Diremaw" x="0" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33250" centery="32269" centerz="15" radius="1">
+		<monster name="Diremaw" x="0" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33245" centery="32270" centerz="15" radius="1">
+		<monster name="Deepworm" x="0" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33333" centery="32270" centerz="15" radius="1">
+		<monster name="Diremaw" x="0" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33223" centery="32271" centerz="15" radius="1">
+		<monster name="Diremaw" x="0" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33211" centery="32273" centerz="15" radius="3">
+		<monster name="Diremaw" x="2" y="-2" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33218" centery="32273" centerz="15" radius="3">
+		<monster name="Mole" x="-2" y="-3" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33232" centery="32273" centerz="15" radius="3">
+		<monster name="Diremaw" x="2" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33253" centery="32273" centerz="15" radius="3">
+		<monster name="Diremaw" x="-2" y="2" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33260" centery="32273" centerz="15" radius="3">
+		<monster name="Diremaw" x="-1" y="-2" z="15" spawntime="60" />
+		<monster name="Diremaw" x="3" y="-2" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33267" centery="32273" centerz="15" radius="3">
+		<monster name="Diremaw" x="2" y="2" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33295" centery="32273" centerz="15" radius="3">
+		<monster name="Diremaw" x="-1" y="-3" z="15" spawntime="60" />
+		<monster name="Deepworm" x="1" y="-3" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33302" centery="32273" centerz="15" radius="3">
+		<monster name="Diremaw" x="2" y="-2" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33316" centery="32273" centerz="15" radius="3">
+		<monster name="Diremaw" x="1" y="-2" z="15" spawntime="60" />
+		<monster name="Deepworm" x="-1" y="1" z="15" spawntime="60" />
+		<monster name="Diremaw" x="2" y="1" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33344" centery="32273" centerz="15" radius="3">
+		<monster name="Deepworm" x="-2" y="-2" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33285" centery="32275" centerz="15" radius="1">
+		<monster name="Deepworm" x="0" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33213" centery="32278" centerz="15" radius="1">
+		<monster name="Diremaw" x="0" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33218" centery="32280" centerz="15" radius="3">
+		<monster name="Spit Nettle" x="3" y="2" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33232" centery="32280" centerz="15" radius="3">
+		<monster name="Diremaw" x="0" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33239" centery="32280" centerz="15" radius="3">
+		<monster name="Diremaw" x="-3" y="0" z="15" spawntime="60" />
+		<monster name="Deepworm" x="0" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33246" centery="32280" centerz="15" radius="3">
+		<monster name="Diremaw" x="-2" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33274" centery="32280" centerz="15" radius="3">
+		<monster name="Diremaw" x="-3" y="3" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33281" centery="32280" centerz="15" radius="3">
+		<monster name="Diremaw" x="0" y="-3" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33316" centery="32280" centerz="15" radius="3">
+		<monster name="Diremaw" x="-1" y="-3" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33323" centery="32280" centerz="15" radius="3">
+		<monster name="Diremaw" x="-1" y="1" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33222" centery="32281" centerz="15" radius="1">
+		<monster name="Deepworm" x="0" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33213" centery="32285" centerz="15" radius="1">
+		<monster name="Diremaw" x="0" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33211" centery="32287" centerz="15" radius="1">
+		<monster name="Deepworm" x="0" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33323" centery="32287" centerz="15" radius="3">
+		<monster name="Diremaw" x="-2" y="-2" z="15" spawntime="60" />
+		<monster name="Diremaw" x="-1" y="-2" z="15" spawntime="60" />
+		<monster name="Deepworm" x="3" y="2" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33337" centery="32287" centerz="15" radius="3">
+		<monster name="Spit Nettle" x="1" y="3" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33312" centery="32289" centerz="15" radius="1">
+		<monster name="Diremaw" x="0" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33342" centery="32291" centerz="15" radius="1">
+		<monster name="Diremaw" x="0" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33211" centery="32294" centerz="15" radius="3">
+		<monster name="Deepworm" x="0" y="2" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33274" centery="32294" centerz="15" radius="3">
+		<monster name="Diremaw" x="-3" y="-2" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33309" centery="32294" centerz="15" radius="3">
+		<monster name="Deepworm" x="-1" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33316" centery="32294" centerz="15" radius="3">
+		<monster name="Deepworm" x="2" y="-3" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33330" centery="32294" centerz="15" radius="3">
+		<monster name="Deepworm" x="0" y="2" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33337" centery="32294" centerz="15" radius="3">
+		<monster name="Diremaw" x="-1" y="-2" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33218" centery="32298" centerz="15" radius="1">
+		<monster name="Diremaw" x="0" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33275" centery="32298" centerz="15" radius="1">
+		<monster name="Deepworm" x="0" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33301" centery="32300" centerz="15" radius="1">
+		<monster name="Diremaw" x="0" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33266" centery="32301" centerz="15" radius="1">
+		<monster name="Deepworm" x="0" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33288" centery="32301" centerz="15" radius="3">
+		<monster name="Diremaw" x="-3" y="-1" z="15" spawntime="60" />
+		<monster name="Diremaw" x="2" y="1" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33295" centery="32301" centerz="15" radius="3">
+		<monster name="Diremaw" x="-2" y="3" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33316" centery="32301" centerz="15" radius="3">
+		<monster name="Spit Nettle" x="0" y="3" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33323" centery="32301" centerz="15" radius="3">
+		<monster name="Diremaw" x="3" y="-3" z="15" spawntime="60" />
+		<monster name="Diremaw" x="3" y="-2" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33211" centery="32303" centerz="15" radius="1">
+		<monster name="Diremaw" x="0" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33312" centery="32307" centerz="15" radius="1">
+		<monster name="Deepworm" x="0" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33218" centery="32308" centerz="15" radius="3">
+		<monster name="Deepworm" x="2" y="-3" z="15" spawntime="60" />
+		<monster name="Diremaw" x="0" y="1" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33253" centery="32308" centerz="15" radius="3">
+		<monster name="Deepworm" x="1" y="2" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33260" centery="32308" centerz="15" radius="3">
+		<monster name="Diremaw" x="-2" y="-3" z="15" spawntime="60" />
+		<monster name="Deepworm" x="-3" y="2" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33267" centery="32308" centerz="15" radius="3">
+		<monster name="Deepworm" x="2" y="2" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33274" centery="32308" centerz="15" radius="3">
+		<monster name="Deepworm" x="2" y="2" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33295" centery="32308" centerz="15" radius="3">
+		<monster name="Deepworm" x="-2" y="-2" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33316" centery="32308" centerz="15" radius="3">
+		<monster name="Diremaw" x="0" y="-2" z="15" spawntime="60" />
+		<monster name="Deepworm" x="1" y="3" z="15" spawntime="60" />
+		<monster name="Diremaw" x="2" y="3" z="15" spawntime="60" />
+		<monster name="Deepworm" x="3" y="3" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33323" centery="32308" centerz="15" radius="3">
+		<monster name="Diremaw" x="-3" y="-3" z="15" spawntime="60" />
+		<monster name="Deepworm" x="-1" y="-2" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33218" centery="32315" centerz="15" radius="3">
+		<monster name="Diremaw" x="0" y="0" z="15" spawntime="60" />
+		<monster name="Deepworm" x="1" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33225" centery="32315" centerz="15" radius="3">
+		<monster name="Deepworm" x="2" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33232" centery="32315" centerz="15" radius="3">
+		<monster name="Spit Nettle" x="1" y="-1" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33239" centery="32315" centerz="15" radius="3">
+		<monster name="Diremaw" x="0" y="-1" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33246" centery="32315" centerz="15" radius="3">
+		<monster name="Diremaw" x="0" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33253" centery="32315" centerz="15" radius="3">
+		<monster name="Diremaw" x="3" y="-1" z="15" spawntime="60" />
+		<monster name="Deepworm" x="2" y="0" z="15" spawntime="60" />
+		<monster name="Diremaw" x="0" y="1" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33267" centery="32315" centerz="15" radius="3">
+		<monster name="Deepworm" x="2" y="1" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33274" centery="32315" centerz="15" radius="3">
+		<monster name="Diremaw" x="-3" y="-2" z="15" spawntime="60" />
+		<monster name="Diremaw" x="-2" y="-2" z="15" spawntime="60" />
+		<monster name="Diremaw" x="3" y="-2" z="15" spawntime="60" />
+		<monster name="Spit Nettle" x="-2" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33281" centery="32315" centerz="15" radius="3">
+		<monster name="Deepworm" x="-1" y="-3" z="15" spawntime="60" />
+		<monster name="Deepworm" x="2" y="-2" z="15" spawntime="60" />
+		<monster name="Spit Nettle" x="-2" y="0" z="15" spawntime="60" />
+		<monster name="Diremaw" x="1" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33295" centery="32315" centerz="15" radius="3">
+		<monster name="Diremaw" x="-2" y="-1" z="15" spawntime="60" />
+		<monster name="Deepworm" x="-2" y="3" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33316" centery="32318" centerz="15" radius="1">
+		<monster name="Deepworm" x="0" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33276" centery="32320" centerz="15" radius="1">
+		<monster name="Deepworm" x="0" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33282" centery="32320" centerz="15" radius="1">
+		<monster name="Diremaw" x="0" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33271" centery="32321" centerz="15" radius="1">
+		<monster name="Diremaw" x="0" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33253" centery="32322" centerz="15" radius="3">
+		<monster name="Spit Nettle" x="-1" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33260" centery="32322" centerz="15" radius="3">
+		<monster name="Deepworm" x="-2" y="-3" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33316" centery="32322" centerz="15" radius="3">
+		<monster name="Diremaw" x="-1" y="0" z="15" spawntime="60" />
+		<monster name="Diremaw" x="0" y="0" z="15" spawntime="60" />
+		<monster name="Spit Nettle" x="3" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33294" centery="32324" centerz="15" radius="1">
+		<monster name="Diremaw" x="0" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33297" centery="32326" centerz="15" radius="1">
+		<monster name="Deepworm" x="0" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33213" centery="32327" centerz="15" radius="1">
+		<monster name="Diremaw" x="0" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33260" centery="32329" centerz="15" radius="3">
+		<monster name="Deepworm" x="-3" y="-3" z="15" spawntime="60" />
+		<monster name="Diremaw" x="1" y="-2" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33274" centery="32329" centerz="15" radius="3">
+		<monster name="Diremaw" x="3" y="1" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33288" centery="32329" centerz="15" radius="3">
+		<monster name="Diremaw" x="-2" y="1" z="15" spawntime="60" />
+		<monster name="Deepworm" x="1" y="1" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33302" centery="32329" centerz="15" radius="1">
+		<monster name="Diremaw" x="0" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33309" centery="32329" centerz="15" radius="3">
+		<monster name="Deepworm" x="2" y="3" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33316" centery="32329" centerz="15" radius="3">
+		<monster name="Deepworm" x="-3" y="1" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33213" centery="32330" centerz="15" radius="1">
+		<monster name="Deepworm" x="0" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33211" centery="32336" centerz="15" radius="3">
+		<monster name="Deepworm" x="0" y="0" z="15" spawntime="60" />
+		<monster name="Diremaw" x="2" y="0" z="15" spawntime="60" />
+		<monster name="Diremaw" x="3" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33267" centery="32336" centerz="15" radius="3">
+		<monster name="Diremaw" x="0" y="-3" z="15" spawntime="60" />
+		<monster name="Diremaw" x="-1" y="-2" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33274" centery="32336" centerz="15" radius="3">
+		<monster name="Diremaw" x="1" y="-3" z="15" spawntime="60" />
+		<monster name="Mole" x="1" y="-1" z="15" spawntime="60" />
+		<monster name="Deepworm" x="-3" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33309" centery="32336" centerz="15" radius="3">
+		<monster name="Diremaw" x="1" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33218" centery="32343" centerz="15" radius="3">
+		<monster name="Deepworm" x="-1" y="2" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33267" centery="32343" centerz="15" radius="3">
+		<monster name="Deepworm" x="-2" y="2" z="15" spawntime="60" />
+		<monster name="Diremaw" x="0" y="3" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33309" centery="32343" centerz="15" radius="3">
+		<monster name="Deepworm" x="0" y="0" z="15" spawntime="60" />
+		<monster name="Mole" x="-2" y="1" z="15" spawntime="60" />
+		<monster name="Diremaw" x="2" y="3" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33316" centery="32343" centerz="15" radius="3">
+		<monster name="Deepworm" x="3" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33323" centery="32343" centerz="15" radius="3">
+		<monster name="Deepworm" x="-1" y="0" z="15" spawntime="60" />
+		<monster name="Diremaw" x="0" y="1" z="15" spawntime="60" />
+		<monster name="Diremaw" x="1" y="3" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33330" centery="32343" centerz="15" radius="3">
+		<monster name="Spit Nettle" x="-2" y="-2" z="15" spawntime="60" />
+		<monster name="Diremaw" x="2" y="-1" z="15" spawntime="60" />
+		<monster name="Deepworm" x="0" y="1" z="15" spawntime="60" />
+		<monster name="Diremaw" x="3" y="1" z="15" spawntime="60" />
+		<monster name="Diremaw" x="-3" y="2" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33326" centery="32349" centerz="15" radius="1">
+		<monster name="Deepworm" x="0" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33218" centery="32350" centerz="15" radius="3">
+		<monster name="Deepworm" x="3" y="1" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33239" centery="32350" centerz="15" radius="3">
+		<monster name="Diremaw" x="-2" y="2" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33246" centery="32350" centerz="15" radius="3">
+		<monster name="Diremaw" x="-1" y="2" z="15" spawntime="60" />
+		<monster name="Diremaw" x="1" y="3" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33253" centery="32350" centerz="15" radius="3">
+		<monster name="Diremaw" x="3" y="3" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33267" centery="32350" centerz="15" radius="3">
+		<monster name="Diremaw" x="-3" y="-2" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33302" centery="32350" centerz="15" radius="3">
+		<monster name="Diremaw" x="2" y="-3" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33316" centery="32350" centerz="15" radius="3">
+		<monster name="Diremaw" x="0" y="-2" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33330" centery="32350" centerz="15" radius="3">
+		<monster name="Diremaw" x="3" y="-2" z="15" spawntime="60" />
+		<monster name="Diremaw" x="-2" y="-1" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33218" centery="32357" centerz="15" radius="3">
+		<monster name="Diremaw" x="2" y="-3" z="15" spawntime="60" />
+		<monster name="Diremaw" x="2" y="0" z="15" spawntime="60" />
+		<monster name="Diremaw" x="2" y="3" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33232" centery="32357" centerz="15" radius="3">
+		<monster name="Diremaw" x="3" y="-2" z="15" spawntime="60" />
+		<monster name="Deepworm" x="2" y="-1" z="15" spawntime="60" />
+		<monster name="Diremaw" x="-3" y="2" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33239" centery="32357" centerz="15" radius="3">
+		<monster name="Diremaw" x="-3" y="-3" z="15" spawntime="60" />
+		<monster name="Deepworm" x="1" y="-3" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33246" centery="32357" centerz="15" radius="3">
+		<monster name="Deepworm" x="-2" y="-1" z="15" spawntime="60" />
+		<monster name="Diremaw" x="-1" y="-1" z="15" spawntime="60" />
+		<monster name="Deepworm" x="0" y="-1" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33253" centery="32357" centerz="15" radius="3">
+		<monster name="Diremaw" x="3" y="-3" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33260" centery="32357" centerz="15" radius="3">
+		<monster name="Diremaw" x="-2" y="-3" z="15" spawntime="60" />
+		<monster name="Deepworm" x="-2" y="-1" z="15" spawntime="60" />
+		<monster name="Diremaw" x="-1" y="-1" z="15" spawntime="60" />
+		<monster name="Mole" x="-3" y="1" z="15" spawntime="60" />
+		<monster name="Deepworm" x="2" y="2" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33295" centery="32357" centerz="15" radius="3">
+		<monster name="Diremaw" x="-3" y="0" z="15" spawntime="60" />
+		<monster name="Deepworm" x="-3" y="1" z="15" spawntime="60" />
+		<monster name="Diremaw" x="-2" y="3" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33302" centery="32357" centerz="15" radius="3">
+		<monster name="Spit Nettle" x="1" y="1" z="15" spawntime="60" />
+		<monster name="Diremaw" x="3" y="1" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33273" centery="32359" centerz="15" radius="1">
+		<monster name="Deepworm" x="0" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33286" centery="32359" centerz="15" radius="1">
+		<monster name="Diremaw" x="0" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33285" centery="32362" centerz="15" radius="1">
+		<monster name="Deepworm" x="0" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33218" centery="32364" centerz="15" radius="3">
+		<monster name="Humongous Fungus" x="2" y="-2" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33224" centery="32364" centerz="15" radius="1">
+		<monster name="Deepworm" x="0" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33274" centery="32364" centerz="15" radius="3">
+		<monster name="Diremaw" x="3" y="-3" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33316" centery="32364" centerz="15" radius="3">
+		<monster name="Deepworm" x="-3" y="-2" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33323" centery="32364" centerz="15" radius="3">
+		<monster name="Deepworm" x="-2" y="2" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33321" centery="32370" centerz="15" radius="1">
+		<monster name="Diremaw" x="0" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33311" centery="32372" centerz="15" radius="1">
+		<monster name="Diremaw" x="0" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33312" centery="32375" centerz="15" radius="1">
+		<monster name="Deepworm" x="0" y="0" z="15" spawntime="60" />
+	</monster>
+	<monster centerx="33319" centery="32375" centerz="15" radius="1">
+		<monster name="Diremaw" x="0" y="0" z="15" spawntime="60" />
+	</monster>
+</monsters>

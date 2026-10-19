@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32721" centery="31622" centerz="7" radius="3">
+		<monster name="Blue Butterfly" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32690" centery="31582" centerz="8" radius="3">
+		<monster name="Bat" x="-2" y="-2" z="8" spawntime="90" />
+		<monster name="Bat" x="3" y="-1" z="8" spawntime="90" />
+		<monster name="Bat" x="2" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32719" centery="31589" centerz="8" radius="2">
+		<monster name="Snake" x="-1" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32699" centery="31596" centerz="8" radius="2">
+		<monster name="Snake" x="0" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32693" centery="31601" centerz="8" radius="3">
+		<monster name="Skeleton" x="-2" y="-2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32708" centery="31602" centerz="8" radius="6">
+		<monster name="Poison Spider" x="-3" y="-6" z="8" spawntime="90" />
+		<monster name="Poison Spider" x="0" y="-6" z="8" spawntime="90" />
+		<monster name="Poison Spider" x="-4" y="-4" z="8" spawntime="90" />
+		<monster name="Rotworm" x="6" y="-3" z="8" spawntime="90" />
+		<monster name="Poison Spider" x="-4" y="-1" z="8" spawntime="90" />
+		<monster name="Snake" x="6" y="0" z="8" spawntime="90" />
+		<monster name="Poison Spider" x="-6" y="6" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32723" centery="31602" centerz="8" radius="2">
+		<monster name="Ghoul" x="0" y="-1" z="8" spawntime="90" />
+		<monster name="Skeleton" x="-1" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32722" centery="31615" centerz="8" radius="3">
+		<monster name="Rotworm" x="-2" y="-2" z="8" spawntime="90" />
+		<monster name="Rotworm" x="-2" y="1" z="8" spawntime="90" />
+		<monster name="Rotworm" x="2" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32701" centery="31622" centerz="8" radius="2">
+		<monster name="Rotworm" x="2" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32715" centery="31626" centerz="8" radius="3">
+		<monster name="Skeleton" x="0" y="-3" z="8" spawntime="90" />
+		<monster name="Ghoul" x="3" y="-1" z="8" spawntime="90" />
+		<monster name="Skeleton" x="2" y="0" z="8" spawntime="90" />
+		<monster name="Skeleton" x="-1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32700" centery="31629" centerz="8" radius="3">
+		<monster name="Skeleton" x="-2" y="-2" z="8" spawntime="90" />
+		<monster name="Skeleton" x="2" y="-1" z="8" spawntime="90" />
+		<monster name="Slime" x="1" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32723" centery="31634" centerz="8" radius="2">
+		<monster name="Slime" x="1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32713" centery="31642" centerz="8" radius="2">
+		<monster name="Bat" x="0" y="-2" z="8" spawntime="90" />
+		<monster name="Rotworm" x="1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32704" centery="31647" centerz="8" radius="2">
+		<monster name="Bat" x="-1" y="0" z="8" spawntime="90" />
+		<monster name="Rotworm" x="2" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32710" centery="31672" centerz="8" radius="1">
+		<monster name="Rotworm" x="0" y="0" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="32700" centery="31594" centerz="9" radius="3">
+		<monster name="Skeleton" x="2" y="-2" z="9" spawntime="90" />
+		<monster name="Skeleton" x="1" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32707" centery="31594" centerz="9" radius="3">
+		<monster name="Skeleton" x="0" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32681" centery="31622" centerz="9" radius="4">
+		<monster name="Troll" x="-1" y="-1" z="9" spawntime="90" />
+		<monster name="Troll" x="-4" y="1" z="9" spawntime="90" />
+		<monster name="Troll" x="4" y="1" z="9" spawntime="90" />
+		<monster name="Troll" x="0" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32677" centery="31632" centerz="9" radius="3">
+		<monster name="Troll" x="2" y="-3" z="9" spawntime="90" />
+		<monster name="Troll" x="-2" y="0" z="9" spawntime="90" />
+		<monster name="Troll" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32686" centery="31636" centerz="9" radius="3">
+		<monster name="Troll" x="-3" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32679" centery="31643" centerz="9" radius="3">
+		<monster name="Troll" x="3" y="-1" z="9" spawntime="90" />
+		<monster name="Troll" x="2" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32686" centery="31643" centerz="9" radius="3">
+		<monster name="Troll" x="-3" y="-3" z="9" spawntime="90" />
+	</monster>
+</monsters>

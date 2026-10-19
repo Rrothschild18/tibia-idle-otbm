@@ -1,0 +1,162 @@
+{
+  "city": "PORTHOPE",
+  "area": "Tiquanda",
+  "subareas": [
+    459,
+    86,
+    238,
+    309,
+    87,
+    90,
+    475,
+    92,
+    235,
+    107
+  ],
+  "hunts": [
+    {
+      "id": "PORTHOPE-HUNT-0101",
+      "name": "Tiquanda/Trapwood",
+      "floors": [
+        7,
+        8,
+        9
+      ],
+      "candidateIds": [
+        "PORTHOPE-FULL-z08-333"
+      ],
+      "species": null,
+      "creatures": 228,
+      "extent": {
+        "minX": 32627,
+        "minY": 32865,
+        "maxX": 32779,
+        "maxY": 32942,
+        "centerX": 32703,
+        "centerY": 32903
+      },
+      "subareaId": 92,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "PORTHOPE-HUNT-0102",
+      "name": "Kongras — Banuta z9",
+      "floors": [
+        8,
+        9,
+        10
+      ],
+      "candidateIds": [
+        "PORTHOPE-FULL-z09-21"
+      ],
+      "species": null,
+      "creatures": 148,
+      "extent": {
+        "minX": 32744,
+        "minY": 32489,
+        "maxX": 32858,
+        "maxY": 32589,
+        "centerX": 32801,
+        "centerY": 32539
+      },
+      "subareaId": 86,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "PORTHOPE-HUNT-0103",
+      "name": "Port Hope Swamp Trolls",
+      "floors": [
+        7,
+        8,
+        9
+      ],
+      "candidateIds": [
+        "PORTHOPE-FULL-z08-110"
+      ],
+      "species": null,
+      "creatures": 26,
+      "extent": {
+        "minX": 32668,
+        "minY": 32573,
+        "maxX": 32702,
+        "maxY": 32623,
+        "centerX": 32685,
+        "centerY": 32598
+      },
+      "subareaId": 92,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "PORTHOPE-HUNT-0104",
+      "name": "Southern Terramite Tunnels",
+      "floors": [
+        7,
+        8,
+        9
+      ],
+      "candidateIds": [
+        "PORTHOPE-FULL-z08-737"
+      ],
+      "species": null,
+      "creatures": 23,
+      "extent": {
+        "minX": 32978,
+        "minY": 32681,
+        "maxX": 33048,
+        "maxY": 32711,
+        "centerX": 33013,
+        "centerY": 32696
+      },
+      "subareaId": 107,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "PORTHOPE-HUNT-0105",
+      "name": "Kha'zeel Dragon Lairs/Tiquanda",
+      "floors": [
+        6,
+        7,
+        8
+      ],
+      "candidateIds": [
+        "PORTHOPE-FULL-z07-3"
+      ],
+      "species": null,
+      "creatures": 1226,
+      "extent": {
+        "minX": 32544,
+        "minY": 32486,
+        "maxX": 33008,
+        "maxY": 32966,
+        "centerX": 32776,
+        "centerY": 32726
+      },
+      "subareaId": 90,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "PORTHOPE-HUNT-0106",
+      "name": "Banuta",
+      "floors": [
+        7,
+        8,
+        9
+      ],
+      "candidateIds": [
+        "PORTHOPE-FULL-z08-11"
+      ],
+      "species": null,
+      "creatures": 124,
+      "extent": {
+        "minX": 32752,
+        "minY": 32492,
+        "maxX": 32852,
+        "maxY": 32576,
+        "centerX": 32802,
+        "centerY": 32534
+      },
+      "subareaId": 86,
+      "walkTilesFromTemple": null
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "city": "DARASHIA",
+  "area": {
+    "id": 4,
+    "name": "Northern Darama"
+  },
+  "subareas": [
+    {
+      "id": 452,
+      "name": "Northern Darama"
+    },
+    {
+      "id": 296,
+      "name": "Darashia City"
+    },
+    {
+      "id": 64,
+      "name": "Daramian Minotaur Pyramid"
+    },
+    {
+      "id": 82,
+      "name": "Ashta'daramai"
+    },
+    {
+      "id": 66,
+      "name": "Drefia"
+    },
+    {
+      "id": 68,
+      "name": "Northern Darama Desert"
+    },
+    {
+      "id": 217,
+      "name": "Lion's Rock"
+    }
+  ],
+  "world": {
+    "file": "otservbr.otbm",
+    "bytes": 184797168
+  },
+  "shape": "square",
+  "bounds": {
+    "minX": 32790,
+    "minY": 32041,
+    "maxX": 33500,
+    "maxY": 32751
+  },
+  "columns": 56509,
+  "monsterScope": "box",
+  "tiles": 2785425,
+  "tileAreas": 185923,
+  "towns": [
+    {
+      "id": 13,
+      "name": "Darashia",
+      "x": 33213,
+      "y": 32454,
+      "z": 1
+    }
+  ],
+  "monsterGroups": 8063,
+  "monsterEntries": 14401,
+  "npcGroups": 36,
+  "npcEntries": 36,
+  "houses": 76
+}

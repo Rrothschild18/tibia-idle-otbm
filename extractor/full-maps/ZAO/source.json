@@ -68,14 +68,15 @@
   },
   "shape": "square",
   "bounds": {
-    "minX": 32805,
-    "minY": 30992,
-    "maxX": 33453,
-    "maxY": 31640
+    "minX": 32650,
+    "minY": 30837,
+    "maxX": 33608,
+    "maxY": 31795
   },
   "columns": 174462,
-  "tiles": 1641458,
-  "tileAreas": 113115,
+  "monsterScope": "box",
+  "tiles": 3361273,
+  "tileAreas": 229977,
   "towns": [
     {
       "id": 12,
@@ -85,8 +86,8 @@
       "z": 11
     }
   ],
-  "monsterGroups": 4698,
-  "monsterEntries": 5552,
+  "monsterGroups": 12505,
+  "monsterEntries": 17199,
   "npcGroups": 45,
   "npcEntries": 45,
   "houses": 1

@@ -1,0 +1,878 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32133" centery="30992" centerz="9" radius="3">
+		<monster name="Lancer Beetle" x="1" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32140" centery="30992" centerz="9" radius="3">
+		<monster name="Wailing Widow" x="1" y="0" z="9" spawntime="90" />
+		<monster name="Lancer Beetle" x="2" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32154" centery="30992" centerz="9" radius="3">
+		<monster name="Lancer Beetle" x="2" y="-2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32168" centery="30992" centerz="9" radius="3">
+		<monster name="Lancer Beetle" x="1" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32140" centery="30999" centerz="9" radius="3">
+		<monster name="Wailing Widow" x="2" y="-3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32147" centery="31006" centerz="9" radius="3">
+		<monster name="Lancer Beetle" x="0" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32154" centery="31006" centerz="9" radius="3">
+		<monster name="Wailing Widow" x="-3" y="-2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32161" centery="31006" centerz="9" radius="3">
+		<monster name="Lancer Beetle" x="-2" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32166" centery="31011" centerz="9" radius="5">
+		<monster name="Lancer Beetle" x="0" y="-2" z="9" spawntime="90" />
+		<monster name="Wailing Widow" x="1" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32329" centery="31020" centerz="9" radius="3">
+		<monster name="Crystal Spider" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32336" centery="31020" centerz="9" radius="3">
+		<monster name="Ice Golem" x="-1" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32331" centery="31024" centerz="9" radius="1">
+		<monster name="Crystal Spider" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32336" centery="31027" centerz="9" radius="3">
+		<monster name="Ice Golem" x="3" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32146" centery="31029" centerz="9" radius="3">
+		<monster name="Mammoth" x="2" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32135" centery="31030" centerz="9" radius="3">
+		<monster name="Novice of the Cult" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32329" centery="31034" centerz="9" radius="3">
+		<monster name="Crystal Spider" x="-2" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32335" centery="31036" centerz="9" radius="1">
+		<monster name="Crystal Spider" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32146" centery="31043" centerz="9" radius="4">
+		<monster name="Novice of the Cult" x="2" y="-3" z="9" spawntime="90" />
+		<monster name="Novice of the Cult" x="-2" y="-1" z="9" spawntime="90" />
+		<monster name="Novice of the Cult" x="2" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32306" centery="31044" centerz="9" radius="1">
+		<monster name="Crystal Spider" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32308" centery="31048" centerz="9" radius="3">
+		<monster name="Crystal Spider" x="1" y="-2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32329" centery="31048" centerz="9" radius="3">
+		<monster name="Ice Golem" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32343" centery="31048" centerz="9" radius="3">
+		<monster name="Ice Golem" x="2" y="-2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32322" centery="31055" centerz="9" radius="3">
+		<monster name="Crystal Spider" x="-2" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32146" centery="31056" centerz="9" radius="3">
+		<monster name="Acolyte of the Cult" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32136" centery="31057" centerz="9" radius="3">
+		<monster name="Novice of the Cult" x="1" y="-2" z="9" spawntime="90" />
+		<monster name="Novice of the Cult" x="-1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32307" centery="31057" centerz="9" radius="5">
+		<monster name="Ice Golem" x="0" y="2" z="9" spawntime="90" />
+		<monster name="Crystal Spider" x="3" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32342" centery="31060" centerz="9" radius="5">
+		<monster name="Ice Golem" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32301" centery="31062" centerz="9" radius="3">
+		<monster name="Crystal Spider" x="-3" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32146" centery="31064" centerz="9" radius="3">
+		<monster name="Mammoth" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32322" centery="31066" centerz="9" radius="1">
+		<monster name="Crystal Spider" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32307" centery="31068" centerz="9" radius="1">
+		<monster name="Crystal Spider" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32337" centery="31071" centerz="9" radius="1">
+		<monster name="Crystal Spider" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32146" centery="31072" centerz="9" radius="3">
+		<monster name="Novice of the Cult" x="-1" y="-1" z="9" spawntime="90" />
+		<monster name="Novice of the Cult" x="2" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32354" centery="31072" centerz="9" radius="5">
+		<monster name="Crystal Spider" x="-5" y="-2" z="9" spawntime="90" />
+		<monster name="Ice Golem" x="-1" y="5" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32335" centery="31073" centerz="9" radius="1">
+		<monster name="Crystal Spider" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32325" centery="31077" centerz="9" radius="5">
+		<monster name="Crystal Spider" x="0" y="-1" z="9" spawntime="90" />
+		<monster name="Crystal Spider" x="4" y="4" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32145" centery="31080" centerz="9" radius="3">
+		<monster name="Gargoyle" x="2" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32336" centery="31083" centerz="9" radius="3">
+		<monster name="Crystal Spider" x="3" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32336" centery="31090" centerz="9" radius="3">
+		<monster name="Ice Golem" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32146" centery="31091" centerz="9" radius="3">
+		<monster name="Gargoyle" x="2" y="-1" z="9" spawntime="90" />
+		<monster name="Gargoyle" x="1" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32137" centery="31101" centerz="9" radius="3">
+		<monster name="Frost Troll" x="-2" y="-2" z="9" spawntime="90" />
+		<monster name="Frost Troll" x="1" y="0" z="9" spawntime="90" />
+		<monster name="Frost Troll" x="-3" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32146" centery="31104" centerz="9" radius="3">
+		<monster name="Novice of the Cult" x="-1" y="-1" z="9" spawntime="90" />
+		<monster name="Novice of the Cult" x="2" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32149" centery="31116" centerz="9" radius="3">
+		<monster name="Gargoyle" x="-2" y="0" z="9" spawntime="90" />
+		<monster name="Gargoyle" x="0" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32143" centery="31124" centerz="9" radius="3">
+		<monster name="Novice of the Cult" x="-1" y="-2" z="9" spawntime="90" />
+		<monster name="Novice of the Cult" x="1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32151" centery="31124" centerz="9" radius="3">
+		<monster name="Mammoth" x="2" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32146" centery="31132" centerz="9" radius="3">
+		<monster name="Mammoth" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32132" centery="31139" centerz="9" radius="4">
+		<monster name="Novice of the Cult" x="4" y="-3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32146" centery="31142" centerz="9" radius="3">
+		<monster name="Novice of the Cult" x="-2" y="-2" z="9" spawntime="90" />
+		<monster name="Novice of the Cult" x="2" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32189" centery="31146" centerz="9" radius="3">
+		<monster name="Gargoyle" x="1" y="-2" z="9" spawntime="90" />
+		<monster name="Gargoyle" x="2" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32130" centery="31153" centerz="9" radius="5">
+		<monster name="Novice of the Cult" x="5" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32145" centery="31153" centerz="9" radius="3">
+		<monster name="Novice of the Cult" x="-2" y="-2" z="9" spawntime="90" />
+		<monster name="Novice of the Cult" x="2" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32189" centery="31156" centerz="9" radius="3">
+		<monster name="Novice of the Cult" x="-1" y="-3" z="9" spawntime="90" />
+		<monster name="Novice of the Cult" x="3" y="-1" z="9" spawntime="90" />
+		<monster name="Novice of the Cult" x="1" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32189" centery="31163" centerz="9" radius="2">
+		<monster name="Novice of the Cult" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32146" centery="31167" centerz="9" radius="4">
+		<monster name="Novice of the Cult" x="0" y="-4" z="9" spawntime="90" />
+		<monster name="Novice of the Cult" x="-4" y="0" z="9" spawntime="90" />
+		<monster name="Novice of the Cult" x="2" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32189" centery="31172" centerz="9" radius="1">
+		<monster name="Novice of the Cult" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32189" centery="31180" centerz="9" radius="1">
+		<monster name="Novice of the Cult" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32145" centery="31181" centerz="9" radius="4">
+		<monster name="Novice of the Cult" x="-1" y="-4" z="9" spawntime="90" />
+		<monster name="Novice of the Cult" x="3" y="-3" z="9" spawntime="90" />
+		<monster name="Novice of the Cult" x="-2" y="2" z="9" spawntime="90" />
+		<monster name="Novice of the Cult" x="2" y="4" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32146" centery="31193" centerz="9" radius="4">
+		<monster name="Gargoyle" x="2" y="-3" z="9" spawntime="90" />
+		<monster name="Gargoyle" x="-1" y="0" z="9" spawntime="90" />
+		<monster name="Gargoyle" x="2" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32189" centery="31194" centerz="9" radius="4">
+		<monster name="Novice of the Cult" x="0" y="-3" z="9" spawntime="90" />
+		<monster name="Novice of the Cult" x="3" y="0" z="9" spawntime="90" />
+		<monster name="Novice of the Cult" x="0" y="4" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32214" centery="31195" centerz="9" radius="3">
+		<monster name="Novice of the Cult" x="1" y="-1" z="9" spawntime="90" />
+		<monster name="Novice of the Cult" x="-1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32202" centery="30987" centerz="10" radius="5">
+		<monster name="Wailing Widow" x="1" y="4" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32130" centery="30995" centerz="10" radius="5">
+		<monster name="Wailing Widow" x="4" y="-3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32143" centery="30996" centerz="10" radius="5">
+		<monster name="Brimstone Bug" x="1" y="1" z="10" spawntime="90" />
+		<monster name="Wailing Widow" x="1" y="4" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32149" centery="31006" centerz="10" radius="5">
+		<monster name="Lancer Beetle" x="-5" y="-3" z="10" spawntime="90" />
+		<monster name="Wailing Widow" x="-2" y="-2" z="10" spawntime="90" />
+		<monster name="Wailing Widow" x="2" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32161" centery="31006" centerz="10" radius="5">
+		<monster name="Lancer Beetle" x="4" y="-2" z="10" spawntime="90" />
+		<monster name="Wailing Widow" x="-2" y="2" z="10" spawntime="90" />
+		<monster name="Lancer Beetle" x="3" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32133" centery="31008" centerz="10" radius="5">
+		<monster name="Wailing Widow" x="1" y="-4" z="10" spawntime="90" />
+		<monster name="Brimstone Bug" x="4" y="-2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32208" centery="31014" centerz="10" radius="1">
+		<monster name="Ice Golem" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32221" centery="31014" centerz="10" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32209" centery="31016" centerz="10" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32171" centery="31017" centerz="10" radius="5">
+		<monster name="Wailing Widow" x="-2" y="-5" z="10" spawntime="90" />
+		<monster name="Lancer Beetle" x="3" y="-1" z="10" spawntime="90" />
+		<monster name="Wailing Widow" x="-2" y="1" z="10" spawntime="90" />
+		<monster name="Wailing Widow" x="0" y="4" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32218" centery="31017" centerz="10" radius="1">
+		<monster name="Ice Golem" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32153" centery="31018" centerz="10" radius="5">
+		<monster name="Lancer Beetle" x="0" y="-1" z="10" spawntime="90" />
+		<monster name="Wailing Widow" x="-2" y="0" z="10" spawntime="90" />
+		<monster name="Wailing Widow" x="3" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32206" centery="31025" centerz="10" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32134" centery="31030" centerz="10" radius="3">
+		<monster name="Ice Golem" x="1" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32207" centery="31033" centerz="10" radius="1">
+		<monster name="Ice Golem" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32208" centery="31037" centerz="10" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32192" centery="31041" centerz="10" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32226" centery="31043" centerz="10" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32236" centery="31043" centerz="10" radius="1">
+		<monster name="Ice Golem" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32211" centery="31044" centerz="10" radius="1">
+		<monster name="Ice Golem" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32231" centery="31044" centerz="10" radius="1">
+		<monster name="Ice Golem" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32239" centery="31044" centerz="10" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32201" centery="31045" centerz="10" radius="1">
+		<monster name="Ice Golem" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32206" centery="31045" centerz="10" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32219" centery="31045" centerz="10" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32194" centery="31046" centerz="10" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32227" centery="31046" centerz="10" radius="1">
+		<monster name="Adept of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32190" centery="31052" centerz="10" radius="1">
+		<monster name="Ice Golem" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32227" centery="31053" centerz="10" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32193" centery="31054" centerz="10" radius="1">
+		<monster name="Ice Golem" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32189" centery="31055" centerz="10" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32227" centery="31055" centerz="10" radius="1">
+		<monster name="Ice Golem" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32191" centery="31059" centerz="10" radius="1">
+		<monster name="Ice Golem" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32228" centery="31059" centerz="10" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32227" centery="31062" centerz="10" radius="1">
+		<monster name="Adept of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32216" centery="31063" centerz="10" radius="1">
+		<monster name="Ice Golem" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32211" centery="31065" centerz="10" radius="1">
+		<monster name="Adept of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32220" centery="31065" centerz="10" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32225" centery="31066" centerz="10" radius="1">
+		<monster name="Ice Golem" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32212" centery="31069" centerz="10" radius="1">
+		<monster name="Ice Golem" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32215" centery="31070" centerz="10" radius="1">
+		<monster name="Adept of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32226" centery="31071" centerz="10" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32193" centery="31073" centerz="10" radius="1">
+		<monster name="Ice Golem" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32187" centery="31074" centerz="10" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32138" centery="31075" centerz="10" radius="4">
+		<monster name="Novice of the Cult" x="1" y="-2" z="10" spawntime="90" />
+		<monster name="Novice of the Cult" x="-2" y="0" z="10" spawntime="90" />
+		<monster name="Novice of the Cult" x="3" y="1" z="10" spawntime="90" />
+		<monster name="Novice of the Cult" x="0" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32158" centery="31075" centerz="10" radius="3">
+		<monster name="Acolyte of the Cult" x="0" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32168" centery="31075" centerz="10" radius="3">
+		<monster name="Crystal Spider" x="0" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32193" centery="31078" centerz="10" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="10" spawntime="60" />
+		<monster name="Acolyte of the Cult" x="0" y="1" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32249" centery="31078" centerz="10" radius="3">
+		<monster name="Acolyte of the Cult" x="2" y="-1" z="10" spawntime="90" />
+		<monster name="Acolyte of the Cult" x="-1" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32190" centery="31079" centerz="10" radius="1">
+		<monster name="Ice Golem" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32148" centery="31081" centerz="10" radius="3">
+		<monster name="Acolyte of the Cult" x="2" y="-1" z="10" spawntime="90" />
+		<monster name="Acolyte of the Cult" x="-2" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32251" centery="31086" centerz="10" radius="1">
+		<monster name="Ice Golem" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32191" centery="31087" centerz="10" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32249" centery="31088" centerz="10" radius="1">
+		<monster name="Adept of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32324" centery="31088" centerz="10" radius="1">
+		<monster name="Ice Golem" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32149" centery="31089" centerz="10" radius="3">
+		<monster name="Acolyte of the Cult" x="1" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32330" centery="31089" centerz="10" radius="1">
+		<monster name="Adept of the Cult" x="0" y="0" z="10" spawntime="60" />
+		<monster name="Acolyte of the Cult" x="-1" y="1" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32324" centery="31091" centerz="10" radius="1">
+		<monster name="Adept of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32193" centery="31092" centerz="10" radius="1">
+		<monster name="Ice Golem" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32220" centery="31093" centerz="10" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32249" centery="31093" centerz="10" radius="1">
+		<monster name="Ice Golem" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32203" centery="31094" centerz="10" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="10" spawntime="60" />
+		<monster name="Ice Golem" x="-1" y="1" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32224" centery="31094" centerz="10" radius="1">
+		<monster name="Ice Golem" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32325" centery="31094" centerz="10" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32216" centery="31095" centerz="10" radius="1">
+		<monster name="Ice Golem" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32227" centery="31095" centerz="10" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32191" centery="31096" centerz="10" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32148" centery="31098" centerz="10" radius="3">
+		<monster name="Acolyte of the Cult" x="0" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32258" centery="31100" centerz="10" radius="3">
+		<monster name="Cave Rat" x="0" y="-1" z="10" spawntime="90" />
+		<monster name="Cave Rat" x="-1" y="1" z="10" spawntime="90" />
+		<monster name="Cave Rat" x="1" y="1" z="10" spawntime="90" />
+		<monster name="Cave Rat" x="-2" y="2" z="10" spawntime="90" />
+		<monster name="Cave Rat" x="0" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32190" centery="31102" centerz="10" radius="1">
+		<monster name="Ice Golem" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32193" centery="31102" centerz="10" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32249" centery="31102" centerz="10" radius="3">
+		<monster name="Adept of the Cult" x="2" y="-2" z="10" spawntime="90" />
+		<monster name="Adept of the Cult" x="-1" y="1" z="10" spawntime="90" />
+		<monster name="Ice Golem" x="1" y="3" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32326" centery="31102" centerz="10" radius="1">
+		<monster name="Ice Golem" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32219" centery="31104" centerz="10" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32328" centery="31106" centerz="10" radius="1">
+		<monster name="Adept of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32221" centery="31109" centerz="10" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32327" centery="31109" centerz="10" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32221" centery="31111" centerz="10" radius="1">
+		<monster name="Ice Golem" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32327" centery="31111" centerz="10" radius="1">
+		<monster name="Ice Golem" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32249" centery="31112" centerz="10" radius="1">
+		<monster name="Adept of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32264" centery="31114" centerz="10" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32293" centery="31114" centerz="10" radius="1">
+		<monster name="Adept of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32323" centery="31114" centerz="10" radius="1">
+		<monster name="Ice Golem" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32257" centery="31115" centerz="10" radius="1">
+		<monster name="Adept of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32275" centery="31115" centerz="10" radius="1">
+		<monster name="Adept of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32298" centery="31115" centerz="10" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32221" centery="31116" centerz="10" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32268" centery="31116" centerz="10" radius="1">
+		<monster name="Adept of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32273" centery="31116" centerz="10" radius="1">
+		<monster name="Ice Golem" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32285" centery="31116" centerz="10" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32293" centery="31116" centerz="10" radius="1">
+		<monster name="Ice Golem" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32303" centery="31116" centerz="10" radius="1">
+		<monster name="Ice Golem" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32308" centery="31116" centerz="10" radius="1">
+		<monster name="Adept of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32319" centery="31116" centerz="10" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32325" centery="31116" centerz="10" radius="1">
+		<monster name="Adept of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32251" centery="31117" centerz="10" radius="1">
+		<monster name="Ice Golem" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32264" centery="31117" centerz="10" radius="1">
+		<monster name="Ice Golem" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32219" centery="31118" centerz="10" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32149" centery="31119" centerz="10" radius="3">
+		<monster name="Acolyte of the Cult" x="-1" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32219" centery="31122" centerz="10" radius="1">
+		<monster name="Ice Golem" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32250" centery="31126" centerz="10" radius="1">
+		<monster name="Ice Golem" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32144" centery="31128" centerz="10" radius="3">
+		<monster name="Acolyte of the Cult" x="0" y="-2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32221" centery="31129" centerz="10" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32249" centery="31129" centerz="10" radius="1">
+		<monster name="Adept of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32219" centery="31131" centerz="10" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32191" centery="31132" centerz="10" radius="3">
+		<monster name="Ice Golem" x="-1" y="-1" z="10" spawntime="90" />
+		<monster name="Ice Golem" x="2" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32250" centery="31132" centerz="10" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32221" centery="31134" centerz="10" radius="1">
+		<monster name="Ice Golem" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32207" centery="31137" centerz="10" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32209" centery="31137" centerz="10" radius="1">
+		<monster name="Ice Golem" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32230" centery="31137" centerz="10" radius="1">
+		<monster name="Adept of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32225" centery="31138" centerz="10" radius="1">
+		<monster name="Ice Golem" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32228" centery="31138" centerz="10" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32240" centery="31138" centerz="10" radius="1">
+		<monster name="Ice Golem" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32245" centery="31138" centerz="10" radius="1">
+		<monster name="Adept of the Cult" x="0" y="0" z="10" spawntime="60" />
+		<monster name="Adept of the Cult" x="1" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32256" centery="31138" centerz="10" radius="1">
+		<monster name="Ice Golem" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32192" centery="31139" centerz="10" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32222" centery="31141" centerz="10" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32191" centery="31151" centerz="10" radius="3">
+		<monster name="Acolyte of the Cult" x="-1" y="-2" z="10" spawntime="90" />
+		<monster name="Acolyte of the Cult" x="2" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32220" centery="31151" centerz="10" radius="4">
+		<monster name="Ice Golem" x="-1" y="-2" z="10" spawntime="90" />
+		<monster name="Ice Golem" x="2" y="0" z="10" spawntime="90" />
+		<monster name="Ice Golem" x="0" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32145" centery="31163" centerz="10" radius="3">
+		<monster name="Novice of the Cult" x="0" y="-2" z="10" spawntime="90" />
+		<monster name="Novice of the Cult" x="-3" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32144" centery="31173" centerz="10" radius="3">
+		<monster name="Novice of the Cult" x="1" y="-2" z="10" spawntime="90" />
+		<monster name="Novice of the Cult" x="2" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32220" centery="31173" centerz="10" radius="3">
+		<monster name="Acolyte of the Cult" x="-1" y="-2" z="10" spawntime="90" />
+		<monster name="Acolyte of the Cult" x="2" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32183" centery="31200" centerz="10" radius="3">
+		<monster name="Acolyte of the Cult" x="-1" y="-3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32140" centery="30992" centerz="11" radius="3">
+		<monster name="Stampor" x="-2" y="3" z="11" spawntime="90" />
+		<monster name="Stampor" x="-1" y="3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32147" centery="30992" centerz="11" radius="3">
+		<monster name="Stampor" x="-3" y="2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32281" centery="30992" centerz="11" radius="1">
+		<monster name="Frost Dragon" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32244" centery="30993" centerz="11" radius="1">
+		<monster name="Ice Witch" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32240" centery="30996" centerz="11" radius="1">
+		<monster name="Frost Dragon" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32250" centery="30997" centerz="11" radius="1">
+		<monster name="Frost Dragon" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32280" centery="30998" centerz="11" radius="1">
+		<monster name="Ice Witch" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32140" centery="30999" centerz="11" radius="3">
+		<monster name="Killer Caiman" x="2" y="-3" z="11" spawntime="90" />
+		<monster name="Giant Spider" x="-1" y="-2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32237" centery="30999" centerz="11" radius="1">
+		<monster name="Ice Witch" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32257" centery="31000" centerz="11" radius="1">
+		<monster name="Ice Witch" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32262" centery="31003" centerz="11" radius="1">
+		<monster name="Frost Dragon" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32275" centery="31003" centerz="11" radius="1">
+		<monster name="Frost Dragon" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32305" centery="31005" centerz="11" radius="1">
+		<monster name="Frost Dragon" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32307" centery="31005" centerz="11" radius="1">
+		<monster name="Ice Witch" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32229" centery="31006" centerz="11" radius="1">
+		<monster name="Ice Witch" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32288" centery="31006" centerz="11" radius="1">
+		<monster name="Frost Dragon" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32267" centery="31007" centerz="11" radius="1">
+		<monster name="Ice Witch" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32295" centery="31009" centerz="11" radius="1">
+		<monster name="Ice Witch" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32236" centery="31011" centerz="11" radius="1">
+		<monster name="Ice Witch" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32304" centery="31013" centerz="11" radius="1">
+		<monster name="Frost Dragon" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32217" centery="31014" centerz="11" radius="1">
+		<monster name="Ice Witch" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32224" centery="31014" centerz="11" radius="1">
+		<monster name="Ice Witch" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32241" centery="31015" centerz="11" radius="1">
+		<monster name="Frost Dragon" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32245" centery="31015" centerz="11" radius="1">
+		<monster name="Ice Witch" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32220" centery="31018" centerz="11" radius="1">
+		<monster name="Frost Dragon" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32257" centery="31019" centerz="11" radius="1">
+		<monster name="Ice Witch" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32240" centery="31020" centerz="11" radius="1">
+		<monster name="Ice Witch" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32260" centery="31024" centerz="11" radius="1">
+		<monster name="Frost Dragon" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32274" centery="31026" centerz="11" radius="1">
+		<monster name="Frost Dragon" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32280" centery="31031" centerz="11" radius="1">
+		<monster name="Ice Witch" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32271" centery="31032" centerz="11" radius="1">
+		<monster name="Frost Dragon" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32273" centery="31039" centerz="11" radius="1">
+		<monster name="Ice Witch" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32197" centery="31043" centerz="11" radius="1">
+		<monster name="Destroyer" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32203" centery="31043" centerz="11" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32222" centery="31043" centerz="11" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32244" centery="31043" centerz="11" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32160" centery="31044" centerz="11" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32178" centery="31044" centerz="11" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32231" centery="31044" centerz="11" radius="1">
+		<monster name="Destroyer" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32240" centery="31044" centerz="11" radius="1">
+		<monster name="Destroyer" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32169" centery="31045" centerz="11" radius="3">
+		<monster name="Crystal Spider" x="0" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32214" centery="31045" centerz="11" radius="1">
+		<monster name="Destroyer" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32151" centery="31046" centerz="11" radius="3">
+		<monster name="Destroyer" x="2" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32203" centery="31046" centerz="11" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32174" centery="31047" centerz="11" radius="1">
+		<monster name="Destroyer" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32195" centery="31047" centerz="11" radius="1">
+		<monster name="Destroyer" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32239" centery="31047" centerz="11" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32186" centery="31048" centerz="11" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32152" centery="31050" centerz="11" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32221" centery="31050" centerz="11" radius="1">
+		<monster name="Acolyte of the Cult" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32221" centery="31056" centerz="11" radius="1">
+		<monster name="Destroyer" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32151" centery="31065" centerz="11" radius="3">
+		<monster name="Nightmare" x="2" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32222" centery="31066" centerz="11" radius="1">
+		<monster name="Destroyer" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32167" centery="31075" centerz="11" radius="4">
+		<monster name="Enlightened of the Cult" x="1" y="-2" z="11" spawntime="90" />
+		<monster name="Lost Soul" x="1" y="3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32148" centery="31082" centerz="11" radius="4">
+		<monster name="Crystal Spider" x="-3" y="-1" z="11" spawntime="90" />
+		<monster name="Crystal Spider" x="3" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32221" centery="31083" centerz="11" radius="4">
+		<monster name="Crystal Spider" x="0" y="-4" z="11" spawntime="90" />
+		<monster name="Crystal Spider" x="-1" y="1" z="11" spawntime="90" />
+		<monster name="Crystal Spider" x="2" y="3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32198" centery="31086" centerz="11" radius="3">
+		<monster name="Nightmare" x="2" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32165" centery="31098" centerz="11" radius="3">
+		<monster name="Nightmare" x="0" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32227" centery="31098" centerz="11" radius="3">
+		<monster name="Crystal Spider" x="1" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32201" centery="31099" centerz="11" radius="3">
+		<monster name="Enlightened of the Cult" x="1" y="-2" z="11" spawntime="90" />
+		<monster name="Enlightened of the Cult" x="-1" y="2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32151" centery="31104" centerz="11" radius="3">
+		<monster name="Nightmare" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32151" centery="31117" centerz="11" radius="3">
+		<monster name="Lost Soul" x="2" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32199" centery="31124" centerz="11" radius="3">
+		<monster name="Crystal Spider" x="1" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32227" centery="31124" centerz="11" radius="4">
+		<monster name="Enlightened of the Cult" x="-2" y="-2" z="11" spawntime="90" />
+		<monster name="Enlightened of the Cult" x="3" y="-1" z="11" spawntime="90" />
+		<monster name="Enlightened of the Cult" x="-1" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32151" centery="31129" centerz="11" radius="3">
+		<monster name="Enlightened of the Cult" x="3" y="0" z="11" spawntime="90" />
+		<monster name="Enlightened of the Cult" x="-1" y="3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32139" centery="31134" centerz="11" radius="4">
+		<monster name="Enlightened of the Cult" x="-2" y="-3" z="11" spawntime="90" />
+		<monster name="Enlightened of the Cult" x="3" y="-2" z="11" spawntime="90" />
+		<monster name="Nightmare" x="0" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32199" centery="31136" centerz="11" radius="3">
+		<monster name="Enlightened of the Cult" x="2" y="-1" z="11" spawntime="90" />
+		<monster name="Enlightened of the Cult" x="-1" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32173" centery="31145" centerz="11" radius="3">
+		<monster name="Nightmare" x="-1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32187" centery="31145" centerz="11" radius="3">
+		<monster name="Destroyer" x="0" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32215" centery="31145" centerz="11" radius="3">
+		<monster name="Nightmare" x="0" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32201" centery="31146" centerz="11" radius="3">
+		<monster name="Enlightened of the Cult" x="3" y="-1" z="11" spawntime="90" />
+		<monster name="Enlightened of the Cult" x="-1" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32151" centery="31170" centerz="11" radius="3">
+		<monster name="Nightmare" x="1" y="-1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32201" centery="31170" centerz="11" radius="3">
+		<monster name="Enlightened of the Cult" x="2" y="-1" z="11" spawntime="90" />
+		<monster name="Enlightened of the Cult" x="-2" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32215" centery="31171" centerz="11" radius="4">
+		<monster name="Enlightened of the Cult" x="-1" y="-1" z="11" spawntime="90" />
+		<monster name="Enlightened of the Cult" x="2" y="3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32151" centery="31190" centerz="11" radius="3">
+		<monster name="Enlightened of the Cult" x="-1" y="-2" z="11" spawntime="90" />
+		<monster name="Enlightened of the Cult" x="2" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32199" centery="31196" centerz="11" radius="3">
+		<monster name="Crystal Spider" x="0" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32167" centery="31197" centerz="11" radius="3">
+		<monster name="Nightmare" x="1" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32187" centery="31197" centerz="11" radius="3">
+		<monster name="Enlightened of the Cult" x="-1" y="-1" z="11" spawntime="90" />
+		<monster name="Enlightened of the Cult" x="2" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32217" centery="31197" centerz="11" radius="3">
+		<monster name="Nightmare" x="2" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32242" centery="31197" centerz="11" radius="4">
+		<monster name="Enlightened of the Cult" x="1" y="-1" z="11" spawntime="90" />
+		<monster name="Enlightened of the Cult" x="-3" y="1" z="11" spawntime="90" />
+		<monster name="Enlightened of the Cult" x="3" y="1" z="11" spawntime="90" />
+	</monster>
+</monsters>

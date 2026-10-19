@@ -1,0 +1,113 @@
+{
+  "city": "LIBERTYBAY",
+  "area": {
+    "id": 17,
+    "name": "Vandura"
+  },
+  "subareas": [
+    {
+      "id": 462,
+      "name": "Vandura"
+    },
+    {
+      "id": 95,
+      "name": "Liberty Bay Surroundings"
+    },
+    {
+      "id": 312,
+      "name": "Liberty Bay City"
+    },
+    {
+      "id": 94,
+      "name": "Vandura Cultist Hideout"
+    },
+    {
+      "id": 96,
+      "name": "Meriana"
+    },
+    {
+      "id": 282,
+      "name": "Goroma"
+    },
+    {
+      "id": 97,
+      "name": "Nargor"
+    },
+    {
+      "id": 98,
+      "name": "Talahu"
+    },
+    {
+      "id": 99,
+      "name": "Hellgorge"
+    },
+    {
+      "id": 228,
+      "name": "Vandura Quara Caves"
+    },
+    {
+      "id": 100,
+      "name": "Laguna Islands"
+    },
+    {
+      "id": 101,
+      "name": "Treasure Island"
+    },
+    {
+      "id": 102,
+      "name": "Calassa"
+    },
+    {
+      "id": 283,
+      "name": "Ramoa"
+    },
+    {
+      "id": 284,
+      "name": "Malada"
+    },
+    {
+      "id": 285,
+      "name": "Kharos"
+    },
+    {
+      "id": 391,
+      "name": "Bounac"
+    }
+  ],
+  "world": {
+    "file": "otservbr.otbm",
+    "bytes": 184797168
+  },
+  "shape": "square",
+  "bounds": {
+    "minX": 31711,
+    "minY": 32217,
+    "maxX": 32723,
+    "maxY": 33229
+  },
+  "columns": 129805,
+  "monsterScope": "box",
+  "tiles": 2780720,
+  "tileAreas": 181468,
+  "towns": [
+    {
+      "id": 14,
+      "name": "Liberty Bay",
+      "x": 32317,
+      "y": 32826,
+      "z": 7
+    },
+    {
+      "id": 25,
+      "name": "Bounac",
+      "x": 32424,
+      "y": 32445,
+      "z": 7
+    }
+  ],
+  "monsterGroups": 7835,
+  "monsterEntries": 13125,
+  "npcGroups": 68,
+  "npcEntries": 68,
+  "houses": 71
+}

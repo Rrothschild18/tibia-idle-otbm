@@ -1,0 +1,489 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32651" centery="31706" centerz="9" radius="3">
+		<monster name="Wasp" x="-2" y="1" z="9" spawntime="90" />
+		<monster name="Wasp" x="-1" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32598" centery="31707" centerz="9" radius="2">
+		<monster name="Wasp" x="-2" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32619" centery="31708" centerz="9" radius="2">
+		<monster name="Wasp" x="-1" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32630" centery="31708" centerz="9" radius="2">
+		<monster name="Wasp" x="-2" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32638" centery="31708" centerz="9" radius="2">
+		<monster name="Wasp" x="1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32648" centery="31709" centerz="9" radius="2">
+		<monster name="Wasp" x="-1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32651" centery="31734" centerz="9" radius="3">
+		<monster name="Cyclops" x="-2" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32665" centery="31734" centerz="9" radius="3">
+		<monster name="Cyclops" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32679" centery="31734" centerz="9" radius="3">
+		<monster name="Cyclops Drone" x="2" y="-2" z="9" spawntime="90" />
+		<monster name="Cyclops Drone" x="3" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32658" centery="31741" centerz="9" radius="3">
+		<monster name="Cyclops" x="0" y="-3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32679" centery="31741" centerz="9" radius="3">
+		<monster name="Cyclops Smith" x="1" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32686" centery="31748" centerz="9" radius="3">
+		<monster name="Cyclops" x="-3" y="-3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32693" centery="31748" centerz="9" radius="3">
+		<monster name="Cyclops Drone" x="-2" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32604" centery="31752" centerz="9" radius="1">
+		<monster name="Goblin Leader" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32595" centery="31759" centerz="9" radius="2">
+		<monster name="Goblin" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32658" centery="31762" centerz="9" radius="3">
+		<monster name="Cyclops" x="-1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32679" centery="31762" centerz="9" radius="3">
+		<monster name="Cyclops Drone" x="0" y="-1" z="9" spawntime="90" />
+		<monster name="Cyclops" x="-2" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32595" centery="31771" centerz="9" radius="2">
+		<monster name="Goblin" x="1" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32651" centery="31776" centerz="9" radius="3">
+		<monster name="Cyclops" x="1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32679" centery="31776" centerz="9" radius="3">
+		<monster name="Cyclops Drone" x="1" y="-1" z="9" spawntime="90" />
+		<monster name="Cyclops Drone" x="-1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32592" centery="31777" centerz="9" radius="1">
+		<monster name="Goblin" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32603" centery="31777" centerz="9" radius="1">
+		<monster name="Goblin" x="1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32600" centery="31780" centerz="9" radius="1">
+		<monster name="Goblin" x="-1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32592" centery="31781" centerz="9" radius="1">
+		<monster name="Goblin" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32609" centery="31782" centerz="9" radius="1">
+		<monster name="Goblin" x="-1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32602" centery="31786" centerz="9" radius="1">
+		<monster name="Goblin" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32609" centery="31786" centerz="9" radius="1">
+		<monster name="Goblin" x="-1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32592" centery="31787" centerz="9" radius="1">
+		<monster name="Goblin" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32593" centery="31792" centerz="9" radius="2">
+		<monster name="Pig" x="0" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32600" centery="31792" centerz="9" radius="2">
+		<monster name="Pig" x="0" y="-2" z="9" spawntime="90" />
+		<monster name="Pig" x="-2" y="-1" z="9" spawntime="90" />
+		<monster name="Pig" x="2" y="1" z="9" spawntime="90" />
+		<monster name="Pig" x="0" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32618" centery="31816" centerz="9" radius="1">
+		<monster name="Rotworm" x="0" y="-1" z="9" spawntime="90" />
+		<monster name="Rotworm" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32600" centery="31818" centerz="9" radius="2">
+		<monster name="Bat" x="2" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32608" centery="31825" centerz="9" radius="1">
+		<monster name="Bat" x="-1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32632" centery="31707" centerz="10" radius="2">
+		<monster name="Wasp" x="2" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32638" centery="31731" centerz="10" radius="1">
+		<monster name="Eyeless Devourer" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32642" centery="31731" centerz="10" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32654" centery="31731" centerz="10" radius="1">
+		<monster name="Eyeless Devourer" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32663" centery="31731" centerz="10" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32604" centery="31732" centerz="10" radius="1">
+		<monster name="Afflicted Strider" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32608" centery="31732" centerz="10" radius="1">
+		<monster name="Eyeless Devourer" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32629" centery="31732" centerz="10" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32611" centery="31733" centerz="10" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32617" centery="31733" centerz="10" radius="1">
+		<monster name="Afflicted Strider" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32672" centery="31733" centerz="10" radius="1">
+		<monster name="Eyeless Devourer" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32623" centery="31735" centerz="10" radius="1">
+		<monster name="Eyeless Devourer" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32673" centery="31736" centerz="10" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32615" centery="31738" centerz="10" radius="1">
+		<monster name="Eyeless Devourer" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32612" centery="31742" centerz="10" radius="1">
+		<monster name="Eyeless Devourer" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32640" centery="31743" centerz="10" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32646" centery="31743" centerz="10" radius="1">
+		<monster name="Afflicted Strider" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32670" centery="31743" centerz="10" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32654" centery="31745" centerz="10" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32610" centery="31746" centerz="10" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32614" centery="31750" centerz="10" radius="1">
+		<monster name="Eyeless Devourer" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32637" centery="31750" centerz="10" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32654" centery="31752" centerz="10" radius="1">
+		<monster name="Eyeless Devourer" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32675" centery="31752" centerz="10" radius="1">
+		<monster name="Afflicted Strider" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32683" centery="31752" centerz="10" radius="1">
+		<monster name="Eyeless Devourer" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32685" centery="31753" centerz="10" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="10" spawntime="60" />
+		<monster name="Eyeless Devourer" x="-1" y="1" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32652" centery="31757" centerz="10" radius="1">
+		<monster name="Eyeless Devourer" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32622" centery="31758" centerz="10" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32638" centery="31758" centerz="10" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32655" centery="31758" centerz="10" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32637" centery="31762" centerz="10" radius="1">
+		<monster name="Eyeless Devourer" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32673" centery="31766" centerz="10" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32676" centery="31768" centerz="10" radius="1">
+		<monster name="Eyeless Devourer" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32611" centery="31770" centerz="10" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32622" centery="31770" centerz="10" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32627" centery="31770" centerz="10" radius="1">
+		<monster name="Eyeless Devourer" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32632" centery="31770" centerz="10" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32637" centery="31770" centerz="10" radius="1">
+		<monster name="Afflicted Strider" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32647" centery="31771" centerz="10" radius="1">
+		<monster name="Eyeless Devourer" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32652" centery="31772" centerz="10" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32611" centery="31776" centerz="10" radius="1">
+		<monster name="Eyeless Devourer" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32671" centery="31777" centerz="10" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32685" centery="31777" centerz="10" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32611" centery="31780" centerz="10" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32624" centery="31781" centerz="10" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32648" centery="31781" centerz="10" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32642" centery="31782" centerz="10" radius="1">
+		<monster name="Eyeless Devourer" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32637" centery="31783" centerz="10" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32610" centery="31784" centerz="10" radius="1">
+		<monster name="Eyeless Devourer" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32683" centery="31784" centerz="10" radius="1">
+		<monster name="Eyeless Devourer" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32627" centery="31785" centerz="10" radius="1">
+		<monster name="Eyeless Devourer" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32663" centery="31786" centerz="10" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32654" centery="31788" centerz="10" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32679" centery="31788" centerz="10" radius="1">
+		<monster name="Eyeless Devourer" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32635" centery="31790" centerz="10" radius="1">
+		<monster name="Afflicted Strider" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32663" centery="31790" centerz="10" radius="1">
+		<monster name="Eyeless Devourer" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32681" centery="31790" centerz="10" radius="1">
+		<monster name="Eyeless Devourer" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32612" centery="31791" centerz="10" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32643" centery="31793" centerz="10" radius="1">
+		<monster name="Eyeless Devourer" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32628" centery="31794" centerz="10" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32665" centery="31794" centerz="10" radius="1">
+		<monster name="Afflicted Strider" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32681" centery="31795" centerz="10" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32606" centery="31796" centerz="10" radius="1">
+		<monster name="Eyeless Devourer" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32626" centery="31797" centerz="10" radius="1">
+		<monster name="Eyeless Devourer" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32604" centery="31798" centerz="10" radius="1">
+		<monster name="Afflicted Strider" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32671" centery="31798" centerz="10" radius="1">
+		<monster name="Eyeless Devourer" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32678" centery="31798" centerz="10" radius="1">
+		<monster name="Afflicted Strider" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32662" centery="31799" centerz="10" radius="1">
+		<monster name="Eyeless Devourer" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32665" centery="31799" centerz="10" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32607" centery="31800" centerz="10" radius="1">
+		<monster name="Eyeless Devourer" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32603" centery="31801" centerz="10" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32622" centery="31801" centerz="10" radius="1">
+		<monster name="Eyeless Devourer" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32624" centery="31801" centerz="10" radius="1">
+		<monster name="Eyeless Devourer" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32627" centery="31801" centerz="10" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32647" centery="31801" centerz="10" radius="1">
+		<monster name="Afflicted Strider" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32654" centery="31801" centerz="10" radius="1">
+		<monster name="Afflicted Strider" x="0" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="32643" centery="31723" centerz="11" radius="1">
+		<monster name="Afflicted Strider" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32632" centery="31728" centerz="11" radius="1">
+		<monster name="Afflicted Strider" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32644" centery="31728" centerz="11" radius="1">
+		<monster name="Eyeless Devourer" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32624" centery="31729" centerz="11" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32607" centery="31731" centerz="11" radius="1">
+		<monster name="Afflicted Strider" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32613" centery="31731" centerz="11" radius="1">
+		<monster name="Eyeless Devourer" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32617" centery="31731" centerz="11" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32633" centery="31732" centerz="11" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32605" centery="31735" centerz="11" radius="1">
+		<monster name="Eyeless Devourer" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32618" centery="31735" centerz="11" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32651" centery="31735" centerz="11" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32660" centery="31736" centerz="11" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32617" centery="31741" centerz="11" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32654" centery="31741" centerz="11" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32660" centery="31741" centerz="11" radius="1">
+		<monster name="Afflicted Strider" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32658" centery="31744" centerz="11" radius="1">
+		<monster name="Eyeless Devourer" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32617" centery="31746" centerz="11" radius="1">
+		<monster name="Eyeless Devourer" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32614" centery="31750" centerz="11" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32608" centery="31751" centerz="11" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32630" centery="31752" centerz="11" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32608" centery="31754" centerz="11" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32618" centery="31754" centerz="11" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32663" centery="31755" centerz="11" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32619" centery="31757" centerz="11" radius="1">
+		<monster name="Afflicted Strider" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32636" centery="31758" centerz="11" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32621" centery="31765" centerz="11" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32658" centery="31766" centerz="11" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32661" centery="31766" centerz="11" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32641" centery="31767" centerz="11" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32609" centery="31769" centerz="11" radius="1">
+		<monster name="Afflicted Strider" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32624" centery="31770" centerz="11" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32661" centery="31770" centerz="11" radius="1">
+		<monster name="Afflicted Strider" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32658" centery="31771" centerz="11" radius="1">
+		<monster name="Eyeless Devourer" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32628" centery="31774" centerz="11" radius="1">
+		<monster name="Afflicted Strider" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32662" centery="31775" centerz="11" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32632" centery="31776" centerz="11" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32637" centery="31777" centerz="11" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32629" centery="31778" centerz="11" radius="1">
+		<monster name="Eyeless Devourer" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32611" centery="31779" centerz="11" radius="1">
+		<monster name="Eyeless Devourer" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32639" centery="31781" centerz="11" radius="1">
+		<monster name="Afflicted Strider" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32613" centery="31783" centerz="11" radius="1">
+		<monster name="Afflicted Strider" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32618" centery="31783" centerz="11" radius="1">
+		<monster name="Blemished Spawn" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32581" centery="31804" centerz="11" radius="3">
+		<monster name="Dragon" x="1" y="-1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32595" centery="31804" centerz="11" radius="3">
+		<monster name="Dragon" x="-1" y="-2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32616" centery="31811" centerz="11" radius="3">
+		<monster name="Dragon" x="1" y="-1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32623" centery="31811" centerz="11" radius="3">
+		<monster name="Dragon" x="-2" y="3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32588" centery="31818" centerz="11" radius="3">
+		<monster name="Dragon" x="1" y="-2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32616" centery="31818" centerz="11" radius="3">
+		<monster name="Dragon" x="2" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32581" centery="31825" centerz="11" radius="3">
+		<monster name="Dragon" x="3" y="-2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32609" centery="31825" centerz="11" radius="3">
+		<monster name="Dragon" x="-3" y="-1" z="11" spawntime="90" />
+	</monster>
+</monsters>
