@@ -1,0 +1,40 @@
+# EDRON: 30 NPC(s) fora do fragmento.
+#
+# Descarte intencional, não bug de mapa — quem está aqui não faz nada que
+# o jogo idle possa oferecer. Nó sem entrada no grafo é outro relatório
+# (travel-graph-rejections.txt). Para resgatar um destes, ou ele passa a ter
+# serviço no .lua do Canary, ou entra em extractor/npc-allowlist.json com motivo.
+
+## sem shop e sem serviço (25)
+  EDRON-NPC-a-majestic-warwolf  A Majestic Warwolf
+  EDRON-NPC-albert  Albert
+  EDRON-NPC-avar-tar  Avar Tar
+  EDRON-NPC-chief-grarkharok  Chief Grarkharok
+  EDRON-NPC-daniel-steelsoul  Daniel Steelsoul
+  EDRON-NPC-dedoras  Dedoras
+  EDRON-NPC-edron-guardsman  Edron Guardsman
+  EDRON-NPC-edron-guardsman  Edron Guardsman
+  EDRON-NPC-falk  Falk
+  EDRON-NPC-falonzo  Falonzo
+  EDRON-NPC-ikassis  Ikassis
+  EDRON-NPC-jack  Jack
+  EDRON-NPC-jerom  Jerom
+  EDRON-NPC-messenger-of-heaven  Messenger of Heaven
+  EDRON-NPC-mother-of-jack  Mother Of Jack
+  EDRON-NPC-myzzi  Myzzi
+  EDRON-NPC-sane-mage  Sane Mage
+  EDRON-NPC-servant-sentry  Servant Sentry
+  EDRON-NPC-shoddy-beggar  Shoddy Beggar
+  EDRON-NPC-sinclair  Sinclair
+  EDRON-NPC-sister-of-jack  Sister Of Jack
+  EDRON-NPC-spectulus  Spectulus
+  EDRON-NPC-telas-golem  Telas Golem
+  EDRON-NPC-tereban  Tereban
+  EDRON-NPC-wyrdin  Wyrdin
+
+## serviço só de spell (5)
+  EDRON-NPC-eliza  Eliza
+  EDRON-NPC-gundralph  Gundralph
+  EDRON-NPC-puffels  Puffels
+  EDRON-NPC-ursula  Ursula
+  EDRON-NPC-zoltan  Zoltan

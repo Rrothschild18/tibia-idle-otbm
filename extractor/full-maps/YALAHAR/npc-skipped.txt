@@ -1,0 +1,39 @@
+# YALAHAR: 29 NPC(s) fora do fragmento.
+#
+# Descarte intencional, não bug de mapa — quem está aqui não faz nada que
+# o jogo idle possa oferecer. Nó sem entrada no grafo é outro relatório
+# (travel-graph-rejections.txt). Para resgatar um destes, ou ele passa a ter
+# serviço no .lua do Canary, ou entra em extractor/npc-allowlist.json com motivo.
+
+## sem shop e sem serviço (26)
+  YALAHAR-NPC-a-grumpy-cyclops  A Grumpy Cyclops
+  YALAHAR-NPC-barry  Barry
+  YALAHAR-NPC-bruce  Bruce
+  YALAHAR-NPC-frok-the-guard  Frok, The Guard
+  YALAHAR-NPC-golem-guardian  Golem Guardian
+  YALAHAR-NPC-golem-guardian  Golem Guardian
+  YALAHAR-NPC-guide-edna  Guide Edna
+  YALAHAR-NPC-hal  Hal
+  YALAHAR-NPC-harog  Harog
+  YALAHAR-NPC-karith  Karith
+  YALAHAR-NPC-kihil-the-guard  Kihil, The Guard
+  YALAHAR-NPC-lisander  Lisander
+  YALAHAR-NPC-menacing-mummy  Menacing Mummy
+  YALAHAR-NPC-mr-west  Mr. West
+  YALAHAR-NPC-oliver  Oliver
+  YALAHAR-NPC-orc-berserker  Orc Berserker
+  YALAHAR-NPC-ortheus  Ortheus
+  YALAHAR-NPC-palimuth  Palimuth
+  YALAHAR-NPC-pythius-the-rotten  Pythius The Rotten
+  YALAHAR-NPC-reed  Reed
+  YALAHAR-NPC-tamerin  Tamerin
+  YALAHAR-NPC-tarak-inner  Tarak (Inner)
+  YALAHAR-NPC-tarak-sunken  Tarak (Sunken)
+  YALAHAR-NPC-timothy  Timothy
+  YALAHAR-NPC-tony  Tony
+  YALAHAR-NPC-yalahari  Yalahari
+
+## serviço só de spell (3)
+  YALAHAR-NPC-ethan  Ethan
+  YALAHAR-NPC-tamara  Tamara
+  YALAHAR-NPC-zarak  Zarak

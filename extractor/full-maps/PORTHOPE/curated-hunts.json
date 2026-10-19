@@ -241,6 +241,121 @@
       "walkTilesFromTemple": 213,
       "tiles": 89308,
       "spawns": 413
+    },
+    {
+      "id": "PORTHOPE-HUNT-0107",
+      "type": "HUNT",
+      "name": "Kongras banuta -1",
+      "slug": "kongras-banuta-z9-z9",
+      "folder": "PORTHOPE-HUNT-0107_kongras-banuta-z9-z9",
+      "floors": [
+        9
+      ],
+      "cropFloors": [
+        9
+      ],
+      "candidateIds": [],
+      "creatures": null,
+      "extent": null,
+      "subareaId": null,
+      "entrance": {
+        "x": 32802,
+        "y": 32548,
+        "z": 9
+      },
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "PORTHOPE-HUNT-0108",
+      "type": "HUNT",
+      "name": "Kongras -2",
+      "slug": "banuta-z8",
+      "folder": "PORTHOPE-HUNT-0108_banuta-z8",
+      "floors": [
+        8
+      ],
+      "cropFloors": [
+        8
+      ],
+      "candidateIds": [],
+      "creatures": null,
+      "extent": null,
+      "subareaId": null,
+      "entrance": {
+        "x": 32779,
+        "y": 32522,
+        "z": 8
+      },
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "PORTHOPE-HUNT-0109",
+      "type": "HUNT",
+      "name": "Giants Spiders Forbidden Lands",
+      "slug": "kha-zeel-dragon-lairs-tiquanda-z8",
+      "folder": "PORTHOPE-HUNT-0109_kha-zeel-dragon-lairs-tiquanda-z8",
+      "floors": [
+        8
+      ],
+      "cropFloors": [
+        8
+      ],
+      "candidateIds": [],
+      "creatures": null,
+      "extent": null,
+      "subareaId": null,
+      "entrance": {
+        "x": 32961,
+        "y": 32545,
+        "z": 8
+      },
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "PORTHOPE-HUNT-0110",
+      "type": "HUNT",
+      "name": "Behemot Forbinden Islands",
+      "slug": "kha-zeel-dragon-lairs-tiquanda-z8",
+      "folder": "PORTHOPE-HUNT-0110_kha-zeel-dragon-lairs-tiquanda-z8",
+      "floors": [
+        8
+      ],
+      "cropFloors": [
+        8
+      ],
+      "candidateIds": [],
+      "creatures": null,
+      "extent": null,
+      "subareaId": null,
+      "entrance": {
+        "x": 33015,
+        "y": 32564,
+        "z": 8
+      },
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "PORTHOPE-HUNT-0111",
+      "type": "HUNT",
+      "name": "Hydra Forbidden Islands",
+      "slug": "kha-zeel-dragon-lairs-tiquanda-z8",
+      "folder": "PORTHOPE-HUNT-0111_kha-zeel-dragon-lairs-tiquanda-z8",
+      "floors": [
+        8
+      ],
+      "cropFloors": [
+        8
+      ],
+      "candidateIds": [],
+      "creatures": null,
+      "extent": null,
+      "subareaId": null,
+      "entrance": {
+        "x": 32988,
+        "y": 32523,
+        "z": 8
+      },
+      "walkTilesFromTemple": null
     }
   ]
 }

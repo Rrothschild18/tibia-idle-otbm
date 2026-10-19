@@ -20,7 +20,10 @@ print('1' if [z for z,c in d['floors'].items() if c and int(z) not in excl] else
       echo "[!!] $id: apply_hunt_mask falhou — $(tail -1 /tmp/mask-$id.log)"; continue
     fi
     grep -E "^\[OK\] re-corte|fundo \(geometria" /tmp/mask-$id.log | sed "s/^/     /"
-    folder=$(basename "$(ls -d extractor/maps/"$city"/"$id"_* 2>/dev/null | head -1)")
+    # `-not -name '*_window'`: o `build_hunt_window.py` deixa um recorte
+    # `<ID>_window` em maps/, e um `head -1` do glob pegava ele em vez da hunt —
+    # foi assim que um bundle `ZAO-HUNT-0112_window` foi publicado como hunt.
+    folder=$(basename "$(ls -d extractor/maps/"$city"/"$id"_* 2>/dev/null | grep -v '_window$' | head -1)")
     [ -n "$folder" ] || { echo "[!!] $id: pasta de recorte não achada"; continue; }
     uv run python extractor/scripts/publish.py "$folder" | grep -oE "^\[OK\] ${id}[^:]*" || echo "[!!] $id: publish falhou"
     rm -f /tmp/mask-$id.log

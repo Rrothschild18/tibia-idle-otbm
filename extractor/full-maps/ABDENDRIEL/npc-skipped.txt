@@ -1,0 +1,27 @@
+# ABDENDRIEL: 17 NPC(s) fora do fragmento.
+#
+# Descarte intencional, não bug de mapa — quem está aqui não faz nada que
+# o jogo idle possa oferecer. Nó sem entrada no grafo é outro relatório
+# (travel-graph-rejections.txt). Para resgatar um destes, ou ele passa a ter
+# serviço no .lua do Canary, ou entra em extractor/npc-allowlist.json com motivo.
+
+## sem shop e sem serviço (15)
+  ABDENDRIEL-NPC-a-sweaty-cyclops  A Sweaty Cyclops
+  ABDENDRIEL-NPC-alkestios  Alkestios
+  ABDENDRIEL-NPC-amarie  Amarie
+  ABDENDRIEL-NPC-an-old-dragonlord  An Old Dragonlord
+  ABDENDRIEL-NPC-benevola  Benevola
+  ABDENDRIEL-NPC-ceiron  Ceiron
+  ABDENDRIEL-NPC-demon-skeleton  Demon Skeleton
+  ABDENDRIEL-NPC-elathriel  Elathriel
+  ABDENDRIEL-NPC-elf-guard  Elf Guard
+  ABDENDRIEL-NPC-larfion-the-shaman  Larfion The Shaman
+  ABDENDRIEL-NPC-lavirias  Lavirias
+  ABDENDRIEL-NPC-mysterious-ornate-chest  Mysterious Ornate Chest
+  ABDENDRIEL-NPC-roderick  Roderick
+  ABDENDRIEL-NPC-shirith  Shirith
+  ABDENDRIEL-NPC-tooth-fairy  Tooth Fairy
+
+## serviço só de spell (2)
+  ABDENDRIEL-NPC-eroth  Eroth
+  ABDENDRIEL-NPC-faluae  Faluae

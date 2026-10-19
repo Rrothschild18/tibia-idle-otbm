@@ -1,0 +1,19 @@
+# ANKRAHMUN: 9 NPC(s) fora do fragmento.
+#
+# Descarte intencional, não bug de mapa — quem está aqui não faz nada que
+# o jogo idle possa oferecer. Nó sem entrada no grafo é outro relatório
+# (travel-graph-rejections.txt). Para resgatar um destes, ou ele passa a ter
+# serviço no .lua do Canary, ou entra em extractor/npc-allowlist.json com motivo.
+
+## sem shop e sem serviço (8)
+  ANKRAHMUN-NPC-an-ancient-priest  An Ancient Priest
+  ANKRAHMUN-NPC-arkhothep  Arkhothep
+  ANKRAHMUN-NPC-baa-leal  Baa'Leal
+  ANKRAHMUN-NPC-malor  Malor
+  ANKRAHMUN-NPC-melchior  Melchior
+  ANKRAHMUN-NPC-messenger-of-heaven  Messenger of Heaven
+  ANKRAHMUN-NPC-rata-mari  Rata'Mari
+  ANKRAHMUN-NPC-ubaid  Ubaid
+
+## serviço só de spell (1)
+  ANKRAHMUN-NPC-ormuhn  Ormuhn

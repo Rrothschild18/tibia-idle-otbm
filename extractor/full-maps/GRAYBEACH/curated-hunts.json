@@ -238,6 +238,75 @@
       "walkTilesFromTemple": 230,
       "tiles": 20673,
       "spawns": 222
+    },
+    {
+      "id": "GRAYBEACH-HUNT-0107",
+      "type": "HUNT",
+      "name": "Hive Tower z6",
+      "slug": "hive-tower-z6",
+      "folder": "GRAYBEACH-HUNT-0107_hive-tower-z6",
+      "floors": [
+        6
+      ],
+      "cropFloors": [
+        6
+      ],
+      "candidateIds": [],
+      "creatures": null,
+      "extent": null,
+      "subareaId": null,
+      "entrance": {
+        "x": 33508,
+        "y": 31207,
+        "z": 6
+      },
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "GRAYBEACH-HUNT-0108",
+      "type": "HUNT",
+      "name": "Hive Tower z4",
+      "slug": "hive-tower-z4",
+      "folder": "GRAYBEACH-HUNT-0108_hive-tower-z4",
+      "floors": [
+        4
+      ],
+      "cropFloors": [
+        4
+      ],
+      "candidateIds": [],
+      "creatures": null,
+      "extent": null,
+      "subareaId": null,
+      "entrance": {
+        "x": 33516,
+        "y": 31207,
+        "z": 4
+      },
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "GRAYBEACH-HUNT-0109",
+      "type": "HUNT",
+      "name": "Hive Tower Surface",
+      "slug": "hive-tower-z7",
+      "folder": "GRAYBEACH-HUNT-0109_hive-tower-z7",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [],
+      "creatures": null,
+      "extent": null,
+      "subareaId": null,
+      "entrance": {
+        "x": 33531,
+        "y": 31233,
+        "z": 7
+      },
+      "walkTilesFromTemple": null
     }
   ]
 }

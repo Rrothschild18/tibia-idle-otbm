@@ -1,0 +1,28 @@
+# SVARGROND: 18 NPC(s) fora do fragmento.
+#
+# Descarte intencional, não bug de mapa — quem está aqui não faz nada que
+# o jogo idle possa oferecer. Nó sem entrada no grafo é outro relatório
+# (travel-graph-rejections.txt). Para resgatar um destes, ou ele passa a ter
+# serviço no .lua do Canary, ou entra em extractor/npc-allowlist.json com motivo.
+
+## sem shop e sem serviço (16)
+  SVARGROND-NPC-a-restless-soul  A Restless Soul
+  SVARGROND-NPC-a-starving-dog  A Starving Dog
+  SVARGROND-NPC-captain-haba  Captain Haba
+  SVARGROND-NPC-eirik  Eirik
+  SVARGROND-NPC-freezhild  Freezhild
+  SVARGROND-NPC-fynn  Fynn
+  SVARGROND-NPC-gelidrazah-s-thirst  Gelidrazah'S Thirst
+  SVARGROND-NPC-halvar  Halvar
+  SVARGROND-NPC-hjaern  Hjaern
+  SVARGROND-NPC-iskan  Iskan
+  SVARGROND-NPC-messenger-of-heaven  Messenger of Heaven
+  SVARGROND-NPC-nilsor  Nilsor
+  SVARGROND-NPC-nor  Nor
+  SVARGROND-NPC-sinatuki  Sinatuki
+  SVARGROND-NPC-sirik  Sirik
+  SVARGROND-NPC-sven  Sven
+
+## serviço só de spell (2)
+  SVARGROND-NPC-hawkyr  Hawkyr
+  SVARGROND-NPC-thorwulf  Thorwulf

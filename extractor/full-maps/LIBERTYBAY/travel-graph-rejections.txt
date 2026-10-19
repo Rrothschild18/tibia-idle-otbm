@@ -1,0 +1,14 @@
+# Nós sem entrada no grafo de viagem — LIBERTYBAY
+#
+# Gerado por build_travel_fragment.py. Nada aqui entrou no fragmento: são os nós que
+# ninguém consegue alcançar viajando, e o que fazer com cada um.
+
+## poi-without-edge (3)
+POI com coordenada e sem aresta — a placa existe no OTBM, mas o tile dela não
+alcança nenhum outro POI da cidade (ilhado por parede/água, ou a placa está num
+tile intransponível). Abra a coordenada no editor de mapa e mova a placa pra um
+tile caminhável ligado ao resto da cidade.
+
+  LIBERTYBAY-NPC-augustin  (NPC)  x=32393 y=32470 z=4
+  LIBERTYBAY-NPC-captain-max-calassa  (NPC)  x=31915 y=32710 z=6
+  LIBERTYBAY-NPC-sebastian-nargor  (NPC)  x=32027 y=32814 z=7

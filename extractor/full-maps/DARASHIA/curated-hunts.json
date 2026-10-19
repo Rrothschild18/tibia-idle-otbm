@@ -411,6 +411,146 @@
       "walkTilesFromTemple": null,
       "tiles": 55804,
       "spawns": 173
+    },
+    {
+      "id": "DARASHIA-HUNT-0107",
+      "type": "HUNT",
+      "name": "Hyaena Lairs",
+      "slug": "hyaena-lairs-z11",
+      "folder": "DARASHIA-HUNT-0107_hyaena-lairs-z11",
+      "floors": [
+        11
+      ],
+      "cropFloors": [
+        11
+      ],
+      "candidateIds": [],
+      "creatures": null,
+      "extent": null,
+      "subareaId": null,
+      "entrance": {
+        "x": 33174,
+        "y": 32382,
+        "z": 11
+      },
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "DARASHIA-HUNT-0108",
+      "type": "HUNT",
+      "name": "Hyaena Lairs 2",
+      "slug": "hyaena-lairs-z10",
+      "folder": "DARASHIA-HUNT-0108_hyaena-lairs-z10",
+      "floors": [
+        10
+      ],
+      "cropFloors": [
+        10
+      ],
+      "candidateIds": [],
+      "creatures": null,
+      "extent": null,
+      "subareaId": null,
+      "entrance": {
+        "x": 33222,
+        "y": 32351,
+        "z": 10
+      },
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "DARASHIA-HUNT-0112",
+      "type": "HUNT",
+      "name": "Dragon Lair North DL",
+      "slug": "dragon-lords-northern-darama-desert-z10",
+      "folder": "DARASHIA-HUNT-0112_dragon-lords-northern-darama-desert-z10",
+      "floors": [
+        11,
+        12
+      ],
+      "cropFloors": [
+        11,
+        12
+      ],
+      "candidateIds": [],
+      "creatures": null,
+      "extent": null,
+      "subareaId": null,
+      "entrance": {
+        "x": 33267,
+        "y": 32301,
+        "z": 11
+      },
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "DARASHIA-HUNT-0113",
+      "type": "HUNT",
+      "name": "Wyrm Drefia",
+      "slug": "drefia-wyrm-caves-z13",
+      "folder": "DARASHIA-HUNT-0113_drefia-wyrm-caves-z13",
+      "floors": [
+        13
+      ],
+      "cropFloors": [
+        13
+      ],
+      "candidateIds": [],
+      "creatures": null,
+      "extent": null,
+      "subareaId": null,
+      "entrance": {
+        "x": 33073,
+        "y": 32395,
+        "z": 13
+      },
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "DARASHIA-HUNT-0114",
+      "type": "HUNT",
+      "name": "Drefia Elder Wyrm",
+      "slug": "drefia-wyrm-caves-z14",
+      "folder": "DARASHIA-HUNT-0114_drefia-wyrm-caves-z14",
+      "floors": [
+        14
+      ],
+      "cropFloors": [
+        14
+      ],
+      "candidateIds": [],
+      "creatures": null,
+      "extent": null,
+      "subareaId": null,
+      "entrance": {
+        "x": 33088,
+        "y": 32385,
+        "z": 14
+      },
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "DARASHIA-HUNT-0116",
+      "type": "HUNT",
+      "name": "Dragon Lair North",
+      "slug": "dragon-lords-northern-darama-desert-z10",
+      "folder": "DARASHIA-HUNT-0116_dragon-lords-northern-darama-desert-z10",
+      "floors": [
+        10
+      ],
+      "cropFloors": [
+        10
+      ],
+      "candidateIds": [],
+      "creatures": null,
+      "extent": null,
+      "subareaId": null,
+      "entrance": {
+        "x": 33257,
+        "y": 32278,
+        "z": 10
+      },
+      "walkTilesFromTemple": null
     }
   ]
 }

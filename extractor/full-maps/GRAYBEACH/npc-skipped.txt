@@ -1,0 +1,12 @@
+# GRAYBEACH: 4 NPC(s) fora do fragmento.
+#
+# Descarte intencional, não bug de mapa — quem está aqui não faz nada que
+# o jogo idle possa oferecer. Nó sem entrada no grafo é outro relatório
+# (travel-graph-rejections.txt). Para resgatar um destes, ou ele passa a ter
+# serviço no .lua do Canary, ou entra em extractor/npc-allowlist.json com motivo.
+
+## sem shop e sem serviço (4)
+  GRAYBEACH-NPC-flickering-soul  Flickering Soul
+  GRAYBEACH-NPC-old-rock-boy  Old Rock Boy
+  GRAYBEACH-NPC-rock-in-a-hard-place  Rock In A Hard Place
+  GRAYBEACH-NPC-rock-steady  Rock Steady

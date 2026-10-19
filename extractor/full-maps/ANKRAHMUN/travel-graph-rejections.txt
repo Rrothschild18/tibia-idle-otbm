@@ -1,0 +1,14 @@
+# Nós sem entrada no grafo de viagem — ANKRAHMUN
+#
+# Gerado por build_travel_fragment.py. Nada aqui entrou no fragmento: são os nós que
+# ninguém consegue alcançar viajando, e o que fazer com cada um.
+
+## hunt-without-poi (3)
+Hunt sem POI de entrada — o mapa da hunt existe em extractor/maps/, mas nenhuma placa
+marca por onde se entra nela. A hunt não tem coordenada de mundo (o startPosition dela é
+posição dentro do próprio mapa da hunt), então só o OTBM sabe onde fica: coloque a placa
+com esse id na entrada, no editor de mapa.
+
+  ANKRAHMUN-HUNT-0111  dragons-kha-zeel-dragon-lairs-z7-z7  sem coordenada de mundo
+  ANKRAHMUN-HUNT-0111  window  sem coordenada de mundo
+  ANKRAHMUN-HUNT-0112  daramian-scarab-lair-z10  sem coordenada de mundo

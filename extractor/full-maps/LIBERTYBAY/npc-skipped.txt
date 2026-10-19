@@ -1,0 +1,55 @@
+# LIBERTYBAY: 45 NPC(s) fora do fragmento.
+#
+# Descarte intencional, não bug de mapa — quem está aqui não faz nada que
+# o jogo idle possa oferecer. Nó sem entrada no grafo é outro relatório
+# (travel-graph-rejections.txt). Para resgatar um destes, ou ele passa a ter
+# serviço no .lua do Canary, ou entra em extractor/npc-allowlist.json com motivo.
+
+## sem shop e sem serviço (42)
+  LIBERTYBAY-NPC-a-behemoth  A Behemoth
+  LIBERTYBAY-NPC-a-drillworm  A Drillworm
+  LIBERTYBAY-NPC-a-vulcongra  A Vulcongra
+  LIBERTYBAY-NPC-admiral-wyrmslicer  Admiral Wyrmslicer
+  LIBERTYBAY-NPC-an-idol  An Idol
+  LIBERTYBAY-NPC-bertram  Bertram
+  LIBERTYBAY-NPC-braden  Braden
+  LIBERTYBAY-NPC-bradford  Bradford
+  LIBERTYBAY-NPC-cameron  Cameron
+  LIBERTYBAY-NPC-captain-waverider  Captain Waverider
+  LIBERTYBAY-NPC-captain-waverider  Captain Waverider
+  LIBERTYBAY-NPC-danlon  Danlon
+  LIBERTYBAY-NPC-doug  Doug
+  LIBERTYBAY-NPC-eleonore  Eleonore
+  LIBERTYBAY-NPC-erayo  Erayo
+  LIBERTYBAY-NPC-fergus  Fergus
+  LIBERTYBAY-NPC-gnome-trooper  Gnome Trooper
+  LIBERTYBAY-NPC-gordon  Gordon
+  LIBERTYBAY-NPC-hamilton  Hamilton
+  LIBERTYBAY-NPC-irvin  Irvin
+  LIBERTYBAY-NPC-jack-fate-goroma  Jack Fate (Goroma)
+  LIBERTYBAY-NPC-jason  Jason
+  LIBERTYBAY-NPC-john-bounac  John (Bounac)
+  LIBERTYBAY-NPC-klaus  Klaus
+  LIBERTYBAY-NPC-larry  Larry
+  LIBERTYBAY-NPC-marcus  Marcus
+  LIBERTYBAY-NPC-marina  Marina
+  LIBERTYBAY-NPC-meraya  Meraya
+  LIBERTYBAY-NPC-morgan  Morgan
+  LIBERTYBAY-NPC-norris  Norris
+  LIBERTYBAY-NPC-ocelus  Ocelus
+  LIBERTYBAY-NPC-one-eyed-joe  One-Eyed Joe
+  LIBERTYBAY-NPC-parlan  Parlan
+  LIBERTYBAY-NPC-percy-silverhand  Percy Silverhand
+  LIBERTYBAY-NPC-polly  Polly
+  LIBERTYBAY-NPC-raymond-striker  Raymond Striker
+  LIBERTYBAY-NPC-ross  Ross
+  LIBERTYBAY-NPC-skip  Skip
+  LIBERTYBAY-NPC-squeekquek  Squeekquek
+  LIBERTYBAY-NPC-theodore-loveless  Theodore Loveless
+  LIBERTYBAY-NPC-torence  Torence
+  LIBERTYBAY-NPC-vulturenose  Vulturenose
+
+## serviço só de spell (3)
+  LIBERTYBAY-NPC-charlotta  Charlotta
+  LIBERTYBAY-NPC-isolde  Isolde
+  LIBERTYBAY-NPC-tristan  Tristan

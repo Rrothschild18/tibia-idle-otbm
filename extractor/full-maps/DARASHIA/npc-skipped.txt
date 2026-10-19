@@ -1,0 +1,29 @@
+# DARASHIA: 19 NPC(s) fora do fragmento.
+#
+# Descarte intencional, não bug de mapa — quem está aqui não faz nada que
+# o jogo idle possa oferecer. Nó sem entrada no grafo é outro relatório
+# (travel-graph-rejections.txt). Para resgatar um destes, ou ele passa a ter
+# serviço no .lua do Canary, ou entra em extractor/npc-allowlist.json com motivo.
+
+## sem shop e sem serviço (17)
+  DARASHIA-NPC-angelo  Angelo
+  DARASHIA-NPC-bo-ques  Bo'Ques
+  DARASHIA-NPC-bozarn  Bozarn
+  DARASHIA-NPC-dabui  Dabui
+  DARASHIA-NPC-djema  Djema
+  DARASHIA-NPC-elyen-ravenlock  Elyen Ravenlock
+  DARASHIA-NPC-gabel  Gabel
+  DARASHIA-NPC-guide-behil  Guide Behil
+  DARASHIA-NPC-jean-pierre  Jean Pierre
+  DARASHIA-NPC-kazzan  Kazzan
+  DARASHIA-NPC-mazarius  Mazarius
+  DARASHIA-NPC-mazarius  Mazarius
+  DARASHIA-NPC-morun  Morun
+  DARASHIA-NPC-omrabas  Omrabas
+  DARASHIA-NPC-tomruk-the-ruddy  Tomruk The Ruddy
+  DARASHIA-NPC-umar  Umar
+  DARASHIA-NPC-zarifan  Zarifan
+
+## serviço só de spell (2)
+  DARASHIA-NPC-razan  Razan
+  DARASHIA-NPC-shalmar  Shalmar

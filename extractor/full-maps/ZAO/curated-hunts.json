@@ -360,6 +360,194 @@
       "walkTilesFromTemple": null,
       "tiles": 24256,
       "spawns": 87
+    },
+    {
+      "id": "ZAO-HUNT-0109",
+      "type": "HUNT",
+      "name": "Lizards Cave",
+      "slug": "black-serpent-dungeon-z8",
+      "folder": "ZAO-HUNT-0109_black-serpent-dungeon-z8",
+      "floors": [
+        8
+      ],
+      "cropFloors": [
+        8
+      ],
+      "candidateIds": [],
+      "creatures": null,
+      "extent": null,
+      "subareaId": null,
+      "entrance": {
+        "x": 33337,
+        "y": 31096,
+        "z": 8
+      },
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "ZAO-HUNT-0111",
+      "type": "HUNT",
+      "name": "Zao North Surface",
+      "slug": "dragonblaze-peaks-z7",
+      "folder": "ZAO-HUNT-0111_dragonblaze-peaks-z7",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [],
+      "creatures": null,
+      "extent": null,
+      "subareaId": null,
+      "entrance": {
+        "x": 33156,
+        "y": 31249,
+        "z": 7
+      },
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "ZAO-HUNT-0112",
+      "type": "HUNT",
+      "name": "Lizard Chosen -1",
+      "slug": "zao-north-surface-z7",
+      "folder": "ZAO-HUNT-0112_zao-north-surface-z7",
+      "floors": [
+        9
+      ],
+      "cropFloors": [
+        9
+      ],
+      "candidateIds": [],
+      "creatures": null,
+      "extent": null,
+      "subareaId": null,
+      "entrance": {
+        "x": 33191,
+        "y": 31215,
+        "z": 9
+      },
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "ZAO-HUNT-0113",
+      "type": "HUNT",
+      "name": "Vengoth",
+      "slug": "vengoth-z8",
+      "folder": "ZAO-HUNT-0113_vengoth-z8",
+      "floors": [
+        8,
+        9,
+        10
+      ],
+      "cropFloors": [
+        8,
+        9,
+        10
+      ],
+      "candidateIds": [],
+      "creatures": null,
+      "extent": null,
+      "subareaId": null,
+      "entrance": {
+        "x": 32954,
+        "y": 31454,
+        "z": 8
+      },
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "ZAO-HUNT-0114",
+      "type": "HUNT",
+      "name": "Draken Walls",
+      "slug": "draken-warmasters-razachai-z3-z2",
+      "folder": "ZAO-HUNT-0114_draken-warmasters-razachai-z3-z2",
+      "floors": [
+        2
+      ],
+      "cropFloors": [
+        2
+      ],
+      "candidateIds": [],
+      "creatures": null,
+      "extent": null,
+      "subareaId": null,
+      "entrance": {
+        "x": 33104,
+        "y": 31115,
+        "z": 2
+      },
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "ZAO-HUNT-0115",
+      "type": "HUNT",
+      "name": "Lizard City",
+      "slug": "draken-warmasters-razachai-z3-z7",
+      "folder": "ZAO-HUNT-0115_draken-warmasters-razachai-z3-z7",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [],
+      "creatures": null,
+      "extent": null,
+      "subareaId": null,
+      "entrance": {
+        "x": 33072,
+        "y": 31167,
+        "z": 7
+      },
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "ZAO-HUNT-0116",
+      "type": "HUNT",
+      "name": "Draken Walls 2",
+      "slug": "draken-warmasters-razachai-z3-z3",
+      "folder": "ZAO-HUNT-0116_draken-warmasters-razachai-z3-z3",
+      "floors": [
+        3
+      ],
+      "cropFloors": [
+        3
+      ],
+      "candidateIds": [],
+      "creatures": null,
+      "extent": null,
+      "subareaId": null,
+      "entrance": {
+        "x": 33114,
+        "y": 31147,
+        "z": 3
+      },
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "ZAO-HUNT-0117",
+      "type": "HUNT",
+      "name": "Draken Walls 3",
+      "slug": "draken-warmasters-razachai-z3-z4",
+      "folder": "ZAO-HUNT-0117_draken-warmasters-razachai-z3-z4",
+      "floors": [
+        4
+      ],
+      "cropFloors": [
+        4
+      ],
+      "candidateIds": [],
+      "creatures": null,
+      "extent": null,
+      "subareaId": null,
+      "entrance": {
+        "x": 33104,
+        "y": 31115,
+        "z": 4
+      },
+      "walkTilesFromTemple": null
     }
   ]
 }

@@ -1,0 +1,24 @@
+# PORTHOPE: 14 NPC(s) fora do fragmento.
+#
+# Descarte intencional, não bug de mapa — quem está aqui não faz nada que
+# o jogo idle possa oferecer. Nó sem entrada no grafo é outro relatório
+# (travel-graph-rejections.txt). Para resgatar um destes, ou ele passa a ter
+# serviço no .lua do Canary, ou entra em extractor/npc-allowlist.json com motivo.
+
+## sem shop e sem serviço (11)
+  PORTHOPE-NPC-angus  Angus
+  PORTHOPE-NPC-clark  Clark
+  PORTHOPE-NPC-fa-hradin  Fa'Hradin
+  PORTHOPE-NPC-ghost-of-a-priest  Ghost Of A Priest
+  PORTHOPE-NPC-ghost-of-a-priest  Ghost Of A Priest
+  PORTHOPE-NPC-ghost-of-a-priest  Ghost Of A Priest
+  PORTHOPE-NPC-samir  Samir
+  PORTHOPE-NPC-the-blind-prophet  The Blind Prophet
+  PORTHOPE-NPC-torkada  Torkada
+  PORTHOPE-NPC-vescu  Vescu
+  PORTHOPE-NPC-yawno  Yawno
+
+## serviço só de spell (3)
+  PORTHOPE-NPC-helor  Helor
+  PORTHOPE-NPC-myra  Myra
+  PORTHOPE-NPC-uso  Uso

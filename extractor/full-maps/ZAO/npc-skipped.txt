@@ -1,0 +1,38 @@
+# ZAO: 30 NPC(s) fora do fragmento.
+#
+# Descarte intencional, não bug de mapa — quem está aqui não faz nada que
+# o jogo idle possa oferecer. Nó sem entrada no grafo é outro relatório
+# (travel-graph-rejections.txt). Para resgatar um destes, ou ele passa a ter
+# serviço no .lua do Canary, ou entra em extractor/npc-allowlist.json com motivo.
+
+## sem shop e sem serviço (30)
+  ZAO-NPC-a-sleeping-dragon  A Sleeping Dragon
+  ZAO-NPC-awarness-of-the-emperor  Awarness Of The Emperor
+  ZAO-NPC-broken-servant-sentry  Broken Servant Sentry
+  ZAO-NPC-broken-servant-sentry  Broken Servant Sentry
+  ZAO-NPC-chrak  Chrak
+  ZAO-NPC-cranky-lizard-crone  Cranky Lizard Crone
+  ZAO-NPC-crowned-tree  Crowned Tree
+  ZAO-NPC-curos  Curos
+  ZAO-NPC-gate-guardian  Gate Guardian
+  ZAO-NPC-izsh  Izsh
+  ZAO-NPC-lazaran  Lazaran
+  ZAO-NPC-messenger-of-heaven  Messenger of Heaven
+  ZAO-NPC-nina  Nina
+  ZAO-NPC-oberon-s-bile  Oberon's Bile
+  ZAO-NPC-oberon-s-hate  Oberon's Hate
+  ZAO-NPC-oberon-s-ire  Oberon's Ire
+  ZAO-NPC-oberon-s-spite  Oberon's Spite
+  ZAO-NPC-ongulf  Ongulf
+  ZAO-NPC-ongulf  Ongulf
+  ZAO-NPC-ongulf  Ongulf
+  ZAO-NPC-pompan  Pompan
+  ZAO-NPC-pompan  Pompan
+  ZAO-NPC-pompan  Pompan
+  ZAO-NPC-rebel  Rebel
+  ZAO-NPC-rebel  Rebel
+  ZAO-NPC-ulala  Ulala
+  ZAO-NPC-zizzle  Zizzle
+  ZAO-NPC-zlak  Zlak
+  ZAO-NPC-zurak  Zurak
+  ZAO-NPC-zurak-arena  Zurak (Arena)

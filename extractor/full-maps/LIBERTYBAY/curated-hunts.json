@@ -243,6 +243,213 @@
       "walkTilesFromTemple": null,
       "tiles": 88373,
       "spawns": 209
+    },
+    {
+      "id": "LIBERTYBAY-HUNT-0107",
+      "type": "HUNT",
+      "name": "Laguna Islands",
+      "slug": "laguna-islands-z7",
+      "folder": "LIBERTYBAY-HUNT-0107_laguna-islands-z7",
+      "floors": [
+        7
+      ],
+      "cropFloors": [
+        7
+      ],
+      "candidateIds": [],
+      "creatures": null,
+      "extent": null,
+      "subareaId": null,
+      "entrance": {
+        "x": 32359,
+        "y": 32903,
+        "z": 7
+      },
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "LIBERTYBAY-HUNT-0108",
+      "type": "HUNT",
+      "name": "Laguna Islands -1",
+      "slug": "laguna-islands-z8",
+      "folder": "LIBERTYBAY-HUNT-0108_laguna-islands-z8",
+      "floors": [
+        8
+      ],
+      "cropFloors": [
+        8
+      ],
+      "candidateIds": [],
+      "creatures": null,
+      "extent": null,
+      "subareaId": null,
+      "entrance": {
+        "x": 32400,
+        "y": 32912,
+        "z": 8
+      },
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "LIBERTYBAY-HUNT-0109",
+      "type": "HUNT",
+      "name": "Laguna islands -3",
+      "slug": "laguna-islands-z9",
+      "folder": "LIBERTYBAY-HUNT-0109_laguna-islands-z9",
+      "floors": [
+        9
+      ],
+      "cropFloors": [
+        9
+      ],
+      "candidateIds": [],
+      "creatures": null,
+      "extent": null,
+      "subareaId": null,
+      "entrance": {
+        "x": 32341,
+        "y": 32943,
+        "z": 9
+      },
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "LIBERTYBAY-HUNT-0110",
+      "type": "HUNT",
+      "name": "Ramoa -2",
+      "slug": "ramoa-z9",
+      "folder": "LIBERTYBAY-HUNT-0110_ramoa-z9",
+      "floors": [
+        9
+      ],
+      "cropFloors": [
+        9
+      ],
+      "candidateIds": [],
+      "creatures": null,
+      "extent": null,
+      "subareaId": null,
+      "entrance": {
+        "x": 31944,
+        "y": 32572,
+        "z": 9
+      },
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "LIBERTYBAY-HUNT-0111",
+      "type": "HUNT",
+      "name": "Ramoa -4",
+      "slug": "ramoa-z10",
+      "folder": "LIBERTYBAY-HUNT-0111_ramoa-z10",
+      "floors": [
+        10
+      ],
+      "cropFloors": [
+        10
+      ],
+      "candidateIds": [],
+      "creatures": null,
+      "extent": null,
+      "subareaId": null,
+      "entrance": {
+        "x": 31947,
+        "y": 32593,
+        "z": 10
+      },
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "LIBERTYBAY-HUNT-0112",
+      "type": "HUNT",
+      "name": "Wyrm mountains",
+      "slug": "vandura-mountains-z2",
+      "folder": "LIBERTYBAY-HUNT-0112_vandura-mountains-z2",
+      "floors": [
+        2
+      ],
+      "cropFloors": [
+        2
+      ],
+      "candidateIds": [],
+      "creatures": null,
+      "extent": null,
+      "subareaId": null,
+      "entrance": {
+        "x": 32388,
+        "y": 32773,
+        "z": 2
+      },
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "LIBERTYBAY-HUNT-0113",
+      "type": "HUNT",
+      "name": "Vendura Mountains 2",
+      "slug": "vandura-mountains-z3",
+      "folder": "LIBERTYBAY-HUNT-0113_vandura-mountains-z3",
+      "floors": [
+        3
+      ],
+      "cropFloors": [
+        3
+      ],
+      "candidateIds": [],
+      "creatures": null,
+      "extent": null,
+      "subareaId": null,
+      "entrance": {
+        "x": 32409,
+        "y": 32752,
+        "z": 3
+      },
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "LIBERTYBAY-HUNT-0114",
+      "type": "HUNT",
+      "name": "Vandura Mountains 3",
+      "slug": "vandura-mountains-z4",
+      "folder": "LIBERTYBAY-HUNT-0114_vandura-mountains-z4",
+      "floors": [
+        4
+      ],
+      "cropFloors": [
+        4
+      ],
+      "candidateIds": [],
+      "creatures": null,
+      "extent": null,
+      "subareaId": null,
+      "entrance": {
+        "x": 32410,
+        "y": 32752,
+        "z": 4
+      },
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "LIBERTYBAY-HUNT-0115",
+      "type": "HUNT",
+      "name": "Vandura Mountains 4",
+      "slug": "vandura-mountains-z1",
+      "folder": "LIBERTYBAY-HUNT-0115_vandura-mountains-z1",
+      "floors": [
+        1
+      ],
+      "cropFloors": [
+        1
+      ],
+      "candidateIds": [],
+      "creatures": null,
+      "extent": null,
+      "subareaId": null,
+      "entrance": {
+        "x": 32399,
+        "y": 32763,
+        "z": 1
+      },
+      "walkTilesFromTemple": null
     }
   ]
 }

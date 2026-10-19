@@ -221,6 +221,98 @@
       "walkTilesFromTemple": null,
       "tiles": 52119,
       "spawns": 147
+    },
+    {
+      "id": "ANKRAHMUN-HUNT-0107",
+      "type": "HUNT",
+      "name": "Larvas -1",
+      "slug": "daramian-scarab-lairs-z9",
+      "folder": "ANKRAHMUN-HUNT-0107_daramian-scarab-lairs-z9",
+      "floors": [
+        9
+      ],
+      "cropFloors": [
+        9
+      ],
+      "candidateIds": [],
+      "creatures": null,
+      "extent": null,
+      "subareaId": null,
+      "entrance": {
+        "x": 33224,
+        "y": 32643,
+        "z": 9
+      },
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "ANKRAHMUN-HUNT-0108",
+      "type": "HUNT",
+      "name": "Necromancers & Undeads Darama Desert 2",
+      "slug": "vampires-undeads-darama-desert-z14",
+      "folder": "ANKRAHMUN-HUNT-0108_vampires-undeads-darama-desert-z14",
+      "floors": [
+        14
+      ],
+      "cropFloors": [
+        14
+      ],
+      "candidateIds": [],
+      "creatures": null,
+      "extent": null,
+      "subareaId": null,
+      "entrance": {
+        "x": 33046,
+        "y": 32662,
+        "z": 14
+      },
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "ANKRAHMUN-HUNT-0109",
+      "type": "HUNT",
+      "name": "Scarab & Skeletons",
+      "slug": "larva-caves-z11-z11",
+      "folder": "ANKRAHMUN-HUNT-0109_larva-caves-z11-z11",
+      "floors": [
+        11
+      ],
+      "cropFloors": [
+        11
+      ],
+      "candidateIds": [],
+      "creatures": null,
+      "extent": null,
+      "subareaId": null,
+      "entrance": {
+        "x": 33064,
+        "y": 32572,
+        "z": 11
+      },
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "ANKRAHMUN-HUNT-0110",
+      "type": "HUNT",
+      "name": "Daramian Scarab Lair",
+      "slug": "daramian-scarab-lairs-z10",
+      "folder": "ANKRAHMUN-HUNT-0110_daramian-scarab-lairs-z10",
+      "floors": [
+        10
+      ],
+      "cropFloors": [
+        10
+      ],
+      "candidateIds": [],
+      "creatures": null,
+      "extent": null,
+      "subareaId": null,
+      "entrance": {
+        "x": 33222,
+        "y": 32655,
+        "z": 10
+      },
+      "walkTilesFromTemple": null
     }
   ]
 }
