@@ -39,6 +39,15 @@ def main() -> None:
     parser.add_argument("hunt_id")
     parser.add_argument("--tibia-idle-dir")
     parser.add_argument(
+        "--backdrop",
+        type=int,
+        default=2,
+        help="andares de fundo abaixo do mais fundo da máscara (default 2). A régua do "
+        "cliente (`crop_floors_for`) desce até o nível do mar quando a hunt é de "
+        "superfície, o que dá +6 andares de silhueta numa hunt de z1 — e você só vê o "
+        "andar de baixo através de buraco. 0 desliga o fundo.",
+    )
+    parser.add_argument(
         "--slug",
         help="slug da pasta de uma hunt que ainda NÃO tem bundle publicado — é o caso do "
         "split de andar feito no editor. Sem isto, o slug é descoberto no bundle.",
@@ -111,7 +120,14 @@ def main() -> None:
     # Andar **acima** do mais raso da máscara nunca volta, porque o fundo só
     # desce. Andar excluído que caia abaixo dele volta como cenário, sem bicho:
     # é o que tira o vazio sem ressuscitar a hunt que você tirou de lá.
+    # O teto de `--backdrop` entra por cima da régua do cliente: ela desce até o
+    # nível do mar, e andar de superfície pagava seis silhuetas pra cobrir buraco
+    # que quase nunca existe. Os andares do meio (entre os pintados) continuam
+    # vindo pela régua — sem eles o mapa sai em pedaços que não se alcançam.
     crop_floors = bch.crop_floors_for(floors)
+    if args.backdrop >= 0:
+        limite = max(floors) + args.backdrop
+        crop_floors = {z for z in crop_floors if z <= limite}
     backdrop = sorted(crop_floors - floors)
     hunt = {"id": args.hunt_id, "slug": slug, "folder": f"{args.hunt_id}_{slug}", "name": args.hunt_id}
     result = bch.write_hunt_map(
