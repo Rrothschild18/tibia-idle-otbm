@@ -91,6 +91,22 @@ def resolve_subareas(document, area, selected=None) -> list:
     return list(selected)
 
 
+class BoxColumns:
+    """As colunas de uma caixa, com cara de conjunto.
+
+    Existe para o `--spawns-box` não materializar as 160 mil tuplas de um
+    recorte de 400x400 só para o `in` do filtro de spawn.
+    """
+
+    def __init__(self, bounds):
+        self.bounds = bounds
+
+    def __contains__(self, column) -> bool:
+        x, y = column
+        min_x, min_y, max_x, max_y = self.bounds
+        return min_x <= x <= max_x and min_y <= y <= max_y
+
+
 def filter_spawn_file(source: str, destination: str, columns, tag: str) -> dict:
     tree = ElementTree.parse(source)
     root = tree.getroot()
@@ -154,6 +170,15 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("city", help="código da cidade (pasta em full-maps/, ex: CARLIN)")
     parser.add_argument("--area", required=True, help="nome da área na Cyclopedia (ex: Carlin)")
+    parser.add_argument(
+        "--spawns-box",
+        action="store_true",
+        help="o monstro entra pela caixa quadrada do recorte, não pela máscara das "
+        "subáreas. A máscara da Cyclopedia só cobre superfície mapeada, então masmorra "
+        "embaixo de serra perde os bichos dela: em Darama são 52%% das criaturas da "
+        "caixa. O tile já vem do quadrado, então nenhum spawn entra sem chão — o preço "
+        "é bicho de cidade vizinha nas bordas. NPC e casa continuam pela máscara.",
+    )
     parser.add_argument(
         "--subareas",
         help="ids de subárea separados por vírgula; padrão é toda subárea da área que tem contorno",
@@ -231,6 +256,13 @@ def main():
         )
         keep_column = lambda x, y: (x, y) in columns
 
+    monster_columns = columns
+    if args.spawns_box:
+        if args.shape != "square":
+            sys.exit("error: --spawns-box só faz sentido com --shape square (é a caixa dele)")
+        monster_columns = BoxColumns(bounds)
+        print("[..] --spawns-box: o monstro entra pela caixa quadrada, não pela máscara")
+
     areas = otbm_stream.crop_tiles(
         data,
         keep_column,
@@ -256,7 +288,10 @@ def main():
     counts = {}
     counts.update(
         filter_spawn_file(
-            world["monster"], os.path.join(destination, f"{city}-monster.xml"), columns, "monster"
+            world["monster"],
+            os.path.join(destination, f"{city}-monster.xml"),
+            monster_columns,
+            "monster"
         )
     )
     counts.update(
@@ -285,6 +320,7 @@ def main():
         "shape": args.shape,
         "bounds": {"minX": bounds[0], "minY": bounds[1], "maxX": bounds[2], "maxY": bounds[3]},
         "columns": len(columns),
+        "monsterScope": "box" if args.spawns_box else "mask",
         "tiles": written,
         "tileAreas": len(areas),
         "towns": city_towns,
