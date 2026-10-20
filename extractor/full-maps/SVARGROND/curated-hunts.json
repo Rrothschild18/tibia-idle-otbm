@@ -241,6 +241,126 @@
       "walkTilesFromTemple": null,
       "tiles": 25862,
       "spawns": 278
+    },
+    {
+      "id": "SVARGROND-HUNT-0110",
+      "type": "HUNT",
+      "name": "Sea Serpent Area (Sul) — Blood Crab",
+      "slug": "sea-serpent-area-sul-blood-crab",
+      "folder": "SVARGROND-HUNT-0110_sea-serpent-area-sul-blood-crab",
+      "floors": [
+        7,
+        8,
+        9
+      ],
+      "cropFloors": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "candidateIds": [
+        "SVARGROND-FULL-z08-224"
+      ],
+      "creatures": 44,
+      "extent": {
+        "minX": 31901,
+        "minY": 31010,
+        "maxX": 31958,
+        "maxY": 31124,
+        "centerX": 31929,
+        "centerY": 31067
+      },
+      "subareaId": null,
+      "entrance": {
+        "x": 31907,
+        "y": 31010,
+        "z": 8
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 34010,
+      "spawns": 44
+    },
+    {
+      "id": "SVARGROND-HUNT-0111",
+      "type": "HUNT",
+      "name": "Okolnir — Frost Dragon Lair",
+      "slug": "okolnir-frost-dragon-lair",
+      "folder": "SVARGROND-HUNT-0111_okolnir-frost-dragon-lair",
+      "floors": [
+        6,
+        7,
+        8
+      ],
+      "cropFloors": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "candidateIds": [
+        "SVARGROND-FULL-z07-93",
+        "SVARGROND-FULL-z07-219",
+        "SVARGROND-FULL-z07-275"
+      ],
+      "creatures": 54,
+      "extent": {
+        "minX": 32156,
+        "minY": 31384,
+        "maxX": 32297,
+        "maxY": 31468,
+        "centerX": 32226,
+        "centerY": 31426
+      },
+      "subareaId": null,
+      "entrance": {
+        "x": 32246,
+        "y": 31384,
+        "z": 7
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 41309,
+      "spawns": 54
+    },
+    {
+      "id": "SVARGROND-HUNT-0120",
+      "type": "HUNT",
+      "name": "Sea Serpent Area (Norte)",
+      "slug": "sea-serpent-area-norte",
+      "folder": "SVARGROND-HUNT-0120_sea-serpent-area-norte",
+      "floors": [
+        8,
+        9,
+        10
+      ],
+      "cropFloors": [
+        8,
+        9,
+        10
+      ],
+      "candidateIds": [
+        "SVARGROND-FULL-z09-85"
+      ],
+      "creatures": 45,
+      "extent": {
+        "minX": 31899,
+        "minY": 31194,
+        "maxX": 31977,
+        "maxY": 31320,
+        "centerX": 31938,
+        "centerY": 31257
+      },
+      "subareaId": null,
+      "entrance": {
+        "x": 31915,
+        "y": 31194,
+        "z": 9
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 17685,
+      "spawns": 45
     }
   ]
 }

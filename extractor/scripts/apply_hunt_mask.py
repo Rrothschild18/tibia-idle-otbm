@@ -18,13 +18,34 @@ import os
 import subprocess
 import sys
 
+import appearance_flags
 import build_curated_hunts as bch
 import otbm_stream
 import paths
+import update_canary_data
+from travel_graph import extract_tile_flags, floor_transition_edges
 
 SCRIPTS_DIR = os.path.dirname(os.path.abspath(__file__))
 EXTRACTOR_DIR = os.path.dirname(SCRIPTS_DIR)
 MASK_DIR = os.path.join(EXTRACTOR_DIR, "hunt-masks")
+
+
+def _hole_edges_for(city: str):
+    """Arestas reais de mudança de andar (buraco/escada/rampa) da cidade
+    inteira — mesma leitura que `build_curated_hunts.py` já faz pro caminho da
+    curadoria. Tolerante a dump ausente: sem ele, quem chama cai de volta na
+    régua cega de `crop_floors_for` (`connected_pairs=None`) em vez de
+    quebrar o recorte por máscara."""
+    dump_path = os.path.join(bch.RAW_MAPS_DIR, f"{city}.raw.json")
+    if not os.path.exists(dump_path):
+        print(f"[WARN] sem {dump_path} — fundo da máscara volta a descer cego até a régua do cliente")
+        return None
+    with open(dump_path, encoding="utf-8") as handle:
+        dump = json.load(handle)
+    flags_by_id = appearance_flags.load_flags(city)
+    floorchange_by_id, ladder_ids = update_canary_data.read_floor_change_rules(None)
+    tiles = extract_tile_flags(dump, flags_by_id, floorchange_by_id, ladder_ids)
+    return floor_transition_edges(tiles)
 
 
 def _bundle_slug(assets_dir: str, hunt_id: str) -> str:
@@ -42,10 +63,11 @@ def main() -> None:
         "--backdrop",
         type=int,
         default=2,
-        help="andares de fundo abaixo do mais fundo da máscara (default 2). A régua do "
-        "cliente (`crop_floors_for`) desce até o nível do mar quando a hunt é de "
-        "superfície, o que dá +6 andares de silhueta numa hunt de z1 — e você só vê o "
-        "andar de baixo através de buraco. 0 desliga o fundo.",
+        help="teto de andares de fundo abaixo do mais fundo da máscara (default 2) — "
+        "segurança por cima do filtro por buraco/escada de verdade "
+        "(`floor_pairs_touching_box`): o fundo já pára sozinho no primeiro andar sem "
+        "passagem nenhuma, isto só limita o quão fundo ele pode ir mesmo com buraco. "
+        "0 desliga o fundo.",
     )
     parser.add_argument(
         "--slug",
@@ -112,19 +134,31 @@ def main() -> None:
     # O fundo. Os andares que o cliente enxerga **por baixo** da máscara entram
     # na geometria com a silhueta 2D dela, e ficam fora do spawn: hunt de um
     # andar — e todo fork, que é sempre de um andar — saía sem chão embaixo, e o
-    # front desenhava vazio no lugar. A régua é a mesma que
-    # `build_curated_hunts.crop_floors_for` já aplicava no caminho da curadoria
-    # (`floor-visibility.ts`: acima do solo enxerga até o nível do mar, no
-    # subsolo dois andares abaixo); o que faltava era aplicá-la aqui.
+    # front desenhava vazio no lugar.
+    #
+    # `connected_pairs` restringe esse fundo ao que tem aresta de mudança de
+    # andar de verdade tocando a máscara (buraco/escada/rampa, lidos do dump da
+    # cidade inteira): desce um andar de cada vez e pára no primeiro sem
+    # passagem nenhuma, em vez de descer cego até a régua do cliente mesmo
+    # quando não há buraco ali — que é o que pagava silhueta de andar 100%
+    # morto (sem bicho e sem `transitions`). Sem dump disponível,
+    # `_hole_edges_for` volta `None` e `crop_floors_for` cai na régua cega de
+    # sempre.
     #
     # Andar **acima** do mais raso da máscara nunca volta, porque o fundo só
     # desce. Andar excluído que caia abaixo dele volta como cenário, sem bicho:
     # é o que tira o vazio sem ressuscitar a hunt que você tirou de lá.
-    # O teto de `--backdrop` entra por cima da régua do cliente: ela desce até o
-    # nível do mar, e andar de superfície pagava seis silhuetas pra cobrir buraco
-    # que quase nunca existe. Os andares do meio (entre os pintados) continuam
-    # vindo pela régua — sem eles o mapa sai em pedaços que não se alcançam.
-    crop_floors = bch.crop_floors_for(floors)
+    # O teto de `--backdrop` continua por cima disso tudo, como segurança: um
+    # recorte sem dump (régua cega) ou uma cadeia de escada maior que o
+    # esperado não escapam do limite. Os andares do meio (entre os pintados)
+    # continuam vindo sem filtro nenhum — sem eles o mapa sai em pedaços que
+    # não se alcançam.
+    hole_edges = _hole_edges_for(city)
+    # `union`, não `box`: a silhueta exata pintada no editor, a mesma que todo
+    # andar de fundo projeta pra baixo — caixa deixaria passar escada em
+    # qualquer canto do retângulo, longe de onde a máscara realmente existe.
+    connected_pairs = bch.floor_pairs_touching_points(hole_edges, union) if hole_edges is not None else None
+    crop_floors = bch.crop_floors_for(floors, connected_pairs)
     if args.backdrop >= 0:
         limite = max(floors) + args.backdrop
         crop_floors = {z for z in crop_floors if z <= limite}

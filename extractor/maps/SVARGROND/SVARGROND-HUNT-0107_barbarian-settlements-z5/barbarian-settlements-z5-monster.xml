@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32095" centery="31178" centerz="5" radius="3">
+		<monster name="Ice Golem" x="0" y="-1" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32133" centery="31181" centerz="5" radius="3">
+		<monster name="Ice Golem" x="-3" y="-1" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32164" centery="31185" centerz="5" radius="3">
+		<monster name="Frost Troll" x="-1" y="-2" z="5" spawntime="90" />
+		<monster name="Frost Troll" x="3" y="-1" z="5" spawntime="90" />
+		<monster name="Frost Troll" x="-2" y="1" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32077" centery="31188" centerz="5" radius="3">
+		<monster name="Ice Golem" x="-3" y="-2" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32105" centery="31188" centerz="5" radius="3">
+		<monster name="Ice Golem" x="2" y="2" z="5" spawntime="90" />
+		<monster name="Crystal Spider" x="-1" y="3" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32126" centery="31188" centerz="5" radius="3">
+		<monster name="Ice Golem" x="3" y="0" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32077" centery="31195" centerz="5" radius="3">
+		<monster name="Ice Golem" x="3" y="-2" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32126" centery="31195" centerz="5" radius="3">
+		<monster name="Ice Golem" x="1" y="3" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32133" centery="31195" centerz="5" radius="3">
+		<monster name="Crystal Spider" x="-3" y="3" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32084" centery="31202" centerz="5" radius="3">
+		<monster name="Ice Golem" x="1" y="1" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32119" centery="31202" centerz="5" radius="3">
+		<monster name="Crystal Spider" x="3" y="0" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32070" centery="31216" centerz="5" radius="3">
+		<monster name="Crystal Spider" x="2" y="-2" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32145" centery="31306" centerz="5" radius="2">
+		<monster name="Barbarian Headsplitter" x="-1" y="1" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32160" centery="31311" centerz="5" radius="2">
+		<monster name="Barbarian Headsplitter" x="-1" y="-1" z="5" spawntime="90" />
+		<monster name="Barbarian Headsplitter" x="2" y="2" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32150" centery="31316" centerz="5" radius="3">
+		<monster name="Barbarian Brutetamer" x="0" y="-1" z="5" spawntime="90" />
+		<monster name="Barbarian Skullhunter" x="3" y="1" z="5" spawntime="90" />
+		<monster name="Barbarian Bloodwalker" x="0" y="2" z="5" spawntime="90" />
+		<monster name="Barbarian Bloodwalker" x="-3" y="3" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32158" centery="31326" centerz="5" radius="3">
+		<monster name="Barbarian Skullhunter" x="-1" y="-1" z="5" spawntime="90" />
+		<monster name="Barbarian Bloodwalker" x="-2" y="2" z="5" spawntime="90" />
+		<monster name="Barbarian Skullhunter" x="0" y="2" z="5" spawntime="90" />
+		<monster name="Barbarian Bloodwalker" x="2" y="3" z="5" spawntime="90" />
+	</monster>
+</monsters>

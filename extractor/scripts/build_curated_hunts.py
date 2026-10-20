@@ -34,6 +34,7 @@ import update_canary_data
 from travel_graph import (
     build_walkable_graph,
     extract_tile_flags,
+    floor_transition_edges,
     parse_marker_signs,
     signs_by_id,
     tile_distances_and_prev,
@@ -72,25 +73,89 @@ def _load_json(path: str, what: str):
         return json.load(handler)
 
 
-def crop_floors_for(floors) -> set:
+def floor_pairs_touching_points(edges, points) -> set:
+    """De `travel_graph.floor_transition_edges`: os pares `(z, z+1)` que têm
+    aresta de mudança de andar (buraco/escada/rampa) com alguma ponta em
+    `points` (x, y) — a evidência de que existe passagem de verdade **dentro
+    da silhueta da hunt**, não só na caixa que a envolve. `edges` vem do dump
+    da cidade inteira, sem recorte nenhum, então a resposta não depende de
+    quais andares a hunt já decidiu levar — sem isso seria circular. Serve de
+    filtro pro item 2 de `crop_floors_for`; passar `None` lá mantém a régua
+    cega de sempre.
+
+    A silhueta é a mesma em todo andar de fundo (é o que `tile_in_floor`
+    projeta pra baixo), então o mesmo `points` vale pra cada passo da descida
+    — não precisa ser recalculado por andar."""
+    pairs = set()
+    for (ax, ay, az), (bx, by, bz) in edges:
+        if abs(az - bz) != 1:
+            continue
+        lo, hi = (az, bz) if az < bz else (bz, az)
+        if (ax, ay) in points or (bx, by) in points:
+            pairs.add((lo, hi))
+    return pairs
+
+
+def floor_pairs_touching_box(edges, box) -> set:
+    """Como `floor_pairs_touching_points`, mas contra uma caixa retangular —
+    o único dado que a curadoria tem antes do recorte (a hunt ainda não tem
+    máscara pintada, só `extent` + margem). Mais permissivo: uma hunt grande
+    plausivelmente tem escada em algum canto da caixa, mesmo longe do bicho —
+    é por isso que `apply_hunt_mask.py`, que já tem a silhueta exata pintada
+    no editor, usa `floor_pairs_touching_points` em vez desta."""
+    min_x, min_y, max_x, max_y = box
+    pairs = set()
+    for (ax, ay, az), (bx, by, bz) in edges:
+        if abs(az - bz) != 1:
+            continue
+        lo, hi = (az, bz) if az < bz else (bz, az)
+        if (min_x <= ax <= max_x and min_y <= ay <= max_y) or (
+            min_x <= bx <= max_x and min_y <= by <= max_y
+        ):
+            pairs.add((lo, hi))
+    return pairs
+
+
+def crop_floors_for(floors, connected_pairs=None) -> set:
     """Os andares que entram no recorte, dados os andares **com spawn**.
 
-    Três coisas de uma vez, e todas sobre geometria — o spawn continua sendo só
+    Duas coisas de uma vez, e ambas sobre geometria — o spawn continua sendo só
     o dos andares curados (`spawn_floors`):
 
     1. Os andares do meio. A torre das amazonas tem bicho em z7, z4, z3 e z2, e
        as escadas em z5 e z6 — sem os dois andares vazios o mapa sai em pedaços
-       que não se alcançam.
+       que não se alcançam. Nunca passam pelo filtro de `connected_pairs`: são
+       os que a curadoria já escolheu ter conteúdo, e cortar um deles no meio
+       fragmentaria o mapa mesmo quando a aresta não foi detectada (ex.: rampa
+       que o parser de floorchange não reconhece).
     2. Os andares **abaixo** do mais fundo, até onde o cliente enxerga. Sem
        eles, hunt de superfície num andar só (Wyvern Hill, z5) saía sem z6/z7:
        o front não tinha o que desenhar por baixo e `transitions` nascia vazio.
-    3. O limite é o mesmo do front — `last_visible_floor`, de
+       O limite é o mesmo do front — `last_visible_floor`, de
        `render_map_v6.py`, que por sua vez espelha o `floor-visibility.ts`. Não
        há constante nova aqui de propósito: uma segunda régua divergiria da do
        cliente na primeira mudança.
+
+       **Com `connected_pairs`** (de `floor_pairs_touching_box`), este andar
+       abaixo só entra um de cada vez, e só enquanto o par `(z, z+1)` tiver
+       aresta de verdade tocando a caixa da hunt — pára no primeiro andar sem
+       buraco, em vez de descer cego até `last_visible_floor` mesmo quando não
+       há passagem nenhuma ali (o que pagava silhueta de andar 100% morto, sem
+       bicho e sem `transitions`). Sem `connected_pairs` (`None`), mantém a
+       régua cega de sempre — é o que os chamadores que ainda não carregam o
+       dump da cidade (placa de treino, por exemplo) continuam recebendo.
     """
-    deepest = min(render_map_v6.last_visible_floor(max(floors)), MAX_FLOOR)
-    return set(range(min(floors), deepest + 1))
+    deepest_ceiling = min(render_map_v6.last_visible_floor(max(floors)), MAX_FLOOR)
+    middle = set(range(min(floors), max(floors) + 1))
+    if connected_pairs is None:
+        return middle | set(range(max(floors) + 1, deepest_ceiling + 1))
+
+    tail = set()
+    z = max(floors)
+    while z < deepest_ceiling and (z, z + 1) in connected_pairs:
+        tail.add(z + 1)
+        z += 1
+    return middle | tail
 
 
 def crop_spawns(source: str, destination: str, bounds, floors, chosen=None) -> int:
@@ -324,6 +389,10 @@ def main():
     tiles = extract_tile_flags(dump, flags_by_id, floorchange_by_id, ladder_ids)
     graph = build_walkable_graph(tiles)
     walkable = set(graph)
+    # Arestas da cidade inteira, sem recorte nenhum — é o que deixa
+    # `floor_pairs_touching_box` responder por hunt sem depender de quais
+    # andares cada uma já decidiu levar.
+    hole_edges = floor_transition_edges(tiles)
 
     source = _load_json(os.path.join(city_dir, "source.json"), "manifesto do recorte")
     temple = (source.get("towns") or [None])[0]
@@ -369,8 +438,9 @@ def main():
             members = []
 
         floors = set(hunt["floors"])
-        crop_floors = crop_floors_for(floors)
         bounds = curated_hunts.crop_bounds(hunt["extent"], args.margin)
+        connected_pairs = floor_pairs_touching_box(hole_edges, bounds)
+        crop_floors = crop_floors_for(floors, connected_pairs)
 
         anchor_of = lambda spawn: hunt_candidates.anchor_tile(spawn, walkable)
 

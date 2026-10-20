@@ -658,6 +658,44 @@
       "tiles": 1246,
       "spawns": 4,
       "isTrainingHunt": true
+    },
+    {
+      "id": "CARLIN-HUNT-0013",
+      "type": "HUNT",
+      "name": "Demona (Warlocks)",
+      "slug": "demona-warlocks",
+      "folder": "CARLIN-HUNT-0013_demona-warlocks",
+      "floors": [
+        13,
+        14,
+        15
+      ],
+      "cropFloors": [
+        13,
+        14,
+        15
+      ],
+      "candidateIds": [
+        "CARLIN-FULL-z14-71"
+      ],
+      "creatures": 15,
+      "extent": {
+        "minX": 32448,
+        "minY": 31654,
+        "maxX": 32508,
+        "maxY": 31675,
+        "centerX": 32478,
+        "centerY": 31664
+      },
+      "subareaId": null,
+      "entrance": {
+        "x": 32479,
+        "y": 31654,
+        "z": 14
+      },
+      "walkTilesFromTemple": null,
+      "tiles": 11229,
+      "spawns": 15
     }
   ]
 }

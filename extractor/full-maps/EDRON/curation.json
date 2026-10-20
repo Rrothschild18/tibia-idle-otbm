@@ -161,6 +161,218 @@
       },
       "subareaId": 59,
       "walkTilesFromTemple": null
+    },
+    {
+      "id": "EDRON-HUNT-0120",
+      "name": "Edron Hero Fortress (Hero Cave)",
+      "floors": [
+        12,
+        13,
+        14
+      ],
+      "candidateIds": [
+        "EDRON-FULL-z13-531",
+        "EDRON-FULL-z13-64"
+      ],
+      "species": null,
+      "creatures": 60,
+      "extent": {
+        "minX": 33105,
+        "minY": 31588,
+        "maxX": 33194,
+        "maxY": 31698,
+        "centerX": 33149,
+        "centerY": 31643
+      },
+      "subareaId": null,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "EDRON-HUNT-0121",
+      "name": "Grimvale",
+      "floors": [
+        6,
+        7,
+        8
+      ],
+      "candidateIds": [
+        "EDRON-FULL-z07-353"
+      ],
+      "species": null,
+      "creatures": 22,
+      "extent": {
+        "minX": 33326,
+        "minY": 31669,
+        "maxX": 33352,
+        "maxY": 31692,
+        "centerX": 33339,
+        "centerY": 31680
+      },
+      "subareaId": null,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "EDRON-HUNT-0122",
+      "name": "Lycanthrope Grounds (Edron)",
+      "floors": [
+        8,
+        9,
+        10
+      ],
+      "candidateIds": [
+        "EDRON-FULL-z09-622"
+      ],
+      "species": null,
+      "creatures": 63,
+      "extent": {
+        "minX": 33049,
+        "minY": 31910,
+        "maxX": 33128,
+        "maxY": 31990,
+        "centerX": 33088,
+        "centerY": 31950
+      },
+      "subareaId": null,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "EDRON-HUNT-0123",
+      "name": "Edron Vampire Crypt",
+      "floors": [
+        10,
+        11,
+        12
+      ],
+      "candidateIds": [
+        "EDRON-FULL-z11-192"
+      ],
+      "species": null,
+      "creatures": 68,
+      "extent": {
+        "minX": 32970,
+        "minY": 31592,
+        "maxX": 33058,
+        "maxY": 31638,
+        "centerX": 33014,
+        "centerY": 31615
+      },
+      "subareaId": null,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "EDRON-HUNT-0124",
+      "name": "Edron Forgotten Tomb (Catacombs)",
+      "floors": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "candidateIds": [
+        "EDRON-FULL-z08-75",
+        "EDRON-FULL-z09-773",
+        "EDRON-FULL-z10-370",
+        "EDRON-FULL-z11-482",
+        "EDRON-FULL-z12-445",
+        "EDRON-FULL-z13-66"
+      ],
+      "species": null,
+      "creatures": 465,
+      "extent": {
+        "minX": 33229,
+        "minY": 31590,
+        "maxX": 33429,
+        "maxY": 31749,
+        "centerX": 33329,
+        "centerY": 31669
+      },
+      "subareaId": null,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "EDRON-HUNT-0125",
+      "name": "Edron Dragon Lair",
+      "floors": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "candidateIds": [
+        "EDRON-FULL-z06-1008",
+        "EDRON-FULL-z08-967",
+        "EDRON-FULL-z09-1227",
+        "EDRON-FULL-z09-1243",
+        "EDRON-FULL-z09-2494"
+      ],
+      "species": null,
+      "creatures": 17,
+      "extent": {
+        "minX": 33054,
+        "minY": 31631,
+        "maxX": 33109,
+        "maxY": 31702,
+        "centerX": 33081,
+        "centerY": 31666
+      },
+      "subareaId": null,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "EDRON-HUNT-0126",
+      "name": "Edron Behemoth Quest Cave",
+      "floors": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "candidateIds": [
+        "EDRON-FULL-z08-651",
+        "EDRON-FULL-z09-778"
+      ],
+      "species": null,
+      "creatures": 43,
+      "extent": {
+        "minX": 32997,
+        "minY": 32473,
+        "maxX": 33061,
+        "maxY": 32590,
+        "centerX": 33029,
+        "centerY": 32531
+      },
+      "subareaId": null,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "EDRON-HUNT-0127",
+      "name": "Cormaya Werecreatures Cave",
+      "floors": [
+        8,
+        9,
+        10
+      ],
+      "candidateIds": [
+        "EDRON-FULL-z09-425"
+      ],
+      "species": null,
+      "creatures": 51,
+      "extent": {
+        "minX": 33355,
+        "minY": 32020,
+        "maxX": 33442,
+        "maxY": 32100,
+        "centerX": 33398,
+        "centerY": 32060
+      },
+      "subareaId": null,
+      "walkTilesFromTemple": null
     }
   ]
 }

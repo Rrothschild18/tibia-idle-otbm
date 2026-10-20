@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32072" centery="31143" centerz="4" radius="3">
+		<monster name="Frost Troll" x="2" y="0" z="4" spawntime="90" />
+		<monster name="Frost Troll" x="-2" y="3" z="4" spawntime="90" />
+	</monster>
+	<monster centerx="32069" centery="31152" centerz="4" radius="2">
+		<monster name="Frost Troll" x="2" y="-1" z="4" spawntime="90" />
+		<monster name="Polar Bear" x="-1" y="2" z="4" spawntime="90" />
+	</monster>
+	<monster centerx="32095" centery="31156" centerz="4" radius="5">
+		<monster name="Ice Golem" x="-2" y="-4" z="4" spawntime="90" />
+		<monster name="Ice Golem" x="3" y="-4" z="4" spawntime="90" />
+		<monster name="Ice Golem" x="-3" y="2" z="4" spawntime="90" />
+		<monster name="Ice Golem" x="5" y="3" z="4" spawntime="90" />
+	</monster>
+	<monster centerx="32065" centery="31162" centerz="4" radius="2">
+		<monster name="Frost Troll" x="1" y="-2" z="4" spawntime="90" />
+		<monster name="Frost Troll" x="-2" y="2" z="4" spawntime="90" />
+	</monster>
+	<monster centerx="32106" centery="31164" centerz="4" radius="3">
+		<monster name="Ice Golem" x="-3" y="-1" z="4" spawntime="90" />
+		<monster name="Ice Golem" x="3" y="1" z="4" spawntime="90" />
+	</monster>
+	<monster centerx="32086" centery="31171" centerz="4" radius="1">
+		<monster name="Ice Golem" x="-1" y="0" z="4" spawntime="90" />
+		<monster name="Ice Golem" x="1" y="0" z="4" spawntime="90" />
+	</monster>
+	<monster centerx="32077" centery="31179" centerz="4" radius="2">
+		<monster name="Mammoth" x="1" y="1" z="4" spawntime="90" />
+	</monster>
+	<monster centerx="32059" centery="31180" centerz="4" radius="3">
+		<monster name="Frost Troll" x="1" y="-2" z="4" spawntime="90" />
+		<monster name="Frost Troll" x="-2" y="0" z="4" spawntime="90" />
+		<monster name="Winter Wolf" x="1" y="1" z="4" spawntime="90" />
+		<monster name="Frost Troll" x="2" y="3" z="4" spawntime="90" />
+	</monster>
+	<monster centerx="32091" centery="31188" centerz="4" radius="3">
+		<monster name="Mammoth" x="0" y="-3" z="4" spawntime="90" />
+		<monster name="Polar Bear" x="-1" y="2" z="4" spawntime="90" />
+	</monster>
+	<monster centerx="32073" centery="31189" centerz="4" radius="2">
+		<monster name="Winter Wolf" x="-1" y="-1" z="4" spawntime="90" />
+		<monster name="Polar Bear" x="1" y="1" z="4" spawntime="90" />
+	</monster>
+	<monster centerx="32057" centery="31191" centerz="4" radius="3">
+		<monster name="Frost Troll" x="-3" y="0" z="4" spawntime="90" />
+		<monster name="Polar Bear" x="2" y="1" z="4" spawntime="90" />
+		<monster name="Polar Bear" x="-2" y="3" z="4" spawntime="90" />
+	</monster>
+	<monster centerx="32098" centery="31195" centerz="4" radius="3">
+		<monster name="Mammoth" x="-1" y="-3" z="4" spawntime="90" />
+	</monster>
+	<monster centerx="32075" centery="31197" centerz="4" radius="3">
+		<monster name="Mammoth" x="-1" y="-1" z="4" spawntime="90" />
+		<monster name="Winter Wolf" x="2" y="1" z="4" spawntime="90" />
+	</monster>
+	<monster centerx="32040" centery="31198" centerz="4" radius="3">
+		<monster name="Winter Wolf" x="2" y="-1" z="4" spawntime="90" />
+		<monster name="Polar Bear" x="3" y="-1" z="4" spawntime="90" />
+		<monster name="Winter Wolf" x="-3" y="1" z="4" spawntime="90" />
+		<monster name="Polar Bear" x="-2" y="2" z="4" spawntime="90" />
+	</monster>
+	<monster centerx="32073" centery="31205" centerz="4" radius="3">
+		<monster name="Frost Troll" x="0" y="-3" z="4" spawntime="90" />
+		<monster name="Winter Wolf" x="2" y="-3" z="4" spawntime="90" />
+		<monster name="Frost Troll" x="3" y="-3" z="4" spawntime="90" />
+		<monster name="Winter Wolf" x="-1" y="0" z="4" spawntime="90" />
+		<monster name="Mammoth" x="2" y="0" z="4" spawntime="90" />
+		<monster name="Winter Wolf" x="3" y="0" z="4" spawntime="90" />
+		<monster name="Winter Wolf" x="-3" y="1" z="4" spawntime="90" />
+		<monster name="Frost Troll" x="-2" y="2" z="4" spawntime="90" />
+		<monster name="Frost Troll" x="0" y="3" z="4" spawntime="90" />
+	</monster>
+	<monster centerx="32077" centery="31218" centerz="4" radius="2">
+		<monster name="Frost Troll" x="2" y="-1" z="4" spawntime="90" />
+	</monster>
+	<monster centerx="32070" centery="31219" centerz="4" radius="2">
+		<monster name="Mammoth" x="0" y="1" z="4" spawntime="90" />
+	</monster>
+</monsters>

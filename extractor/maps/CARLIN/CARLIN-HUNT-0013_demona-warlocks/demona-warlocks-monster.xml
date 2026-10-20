@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32451" centery="31655" centerz="14" radius="3">
+		<monster name="Warlock" x="1" y="1" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="32479" centery="31656" centerz="14" radius="3">
+		<monster name="Warlock" x="0" y="-2" z="14" spawntime="90" />
+		<monster name="Elf Arcanist" x="0" y="2" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="32505" centery="31656" centerz="14" radius="3">
+		<monster name="Warlock" x="1" y="-2" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="32497" centery="31660" centerz="14" radius="2">
+		<monster name="Elf Arcanist" x="2" y="-1" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="32458" centery="31661" centerz="14" radius="2">
+		<monster name="Elf Arcanist" x="1" y="0" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="32491" centery="31664" centerz="14" radius="2">
+		<monster name="Elf Arcanist" x="1" y="1" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="32466" centery="31665" centerz="14" radius="2">
+		<monster name="Elf Arcanist" x="-1" y="1" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="32479" centery="31669" centerz="14" radius="3">
+		<monster name="Warlock" x="0" y="-2" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="32507" centery="31669" centerz="14" radius="3">
+		<monster name="Elf Arcanist" x="-1" y="-1" z="14" spawntime="90" />
+		<monster name="Warlock" x="1" y="2" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="32450" centery="31670" centerz="14" radius="3">
+		<monster name="Elf Arcanist" x="-2" y="0" z="14" spawntime="90" />
+		<monster name="Warlock" x="-1" y="3" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="32469" centery="31675" centerz="14" radius="3">
+		<monster name="Warlock" x="-1" y="-2" z="14" spawntime="90" />
+		<monster name="Elf Arcanist" x="-3" y="0" z="14" spawntime="90" />
+	</monster>
+</monsters>

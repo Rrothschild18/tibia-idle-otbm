@@ -162,6 +162,80 @@
       },
       "subareaId": 112,
       "walkTilesFromTemple": null
+    },
+    {
+      "id": "SVARGROND-HUNT-0120",
+      "name": "Sea Serpent Area (Norte)",
+      "floors": [
+        8,
+        9,
+        10
+      ],
+      "candidateIds": [
+        "SVARGROND-FULL-z09-85"
+      ],
+      "species": null,
+      "creatures": 45,
+      "extent": {
+        "minX": 31899,
+        "minY": 31194,
+        "maxX": 31977,
+        "maxY": 31320,
+        "centerX": 31938,
+        "centerY": 31257
+      },
+      "subareaId": null,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "SVARGROND-HUNT-0110",
+      "name": "Sea Serpent Area (Sul) — Blood Crab",
+      "floors": [
+        7,
+        8,
+        9
+      ],
+      "candidateIds": [
+        "SVARGROND-FULL-z08-224"
+      ],
+      "species": null,
+      "creatures": 44,
+      "extent": {
+        "minX": 31901,
+        "minY": 31010,
+        "maxX": 31958,
+        "maxY": 31124,
+        "centerX": 31929,
+        "centerY": 31067
+      },
+      "subareaId": null,
+      "walkTilesFromTemple": null
+    },
+    {
+      "id": "SVARGROND-HUNT-0111",
+      "name": "Okolnir — Frost Dragon Lair",
+      "floors": [
+        6,
+        7,
+        8
+      ],
+      "candidateIds": [
+        "SVARGROND-FULL-z07-93",
+        "SVARGROND-FULL-z07-219",
+        "SVARGROND-FULL-z07-275"
+      ],
+      "species": null,
+      "creatures": 54,
+      "extent": {
+        "minX": 32156,
+        "minY": 31384,
+        "maxX": 32297,
+        "maxY": 31468,
+        "centerX": 32226,
+        "centerY": 31426
+      },
+      "subareaId": null,
+      "walkTilesFromTemple": null
     }
   ]
 }

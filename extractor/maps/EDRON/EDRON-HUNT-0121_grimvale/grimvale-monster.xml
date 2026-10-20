@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="33337" centery="31671" centerz="7" radius="3">
+		<monster name="Wereboar" x="-2" y="-1" z="7" spawntime="90" />
+		<monster name="Bandit" x="0" y="-1" z="7" spawntime="90" />
+		<monster name="Bandit" x="-3" y="0" z="7" spawntime="90" />
+		<monster name="Werebadger" x="-1" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33351" centery="31671" centerz="7" radius="3">
+		<monster name="Werebadger" x="0" y="-2" z="7" spawntime="90" />
+		<monster name="Wereboar" x="-2" y="0" z="7" spawntime="90" />
+		<monster name="Badger" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33349" centery="31676" centerz="7" radius="1">
+		<monster name="Werebadger" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33330" centery="31678" centerz="7" radius="3">
+		<monster name="Badger" x="-2" y="-2" z="7" spawntime="90" />
+		<monster name="Wereboar" x="-2" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33338" centery="31678" centerz="7" radius="1">
+		<monster name="Wereboar" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33344" centery="31678" centerz="7" radius="3">
+		<monster name="Werebadger" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33337" centery="31683" centerz="7" radius="1">
+		<monster name="Werebadger" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33351" centery="31683" centerz="7" radius="1">
+		<monster name="Werebadger" x="0" y="0" z="7" spawntime="90" />
+		<monster name="Wereboar" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33330" centery="31685" centerz="7" radius="3">
+		<monster name="Werebadger" x="-2" y="-3" z="7" spawntime="90" />
+		<monster name="Butterfly" x="-1" y="-3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33344" centery="31685" centerz="7" radius="3">
+		<monster name="Werebadger" x="-3" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33327" centery="31689" centerz="7" radius="1">
+		<monster name="Wereboar" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33331" centery="31690" centerz="7" radius="1">
+		<monster name="Werebadger" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33345" centery="31691" centerz="7" radius="3">
+		<monster name="Butterfly" x="-1" y="-2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33326" centery="31692" centerz="7" radius="1">
+		<monster name="Wereboar" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+</monsters>

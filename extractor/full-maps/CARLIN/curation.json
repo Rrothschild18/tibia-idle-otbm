@@ -297,6 +297,30 @@
       },
       "subareaId": 271,
       "walkTilesFromTemple": null
+    },
+    {
+      "id": "CARLIN-HUNT-0013",
+      "name": "Demona (Warlocks)",
+      "floors": [
+        13,
+        14,
+        15
+      ],
+      "candidateIds": [
+        "CARLIN-FULL-z14-71"
+      ],
+      "species": null,
+      "creatures": 15,
+      "extent": {
+        "minX": 32448,
+        "minY": 31654,
+        "maxX": 32508,
+        "maxY": 31675,
+        "centerX": 32478,
+        "centerY": 31664
+      },
+      "subareaId": null,
+      "walkTilesFromTemple": null
     }
   ]
 }
