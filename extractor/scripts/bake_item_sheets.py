@@ -24,7 +24,7 @@ belong to.
 
 import json
 import os
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List, Optional, Set, Tuple
 
 from PIL import Image
 
@@ -108,14 +108,21 @@ def _is_static(data: Dict) -> bool:
     return not data.get("spriteInfo", {}).get("animation")
 
 
-def _list_static_equipment_items() -> List[Tuple[int, List[str]]]:
+def _list_static_equipment_items(
+    dropped_ids: Set[int] = frozenset(),
+) -> List[Tuple[int, List[str]]]:
     """(item_id, spriteKeys) for every equipment/consumable candidate
     (bia.is_equipment_candidate) that has no animation, sorted by ID for
-    determinism."""
+    determinism. `dropped_ids` (see bia.dropped_item_ids) widens that
+    classification to any item a monster can drop."""
     result = []
     for item_id in bia._list_item_ids():
         data = bia._load_item_json(item_id)
-        if data is None or not bia.is_equipment_candidate(data) or not _is_static(data):
+        if (
+            data is None
+            or not bia.is_equipment_candidate(data, dropped_ids)
+            or not _is_static(data)
+        ):
             continue
         result.append((item_id, list(data.get("spriteId", []))))
     return result
@@ -138,12 +145,12 @@ def _render_sheet(plan: Dict, item_id_by_key: Dict[str, int]) -> Image.Image:
     return canvas
 
 
-def bake_static_sheets() -> List[Dict]:
+def bake_static_sheets(dropped_ids: Set[int] = frozenset()) -> List[Dict]:
     """Bake every static equipment/consumable item into NUM_SHEETS grid
     sheets, writing items-static-<i>.png + items-static-<i>.json to
     SHEETS_DIR. Returns the list of atlas JSON dicts written, in shard
     order."""
-    items = _list_static_equipment_items()
+    items = _list_static_equipment_items(dropped_ids)
     item_id_by_key = {key: item_id for item_id, keys in items for key in keys}
 
     plans = plan_static_sheets(items, columns=COLUMNS, num_sheets=NUM_SHEETS)
@@ -171,10 +178,11 @@ def bake_static_sheets() -> List[Dict]:
 # =========================
 
 def main():
-    items = _list_static_equipment_items()
+    dropped_ids = bia.dropped_item_ids()
+    items = _list_static_equipment_items(dropped_ids)
     total_cells = sum(len(keys) for _, keys in items)
 
-    atlases = bake_static_sheets()
+    atlases = bake_static_sheets(dropped_ids)
 
     print(f"[OK] items-static: {len(items)} itens ({total_cells} celulas) em {NUM_SHEETS} sheets, {SHEETS_DIR}")
     for i, atlas in enumerate(atlases):

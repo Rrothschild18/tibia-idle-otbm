@@ -174,8 +174,15 @@ def test_generate_item_index_covers_animated_and_static_excludes_scenery(tmp_pat
 
 def test_generate_item_index_no_orphan_frame_keys_against_real_data():
     """Every frameKey in the real generated index resolves to a frame that
-    actually exists in the referenced atlas/sheet JSON on disk."""
-    index = bii.generate_item_index()
+    actually exists in the referenced atlas/sheet JSON on disk.
+
+    `dropped_item_ids()` here matters, not just style: the real sheets on disk
+    were baked by build_items.js with it included, and shard assignment is
+    sequential by item id, so computing the index without it shifts every
+    item after the first dropped-only id into the wrong shard relative to
+    what's actually on disk — a false positive for "orphan", not a real one.
+    """
+    index = bii.generate_item_index(bia.dropped_item_ids())
     assert len(index) > 0
 
     checked_files = {}

@@ -395,3 +395,96 @@ def test_npc_outfit_ids_is_empty_without_any_city_fragment(tmp_path, monkeypatch
     monkeypatch.setattr(boa, "EXTRACTOR_DIR", str(tmp_path))
 
     assert boa.npc_outfit_ids() == set()
+
+
+# ======================================================
+# monster_appearances
+# ======================================================
+
+
+def _write_respawn(extractor_dir, city, map_id, monster_defs, spawns):
+    map_dir = os.path.join(extractor_dir, "ready-maps", city, map_id, "monsters")
+    os.makedirs(map_dir, exist_ok=True)
+    with open(os.path.join(map_dir, "respawn.json"), "w", encoding="utf-8") as handler:
+        json.dump({"monsterDefs": monster_defs, "spawns": spawns}, handler)
+
+
+def test_monster_appearances_reads_colored_monster_defs_from_respawn_json(tmp_path, monkeypatch):
+    monkeypatch.setattr(boa, "EXTRACTOR_DIR", str(tmp_path))
+    _write_respawn(str(tmp_path), "ROOK", "ROOK-HUNT-0001", {
+        "21": {"name": "Rat", "appearance": {"looktype": 21, "head": 0, "body": 0, "legs": 0, "feet": 0}},
+        "137": {"name": "Amazon", "appearance": {
+            "looktype": 137, "head": 113, "body": 120, "legs": 95, "feet": 115,
+        }},
+    }, spawns=[{"name": "Rat"}, {"name": "Amazon"}])
+
+    appearances = boa.monster_appearances()
+
+    assert appearances == [{"looktype": 137, "head": 113, "body": 120, "legs": 95, "feet": 115}]
+
+
+def test_monster_appearances_without_canary_dir_misses_a_species_sharing_the_outfit(
+    tmp_path, monkeypatch,
+):
+    # Coral Frog is the one that survives the respawn.json dedup for outfit
+    # 226; Azure Frog shares the looktype with different colors and has no
+    # monsterDefs entry of its own — only a spawn name.
+    monkeypatch.setattr(boa, "EXTRACTOR_DIR", str(tmp_path))
+    _write_respawn(str(tmp_path), "LIBERTYBAY", "LIBERTYBAY-HUNT-0101", {
+        "226": {"name": "Coral Frog", "appearance": {
+            "looktype": 226, "head": 114, "body": 79, "legs": 78, "feet": 114,
+        }},
+    }, spawns=[{"name": "Coral Frog"}, {"name": "Azure Frog"}])
+
+    appearances = boa.monster_appearances()
+
+    assert appearances == [{"looktype": 226, "head": 114, "body": 79, "legs": 78, "feet": 114}]
+
+
+def test_monster_appearances_with_canary_dir_resolves_the_missing_species_by_spawn_name(
+    tmp_path, monkeypatch,
+):
+    monkeypatch.setattr(boa, "EXTRACTOR_DIR", str(tmp_path))
+    _write_respawn(str(tmp_path), "LIBERTYBAY", "LIBERTYBAY-HUNT-0101", {
+        "226": {"name": "Coral Frog", "appearance": {
+            "looktype": 226, "head": 114, "body": 79, "legs": 78, "feet": 114,
+        }},
+    }, spawns=[{"name": "Coral Frog"}, {"name": "Azure Frog"}])
+
+    canary_dir = tmp_path / "canary"
+    monster_dir = canary_dir / "data-otservbr-global" / "monster" / "amphibics"
+    monster_dir.mkdir(parents=True)
+    (monster_dir / "azure_frog.lua").write_text(
+        'local mType = Game.createMonsterType("Azure Frog")\n'
+        "local monster = {}\n"
+        "monster.outfit = { lookType = 226, lookHead = 87, lookBody = 85, lookLegs = 85, lookFeet = 87 }\n",
+        encoding="utf-8",
+    )
+
+    appearances = boa.monster_appearances(str(canary_dir))
+
+    assert appearances == [
+        {"looktype": 226, "head": 114, "body": 79, "legs": 78, "feet": 114},
+        {"looktype": 226, "head": 87, "body": 85, "legs": 85, "feet": 87, "addons": 0},
+    ]
+
+
+def test_monster_appearances_canary_supplement_skips_species_without_color_or_addon(
+    tmp_path, monkeypatch,
+):
+    monkeypatch.setattr(boa, "EXTRACTOR_DIR", str(tmp_path))
+    _write_respawn(str(tmp_path), "ROOK", "ROOK-HUNT-0001", {
+        "21": {"name": "Rat", "appearance": {"looktype": 21, "head": 0, "body": 0, "legs": 0, "feet": 0}},
+    }, spawns=[{"name": "Rat"}])
+
+    canary_dir = tmp_path / "canary"
+    monster_dir = canary_dir / "data-otservbr-global" / "monster" / "mammals"
+    monster_dir.mkdir(parents=True)
+    (monster_dir / "rat.lua").write_text(
+        'local mType = Game.createMonsterType("Rat")\n'
+        "local monster = {}\n"
+        "monster.outfit = { lookType = 21 }\n",
+        encoding="utf-8",
+    )
+
+    assert boa.monster_appearances(str(canary_dir)) == []

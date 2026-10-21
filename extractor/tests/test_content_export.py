@@ -73,6 +73,15 @@ def test_hunt_manifest_omits_a_field_the_hunt_does_not_carry():
     assert manifest == [{"id": "ROOK-HUNT-0001", "mapId": "ROOK-HUNT-0001"}]
 
 
+def test_hunt_manifest_skips_test_status_hunts():
+    manifest = ce.hunt_manifest([
+        _hunt("ROOK-HUNT-0001"),
+        _hunt("TEST-HUNT-0001", status="test"),
+    ])
+
+    assert [h["id"] for h in manifest] == ["ROOK-HUNT-0001"]
+
+
 # ======================================================
 # content/hunts/respawn/<HUNT-ID>.json and loot.json
 # ======================================================
@@ -101,6 +110,18 @@ def test_loot_file_entry_is_keyed_by_map_id_alone():
     entry = ce.loot_file_entry({"id": "ROOK-HUNT-0001", "mapId": "ROOK-HUNT-0001", "drops": drops})
 
     assert entry == {"mapId": "ROOK-HUNT-0001", "drops": drops}
+
+
+def test_loot_file_entry_carries_corpses_and_races_when_the_fragment_has_them():
+    corpses = [{"monsterName": "Rat", "itemId": 5964, "stages": []}]
+    races = [{"monsterName": "Rat", "race": "blood"}]
+
+    entry = ce.loot_file_entry({
+        "id": "ROOK-HUNT-0001", "mapId": "ROOK-HUNT-0001", "drops": [],
+        "corpses": corpses, "races": races,
+    })
+
+    assert entry == {"mapId": "ROOK-HUNT-0001", "drops": [], "corpses": corpses, "races": races}
 
 
 # ======================================================

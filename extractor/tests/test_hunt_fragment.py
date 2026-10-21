@@ -81,6 +81,37 @@ def test_build_loot_entry_empty_when_no_monster_def_has_loot():
     assert loot_entry["drops"] == []
 
 
+def test_build_loot_entry_carries_corpse_and_race_per_monster_that_has_them():
+    respawn = _respawn(monster_defs={
+        "21": {
+            "name": "Rat",
+            "outfitId": 21,
+            "loot": [],
+            "corpse": {"itemId": 5964, "stages": [{"durationSeconds": 10, "itemId": 5964}]},
+            "race": "blood",
+        },
+        "30": {"name": "Spider", "outfitId": 30, "loot": []},
+    })
+    monsters_entry = hf.build_monsters_entry(respawn, "rats-cave", "ROOK-0010")
+
+    loot_entry = hf.build_loot_entry(monsters_entry, "ROOK-0010")
+
+    assert loot_entry["corpses"] == [
+        {"monsterName": "Rat", "itemId": 5964, "stages": [{"durationSeconds": 10, "itemId": 5964}]},
+    ]
+    assert loot_entry["races"] == [{"monsterName": "Rat", "race": "blood"}]
+
+
+def test_build_loot_entry_omits_corpses_and_races_when_no_monster_has_them():
+    respawn = _respawn(monster_defs={"30": {"name": "Spider", "outfitId": 30, "loot": []}})
+    monsters_entry = hf.build_monsters_entry(respawn, "spider-cave", "ROOK-0011")
+
+    loot_entry = hf.build_loot_entry(monsters_entry, "ROOK-0011")
+
+    assert "corpses" not in loot_entry
+    assert "races" not in loot_entry
+
+
 # ======================================================
 # build_hunts_entry
 # ======================================================

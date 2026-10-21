@@ -63,11 +63,29 @@ def build_monsters_entry(respawn: Dict, map_name: str, map_id: str) -> Dict:
 
 
 def build_loot_entry(monsters_entry: Dict, map_id: str) -> Dict:
+    """`corpse`/`race` são campos por monstro (ver monster_loot.py no repo
+    extrator) que só existem em parte dos monstros — bosses/summons sem corpo
+    não têm `corpse`, e a maioria das espécies não tem `race` documentada.
+    Virando `corpses`/`races` aqui, ficam de fora quando nenhum monstro do mapa
+    tem o dado, em vez de um array vazio sem sentido."""
     drops = []
+    corpses = []
+    races = []
     for monster_def in monsters_entry["monsterDefs"].values():
         for loot_row in monster_def.get("loot", []):
             drops.append({**loot_row, "monsterName": monster_def["name"]})
-    return {"id": map_id, "mapId": map_id, "drops": drops}
+        corpse = monster_def.get("corpse")
+        if corpse is not None:
+            corpses.append({"monsterName": monster_def["name"], **corpse})
+        race = monster_def.get("race")
+        if race is not None:
+            races.append({"monsterName": monster_def["name"], "race": race})
+    entry = {"id": map_id, "mapId": map_id, "drops": drops}
+    if corpses:
+        entry["corpses"] = corpses
+    if races:
+        entry["races"] = races
+    return entry
 
 
 def _preview_atlas(respawn: Dict, preview_spawn: Dict) -> Dict:

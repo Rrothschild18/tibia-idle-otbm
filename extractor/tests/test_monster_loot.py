@@ -362,3 +362,93 @@ def test_build_monster_loot_index_walks_a_fake_install(tmp_path):
     assert index["Practice Target"]["loot"] == []
     assert "corpse" not in index["Practice Target"]
     assert "race" not in index["Practice Target"]
+
+
+# ======================================================
+# parse_monster_outfit_lua / build_monster_outfit_index
+# ======================================================
+
+
+def test_parse_monster_outfit_lua_reads_every_field(tmp_path):
+    lua_file = tmp_path / "azure_frog.lua"
+    lua_file.write_text(
+        textwrap.dedent(
+            """\
+            local mType = Game.createMonsterType("Azure Frog")
+            local monster = {}
+
+            monster.outfit = {
+                lookType = 226,
+                lookHead = 87,
+                lookBody = 85,
+                lookLegs = 85,
+                lookFeet = 87,
+                lookAddons = 0,
+                lookMount = 0,
+            }
+            """
+        ),
+        encoding="utf-8",
+    )
+
+    name, appearance = ml.parse_monster_outfit_lua(str(lua_file))
+
+    assert name == "Azure Frog"
+    assert appearance == {
+        "looktype": 226, "head": 87, "body": 85, "legs": 85, "feet": 87, "addons": 0,
+    }
+
+
+def test_parse_monster_outfit_lua_defaults_omitted_fields_to_zero(tmp_path):
+    lua_file = tmp_path / "rat.lua"
+    lua_file.write_text(
+        textwrap.dedent(
+            """\
+            local mType = Game.createMonsterType("Rat")
+            local monster = {}
+            monster.outfit = { lookType = 21 }
+            """
+        ),
+        encoding="utf-8",
+    )
+
+    _, appearance = ml.parse_monster_outfit_lua(str(lua_file))
+
+    assert appearance == {
+        "looktype": 21, "head": 0, "body": 0, "legs": 0, "feet": 0, "addons": 0,
+    }
+
+
+def test_parse_monster_outfit_lua_none_without_outfit_block(tmp_path):
+    lua_file = tmp_path / "no_outfit.lua"
+    lua_file.write_text('local mType = Game.createMonsterType("Ghost")\n', encoding="utf-8")
+
+    name, appearance = ml.parse_monster_outfit_lua(str(lua_file))
+
+    assert name == "Ghost"
+    assert appearance is None
+
+
+def test_build_monster_outfit_index_walks_a_fake_install_and_skips_no_outfit(tmp_path):
+    monster_dir = tmp_path / "data-otservbr-global" / "monster" / "amphibics"
+    monster_dir.mkdir(parents=True)
+    (monster_dir / "azure_frog.lua").write_text(
+        textwrap.dedent(
+            """\
+            local mType = Game.createMonsterType("Azure Frog")
+            local monster = {}
+            monster.outfit = { lookType = 226, lookHead = 87, lookBody = 85, lookLegs = 85, lookFeet = 87 }
+            """
+        ),
+        encoding="utf-8",
+    )
+    (monster_dir / "no_outfit.lua").write_text(
+        'local mType = Game.createMonsterType("Ghost")\n', encoding="utf-8",
+    )
+
+    index = ml.build_monster_outfit_index(str(tmp_path))
+
+    assert set(index.keys()) == {"Azure Frog"}
+    assert index["Azure Frog"] == {
+        "looktype": 226, "head": 87, "body": 85, "legs": 85, "feet": 87, "addons": 0,
+    }

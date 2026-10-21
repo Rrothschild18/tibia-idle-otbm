@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32196" centery="31771" centerz="10" radius="3">
+		<monster name="Ghoul" x="1" y="-2" z="10" spawntime="90" />
+		<monster name="Demon Skeleton" x="0" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32181" centery="31777" centerz="10" radius="3">
+		<monster name="Ghoul" x="-1" y="-2" z="10" spawntime="90" />
+		<monster name="Demon Skeleton" x="2" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32193" centery="31785" centerz="10" radius="3">
+		<monster name="Ghoul" x="-2" y="-3" z="10" spawntime="90" />
+		<monster name="Ghoul" x="2" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32182" centery="31793" centerz="10" radius="3">
+		<monster name="Demon Skeleton" x="1" y="0" z="10" spawntime="90" />
+		<monster name="Ghoul" x="-1" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32193" centery="31795" centerz="10" radius="3">
+		<monster name="Ghoul" x="0" y="-1" z="10" spawntime="90" />
+	</monster>
+</monsters>

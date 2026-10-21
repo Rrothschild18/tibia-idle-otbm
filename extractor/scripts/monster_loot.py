@@ -135,6 +135,8 @@ _MONSTER_RACE_RE = re.compile(r'monster\.race\s*=\s*"([^"]+)"')
 _LOOT_BLOCK_START_RE = re.compile(r"monster\.loot\s*=\s*\{")
 _LOOT_ENTRY_RE = re.compile(r"\{([^{}]*)\}")
 _LOOT_FIELD_RE = re.compile(r'(\w+)\s*=\s*("(?:[^"\\]|\\.)*"|-?\d+(?:\.\d+)?|true|false)')
+_OUTFIT_BLOCK_START_RE = re.compile(r"monster\.outfit\s*=\s*\{")
+_OUTFIT_FIELD_RE = re.compile(r"look(Type|Head|Body|Legs|Feet|Addons)\s*=\s*(\d+)")
 
 
 def _extract_braced_block(text: str, start: int) -> str:
@@ -216,6 +218,58 @@ def parse_monster_loot_lua(lua_path: str) -> Tuple[Optional[str], Optional[int],
             raw_rows.append(row)
 
     return monster_name, corpse_item_id, race, raw_rows
+
+
+def parse_monster_outfit_lua(lua_path: str) -> Tuple[Optional[str], Optional[Dict]]:
+    """One Canary monster .lua file -> (monster name, outfit appearance).
+
+    `appearance` is None for a file with no `monster.outfit` block at all;
+    a field the block omits defaults to 0, same convention lua-table.ts's
+    reader uses on the TS side (generate-monster-outfit-colors.ts), which
+    this is the Python-side companion to — see build_monster_outfit_index.
+    """
+    with open(lua_path, "r", encoding="utf-8", errors="replace") as f:
+        text = f.read()
+
+    name_match = _MONSTER_NAME_RE.search(text)
+    monster_name = name_match.group(1) if name_match else None
+
+    block_match = _OUTFIT_BLOCK_START_RE.search(text)
+    if not block_match:
+        return monster_name, None
+
+    block = _extract_braced_block(text, block_match.end())
+    fields = {key: 0 for key in ("looktype", "head", "body", "legs", "feet", "addons")}
+    field_key = {
+        "Type": "looktype", "Head": "head", "Body": "body",
+        "Legs": "legs", "Feet": "feet", "Addons": "addons",
+    }
+    for field_match in _OUTFIT_FIELD_RE.finditer(block):
+        fields[field_key[field_match.group(1)]] = int(field_match.group(2))
+
+    return monster_name, fields
+
+
+def build_monster_outfit_index(canary_dir: str) -> Dict[str, Dict]:
+    """Every monster .lua file in a local Canary install -> {monster name:
+    appearance}. Same scope and style as build_monster_loot_index: a complete
+    reference, not filtered to what tibia-idle currently spawns. Monsters
+    with no `monster.outfit` block are omitted.
+
+    Exists because `respawn.json`'s `monsterDefs` keeps one appearance per
+    OUTFIT ID, not per monster name — four frog species can share outfit 226
+    with four different colors, and only one of them survives the dedup into
+    `monsterDefs`. This index resolves the other three straight from Canary,
+    by the name the spawn actually uses (see bake_outfit_atlas.py's
+    monster_appearances, which falls back to this for exactly that case)."""
+    monster_glob = os.path.join(canary_dir, "data-otservbr-global", "monster", "**", "*.lua")
+    index: Dict[str, Dict] = {}
+    for lua_path in sorted(glob.glob(monster_glob, recursive=True)):
+        monster_name, appearance = parse_monster_outfit_lua(lua_path)
+        if monster_name is None or appearance is None:
+            continue
+        index[monster_name] = appearance
+    return index
 
 
 # ======================================================

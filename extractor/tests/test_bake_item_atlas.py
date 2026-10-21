@@ -186,6 +186,72 @@ def test_is_equipment_candidate_false_for_corpse():
     )
 
 
+def test_is_equipment_candidate_false_for_take_only_item_not_in_dropped_ids():
+    # Same shape as "Blue Ectoplasm" (30082): take+expire only, no
+    # usable/cumulative/market/clothes — excluded unless some monster drops it.
+    assert not bia.is_equipment_candidate({"id": 30082, "flags": {"take": True, "expire": True}})
+
+
+def test_is_equipment_candidate_true_for_take_only_item_in_dropped_ids():
+    assert bia.is_equipment_candidate(
+        {"id": 30082, "flags": {"take": True, "expire": True}}, dropped_ids={30082}
+    )
+
+
+# ---------------------------------------------------------------------------
+# is_dropped_item
+# ---------------------------------------------------------------------------
+
+def test_is_dropped_item_true_when_id_is_in_the_set():
+    assert bia.is_dropped_item({"id": 30082}, {30082, 99})
+
+
+def test_is_dropped_item_false_when_id_is_not_in_the_set():
+    assert not bia.is_dropped_item({"id": 30082}, {99})
+
+
+def test_is_dropped_item_false_when_dropped_ids_is_empty_or_none():
+    assert not bia.is_dropped_item({"id": 30082}, set())
+    assert not bia.is_dropped_item({"id": 30082}, None)
+
+
+# ---------------------------------------------------------------------------
+# dropped_item_ids
+# ---------------------------------------------------------------------------
+
+def test_dropped_item_ids_collects_loot_item_ids_across_every_respawn_json(tmp_path):
+    rook = tmp_path / "ROOK" / "ROOK-HUNT-0001"
+    rook.mkdir(parents=True)
+    (rook / "monsters").mkdir()
+    (rook / "monsters" / "respawn.json").write_text(json.dumps({
+        "monsterDefs": {
+            "21": {"name": "Rat", "loot": [{"itemId": 3031}, {"itemId": 3607}]},
+        },
+    }), encoding="utf-8")
+
+    carlin = tmp_path / "CARLIN" / "CARLIN-HUNT-0001"
+    carlin.mkdir(parents=True)
+    (carlin / "monsters").mkdir()
+    (carlin / "monsters" / "respawn.json").write_text(json.dumps({
+        "monsterDefs": {
+            "130": {"name": "Corym Charlatan", "loot": [{"itemId": 3031}, {"itemId": 30082}]},
+        },
+    }), encoding="utf-8")
+
+    assert bia.dropped_item_ids(str(tmp_path)) == {3031, 3607, 30082}
+
+
+def test_dropped_item_ids_empty_when_no_monster_has_loot(tmp_path):
+    rook = tmp_path / "ROOK" / "ROOK-HUNT-0001"
+    rook.mkdir(parents=True)
+    (rook / "monsters").mkdir()
+    (rook / "monsters" / "respawn.json").write_text(json.dumps({
+        "monsterDefs": {"30": {"name": "Spider", "loot": []}},
+    }), encoding="utf-8")
+
+    assert bia.dropped_item_ids(str(tmp_path)) == set()
+
+
 # ---------------------------------------------------------------------------
 # _list_item_ids
 # ---------------------------------------------------------------------------

@@ -101,10 +101,18 @@ def empty_catalog() -> Dict[str, List[Dict]]:
 def hunt_manifest(catalog_hunts: List[Dict]) -> List[Dict]:
     """The catalog's `hunts` -> content/hunts/hunts.json. A projection, so the
     manifest can never disagree with the catalog about a hunt's map or start
-    position: there is one merged copy, and this is a view of it."""
+    position: there is one merged copy, and this is a view of it.
+
+    Skips `status: "test"` hunts (city_ids.TEST_CITY) — this file is read
+    straight off disk by tools with no database nearby (hunt-bench,
+    headless-arena), and none of them need to simulate a render-harness
+    bench map. The back-end's own hunt listing already filters the same way
+    (`eq(hunts.status, 'live')`); the test hunt still lands in the catalog,
+    respawn and loot — just not here."""
     return [
         {field: hunt[field] for field in HUNT_MANIFEST_FIELDS if field in hunt}
         for hunt in catalog_hunts
+        if hunt.get("status") != "test"
     ]
 
 
@@ -123,8 +131,16 @@ def respawn_file(monsters_entry: Dict) -> Dict:
 def loot_file_entry(loot_entry: Dict) -> Dict:
     """The fragment's `loot` entry -> a content/hunts/loot.json row. Keyed by
     `mapId` alone; the `id` the old db.json collection carried was a
-    json-server requirement, and json-server is gone."""
-    return {"mapId": loot_entry["mapId"], "drops": loot_entry["drops"]}
+    json-server requirement, and json-server is gone.
+
+    `corpses`/`races` ride along only when the fragment has them — see
+    hunt_fragment.build_loot_entry, which is the only producer of this dict."""
+    entry = {"mapId": loot_entry["mapId"], "drops": loot_entry["drops"]}
+    if "corpses" in loot_entry:
+        entry["corpses"] = loot_entry["corpses"]
+    if "races" in loot_entry:
+        entry["races"] = loot_entry["races"]
+    return entry
 
 
 def hunt_id_exists(catalog_hunts: List[Dict], loot_entries: List[Dict], map_id: str) -> bool:

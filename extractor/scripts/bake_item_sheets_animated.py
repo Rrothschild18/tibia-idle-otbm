@@ -39,7 +39,7 @@ no longer part of the pipeline (see build_items.js).
 
 import json
 import os
-from typing import Dict, List, Tuple
+from typing import Dict, List, Set, Tuple
 
 import bake_item_atlas as bia
 import bake_item_sheets as bis
@@ -67,16 +67,24 @@ NUM_SHEETS = 8         # animated items pack far more cells/item (one per
 # ITEM DISCOVERY (animated equipment/consumable candidates only)
 # =========================
 
-def _list_animated_equipment_items() -> List[Tuple[int, List[str]]]:
+def _list_animated_equipment_items(
+    dropped_ids: Set[int] = frozenset(),
+) -> List[Tuple[int, List[str]]]:
     """(item_id, spriteKeys) for every equipment/consumable candidate
     (bia.is_equipment_candidate) that HAS animation, sorted by ID for
     determinism. spriteKeys is the item's full spriteId list — every
     animation-phase frame (and every multi-cell block within each phase,
-    for the rare multi-cell animated item), in original order."""
+    for the rare multi-cell animated item), in original order. `dropped_ids`
+    (see bia.dropped_item_ids) widens that classification to any item a
+    monster can drop."""
     result = []
     for item_id in bia._list_item_ids():
         data = bia._load_item_json(item_id)
-        if data is None or not bia.is_equipment_candidate(data) or bis._is_static(data):
+        if (
+            data is None
+            or not bia.is_equipment_candidate(data, dropped_ids)
+            or bis._is_static(data)
+        ):
             continue
         result.append((item_id, list(data.get("spriteId", []))))
     return result
@@ -86,12 +94,12 @@ def _list_animated_equipment_items() -> List[Tuple[int, List[str]]]:
 # BAKE
 # =========================
 
-def bake_animated_sheets() -> List[Dict]:
+def bake_animated_sheets(dropped_ids: Set[int] = frozenset()) -> List[Dict]:
     """Bake every animated equipment/consumable item into NUM_SHEETS grid
     sheets, writing items-animated-<i>.png + items-animated-<i>.json to
     SHEETS_DIR. Returns the list of atlas JSON dicts written, in shard
     order."""
-    items = _list_animated_equipment_items()
+    items = _list_animated_equipment_items(dropped_ids)
     item_id_by_key = {key: item_id for item_id, keys in items for key in keys}
 
     plans = bis.plan_static_sheets(items, columns=COLUMNS, num_sheets=NUM_SHEETS)
@@ -119,10 +127,11 @@ def bake_animated_sheets() -> List[Dict]:
 # =========================
 
 def main():
-    items = _list_animated_equipment_items()
+    dropped_ids = bia.dropped_item_ids()
+    items = _list_animated_equipment_items(dropped_ids)
     total_cells = sum(len(keys) for _, keys in items)
 
-    atlases = bake_animated_sheets()
+    atlases = bake_animated_sheets(dropped_ids)
 
     print(f"[OK] items-animated: {len(items)} itens ({total_cells} celulas) em {NUM_SHEETS} sheets, {SHEETS_DIR}")
     for i, atlas in enumerate(atlases):

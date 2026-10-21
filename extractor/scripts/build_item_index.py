@@ -11,7 +11,7 @@ sheets, kind "animated-sheet" — mirroring what static items already had).
 
 import json
 import os
-from typing import Dict, List, Tuple
+from typing import Dict, List, Set, Tuple
 
 import bake_item_atlas as bia
 import bake_item_sheets as bis
@@ -108,18 +108,18 @@ def _compute_shard_of(
 # ORCHESTRATION (I/O)
 # =========================
 
-def _load_all_candidates() -> List[Tuple[int, Dict]]:
+def _load_all_candidates(dropped_ids: Set[int] = frozenset()) -> List[Tuple[int, Dict]]:
     result = []
     for item_id in bia._list_item_ids():
         data = bia._load_item_json(item_id)
-        if data is None or not bia.is_equipment_candidate(data):
+        if data is None or not bia.is_equipment_candidate(data, dropped_ids):
             continue
         result.append((item_id, data))
     return result
 
 
-def generate_item_index() -> Dict[str, Dict]:
-    all_items = _load_all_candidates()
+def generate_item_index(dropped_ids: Set[int] = frozenset()) -> Dict[str, Dict]:
+    all_items = _load_all_candidates(dropped_ids)
     static_items = [(item_id, list(data.get("spriteId", []))) for item_id, data in all_items if bis._is_static(data)]
     animated_items = [(item_id, list(data.get("spriteId", []))) for item_id, data in all_items if not bis._is_static(data)]
     static_shard_of = _compute_shard_of(static_items, columns=bis.COLUMNS, num_sheets=bis.NUM_SHEETS)
@@ -132,7 +132,7 @@ def generate_item_index() -> Dict[str, Dict]:
 # =========================
 
 def main():
-    index = generate_item_index()
+    index = generate_item_index(bia.dropped_item_ids())
 
     os.makedirs(os.path.dirname(INDEX_PATH), exist_ok=True)
     with open(INDEX_PATH, "w", encoding="utf-8") as f:

@@ -1,6 +1,7 @@
+import glob
 import json
 import os
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List, Optional, Set, Tuple
 
 from PIL import Image
 
@@ -13,6 +14,7 @@ EXTRACTOR_DIR = os.path.dirname(SCRIPTS_DIR)
 
 ITEMS_SPRITES_DIR = os.path.join(EXTRACTOR_DIR, "sprites", "items")
 ITEMS_ATLAS_DIR = os.path.join(EXTRACTOR_DIR, "atlases", "items")
+READY_MAPS_DIR = os.path.join(EXTRACTOR_DIR, "ready-maps")
 
 # Transparent pixels added around each packed frame so the client scaling
 # or filtering the atlas texture doesn't bleed neighboring frames together.
@@ -121,11 +123,36 @@ def is_portable_consumable_without_market(data: Dict) -> bool:
     return not any(flags.get(f) for f in _SCENERY_FLAGS)
 
 
-def is_equipment_candidate(data: Dict) -> bool:
+def dropped_item_ids(root: Optional[str] = None) -> Set[int]:
+    """Item ids any currently-spawned monster can drop, read straight from
+    ready-maps/*/*/monsters/respawn.json — the same scope
+    build_monster_stats.py's spawned_monster_names() uses for monsters,
+    applied here to their loot. A dropped item needs a sprite the moment a
+    player can loot it, no matter what is_portable_consumable_without_market
+    thinks of its own flags (see "Blue Ectoplasm"/30082: take+expire only,
+    no usable/cumulative/market — dropped by Burster Spectre regardless)."""
+    ids: Set[int] = set()
+    for path in glob.glob(os.path.join(root or READY_MAPS_DIR, "*", "*", "monsters", "respawn.json")):
+        with open(path, "r", encoding="utf-8") as f:
+            respawn = json.load(f)
+        for monster_def in respawn.get("monsterDefs", {}).values():
+            for loot_row in monster_def.get("loot", []):
+                ids.add(loot_row["itemId"])
+    return ids
+
+
+def is_dropped_item(data: Dict, dropped_ids: Optional[Set[int]]) -> bool:
+    if not dropped_ids:
+        return False
+    return data.get("id") in dropped_ids
+
+
+def is_equipment_candidate(data: Dict, dropped_ids: Optional[Set[int]] = None) -> bool:
     return (
         is_market_item(data)
         or is_wearable_without_market(data)
         or is_portable_consumable_without_market(data)
+        or is_dropped_item(data, dropped_ids)
     )
 
 

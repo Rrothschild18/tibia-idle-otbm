@@ -172,6 +172,21 @@ def catalog_name(game_dir: str, hunt_id: str) -> Optional[str]:
     return None
 
 
+def resolve_hunt_name(mask: Dict, catalog_name_value: Optional[str]) -> Optional[str]:
+    """The name to pass to hunt-add's `--name`, preferring whatever is
+    already curated in the catalog over the mask's own `name` field.
+
+    The mask's `name` is a snapshot from the moment it was drawn in the
+    editor — for a hunt that already exists, it can be stale next to a name
+    a human later typed straight into the catalog, and passing it as
+    `--name` would overwrite that curation (`--name` always wins in
+    hunt-add, by design, for the hunt a human names on purpose at the CLI).
+    It's still needed as a fallback for a hunt born from the editor's
+    "nova hunt a partir desse andar" — brand new, with no catalog entry yet,
+    so no other name exists to prefer."""
+    return catalog_name_value or mask.get("name")
+
+
 def restore_start_position(game_dir: str, hunt_id: str, entrance) -> None:
     """A entrada curada de volta nos dois arquivos de conteúdo.
 
@@ -208,7 +223,7 @@ def apply_one(game_dir: str, hunt_id: str, folder: str, bundle: str, mask: Dict)
         return False, f"publish: {last_line(log)}"
 
     command = ["bunx", "nx", "run", "hunt-add:add", "--", "--from", bundle]
-    name = mask.get("name") or catalog_name(game_dir, hunt_id)
+    name = resolve_hunt_name(mask, catalog_name(game_dir, hunt_id))
     if name:
         command += ["--name", name]
     code, log = run(command, game_dir)

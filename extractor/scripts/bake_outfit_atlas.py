@@ -1,3 +1,4 @@
+import argparse
 import contextlib
 import glob
 import json
@@ -7,7 +8,9 @@ from typing import Dict, List, Optional, Set, Tuple
 
 from PIL import Image
 
+import monster_loot
 import outfit_colors
+import paths
 
 # =========================
 # CONFIG
@@ -275,16 +278,38 @@ def monster_outfit_ids() -> Set[int]:
     return ids
 
 
-def monster_appearances() -> List[Dict]:
-    """As aparências que precisam de atlas próprio (cor ou addon), sem repetir."""
+def monster_appearances(canary_dir: Optional[str] = None) -> List[Dict]:
+    """As aparências que precisam de atlas próprio (cor ou addon), sem repetir.
+
+    Duas fontes. A primeira, sempre: os `monsterDefs` do respawn.json — um só
+    por outfit id, então quando duas espécies compartilham o looktype com
+    cores diferentes (Azure/Crimson/Orchid Frog no 226, todas atrás de
+    "Coral Frog" depois do dedup), só a que sobreviveu no respawn aparece
+    aqui. A segunda, só com `canary_dir`: o nome de cada spawn, resolvido
+    direto no Canary (monster_loot.build_monster_outfit_index) — o mesmo nome
+    que generate-monster-outfit-colors.ts já usa do lado do jogo — cobre as
+    que a primeira fonte perde."""
     seen: Dict[str, Dict] = {}
+    spawn_names: Set[str] = set()
     pattern = os.path.join(EXTRACTOR_DIR, "ready-maps", "*", "*", "monsters", "respawn.json")
     for path in glob.glob(pattern):
         with open(path, "r", encoding="utf-8") as handler:
-            for monster in json.load(handler).get("monsterDefs", {}).values():
+            data = json.load(handler)
+            for monster in data.get("monsterDefs", {}).values():
                 appearance = monster.get("appearance")
                 if appearance and outfit_colors.needs_appearance_atlas(appearance):
                     seen[outfit_colors.appearance_key(appearance)] = appearance
+            for spawn in data.get("spawns", []):
+                if spawn.get("name"):
+                    spawn_names.add(spawn["name"])
+
+    if canary_dir:
+        outfit_index = monster_loot.build_monster_outfit_index(canary_dir)
+        for name in spawn_names:
+            appearance = outfit_index.get(name)
+            if appearance and outfit_colors.needs_appearance_atlas(appearance):
+                seen[outfit_colors.appearance_key(appearance)] = appearance
+
     return [seen[key] for key in sorted(seen)]
 
 
@@ -316,6 +341,21 @@ def npc_outfit_ids() -> Set[int]:
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--canary-dir",
+        default=None,
+        help="Checkout do Canary, só para resolver espécies que compartilham "
+        "looktype com cores diferentes e que o respawn.json perdeu no dedup "
+        "(default: " + f"${paths.CANARY.env_var} ou {paths.CANARY.sibling_default()}" + "). "
+        "Sem ele, essas espécies continuam caindo no sheet cinza do looktype.",
+    )
+    args = parser.parse_args()
+
+    canary_dir = paths.CANARY.resolve(args.canary_dir)
+    if not os.path.isdir(canary_dir):
+        canary_dir = None
+
     ids = _list_outfit_ids()
     baked = 0
     skipped = []
@@ -332,7 +372,7 @@ def main():
             baked += 1
 
     colored = 0
-    for appearance in monster_appearances():
+    for appearance in monster_appearances(canary_dir):
         if bake_monster_appearance(appearance) is not None:
             colored += 1
 
@@ -341,6 +381,9 @@ def main():
         print(f"  [OK] {len(humanoids)} de outfit de jogador, usados por monstro: {humanoids}")
     if colored:
         print(f"  [OK] {colored} atlas por aparência (outfit + cores e addons do monstro)")
+    if canary_dir is None:
+        print("  [--] sem --canary-dir: espécies que dividem looktype com cores "
+              "diferentes (ex.: Azure/Crimson/Orchid Frog no 226) ficam de fora")
     remaining = len(skipped) - len(humanoids)
     if remaining:
         print(f"  [skip] {remaining} outfits ignorados (sem JSON, ou de jogador sem monstro que os use)")
