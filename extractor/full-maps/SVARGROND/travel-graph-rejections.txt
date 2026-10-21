@@ -12,15 +12,3 @@ tile caminhável ligado ao resto da cidade.
   SVARGROND-NPC-buddel-helheim  (NPC)  x=32462 y=31173 z=7
   SVARGROND-NPC-nomad  (NPC)  x=31941 y=31305 z=6
   SVARGROND-NPC-siflind  (NPC)  x=32360 y=31030 z=6
-
-## hunt-without-poi (5)
-Hunt sem POI de entrada — o mapa da hunt existe em extractor/maps/, mas nenhuma placa
-marca por onde se entra nela. A hunt não tem coordenada de mundo (o startPosition dela é
-posição dentro do próprio mapa da hunt), então só o OTBM sabe onde fica: coloque a placa
-com esse id na entrada, no editor de mapa.
-
-  SVARGROND-HUNT-0107  barbarian-settlements-z5  sem coordenada de mundo
-  SVARGROND-HUNT-0108  tyrsung-z9  sem coordenada de mundo
-  SVARGROND-HUNT-0109  formorgar-glacier-crystal-spiders-z4  sem coordenada de mundo
-  SVARGROND-HUNT-0121  sea-serpent-area-norte-z10  sem coordenada de mundo
-  SVARGROND-HUNT-0122  sea-serpent-area-norte-z10  sem coordenada de mundo

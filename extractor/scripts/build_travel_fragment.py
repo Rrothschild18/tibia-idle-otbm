@@ -87,6 +87,7 @@ EXTRACTOR_DIR = os.path.dirname(SCRIPTS_DIR)
 RAW_MAPS_DIR = os.path.join(EXTRACTOR_DIR, "raw-maps")
 FULL_MAPS_DIR = os.path.join(EXTRACTOR_DIR, "full-maps")
 MAPS_DIR = os.path.join(EXTRACTOR_DIR, "maps")
+MASK_DIR = os.path.join(EXTRACTOR_DIR, "hunt-masks")
 
 
 def _load_json(path, what):
@@ -266,6 +267,67 @@ def _load_curated_hunt_locations(city: str):
     return locations, path
 
 
+def _resolve_mask_entrance(hunt_id, _seen=None):
+    """A entrada de verdade de uma hunt nascida de split de andar no editor
+    (`tibia-idle-map-editor`'s /api/split) — a própria `hunt-masks/<ID>.json`
+    (campo `entrance`) ou, quando o split não escolheu uma, a da hunt de onde
+    ela foi cortada (`splitFrom`), recursivamente. A entrada da origem serve
+    porque fisicamente é o mesmo lugar no mapa da cidade, só um recorte de
+    andar diferente — não é geograficamente exata, mas dá rota alcançável de
+    verdade em vez de nenhuma (mesma lógica de `connect_orphan_hunts` pra ilha
+    sem caminho: estimativa > esconder a hunt do jogador).
+
+    `_seen` corta ciclo — `splitFrom` é texto digitado/copiado na mão (pelo
+    split em si, mas também editável), não uma árvore garantida."""
+    seen = _seen or set()
+    if hunt_id in seen:
+        return None
+    seen.add(hunt_id)
+    path = os.path.join(MASK_DIR, f"{hunt_id}.json")
+    if not os.path.exists(path):
+        return None
+    with open(path, "r", encoding="utf-8") as handler:
+        mask = json.load(handler)
+    entrance = mask.get("entrance")
+    if entrance:
+        return tuple(entrance)
+    split_from = mask.get("splitFrom")
+    if split_from:
+        return _resolve_mask_entrance(split_from, seen)
+    return None
+
+
+def _load_split_hunt_locations(city: str, exclude_ids):
+    """POIs sintéticos pras hunts de split que não têm placa no OTBM nem
+    entrada em `curated-hunts.json` — sem isto elas caem em `hunt-without-poi`
+    mesmo quando a própria máscara (ou a de quem ela foi cortada) já sabe a
+    entrada. `exclude_ids` são os ids que já têm POI de placa/curadoria: esses
+    nunca são sobrescritos — uma entrada de máscara desatualizada não briga
+    com a fonte mais confiável."""
+    locations = []
+    for folder in map_dirs.discover_city_map_names(MAPS_DIR, city):
+        if "_" not in folder:
+            continue
+        hunt_id = map_id_from_folder(folder)
+        if city_ids.derive_city(hunt_id) != city or hunt_id in exclude_ids:
+            continue
+        entrance = _resolve_mask_entrance(hunt_id)
+        if entrance is None:
+            continue
+        name = folder.split("_", 1)[1]
+        mask_path = os.path.join(MASK_DIR, f"{hunt_id}.json")
+        if os.path.exists(mask_path):
+            with open(mask_path, "r", encoding="utf-8") as handler:
+                name = json.load(handler).get("name") or name
+        fake_hunt = {
+            "id": hunt_id,
+            "name": name,
+            "type": "TRAINING" if "-TRAINING-" in hunt_id else "HUNT",
+        }
+        locations.append(curated_hunts.build_location(fake_hunt, entrance))
+    return locations
+
+
 def build_city_fragment(
     city: str,
     canary_dir=None,
@@ -333,6 +395,16 @@ def build_city_fragment(
         by_id.update({location["id"]: location for location in curated_locations})
         sign_locations = list(by_id.values())
         print(f"[OK] {len(curated_locations)} POIs de hunt curados lidos de {curated_path}")
+
+    # POIs sintéticos pras hunts de split de andar (ver _load_split_hunt_locations)
+    # — só preenche o que placa e curadoria não cobriram, nunca sobrescreve.
+    split_locations = _load_split_hunt_locations(
+        city, {location["id"] for location in sign_locations}
+    )
+    if split_locations:
+        sign_locations = [*sign_locations, *split_locations]
+        print(f"[OK] {len(split_locations)} POIs sintéticos de hunt de split "
+              f"(entrada da própria máscara ou de quem ela foi cortada)")
 
     npcs = _load_city_npcs(city, warn=True)
 
