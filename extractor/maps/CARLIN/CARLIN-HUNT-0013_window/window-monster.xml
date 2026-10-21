@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32507" centery="31616" centerz="11" radius="2">
+		<monster name="Slime" x="1" y="2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32502" centery="31622" centerz="11" radius="2">
+		<monster name="Bonelord" x="0" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32445" centery="31623" centerz="11" radius="3">
+		<monster name="Minotaur Mage" x="-1" y="-1" z="11" spawntime="90" />
+		<monster name="Troll" x="2" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32502" centery="31632" centerz="11" radius="2">
+		<monster name="Bug" x="1" y="-2" z="11" spawntime="90" />
+		<monster name="Bug" x="-1" y="2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32406" centery="31645" centerz="11" radius="3">
+		<monster name="Wasp" x="0" y="-1" z="11" spawntime="90" />
+		<monster name="Wasp" x="0" y="2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32437" centery="31646" centerz="11" radius="3">
+		<monster name="Minotaur Archer" x="-1" y="-3" z="11" spawntime="90" />
+		<monster name="Monk" x="-1" y="-1" z="11" spawntime="90" />
+		<monster name="Orc Warrior" x="1" y="2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32469" centery="31647" centerz="11" radius="3">
+		<monster name="Giant Spider" x="0" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32417" centery="31688" centerz="11" radius="3">
+		<monster name="Minotaur Archer" x="-1" y="-2" z="11" spawntime="90" />
+		<monster name="Troll" x="3" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32404" centery="31722" centerz="11" radius="2">
+		<monster name="Dwarf Guard" x="1" y="-1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32479" centery="31722" centerz="11" radius="3">
+		<monster name="Cyclops" x="-2" y="-1" z="11" spawntime="90" />
+		<monster name="Orc Berserker" x="3" y="-1" z="11" spawntime="90" />
+		<monster name="Minotaur Archer" x="0" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32467" centery="31624" centerz="12" radius="3">
+		<monster name="Orc Berserker" x="0" y="-2" z="12" spawntime="90" />
+		<monster name="Minotaur Mage" x="3" y="-2" z="12" spawntime="90" />
+		<monster name="Minotaur Archer" x="-3" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32510" centery="31635" centerz="12" radius="2">
+		<monster name="Bug" x="1" y="-1" z="12" spawntime="90" />
+		<monster name="Bug" x="0" y="1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32454" centery="31640" centerz="12" radius="3">
+		<monster name="Bonelord" x="0" y="-1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32404" centery="31651" centerz="12" radius="3">
+		<monster name="Skeleton" x="-1" y="-2" z="12" spawntime="90" />
+		<monster name="Skeleton" x="1" y="1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32467" centery="31668" centerz="12" radius="4">
+		<monster name="Minotaur Mage" x="-2" y="-3" z="12" spawntime="90" />
+		<monster name="Troll" x="-3" y="0" z="12" spawntime="90" />
+		<monster name="Orc Spearman" x="2" y="1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32411" centery="31673" centerz="12" radius="2">
+		<monster name="Scorpion" x="1" y="1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32458" centery="31677" centerz="12" radius="3">
+		<monster name="Cyclops" x="-1" y="-1" z="12" spawntime="90" />
+		<monster name="Orc Berserker" x="1" y="1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32397" centery="31706" centerz="12" radius="2">
+		<monster name="Snake" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32433" centery="31621" centerz="13" radius="3">
+		<monster name="Cyclops" x="1" y="-2" z="13" spawntime="90" />
+		<monster name="Orc Shaman" x="-1" y="1" z="13" spawntime="90" />
+		<monster name="Minotaur Guard" x="3" y="1" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="32398" centery="31717" centerz="13" radius="3">
+		<monster name="Dragon Lord" x="0" y="0" z="13" spawntime="90" />
+	</monster>
+	<monster centerx="32423" centery="31602" centerz="14" radius="3">
+		<monster name="Elf Arcanist" x="1" y="1" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="32433" centery="31602" centerz="14" radius="3">
+		<monster name="Elf Arcanist" x="-1" y="1" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="32451" centery="31655" centerz="14" radius="3">
+		<monster name="Warlock" x="1" y="1" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="32479" centery="31656" centerz="14" radius="3">
+		<monster name="Warlock" x="0" y="-2" z="14" spawntime="90" />
+		<monster name="Elf Arcanist" x="0" y="2" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="32505" centery="31656" centerz="14" radius="3">
+		<monster name="Warlock" x="1" y="-2" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="32497" centery="31660" centerz="14" radius="2">
+		<monster name="Elf Arcanist" x="2" y="-1" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="32458" centery="31661" centerz="14" radius="2">
+		<monster name="Elf Arcanist" x="1" y="0" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="32491" centery="31664" centerz="14" radius="2">
+		<monster name="Elf Arcanist" x="1" y="1" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="32466" centery="31665" centerz="14" radius="2">
+		<monster name="Elf Arcanist" x="-1" y="1" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="32479" centery="31669" centerz="14" radius="3">
+		<monster name="Warlock" x="0" y="-2" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="32507" centery="31669" centerz="14" radius="3">
+		<monster name="Elf Arcanist" x="-1" y="-1" z="14" spawntime="90" />
+		<monster name="Warlock" x="1" y="2" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="32450" centery="31670" centerz="14" radius="3">
+		<monster name="Elf Arcanist" x="-2" y="0" z="14" spawntime="90" />
+		<monster name="Warlock" x="-1" y="3" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="32469" centery="31675" centerz="14" radius="3">
+		<monster name="Warlock" x="-1" y="-2" z="14" spawntime="90" />
+		<monster name="Elf Arcanist" x="-3" y="0" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="32508" centery="31613" centerz="15" radius="3">
+		<monster name="Warlock" x="1" y="-2" z="15" spawntime="90" />
+	</monster>
+	<monster centerx="32479" centery="31615" centerz="15" radius="5">
+		<monster name="Warlock" x="-4" y="-3" z="15" spawntime="90" />
+		<monster name="Dragon" x="0" y="-3" z="15" spawntime="90" />
+		<monster name="Warlock" x="5" y="-3" z="15" spawntime="90" />
+		<monster name="Dragon" x="-5" y="1" z="15" spawntime="90" />
+		<monster name="Dragon" x="5" y="1" z="15" spawntime="90" />
+		<monster name="Warlock" x="0" y="2" z="15" spawntime="90" />
+		<monster name="Dragon" x="0" y="5" z="15" spawntime="90" />
+	</monster>
+	<monster centerx="32433" centery="31622" centerz="15" radius="3">
+		<monster name="Warlock" x="0" y="0" z="15" spawntime="90" />
+	</monster>
+	<monster centerx="32396" centery="31629" centerz="15" radius="3">
+		<monster name="Elf Arcanist" x="1" y="-2" z="15" spawntime="90" />
+		<monster name="Elf Arcanist" x="1" y="1" z="15" spawntime="90" />
+	</monster>
+	<monster centerx="32404" centery="31629" centerz="15" radius="3">
+		<monster name="Warlock" x="0" y="-2" z="15" spawntime="90" />
+	</monster>
+	<monster centerx="32416" centery="31629" centerz="15" radius="3">
+		<monster name="Warlock" x="1" y="0" z="15" spawntime="90" />
+	</monster>
+	<monster centerx="32508" centery="31631" centerz="15" radius="3">
+		<monster name="Warlock" x="1" y="-3" z="15" spawntime="90" />
+		<monster name="Elf Arcanist" x="-1" y="1" z="15" spawntime="90" />
+	</monster>
+	<monster centerx="32432" centery="31636" centerz="15" radius="2">
+		<monster name="Elf Arcanist" x="-2" y="1" z="15" spawntime="90" />
+	</monster>
+	<monster centerx="32449" centery="31637" centerz="15" radius="3">
+		<monster name="Elf Arcanist" x="-3" y="-2" z="15" spawntime="90" />
+		<monster name="Warlock" x="2" y="0" z="15" spawntime="90" />
+	</monster>
+	<monster centerx="32480" centery="31638" centerz="15" radius="3">
+		<monster name="Warlock" x="-1" y="-2" z="15" spawntime="90" />
+		<monster name="Elf Arcanist" x="-2" y="0" z="15" spawntime="90" />
+	</monster>
+	<monster centerx="32406" centery="31645" centerz="15" radius="3">
+		<monster name="Warlock" x="-2" y="1" z="15" spawntime="90" />
+	</monster>
+	<monster centerx="32419" centery="31645" centerz="15" radius="3">
+		<monster name="Warlock" x="1" y="2" z="15" spawntime="90" />
+	</monster>
+	<monster centerx="32508" centery="31647" centerz="15" radius="3">
+		<monster name="Warlock" x="1" y="-2" z="15" spawntime="90" />
+	</monster>
+	<monster centerx="32400" centery="31656" centerz="15" radius="3">
+		<monster name="Warlock" x="2" y="-1" z="15" spawntime="90" />
+		<monster name="Warlock" x="-2" y="2" z="15" spawntime="90" />
+	</monster>
+	<monster centerx="32488" centery="31722" centerz="15" radius="2">
+		<monster name="Elf Arcanist" x="1" y="-2" z="15" spawntime="90" />
+		<monster name="Dwarf Guard" x="-1" y="1" z="15" spawntime="90" />
+		<monster name="Stone Golem" x="2" y="2" z="15" spawntime="90" />
+	</monster>
+	<monster centerx="32495" centery="31722" centerz="15" radius="2">
+		<monster name="Dwarf Guard" x="-1" y="-2" z="15" spawntime="90" />
+		<monster name="Elf Arcanist" x="1" y="-1" z="15" spawntime="90" />
+		<monster name="Minotaur Guard" x="0" y="1" z="15" spawntime="90" />
+	</monster>
+	<monster centerx="32504" centery="31722" centerz="15" radius="2">
+		<monster name="Minotaur Guard" x="2" y="-2" z="15" spawntime="90" />
+		<monster name="Stone Golem" x="-2" y="0" z="15" spawntime="90" />
+		<monster name="Elf Arcanist" x="2" y="1" z="15" spawntime="90" />
+	</monster>
+</monsters>

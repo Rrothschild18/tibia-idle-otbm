@@ -1,148 +1,312 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <monsters>
-	<monster centerx="33271" centery="31590" centerz="8" radius="1">
-		<monster name="Vicious Squire" x="0" y="0" z="8" spawntime="90" />
+	<monster centerx="33402" centery="31579" centerz="10" radius="1">
+		<monster name="Wereboar" x="0" y="0" z="10" spawntime="90" />
 	</monster>
-	<monster centerx="33274" centery="31594" centerz="8" radius="3">
-		<monster name="Vicious Squire" x="3" y="1" z="8" spawntime="90" />
+	<monster centerx="33281" centery="31580" centerz="10" radius="3">
+		<monster name="Hero" x="-2" y="0" z="10" spawntime="90" />
+		<monster name="Vicious Squire" x="2" y="1" z="10" spawntime="90" />
+		<monster name="Renegade Knight" x="-3" y="2" z="10" spawntime="90" />
+		<monster name="Blood Priest" x="0" y="2" z="10" spawntime="90" />
 	</monster>
-	<monster centerx="33265" centery="31595" centerz="8" radius="1">
-		<monster name="Necromancer" x="0" y="0" z="8" spawntime="90" />
+	<monster centerx="33288" centery="31580" centerz="10" radius="3">
+		<monster name="Vile Grandmaster" x="-1" y="2" z="10" spawntime="90" />
 	</monster>
-	<monster centerx="33267" centery="31595" centerz="8" radius="1">
-		<monster name="Vicious Squire" x="0" y="0" z="8" spawntime="90" />
+	<monster centerx="33295" centery="31580" centerz="10" radius="3">
+		<monster name="Undead Gladiator" x="-2" y="2" z="10" spawntime="90" />
 	</monster>
-	<monster centerx="33278" centery="31596" centerz="8" radius="1">
-		<monster name="Necromancer" x="0" y="0" z="8" spawntime="90" />
+	<monster centerx="33302" centery="31580" centerz="10" radius="3">
+		<monster name="Vicious Squire" x="-3" y="-2" z="10" spawntime="90" />
 	</monster>
-	<monster centerx="33281" centery="31601" centerz="8" radius="3">
-		<monster name="Bonebeast" x="0" y="-3" z="8" spawntime="90" />
+	<monster centerx="33309" centery="31580" centerz="10" radius="3">
+		<monster name="Bonebeast" x="3" y="-1" z="10" spawntime="90" />
+		<monster name="Undead Gladiator" x="2" y="1" z="10" spawntime="90" />
 	</monster>
-	<monster centerx="33281" centery="31606" centerz="8" radius="1">
-		<monster name="Vicious Squire" x="0" y="0" z="8" spawntime="90" />
+	<monster centerx="33316" centery="31580" centerz="10" radius="3">
+		<monster name="Undead Gladiator" x="-3" y="3" z="10" spawntime="90" />
 	</monster>
-	<monster centerx="33291" centery="31614" centerz="8" radius="1">
-		<monster name="Vicious Squire" x="0" y="0" z="8" spawntime="90" />
+	<monster centerx="33330" centery="31580" centerz="10" radius="3">
+		<monster name="Blood Priest" x="1" y="0" z="10" spawntime="90" />
+		<monster name="Bonebeast" x="2" y="0" z="10" spawntime="90" />
+		<monster name="Bonebeast" x="3" y="2" z="10" spawntime="90" />
 	</monster>
-	<monster centerx="33267" centery="31615" centerz="8" radius="3">
-		<monster name="Vicious Squire" x="0" y="-2" z="8" spawntime="90" />
-		<monster name="Vicious Squire" x="3" y="-2" z="8" spawntime="90" />
-		<monster name="Necromancer" x="-1" y="-1" z="8" spawntime="90" />
+	<monster centerx="33344" centery="31580" centerz="10" radius="3">
+		<monster name="Vicious Squire" x="3" y="-2" z="10" spawntime="90" />
 	</monster>
-	<monster centerx="33274" centery="31615" centerz="8" radius="3">
-		<monster name="Bonebeast" x="3" y="1" z="8" spawntime="90" />
+	<monster centerx="33365" centery="31580" centerz="10" radius="3">
+		<monster name="Vicious Squire" x="-1" y="-2" z="10" spawntime="90" />
+		<monster name="Blood Priest" x="2" y="-1" z="10" spawntime="90" />
+		<monster name="Vicious Squire" x="2" y="2" z="10" spawntime="90" />
+		<monster name="Hero" x="3" y="2" z="10" spawntime="90" />
 	</monster>
-	<monster centerx="33281" centery="31615" centerz="8" radius="3">
-		<monster name="Bonebeast" x="-2" y="-2" z="8" spawntime="90" />
-		<monster name="Necromancer" x="2" y="-2" z="8" spawntime="90" />
-		<monster name="Bonebeast" x="0" y="-1" z="8" spawntime="90" />
-		<monster name="Bonebeast" x="-2" y="0" z="8" spawntime="90" />
-		<monster name="Vicious Squire" x="2" y="0" z="8" spawntime="90" />
+	<monster centerx="33407" centery="31580" centerz="10" radius="3">
+		<monster name="War Wolf" x="-2" y="-2" z="10" spawntime="90" />
+		<monster name="Werewolf" x="0" y="1" z="10" spawntime="90" />
+		<monster name="Werebear" x="3" y="1" z="10" spawntime="90" />
 	</monster>
-	<monster centerx="33295" centery="31615" centerz="8" radius="3">
-		<monster name="Bonebeast" x="-1" y="-1" z="8" spawntime="90" />
+	<monster centerx="33427" centery="31580" centerz="10" radius="1">
+		<monster name="Werebear" x="0" y="0" z="10" spawntime="90" />
 	</monster>
-	<monster centerx="33295" centery="31622" centerz="8" radius="3">
-		<monster name="Bonebeast" x="0" y="2" z="8" spawntime="90" />
+	<monster centerx="33360" centery="31581" centerz="10" radius="1">
+		<monster name="Renegade Knight" x="0" y="0" z="10" spawntime="90" />
 	</monster>
-	<monster centerx="33266" centery="31623" centerz="8" radius="1">
-		<monster name="Vicious Squire" x="0" y="0" z="8" spawntime="90" />
+	<monster centerx="33306" centery="31585" centerz="10" radius="1">
+		<monster name="Vile Grandmaster" x="0" y="0" z="10" spawntime="90" />
 	</monster>
-	<monster centerx="33276" centery="31626" centerz="8" radius="1">
-		<monster name="Necromancer" x="-1" y="-1" z="8" spawntime="90" />
-		<monster name="Vicious Squire" x="0" y="0" z="8" spawntime="90" />
+	<monster centerx="33432" centery="31585" centerz="10" radius="1">
+		<monster name="Wereboar" x="0" y="0" z="10" spawntime="90" />
 	</monster>
-	<monster centerx="33291" centery="31626" centerz="8" radius="1">
-		<monster name="Vicious Squire" x="0" y="0" z="8" spawntime="90" />
-		<monster name="Necromancer" x="-1" y="1" z="8" spawntime="90" />
+	<monster centerx="33365" centery="31586" centerz="10" radius="1">
+		<monster name="Renegade Knight" x="0" y="0" z="10" spawntime="90" />
 	</monster>
-	<monster centerx="33232" centery="31629" centerz="8" radius="3">
-		<monster name="Necromancer" x="-3" y="0" z="8" spawntime="90" />
-		<monster name="Bonebeast" x="-3" y="2" z="8" spawntime="90" />
-		<monster name="Vicious Squire" x="1" y="2" z="8" spawntime="90" />
+	<monster centerx="33400" centery="31586" centerz="10" radius="1">
+		<monster name="Wereboar" x="0" y="0" z="10" spawntime="90" />
 	</monster>
-	<monster centerx="33246" centery="31629" centerz="8" radius="3">
-		<monster name="Vicious Squire" x="1" y="2" z="8" spawntime="90" />
-		<monster name="Bonebeast" x="3" y="2" z="8" spawntime="90" />
+	<monster centerx="33414" centery="31586" centerz="10" radius="1">
+		<monster name="Wereboar" x="0" y="0" z="10" spawntime="90" />
 	</monster>
-	<monster centerx="33260" centery="31629" centerz="8" radius="3">
-		<monster name="Bonebeast" x="-2" y="0" z="8" spawntime="90" />
-		<monster name="Vicious Squire" x="2" y="2" z="8" spawntime="90" />
+	<monster centerx="33422" centery="31586" centerz="10" radius="1">
+		<monster name="Wereboar" x="0" y="0" z="10" spawntime="90" />
 	</monster>
-	<monster centerx="33267" centery="31629" centerz="8" radius="3">
-		<monster name="Necromancer" x="0" y="-3" z="8" spawntime="90" />
-		<monster name="Necromancer" x="-2" y="2" z="8" spawntime="90" />
-		<monster name="Vicious Squire" x="0" y="2" z="8" spawntime="90" />
+	<monster centerx="33281" centery="31587" centerz="10" radius="3">
+		<monster name="Hero" x="0" y="-3" z="10" spawntime="90" />
 	</monster>
-	<monster centerx="33295" centery="31629" centerz="8" radius="3">
-		<monster name="Vicious Squire" x="2" y="-3" z="8" spawntime="90" />
-		<monster name="Bonebeast" x="3" y="-3" z="8" spawntime="90" />
+	<monster centerx="33293" centery="31587" centerz="10" radius="1">
+		<monster name="Renegade Knight" x="0" y="0" z="10" spawntime="90" />
 	</monster>
-	<monster centerx="33302" centery="31629" centerz="8" radius="3">
-		<monster name="Necromancer" x="-2" y="-1" z="8" spawntime="90" />
+	<monster centerx="33323" centery="31587" centerz="10" radius="3">
+		<monster name="Undead Gladiator" x="-2" y="0" z="10" spawntime="90" />
 	</monster>
-	<monster centerx="33281" centery="31630" centerz="8" radius="3">
-		<monster name="Bonebeast" x="-1" y="-1" z="8" spawntime="90" />
-		<monster name="Bonebeast" x="0" y="-1" z="8" spawntime="90" />
-		<monster name="Bonebeast" x="1" y="1" z="8" spawntime="90" />
+	<monster centerx="33330" centery="31587" centerz="10" radius="3">
+		<monster name="Lich" x="-2" y="2" z="10" spawntime="90" />
+		<monster name="Vicious Squire" x="2" y="2" z="10" spawntime="90" />
 	</monster>
-	<monster centerx="33244" centery="31634" centerz="8" radius="1">
-		<monster name="Necromancer" x="0" y="0" z="8" spawntime="90" />
+	<monster centerx="33337" centery="31587" centerz="10" radius="3">
+		<monster name="Bonebeast" x="0" y="2" z="10" spawntime="90" />
 	</monster>
-	<monster centerx="33229" centery="31639" centerz="8" radius="1">
-		<monster name="Necromancer" x="0" y="0" z="8" spawntime="90" />
+	<monster centerx="33344" centery="31587" centerz="10" radius="3">
+		<monster name="Blood Priest" x="-3" y="-3" z="10" spawntime="90" />
+		<monster name="Vile Grandmaster" x="2" y="-2" z="10" spawntime="90" />
+		<monster name="Vicious Squire" x="3" y="-2" z="10" spawntime="90" />
+		<monster name="Renegade Knight" x="3" y="1" z="10" spawntime="90" />
+		<monster name="Undead Gladiator" x="1" y="2" z="10" spawntime="90" />
 	</monster>
-	<monster centerx="33243" centery="31640" centerz="8" radius="1">
-		<monster name="Vicious Squire" x="0" y="0" z="8" spawntime="90" />
+	<monster centerx="33352" centery="31587" centerz="10" radius="1">
+		<monster name="Vicious Squire" x="0" y="0" z="10" spawntime="90" />
 	</monster>
-	<monster centerx="33232" centery="31643" centerz="8" radius="3">
-		<monster name="Vicious Squire" x="-2" y="-1" z="8" spawntime="90" />
-		<monster name="Bonebeast" x="-3" y="2" z="8" spawntime="90" />
+	<monster centerx="33420" centery="31587" centerz="10" radius="1">
+		<monster name="Werebear" x="0" y="0" z="10" spawntime="90" />
 	</monster>
-	<monster centerx="33248" centery="31643" centerz="8" radius="1">
-		<monster name="Vicious Squire" x="0" y="0" z="8" spawntime="90" />
+	<monster centerx="33434" centery="31587" centerz="10" radius="1">
+		<monster name="Werebear" x="0" y="0" z="10" spawntime="90" />
 	</monster>
-	<monster centerx="33241" centery="31645" centerz="8" radius="1">
-		<monster name="Necromancer" x="0" y="0" z="8" spawntime="90" />
+	<monster centerx="33216" centery="31589" centerz="10" radius="1">
+		<monster name="Demon Skeleton" x="1" y="0" z="10" spawntime="90" />
+		<monster name="Skeleton" x="1" y="1" z="10" spawntime="90" />
 	</monster>
-	<monster centerx="33358" centery="31664" centerz="9" radius="3">
-		<monster name="Ghoul" x="-3" y="1" z="9" spawntime="60" />
+	<monster centerx="33308" centery="31589" centerz="10" radius="1">
+		<monster name="Blood Priest" x="0" y="0" z="10" spawntime="90" />
 	</monster>
-	<monster centerx="33344" centery="31671" centerz="9" radius="3">
-		<monster name="Skeleton" x="2" y="-3" z="9" spawntime="60" />
+	<monster centerx="33224" centery="31590" centerz="10" radius="1">
+		<monster name="Skeleton" x="0" y="-1" z="10" spawntime="90" />
 	</monster>
-	<monster centerx="33358" centery="31671" centerz="9" radius="3">
-		<monster name="Skeleton" x="-3" y="0" z="9" spawntime="60" />
+	<monster centerx="33245" centery="31590" centerz="10" radius="1">
+		<monster name="Monk" x="1" y="-1" z="10" spawntime="90" />
 	</monster>
-	<monster centerx="33344" centery="31678" centerz="9" radius="3">
-		<monster name="Skeleton" x="1" y="-2" z="9" spawntime="60" />
+	<monster centerx="33300" centery="31590" centerz="10" radius="1">
+		<monster name="Vile Grandmaster" x="0" y="0" z="10" spawntime="90" />
 	</monster>
-	<monster centerx="33351" centery="31678" centerz="9" radius="3">
-		<monster name="Ghoul" x="0" y="-3" z="9" spawntime="60" />
+	<monster centerx="33399" centery="31590" centerz="10" radius="1">
+		<monster name="Werebear" x="0" y="0" z="10" spawntime="90" />
 	</monster>
-	<monster centerx="33330" centery="31685" centerz="9" radius="3">
-		<monster name="Skeleton" x="-1" y="-2" z="9" spawntime="60" />
+	<monster centerx="33433" centery="31590" centerz="10" radius="1">
+		<monster name="Werebear" x="0" y="0" z="10" spawntime="90" />
 	</monster>
-	<monster centerx="33337" centery="31685" centerz="9" radius="3">
-		<monster name="Ghoul" x="0" y="3" z="9" spawntime="60" />
+	<monster centerx="33284" centery="31591" centerz="10" radius="1">
+		<monster name="Renegade Knight" x="0" y="0" z="10" spawntime="90" />
 	</monster>
-	<monster centerx="33309" centery="31713" centerz="9" radius="3">
-		<monster name="Skeleton" x="-3" y="3" z="9" spawntime="60" />
+	<monster centerx="33220" centery="31592" centerz="10" radius="1">
+		<monster name="Demon Skeleton" x="1" y="-1" z="10" spawntime="90" />
 	</monster>
-	<monster centerx="33316" centery="31713" centerz="9" radius="3">
-		<monster name="Skeleton" x="-3" y="1" z="9" spawntime="60" />
+	<monster centerx="33297" centery="31592" centerz="10" radius="1">
+		<monster name="Renegade Knight" x="0" y="0" z="10" spawntime="90" />
 	</monster>
-	<monster centerx="33316" centery="31720" centerz="9" radius="1">
-		<monster name="Skeleton" x="-1" y="-1" z="9" spawntime="90" />
+	<monster centerx="33399" centery="31593" centerz="10" radius="1">
+		<monster name="Werebear" x="0" y="0" z="10" spawntime="90" />
 	</monster>
-	<monster centerx="33298" centery="31723" centerz="9" radius="1">
-		<monster name="Skeleton" x="1" y="-1" z="9" spawntime="90" />
+	<monster centerx="33253" centery="31594" centerz="10" radius="3">
+		<monster name="Monk" x="0" y="-3" z="10" spawntime="90" />
 	</monster>
-	<monster centerx="33293" centery="31724" centerz="9" radius="1">
-		<monster name="Skeleton" x="1" y="0" z="9" spawntime="90" />
+	<monster centerx="33442" centery="31594" centerz="10" radius="3">
+		<monster name="Werebear" x="-2" y="-2" z="10" spawntime="90" />
+		<monster name="War Wolf" x="-1" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33291" centery="31598" centerz="10" radius="1">
+		<monster name="Vile Grandmaster" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33303" centery="31599" centerz="10" radius="1">
+		<monster name="Vile Grandmaster" x="-1" y="0" z="10" spawntime="14402" />
+		<monster name="Vile Grandmaster" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33327" centery="31599" centerz="10" radius="1">
+		<monster name="Vicious Squire" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33333" centery="31600" centerz="10" radius="1">
+		<monster name="Renegade Knight" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33351" centery="31600" centerz="10" radius="1">
+		<monster name="Vile Grandmaster" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33344" centery="31601" centerz="10" radius="3">
+		<monster name="Undead Gladiator" x="-1" y="-2" z="10" spawntime="90" />
+		<monster name="Vicious Squire" x="2" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33412" centery="31601" centerz="10" radius="1">
+		<monster name="Wereboar" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33435" centery="31601" centerz="10" radius="3">
+		<monster name="Wereboar" x="-3" y="-3" z="10" spawntime="90" />
+		<monster name="War Wolf" x="-2" y="-3" z="10" spawntime="90" />
+		<monster name="Werewolf" x="-2" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33430" centery="31604" centerz="10" radius="1">
+		<monster name="Werebear" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33302" centery="31608" centerz="10" radius="3">
+		<monster name="Renegade Knight" x="-3" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33323" centery="31608" centerz="10" radius="3">
+		<monster name="Hero" x="-1" y="-1" z="10" spawntime="90" />
+		<monster name="Hero" x="-2" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33330" centery="31608" centerz="10" radius="3">
+		<monster name="Hero" x="-2" y="-2" z="10" spawntime="90" />
+		<monster name="Vicious Squire" x="-2" y="1" z="10" spawntime="90" />
+		<monster name="Hero" x="-1" y="1" z="10" spawntime="90" />
+		<monster name="Renegade Knight" x="-2" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33346" centery="31608" centerz="10" radius="1">
+		<monster name="Vile Grandmaster" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33409" centery="31608" centerz="10" radius="1">
+		<monster name="Werebear" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33296" centery="31610" centerz="10" radius="1">
+		<monster name="Vile Grandmaster" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33438" centery="31610" centerz="10" radius="1">
+		<monster name="Wereboar" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33318" centery="31611" centerz="10" radius="1">
+		<monster name="Vile Grandmaster" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33406" centery="31611" centerz="10" radius="1">
+		<monster name="Wereboar" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33433" centery="31611" centerz="10" radius="1">
+		<monster name="Werebear" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33351" centery="31612" centerz="10" radius="1">
+		<monster name="Renegade Knight" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33349" centery="31613" centerz="10" radius="1">
+		<monster name="Vile Grandmaster" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33295" centery="31615" centerz="10" radius="3">
+		<monster name="Hero" x="2" y="-1" z="10" spawntime="90" />
+		<monster name="Hero" x="0" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33302" centery="31615" centerz="10" radius="3">
+		<monster name="Blood Priest" x="1" y="-2" z="10" spawntime="90" />
+		<monster name="Blood Priest" x="1" y="0" z="10" spawntime="90" />
+		<monster name="Vicious Squire" x="0" y="2" z="10" spawntime="90" />
+		<monster name="Renegade Knight" x="-1" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33316" centery="31615" centerz="10" radius="3">
+		<monster name="Hero" x="-1" y="-2" z="10" spawntime="90" />
+		<monster name="Hero" x="2" y="0" z="10" spawntime="90" />
+		<monster name="Vicious Squire" x="-2" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33337" centery="31615" centerz="10" radius="3">
+		<monster name="Vicious Squire" x="3" y="-2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33344" centery="31615" centerz="10" radius="3">
+		<monster name="Hero" x="0" y="-3" z="10" spawntime="90" />
+		<monster name="Hero" x="-3" y="0" z="10" spawntime="90" />
+		<monster name="Renegade Knight" x="-1" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33418" centery="31615" centerz="10" radius="1">
+		<monster name="Werebear" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33426" centery="31615" centerz="10" radius="1">
+		<monster name="Wereboar" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33437" centery="31616" centerz="10" radius="1">
+		<monster name="Wereboar" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33423" centery="31618" centerz="10" radius="1">
+		<monster name="Werebear" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33323" centery="31619" centerz="10" radius="1">
+		<monster name="Blood Priest" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33325" centery="31619" centerz="10" radius="1">
+		<monster name="Vile Grandmaster" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33303" centery="31620" centerz="10" radius="1">
+		<monster name="Vile Grandmaster" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33315" centery="31620" centerz="10" radius="1">
+		<monster name="Renegade Knight" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33341" centery="31621" centerz="10" radius="1">
+		<monster name="Vile Grandmaster" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33351" centery="31622" centerz="10" radius="3">
+		<monster name="Blood Priest" x="-2" y="-3" z="10" spawntime="90" />
+		<monster name="Hero" x="0" y="-3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33435" centery="31622" centerz="10" radius="3">
+		<monster name="War Wolf" x="0" y="-3" z="10" spawntime="90" />
+		<monster name="Werewolf" x="3" y="-3" z="10" spawntime="90" />
+		<monster name="War Wolf" x="1" y="-2" z="10" spawntime="90" />
+		<monster name="Wereboar" x="2" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33440" centery="31623" centerz="10" radius="1">
+		<monster name="Werebear" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33319" centery="31625" centerz="10" radius="1">
+		<monster name="Renegade Knight" x="-1" y="0" z="10" spawntime="14402" />
+		<monster name="Renegade Knight" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33213" centery="31633" centerz="10" radius="6">
+		<monster name="Nightmare" x="6" y="-3" z="10" spawntime="90" />
+		<monster name="Son of Verminor" x="5" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33232" centery="31636" centerz="10" radius="3">
+		<monster name="Nightmare" x="-3" y="-2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33261" centery="31636" centerz="10" radius="5">
+		<monster name="Cyclops" x="0" y="-3" z="10" spawntime="90" />
+		<monster name="Cyclops Drone" x="1" y="-3" z="10" spawntime="90" />
+		<monster name="Cyclops" x="-2" y="1" z="10" spawntime="90" />
+		<monster name="Cyclops" x="3" y="1" z="10" spawntime="90" />
+		<monster name="Cyclops Drone" x="1" y="5" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33285" centery="31636" centerz="10" radius="5">
+		<monster name="Cyclops Drone" x="-1" y="-3" z="10" spawntime="90" />
+		<monster name="Cyclops Smith" x="-4" y="-1" z="10" spawntime="90" />
+		<monster name="Cyclops Drone" x="-3" y="-1" z="10" spawntime="90" />
+		<monster name="Cyclops Smith" x="-4" y="1" z="10" spawntime="90" />
+		<monster name="Cyclops Smith" x="2" y="1" z="10" spawntime="90" />
+		<monster name="Cyclops Drone" x="-2" y="4" z="10" spawntime="90" />
 	</monster>
 	<monster centerx="33379" centery="31650" centerz="10" radius="3">
 		<monster name="Skeleton" x="-2" y="3" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="33262" centery="31652" centerz="10" radius="3">
+		<monster name="Cyclops Smith" x="-1" y="-2" z="10" spawntime="90" />
+		<monster name="Cyclops Smith" x="0" y="3" z="10" spawntime="90" />
 	</monster>
 	<monster centerx="33365" centery="31657" centerz="10" radius="3">
 		<monster name="Ghoul" x="1" y="3" z="10" spawntime="60" />
@@ -156,6 +320,24 @@
 	<monster centerx="33414" centery="31657" centerz="10" radius="3">
 		<monster name="Skeleton" x="-3" y="-2" z="10" spawntime="60" />
 		<monster name="Ghoul" x="0" y="-2" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="33277" centery="31659" centerz="10" radius="1">
+		<monster name="Fire Elemental" x="0" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33235" centery="31660" centerz="10" radius="3">
+		<monster name="Cyclops Drone" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33244" centery="31660" centerz="10" radius="3">
+		<monster name="Cyclops Smith" x="2" y="-2" z="10" spawntime="90" />
+		<monster name="Cyclops Drone" x="-2" y="0" z="10" spawntime="90" />
+		<monster name="Cyclops Drone" x="2" y="1" z="10" spawntime="90" />
+		<monster name="Cyclops Smith" x="0" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33253" centery="31660" centerz="10" radius="3">
+		<monster name="Cyclops" x="1" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33261" centery="31661" centerz="10" radius="3">
+		<monster name="Cyclops" x="1" y="-1" z="10" spawntime="90" />
 	</monster>
 	<monster centerx="33358" centery="31664" centerz="10" radius="3">
 		<monster name="Ghoul" x="3" y="1" z="10" spawntime="60" />
@@ -198,6 +380,9 @@
 	<monster centerx="33428" centery="31671" centerz="10" radius="3">
 		<monster name="Ghoul" x="-2" y="3" z="10" spawntime="60" />
 	</monster>
+	<monster centerx="33279" centery="31678" centerz="10" radius="1">
+		<monster name="Cyclops Smith" x="0" y="1" z="10" spawntime="90" />
+	</monster>
 	<monster centerx="33330" centery="31678" centerz="10" radius="3">
 		<monster name="Crypt Shambler" x="-2" y="-3" z="10" spawntime="60" />
 		<monster name="Crypt Shambler" x="1" y="-3" z="10" spawntime="60" />
@@ -223,6 +408,21 @@
 		<monster name="Mummy" x="1" y="-3" z="10" spawntime="60" />
 		<monster name="Ghoul" x="0" y="0" z="10" spawntime="60" />
 		<monster name="Ghoul" x="-2" y="2" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="33253" centery="31679" centerz="10" radius="1">
+		<monster name="Fire Elemental" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33275" centery="31681" centerz="10" radius="1">
+		<monster name="Cyclops Smith" x="-1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33270" centery="31683" centerz="10" radius="1">
+		<monster name="Cyclops Drone" x="0" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33256" centery="31684" centerz="10" radius="1">
+		<monster name="Fire Elemental" x="0" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33280" centery="31684" centerz="10" radius="1">
+		<monster name="Cyclops Drone" x="0" y="-1" z="10" spawntime="90" />
 	</monster>
 	<monster centerx="33337" centery="31685" centerz="10" radius="3">
 		<monster name="Ghoul" x="3" y="-1" z="10" spawntime="60" />
@@ -351,6 +551,12 @@
 	<monster centerx="33407" centery="31734" centerz="10" radius="3">
 		<monster name="Crypt Shambler" x="1" y="0" z="10" spawntime="60" />
 	</monster>
+	<monster centerx="33218" centery="31737" centerz="10" radius="1">
+		<monster name="Scorpion" x="0" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33222" centery="31739" centerz="10" radius="1">
+		<monster name="Scorpion" x="0" y="1" z="10" spawntime="90" />
+	</monster>
 	<monster centerx="33358" centery="31741" centerz="10" radius="3">
 		<monster name="Crypt Shambler" x="-1" y="1" z="10" spawntime="60" />
 	</monster>
@@ -370,633 +576,10 @@
 	<monster centerx="33372" centery="31748" centerz="10" radius="3">
 		<monster name="Mummy" x="-3" y="-2" z="10" spawntime="60" />
 	</monster>
-	<monster centerx="33358" centery="31622" centerz="11" radius="3">
-		<monster name="Skeleton" x="3" y="3" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33344" centery="31629" centerz="11" radius="3">
-		<monster name="Ghoul" x="2" y="-2" z="11" spawntime="60" />
-		<monster name="Blue Djinn" x="-3" y="2" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33358" centery="31629" centerz="11" radius="3">
-		<monster name="Mummy" x="-2" y="-1" z="11" spawntime="60" />
-		<monster name="Skeleton" x="3" y="-1" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33365" centery="31629" centerz="11" radius="3">
-		<monster name="Skeleton" x="-3" y="1" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33337" centery="31636" centerz="11" radius="3">
-		<monster name="Ghoul" x="-2" y="-2" z="11" spawntime="60" />
-		<monster name="Ghoul" x="-2" y="-1" z="11" spawntime="60" />
-		<monster name="Ghoul" x="0" y="3" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33344" centery="31636" centerz="11" radius="3">
-		<monster name="Demon Skeleton" x="2" y="1" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33386" centery="31636" centerz="11" radius="3">
-		<monster name="Crypt Shambler" x="-1" y="1" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33337" centery="31643" centerz="11" radius="3">
-		<monster name="Crypt Shambler" x="-1" y="2" z="11" spawntime="60" />
-		<monster name="Crypt Shambler" x="-3" y="3" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33344" centery="31643" centerz="11" radius="3">
-		<monster name="Mummy" x="-3" y="-3" z="11" spawntime="60" />
-		<monster name="Demon Skeleton" x="1" y="2" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33358" centery="31643" centerz="11" radius="3">
-		<monster name="Ghoul" x="3" y="-3" z="11" spawntime="60" />
-		<monster name="Mummy" x="3" y="1" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33365" centery="31643" centerz="11" radius="3">
-		<monster name="Ghoul" x="-3" y="0" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33372" centery="31643" centerz="11" radius="3">
-		<monster name="Ghoul" x="-3" y="-1" z="11" spawntime="60" />
-		<monster name="Demon Skeleton" x="-1" y="-1" z="11" spawntime="60" />
-		<monster name="Ghoul" x="3" y="3" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33379" centery="31643" centerz="11" radius="3">
-		<monster name="Crypt Shambler" x="1" y="-3" z="11" spawntime="60" />
-		<monster name="Skeleton" x="-2" y="-1" z="11" spawntime="60" />
-		<monster name="Skeleton" x="0" y="0" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33386" centery="31643" centerz="11" radius="3">
-		<monster name="Skeleton" x="1" y="-2" z="11" spawntime="60" />
-		<monster name="Mummy" x="-2" y="-1" z="11" spawntime="60" />
-		<monster name="Ghoul" x="1" y="2" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33393" centery="31643" centerz="11" radius="3">
-		<monster name="Mummy" x="-2" y="0" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33407" centery="31643" centerz="11" radius="3">
-		<monster name="Skeleton" x="1" y="0" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33414" centery="31643" centerz="11" radius="3">
-		<monster name="Ghoul" x="-1" y="-2" z="11" spawntime="60" />
-		<monster name="Skeleton" x="0" y="-2" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33372" centery="31650" centerz="11" radius="3">
-		<monster name="Ghoul" x="0" y="-3" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33379" centery="31650" centerz="11" radius="3">
-		<monster name="Mummy" x="3" y="-3" z="11" spawntime="60" />
-		<monster name="Ghoul" x="2" y="-1" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33400" centery="31650" centerz="11" radius="3">
-		<monster name="Ghoul" x="0" y="2" z="11" spawntime="60" />
-		<monster name="Skeleton" x="-1" y="3" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33407" centery="31650" centerz="11" radius="3">
-		<monster name="Ghoul" x="1" y="0" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33414" centery="31650" centerz="11" radius="3">
-		<monster name="Demon Skeleton" x="-3" y="-1" z="11" spawntime="60" />
-		<monster name="Crypt Shambler" x="1" y="-1" z="11" spawntime="60" />
-		<monster name="Crypt Shambler" x="0" y="0" z="11" spawntime="60" />
-		<monster name="Demon Skeleton" x="-2" y="1" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33351" centery="31657" centerz="11" radius="3">
-		<monster name="Crypt Shambler" x="-1" y="-2" z="11" spawntime="60" />
-		<monster name="Ghoul" x="3" y="-1" z="11" spawntime="60" />
-		<monster name="Ghoul" x="2" y="2" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33358" centery="31657" centerz="11" radius="3">
-		<monster name="Ghoul" x="1" y="-3" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33400" centery="31657" centerz="11" radius="3">
-		<monster name="Ghoul" x="-1" y="-1" z="11" spawntime="60" />
-		<monster name="Blue Djinn" x="-1" y="2" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33407" centery="31657" centerz="11" radius="3">
-		<monster name="Ghoul" x="0" y="3" z="11" spawntime="60" />
-		<monster name="Mummy" x="3" y="3" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33414" centery="31657" centerz="11" radius="3">
-		<monster name="Ghoul" x="0" y="0" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33344" centery="31664" centerz="11" radius="3">
-		<monster name="Mummy" x="1" y="0" z="11" spawntime="60" />
-		<monster name="Ghoul" x="2" y="0" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33351" centery="31664" centerz="11" radius="3">
-		<monster name="Skeleton" x="-1" y="-3" z="11" spawntime="60" />
-		<monster name="Crypt Shambler" x="3" y="-3" z="11" spawntime="60" />
-		<monster name="Mummy" x="-3" y="-2" z="11" spawntime="60" />
-		<monster name="Mummy" x="3" y="-2" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33365" centery="31664" centerz="11" radius="3">
-		<monster name="Crypt Shambler" x="-1" y="2" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33386" centery="31664" centerz="11" radius="3">
-		<monster name="Demon Skeleton" x="-3" y="1" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33393" centery="31664" centerz="11" radius="3">
-		<monster name="Gargoyle" x="0" y="1" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33400" centery="31664" centerz="11" radius="3">
-		<monster name="Skeleton" x="0" y="3" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33407" centery="31664" centerz="11" radius="3">
-		<monster name="Gargoyle" x="-1" y="0" z="11" spawntime="60" />
-		<monster name="Ghoul" x="1" y="2" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33414" centery="31664" centerz="11" radius="3">
-		<monster name="Ghoul" x="1" y="-1" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33358" centery="31671" centerz="11" radius="3">
-		<monster name="Mummy" x="2" y="1" z="11" spawntime="60" />
-		<monster name="Skeleton" x="3" y="1" z="11" spawntime="60" />
-		<monster name="Ghoul" x="1" y="3" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33365" centery="31671" centerz="11" radius="3">
-		<monster name="Demon Skeleton" x="3" y="-1" z="11" spawntime="60" />
-		<monster name="Mummy" x="2" y="1" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33379" centery="31671" centerz="11" radius="3">
-		<monster name="Ghoul" x="3" y="-2" z="11" spawntime="60" />
-		<monster name="Ghoul" x="-1" y="-1" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33400" centery="31671" centerz="11" radius="3">
-		<monster name="Crypt Shambler" x="1" y="2" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33407" centery="31671" centerz="11" radius="3">
-		<monster name="Ghoul" x="-1" y="2" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33414" centery="31671" centerz="11" radius="3">
-		<monster name="Ghoul" x="0" y="2" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33358" centery="31678" centerz="11" radius="3">
-		<monster name="Ghoul" x="2" y="-1" z="11" spawntime="60" />
-		<monster name="Ghoul" x="3" y="0" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33365" centery="31678" centerz="11" radius="3">
-		<monster name="Crypt Shambler" x="-1" y="-2" z="11" spawntime="60" />
-		<monster name="Demon Skeleton" x="1" y="2" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33372" centery="31678" centerz="11" radius="3">
-		<monster name="Skeleton" x="-3" y="0" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33407" centery="31678" centerz="11" radius="3">
-		<monster name="Skeleton" x="1" y="3" z="11" spawntime="60" />
-		<monster name="Ghoul" x="3" y="3" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33414" centery="31678" centerz="11" radius="3">
-		<monster name="Crypt Shambler" x="-3" y="0" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33365" centery="31685" centerz="11" radius="3">
-		<monster name="Ghoul" x="-1" y="1" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33379" centery="31685" centerz="11" radius="3">
-		<monster name="Mummy" x="2" y="-3" z="11" spawntime="60" />
-		<monster name="Mummy" x="0" y="1" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33386" centery="31685" centerz="11" radius="3">
-		<monster name="Gargoyle" x="-1" y="-1" z="11" spawntime="60" />
-		<monster name="Mummy" x="1" y="1" z="11" spawntime="60" />
-		<monster name="Crypt Shambler" x="1" y="3" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33393" centery="31685" centerz="11" radius="3">
-		<monster name="Crypt Shambler" x="-2" y="-2" z="11" spawntime="60" />
-		<monster name="Crypt Shambler" x="0" y="1" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33400" centery="31685" centerz="11" radius="3">
-		<monster name="Skeleton" x="0" y="-3" z="11" spawntime="60" />
-		<monster name="Ghoul" x="-1" y="3" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33414" centery="31685" centerz="11" radius="3">
-		<monster name="Ghoul" x="-2" y="3" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33365" centery="31692" centerz="11" radius="3">
-		<monster name="Ghoul" x="2" y="-3" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33400" centery="31692" centerz="11" radius="3">
-		<monster name="Ghoul" x="1" y="3" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33407" centery="31692" centerz="11" radius="3">
-		<monster name="Ghoul" x="3" y="-2" z="11" spawntime="60" />
-		<monster name="Skeleton" x="1" y="-1" z="11" spawntime="60" />
-		<monster name="Demon Skeleton" x="-1" y="2" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33414" centery="31692" centerz="11" radius="3">
-		<monster name="Mummy" x="1" y="1" z="11" spawntime="60" />
-		<monster name="Ghoul" x="0" y="2" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33386" centery="31699" centerz="11" radius="3">
-		<monster name="Ghoul" x="-1" y="-2" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33393" centery="31699" centerz="11" radius="3">
-		<monster name="Ghoul" x="-1" y="-1" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33400" centery="31699" centerz="11" radius="3">
-		<monster name="Demon Skeleton" x="2" y="0" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33365" centery="31706" centerz="11" radius="3">
-		<monster name="Ghoul" x="-2" y="-3" z="11" spawntime="60" />
-	</monster>
-	<monster centerx="33337" centery="31636" centerz="12" radius="3">
-		<monster name="Demon Skeleton" x="3" y="3" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33365" centery="31636" centerz="12" radius="3">
-		<monster name="Skeleton" x="1" y="-1" z="12" spawntime="60" />
-		<monster name="Skeleton" x="2" y="0" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33372" centery="31636" centerz="12" radius="3">
-		<monster name="Gargoyle" x="-1" y="-1" z="12" spawntime="60" />
-		<monster name="Gargoyle" x="0" y="2" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33337" centery="31643" centerz="12" radius="3">
-		<monster name="Mummy" x="-1" y="0" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33337" centery="31650" centerz="12" radius="3">
-		<monster name="Mummy" x="-1" y="-2" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33344" centery="31650" centerz="12" radius="3">
-		<monster name="Mummy" x="-1" y="-2" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33379" centery="31650" centerz="12" radius="3">
-		<monster name="Ghoul" x="0" y="3" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33344" centery="31657" centerz="12" radius="3">
-		<monster name="Crypt Shambler" x="-2" y="-3" z="12" spawntime="60" />
-		<monster name="Crypt Shambler" x="-3" y="1" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33351" centery="31657" centerz="12" radius="3">
-		<monster name="Ghoul" x="-3" y="-2" z="12" spawntime="60" />
-		<monster name="Ghoul" x="-2" y="-2" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33358" centery="31657" centerz="12" radius="3">
-		<monster name="Skeleton" x="1" y="-3" z="12" spawntime="60" />
-		<monster name="Mummy" x="-2" y="-1" z="12" spawntime="60" />
-		<monster name="Skeleton" x="0" y="-1" z="12" spawntime="60" />
-		<monster name="Skeleton" x="2" y="-1" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33365" centery="31657" centerz="12" radius="3">
-		<monster name="Crypt Shambler" x="-1" y="-3" z="12" spawntime="60" />
-		<monster name="Skeleton" x="2" y="-2" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33372" centery="31657" centerz="12" radius="3">
-		<monster name="Ghoul" x="-2" y="-1" z="12" spawntime="60" />
-		<monster name="Crypt Shambler" x="0" y="1" z="12" spawntime="60" />
-		<monster name="Ghoul" x="3" y="1" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33351" centery="31664" centerz="12" radius="3">
-		<monster name="Mummy" x="0" y="0" z="12" spawntime="60" />
-		<monster name="Mummy" x="-1" y="3" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33358" centery="31664" centerz="12" radius="3">
-		<monster name="Ghoul" x="-2" y="-3" z="12" spawntime="60" />
-		<monster name="Ghoul" x="-2" y="3" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33365" centery="31664" centerz="12" radius="3">
-		<monster name="Mummy" x="2" y="2" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33372" centery="31664" centerz="12" radius="3">
-		<monster name="Gargoyle" x="-2" y="0" z="12" spawntime="60" />
-		<monster name="Mummy" x="3" y="1" z="12" spawntime="60" />
-		<monster name="Ghoul" x="-2" y="2" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33379" centery="31664" centerz="12" radius="3">
-		<monster name="Demon Skeleton" x="0" y="-3" z="12" spawntime="60" />
-		<monster name="Demon Skeleton" x="-1" y="-1" z="12" spawntime="60" />
-		<monster name="Ghoul" x="-2" y="2" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33323" centery="31671" centerz="12" radius="3">
-		<monster name="Ghoul" x="0" y="-2" z="12" spawntime="60" />
-		<monster name="Crypt Shambler" x="2" y="-2" z="12" spawntime="60" />
-		<monster name="Crypt Shambler" x="0" y="-1" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33330" centery="31671" centerz="12" radius="3">
-		<monster name="Ghoul" x="-1" y="-2" z="12" spawntime="60" />
-		<monster name="Crypt Shambler" x="-2" y="0" z="12" spawntime="60" />
-		<monster name="Mummy" x="-1" y="0" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33337" centery="31671" centerz="12" radius="3">
-		<monster name="Ghoul" x="0" y="-3" z="12" spawntime="60" />
-		<monster name="Mummy" x="2" y="-3" z="12" spawntime="60" />
-		<monster name="Mummy" x="3" y="0" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33344" centery="31671" centerz="12" radius="3">
-		<monster name="Mummy" x="-2" y="2" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33351" centery="31671" centerz="12" radius="3">
-		<monster name="Crypt Shambler" x="-3" y="-2" z="12" spawntime="60" />
-		<monster name="Demon Skeleton" x="-3" y="0" z="12" spawntime="60" />
-		<monster name="Ghoul" x="0" y="0" z="12" spawntime="60" />
-		<monster name="Crypt Shambler" x="-1" y="1" z="12" spawntime="60" />
-		<monster name="Crypt Shambler" x="-1" y="2" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33358" centery="31671" centerz="12" radius="3">
-		<monster name="Demon Skeleton" x="-2" y="-1" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33323" centery="31678" centerz="12" radius="3">
-		<monster name="Demon Skeleton" x="3" y="-3" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33344" centery="31678" centerz="12" radius="3">
-		<monster name="Ghoul" x="3" y="-1" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33351" centery="31678" centerz="12" radius="3">
-		<monster name="Ghoul" x="1" y="-3" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33372" centery="31678" centerz="12" radius="3">
-		<monster name="Demon Skeleton" x="2" y="0" z="12" spawntime="60" />
-		<monster name="Demon Skeleton" x="2" y="3" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33379" centery="31678" centerz="12" radius="3">
-		<monster name="Ghoul" x="-1" y="2" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33323" centery="31685" centerz="12" radius="3">
-		<monster name="Ghoul" x="0" y="-1" z="12" spawntime="60" />
-		<monster name="Crypt Shambler" x="0" y="3" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33337" centery="31685" centerz="12" radius="3">
-		<monster name="Gargoyle" x="2" y="-1" z="12" spawntime="60" />
-		<monster name="Ghoul" x="-2" y="0" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33351" centery="31685" centerz="12" radius="3">
-		<monster name="Skeleton" x="0" y="1" z="12" spawntime="60" />
-		<monster name="Demon Skeleton" x="1" y="2" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33358" centery="31685" centerz="12" radius="3">
-		<monster name="Ghoul" x="-3" y="1" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33372" centery="31685" centerz="12" radius="3">
-		<monster name="Skeleton" x="3" y="-2" z="12" spawntime="60" />
-		<monster name="Demon Skeleton" x="-3" y="0" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33379" centery="31685" centerz="12" radius="3">
-		<monster name="Mummy" x="2" y="-2" z="12" spawntime="60" />
-		<monster name="Skeleton" x="0" y="1" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33323" centery="31692" centerz="12" radius="3">
-		<monster name="Demon Skeleton" x="3" y="-1" z="12" spawntime="60" />
-		<monster name="Crypt Shambler" x="2" y="2" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33330" centery="31692" centerz="12" radius="3">
-		<monster name="Ghoul" x="2" y="3" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33337" centery="31692" centerz="12" radius="3">
-		<monster name="Ghoul" x="1" y="-3" z="12" spawntime="60" />
-		<monster name="Mummy" x="2" y="-3" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33344" centery="31692" centerz="12" radius="3">
-		<monster name="Skeleton" x="-1" y="1" z="12" spawntime="60" />
-		<monster name="Skeleton" x="-1" y="2" z="12" spawntime="60" />
-		<monster name="Crypt Shambler" x="3" y="2" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33351" centery="31692" centerz="12" radius="3">
-		<monster name="Skeleton" x="2" y="0" z="12" spawntime="60" />
-		<monster name="Skeleton" x="-3" y="2" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33358" centery="31692" centerz="12" radius="3">
-		<monster name="Gargoyle" x="-2" y="1" z="12" spawntime="60" />
-		<monster name="Mummy" x="0" y="3" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33372" centery="31692" centerz="12" radius="3">
-		<monster name="Ghoul" x="1" y="-2" z="12" spawntime="60" />
-		<monster name="Mummy" x="1" y="1" z="12" spawntime="60" />
-		<monster name="Mummy" x="-1" y="2" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33330" centery="31699" centerz="12" radius="3">
-		<monster name="Demon Skeleton" x="2" y="-2" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33358" centery="31699" centerz="12" radius="3">
-		<monster name="Crypt Shambler" x="3" y="-2" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33365" centery="31699" centerz="12" radius="3">
-		<monster name="Ghoul" x="3" y="3" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33372" centery="31699" centerz="12" radius="3">
-		<monster name="Ghoul" x="2" y="-3" z="12" spawntime="60" />
-		<monster name="Skeleton" x="-3" y="-2" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33365" centery="31706" centerz="12" radius="3">
-		<monster name="Skeleton" x="2" y="-3" z="12" spawntime="60" />
-		<monster name="Skeleton" x="1" y="-2" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33348" centery="31707" centerz="12" radius="5">
-		<monster name="Blue Djinn" x="-1" y="-2" z="12" spawntime="60" />
-		<monster name="Demon Skeleton" x="-2" y="-1" z="12" spawntime="60" />
-		<monster name="Mummy" x="3" y="-1" z="12" spawntime="60" />
-		<monster name="Mummy" x="-5" y="0" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33344" centery="31713" centerz="12" radius="3">
-		<monster name="Ghoul" x="3" y="2" z="12" spawntime="60" />
-		<monster name="Mummy" x="2" y="3" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33347" centery="31718" centerz="12" radius="5">
-		<monster name="Demon Skeleton" x="-1" y="1" z="12" spawntime="60" />
-	</monster>
-	<monster centerx="33358" centery="31636" centerz="13" radius="3">
-		<monster name="Skeleton" x="3" y="-2" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33372" centery="31636" centerz="13" radius="3">
-		<monster name="Ghoul" x="3" y="-1" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33379" centery="31636" centerz="13" radius="3">
-		<monster name="Ghoul" x="-3" y="0" z="13" spawntime="60" />
-		<monster name="Demon Skeleton" x="-3" y="1" z="13" spawntime="60" />
-		<monster name="Ghoul" x="0" y="2" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33386" centery="31636" centerz="13" radius="3">
-		<monster name="Demon Skeleton" x="1" y="3" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33386" centery="31643" centerz="13" radius="3">
-		<monster name="Gargoyle" x="-1" y="1" z="13" spawntime="60" />
-		<monster name="Skeleton" x="2" y="1" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33344" centery="31650" centerz="13" radius="3">
-		<monster name="Ghoul" x="2" y="1" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33351" centery="31650" centerz="13" radius="3">
-		<monster name="Skeleton" x="-1" y="2" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33358" centery="31650" centerz="13" radius="3">
-		<monster name="Crypt Shambler" x="-3" y="0" z="13" spawntime="60" />
-		<monster name="Ghoul" x="-2" y="2" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33372" centery="31650" centerz="13" radius="3">
-		<monster name="Ghoul" x="0" y="-2" z="13" spawntime="60" />
-		<monster name="Ghoul" x="1" y="0" z="13" spawntime="60" />
-		<monster name="Demon Skeleton" x="-3" y="1" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33386" centery="31650" centerz="13" radius="3">
-		<monster name="Skeleton" x="2" y="-2" z="13" spawntime="60" />
-		<monster name="Mummy" x="1" y="2" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33351" centery="31657" centerz="13" radius="3">
-		<monster name="Demon Skeleton" x="2" y="-3" z="13" spawntime="60" />
-		<monster name="Ghoul" x="-2" y="0" z="13" spawntime="60" />
-		<monster name="Blue Djinn" x="2" y="3" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33358" centery="31657" centerz="13" radius="3">
-		<monster name="Crypt Shambler" x="2" y="3" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33365" centery="31657" centerz="13" radius="3">
-		<monster name="Crypt Shambler" x="3" y="2" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33372" centery="31657" centerz="13" radius="3">
-		<monster name="Skeleton" x="-3" y="-3" z="13" spawntime="60" />
-		<monster name="Demon Skeleton" x="-2" y="0" z="13" spawntime="60" />
-		<monster name="Crypt Shambler" x="1" y="2" z="13" spawntime="60" />
-		<monster name="Mummy" x="-1" y="3" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33379" centery="31657" centerz="13" radius="3">
-		<monster name="Ghoul" x="-2" y="-2" z="13" spawntime="60" />
-		<monster name="Skeleton" x="-1" y="-1" z="13" spawntime="60" />
-		<monster name="Mummy" x="-2" y="0" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33386" centery="31657" centerz="13" radius="3">
-		<monster name="Gargoyle" x="-1" y="-3" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33351" centery="31664" centerz="13" radius="3">
-		<monster name="Skeleton" x="-3" y="-2" z="13" spawntime="60" />
-		<monster name="Skeleton" x="1" y="-2" z="13" spawntime="60" />
-		<monster name="Ghoul" x="-2" y="-1" z="13" spawntime="60" />
-		<monster name="Ghoul" x="1" y="1" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33358" centery="31664" centerz="13" radius="3">
-		<monster name="Crypt Shambler" x="2" y="0" z="13" spawntime="60" />
-		<monster name="Ghoul" x="-2" y="1" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33386" centery="31664" centerz="13" radius="3">
-		<monster name="Mummy" x="-1" y="-3" z="13" spawntime="60" />
-		<monster name="Mummy" x="1" y="-2" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33351" centery="31671" centerz="13" radius="3">
-		<monster name="Ghoul" x="2" y="0" z="13" spawntime="60" />
-		<monster name="Mummy" x="3" y="1" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33365" centery="31671" centerz="13" radius="3">
-		<monster name="Demon Skeleton" x="-2" y="-1" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33372" centery="31671" centerz="13" radius="3">
-		<monster name="Ghoul" x="-2" y="-1" z="13" spawntime="60" />
-		<monster name="Blue Djinn" x="-2" y="2" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33386" centery="31671" centerz="13" radius="3">
-		<monster name="Skeleton" x="1" y="3" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33351" centery="31678" centerz="13" radius="3">
-		<monster name="Gargoyle" x="2" y="-2" z="13" spawntime="60" />
-		<monster name="Mummy" x="2" y="-1" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33358" centery="31678" centerz="13" radius="3">
-		<monster name="Gargoyle" x="1" y="3" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33365" centery="31678" centerz="13" radius="3">
-		<monster name="Ghoul" x="-1" y="-3" z="13" spawntime="60" />
-		<monster name="Ghoul" x="1" y="-1" z="13" spawntime="60" />
-		<monster name="Skeleton" x="1" y="0" z="13" spawntime="60" />
-		<monster name="Skeleton" x="3" y="1" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33372" centery="31678" centerz="13" radius="3">
-		<monster name="Skeleton" x="-1" y="-1" z="13" spawntime="60" />
-		<monster name="Mummy" x="-3" y="1" z="13" spawntime="60" />
-		<monster name="Mummy" x="3" y="2" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33379" centery="31678" centerz="13" radius="3">
-		<monster name="Mummy" x="2" y="0" z="13" spawntime="60" />
-		<monster name="Demon Skeleton" x="0" y="3" z="13" spawntime="60" />
-		<monster name="Ghoul" x="2" y="3" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33386" centery="31678" centerz="13" radius="3">
-		<monster name="Skeleton" x="-1" y="-1" z="13" spawntime="60" />
-		<monster name="Crypt Shambler" x="2" y="1" z="13" spawntime="60" />
-		<monster name="Mummy" x="2" y="2" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33393" centery="31678" centerz="13" radius="3">
-		<monster name="Ghoul" x="0" y="-3" z="13" spawntime="60" />
-		<monster name="Demon Skeleton" x="-1" y="2" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33358" centery="31685" centerz="13" radius="3">
-		<monster name="Skeleton" x="-3" y="0" z="13" spawntime="60" />
-		<monster name="Gargoyle" x="1" y="3" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33365" centery="31685" centerz="13" radius="3">
-		<monster name="Ghoul" x="1" y="3" z="13" spawntime="60" />
-		<monster name="Gargoyle" x="3" y="3" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33372" centery="31685" centerz="13" radius="3">
-		<monster name="Ghoul" x="-1" y="1" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33379" centery="31685" centerz="13" radius="3">
-		<monster name="Crypt Shambler" x="3" y="-1" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33386" centery="31685" centerz="13" radius="3">
-		<monster name="Skeleton" x="2" y="-3" z="13" spawntime="60" />
-		<monster name="Demon Skeleton" x="3" y="-3" z="13" spawntime="60" />
-		<monster name="Crypt Shambler" x="1" y="-2" z="13" spawntime="60" />
-		<monster name="Ghoul" x="3" y="-2" z="13" spawntime="60" />
-		<monster name="Ghoul" x="2" y="0" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33351" centery="31692" centerz="13" radius="3">
-		<monster name="Skeleton" x="3" y="-2" z="13" spawntime="60" />
-		<monster name="Crypt Shambler" x="2" y="1" z="13" spawntime="60" />
-		<monster name="Skeleton" x="3" y="2" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33358" centery="31692" centerz="13" radius="3">
-		<monster name="Ghoul" x="-2" y="-3" z="13" spawntime="60" />
-		<monster name="Ghoul" x="-3" y="3" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33372" centery="31692" centerz="13" radius="3">
-		<monster name="Demon Skeleton" x="-2" y="-3" z="13" spawntime="60" />
-		<monster name="Ghoul" x="-3" y="-2" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33386" centery="31692" centerz="13" radius="3">
-		<monster name="Gargoyle" x="1" y="2" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33351" centery="31699" centerz="13" radius="3">
-		<monster name="Mummy" x="1" y="-1" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33358" centery="31699" centerz="13" radius="3">
-		<monster name="Gargoyle" x="1" y="-3" z="13" spawntime="60" />
-		<monster name="Mummy" x="2" y="-1" z="13" spawntime="60" />
-		<monster name="Crypt Shambler" x="3" y="0" z="13" spawntime="60" />
-		<monster name="Ghoul" x="-1" y="1" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33365" centery="31699" centerz="13" radius="3">
-		<monster name="Gargoyle" x="-2" y="0" z="13" spawntime="60" />
-		<monster name="Mummy" x="2" y="3" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33372" centery="31699" centerz="13" radius="3">
-		<monster name="Skeleton" x="-1" y="0" z="13" spawntime="60" />
-		<monster name="Skeleton" x="1" y="2" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33379" centery="31699" centerz="13" radius="3">
-		<monster name="Mummy" x="2" y="-2" z="13" spawntime="60" />
-		<monster name="Mummy" x="0" y="0" z="13" spawntime="60" />
-		<monster name="Ghoul" x="-1" y="1" z="13" spawntime="60" />
-		<monster name="Mummy" x="3" y="1" z="13" spawntime="60" />
-		<monster name="Mummy" x="-2" y="2" z="13" spawntime="60" />
-		<monster name="Skeleton" x="1" y="2" z="13" spawntime="60" />
-		<monster name="Blue Djinn" x="-1" y="3" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33386" centery="31699" centerz="13" radius="3">
-		<monster name="Gargoyle" x="1" y="-2" z="13" spawntime="60" />
-		<monster name="Ghoul" x="-1" y="2" z="13" spawntime="60" />
-		<monster name="Demon Skeleton" x="2" y="2" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33393" centery="31699" centerz="13" radius="3">
-		<monster name="Mummy" x="-2" y="0" z="13" spawntime="60" />
-		<monster name="Vampire" x="1" y="2" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33351" centery="31706" centerz="13" radius="3">
-		<monster name="Crypt Shambler" x="3" y="-2" z="13" spawntime="60" />
-		<monster name="Demon Skeleton" x="-2" y="1" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33358" centery="31706" centerz="13" radius="3">
-		<monster name="Crypt Shambler" x="1" y="-2" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33379" centery="31706" centerz="13" radius="3">
-		<monster name="Ghoul" x="3" y="-2" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33386" centery="31706" centerz="13" radius="3">
-		<monster name="Crypt Shambler" x="-1" y="-3" z="13" spawntime="60" />
-		<monster name="Demon Skeleton" x="2" y="-3" z="13" spawntime="60" />
-		<monster name="Crypt Shambler" x="-1" y="3" z="13" spawntime="60" />
-	</monster>
-	<monster centerx="33393" centery="31706" centerz="13" radius="3">
-		<monster name="Crypt Shambler" x="2" y="-3" z="13" spawntime="60" />
-		<monster name="Crypt Shambler" x="-3" y="3" z="13" spawntime="60" />
+	<monster centerx="33323" centery="31758" centerz="10" radius="1">
+		<monster name="Rotworm" x="1" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33265" centery="31762" centerz="10" radius="1">
+		<monster name="Vampire" x="1" y="-1" z="10" spawntime="90" />
 	</monster>
 </monsters>

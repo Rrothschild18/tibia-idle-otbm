@@ -1,9 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <monsters>
-	<monster centerx="32232" centery="31719" centerz="7" radius="3">
-		<monster name="Troll" x="0" y="-1" z="7" spawntime="90" />
-		<monster name="Troll" x="2" y="3" z="7" spawntime="90" />
-	</monster>
 	<monster centerx="32233" centery="31717" centerz="8" radius="4">
 		<monster name="Troll" x="0" y="-3" z="8" spawntime="90" />
 		<monster name="Troll" x="-3" y="2" z="8" spawntime="90" />

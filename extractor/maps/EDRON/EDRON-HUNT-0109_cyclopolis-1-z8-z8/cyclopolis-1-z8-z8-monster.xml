@@ -1,5 +1,23 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <monsters>
+	<monster centerx="33271" centery="31590" centerz="8" radius="1">
+		<monster name="Vicious Squire" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33274" centery="31594" centerz="8" radius="3">
+		<monster name="Vicious Squire" x="3" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33265" centery="31595" centerz="8" radius="1">
+		<monster name="Necromancer" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33267" centery="31595" centerz="8" radius="1">
+		<monster name="Vicious Squire" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33278" centery="31596" centerz="8" radius="1">
+		<monster name="Necromancer" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33281" centery="31601" centerz="8" radius="3">
+		<monster name="Bonebeast" x="0" y="-3" z="8" spawntime="90" />
+	</monster>
 	<monster centerx="33281" centery="31606" centerz="8" radius="1">
 		<monster name="Vicious Squire" x="0" y="0" z="8" spawntime="90" />
 	</monster>
@@ -86,5 +104,41 @@
 	</monster>
 	<monster centerx="33241" centery="31645" centerz="8" radius="1">
 		<monster name="Necromancer" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33314" centery="31652" centerz="8" radius="1">
+		<monster name="Werebadger" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33310" centery="31655" centerz="8" radius="1">
+		<monster name="Wereboar" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33314" centery="31655" centerz="8" radius="1">
+		<monster name="Wereboar" x="0" y="0" z="8" spawntime="90" />
+		<monster name="Werebadger" x="1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33212" centery="31656" centerz="8" radius="1">
+		<monster name="Scorpion" x="1" y="-1" z="8" spawntime="90" />
+		<monster name="Scorpion" x="1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33265" centery="31656" centerz="8" radius="1">
+		<monster name="Orc Leader" x="0" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33276" centery="31657" centerz="8" radius="1">
+		<monster name="Wild Warrior" x="0" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33280" centery="31657" centerz="8" radius="1">
+		<monster name="Wild Warrior" x="-1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33310" centery="31658" centerz="8" radius="1">
+		<monster name="Wereboar" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33272" centery="31659" centerz="8" radius="1">
+		<monster name="Orc Berserker" x="0" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33215" centery="31660" centerz="8" radius="1">
+		<monster name="Scorpion" x="-1" y="-1" z="8" spawntime="90" />
+		<monster name="Scorpion" x="1" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33265" centery="31660" centerz="8" radius="1">
+		<monster name="Orc Berserker" x="1" y="-1" z="8" spawntime="90" />
 	</monster>
 </monsters>

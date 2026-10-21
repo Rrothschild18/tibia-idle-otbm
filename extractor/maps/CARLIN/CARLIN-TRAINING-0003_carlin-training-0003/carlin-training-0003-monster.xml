@@ -1,13 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <monsters>
-	<monster centerx="32300" centery="31779" centerz="8" radius="2">
-		<monster name="Bug" x="0" y="-1" z="8" spawntime="90" />
-		<monster name="Bug" x="1" y="1" z="8" spawntime="90" />
-	</monster>
-	<monster centerx="32304" centery="31791" centerz="8" radius="2">
-		<monster name="Bug" x="-1" y="-2" z="8" spawntime="90" />
-		<monster name="Bug" x="1" y="2" z="8" spawntime="90" />
-	</monster>
 	<monster centerx="32302" centery="31780" centerz="9" radius="3">
 		<monster name="Rotworm" x="0" y="-1" z="9" spawntime="90" />
 		<monster name="Rotworm" x="2" y="2" z="9" spawntime="90" />

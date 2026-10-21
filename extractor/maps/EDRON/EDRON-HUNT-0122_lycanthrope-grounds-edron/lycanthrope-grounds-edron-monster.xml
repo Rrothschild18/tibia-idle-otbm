@@ -1,5 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <monsters>
+	<monster centerx="33128" centery="31899" centerz="9" radius="3">
+		<monster name="Orc Warrior" x="-3" y="0" z="9" spawntime="90" />
+		<monster name="Poison Spider" x="3" y="0" z="9" spawntime="90" />
+		<monster name="Orc Warrior" x="-1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33140" centery="31899" centerz="9" radius="2">
+		<monster name="Poison Spider" x="0" y="1" z="9" spawntime="90" />
+	</monster>
 	<monster centerx="33078" centery="31909" centerz="9" radius="3">
 		<monster name="Wereboar" x="-1" y="1" z="9" spawntime="60" />
 		<monster name="Werebear" x="-3" y="2" z="9" spawntime="60" />
@@ -18,6 +26,12 @@
 	<monster centerx="33078" centery="31930" centerz="9" radius="3">
 		<monster name="Werebadger" x="-3" y="-2" z="9" spawntime="60" />
 		<monster name="Werebear" x="-2" y="-2" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33140" centery="31930" centerz="9" radius="4">
+		<monster name="Orc Warrior" x="-2" y="-1" z="9" spawntime="90" />
+		<monster name="Orc Shaman" x="-2" y="0" z="9" spawntime="90" />
+		<monster name="Orc Spearman" x="0" y="2" z="9" spawntime="90" />
+		<monster name="Orc Warrior" x="-3" y="3" z="9" spawntime="90" />
 	</monster>
 	<monster centerx="33078" centery="31937" centerz="9" radius="3">
 		<monster name="Wereboar" x="-1" y="2" z="9" spawntime="60" />

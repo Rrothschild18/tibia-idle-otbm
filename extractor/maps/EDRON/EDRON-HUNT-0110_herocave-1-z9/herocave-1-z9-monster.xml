@@ -1,9 +1,79 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <monsters>
+	<monster centerx="33288" centery="31524" centerz="9" radius="3">
+		<monster name="Blood Priest" x="0" y="1" z="9" spawntime="90" />
+		<monster name="Vicious Squire" x="-1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33302" centery="31524" centerz="9" radius="3">
+		<monster name="Necromancer" x="0" y="-1" z="9" spawntime="90" />
+		<monster name="Vicious Squire" x="-1" y="1" z="9" spawntime="90" />
+		<monster name="Vile Grandmaster" x="-3" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33309" centery="31524" centerz="9" radius="3">
+		<monster name="Mummy" x="-1" y="-1" z="9" spawntime="90" />
+		<monster name="Renegade Knight" x="-3" y="1" z="9" spawntime="90" />
+		<monster name="Necromancer" x="-1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33292" centery="31525" centerz="9" radius="1">
+		<monster name="Renegade Knight" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33294" centery="31531" centerz="9" radius="1">
+		<monster name="Vile Grandmaster" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33309" centery="31531" centerz="9" radius="3">
+		<monster name="Vicious Squire" x="-1" y="-3" z="9" spawntime="90" />
+		<monster name="Hero" x="-1" y="-2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33321" centery="31536" centerz="9" radius="1">
+		<monster name="Vile Grandmaster" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33307" centery="31538" centerz="9" radius="1">
+		<monster name="Renegade Knight" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33283" centery="31540" centerz="9" radius="1">
+		<monster name="Vile Grandmaster" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33311" centery="31540" centerz="9" radius="1">
+		<monster name="Vile Grandmaster" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33285" centery="31541" centerz="9" radius="1">
+		<monster name="Vicious Squire" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33309" centery="31541" centerz="9" radius="1">
+		<monster name="Blood Priest" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33281" centery="31545" centerz="9" radius="3">
+		<monster name="Blood Priest" x="3" y="-2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33288" centery="31545" centerz="9" radius="3">
+		<monster name="Renegade Knight" x="-2" y="-1" z="9" spawntime="90" />
+		<monster name="Hero" x="-2" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33309" centery="31545" centerz="9" radius="3">
+		<monster name="Vicious Squire" x="0" y="-2" z="9" spawntime="90" />
+		<monster name="Renegade Knight" x="3" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33316" centery="31545" centerz="9" radius="3">
+		<monster name="Renegade Knight" x="3" y="-2" z="9" spawntime="90" />
+		<monster name="Hero" x="-2" y="-1" z="9" spawntime="90" />
+		<monster name="Vicious Squire" x="3" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33323" centery="31545" centerz="9" radius="3">
+		<monster name="Hero" x="-2" y="-2" z="9" spawntime="90" />
+		<monster name="Renegade Knight" x="-1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33297" centery="31547" centerz="9" radius="1">
+		<monster name="Vile Grandmaster" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33320" centery="31550" centerz="9" radius="1">
+		<monster name="Vile Grandmaster" x="0" y="0" z="9" spawntime="90" />
+	</monster>
 	<monster centerx="33283" centery="31552" centerz="9" radius="1">
 		<monster name="Renegade Knight" x="0" y="0" z="9" spawntime="90" />
 	</monster>
 	<monster centerx="33330" centery="31552" centerz="9" radius="3">
+		<monster name="Vicious Squire" x="0" y="-3" z="9" spawntime="90" />
+		<monster name="Renegade Knight" x="1" y="-1" z="9" spawntime="90" />
 		<monster name="Vile Grandmaster" x="-1" y="1" z="9" spawntime="90" />
 		<monster name="Hero" x="1" y="2" z="9" spawntime="90" />
 	</monster>

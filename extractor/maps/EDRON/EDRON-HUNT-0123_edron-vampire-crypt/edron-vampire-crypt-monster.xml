@@ -144,4 +144,46 @@
 	<monster centerx="33043" centery="31636" centerz="11" radius="3">
 		<monster name="Vampire Viscount" x="-2" y="1" z="11" spawntime="90" />
 	</monster>
+	<monster centerx="33008" centery="31608" centerz="12" radius="3">
+		<monster name="Vampire Bride" x="0" y="3" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32980" centery="31615" centerz="12" radius="3">
+		<monster name="Vampire Bride" x="3" y="-3" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32987" centery="31615" centerz="12" radius="3">
+		<monster name="Vampire" x="-2" y="-2" z="12" spawntime="90" />
+		<monster name="Vampire Viscount" x="2" y="-1" z="12" spawntime="90" />
+		<monster name="Vampire Viscount" x="3" y="3" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33001" centery="31615" centerz="12" radius="3">
+		<monster name="Vampire" x="3" y="-1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32997" centery="31621" centerz="12" radius="1">
+		<monster name="Vampire Viscount" x="0" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32980" centery="31622" centerz="12" radius="3">
+		<monster name="Vampire Bride" x="3" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33001" centery="31622" centerz="12" radius="3">
+		<monster name="Vampire Viscount" x="-2" y="-3" z="12" spawntime="90" />
+		<monster name="Vampire Viscount" x="3" y="2" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33008" centery="31622" centerz="12" radius="3">
+		<monster name="Vampire Bride" x="0" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32987" centery="31629" centerz="12" radius="3">
+		<monster name="Vampire Viscount" x="2" y="-2" z="12" spawntime="90" />
+		<monster name="Vampire" x="-1" y="0" z="12" spawntime="90" />
+		<monster name="Vampire Viscount" x="3" y="2" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33001" centery="31629" centerz="12" radius="3">
+		<monster name="Vampire" x="3" y="0" z="12" spawntime="90" />
+		<monster name="Vampire Viscount" x="-3" y="2" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32980" centery="31636" centerz="12" radius="3">
+		<monster name="Vampire Bride" x="3" y="-3" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33008" centery="31636" centerz="12" radius="3">
+		<monster name="Vampire Bride" x="0" y="-3" z="12" spawntime="90" />
+	</monster>
 </monsters>

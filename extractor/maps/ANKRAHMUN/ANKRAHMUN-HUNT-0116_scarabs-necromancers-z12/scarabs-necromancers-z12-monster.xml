@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="33323" centery="32609" centerz="12" radius="3">
+		<monster name="Skeleton" x="3" y="3" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33323" centery="32616" centerz="12" radius="3">
+		<monster name="Skeleton" x="0" y="-3" z="12" spawntime="90" />
+		<monster name="Stalker" x="3" y="-2" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33372" centery="32623" centerz="12" radius="3">
+		<monster name="Bonebeast" x="0" y="3" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33351" centery="32630" centerz="12" radius="3">
+		<monster name="Scarab" x="3" y="3" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33358" centery="32630" centerz="12" radius="3">
+		<monster name="Bonebeast" x="0" y="-3" z="12" spawntime="90" />
+		<monster name="Bonebeast" x="-1" y="1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33365" centery="32630" centerz="12" radius="3">
+		<monster name="Scarab" x="3" y="-1" z="12" spawntime="90" />
+		<monster name="Ancient Scarab" x="3" y="2" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33330" centery="32637" centerz="12" radius="3">
+		<monster name="Ancient Scarab" x="-3" y="-3" z="12" spawntime="90" />
+		<monster name="Bonebeast" x="-1" y="-2" z="12" spawntime="90" />
+		<monster name="Ancient Scarab" x="2" y="-2" z="12" spawntime="90" />
+		<monster name="Ancient Scarab" x="-3" y="2" z="12" spawntime="90" />
+		<monster name="Ancient Scarab" x="-2" y="3" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33337" centery="32637" centerz="12" radius="3">
+		<monster name="Scarab" x="-1" y="-3" z="12" spawntime="90" />
+		<monster name="Bonebeast" x="0" y="-3" z="12" spawntime="90" />
+		<monster name="Scarab" x="-3" y="1" z="12" spawntime="90" />
+		<monster name="Necromancer" x="-1" y="2" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33358" centery="32637" centerz="12" radius="3">
+		<monster name="Bonebeast" x="-2" y="-2" z="12" spawntime="90" />
+		<monster name="Ancient Scarab" x="1" y="-2" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33365" centery="32637" centerz="12" radius="3">
+		<monster name="Scarab" x="2" y="-2" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33372" centery="32637" centerz="12" radius="3">
+		<monster name="Ancient Scarab" x="-3" y="1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33337" centery="32644" centerz="12" radius="3">
+		<monster name="Ancient Scarab" x="-3" y="-1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33351" centery="32644" centerz="12" radius="3">
+		<monster name="Ancient Scarab" x="3" y="2" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33372" centery="32644" centerz="12" radius="3">
+		<monster name="Scarab" x="-1" y="-3" z="12" spawntime="90" />
+		<monster name="Ancient Scarab" x="-3" y="-2" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33386" centery="32644" centerz="12" radius="3">
+		<monster name="Ancient Scarab" x="1" y="2" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33375" centery="32649" centerz="12" radius="1">
+		<monster name="Ancient Scarab" x="0" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33323" centery="32651" centerz="12" radius="3">
+		<monster name="Bonebeast" x="2" y="3" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33351" centery="32651" centerz="12" radius="3">
+		<monster name="Scarab" x="2" y="-2" z="12" spawntime="90" />
+		<monster name="Scarab" x="-2" y="1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33358" centery="32651" centerz="12" radius="3">
+		<monster name="Bonebeast" x="-3" y="-2" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33365" centery="32651" centerz="12" radius="3">
+		<monster name="Ancient Scarab" x="-2" y="-2" z="12" spawntime="90" />
+		<monster name="Scarab" x="-2" y="1" z="12" spawntime="90" />
+		<monster name="Scarab" x="2" y="1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33386" centery="32651" centerz="12" radius="3">
+		<monster name="Ancient Scarab" x="1" y="-2" z="12" spawntime="90" />
+		<monster name="Bonebeast" x="-3" y="-1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33323" centery="32658" centerz="12" radius="3">
+		<monster name="Ancient Scarab" x="0" y="-2" z="12" spawntime="90" />
+		<monster name="Scarab" x="3" y="-2" z="12" spawntime="90" />
+		<monster name="Bonebeast" x="3" y="2" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33344" centery="32658" centerz="12" radius="3">
+		<monster name="Scarab" x="0" y="-3" z="12" spawntime="90" />
+		<monster name="Ancient Scarab" x="0" y="-2" z="12" spawntime="90" />
+		<monster name="Scarab" x="-1" y="2" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33351" centery="32658" centerz="12" radius="3">
+		<monster name="Bonebeast" x="-1" y="-1" z="12" spawntime="90" />
+		<monster name="Scarab" x="2" y="2" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33358" centery="32658" centerz="12" radius="3">
+		<monster name="Ancient Scarab" x="0" y="-3" z="12" spawntime="90" />
+		<monster name="Ancient Scarab" x="-3" y="-2" z="12" spawntime="90" />
+		<monster name="Scarab" x="0" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33372" centery="32658" centerz="12" radius="3">
+		<monster name="Bonebeast" x="3" y="-2" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33379" centery="32658" centerz="12" radius="3">
+		<monster name="Ancient Scarab" x="-1" y="-1" z="12" spawntime="90" />
+		<monster name="Bonebeast" x="-3" y="1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33328" centery="32663" centerz="12" radius="1">
+		<monster name="Ancient Scarab" x="0" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33323" centery="32665" centerz="12" radius="3">
+		<monster name="Scarab" x="0" y="-3" z="12" spawntime="90" />
+		<monster name="Ancient Scarab" x="3" y="-2" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33372" centery="32665" centerz="12" radius="3">
+		<monster name="Bonebeast" x="-2" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33379" centery="32665" centerz="12" radius="3">
+		<monster name="Ancient Scarab" x="1" y="2" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33386" centery="32665" centerz="12" radius="3">
+		<monster name="Scarab" x="-1" y="2" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33393" centery="32665" centerz="12" radius="3">
+		<monster name="Ancient Scarab" x="-2" y="0" z="12" spawntime="90" />
+		<monster name="Scarab" x="-1" y="2" z="12" spawntime="90" />
+		<monster name="Bonebeast" x="-3" y="3" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33323" centery="32672" centerz="12" radius="3">
+		<monster name="Bonebeast" x="3" y="-2" z="12" spawntime="90" />
+		<monster name="Ancient Scarab" x="2" y="0" z="12" spawntime="90" />
+		<monster name="Scarab" x="3" y="3" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33344" centery="32672" centerz="12" radius="3">
+		<monster name="Scarab" x="-2" y="1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33351" centery="32672" centerz="12" radius="3">
+		<monster name="Scarab" x="2" y="-1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33325" centery="32677" centerz="12" radius="1">
+		<monster name="Ancient Scarab" x="0" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33330" centery="32679" centerz="12" radius="3">
+		<monster name="Scarab" x="1" y="-3" z="12" spawntime="90" />
+		<monster name="Scarab" x="-3" y="3" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33337" centery="32679" centerz="12" radius="3">
+		<monster name="Scarab" x="-3" y="2" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33351" centery="32679" centerz="12" radius="3">
+		<monster name="Bonebeast" x="3" y="1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33372" centery="32679" centerz="12" radius="3">
+		<monster name="Ancient Scarab" x="2" y="-2" z="12" spawntime="90" />
+		<monster name="Ancient Scarab" x="-2" y="3" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33379" centery="32679" centerz="12" radius="3">
+		<monster name="Bonebeast" x="-3" y="3" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33356" centery="32685" centerz="12" radius="1">
+		<monster name="Ancient Scarab" x="0" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33351" centery="32686" centerz="12" radius="3">
+		<monster name="Scarab" x="-3" y="-3" z="12" spawntime="90" />
+		<monster name="Bonebeast" x="2" y="-1" z="12" spawntime="90" />
+		<monster name="Scarab" x="-1" y="2" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33372" centery="32686" centerz="12" radius="3">
+		<monster name="Scarab" x="1" y="-1" z="12" spawntime="90" />
+		<monster name="Ancient Scarab" x="2" y="-1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33379" centery="32686" centerz="12" radius="3">
+		<monster name="Bonebeast" x="-3" y="-3" z="12" spawntime="90" />
+		<monster name="Ancient Scarab" x="2" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33358" centery="32693" centerz="12" radius="3">
+		<monster name="Ancient Scarab" x="-2" y="-3" z="12" spawntime="90" />
+	</monster>
+</monsters>

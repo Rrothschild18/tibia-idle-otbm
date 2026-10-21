@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="33358" centery="32574" centerz="10" radius="3">
+		<monster name="Scarab" x="3" y="-3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33365" centery="32574" centerz="10" radius="3">
+		<monster name="Bonebeast" x="-1" y="-2" z="10" spawntime="90" />
+		<monster name="Scarab" x="-2" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33358" centery="32588" centerz="10" radius="3">
+		<monster name="Mummy" x="-2" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33330" centery="32595" centerz="10" radius="3">
+		<monster name="Scarab" x="-3" y="-2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33344" centery="32595" centerz="10" radius="3">
+		<monster name="Scarab" x="-2" y="-3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33323" centery="32602" centerz="10" radius="3">
+		<monster name="Larva" x="2" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33358" centery="32602" centerz="10" radius="3">
+		<monster name="Larva" x="0" y="1" z="10" spawntime="90" />
+		<monster name="Scarab" x="2" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33344" centery="32609" centerz="10" radius="3">
+		<monster name="Mummy" x="1" y="-3" z="10" spawntime="90" />
+		<monster name="Bonebeast" x="-3" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33358" centery="32609" centerz="10" radius="3">
+		<monster name="Bonebeast" x="3" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33365" centery="32609" centerz="10" radius="3">
+		<monster name="Mummy" x="-1" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33323" centery="32616" centerz="10" radius="3">
+		<monster name="Scarab" x="3" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33337" centery="32616" centerz="10" radius="3">
+		<monster name="Scarab" x="2" y="-3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33323" centery="32623" centerz="10" radius="3">
+		<monster name="Scarab" x="-2" y="1" z="10" spawntime="90" />
+		<monster name="Scarab" x="0" y="1" z="10" spawntime="90" />
+		<monster name="Mummy" x="2" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33330" centery="32623" centerz="10" radius="3">
+		<monster name="Scarab" x="3" y="1" z="10" spawntime="90" />
+		<monster name="Larva" x="0" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33351" centery="32623" centerz="10" radius="3">
+		<monster name="Scarab" x="0" y="-3" z="10" spawntime="90" />
+		<monster name="Mummy" x="-2" y="-2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33358" centery="32623" centerz="10" radius="3">
+		<monster name="Mummy" x="0" y="2" z="10" spawntime="90" />
+		<monster name="Larva" x="2" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33365" centery="32623" centerz="10" radius="3">
+		<monster name="Scarab" x="-3" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33323" centery="32630" centerz="10" radius="3">
+		<monster name="Mummy" x="0" y="-2" z="10" spawntime="90" />
+		<monster name="Bonebeast" x="1" y="-2" z="10" spawntime="90" />
+		<monster name="Scarab" x="2" y="-2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33337" centery="32630" centerz="10" radius="3">
+		<monster name="Mummy" x="-3" y="-3" z="10" spawntime="90" />
+		<monster name="Mummy" x="-3" y="-2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33351" centery="32630" centerz="10" radius="3">
+		<monster name="Mummy" x="3" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33358" centery="32630" centerz="10" radius="3">
+		<monster name="Larva" x="0" y="-1" z="10" spawntime="90" />
+		<monster name="Scarab" x="1" y="0" z="10" spawntime="90" />
+		<monster name="Bonebeast" x="3" y="0" z="10" spawntime="90" />
+	</monster>
+</monsters>

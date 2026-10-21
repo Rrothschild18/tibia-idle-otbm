@@ -1,32 +1,15 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <monsters>
-	<monster centerx="32384" centery="32129" centerz="10" radius="2">
-		<monster name="Carrion Worm" x="0" y="-1" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32361" centery="32135" centerz="10" radius="4">
-		<monster name="Rotworm" x="0" y="-2" z="10" spawntime="90" />
-		<monster name="Rotworm" x="2" y="2" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32374" centery="32137" centerz="10" radius="4">
-		<monster name="Rotworm" x="-2" y="-4" z="10" spawntime="90" />
-		<monster name="Rotworm" x="-1" y="-2" z="10" spawntime="90" />
-		<monster name="Rotworm" x="4" y="-2" z="10" spawntime="90" />
-		<monster name="Rotworm" x="3" y="1" z="10" spawntime="90" />
-		<monster name="Carrion Worm" x="-3" y="2" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32373" centery="32146" centerz="10" radius="2">
-		<monster name="Rotworm" x="2" y="-2" z="10" spawntime="90" />
-		<monster name="Rotworm" x="-1" y="1" z="10" spawntime="90" />
-	</monster>
-	<monster centerx="32378" centery="32156" centerz="10" radius="5">
-		<monster name="Rotworm" x="0" y="-5" z="10" spawntime="90" />
-	</monster>
 	<monster centerx="32382" centery="32136" centerz="11" radius="1">
 		<monster name="Rotworm" x="0" y="1" z="11" spawntime="90" />
 	</monster>
 	<monster centerx="32374" centery="32140" centerz="11" radius="1">
 		<monster name="Rotworm" x="0" y="0" z="11" spawntime="90" />
 		<monster name="Rotworm" x="-1" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="32391" centery="32143" centerz="11" radius="2">
+		<monster name="Rotworm" x="-2" y="0" z="11" spawntime="90" />
+		<monster name="Rotworm" x="0" y="2" z="11" spawntime="90" />
 	</monster>
 	<monster centerx="32378" centery="32151" centerz="11" radius="1">
 		<monster name="Rotworm" x="0" y="-1" z="11" spawntime="90" />

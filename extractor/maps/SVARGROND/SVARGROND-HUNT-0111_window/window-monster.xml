@@ -1,0 +1,1133 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="32266" centery="31360" centerz="4" radius="1">
+		<monster name="Frost Dragon" x="1" y="0" z="4" spawntime="90" />
+	</monster>
+	<monster centerx="32273" centery="31363" centerz="4" radius="3">
+		<monster name="Frost Dragon" x="1" y="-2" z="4" spawntime="60" />
+		<monster name="Frost Dragon" x="2" y="2" z="4" spawntime="90" />
+	</monster>
+	<monster centerx="32261" centery="31386" centerz="5" radius="1">
+		<monster name="Frost Dragon" x="-1" y="0" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32245" centery="31388" centerz="5" radius="1">
+		<monster name="Frost Dragon" x="1" y="-1" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32248" centery="31392" centerz="5" radius="1">
+		<monster name="Frost Dragon" x="1" y="-1" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32259" centery="31395" centerz="5" radius="1">
+		<monster name="Frost Dragon" x="0" y="1" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32250" centery="31399" centerz="5" radius="1">
+		<monster name="Frost Dragon Hatchling" x="0" y="1" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32246" centery="31400" centerz="5" radius="1">
+		<monster name="Frost Dragon Hatchling" x="0" y="0" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32256" centery="31401" centerz="5" radius="1">
+		<monster name="Frost Dragon Hatchling" x="0" y="-1" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32266" centery="31408" centerz="5" radius="1">
+		<monster name="Frost Dragon Hatchling" x="-1" y="-1" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32257" centery="31415" centerz="5" radius="2">
+		<monster name="Frost Dragon Hatchling" x="0" y="-1" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32194" centery="31419" centerz="5" radius="2">
+		<monster name="Frost Dragon" x="2" y="-2" z="5" spawntime="90" />
+		<monster name="Frost Dragon" x="-1" y="0" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32183" centery="31427" centerz="5" radius="1">
+		<monster name="Frost Dragon" x="0" y="1" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32195" centery="31427" centerz="5" radius="1">
+		<monster name="Frost Dragon" x="-1" y="0" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32186" centery="31432" centerz="5" radius="1">
+		<monster name="Frost Dragon" x="1" y="0" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32170" centery="31436" centerz="5" radius="1">
+		<monster name="Frost Dragon" x="0" y="0" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32159" centery="31444" centerz="5" radius="1">
+		<monster name="Frost Dragon" x="1" y="-1" z="5" spawntime="90" />
+	</monster>
+	<monster centerx="32171" centery="31338" centerz="6" radius="3">
+		<monster name="Silver Rabbit" x="1" y="2" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32185" centery="31338" centerz="6" radius="3">
+		<monster name="Mammoth" x="-3" y="3" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32119" centery="31344" centerz="6" radius="4">
+		<monster name="Barbarian Bloodwalker" x="0" y="-2" z="6" spawntime="90" />
+		<monster name="Barbarian Skullhunter" x="-2" y="-1" z="6" spawntime="90" />
+		<monster name="Barbarian Headsplitter" x="0" y="2" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32147" centery="31346" centerz="6" radius="4">
+		<monster name="Barbarian Bloodwalker" x="-1" y="2" z="6" spawntime="90" />
+		<monster name="Barbarian Headsplitter" x="0" y="3" z="6" spawntime="90" />
+		<monster name="Barbarian Skullhunter" x="-2" y="4" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32168" centery="31348" centerz="6" radius="3">
+		<monster name="Badger" x="-3" y="-3" z="6" spawntime="90" />
+		<monster name="Mammoth" x="0" y="-2" z="6" spawntime="90" />
+		<monster name="Mammoth" x="2" y="-2" z="6" spawntime="90" />
+		<monster name="Winter Wolf" x="3" y="-2" z="6" spawntime="90" />
+		<monster name="Badger" x="-3" y="0" z="6" spawntime="90" />
+		<monster name="Badger" x="-3" y="3" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32123" centery="31356" centerz="6" radius="4">
+		<monster name="Barbarian Bloodwalker" x="-2" y="-1" z="6" spawntime="90" />
+		<monster name="Barbarian Skullhunter" x="-1" y="-1" z="6" spawntime="90" />
+		<monster name="Barbarian Bloodwalker" x="0" y="1" z="6" spawntime="90" />
+		<monster name="Barbarian Headsplitter" x="1" y="1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32268" centery="31364" centerz="6" radius="3">
+		<monster name="Frost Dragon" x="1" y="-2" z="6" spawntime="90" />
+		<monster name="Frost Dragon" x="-1" y="2" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32250" centery="31386" centerz="6" radius="1">
+		<monster name="Frost Dragon Hatchling" x="0" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32245" centery="31387" centerz="6" radius="1">
+		<monster name="Frost Dragon" x="1" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32280" centery="31392" centerz="6" radius="1">
+		<monster name="Frost Dragon" x="1" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32250" centery="31395" centerz="6" radius="1">
+		<monster name="Frost Dragon Hatchling" x="1" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32278" centery="31395" centerz="6" radius="1">
+		<monster name="Frost Dragon Hatchling" x="1" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32270" centery="31396" centerz="6" radius="1">
+		<monster name="Frost Dragon" x="1" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32292" centery="31397" centerz="6" radius="1">
+		<monster name="Frost Dragon" x="1" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32275" centery="31406" centerz="6" radius="1">
+		<monster name="Frost Dragon" x="1" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32242" centery="31407" centerz="6" radius="1">
+		<monster name="Frost Dragon Hatchling" x="1" y="1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32203" centery="31408" centerz="6" radius="1">
+		<monster name="Frost Dragon" x="0" y="-1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32209" centery="31409" centerz="6" radius="1">
+		<monster name="Frost Dragon Hatchling" x="0" y="1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32234" centery="31411" centerz="6" radius="1">
+		<monster name="Frost Dragon Hatchling" x="1" y="-1" z="6" spawntime="90" />
+		<monster name="Frost Dragon" x="0" y="1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32239" centery="31411" centerz="6" radius="1">
+		<monster name="Frost Dragon" x="1" y="-1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32210" centery="31414" centerz="6" radius="2">
+		<monster name="Frost Dragon" x="1" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32194" centery="31418" centerz="6" radius="2">
+		<monster name="Frost Dragon" x="0" y="-1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32203" centery="31418" centerz="6" radius="1">
+		<monster name="Frost Dragon Hatchling" x="1" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32210" centery="31419" centerz="6" radius="1">
+		<monster name="Frost Dragon Hatchling" x="1" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32208" centery="31427" centerz="6" radius="1">
+		<monster name="Frost Dragon" x="0" y="1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32222" centery="31429" centerz="6" radius="1">
+		<monster name="Frost Dragon" x="1" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32226" centery="31431" centerz="6" radius="1">
+		<monster name="Frost Dragon" x="1" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32157" centery="31436" centerz="6" radius="2">
+		<monster name="Frost Dragon" x="1" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32164" centery="31438" centerz="6" radius="2">
+		<monster name="Frost Dragon" x="1" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32186" centery="31439" centerz="6" radius="1">
+		<monster name="Frost Dragon Hatchling" x="1" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32185" centery="31449" centerz="6" radius="1">
+		<monster name="Frost Dragon Hatchling" x="0" y="-1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32176" centery="31456" centerz="6" radius="1">
+		<monster name="Frost Dragon" x="0" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32180" centery="31456" centerz="6" radius="1">
+		<monster name="Frost Dragon" x="0" y="0" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="32137" centery="31335" centerz="7" radius="6">
+		<monster name="Barbarian Skullhunter" x="-2" y="3" z="7" spawntime="90" />
+		<monster name="Barbarian Bloodwalker" x="5" y="4" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32122" centery="31340" centerz="7" radius="4">
+		<monster name="Barbarian Headsplitter" x="-1" y="-2" z="7" spawntime="90" />
+		<monster name="Barbarian Brutetamer" x="3" y="0" z="7" spawntime="90" />
+		<monster name="Barbarian Skullhunter" x="-3" y="1" z="7" spawntime="90" />
+		<monster name="Barbarian Headsplitter" x="1" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32264" centery="31341" centerz="7" radius="1">
+		<monster name="Frost Dragon" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32153" centery="31345" centerz="7" radius="4">
+		<monster name="Barbarian Bloodwalker" x="-2" y="1" z="7" spawntime="90" />
+		<monster name="Barbarian Headsplitter" x="2" y="1" z="7" spawntime="90" />
+		<monster name="Barbarian Skullhunter" x="-1" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32260" centery="31347" centerz="7" radius="1">
+		<monster name="Frost Dragon" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32268" centery="31348" centerz="7" radius="1">
+		<monster name="Frost Dragon" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32179" centery="31350" centerz="7" radius="2">
+		<monster name="Silver Rabbit" x="2" y="-2" z="7" spawntime="90" />
+		<monster name="Silver Rabbit" x="-2" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32118" centery="31352" centerz="7" radius="4">
+		<monster name="Barbarian Headsplitter" x="0" y="0" z="7" spawntime="90" />
+		<monster name="Barbarian Brutetamer" x="2" y="0" z="7" spawntime="90" />
+		<monster name="Barbarian Skullhunter" x="3" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32131" centery="31352" centerz="7" radius="4">
+		<monster name="Barbarian Skullhunter" x="-1" y="-2" z="7" spawntime="90" />
+		<monster name="Barbarian Headsplitter" x="-2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32266" centery="31355" centerz="7" radius="1">
+		<monster name="Frost Dragon" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32109" centery="31366" centerz="7" radius="2">
+		<monster name="Rabbit" x="0" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32133" centery="31370" centerz="7" radius="2">
+		<monster name="Rabbit" x="-1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32135" centery="31377" centerz="7" radius="2">
+		<monster name="Polar Bear" x="-1" y="-2" z="7" spawntime="90" />
+		<monster name="Polar Bear" x="1" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32147" centery="31377" centerz="7" radius="3">
+		<monster name="Mammoth" x="-3" y="0" z="7" spawntime="90" />
+		<monster name="Winter Wolf" x="-3" y="3" z="7" spawntime="90" />
+		<monster name="Badger" x="-1" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32108" centery="31383" centerz="7" radius="2">
+		<monster name="Silver Rabbit" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32147" centery="31384" centerz="7" radius="3">
+		<monster name="Badger" x="-1" y="-2" z="7" spawntime="90" />
+		<monster name="Badger" x="-1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32247" centery="31384" centerz="7" radius="1">
+		<monster name="Frost Dragon Hatchling" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32131" centery="31385" centerz="7" radius="2">
+		<monster name="Silver Rabbit" x="0" y="-1" z="7" spawntime="90" />
+		<monster name="Silver Rabbit" x="2" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32242" centery="31390" centerz="7" radius="1">
+		<monster name="Frost Dragon Hatchling" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32289" centery="31399" centerz="7" radius="4">
+		<monster name="Frost Dragon" x="2" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32279" centery="31403" centerz="7" radius="2">
+		<monster name="Frost Dragon Hatchling" x="2" y="-2" z="7" spawntime="90" />
+		<monster name="Frost Dragon Hatchling" x="-2" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32164" centery="31415" centerz="7" radius="1">
+		<monster name="Frost Dragon" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32170" centery="31415" centerz="7" radius="2">
+		<monster name="Penguin" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32201" centery="31416" centerz="7" radius="2">
+		<monster name="Frost Dragon" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32288" centery="31417" centerz="7" radius="1">
+		<monster name="Frost Dragon" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32279" centery="31418" centerz="7" radius="1">
+		<monster name="Frost Dragon Hatchling" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32283" centery="31419" centerz="7" radius="1">
+		<monster name="Frost Dragon" x="-1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32159" centery="31420" centerz="7" radius="2">
+		<monster name="Frost Dragon" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32172" centery="31420" centerz="7" radius="1">
+		<monster name="Frost Dragon Hatchling" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32274" centery="31420" centerz="7" radius="1">
+		<monster name="Frost Dragon" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32166" centery="31421" centerz="7" radius="1">
+		<monster name="Frost Dragon" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32202" centery="31421" centerz="7" radius="2">
+		<monster name="Frost Dragon Hatchling" x="2" y="-1" z="7" spawntime="90" />
+		<monster name="Frost Dragon Hatchling" x="-1" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32171" centery="31423" centerz="7" radius="1">
+		<monster name="Frost Dragon Hatchling" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32224" centery="31424" centerz="7" radius="1">
+		<monster name="Frost Dragon Hatchling" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32265" centery="31424" centerz="7" radius="1">
+		<monster name="Frost Dragon" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32259" centery="31425" centerz="7" radius="1">
+		<monster name="Frost Dragon" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32210" centery="31426" centerz="7" radius="2">
+		<monster name="Frost Dragon" x="0" y="-1" z="7" spawntime="90" />
+		<monster name="Frost Dragon Hatchling" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32280" centery="31426" centerz="7" radius="1">
+		<monster name="Frost Dragon" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32297" centery="31426" centerz="7" radius="1">
+		<monster name="Frost Dragon" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32184" centery="31427" centerz="7" radius="2">
+		<monster name="Frost Dragon Hatchling" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32228" centery="31427" centerz="7" radius="1">
+		<monster name="Frost Dragon Hatchling" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32269" centery="31427" centerz="7" radius="1">
+		<monster name="Frost Dragon" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32249" centery="31428" centerz="7" radius="2">
+		<monster name="Frost Dragon Hatchling" x="2" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32289" centery="31428" centerz="7" radius="1">
+		<monster name="Frost Dragon Hatchling" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32242" centery="31429" centerz="7" radius="2">
+		<monster name="Frost Dragon Hatchling" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32224" centery="31430" centerz="7" radius="1">
+		<monster name="Frost Dragon" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32230" centery="31431" centerz="7" radius="1">
+		<monster name="Frost Dragon" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32160" centery="31432" centerz="7" radius="1">
+		<monster name="Frost Dragon" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32156" centery="31435" centerz="7" radius="1">
+		<monster name="Frost Dragon Hatchling" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32224" centery="31435" centerz="7" radius="2">
+		<monster name="Frost Dragon" x="-1" y="0" z="7" spawntime="90" />
+		<monster name="Frost Dragon Hatchling" x="2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32163" centery="31436" centerz="7" radius="2">
+		<monster name="Frost Dragon" x="0" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32200" centery="31436" centerz="7" radius="2">
+		<monster name="Frost Dragon" x="-2" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32207" centery="31436" centerz="7" radius="2">
+		<monster name="Frost Dragon" x="0" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32237" centery="31440" centerz="7" radius="2">
+		<monster name="Frost Dragon Hatchling" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32210" centery="31441" centerz="7" radius="1">
+		<monster name="Frost Dragon Hatchling" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32165" centery="31442" centerz="7" radius="2">
+		<monster name="Frost Dragon Hatchling" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32181" centery="31445" centerz="7" radius="2">
+		<monster name="Frost Dragon" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32201" centery="31445" centerz="7" radius="2">
+		<monster name="Frost Dragon Hatchling" x="1" y="-2" z="7" spawntime="90" />
+		<monster name="Frost Dragon Hatchling" x="1" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32217" centery="31446" centerz="7" radius="1">
+		<monster name="Frost Dragon" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32194" centery="31448" centerz="7" radius="2">
+		<monster name="Frost Dragon" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32183" centery="31452" centerz="7" radius="2">
+		<monster name="Frost Dragon Hatchling" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32195" centery="31454" centerz="7" radius="2">
+		<monster name="Frost Dragon Hatchling" x="2" y="-2" z="7" spawntime="90" />
+		<monster name="Frost Dragon" x="-1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32197" centery="31460" centerz="7" radius="1">
+		<monster name="Frost Dragon" x="0" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32163" centery="31461" centerz="7" radius="2">
+		<monster name="Frost Dragon" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32187" centery="31467" centerz="7" radius="2">
+		<monster name="Frost Dragon" x="0" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="32252" centery="31338" centerz="8" radius="1">
+		<monster name="Frost Dragon" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32256" centery="31341" centerz="8" radius="1">
+		<monster name="Frost Dragon" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32274" centery="31342" centerz="8" radius="1">
+		<monster name="Frost Dragon Hatchling" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32253" centery="31345" centerz="8" radius="1">
+		<monster name="Frost Dragon" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32271" centery="31345" centerz="8" radius="1">
+		<monster name="Frost Dragon Hatchling" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32259" centery="31356" centerz="8" radius="1">
+		<monster name="Frost Dragon Hatchling" x="0" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32271" centery="31359" centerz="8" radius="1">
+		<monster name="Frost Dragon Hatchling" x="0" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32266" centery="31361" centerz="8" radius="1">
+		<monster name="Frost Dragon" x="1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32273" centery="31361" centerz="8" radius="1">
+		<monster name="Frost Dragon" x="-1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32271" centery="31364" centerz="8" radius="1">
+		<monster name="Frost Dragon Hatchling" x="0" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32228" centery="31405" centerz="8" radius="1">
+		<monster name="Frost Dragon" x="1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32223" centery="31406" centerz="8" radius="1">
+		<monster name="Frost Dragon" x="-1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32259" centery="31407" centerz="8" radius="1">
+		<monster name="Frost Dragon" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32230" centery="31408" centerz="8" radius="1">
+		<monster name="Frost Dragon" x="1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32225" centery="31410" centerz="8" radius="1">
+		<monster name="Frost Dragon" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32249" centery="31412" centerz="8" radius="1">
+		<monster name="Frost Dragon Hatchling" x="0" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32260" centery="31413" centerz="8" radius="1">
+		<monster name="Frost Dragon" x="1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32231" centery="31415" centerz="8" radius="1">
+		<monster name="Frost Dragon Hatchling" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32243" centery="31415" centerz="8" radius="1">
+		<monster name="Frost Dragon Hatchling" x="0" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32247" centery="31415" centerz="8" radius="1">
+		<monster name="Frost Dragon" x="1" y="0" z="8" spawntime="90" />
+		<monster name="Frost Dragon Hatchling" x="0" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32264" centery="31415" centerz="8" radius="1">
+		<monster name="Frost Dragon Hatchling" x="1" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32230" centery="31419" centerz="8" radius="1">
+		<monster name="Frost Dragon" x="1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32251" centery="31419" centerz="8" radius="1">
+		<monster name="Frost Dragon" x="0" y="-1" z="8" spawntime="90" />
+		<monster name="Frost Dragon" x="1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32244" centery="31420" centerz="8" radius="1">
+		<monster name="Frost Dragon" x="0" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32233" centery="31422" centerz="8" radius="1">
+		<monster name="Frost Dragon Hatchling" x="0" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32299" centery="31426" centerz="8" radius="1">
+		<monster name="Frost Dragon Hatchling" x="1" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32294" centery="31427" centerz="8" radius="1">
+		<monster name="Frost Dragon" x="1" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32297" centery="31429" centerz="8" radius="1">
+		<monster name="Frost Dragon" x="1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32254" centery="31430" centerz="8" radius="1">
+		<monster name="Frost Dragon" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32259" centery="31431" centerz="8" radius="1">
+		<monster name="Frost Dragon" x="1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32300" centery="31431" centerz="8" radius="1">
+		<monster name="Frost Dragon Hatchling" x="1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32151" centery="31432" centerz="8" radius="1">
+		<monster name="Frost Dragon" x="1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32291" centery="31432" centerz="8" radius="1">
+		<monster name="Frost Dragon" x="1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32156" centery="31433" centerz="8" radius="1">
+		<monster name="Frost Dragon" x="1" y="-1" z="8" spawntime="90" />
+		<monster name="Frost Dragon Hatchling" x="0" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32249" centery="31433" centerz="8" radius="1">
+		<monster name="Frost Dragon Hatchling" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32295" centery="31434" centerz="8" radius="1">
+		<monster name="Frost Dragon" x="0" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32146" centery="31435" centerz="8" radius="1">
+		<monster name="Frost Dragon" x="1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32183" centery="31435" centerz="8" radius="2">
+		<monster name="Frost Dragon" x="1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32252" centery="31436" centerz="8" radius="1">
+		<monster name="Frost Dragon Hatchling" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32257" centery="31436" centerz="8" radius="1">
+		<monster name="Frost Dragon Hatchling" x="-1" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32149" centery="31437" centerz="8" radius="1">
+		<monster name="Frost Dragon" x="1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32159" centery="31437" centerz="8" radius="1">
+		<monster name="Frost Dragon Hatchling" x="1" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32173" centery="31438" centerz="8" radius="2">
+		<monster name="Frost Dragon" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32187" centery="31438" centerz="8" radius="1">
+		<monster name="Frost Dragon Hatchling" x="0" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32160" centery="31440" centerz="8" radius="1">
+		<monster name="Frost Dragon Hatchling" x="-1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32150" centery="31441" centerz="8" radius="1">
+		<monster name="Frost Dragon" x="1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32157" centery="31442" centerz="8" radius="1">
+		<monster name="Frost Dragon" x="1" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32154" centery="31445" centerz="8" radius="1">
+		<monster name="Frost Dragon" x="1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32176" centery="31445" centerz="8" radius="2">
+		<monster name="Frost Dragon" x="2" y="-2" z="8" spawntime="90" />
+		<monster name="Frost Dragon" x="-1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32171" centery="31455" centerz="8" radius="2">
+		<monster name="Frost Dragon" x="1" y="-2" z="8" spawntime="90" />
+		<monster name="Frost Dragon" x="-1" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32177" centery="31455" centerz="8" radius="2">
+		<monster name="Frost Dragon Hatchling" x="1" y="-1" z="8" spawntime="90" />
+		<monster name="Frost Dragon Hatchling" x="1" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32178" centery="31462" centerz="8" radius="1">
+		<monster name="Frost Dragon" x="-1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="32264" centery="31354" centerz="9" radius="1">
+		<monster name="Frost Dragon Hatchling" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32246" centery="31413" centerz="9" radius="1">
+		<monster name="Frost Dragon" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32252" centery="31421" centerz="9" radius="1">
+		<monster name="Frost Dragon" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32303" centery="31431" centerz="9" radius="1">
+		<monster name="Frost Dragon" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32297" centery="31432" centerz="9" radius="1">
+		<monster name="Frost Dragon" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32303" centery="31434" centerz="9" radius="1">
+		<monster name="Frost Dragon" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32298" centery="31436" centerz="9" radius="1">
+		<monster name="Frost Dragon" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32158" centery="31441" centerz="9" radius="2">
+		<monster name="Frost Dragon" x="1" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32301" centery="31443" centerz="9" radius="1">
+		<monster name="Frost Dragon" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32308" centery="31444" centerz="9" radius="1">
+		<monster name="Frost Dragon" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32298" centery="31449" centerz="9" radius="1">
+		<monster name="Frost Dragon" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32171" centery="31453" centerz="9" radius="2">
+		<monster name="Frost Dragon" x="1" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="32126" centery="31335" centerz="11" radius="3">
+		<monster name="Breach Brood" x="-3" y="1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32133" centery="31335" centerz="11" radius="3">
+		<monster name="Breach Brood" x="3" y="2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32147" centery="31335" centerz="11" radius="3">
+		<monster name="Reality Reaver" x="-1" y="1" z="11" spawntime="60" />
+		<monster name="Dread Intruder" x="0" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32154" centery="31335" centerz="11" radius="3">
+		<monster name="Breach Brood" x="-1" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32161" centery="31335" centerz="11" radius="3">
+		<monster name="Sparkion" x="2" y="1" z="11" spawntime="60" />
+		<monster name="Reality Reaver" x="1" y="2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32112" centery="31342" centerz="11" radius="3">
+		<monster name="Dread Intruder" x="-2" y="-3" z="11" spawntime="60" />
+		<monster name="Sparkion" x="3" y="2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32119" centery="31342" centerz="11" radius="3">
+		<monster name="Dread Intruder" x="1" y="1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32126" centery="31342" centerz="11" radius="3">
+		<monster name="Reality Reaver" x="0" y="-2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32133" centery="31342" centerz="11" radius="3">
+		<monster name="Sparkion" x="0" y="0" z="11" spawntime="60" />
+		<monster name="Breach Brood" x="3" y="0" z="11" spawntime="60" />
+		<monster name="Reality Reaver" x="2" y="1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32154" centery="31342" centerz="11" radius="3">
+		<monster name="Breach Brood" x="2" y="-1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32161" centery="31342" centerz="11" radius="3">
+		<monster name="Sparkion" x="-3" y="1" z="11" spawntime="60" />
+		<monster name="Dread Intruder" x="1" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32168" centery="31342" centerz="11" radius="3">
+		<monster name="Sparkion" x="-1" y="0" z="11" spawntime="60" />
+		<monster name="Reality Reaver" x="-3" y="2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32119" centery="31349" centerz="11" radius="3">
+		<monster name="Breach Brood" x="1" y="-1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32126" centery="31349" centerz="11" radius="3">
+		<monster name="Reality Reaver" x="1" y="0" z="11" spawntime="60" />
+		<monster name="Dread Intruder" x="2" y="2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32133" centery="31349" centerz="11" radius="3">
+		<monster name="Dread Intruder" x="-3" y="-3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32140" centery="31349" centerz="11" radius="3">
+		<monster name="Dread Intruder" x="-2" y="-2" z="11" spawntime="60" />
+		<monster name="Breach Brood" x="-3" y="-1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32154" centery="31349" centerz="11" radius="3">
+		<monster name="Sparkion" x="0" y="1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32161" centery="31349" centerz="11" radius="3">
+		<monster name="Breach Brood" x="3" y="-3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32168" centery="31349" centerz="11" radius="3">
+		<monster name="Reality Reaver" x="3" y="0" z="11" spawntime="60" />
+		<monster name="Sparkion" x="3" y="2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32105" centery="31356" centerz="11" radius="3">
+		<monster name="Sparkion" x="3" y="-1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32119" centery="31356" centerz="11" radius="3">
+		<monster name="Reality Reaver" x="-1" y="0" z="11" spawntime="60" />
+		<monster name="Sparkion" x="0" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32133" centery="31356" centerz="11" radius="3">
+		<monster name="Breach Brood" x="1" y="0" z="11" spawntime="60" />
+		<monster name="Breach Brood" x="3" y="1" z="11" spawntime="60" />
+		<monster name="Breach Brood" x="-3" y="2" z="11" spawntime="60" />
+		<monster name="Sparkion" x="-3" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32140" centery="31356" centerz="11" radius="3">
+		<monster name="Reality Reaver" x="-3" y="-1" z="11" spawntime="60" />
+		<monster name="Sparkion" x="-2" y="1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32126" centery="31363" centerz="11" radius="3">
+		<monster name="Reality Reaver" x="-3" y="1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32133" centery="31363" centerz="11" radius="3">
+		<monster name="Reality Reaver" x="-3" y="-2" z="11" spawntime="60" />
+		<monster name="Breach Brood" x="-2" y="3" z="11" spawntime="60" />
+		<monster name="Sparkion" x="-1" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32140" centery="31363" centerz="11" radius="3">
+		<monster name="Sparkion" x="3" y="1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32147" centery="31363" centerz="11" radius="3">
+		<monster name="Reality Reaver" x="0" y="-2" z="11" spawntime="60" />
+		<monster name="Breach Brood" x="2" y="-2" z="11" spawntime="60" />
+		<monster name="Reality Reaver" x="-2" y="0" z="11" spawntime="60" />
+		<monster name="Breach Brood" x="0" y="1" z="11" spawntime="60" />
+		<monster name="Breach Brood" x="-2" y="2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32161" centery="31363" centerz="11" radius="3">
+		<monster name="Reality Reaver" x="1" y="-2" z="11" spawntime="60" />
+		<monster name="Reality Reaver" x="2" y="-1" z="11" spawntime="60" />
+		<monster name="Sparkion" x="-3" y="2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32168" centery="31363" centerz="11" radius="3">
+		<monster name="Sparkion" x="1" y="0" z="11" spawntime="60" />
+		<monster name="Breach Brood" x="2" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32112" centery="31370" centerz="11" radius="3">
+		<monster name="Sparkion" x="2" y="-1" z="11" spawntime="60" />
+		<monster name="Dread Intruder" x="-3" y="2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32119" centery="31370" centerz="11" radius="3">
+		<monster name="Sparkion" x="3" y="2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32140" centery="31370" centerz="11" radius="3">
+		<monster name="Reality Reaver" x="0" y="-2" z="11" spawntime="60" />
+		<monster name="Breach Brood" x="2" y="-2" z="11" spawntime="60" />
+		<monster name="Breach Brood" x="1" y="1" z="11" spawntime="60" />
+		<monster name="Dread Intruder" x="-1" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32147" centery="31370" centerz="11" radius="3">
+		<monster name="Dread Intruder" x="1" y="0" z="11" spawntime="60" />
+		<monster name="Dread Intruder" x="-2" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32154" centery="31370" centerz="11" radius="3">
+		<monster name="Sparkion" x="-3" y="2" z="11" spawntime="60" />
+		<monster name="Sparkion" x="1" y="2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32105" centery="31377" centerz="11" radius="3">
+		<monster name="Reality Reaver" x="3" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32112" centery="31377" centerz="11" radius="3">
+		<monster name="Dread Intruder" x="2" y="-3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32119" centery="31377" centerz="11" radius="3">
+		<monster name="Reality Reaver" x="1" y="-3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32154" centery="31377" centerz="11" radius="3">
+		<monster name="Dread Intruder" x="3" y="-2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32168" centery="31377" centerz="11" radius="3">
+		<monster name="Sparkion" x="-2" y="0" z="11" spawntime="60" />
+		<monster name="Dread Intruder" x="0" y="1" z="11" spawntime="60" />
+		<monster name="Breach Brood" x="-1" y="2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32112" centery="31384" centerz="11" radius="3">
+		<monster name="Dread Intruder" x="1" y="-3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32119" centery="31384" centerz="11" radius="3">
+		<monster name="Sparkion" x="3" y="-2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32126" centery="31384" centerz="11" radius="3">
+		<monster name="Dread Intruder" x="1" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32140" centery="31384" centerz="11" radius="3">
+		<monster name="Reality Reaver" x="-3" y="1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32147" centery="31384" centerz="11" radius="3">
+		<monster name="Breach Brood" x="-3" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32154" centery="31384" centerz="11" radius="3">
+		<monster name="Reality Reaver" x="-1" y="-1" z="11" spawntime="60" />
+		<monster name="Sparkion" x="0" y="-1" z="11" spawntime="60" />
+		<monster name="Dread Intruder" x="3" y="0" z="11" spawntime="60" />
+		<monster name="Breach Brood" x="3" y="2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32168" centery="31384" centerz="11" radius="3">
+		<monster name="Reality Reaver" x="-3" y="-3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32119" centery="31391" centerz="11" radius="3">
+		<monster name="Sparkion" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32126" centery="31391" centerz="11" radius="3">
+		<monster name="Breach Brood" x="0" y="-2" z="11" spawntime="60" />
+		<monster name="Dread Intruder" x="3" y="-2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32133" centery="31391" centerz="11" radius="3">
+		<monster name="Reality Reaver" x="1" y="-1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32147" centery="31391" centerz="11" radius="3">
+		<monster name="Sparkion" x="-1" y="-3" z="11" spawntime="60" />
+		<monster name="Breach Brood" x="-2" y="-2" z="11" spawntime="60" />
+		<monster name="Dread Intruder" x="1" y="0" z="11" spawntime="60" />
+		<monster name="Breach Brood" x="1" y="2" z="11" spawntime="60" />
+		<monster name="Reality Reaver" x="0" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32168" centery="31391" centerz="11" radius="3">
+		<monster name="Reality Reaver" x="-2" y="-3" z="11" spawntime="60" />
+		<monster name="Breach Brood" x="0" y="-3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32112" centery="31398" centerz="11" radius="3">
+		<monster name="Sparkion" x="-3" y="-2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32126" centery="31398" centerz="11" radius="3">
+		<monster name="Sparkion" x="-1" y="-2" z="11" spawntime="60" />
+		<monster name="Breach Brood" x="-3" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32133" centery="31398" centerz="11" radius="3">
+		<monster name="Sparkion" x="3" y="-3" z="11" spawntime="60" />
+		<monster name="Breach Brood" x="0" y="-2" z="11" spawntime="60" />
+		<monster name="Sparkion" x="2" y="-2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32147" centery="31398" centerz="11" radius="3">
+		<monster name="Sparkion" x="-2" y="-1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="32105" centery="31335" centerz="12" radius="3">
+		<monster name="Sparkion" x="3" y="2" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32112" centery="31335" centerz="12" radius="3">
+		<monster name="Reality Reaver" x="-1" y="1" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32119" centery="31335" centerz="12" radius="3">
+		<monster name="Dread Intruder" x="1" y="1" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32126" centery="31335" centerz="12" radius="3">
+		<monster name="Dread Intruder" x="2" y="3" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32168" centery="31335" centerz="12" radius="3">
+		<monster name="Reality Reaver" x="1" y="1" z="12" spawntime="60" />
+		<monster name="Reality Reaver" x="-3" y="3" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32105" centery="31342" centerz="12" radius="3">
+		<monster name="Dread Intruder" x="3" y="-2" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32119" centery="31342" centerz="12" radius="3">
+		<monster name="Reality Reaver" x="2" y="-1" z="12" spawntime="60" />
+		<monster name="Dread Intruder" x="2" y="1" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32147" centery="31342" centerz="12" radius="3">
+		<monster name="Breach Brood" x="0" y="-1" z="12" spawntime="60" />
+		<monster name="Reality Reaver" x="3" y="0" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32154" centery="31342" centerz="12" radius="3">
+		<monster name="Sparkion" x="-3" y="0" z="12" spawntime="60" />
+		<monster name="Reality Reaver" x="0" y="3" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32161" centery="31342" centerz="12" radius="3">
+		<monster name="Breach Brood" x="2" y="-3" z="12" spawntime="60" />
+		<monster name="Sparkion" x="0" y="-2" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32168" centery="31342" centerz="12" radius="3">
+		<monster name="Sparkion" x="-1" y="0" z="12" spawntime="60" />
+		<monster name="Dread Intruder" x="0" y="1" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32112" centery="31349" centerz="12" radius="3">
+		<monster name="Breach Brood" x="2" y="-2" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32119" centery="31349" centerz="12" radius="3">
+		<monster name="Sparkion" x="-2" y="-2" z="12" spawntime="60" />
+		<monster name="Breach Brood" x="1" y="0" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32126" centery="31349" centerz="12" radius="3">
+		<monster name="Reality Reaver" x="1" y="3" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32133" centery="31349" centerz="12" radius="3">
+		<monster name="Sparkion" x="2" y="-2" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32140" centery="31349" centerz="12" radius="3">
+		<monster name="Reality Reaver" x="-1" y="3" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32161" centery="31349" centerz="12" radius="3">
+		<monster name="Sparkion" x="1" y="-2" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32175" centery="31349" centerz="12" radius="3">
+		<monster name="Reality Reaver" x="1" y="-3" z="12" spawntime="60" />
+		<monster name="Reality Reaver" x="0" y="0" z="12" spawntime="60" />
+		<monster name="Breach Brood" x="2" y="0" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32112" centery="31356" centerz="12" radius="3">
+		<monster name="Reality Reaver" x="-1" y="-3" z="12" spawntime="60" />
+		<monster name="Sparkion" x="2" y="-1" z="12" spawntime="60" />
+		<monster name="Sparkion" x="3" y="2" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32119" centery="31356" centerz="12" radius="3">
+		<monster name="Dread Intruder" x="-2" y="-3" z="12" spawntime="60" />
+		<monster name="Sparkion" x="0" y="-2" z="12" spawntime="60" />
+		<monster name="Reality Reaver" x="-3" y="0" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32126" centery="31356" centerz="12" radius="3">
+		<monster name="Sparkion" x="3" y="-3" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32140" centery="31356" centerz="12" radius="3">
+		<monster name="Sparkion" x="1" y="-3" z="12" spawntime="60" />
+		<monster name="Dread Intruder" x="0" y="-1" z="12" spawntime="60" />
+		<monster name="Reality Reaver" x="3" y="0" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32147" centery="31356" centerz="12" radius="3">
+		<monster name="Reality Reaver" x="-3" y="2" z="12" spawntime="60" />
+		<monster name="Breach Brood" x="-1" y="2" z="12" spawntime="60" />
+		<monster name="Dread Intruder" x="1" y="2" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32154" centery="31356" centerz="12" radius="3">
+		<monster name="Sparkion" x="-1" y="-2" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32161" centery="31356" centerz="12" radius="3">
+		<monster name="Reality Reaver" x="-1" y="-3" z="12" spawntime="60" />
+		<monster name="Dread Intruder" x="0" y="0" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32168" centery="31356" centerz="12" radius="3">
+		<monster name="Breach Brood" x="-3" y="1" z="12" spawntime="60" />
+		<monster name="Dread Intruder" x="2" y="1" z="12" spawntime="60" />
+		<monster name="Breach Brood" x="-3" y="3" z="12" spawntime="60" />
+		<monster name="Breach Brood" x="1" y="3" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32112" centery="31363" centerz="12" radius="3">
+		<monster name="Sparkion" x="3" y="-3" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32119" centery="31363" centerz="12" radius="3">
+		<monster name="Breach Brood" x="-2" y="-3" z="12" spawntime="60" />
+		<monster name="Dread Intruder" x="0" y="-2" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32126" centery="31363" centerz="12" radius="3">
+		<monster name="Sparkion" x="-2" y="3" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32140" centery="31363" centerz="12" radius="3">
+		<monster name="Sparkion" x="3" y="1" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32147" centery="31363" centerz="12" radius="3">
+		<monster name="Sparkion" x="3" y="-3" z="12" spawntime="60" />
+		<monster name="Sparkion" x="2" y="2" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32154" centery="31363" centerz="12" radius="3">
+		<monster name="Dread Intruder" x="-1" y="2" z="12" spawntime="60" />
+		<monster name="Sparkion" x="-2" y="3" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32161" centery="31363" centerz="12" radius="3">
+		<monster name="Reality Reaver" x="3" y="-3" z="12" spawntime="60" />
+		<monster name="Sparkion" x="3" y="-2" z="12" spawntime="60" />
+		<monster name="Dread Intruder" x="-1" y="3" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32168" centery="31363" centerz="12" radius="3">
+		<monster name="Reality Reaver" x="-2" y="-3" z="12" spawntime="60" />
+		<monster name="Sparkion" x="-3" y="-1" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32175" centery="31363" centerz="12" radius="3">
+		<monster name="Sparkion" x="0" y="0" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32119" centery="31370" centerz="12" radius="3">
+		<monster name="Reality Reaver" x="-2" y="-1" z="12" spawntime="60" />
+		<monster name="Dread Intruder" x="-1" y="-1" z="12" spawntime="60" />
+		<monster name="Dread Intruder" x="-2" y="0" z="12" spawntime="60" />
+		<monster name="Reality Reaver" x="-1" y="2" z="12" spawntime="60" />
+		<monster name="Breach Brood" x="1" y="2" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32126" centery="31370" centerz="12" radius="3">
+		<monster name="Breach Brood" x="1" y="-3" z="12" spawntime="60" />
+		<monster name="Breach Brood" x="-3" y="-2" z="12" spawntime="60" />
+		<monster name="Sparkion" x="3" y="-2" z="12" spawntime="60" />
+		<monster name="Reality Reaver" x="-1" y="-1" z="12" spawntime="60" />
+		<monster name="Dread Intruder" x="3" y="0" z="12" spawntime="60" />
+		<monster name="Sparkion" x="2" y="1" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32133" centery="31370" centerz="12" radius="3">
+		<monster name="Reality Reaver" x="3" y="3" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32140" centery="31370" centerz="12" radius="3">
+		<monster name="Sparkion" x="1" y="-3" z="12" spawntime="60" />
+		<monster name="Sparkion" x="-1" y="-2" z="12" spawntime="60" />
+		<monster name="Breach Brood" x="-2" y="1" z="12" spawntime="60" />
+		<monster name="Reality Reaver" x="1" y="1" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32147" centery="31370" centerz="12" radius="3">
+		<monster name="Dread Intruder" x="3" y="-2" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32154" centery="31370" centerz="12" radius="3">
+		<monster name="Dread Intruder" x="-3" y="-3" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32161" centery="31370" centerz="12" radius="3">
+		<monster name="Breach Brood" x="1" y="-3" z="12" spawntime="60" />
+		<monster name="Reality Reaver" x="1" y="-2" z="12" spawntime="60" />
+		<monster name="Sparkion" x="2" y="0" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32168" centery="31370" centerz="12" radius="3">
+		<monster name="Reality Reaver" x="3" y="-2" z="12" spawntime="60" />
+		<monster name="Breach Brood" x="2" y="-1" z="12" spawntime="60" />
+		<monster name="Reality Reaver" x="-3" y="1" z="12" spawntime="60" />
+		<monster name="Dread Intruder" x="-2" y="2" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32175" centery="31370" centerz="12" radius="3">
+		<monster name="Dread Intruder" x="-2" y="1" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32182" centery="31370" centerz="12" radius="3">
+		<monster name="Reality Reaver" x="-2" y="-2" z="12" spawntime="60" />
+		<monster name="Dread Intruder" x="-1" y="-1" z="12" spawntime="60" />
+		<monster name="Breach Brood" x="-1" y="0" z="12" spawntime="60" />
+		<monster name="Reality Reaver" x="-2" y="1" z="12" spawntime="60" />
+		<monster name="Sparkion" x="-1" y="2" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32126" centery="31377" centerz="12" radius="3">
+		<monster name="Reality Reaver" x="1" y="-1" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32133" centery="31377" centerz="12" radius="3">
+		<monster name="Reality Reaver" x="-2" y="-1" z="12" spawntime="60" />
+		<monster name="Reality Reaver" x="3" y="-1" z="12" spawntime="60" />
+		<monster name="Sparkion" x="0" y="1" z="12" spawntime="60" />
+		<monster name="Breach Brood" x="-1" y="2" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32140" centery="31377" centerz="12" radius="3">
+		<monster name="Breach Brood" x="-2" y="1" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32154" centery="31377" centerz="12" radius="3">
+		<monster name="Dread Intruder" x="0" y="2" z="12" spawntime="60" />
+		<monster name="Dread Intruder" x="3" y="2" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32161" centery="31377" centerz="12" radius="3">
+		<monster name="Reality Reaver" x="-3" y="1" z="12" spawntime="60" />
+		<monster name="Sparkion" x="1" y="1" z="12" spawntime="60" />
+		<monster name="Breach Brood" x="1" y="3" z="12" spawntime="60" />
+		<monster name="Reality Reaver" x="3" y="3" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32175" centery="31377" centerz="12" radius="3">
+		<monster name="Reality Reaver" x="2" y="0" z="12" spawntime="60" />
+		<monster name="Breach Brood" x="0" y="1" z="12" spawntime="60" />
+		<monster name="Dread Intruder" x="-1" y="3" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32182" centery="31377" centerz="12" radius="3">
+		<monster name="Reality Reaver" x="1" y="-3" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32119" centery="31384" centerz="12" radius="3">
+		<monster name="Reality Reaver" x="0" y="3" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32133" centery="31384" centerz="12" radius="3">
+		<monster name="Breach Brood" x="-3" y="1" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32147" centery="31384" centerz="12" radius="3">
+		<monster name="Dread Intruder" x="-3" y="-3" z="12" spawntime="60" />
+		<monster name="Sparkion" x="-2" y="-3" z="12" spawntime="60" />
+		<monster name="Breach Brood" x="2" y="-1" z="12" spawntime="60" />
+		<monster name="Sparkion" x="2" y="1" z="12" spawntime="60" />
+		<monster name="Dread Intruder" x="-1" y="3" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32154" centery="31384" centerz="12" radius="3">
+		<monster name="Sparkion" x="3" y="1" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32161" centery="31384" centerz="12" radius="3">
+		<monster name="Sparkion" x="-3" y="-3" z="12" spawntime="60" />
+		<monster name="Sparkion" x="3" y="1" z="12" spawntime="60" />
+		<monster name="Reality Reaver" x="-3" y="2" z="12" spawntime="60" />
+		<monster name="Dread Intruder" x="0" y="2" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32168" centery="31384" centerz="12" radius="3">
+		<monster name="Sparkion" x="3" y="-3" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32175" centery="31384" centerz="12" radius="3">
+		<monster name="Reality Reaver" x="-1" y="-2" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32112" centery="31391" centerz="12" radius="3">
+		<monster name="Reality Reaver" x="0" y="-3" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32119" centery="31391" centerz="12" radius="3">
+		<monster name="Dread Intruder" x="-3" y="-2" z="12" spawntime="60" />
+		<monster name="Breach Brood" x="3" y="-2" z="12" spawntime="60" />
+		<monster name="Reality Reaver" x="-1" y="2" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32133" centery="31391" centerz="12" radius="3">
+		<monster name="Reality Reaver" x="-1" y="2" z="12" spawntime="60" />
+		<monster name="Reality Reaver" x="0" y="2" z="12" spawntime="60" />
+		<monster name="Dread Intruder" x="0" y="3" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32140" centery="31391" centerz="12" radius="3">
+		<monster name="Sparkion" x="1" y="-3" z="12" spawntime="60" />
+		<monster name="Dread Intruder" x="-1" y="1" z="12" spawntime="60" />
+		<monster name="Reality Reaver" x="2" y="3" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32147" centery="31391" centerz="12" radius="3">
+		<monster name="Dread Intruder" x="-1" y="1" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32154" centery="31391" centerz="12" radius="3">
+		<monster name="Breach Brood" x="0" y="-3" z="12" spawntime="60" />
+		<monster name="Sparkion" x="-2" y="1" z="12" spawntime="60" />
+		<monster name="Reality Reaver" x="2" y="3" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32161" centery="31391" centerz="12" radius="3">
+		<monster name="Reality Reaver" x="3" y="0" z="12" spawntime="60" />
+		<monster name="Dread Intruder" x="-3" y="2" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32168" centery="31391" centerz="12" radius="3">
+		<monster name="Sparkion" x="-1" y="0" z="12" spawntime="60" />
+		<monster name="Breach Brood" x="2" y="0" z="12" spawntime="60" />
+		<monster name="Dread Intruder" x="0" y="1" z="12" spawntime="60" />
+		<monster name="Reality Reaver" x="1" y="1" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32175" centery="31391" centerz="12" radius="3">
+		<monster name="Reality Reaver" x="-2" y="-2" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32105" centery="31398" centerz="12" radius="3">
+		<monster name="Breach Brood" x="3" y="0" z="12" spawntime="60" />
+		<monster name="Sparkion" x="3" y="3" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32112" centery="31398" centerz="12" radius="3">
+		<monster name="Sparkion" x="-3" y="-2" z="12" spawntime="60" />
+		<monster name="Breach Brood" x="-3" y="1" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32133" centery="31398" centerz="12" radius="3">
+		<monster name="Sparkion" x="2" y="-3" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32140" centery="31398" centerz="12" radius="3">
+		<monster name="Reality Reaver" x="-2" y="2" z="12" spawntime="60" />
+		<monster name="Dread Intruder" x="-1" y="3" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32154" centery="31398" centerz="12" radius="3">
+		<monster name="Dread Intruder" x="-3" y="1" z="12" spawntime="60" />
+		<monster name="Reality Reaver" x="3" y="1" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32161" centery="31398" centerz="12" radius="3">
+		<monster name="Breach Brood" x="3" y="0" z="12" spawntime="60" />
+		<monster name="Sparkion" x="-3" y="2" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32112" centery="31405" centerz="12" radius="3">
+		<monster name="Breach Brood" x="3" y="-2" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32119" centery="31405" centerz="12" radius="3">
+		<monster name="Reality Reaver" x="-3" y="-2" z="12" spawntime="60" />
+		<monster name="Dread Intruder" x="2" y="-2" z="12" spawntime="60" />
+		<monster name="Reality Reaver" x="3" y="-1" z="12" spawntime="60" />
+		<monster name="Dread Intruder" x="-1" y="0" z="12" spawntime="60" />
+		<monster name="Dread Intruder" x="3" y="1" z="12" spawntime="60" />
+		<monster name="Breach Brood" x="-2" y="2" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32126" centery="31405" centerz="12" radius="3">
+		<monster name="Sparkion" x="-3" y="-1" z="12" spawntime="60" />
+		<monster name="Dread Intruder" x="2" y="0" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32133" centery="31405" centerz="12" radius="3">
+		<monster name="Sparkion" x="-3" y="0" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32140" centery="31405" centerz="12" radius="3">
+		<monster name="Sparkion" x="3" y="1" z="12" spawntime="60" />
+		<monster name="Dread Intruder" x="1" y="2" z="12" spawntime="60" />
+		<monster name="Reality Reaver" x="0" y="3" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32154" centery="31405" centerz="12" radius="3">
+		<monster name="Sparkion" x="-1" y="-2" z="12" spawntime="60" />
+		<monster name="Reality Reaver" x="0" y="0" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32119" centery="31412" centerz="12" radius="3">
+		<monster name="Sparkion" x="-1" y="-2" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="32133" centery="31412" centerz="12" radius="3">
+		<monster name="Reality Reaver" x="-2" y="-1" z="12" spawntime="60" />
+		<monster name="Dread Intruder" x="-1" y="0" z="12" spawntime="60" />
+		<monster name="Sparkion" x="0" y="0" z="12" spawntime="60" />
+		<monster name="Breach Brood" x="2" y="2" z="12" spawntime="60" />
+		<monster name="Breach Brood" x="2" y="3" z="12" spawntime="60" />
+		<monster name="Dread Intruder" x="3" y="3" z="12" spawntime="60" />
+	</monster>
+</monsters>

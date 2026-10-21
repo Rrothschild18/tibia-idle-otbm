@@ -1,0 +1,2426 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monsters>
+	<monster centerx="33057" centery="32028" centerz="6" radius="3">
+		<monster name="Orc" x="2" y="-2" z="6" spawntime="90" />
+		<monster name="Snake" x="1" y="1" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="33057" centery="32035" centerz="6" radius="3">
+		<monster name="Snake" x="-1" y="-2" z="6" spawntime="90" />
+	</monster>
+	<monster centerx="33139" centery="31857" centerz="7" radius="3">
+		<monster name="Snake" x="-1" y="2" z="7" spawntime="90" />
+		<monster name="Snake" x="3" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33107" centery="31860" centerz="7" radius="2">
+		<monster name="Seagull" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33163" centery="31868" centerz="7" radius="5">
+		<monster name="Deer" x="-3" y="-5" z="7" spawntime="90" />
+		<monster name="Poison Spider" x="1" y="-4" z="7" spawntime="90" />
+		<monster name="Poison Spider" x="-5" y="-2" z="7" spawntime="90" />
+		<monster name="Poison Spider" x="-1" y="-2" z="7" spawntime="90" />
+		<monster name="Poison Spider" x="-2" y="0" z="7" spawntime="90" />
+		<monster name="Poison Spider" x="4" y="3" z="7" spawntime="90" />
+		<monster name="Poison Spider" x="-4" y="4" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33135" centery="31870" centerz="7" radius="2">
+		<monster name="Deer" x="1" y="-2" z="7" spawntime="90" />
+		<monster name="Deer" x="0" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33179" centery="31877" centerz="7" radius="4">
+		<monster name="Orc Warrior" x="0" y="-2" z="7" spawntime="90" />
+		<monster name="Orc" x="-3" y="-1" z="7" spawntime="90" />
+		<monster name="Orc" x="0" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33151" centery="31878" centerz="7" radius="2">
+		<monster name="Orc" x="2" y="-2" z="7" spawntime="90" />
+		<monster name="Wisp" x="-2" y="1" z="7" spawntime="90" />
+		<monster name="Orc" x="2" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33143" centery="31879" centerz="7" radius="3">
+		<monster name="Orc Spearman" x="3" y="-3" z="7" spawntime="90" />
+		<monster name="Orc Spearman" x="-1" y="-2" z="7" spawntime="90" />
+		<monster name="Orc Warrior" x="1" y="0" z="7" spawntime="90" />
+		<monster name="Orc Spearman" x="3" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33141" centery="31888" centerz="7" radius="3">
+		<monster name="Poison Spider" x="2" y="-2" z="7" spawntime="90" />
+		<monster name="Deer" x="-3" y="0" z="7" spawntime="90" />
+		<monster name="Orc" x="1" y="1" z="7" spawntime="90" />
+		<monster name="Poison Spider" x="-1" y="2" z="7" spawntime="90" />
+		<monster name="Poison Spider" x="3" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33180" centery="31895" centerz="7" radius="4">
+		<monster name="Orc Spearman" x="-2" y="-3" z="7" spawntime="90" />
+		<monster name="Poison Spider" x="0" y="-3" z="7" spawntime="90" />
+		<monster name="Poison Spider" x="-3" y="-1" z="7" spawntime="90" />
+		<monster name="Orc Spearman" x="-1" y="4" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33172" centery="31901" centerz="7" radius="2">
+		<monster name="Orc Warrior" x="2" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33157" centery="31905" centerz="7" radius="2">
+		<monster name="Orc Warrior" x="-1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33164" centery="31907" centerz="7" radius="2">
+		<monster name="Orc Warrior" x="-1" y="-2" z="7" spawntime="90" />
+		<monster name="Orc Warrior" x="1" y="1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33177" centery="31910" centerz="7" radius="2">
+		<monster name="Orc Spearman" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33015" centery="32007" centerz="7" radius="3">
+		<monster name="Adventurer" x="3" y="2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33022" centery="32007" centerz="7" radius="3">
+		<monster name="Rabbit" x="1" y="-3" z="7" spawntime="90" />
+		<monster name="Rabbit" x="-3" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33029" centery="32007" centerz="7" radius="3">
+		<monster name="Adventurer" x="1" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33008" centery="32021" centerz="7" radius="3">
+		<monster name="Marsh Stalker" x="0" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33057" centery="32028" centerz="7" radius="3">
+		<monster name="Snake" x="3" y="0" z="7" spawntime="90" />
+		<monster name="Orc" x="2" y="1" z="7" spawntime="90" />
+		<monster name="Snake" x="1" y="2" z="7" spawntime="90" />
+		<monster name="Orc" x="0" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33029" centery="32035" centerz="7" radius="3">
+		<monster name="Pig" x="1" y="-1" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33050" centery="32035" centerz="7" radius="3">
+		<monster name="Marsh Stalker" x="0" y="-2" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33057" centery="32035" centerz="7" radius="3">
+		<monster name="Snake" x="3" y="-2" z="7" spawntime="90" />
+		<monster name="Swampling" x="0" y="3" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33078" centery="32042" centerz="7" radius="3">
+		<monster name="Adventurer" x="1" y="0" z="7" spawntime="90" />
+	</monster>
+	<monster centerx="33078" centery="31859" centerz="8" radius="2">
+		<monster name="Goblin Assassin" x="2" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33100" centery="31859" centerz="8" radius="2">
+		<monster name="Goblin Assassin" x="1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33059" centery="31863" centerz="8" radius="2">
+		<monster name="Goblin Scavenger" x="1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33067" centery="31864" centerz="8" radius="2">
+		<monster name="Goblin Assassin" x="0" y="-2" z="8" spawntime="90" />
+		<monster name="Goblin Scavenger" x="0" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33075" centery="31866" centerz="8" radius="2">
+		<monster name="Goblin" x="-2" y="-1" z="8" spawntime="90" />
+		<monster name="Goblin" x="1" y="0" z="8" spawntime="90" />
+		<monster name="Goblin Scavenger" x="0" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33103" centery="31866" centerz="8" radius="2">
+		<monster name="Goblin" x="1" y="-1" z="8" spawntime="90" />
+		<monster name="Goblin Scavenger" x="1" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33092" centery="31867" centerz="8" radius="2">
+		<monster name="Goblin" x="2" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33081" centery="31869" centerz="8" radius="2">
+		<monster name="Goblin" x="1" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33109" centery="31870" centerz="8" radius="2">
+		<monster name="Goblin Scavenger" x="1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33100" centery="31872" centerz="8" radius="2">
+		<monster name="Goblin Scavenger" x="1" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33169" centery="31883" centerz="8" radius="2">
+		<monster name="Orc Spearman" x="2" y="0" z="8" spawntime="90" />
+		<monster name="Orc Spearman" x="-1" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33168" centery="31892" centerz="8" radius="3">
+		<monster name="Orc Spearman" x="-2" y="-3" z="8" spawntime="90" />
+		<monster name="Orc" x="3" y="-2" z="8" spawntime="90" />
+		<monster name="Orc" x="2" y="0" z="8" spawntime="90" />
+		<monster name="Orc Spearman" x="-3" y="1" z="8" spawntime="90" />
+		<monster name="Orc" x="0" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33160" centery="31897" centerz="8" radius="2">
+		<monster name="Orc" x="1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33153" centery="31900" centerz="8" radius="3">
+		<monster name="Orc" x="1" y="-1" z="8" spawntime="90" />
+		<monster name="Orc Spearman" x="3" y="0" z="8" spawntime="90" />
+		<monster name="Orc Spearman" x="0" y="2" z="8" spawntime="90" />
+		<monster name="Orc" x="2" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33160" centery="31908" centerz="8" radius="3">
+		<monster name="Poison Spider" x="0" y="-2" z="8" spawntime="90" />
+		<monster name="Orc Spearman" x="2" y="-2" z="8" spawntime="90" />
+		<monster name="Poison Spider" x="1" y="0" z="8" spawntime="90" />
+		<monster name="Orc Spearman" x="1" y="1" z="8" spawntime="90" />
+		<monster name="Poison Spider" x="1" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33157" centery="31915" centerz="8" radius="2">
+		<monster name="Poison Spider" x="-2" y="-2" z="8" spawntime="90" />
+		<monster name="Orc" x="2" y="-2" z="8" spawntime="90" />
+		<monster name="Orc Spearman" x="0" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33140" centery="31916" centerz="8" radius="5">
+		<monster name="Orc Spearman" x="-2" y="-5" z="8" spawntime="90" />
+		<monster name="Poison Spider" x="-1" y="-3" z="8" spawntime="90" />
+		<monster name="Orc" x="2" y="-3" z="8" spawntime="90" />
+		<monster name="Orc Warrior" x="1" y="-1" z="8" spawntime="90" />
+		<monster name="Orc Spearman" x="-3" y="0" z="8" spawntime="90" />
+		<monster name="Orc Warrior" x="3" y="0" z="8" spawntime="90" />
+		<monster name="Poison Spider" x="4" y="0" z="8" spawntime="90" />
+		<monster name="Orc" x="-1" y="1" z="8" spawntime="90" />
+		<monster name="Poison Spider" x="2" y="2" z="8" spawntime="90" />
+		<monster name="Orc" x="4" y="2" z="8" spawntime="90" />
+		<monster name="Poison Spider" x="0" y="3" z="8" spawntime="90" />
+		<monster name="Orc Spearman" x="-1" y="4" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33161" centery="31918" centerz="8" radius="2">
+		<monster name="Orc Warrior" x="-1" y="-1" z="8" spawntime="90" />
+		<monster name="Orc" x="1" y="0" z="8" spawntime="90" />
+		<monster name="Orc Spearman" x="1" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33153" centery="31922" centerz="8" radius="2">
+		<monster name="Orc Spearman" x="1" y="-2" z="8" spawntime="90" />
+		<monster name="Orc" x="1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33166" centery="31924" centerz="8" radius="2">
+		<monster name="Orc Spearman" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33158" centery="31928" centerz="8" radius="1">
+		<monster name="Orc" x="1" y="-1" z="8" spawntime="90" />
+		<monster name="Poison Spider" x="-1" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33078" centery="31930" centerz="8" radius="3">
+		<monster name="Werebadger" x="2" y="1" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33151" centery="31932" centerz="8" radius="3">
+		<monster name="Orc Spearman" x="-2" y="-2" z="8" spawntime="90" />
+		<monster name="Orc Warrior" x="1" y="-2" z="8" spawntime="90" />
+		<monster name="Orc" x="0" y="1" z="8" spawntime="90" />
+		<monster name="Orc Spearman" x="2" y="1" z="8" spawntime="90" />
+		<monster name="Orc Warrior" x="-2" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33163" centery="31932" centerz="8" radius="2">
+		<monster name="Poison Spider" x="2" y="-2" z="8" spawntime="90" />
+		<monster name="Poison Spider" x="-1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33071" centery="31937" centerz="8" radius="3">
+		<monster name="Wereboar" x="1" y="-1" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33078" centery="31937" centerz="8" radius="3">
+		<monster name="Wereboar" x="1" y="-3" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33085" centery="31937" centerz="8" radius="3">
+		<monster name="Werebear" x="-2" y="-2" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33113" centery="31944" centerz="8" radius="3">
+		<monster name="Werebadger" x="2" y="-1" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33078" centery="31951" centerz="8" radius="3">
+		<monster name="Werebadger" x="1" y="2" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33099" centery="31951" centerz="8" radius="3">
+		<monster name="Fox" x="1" y="-1" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33127" centery="31951" centerz="8" radius="3">
+		<monster name="Werebear" x="-2" y="3" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33092" centery="31958" centerz="8" radius="3">
+		<monster name="Werebear" x="-3" y="1" z="8" spawntime="60" />
+		<monster name="Werebear" x="0" y="3" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33099" centery="31958" centerz="8" radius="3">
+		<monster name="Werebadger" x="2" y="-2" z="8" spawntime="60" />
+		<monster name="Werebadger" x="-3" y="1" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33120" centery="31958" centerz="8" radius="3">
+		<monster name="Fox" x="0" y="2" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33127" centery="31958" centerz="8" radius="3">
+		<monster name="Werebadger" x="-3" y="-2" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33134" centery="31958" centerz="8" radius="3">
+		<monster name="Werebear" x="-1" y="-2" z="8" spawntime="60" />
+		<monster name="Werebadger" x="1" y="-2" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33155" centery="31958" centerz="8" radius="3">
+		<monster name="Werefox" x="1" y="3" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33162" centery="31958" centerz="8" radius="3">
+		<monster name="Wereboar" x="-3" y="-2" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33085" centery="31965" centerz="8" radius="3">
+		<monster name="Werebear" x="-2" y="0" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33092" centery="31965" centerz="8" radius="3">
+		<monster name="Werefox" x="2" y="3" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33120" centery="31965" centerz="8" radius="3">
+		<monster name="Fox" x="-1" y="0" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33169" centery="31965" centerz="8" radius="3">
+		<monster name="Werebadger" x="1" y="-3" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33078" centery="31972" centerz="8" radius="3">
+		<monster name="Wereboar" x="1" y="3" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33099" centery="31972" centerz="8" radius="3">
+		<monster name="Werebadger" x="0" y="3" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33127" centery="31972" centerz="8" radius="3">
+		<monster name="Werebadger" x="-2" y="-3" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33155" centery="31972" centerz="8" radius="3">
+		<monster name="Werebadger" x="3" y="-3" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33176" centery="31972" centerz="8" radius="3">
+		<monster name="Werebadger" x="1" y="0" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33106" centery="31979" centerz="8" radius="3">
+		<monster name="Werebadger" x="-3" y="3" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33120" centery="31979" centerz="8" radius="3">
+		<monster name="Wereboar" x="3" y="0" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33127" centery="31979" centerz="8" radius="3">
+		<monster name="Werebear" x="1" y="3" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33169" centery="31979" centerz="8" radius="3">
+		<monster name="Werefox" x="-3" y="0" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33071" centery="31986" centerz="8" radius="3">
+		<monster name="Werefox" x="-1" y="1" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33078" centery="31986" centerz="8" radius="3">
+		<monster name="Werebear" x="-1" y="2" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33085" centery="31986" centerz="8" radius="3">
+		<monster name="Werebear" x="2" y="2" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33127" centery="31986" centerz="8" radius="3">
+		<monster name="Werefox" x="0" y="-3" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33134" centery="31986" centerz="8" radius="3">
+		<monster name="Wereboar" x="0" y="0" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33162" centery="31986" centerz="8" radius="3">
+		<monster name="Werefox" x="-2" y="-2" z="8" spawntime="60" />
+		<monster name="Wereboar" x="1" y="-2" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33169" centery="31986" centerz="8" radius="3">
+		<monster name="Werefox" x="-3" y="1" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33064" centery="31993" centerz="8" radius="3">
+		<monster name="Wereboar" x="2" y="0" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33071" centery="31993" centerz="8" radius="3">
+		<monster name="Werebear" x="0" y="1" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33078" centery="31993" centerz="8" radius="3">
+		<monster name="Wereboar" x="0" y="-1" z="8" spawntime="60" />
+		<monster name="Werebadger" x="-3" y="0" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33162" centery="31993" centerz="8" radius="3">
+		<monster name="Wereboar" x="0" y="-3" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33071" centery="32000" centerz="8" radius="3">
+		<monster name="Werefox" x="3" y="-3" z="8" spawntime="60" />
+	</monster>
+	<monster centerx="33029" centery="32007" centerz="8" radius="3">
+		<monster name="Rotworm" x="-3" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33015" centery="32014" centerz="8" radius="3">
+		<monster name="Rotworm" x="2" y="2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33022" centery="32014" centerz="8" radius="3">
+		<monster name="Rotworm" x="-3" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33057" centery="32014" centerz="8" radius="3">
+		<monster name="Snake" x="2" y="1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33071" centery="32014" centerz="8" radius="3">
+		<monster name="Orc" x="0" y="3" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33015" centery="32021" centerz="8" radius="3">
+		<monster name="Rotworm" x="3" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33050" centery="32021" centerz="8" radius="3">
+		<monster name="Orc Spearman" x="2" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33057" centery="32021" centerz="8" radius="3">
+		<monster name="Orc" x="2" y="-3" z="8" spawntime="90" />
+		<monster name="Snake" x="0" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33071" centery="32021" centerz="8" radius="3">
+		<monster name="Orc Spearman" x="1" y="-1" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33043" centery="32028" centerz="8" radius="3">
+		<monster name="Orc" x="3" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33050" centery="32028" centerz="8" radius="3">
+		<monster name="Orc Spearman" x="1" y="-3" z="8" spawntime="90" />
+		<monster name="Orc Spearman" x="2" y="-3" z="8" spawntime="90" />
+		<monster name="Orc Spearman" x="-2" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33057" centery="32028" centerz="8" radius="3">
+		<monster name="Snake" x="0" y="-1" z="8" spawntime="90" />
+		<monster name="Orc" x="2" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33064" centery="32028" centerz="8" radius="3">
+		<monster name="Snake" x="-2" y="-2" z="8" spawntime="90" />
+		<monster name="Orc Spearman" x="-1" y="0" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33057" centery="32035" centerz="8" radius="3">
+		<monster name="Snake" x="-1" y="-3" z="8" spawntime="90" />
+		<monster name="Snake" x="1" y="-2" z="8" spawntime="90" />
+	</monster>
+	<monster centerx="33123" centery="31889" centerz="9" radius="3">
+		<monster name="Orc Shaman" x="0" y="-2" z="9" spawntime="90" />
+		<monster name="Orc Warrior" x="-2" y="0" z="9" spawntime="90" />
+		<monster name="Orc Warrior" x="2" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33132" centery="31890" centerz="9" radius="3">
+		<monster name="Orc Shaman" x="-1" y="0" z="9" spawntime="90" />
+		<monster name="Orc Warrior" x="2" y="1" z="9" spawntime="90" />
+		<monster name="Orc Warrior" x="0" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33169" centery="31890" centerz="9" radius="3">
+		<monster name="Orc Warrior" x="0" y="-2" z="9" spawntime="90" />
+		<monster name="Orc Shaman" x="-1" y="0" z="9" spawntime="90" />
+		<monster name="Orc Warrior" x="-2" y="2" z="9" spawntime="90" />
+		<monster name="Orc Warrior" x="2" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33144" centery="31892" centerz="9" radius="2">
+		<monster name="Poison Spider" x="-1" y="-1" z="9" spawntime="90" />
+		<monster name="Poison Spider" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33128" centery="31899" centerz="9" radius="3">
+		<monster name="Orc Spearman" x="-2" y="-3" z="9" spawntime="90" />
+		<monster name="Orc Warrior" x="0" y="-2" z="9" spawntime="90" />
+		<monster name="Orc Warrior" x="-3" y="0" z="9" spawntime="90" />
+		<monster name="Poison Spider" x="3" y="0" z="9" spawntime="90" />
+		<monster name="Orc Warrior" x="-1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33140" centery="31899" centerz="9" radius="2">
+		<monster name="Poison Spider" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33167" centery="31900" centerz="9" radius="2">
+		<monster name="Orc Spearman" x="1" y="-2" z="9" spawntime="90" />
+		<monster name="Orc Spearman" x="-2" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33177" centery="31902" centerz="9" radius="4">
+		<monster name="Orc Warrior" x="-2" y="-3" z="9" spawntime="90" />
+		<monster name="Orc Spearman" x="1" y="-3" z="9" spawntime="90" />
+		<monster name="Orc Warrior" x="2" y="-2" z="9" spawntime="90" />
+		<monster name="Orc Spearman" x="-2" y="0" z="9" spawntime="90" />
+		<monster name="Orc Spearman" x="0" y="0" z="9" spawntime="90" />
+		<monster name="Orc Warrior" x="-2" y="3" z="9" spawntime="90" />
+		<monster name="Orc Warrior" x="3" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33152" centery="31904" centerz="9" radius="3">
+		<monster name="Orc Spearman" x="3" y="-2" z="9" spawntime="90" />
+		<monster name="Orc Warrior" x="-1" y="-1" z="9" spawntime="90" />
+		<monster name="Orc Spearman" x="1" y="1" z="9" spawntime="90" />
+		<monster name="Orc Warrior" x="-1" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33078" centery="31909" centerz="9" radius="3">
+		<monster name="Wereboar" x="-1" y="1" z="9" spawntime="60" />
+		<monster name="Werebear" x="-3" y="2" z="9" spawntime="60" />
+		<monster name="Werewolf" x="-2" y="2" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33161" centery="31911" centerz="9" radius="3">
+		<monster name="Orc Warrior" x="-1" y="-2" z="9" spawntime="90" />
+		<monster name="Orc Shaman" x="2" y="0" z="9" spawntime="90" />
+		<monster name="Orc Warrior" x="-1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33152" centery="31914" centerz="9" radius="2">
+		<monster name="Poison Spider" x="-1" y="-2" z="9" spawntime="90" />
+		<monster name="Orc Spearman" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33050" centery="31916" centerz="9" radius="3">
+		<monster name="Werebear" x="-1" y="-3" z="9" spawntime="60" />
+		<monster name="Werewolf" x="2" y="-3" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33057" centery="31916" centerz="9" radius="3">
+		<monster name="Werebadger" x="0" y="-2" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33071" centery="31916" centerz="9" radius="3">
+		<monster name="Wereboar" x="3" y="-2" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33141" centery="31917" centerz="9" radius="3">
+		<monster name="Orc Spearman" x="1" y="-3" z="9" spawntime="90" />
+		<monster name="Poison Spider" x="0" y="-1" z="9" spawntime="90" />
+		<monster name="Orc Spearman" x="3" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33152" centery="31921" centerz="9" radius="2">
+		<monster name="Poison Spider" x="1" y="-2" z="9" spawntime="90" />
+		<monster name="Poison Spider" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33167" centery="31922" centerz="9" radius="5">
+		<monster name="Orc Spearman" x="2" y="-2" z="9" spawntime="90" />
+		<monster name="Orc Warrior" x="-1" y="-1" z="9" spawntime="90" />
+		<monster name="Orc Warrior" x="4" y="0" z="9" spawntime="90" />
+		<monster name="Orc Spearman" x="-5" y="1" z="9" spawntime="90" />
+		<monster name="Orc Spearman" x="-2" y="1" z="9" spawntime="90" />
+		<monster name="Poison Spider" x="1" y="1" z="9" spawntime="90" />
+		<monster name="Orc Warrior" x="-2" y="3" z="9" spawntime="90" />
+		<monster name="Orc Spearman" x="2" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33152" centery="31928" centerz="9" radius="2">
+		<monster name="Orc Spearman" x="1" y="-2" z="9" spawntime="90" />
+		<monster name="Orc Warrior" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33078" centery="31930" centerz="9" radius="3">
+		<monster name="Werebadger" x="-3" y="-2" z="9" spawntime="60" />
+		<monster name="Werebear" x="-2" y="-2" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33140" centery="31930" centerz="9" radius="4">
+		<monster name="Orc Spearman" x="2" y="-4" z="9" spawntime="90" />
+		<monster name="Orc Warrior" x="-2" y="-1" z="9" spawntime="90" />
+		<monster name="Orc Warrior" x="2" y="-1" z="9" spawntime="90" />
+		<monster name="Orc Shaman" x="-2" y="0" z="9" spawntime="90" />
+		<monster name="Orc Spearman" x="4" y="0" z="9" spawntime="90" />
+		<monster name="Orc Spearman" x="0" y="2" z="9" spawntime="90" />
+		<monster name="Orc Warrior" x="-3" y="3" z="9" spawntime="90" />
+		<monster name="Orc Spearman" x="2" y="4" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33162" centery="31932" centerz="9" radius="3">
+		<monster name="Poison Spider" x="-2" y="-2" z="9" spawntime="90" />
+		<monster name="Poison Spider" x="2" y="-2" z="9" spawntime="90" />
+		<monster name="Orc Warrior" x="-2" y="0" z="9" spawntime="90" />
+		<monster name="Orc Warrior" x="3" y="0" z="9" spawntime="90" />
+		<monster name="Poison Spider" x="0" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33078" centery="31937" centerz="9" radius="3">
+		<monster name="Wereboar" x="-1" y="2" z="9" spawntime="60" />
+		<monster name="Werebadger" x="1" y="2" z="9" spawntime="60" />
+		<monster name="Werebadger" x="0" y="3" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33050" centery="31944" centerz="9" radius="3">
+		<monster name="Werewolf" x="2" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33085" centery="31944" centerz="9" radius="3">
+		<monster name="Werebear" x="-3" y="-1" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33092" centery="31944" centerz="9" radius="3">
+		<monster name="Wereboar" x="2" y="3" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33099" centery="31944" centerz="9" radius="3">
+		<monster name="Werebadger" x="-2" y="2" z="9" spawntime="60" />
+		<monster name="Wereboar" x="0" y="2" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33106" centery="31944" centerz="9" radius="3">
+		<monster name="Werefox" x="-3" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33057" centery="31951" centerz="9" radius="3">
+		<monster name="Werebear" x="0" y="-2" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33064" centery="31951" centerz="9" radius="3">
+		<monster name="Wereboar" x="-3" y="-3" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33092" centery="31951" centerz="9" radius="3">
+		<monster name="Werebadger" x="-2" y="-2" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33099" centery="31951" centerz="9" radius="3">
+		<monster name="Werebadger" x="0" y="-3" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33106" centery="31951" centerz="9" radius="3">
+		<monster name="Werewolf" x="1" y="-3" z="9" spawntime="60" />
+		<monster name="Fox" x="2" y="-1" z="9" spawntime="60" />
+		<monster name="Werefox" x="3" y="1" z="9" spawntime="60" />
+		<monster name="Werebadger" x="3" y="2" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33113" centery="31951" centerz="9" radius="3">
+		<monster name="Fox" x="-3" y="1" z="9" spawntime="60" />
+		<monster name="Werebadger" x="-3" y="3" z="9" spawntime="60" />
+		<monster name="Werewolf" x="-2" y="3" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33078" centery="31958" centerz="9" radius="3">
+		<monster name="Wereboar" x="-2" y="1" z="9" spawntime="60" />
+		<monster name="Werewolf" x="3" y="2" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33113" centery="31958" centerz="9" radius="3">
+		<monster name="Werewolf" x="-2" y="-3" z="9" spawntime="60" />
+		<monster name="Werebear" x="-1" y="-2" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33120" centery="31958" centerz="9" radius="3">
+		<monster name="Werebear" x="-3" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33127" centery="31958" centerz="9" radius="3">
+		<monster name="Werewolf" x="1" y="1" z="9" spawntime="60" />
+		<monster name="Wereboar" x="-2" y="3" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33078" centery="31965" centerz="9" radius="3">
+		<monster name="Werebear" x="0" y="-3" z="9" spawntime="60" />
+		<monster name="Werebadger" x="-2" y="-1" z="9" spawntime="60" />
+		<monster name="Werewolf" x="-1" y="0" z="9" spawntime="60" />
+		<monster name="Wereboar" x="2" y="1" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33085" centery="31965" centerz="9" radius="3">
+		<monster name="Werebadger" x="3" y="1" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33099" centery="31965" centerz="9" radius="3">
+		<monster name="Wereboar" x="-2" y="-1" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33106" centery="31965" centerz="9" radius="3">
+		<monster name="Werebadger" x="-1" y="2" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33113" centery="31965" centerz="9" radius="3">
+		<monster name="Werewolf" x="2" y="-3" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33120" centery="31965" centerz="9" radius="3">
+		<monster name="Werebear" x="0" y="-3" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33071" centery="31972" centerz="9" radius="3">
+		<monster name="Werebadger" x="2" y="0" z="9" spawntime="60" />
+		<monster name="Werewolf" x="-3" y="1" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33099" centery="31972" centerz="9" radius="3">
+		<monster name="Werebear" x="-3" y="0" z="9" spawntime="60" />
+		<monster name="Wereboar" x="-2" y="0" z="9" spawntime="60" />
+		<monster name="Werebadger" x="0" y="1" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33106" centery="31972" centerz="9" radius="3">
+		<monster name="Werewolf" x="-1" y="-2" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33127" centery="31972" centerz="9" radius="3">
+		<monster name="Werebadger" x="1" y="0" z="9" spawntime="60" />
+		<monster name="Werebadger" x="-3" y="1" z="9" spawntime="60" />
+		<monster name="Werebear" x="-3" y="2" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33064" centery="31979" centerz="9" radius="3">
+		<monster name="Werebadger" x="1" y="-1" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33071" centery="31979" centerz="9" radius="3">
+		<monster name="Werebear" x="-2" y="-2" z="9" spawntime="60" />
+		<monster name="Wereboar" x="-2" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33120" centery="31979" centerz="9" radius="3">
+		<monster name="Werewolf" x="3" y="-3" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33127" centery="31979" centerz="9" radius="3">
+		<monster name="Werebadger" x="-3" y="-2" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33071" centery="31986" centerz="9" radius="3">
+		<monster name="Werebear" x="2" y="-3" z="9" spawntime="60" />
+		<monster name="Werebadger" x="1" y="0" z="9" spawntime="60" />
+		<monster name="Wereboar" x="-2" y="2" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33071" centery="31993" centerz="9" radius="3">
+		<monster name="Werewolf" x="0" y="-3" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33012" centery="31996" centerz="9" radius="3">
+		<monster name="Rotworm" x="-1" y="-1" z="9" spawntime="90" />
+		<monster name="Rotworm" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33029" centery="32006" centerz="9" radius="2">
+		<monster name="Rotworm" x="-1" y="-1" z="9" spawntime="90" />
+		<monster name="Rotworm" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33002" centery="32012" centerz="9" radius="3">
+		<monster name="Rotworm" x="0" y="-1" z="9" spawntime="90" />
+		<monster name="Rotworm" x="1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33057" centery="32014" centerz="9" radius="3">
+		<monster name="Orc" x="-1" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33071" centery="32021" centerz="9" radius="3">
+		<monster name="Orc Spearman" x="2" y="-3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33078" centery="32021" centerz="9" radius="3">
+		<monster name="Snake" x="-2" y="-2" z="9" spawntime="90" />
+		<monster name="Snake" x="-1" y="3" z="9" spawntime="90" />
+		<monster name="Orc Shaman" x="0" y="3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33085" centery="32021" centerz="9" radius="3">
+		<monster name="Orc" x="-2" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33016" centery="32026" centerz="9" radius="2">
+		<monster name="Rotworm" x="1" y="-1" z="9" spawntime="90" />
+		<monster name="Rotworm" x="-1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33043" centery="32028" centerz="9" radius="3">
+		<monster name="Snake" x="-1" y="1" z="9" spawntime="90" />
+		<monster name="Orc Spearman" x="3" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33050" centery="32028" centerz="9" radius="3">
+		<monster name="Orc" x="-1" y="-3" z="9" spawntime="90" />
+		<monster name="Snake" x="2" y="-3" z="9" spawntime="90" />
+		<monster name="Snake" x="-1" y="-2" z="9" spawntime="90" />
+		<monster name="Orc" x="3" y="-2" z="9" spawntime="90" />
+		<monster name="Snake" x="-3" y="0" z="9" spawntime="90" />
+		<monster name="Orc" x="-1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33057" centery="32028" centerz="9" radius="3">
+		<monster name="Snake" x="-2" y="-3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33078" centery="32028" centerz="9" radius="3">
+		<monster name="Snake" x="1" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33085" centery="32028" centerz="9" radius="3">
+		<monster name="Orc" x="-3" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33043" centery="32035" centerz="9" radius="3">
+		<monster name="Orc Spearman" x="-1" y="-3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33050" centery="32035" centerz="9" radius="3">
+		<monster name="Snake" x="-2" y="-3" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33050" centery="32042" centerz="9" radius="3">
+		<monster name="Orc" x="-2" y="-1" z="9" spawntime="90" />
+		<monster name="Snake" x="2" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33057" centery="32042" centerz="9" radius="3">
+		<monster name="Snake" x="1" y="-1" z="9" spawntime="90" />
+		<monster name="Orc Spearman" x="3" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33064" centery="32042" centerz="9" radius="3">
+		<monster name="Orc Spearman" x="-3" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33075" centery="31858" centerz="10" radius="3">
+		<monster name="Goblin" x="-2" y="0" z="10" spawntime="90" />
+		<monster name="Goblin" x="3" y="0" z="10" spawntime="90" />
+		<monster name="Goblin" x="1" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33134" centery="31860" centerz="10" radius="3">
+		<monster name="Orc Cult Priest" x="1" y="2" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="33141" centery="31860" centerz="10" radius="3">
+		<monster name="Orc Cultist" x="-3" y="1" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="33148" centery="31860" centerz="10" radius="3">
+		<monster name="Orc Cult Inquisitor" x="1" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="33108" centery="31866" centerz="10" radius="4">
+		<monster name="Bug" x="0" y="-3" z="10" spawntime="90" />
+		<monster name="Goblin Scavenger" x="-3" y="-1" z="10" spawntime="90" />
+		<monster name="Goblin Assassin" x="0" y="-1" z="10" spawntime="90" />
+		<monster name="Bug" x="-3" y="0" z="10" spawntime="90" />
+		<monster name="Bug" x="0" y="2" z="10" spawntime="90" />
+		<monster name="Bug" x="2" y="2" z="10" spawntime="90" />
+		<monster name="Goblin Scavenger" x="0" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33134" centery="31867" centerz="10" radius="3">
+		<monster name="Orc Cult Inquisitor" x="-1" y="-2" z="10" spawntime="60" />
+		<monster name="Orc Cult Minion" x="-3" y="-1" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="33155" centery="31867" centerz="10" radius="3">
+		<monster name="Orc Cult Inquisitor" x="-3" y="-2" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="33127" centery="31874" centerz="10" radius="3">
+		<monster name="Orc Cult Inquisitor" x="3" y="-1" z="10" spawntime="60" />
+		<monster name="Orc Cultist" x="3" y="2" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="33134" centery="31874" centerz="10" radius="3">
+		<monster name="Orc Cult Minion" x="3" y="1" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="33141" centery="31874" centerz="10" radius="3">
+		<monster name="Orc Cult Priest" x="-1" y="3" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="33148" centery="31874" centerz="10" radius="3">
+		<monster name="Orc Cult Minion" x="1" y="3" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="33155" centery="31874" centerz="10" radius="3">
+		<monster name="Orc Cult Inquisitor" x="-3" y="3" z="10" spawntime="60" />
+		<monster name="Orc Cult Minion" x="-1" y="3" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="33127" centery="31881" centerz="10" radius="3">
+		<monster name="Orc Cultist" x="2" y="-2" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="33134" centery="31881" centerz="10" radius="3">
+		<monster name="Orc Cult Priest" x="3" y="-3" z="10" spawntime="60" />
+		<monster name="Orc Cult Inquisitor" x="3" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="33141" centery="31881" centerz="10" radius="3">
+		<monster name="Orc Cult Inquisitor" x="-1" y="3" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="33155" centery="31881" centerz="10" radius="3">
+		<monster name="Orc Cult Inquisitor" x="-2" y="-1" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="33067" centery="31882" centerz="10" radius="1">
+		<monster name="Humorless Fungus" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33169" centery="31882" centerz="10" radius="2">
+		<monster name="Orc Warrior" x="2" y="-2" z="10" spawntime="90" />
+		<monster name="Orc Berserker" x="0" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33065" centery="31883" centerz="10" radius="1">
+		<monster name="Hideous Fungus" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33030" centery="31886" centerz="10" radius="1">
+		<monster name="Hideous Fungus" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33063" centery="31887" centerz="10" radius="1">
+		<monster name="Hideous Fungus" x="0" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33148" centery="31888" centerz="10" radius="3">
+		<monster name="Orc Cult Minion" x="-3" y="-1" z="10" spawntime="60" />
+		<monster name="Orc Cult Inquisitor" x="-3" y="3" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="33067" centery="31889" centerz="10" radius="1">
+		<monster name="Humongous Fungus" x="0" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33067" centery="31891" centerz="10" radius="1">
+		<monster name="Hideous Fungus" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33069" centery="31891" centerz="10" radius="1">
+		<monster name="Humorless Fungus" x="1" y="-1" z="10" spawntime="90" />
+		<monster name="Hideous Fungus" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33039" centery="31892" centerz="10" radius="1">
+		<monster name="Humongous Fungus" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33044" centery="31893" centerz="10" radius="1">
+		<monster name="Humongous Fungus" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33073" centery="31893" centerz="10" radius="1">
+		<monster name="Humorless Fungus" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33054" centery="31894" centerz="10" radius="1">
+		<monster name="Humongous Fungus" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33076" centery="31894" centerz="10" radius="1">
+		<monster name="Humongous Fungus" x="1" y="0" z="10" spawntime="90" />
+		<monster name="Hideous Fungus" x="0" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33069" centery="31895" centerz="10" radius="1">
+		<monster name="Humorless Fungus" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33072" centery="31895" centerz="10" radius="1">
+		<monster name="Stone Devourer" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33127" centery="31895" centerz="10" radius="3">
+		<monster name="Orc Cultist" x="3" y="-3" z="10" spawntime="60" />
+		<monster name="Orc Cult Minion" x="3" y="2" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="33134" centery="31895" centerz="10" radius="3">
+		<monster name="Orc Cult Inquisitor" x="2" y="1" z="10" spawntime="60" />
+		<monster name="Orc Cult Minion" x="3" y="2" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="33141" centery="31895" centerz="10" radius="3">
+		<monster name="Orc Cult Inquisitor" x="2" y="-1" z="10" spawntime="60" />
+		<monster name="Orc Cult Minion" x="2" y="0" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="33169" centery="31895" centerz="10" radius="4">
+		<monster name="Orc Warrior" x="1" y="-3" z="10" spawntime="90" />
+		<monster name="Orc Shaman" x="-3" y="-2" z="10" spawntime="90" />
+		<monster name="Orc Shaman" x="3" y="-2" z="10" spawntime="90" />
+		<monster name="Orc Berserker" x="0" y="-1" z="10" spawntime="90" />
+		<monster name="Poison Spider" x="1" y="-1" z="10" spawntime="90" />
+		<monster name="Orc Warrior" x="-4" y="1" z="10" spawntime="90" />
+		<monster name="Orc Shaman" x="-2" y="2" z="10" spawntime="90" />
+		<monster name="Poison Spider" x="2" y="2" z="10" spawntime="90" />
+		<monster name="Orc Shaman" x="3" y="2" z="10" spawntime="90" />
+		<monster name="Orc Warrior" x="2" y="4" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33049" centery="31896" centerz="10" radius="1">
+		<monster name="Hideous Fungus" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33042" centery="31897" centerz="10" radius="1">
+		<monster name="Hideous Fungus" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33052" centery="31897" centerz="10" radius="1">
+		<monster name="Humongous Fungus" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33049" centery="31898" centerz="10" radius="1">
+		<monster name="Hideous Fungus" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33070" centery="31898" centerz="10" radius="1">
+		<monster name="Humorless Fungus" x="1" y="-1" z="10" spawntime="90" />
+		<monster name="Humorless Fungus" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33076" centery="31898" centerz="10" radius="1">
+		<monster name="Humongous Fungus" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33047" centery="31900" centerz="10" radius="1">
+		<monster name="Hideous Fungus" x="0" y="0" z="10" spawntime="90" />
+		<monster name="Humongous Fungus" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33074" centery="31901" centerz="10" radius="1">
+		<monster name="Humongous Fungus" x="1" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33075" centery="31902" centerz="10" radius="1">
+		<monster name="Armadile" x="1" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33134" centery="31902" centerz="10" radius="3">
+		<monster name="Orc Cult Priest" x="1" y="-2" z="10" spawntime="60" />
+		<monster name="Orc Cult Inquisitor" x="2" y="0" z="10" spawntime="60" />
+		<monster name="Orc Cultist" x="1" y="2" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="33041" centery="31903" centerz="10" radius="1">
+		<monster name="Hideous Fungus" x="0" y="-1" z="10" spawntime="90" />
+		<monster name="Humongous Fungus" x="0" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33169" centery="31903" centerz="10" radius="2">
+		<monster name="Orc Warrior" x="-1" y="-1" z="10" spawntime="90" />
+		<monster name="Orc Warrior" x="2" y="1" z="10" spawntime="90" />
+		<monster name="Orc Shaman" x="-2" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33019" centery="31905" centerz="10" radius="3">
+		<monster name="Hideous Fungus" x="3" y="0" z="10" spawntime="90" />
+		<monster name="Hideous Fungus" x="0" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33060" centery="31907" centerz="10" radius="1">
+		<monster name="Hideous Fungus" x="0" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33065" centery="31907" centerz="10" radius="1">
+		<monster name="Hideous Fungus" x="-1" y="0" z="10" spawntime="90" />
+		<monster name="Hideous Fungus" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33076" centery="31907" centerz="10" radius="1">
+		<monster name="Hideous Fungus" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33157" centery="31907" centerz="10" radius="3">
+		<monster name="Poison Spider" x="2" y="-1" z="10" spawntime="90" />
+		<monster name="Orc Warrior" x="-1" y="1" z="10" spawntime="90" />
+		<monster name="Poison Spider" x="0" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33127" centery="31909" centerz="10" radius="3">
+		<monster name="Orc Cult Minion" x="1" y="-3" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="33134" centery="31909" centerz="10" radius="3">
+		<monster name="Orc Cultist" x="0" y="-3" z="10" spawntime="60" />
+		<monster name="Orc Cult Minion" x="1" y="1" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="33165" centery="31909" centerz="10" radius="2">
+		<monster name="Poison Spider" x="2" y="-2" z="10" spawntime="90" />
+		<monster name="Poison Spider" x="-1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33059" centery="31910" centerz="10" radius="1">
+		<monster name="Armadile" x="0" y="0" z="10" spawntime="90" />
+		<monster name="Humorless Fungus" x="1" y="0" z="10" spawntime="90" />
+		<monster name="Stone Devourer" x="0" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33019" centery="31912" centerz="10" radius="1">
+		<monster name="Humongous Fungus" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33040" centery="31912" centerz="10" radius="1">
+		<monster name="Hideous Fungus" x="0" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33077" centery="31912" centerz="10" radius="1">
+		<monster name="Humongous Fungus" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33080" centery="31913" centerz="10" radius="1">
+		<monster name="Hideous Fungus" x="-1" y="0" z="10" spawntime="90" />
+		<monster name="Armadile" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33045" centery="31915" centerz="10" radius="1">
+		<monster name="Humongous Fungus" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33018" centery="31916" centerz="10" radius="1">
+		<monster name="Hideous Fungus" x="0" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33120" centery="31916" centerz="10" radius="3">
+		<monster name="Orc Cult Inquisitor" x="3" y="-1" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="33127" centery="31916" centerz="10" radius="3">
+		<monster name="Orc Cult Minion" x="-2" y="1" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="33134" centery="31916" centerz="10" radius="3">
+		<monster name="Orc Cultist" x="-1" y="2" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="33176" centery="31916" centerz="10" radius="3">
+		<monster name="Orc Warrior" x="3" y="-3" z="10" spawntime="90" />
+		<monster name="Poison Spider" x="-2" y="-1" z="10" spawntime="90" />
+		<monster name="Orc Shaman" x="2" y="0" z="10" spawntime="90" />
+		<monster name="Orc Warrior" x="-2" y="1" z="10" spawntime="90" />
+		<monster name="Poison Spider" x="-3" y="3" z="10" spawntime="90" />
+		<monster name="Poison Spider" x="0" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33079" centery="31917" centerz="10" radius="1">
+		<monster name="Humongous Fungus" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33082" centery="31917" centerz="10" radius="1">
+		<monster name="Hideous Fungus" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33167" centery="31917" centerz="10" radius="3">
+		<monster name="Poison Spider" x="-2" y="-2" z="10" spawntime="90" />
+		<monster name="Orc Shaman" x="-1" y="-2" z="10" spawntime="90" />
+		<monster name="Poison Spider" x="3" y="-2" z="10" spawntime="90" />
+		<monster name="Poison Spider" x="1" y="-1" z="10" spawntime="90" />
+		<monster name="Poison Spider" x="-3" y="0" z="10" spawntime="90" />
+		<monster name="Orc Shaman" x="2" y="1" z="10" spawntime="90" />
+		<monster name="Poison Spider" x="-2" y="2" z="10" spawntime="90" />
+		<monster name="Poison Spider" x="0" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33047" centery="31918" centerz="10" radius="1">
+		<monster name="Humorless Fungus" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33073" centery="31918" centerz="10" radius="1">
+		<monster name="Hideous Fungus" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33051" centery="31920" centerz="10" radius="1">
+		<monster name="Humongous Fungus" x="1" y="0" z="10" spawntime="90" />
+		<monster name="Hideous Fungus" x="-1" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33054" centery="31921" centerz="10" radius="1">
+		<monster name="Humongous Fungus" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33066" centery="31921" centerz="10" radius="1">
+		<monster name="Stone Devourer" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33076" centery="31921" centerz="10" radius="1">
+		<monster name="Humorless Fungus" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33065" centery="31923" centerz="10" radius="1">
+		<monster name="Humongous Fungus" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33068" centery="31923" centerz="10" radius="1">
+		<monster name="Stone Devourer" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33127" centery="31923" centerz="10" radius="3">
+		<monster name="Orc Cult Inquisitor" x="-2" y="-3" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="33134" centery="31923" centerz="10" radius="3">
+		<monster name="Orc Cultist" x="1" y="-3" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="33053" centery="31925" centerz="10" radius="1">
+		<monster name="Hideous Fungus" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33064" centery="31926" centerz="10" radius="1">
+		<monster name="Humongous Fungus" x="1" y="0" z="10" spawntime="90" />
+		<monster name="Stone Devourer" x="-1" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33068" centery="31926" centerz="10" radius="1">
+		<monster name="Stone Devourer" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33175" centery="31926" centerz="10" radius="2">
+		<monster name="Poison Spider" x="-1" y="-1" z="10" spawntime="90" />
+		<monster name="Poison Spider" x="2" y="-1" z="10" spawntime="90" />
+		<monster name="Poison Spider" x="0" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33027" centery="31927" centerz="10" radius="1">
+		<monster name="Stone Devourer" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33060" centery="31927" centerz="10" radius="1">
+		<monster name="Humorless Fungus" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33033" centery="31929" centerz="10" radius="1">
+		<monster name="Hideous Fungus" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33155" centery="31929" centerz="10" radius="4">
+		<monster name="Poison Spider" x="1" y="-3" z="10" spawntime="90" />
+		<monster name="Orc Berserker" x="-1" y="-1" z="10" spawntime="90" />
+		<monster name="Orc Warrior" x="2" y="-1" z="10" spawntime="90" />
+		<monster name="Poison Spider" x="1" y="1" z="10" spawntime="90" />
+		<monster name="Poison Spider" x="-2" y="2" z="10" spawntime="90" />
+		<monster name="Orc Warrior" x="-1" y="3" z="10" spawntime="90" />
+		<monster name="Poison Spider" x="2" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33026" centery="31930" centerz="10" radius="1">
+		<monster name="Armadile" x="0" y="-1" z="10" spawntime="90" />
+		<monster name="Hideous Fungus" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33058" centery="31930" centerz="10" radius="1">
+		<monster name="Hideous Fungus" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33165" centery="31930" centerz="10" radius="2">
+		<monster name="Orc Warrior" x="-1" y="-1" z="10" spawntime="90" />
+		<monster name="Orc Warrior" x="2" y="1" z="10" spawntime="90" />
+		<monster name="Poison Spider" x="0" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33038" centery="31932" centerz="10" radius="1">
+		<monster name="Armadile" x="1" y="0" z="10" spawntime="90" />
+		<monster name="Hideous Fungus" x="-1" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33180" centery="31932" centerz="10" radius="2">
+		<monster name="Orc Warrior" x="0" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33008" centery="31933" centerz="10" radius="1">
+		<monster name="Stone Devourer" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33032" centery="31933" centerz="10" radius="1">
+		<monster name="Humongous Fungus" x="1" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33059" centery="31933" centerz="10" radius="1">
+		<monster name="Armadile" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33054" centery="31934" centerz="10" radius="1">
+		<monster name="Hideous Fungus" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33026" centery="31935" centerz="10" radius="1">
+		<monster name="Armadile" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33061" centery="31935" centerz="10" radius="1">
+		<monster name="Hideous Fungus" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33040" centery="31936" centerz="10" radius="1">
+		<monster name="Hideous Fungus" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33049" centery="31937" centerz="10" radius="1">
+		<monster name="Humongous Fungus" x="1" y="0" z="10" spawntime="90" />
+		<monster name="Humongous Fungus" x="1" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33054" centery="31937" centerz="10" radius="1">
+		<monster name="Humongous Fungus" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33057" centery="31937" centerz="10" radius="1">
+		<monster name="Humongous Fungus" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33068" centery="31937" centerz="10" radius="1">
+		<monster name="Stone Devourer" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33012" centery="31938" centerz="10" radius="1">
+		<monster name="Humongous Fungus" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33019" centery="31938" centerz="10" radius="1">
+		<monster name="Humongous Fungus" x="1" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33023" centery="31938" centerz="10" radius="1">
+		<monster name="Humongous Fungus" x="1" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33062" centery="31938" centerz="10" radius="1">
+		<monster name="Hideous Fungus" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33065" centery="31938" centerz="10" radius="1">
+		<monster name="Armadile" x="1" y="-1" z="10" spawntime="90" />
+		<monster name="Hideous Fungus" x="1" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33008" centery="31940" centerz="10" radius="1">
+		<monster name="Hideous Fungus" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33059" centery="31940" centerz="10" radius="1">
+		<monster name="Armadile" x="1" y="-1" z="10" spawntime="90" />
+		<monster name="Hideous Fungus" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33071" centery="31940" centerz="10" radius="1">
+		<monster name="Stone Devourer" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33023" centery="31941" centerz="10" radius="1">
+		<monster name="Humongous Fungus" x="0" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33002" centery="31943" centerz="10" radius="1">
+		<monster name="Humongous Fungus" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33046" centery="31944" centerz="10" radius="1">
+		<monster name="Armadile" x="1" y="0" z="10" spawntime="90" />
+		<monster name="Stone Devourer" x="0" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33049" centery="31944" centerz="10" radius="1">
+		<monster name="Humongous Fungus" x="0" y="0" z="10" spawntime="90" />
+		<monster name="Humongous Fungus" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33073" centery="31944" centerz="10" radius="1">
+		<monster name="Armadile" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32999" centery="31946" centerz="10" radius="1">
+		<monster name="Humorless Fungus" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33029" centery="31947" centerz="10" radius="1">
+		<monster name="Hideous Fungus" x="1" y="0" z="10" spawntime="90" />
+		<monster name="Humongous Fungus" x="1" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33044" centery="31947" centerz="10" radius="1">
+		<monster name="Humongous Fungus" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33032" centery="31948" centerz="10" radius="1">
+		<monster name="Humongous Fungus" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33046" centery="31948" centerz="10" radius="1">
+		<monster name="Stone Devourer" x="0" y="0" z="10" spawntime="90" />
+		<monster name="Humongous Fungus" x="1" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33002" centery="31950" centerz="10" radius="1">
+		<monster name="Hideous Fungus" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33074" centery="31951" centerz="10" radius="1">
+		<monster name="Stone Devourer" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33019" centery="31952" centerz="10" radius="1">
+		<monster name="Hideous Fungus" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33032" centery="31952" centerz="10" radius="1">
+		<monster name="Hideous Fungus" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33078" centery="31952" centerz="10" radius="1">
+		<monster name="Armadile" x="0" y="-1" z="10" spawntime="90" />
+		<monster name="Armadile" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33040" centery="31953" centerz="10" radius="1">
+		<monster name="Humongous Fungus" x="1" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33044" centery="31953" centerz="10" radius="1">
+		<monster name="Hideous Fungus" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="32998" centery="31954" centerz="10" radius="1">
+		<monster name="Humongous Fungus" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33037" centery="31954" centerz="10" radius="1">
+		<monster name="Hideous Fungus" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33072" centery="31954" centerz="10" radius="1">
+		<monster name="Armadile" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33005" centery="31955" centerz="10" radius="1">
+		<monster name="Humongous Fungus" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33016" centery="31956" centerz="10" radius="1">
+		<monster name="Hideous Fungus" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33044" centery="31957" centerz="10" radius="1">
+		<monster name="Humongous Fungus" x="-1" y="-1" z="10" spawntime="90" />
+		<monster name="Armadile" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33002" centery="31958" centerz="10" radius="1">
+		<monster name="Humongous Fungus" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33046" centery="31958" centerz="10" radius="1">
+		<monster name="Hideous Fungus" x="0" y="0" z="10" spawntime="90" />
+		<monster name="Humongous Fungus" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33021" centery="31959" centerz="10" radius="1">
+		<monster name="Armadile" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33015" centery="31960" centerz="10" radius="1">
+		<monster name="Humongous Fungus" x="0" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33040" centery="31960" centerz="10" radius="1">
+		<monster name="Armadile" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33049" centery="31960" centerz="10" radius="1">
+		<monster name="Hideous Fungus" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33051" centery="31960" centerz="10" radius="1">
+		<monster name="Humorless Fungus" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33070" centery="31960" centerz="10" radius="1">
+		<monster name="Armadile" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33003" centery="31961" centerz="10" radius="1">
+		<monster name="Humorless Fungus" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33019" centery="31961" centerz="10" radius="1">
+		<monster name="Humorless Fungus" x="-1" y="0" z="10" spawntime="90" />
+		<monster name="Humongous Fungus" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33036" centery="31962" centerz="10" radius="1">
+		<monster name="Humongous Fungus" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33048" centery="31962" centerz="10" radius="1">
+		<monster name="Humongous Fungus" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33013" centery="31963" centerz="10" radius="1">
+		<monster name="Hideous Fungus" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33020" centery="31963" centerz="10" radius="1">
+		<monster name="Armadile" x="0" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33044" centery="31963" centerz="10" radius="1">
+		<monster name="Humongous Fungus" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33002" centery="31964" centerz="10" radius="1">
+		<monster name="Humongous Fungus" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33023" centery="31965" centerz="10" radius="1">
+		<monster name="Humongous Fungus" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33054" centery="31965" centerz="10" radius="1">
+		<monster name="Humorless Fungus" x="-1" y="-1" z="10" spawntime="90" />
+		<monster name="Hideous Fungus" x="1" y="0" z="10" spawntime="90" />
+		<monster name="Armadile" x="1" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33039" centery="31966" centerz="10" radius="1">
+		<monster name="Humongous Fungus" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33044" centery="31966" centerz="10" radius="1">
+		<monster name="Humorless Fungus" x="0" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33059" centery="31966" centerz="10" radius="1">
+		<monster name="Humorless Fungus" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33007" centery="31967" centerz="10" radius="1">
+		<monster name="Humongous Fungus" x="1" y="0" z="10" spawntime="90" />
+		<monster name="Hideous Fungus" x="0" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33063" centery="31968" centerz="10" radius="1">
+		<monster name="Armadile" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33001" centery="31969" centerz="10" radius="1">
+		<monster name="Armadile" x="-1" y="0" z="10" spawntime="90" />
+		<monster name="Humorless Fungus" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33027" centery="31969" centerz="10" radius="1">
+		<monster name="Hideous Fungus" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33034" centery="31969" centerz="10" radius="1">
+		<monster name="Humongous Fungus" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33057" centery="31969" centerz="10" radius="1">
+		<monster name="Armadile" x="0" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33030" centery="31971" centerz="10" radius="1">
+		<monster name="Hideous Fungus" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33034" centery="31972" centerz="10" radius="1">
+		<monster name="Humongous Fungus" x="1" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33061" centery="31973" centerz="10" radius="1">
+		<monster name="Stone Devourer" x="0" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33056" centery="31974" centerz="10" radius="1">
+		<monster name="Stone Devourer" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33048" centery="31978" centerz="10" radius="1">
+		<monster name="Stone Devourer" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33064" centery="31979" centerz="10" radius="1">
+		<monster name="Armadile" x="0" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33155" centery="31979" centerz="10" radius="3">
+		<monster name="Dryad" x="-2" y="2" z="10" spawntime="60" />
+		<monster name="Haunted Treeling" x="-1" y="2" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="33183" centery="31979" centerz="10" radius="3">
+		<monster name="Dryad" x="-3" y="-1" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="33053" centery="31980" centerz="10" radius="1">
+		<monster name="Hideous Fungus" x="0" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33058" centery="31980" centerz="10" radius="1">
+		<monster name="Stone Devourer" x="1" y="0" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33148" centery="31986" centerz="10" radius="3">
+		<monster name="Dryad" x="2" y="-2" z="10" spawntime="60" />
+		<monster name="Forest Fury" x="1" y="-1" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="33155" centery="31986" centerz="10" radius="3">
+		<monster name="Dryad" x="2" y="-2" z="10" spawntime="60" />
+		<monster name="Haunted Treeling" x="3" y="-1" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="33176" centery="31986" centerz="10" radius="3">
+		<monster name="Haunted Treeling" x="-1" y="-3" z="10" spawntime="60" />
+		<monster name="Wilting Leaf Golem" x="2" y="-2" z="10" spawntime="60" />
+		<monster name="Dryad" x="0" y="-1" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="33036" centery="32007" centerz="10" radius="3">
+		<monster name="Corym Charlatan" x="1" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33078" centery="32007" centerz="10" radius="3">
+		<monster name="Corym Charlatan" x="-1" y="-1" z="10" spawntime="90" />
+		<monster name="Corym Vanguard" x="0" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33169" centery="32007" centerz="10" radius="3">
+		<monster name="Haunted Treeling" x="2" y="-2" z="10" spawntime="60" />
+		<monster name="Haunted Treeling" x="2" y="-1" z="10" spawntime="60" />
+		<monster name="Haunted Treeling" x="-2" y="1" z="10" spawntime="60" />
+		<monster name="Dryad" x="0" y="1" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="33176" centery="32007" centerz="10" radius="3">
+		<monster name="Dryad" x="-2" y="-2" z="10" spawntime="60" />
+		<monster name="Wilting Leaf Golem" x="0" y="-2" z="10" spawntime="60" />
+		<monster name="Wilting Leaf Golem" x="-3" y="-1" z="10" spawntime="60" />
+		<monster name="Dryad" x="-2" y="1" z="10" spawntime="60" />
+		<monster name="Haunted Treeling" x="-3" y="2" z="10" spawntime="60" />
+		<monster name="Wilting Leaf Golem" x="-3" y="3" z="10" spawntime="60" />
+	</monster>
+	<monster centerx="33008" centery="32014" centerz="10" radius="3">
+		<monster name="Corym Skirmisher" x="2" y="-1" z="10" spawntime="90" />
+		<monster name="Corym Charlatan" x="2" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33015" centery="32014" centerz="10" radius="3">
+		<monster name="Corym Vanguard" x="-3" y="2" z="10" spawntime="90" />
+		<monster name="Corym Charlatan" x="3" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33029" centery="32014" centerz="10" radius="3">
+		<monster name="Corym Skirmisher" x="0" y="-3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33043" centery="32014" centerz="10" radius="3">
+		<monster name="Corym Vanguard" x="0" y="-3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33050" centery="32014" centerz="10" radius="3">
+		<monster name="Corym Skirmisher" x="-3" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33057" centery="32014" centerz="10" radius="3">
+		<monster name="Corym Charlatan" x="-1" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33064" centery="32014" centerz="10" radius="3">
+		<monster name="Corym Charlatan" x="2" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33092" centery="32014" centerz="10" radius="3">
+		<monster name="Corym Charlatan" x="3" y="1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33099" centery="32014" centerz="10" radius="3">
+		<monster name="Corym Charlatan" x="0" y="1" z="10" spawntime="90" />
+		<monster name="Corym Skirmisher" x="1" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33141" centery="32014" centerz="10" radius="3">
+		<monster name="Corym Skirmisher" x="1" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33078" centery="32021" centerz="10" radius="3">
+		<monster name="Corym Charlatan" x="3" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33099" centery="32021" centerz="10" radius="3">
+		<monster name="Corym Skirmisher" x="0" y="-2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33113" centery="32021" centerz="10" radius="3">
+		<monster name="Corym Charlatan" x="-3" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33050" centery="32028" centerz="10" radius="3">
+		<monster name="Corym Skirmisher" x="-2" y="2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33071" centery="32028" centerz="10" radius="3">
+		<monster name="Corym Vanguard" x="1" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33092" centery="32028" centerz="10" radius="3">
+		<monster name="Corym Skirmisher" x="-3" y="3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33113" centery="32028" centerz="10" radius="3">
+		<monster name="Corym Skirmisher" x="-2" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33050" centery="32035" centerz="10" radius="3">
+		<monster name="Corym Charlatan" x="0" y="-2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33057" centery="32035" centerz="10" radius="3">
+		<monster name="Corym Skirmisher" x="-3" y="-3" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33106" centery="32035" centerz="10" radius="3">
+		<monster name="Corym Charlatan" x="2" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33064" centery="32042" centerz="10" radius="3">
+		<monster name="Corym Charlatan" x="-1" y="-1" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33092" centery="32042" centerz="10" radius="3">
+		<monster name="Corym Skirmisher" x="-1" y="-2" z="10" spawntime="90" />
+	</monster>
+	<monster centerx="33029" centery="31857" centerz="11" radius="3">
+		<monster name="Massive Earth Elemental" x="0" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33036" centery="31857" centerz="11" radius="3">
+		<monster name="Massive Earth Elemental" x="0" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33066" centery="31859" centerz="11" radius="3">
+		<monster name="Crystalcrusher" x="0" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33106" centery="31860" centerz="11" radius="3">
+		<monster name="Orc Cult Priest" x="3" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33120" centery="31860" centerz="11" radius="3">
+		<monster name="Orc Cult Fanatic" x="0" y="-2" z="11" spawntime="60" />
+		<monster name="Orc Cult Inquisitor" x="1" y="1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33160" centery="31860" centerz="11" radius="4">
+		<monster name="Poison Spider" x="4" y="-2" z="11" spawntime="90" />
+		<monster name="Orc Berserker" x="-2" y="-1" z="11" spawntime="90" />
+		<monster name="Orc Berserker" x="1" y="0" z="11" spawntime="90" />
+		<monster name="Poison Spider" x="-3" y="1" z="11" spawntime="90" />
+		<monster name="Poison Spider" x="1" y="2" z="11" spawntime="90" />
+		<monster name="Orc Shaman" x="-3" y="3" z="11" spawntime="90" />
+		<monster name="Orc Shaman" x="3" y="3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33019" centery="31862" centerz="11" radius="3">
+		<monster name="Wiggler" x="1" y="0" z="11" spawntime="90" />
+		<monster name="Wiggler" x="0" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33066" centery="31864" centerz="11" radius="3">
+		<monster name="Wiggler" x="0" y="1" z="11" spawntime="90" />
+		<monster name="Wiggler" x="2" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33071" centery="31865" centerz="11" radius="3">
+		<monster name="Wiggler" x="0" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33106" centery="31867" centerz="11" radius="3">
+		<monster name="Orc Cult Fanatic" x="3" y="2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33120" centery="31867" centerz="11" radius="3">
+		<monster name="Orc Cult Priest" x="-1" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33127" centery="31867" centerz="11" radius="3">
+		<monster name="Orc Cult Priest" x="-3" y="-3" z="11" spawntime="60" />
+		<monster name="Orc Cult Inquisitor" x="2" y="-1" z="11" spawntime="60" />
+		<monster name="Orc Cult Inquisitor" x="-1" y="2" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33160" centery="31868" centerz="11" radius="2">
+		<monster name="Orc Leader" x="0" y="-2" z="11" spawntime="90" />
+		<monster name="Orc Shaman" x="1" y="2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33059" centery="31870" centerz="11" radius="3">
+		<monster name="Massive Earth Elemental" x="0" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33149" centery="31870" centerz="11" radius="3">
+		<monster name="Poison Spider" x="2" y="-3" z="11" spawntime="90" />
+		<monster name="Poison Spider" x="-2" y="0" z="11" spawntime="90" />
+		<monster name="Poison Spider" x="0" y="1" z="11" spawntime="90" />
+		<monster name="Poison Spider" x="3" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33007" centery="31871" centerz="11" radius="3">
+		<monster name="Wiggler" x="-3" y="1" z="11" spawntime="90" />
+		<monster name="Wiggler" x="0" y="1" z="11" spawntime="90" />
+		<monster name="Wiggler" x="3" y="2" z="11" spawntime="90" />
+		<monster name="Wiggler" x="-1" y="3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33169" centery="31871" centerz="11" radius="3">
+		<monster name="Orc Shaman" x="0" y="-1" z="11" spawntime="90" />
+		<monster name="Poison Spider" x="2" y="-1" z="11" spawntime="90" />
+		<monster name="Poison Spider" x="-2" y="0" z="11" spawntime="90" />
+		<monster name="Poison Spider" x="3" y="0" z="11" spawntime="90" />
+		<monster name="Poison Spider" x="1" y="3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33016" centery="31873" centerz="11" radius="3">
+		<monster name="Massive Earth Elemental" x="1" y="0" z="11" spawntime="90" />
+		<monster name="Massive Earth Elemental" x="0" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33068" centery="31874" centerz="11" radius="3">
+		<monster name="Crystalcrusher" x="0" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33113" centery="31874" centerz="11" radius="3">
+		<monster name="Orc Cult Inquisitor" x="2" y="-3" z="11" spawntime="60" />
+		<monster name="Orc Cult Fanatic" x="2" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33141" centery="31874" centerz="11" radius="3">
+		<monster name="Orc Cult Inquisitor" x="-3" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33055" centery="31876" centerz="11" radius="3">
+		<monster name="Crystalcrusher" x="-1" y="0" z="11" spawntime="90" />
+		<monster name="Crystalcrusher" x="0" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33007" centery="31878" centerz="11" radius="3">
+		<monster name="Wiggler" x="0" y="-2" z="11" spawntime="90" />
+		<monster name="Wiggler" x="0" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33075" centery="31878" centerz="11" radius="3">
+		<monster name="Crystalcrusher" x="0" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33159" centery="31879" centerz="11" radius="4">
+		<monster name="Poison Spider" x="-1" y="-3" z="11" spawntime="90" />
+		<monster name="Poison Spider" x="1" y="-3" z="11" spawntime="90" />
+		<monster name="Orc Shaman" x="2" y="-3" z="11" spawntime="90" />
+		<monster name="Orc Shaman" x="-3" y="-1" z="11" spawntime="90" />
+		<monster name="Orc Leader" x="4" y="-1" z="11" spawntime="90" />
+		<monster name="Poison Spider" x="3" y="0" z="11" spawntime="90" />
+		<monster name="Orc Shaman" x="2" y="1" z="11" spawntime="90" />
+		<monster name="Orc Leader" x="-3" y="2" z="11" spawntime="90" />
+		<monster name="Poison Spider" x="-1" y="3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33081" centery="31880" centerz="11" radius="3">
+		<monster name="Massive Earth Elemental" x="0" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33171" centery="31880" centerz="11" radius="3">
+		<monster name="Orc Leader" x="-2" y="-2" z="11" spawntime="90" />
+		<monster name="Poison Spider" x="1" y="-2" z="11" spawntime="90" />
+		<monster name="Orc Leader" x="2" y="0" z="11" spawntime="90" />
+		<monster name="Orc Shaman" x="-2" y="2" z="11" spawntime="90" />
+		<monster name="Poison Spider" x="1" y="2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33077" centery="31881" centerz="11" radius="3">
+		<monster name="Crystalcrusher" x="0" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33120" centery="31881" centerz="11" radius="3">
+		<monster name="Orc Cult Inquisitor" x="-1" y="-2" z="11" spawntime="60" />
+		<monster name="Orc Cult Priest" x="3" y="-1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33127" centery="31881" centerz="11" radius="3">
+		<monster name="Orc Cult Inquisitor" x="1" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33134" centery="31881" centerz="11" radius="3">
+		<monster name="Orc Cult Fanatic" x="1" y="-2" z="11" spawntime="60" />
+		<monster name="Orc Cult Priest" x="-2" y="0" z="11" spawntime="60" />
+		<monster name="Orc Cult Inquisitor" x="2" y="1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33005" centery="31882" centerz="11" radius="3">
+		<monster name="Wiggler" x="-3" y="0" z="11" spawntime="90" />
+		<monster name="Wiggler" x="0" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33028" centery="31884" centerz="11" radius="3">
+		<monster name="Wiggler" x="2" y="0" z="11" spawntime="90" />
+		<monster name="Massive Earth Elemental" x="0" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33127" centery="31888" centerz="11" radius="3">
+		<monster name="Orc Cult Fanatic" x="1" y="-1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33158" centery="31888" centerz="11" radius="2">
+		<monster name="Poison Spider" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33023" centery="31890" centerz="11" radius="3">
+		<monster name="Crystalcrusher" x="0" y="1" z="11" spawntime="90" />
+		<monster name="Crystalcrusher" x="-1" y="3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33028" centery="31892" centerz="11" radius="3">
+		<monster name="Massive Earth Elemental" x="-1" y="-3" z="11" spawntime="90" />
+		<monster name="Wiggler" x="3" y="0" z="11" spawntime="90" />
+		<monster name="Wiggler" x="0" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33036" centery="31892" centerz="11" radius="3">
+		<monster name="Crystalcrusher" x="1" y="0" z="11" spawntime="90" />
+		<monster name="Crystalcrusher" x="0" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33024" centery="31895" centerz="11" radius="3">
+		<monster name="Crystalcrusher" x="0" y="-1" z="11" spawntime="90" />
+		<monster name="Crystalcrusher" x="0" y="1" z="11" spawntime="90" />
+		<monster name="Crystal Spider" x="3" y="2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33141" centery="31895" centerz="11" radius="3">
+		<monster name="Orc Cult Priest" x="-3" y="-2" z="11" spawntime="60" />
+		<monster name="Orc Cult Fanatic" x="0" y="-1" z="11" spawntime="60" />
+		<monster name="Orc Cult Fanatic" x="3" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33028" centery="31898" centerz="11" radius="3">
+		<monster name="Crystal Spider" x="1" y="-1" z="11" spawntime="90" />
+		<monster name="Crystalcrusher" x="0" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33058" centery="31911" centerz="11" radius="1">
+		<monster name="Infected Weeper" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33055" centery="31913" centerz="11" radius="1">
+		<monster name="Lost Berserker" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33062" centery="31915" centerz="11" radius="1">
+		<monster name="Infected Weeper" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33177" centery="31915" centerz="11" radius="4">
+		<monster name="Orc Berserker" x="0" y="-3" z="11" spawntime="90" />
+		<monster name="Orc Warrior" x="-3" y="-2" z="11" spawntime="90" />
+		<monster name="Orc Berserker" x="-4" y="0" z="11" spawntime="90" />
+		<monster name="Orc Warrior" x="-2" y="4" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33056" centery="31916" centerz="11" radius="1">
+		<monster name="Lost Berserker" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33158" centery="31916" centerz="11" radius="3">
+		<monster name="Orc Warrior" x="0" y="-1" z="11" spawntime="90" />
+		<monster name="Orc Berserker" x="2" y="0" z="11" spawntime="90" />
+		<monster name="Orc Berserker" x="-1" y="1" z="11" spawntime="90" />
+		<monster name="Orc Berserker" x="2" y="3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33061" centery="31919" centerz="11" radius="1">
+		<monster name="Magma Crawler" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33058" centery="31920" centerz="11" radius="1">
+		<monster name="Magma Crawler" x="-1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33048" centery="31923" centerz="11" radius="1">
+		<monster name="Lava Golem" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33016" centery="31924" centerz="11" radius="3">
+		<monster name="Weeper" x="0" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33044" centery="31924" centerz="11" radius="1">
+		<monster name="Lost Berserker" x="0" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33054" centery="31924" centerz="11" radius="1">
+		<monster name="Magma Crawler" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33163" centery="31924" centerz="11" radius="2">
+		<monster name="Orc Berserker" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33085" centery="31925" centerz="11" radius="1">
+		<monster name="Infected Weeper" x="0" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33054" centery="31926" centerz="11" radius="1">
+		<monster name="Magma Crawler" x="0" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33040" centery="31927" centerz="11" radius="1">
+		<monster name="Magma Crawler" x="0" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33058" centery="31928" centerz="11" radius="1">
+		<monster name="Lava Golem" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33074" centery="31928" centerz="11" radius="1">
+		<monster name="Lost Berserker" x="0" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33080" centery="31928" centerz="11" radius="1">
+		<monster name="Lava Golem" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33021" centery="31929" centerz="11" radius="1">
+		<monster name="Weeper" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33049" centery="31929" centerz="11" radius="1">
+		<monster name="Magma Crawler" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33062" centery="31929" centerz="11" radius="1">
+		<monster name="Magma Crawler" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33023" centery="31930" centerz="11" radius="1">
+		<monster name="Lost Berserker" x="0" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33045" centery="31930" centerz="11" radius="1">
+		<monster name="Lava Golem" x="1" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33077" centery="31930" centerz="11" radius="1">
+		<monster name="Weeper" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33163" centery="31930" centerz="11" radius="2">
+		<monster name="Orc Berserker" x="0" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33029" centery="31931" centerz="11" radius="1">
+		<monster name="Magma Crawler" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33060" centery="31931" centerz="11" radius="1">
+		<monster name="Lava Golem" x="0" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33066" centery="31931" centerz="11" radius="1">
+		<monster name="Magma Crawler" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33071" centery="31931" centerz="11" radius="1">
+		<monster name="Weeper" x="1" y="0" z="11" spawntime="90" />
+		<monster name="Lost Berserker" x="0" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33082" centery="31932" centerz="11" radius="1">
+		<monster name="Magma Crawler" x="0" y="-1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33063" centery="31933" centerz="11" radius="1">
+		<monster name="Weeper" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33088" centery="31933" centerz="11" radius="1">
+		<monster name="Weeper" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33184" centery="31933" centerz="11" radius="4">
+		<monster name="Orc Berserker" x="-4" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33037" centery="31934" centerz="11" radius="1">
+		<monster name="Lava Golem" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33074" centery="31934" centerz="11" radius="1">
+		<monster name="Lost Berserker" x="0" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33086" centery="31934" centerz="11" radius="1">
+		<monster name="Infected Weeper" x="0" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33040" centery="31935" centerz="11" radius="1">
+		<monster name="Lost Berserker" x="0" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33055" centery="31935" centerz="11" radius="1">
+		<monster name="Magma Crawler" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33071" centery="31935" centerz="11" radius="1">
+		<monster name="Weeper" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33082" centery="31935" centerz="11" radius="1">
+		<monster name="Weeper" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33029" centery="31936" centerz="11" radius="1">
+		<monster name="Weeper" x="1" y="0" z="11" spawntime="90" />
+		<monster name="Magma Crawler" x="0" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33049" centery="31936" centerz="11" radius="1">
+		<monster name="Lost Berserker" x="-1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33022" centery="31937" centerz="11" radius="1">
+		<monster name="Lost Berserker" x="-1" y="-1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33053" centery="31937" centerz="11" radius="1">
+		<monster name="Lost Berserker" x="0" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33062" centery="31937" centerz="11" radius="1">
+		<monster name="Weeper" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33087" centery="31938" centerz="11" radius="1">
+		<monster name="Infected Weeper" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33045" centery="31939" centerz="11" radius="1">
+		<monster name="Weeper" x="0" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33077" centery="31939" centerz="11" radius="1">
+		<monster name="Magma Crawler" x="0" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33164" centery="31939" centerz="11" radius="3">
+		<monster name="Orc Berserker" x="-2" y="-2" z="11" spawntime="90" />
+		<monster name="Orc Berserker" x="2" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33049" centery="31941" centerz="11" radius="1">
+		<monster name="Lava Golem" x="0" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33024" centery="31942" centerz="11" radius="1">
+		<monster name="Magma Crawler" x="0" y="-1" z="11" spawntime="90" />
+		<monster name="Weeper" x="-1" y="1" z="11" spawntime="90" />
+		<monster name="Lost Berserker" x="1" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33078" centery="31942" centerz="11" radius="1">
+		<monster name="Magma Crawler" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33052" centery="31943" centerz="11" radius="1">
+		<monster name="Weeper" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33078" centery="31944" centerz="11" radius="1">
+		<monster name="Weeper" x="0" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33079" centery="31945" centerz="11" radius="1">
+		<monster name="Magma Crawler" x="0" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33069" centery="31946" centerz="11" radius="1">
+		<monster name="Magma Crawler" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33049" centery="31947" centerz="11" radius="1">
+		<monster name="Lava Golem" x="0" y="-1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33025" centery="31948" centerz="11" radius="1">
+		<monster name="Lava Golem" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33075" centery="31949" centerz="11" radius="1">
+		<monster name="Magma Crawler" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33048" centery="31950" centerz="11" radius="1">
+		<monster name="Magma Crawler" x="0" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33051" centery="31950" centerz="11" radius="1">
+		<monster name="Lava Golem" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33026" centery="31951" centerz="11" radius="1">
+		<monster name="Magma Crawler" x="-1" y="-1" z="11" spawntime="90" />
+		<monster name="Magma Crawler" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33045" centery="31951" centerz="11" radius="1">
+		<monster name="Lava Golem" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33057" centery="31951" centerz="11" radius="1">
+		<monster name="Magma Crawler" x="0" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33072" centery="31952" centerz="11" radius="1">
+		<monster name="Infected Weeper" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33022" centery="31954" centerz="11" radius="1">
+		<monster name="Lost Berserker" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33032" centery="31954" centerz="11" radius="1">
+		<monster name="Lava Golem" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33084" centery="31955" centerz="11" radius="1">
+		<monster name="Lava Golem" x="0" y="-1" z="11" spawntime="90" />
+		<monster name="Magma Crawler" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33047" centery="31957" centerz="11" radius="1">
+		<monster name="Magma Crawler" x="1" y="-1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33055" centery="31957" centerz="11" radius="1">
+		<monster name="Weeper" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33081" centery="31957" centerz="11" radius="1">
+		<monster name="Magma Crawler" x="0" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33015" centery="31958" centerz="11" radius="1">
+		<monster name="Magma Crawler" x="0" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33020" centery="31958" centerz="11" radius="1">
+		<monster name="Magma Crawler" x="0" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33043" centery="31958" centerz="11" radius="1">
+		<monster name="Infected Weeper" x="1" y="-1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33051" centery="31958" centerz="11" radius="1">
+		<monster name="Weeper" x="0" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33075" centery="31958" centerz="11" radius="1">
+		<monster name="Lava Golem" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33086" centery="31958" centerz="11" radius="1">
+		<monster name="Lava Golem" x="0" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33070" centery="31959" centerz="11" radius="1">
+		<monster name="Weeper" x="0" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33029" centery="31961" centerz="11" radius="1">
+		<monster name="Weeper" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33058" centery="31962" centerz="11" radius="1">
+		<monster name="Weeper" x="0" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33082" centery="31962" centerz="11" radius="1">
+		<monster name="Magma Crawler" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33010" centery="31963" centerz="11" radius="1">
+		<monster name="Lost Berserker" x="0" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33020" centery="31963" centerz="11" radius="1">
+		<monster name="Lost Berserker" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33047" centery="31963" centerz="11" radius="1">
+		<monster name="Weeper" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33054" centery="31964" centerz="11" radius="1">
+		<monster name="Magma Crawler" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33025" centery="31965" centerz="11" radius="1">
+		<monster name="Lava Golem" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33033" centery="31965" centerz="11" radius="1">
+		<monster name="Magma Crawler" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33045" centery="31965" centerz="11" radius="1">
+		<monster name="Lava Golem" x="0" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33012" centery="31967" centerz="11" radius="1">
+		<monster name="Weeper" x="0" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33016" centery="31967" centerz="11" radius="1">
+		<monster name="Lost Berserker" x="0" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33030" centery="31967" centerz="11" radius="1">
+		<monster name="Magma Crawler" x="-1" y="0" z="11" spawntime="90" />
+		<monster name="Lava Golem" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33077" centery="31967" centerz="11" radius="1">
+		<monster name="Lava Golem" x="0" y="-1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33079" centery="31967" centerz="11" radius="1">
+		<monster name="Magma Crawler" x="1" y="0" z="11" spawntime="90" />
+		<monster name="Lava Golem" x="1" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33080" centery="31967" centerz="11" radius="1">
+		<monster name="Weeper" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33027" centery="31970" centerz="11" radius="1">
+		<monster name="Lost Berserker" x="0" y="-1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33079" centery="31970" centerz="11" radius="1">
+		<monster name="Magma Crawler" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33046" centery="31971" centerz="11" radius="1">
+		<monster name="Lava Golem" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33023" centery="31972" centerz="11" radius="1">
+		<monster name="Infected Weeper" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33029" centery="31973" centerz="11" radius="1">
+		<monster name="Lost Berserker" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33048" centery="31973" centerz="11" radius="1">
+		<monster name="Magma Crawler" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33079" centery="31973" centerz="11" radius="1">
+		<monster name="Weeper" x="0" y="0" z="11" spawntime="90" />
+		<monster name="Lava Golem" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33042" centery="31975" centerz="11" radius="1">
+		<monster name="Magma Crawler" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33019" centery="31976" centerz="11" radius="1">
+		<monster name="Lost Berserker" x="0" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33083" centery="31976" centerz="11" radius="1">
+		<monster name="Weeper" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33033" centery="31977" centerz="11" radius="1">
+		<monster name="Lava Golem" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33085" centery="31977" centerz="11" radius="1">
+		<monster name="Magma Crawler" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33095" centery="31978" centerz="11" radius="1">
+		<monster name="Weeper" x="0" y="-1" z="11" spawntime="90" />
+		<monster name="Infected Weeper" x="1" y="-1" z="11" spawntime="90" />
+		<monster name="Lost Berserker" x="0" y="1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33090" centery="31979" centerz="11" radius="1">
+		<monster name="Lost Berserker" x="1" y="-1" z="11" spawntime="90" />
+		<monster name="Lava Golem" x="-1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33041" centery="31980" centerz="11" radius="1">
+		<monster name="Lost Berserker" x="0" y="-1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33086" centery="31981" centerz="11" radius="1">
+		<monster name="Magma Crawler" x="0" y="-1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33021" centery="31982" centerz="11" radius="1">
+		<monster name="Weeper" x="1" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33169" centery="31986" centerz="11" radius="3">
+		<monster name="Deer" x="-3" y="3" z="11" spawntime="60" />
+		<monster name="Wilting Leaf Golem" x="3" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33155" centery="31993" centerz="11" radius="3">
+		<monster name="Leaf Golem" x="1" y="-3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33162" centery="31993" centerz="11" radius="3">
+		<monster name="Wilting Leaf Golem" x="0" y="-1" z="11" spawntime="60" />
+		<monster name="Wilting Leaf Golem" x="1" y="-1" z="11" spawntime="60" />
+		<monster name="Leaf Golem" x="1" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33169" centery="31993" centerz="11" radius="3">
+		<monster name="Emerald Damselfly" x="0" y="-1" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33176" centery="31993" centerz="11" radius="3">
+		<monster name="Wilting Leaf Golem" x="-1" y="0" z="11" spawntime="60" />
+		<monster name="Wilting Leaf Golem" x="-1" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33162" centery="32000" centerz="11" radius="3">
+		<monster name="Deer" x="3" y="-3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33176" centery="32000" centerz="11" radius="3">
+		<monster name="Leaf Golem" x="-2" y="-1" z="11" spawntime="60" />
+		<monster name="Wilting Leaf Golem" x="2" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33106" centery="32007" centerz="11" radius="3">
+		<monster name="Corym Vanguard" x="-2" y="-2" z="11" spawntime="90" />
+		<monster name="Corym Skirmisher" x="2" y="3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33113" centery="32007" centerz="11" radius="3">
+		<monster name="Corym Skirmisher" x="-3" y="-3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33127" centery="32007" centerz="11" radius="3">
+		<monster name="Corym Skirmisher" x="2" y="2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33134" centery="32007" centerz="11" radius="3">
+		<monster name="Corym Vanguard" x="-3" y="3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33106" centery="32014" centerz="11" radius="3">
+		<monster name="Corym Skirmisher" x="1" y="-3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33120" centery="32014" centerz="11" radius="3">
+		<monster name="Corym Charlatan" x="0" y="-3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33127" centery="32014" centerz="11" radius="3">
+		<monster name="Corym Vanguard" x="-2" y="-1" z="11" spawntime="90" />
+		<monster name="Corym Skirmisher" x="3" y="2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33134" centery="32014" centerz="11" radius="3">
+		<monster name="Corym Vanguard" x="-1" y="-3" z="11" spawntime="90" />
+		<monster name="Corym Charlatan" x="-1" y="2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33183" centery="32014" centerz="11" radius="3">
+		<monster name="Leaf Golem" x="-3" y="-3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33029" centery="32021" centerz="11" radius="3">
+		<monster name="Corym Vanguard" x="0" y="-1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33043" centery="32021" centerz="11" radius="3">
+		<monster name="Corym Skirmisher" x="0" y="0" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33092" centery="32021" centerz="11" radius="3">
+		<monster name="Corym Skirmisher" x="0" y="2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33127" centery="32021" centerz="11" radius="3">
+		<monster name="Corym Charlatan" x="3" y="-2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33141" centery="32021" centerz="11" radius="3">
+		<monster name="Corym Charlatan" x="0" y="-3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33148" centery="32021" centerz="11" radius="3">
+		<monster name="Corym Charlatan" x="-2" y="2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33176" centery="32021" centerz="11" radius="3">
+		<monster name="Leaf Golem" x="-3" y="3" z="11" spawntime="60" />
+	</monster>
+	<monster centerx="33008" centery="32028" centerz="11" radius="3">
+		<monster name="Corym Charlatan" x="3" y="-3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33043" centery="32028" centerz="11" radius="3">
+		<monster name="Corym Skirmisher" x="-1" y="-1" z="11" spawntime="90" />
+		<monster name="Corym Charlatan" x="-2" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33064" centery="32028" centerz="11" radius="3">
+		<monster name="Corym Skirmisher" x="2" y="0" z="11" spawntime="90" />
+		<monster name="Corym Skirmisher" x="2" y="2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33071" centery="32028" centerz="11" radius="3">
+		<monster name="Corym Charlatan" x="0" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33092" centery="32028" centerz="11" radius="3">
+		<monster name="Corym Charlatan" x="-2" y="-1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33148" centery="32028" centerz="11" radius="3">
+		<monster name="Corym Charlatan" x="-1" y="-2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33001" centery="32035" centerz="11" radius="3">
+		<monster name="Corym Vanguard" x="1" y="-1" z="11" spawntime="90" />
+		<monster name="Corym Skirmisher" x="3" y="-1" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33071" centery="32035" centerz="11" radius="3">
+		<monster name="Corym Skirmisher" x="-1" y="-3" z="11" spawntime="90" />
+		<monster name="Corym Charlatan" x="-2" y="-2" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33085" centery="32035" centerz="11" radius="3">
+		<monster name="Corym Charlatan" x="2" y="0" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33148" centery="32035" centerz="11" radius="3">
+		<monster name="Corym Skirmisher" x="-2" y="3" z="11" spawntime="90" />
+		<monster name="Corym Charlatan" x="-1" y="3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33022" centery="32042" centerz="11" radius="3">
+		<monster name="Corym Skirmisher" x="0" y="-3" z="11" spawntime="90" />
+	</monster>
+	<monster centerx="33180" centery="31867" centerz="12" radius="3">
+		<monster name="Giant Spider" x="0" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33065" centery="31885" centerz="12" radius="1">
+		<monster name="Minion of Versperoth" x="0" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33148" centery="31888" centerz="12" radius="3">
+		<monster name="Orc Cult Priest" x="1" y="-3" z="12" spawntime="60" />
+		<monster name="Orc Cult Fanatic" x="2" y="-3" z="12" spawntime="60" />
+		<monster name="Orc Cult Inquisitor" x="-3" y="1" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="33155" centery="31888" centerz="12" radius="3">
+		<monster name="Orc Cult Inquisitor" x="-3" y="-3" z="12" spawntime="60" />
+		<monster name="Orc Cult Fanatic" x="3" y="-3" z="12" spawntime="60" />
+		<monster name="Orc Cult Priest" x="0" y="-2" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="33060" centery="31889" centerz="12" radius="1">
+		<monster name="Lost Berserker" x="0" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33063" centery="31889" centerz="12" radius="1">
+		<monster name="Minion of Versperoth" x="0" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33056" centery="31891" centerz="12" radius="1">
+		<monster name="Ironblight" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33057" centery="31895" centerz="12" radius="1">
+		<monster name="Lost Berserker" x="0" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33141" centery="31895" centerz="12" radius="3">
+		<monster name="Orc Cult Inquisitor" x="0" y="-2" z="12" spawntime="60" />
+		<monster name="Orc Cult Inquisitor" x="1" y="0" z="12" spawntime="60" />
+		<monster name="Orc Cult Priest" x="3" y="0" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="33148" centery="31895" centerz="12" radius="3">
+		<monster name="Orc Cult Fanatic" x="-2" y="-2" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="33169" centery="31895" centerz="12" radius="3">
+		<monster name="Orc Cult Fanatic" x="3" y="1" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="33176" centery="31895" centerz="12" radius="3">
+		<monster name="Orc Cult Fanatic" x="2" y="-2" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="33053" centery="31896" centerz="12" radius="1">
+		<monster name="Ironblight" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33061" centery="31896" centerz="12" radius="1">
+		<monster name="Lost Berserker" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33059" centery="31898" centerz="12" radius="1">
+		<monster name="Orewalker" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33054" centery="31900" centerz="12" radius="1">
+		<monster name="Lost Berserker" x="0" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33051" centery="31904" centerz="12" radius="1">
+		<monster name="Ironblight" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33054" centery="31904" centerz="12" radius="1">
+		<monster name="Lost Berserker" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33051" centery="31907" centerz="12" radius="1">
+		<monster name="Lost Berserker" x="0" y="1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33148" centery="31909" centerz="12" radius="3">
+		<monster name="Orc Cult Inquisitor" x="2" y="-1" z="12" spawntime="60" />
+		<monster name="Orc Cult Priest" x="-1" y="0" z="12" spawntime="60" />
+		<monster name="Orc Cult Inquisitor" x="3" y="0" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="33155" centery="31909" centerz="12" radius="3">
+		<monster name="Orc Cult Priest" x="0" y="0" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="33162" centery="31909" centerz="12" radius="3">
+		<monster name="Orc Cult Priest" x="-1" y="-3" z="12" spawntime="60" />
+		<monster name="Orc Cult Fanatic" x="-3" y="-1" z="12" spawntime="60" />
+		<monster name="Orc Cult Priest" x="2" y="2" z="12" spawntime="60" />
+		<monster name="Orc Cult Inquisitor" x="0" y="3" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="33169" centery="31909" centerz="12" radius="3">
+		<monster name="Orc Cult Inquisitor" x="3" y="3" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="33176" centery="31909" centerz="12" radius="3">
+		<monster name="Orc Cult Fanatic" x="1" y="3" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="33183" centery="31909" centerz="12" radius="3">
+		<monster name="Orc Cult Inquisitor" x="-3" y="1" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="33046" centery="31911" centerz="12" radius="1">
+		<monster name="Orewalker" x="0" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33055" centery="31912" centerz="12" radius="1">
+		<monster name="Ironblight" x="0" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33061" centery="31914" centerz="12" radius="1">
+		<monster name="Ironblight" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33012" centery="31915" centerz="12" radius="1">
+		<monster name="Orewalker" x="0" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33017" centery="31915" centerz="12" radius="1">
+		<monster name="Ironblight" x="0" y="1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33057" centery="31915" centerz="12" radius="1">
+		<monster name="Lost Berserker" x="0" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33048" centery="31916" centerz="12" radius="1">
+		<monster name="Cliff Strider" x="0" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33148" centery="31916" centerz="12" radius="3">
+		<monster name="Orc Cult Fanatic" x="0" y="-2" z="12" spawntime="60" />
+		<monster name="Orc Cult Priest" x="1" y="3" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="33176" centery="31916" centerz="12" radius="3">
+		<monster name="Orc Cult Priest" x="0" y="-1" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="33000" centery="31918" centerz="12" radius="1">
+		<monster name="Ironblight" x="0" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33006" centery="31918" centerz="12" radius="1">
+		<monster name="Orewalker" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33054" centery="31919" centerz="12" radius="1">
+		<monster name="Orewalker" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33056" centery="31919" centerz="12" radius="1">
+		<monster name="Cliff Strider" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33042" centery="31921" centerz="12" radius="1">
+		<monster name="Lost Berserker" x="0" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33050" centery="31921" centerz="12" radius="1">
+		<monster name="Cliff Strider" x="0" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33007" centery="31922" centerz="12" radius="4">
+		<monster name="Ironblight" x="0" y="2" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33012" centery="31922" centerz="12" radius="1">
+		<monster name="Ironblight" x="0" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33015" centery="31922" centerz="12" radius="1">
+		<monster name="Cliff Strider" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33148" centery="31923" centerz="12" radius="3">
+		<monster name="Orc Cult Inquisitor" x="2" y="-2" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="33155" centery="31923" centerz="12" radius="3">
+		<monster name="Orc Cult Inquisitor" x="-2" y="-1" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="33162" centery="31923" centerz="12" radius="3">
+		<monster name="Orc Cult Priest" x="-1" y="-3" z="12" spawntime="60" />
+		<monster name="Orc Cult Inquisitor" x="-3" y="-1" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="33176" centery="31923" centerz="12" radius="3">
+		<monster name="Orc Cult Inquisitor" x="-1" y="-1" z="12" spawntime="60" />
+		<monster name="Orc Cult Inquisitor" x="-1" y="3" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="33001" centery="31924" centerz="12" radius="1">
+		<monster name="Ironblight" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33016" centery="31924" centerz="12" radius="1">
+		<monster name="Orewalker" x="1" y="0" z="12" spawntime="90" />
+		<monster name="Ironblight" x="-1" y="1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33053" centery="31926" centerz="12" radius="1">
+		<monster name="Lost Berserker" x="0" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33008" centery="31927" centerz="12" radius="1">
+		<monster name="Lost Berserker" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33004" centery="31929" centerz="12" radius="1">
+		<monster name="Cliff Strider" x="0" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33016" centery="31930" centerz="12" radius="1">
+		<monster name="Cliff Strider" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33169" centery="31930" centerz="12" radius="3">
+		<monster name="Orc Cult Fanatic" x="0" y="-2" z="12" spawntime="60" />
+		<monster name="Orc Cult Priest" x="2" y="-2" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="33053" centery="31931" centerz="12" radius="1">
+		<monster name="Ironblight" x="0" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33008" centery="31933" centerz="12" radius="1">
+		<monster name="Orewalker" x="0" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33055" centery="31933" centerz="12" radius="1">
+		<monster name="Ironblight" x="0" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33014" centery="31934" centerz="12" radius="1">
+		<monster name="Cliff Strider" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33036" centery="31934" centerz="12" radius="1">
+		<monster name="Orewalker" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33047" centery="31934" centerz="12" radius="1">
+		<monster name="Lost Berserker" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33040" centery="31935" centerz="12" radius="1">
+		<monster name="Lost Berserker" x="0" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33044" centery="31935" centerz="12" radius="1">
+		<monster name="Lost Berserker" x="1" y="0" z="12" spawntime="90" />
+		<monster name="Lost Berserker" x="-1" y="1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33014" centery="31937" centerz="12" radius="1">
+		<monster name="Cliff Strider" x="1" y="1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33042" centery="31938" centerz="12" radius="1">
+		<monster name="Ironblight" x="0" y="0" z="12" spawntime="90" />
+		<monster name="Lost Berserker" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33016" centery="31939" centerz="12" radius="1">
+		<monster name="Ironblight" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33019" centery="31939" centerz="12" radius="1">
+		<monster name="Lost Berserker" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33042" centery="31941" centerz="12" radius="1">
+		<monster name="Orewalker" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33060" centery="31941" centerz="12" radius="1">
+		<monster name="Ironblight" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33068" centery="31941" centerz="12" radius="1">
+		<monster name="Cliff Strider" x="0" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33005" centery="31942" centerz="12" radius="1">
+		<monster name="Cliff Strider" x="0" y="1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33033" centery="31942" centerz="12" radius="1">
+		<monster name="Ironblight" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33044" centery="31942" centerz="12" radius="1">
+		<monster name="Ironblight" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33017" centery="31943" centerz="12" radius="1">
+		<monster name="Orewalker" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33067" centery="31944" centerz="12" radius="1">
+		<monster name="Orewalker" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33011" centery="31945" centerz="12" radius="1">
+		<monster name="Ironblight" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33038" centery="31945" centerz="12" radius="1">
+		<monster name="Lost Berserker" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33013" centery="31946" centerz="12" radius="1">
+		<monster name="Lost Berserker" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33036" centery="31946" centerz="12" radius="1">
+		<monster name="Ironblight" x="0" y="1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33029" centery="31947" centerz="12" radius="1">
+		<monster name="Lost Berserker" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33033" centery="31947" centerz="12" radius="1">
+		<monster name="Orewalker" x="0" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33060" centery="31947" centerz="12" radius="1">
+		<monster name="Cliff Strider" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33010" centery="31949" centerz="12" radius="1">
+		<monster name="Cliff Strider" x="0" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33069" centery="31949" centerz="12" radius="1">
+		<monster name="Cliff Strider" x="0" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33038" centery="31950" centerz="12" radius="1">
+		<monster name="Lost Berserker" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33003" centery="31951" centerz="12" radius="1">
+		<monster name="Orewalker" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="32998" centery="31953" centerz="12" radius="1">
+		<monster name="Ironblight" x="0" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33067" centery="31954" centerz="12" radius="1">
+		<monster name="Lost Berserker" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33006" centery="31955" centerz="12" radius="1">
+		<monster name="Lost Berserker" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33046" centery="31956" centerz="12" radius="1">
+		<monster name="Ironblight" x="0" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33002" centery="31958" centerz="12" radius="1">
+		<monster name="Orewalker" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33048" centery="31959" centerz="12" radius="1">
+		<monster name="Cliff Strider" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33050" centery="31960" centerz="12" radius="1">
+		<monster name="Lost Berserker" x="1" y="1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33055" centery="31961" centerz="12" radius="1">
+		<monster name="Cliff Strider" x="0" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33043" centery="31962" centerz="12" radius="1">
+		<monster name="Lost Berserker" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33056" centery="31964" centerz="12" radius="1">
+		<monster name="Orewalker" x="0" y="1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33017" centery="31965" centerz="12" radius="1">
+		<monster name="Ironblight" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33042" centery="31967" centerz="12" radius="1">
+		<monster name="Ironblight" x="0" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33020" centery="31968" centerz="12" radius="1">
+		<monster name="Cliff Strider" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33030" centery="31969" centerz="12" radius="1">
+		<monster name="Cliff Strider" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33040" centery="31969" centerz="12" radius="1">
+		<monster name="Ironblight" x="0" y="1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33047" centery="31969" centerz="12" radius="1">
+		<monster name="Lost Berserker" x="-1" y="-1" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33051" centery="31969" centerz="12" radius="1">
+		<monster name="Ironblight" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33013" centery="31970" centerz="12" radius="1">
+		<monster name="Ironblight" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33020" centery="31970" centerz="12" radius="1">
+		<monster name="Orewalker" x="-1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33025" centery="31971" centerz="12" radius="1">
+		<monster name="Lost Berserker" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33030" centery="31973" centerz="12" radius="1">
+		<monster name="Lost Berserker" x="0" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33045" centery="31973" centerz="12" radius="1">
+		<monster name="Lost Berserker" x="0" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33021" centery="31974" centerz="12" radius="1">
+		<monster name="Cliff Strider" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33056" centery="31974" centerz="12" radius="1">
+		<monster name="Orewalker" x="0" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33020" centery="31978" centerz="12" radius="1">
+		<monster name="Ironblight" x="1" y="0" z="12" spawntime="90" />
+	</monster>
+	<monster centerx="33018" centery="32010" centerz="12" radius="3">
+		<monster name="Stonerefiner" x="0" y="3" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="33054" centery="32010" centerz="12" radius="3">
+		<monster name="Stonerefiner" x="-1" y="0" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="33067" centery="32010" centerz="12" radius="3">
+		<monster name="Stonerefiner" x="0" y="3" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="33081" centery="32024" centerz="12" radius="3">
+		<monster name="Stonerefiner" x="-1" y="2" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="33074" centery="32031" centerz="12" radius="3">
+		<monster name="Stonerefiner" x="2" y="3" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="33081" centery="32031" centerz="12" radius="3">
+		<monster name="Stonerefiner" x="-2" y="-1" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="33004" centery="32038" centerz="12" radius="3">
+		<monster name="Tarantula" x="0" y="1" z="12" spawntime="60" />
+		<monster name="Bat" x="1" y="1" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="33032" centery="32038" centerz="12" radius="3">
+		<monster name="Tarantula" x="-3" y="2" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="33039" centery="32038" centerz="12" radius="3">
+		<monster name="Bat" x="2" y="0" z="12" spawntime="60" />
+		<monster name="Tarantula" x="3" y="3" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="33053" centery="32038" centerz="12" radius="3">
+		<monster name="Stonerefiner" x="1" y="3" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="33074" centery="32038" centerz="12" radius="3">
+		<monster name="Stonerefiner" x="2" y="-2" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="33004" centery="32045" centerz="12" radius="3">
+		<monster name="Bat" x="3" y="-3" z="12" spawntime="60" />
+	</monster>
+	<monster centerx="33032" centery="32045" centerz="12" radius="3">
+		<monster name="Bat" x="0" y="-3" z="12" spawntime="60" />
+	</monster>
+</monsters>

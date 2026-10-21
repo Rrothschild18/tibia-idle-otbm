@@ -1,11 +1,23 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <monsters>
+	<monster centerx="33369" centery="32012" centerz="9" radius="1">
+		<monster name="Werefox" x="0" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33377" centery="32018" centerz="9" radius="1">
+		<monster name="Werefox" x="0" y="0" z="9" spawntime="60" />
+	</monster>
 	<monster centerx="33421" centery="32021" centerz="9" radius="3">
 		<monster name="Werebear" x="3" y="-1" z="9" spawntime="60" />
 	</monster>
 	<monster centerx="33428" centery="32021" centerz="9" radius="3">
 		<monster name="Werebear" x="0" y="-1" z="9" spawntime="60" />
 		<monster name="Werebadger" x="3" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33385" centery="32024" centerz="9" radius="1">
+		<monster name="Werebadger" x="0" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33393" centery="32029" centerz="9" radius="1">
+		<monster name="Werebadger" x="0" y="0" z="9" spawntime="60" />
 	</monster>
 	<monster centerx="33407" centery="32035" centerz="9" radius="3">
 		<monster name="Wereboar" x="0" y="2" z="9" spawntime="60" />

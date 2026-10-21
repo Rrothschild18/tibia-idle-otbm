@@ -11,3 +11,23 @@ tile caminhável ligado ao resto da cidade.
 
   EDRON-NPC-eremo  (NPC)  x=33327 y=31882 z=7
   EDRON-NPC-scrutinon  (NPC)  x=33189 y=31982 z=7
+
+## hunt-without-poi (13)
+Hunt sem POI de entrada — o mapa da hunt existe em extractor/maps/, mas nenhuma placa
+marca por onde se entra nela. A hunt não tem coordenada de mundo (o startPosition dela é
+posição dentro do próprio mapa da hunt), então só o OTBM sabe onde fica: coloque a placa
+com esse id na entrada, no editor de mapa.
+
+  EDRON-HUNT-0107  cyclopolis-1-z9  sem coordenada de mundo
+  EDRON-HUNT-0108  cyclopolis-1-z8  sem coordenada de mundo
+  EDRON-HUNT-0109  cyclopolis-1-z8-z8  sem coordenada de mundo
+  EDRON-HUNT-0110  herocave-1-z9  sem coordenada de mundo
+  EDRON-HUNT-0111  herocave-2-z10  sem coordenada de mundo
+  EDRON-HUNT-0112  herocave-1-z8  sem coordenada de mundo
+  EDRON-HUNT-0113  grimvale-z8  sem coordenada de mundo
+  EDRON-HUNT-0114  delete-z8  sem coordenada de mundo
+  EDRON-HUNT-0128  edron-forgotten-tomb-catacombs-z13  sem coordenada de mundo
+  EDRON-HUNT-0129  forgotten-tomb-catacombs-z12  sem coordenada de mundo
+  EDRON-HUNT-0130  edron-vampire-crypt-z10  sem coordenada de mundo
+  EDRON-HUNT-0131  edron-vampire-crypt-z10  sem coordenada de mundo
+  EDRON-HUNT-0132  solo-demon-z15  sem coordenada de mundo
