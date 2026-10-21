@@ -153,6 +153,43 @@ def duplicated_candidates(hunts: Sequence[Dict]) -> Dict[str, List[str]]:
     return {cid: names for cid, names in claims.items() if len(names) > 1}
 
 
+def duplicated_spawns(
+    spawns_by_hunt: Dict[str, Set[Tuple[int, int, int, str]]]
+) -> Dict[str, Dict[str, object]]:
+    """Spawn exato (x, y, z, nome) presente em mais de uma hunt da cidade ->
+    por hunt afetada, com quem ela bate e quantos.
+
+    Diferente de `duplicated_candidates` (candidata reaproveitada, convivência
+    legítima e só um aviso): aqui é o monstro de verdade nascendo duas vezes no
+    mesmo tile, as duas hunts com bundle e `respawn.json` próprios — o bug do
+    ticket 20 (`b239b97d` trouxe 68 hunts novas sem checar se a área já estava
+    coberta por uma hunt curada à mão antes). Mesmo tile com nomes diferentes
+    não conta: duas espécies convivendo na mesma masmorra é o jogo normal.
+    """
+    claims: Dict[Tuple[int, int, int, str], List[str]] = {}
+    for hunt_id, spawns in spawns_by_hunt.items():
+        for spawn in spawns:
+            claims.setdefault(spawn, []).append(hunt_id)
+
+    shared: Dict[str, Set[str]] = {}
+    overlap_tiles: Dict[str, Set[Tuple[int, int, int, str]]] = {}
+    for spawn, hunt_ids in claims.items():
+        if len(hunt_ids) < 2:
+            continue
+        for hunt_id in hunt_ids:
+            shared.setdefault(hunt_id, set()).update(h for h in hunt_ids if h != hunt_id)
+            overlap_tiles.setdefault(hunt_id, set()).add(spawn)
+
+    return {
+        hunt_id: {
+            "siblings": sorted(siblings),
+            "count": len(overlap_tiles[hunt_id]),
+            "total": len(spawns_by_hunt[hunt_id]),
+        }
+        for hunt_id, siblings in shared.items()
+    }
+
+
 def assign(city: str, hunts: Sequence[Dict]) -> List[Dict]:
     """A curadoria com id, slug e pasta — sem tocar em mapa nem em tile.
 

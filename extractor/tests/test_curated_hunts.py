@@ -192,6 +192,67 @@ def test_is_training_is_false_for_a_regular_hunt():
 
 
 # ======================================================
+# duplicated_spawns
+# ======================================================
+
+
+def test_duplicated_spawns_is_empty_when_no_tile_repeats():
+    spawns_by_hunt = {
+        "CARLIN-HUNT-0001": {(100, 200, 7, "Rat")},
+        "CARLIN-HUNT-0002": {(300, 400, 7, "Rat")},
+    }
+
+    assert ch.duplicated_spawns(spawns_by_hunt) == {}
+
+
+def test_duplicated_spawns_flags_both_sides_of_an_exact_overlap():
+    spawns_by_hunt = {
+        "DARASHIA-HUNT-0101": {(1, 1, 10, "Hyaena"), (2, 2, 10, "Hyaena")},
+        "DARASHIA-HUNT-0107": {(1, 1, 10, "Hyaena")},
+    }
+
+    dupes = ch.duplicated_spawns(spawns_by_hunt)
+
+    assert dupes["DARASHIA-HUNT-0101"] == {
+        "siblings": ["DARASHIA-HUNT-0107"],
+        "count": 1,
+        "total": 2,
+    }
+    assert dupes["DARASHIA-HUNT-0107"] == {
+        "siblings": ["DARASHIA-HUNT-0101"],
+        "count": 1,
+        "total": 1,
+    }
+
+
+def test_duplicated_spawns_names_every_sibling_that_shares_a_tile():
+    # Mesmo monstro, mesmo tile, três hunts diferentes — o caso raro de uma
+    # terceira hunt pisando no mesmo par recortado antes.
+    spawns_by_hunt = {
+        "A": {(1, 1, 7, "Rat")},
+        "B": {(1, 1, 7, "Rat")},
+        "C": {(1, 1, 7, "Rat")},
+    }
+
+    dupes = ch.duplicated_spawns(spawns_by_hunt)
+
+    assert dupes["A"]["siblings"] == ["B", "C"]
+    assert dupes["B"]["siblings"] == ["A", "C"]
+    assert dupes["C"]["siblings"] == ["A", "B"]
+
+
+def test_duplicated_spawns_does_not_confuse_same_tile_different_monster():
+    # Convivência legítima: duas espécies diferentes no mesmo tile não é o bug
+    # do ticket 20 (monstro nascendo duas vezes) — é o jogo normal.
+    spawns_by_hunt = {
+        "A": {(1, 1, 7, "Rat")},
+        "B": {(1, 1, 7, "Spider")},
+    }
+
+    assert ch.duplicated_spawns(spawns_by_hunt) == {}
+
+
+# ======================================================
 # sign_entrance_of
 # ======================================================
 

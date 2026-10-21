@@ -204,6 +204,37 @@ def crop_spawns(source: str, destination: str, bounds, floors, chosen=None) -> i
     return kept
 
 
+def read_hunt_spawns(folder: str, slug: str) -> set:
+    """O spawn já recortado de uma hunt, lido de volta do disco: `(x, y, z,
+    nome)` em coordenada absoluta, para cada bicho em `<slug>-monster.xml`.
+
+    Lê o arquivo que `crop_spawns` escreveu, não o que está em memória — serve
+    tanto a hunt que acabou de ser recortada nesta rodada quanto a que já
+    existia e `--only` não tocou, sem duas lógicas separadas para achar
+    duplicata exata entre hunts (`curated_hunts.duplicated_spawns`).
+    """
+    path = os.path.join(folder, f"{slug}-monster.xml")
+    if not os.path.isfile(path):
+        return set()
+
+    root = ElementTree.parse(path).getroot()
+    spawns = set()
+    for group in root:
+        center_x = int(group.get("centerx"))
+        center_y = int(group.get("centery"))
+        center_z = int(group.get("centerz"))
+        for entry in group:
+            spawns.add(
+                (
+                    center_x + int(entry.get("x")),
+                    center_y + int(entry.get("y")),
+                    int(entry.get("z", center_z)),
+                    entry.get("name"),
+                )
+            )
+    return spawns
+
+
 def write_hunt_map(
     city: str,
     hunt: dict,
@@ -555,6 +586,24 @@ def main():
             ensure_ascii=False,
         )
         handler.write("\n")
+
+    # Lido de volta do disco, não computado em memória: cobre tanto a hunt que
+    # acabou de ser recortada agora quanto a que `--only` preservou — as duas
+    # têm pasta e `-monster.xml` prontos em `entries`. É o que teria pego o bug
+    # do ticket 20 (hunt nova cravando o mesmo spawn de uma hunt já curada) no
+    # dia em que o pipeline rodou.
+    spawns_by_hunt = {
+        hunt["id"]: read_hunt_spawns(os.path.join(MAPS_DIR, city, hunt["folder"]), hunt["slug"])
+        for hunt in entries
+    }
+    duplicates = curated_hunts.duplicated_spawns(spawns_by_hunt)
+    for hunt_id, info in sorted(duplicates.items(), key=lambda kv: (-kv[1]["count"], kv[0])):
+        pct = round(100 * info["count"] / info["total"]) if info["total"] else 0
+        print(
+            f"[WARN] {hunt_id}: {info['count']}/{info['total']} spawns ({pct}%) já "
+            f"existem em {', '.join(info['siblings'])} — mesmo monstro nascendo duas "
+            "vezes no jogo"
+        )
 
     unreachable = [hunt for hunt in written if hunt["entrance"] is None]
     print(f"\n[OK] {len(entries)} hunts -> {destination}")

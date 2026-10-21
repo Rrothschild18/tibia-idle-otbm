@@ -47,6 +47,38 @@ def test_merge_manifest_appends_an_id_the_file_did_not_have():
     assert [hunt["id"] for hunt in merged] == ["A", "Z"]
 
 
+def _write_monster_xml(path, groups):
+    """`groups` é uma lista de (centerx, centery, centerz, [(x, y, name), ...])."""
+    lines = ["<monsters>"]
+    for center_x, center_y, center_z, entries in groups:
+        lines.append(
+            f'\t<monster centerx="{center_x}" centery="{center_y}" centerz="{center_z}" '
+            f'radius="1">'
+        )
+        for x, y, name in entries:
+            lines.append(f'\t\t<monster name="{name}" x="{x}" y="{y}" spawntime="30"/>')
+        lines.append("\t</monster>")
+    lines.append("</monsters>\n")
+    path.write_text("\n".join(lines), encoding="utf-8")
+
+
+def test_read_hunt_spawns_returns_absolute_tiles_and_names(tmp_path):
+    folder = tmp_path / "CARLIN-HUNT-0001_rats"
+    folder.mkdir()
+    _write_monster_xml(
+        folder / "rats-monster.xml",
+        [(1000, 2000, 7, [(1, 1, "Rat"), (-1, 0, "Rat")])],
+    )
+
+    spawns = bch.read_hunt_spawns(str(folder), "rats")
+
+    assert spawns == {(1001, 2001, 7, "Rat"), (999, 2000, 7, "Rat")}
+
+
+def test_read_hunt_spawns_is_empty_when_the_file_does_not_exist(tmp_path):
+    assert bch.read_hunt_spawns(str(tmp_path), "missing") == set()
+
+
 def test_merge_manifest_does_not_reorder():
     # A ordem do arquivo é a da curadoria, não alfabética — reordenar faria todo
     # diff vir cheio de movimentação sem mudança.
